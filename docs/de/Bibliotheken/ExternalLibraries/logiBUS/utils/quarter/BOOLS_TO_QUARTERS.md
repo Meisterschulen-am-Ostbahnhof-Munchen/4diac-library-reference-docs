@@ -78,7 +78,7 @@ Als Composite FB ohne eigene, explizite Zustandsmaschine besitzt `BOOLS_TO_QUART
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_060](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Uebung_060](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Fazit
 

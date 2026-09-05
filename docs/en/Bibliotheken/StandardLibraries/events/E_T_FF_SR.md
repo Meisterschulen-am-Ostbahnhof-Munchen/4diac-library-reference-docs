@@ -46,13 +46,13 @@ The function block starts in the `START` state (implies `Q` is undefined/`FALSE`
 - **Control with Manual Override**: A toggle switch (`CLK`) for a lamp, which can be switched directly on (`S`) or off (`R`) if needed (e.g., for safety reasons).
 - **Mode Switching**: Switch between different modes (`CLK`), with the option to directly access a basic mode (`R`) or a special mode (`S`).
 - **Error Reset and Toggle**: An error state can be set using `S`, acknowledged using `R`, and the error handling state can be toggled using `CLK`.
-- [Exercise_004a7](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a7/)
-- [Exercise_006a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a/)
-- [Exercise_006a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a2/)
-- [Exercise_006a3](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3/)
-- [Exercise_006a4](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
-- [Exercise_179](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_179/)
-- [Exercise_180](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_180/)
+- [Exercise_004a7](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a7/)
+- [Exercise_006a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a/)
+- [Exercise_006a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a2/)
+- [Exercise_006a3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3/)
+- [Exercise_006a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
+- [Exercise_179](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_179/)
+- [Exercise_180](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_180/)
 
 The `E_T_FF_SR` block offers maximum flexibility for memory and control tasks by combining the toggle function with direct set and reset capabilities. combined. The specific behaviors of the `START` state and the lack of a prioritization guarantee for simultaneous events must be carefully considered during implementation.
 

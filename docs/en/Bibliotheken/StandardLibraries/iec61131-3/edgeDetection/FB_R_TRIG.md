@@ -55,8 +55,8 @@ This function block does not have a complex state machine. The state is represen
 
 ## 🛠️ Related Exercises
 
-- [Exercise_177](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_177/)
-- [Exercise_177_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_177_AX/)
+- [Exercise_177](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_177/)
+- [Exercise_177_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_177_AX/)
 
 ## Conclusion
 

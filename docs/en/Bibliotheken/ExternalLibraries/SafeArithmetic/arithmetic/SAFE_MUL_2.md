@@ -66,7 +66,7 @@ a silent underflow wraparound.
 - [F_MUL](../../../StandardLibraries/iec61131-3/arithmetic/F_MUL.md) — the
   plain, non-saturating standard-library equivalent (silent wraparound/`INF` on overflow instead
   of clamping and reporting).
-- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
+- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
   that motivated this library.
 
 ## Conclusion

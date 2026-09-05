@@ -64,9 +64,9 @@ Since it is a purely pass-through composite function block without an internal s
 
 ## 🛠️ Related Exercises
 
-- [Exercise_126b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2_sub/)
-- [Exercise_126b_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
-- [Exercise_12x_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
+- [Exercise_126b2_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2_sub/)
+- [Exercise_126b_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
+- [Exercise_12x_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
 
 ## Conclusion
 

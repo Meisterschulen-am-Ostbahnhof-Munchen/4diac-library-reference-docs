@@ -75,7 +75,7 @@ Vergleich mit [XOR_3](../../../StandardLibraries/iec61131-3/bitwiseOperators/XOR
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_002a7_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
+- [Uebung_002a7_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
 
 ## Änderungserkennung
 

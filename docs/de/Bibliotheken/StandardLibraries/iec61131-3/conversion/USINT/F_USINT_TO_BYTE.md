@@ -60,7 +60,7 @@ Der Funktionsblock führt die Konvertierung durch, sobald das Ereignis `REQ` emp
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_126b_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
+- [Uebung_126b_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
 
 ## Fazit
 

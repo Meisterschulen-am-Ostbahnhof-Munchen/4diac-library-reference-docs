@@ -66,8 +66,8 @@ Similar function blocks might have fewer inputs or offer additional features lik
 
 ## 🛠️ Related Exercises
 
-- [Exercise_035a1b_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a1b_AX/)
-- [Exercise_053](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
+- [Exercise_035a1b_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a1b_AX/)
+- [Exercise_053](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
 
 ## Conclusion
 

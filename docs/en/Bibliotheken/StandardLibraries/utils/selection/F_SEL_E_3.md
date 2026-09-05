@@ -68,8 +68,8 @@ When such an event occurs, the corresponding input variable (`IN0`, `IN1`, or `I
 
 ## 🛠️ Related Exercises
 
-- [Exercise_015a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
-- [Exercise_016a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_016a/)
+- [Exercise_015a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
+- [Exercise_016a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_016a/)
 
 ## Conclusion
 

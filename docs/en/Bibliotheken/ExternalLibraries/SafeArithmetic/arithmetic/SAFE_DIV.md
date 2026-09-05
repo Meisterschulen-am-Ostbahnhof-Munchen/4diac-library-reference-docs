@@ -62,7 +62,7 @@ commutative, so a "chained" division has no well-defined meaning the way extensi
 - [F_DIV](../../../StandardLibraries/iec61131-3/arithmetic/F_DIV.md) — the plain, non-saturating
   standard-library equivalent (undefined behavior on integer division by zero, `INF`/`NaN` on
   float division by/of zero, instead of clamping and reporting).
-- [Uebung_011b7](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b7/) — a division-by-zero
+- [Uebung_011b7](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b7/) — a division-by-zero
   demo with `SAFE_DIV`, `LIMIT_HIT` wired to a second output so the clamping is visible on
   hardware.
 

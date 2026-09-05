@@ -74,8 +74,8 @@ Compared to simple digital output blocks, DataPanel_MI_QX offers advanced functi
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
-- [Exercise_010a4](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a4/)
+- [Exercise_003b2_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
+- [Exercise_010a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a4/)
 
 ## Conclusion
 

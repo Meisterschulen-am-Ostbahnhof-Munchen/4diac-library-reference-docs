@@ -56,5 +56,5 @@ Der Baustein wird über das `INIT`-Ereignis mit der Objekt-ID `u16ObjId` initial
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_009_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
-- [Uebung_083_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
+- [Uebung_009_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
+- [Uebung_083_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)

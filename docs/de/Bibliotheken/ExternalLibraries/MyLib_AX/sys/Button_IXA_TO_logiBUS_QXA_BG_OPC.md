@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC` ist der wiederverwendbare Baustein für **einen einzelnen digitalen Ausgang**, der sowohl über einen VT-Taster als auch über OPC-UA (Web-Client) geschaltet werden kann — inklusive VT-Statusanzeige. Er wird 12-fach parametrisiert in [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) instanziiert.
+`Button_IXA_TO_logiBUS_QXA_BG_OPC` ist der wiederverwendbare Baustein für **einen einzelnen digitalen Ausgang**, der sowohl über einen VT-Taster als auch über OPC-UA (Web-Client) geschaltet werden kann — inklusive VT-Statusanzeige. Er wird 12-fach parametrisiert in [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) instanziiert.
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -52,7 +52,7 @@ Gegenüber dem Eingangs-Pendant [`logiBUS_IXA_BG_OPC`](./logiBUS_IXA_BG_OPC.md) 
 
 ## 🛠️ Zugehörige Übungen
 
-- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
+- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
 
 ---
 

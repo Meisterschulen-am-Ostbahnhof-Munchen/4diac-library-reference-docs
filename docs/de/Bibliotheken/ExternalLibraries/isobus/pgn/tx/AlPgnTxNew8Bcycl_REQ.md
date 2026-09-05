@@ -81,9 +81,9 @@ Der Funktionsblock durchläuft implizit folgende Hauptzustände:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_126](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126/)
-- [Uebung_126b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b/)
-- [Uebung_126b2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2/)
+- [Uebung_126](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126/)
+- [Uebung_126b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b/)
+- [Uebung_126b2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2/)
 
 ## Fazit
 

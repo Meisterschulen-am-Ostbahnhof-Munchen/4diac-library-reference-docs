@@ -55,8 +55,8 @@ The function block has no internal states. The operation is re-executed with eac
 
 ## 🛠️ Related Exercises
 
-- [Exercise_015](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
-- [Exercise_015a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
+- [Exercise_015](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
+- [Exercise_015a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
 
 ## Conclusion
 

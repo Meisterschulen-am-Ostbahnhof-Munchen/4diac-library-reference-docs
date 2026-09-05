@@ -43,7 +43,7 @@ Bahnübergänge, Warnsignale.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_035a3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a3_AX/)
+- [Uebung_035a3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a3_AX/)
 
 ## Fazit
 

@@ -65,7 +65,7 @@ The block then returns directly to the wait state (1).
 
 ## 🛠️ Related Exercises
 
-- [Exercise_121](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
+- [Exercise_121](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
 
 ## Conclusion
 

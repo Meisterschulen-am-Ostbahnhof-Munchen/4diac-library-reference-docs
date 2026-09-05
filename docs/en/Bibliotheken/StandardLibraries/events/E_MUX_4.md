@@ -51,7 +51,7 @@ In this way, the event flow is merged while preserving information about the eve
 
 ## 🛠️ Related Exercises
 
-- [Exercise_087a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
+- [Exercise_087a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
 
 ## Conclusion
 

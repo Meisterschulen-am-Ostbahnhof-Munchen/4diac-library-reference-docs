@@ -54,7 +54,7 @@ Auf diese Weise wird der Ereignisfluss zusammengeführt, wobei die Information �
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_087a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
+- [Uebung_087a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
 
 ## Fazit
 

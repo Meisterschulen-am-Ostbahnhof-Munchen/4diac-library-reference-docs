@@ -42,8 +42,8 @@ Signaling
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020h_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020h_AX/)
-- [Exercise_020i_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
+- [Exercise_020h_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020h_AX/)
+- [Exercise_020i_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
 
 ## Conclusion
 

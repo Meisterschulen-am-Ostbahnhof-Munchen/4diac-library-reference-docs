@@ -44,8 +44,8 @@ The function block stores the previous state of the `CLK` signal in an internal 
 - Triggering of actions on falling edges in time-critical applications.
 - **FB_R_TRIG**: Detection of a rising edge (from `FALSE` to `TRUE`).
 - **FB_R_F_TRIG**: Combined detection of rising and falling edges. - **FB_F_TRIG** is specialized for detecting falling edges and is therefore more efficient in this specific application.
-- [Exercise_178](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)
-- [Exercise_178_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_178_AX/)
+- [Exercise_178](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)
+- [Exercise_178_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_178_AX/)
 
 The `FB_F_TRIG` function block is a simple and efficient function block for detecting falling edges in Boolean signals. Its clear interface and simple operation make it ideal for control applications where state changes need to be detected.
 

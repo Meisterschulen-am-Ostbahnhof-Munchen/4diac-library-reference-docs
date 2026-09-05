@@ -52,7 +52,7 @@ Auf diese Weise wird der Ereignisfluss zusammengeführt, wobei die Information �
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_172](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
+- [Uebung_172](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
 
 ## Fazit
 

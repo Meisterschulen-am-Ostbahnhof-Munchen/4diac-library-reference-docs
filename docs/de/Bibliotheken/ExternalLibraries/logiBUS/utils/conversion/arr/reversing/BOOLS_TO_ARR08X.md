@@ -75,7 +75,7 @@ Der Funktionsblock ist zustandslos (stateless). Er besitzt kein internes Gedäch
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_054](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_054/)
+- [Uebung_054](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_054/)
 
 ## Fazit
 

@@ -55,9 +55,9 @@ After each of these actions, the status flags `QU` and `QD` are updated based on
 - **Total Counter**: Recording total production quantities or operating hours over the entire lifespan of a machine, where a 16-bit counter is insufficient.
 - **Energy Measurement**: Counting pulses from an energy meter (e.g., Wh or kWh) over extended periods.
 - **High-Resolution Position Detection**: Counting a very large number of increments from a high-resolution encoder.
-- [Exercise_009](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009/)
-- [Exercise_034b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034b/)
-- [Exercise_083](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_083/)
+- [Exercise_009](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009/)
+- [Exercise_034b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034b/)
+- [Exercise_083](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_083/)
 
 The `E_CTUD_UDINT` is the `UDINT` variant of the universal `E_CTUD` counter. It offers the same functionality, but with a significantly larger counting range (32 bits). This makes it the ideal choice for applications where the counter value can exceed the limit of a 16-bit `UINT` counter. Its robust, event-driven nature and comprehensive control and status functions are retained.
 

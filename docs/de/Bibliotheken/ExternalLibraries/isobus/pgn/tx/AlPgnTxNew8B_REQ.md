@@ -78,7 +78,7 @@ Der Baustein durchläuft implizit folgende Hauptzustände:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_125](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_125/)
+- [Uebung_125](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_125/)
 
 ## Fazit
 

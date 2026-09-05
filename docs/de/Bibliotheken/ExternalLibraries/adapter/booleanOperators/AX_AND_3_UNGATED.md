@@ -79,7 +79,7 @@ Vergleich mit [AND_3](../../../StandardLibraries/iec61131-3/bitwiseOperators/AND
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_002a6_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
+- [Uebung_002a6_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
 
 ## Änderungserkennung
 

@@ -68,8 +68,8 @@ Vergleich mit [E_TON](../../../../../../StandardLibraries/events/timers/E_TON.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
-- [Uebung_160b2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
+- [Uebung_020c_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
+- [Uebung_160b2_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
 
 ## Fazit
 

@@ -73,8 +73,8 @@ Im Vergleich zu einfachen booleschen Eingabeblöcken bietet Button_IXA:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_010a2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a2_AX/)
-- [Uebung_010a3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a3_AX/)
+- [Uebung_010a2_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a2_AX/)
+- [Uebung_010a3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a3_AX/)
 
 ## Fazit
 

@@ -62,7 +62,7 @@ Compared to generic timing modules (such as `E_DELAY` or `E_CYCLE`), `CYCLE_TIME
 
 ## 🛠️ Related Exercises
 
-- [Exercise_072c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072c/)
+- [Exercise_072c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072c/)
 
 ## Conclusion
 

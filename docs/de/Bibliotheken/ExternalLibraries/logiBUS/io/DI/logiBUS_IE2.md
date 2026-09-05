@@ -84,10 +84,10 @@ Im Vergleich zu einfachen digitalen Eingabeblöcken bietet logiBUS_IE2 erweitert
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_004c6](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004c6/)
-- [Uebung_004c6_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004c6_AX/)
-- [Uebung_004c7](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004c7/)
-- [Uebung_004c7_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004c7_AX/)
+- [Uebung_004c6](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004c6/)
+- [Uebung_004c6_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004c6_AX/)
+- [Uebung_004c7](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004c7/)
+- [Uebung_004c7_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004c7_AX/)
 
 ## Fazit
 

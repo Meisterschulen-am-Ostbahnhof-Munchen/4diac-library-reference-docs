@@ -75,7 +75,7 @@ The **E_RDELAY** (Reloadable Delay) is an extended delay function block accordin
 
 ## 🛠️ Related Exercises
 
-- [Exercise_018a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018a/)
+- [Exercise_018a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018a/)
 
 ## Conclusion
 

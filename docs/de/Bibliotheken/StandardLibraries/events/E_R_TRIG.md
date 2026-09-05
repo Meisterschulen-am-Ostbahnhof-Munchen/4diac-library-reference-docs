@@ -69,7 +69,7 @@ Laut XML-Spezifikation besteht der Baustein aus:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_089](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
+- [Uebung_089](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
 
 ## Fazit
 

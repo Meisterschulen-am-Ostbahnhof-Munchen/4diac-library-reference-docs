@@ -83,8 +83,8 @@ The ECC (Execution Control Chart) consists of six states:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_055](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_055/)
-- [Exercise_056](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
+- [Exercise_055](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_055/)
+- [Exercise_056](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
 
 ## Conclusion
 

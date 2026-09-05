@@ -69,7 +69,7 @@ Compared to simple digital output blocks, logiBUS_LED_DO_QX offers advanced freq
 
 ## 🛠️ Related Exercises
 
-- [Exercise_029](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_029/)
+- [Exercise_029](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_029/)
 
 ## Conclusion
 

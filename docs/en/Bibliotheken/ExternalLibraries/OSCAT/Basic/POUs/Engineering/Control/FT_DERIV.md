@@ -39,5 +39,5 @@ Calculate derivative over signal 'in' with Factor 'K'
 
 ## 🛠️ Related exercises
 
-- [Uebung_151](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
-- [Uebung_151_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
+- [Uebung_151](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
+- [Uebung_151_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)

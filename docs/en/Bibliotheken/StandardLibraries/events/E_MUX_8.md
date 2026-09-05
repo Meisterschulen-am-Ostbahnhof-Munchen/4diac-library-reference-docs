@@ -49,7 +49,7 @@ In this way, the event streams are merged while preserving information about the
 
 ## 🛠️ Related Exercises
 
-- [Exercise_173](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_173/)
+- [Exercise_173](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_173/)
 
 ## Conclusion
 

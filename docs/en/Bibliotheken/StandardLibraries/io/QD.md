@@ -74,7 +74,7 @@ Compared to simpler output blocks, QD offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_060](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Exercise_060](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Conclusion
 

@@ -55,8 +55,8 @@ The `E_DEMUX_8` (Event Demultiplexer) is a function block according to IEC 61499
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
-- [Exercise_041](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_041/)
+- [Exercise_006c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
+- [Exercise_041](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_041/)
 
 ## Conclusion
 

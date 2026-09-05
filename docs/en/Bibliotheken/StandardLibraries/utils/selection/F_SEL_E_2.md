@@ -68,8 +68,8 @@ The function block `F_SEL_E_2` selects between two input variables based on the 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_019](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_019/)
-- [Exercise_074](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
+- [Exercise_019](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_019/)
+- [Exercise_074](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
 
 ## Conclusion
 

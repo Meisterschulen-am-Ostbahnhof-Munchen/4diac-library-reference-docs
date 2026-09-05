@@ -78,7 +78,7 @@ Im Vergleich zu einem einfachen `SR`- oder `RS`-Flipflop bietet `LinksRechts` ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006a4](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
+- [Uebung_006a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
 
 ## Fazit
 

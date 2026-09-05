@@ -69,7 +69,7 @@ According to the XML specification, the block consists of:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_089](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
+- [Exercise_089](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
 
 ## Conclusion
 

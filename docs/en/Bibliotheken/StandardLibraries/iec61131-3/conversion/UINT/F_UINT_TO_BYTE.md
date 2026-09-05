@@ -54,7 +54,7 @@ The function block has no internal states. The conversion is re-executed with ea
 
 ## 🛠️ Related Exercises
 
-- [Exercise_12x_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
+- [Exercise_12x_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
 
 ## Conclusion
 

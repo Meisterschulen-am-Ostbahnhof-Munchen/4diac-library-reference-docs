@@ -79,8 +79,8 @@ Im Gegensatz zu einem einfachen TON-Timer (Verzögerungseinschaltverzögerung) r
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_035a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
-- [Uebung_035a3](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a3/)
+- [Uebung_035a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
+- [Uebung_035a3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a3/)
 
 ## Fazit
 

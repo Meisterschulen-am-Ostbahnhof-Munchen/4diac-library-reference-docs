@@ -60,7 +60,7 @@ The `E_N_TABLE` (Event N-Table) is a function block according to IEC 61499 that 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_093b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093b/)
+- [Exercise_093b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093b/)
 
 ## Conclusion
 

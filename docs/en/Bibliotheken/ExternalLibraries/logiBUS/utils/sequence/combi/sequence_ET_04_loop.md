@@ -97,7 +97,7 @@ Unlike simple timer blocks or flip-flops, this function block orchestrates a com
 
 ## 🛠️ Related Exercises
 
-- [Exercise_037](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_037/)
+- [Exercise_037](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_037/)
 
 ## Conclusion
 

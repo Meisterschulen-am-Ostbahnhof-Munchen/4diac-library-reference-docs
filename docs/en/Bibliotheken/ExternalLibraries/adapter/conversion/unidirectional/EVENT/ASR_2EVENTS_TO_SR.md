@@ -56,7 +56,7 @@ Compared to simple event function blocks, ASR_2EVENTS_TO_SR offers a specific in
 
 ## 🛠️ Related Exercises
 
-- [Exercise_171_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
+- [Exercise_171_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
 
 ## Conclusion
 

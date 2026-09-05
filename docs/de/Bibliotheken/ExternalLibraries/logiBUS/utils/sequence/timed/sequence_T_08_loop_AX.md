@@ -56,7 +56,7 @@ Für zeitgesteuerte zyklische 8-stufige Sequenzen mit Adapteranbindung.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_038_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_038_AX/)
+- [Uebung_038_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_038_AX/)
 
 ## Fazit
 

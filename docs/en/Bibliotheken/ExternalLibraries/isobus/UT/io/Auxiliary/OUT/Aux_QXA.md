@@ -75,7 +75,7 @@ Compared to simple Boolean output blocks, this offers Aux_QXA:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003c_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003c_sub_AX/)
+- [Exercise_003c_sub_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003c_sub_AX/)
 
 ## Conclusion
 

@@ -67,9 +67,9 @@ The **E_SPLIT** is a standards-compliant function block (IEC 61499-1 Annex A) fo
 
 ## 🛠️ Related Exercises
 
-- [Exercise_004a4](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a4/)
-- [Exercise_004a4_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a4_AX/)
-- [Exercise_080b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_080b/)
+- [Exercise_004a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a4/)
+- [Exercise_004a4_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a4_AX/)
+- [Exercise_080b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_080b/)
 
 ## Conclusion
 

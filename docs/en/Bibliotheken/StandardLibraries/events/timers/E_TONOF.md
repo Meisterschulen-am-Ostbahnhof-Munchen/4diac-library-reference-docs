@@ -105,4 +105,4 @@ The **E_TONOF** block is a powerful tool in IEC 61499 for implementing time-dela
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020g](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)
+- [Exercise_020g](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)

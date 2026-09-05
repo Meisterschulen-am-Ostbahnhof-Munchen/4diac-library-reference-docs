@@ -104,7 +104,7 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65093) for the precise
 
 ## 🛠️ Related Exercises
 
-- [Exercise_079](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Exercise_079](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 

@@ -54,7 +54,7 @@ The function block has no internal states. Execution occurs immediately upon tri
 
 ## 🛠️ Related Exercises
 
-- [Exercise_011a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
+- [Exercise_011a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
 
 ## Conclusion
 

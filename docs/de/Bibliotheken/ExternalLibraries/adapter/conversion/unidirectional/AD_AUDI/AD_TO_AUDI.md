@@ -34,4 +34,4 @@ Sobald am `AD_IN` ein Ereignis (`E1`) zusammen mit Daten (`D1`) eintrifft, wird 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_011_AUDI](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Uebung_011_AUDI](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)

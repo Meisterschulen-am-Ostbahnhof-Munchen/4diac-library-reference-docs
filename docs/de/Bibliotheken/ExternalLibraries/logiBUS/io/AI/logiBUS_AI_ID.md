@@ -74,8 +74,8 @@ Im Vergleich zu einfachen analogen Eingangsbausteinen bietet logiBUS_AI_ID erwei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_028](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
-- [Uebung_034](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
+- [Uebung_028](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
+- [Uebung_034](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
 
 ## Fazit
 

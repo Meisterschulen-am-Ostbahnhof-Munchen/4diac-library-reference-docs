@@ -69,7 +69,7 @@ Other blocks, such as `EXTRACT_BITS` or `BIT_SLICE`, are more general but requir
 
 ## 🛠️ Related Exercises
 
-- [Exercise_056](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
+- [Exercise_056](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
 
 ## Conclusion
 

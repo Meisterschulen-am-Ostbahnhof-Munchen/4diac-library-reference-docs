@@ -42,7 +42,7 @@ Blinkende Anzeigen.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020f3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
+- [Uebung_020f3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
 
 ## Fazit
 
