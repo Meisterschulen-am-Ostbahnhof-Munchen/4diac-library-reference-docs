@@ -10,17 +10,15 @@ und hat den ReadTheDocs-Build von `visual-programming-languages-docs` auf
 über 13 Minuten pro Sprache aufgeblasen (Zeitlimit-Timeouts). Als eigenständiges,
 seltener neu gebautes Projekt bleibt die Bauzeit beherrschbar.
 
-## Status
-
-> **Hinweis:** Dieses Repository ist gerade im Aufbau (Grundgerüst: `mkdocs.yml`,
-> `.readthedocs.yaml`, Theme-Assets). Der eigentliche Inhalt wird erst
-> verschoben, sobald alle offenen Pull Requests in
-> [visual-programming-languages-docs](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/visual-programming-languages-docs/pulls)
-abgearbeitet sind.
-
 ## Dokumentation
 
+- [📖 Dokumentation (ReadTheDocs, Deutsch)](https://docs.ms-muc-docs.de/projects/4diac-library-reference-docs/de/latest/)
+- [📖 Documentation (ReadTheDocs, English)](https://docs.ms-muc-docs.de/projects/4diac-library-reference-docs/en/latest/)
+- [📄 PDF-Handbuch (Deutsch)](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/de/pdf/4diac-library-reference-docs-de.pdf)
+- [📄 PDF handbook (English)](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/en/pdf/4diac-library-reference-docs-en.pdf)
 - [GitHub Repository](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/4diac-library-reference-docs)
+
+Siehe auch: [Wiki 4 – Visuelle Programmiersprachen: Low-Code](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/visual-programming-languages-docs) (Grundlagen, Design Patterns) und [Wiki 4.2 – Übungsaufgaben: 4diac Trainingslösungen](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/4diac-exercises-docs).
 
 ---
 *Powered by Eclipse 4diac*
