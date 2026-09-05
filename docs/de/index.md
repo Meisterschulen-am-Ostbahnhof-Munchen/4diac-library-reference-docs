@@ -5,3 +5,5 @@ für Eclipse 4diac (Standard- und External-Libraries), ausgelagert aus dem Haupt
 [Visuelle Programmiersprachen: Low-Code (4)](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/visual-programming-languages-docs).
 
 👉 [Zur Bibliotheksübersicht](Bibliotheken/index.md)
+
+- [📄 PDF-Handbuch herunterladen](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/de/pdf/4diac-library-reference-docs-de.pdf)

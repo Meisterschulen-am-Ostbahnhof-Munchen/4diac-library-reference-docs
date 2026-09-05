@@ -6,3 +6,5 @@ the main wiki
 [Visual Programming Languages: Low-Code (4)](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/visual-programming-languages-docs).
 
 👉 [Go to the library overview](Bibliotheken/index.md)
+
+- [📄 Download PDF Handbook](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/en/pdf/4diac-library-reference-docs-en.pdf)
