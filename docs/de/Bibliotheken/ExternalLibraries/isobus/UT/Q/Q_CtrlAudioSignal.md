@@ -97,9 +97,9 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_017](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_017/)
-- [Uebung_018](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018/)
-- [Uebung_018a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018a/)
+- [Uebung_017](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_017/)
+- [Uebung_018](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018/)
+- [Uebung_018a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_018a/)
 
 ## Fazit
 

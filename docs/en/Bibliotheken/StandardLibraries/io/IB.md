@@ -83,8 +83,8 @@ Compared to other input blocks:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
-- [Exercise_011a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
+- [Exercise_006c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
+- [Exercise_011a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
 
 ## Conclusion
 

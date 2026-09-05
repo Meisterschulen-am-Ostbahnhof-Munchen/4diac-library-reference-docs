@@ -74,7 +74,7 @@ The **E_CTD** (Event-Driven Down Counter) is an event-driven down counter accord
 
 ## 🛠️ Related Exercises
 
-- [Exercise_081](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_081/)
+- [Exercise_081](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_081/)
 
 ## Conclusion
 

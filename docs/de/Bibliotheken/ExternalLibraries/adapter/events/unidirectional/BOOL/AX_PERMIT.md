@@ -40,4 +40,4 @@ Der Baustein empfängt ein kombiniertes Ereignis- und Bool-Signal über einen `A
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_009_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
+- [Uebung_009_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)

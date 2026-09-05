@@ -71,8 +71,8 @@ Compared to simple analog input function blocks, logiBUS_AI_ID offers extended f
 
 ## 🛠️ Related Exercises
 
-- [Exercise_028](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
-- [Exercise_034](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
+- [Exercise_028](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
+- [Exercise_034](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
 
 ## Conclusion
 

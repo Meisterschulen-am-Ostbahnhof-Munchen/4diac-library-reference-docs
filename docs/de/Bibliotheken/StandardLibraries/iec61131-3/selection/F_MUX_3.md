@@ -62,7 +62,7 @@ Der Funktionsblock hat keine internen Zustände. Die Auswahl und Weiterleitung e
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_090a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
+- [Uebung_090a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
 
 ## Fazit
 

@@ -55,7 +55,7 @@ The function block has no internal states. Execution occurs immediately upon rec
 
 ## 🛠️ Related Exercises
 
-- [Exercise_053](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
+- [Exercise_053](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
 
 ## Conclusion
 

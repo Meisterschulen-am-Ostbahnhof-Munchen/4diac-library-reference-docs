@@ -75,7 +75,7 @@ Compared to standard digital input blocks, logiBUS_ID:
 
 ## 🛠️ Related exercises
 
-- [Exercise_011a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
+- [Exercise_011a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
 
 ## Conclusion
 

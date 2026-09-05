@@ -71,8 +71,8 @@ The block uses a **socket** of type `ARTimeOut`. Since it is a socket, the signa
 
 ## 🛠️ Related Exercises
 
-- [Exercise_035b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
-- [Exercise_170](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
+- [Exercise_035b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
+- [Exercise_170](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
 
 ## Conclusion
 

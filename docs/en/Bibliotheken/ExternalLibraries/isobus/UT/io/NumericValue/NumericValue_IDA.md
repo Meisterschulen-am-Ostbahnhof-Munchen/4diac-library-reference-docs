@@ -81,7 +81,7 @@ Since this is a composite function block, its status is primarily determined by 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_011_AUDI](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Exercise_011_AUDI](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
 
 ## Conclusion
 

@@ -69,7 +69,7 @@ Compared to event-based timers such as [AX_TOF](../../events/unidirectional/BOOL
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020e2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
+- [Exercise_020e2_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
 
 ## Conclusion
 

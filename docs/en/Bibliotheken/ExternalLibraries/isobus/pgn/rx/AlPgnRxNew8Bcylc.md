@@ -78,7 +78,7 @@ Unlike generic CAN receive blocks, `AlPgnRxNew8Bcylc` is specifically tailored t
 
 ## 🛠️ Related Exercises
 
-- [Exercise_131](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_131/)
+- [Exercise_131](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_131/)
 
 ## Conclusion
 

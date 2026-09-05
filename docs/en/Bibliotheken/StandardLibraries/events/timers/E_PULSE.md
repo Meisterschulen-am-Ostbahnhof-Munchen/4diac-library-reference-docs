@@ -61,8 +61,8 @@ The E_PULSE function block can be used in various industrial control application
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020h](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
-- [Exercise_020i](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Exercise_020h](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
+- [Exercise_020i](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
 
 ## Conclusion
 

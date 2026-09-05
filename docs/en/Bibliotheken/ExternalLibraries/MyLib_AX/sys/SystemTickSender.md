@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`SystemTickSender` provides a cyclically incrementing "heartbeat" for the VT and web client — a simple, immediately visible confirmation that the controller is running and processing events. The block is used in several training examples in this system, including [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) and [`InputOutputTesterButton_PWM_OPC_UA`](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/).
+`SystemTickSender` provides a cyclically incrementing "heartbeat" for the VT and web client — a simple, immediately visible confirmation that the controller is running and processing events. The block is used in several training examples in this system, including [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) and [`InputOutputTesterButton_PWM_OPC_UA`](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/).
 
 ## Function Blocks (FBs) Used
 
@@ -43,8 +43,8 @@
 
 ## 🛠️ Related Exercises
 
-- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
-- [InputOutputTesterButton_PWM_OPC_UA](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
+- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
+- [InputOutputTesterButton_PWM_OPC_UA](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
 
 ---
 

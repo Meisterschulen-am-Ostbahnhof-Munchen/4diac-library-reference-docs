@@ -78,7 +78,7 @@ Compared to a simple `SR` or `RS` flip-flop, `LinksRechts` offers a higher level
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006a4](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
+- [Exercise_006a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
 
 ## Conclusion
 

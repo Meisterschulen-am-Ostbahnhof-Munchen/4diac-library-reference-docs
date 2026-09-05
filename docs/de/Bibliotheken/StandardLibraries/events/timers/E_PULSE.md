@@ -69,8 +69,8 @@ Der E_PULSE-Baustein kann in verschiedenen industriellen Steuerungsanwendungen e
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020h](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
-- [Uebung_020i](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Uebung_020h](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
+- [Uebung_020i](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
 
 ## Fazit
 

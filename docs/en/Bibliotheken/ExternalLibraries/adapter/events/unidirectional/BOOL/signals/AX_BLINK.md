@@ -41,7 +41,7 @@ Flashing displays.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020f3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
+- [Exercise_020f3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
 
 ## Conclusion
 

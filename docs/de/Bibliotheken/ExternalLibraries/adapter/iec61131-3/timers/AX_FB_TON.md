@@ -70,7 +70,7 @@ Im Vergleich zum [AX_TON](../../events/unidirectional/BOOL/timers/AX_TON.md) bie
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Uebung_020c3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Fazit
 

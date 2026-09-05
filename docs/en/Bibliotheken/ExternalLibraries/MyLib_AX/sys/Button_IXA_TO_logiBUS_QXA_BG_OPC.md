@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC` is the reusable block for **a single digital output** that can be switched both via a VT button and via OPC-UA (web client) — including a VT status display. It is instantiated 12 times with different parameters in [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/).
+`Button_IXA_TO_logiBUS_QXA_BG_OPC` is the reusable block for **a single digital output** that can be switched both via a VT button and via OPC-UA (web client) — including a VT status display. It is instantiated 12 times with different parameters in [`InputOutputTesterButton_DIDO_OPC_UA`](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/).
 
 ## Function Blocks (FBs) Used
 
@@ -52,7 +52,7 @@ Compared to its input counterpart [`logiBUS_IXA_BG_OPC`](./logiBUS_IXA_BG_OPC.md
 
 ## 🛠️ Related Exercises
 
-- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
+- [InputOutputTesterButton_DIDO_OPC_UA](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
 
 ---
 

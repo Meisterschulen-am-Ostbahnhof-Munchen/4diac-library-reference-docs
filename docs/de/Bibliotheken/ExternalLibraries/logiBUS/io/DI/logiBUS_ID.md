@@ -78,7 +78,7 @@ Im Vergleich zu standardmäßigen digitalen Eingangsblöcken bietet logiBUS_ID:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_011a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
+- [Uebung_011a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
 
 ## Fazit
 

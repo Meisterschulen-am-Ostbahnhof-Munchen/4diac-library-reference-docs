@@ -79,7 +79,7 @@ Der Funktionsblock besitzt keinen internen Zustand (speicherfrei, kombinatorisch
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_002a5b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a5b/)
+- [Uebung_002a5b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a5b/)
 
 ## Fazit
 

@@ -83,7 +83,7 @@ This function block does not use any adapter interfaces.
 
 ## 🛠️ Related exercises
 
-- [Uebung_133](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_133/)
+- [Uebung_133](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_133/)
 
 ## Conclusion
 

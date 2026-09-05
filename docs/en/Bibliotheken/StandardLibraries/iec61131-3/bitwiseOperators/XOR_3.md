@@ -66,7 +66,7 @@ Compared to XOR_3 offers the ability to process three inputs simultaneously, unl
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a7_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
+- [Exercise_002a7_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
 
 ## Conclusion
 

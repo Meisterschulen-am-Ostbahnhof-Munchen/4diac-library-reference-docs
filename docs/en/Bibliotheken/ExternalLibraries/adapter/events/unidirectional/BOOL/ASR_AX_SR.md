@@ -75,7 +75,7 @@ RESET → SET:    bei S_R.SET Ereignis
 
 ## 🛠️ Related Exercises
 
-- [Exercise_171_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
+- [Exercise_171_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
 
 ## Conclusion
 

@@ -94,7 +94,7 @@ The function block has no internal state. Each event immediately triggers its co
 
 ## 🛠️ Related Exercises
 
-- [Exercise_009a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
+- [Exercise_009a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
 
 ## Conclusion
 

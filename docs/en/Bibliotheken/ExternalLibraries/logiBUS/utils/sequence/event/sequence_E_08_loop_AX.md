@@ -56,7 +56,7 @@ For cyclic, event-driven 8-step sequences with adapter connectivity.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_040_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_040_AX/)
+- [Exercise_040_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_040_AX/)
 
 ## Conclusion
 

@@ -75,7 +75,7 @@ The component implicitly passes through the following main states:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_125](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_125/)
+- [Exercise_125](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_125/)
 
 ## Conclusion
 

@@ -69,9 +69,9 @@ Comparison [AND_2](../../../StandardLibraries/iec61131-3/bitwiseOperators/AND_2.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a_AX/)
-- [Exercise_002b3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002b3_AX/)
-- [Exercise_006a3_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006a3_AX/)
+- [Exercise_002a_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a_AX/)
+- [Exercise_002b3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002b3_AX/)
+- [Exercise_006a3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006a3_AX/)
 
 ## Change Detection
 

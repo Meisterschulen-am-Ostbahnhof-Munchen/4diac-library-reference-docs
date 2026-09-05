@@ -58,8 +58,8 @@ Der Funktionsblock besitzt keine internen Zustände. Die Operation wird bei jede
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_015](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
-- [Uebung_015a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
+- [Uebung_015](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
+- [Uebung_015a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
 
 ## Fazit
 

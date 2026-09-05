@@ -62,7 +62,7 @@ Compared to other logical operations such as F_AND or F_OR, F_NOT performs only 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006a3_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3_sub/)
+- [Exercise_006a3_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3_sub/)
 
 ## Conclusion
 

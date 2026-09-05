@@ -59,7 +59,7 @@ The function block `F_SHL` performs a bitwise left shift of the input value `IN`
 
 ## 🛠️ Related Exercises
 
-- [Exercise_034](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
+- [Exercise_034](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
 
 ## Conclusion
 

@@ -91,7 +91,7 @@ Vorzeichen immer einen echten, korrekten Overflow — die Mehrdeutigkeit existie
 - [F_MUL](../../../StandardLibraries/iec61131-3/arithmetic/F_MUL.md) — der feste 2-Eingänge-
   Standardbaustein, den dieses Muster erweitert (stiller Wraparound/`INF` bei Overflow statt
   Klemmen und Melden; ein 3-Eingänge-Standardpendant existiert nicht).
-- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
+- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
   der diese Bibliothek motiviert hat.
 
 ## Fazit

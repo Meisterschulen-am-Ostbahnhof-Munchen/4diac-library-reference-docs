@@ -83,8 +83,8 @@ Im Vergleich zu anderen Eingabebausteinen:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
-- [Uebung_011a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
+- [Uebung_006c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
+- [Uebung_011a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
 
 ## Fazit
 

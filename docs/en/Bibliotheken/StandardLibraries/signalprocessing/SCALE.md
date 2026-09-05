@@ -64,7 +64,7 @@ Ideal for simple linear scaling without additional logic.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_042](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
+- [Exercise_042](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
 
 ## Conclusion
 

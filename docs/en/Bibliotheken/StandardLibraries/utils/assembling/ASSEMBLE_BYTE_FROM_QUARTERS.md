@@ -65,7 +65,7 @@ The function block accepts four quarter bytes and combines them into a complete 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_056](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
+- [Exercise_056](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
 
 ## Conclusion
 

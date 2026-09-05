@@ -72,7 +72,7 @@ Der **E_RESTART** ist ein spezieller Service-Interface-Funktionsbaustein nach IE
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_174](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_174/)
+- [Uebung_174](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_174/)
 
 ## Fazit
 

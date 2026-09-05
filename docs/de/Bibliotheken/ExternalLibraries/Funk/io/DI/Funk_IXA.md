@@ -74,8 +74,8 @@ Im Vergleich zu einfachen digitalen Eingangsblöcken bietet Funk_IXA:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Uebung_003b3_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Uebung_003b2_sub_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
+- [Uebung_003b3_sub_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
 
 ## Fazit
 

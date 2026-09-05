@@ -81,7 +81,7 @@ Im Vergleich zu einfachen Skalierungsbausteinen bietet SCALE_LIM zusätzlich:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_043](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_043/)
+- [Uebung_043](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_043/)
 
 ## Fazit
 

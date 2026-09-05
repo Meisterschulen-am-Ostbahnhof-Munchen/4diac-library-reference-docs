@@ -64,8 +64,8 @@ Compared to simple OR blocks with only two inputs, OR_3 offers the possibility o
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a5_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
-- [Exercise_002a5b_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
+- [Exercise_002a5_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
+- [Exercise_002a5b_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
 
 ## Conclusion
 

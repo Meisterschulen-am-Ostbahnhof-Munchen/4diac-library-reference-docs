@@ -40,8 +40,8 @@ When an event arrives at input `EI`, the function block immediately triggers the
 
 ## 🛠️ Related Exercises
 
-- [Exercise_004a8](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a8/)
-- [Exercise_004a8_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a8_AX/)
+- [Exercise_004a8](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a8/)
+- [Exercise_004a8_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a8_AX/)
 
 ## Conclusion
 
