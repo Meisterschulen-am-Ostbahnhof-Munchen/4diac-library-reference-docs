@@ -1,0 +1,13 @@
+![dummy](dummy.svg)
+
+# dummy
+
+does nothing
+
+## Interface
+
+### Event Inputs
+
+| Name | Comment | With |
+| :--- | :--- | :--- |
+| EI1 | | |
