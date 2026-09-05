@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 576.916015625 132.0"
-     width="576.916015625" height="132.0">
+     viewBox="0 0 564.1875 132.0"
+     width="564.1875" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(254.9599609375, 10)">
+  <g transform="translate(242.2314453125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -95,7 +95,7 @@
     <text x="43.00537109375" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ADD_2</text>
-
+    
     <text x="50.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -167,10 +167,10 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Execution Confirmation</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">first summand – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_MAGNITUDE</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ADD input 1 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_MAGNITUDE</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">second summand – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_MAGNITUDE</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ADD input 2 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_MAGNITUDE</tspan></text>
 
     <text x="125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_MAGNITUDE</tspan> – ADD result</text>

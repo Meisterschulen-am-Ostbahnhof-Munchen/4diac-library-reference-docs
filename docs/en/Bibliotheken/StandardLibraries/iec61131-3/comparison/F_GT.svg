@@ -95,7 +95,7 @@
     <text x="47.0830078125" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">F_GT</text>
-
+    
     <text x="50.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -173,6 +173,6 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_ELEMENTARY</tspan></text>
 
     <text x="125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – value 1 > value2 = true</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – value 1 &gt; value2 = true</text>
   </g>
 </svg>

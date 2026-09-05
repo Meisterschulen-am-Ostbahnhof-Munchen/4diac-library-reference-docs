@@ -99,7 +99,7 @@
     <text x="43.0" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_DELAY</text>
-
+    
     <text x="58.56005859375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0.1</text>
@@ -142,6 +142,6 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Delayed event</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Delay time, >0 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Delay time, &gt;0 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
   </g>
 </svg>

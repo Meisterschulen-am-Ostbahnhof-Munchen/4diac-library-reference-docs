@@ -103,7 +103,7 @@
     <text x="43.0" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_CTD</text>
-
+    
     <text x="50.2236328125" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -202,7 +202,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Preset Value – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="139.447265625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – CV <= 0</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – CV &lt;= 0</text>
 
     <text x="139.447265625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan> – Counter Value</text>

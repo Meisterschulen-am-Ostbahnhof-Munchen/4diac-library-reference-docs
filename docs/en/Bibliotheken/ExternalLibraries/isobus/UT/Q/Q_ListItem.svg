@@ -103,7 +103,7 @@
     <text x="80.61181640625" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Q_ListItem</text>
-
+    
     <text x="99.71630859375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
@@ -242,7 +242,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-39" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">List index (-> see list)  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">List index (-&gt; see list)  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
 
     <text x="-39" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">New object ID or 0xFFFF to set empty  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
@@ -251,7 +251,7 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
 
     <text x="224.4326171875" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan> – Old list index (-> see list) </text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan> – Old list index (-&gt; see list) </text>
 
     <text x="224.4326171875" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan> – Old object ID or 0xFFFF to set empty </text>

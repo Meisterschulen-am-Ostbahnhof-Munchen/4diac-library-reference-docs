@@ -95,7 +95,7 @@
     <text x="80.52978515625" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ADS_SERVER_CONFIG</text>
-
+    
     <text x="134.3984375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -195,7 +195,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Server ADS port – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">ADS Server IPv4 address or hostname – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ADS Server IPv4 address or hostame – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="293.796875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Event Output Qualifier</text>

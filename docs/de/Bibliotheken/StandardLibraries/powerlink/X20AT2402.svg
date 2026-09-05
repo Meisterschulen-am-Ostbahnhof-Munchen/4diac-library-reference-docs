@@ -103,7 +103,7 @@
     <text x="43.0" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">X20AT2402</text>
-
+    
     <text x="65.98046875" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -294,9 +294,9 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Network Status</text>
 
     <text x="170.9609375" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – Temperature Input 01</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – Temperatur Input 01</text>
 
     <text x="170.9609375" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – Temperature Input 02</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – Temperatur Input 02</text>
   </g>
 </svg>

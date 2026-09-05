@@ -87,7 +87,7 @@
     <text x="43.0" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AIS_GE</text>
-
+    
     <text x="52.06591796875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -151,12 +151,12 @@
     <!-- External Labels -->
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 -- left operand (IN1 >= IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AIS</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 -- left operand (IN1 &gt;= IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AIS</tspan></text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 -- right operand (IN1 >= IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AIS</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 -- right operand (IN1 &gt;= IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AIS</tspan></text>
 
     <text x="129.1318359375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – IN1 >= IN2 = TRUE</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – IN1 &gt;= IN2 = TRUE</text>
   </g>
 </svg>
