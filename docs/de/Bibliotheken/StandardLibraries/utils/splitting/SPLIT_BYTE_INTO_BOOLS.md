@@ -55,7 +55,7 @@ Der Funktionsblock hat keine internen Zustände. Die Ausführung erfolgt direkt 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_053](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
+- [Uebung_053](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
 
 ## Fazit
 

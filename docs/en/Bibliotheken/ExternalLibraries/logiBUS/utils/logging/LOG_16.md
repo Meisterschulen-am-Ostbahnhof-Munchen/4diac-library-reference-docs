@@ -66,8 +66,8 @@ The function block does not possess a persistent internal state in the sense of 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_122](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122/)
-- [Exercise_122b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122b/)
+- [Exercise_122](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122/)
+- [Exercise_122b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122b/)
 
 ## Conclusion
 

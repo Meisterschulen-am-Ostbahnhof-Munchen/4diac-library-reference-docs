@@ -52,4 +52,4 @@ The output flags lim will signal that the output limits are active.
 
 ## 🛠️ Related exercises
 
-- [Uebung_153](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
+- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)

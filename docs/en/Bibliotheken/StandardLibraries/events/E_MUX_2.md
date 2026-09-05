@@ -50,7 +50,7 @@ In this way, the event flow is merged while preserving information about the eve
 
 ## 🛠️ Related Exercises
 
-- [Exercise_172](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
+- [Exercise_172](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
 
 ## Conclusion
 

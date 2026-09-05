@@ -64,7 +64,7 @@ hätte, wie es bei erweiterbarem ADD/MUL der Fall ist.
 - [F_DIV](../../../StandardLibraries/iec61131-3/arithmetic/F_DIV.md) — das normale,
   nicht-saturierende Standard-Pendant (undefiniertes Verhalten bei Integer-Division durch Null,
   `INF`/`NaN` bei Fließkomma-Division durch/von Null, statt Klemmen und Melden).
-- [Uebung_011b7](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b7/) — eine
+- [Uebung_011b7](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b7/) — eine
   Division-durch-Null-Demo mit `SAFE_DIV`, `LIMIT_HIT` auf einem zweiten Ausgang verdrahtet,
   damit das Klemmen auf der Hardware sichtbar wird.
 

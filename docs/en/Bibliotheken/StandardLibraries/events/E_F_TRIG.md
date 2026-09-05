@@ -62,7 +62,7 @@ The internal logic of the function block (as of `events-3.0.0`) is incorrect and
 
 ## 🛠️ Related Exercises
 
-- [Exercise_088](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
+- [Exercise_088](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
 
 ## Conclusion
 

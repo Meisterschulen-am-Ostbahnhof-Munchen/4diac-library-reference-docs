@@ -80,7 +80,7 @@ Da es sich um einen Composite FB handelt, wird der Zustand primär durch die int
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_011_AUDI](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Uebung_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
 
 ## Fazit
 

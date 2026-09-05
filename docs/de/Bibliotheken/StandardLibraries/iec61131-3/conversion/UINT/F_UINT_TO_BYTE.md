@@ -57,7 +57,7 @@ Der Funktionsblock besitzt keine internen Zustände. Die Konvertierung wird bei 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_12x_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
+- [Uebung_12x_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_12x_sub/)
 
 ## Fazit
 

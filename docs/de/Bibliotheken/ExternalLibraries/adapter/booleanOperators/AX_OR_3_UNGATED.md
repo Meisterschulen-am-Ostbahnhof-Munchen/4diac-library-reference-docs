@@ -77,8 +77,8 @@ Vergleich mit [OR_3](../../../StandardLibraries/iec61131-3/bitwiseOperators/OR_3
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_002a5_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
-- [Uebung_002a5b_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
+- [Uebung_002a5_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
+- [Uebung_002a5b_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
 
 ## Änderungserkennung
 

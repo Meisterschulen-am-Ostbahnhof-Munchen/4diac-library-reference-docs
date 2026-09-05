@@ -74,8 +74,8 @@ Compared to simple digital input blocks, Button_IX offers extended functionaliti
 
 ## 🛠️ Related Exercises
 
-- [Exercise_010a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a2/)
-- [Exercise_010a3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a3/)
+- [Exercise_010a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a2/)
+- [Exercise_010a3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a3/)
 
 ## Conclusion
 

@@ -77,7 +77,7 @@ Vergleich mit [E_TOF](../../../../../../StandardLibraries/events/timers/E_TOF.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
+- [Uebung_020e_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
 
 ## Fazit
 

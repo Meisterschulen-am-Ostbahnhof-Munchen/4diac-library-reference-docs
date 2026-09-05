@@ -42,4 +42,4 @@ The added CF will be set to announced in the next iso_DlCyclicGlobal() run.
 
 ## 🛠️ Related exercises
 
-- [Uebung_134](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)
+- [Uebung_134](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)

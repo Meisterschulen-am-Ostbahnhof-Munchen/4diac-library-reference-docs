@@ -50,7 +50,7 @@ Auswahl von Signalen.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_095_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
+- [Uebung_095_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
 
 ## Fazit
 

@@ -79,8 +79,8 @@ The **ADD_3** is an enhanced version of the adder for calculating the sum of thr
 
 ## 🛠️ Related Exercises
 
-- [Exercise_087](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087/)
-- [Exercise_087a1](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a1/)
+- [Exercise_087](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087/)
+- [Exercise_087a1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a1/)
 
 ## Conclusion
 

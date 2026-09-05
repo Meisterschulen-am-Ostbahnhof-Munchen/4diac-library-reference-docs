@@ -86,7 +86,7 @@ An event `RESET` from any state leads to state `sRESET`. There, all outputs (`DO
 
 ## 🛠️ Related Exercises
 
-- [Exercise_035a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a/)
+- [Exercise_035a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a/)
 
 ## Conclusion
 

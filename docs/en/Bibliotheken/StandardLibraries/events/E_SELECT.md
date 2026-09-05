@@ -72,7 +72,7 @@ The **E_SELECT** is a basic function block according to IEC 61499 (Annex A) that
 
 ## 🛠️ Related Exercises
 
-- [Exercise_095](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_095/)
+- [Exercise_095](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_095/)
 
 ## Conclusion
 

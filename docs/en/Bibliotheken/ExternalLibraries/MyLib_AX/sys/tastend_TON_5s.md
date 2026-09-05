@@ -66,8 +66,8 @@ The sub-application tastend_TON_5s provides a compact solution for time-delayed 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_103](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
-- [Exercise_103c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
+- [Exercise_103](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
+- [Exercise_103c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
 
 ---
 

@@ -83,7 +83,7 @@ This function block does not use any adapter interfaces.
 
 ## 🛠️ Related exercises
 
-- [Uebung_133](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_133/)
+- [Uebung_133](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_133/)
 
 ## Conclusion
 

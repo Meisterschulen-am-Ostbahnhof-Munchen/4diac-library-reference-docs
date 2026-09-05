@@ -70,8 +70,8 @@ The state of the flip-flop (`Q1`) depends on the current values of `S1` and `R` 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006e1](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006e1/)
-- [Exercise_006e1_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006e1_AX/)
+- [Exercise_006e1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006e1/)
+- [Exercise_006e1_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006e1_AX/)
 
 ## Conclusion
 

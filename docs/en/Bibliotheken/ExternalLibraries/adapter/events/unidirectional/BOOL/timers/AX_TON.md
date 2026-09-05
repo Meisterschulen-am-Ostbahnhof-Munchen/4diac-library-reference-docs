@@ -65,8 +65,8 @@ Comparison with [E_TON](../../../../../../StandardLibraries/events/timers/E_TON.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020c_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
-- [Exercise_160b2_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
+- [Exercise_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
+- [Exercise_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
 
 ## Conclusion
 

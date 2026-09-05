@@ -65,8 +65,8 @@ The FB_TON starts the time measurement when the IN input changes from FALSE to T
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020c3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c3/)
-- [Exercise_020c3_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Exercise_020c3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c3/)
+- [Exercise_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Conclusion
 

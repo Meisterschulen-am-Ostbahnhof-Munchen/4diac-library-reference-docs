@@ -84,7 +84,7 @@ Nach jeder dieser Aktionen werden die Status-Flags `QU` und `QD` basierend auf d
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_082](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_082/)
+- [Uebung_082](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_082/)
 
 ## Fazit
 

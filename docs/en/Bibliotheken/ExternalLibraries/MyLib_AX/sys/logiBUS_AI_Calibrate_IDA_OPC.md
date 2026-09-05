@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`logiBUS_AI_Calibrate_IDA_OPC` connects a physical analog input (`logiBUS_AI_IDA`) to a full VT- and OPC-UA-backed 2-point calibration (`AR_CALIBRATE_SQ_REF`) - used by the [AI_Calibrate training sample](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_OPC_UA/InputOutputTesterButton_AI_Calibrate_OPC_UA/). The input's raw value is converted into a physically scaled value through the calibration adapter chain; zero point (`ZERO`) and span (`SPAN`) are adjustable both via the VT and via OPC-UA, and are persisted in an INI file.
+`logiBUS_AI_Calibrate_IDA_OPC` connects a physical analog input (`logiBUS_AI_IDA`) to a full VT- and OPC-UA-backed 2-point calibration (`AR_CALIBRATE_SQ_REF`) - used by the [AI_Calibrate training sample](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_OPC_UA/InputOutputTesterButton_AI_Calibrate_OPC_UA/). The input's raw value is converted into a physically scaled value through the calibration adapter chain; zero point (`ZERO`) and span (`SPAN`) are adjustable both via the VT and via OPC-UA, and are persisted in an INI file.
 
 ## Function blocks used
 

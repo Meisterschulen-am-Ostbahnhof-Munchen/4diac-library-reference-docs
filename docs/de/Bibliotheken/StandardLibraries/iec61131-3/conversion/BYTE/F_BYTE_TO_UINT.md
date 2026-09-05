@@ -57,7 +57,7 @@ Der Funktionsblock hat keinen internen Zustand. Die Ausführung erfolgt unmittel
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
+- [Uebung_006c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
 
 ## Fazit
 

@@ -87,7 +87,7 @@ The function block has internally implicit states defined by the availability of
 
 ## 🛠️ Related Exercises
 
-- [Exercise_128b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
+- [Exercise_128b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
 
 ## Conclusion
 
