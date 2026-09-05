@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 973.5263671875 172.0"
-     width="973.5263671875" height="172.0">
+     viewBox="0 0 964.646484375 172.0"
+     width="964.646484375" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(433.658203125, 10)">
+  <g transform="translate(430.896484375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -107,7 +107,7 @@
     <text x="43.0" y="111.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_REND_3</text>
-
+    
     <text x="61.84814453125" y="126.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
@@ -131,9 +131,9 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Third event to wait for – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Reset the FB to initial state (i.e., wait again for all events) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Reset the FB to inital state (i.e., wait again for all events) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="148.6962890625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Triggered when all input events occurred at least once</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Triggered when all input events occured at least once</text>
   </g>
 </svg>

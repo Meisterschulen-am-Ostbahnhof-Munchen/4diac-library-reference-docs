@@ -99,7 +99,7 @@
     <text x="48.91015625" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ATimeOut</text>
-
+    
     <text x="65.6083984375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0.1</text>

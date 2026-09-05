@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 971.208984375 152.0"
-     width="971.208984375" height="152.0">
+     viewBox="0 0 962.3291015625 152.0"
+     width="962.3291015625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(442.6064453125, 10)">
+  <g transform="translate(439.8447265625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -103,7 +103,7 @@
     <text x="43.0" y="91.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_REND</text>
-
+    
     <text x="55.77783203125" y="106.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -124,9 +124,9 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">second event to wait for – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">reset the FB to initial state (i.e., wait again for both events) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">reset the FB to inital state (i.e., wait again for both events) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="136.5556640625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – triggered when both EI1 and EI2 occurred at least once</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – triggered when both EI1 and EI2 occured at least once</text>
   </g>
 </svg>

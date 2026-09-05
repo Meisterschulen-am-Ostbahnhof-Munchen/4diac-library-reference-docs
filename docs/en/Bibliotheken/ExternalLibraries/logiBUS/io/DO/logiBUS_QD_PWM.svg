@@ -103,7 +103,7 @@
     <text x="43.0" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">logiBUS_QD_PWM</text>
-
+    
     <text x="83.16943359375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1227.6318359375 152.0"
-     width="1227.6318359375" height="152.0">
+     viewBox="0 0 1172.2333984375 152.0"
+     width="1172.2333984375" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(618.966796875, 10)">
+  <g transform="translate(640.2333984375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -95,7 +95,7 @@
     <text x="43.0" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">SET_STRUCT_VALUE</text>
-
+    
     <text x="93.34130859375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -183,12 +183,12 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Structure to look into – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Member of the structure to set. Inner members are accessed using the dot (.) operator – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Member of the strucuture to retrieve. Inner members are access using the dot (.) operator – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">new value for the element – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY</tspan></text>
 
     <text x="211.6826171875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY</tspan> – Structure with the specified member set to element_value</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY</tspan> – TRUE if no errors ocurred, FALSE otherwise</text>
   </g>
 </svg>

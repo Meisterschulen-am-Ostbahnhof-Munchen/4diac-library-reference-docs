@@ -87,7 +87,7 @@
     <text x="45.94140625" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AI_GT</text>
-
+    
     <text x="50.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -151,12 +151,12 @@
     <!-- External Labels -->
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 -- left operand (IN1 > IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AI</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 -- left operand (IN1 &gt; IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AI</tspan></text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 -- right operand (IN1 > IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AI</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 -- right operand (IN1 &gt; IN2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AI</tspan></text>
 
     <text x="125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – IN1 > IN2 = TRUE</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – IN1 &gt; IN2 = TRUE</text>
   </g>
 </svg>

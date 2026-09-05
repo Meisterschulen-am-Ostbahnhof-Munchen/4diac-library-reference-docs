@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 813.4560546875 152.0"
-     width="813.4560546875" height="152.0">
+     viewBox="0 0 812.5947265625 152.0"
+     width="812.5947265625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(359.666015625, 10)">
+  <g transform="translate(358.8046875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -99,7 +99,7 @@
     <text x="43.0" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_TRAIN</text>
-
+    
     <text x="56.22216796875" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
@@ -174,7 +174,7 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Generated events</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Time by which the events should be separated – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Time by which the events should be seperated – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Number of events to generate – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>

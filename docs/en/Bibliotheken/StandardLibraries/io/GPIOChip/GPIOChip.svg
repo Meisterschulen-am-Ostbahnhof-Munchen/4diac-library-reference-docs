@@ -99,7 +99,7 @@
     <text x="76.9169921875" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">GPIOChip</text>
-
+    
     <text x="92.51806640625" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>

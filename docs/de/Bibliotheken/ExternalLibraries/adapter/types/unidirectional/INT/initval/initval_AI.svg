@@ -95,7 +95,7 @@
     <text x="45.63232421875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">initval_AI</text>
-
+    
     <text x="60.8984375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>

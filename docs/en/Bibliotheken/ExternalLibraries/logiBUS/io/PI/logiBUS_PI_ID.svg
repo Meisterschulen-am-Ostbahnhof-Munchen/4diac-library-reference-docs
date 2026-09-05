@@ -107,7 +107,7 @@
     <text x="59.765625" y="91.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">logiBUS_PI_ID</text>
-
+    
     <text x="88.47802734375" y="106.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
@@ -335,7 +335,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">After How many ms an IND – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">DWORD</tspan></text>
 
     <text x="-39" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Maximum 1 IND in how many ms. (< delta) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">DWORD</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Maximum 1 IND in how many ms. (&lt; delta) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">DWORD</tspan></text>
 
     <text x="229.9560546875" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Event Output Qualifier</text>
