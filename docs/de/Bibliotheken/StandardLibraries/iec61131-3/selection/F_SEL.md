@@ -75,9 +75,9 @@ Im Vergleich zu anderen Selektionsbausteinen bietet F_SEL:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_015](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
-- [Uebung_016](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_016/)
-- [Uebung_060](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Uebung_015](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
+- [Uebung_016](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_016/)
+- [Uebung_060](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Fazit
 

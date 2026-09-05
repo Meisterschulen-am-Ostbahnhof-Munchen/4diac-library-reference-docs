@@ -77,7 +77,7 @@ Im Vergleich zu einfachen digitalen Eingangsbausteinen bietet Funk_IX erweiterte
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
+- [Uebung_003b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
 
 ## Fazit
 

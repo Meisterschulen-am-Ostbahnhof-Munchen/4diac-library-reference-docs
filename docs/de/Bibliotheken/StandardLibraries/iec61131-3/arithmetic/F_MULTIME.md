@@ -78,7 +78,7 @@ Der **F_MULTIME** ist ein standardkonformer Funktionsbaustein zur Multiplikation
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2/)
+- [Uebung_020c2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2/)
 
 ## Fazit
 

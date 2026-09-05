@@ -74,9 +74,9 @@ Im Vergleich zu einfachen digitalen Ausgabebausteinen bietet DataPanel_MI_QXA:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Uebung_003b3_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
-- [Uebung_010a4_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a4_AX/)
+- [Uebung_003b2_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
+- [Uebung_003b3_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Uebung_010a4_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a4_AX/)
 
 ## Fazit
 

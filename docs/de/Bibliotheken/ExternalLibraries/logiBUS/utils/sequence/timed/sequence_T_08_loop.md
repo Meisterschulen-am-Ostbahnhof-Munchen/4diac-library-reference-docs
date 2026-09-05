@@ -94,7 +94,7 @@ Im Gegensatz zu einem `E_CYCLE`- oder `E_DELAY`-FB, die einfache periodische ode
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_038](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_038/)
+- [Uebung_038](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_038/)
 
 ## Fazit
 

@@ -65,7 +65,7 @@ Der Block kehrt danach direkt wieder in den Wartezustand (1) zurück.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_121](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
+- [Uebung_121](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
 
 ## Fazit
 

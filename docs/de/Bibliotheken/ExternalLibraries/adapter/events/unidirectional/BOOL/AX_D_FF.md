@@ -72,7 +72,7 @@ Vergleich mit [E_D_FF](../../../../../StandardLibraries/events/E_D_FF.md)
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_170_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_170_AX/)
+- [Uebung_170_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_170_AX/)
 
 ## Fazit
 

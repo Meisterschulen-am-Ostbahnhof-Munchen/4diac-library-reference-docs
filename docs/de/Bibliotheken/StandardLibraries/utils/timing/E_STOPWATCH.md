@@ -97,8 +97,8 @@ stateDiagram-v2
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020i](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
-- [Uebung_020i_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
+- [Uebung_020i](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Uebung_020i_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
 
 ## Fazit
 

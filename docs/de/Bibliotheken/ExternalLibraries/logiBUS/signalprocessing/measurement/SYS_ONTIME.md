@@ -66,7 +66,7 @@ Anschließend überwacht der Block kontinuierlich die Systemressource. Sobald si
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_140](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_140/)
+- [Uebung_140](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_140/)
 
 ## Fazit
 

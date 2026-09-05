@@ -84,7 +84,7 @@ Im Vergleich zu generischen CAN-Empfangsblöcken ist `AlPgnRxNew8B_REQ` speziell
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_132](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_132/)
+- [Uebung_132](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_132/)
 
 ## Fazit
 

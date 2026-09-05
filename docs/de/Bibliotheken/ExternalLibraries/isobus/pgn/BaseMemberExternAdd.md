@@ -43,4 +43,4 @@ The added CF will be set to announced in the next iso_DlCyclicGlobal() run.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_134](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)
+- [Uebung_134](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)

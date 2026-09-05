@@ -77,7 +77,7 @@ Vergleich mit [E_TOF](../../../../../../StandardLibraries/events/timers/E_TOF.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
+- [Uebung_020e_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
 
 ## Fazit
 

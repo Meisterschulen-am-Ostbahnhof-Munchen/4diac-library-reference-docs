@@ -74,7 +74,7 @@ Im Vergleich zu anderen Multiplexern bietet F_MUX_2:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_090a1](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
+- [Uebung_090a1](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
 
 ## Fazit
 

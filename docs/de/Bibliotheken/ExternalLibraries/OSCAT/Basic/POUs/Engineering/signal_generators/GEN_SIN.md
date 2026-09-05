@@ -46,5 +46,5 @@ in addition to a analog output Out there is a second boolean output Q with the c
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_126b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2_sub/)
-- [Uebung_126b_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
+- [Uebung_126b2_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2_sub/)
+- [Uebung_126b_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)

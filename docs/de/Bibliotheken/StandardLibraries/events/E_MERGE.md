@@ -74,8 +74,8 @@ Diese Bausteine erlauben die einfache Zusammenführung von bis zu vier Ereignisq
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_004a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2/)
-- [Uebung_004a2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a2_AX/)
+- [Uebung_004a2](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2/)
+- [Uebung_004a2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_004a2_AX/)
 
 ## Fazit
 

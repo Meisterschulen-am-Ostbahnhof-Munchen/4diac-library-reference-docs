@@ -87,7 +87,7 @@ Der Baustein besitzt intern implizite Zustände, die durch die Verfügbarkeit ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_128b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
+- [Uebung_128b](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
 
 ## Fazit
 

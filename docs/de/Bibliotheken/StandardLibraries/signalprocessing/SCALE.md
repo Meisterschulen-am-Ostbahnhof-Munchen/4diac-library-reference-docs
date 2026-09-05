@@ -68,7 +68,7 @@ Der Funktionsblock hat keine internen Zustände. Die Operation wird bei jedem RE
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_042](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
+- [Uebung_042](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
 
 ## Fazit
 

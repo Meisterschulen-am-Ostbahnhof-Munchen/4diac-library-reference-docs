@@ -79,7 +79,7 @@ Dieser Baustein kapselt also die reine Zustandslogik (welcher Schritt ist der n�
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_175](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
+- [Uebung_175](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
 
 ## Fazit
 

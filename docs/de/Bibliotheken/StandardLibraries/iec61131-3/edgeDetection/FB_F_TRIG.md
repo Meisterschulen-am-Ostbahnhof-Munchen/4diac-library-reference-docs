@@ -63,8 +63,8 @@ Der Funktionsblock speichert den vorherigen Zustand des `CLK`-Signals in einer i
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_178](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)
-- [Uebung_178_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_178_AX/)
+- [Uebung_178](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)
+- [Uebung_178_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_178_AX/)
 
 ## Fazit
 

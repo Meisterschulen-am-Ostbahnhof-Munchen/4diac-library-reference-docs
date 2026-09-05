@@ -34,4 +34,4 @@ Der Funktionsblock empfängt einen UDINT-Wert am Daten-Eingang OUT und wandelt d
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_083_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
+- [Uebung_083_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)

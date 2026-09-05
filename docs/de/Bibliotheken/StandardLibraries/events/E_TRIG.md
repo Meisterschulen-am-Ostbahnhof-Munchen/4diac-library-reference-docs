@@ -50,7 +50,7 @@ Angenommen, mehrere Funktionsbausteine in einer Ressource haben einen unverbunde
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_176](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
+- [Uebung_176](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
 
 ## Fazit
 

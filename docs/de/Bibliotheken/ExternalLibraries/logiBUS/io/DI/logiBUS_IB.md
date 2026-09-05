@@ -84,8 +84,8 @@ Im Vergleich zu einfachen digitalen Eingabebausteinen bietet logiBUS_IB erweiter
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
-- [Uebung_011a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
+- [Uebung_006c](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006c/)
+- [Uebung_011a](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a/)
 
 ## Fazit
 

@@ -72,7 +72,7 @@ Im Vergleich zu einfachen digitalen Eingangsblöcken bietet Aux_IX erweiterte Se
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_010b1](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_010b1/)
+- [Uebung_010b1](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010b1/)
 
 ## Fazit
 

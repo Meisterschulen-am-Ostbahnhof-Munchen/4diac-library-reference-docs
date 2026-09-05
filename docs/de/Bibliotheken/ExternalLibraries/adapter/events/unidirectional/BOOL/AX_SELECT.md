@@ -50,7 +50,7 @@ Auswahl von Signalen.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_095_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
+- [Uebung_095_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
 
 ## Fazit
 

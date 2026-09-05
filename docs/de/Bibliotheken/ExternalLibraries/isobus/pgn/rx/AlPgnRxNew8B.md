@@ -80,8 +80,8 @@ Der Block verfügt über implizite Zustände:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_130](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_130/)
-- [Uebung_134](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)
+- [Uebung_130](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_130/)
+- [Uebung_134](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_134/)
 
 ## Fazit
 

@@ -55,4 +55,4 @@ the output flags lim will signal that the output limits are active.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_153](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
+- [Uebung_153](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)

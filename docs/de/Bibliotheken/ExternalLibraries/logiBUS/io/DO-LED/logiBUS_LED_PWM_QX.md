@@ -73,7 +73,7 @@ Im Vergleich zu einfachen digitalen Ausgangsbausteinen bietet logiBUS_LED_PWM_QX
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_030](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_030/)
+- [Uebung_030](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_030/)
 
 ## Fazit
 

@@ -62,7 +62,7 @@ Im Vergleich zu einfachen booleschen Ausgabeblöcken bietet Aux_QX erweiterte Se
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003c_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
+- [Uebung_003c_sub](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
 
 ## Fazit
 

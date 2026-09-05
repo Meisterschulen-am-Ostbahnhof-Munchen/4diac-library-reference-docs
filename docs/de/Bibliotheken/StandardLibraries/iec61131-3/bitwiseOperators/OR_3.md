@@ -65,8 +65,8 @@ Im Vergleich zu einfachen ODER-Bausteinen mit nur zwei Eingängen bietet OR_3 di
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_002a5_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
-- [Uebung_002a5b_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
+- [Uebung_002a5_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5_AX/)
+- [Uebung_002a5b_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a5b_AX/)
 
 ## Fazit
 

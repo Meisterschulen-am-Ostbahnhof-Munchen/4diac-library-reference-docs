@@ -72,7 +72,7 @@ Im Vergleich zu ereignisbasierten Timern wie [AX_TOF](../../events/unidirectiona
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
+- [Uebung_020e2_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
 
 ## Fazit
 

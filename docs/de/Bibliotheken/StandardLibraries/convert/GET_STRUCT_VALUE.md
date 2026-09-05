@@ -78,7 +78,7 @@ Es gibt in der Standardbibliothek von 4diac keine direkt vergleichbaren Funktion
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_052](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
+- [Uebung_052](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
 
 ## Fazit
 

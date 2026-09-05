@@ -78,7 +78,7 @@ Im Vergleich zu einfachen booleschen Ausgabeblöcken bietet Aux_QXA:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003c_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003c_sub_AX/)
+- [Uebung_003c_sub_AX](https://docs.ms-muc-docs.de/projects/visual-programming-languages-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003c_sub_AX/)
 
 ## Fazit
 
