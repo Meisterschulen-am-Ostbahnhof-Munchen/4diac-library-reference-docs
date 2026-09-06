@@ -41,9 +41,9 @@ This function block thus acts as a simple monitor for the event flow.
 - **Operating Mode Switching**: Commands from a manual controller (`EI`) are only forwarded if the system is in "Manual" mode (`PERMIT` = true).
 - **Data Validation**: An event that triggers further data processing is only triggered if a previous data validation was successful (`PERMIT` = true).
 - **`E_SWITCH`**: While `E_PERMIT` either passes or blocks an event (1-to-1 or 1-to-0), `E_SWITCH` forwards an event to one of two different outputs (1-to-2). `E_PERMIT` is a gate, and `E_SWITCH` is a switch.
-- [Exercise_009](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009/)
-- [Exercise_080c](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_080c/)
-- [Exercise_094](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_094/)
+- [Exercise_009](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009/)
+- [Exercise_080c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_080c/)
+- [Exercise_094](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_094/)
 
 The `E_PERMIT` block is a fundamental and widely used block for implementing conditions and enable statements in the event-driven logic of IEC 61499. Its simplicity and clear function make it an indispensable tool for creating safe and robust control sequences.
 

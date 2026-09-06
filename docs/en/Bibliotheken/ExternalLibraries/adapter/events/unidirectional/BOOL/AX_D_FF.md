@@ -71,7 +71,7 @@ Compare with [E_D_FF](../../../../../StandardLibraries/events/E_D_FF.md)
 
 ## 🛠️ Related Exercises
 
-- [Exercise_170_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_170_AX/)
+- [Exercise_170_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_170_AX/)
 
 ## Conclusion
 

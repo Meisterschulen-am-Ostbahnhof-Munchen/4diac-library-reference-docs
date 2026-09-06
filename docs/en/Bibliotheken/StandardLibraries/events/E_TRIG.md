@@ -50,7 +50,7 @@ Suppose several function blocks in a resource have an unconnected input named `I
 
 ## 🛠️ Related Exercises
 
-- [Exercise_176](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
+- [Exercise_176](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
 
 ## Conclusion
 

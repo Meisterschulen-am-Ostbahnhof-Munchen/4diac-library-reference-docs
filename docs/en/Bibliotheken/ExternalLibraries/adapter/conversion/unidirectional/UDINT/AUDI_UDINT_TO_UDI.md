@@ -33,4 +33,4 @@ The function block receives a UDINT value at the OUT data input and converts it 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_083_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
+- [Exercise_083_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)

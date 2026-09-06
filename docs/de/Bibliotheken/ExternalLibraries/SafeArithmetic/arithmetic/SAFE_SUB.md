@@ -68,9 +68,9 @@ Subtraktion ist weder assoziativ noch kommutativ, sodass ein N-stelliges, "erwei
 - [F_SUB](../../../StandardLibraries/iec61131-3/arithmetic/F_SUB.md) — das normale,
   nicht-saturierende Standard-Pendant (stiller Wraparound/`INF` bei Overflow statt Klemmen und
   Melden).
-- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
+- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
   der diese Bibliothek motiviert hat.
-- [Uebung_011b5](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b5/) — dasselbe
+- [Uebung_011b5](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b5/) — dasselbe
   `1 - 12`-Szenario, erneut ausgeführt mit `SAFE_SUB`, mit `LIMIT_HIT` auf einem zweiten Ausgang
   verdrahtet, damit das Klemmen auf der Hardware sichtbar wird.
 

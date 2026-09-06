@@ -63,7 +63,7 @@ The function block accepts 16 quarter bytes and combines them into a 32-bit DWOR
 
 ## 🛠️ Related Exercises
 
-- [Exercise_060](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Exercise_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Conclusion
 

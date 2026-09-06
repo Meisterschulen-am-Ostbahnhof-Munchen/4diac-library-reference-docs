@@ -66,7 +66,7 @@ Zweierkomplement-Wraparound berechnen — laut Norm korrekt, aber gefährlich f�
 - [F_MUL](../../../StandardLibraries/iec61131-3/arithmetic/F_MUL.md) — das
   normale, nicht-saturierende Standard-Pendant (stiller Wraparound/`INF` bei Overflow statt
   Klemmen und Melden).
-- [Uebung_011b3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
+- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — der Hardware-Befund,
   der diese Bibliothek motiviert hat.
 
 ## Fazit

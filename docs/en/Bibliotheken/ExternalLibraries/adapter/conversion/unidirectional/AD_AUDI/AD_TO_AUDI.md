@@ -34,4 +34,4 @@ As soon as an event (`E1`) arrives at `AD_IN` along with data (`D1`), the DWORD 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_011_AUDI](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Exercise_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)

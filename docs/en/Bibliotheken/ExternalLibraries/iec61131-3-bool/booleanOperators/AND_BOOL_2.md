@@ -68,9 +68,9 @@ The `AND_BOOL_2` block is a fundamental building block in control and automation
 - **`OR_BOOL_2` / `XOR_BOOL_2`:** These blocks implement other basic Boolean operations (OR and exclusive OR, respectively). They have the same event-driven interface (`REQ`/`CNF`), but perform a different logical operation on the inputs `IN1` and `IN2`.
 - **Combinatorial Logic in SFC/ST:** The AND function could also be directly encoded in Structured Text (ST) using the `&` or `AND` operator. The advantage of the `AND_BOOL_2` function block lies in its standardized, reusable, and graphically linkable form within the 4diac function block network (FBN).
 - **Combinatorial Logic in SFC/ST:** The AND function could also be directly encoded in Structured Text (ST) using the `&` or `AND` operator.
-- [Exercise_002a4](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a4/)
-- [Exercise_002b3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002b3/)
-- [Exercise_006a3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3/)
+- [Exercise_002a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a4/)
+- [Exercise_002b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002b3/)
+- [Exercise_006a3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a3/)
 
 The `AND_BOOL_2` function block is an essential, reliable, and easy-to-use building block for implementing Boolean logic in 4diac-based control applications. Its clear, event-driven interface and deterministic functionality make it the ideal building block for safety operations, control conditions, and general logical operations. It is the first choice for pure Boolean binary operations.
 

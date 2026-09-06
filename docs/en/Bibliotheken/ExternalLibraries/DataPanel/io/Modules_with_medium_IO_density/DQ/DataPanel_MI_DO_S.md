@@ -7,9 +7,9 @@ DataPanel Modules with medium IO density DO Struct
 | :--- | :--- | :--- |
 | Pin | USINT | 255 |
 
-- [Uebung_003b2_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
-- [Uebung_003b2_sub_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Uebung_003b3_sub_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Uebung_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
+- [Uebung_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
+- [Uebung_003b3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
 
 ## Structure
 

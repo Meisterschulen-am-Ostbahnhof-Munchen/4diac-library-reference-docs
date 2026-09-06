@@ -59,7 +59,7 @@ The function block has no internal states. Selection and routing occur immediate
 
 ## 🛠️ Related Exercises
 
-- [Exercise_090a2](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
+- [Exercise_090a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
 
 ## Conclusion
 

@@ -76,7 +76,7 @@ The function block has no internal state (memory-free, combinatorial). Its outpu
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a5b](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a5b/)
+- [Exercise_002a5b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_002a5b/)
 
 ## Conclusion
 

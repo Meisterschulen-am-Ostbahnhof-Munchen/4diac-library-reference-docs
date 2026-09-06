@@ -1,6 +1,6 @@
 docs_dir: .
 site_name: '4diac Libraries: FB & Adapter Reference (4.1)'
-site_url: https://docs.ms-muc-docs.de/projects/4diac-library-reference-docs/
+site_url: https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs-en/
 extra:
   alternate:
   - lang: de

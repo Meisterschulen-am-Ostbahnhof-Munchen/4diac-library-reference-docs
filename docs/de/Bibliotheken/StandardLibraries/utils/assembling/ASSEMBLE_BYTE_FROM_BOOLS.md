@@ -65,8 +65,8 @@ Bei Auslösung des Ereignisses `REQ` werden die aktuellen Werte der booleschen E
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_035a1b_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a1b_AX/)
-- [Uebung_053](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
+- [Uebung_035a1b_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a1b_AX/)
+- [Uebung_053](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_053/)
 
 ## Fazit
 

@@ -42,7 +42,7 @@ The inputs are logically ORed and forwarded without delay.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_004a2_3](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2_3/)
+- [Exercise_004a2_3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2_3/)
 
 ## Conclusion
 

@@ -48,7 +48,7 @@ The function block has a simple, stateless sequence:
 
 Unlike general-purpose computing blocks (such as `MUL`, `ADD`) or scalers, `hsv2rgb` is an application-specific block that encapsulates a complex, non-linear algorithm. It saves the user the time-consuming and error-prone implementation of the conversion to Structured Text or other languages. A direct counterpart, `rgb2hsv`, for the reverse conversion would be a similarly specialized block.
 
-- [Exercise_031](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
+- [Exercise_031](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
 
 The `hsv2rgb` function block is a useful and specialized tool for all 4diac applications involving color manipulation. By encapsulating the conversion algorithm in a standardized IEC 61499 block, it significantly simplifies programming, promotes reusability, and increases software reliability. Its use is recommended where intuitive, human-perceived color control meets device-oriented RGB output.
 

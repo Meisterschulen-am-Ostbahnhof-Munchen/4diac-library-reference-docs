@@ -85,7 +85,7 @@ This block therefore encapsulates the pure state logic (which step is next, how 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_175](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
+- [Exercise_175](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
 
 ## Conclusion
 

@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`logiBUS_AI_Calibrate_IDA_OPC` bindet einen physischen Analogeingang (`logiBUS_AI_IDA`) an eine vollstaendige VT- und OPC-UA-gestuetzte 2-Punkt-Kalibrierung (`AR_CALIBRATE_SQ_REF`) an - genutzt vom [AI_Calibrate-Trainingsbeispiel](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_OPC_UA/InputOutputTesterButton_AI_Calibrate_OPC_UA/). Der Rohwert des Eingangs wird ueber die Kalibrieradapterkette in einen physikalisch skalierten Wert gewandelt; Nullpunkt (`ZERO`) und Spanne (`SPAN`) sind sowohl per VT als auch per OPC-UA einstellbar und werden per INI-Datei persistiert.
+`logiBUS_AI_Calibrate_IDA_OPC` bindet einen physischen Analogeingang (`logiBUS_AI_IDA`) an eine vollstaendige VT- und OPC-UA-gestuetzte 2-Punkt-Kalibrierung (`AR_CALIBRATE_SQ_REF`) an - genutzt vom [AI_Calibrate-Trainingsbeispiel](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_OPC_UA/InputOutputTesterButton_AI_Calibrate_OPC_UA/). Der Rohwert des Eingangs wird ueber die Kalibrieradapterkette in einen physikalisch skalierten Wert gewandelt; Nullpunkt (`ZERO`) und Spanne (`SPAN`) sind sowohl per VT als auch per OPC-UA einstellbar und werden per INI-Datei persistiert.
 
 ## Verwendete Funktionsbausteine (FBs)
 

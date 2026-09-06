@@ -75,7 +75,7 @@ Comparison with [AND_3](../../../StandardLibraries/iec61131-3/bitwiseOperators/A
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a6_AX](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
+- [Exercise_002a6_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
 
 ## Change Detection
 

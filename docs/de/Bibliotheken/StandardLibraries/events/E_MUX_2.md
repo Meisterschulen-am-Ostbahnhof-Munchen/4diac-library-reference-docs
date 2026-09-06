@@ -52,7 +52,7 @@ Auf diese Weise wird der Ereignisfluss zusammengeführt, wobei die Information �
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_172](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
+- [Uebung_172](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_172/)
 
 ## Fazit
 

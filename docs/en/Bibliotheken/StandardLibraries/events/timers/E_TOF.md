@@ -56,7 +56,7 @@ The E_TOF block can be used in various industrial control applications, especial
 - **Machine Control**: The block can be used to ensure that a machine continues to run for a specific period of time after being switched off, for example, to complete processes or to implement safety precautions.
 - **Lighting Control**: The block can be used in lighting systems to keep the light on for a specific period of time after the switch has been turned off.
 - **Valve Control**: This function block can be used to keep a valve open for a specific period of time after it has closed, for example, to release pressure.
-- [Exercise_020e](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
+- [Exercise_020e](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
 
 The E_TOF function block is a versatile function block in IEC 61499 that implements a delayed shutdown function. Due to its internal use of the **E_DELAY** function block, it can function correctly **even if it is not called cyclically**. This makes it particularly suitable for event-driven and distributed control systems where cyclic calls are not always guaranteed.
 

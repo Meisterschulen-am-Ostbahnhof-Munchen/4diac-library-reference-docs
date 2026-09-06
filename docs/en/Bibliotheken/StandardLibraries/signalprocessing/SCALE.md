@@ -64,7 +64,7 @@ Ideal for simple linear scaling without additional logic.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_042](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
+- [Exercise_042](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
 
 ## Conclusion
 

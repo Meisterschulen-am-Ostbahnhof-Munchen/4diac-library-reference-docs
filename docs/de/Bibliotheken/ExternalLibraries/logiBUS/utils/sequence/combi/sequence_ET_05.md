@@ -99,8 +99,8 @@ Im Vergleich zu einfachen Timer-Ketten oder Zählern bietet `sequence_ET_05` ein
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_039](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039/)
-- [Uebung_039a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039a/)
+- [Uebung_039](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039/)
+- [Uebung_039a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039a/)
 
 ## Fazit
 

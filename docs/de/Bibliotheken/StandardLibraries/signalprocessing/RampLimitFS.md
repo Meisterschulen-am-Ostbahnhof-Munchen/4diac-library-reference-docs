@@ -94,7 +94,7 @@ Der Funktionsblock hat keinen internen Zustand. Jedes Ereignis führt sofort zur
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_009a](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
+- [Uebung_009a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
 
 ## Fazit
 

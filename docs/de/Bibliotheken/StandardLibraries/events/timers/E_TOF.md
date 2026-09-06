@@ -70,7 +70,7 @@ Der E_TOF-Baustein kann in verschiedenen industriellen Steuerungsanwendungen ein
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
+- [Uebung_020e](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
 
 ## Fazit
 

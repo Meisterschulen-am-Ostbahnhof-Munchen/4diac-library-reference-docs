@@ -62,7 +62,7 @@ Im Vergleich zu einfachen booleschen Ausgabeblöcken bietet Aux_QX erweiterte Se
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003c_sub](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
+- [Uebung_003c_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
 
 ## Fazit
 

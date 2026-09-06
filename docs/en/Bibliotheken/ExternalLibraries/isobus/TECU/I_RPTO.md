@@ -98,8 +98,8 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65091) for the precise
 
 ## 🛠️ Related Exercises
 
-- [Exercise_074](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
-- [Exercise_079](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Exercise_074](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
+- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 

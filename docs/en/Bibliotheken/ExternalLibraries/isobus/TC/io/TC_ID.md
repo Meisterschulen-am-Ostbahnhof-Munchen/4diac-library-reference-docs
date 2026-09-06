@@ -80,7 +80,7 @@ Compared to simple input blocks, TC_ID offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_060](https://docs.ms-muc-docs.de/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Exercise_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Conclusion
 
