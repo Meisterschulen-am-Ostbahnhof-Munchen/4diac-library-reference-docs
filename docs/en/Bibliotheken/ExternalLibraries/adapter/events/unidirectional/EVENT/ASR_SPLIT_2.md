@@ -56,7 +56,7 @@ The function block does not have its own state diagram, as it operates purely pa
 
 ## Comparison with Similar Components
 
-- **ASR_MERGE_2** (hypothetical): Combines two ASR inputs into one output (e.g., using priority or a logical OR operation). The **ASR_SPLIT_2** does the opposite.
+- **[ASR_MERGE_2](ASR_MERGE_2.md)**: Merges two ASR inputs into one output (every SET/RESET event is forwarded unchanged, no priority arbitration). The **ASR_SPLIT_2** does the opposite.
 - **SPLIT_1_to_N** (generic split components): A general splitter that operates with a configurable number of outputs. The **ASR_SPLIT_2** is a specialized version with two fixed outputs.
 
 ## Conclusion
@@ -68,5 +68,3 @@ The **ASR_SPLIT_2** is a simple yet useful generic component for multiplying ASR
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
 - [🌐 Eclipse 4diac IDE & Color Reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
-
-]
