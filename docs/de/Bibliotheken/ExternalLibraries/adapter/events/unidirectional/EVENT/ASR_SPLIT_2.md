@@ -56,7 +56,7 @@ Der Baustein besitzt kein eigenes Zustandsdiagramm, da er rein passiv arbeitet. 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-- **ASR_MERGE_2** (hypothetisch): Führt zwei ASR‑Eingänge zu einem Ausgang zusammen (z. B. mittels Priorität oder logischer ODER‑Verknüpfung). Der **ASR_SPLIT_2** macht das Gegenteil.
+- **[ASR_MERGE_2](ASR_MERGE_2.md)**: Führt zwei ASR‑Eingänge auf einen Ausgang zusammen (jedes SET/RESET-Ereignis wird unverändert durchgereicht, keine Priorisierung). Der **ASR_SPLIT_2** macht das Gegenteil.
 - **SPLIT_1_to_N** (generische Split-Komponenten): Ein allgemeiner Splitter, der mit einer konfigurierbaren Anzahl von Ausgängen arbeitet. Der **ASR_SPLIT_2** ist eine spezialisierte Version mit fest zwei Ausgängen.
 
 ## Fazit
