@@ -12,26 +12,26 @@ Der Funktionsblock `GET_DWORD` dient dazu, den aktuellen Wert einer als InOut-Pa
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                       |
+| -------- | -------- | ------------------------------------------------------------------------------- |
 | `REQ`    | `Event`  | Anforderung zum Auslesen der InOut-Variable und Bereitstellen des Ausgangswerts |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                          |
+| -------- | -------- | ---------------------------------------------------------------------------------- |
 | `CNF`    | `Event`  | Bestätigung, dass der Lesevorgang abgeschlossen und die Ausgabe aktualisiert wurde |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
+| Name | Datentyp | Kommentar                                                                                       |
+| ---- | -------- | ----------------------------------------------------------------------------------------------- |
 | `IN` | `DWORD`  | Quellvariable (InOut). Der aktuelle Wert dieser Variable wird bei `REQ` gelesen. Initialwert: 0 |
 
 ### **Daten-Ausgänge**
 
-| Name  | Datentyp | Kommentar |
-|-------|----------|-----------|
+| Name  | Datentyp | Kommentar                                                                                       |
+| ----- | -------- | ----------------------------------------------------------------------------------------------- |
 | `OUT` | `DWORD`  | Gepufferter Ausgangswert. Enthält den bei der letzten Ausführung gelesenen Wert. Initialwert: 0 |
 
 ### **Adapter**
@@ -54,8 +54,8 @@ Der FB puffert den gelesenen Wert, d.h. `OUT` behält seinen Wert, bis ein erneu
 
 Der Funktionsblock besitzt einen einzigen Zustand `REQ`:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                                                    |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQ`   | Wartet auf das Ereignis `REQ`. Bei Eintritt wird die Aktion `REQ` (OUT := IN) ausgeführt und danach das Ereignis `CNF` gesendet. Nach `CNF` verbleibt der FB im selben Zustand. |
 
 ## Anwendungsszenarien

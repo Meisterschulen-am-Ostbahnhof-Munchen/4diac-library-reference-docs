@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Die Datenweitergabe erfolgt über den Plug-Adapt
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Kommentar |
-|-------------|-----|----------|-----------|
-| `AD_IN` | `adapter::types::unidirectional::AD` | Socket (Eingang) | DWORD Adapter Input – liefert ein DWORD-Datum und ein Ereignis |
-| `ADI_OUT` | `adapter::types::unidirectional::ADI` | Plug (Ausgang) | DINT Adapter Output – liefert ein konvertiertes DINT-Datum und ein Ereignis |
+| Bezeichnung | Typ                                   | Richtung         | Kommentar                                                                   |
+| ----------- | ------------------------------------- | ---------------- | --------------------------------------------------------------------------- |
+| `AD_IN`     | `adapter::types::unidirectional::AD`  | Socket (Eingang) | DWORD Adapter Input – liefert ein DWORD-Datum und ein Ereignis              |
+| `ADI_OUT`   | `adapter::types::unidirectional::ADI` | Plug (Ausgang)   | DINT Adapter Output – liefert ein konvertiertes DINT-Datum und ein Ereignis |
 
 ## Funktionsweise
 

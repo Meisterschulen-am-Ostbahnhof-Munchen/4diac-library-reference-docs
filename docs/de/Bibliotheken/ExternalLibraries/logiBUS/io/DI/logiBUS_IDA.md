@@ -12,37 +12,37 @@ Der **logiBUS_IDA** ist ein Composite-Funktionsblock (CFB) zur digitalen Doppelw
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                                                                        |
+| -------- | ----- | ----------------------------------------------------------------------------------- |
 | INIT     | EInit | Service-Initialisierung; erwartet gültige Parameter (QI, PARAMS, Input, InputEvent) |
-| REQ      | Event | Service-Anforderung; triggert eine erneute Datenabfrage am internen Baustein |
+| REQ      | Event | Service-Anforderung; triggert eine erneute Datenabfrage am internen Baustein        |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                                                     |
+| -------- | ----- | ---------------------------------------------------------------- |
 | INITO    | EInit | Initialisierungsbestätigung; gibt den Status (QO, STATUS) zurück |
 
 ### **Daten-Eingänge**
 
-| Variable      | Typ                         | Beschreibung |
-|---------------|-----------------------------|--------------|
-| QI            | BOOL                        | Qualifizierer für den Ereigniseingang; steuert die Ausführung |
-| PARAMS        | STRING                      | Service-Parameter (z. B. Konfigurationszeichenfolge) |
-| Input         | logiBUS_DI_S                | Auswahl des digitalen Eingangskanals (I1 … I8); Vorgabewert: *Invalid* |
-| InputEvent    | logiBUS_DI_Events_S         | Auswahl des Ereignistyps (aktuell nur *REPEAT* unterstützt); Vorgabewert: *Invalid* |
+| Variable   | Typ                 | Beschreibung                                                                        |
+| ---------- | ------------------- | ----------------------------------------------------------------------------------- |
+| QI         | BOOL                | Qualifizierer für den Ereigniseingang; steuert die Ausführung                       |
+| PARAMS     | STRING              | Service-Parameter (z. B. Konfigurationszeichenfolge)                                |
+| Input      | logiBUS_DI_S        | Auswahl des digitalen Eingangskanals (I1 … I8); Vorgabewert: *Invalid*              |
+| InputEvent | logiBUS_DI_Events_S | Auswahl des Ereignistyps (aktuell nur *REPEAT* unterstützt); Vorgabewert: *Invalid* |
 
 ### **Daten-Ausgänge**
 
-| Variable      | Typ    | Beschreibung |
-|---------------|--------|--------------|
-| QO            | BOOL   | Qualifizierer des Ausgangsereignisses |
-| STATUS        | STRING | Dienststatus (z. B. Fehlermeldungen oder Betriebszustand) |
+| Variable | Typ    | Beschreibung                                              |
+| -------- | ------ | --------------------------------------------------------- |
+| QO       | BOOL   | Qualifizierer des Ausgangsereignisses                     |
+| STATUS   | STRING | Dienststatus (z. B. Fehlermeldungen oder Betriebszustand) |
 
 ### **Adapter**
 
-| Adapter | Typ                          | Beschreibung |
-|---------|------------------------------|--------------|
+| Adapter | Typ                                | Beschreibung                                                                                  |
+| ------- | ---------------------------------- | --------------------------------------------------------------------------------------------- |
 | IN      | adapter::types::unidirectional::AD | Unidirektionaler Eingangsadapter zur Aufnahme der digitalen Doppelwortdaten aus der Ressource |
 
 ## Funktionsweise

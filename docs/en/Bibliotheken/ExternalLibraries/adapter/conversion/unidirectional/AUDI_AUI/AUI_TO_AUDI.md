@@ -28,10 +28,10 @@ No dedicated data outputs: This function block has no direct data outputs. Data 
 
 ### **Adapters**
 
-| Name | Type | Direction | Comment |
-| ------ | ----- | ---------- | ----------- |
-| AUI_IN | `adapter::types::unidirectional::AUI` | Socket (Input) | Receives UINT data and associated event |
-| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Output) | Sends UINT data and associated event |
+| Name     | Type                                   | Direction      | Comment                                 |
+| -------- | -------------------------------------- | -------------- | --------------------------------------- |
+| AUI_IN   | `adapter::types::unidirectional::AUI`  | Socket (Input) | Receives UINT data and associated event |
+| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Output)  | Sends UINT data and associated event    |
 
 ## Functionality
 

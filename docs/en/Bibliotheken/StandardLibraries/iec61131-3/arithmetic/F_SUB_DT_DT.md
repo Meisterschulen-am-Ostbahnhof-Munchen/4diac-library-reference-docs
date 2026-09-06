@@ -34,11 +34,13 @@ The **F_SUB_DT_DT** is a standards-compliant function block for the precise calc
 
 - `REQ` event with two DATE_AND_TIME values
 - Format: DT#1970-01-01-00:00:00 to DT#2106-02-07-06:28:15
+
 1. **Difference Calculation**:
 
 - Conversion to epoch microseconds
 - Subtraction of timestamps (IN1 - IN2)
 - Conversion to TIME data type
+
 1. **Result Output**:
 
 - `CNF` event with calculated interval
@@ -71,11 +73,11 @@ The **F_SUB_DT_DT** is a standards-compliant function block for the precise calc
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_SUB_DT_DT | F_SUB_DATE_DATE | F_SUB_TIME |
-| --------------- | ---------------- | ----------------- | ------------ |
-| Accuracy | Microseconds | Days | Nanoseconds |
-| Input Type | DATE_AND_TIME | DATE | TIME |
-| Typical Application | Process Diagnostics | Scheduling | Cycle Time |
+| Feature             | F_SUB_DT_DT         | F_SUB_DATE_DATE | F_SUB_TIME  |
+| ------------------- | ------------------- | --------------- | ----------- |
+| Accuracy            | Microseconds        | Days            | Nanoseconds |
+| Input Type          | DATE_AND_TIME       | DATE            | TIME        |
+| Typical Application | Process Diagnostics | Scheduling      | Cycle Time  |
 
 ## Conclusion
 

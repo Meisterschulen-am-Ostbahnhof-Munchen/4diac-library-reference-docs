@@ -1,6 +1,6 @@
-![E_TOF](E_TOF.svg)
-
 # E_TOF
+
+![E_TOF](E_TOF.svg)
 
 ## 🎧 Podcast
 
@@ -11,7 +11,7 @@ IEC 61499 is an international standard that enables the modeling of distributed 
 
 The E_TOF function block is a **Composite Function Block (CFB)** specified according to IEC 61499. A CFB consists of an interface and an internal network of function blocks that work together to implement the desired behavior.
 
-#### Struktur des E_TOF-Bausteins
+### Struktur des E_TOF-Bausteins
 
 #### Introduction
 
@@ -19,7 +19,7 @@ The E_TOF function block is a **Composite Function Block (CFB)** specified accor
 
 ## Beschreibung
 
-##### Interface
+### Interface
 
 The interface of the E_TOF block consists of:
 
@@ -34,7 +34,7 @@ The interface of the E_TOF block consists of:
 - **Output Variable**:
 - **Q (Output)**: This is a Boolean variable that indicates the timer's state. It remains **TRUE** until the delay time **PT** has elapsed.
 
-##### Internal Network (FBNetwork)
+#### Internal Network (FBNetwork)
 
 The E_TOF block uses three function blocks internally to implement the desired behavior:
 
@@ -70,7 +70,7 @@ The fact that it doesn't require cyclical calls is a key advantage.## ⚖️ Com
 
 ## 🛠️ Zugehörige Übungen
 
-#### Anwendungsbeispiele
+### Anwendungsbeispiele
 
 #### Unabhängigkeit vom zyklischen Aufruf
 

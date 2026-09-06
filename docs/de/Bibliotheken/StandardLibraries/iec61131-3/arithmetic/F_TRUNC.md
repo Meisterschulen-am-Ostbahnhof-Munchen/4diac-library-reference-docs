@@ -69,11 +69,11 @@ Der **F_TRUNC** ist ein standardkonformer Funktionsbaustein zur Abrundung von Fl
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_TRUNC  | F_ROUND  | F_FLOOR  |
-|---------------|----------|----------|----------|
-| Operation     | Richtung Null | Mathematisch | Abrunden |
-| Beispiel      | 3.9 → 3  | 3.9 → 4  | 3.9 → 3  |
-| Beispiel    | -2.7 → -2 | -2.7 → -3 | -2.7 → -3 |
+| Feature   | F_TRUNC       | F_ROUND      | F_FLOOR   |
+| --------- | ------------- | ------------ | --------- |
+| Operation | Richtung Null | Mathematisch | Abrunden  |
+| Beispiel  | 3.9 → 3       | 3.9 → 4      | 3.9 → 3   |
+| Beispiel  | -2.7 → -2     | -2.7 → -3    | -2.7 → -3 |
 
 ## Fazit
 

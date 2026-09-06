@@ -62,18 +62,18 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 
 ## Koordinatenbereich
 
-| Parameter | Bereich     | Beschreibung               |
-|-----------|------------|----------------------------|
-| X-Wert    | 0 - 65535  | Horizontale Position (px)  |
-| Y-Wert    | 0 - 65535  | Vertikale Position (px)    |
+| Parameter | Bereich   | Beschreibung              |
+| --------- | --------- | ------------------------- |
+| X-Wert    | 0 - 65535 | Horizontale Position (px) |
+| Y-Wert    | 0 - 65535 | Vertikale Position (px)   |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Ungültiger Punktindex             |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Polygon-ID              |
+| Code | Konstante           | Bedeutung             |
+| ---- | ------------------- | --------------------- |
+| 0    | VT_E_NO_ERR         | Erfolgreich           |
+| -6   | VT_E_OVERFLOW       | Ungültiger Punktindex |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Polygon-ID  |
 
 ## Anwendungsszenarien
 
@@ -84,11 +84,11 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ChangePolygonPoint | VtGeometryEditor | VtDynamicShape |
-|---------------|----------------------|------------------|----------------|
-| ISO-Standard  | ✔                    | ✖                | ✖              |
-| Genauigkeit   | 16-bit Koordinaten   | 8-bit            | 16-bit         |
-| Punktanzahl   | Bis zu 255           | Unbegrenzt       | Begrenzt       |
+| Feature      | Q_ChangePolygonPoint | VtGeometryEditor | VtDynamicShape |
+| ------------ | -------------------- | ---------------- | -------------- |
+| ISO-Standard | ✔                    | ✖                | ✖              |
+| Genauigkeit  | 16-bit Koordinaten   | 8-bit            | 16-bit         |
+| Punktanzahl  | Bis zu 255           | Unbegrenzt       | Begrenzt       |
 
 ## Fazit
 

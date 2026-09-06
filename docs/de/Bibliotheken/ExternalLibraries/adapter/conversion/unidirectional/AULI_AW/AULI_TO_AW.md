@@ -12,34 +12,34 @@ Der Funktionsblock **AULI_TO_AW** ist ein zusammengesetzter Baustein (Composite 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name              | Typ   | Kommentar                 |
+| ----------------- | ----- | ------------------------- |
 | E1 (über AULI_IN) | Event | Startet die Konvertierung |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name             | Typ   | Kommentar                                         |
+| ---------------- | ----- | ------------------------------------------------- |
 | E1 (über AW_OUT) | Event | Signalisiert die Fertigstellung der Konvertierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name              | Typ   | Kommentar          |
+| ----------------- | ----- | ------------------ |
 | D1 (über AULI_IN) | ULINT | ULINT‑Eingangswert |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name             | Typ  | Kommentar         |
+| ---------------- | ---- | ----------------- |
 | D1 (über AW_OUT) | WORD | WORD‑Ausgangswert |
 
 ### **Adapter**
 
-| Typ | Rolle | Name | Kommentar |
-|-----|-------|------|-----------|
+| Typ                                      | Rolle  | Name    | Kommentar             |
+| ---------------------------------------- | ------ | ------- | --------------------- |
 | **adapter::types::unidirectional::AULI** | Socket | AULI_IN | ULINT‑Adapter Eingang |
-| **adapter::types::unidirectional::AW**   | Plug  | AW_OUT  | WORD‑Adapter Ausgang |
+| **adapter::types::unidirectional::AW**   | Plug   | AW_OUT  | WORD‑Adapter Ausgang  |
 
 ## Funktionsweise
 

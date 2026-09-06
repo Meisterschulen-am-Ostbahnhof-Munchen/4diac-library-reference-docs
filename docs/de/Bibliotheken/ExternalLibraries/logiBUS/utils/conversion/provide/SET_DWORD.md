@@ -12,30 +12,30 @@ Der Funktionsbaustein `SET_DWORD` dient dazu, einen DWORD-Wert über einen Einga
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Comment |
-|------|-----|---------|
+| Name | Typ   | Comment                                           |
+| ---- | ----- | ------------------------------------------------- |
 | REQ  | Event | Normal Execution Request – löst das Schreiben aus |
 
 Mit dem Ereignis `REQ` werden die Daten `IN` und `OUT` gleichzeitig bereitgestellt.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Comment |
-|------|-----|---------|
+| Name | Typ   | Comment                                                              |
+| ---- | ----- | -------------------------------------------------------------------- |
 | CNF  | Event | Execution Confirmation – wird nach erfolgreicher Ausführung gesendet |
 
 Der Ausgang `CNF` referenziert die veränderte Variable `OUT`.
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Comment |
-|------|-----|---------|
+| Name | Typ   | Comment                                                                |
+| ---- | ----- | ---------------------------------------------------------------------- |
 | IN   | DWORD | Wert, der in die Zielvariable geschrieben werden soll (Initialwert: 0) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Comment |
-|------|-----|---------|
+| Name | Typ   | Comment                                                                            |
+| ---- | ----- | ---------------------------------------------------------------------------------- |
 | OUT  | DWORD | Zielvariable (InOut) – der Wert von `IN` wird hierhin geschrieben (Initialwert: 0) |
 
 **Hinweis:** `OUT` ist als InOut-Variable deklariert, d. h. sie kann von außen referenziert werden und ihr Speicherort wird direkt durch den Baustein verändert. Sie erscheint im FB-Netzwerk sowohl als Ausgang als auch als Eingang.
@@ -64,9 +64,9 @@ Anschließend wird das Ereignis `CNF` gesendet. Der Baustein ist zustandslos und
 
 Der Baustein besteht aus einem einfachen Zustandsautomaten mit genau einem Zustand:
 
-| Zustand | Auslösendes Ereignis | Aktion | Ausgang |
-|---------|----------------------|--------|---------|
-| `REQ`   | `REQ`                | `OUT := IN;` | `CNF` |
+| Zustand | Auslösendes Ereignis | Aktion       | Ausgang |
+| ------- | -------------------- | ------------ | ------- |
+| `REQ`   | `REQ`                | `OUT := IN;` | `CNF`   |
 
 Es gibt keine Wartezustände oder Verzweigungen.
 

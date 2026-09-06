@@ -12,29 +12,29 @@ Der Funktionsblock **GET_UINT** liest den aktuellen Wert einer als InOut-Variabl
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                             |
+| -------- | -------------------------------------------------------------------------------------------------------- |
 | **REQ**  | Normaler Ausführungsauftrag; löst das Lesen der InOut-Variablen und die Aktualisierung des Ausgangs aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------- |
 | **CNF**  | Bestätigt die erfolgreiche Ausführung von REQ und signalisiert, dass die Ausgänge gültig sind. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| **IN**   | UINT  | Quellvariable, die als InOut-Parameter bereitgestellt wird. Der Wert wird bei REQ ausgelesen und unverändert an den Ausgang übergeben. Standardwert: `0`. |
+| Variable | Typ  | Beschreibung                                                                                                                                              |
+| -------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IN**   | UINT | Quellvariable, die als InOut-Parameter bereitgestellt wird. Der Wert wird bei REQ ausgelesen und unverändert an den Ausgang übergeben. Standardwert: `0`. |
 
 **Hinweis:** `IN` ist als InOut-Variable deklariert, wird innerhalb des Bausteins jedoch nur lesend verwendet.
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| **OUT**  | UINT  | Gepufferter Ausgangswert, der den bei der letzten REQ-Ausführung gelesenen Wert von `IN` enthält. Standardwert: `0`. |
+| Variable | Typ  | Beschreibung                                                                                                         |
+| -------- | ---- | -------------------------------------------------------------------------------------------------------------------- |
+| **OUT**  | UINT | Gepufferter Ausgangswert, der den bei der letzten REQ-Ausführung gelesenen Wert von `IN` enthält. Standardwert: `0`. |
 
 ### **Adapter**
 
@@ -58,8 +58,8 @@ Die Verarbeitung erfolgt strikt sequenziell und ohne Verzögerung.
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                      |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **REQ** | Wartet auf das Eintreffen des Ereignisses `REQ` und führt dann die Zuweisung `OUT := IN` durch. Anschließend wird `CNF` gesendet. |
 
 Es gibt keinen expliziten Start- oder Endzustand; nach der Ausführung bleibt der Baustein im Zustand `REQ` bereit für den nächsten Auftrag.

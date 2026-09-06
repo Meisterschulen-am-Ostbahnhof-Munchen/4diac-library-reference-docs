@@ -28,16 +28,16 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Typ | Richtung | Name |
-| --- | -------- | ---- |
-| Socket (adapter::types::unidirectional::AUI) | Eingang | IN |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT1 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT2 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT3 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT4 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT5 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT6 |
-| Plug (adapter::types::unidirectional::AUI) | Ausgang | OUT7 |
+| Typ                                          | Richtung | Name |
+| -------------------------------------------- | -------- | ---- |
+| Socket (adapter::types::unidirectional::AUI) | Eingang  | IN   |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT1 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT2 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT3 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT4 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT5 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT6 |
+| Plug (adapter::types::unidirectional::AUI)   | Ausgang  | OUT7 |
 
 ## Funktionsweise
 

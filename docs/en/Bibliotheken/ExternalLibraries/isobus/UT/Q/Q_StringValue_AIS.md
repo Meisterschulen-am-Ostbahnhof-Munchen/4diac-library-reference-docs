@@ -12,34 +12,34 @@ The function block **Q_StringValue_AIS** implements the "Command Change String V
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|----------|-------|-------------------------------------------------|
-| INIT | EInit | Service initialization, sets the object ID |
+| Event | Type  | Comment                                    |
+| ----- | ----- | ------------------------------------------ |
+| INIT  | EInit | Service initialization, sets the object ID |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-| ---------- | ------- | --------------------------------------------------- |
-| INITO | EInit | Confirmation of successful initialization |
-| CNF | Event | Confirmation of the requested service (result) |
+| Event | Type  | Comment                                        |
+| ----- | ----- | ---------------------------------------------- |
+| INITO | EInit | Confirmation of successful initialization      |
+| CNF   | Event | Confirmation of the requested service (result) |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Comment |
-|----------|------|--------------|-----------------------------|
-| u16ObjId | UINT | ID_NULL | Object ID of the value to be changed |
+| Name     | Type | Initial Value | Comment                              |
+| -------- | ---- | ------------- | ------------------------------------ |
+| u16ObjId | UINT | ID_NULL       | Object ID of the value to be changed |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-| ----------- | ------- | ---------------------------------------------------- |
-| STATUS | STRING | Service status (e.g., "IDLE", "BUSY", "ERROR") |
-| s16result | INT | Return value (see service description) |
+| Name      | Type   | Comment                                        |
+| --------- | ------ | ---------------------------------------------- |
+| STATUS    | STRING | Service status (e.g., "IDLE", "BUSY", "ERROR") |
+| s16result | INT    | Return value (see service description)         |
 
 ### **Adapter**
 
-| Name | Type | Comment |
-|------------|------------------------------------|----------------------------------|
+| Name       | Type                                | Comment                      |
+| ---------- | ----------------------------------- | ---------------------------- |
 | pau8String | adapter::types::unidirectional::AIS | Returns the new string value |
 
 ## Valid Object IDs

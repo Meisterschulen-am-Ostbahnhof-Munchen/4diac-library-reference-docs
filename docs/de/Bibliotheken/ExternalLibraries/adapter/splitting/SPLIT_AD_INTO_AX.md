@@ -20,20 +20,20 @@ Keine. Die Ausgabe erfolgt über die Adapter‑Plugs, deren internes Ereignisver
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Typ   | Kommentar              |
-|-------------|-------|------------------------|
-| IN          | AD    | DWORD Input (32 Bit)   |
+| Bezeichnung | Typ | Kommentar            |
+| ----------- | --- | -------------------- |
+| IN          | AD  | DWORD Input (32 Bit) |
 
 Die Daten werden über den Adapter‑Socket IN empfangen. Der AD‑Adapter stellt einen DWORD‑Wert sowie ein zugehöriges Ereignis (E1) bereit.
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Typ   | Kommentar           |
-|-------------|-------|---------------------|
-| BIT_00      | AX    | Bool Bit 0          |
-| BIT_01      | AX    | Bool Bit 1          |
-| …           | …     | …                   |
-| BIT_31      | AX    | Bool Bit 31         |
+| Bezeichnung | Typ | Kommentar   |
+| ----------- | --- | ----------- |
+| BIT_00      | AX  | Bool Bit 0  |
+| BIT_01      | AX  | Bool Bit 1  |
+| …           | …   | …           |
+| BIT_31      | AX  | Bool Bit 31 |
 
 Alle 32 Ausgangsadapter sind vom Typ AX (unidirektionaler BOOL‑Adapter). Jeder Ausgang gibt den Zustand des entsprechenden Bits des eingehenden DWORD aus.
 

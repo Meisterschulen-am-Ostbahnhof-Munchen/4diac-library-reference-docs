@@ -12,21 +12,21 @@ Der Funktionsblock **AQ_D_FF_TMIN** realisiert ein datenverriegelndes D-Flipflop
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit Variable | Kommentar |
-|----------|-----|-------------|-----------|
-| INIT | EInit | Tmin | Initialisierungsanfrage, setzt die minimale Zwischenzeit. |
+| Ereignis | Typ   | Mit Variable | Kommentar                                                 |
+| -------- | ----- | ------------ | --------------------------------------------------------- |
+| INIT     | EInit | Tmin         | Initialisierungsanfrage, setzt die minimale Zwischenzeit. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| INITO | EInit | Initialisierungsbestätigung. |
+| Ereignis | Typ   | Kommentar                    |
+| -------- | ----- | ---------------------------- |
+| INITO    | EInit | Initialisierungsbestätigung. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| Tmin | TIME | Minimale Wartezeit zwischen zwei Ausgangsereignissen (EO). |
+| Variable | Typ  | Kommentar                                                  |
+| -------- | ---- | ---------------------------------------------------------- |
+| Tmin     | TIME | Minimale Wartezeit zwischen zwei Ausgangsereignissen (EO). |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine eigenen Datenausgänge, das latched Signal wird über den Adapter `Q` ausg
 
 ### **Adapter**
 
-| Typ | Bezeichnung | Richtung | Kommentar |
-|-----|-------------|----------|-----------|
-| `adapter::types::unidirectional::AQ` | I | Socket (Eingang) | Wert zum latchen, enthält je ein Daten‑ (D1) und Ereignissignal (E1). |
-| `adapter::types::unidirectional::AQ` | Q | Plug (Ausgang) | Gelatchter Wert, enthält je ein Daten- (D1) und Ereignissignal (E1). |
+| Typ                                  | Bezeichnung | Richtung         | Kommentar                                                             |
+| ------------------------------------ | ----------- | ---------------- | --------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | I           | Socket (Eingang) | Wert zum latchen, enthält je ein Daten‑ (D1) und Ereignissignal (E1). |
+| `adapter::types::unidirectional::AQ` | Q           | Plug (Ausgang)   | Gelatchter Wert, enthält je ein Daten- (D1) und Ereignissignal (E1).  |
 
 ## Funktionsweise
 
@@ -55,12 +55,12 @@ Die Initialisierung (`INIT`) übergibt den Parameter `Tmin` an den internen FB, 
 
 Der FB besitzt keinen expliziten öffentlichen Zustandsautomaten. Sein Verhalten wird durch den internen FB `E_D_FF_ANY_TMIN` bestimmt, der als Zustand den letzten gelatchten Wert und eine Wartezeitlogik aufweist. Vereinfacht dargestellt:
 
-| Zustand | Bedeutung |
-| --------- | ----------- |
-| Initialisiert | Nach INIT bereit, Tmin ist gesetzt |
-| Bereit | Wartet auf Takt (I.E1) |
-| Gelatcht | Datenwert wurde übernommen, Ausgangsereignis wird nach Ablauf von Tmin ausgegeben |
-| Wartend | Tmin läuft – Ausgangsereignis wird blockiert |
+| Zustand       | Bedeutung                                                                         |
+| ------------- | --------------------------------------------------------------------------------- |
+| Initialisiert | Nach INIT bereit, Tmin ist gesetzt                                                |
+| Bereit        | Wartet auf Takt (I.E1)                                                            |
+| Gelatcht      | Datenwert wurde übernommen, Ausgangsereignis wird nach Ablauf von Tmin ausgegeben |
+| Wartend       | Tmin läuft – Ausgangsereignis wird blockiert                                      |
 
 Eine detaillierte Zustandsdarstellung ist im Quellcode des internen FBs ersichtlich.
 
@@ -73,11 +73,11 @@ Eine detaillierte Zustandsdarstellung ist im Quellcode des internen FBs ersichtl
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Besonderheit |
-| ---------- | -------------- |
-| `AQ_D_FF` / `E_D_FF` | Einfaches D‑Flipflop ohne zeitliche Einschränkung des Ausgangs. |
-| `AQ_D_FF_TMIN` (dieser FB) | Erweitert um minimale Zwischenzeit Tmin zwischen Ausgangsereignissen. |
-| `AQ_D_FF_TMAX` (hypothetisch) | Begrenzung der maximalen Zeit zwischen zwei Ausgangsereignissen. |
+| Baustein                      | Besonderheit                                                          |
+| ----------------------------- | --------------------------------------------------------------------- |
+| `AQ_D_FF` / `E_D_FF`          | Einfaches D‑Flipflop ohne zeitliche Einschränkung des Ausgangs.       |
+| `AQ_D_FF_TMIN` (dieser FB)    | Erweitert um minimale Zwischenzeit Tmin zwischen Ausgangsereignissen. |
+| `AQ_D_FF_TMAX` (hypothetisch) | Begrenzung der maximalen Zeit zwischen zwei Ausgangsereignissen.      |
 
 Gegenüber einem Standard-D‑Flipflop bietet `AQ_D_FF_TMIN` zusätzlichen Schutz vor zu rascher Folge von Ausgangsereignissen, was in der Praxis häufig erforderlich ist.
 

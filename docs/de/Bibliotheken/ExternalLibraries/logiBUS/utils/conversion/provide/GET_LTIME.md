@@ -12,14 +12,14 @@ Der Funktionsbaustein **GET_LTIME** dient dazu, den aktuellen Wert einer LTIME-V
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                       |
+| -------- | -------- | --------------------------------------------------------------- |
 | REQ      | Event    | Normaler Ausführungsauftrag. Verbunden mit dem Eingangswert IN. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                           |
+| -------- | -------- | ------------------------------------------------------------------- |
 | CNF      | Event    | Bestätigung der Ausführung. Verbunden mit den Ausgängen OUT und IN. |
 
 ### **Daten-Eingänge**
@@ -28,8 +28,8 @@ Der Baustein besitzt keine klassischen Dateneingänge. Der Zugriff auf den Quell
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
+| Name | Datentyp | Kommentar                                    |
+| ---- | -------- | -------------------------------------------- |
 | OUT  | LTIME    | Gepufferter Ausgabewert (Initialwert LT#0s). |
 
 ### **Adapter**
@@ -56,9 +56,9 @@ Somit wird der Wert der externen LTIME-Variablen nur zu dem Zeitpunkt gelesen, a
 
 Der Baustein ist als SimpleFB realisiert und besitzt genau einen internen Zustand:
 
-| Zustand | Aktion | Ausgangsereignis |
-|---------|--------|------------------|
-| REQ     | Algorithmus REQ (OUT := IN) | CNF |
+| Zustand | Aktion                      | Ausgangsereignis |
+| ------- | --------------------------- | ---------------- |
+| REQ     | Algorithmus REQ (OUT := IN) | CNF              |
 
 Nach dem Empfang von **REQ** wird der Zustand einmalig durchlaufen und die Ausgabe erzeugt. Es gibt keine weiteren Zustände oder Verzweigungen.
 

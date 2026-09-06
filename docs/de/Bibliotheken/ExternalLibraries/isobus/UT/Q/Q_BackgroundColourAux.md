@@ -61,19 +61,19 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Standard-Hilfsfarben (Auszug)
 
-| Code | Anwendungsbereich      | Typische Farbe  |
-|------|------------------------|-----------------|
-| 16   | Statusbalken           | Blau            |
-| 32   | Sekundärbereiche       | Grau            |
-| 48   | Hilfslinien            | Hellblau        |
+| Code | Anwendungsbereich | Typische Farbe |
+| ---- | ----------------- | -------------- |
+| 16   | Statusbalken      | Blau           |
+| 32   | Sekundärbereiche  | Grau           |
+| 48   | Hilfslinien       | Hellblau       |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz                |
+| Code | Konstante                 | Bedeutung           |
+| ---- | ------------------------- | ------------------- |
+| 0    | VT_E_NO_ERR               | Erfolgreich         |
+| -128 | VT_E_HANDLE_INVALID       | Ungültige Objekt-ID |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz   |
 
 ## Anwendungsszenarien
 
@@ -84,11 +84,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_BackgroundColourAux | Q_BackgroundColour | VtAuxColour |
-|---------------|-----------------------|--------------------|-------------|
-| ISO-Standard  | ✔                     | ✔                  | ✖           |
-| Farbbereich   | Hilfselemente         | Hauptelemente      | Alle        |
-| Verwendung    | Sekundär              | Primär             | Universell  |
+| Feature      | Q_BackgroundColourAux | Q_BackgroundColour | VtAuxColour |
+| ------------ | --------------------- | ------------------ | ----------- |
+| ISO-Standard | ✔                     | ✔                  | ✖           |
+| Farbbereich  | Hilfselemente         | Hauptelemente      | Alle        |
+| Verwendung   | Sekundär              | Primär             | Universell  |
 
 ## Fazit
 

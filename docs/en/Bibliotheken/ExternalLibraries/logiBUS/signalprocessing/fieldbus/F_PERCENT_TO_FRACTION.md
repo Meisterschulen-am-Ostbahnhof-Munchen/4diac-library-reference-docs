@@ -12,27 +12,27 @@ The function block **F_PERCENT_TO_FRACTION** converts a percent value (REAL 0.0â
 
 ### **Event Inputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| REQ | Event | Request conversion; processes the current value of `rPercent`. |
+| Event | Data Type | Comment                                                        |
+| ----- | --------- | -------------------------------------------------------------- |
+| REQ   | Event     | Request conversion; processes the current value of `rPercent`. |
 
 ### **Event Outputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| CNF | Event | Conversion complete; `rFraction` has been updated. |
+| Event | Data Type | Comment                                            |
+| ----- | --------- | -------------------------------------------------- |
+| CNF   | Event     | Conversion complete; `rFraction` has been updated. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| rPercent | REAL | Percent value, clamped to 0.0-100.0. |
+| Name     | Data Type | Comment                              |
+| -------- | --------- | ------------------------------------ |
+| rPercent | REAL      | Percent value, clamped to 0.0-100.0. |
 
 ### **Data Outputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| rFraction | REAL | Fraction 0.0-1.0. |
+| Name      | Data Type | Comment           |
+| --------- | --------- | ----------------- |
+| rFraction | REAL      | Fraction 0.0-1.0. |
 
 ### **Adapter**
 
@@ -65,9 +65,9 @@ END_IF;
 
 ## State Overview
 
-| State | Action | Output Event |
-|---------|--------|-----------------|
-| REQ | Executes the **REQ** algorithm (clamping + division by 100) | CNF |
+| State | Action                                                      | Output Event |
+| ----- | ----------------------------------------------------------- | ------------ |
+| REQ   | Executes the **REQ** algorithm (clamping + division by 100) | CNF          |
 
 There are no further waiting or initialization states.
 

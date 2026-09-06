@@ -31,10 +31,10 @@ Zusätzlich werden die Ausgabeadapter **Q** und **CV** mit demselben Ereignis be
 
 Alle Dateneingänge werden über die Adapter-Sockets bereitgestellt:
 
-| Adapter | Daten-Eingang | Typ | Beschreibung |
-|---------|---------------|-----|--------------|
-| CU.D1   | CU            | INT | Count Up – Zählimpuls (wird bei jedem Ereignis inkrementiert) |
-| R.D1    | R             | INT | Reset – Wert auf den der Zähler zurückgesetzt wird (typischerweise 0) |
+| Adapter | Daten-Eingang | Typ | Beschreibung                                                              |
+| ------- | ------------- | --- | ------------------------------------------------------------------------- |
+| CU.D1   | CU            | INT | Count Up – Zählimpuls (wird bei jedem Ereignis inkrementiert)             |
+| R.D1    | R             | INT | Reset – Wert auf den der Zähler zurückgesetzt wird (typischerweise 0)     |
 | PV.D1   | PV            | INT | Preset Value – Schwellwert, bei dessen Erreichen der Ausgang Q aktiv wird |
 
 ### **Daten-Ausgänge**
@@ -44,13 +44,13 @@ Alle Dateneingänge werden über die Adapter-Sockets bereitgestellt:
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| CU | adapter::types::unidirectional::AX | Socket (Eingang) | Ereignis- und Datenadapter für den Zählimpuls |
-| R | adapter::types::unidirectional::AX | Socket (Eingang) | Ereignis- und Datenadapter für das Rücksetzen |
-| PV | adapter::types::unidirectional::AI | Socket (Eingang) | Datenadapter (nur Wert, kein Ereignis) für den Preset-Wert |
-| Q | adapter::types::unidirectional::AX | Plug (Ausgang) | Ereignis- und Datenadapter für den Zählerausgang |
-| CV | adapter::types::unidirectional::AI | Plug (Ausgang) | Datenadapter (nur Wert) für den aktuellen Zählerstand |
+| Name | Typ                                | Richtung         | Beschreibung                                               |
+| ---- | ---------------------------------- | ---------------- | ---------------------------------------------------------- |
+| CU   | adapter::types::unidirectional::AX | Socket (Eingang) | Ereignis- und Datenadapter für den Zählimpuls              |
+| R    | adapter::types::unidirectional::AX | Socket (Eingang) | Ereignis- und Datenadapter für das Rücksetzen              |
+| PV   | adapter::types::unidirectional::AI | Socket (Eingang) | Datenadapter (nur Wert, kein Ereignis) für den Preset-Wert |
+| Q    | adapter::types::unidirectional::AX | Plug (Ausgang)   | Ereignis- und Datenadapter für den Zählerausgang           |
+| CV   | adapter::types::unidirectional::AI | Plug (Ausgang)   | Datenadapter (nur Wert) für den aktuellen Zählerstand      |
 
 ## Funktionsweise
 
@@ -85,12 +85,12 @@ Der Baustein hat keine eigenen sequentiellen Zustände jenseits dieser Datenabh�
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| **AI_FB_CTU** | Adapter-basiert, verwendet IEC 61131-3 CTU, löst bei jedem Eingang aus |
-| **Standard CTU (IEC 61131)** | Eingänge als Events + Daten, kein Adapterkonzept, oft direkt an Hardware gebunden |
-| **CTUD (Auf-/Abwärtszähler)** | Bietet zusätzlich Abwärtszählen, hat komplexere Schnittstelle |
-| **AX_CTU** (hypothetisch) | Könnte optimierte Ereignisauslösung (nur bei Änderung) bieten |
+| Baustein                      | Eigenschaften                                                                     |
+| ----------------------------- | --------------------------------------------------------------------------------- |
+| **AI_FB_CTU**                 | Adapter-basiert, verwendet IEC 61131-3 CTU, löst bei jedem Eingang aus            |
+| **Standard CTU (IEC 61131)**  | Eingänge als Events + Daten, kein Adapterkonzept, oft direkt an Hardware gebunden |
+| **CTUD (Auf-/Abwärtszähler)** | Bietet zusätzlich Abwärtszählen, hat komplexere Schnittstelle                     |
+| **AX_CTU** (hypothetisch)     | Könnte optimierte Ereignisauslösung (nur bei Änderung) bieten                     |
 
 Der **AI_FB_CTU** besticht durch seine einfache Adapter-Anbindung, erfordert aber ggf. einen externen Filter, um unnötige Aufrufe zu vermeiden.
 

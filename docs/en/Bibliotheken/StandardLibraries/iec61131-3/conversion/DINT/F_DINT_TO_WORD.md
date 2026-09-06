@@ -10,7 +10,7 @@ The function block `F_DINT_TO_WORD` converts a 32-bit integer value (DINT) into 
 - **IN**: The 32-bit integer value (DINT) to be converted.
 - **OUT**: The converted 16-bit word value (WORD).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_DINT_TO_WORD` converts a 32-bit integer value (DINT) into 
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 This function block has no adapters.
 

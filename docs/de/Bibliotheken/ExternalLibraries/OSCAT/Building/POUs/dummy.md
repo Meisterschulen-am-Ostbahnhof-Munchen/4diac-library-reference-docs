@@ -1,6 +1,6 @@
-![dummy](dummy.svg)
-
 # dummy
+
+![dummy](dummy.svg)
 
 does nothing
 
@@ -9,5 +9,5 @@ does nothing
 ### Event Inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| EI1 | | |
+| :--- | :------ | :--- |
+| EI1  |         |      |

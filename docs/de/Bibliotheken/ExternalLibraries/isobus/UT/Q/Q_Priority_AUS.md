@@ -12,36 +12,36 @@ Der Funktionsblock Q_Priority_AUS dient zur Änderung der Priorität einer Alarm
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|-------------|
-| INIT | EInit | Service-Initialisierung; wird mit dem Daten-Eingang `u16ObjId` ausgeführt. |
+| Ereignis | Typ   | Beschreibung                                                               |
+| -------- | ----- | -------------------------------------------------------------------------- |
+| INIT     | EInit | Service-Initialisierung; wird mit dem Daten-Eingang `u16ObjId` ausgeführt. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-| ---------- | ----- | ------------- |
-| INITO | EInit | Bestätigung der erfolgreichen Initialisierung. |
-| CNF | Event | Bestätigung des angeforderten Dienstes; wird mit `STATUS` und `s16result` ausgegeben. |
+| Ereignis | Typ   | Beschreibung                                                                          |
+| -------- | ----- | ------------------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der erfolgreichen Initialisierung.                                        |
+| CNF      | Event | Bestätigung des angeforderten Dienstes; wird mit `STATUS` und `s16result` ausgegeben. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung | Initialwert |
-|------|-----|-------------|-------------|
-| u16ObjId | UINT | Objekt-ID der Alarmmaske | ID_NULL |
+| Name     | Typ  | Beschreibung             | Initialwert |
+| -------- | ---- | ------------------------ | ----------- |
+| u16ObjId | UINT | Objekt-ID der Alarmmaske | ID_NULL     |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | ------------- |
-| STATUS | STRING | Status des Dienstes (z. B. Fehler- oder Erfolgsmeldung) |
-| s16result | INT | Rückgabewert gemäß Beschreibung (siehe Funktionsweise) |
+| Name      | Typ    | Beschreibung                                            |
+| --------- | ------ | ------------------------------------------------------- |
+| STATUS    | STRING | Status des Dienstes (z. B. Fehler- oder Erfolgsmeldung) |
+| s16result | INT    | Rückgabewert gemäß Beschreibung (siehe Funktionsweise)  |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|-------------|
-| u8Priority | AUS (unidirectional) | Socket | Neue Priorität (wird über den Adapter gesendet) |
-| u8OldPriority | AUS (unidirectional) | Plug | Alte Priorität (wird über den Adapter empfangen) |
+| Name          | Typ                  | Richtung | Beschreibung                                     |
+| ------------- | -------------------- | -------- | ------------------------------------------------ |
+| u8Priority    | AUS (unidirectional) | Socket   | Neue Priorität (wird über den Adapter gesendet)  |
+| u8OldPriority | AUS (unidirectional) | Plug     | Alte Priorität (wird über den Adapter empfangen) |
 
 ## Gültige Objekt-IDs
 

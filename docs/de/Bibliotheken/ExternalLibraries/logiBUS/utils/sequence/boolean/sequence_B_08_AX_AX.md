@@ -12,15 +12,15 @@ Der Funktionsblock **sequence_B_08_AX_AX** realisiert eine sequenzielle Ablaufst
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name       | Beschreibung                                                              |
+| ---------- | ------------------------------------------------------------------------- |
 | `S8_START` | Ereignis, das einen Sprung von Zustand 8 zurück zum Startzustand auslöst. |
-| `RESET` | Ereignis, das aus jedem aktiven Zustand einen sofortigen Reset auslöst. |
+| `RESET`    | Ereignis, das aus jedem aktiven Zustand einen sofortigen Reset auslöst.   |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name  | Beschreibung                                                                                               |
+| ----- | ---------------------------------------------------------------------------------------------------------- |
 | `CNF` | Bestätigungsereignis, das nach jedem Zustandswechsel die aktuelle Zustandsnummer ausgibt. (Mit `STATE_NR`) |
 
 ### **Daten-Eingänge**
@@ -29,16 +29,16 @@ Der FB besitzt keine direkten Dateneingänge. Die Übergangsbedingungen werden a
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name       | Typ  | Beschreibung                                                                            |
+| ---------- | ---- | --------------------------------------------------------------------------------------- |
 | `STATE_NR` | SINT | Nummer des aktuellen Zustands: 0 = Start, 1…8 = State_01…State_08, 9 = State_00 (Ende). |
 
 ### **Adapter**
 
 **Plugs (Ausgänge – Typ `adapter::types::unidirectional::AX`)**  
 
-| Name | Beschreibung |
-| ------ | -------------- |
+| Name    | Beschreibung                             |
+| ------- | ---------------------------------------- |
 | `DO_S1` | Ausgang aktiv, wenn Zustand 1 aktiv ist. |
 | `DO_S2` | Ausgang aktiv, wenn Zustand 2 aktiv ist. |
 | `DO_S3` | Ausgang aktiv, wenn Zustand 3 aktiv ist. |
@@ -50,16 +50,16 @@ Der FB besitzt keine direkten Dateneingänge. Die Übergangsbedingungen werden a
 
 **Sockets (Eingänge – Typ `adapter::types::unidirectional::AX`)**  
 
-| Name | Beschreibung |
-| ------ | -------------- |
+| Name    | Beschreibung                                       |
+| ------- | -------------------------------------------------- |
 | `DI_S1` | Signal für Übergang vom Startzustand zu Zustand 1. |
-| `DI_S2` | Signal für Übergang von Zustand 1 zu Zustand 2. |
-| `DI_S3` | Signal für Übergang von Zustand 2 zu Zustand 3. |
-| `DI_S4` | Signal für Übergang von Zustand 3 zu Zustand 4. |
-| `DI_S5` | Signal für Übergang von Zustand 4 zu Zustand 5. |
-| `DI_S6` | Signal für Übergang von Zustand 5 zu Zustand 6. |
-| `DI_S7` | Signal für Übergang von Zustand 6 zu Zustand 7. |
-| `DI_S8` | Signal für Übergang von Zustand 7 zu Zustand 8. |
+| `DI_S2` | Signal für Übergang von Zustand 1 zu Zustand 2.    |
+| `DI_S3` | Signal für Übergang von Zustand 2 zu Zustand 3.    |
+| `DI_S4` | Signal für Übergang von Zustand 3 zu Zustand 4.    |
+| `DI_S5` | Signal für Übergang von Zustand 4 zu Zustand 5.    |
+| `DI_S6` | Signal für Übergang von Zustand 5 zu Zustand 6.    |
+| `DI_S7` | Signal für Übergang von Zustand 6 zu Zustand 7.    |
+| `DI_S8` | Signal für Übergang von Zustand 7 zu Zustand 8.    |
 
 ## Funktionsweise
 
@@ -85,18 +85,18 @@ Nach einem Reset (`RESET`) durchläuft der Automat kurz den Zustand `sRESET`, de
 
 ## Zustandsübersicht
 
-| Zustand (ECC) | Zustandsnummer | Ausgang aktiv | Übergangsbedingung (zum nächsten Zustand) |
-| --------------- | ---------------- | --------------- | ------------------------------------------- |
-| `xSTART` | 0 | – | `DI_S1.D1` → sState_01<br>`DI_S2.D1` → sState_02<br>…<br>`DI_S8.D1` → sState_08<br> sonst → sState_00 |
-| `sState_01` | 1 | `DO_S1` | `DI_S2.D1` → sState_02<br>`RESET` → sState_00 |
-| `sState_02` | 2 | `DO_S2` | `DI_S3.D1` → sState_03<br>`RESET` → sState_00 |
-| `sState_03` | 3 | `DO_S3` | `DI_S4.D1` → sState_04<br>`RESET` → sState_00 |
-| `sState_04` | 4 | `DO_S4` | `DI_S5.D1` → sState_05<br>`RESET` → sState_00 |
-| `sState_05` | 5 | `DO_S5` | `DI_S6.D1` → sState_06<br>`RESET` → sState_00 |
-| `sState_06` | 6 | `DO_S6` | `DI_S7.D1` → sState_07<br>`RESET` → sState_00 |
-| `sState_07` | 7 | `DO_S7` | `DI_S8.D1` → sState_08<br>`RESET` → sState_00 |
-| `sState_08` | 8 | `DO_S8` | `S8_START` → xSTART<br>`RESET` → sState_00 |
-| `sState_00` | 9 | – | `DI_S1.D1` → sState_01 (Neustart der Sequenz) |
+| Zustand (ECC) | Zustandsnummer | Ausgang aktiv | Übergangsbedingung (zum nächsten Zustand)                                                             |
+| ------------- | -------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
+| `xSTART`      | 0              | –             | `DI_S1.D1` → sState_01<br>`DI_S2.D1` → sState_02<br>…<br>`DI_S8.D1` → sState_08<br> sonst → sState_00 |
+| `sState_01`   | 1              | `DO_S1`       | `DI_S2.D1` → sState_02<br>`RESET` → sState_00                                                         |
+| `sState_02`   | 2              | `DO_S2`       | `DI_S3.D1` → sState_03<br>`RESET` → sState_00                                                         |
+| `sState_03`   | 3              | `DO_S3`       | `DI_S4.D1` → sState_04<br>`RESET` → sState_00                                                         |
+| `sState_04`   | 4              | `DO_S4`       | `DI_S5.D1` → sState_05<br>`RESET` → sState_00                                                         |
+| `sState_05`   | 5              | `DO_S5`       | `DI_S6.D1` → sState_06<br>`RESET` → sState_00                                                         |
+| `sState_06`   | 6              | `DO_S6`       | `DI_S7.D1` → sState_07<br>`RESET` → sState_00                                                         |
+| `sState_07`   | 7              | `DO_S7`       | `DI_S8.D1` → sState_08<br>`RESET` → sState_00                                                         |
+| `sState_08`   | 8              | `DO_S8`       | `S8_START` → xSTART<br>`RESET` → sState_00                                                            |
+| `sState_00`   | 9              | –             | `DI_S1.D1` → sState_01 (Neustart der Sequenz)                                                         |
 
 *Hinweis: Der Zustand `sRESET` dient nur der Bereinigung aller Ausgänge und wird automatisch verlassen.*
 

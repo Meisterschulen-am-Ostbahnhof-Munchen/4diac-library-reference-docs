@@ -12,34 +12,34 @@ The function block **AUI_TO_AD** is a composite function block (FB) that convert
 
 ### **Event Inputs**
 
-| Name | Description |
-|------|--------------|
+| Name      | Description                                              |
+| --------- | -------------------------------------------------------- |
 | AUI_IN.E1 | Event from the AUI adapter that triggers the conversion. |
 
 ### **Event Outputs**
 
-| Name | Description |
-|------|--------------|
+| Name      | Description                                                                   |
+| --------- | ----------------------------------------------------------------------------- |
 | AD_OUT.E1 | Event to the AD adapter that signals the availability of the converted value. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Description |
-|------|----------|--------------|
-| AUI_IN.D1 | UINT | Input value from the AUI adapter that is converted to a DWORD value. |
+| Name      | Data Type | Description                                                          |
+| --------- | --------- | -------------------------------------------------------------------- |
+| AUI_IN.D1 | UINT      | Input value from the AUI adapter that is converted to a DWORD value. |
 
 ### **Data Outputs**
 
-| Name | Data Type | Description |
-|------|----------|--------------|
-| AD_OUT.D1 | DWORD | Output value that passes the converted DWORD value to the AD adapter. |
+| Name      | Data Type | Description                                                           |
+| --------- | --------- | --------------------------------------------------------------------- |
+| AD_OUT.D1 | DWORD     | Output value that passes the converted DWORD value to the AD adapter. |
 
 ### **Adapter**
 
-| Type | Name | Role |
-| ----- | ------ | ------- |
-| `adapter::types::unidirectional::AUI` | AUI_IN | Socket – Input adapter for the UINT value and the associated event. |
-| `adapter::types::unidirectional::AD` | AD_OUT | Plug – Output adapter for the converted DWORD value and the confirmation event. |
+| Type                                  | Name   | Role                                                                            |
+| ------------------------------------- | ------ | ------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AUI` | AUI_IN | Socket – Input adapter for the UINT value and the associated event.             |
+| `adapter::types::unidirectional::AD`  | AD_OUT | Plug – Output adapter for the converted DWORD value and the confirmation event. |
 
 ## Functionality
 

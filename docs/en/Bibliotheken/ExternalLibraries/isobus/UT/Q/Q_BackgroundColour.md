@@ -47,10 +47,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with object ID
 - `INITO` confirms operational readiness
+
 1. **Color Change**:
 
 - `REQ` triggers with new color code (0-255)
 - `CNF` returns result and previous color value
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -65,21 +67,21 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## Standard color palette (excerpt)
 
-| Code | Color | RGB equivalent |
-| ------ | ------------- | ---------------- |
-| 0 | Black | #000000 |
-| 1 | Red | #FF0000 |
-| 2 | Green | #00FF00 |
-| 3 | Yellow | #FFFF00 |
-| 4 | Blue | #0000FF |
+| Code | Color  | RGB equivalent |
+| ---- | ------ | -------------- |
+| 0    | Black  | #000000        |
+| 1    | Red    | #FF0000        |
+| 2    | Green  | #00FF00        |
+| 3    | Yellow | #FFFF00        |
+| 4    | Blue   | #0000FF        |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | Invalid State |
+| Code | Constant            | Meaning           |
+| ---- | ------------------- | ----------------- |
+| 0    | VT_E_NO_ERR         | Success           |
+| -6   | VT_E_OVERFLOW       | Buffer Overflow   |
+| -8   | VT_E_NOACT          | Invalid State     |
 | -128 | VT_E_HANDLE_INVALID | Invalid Object ID |
 
 ## Application Scenarios
@@ -91,11 +93,11 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | Q_BackgroundColour | VtColourManager | VtDynamicStyle |
---------------- | ------------------- | ----------------- | ---------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Color Palette | Standard | Extended | User Defined |
-| Object Binding | Explicit | Implicit | Stylesheet |
+| Feature        | Q_BackgroundColour | VtColourManager | VtDynamicStyle |
+| -------------- | ------------------ | --------------- | -------------- |
+| ISO Standard   | ✔                  | ✖               | ✖              |
+| Color Palette  | Standard           | Extended        | User Defined   |
+| Object Binding | Explicit           | Implicit        | Stylesheet     |
 
 ## 🛠️ Related Exercises
 

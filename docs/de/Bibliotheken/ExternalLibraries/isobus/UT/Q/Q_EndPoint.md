@@ -68,21 +68,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Linienrichtungen (B.27)
 
-| Wert | Richtung          | Beschreibung            |
-|------|-------------------|-------------------------|
-| 0    | Horizontal        | Von links nach rechts   |
-| 1    | Vertikal          | Von oben nach unten     |
-| 2    | Diagonal rechts   | Links oben → rechts unten |
-| 3    | Diagonal links    | Rechts oben → links unten |
+| Wert | Richtung        | Beschreibung              |
+| ---- | --------------- | ------------------------- |
+| 0    | Horizontal      | Von links nach rechts     |
+| 1    | Vertikal        | Von oben nach unten       |
+| 2    | Diagonal rechts | Links oben → rechts unten |
+| 3    | Diagonal links  | Rechts oben → links unten |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Ungültige Positionswerte          |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Linienobjekt-ID         |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz                |
+| Code | Konstante                 | Bedeutung                 |
+| ---- | ------------------------- | ------------------------- |
+| 0    | VT_E_NO_ERR               | Erfolgreich               |
+| -6   | VT_E_OVERFLOW             | Ungültige Positionswerte  |
+| -128 | VT_E_HANDLE_INVALID       | Ungültige Linienobjekt-ID |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz         |
 
 ## Anwendungsszenarien
 
@@ -93,11 +93,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_EndPoint   | VtLineEditor | VtDynamicLine |
-|---------------|--------------|--------------|---------------|
-| ISO-Standard  | ✔            | ✖            | ✖             |
-| Steuerung     | Endpunkt     | Vollständig  | Nur Position  |
-| Richtungen    | 4 Optionen   | 8 Optionen   | Keine         |
+| Feature      | Q_EndPoint | VtLineEditor | VtDynamicLine |
+| ------------ | ---------- | ------------ | ------------- |
+| ISO-Standard | ✔          | ✖            | ✖             |
+| Steuerung    | Endpunkt   | Vollständig  | Nur Position  |
+| Richtungen   | 4 Optionen | 8 Optionen   | Keine         |
 
 ## Fazit
 

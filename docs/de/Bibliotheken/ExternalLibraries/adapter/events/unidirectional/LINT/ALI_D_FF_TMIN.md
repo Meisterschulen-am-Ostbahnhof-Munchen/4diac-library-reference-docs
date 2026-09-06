@@ -12,21 +12,21 @@ Der Funktionsblock **ALI_D_FF_TMIN** realisiert einen Datenspeicher (D-Flip-Flop
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| INIT     | EInit | Tmin | Initialisierungsanforderung, setzt die minimale Haltezeit |
+| Ereignis | Typ   | Mit Variablen | Kommentar                                                 |
+| -------- | ----- | ------------- | --------------------------------------------------------- |
+| INIT     | EInit | Tmin          | Initialisierungsanforderung, setzt die minimale Haltezeit |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| INITO    | EInit | – | Bestätigung der Initialisierung |
+| Ereignis | Typ   | Mit Variablen | Kommentar                       |
+| -------- | ----- | ------------- | ------------------------------- |
+| INITO    | EInit | –             | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
-| Tmin     | TIME  | Minimale Zeit zwischen zwei Ausgangsereignissen (EO) |
+| Variable | Typ  | Kommentar                                            |
+| -------- | ---- | ---------------------------------------------------- |
+| Tmin     | TIME | Minimale Zeit zwischen zwei Ausgangsereignissen (EO) |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge. Der latched Wert wird über den **Q-Adapter** ber
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Kommentar |
-|-------------|-----|----------|-----------|
+| Bezeichnung | Typ                  | Richtung         | Kommentar                        |
+| ----------- | -------------------- | ---------------- | -------------------------------- |
 | I           | ALI (unidirectional) | Socket (Eingang) | Wert, der übernommen werden soll |
-| Q           | ALI (unidirectional) | Plug (Ausgang)  | Gespeicherter Wert |
+| Q           | ALI (unidirectional) | Plug (Ausgang)   | Gespeicherter Wert               |
 
 ## Funktionsweise
 
@@ -75,11 +75,11 @@ Der genaue Zustandsautomat liegt jedoch im internen FB und ist hier nicht abgebi
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| ---------- | ------------- |
-| `ALI_D_FF` (ohne TMIN) | Keine Mindestzeit zwischen Ausgangsereignissen, sofortige Weiterleitung bei jeder Flanke. |
-| `E_D_FF` (Standard-61499) | Ereignis-Ein- und Ausgänge direkt, ohne Adapter und ohne Zeitsteuerung. |
-| `E_D_FF_ANY_TMIN` | Gleiche Funktionalität, aber mit eigenen Daten- und Ereignis-Ports, nicht über Adapter. |
+| Baustein                  | Unterschied                                                                               |
+| ------------------------- | ----------------------------------------------------------------------------------------- |
+| `ALI_D_FF` (ohne TMIN)    | Keine Mindestzeit zwischen Ausgangsereignissen, sofortige Weiterleitung bei jeder Flanke. |
+| `E_D_FF` (Standard-61499) | Ereignis-Ein- und Ausgänge direkt, ohne Adapter und ohne Zeitsteuerung.                   |
+| `E_D_FF_ANY_TMIN`         | Gleiche Funktionalität, aber mit eigenen Daten- und Ereignis-Ports, nicht über Adapter.   |
 
 Der **ALI_D_FF_TMIN** erweitert die Adapter-Schnittstelle um eine komfortable Kapselung und Fügt die Zeitsteuerung hinzu, die bei einfachen Flip-Flops fehlt.
 

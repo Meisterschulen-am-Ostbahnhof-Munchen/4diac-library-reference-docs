@@ -9,7 +9,7 @@ The function block `F_WORD_AS_STRING` converts a `WORD` data type to a `STRING`.
 - **IN**: Expects an input value of type `WORD`, which is to be converted to `STRING`.
 - **OUT**: Outputs the converted value as `STRING`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -21,7 +21,7 @@ The function block `F_WORD_AS_STRING` converts a `WORD` data type to a `STRING`.
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 - No adapters are available.
 

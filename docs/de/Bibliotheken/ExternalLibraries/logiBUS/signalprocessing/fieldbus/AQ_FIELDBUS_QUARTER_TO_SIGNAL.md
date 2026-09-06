@@ -34,11 +34,11 @@ Daten werden ebenfalls über den **Socket-Adapter `IN`** übernommen:
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AQ` | **Socket** (Eingang) | Feldbussignal (Ereignis und Daten) |
-| `OUT` | `adapter::types::unidirectional::AQ` | **Plug** (Ausgang) | Gefiltertes / gespiegeltes Ausgangssignal |
-| `VALID` | `adapter::types::unidirectional::AX` | **Plug** (Ausgang) | Gültigkeitsstatus des Signals |
+| Name    | Typ                                  | Richtung             | Beschreibung                              |
+| ------- | ------------------------------------ | -------------------- | ----------------------------------------- |
+| `IN`    | `adapter::types::unidirectional::AQ` | **Socket** (Eingang) | Feldbussignal (Ereignis und Daten)        |
+| `OUT`   | `adapter::types::unidirectional::AQ` | **Plug** (Ausgang)   | Gefiltertes / gespiegeltes Ausgangssignal |
+| `VALID` | `adapter::types::unidirectional::AX` | **Plug** (Ausgang)   | Gültigkeitsstatus des Signals             |
 
 Hinweis: Die Adaptertypen `AQ` und `AX` sind eindirektionale Protokolle, die üblicherweise ein Ereignis‑ und ein Datenfeld kombinieren.
 

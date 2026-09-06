@@ -12,29 +12,29 @@ Der Funktionsbaustein **BasicOne** ist ein grundlegender, ereignisgesteuerter Ba
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mitgeführte Daten | Beschreibung |
-|----------|-----|-------------------|--------------|
-| `INIT`   | EInit | `QI` | Initialisierungsanforderung; die Transition hängt vom Wert des Qualifiers `QI` ab. |
-| `REQ`    | Event | `QI`, `DI1` | Normale Ausführungsanforderung; startet die Hauptoperation. |
+| Ereignis | Typ   | Mitgeführte Daten | Beschreibung                                                                       |
+| -------- | ----- | ----------------- | ---------------------------------------------------------------------------------- |
+| `INIT`   | EInit | `QI`              | Initialisierungsanforderung; die Transition hängt vom Wert des Qualifiers `QI` ab. |
+| `REQ`    | Event | `QI`, `DI1`       | Normale Ausführungsanforderung; startet die Hauptoperation.                        |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mitgeführte Daten | Beschreibung |
-|----------|-----|-------------------|--------------|
-| `INITO`  | EInit | `QO` | Bestätigung einer erfolgreichen Initialisierung oder Deinitialisierung. |
-| `CNF`    | Event | `QO`, `DO1` | Bestätigung der normalen Ausführung; gibt den aktuellen Zustand aus. |
+| Ereignis | Typ   | Mitgeführte Daten | Beschreibung                                                            |
+| -------- | ----- | ----------------- | ----------------------------------------------------------------------- |
+| `INITO`  | EInit | `QO`              | Bestätigung einer erfolgreichen Initialisierung oder Deinitialisierung. |
+| `CNF`    | Event | `QO`, `DO1`       | Bestätigung der normalen Ausführung; gibt den aktuellen Zustand aus.    |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ  | Beschreibung                                                                                                                                                  |
+| ----- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `QI`  | BOOL | Eingangsqualifier – steuert, ob eine Initialisierung aktiv (`TRUE`) oder deinitialisierend (`FALSE`) ist. Beeinflusst auch die Ausführung der Hauptoperation. |
-| `DI1` | BOOL | Erster Dateneingang; wird nur bei aktiver Initialisierung (`QI = TRUE`) während der normalen Operation auf den Ausgang `DO1` übertragen. |
+| `DI1` | BOOL | Erster Dateneingang; wird nur bei aktiver Initialisierung (`QI = TRUE`) während der normalen Operation auf den Ausgang `DO1` übertragen.                      |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ  | Beschreibung                                                                                                         |
+| ----- | ---- | -------------------------------------------------------------------------------------------------------------------- |
 | `QO`  | BOOL | Ausgangsqualifier – spiegelt nach einer Aktion den Wert von `QI` wider (außer nach Deinitialisierung: dann `FALSE`). |
 | `DO1` | BOOL | Erster Datenausgang; enthält bei einer normalen Operation den Wert von `DI1`, sofern `QI = TRUE`, ansonsten `FALSE`. |
 
@@ -61,13 +61,13 @@ Wichtig: Die normale Operation wird nur dann ausgeführt, wenn `QI = TRUE` ist. 
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Mögliche Aktionen |
-| --------- | -------------- | ------------------- |
-| `START` | Initialer Ruhezustand nach Systemstart oder nach einer Deinitialisierung. | Wartet auf `INIT` mit `QI = TRUE`. |
-| `Init` | Initialisierungsphase; setzt `QO = QI`. | Führt Algorithmus *initialize* aus, sendet `INITO`. |
-| `Initialized` | Wartezustand nach erfolgreicher Initialisierung. | Kann auf `REQ` (startet NormalOp) oder auf `INIT` mit `QI = FALSE` (startet DeInit) reagieren. |
-| `NormalOp` | Ausführung der Hauptoperation; überträgt `DI1` nach `DO1` (nur wenn `QI = TRUE`). | Führt Algorithmus *normalOperation* aus, sendet `CNF`. |
-| `DeInit` | Deinitialisierungsphase; setzt `QO = FALSE` und `DO1 = FALSE`. | Führt Algorithmus *deInitialize* aus, sendet `INITO`. |
+| Zustand       | Beschreibung                                                                      | Mögliche Aktionen                                                                              |
+| ------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `START`       | Initialer Ruhezustand nach Systemstart oder nach einer Deinitialisierung.         | Wartet auf `INIT` mit `QI = TRUE`.                                                             |
+| `Init`        | Initialisierungsphase; setzt `QO = QI`.                                           | Führt Algorithmus *initialize* aus, sendet `INITO`.                                            |
+| `Initialized` | Wartezustand nach erfolgreicher Initialisierung.                                  | Kann auf `REQ` (startet NormalOp) oder auf `INIT` mit `QI = FALSE` (startet DeInit) reagieren. |
+| `NormalOp`    | Ausführung der Hauptoperation; überträgt `DI1` nach `DO1` (nur wenn `QI = TRUE`). | Führt Algorithmus *normalOperation* aus, sendet `CNF`.                                         |
+| `DeInit`      | Deinitialisierungsphase; setzt `QO = FALSE` und `DO1 = FALSE`.                    | Führt Algorithmus *deInitialize* aus, sendet `INITO`.                                          |
 
 ## Anwendungsszenarien
 

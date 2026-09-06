@@ -12,31 +12,31 @@ Der Funktionsblock **FIELDBUS_BYTE_TO_SIGNAL_SCALED** dient der Umsetzung eines 
 
 ### **Ereignis-Eingänge**
 
-| Event | Typ | Beschreibung | Mitgeführte Daten |
-| ------- | ----- | ------------- | ------------------- |
-| `INIT` | EInit | Initialisierungsanforderung; setzt Skalierung und Offset | `SCALE`, `OFFSET` |
-| `REQ` | Event | Normale Verarbeitungsanforderung; wertet den Eingang `IN` aus | `IN` |
+| Event  | Typ   | Beschreibung                                                  | Mitgeführte Daten |
+| ------ | ----- | ------------------------------------------------------------- | ----------------- |
+| `INIT` | EInit | Initialisierungsanforderung; setzt Skalierung und Offset      | `SCALE`, `OFFSET` |
+| `REQ`  | Event | Normale Verarbeitungsanforderung; wertet den Eingang `IN` aus | `IN`              |
 
 ### **Ereignis-Ausgänge**
 
-| Event | Typ | Beschreibung | Mitgeführte Daten |
-| ------- | ----- | ------------- | ------------------- |
-| `INITO` | EInit | Bestätigung der Initialisierung | – |
-| `CNF` | Event | Bestätigung der Verarbeitung; liefert skalierten Wert und Gültigkeit | `OUT`, `VALID` |
+| Event   | Typ   | Beschreibung                                                         | Mitgeführte Daten |
+| ------- | ----- | -------------------------------------------------------------------- | ----------------- |
+| `INITO` | EInit | Bestätigung der Initialisierung                                      | –                 |
+| `CNF`   | Event | Bestätigung der Verarbeitung; liefert skalierten Wert und Gültigkeit | `OUT`, `VALID`    |
 
 ### **Daten-Eingänge**
 
-| Name    | Datentyp | Initialwert | Beschreibung |
-|---------|----------|-------------|--------------|
-| `IN`    | BYTE     | `NOT_AVAILABLE_B` | Feldbus-Rohwert (Byte) |
-| `SCALE` | REAL     | `1.0`       | Skalierungsfaktor (Multiplikator) |
-| `OFFSET`| DINT     | `0`         | Additiver Offset (nach Skalierung) |
+| Name     | Datentyp | Initialwert       | Beschreibung                       |
+| -------- | -------- | ----------------- | ---------------------------------- |
+| `IN`     | BYTE     | `NOT_AVAILABLE_B` | Feldbus-Rohwert (Byte)             |
+| `SCALE`  | REAL     | `1.0`             | Skalierungsfaktor (Multiplikator)  |
+| `OFFSET` | DINT     | `0`               | Additiver Offset (nach Skalierung) |
 
 ### **Daten-Ausgänge**
 
-| Name    | Datentyp | Initialwert | Beschreibung |
-|---------|----------|-------------|--------------|
-| `OUT`   | REAL     | `0.0`       | Skalierter Ausgangswert |
+| Name    | Datentyp | Initialwert | Beschreibung                                                    |
+| ------- | -------- | ----------- | --------------------------------------------------------------- |
+| `OUT`   | REAL     | `0.0`       | Skalierter Ausgangswert                                         |
 | `VALID` | BOOL     | `FALSE`     | `TRUE`, wenn der eingehende Byte-Wert als gültig bewertet wurde |
 
 ### **Adapter**
@@ -74,10 +74,10 @@ Der initiale Wert von `IN` ist `NOT_AVAILABLE_B` – ein weiterer importierter K
 
 Der Funktionsblock besitzt zwei einfache Zustände, die jeweils durch das entsprechende Ereignis aktiviert werden:
 
-| Zustand | Auslösendes Event | Ausführbarer Algorithmus | Ausgehende Events |
-|---------|-------------------|--------------------------|-------------------|
-| `INIT`  | `INIT`            | `INIT` (leer)            | `INITO`           |
-| `REQ`   | `REQ`             | `REQ` (Gültigkeitsprüfung + Skalierung) | `CNF` |
+| Zustand | Auslösendes Event | Ausführbarer Algorithmus                | Ausgehende Events |
+| ------- | ----------------- | --------------------------------------- | ----------------- |
+| `INIT`  | `INIT`            | `INIT` (leer)                           | `INITO`           |
+| `REQ`   | `REQ`             | `REQ` (Gültigkeitsprüfung + Skalierung) | `CNF`             |
 
 Es gibt keine automatischen Zustandsübergänge; jeder Zustand wird ausschließlich durch das zugehörige Ereignis angesprochen.
 

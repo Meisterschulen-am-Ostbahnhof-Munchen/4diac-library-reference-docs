@@ -42,11 +42,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 - `INIT` with macro object ID
 - `INITO` confirms operational readiness
+
 1. **Macro Execution**:
 
 - `REQ` without additional parameters
 - Executes saved macro sequence
 - `CNF` returns result status
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -61,21 +63,21 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## Macro Properties
 
-| Feature | Description |
-| --------------- | ---------------------------------- |
+| Feature  | Description                  |
+| -------- | ---------------------------- |
 | Location | Permanently stored in the VT |
-| Size | Up to 255 commands |
-| Content | VT command sequences |
-| ID Range | 0x0001 - 0xFEFF (reserved) |
+| Size     | Up to 255 commands           |
+| Content  | VT command sequences         |
+| ID Range | 0x0001 - 0xFEFF (reserved)   |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful execution |
-| -6 | VT_E_OVERFLOW | Macro too complex |
-| -8 | VT_E_NOACT | VT not ready |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
+| Code | Constant                  | Meaning              |
+| ---- | ------------------------- | -------------------- |
+| 0    | VT_E_NO_ERR               | Successful execution |
+| -6   | VT_E_OVERFLOW             | Macro too complex    |
+| -8   | VT_E_NOACT                | VT not ready         |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance  |
 
 ## Application Scenarios
 
@@ -86,11 +88,11 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | Q_ExecuteExtendedMacro | VtMacroPlayer | VtCommandSequence |
-| --------------- | ------------------------ | --------------- | ------------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| VT Version | 5+ | All | All |
-| ID Type | 16-bit | 8-bit | 16-bit |
+| Feature      | Q_ExecuteExtendedMacro | VtMacroPlayer | VtCommandSequence |
+| ------------ | ---------------------- | ------------- | ----------------- |
+| ISO Standard | ✔                      | ✖             | ✖                 |
+| VT Version   | 5+                     | All           | All               |
+| ID Type      | 16-bit                 | 8-bit         | 16-bit            |
 
 ## Conclusion
 

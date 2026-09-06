@@ -12,33 +12,33 @@ Der Funktionsblock **GetVtcStatus** ist ein Service Interface Block (SIFB), der 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung | Mitgeführte Daten |
-|----------|-----|--------------|-------------------|
-| `INIT` | EInit | Initialisiert den Baustein. | `QI`, `u8Instance` |
-| `REQ` | Event | Fordert das Auslesen eines Statuswertes an. | `QI`, `u8Instance`, `eVTInfo` |
+| Ereignis | Typ   | Beschreibung                                | Mitgeführte Daten             |
+| -------- | ----- | ------------------------------------------- | ----------------------------- |
+| `INIT`   | EInit | Initialisiert den Baustein.                 | `QI`, `u8Instance`            |
+| `REQ`    | Event | Fordert das Auslesen eines Statuswertes an. | `QI`, `u8Instance`, `eVTInfo` |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung | Mitgeführte Daten |
-|----------|-----|--------------|-------------------|
-| `INITO` | EInit | Bestätigung der Initialisierung. | `QO`, `STATUS` |
-| `CNF` | Event | Bestätigung der Leseanforderung mit Ergebnis. | `QO`, `STATUS`, `wValue` |
+| Ereignis | Typ   | Beschreibung                                  | Mitgeführte Daten        |
+| -------- | ----- | --------------------------------------------- | ------------------------ |
+| `INITO`  | EInit | Bestätigung der Initialisierung.              | `QO`, `STATUS`           |
+| `CNF`    | Event | Bestätigung der Leseanforderung mit Ergebnis. | `QO`, `STATUS`, `wValue` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Anfangswert | Beschreibung |
-| ------ | ----- | ------------- | -------------- |
-| `QI` | BOOL | – | Qualitätseingang: TRUE aktiviert den Dienst. |
-| `u8Instance` | USINT | – | Identifikator der VT‑Client‑Instanz (0–255). |
-| `eVTInfo` | UINT | 0 | Art der abzufragenden Statusinformation (Werte aus der Enumeration `ISOVT_STATUS_e`). |
+| Name         | Typ   | Anfangswert | Beschreibung                                                                          |
+| ------------ | ----- | ----------- | ------------------------------------------------------------------------------------- |
+| `QI`         | BOOL  | –           | Qualitätseingang: TRUE aktiviert den Dienst.                                          |
+| `u8Instance` | USINT | –           | Identifikator der VT‑Client‑Instanz (0–255).                                          |
+| `eVTInfo`    | UINT  | 0           | Art der abzufragenden Statusinformation (Werte aus der Enumeration `ISOVT_STATUS_e`). |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| `QO` | BOOL | Qualitätsausgang: TRUE bei erfolgreicher Ausführung. |
-| `STATUS` | STRING | Dienststatus – enthält eine textuelle Rückmeldung. |
-| `wValue` | UINT | Der von `IsoVtcGetStatusInfo()` zurückgegebene Wert (abhängig von `eVTInfo`). |
+| Name     | Typ    | Beschreibung                                                                  |
+| -------- | ------ | ----------------------------------------------------------------------------- |
+| `QO`     | BOOL   | Qualitätsausgang: TRUE bei erfolgreicher Ausführung.                          |
+| `STATUS` | STRING | Dienststatus – enthält eine textuelle Rückmeldung.                            |
+| `wValue` | UINT   | Der von `IsoVtcGetStatusInfo()` zurückgegebene Wert (abhängig von `eVTInfo`). |
 
 ### **Adapter**
 
@@ -63,30 +63,30 @@ Keine Adapter vorhanden.
 - Der Baustein ist als **Service Interface Block** (SIFB) realisiert und greift auf die systemnahe ISOBUS‑Treiberbibliothek zu.
 - Die möglichen Werte für `eVTInfo` (ISOVT_STATUS_e) sind:
 
-| Wert | Bezeichnung | Beschreibung |
-| ------ | ------------- | -------------- |
-| 0 | VT_SOURCE_ADDRESS | Quelladresse des VT |
-| 2 | VT_HND | CF‑Handle des VT |
-| 3 | CF_SOURCE_ADDRESS | Quelladresse des VT‑Client |
-| 4 | CF_HND | CF‑Handle des VT‑Client |
-| 6 | ID_VISIBLE_DATA_MASK | Auf dem VT geöffnete Datenmaske |
-| 7 | ID_VISIBLE_SOFTKEY_MASK | Auf dem VT geöffnete Softkey‑Maske |
-| 8 | VT_BUSY_CODE | Busy‑Code der VT‑Statusmeldung |
-| 9 | AUXUNITS_TYPE1_ONBUS | TRUE, wenn Hilfsgerät Typ 1 am Bus ist |
-| 11 | VT_ALIVE | VT seit mehr als 3 Sekunden nicht erreichbar |
-| 12 | VT_DOWNLOAD_FINISHED | Vollständiges Announcing abgeschlossen |
-| 13 | VT_POOL_ACTIVE_onVT | Pool (ausgewählt) auf dem VT aktiv |
-| 14 | VT_STATEOFANNOUNCING | Zustand des Announcing |
-| 15 | WS_VERSION_NR | Versionsnummer des Working Set |
-| 16 | VT_NUMBOFVERSIONSTRINGS | Anzahl der gesendeten Versionsstrings des VT |
-| 17 | VT_NAVSOFTKEYS | Navigations‑Softkeys (Version 4) |
-| 18 | VT_SOFTKEYXDOT | Softkey‑Bezeichner – Pixel X |
-| 19 | VT_SOFTKEYYDOT | Softkey‑Bezeichner – Pixel Y |
-| 20 | VT_VIRTUALSOFTKEYS | Anzahl der virtuellen Softkeys |
-| 21 | VT_PHYSICALSOFTKEYS | Anzahl der physischen Softkeys |
-| 25 | VT_BOOTTIME | Bootzeit des VT |
-| 26 | VT_GRAPHICTYPE | Grafiktyp der VT‑Hardware |
-| 29 | VT_VERSIONNR | Version des Working Set VT |
+| Wert | Bezeichnung             | Beschreibung                                 |
+| ---- | ----------------------- | -------------------------------------------- |
+| 0    | VT_SOURCE_ADDRESS       | Quelladresse des VT                          |
+| 2    | VT_HND                  | CF‑Handle des VT                             |
+| 3    | CF_SOURCE_ADDRESS       | Quelladresse des VT‑Client                   |
+| 4    | CF_HND                  | CF‑Handle des VT‑Client                      |
+| 6    | ID_VISIBLE_DATA_MASK    | Auf dem VT geöffnete Datenmaske              |
+| 7    | ID_VISIBLE_SOFTKEY_MASK | Auf dem VT geöffnete Softkey‑Maske           |
+| 8    | VT_BUSY_CODE            | Busy‑Code der VT‑Statusmeldung               |
+| 9    | AUXUNITS_TYPE1_ONBUS    | TRUE, wenn Hilfsgerät Typ 1 am Bus ist       |
+| 11   | VT_ALIVE                | VT seit mehr als 3 Sekunden nicht erreichbar |
+| 12   | VT_DOWNLOAD_FINISHED    | Vollständiges Announcing abgeschlossen       |
+| 13   | VT_POOL_ACTIVE_onVT     | Pool (ausgewählt) auf dem VT aktiv           |
+| 14   | VT_STATEOFANNOUNCING    | Zustand des Announcing                       |
+| 15   | WS_VERSION_NR           | Versionsnummer des Working Set               |
+| 16   | VT_NUMBOFVERSIONSTRINGS | Anzahl der gesendeten Versionsstrings des VT |
+| 17   | VT_NAVSOFTKEYS          | Navigations‑Softkeys (Version 4)             |
+| 18   | VT_SOFTKEYXDOT          | Softkey‑Bezeichner – Pixel X                 |
+| 19   | VT_SOFTKEYYDOT          | Softkey‑Bezeichner – Pixel Y                 |
+| 20   | VT_VIRTUALSOFTKEYS      | Anzahl der virtuellen Softkeys               |
+| 21   | VT_PHYSICALSOFTKEYS     | Anzahl der physischen Softkeys               |
+| 25   | VT_BOOTTIME             | Bootzeit des VT                              |
+| 26   | VT_GRAPHICTYPE          | Grafiktyp der VT‑Hardware                    |
+| 29   | VT_VERSIONNR            | Version des Working Set VT                   |
 
 - Der Baustein unterstützt sowohl die Initialisierung als auch den wiederholten Aufruf von Leseoperationen, sodass in einer Schleife verschiedene Statuswerte abgefragt werden können.
 

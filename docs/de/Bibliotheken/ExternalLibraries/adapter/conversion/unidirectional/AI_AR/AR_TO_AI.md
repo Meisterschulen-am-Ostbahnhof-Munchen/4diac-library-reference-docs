@@ -28,10 +28,10 @@ Der Daten-Ausgang wird über den Plug **AI_OUT** bereitgestellt. Der Ausgangswer
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ | Bemerkung |
-|-------------|----------|-----|-----------|
+| Bezeichnung | Richtung | Typ                                  | Bemerkung              |
+| ----------- | -------- | ------------------------------------ | ---------------------- |
 | AR_IN       | Eingang  | `adapter::types::unidirectional::AR` | REAL‑Adapter (Eingang) |
-| AI_OUT      | Ausgang  | `adapter::types::unidirectional::AI` | INT‑Adapter (Ausgang) |
+| AI_OUT      | Ausgang  | `adapter::types::unidirectional::AI` | INT‑Adapter (Ausgang)  |
 
 ## Funktionsweise
 

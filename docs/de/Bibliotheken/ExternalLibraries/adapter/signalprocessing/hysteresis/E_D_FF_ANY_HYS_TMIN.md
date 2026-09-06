@@ -15,31 +15,31 @@ Der Baustein dient dazu, kontinuierliche oder hochfrequente Änderungen eines nu
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung | Zugehörige Daten |
-| :--- | :--- | :--- | :--- |
-| **INIT** | EInit | Initialisiert den Baustein und setzt die Mindestzeitbegrenzung. | `Tmin` |
-| **CLK** | Event | Taktsignal (Clock). Bei Eintreffen dieses Ereignisses wird der Wert am Eingang `D` ausgewertet. | `D`, `HYSTERESIS` |
+| Ereignis | Typ   | Beschreibung                                                                                    | Zugehörige Daten  |
+| :------- | :---- | :---------------------------------------------------------------------------------------------- | :---------------- |
+| **INIT** | EInit | Initialisiert den Baustein und setzt die Mindestzeitbegrenzung.                                 | `Tmin`            |
+| **CLK**  | Event | Taktsignal (Clock). Bei Eintreffen dieses Ereignisses wird der Wert am Eingang `D` ausgewertet. | `D`, `HYSTERESIS` |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung | Zugehörige Daten |
-| :--- | :--- | :--- | :--- |
-| **INITO** | EInit | Bestätigung der erfolgreichen Initialisierung. | Keine |
-| **EO** | Event | Wird ausgelöst, wenn ein CLK-Ereignis eine gültige Änderung des Ausgangswerts `Q` bewirkt hat und die Mindestzeit `Tmin` abgelaufen ist. | `Q` |
+| Ereignis  | Typ   | Beschreibung                                                                                                                             | Zugehörige Daten |
+| :-------- | :---- | :--------------------------------------------------------------------------------------------------------------------------------------- | :--------------- |
+| **INITO** | EInit | Bestätigung der erfolgreichen Initialisierung.                                                                                           | Keine            |
+| **EO**    | Event | Wird ausgelöst, wenn ein CLK-Ereignis eine gültige Änderung des Ausgangswerts `Q` bewirkt hat und die Mindestzeit `Tmin` abgelaufen ist. | `Q`              |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Beschreibung |
-| :--- | :--- | :--- |
-| **D** | ANY_NUM | Der zu speichernde Eingangswert (Data). |
+| Variable       | Typ     | Beschreibung                                                                                                                     |
+| :------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------- |
+| **D**          | ANY_NUM | Der zu speichernde Eingangswert (Data).                                                                                          |
 | **HYSTERESIS** | ANY_NUM | Das Hystereseband. Bestimmt, wie stark sich `D` vom aktuellen Ausgangswert `Q` unterscheiden muss, um eine Änderung zu bewirken. |
-| **Tmin** | TIME | Die minimale Zeitspanne, die zwischen zwei aufeinanderfolgenden `EO`-Ereignissen vergehen muss. |
+| **Tmin**       | TIME    | Die minimale Zeitspanne, die zwischen zwei aufeinanderfolgenden `EO`-Ereignissen vergehen muss.                                  |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-| :--- | :--- | :--- |
-| **Q** | ANY_NUM | Der gespeicherte und gefilterte Ausgangswert (Latched Value). |
+| Variable | Typ     | Beschreibung                                                  |
+| :------- | :------ | :------------------------------------------------------------ |
+| **Q**    | ANY_NUM | Der gespeicherte und gefilterte Ausgangswert (Latched Value). |
 
 ### **Adapter**
 

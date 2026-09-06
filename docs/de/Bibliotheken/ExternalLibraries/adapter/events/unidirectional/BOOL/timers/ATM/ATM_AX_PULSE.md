@@ -14,10 +14,10 @@ Der Funktionsblock **ATM_AX_PULSE** ist ein standardisierter Timerbaustein zur E
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name    | Typ   | Beschreibung                              |
+| ------- | ----- | ----------------------------------------- |
 | **REQ** | Event | Service Anforderung – startet den Impuls. |
-| **R**   | Event | Reset – beendet den Impuls vorzeitig. |
+| **R**   | Event | Reset – beendet den Impuls vorzeitig.     |
 
 ### **Ereignis-Ausgänge**
 
@@ -33,10 +33,10 @@ Keine direkten Datenausgänge. Der Impulszustand wird über den Adapter **Q** ab
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **PT**  | Socket   | `adapter::types::unidirectional::ATM` | Liefert die Impulsdauer als Zeitwert. |
-| **Q**   | Plug     | `adapter::types::unidirectional::AX` | Gibt den Impulsstatus aus: **D1** = aktueller Wert (TRUE während des Impulses); **E1** = Ereignis bei Impulsende oder -wechsel. |
+| Adapter | Richtung | Typ                                   | Beschreibung                                                                                                                    |
+| ------- | -------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **PT**  | Socket   | `adapter::types::unidirectional::ATM` | Liefert die Impulsdauer als Zeitwert.                                                                                           |
+| **Q**   | Plug     | `adapter::types::unidirectional::AX`  | Gibt den Impulsstatus aus: **D1** = aktueller Wert (TRUE während des Impulses); **E1** = Ereignis bei Impulsende oder -wechsel. |
 
 ## Funktionsweise
 

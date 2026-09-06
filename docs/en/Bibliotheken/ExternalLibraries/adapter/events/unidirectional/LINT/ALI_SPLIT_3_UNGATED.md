@@ -26,12 +26,12 @@ The function block **ALI_SPLIT_3_UNGATED** is used to distribute an incoming uni
 
 ### **Adapter**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Input) | `IN` | `adapter::types::unidirectional::ALI` | Receives the incoming ALI signal. |
-| Plug (Output) | `OUT1` | `adapter::types::unidirectional::ALI` | First output copy of the signal. |
-| Plug (Output) | `OUT2` | `adapter::types::unidirectional::ALI` | Second output copy of the signal. |
-| Plug (Output) | `OUT3` | `adapter::types::unidirectional::ALI` | Third output copy of the signal. |
+| Direction      | Name   | Type                                  | Description                       |
+| -------------- | ------ | ------------------------------------- | --------------------------------- |
+| Socket (Input) | `IN`   | `adapter::types::unidirectional::ALI` | Receives the incoming ALI signal. |
+| Plug (Output)  | `OUT1` | `adapter::types::unidirectional::ALI` | First output copy of the signal.  |
+| Plug (Output)  | `OUT2` | `adapter::types::unidirectional::ALI` | Second output copy of the signal. |
+| Plug (Output)  | `OUT3` | `adapter::types::unidirectional::ALI` | Third output copy of the signal.  |
 
 **Note:** The adapter type `ALI` is a unidirectional interface adapter that typically encapsulates data and event flow in one direction. The exact internal structure is defined application-specifically.
 

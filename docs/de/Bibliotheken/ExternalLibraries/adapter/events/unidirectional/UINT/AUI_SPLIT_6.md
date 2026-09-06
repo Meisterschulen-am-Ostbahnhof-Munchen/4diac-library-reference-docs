@@ -30,15 +30,15 @@ Keine Daten-Ausgänge vorhanden.
 
 Der Baustein verwendet ausschließlich Adapter für die Kommunikation:
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang | **IN** | `adapter::types::unidirectional::AUI` | Eingehender AUI-Adapter, der aufgeteilt wird. |
-| Ausgang | **OUT1** | `adapter::types::unidirectional::AUI` | Erster ausgehender AUI-Adapter. |
-| Ausgang | **OUT2** | `adapter::types::unidirectional::AUI` | Zweiter ausgehender AUI-Adapter. |
-| Ausgang | **OUT3** | `adapter::types::unidirectional::AUI` | Dritter ausgehender AUI-Adapter. |
-| Ausgang | **OUT4** | `adapter::types::unidirectional::AUI` | Vierter ausgehender AUI-Adapter. |
-| Ausgang | **OUT5** | `adapter::types::unidirectional::AUI` | Fünfter ausgehender AUI-Adapter. |
-| Ausgang | **OUT6** | `adapter::types::unidirectional::AUI` | Sechster ausgehender AUI-Adapter. |
+| Richtung | Name     | Typ                                   | Beschreibung                                  |
+| -------- | -------- | ------------------------------------- | --------------------------------------------- |
+| Eingang  | **IN**   | `adapter::types::unidirectional::AUI` | Eingehender AUI-Adapter, der aufgeteilt wird. |
+| Ausgang  | **OUT1** | `adapter::types::unidirectional::AUI` | Erster ausgehender AUI-Adapter.               |
+| Ausgang  | **OUT2** | `adapter::types::unidirectional::AUI` | Zweiter ausgehender AUI-Adapter.              |
+| Ausgang  | **OUT3** | `adapter::types::unidirectional::AUI` | Dritter ausgehender AUI-Adapter.              |
+| Ausgang  | **OUT4** | `adapter::types::unidirectional::AUI` | Vierter ausgehender AUI-Adapter.              |
+| Ausgang  | **OUT5** | `adapter::types::unidirectional::AUI` | Fünfter ausgehender AUI-Adapter.              |
+| Ausgang  | **OUT6** | `adapter::types::unidirectional::AUI` | Sechster ausgehender AUI-Adapter.             |
 
 ## Funktionsweise
 

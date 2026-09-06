@@ -42,11 +42,11 @@ The event at input `EI` is always routed to exactly one of the two outputs, depe
 - **Mode-Dependent Processing**: Route commands to different processing paths depending on whether the system is in "Automatic" mode (`G=TRUE`) or "Manual" mode (`G=FALSE`).
 - **Error Handling**: Route a sensor event either to the normal processing logic (`G=FALSE` for "no error") or to an error handling routine (`G=TRUE` for "error detected").
 
-| Feature | E_SWITCH | E_SELECT | E_DEMUX |
-| --------------- | ---------- | ---------- | ---------- |
-| Selection Criterion | Boolean (`G`) | Boolean (`G`) | Index (`K`) |
-| Direction | 1:2 (Demultiplexer) | 2:1 (Multiplexer) | 1:n (Demultiplexer) |
-| State Model | BasicFB | BasicFB | BasicFB/Generic |
+| Feature             | E_SWITCH            | E_SELECT          | E_DEMUX             |
+| ------------------- | ------------------- | ----------------- | ------------------- |
+| Selection Criterion | Boolean (`G`)       | Boolean (`G`)     | Index (`K`)         |
+| Direction           | 1:2 (Demultiplexer) | 2:1 (Multiplexer) | 1:n (Demultiplexer) |
+| State Model         | BasicFB             | BasicFB           | BasicFB/Generic     |
 
 - [Uebung_004b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004b/)
 - [Uebung_004b2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004b2/)

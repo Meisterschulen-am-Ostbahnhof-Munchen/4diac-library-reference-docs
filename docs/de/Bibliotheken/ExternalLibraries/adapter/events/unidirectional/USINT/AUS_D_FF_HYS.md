@@ -12,21 +12,21 @@ Der Funktionsblock `AUS_D_FF_HYS` realisiert ein Data-Latch (D-Flipflop) mit ein
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Comment                        | Mit Parameter |
-|----------|-------|--------------------------------|---------------|
-| `INIT`   | EInit | Set Hysteresis                 | `HYSTERESIS`  |
+| Ereignis | Typ   | Comment        | Mit Parameter |
+| -------- | ----- | -------------- | ------------- |
+| `INIT`   | EInit | Set Hysteresis | `HYSTERESIS`  |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Comment            |
-|----------|-------|--------------------|
-| `INITO`  | EInit | Init Confirmation  |
+| Ereignis | Typ   | Comment           |
+| -------- | ----- | ----------------- |
+| `INITO`  | EInit | Init Confirmation |
 
 ### **Daten-Eingänge**
 
-| Name         | Typ   | Comment          |
-|--------------|-------|------------------|
-| `HYSTERESIS` | USINT | Hysteresis band  |
+| Name         | Typ   | Comment         |
+| ------------ | ----- | --------------- |
+| `HYSTERESIS` | USINT | Hysteresis band |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Der FB hat keine direkten Datenausgänge. Der latched Wert wird über den Adapte
 
 ### **Adapter**
 
-| Name | Typ                                          | Richtung | Comment        |
-|------|----------------------------------------------|----------|----------------|
-| `I`  | `adapter::types::unidirectional::AUS`        | Socket   | Value to latch |
-| `Q`  | `adapter::types::unidirectional::AUS`        | Plug     | Latched value  |
+| Name | Typ                                   | Richtung | Comment        |
+| ---- | ------------------------------------- | -------- | -------------- |
+| `I`  | `adapter::types::unidirectional::AUS` | Socket   | Value to latch |
+| `Q`  | `adapter::types::unidirectional::AUS` | Plug     | Latched value  |
 
 Die Adapter sind unidirektional und enthalten jeweils ein Ereignis (`E1`) und einen Datenwert (`D1`). Über `I` wird der Eingangswert und dessen Übernahmeereignis empfangen, über `Q` wird der ausgegebene Wert und ein Bestätigungsereignis gesendet.
 
@@ -67,10 +67,10 @@ Da der FB keine explizite Zustandsmaschine offenlegt, ergibt sich das Verhalten 
 
 Zustandsübergänge erfolgen nur bei Überschreiten der jeweiligen Hystereseschwellen:
 
-| Übergang | Bedingung (Eingangswert)                     |
-|----------|----------------------------------------------|
-| 0 → 1    | Eingang überschreitet obere Schwelle         |
-| 1 → 0    | Eingang unterschreitet untere Schwelle        |
+| Übergang | Bedingung (Eingangswert)               |
+| -------- | -------------------------------------- |
+| 0 → 1    | Eingang überschreitet obere Schwelle   |
+| 1 → 0    | Eingang unterschreitet untere Schwelle |
 
 Die Schwellen sind um den Hysterese-Wert gegenüber einem Mittelwert oder Referenzwert versetzt (typischerweise obere Schwelle = Referenz + Hysterese/2, untere Schwelle = Referenz - Hysterese/2).
 
@@ -83,11 +83,11 @@ Die Schwellen sind um den Hysterese-Wert gegenüber einem Mittelwert oder Refere
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften | Unterschied zu `AUS_D_FF_HYS` |
-| ---------- | --------------- | ------------------------------- |
-| Standard-D-Flipflop (`E_D_FF`) | Übernimmt Daten bei Taktflanke, keine Hysterese | Keine Rauschunterdrückung; Zustandswechsel bei jeder Flanke. |
+| Baustein                           | Eigenschaften                                         | Unterschied zu `AUS_D_FF_HYS`                                                                                  |
+| ---------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Standard-D-Flipflop (`E_D_FF`)     | Übernimmt Daten bei Taktflanke, keine Hysterese       | Keine Rauschunterdrückung; Zustandswechsel bei jeder Flanke.                                                   |
 | Schmitt-Trigger (`E_D_FF_ANY_HYS`) | Flipflop mit Hysterese, aber meist datentypspezifisch | `AUS_D_FF_HYS` kapselt den generischen Adapter und bietet eine einheitliche Schnittstelle für beliebige Typen. |
-| SR-Flipflop (`E_SR_FF`) | Set-/Reset-Funktion ohne Takt | Keine flankengesteuerte Datenübernahme; Hysterese nicht direkt integriert. |
+| SR-Flipflop (`E_SR_FF`)            | Set-/Reset-Funktion ohne Takt                         | Keine flankengesteuerte Datenübernahme; Hysterese nicht direkt integriert.                                     |
 
 ## Fazit
 

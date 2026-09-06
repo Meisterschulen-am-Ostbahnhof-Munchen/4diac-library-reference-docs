@@ -13,26 +13,26 @@ Der Funktionsblock **AVG** (Array Average) berechnet den arithmetischen Mittelwe
 ### **Ereignis-Eingänge**
 
 | Event | Mit Daten |
-|---|---|
-| `REQ` | `A` |
+| ----- | --------- |
+| `REQ` | `A`       |
 
 ### **Ereignis-Ausgänge**
 
-| Event | Mit Daten |
-|---|---|
+| Event | Mit Daten                 |
+| ----- | ------------------------- |
 | `CNF` | *(Ergebnis-Ausgang)*, `A` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|---|---|---|---|
-| `A` | `ARRAY[*] OF INT` | – | Array von Ganzzahlen, dessen Durchschnitt berechnet wird (InOut-Variable) |
+| Name | Typ               | Initialwert | Kommentar                                                                 |
+| ---- | ----------------- | ----------- | ------------------------------------------------------------------------- |
+| `A`  | `ARRAY[*] OF INT` | –           | Array von Ganzzahlen, dessen Durchschnitt berechnet wird (InOut-Variable) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|---|---|---|---|
-| *(kein Name)* | `REAL` | – | Ergebnis des Durchschnittswerts |
+| Name          | Typ    | Initialwert | Kommentar                       |
+| ------------- | ------ | ----------- | ------------------------------- |
+| *(kein Name)* | `REAL` | –           | Ergebnis des Durchschnittswerts |
 
 ### **Adapter**
 
@@ -67,12 +67,12 @@ Da es sich um einen **kombinatorischen Funktionsblock** handelt, existieren kein
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | **AVG** | Typischer IEC‑61131-3 AVG-Baustein |
-| --- | --- | --- |
-| **Parametrierung** | Dynamisch via Array (kein Limit) | Oft statische Array-Größe oder Listen |
-| **Ereignisgesteuert** | Ja (REQ/CNF) | Nein (reine Funktion) |
-| **Ausgabetyp** | `REAL` | Meist `REAL` oder `LREAL` |
-| **Überlaufschutz** | Summe als `DINT` | Abhängig von Implementierung |
+| Merkmal               | **AVG**                          | Typischer IEC‑61131-3 AVG-Baustein    |
+| --------------------- | -------------------------------- | ------------------------------------- |
+| **Parametrierung**    | Dynamisch via Array (kein Limit) | Oft statische Array-Größe oder Listen |
+| **Ereignisgesteuert** | Ja (REQ/CNF)                     | Nein (reine Funktion)                 |
+| **Ausgabetyp**        | `REAL`                           | Meist `REAL` oder `LREAL`             |
+| **Überlaufschutz**    | Summe als `DINT`                 | Abhängig von Implementierung          |
 
 Der vorliegende Baustein kombiniert die IEC‑61499 Ereignissteuerung mit der kompakten Logik eines IEC‑61131-3 Durchschnittsbausteins und eignet sich daher besonders für verteilte Automatisierungssysteme.
 

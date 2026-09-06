@@ -14,28 +14,28 @@ Der **FB_T_FF** (Toggle Flip-Flop) realisiert einen flankengesteuerten, asynchro
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | assoziierte Daten | Beschreibung                               |
-|----------|-------------------|--------------------------------------------|
+| Ereignis | assoziierte Daten | Beschreibung                                          |
+| -------- | ----------------- | ----------------------------------------------------- |
 | `REQ`    | `CLK`, `RST`      | Normaler Ausführungsauftrag; triggert den Algorithmus |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | assoziierte Daten | Beschreibung                                     |
-|----------|-------------------|--------------------------------------------------|
+| Ereignis | assoziierte Daten | Beschreibung                                                 |
+| -------- | ----------------- | ------------------------------------------------------------ |
 | `CNF`    | `Q`               | Bestätigt die Ausführung, liefert den aktuellen Wert von `Q` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Beschreibung                    |
-|------|-------|---------------------------------|
-| `CLK`| BOOL  | Taktsignal (Flankenauswertung)  |
-| `RST`| BOOL  | Asynchroner Reset (aktiv High)  |
+| Name  | Typ  | Beschreibung                   |
+| ----- | ---- | ------------------------------ |
+| `CLK` | BOOL | Taktsignal (Flankenauswertung) |
+| `RST` | BOOL | Asynchroner Reset (aktiv High) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ   | Beschreibung                               |
-|------|-------|--------------------------------------------|
-| `Q`  | BOOL  | Ausgang – toggelt bei steigender CLK-Flanke, es sei denn, Reset ist aktiv |
+| Name | Typ  | Beschreibung                                                              |
+| ---- | ---- | ------------------------------------------------------------------------- |
+| `Q`  | BOOL | Ausgang – toggelt bei steigender CLK-Flanke, es sei denn, Reset ist aktiv |
 
 ### **Adapter**
 
@@ -61,9 +61,9 @@ Der Algorithmus wird im internen Zustand **REQ** ausgeführt; nach dem Algorithm
 
 Der Baustein ist als **SimpleFB** mit einem einzigen EC‑Zustand implementiert:
 
-| Zustand | Eingehende Ereignisse | Ausgehende Aktion | Ausgehendes Ereignis |
-|---------|-----------------------|-------------------|----------------------|
-| `REQ`   | `REQ`                 | Führe Algorithmus `REQ` aus (Toggle/Reset-Logik) | `CNF` |
+| Zustand | Eingehende Ereignisse | Ausgehende Aktion                                | Ausgehendes Ereignis |
+| ------- | --------------------- | ------------------------------------------------ | -------------------- |
+| `REQ`   | `REQ`                 | Führe Algorithmus `REQ` aus (Toggle/Reset-Logik) | `CNF`                |
 
 Der Zustand wird nach Abarbeitung sofort wieder scharf geschaltet; es gibt keine Warte- oder Folgezustände.
 
@@ -76,11 +76,11 @@ Der Zustand wird nach Abarbeitung sofort wieder scharf geschaltet; es gibt keine
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein       | Eigenschaft                                                                 |
-|----------------|-----------------------------------------------------------------------------|
-| **SR-Flipflop**| Setzt und rückgesetzt durch separate Eingänge; kein Toggle-Verhalten.      |
-| **D-Flipflop** | Übernimmt den Wert von `D` bei Taktflanke; kein Toggle, kein Reset integriert. |
-| **FB_T_FF**    | Invertiert den Ausgang bei jeder steigenden Flanke, asynchroner Reset möglich. |
+| Baustein        | Eigenschaft                                                                    |
+| --------------- | ------------------------------------------------------------------------------ |
+| **SR-Flipflop** | Setzt und rückgesetzt durch separate Eingänge; kein Toggle-Verhalten.          |
+| **D-Flipflop**  | Übernimmt den Wert von `D` bei Taktflanke; kein Toggle, kein Reset integriert. |
+| **FB_T_FF**     | Invertiert den Ausgang bei jeder steigenden Flanke, asynchroner Reset möglich. |
 
 Der **FB_T_FF** ist damit ideal für einfache Umschaltaufgaben, bei denen kein Setz-/Rücksetz-Eingang benötigt wird.
 

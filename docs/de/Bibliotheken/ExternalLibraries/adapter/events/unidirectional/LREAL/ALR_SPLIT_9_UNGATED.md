@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ |
-|----------|------|-----|
-| **Socket** | `IN` | `ALR` (unidirectional) – Der Eingang, der auf die neun Ausgänge verteilt wird. |
-| **Plug** | `OUT1` … `OUT9` | `ALR` (unidirectional) – Die neun Ausgänge, an denen das eingehende Signal bereitgestellt wird. |
+| Richtung   | Name            | Typ                                                                                             |
+| ---------- | --------------- | ----------------------------------------------------------------------------------------------- |
+| **Socket** | `IN`            | `ALR` (unidirectional) – Der Eingang, der auf die neun Ausgänge verteilt wird.                  |
+| **Plug**   | `OUT1` … `OUT9` | `ALR` (unidirectional) – Die neun Ausgänge, an denen das eingehende Signal bereitgestellt wird. |
 
 ## Funktionsweise
 

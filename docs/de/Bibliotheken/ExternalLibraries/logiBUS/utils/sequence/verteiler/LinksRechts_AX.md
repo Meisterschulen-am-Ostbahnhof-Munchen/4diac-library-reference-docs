@@ -22,8 +22,8 @@ Der Baustein verwendet primär Adapter für die Kommunikation, stellt jedoch auc
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| :--- | :--- | :--- |
+| Name   | Typ   | Beschreibung                                                                  |
+| :----- | :---- | :---------------------------------------------------------------------------- |
 | **EO** | Event | Ereignis, das ausgelöst wird, wenn sich der interne Zustand (`STATE`) ändert. |
 
 ### **Daten-Eingänge**
@@ -32,26 +32,26 @@ Der Baustein verwendet primär Adapter für die Kommunikation, stellt jedoch auc
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| :--- | :--- | :--- |
+| Name      | Typ    | Beschreibung                                                            |
+| :-------- | :----- | :---------------------------------------------------------------------- |
 | **STATE** | STRING | Aktueller Zustand des Bausteins (z.B. "Rechtslauf", "Linkslauf_Pause"). |
 
 ### **Adapter**
 
 **Sockets (Eingangs-Schnittstellen):**
 
-| Name | Typ | Kommentar |
-| :--- | :--- | :--- |
-| **EIN** | adapter::types::unidirectional::AX | **Einschalten**: Das Hauptsignal zum Starten und Stoppen der Bewegung. |
+| Name          | Typ                                | Kommentar                                                                                               |
+| :------------ | :--------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| **EIN**       | adapter::types::unidirectional::AX | **Einschalten**: Das Hauptsignal zum Starten und Stoppen der Bewegung.                                  |
 | **DI_Rechts** | adapter::types::unidirectional::AX | **Nur Rechtslauf**: Wenn aktiv, wird ein Wechsel auf Linkslauf verhindert und der Rechtslauf erzwungen. |
-| **DI_Links** | adapter::types::unidirectional::AX | **Nur Linkslauf**: Wenn aktiv, wird ein Wechsel auf Rechtslauf verhindert und der Linkslauf erzwungen. |
+| **DI_Links**  | adapter::types::unidirectional::AX | **Nur Linkslauf**: Wenn aktiv, wird ein Wechsel auf Rechtslauf verhindert und der Linkslauf erzwungen.  |
 
 **Plugs (Ausgangs-Schnittstellen):**
 
-| Name | Typ | Kommentar |
-| :--- | :--- | :--- |
+| Name       | Typ                                | Kommentar                                              |
+| :--------- | :--------------------------------- | :----------------------------------------------------- |
 | **Rechts** | adapter::types::unidirectional::AX | **Rechtslauf**: Ausgangssignal für die Rechtsbewegung. |
-| **Links** | adapter::types::unidirectional::AX | **Linkslauf**: Ausgangssignal für die Linksbewegung. |
+| **Links**  | adapter::types::unidirectional::AX | **Linkslauf**: Ausgangssignal für die Linksbewegung.   |
 
 ## Funktionsweise
 
@@ -77,13 +77,13 @@ Der **LinksRechts_AX** Baustein implementiert eine Zustandsmaschine, die grunds�
 
 Die ECC (Execution Control Chart) definiert folgende Zustände:
 
-| Zustand Name | Aktion | Beschreibung |
-| :--- | :--- | :--- |
-| **START** | - | Initialzustand. Wartet auf das `EIN`-Signal. |
-| **Rechtslauf** | `Set_Rechts_TRUE`, `Set_Links_FALSE`, Status update | Aktiviert den Adapter `Rechts`, deaktiviert `Links`. |
+| Zustand Name         | Aktion                                               | Beschreibung                                                       |
+| :------------------- | :--------------------------------------------------- | :----------------------------------------------------------------- |
+| **START**            | -                                                    | Initialzustand. Wartet auf das `EIN`-Signal.                       |
+| **Rechtslauf**       | `Set_Rechts_TRUE`, `Set_Links_FALSE`, Status update  | Aktiviert den Adapter `Rechts`, deaktiviert `Links`.               |
 | **Rechtslauf_Pause** | `Set_Rechts_FALSE`, `Set_Links_FALSE`, Status update | Beide Ausgänge aus. System merkt sich, dass es zuletzt rechts war. |
-| **Linkslauf** | `Set_Rechts_FALSE`, `Set_Links_TRUE`, Status update | Aktiviert den Adapter `Links`, deaktiviert `Rechts`. |
-| **Linkslauf_Pause** | `Set_Rechts_FALSE`, `Set_Links_FALSE`, Status update | Beide Ausgänge aus. System merkt sich, dass es zuletzt links war. |
+| **Linkslauf**        | `Set_Rechts_FALSE`, `Set_Links_TRUE`, Status update  | Aktiviert den Adapter `Links`, deaktiviert `Rechts`.               |
+| **Linkslauf_Pause**  | `Set_Rechts_FALSE`, `Set_Links_FALSE`, Status update | Beide Ausgänge aus. System merkt sich, dass es zuletzt links war.  |
 
 ## Anwendungsszenarien
 

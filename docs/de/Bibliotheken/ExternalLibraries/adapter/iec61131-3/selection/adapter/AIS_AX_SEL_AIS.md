@@ -76,10 +76,10 @@ Im Inneren des FBs arbeitet ein Netzwerk aus Standard-Funktionsbausteinen, welch
 
 ## Zustandsübersicht
 
-| Zustand des Selektors (`G`) | Letztes Ereignis an... | Aktiver Ausgang (`OUT.D1`) | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **`FALSE`** | `IN0.E1` oder `G.E1` | Wert von `IN0.D1` | Der Eingang 0 ist aktiv geschaltet. Änderungen an `IN1` haben keinen Einfluss auf den Ausgang. |
-| **`TRUE`** | `IN1.E1` oder `G.E1` | Wert von `IN1.D1` | Der Eingang 1 ist aktiv geschaltet. Änderungen an `IN0` haben keinen Einfluss auf den Ausgang. |
+| Zustand des Selektors (`G`) | Letztes Ereignis an... | Aktiver Ausgang (`OUT.D1`) | Beschreibung                                                                                   |
+| :-------------------------- | :--------------------- | :------------------------- | :--------------------------------------------------------------------------------------------- |
+| **`FALSE`**                 | `IN0.E1` oder `G.E1`   | Wert von `IN0.D1`          | Der Eingang 0 ist aktiv geschaltet. Änderungen an `IN1` haben keinen Einfluss auf den Ausgang. |
+| **`TRUE`**                  | `IN1.E1` oder `G.E1`   | Wert von `IN1.D1`          | Der Eingang 1 ist aktiv geschaltet. Änderungen an `IN0` haben keinen Einfluss auf den Ausgang. |
 
 ---
 

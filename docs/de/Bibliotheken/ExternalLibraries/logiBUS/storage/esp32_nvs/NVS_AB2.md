@@ -12,35 +12,35 @@ Der Funktionsblock **NVS_AB2** ermöglicht das Laden und Speichern von `REAL`-Da
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                                                                                                     |
+| -------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `INIT`   | EInit | Initialisiert den Baustein. Die Eingangsdaten (`QI`, `KEY`, `DEFAULT_VALUE`) werden beim Eintritt dieses Ereignisses übernommen. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                                                  |
+| -------- | ----- | ----------------------------------------------------------------------------- |
 | `INITO`  | EInit | Bestätigung der abgeschlossenen Initialisierung und der ersten Leseoperation. |
 
 ### **Daten-Eingänge**
 
-| Name           | Typ    | Beschreibung |
-|----------------|--------|--------------|
-| `QI`           | BOOL   | Qualifizierer für das Initialisierungsereignis (z. B. Freigabe der Verarbeitung). |
-| `KEY`          | STRING | Name des Schlüssels, unter dem der Wert im NVS abgelegt ist. |
-| `DEFAULT_VALUE`| REAL   | Wert, der zurückgegeben wird, falls im NVS noch kein Wert für den angegebenen Schlüssel existiert. |
+| Name            | Typ    | Beschreibung                                                                                       |
+| --------------- | ------ | -------------------------------------------------------------------------------------------------- |
+| `QI`            | BOOL   | Qualifizierer für das Initialisierungsereignis (z. B. Freigabe der Verarbeitung).                  |
+| `KEY`           | STRING | Name des Schlüssels, unter dem der Wert im NVS abgelegt ist.                                       |
+| `DEFAULT_VALUE` | REAL   | Wert, der zurückgegeben wird, falls im NVS noch kein Wert für den angegebenen Schlüssel existiert. |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ    | Beschreibung |
-|----------|--------|--------------|
+| Name     | Typ    | Beschreibung                                                                                 |
+| -------- | ------ | -------------------------------------------------------------------------------------------- |
 | `QO`     | BOOL   | Qualifizierer für das Ausgangsereignis – signalisiert Erfolg (`TRUE`) oder Fehler (`FALSE`). |
-| `STATUS` | STRING | Detailstatusmeldung (z. B. Fehlertext oder Bestätigung). |
+| `STATUS` | STRING | Detailstatusmeldung (z. B. Fehlertext oder Bestätigung).                                     |
 
 ### **Adapter**
 
-| Name  | Typ (AB2‑Adapter) | Beschreibung |
-|-------|-------------------|--------------|
+| Name  | Typ (AB2‑Adapter)                    | Beschreibung                                                                                                                                     |
+| ----- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `VAL` | `adapter::types::bidirectional::AB2` | Bidirektionale Schnittstelle für den Datenwert. Lesen und Schreiben erfolgen über die Adapterkanäle (Events: `EI1`, `EO1`; Daten: `DI1`, `DO1`). |
 
 ## Funktionsweise

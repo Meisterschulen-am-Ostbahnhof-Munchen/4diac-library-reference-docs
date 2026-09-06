@@ -74,10 +74,10 @@ Im Inneren des Bausteins befindet sich ein definiertes Netzwerk aus Standard-Fun
 
 Da es sich um einen Composite-FB handelt, besitzt der Baustein keine eigene Zustandsmaschine (ECC). Das Verhalten ist rein daten- und ereignisgesteuert:
 
-| Zustand Selektor `G` (Wert von D1) | Ausgang `OUT` (Wert von D1) | Triggerung von `OUT.E1` |
-| :--- | :--- | :--- |
-| `FALSE` (0) | Entspricht dem Wert von `IN0` | Ja, bei Änderung/Ereignis an `IN0` oder `G` |
-| `TRUE` (1) | Entspricht dem Wert von `IN1` | Ja, bei Änderung/Ereignis an `IN1` oder `G` |
+| Zustand Selektor `G` (Wert von D1) | Ausgang `OUT` (Wert von D1)   | Triggerung von `OUT.E1`                     |
+| :--------------------------------- | :---------------------------- | :------------------------------------------ |
+| `FALSE` (0)                        | Entspricht dem Wert von `IN0` | Ja, bei Änderung/Ereignis an `IN0` oder `G` |
+| `TRUE` (1)                         | Entspricht dem Wert von `IN1` | Ja, bei Änderung/Ereignis an `IN1` oder `G` |
 
 ---
 

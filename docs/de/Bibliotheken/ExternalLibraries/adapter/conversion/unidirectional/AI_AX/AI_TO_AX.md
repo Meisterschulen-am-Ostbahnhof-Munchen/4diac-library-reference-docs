@@ -14,32 +14,32 @@ Der Baustein besitzt lediglich Adapter-Anschlüsse (Socket und Plug), über die 
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                     |
+| ----------- | -------- | ------------------------------------------------ |
 | `AI_IN.E1`  | EVENT    | Eingangsereignis, das die Konvertierung anstößt. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                                            |
+| ----------- | -------- | ----------------------------------------------------------------------- |
 | `AX_OUT.E1` | EVENT    | Ausgangsereignis, das nach abgeschlossener Konvertierung gesendet wird. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                   |
+| ----------- | -------- | ---------------------------------------------- |
 | `AI_IN.D1`  | INT      | Analoger Integer-Eingangswert (z. B. 0…32767). |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                                                         |
+| ----------- | -------- | ------------------------------------------------------------------------------------ |
 | `AX_OUT.D1` | BOOL     | Boolescher Ausgangswert: `TRUE` wenn der Eingangswert ungleich 0 ist, sonst `FALSE`. |
 
 ### **Adapter**
 
-| Typ        | Name     | Richtung |
-|------------|----------|----------|
+| Typ                     | Name     | Richtung |
+| ----------------------- | -------- | -------- |
 | `AI` (Eingangs-Adapter) | `AI_IN`  | Socket   |
 | `AX` (Ausgangs-Adapter) | `AX_OUT` | Plug     |
 

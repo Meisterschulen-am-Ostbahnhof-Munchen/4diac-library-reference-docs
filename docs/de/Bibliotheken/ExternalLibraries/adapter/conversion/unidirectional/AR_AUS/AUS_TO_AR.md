@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge vorhanden. Daten werden ausschließlich über de
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-| --- | --- | --- | --- |
+| Typ                                   | Name   | Richtung         | Kommentar                       |
+| ------------------------------------- | ------ | ---------------- | ------------------------------- |
 | `adapter::types::unidirectional::AUS` | AUS_IN | Socket (Eingang) | USINT-basierter Adapter-Eingang |
-| `adapter::types::unidirectional::AR` | AR_OUT | Plug (Ausgang) | REAL-basierter Adapter-Ausgang |
+| `adapter::types::unidirectional::AR`  | AR_OUT | Plug (Ausgang)   | REAL-basierter Adapter-Ausgang  |
 
 ## Funktionsweise
 

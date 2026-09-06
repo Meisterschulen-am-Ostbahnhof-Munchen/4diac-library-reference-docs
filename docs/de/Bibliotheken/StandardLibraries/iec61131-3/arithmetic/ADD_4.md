@@ -54,12 +54,12 @@ Der **ADD_4** ist ein leistungsfähiger Funktionsbaustein zur Summation von vier
 
 ## Unterstützte Datentypen
 
-| Kategorie      | Beispiele               |
-|----------------|-------------------------|
-| Ganzzahlen     | INT, DINT, UDINT       |
-| Fließkomma     | REAL, LREAL            |
-| Zeitwerte      | TIME, LTIME            |
-| Spezialtypen   | DATE_AND_TIME          |
+| Kategorie    | Beispiele        |
+| ------------ | ---------------- |
+| Ganzzahlen   | INT, DINT, UDINT |
+| Fließkomma   | REAL, LREAL      |
+| Zeitwerte    | TIME, LTIME      |
+| Spezialtypen | DATE_AND_TIME    |
 
 ## Anwendungsszenarien
 
@@ -70,10 +70,10 @@ Der **ADD_4** ist ein leistungsfähiger Funktionsbaustein zur Summation von vier
 
 ## ⚖️ Vergleich mit anderen Addierern
 
-| Baustein | Eingänge | Vorteile |
-|----------|----------|----------|
+| Baustein | Eingänge | Vorteile            |
+| -------- | -------- | ------------------- |
 | ADD_2    | 2        | Einfachste Variante |
-| ADD_3    | 3        | Kompromiss |
+| ADD_3    | 3        | Kompromiss          |
 | ADD_4    | 4        | Höchste Integration |
 
 ## Fehlermanagement

@@ -85,12 +85,12 @@ Da es sich um einen reinen Rechenbaustein (arithmetische Funktion) handelt, besi
 
 Im Vergleich zu einem Standard-Multiplikationsbaustein (wie dem IEC 61199 `MUL`-Baustein) bietet der `AULI_MUL_2` folgende Vor- und Nachteile:
 
-| Merkmal | Standard `MUL` Baustein | `AULI_MUL_2` |
-| :--- | :--- | :--- |
-| **Schnittstellen** | Einzelne Event- und Datenpins | Gebündelte Adapter (`AULI`) |
-| **Verdrahtungsaufwand** | Hoch (separate Event- und Datenlinien) | Minimal (nur eine Adapterlinie pro Signal) |
-| **Flexibilität** | Hoch (direktes Mapping von Variablen) | Erfordert die Verwendung des `AULI`-Adaptertyps |
-| **Lesbarkeit** | Kann bei vielen Bausteinen unübersichtlich werden | Sehr sauber und modular |
+| Merkmal                 | Standard `MUL` Baustein                           | `AULI_MUL_2`                                    |
+| :---------------------- | :------------------------------------------------ | :---------------------------------------------- |
+| **Schnittstellen**      | Einzelne Event- und Datenpins                     | Gebündelte Adapter (`AULI`)                     |
+| **Verdrahtungsaufwand** | Hoch (separate Event- und Datenlinien)            | Minimal (nur eine Adapterlinie pro Signal)      |
+| **Flexibilität**        | Hoch (direktes Mapping von Variablen)             | Erfordert die Verwendung des `AULI`-Adaptertyps |
+| **Lesbarkeit**          | Kann bei vielen Bausteinen unübersichtlich werden | Sehr sauber und modular                         |
 
 ---
 

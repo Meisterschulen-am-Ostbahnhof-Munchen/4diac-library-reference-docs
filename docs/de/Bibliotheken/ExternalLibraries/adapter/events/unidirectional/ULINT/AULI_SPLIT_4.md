@@ -28,13 +28,13 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AULI` | `IN` | Socket | Eingangsadapter für das zu verteilende AULI-Signal |
-| `adapter::types::unidirectional::AULI` | `OUT1` | Plug | Erster Ausgangsadapter (identisch zum Eingang) |
-| `adapter::types::unidirectional::AULI` | `OUT2` | Plug | Zweiter Ausgangsadapter |
-| `adapter::types::unidirectional::AULI` | `OUT3` | Plug | Dritter Ausgangsadapter |
-| `adapter::types::unidirectional::AULI` | `OUT4` | Plug | Vierter Ausgangsadapter |
+| Typ                                    | Name   | Richtung | Beschreibung                                       |
+| -------------------------------------- | ------ | -------- | -------------------------------------------------- |
+| `adapter::types::unidirectional::AULI` | `IN`   | Socket   | Eingangsadapter für das zu verteilende AULI-Signal |
+| `adapter::types::unidirectional::AULI` | `OUT1` | Plug     | Erster Ausgangsadapter (identisch zum Eingang)     |
+| `adapter::types::unidirectional::AULI` | `OUT2` | Plug     | Zweiter Ausgangsadapter                            |
+| `adapter::types::unidirectional::AULI` | `OUT3` | Plug     | Dritter Ausgangsadapter                            |
+| `adapter::types::unidirectional::AULI` | `OUT4` | Plug     | Vierter Ausgangsadapter                            |
 
 ## Funktionsweise
 

@@ -12,30 +12,30 @@ Der Funktionsblock `AL_FIELDBUS_LWORD_TO_SIGNAL_SCALED` dient der Umwandlung ein
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar |
-|------|-------|-----------|
+| Name | Typ   | Kommentar        |
+| ---- | ----- | ---------------- |
 | INIT | EInit | Init-Anforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar |
-|-------|-------|-----------|
+| Name  | Typ   | Kommentar        |
+| ----- | ----- | ---------------- |
 | INITO | EInit | Init-Bestätigung |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Anfangswert | Kommentar                    |
-|--------|-------|-------------|------------------------------|
-| SCALE  | LREAL | 1.0         | Skalierungsfaktor            |
+| Name   | Typ   | Anfangswert | Kommentar                            |
+| ------ | ----- | ----------- | ------------------------------------ |
+| SCALE  | LREAL | 1.0         | Skalierungsfaktor                    |
 | OFFSET | DINT  | 0           | Nach der Skalierung addierter Offset |
 
 ### **Adapter**
 
-| Typ  | Richtung | Name  | Kommentar                |
-|------|----------|-------|--------------------------|
-| AL   | Socket   | IN    | Eingangssignal (LWORD)   |
-| ALR  | Plug     | OUT   | Ausgangssignal (skaliert)|
-| AX   | Plug     | VALID | Signal gültig (TRUE/FALSE)|
+| Typ | Richtung | Name  | Kommentar                  |
+| --- | -------- | ----- | -------------------------- |
+| AL  | Socket   | IN    | Eingangssignal (LWORD)     |
+| ALR | Plug     | OUT   | Ausgangssignal (skaliert)  |
+| AX  | Plug     | VALID | Signal gültig (TRUE/FALSE) |
 
 ## Funktionsweise
 

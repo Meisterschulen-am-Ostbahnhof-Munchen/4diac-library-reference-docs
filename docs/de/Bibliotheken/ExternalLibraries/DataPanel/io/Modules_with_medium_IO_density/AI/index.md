@@ -1,6 +1,6 @@
-![AI](AI.svg)
-
 # AI
+
+![AI](AI.svg)
 
 ## 📺 Video
 

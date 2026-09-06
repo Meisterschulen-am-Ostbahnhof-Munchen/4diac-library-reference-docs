@@ -36,10 +36,10 @@ Daten werden über den **AB_OUT**-Adapter weitergegeben:
 
 ### **Adapter**
 
-| Name      | Typ                                    | Richtung | Beschreibung |
-|-----------|----------------------------------------|----------|--------------|
+| Name       | Typ                                   | Richtung | Beschreibung                                    |
+| ---------- | ------------------------------------- | -------- | ----------------------------------------------- |
 | **AUS_IN** | `adapter::types::unidirectional::AUS` | Socket   | Eingangsadapter für USINT‑Daten und Ereignisse. |
-| **AB_OUT** | `adapter::types::unidirectional::AB`  | Plug     | Ausgangsadapter für BYTE‑Daten und Ereignisse. |
+| **AB_OUT** | `adapter::types::unidirectional::AB`  | Plug     | Ausgangsadapter für BYTE‑Daten und Ereignisse.  |
 
 ## Funktionsweise
 

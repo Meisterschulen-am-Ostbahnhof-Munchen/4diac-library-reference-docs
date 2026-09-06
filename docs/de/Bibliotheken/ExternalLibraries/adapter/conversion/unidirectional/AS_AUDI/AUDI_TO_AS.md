@@ -34,10 +34,10 @@ Daten-Ausgänge werden über den **Plug-Adapter `AS_OUT`** bereitgestellt:
 
 ### **Adapter**
 
-| Name      | Typ                                       | Richtung | Beschreibung                     |
-|-----------|-------------------------------------------|----------|----------------------------------|
-| `AUDI_IN` | `adapter::types::unidirectional::AUDI`    | Socket   | Eingangsadapter (UDINT)          |
-| `AS_OUT`  | `adapter::types::unidirectional::AS`      | Plug     | Ausgangsadapter (SINT)           |
+| Name      | Typ                                    | Richtung | Beschreibung            |
+| --------- | -------------------------------------- | -------- | ----------------------- |
+| `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Socket   | Eingangsadapter (UDINT) |
+| `AS_OUT`  | `adapter::types::unidirectional::AS`   | Plug     | Ausgangsadapter (SINT)  |
 
 ## Funktionsweise
 

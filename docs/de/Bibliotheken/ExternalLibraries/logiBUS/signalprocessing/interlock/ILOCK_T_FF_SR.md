@@ -12,17 +12,17 @@ Der Funktionsblock `ILOCK_T_FF_SR` ist ein zusammengesetzter Baustein (Composite
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | ------------- |
-| `S` | Event | Setzt den Ausgang `Q` auf TRUE |
-| `R` | Event | Setzt den Ausgang `Q` auf FALSE |
+| Name  | Typ   | Beschreibung                                            |
+| ----- | ----- | ------------------------------------------------------- |
+| `S`   | Event | Setzt den Ausgang `Q` auf TRUE                          |
+| `R`   | Event | Setzt den Ausgang `Q` auf FALSE                         |
 | `CLK` | Event | Clock-Ereignis – löst einen Toggle des Ausgangs `Q` aus |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| `EO`  | Event | Wird nach jeder Änderung des internen Zustands (Set, Reset oder Toggle) ausgelöst |
+| Name | Typ   | Beschreibung                                                                      |
+| ---- | ----- | --------------------------------------------------------------------------------- |
+| `EO` | Event | Wird nach jeder Änderung des internen Zustands (Set, Reset oder Toggle) ausgelöst |
 
 ### **Daten-Eingänge**
 
@@ -30,16 +30,16 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| `Q`   | BOOL | Aktueller Zustand des Flipflops (TRUE = gesetzt, FALSE = zurückgesetzt) |
+| Name | Typ  | Beschreibung                                                            |
+| ---- | ---- | ----------------------------------------------------------------------- |
+| `Q`  | BOOL | Aktueller Zustand des Flipflops (TRUE = gesetzt, FALSE = zurückgesetzt) |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|-------------|
+| Name        | Typ                 | Richtung         | Beschreibung                                                                    |
+| ----------- | ------------------- | ---------------- | ------------------------------------------------------------------------------- |
 | `ILOCK_IN`  | AE2 (bidirektional) | Socket (Eingang) | Ermöglicht den Empfang von Verriegelungssignalen von vorgeschalteten Bausteinen |
-| `ILOCK_OUT` | AE2 (bidirektional) | Plug (Ausgang) | Sendet Verriegelungssignale an nachgeschaltete Bausteine |
+| `ILOCK_OUT` | AE2 (bidirektional) | Plug (Ausgang)   | Sendet Verriegelungssignale an nachgeschaltete Bausteine                        |
 
 Die Adapter `ILOCK_IN` und `ILOCK_OUT` sind Typ `AE2` (allgemeiner, bidirektionaler Adapter). Sie werden verwendet, um mehrere Instanzen des Bausteins zu einer Kaskade zu verbinden, sodass ein gesetzter Zustand eines Bausteins andere Bausteine zurücksetzen kann (Interlock).
 
@@ -75,8 +75,8 @@ Das interne Flipflop `E_SR` kennt die zwei Zustände:
 Ein Set-Ereignis (`S`) führt unabhängig vom aktuellen Zustand immer in den Zustand TRUE.  
 Ein Reset-Ereignis (`R`) führt unabhängig vom aktuellen Zustand immer in den Zustand FALSE.
 
-| Aktueller Zustand | Ereignis | Neuer Zustand | Ausgangsaktionen |
-|-------------------|----------|---------------|------------------|
+| Aktueller Zustand | Ereignis | Neuer Zustand | Ausgangsaktionen    |
+| ----------------- | -------- | ------------- | ------------------- |
 | FALSE             | `S`      | TRUE          | `EO` wird ausgelöst |
 | FALSE             | `R`      | FALSE         | `EO` wird ausgelöst |
 | FALSE             | `CLK`    | TRUE          | `EO` wird ausgelöst |

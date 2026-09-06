@@ -12,20 +12,20 @@ The function block **Q_ObjHideShow_AX** serves as an adapter wrapper for the exi
 
 ### **Event Inputs**
 
-| Name | Type | Comment | With Variable |
-|-------|--------|-------------------------------|----------------|
-| `INIT` | EInit | Service Initialization | `u16ObjId` |
+| Name   | Type  | Comment                | With Variable |
+| ------ | ----- | ---------------------- | ------------- |
+| `INIT` | EInit | Service Initialization | `u16ObjId`    |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|--------|--------|-----------------------------|
+| Name    | Type  | Comment                     |
+| ------- | ----- | --------------------------- |
 | `INITO` | EInit | Initialization Confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|-----------|------|-------------------|
+| Name       | Type | Comment               |
+| ---------- | ---- | --------------------- |
 | `u16ObjId` | UINT | Object Identification |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ This function block does not have its own data outputs. The old visibility value
 
 ### **Adapter**
 
-| Direction | Name | Type | Comment |
-| ---------- | ---------------- | --------------------------------- | ------------------------------------------------------------ |
-| Socket | `qVisible` | `unidirectional::AX` | Input of the new visibility value (0 = hidden, 1 = shown) |
-| Plug | `qOldVisible` | `unidirectional::AB` | Output of the previous visibility value (0/1/0xFF) |
+| Direction | Name          | Type                 | Comment                                                   |
+| --------- | ------------- | -------------------- | --------------------------------------------------------- |
+| Socket    | `qVisible`    | `unidirectional::AX` | Input of the new visibility value (0 = hidden, 1 = shown) |
+| Plug      | `qOldVisible` | `unidirectional::AB` | Output of the previous visibility value (0/1/0xFF)        |
 
 ## Valid Object IDs
 

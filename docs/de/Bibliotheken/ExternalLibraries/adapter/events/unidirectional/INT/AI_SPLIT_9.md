@@ -28,18 +28,18 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | `IN` | `adapter::types::unidirectional::AI` | Einzelner analoger Eingang, der auf alle Ausgänge verteilt wird. |
-| Ausgang (Plug) | `OUT1` | `adapter::types::unidirectional::AI` | Erster ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT2` | `adapter::types::unidirectional::AI` | Zweiter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT3` | `adapter::types::unidirectional::AI` | Dritter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT4` | `adapter::types::unidirectional::AI` | Vierter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT5` | `adapter::types::unidirectional::AI` | Fünfter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT6` | `adapter::types::unidirectional::AI` | Sechster ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT7` | `adapter::types::unidirectional::AI` | Siebter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT8` | `adapter::types::unidirectional::AI` | Achter ausgehender AI‑Kanal. |
-| Ausgang (Plug) | `OUT9` | `adapter::types::unidirectional::AI` | Neunter ausgehender AI‑Kanal. |
+| Richtung         | Name   | Typ                                  | Beschreibung                                                     |
+| ---------------- | ------ | ------------------------------------ | ---------------------------------------------------------------- |
+| Eingang (Socket) | `IN`   | `adapter::types::unidirectional::AI` | Einzelner analoger Eingang, der auf alle Ausgänge verteilt wird. |
+| Ausgang (Plug)   | `OUT1` | `adapter::types::unidirectional::AI` | Erster ausgehender AI‑Kanal.                                     |
+| Ausgang (Plug)   | `OUT2` | `adapter::types::unidirectional::AI` | Zweiter ausgehender AI‑Kanal.                                    |
+| Ausgang (Plug)   | `OUT3` | `adapter::types::unidirectional::AI` | Dritter ausgehender AI‑Kanal.                                    |
+| Ausgang (Plug)   | `OUT4` | `adapter::types::unidirectional::AI` | Vierter ausgehender AI‑Kanal.                                    |
+| Ausgang (Plug)   | `OUT5` | `adapter::types::unidirectional::AI` | Fünfter ausgehender AI‑Kanal.                                    |
+| Ausgang (Plug)   | `OUT6` | `adapter::types::unidirectional::AI` | Sechster ausgehender AI‑Kanal.                                   |
+| Ausgang (Plug)   | `OUT7` | `adapter::types::unidirectional::AI` | Siebter ausgehender AI‑Kanal.                                    |
+| Ausgang (Plug)   | `OUT8` | `adapter::types::unidirectional::AI` | Achter ausgehender AI‑Kanal.                                     |
+| Ausgang (Plug)   | `OUT9` | `adapter::types::unidirectional::AI` | Neunter ausgehender AI‑Kanal.                                    |
 
 ## Funktionsweise
 

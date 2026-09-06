@@ -14,10 +14,10 @@ Der Baustein besitzt keine separaten Ereignis‑ oder Datenports auf der oberste
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
+| Adapter   | Richtung         | Typ                                    | Beschreibung                                                       |
+| --------- | ---------------- | -------------------------------------- | ------------------------------------------------------------------ |
 | `AULI_IN` | Socket (Eingang) | `adapter::types::unidirectional::AULI` | Bietet ein Ereignis `E1` und einen Datenwert `D1` vom Typ `ULINT`. |
-| `AS_OUT`  | Plug (Ausgang)  | `adapter::types::unidirectional::AS`   | Liefert ein Ereignis `E1` und einen Datenwert `D1` vom Typ `SINT`. |
+| `AS_OUT`  | Plug (Ausgang)   | `adapter::types::unidirectional::AS`   | Liefert ein Ereignis `E1` und einen Datenwert `D1` vom Typ `SINT`. |
 
 ### **Ereignis-Eingänge (über Adapter)**
 

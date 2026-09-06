@@ -12,30 +12,30 @@ Der Funktionsbaustein **ARR08B_TO_WORDS** dient der Aufteilung eines 8‑Byte‑
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                                                  |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | REQ      | Auslösen der Konvertierung; der Baustein verarbeitet den aktuellen Wert von `IN` und legt die Ergebnisse an den Ausgängen an. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                             |
+| -------- | ---------------------------------------------------------------------------------------- |
 | CNF      | Bestätigung, dass die Konvertierung abgeschlossen ist und die Ausgangswerte gültig sind. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Array-Größe | Beschreibung |
-|------|-------|-------------|--------------|
-| IN   | BYTE  | 0…7         | Eingangsarray aus 8 Bytes, das in vier Words zerlegt wird. |
+| Name | Typ  | Array-Größe | Beschreibung                                               |
+| ---- | ---- | ----------- | ---------------------------------------------------------- |
+| IN   | BYTE | 0…7         | Eingangsarray aus 8 Bytes, das in vier Words zerlegt wird. |
 
 ### **Daten-Ausgänge**
 
-| Name    | Typ  | Beschreibung |
-|---------|------|--------------|
-| OUT_00  | WORD | Aus den Bytes IN[0] und IN[1] gebildetes Word (niederwertigstes). |
-| OUT_01  | WORD | Aus den Bytes IN[2] und IN[3] gebildetes Word. |
-| OUT_02  | WORD | Aus den Bytes IN[4] und IN[5] gebildetes Word. |
-| OUT_03  | WORD | Aus den Bytes IN[6] und IN[7] gebildetes Word (höchstwertigstes). |
+| Name   | Typ  | Beschreibung                                                      |
+| ------ | ---- | ----------------------------------------------------------------- |
+| OUT_00 | WORD | Aus den Bytes IN[0] und IN[1] gebildetes Word (niederwertigstes). |
+| OUT_01 | WORD | Aus den Bytes IN[2] und IN[3] gebildetes Word.                    |
+| OUT_02 | WORD | Aus den Bytes IN[4] und IN[5] gebildetes Word.                    |
+| OUT_03 | WORD | Aus den Bytes IN[6] und IN[7] gebildetes Word (höchstwertigstes). |
 
 ### **Adapter**
 

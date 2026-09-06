@@ -60,12 +60,12 @@ Der CLIENT_0 Block initialisiert eine Netzwerkverbindung zum SERVER_0 Block übe
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2025 Monika Wenger |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-12-05, Monika Wenger) |
-| 4diac-Paket | iec61499::net |
+| Attribut    | Wert                            |
+| :---------- | :------------------------------ |
+| Copyright   | (c) 2025 Monika Wenger          |
+| Lizenz      | EPL-2.0                         |
+| Version     | 3.0 (2025-12-05, Monika Wenger) |
+| 4diac-Paket | iec61499::net                   |
 
 ---
 

@@ -28,10 +28,10 @@ Keine – alle Daten werden über den Plug-Adapter ausgegeben.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| Socket | `ADI_IN` | Eingang | ADI-Adapter (DINT) – liefert den zu konvertierenden Wert und ein Ereignis |
-| Plug   | `AUI_OUT` | Ausgang | AUI-Adapter (UINT) – stellt den konvertierten Wert und zugehöriges Ereignis bereit |
+| Typ    | Name      | Richtung | Beschreibung                                                                       |
+| ------ | --------- | -------- | ---------------------------------------------------------------------------------- |
+| Socket | `ADI_IN`  | Eingang  | ADI-Adapter (DINT) – liefert den zu konvertierenden Wert und ein Ereignis          |
+| Plug   | `AUI_OUT` | Ausgang  | AUI-Adapter (UINT) – stellt den konvertierten Wert und zugehöriges Ereignis bereit |
 
 ## Funktionsweise
 

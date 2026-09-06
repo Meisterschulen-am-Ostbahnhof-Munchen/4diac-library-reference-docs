@@ -12,33 +12,33 @@ Der Funktionsblock **StringValue_IWS** ist ein Service-Interface-Funktionsblock 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar | Mitgeführte Daten |
-|----------|-----------|-------------------|
+| Ereignis | Kommentar               | Mitgeführte Daten          |
+| -------- | ----------------------- | -------------------------- |
 | `INIT`   | Service-Initialisierung | `QI`, `PARAMS`, `u16ObjId` |
-| `REQ`    | Service-Anforderung     | `QI` |
+| `REQ`    | Service-Anforderung     | `QI`                       |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar | Mitgeführte Daten |
-|----------|-----------|-------------------|
-| `INITO`  | Bestätigung der Initialisierung | `QO`, `STATUS` |
-| `CNF`    | Bestätigung der angeforderten Aktion | `QO`, `STATUS`, `IN` |
+| Ereignis | Kommentar                               | Mitgeführte Daten    |
+| -------- | --------------------------------------- | -------------------- |
+| `INITO`  | Bestätigung der Initialisierung         | `QO`, `STATUS`       |
+| `CNF`    | Bestätigung der angeforderten Aktion    | `QO`, `STATUS`, `IN` |
 | `IND`    | Asynchrone Indikation von der Ressource | `QO`, `STATUS`, `IN` |
 
 ### **Daten-Eingänge**
 
-| Name      | Typ      | Initialwert | Kommentar |
-|-----------|----------|-------------|-----------|
-| `QI`      | `BOOL`   | –           | Ereigniseingangs-Qualifier |
-| `PARAMS`  | `STRING` | –           | Dienstparameter (z. B. Port-/Gerätekonfiguration) |
-| `u16ObjId`| `UINT`   | `ID_NULL`   | Objekt‑ID zur Identifikation der Datenquelle |
+| Name       | Typ      | Initialwert | Kommentar                                         |
+| ---------- | -------- | ----------- | ------------------------------------------------- |
+| `QI`       | `BOOL`   | –           | Ereigniseingangs-Qualifier                        |
+| `PARAMS`   | `STRING` | –           | Dienstparameter (z. B. Port-/Gerätekonfiguration) |
+| `u16ObjId` | `UINT`   | `ID_NULL`   | Objekt‑ID zur Identifikation der Datenquelle      |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ       | Kommentar |
-|----------|-----------|-----------|
-| `QO`     | `BOOL`    | Ereignisausgangs-Qualifier |
-| `STATUS` | `STRING`  | Status- oder Fehlermeldung |
+| Name     | Typ       | Kommentar                                     |
+| -------- | --------- | --------------------------------------------- |
+| `QO`     | `BOOL`    | Ereignisausgangs-Qualifier                    |
+| `STATUS` | `STRING`  | Status- oder Fehlermeldung                    |
 | `IN`     | `WSTRING` | Empfangene Eingabedaten (breite Zeichenkette) |
 
 ### **Adapter**
@@ -97,12 +97,12 @@ Eine explizite Zustandsmaschine ist im XML nicht definiert, jedoch ergibt sich a
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Funktionsblock | Typ | Unterschied |
-| ---------------- | ------- | ------------- |
-| `StringValue_IWS` (vorliegend) | `WSTRING` | Empfängt UTF‑16‑kodierte Zeichenketten. |
-| `StringValue_IWS` (normale Variante) | `STRING` | Empfängt ASCII‑/UTF‑8‑Strings, geringere Zeichenabdeckung. |
-| `AnalogInput_IWS` | `REAL` | Empfängt analoge Messwerte, keine Zeichenketten. |
-| `EventInput_IWS` | – | Nur Ereignis‑Schnittstelle, keine Daten. |
+| Funktionsblock                       | Typ       | Unterschied                                                |
+| ------------------------------------ | --------- | ---------------------------------------------------------- |
+| `StringValue_IWS` (vorliegend)       | `WSTRING` | Empfängt UTF‑16‑kodierte Zeichenketten.                    |
+| `StringValue_IWS` (normale Variante) | `STRING`  | Empfängt ASCII‑/UTF‑8‑Strings, geringere Zeichenabdeckung. |
+| `AnalogInput_IWS`                    | `REAL`    | Empfängt analoge Messwerte, keine Zeichenketten.           |
+| `EventInput_IWS`                     | –         | Nur Ereignis‑Schnittstelle, keine Daten.                   |
 
 Der `StringValue_IWS` ist speziell für die Verarbeitung von Unicode‑Text konzipiert und eignet sich daher für internationale oder zeichensatzlastige Anwendungen.
 

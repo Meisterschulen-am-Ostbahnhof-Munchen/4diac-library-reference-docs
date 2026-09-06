@@ -28,10 +28,10 @@ Der FB besitzt keine direkten Daten-Ausgänge auf der obersten Ebene. Die Datena
 
 ### **Adapter**
 
-| Richtung | Name  | Typ des Adapters              | Beschreibung                                    |
-|----------|-------|-------------------------------|-------------------------------------------------|
-| Socket   | AB_IN | `adapter::types::unidirectional::AB`  | Eingangsadapter für BYTE-Daten (Quelladapter)  |
-| Plug     | AUI_OUT| `adapter::types::unidirectional::AUI` | Ausgangsadapter für UINT-Daten (Zieladapter)    |
+| Richtung | Name    | Typ des Adapters                      | Beschreibung                                  |
+| -------- | ------- | ------------------------------------- | --------------------------------------------- |
+| Socket   | AB_IN   | `adapter::types::unidirectional::AB`  | Eingangsadapter für BYTE-Daten (Quelladapter) |
+| Plug     | AUI_OUT | `adapter::types::unidirectional::AUI` | Ausgangsadapter für UINT-Daten (Zieladapter)  |
 
 **Hinweis:** Die Adapter vom Typ `AB` und `AUI` besitzen jeweils einen Ereignis-Eingang (`E1`), einen Ereignis-Ausgang (`E1`), einen Daten-Eingang (`D1` vom Typ BYTE bzw. UINT) sowie einen Daten-Ausgang (`D1` vom Typ BYTE bzw. UINT). Die genauen Details sind den entsprechenden Adapterdefinitionen zu entnehmen.
 

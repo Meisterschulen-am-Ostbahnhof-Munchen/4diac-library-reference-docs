@@ -12,31 +12,31 @@ Der Funktionsblock **FIELDBUS_DWORD_TO_SIGNAL_SCALED** dient der Konvertierung e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT     | EInit | Initialisierungsanforderung; übergibt Skalierungsparameter |
+| Ereignis | Typ   | Beschreibung                                                 |
+| -------- | ----- | ------------------------------------------------------------ |
+| INIT     | EInit | Initialisierungsanforderung; übergibt Skalierungsparameter   |
 | REQ      | Event | Normale Ausführungsanforderung zur Verarbeitung des Eingangs |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INITO    | EInit | Bestätigung der Initialisierung |
+| Ereignis | Typ   | Beschreibung                                                                 |
+| -------- | ----- | ---------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der Initialisierung                                              |
 | CNF      | Event | Bestätigung der Ausführung; liefert skalierten Ausgang und Gültigkeitsflagge |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Initialwert           | Beschreibung |
-|--------|-------|-----------------------|--------------|
-| IN     | DWORD | NOT_AVAILABLE_DWM     | Eingangswert vom Feldbus |
-| SCALE  | LREAL | LREAL#1.0             | Skalierungsfaktor (Multiplikator) |
-| OFFSET | DINT  | DINT#0                | Offset, der nach der Skalierung addiert wird |
+| Name   | Typ   | Initialwert       | Beschreibung                                 |
+| ------ | ----- | ----------------- | -------------------------------------------- |
+| IN     | DWORD | NOT_AVAILABLE_DWM | Eingangswert vom Feldbus                     |
+| SCALE  | LREAL | LREAL#1.0         | Skalierungsfaktor (Multiplikator)            |
+| OFFSET | DINT  | DINT#0            | Offset, der nach der Skalierung addiert wird |
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ   | Initialwert | Beschreibung |
-|-------|-------|-------------|--------------|
-| OUT   | LREAL | LREAL#0.0   | Skalierter Ausgangswert |
+| Name  | Typ   | Initialwert | Beschreibung                             |
+| ----- | ----- | ----------- | ---------------------------------------- |
+| OUT   | LREAL | LREAL#0.0   | Skalierter Ausgangswert                  |
 | VALID | BOOL  | FALSE       | TRUE, wenn das Eingangssignal gültig ist |
 
 ### **Adapter**
@@ -69,10 +69,10 @@ Die Konstanten `NOT_AVAILABLE_DWM` und `VALID_SIGNAL_DW` stammen aus importierte
 
 ## Zustandsübersicht
 
-| Zustand | Auslöser | Aktion | Ausgang |
-|---------|----------|--------|---------|
-| INIT    | INIT-Ereignis | Algorithmus INIT (leer) | INITO |
-| REQ     | REQ-Ereignis | Algorithmus REQ (Berechnung und Gültigkeitsprüfung) | CNF |
+| Zustand | Auslöser      | Aktion                                              | Ausgang |
+| ------- | ------------- | --------------------------------------------------- | ------- |
+| INIT    | INIT-Ereignis | Algorithmus INIT (leer)                             | INITO   |
+| REQ     | REQ-Ereignis  | Algorithmus REQ (Berechnung und Gültigkeitsprüfung) | CNF     |
 
 Der Funktionsblock benötigt keine Zustandsübergänge zwischen INIT und REQ – beide Zustände werden direkt durch ihre jeweiligen Ereignisse gestartet.
 

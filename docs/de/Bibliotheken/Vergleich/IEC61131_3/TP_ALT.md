@@ -4,12 +4,12 @@ Der Funktionsbaustein **TP** (Timer Pulse) implementiert einen Impulsgeber (Mono
 
 ## Schnittstelle
 
-| Typ | Name | Datentyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Eingang** | IN | BOOL | Startsignal (steigende Flanke löst Impuls aus) |
-| **Eingang** | PT | TIME | Preset Time (Impulsdauer) |
-| **Ausgang** | Q | BOOL | Ausgangssignal |
-| **Ausgang** | ET | TIME | Elapsed Time (verstrichene Zeit seit Impulsstart) |
+| Typ         | Name | Datentyp | Beschreibung                                      |
+| :---------- | :--- | :------- | :------------------------------------------------ |
+| **Eingang** | IN   | BOOL     | Startsignal (steigende Flanke löst Impuls aus)    |
+| **Eingang** | PT   | TIME     | Preset Time (Impulsdauer)                         |
+| **Ausgang** | Q    | BOOL     | Ausgangssignal                                    |
+| **Ausgang** | ET   | TIME     | Elapsed Time (verstrichene Zeit seit Impulsstart) |
 
 ## Funktion
 

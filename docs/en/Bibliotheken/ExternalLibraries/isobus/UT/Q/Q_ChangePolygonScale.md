@@ -40,11 +40,13 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 
 - `INIT` with polygon object ID
 - `INITO` confirms operational readiness
+
 1. **Scaling**:
 
 - `REQ` triggers with new dimensions
 - Proportional scaling of all polygon points
 - `CNF` returns result and previous values
+
 1. **Error Handling**:
 
 - ISO-standardized Error Codes
@@ -59,20 +61,20 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 
 ## Scaling Behavior
 
-| Parameter | Effect |
-| ------------ | ----------------------------- |
-| Width | Horizontal scaling |
-| Height | Vertical scaling |
+| Parameter | Effect             |
+| --------- | ------------------ |
+| Width     | Horizontal scaling |
+| Height    | Vertical scaling   |
 
 Per Annex F.54 the VT rescales all polygon points using 32-bit integer math: `new_x = [(old_x × new_width) + (old_width/2)] / old_width` and analogously for `new_y`.
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success | | -6 | VT_E_OVERFLOW | Invalid Dimensions |
-| -128 | VT_E_HANDLE_INVALID | Invalid Polygon ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid Instance |
+| Code | Constant                  | Meaning            |     |     |               |                    |
+| ---- | ------------------------- | ------------------ | --- | --- | ------------- | ------------------ |
+| 0    | VT_E_NO_ERR               | Success            |     | -6  | VT_E_OVERFLOW | Invalid Dimensions |
+| -128 | VT_E_HANDLE_INVALID       | Invalid Polygon ID |     |     |               |                    |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid Instance   |     |     |               |                    |
 
 ## Application Scenarios
 
@@ -83,11 +85,11 @@ Per Annex F.54 the VT rescales all polygon points using 32-bit integer math: `ne
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Feature | Q_ChangePolygonScale | VtGeometryScaler | VtDynamicResize |
-| --------------- | ---------------------- | ------------------ | ----------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Scaling | Proportional | Free | Width Only |
-| Resolution | 16-bit | 8-bit | 16-bit |
+| Feature      | Q_ChangePolygonScale | VtGeometryScaler | VtDynamicResize |
+| ------------ | -------------------- | ---------------- | --------------- |
+| ISO Standard | ✔                    | ✖                | ✖               |
+| Scaling      | Proportional         | Free             | Width Only      |
+| Resolution   | 16-bit               | 8-bit            | 16-bit          |
 
 ## Conclusion
 

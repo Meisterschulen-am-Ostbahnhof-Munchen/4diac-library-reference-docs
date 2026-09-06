@@ -12,22 +12,22 @@ Der Funktionsblock **AULI_D_FF_HYS_TMIN** realisiert ein taktflankengesteuertes 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INIT` | `EInit` | Initialisierungsanforderung. Setzt die Parameter Hysterese und Mindestzeit. |
+| Ereignis | Typ     | Kommentar                                                                   |
+| -------- | ------- | --------------------------------------------------------------------------- |
+| `INIT`   | `EInit` | Initialisierungsanforderung. Setzt die Parameter Hysterese und Mindestzeit. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INITO` | `EInit` | Bestätigung der erfolgreichen Initialisierung. |
+| Ereignis | Typ     | Kommentar                                      |
+| -------- | ------- | ---------------------------------------------- |
+| `INITO`  | `EInit` | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
+| Variable     | Typ     | Kommentar                                                                                                                 |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `HYSTERESIS` | `ULINT` | Hystereseband als Ganzzahl ohne Vorzeichen. Der Ausgang ändert seinen Wert erst, wenn der Eingang das Band überschreitet. |
-| `Tmin` | `TIME` | Mindestzeit zwischen zwei ausgelösten Ereignissen am Ausgang. Verhindert zu schnelles Schalten. |
+| `Tmin`       | `TIME`  | Mindestzeit zwischen zwei ausgelösten Ereignissen am Ausgang. Verhindert zu schnelles Schalten.                           |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Keine direkten Datenausgänge. Die latched Information wird über den Adapter `Q
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Kommentar |
-|---------|----------|-----|-----------|
-| `I` (Socket) | **Eingang** | `adapter::types::unidirectional::AULI` | Aufnehmender Adapter, der das zu latchdende Signal liefert. Enthält die Ereignis- und Datensignale `E1` und `D1`. |
-| `Q` (Plug) | **Ausgang** | `adapter::types::unidirectional::AULI` | Ausgebender Adapter, der den aktuell gehaltenen Wert bereitstellt. Signal `E1` zeigt eine Wertänderung an, `D1` enthält den Wert. |
+| Adapter      | Richtung    | Typ                                    | Kommentar                                                                                                                         |
+| ------------ | ----------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `I` (Socket) | **Eingang** | `adapter::types::unidirectional::AULI` | Aufnehmender Adapter, der das zu latchdende Signal liefert. Enthält die Ereignis- und Datensignale `E1` und `D1`.                 |
+| `Q` (Plug)   | **Ausgang** | `adapter::types::unidirectional::AULI` | Ausgebender Adapter, der den aktuell gehaltenen Wert bereitstellt. Signal `E1` zeigt eine Wertänderung an, `D1` enthält den Wert. |
 
 ## Funktionsweise
 
@@ -61,11 +61,11 @@ Der Baustein verwendet intern den FB `E_D_FF_ANY_HYS_TMIN`, der die eigentliche 
 
 Der Baustein besitzt keine expliziten eigenen Zustände, sondern delegiert an den internen FB. Die wesentlichen Verhaltensweisen lassen sich jedoch wie folgt beschreiben:
 
-| Phase | Beschreibung |
-| ------- | -------------- |
-| **Initial** | Nach dem Einschalten werden `HYSTERESIS` und `Tmin` noch nicht angewendet. Ein `INIT`‑Ereignis muss die Parameter setzen. |
-| **Bereit** | Nach erfolgreicher Initialisierung wartet der FB auf Taktereignisse am Eingang `I.E1`. |
-| **Sperre (Tmin aktiv)** | Nach einem Ausgangsereignis wird für die Dauer `Tmin` jede weitere Übernahme blockiert. |
+| Phase                               | Beschreibung                                                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Initial**                         | Nach dem Einschalten werden `HYSTERESIS` und `Tmin` noch nicht angewendet. Ein `INIT`‑Ereignis muss die Parameter setzen. |
+| **Bereit**                          | Nach erfolgreicher Initialisierung wartet der FB auf Taktereignisse am Eingang `I.E1`.                                    |
+| **Sperre (Tmin aktiv)**             | Nach einem Ausgangsereignis wird für die Dauer `Tmin` jede weitere Übernahme blockiert.                                   |
 | **Übernahme (bei gültiger Flanke)** | Wenn die Hysterese überschritten ist und keine Sperre vorliegt, wird der aktuelle Eingangswert übernommen und ausgegeben. |
 
 ## Anwendungsszenarien
@@ -76,11 +76,11 @@ Der Baustein besitzt keine expliziten eigenen Zustände, sondern delegiert an de
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| **Einfaches D‑FF** | Keine Hysterese, keine Verzögerung – übernimmt jede Taktflanke sofort. |
-| **D‑FF mit Hysterese** | Enthält nur das Hystereseband, keine zeitliche Begrenzung zwischen Ausgaben. |
-| **D‑FF mit Tmin** | Nur Mindestzeit ohne Hysterese – kann bei Rauschen trotzdem schnell schalten. |
+| Baustein               | Eigenschaften                                                                                                                                |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Einfaches D‑FF**     | Keine Hysterese, keine Verzögerung – übernimmt jede Taktflanke sofort.                                                                       |
+| **D‑FF mit Hysterese** | Enthält nur das Hystereseband, keine zeitliche Begrenzung zwischen Ausgaben.                                                                 |
+| **D‑FF mit Tmin**      | Nur Mindestzeit ohne Hysterese – kann bei Rauschen trotzdem schnell schalten.                                                                |
 | **AULI_D_FF_HYS_TMIN** | Kombiniert Hysterese und Mindestverweilzeit – robuster gegenüber Rauschen und schützt nachgeschaltete Komponenten vor zu schnellem Schalten. |
 
 ## Fazit

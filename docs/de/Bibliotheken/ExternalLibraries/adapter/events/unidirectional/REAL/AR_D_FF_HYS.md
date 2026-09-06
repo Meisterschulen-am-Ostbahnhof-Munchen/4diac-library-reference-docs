@@ -12,20 +12,20 @@ Der Funktionsbaustein **AR_D_FF_HYS** realisiert ein Data-Latch (D-)Flipflop mit
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT | EInit | Initialisiert den Baustein und setzt das Hystereseband. |
+| Ereignis | Typ   | Beschreibung                                            |
+| -------- | ----- | ------------------------------------------------------- |
+| INIT     | EInit | Initialisiert den Baustein und setzt das Hystereseband. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INITO | EInit | Bestätigt die erfolgreiche Initialisierung. |
+| Ereignis | Typ   | Beschreibung                                |
+| -------- | ----- | ------------------------------------------- |
+| INITO    | EInit | Bestätigt die erfolgreiche Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name       | Typ  | Beschreibung              |
+| ---------- | ---- | ------------------------- |
 | HYSTERESIS | REAL | Größe des Hysteresebands. |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der Funktionsbaustein **AR_D_FF_HYS** realisiert ein Data-Latch (D-)Flipflop mit
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| I | adapter::types::unidirectional::AR | Socket (Eingang) | Empfängt den zu latchten Wert (Triggerevent auf E1, Daten auf D1). |
-| Q | adapter::types::unidirectional::AR | Plug (Ausgang) | Gibt den gelatchten Wert aus (Ereignis auf E1, Daten auf D1). |
+| Bezeichnung | Typ                                | Richtung         | Beschreibung                                                       |
+| ----------- | ---------------------------------- | ---------------- | ------------------------------------------------------------------ |
+| I           | adapter::types::unidirectional::AR | Socket (Eingang) | Empfängt den zu latchten Wert (Triggerevent auf E1, Daten auf D1). |
+| Q           | adapter::types::unidirectional::AR | Plug (Ausgang)   | Gibt den gelatchten Wert aus (Ereignis auf E1, Daten auf D1).      |
 
 ## Funktionsweise
 
@@ -74,11 +74,11 @@ Explizite Zustandsautomaten sind nicht vorhanden; der Baustein arbeit rein ereig
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| **AR_D_FF** (ohne Hysterese) | Übernimmt jeden neuen Wert sofort; empfindlich gegen Rauschen. |
-| **AR_D_FF_HYS** (dieser FB) | Verwendet ein Hystereseband zur Unterdrückung von Flimmern. |
-| **Schmitt-Trigger** | Realisiert eine ähnliche Hysterese, aber meist für binäre (boolesche) Signale. Dieser Baustein arbeitet mit analogen (REAL) Werten. |
+| Baustein                     | Eigenschaft                                                                                                                         |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **AR_D_FF** (ohne Hysterese) | Übernimmt jeden neuen Wert sofort; empfindlich gegen Rauschen.                                                                      |
+| **AR_D_FF_HYS** (dieser FB)  | Verwendet ein Hystereseband zur Unterdrückung von Flimmern.                                                                         |
+| **Schmitt-Trigger**          | Realisiert eine ähnliche Hysterese, aber meist für binäre (boolesche) Signale. Dieser Baustein arbeitet mit analogen (REAL) Werten. |
 
 ## Fazit
 

@@ -12,20 +12,20 @@ Der Funktionsblock **AUI_D_FF_TMIN** realisiert ein datenverriegelndes D-Flipflo
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                                     |
+| -------- | ----------------------------------------------------------------------------- |
 | **INIT** | Initialisierungsanforderung; konfiguriert den Block mit dem Parameter `Tmin`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis  | Kommentar                                      |
+| --------- | ---------------------------------------------- |
 | **INITO** | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
+| Variable | Typ  | Kommentar                                                                                     |
+| -------- | ---- | --------------------------------------------------------------------------------------------- |
 | **Tmin** | TIME | Minimale Zeitdauer, die zwischen zwei Ausgabeereignissen (`EO`) mindestens verstreichen muss. |
 
 ### **Daten-Ausgänge**
@@ -34,9 +34,9 @@ Der Funktionsblock **AUI_D_FF_TMIN** realisiert ein datenverriegelndes D-Flipflo
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| **Plug** (Ausgang) | **Q** | `adapter::types::unidirectional::AUI` | Liefert den verriegelten Datenwert (Ereignis‑ und Datenleitung). |
+| Richtung             | Name  | Typ                                   | Kommentar                                                             |
+| -------------------- | ----- | ------------------------------------- | --------------------------------------------------------------------- |
+| **Plug** (Ausgang)   | **Q** | `adapter::types::unidirectional::AUI` | Liefert den verriegelten Datenwert (Ereignis‑ und Datenleitung).      |
 | **Socket** (Eingang) | **I** | `adapter::types::unidirectional::AUI` | Empfängt den zu verriegelnden Datenwert (Ereignis‑ und Datenleitung). |
 
 ## Funktionsweise
@@ -63,11 +63,11 @@ Der Funktionsblock **AUI_D_FF_TMIN** realisiert ein datenverriegelndes D-Flipflo
 
 Der Funktionsblock besitzt keinen extern sichtbaren Zustandsautomaten (ECC). Intern kann der verwendete `E_D_FF_ANY_TMIN` folgende implizite Zustände aufweisen:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **Idle** | Wartet auf ein Ereignis am Eingang `I`. |
+| Zustand      | Beschreibung                                                                    |
+| ------------ | ------------------------------------------------------------------------------- |
+| **Idle**     | Wartet auf ein Ereignis am Eingang `I`.                                         |
 | **Getaktet** | Daten wurden übernommen; Ausgabe wird bis zum Ablauf von `Tmin` zurückgehalten. |
-| **Ausgabe** | Mindestzeit eingehalten – Ausgabeereignis wird gesendet. |
+| **Ausgabe**  | Mindestzeit eingehalten – Ausgabeereignis wird gesendet.                        |
 
 Diese Zustände sind für den Anwender transparent.
 
@@ -79,10 +79,10 @@ Diese Zustände sind für den Anwender transparent.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Merkmal |
-| ---------- | --------- |
-| **E_D_FF** (Standard‑D‑Flipflop) | Keine Zeitbeschränkung; jedes Ereignis wird sofort ausgegeben. |
-| **E_D_FF_ANY_TMIN** | Gleiches Verhalten, jedoch ohne Adapter‑Kapselung; direkte ereignis‑/datenbasierte Anbindung. |
+| Baustein                         | Merkmal                                                                                                                 |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **E_D_FF** (Standard‑D‑Flipflop) | Keine Zeitbeschränkung; jedes Ereignis wird sofort ausgegeben.                                                          |
+| **E_D_FF_ANY_TMIN**              | Gleiches Verhalten, jedoch ohne Adapter‑Kapselung; direkte ereignis‑/datenbasierte Anbindung.                           |
 | **AUI_D_FF_TMIN** (dieser Block) | Kombiniert die D‑Flipflop‑Funktionalität mit einer zeitlichen Drosselung und bietet eine adapterbasierte Schnittstelle. |
 
 ## Fazit

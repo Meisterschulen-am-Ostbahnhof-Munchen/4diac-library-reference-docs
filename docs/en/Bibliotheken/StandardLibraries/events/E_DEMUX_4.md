@@ -36,6 +36,7 @@ The `E_DEMUX_4` (Event Demultiplexer) is a function block according to IEC 61499
 - If `K` = 1, the event is forwarded to `EO2`.
 - If `K` = 2, the event is forwarded to `EO3`.
 - If `K` = 3, the event is forwarded to `EO4`.
+
 1. **Invalid Index**: If the value of `K` is outside the valid range [0, 3], no output event is triggered.
 
 ## Technical Features

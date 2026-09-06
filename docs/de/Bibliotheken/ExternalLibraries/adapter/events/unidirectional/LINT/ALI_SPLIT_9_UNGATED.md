@@ -30,18 +30,18 @@ Keine
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | IN | `ALI` (unidirektional) | Einspeisung des zu verteilenden ALI-Signals |
+| Richtung         | Name | Typ                    | Beschreibung                                          |
+| ---------------- | ---- | ---------------------- | ----------------------------------------------------- |
+| Socket (Eingang) | IN   | `ALI` (unidirektional) | Einspeisung des zu verteilenden ALI-Signals           |
 | Plug (Ausgang 1) | OUT1 | `ALI` (unidirektional) | Erster Ausgang – identische Kopie des Eingangssignals |
-| Plug (Ausgang 2) | OUT2 | `ALI` (unidirektional) | Zweiter Ausgang |
-| Plug (Ausgang 3) | OUT3 | `ALI` (unidirektional) | Dritter Ausgang |
-| Plug (Ausgang 4) | OUT4 | `ALI` (unidirektional) | Vierter Ausgang |
-| Plug (Ausgang 5) | OUT5 | `ALI` (unidirektional) | Fünfter Ausgang |
-| Plug (Ausgang 6) | OUT6 | `ALI` (unidirektional) | Sechster Ausgang |
-| Plug (Ausgang 7) | OUT7 | `ALI` (unidirektional) | Siebter Ausgang |
-| Plug (Ausgang 8) | OUT8 | `ALI` (unidirektional) | Achter Ausgang |
-| Plug (Ausgang 9) | OUT9 | `ALI` (unidirektional) | Neunter Ausgang |
+| Plug (Ausgang 2) | OUT2 | `ALI` (unidirektional) | Zweiter Ausgang                                       |
+| Plug (Ausgang 3) | OUT3 | `ALI` (unidirektional) | Dritter Ausgang                                       |
+| Plug (Ausgang 4) | OUT4 | `ALI` (unidirektional) | Vierter Ausgang                                       |
+| Plug (Ausgang 5) | OUT5 | `ALI` (unidirektional) | Fünfter Ausgang                                       |
+| Plug (Ausgang 6) | OUT6 | `ALI` (unidirektional) | Sechster Ausgang                                      |
+| Plug (Ausgang 7) | OUT7 | `ALI` (unidirektional) | Siebter Ausgang                                       |
+| Plug (Ausgang 8) | OUT8 | `ALI` (unidirektional) | Achter Ausgang                                        |
+| Plug (Ausgang 9) | OUT9 | `ALI` (unidirektional) | Neunter Ausgang                                       |
 
 ## Funktionsweise
 

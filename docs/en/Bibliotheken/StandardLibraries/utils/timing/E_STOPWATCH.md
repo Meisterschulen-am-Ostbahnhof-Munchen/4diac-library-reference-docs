@@ -28,9 +28,9 @@ The module enables millisecond-accurate timing measurements between events in re
 
 ### **Data Outputs**
 
-| Parameter | Type | Description | Accuracy |
-|-----------|-----|---------------|-------------|
-| `TD` | TIME | Measured time difference | 1 ms |
+| Parameter | Type | Description              | Accuracy |
+| --------- | ---- | ------------------------ | -------- |
+| `TD`      | TIME | Measured time difference | 1 ms     |
 
 ## Functionality
 
@@ -38,10 +38,12 @@ The module enables millisecond-accurate timing measurements between events in re
 
 - `START` initializes the time measurement
 - Monotone system time is recorded (`NOW_MONOTONIC`)
+
 1. **Measurement Phase**:
 
 - `ET` delivers intermediate results without stopping the measurement
 - Multiple triggers are possible
+
 1. **Closing Phase**:
 
 - `STOP` ends the measurement and outputs the final result
@@ -81,20 +83,20 @@ START --> RESET: RESET
 
 ## Example Values
 
-| Operation | Result (TD) |
-| ----------- | --------------- |
-| START -> STOP after 1.5s | T#1s500ms |
+| Operation                                  | Result (TD)                   |
+| ------------------------------------------ | ----------------------------- |
+| START -> STOP after 1.5s                   | T#1s500ms                     |
 | START -> ET after 750ms -> STOP after 1.5s | T#750ms (ETO), T#1s500ms (EO) |
-| RESET during measurement | T#0s |
+| RESET during measurement                   | T#0s                          |
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | E_STOPWATCH | Standard Timer | High-Res Timer |
-| --------- | ------------- | ---------------- | ---------------- |
-| Accuracy | 1 ms | 10 ms | 1 µs |
-| Trigger during run | Yes | No | Yes |
-| Monotonous timer | Yes | No | Yes |
-| Reset function | Yes | Partially | Yes |
+| Feature            | E_STOPWATCH | Standard Timer | High-Res Timer |
+| ------------------ | ----------- | -------------- | -------------- |
+| Accuracy           | 1 ms        | 10 ms          | 1 µs           |
+| Trigger during run | Yes         | No             | Yes            |
+| Monotonous timer   | Yes         | No             | Yes            |
+| Reset function     | Yes         | Partially      | Yes            |
 
 ## 🛠️ Related Exercises
 

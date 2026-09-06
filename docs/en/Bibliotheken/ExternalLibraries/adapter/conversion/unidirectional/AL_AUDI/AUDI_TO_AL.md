@@ -36,10 +36,10 @@ This function block does not have its own data outputs. The converted result is 
 
 ### **Adapter**
 
-| Name | Direction | Type | Description |
-| --------- | ---------- | ---------------------------------------------- | --------------------------------------------------- |
-| AUDI_IN | Socket | `adapter::types::unidirectional::AUDI` | UDINT adapter as input interface |
-| AL_OUT | Plug | `adapter::types::unidirectional::AL` | LWORD adapter as output interface |
+| Name    | Direction | Type                                   | Description                       |
+| ------- | --------- | -------------------------------------- | --------------------------------- |
+| AUDI_IN | Socket    | `adapter::types::unidirectional::AUDI` | UDINT adapter as input interface  |
+| AL_OUT  | Plug      | `adapter::types::unidirectional::AL`   | LWORD adapter as output interface |
 
 ## Functionality
 

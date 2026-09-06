@@ -32,10 +32,12 @@ The **E_DELAY** is a key functional block in the IEC 61499 standard for industri
 
 - On the `START` event, the timer starts with the set time `DT`
 - During runtime, further `START` events ignored
+
 1. **Delay Termination:**
 
 - The `STOP` event immediately terminates the active delay
 - No `EO` event is generated
+
 1. **Delay Completion:**
 
 - The `EO` event is triggered exactly after `DT`
@@ -60,11 +62,11 @@ The **E_DELAY** is a key functional block in the IEC 61499 standard for industri
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | E_DELAY | E_CYCLE | E_PULSE |
-| --------------- | --------- | --------- | --------- |
-| Operating principle | Single delay | Continuous cycle | Single pulse |
-| Abort option | Yes | Yes | No |
-| Time parameters | DT (Delay) | DT (Cycle time) | PT (Pulse duration) |
+| Feature             | E_DELAY      | E_CYCLE          | E_PULSE             |
+| ------------------- | ------------ | ---------------- | ------------------- |
+| Operating principle | Single delay | Continuous cycle | Single pulse        |
+| Abort option        | Yes          | Yes              | No                  |
+| Time parameters     | DT (Delay)   | DT (Cycle time)  | PT (Pulse duration) |
 
 ## 🛠️ Related exercises
 

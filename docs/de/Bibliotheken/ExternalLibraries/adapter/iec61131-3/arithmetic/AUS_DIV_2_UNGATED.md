@@ -33,11 +33,11 @@ Der Baustein besitzt keine direkten elementaren Daten-Ausgänge. Das Berechnungs
 
 ### **Adapter**
 
-| Typ | Name | Adaptertyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Socket (Eingang)** | `IN1` | `adapter::types::unidirectional::AUS` | Erster Eingangswert für die Division (Dividend). |
-| **Socket (Eingang)** | `IN2` | `adapter::types::unidirectional::AUS` | Zweiter Eingangswert für die Division (Divisor). |
-| **Plug (Ausgang)** | `OUT` | `adapter::types::unidirectional::AUS` | Ausgang für das Ergebnis der Division (Quotient). |
+| Typ                  | Name  | Adaptertyp                            | Beschreibung                                      |
+| :------------------- | :---- | :------------------------------------ | :------------------------------------------------ |
+| **Socket (Eingang)** | `IN1` | `adapter::types::unidirectional::AUS` | Erster Eingangswert für die Division (Dividend).  |
+| **Socket (Eingang)** | `IN2` | `adapter::types::unidirectional::AUS` | Zweiter Eingangswert für die Division (Divisor).  |
+| **Plug (Ausgang)**   | `OUT` | `adapter::types::unidirectional::AUS` | Ausgang für das Ergebnis der Division (Quotient). |
 
 ## Funktionsweise
 

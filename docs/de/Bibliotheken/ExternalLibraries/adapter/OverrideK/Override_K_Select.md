@@ -36,11 +36,11 @@ Keine eigenen Daten-Ausgänge. Das Ergebnis wird über den Adapter-Plug `K` ausg
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | `Aktiv` | `adapter::types::unidirectional::AX` | `Override.Aktiv` |
-| Socket (Eingang) | `Wert` | `adapter::types::unidirectional::AX` | `Override.Wert` |
-| Plug (Ausgang) | `K` | `adapter::types::unidirectional::AUI` | 0=Normal (`Aktiv`=FALSE), 1=Force FALSE (`Aktiv`=TRUE, `Wert`=FALSE), 2=Force TRUE (`Aktiv`=TRUE, `Wert`=TRUE) |
+| Richtung         | Name    | Typ                                   | Beschreibung                                                                                                   |
+| ---------------- | ------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Socket (Eingang) | `Aktiv` | `adapter::types::unidirectional::AX`  | `Override.Aktiv`                                                                                               |
+| Socket (Eingang) | `Wert`  | `adapter::types::unidirectional::AX`  | `Override.Wert`                                                                                                |
+| Plug (Ausgang)   | `K`     | `adapter::types::unidirectional::AUI` | 0=Normal (`Aktiv`=FALSE), 1=Force FALSE (`Aktiv`=TRUE, `Wert`=FALSE), 2=Force TRUE (`Aktiv`=TRUE, `Wert`=TRUE) |
 
 ## Funktionsweise
 
@@ -83,11 +83,11 @@ IEC-61131-3-Selektor `OUT := G ? IN1 : IN0`) statt mit eigener ST-Logik:
 Der Baustein besitzt keine eigene Zustandsmaschine (Composite-FB ohne ECC); sein Verhalten ist
 rein kombinatorisch, neu berechnet bei jeder Änderung von `Aktiv` oder `Wert`.
 
-| Aktiv | Wert | K |
-| :---: | :---: | :---: |
-| FALSE | — | 0 (Normal) |
-| TRUE | FALSE | 1 (Force FALSE) |
-| TRUE | TRUE | 2 (Force TRUE) |
+| Aktiv | Wert  | K               |
+| :---: | :---: | :-------------: |
+| FALSE | —     | 0 (Normal)      |
+| TRUE  | FALSE | 1 (Force FALSE) |
+| TRUE  | TRUE  | 2 (Force TRUE)  |
 
 ## Anwendungsszenarien
 

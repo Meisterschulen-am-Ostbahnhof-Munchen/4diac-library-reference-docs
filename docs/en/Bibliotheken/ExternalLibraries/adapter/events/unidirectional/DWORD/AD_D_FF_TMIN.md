@@ -12,21 +12,21 @@ The function block **AD_D_FF_TMIN** implements a data-retaining flip-flop (D-lat
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-----|------------|
+| Name | Type  | Comment                                           |
+| ---- | ----- | ------------------------------------------------- |
 | INIT | EInit | Initialization Request (Passing the Minimum Time) |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
+| Name  | Type  | Comment                     |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialization Confirmation |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| Tmin | TIME | Minimum time between two consecutive events on socket *I* |
+| Name | Data Type | Comment                                                   |
+| ---- | --------- | --------------------------------------------------------- |
+| Tmin | TIME      | Minimum time between two consecutive events on socket *I* |
 
 ### **Data Outputs**
 
@@ -34,10 +34,10 @@ No direct data outputs are available; output is exclusively via the adapter *Q*.
 
 ### **Adapters**
 
-| Type | Direction | Name | Comment |
-| ----- | ---------- | ------ | ----------- |
-| adapter::types::unidirectional::AD | **Plug** (Output) | Q | Returns the latched value |
-| adapter::types::unidirectional::AD | **Socket** (Input) | I | Receives the value to be latched and the clock event |
+| Type                               | Direction          | Name | Comment                                              |
+| ---------------------------------- | ------------------ | ---- | ---------------------------------------------------- |
+| adapter::types::unidirectional::AD | **Plug** (Output)  | Q    | Returns the latched value                            |
+| adapter::types::unidirectional::AD | **Socket** (Input) | I    | Receives the value to be latched and the clock event |
 
 ## Functionality
 
@@ -75,11 +75,11 @@ Thanks to the adapter interface, the function block can be seamlessly integrated
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Feature | Difference |
-| ---------- | ------------- | ------------- |
-| **E_D_FF** | Standard D Flip-Flop | No time constraint; every clock event is processed. |
-| **E_CTD** / **E_CTU** | Counter | Different basic function; counts events. |
-| **AD_D_FF_TMIN** | D Flip-Flop with *Minimum Inter-disposal Time* | Prevents excessively fast clock sequences through configurable lock time. |
+| Function Block        | Feature                                        | Difference                                                                |
+| --------------------- | ---------------------------------------------- | ------------------------------------------------------------------------- |
+| **E_D_FF**            | Standard D Flip-Flop                           | No time constraint; every clock event is processed.                       |
+| **E_CTD** / **E_CTU** | Counter                                        | Different basic function; counts events.                                  |
+| **AD_D_FF_TMIN**      | D Flip-Flop with *Minimum Inter-disposal Time* | Prevents excessively fast clock sequences through configurable lock time. |
 
 ## Conclusion
 

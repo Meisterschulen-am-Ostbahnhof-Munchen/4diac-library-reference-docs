@@ -50,10 +50,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with object and attribute ID
 - `INITO` confirms operational readiness
+
 1. **Attribute Change**:
 
 - `REQ` triggers with new value
 - `CNF` returns result and old value
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -68,12 +70,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ----------- | ----------- |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | Invalid State |
-| -21 | VT_E_NO_INSTANCE | No VT Instance |
+| Code | Constant         | Meaning         |
+| ---- | ---------------- | --------------- |
+| 0    | VT_E_NO_ERR      | Success         |
+| -6   | VT_E_OVERFLOW    | Buffer Overflow |
+| -8   | VT_E_NOACT       | Invalid State   |
+| -21  | VT_E_NO_INSTANCE | No VT Instance  |
 
 ## Application Scenarios
 
@@ -84,11 +86,11 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with Similar Blocks
 
-| Feature | Q_Attribute | VtPropertySet | VtDynamicConfig |
-| --------------- | -------------- | --------------- | ----------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Value Range | 32-bit | 16-bit | 32-bit |
-| State Management | Full | Partial | Extended |
+| Feature          | Q_Attribute | VtPropertySet | VtDynamicConfig |
+| ---------------- | ----------- | ------------- | --------------- |
+| ISO Standard     | ✔           | ✖             | ✖               |
+| Value Range      | 32-bit      | 16-bit        | 32-bit          |
+| State Management | Full        | Partial       | Extended        |
 
 ## Conclusion
 

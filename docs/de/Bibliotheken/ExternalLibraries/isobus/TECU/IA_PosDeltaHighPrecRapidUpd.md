@@ -13,35 +13,35 @@ Der Funktionsblock `IA_PosDeltaHighPrecRapidUpd` ist ein ISOBUS-Adapterbaustein 
 ### **Ereignis-Eingänge**
 
 | Ereignis | Typ   | Beschreibung                                            |
-|----------|-------|---------------------------------------------------------|
+| -------- | ----- | ------------------------------------------------------- |
 | `INIT`   | EInit | Initialisierung des Bausteins; wird mit `QI` verwendet. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung                                    |
-|----------|-------|-------------------------------------------------|
+| Ereignis | Typ   | Beschreibung                                                |
+| -------- | ----- | ----------------------------------------------------------- |
 | `INITO`  | EInit | Bestätigung der Initialisierung; liefert `QO` und `STATUS`. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Beschreibung                |
-|------|--------|-----------------------------|
+| Name | Typ    | Beschreibung                    |
+| ---- | ------ | ------------------------------- |
 | `QI` | `BOOL` | Qualifikator für INIT-Ereignis. |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ      | Beschreibung                      |
-|----------|----------|-----------------------------------|
+| Name     | Typ      | Beschreibung                                         |
+| -------- | -------- | ---------------------------------------------------- |
 | `QO`     | `BOOL`   | Ausgangsqualifikator (Initialisierung erfolgreich?). |
-| `STATUS` | `STRING` | Statusmeldung zur Initialisierung. |
+| `STATUS` | `STRING` | Statusmeldung zur Initialisierung.                   |
 
 ### **Adapter**
 
-| Adapterbezeichnung | Typ (Adapter)                    | Beschreibung                            |
-|--------------------|----------------------------------|-----------------------------------------|
-| `TIME_DELTA`       | `adapter::types::unidirectional::AUI` | Liefert das Zeitdelta (unsigned integer). |
-| `LAT_DELTA`        | `adapter::types::unidirectional::AI`  | Liefert das Breitengraddelta (signed integer). |
-| `LON_DELTA`        | `adapter::types::unidirectional::AI`  | Liefert das Längengraddelta (signed integer). |
+| Adapterbezeichnung | Typ (Adapter)                         | Beschreibung                                     |
+| ------------------ | ------------------------------------- | ------------------------------------------------ |
+| `TIME_DELTA`       | `adapter::types::unidirectional::AUI` | Liefert das Zeitdelta (unsigned integer).        |
+| `LAT_DELTA`        | `adapter::types::unidirectional::AI`  | Liefert das Breitengraddelta (signed integer).   |
+| `LON_DELTA`        | `adapter::types::unidirectional::AI`  | Liefert das Längengraddelta (signed integer).    |
 | `TIMEOUT`          | `adapter::types::unidirectional::AX`  | Zeigt an, ob ein Timeout aufgetreten ist (Bool). |
 
 ## Funktionsweise

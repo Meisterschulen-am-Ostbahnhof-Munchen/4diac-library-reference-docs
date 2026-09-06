@@ -55,11 +55,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with child and parent object IDs
 - `INITO` confirms operational readiness
+
 1. **Position Change**:
 
 - `REQ` with absolute coordinates relative to the parent
 - Value range: -32768 to +32767 pixels
 - `CNF` returns the result and the previous position
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -74,18 +76,18 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Position Range
 
-| Parameter | Range | Description |
-|-----------|----------------|----------------------------|
-| X-Position| -32768 - +32767| Horizontal Position |
-| Y-Position| -32768 - +32767| Vertical Position |
+| Parameter  | Range           | Description         |
+| ---------- | --------------- | ------------------- |
+| X-Position | -32768 - +32767 | Horizontal Position |
+| Y-Position | -32768 - +32767 | Vertical Position   |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Position outside the valid range |
-| -128 | VT_E_HANDLE_INVALID | Invalid object ID |
+| Code | Constant            | Meaning                          |
+| ---- | ------------------- | -------------------------------- |
+| 0    | VT_E_NO_ERR         | Success                          |
+| -6   | VT_E_OVERFLOW       | Position outside the valid range |
+| -128 | VT_E_HANDLE_INVALID | Invalid object ID                |
 
 ## Application Scenarios
 
@@ -96,11 +98,11 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | Q_ChildPosition | Q_ChildLocation | VtAbsoluteMove |
-| --------------- | ----------------- | ----------------- | ---------------- |
-| ISO Standard | ✔ | ✔ | ✖ |
-| Position Type | Absolute | Relative | Absolute |
-| Value Range | ±32767 pixels | ±127 pixels | ±32767 pixels |
+| Feature       | Q_ChildPosition | Q_ChildLocation | VtAbsoluteMove |
+| ------------- | --------------- | --------------- | -------------- |
+| ISO Standard  | ✔               | ✔               | ✖              |
+| Position Type | Absolute        | Relative        | Absolute       |
+| Value Range   | ±32767 pixels   | ±127 pixels     | ±32767 pixels  |
 
 ## Conclusion
 

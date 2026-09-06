@@ -70,6 +70,7 @@ The function block `F_SEL` (a standard selection block according to IEC 61131-3)
 
 - If the signal from `G` is equal to `FALSE`, the value from `IN0` is selected.
 - If the signal from `G` is equal to `TRUE`, the value from `IN1` is selected.
+
 1. **Output**:
 
 The selected value is passed via another `F_MOVE` module to the output adapter `OUT`, whereupon the output event (`OUT.E1`) is triggered simultaneously.
@@ -88,10 +89,10 @@ The selected value is passed via another `F_MOVE` module to the output adapter `
 
 Since this is a composite function block network (FB), the function block does not have its own classic ECC (Event Execution Control) state machine. Its behavior is purely data flow and event-driven:
 
-| State Selector `G.D1` | Triggering Event | State Output `OUT.D1` | Output Event |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Change to `IN0.E1` or `G.E1` | Value of `IN0.D1` | `OUT.E1` |
-| `TRUE` | Change to `IN1.E1` or `G.E1` | Value of `IN1.D1` | `OUT.E1` |
+| State Selector `G.D1` | Triggering Event             | State Output `OUT.D1` | Output Event |
+| :-------------------- | :--------------------------- | :-------------------- | :----------- |
+| `FALSE`               | Change to `IN0.E1` or `G.E1` | Value of `IN0.D1`     | `OUT.E1`     |
+| `TRUE`                | Change to `IN1.E1` or `G.E1` | Value of `IN1.D1`     | `OUT.E1`     |
 
 ---
 

@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AR` | IN | Socket | Eingehender AR‑Adapter, der auf die sieben Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AR` | OUT1 … OUT7 | Plug | Sieben Ausgabeadapter, an die der eingehende AR‑Adapter unverändert weitergegeben wird. |
+| Typ                                  | Name        | Richtung | Beschreibung                                                                            |
+| ------------------------------------ | ----------- | -------- | --------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AR` | IN          | Socket   | Eingehender AR‑Adapter, der auf die sieben Ausgänge verteilt wird.                      |
+| `adapter::types::unidirectional::AR` | OUT1 … OUT7 | Plug     | Sieben Ausgabeadapter, an die der eingehende AR‑Adapter unverändert weitergegeben wird. |
 
 ## Funktionsweise
 

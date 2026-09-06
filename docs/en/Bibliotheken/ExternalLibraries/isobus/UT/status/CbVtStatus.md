@@ -33,10 +33,12 @@ The **CbVtStatus** is a standardized callback module for virtual terminal page c
 
 - Event `INIT` starts setup
 - Event `INITO` confirms with STATUS
+
 1. **Page Change**:
 
 - Event `IND` is triggered on screen change
 - Returns: Page ID, Active Status, Instance Number
+
 1. **Operation**:
 
 - Real-time monitoring of the VT status
@@ -51,11 +53,11 @@ The **CbVtStatus** is a standardized callback module for virtual terminal page c
 
 ## Supported Operating Modes
 
-| Mode | Description |
-| --------------- | ---------------------------------- |
+| Mode          | Description                          |
+| ------------- | ------------------------------------ |
 | Single device | Standard operation with u8Instance=0 |
-| Multi-ECU | Parallel Instances (1-255) |
-| Diagnostics | STATUS Messages for Service |
+| Multi-ECU     | Parallel Instances (1-255)           |
+| Diagnostics   | STATUS Messages for Service          |
 
 ## Application Scenarios
 
@@ -66,11 +68,11 @@ The **CbVtStatus** is a standardized callback module for virtual terminal page c
 
 ## ⚖️ Comparison with Similar Modules
 
-| Feature | CbVtStatus | VtPageManager | VtEventLogger |
-| ---------------- | ------------- | --------------- | --------------- |
-| Page Switch | ✔ | ✔ | ✖ |
-| Multi-ECU | ✔ | ✖ | ✖ |
-| STATUS feedback | ✔ | ✖ | ✔ |
+| Feature         | CbVtStatus | VtPageManager | VtEventLogger |
+| --------------- | ---------- | ------------- | ------------- |
+| Page Switch     | ✔          | ✔             | ✖             |
+| Multi-ECU       | ✔          | ✖             | ✖             |
+| STATUS feedback | ✔          | ✖             | ✔             |
 
 ## Error Handling
 

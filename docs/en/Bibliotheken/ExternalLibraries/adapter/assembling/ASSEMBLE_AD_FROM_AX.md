@@ -36,10 +36,10 @@ No explicit data outputs. The composite DWORD is output via the data port (`D1`)
 
 ### **Adapters**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
+| Type                                 | Name                | Direction      | Description                                                          |
+| ------------------------------------ | ------------------- | -------------- | -------------------------------------------------------------------- |
 | `adapter::types::unidirectional::AX` | `BIT_00` … `BIT_31` | Socket (Input) | 32 Boolean individual signals, each with its own event (data change) |
-| `adapter::types::unidirectional::AD` | `OUT` | Plug (Output) | Output of the compound double word with update event |
+| `adapter::types::unidirectional::AD` | `OUT`               | Plug (Output)  | Output of the compound double word with update event                 |
 
 ## Functionality
 

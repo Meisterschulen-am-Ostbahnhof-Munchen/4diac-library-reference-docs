@@ -30,11 +30,11 @@ The function block **AL_SPLIT_2_UNGATED** is used to split an incoming unidirect
 
 ### **Adapter**
 
-| Type | Direction | Name | Description |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AL` | **Socket** (Input) | `IN` | Input signal distributed to both outputs |
-| `adapter::types::unidirectional::AL` | **Plug** (Output) | `OUT1` | First output with the same adapter signal as `IN` |
-| `adapter::types::unidirectional::AL` | **Plug** (Output) | `OUT2` | Second output with the same adapter signal as `IN` |
+| Type                                 | Direction          | Name   | Description                                        |
+| ------------------------------------ | ------------------ | ------ | -------------------------------------------------- |
+| `adapter::types::unidirectional::AL` | **Socket** (Input) | `IN`   | Input signal distributed to both outputs           |
+| `adapter::types::unidirectional::AL` | **Plug** (Output)  | `OUT1` | First output with the same adapter signal as `IN`  |
+| `adapter::types::unidirectional::AL` | **Plug** (Output)  | `OUT2` | Second output with the same adapter signal as `IN` |
 
 ## Functionality
 
@@ -60,12 +60,12 @@ The function block does not have its own state management. It can be considered 
 
 The 4diac IDE offers various splitter components for different signal types:
 
-| Component | Signal Type | Outputs | Special Feature |
-| ---------- | ----------- | ----------- | ------------- |
-| `AL_SPLIT_2_UNGATED` | Adapter (unidirectional) | 2 | Generic, no data/events |
-| `SPLIT` | Events | 2 | Distributes events without data |
-| `E_SPLIT` | Events (with data) | 2 | Distributes events along with accompanying data |
-| `F_SPLIT` | Data (any type) | n | Distributes a data value to multiple outputs |
+| Component            | Signal Type              | Outputs | Special Feature                                 |
+| -------------------- | ------------------------ | ------- | ----------------------------------------------- |
+| `AL_SPLIT_2_UNGATED` | Adapter (unidirectional) | 2       | Generic, no data/events                         |
+| `SPLIT`              | Events                   | 2       | Distributes events without data                 |
+| `E_SPLIT`            | Events (with data)       | 2       | Distributes events along with accompanying data |
+| `F_SPLIT`            | Data (any type)          | n       | Distributes a data value to multiple outputs    |
 
 The `AL_SPLIT_2_UNGATED` is specifically optimized for adapter interfaces, providing a clean way to split complex, adapter-based connections without interfering with the data or event layer.
 

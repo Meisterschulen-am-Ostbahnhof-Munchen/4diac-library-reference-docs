@@ -16,34 +16,34 @@ Da der FB über keine direkten Ereignis- oder Datenports verfügt, werden Ein- u
 
 ### **Ereignis-Eingänge**
 
-| Port | Beschreibung |
-|------|--------------|
+| Port       | Beschreibung                                |
+| ---------- | ------------------------------------------- |
 | `AS_IN.E1` | Startet die Konvertierung eines SINT-Werts. |
 
 ### **Ereignis-Ausgänge**
 
-| Port | Beschreibung |
-|------|--------------|
+| Port        | Beschreibung                                  |
+| ----------- | --------------------------------------------- |
 | `AB_OUT.E1` | Signalisiert den Abschluss der Konvertierung. |
 
 ### **Daten-Eingänge**
 
-| Port | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `AS_IN.D1` | SINT | Der zu konvertierende Wert (Signed Short Integer). |
+| Port       | Datentyp | Beschreibung                                       |
+| ---------- | -------- | -------------------------------------------------- |
+| `AS_IN.D1` | SINT     | Der zu konvertierende Wert (Signed Short Integer). |
 
 ### **Daten-Ausgänge**
 
-| Port | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `AB_OUT.D1` | BYTE | Der konvertierte Wert (Byte). |
+| Port        | Datentyp | Beschreibung                  |
+| ----------- | -------- | ----------------------------- |
+| `AB_OUT.D1` | BYTE     | Der konvertierte Wert (Byte). |
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Kommentar |
-|-------------|-----|----------|-----------|
-| `AS_IN` | `adapter::types::unidirectional::AS` | Socket (Eingang) | SINT Adapter Eingang |
-| `AB_OUT` | `adapter::types::unidirectional::AB` | Plug (Ausgang) | BYTE Adapter Ausgang |
+| Bezeichnung | Typ                                  | Richtung         | Kommentar            |
+| ----------- | ------------------------------------ | ---------------- | -------------------- |
+| `AS_IN`     | `adapter::types::unidirectional::AS` | Socket (Eingang) | SINT Adapter Eingang |
+| `AB_OUT`    | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | BYTE Adapter Ausgang |
 
 ## Funktionsweise
 

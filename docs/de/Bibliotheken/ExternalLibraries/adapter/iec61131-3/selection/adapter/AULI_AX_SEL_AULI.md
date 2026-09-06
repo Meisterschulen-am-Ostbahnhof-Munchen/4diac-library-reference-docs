@@ -68,10 +68,10 @@ Intern basiert der Baustein auf einem Netzwerk aus Standard-Funktionsbausteinen 
 
 Der Baustein besitzt keine eigene explizite Zustandskette (Execution Control Chart, ECC), da er als reines Netzwerk (FBNetwork) realisiert ist. Sein Verhalten ist rein daten- und ereignisflussgesteuert:
 
-| Trigger-Ereignis | Zustand Selektor (`G.D1`) | Resultierendes Verhalten | Ausgangsereignis |
-| :--- | :--- | :--- | :--- |
-| Event an `G.E1`, `IN0.E1` oder `IN1.E1` | `FALSE` | Wert von `IN0.D1` wird nach `OUT.D1` kopiert | `OUT.E1` |
-| Event an `G.E1`, `IN0.E1` oder `IN1.E1` | `TRUE` | Wert von `IN1.D1` wird nach `OUT.D1` kopiert | `OUT.E1` |
+| Trigger-Ereignis                        | Zustand Selektor (`G.D1`) | Resultierendes Verhalten                     | Ausgangsereignis |
+| :-------------------------------------- | :------------------------ | :------------------------------------------- | :--------------- |
+| Event an `G.E1`, `IN0.E1` oder `IN1.E1` | `FALSE`                   | Wert von `IN0.D1` wird nach `OUT.D1` kopiert | `OUT.E1`         |
+| Event an `G.E1`, `IN0.E1` oder `IN1.E1` | `TRUE`                    | Wert von `IN1.D1` wird nach `OUT.D1` kopiert | `OUT.E1`         |
 
 ## Anwendungsszenarien
 

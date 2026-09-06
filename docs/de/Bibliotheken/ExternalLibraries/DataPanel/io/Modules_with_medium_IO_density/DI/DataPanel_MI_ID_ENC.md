@@ -12,37 +12,37 @@ Der Funktionsblock **DataPanel_MI_ID_ENC** ist ein Eingangs-Service-Interface-Fu
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-|----------|--------------|-------------------|
-| INIT | Service-Initialisierung | QI, PARAMS, u8SAMember, Input, ImpulseDelta, TimeDelta |
-| REQ | Service-Anforderung | QI |
+| Ereignis | Beschreibung            | Mitgeführte Daten                                      |
+| -------- | ----------------------- | ------------------------------------------------------ |
+| INIT     | Service-Initialisierung | QI, PARAMS, u8SAMember, Input, ImpulseDelta, TimeDelta |
+| REQ      | Service-Anforderung     | QI                                                     |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-| ---------- | -------------- | ------------------- |
-| INITO | Bestätigung der Initialisierung | QO, STATUS |
-| CNF | Bestätigung der angeforderten Aktion | QO, STATUS, IN |
-| IND | Asynchrone Anzeige eines Ereignisses (Impuls- oder Zeitüberschreitung) | QO, STATUS, IN |
+| Ereignis | Beschreibung                                                           | Mitgeführte Daten |
+| -------- | ---------------------------------------------------------------------- | ----------------- |
+| INITO    | Bestätigung der Initialisierung                                        | QO, STATUS        |
+| CNF      | Bestätigung der angeforderten Aktion                                   | QO, STATUS, IN    |
+| IND      | Asynchrone Anzeige eines Ereignisses (Impuls- oder Zeitüberschreitung) | QO, STATUS, IN    |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-| ------ | ----- | ------------- | -------------- |
-| QI | BOOL | – | Ereignis-Eingangsqualifizierer |
-| PARAMS | STRING | – | Service-Parameter |
-| u8SAMember | USINT | MI::MI_00 | Knotenadresse (Bereich 224..239) |
-| Input | DataPanel::io::MI::DI::DataPanel_MI_DI_S | Invalid | Identifikation des Eingangs (üblicherweise 7A für 7A+8A-Paar) |
-| ImpulseDelta | DWORD | – | Anzahl der Impulse, nach denen ein IND ausgelöst wird |
-| TimeDelta | DWORD | – | Zeit in Millisekunden, nach der ein IND ausgelöst wird |
+| Name         | Typ                                      | Initialwert | Beschreibung                                                  |
+| ------------ | ---------------------------------------- | ----------- | ------------------------------------------------------------- |
+| QI           | BOOL                                     | –           | Ereignis-Eingangsqualifizierer                                |
+| PARAMS       | STRING                                   | –           | Service-Parameter                                             |
+| u8SAMember   | USINT                                    | MI::MI_00   | Knotenadresse (Bereich 224..239)                              |
+| Input        | DataPanel::io::MI::DI::DataPanel_MI_DI_S | Invalid     | Identifikation des Eingangs (üblicherweise 7A für 7A+8A-Paar) |
+| ImpulseDelta | DWORD                                    | –           | Anzahl der Impulse, nach denen ein IND ausgelöst wird         |
+| TimeDelta    | DWORD                                    | –           | Zeit in Millisekunden, nach der ein IND ausgelöst wird        |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| QO | BOOL | Ereignis-Ausgangsqualifizierer |
-| STATUS | STRING | Servicestatus |
-| IN | DWORD | Aktueller Encoder-Zählerwert |
+| Name   | Typ    | Beschreibung                   |
+| ------ | ------ | ------------------------------ |
+| QO     | BOOL   | Ereignis-Ausgangsqualifizierer |
+| STATUS | STRING | Servicestatus                  |
+| IN     | DWORD  | Aktueller Encoder-Zählerwert   |
 
 ### **Adapter**
 
@@ -69,12 +69,12 @@ Der Ausgang `IN` enthält zu jedem Ereignis (CNF und IND) den aktuellen 32-Bit-Z
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| IDLE | Warten auf INIT oder REQ |
-| INIT | Initialisierung läuft, Parametrierung wird übernommen |
-| ACTIVE | Initialisierung abgeschlossen, bereit für REQ und IND |
-| ERROR | Fehlerzustand (z. B. fehlerhafte Initialisierung) |
+| Zustand | Beschreibung                                          |
+| ------- | ----------------------------------------------------- |
+| IDLE    | Warten auf INIT oder REQ                              |
+| INIT    | Initialisierung läuft, Parametrierung wird übernommen |
+| ACTIVE  | Initialisierung abgeschlossen, bereit für REQ und IND |
+| ERROR   | Fehlerzustand (z. B. fehlerhafte Initialisierung)     |
 
 Die tatsächliche Zustandsmaschine ist im vorliegenden Code nicht explizit abgebildet; die dargestellten Zustände leiten sich aus dem typischen Verhalten von Service-Interface-FBs ab.
 

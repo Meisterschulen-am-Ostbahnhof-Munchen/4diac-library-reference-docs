@@ -28,11 +28,11 @@ The function block `AUDI_MUL_2` is a generic function block for calculating the 
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** (Input) | `IN1` | `adapter::types::unidirectional::AUDI` | First Multiplication Operand |
-| **Socket** (Input) | `IN2` | `adapter::types::unidirectional::AUDI` | Second Multiplication Operand |
-| **Plug** (Output) | `OUT` | `adapter::types::unidirectional::AUDI` | Product of the two input values |
+| Direction          | Name  | Type                                   | Description                     |
+| ------------------ | ----- | -------------------------------------- | ------------------------------- |
+| **Socket** (Input) | `IN1` | `adapter::types::unidirectional::AUDI` | First Multiplication Operand    |
+| **Socket** (Input) | `IN2` | `adapter::types::unidirectional::AUDI` | Second Multiplication Operand   |
+| **Plug** (Output)  | `OUT` | `adapter::types::unidirectional::AUDI` | Product of the two input values |
 
 *Note:* The adapter type `AUDI` is a unidirectional, typed adapter that encapsulates the actual numerical value.
 

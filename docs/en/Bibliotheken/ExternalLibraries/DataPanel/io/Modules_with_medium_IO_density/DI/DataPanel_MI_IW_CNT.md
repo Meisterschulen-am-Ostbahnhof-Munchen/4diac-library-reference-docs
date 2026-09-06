@@ -5,30 +5,30 @@
 * * * * * * * * * *
 The **DataPanel_MI_IW_CNT** is a service interface function block from the DataPanel family of HR Agrartechnik GmbH. It is used to acquire **pulse counter data** via the dedicated hardware inputs 7A and 8A of the underlying bus system. The block encapsulates the initialization, cyclic querying, and event-driven output of the counter values. Typical applications include agricultural machinery where pulse generators (e.g., speed, flow, or position sensors) need to be evaluated. The function block is designed for the IEC 61499-compliant 4diac IDE and uses the service interface patterns defined therein.
 
-| Event | Type | Description |
-| -------- | ------- | --------------------------------------------------- |
-| INIT | EInit | Initializes the channel (sets hardware parameters) |
-| REQ | Event | Requests a current counter value |
-| Event | Type | Description |
-| ------- | ------- | ----------------------------------------------------------- |
-| INITO | EInit | Acknowledges successful initialization |
-| CNF | Event | Confirmation of a requested REQ operation |
-| IND | Event | Asynchronous indication (triggered by pulse or time interval) |
-| Name | Type | Description |
-| --------------- | ---------- | ----------------------------------------------------------------------------- |
-| QI | BOOL | Qualifies the INIT/REQ event |
-| PARAMS | STRING | Service parameter (vendor-dependent configuration) |
-| u8SAMember | USINT | Node SA (224..239); Default = `MI::MI_00` |
-| Input | DataPanel_MI_DI_S | Input identification (must be "7A" or "8A"); Default = `Invalid` |
-| ImpulseDelta | WORD | Pulse threshold for asynchronous IND triggering (number of pulses) |
-| TimeDelta | DWORD | Time threshold for asynchronous IND triggering (in ms) |
-| Name | Type | Description |
-| -------- | -------- | ---------------------------------------------- |
-| QO | BOOL | Qualifies the event outputs |
-| STATUS | STRING | Status message (e.g., "OK" or error code) |
-| IN | WORD | Current 16-bit counter value (pulse counter) |
+| Event           | Type              | Description                                                                   |
+| --------------- | ----------------- | ----------------------------------------------------------------------------- |
+| INIT            | EInit             | Initializes the channel (sets hardware parameters)                            |
+| REQ             | Event             | Requests a current counter value                                              |
+| Event           | Type              | Description                                                                   |
+| -------         | -------           | -----------------------------------------------------------                   |
+| INITO           | EInit             | Acknowledges successful initialization                                        |
+| CNF             | Event             | Confirmation of a requested REQ operation                                     |
+| IND             | Event             | Asynchronous indication (triggered by pulse or time interval)                 |
+| Name            | Type              | Description                                                                   |
+| --------------- | ----------        | ----------------------------------------------------------------------------- |
+| QI              | BOOL              | Qualifies the INIT/REQ event                                                  |
+| PARAMS          | STRING            | Service parameter (vendor-dependent configuration)                            |
+| u8SAMember      | USINT             | Node SA (224..239); Default = `MI::MI_00`                                     |
+| Input           | DataPanel_MI_DI_S | Input identification (must be "7A" or "8A"); Default = `Invalid`              |
+| ImpulseDelta    | WORD              | Pulse threshold for asynchronous IND triggering (number of pulses)            |
+| TimeDelta       | DWORD             | Time threshold for asynchronous IND triggering (in ms)                        |
+| Name            | Type              | Description                                                                   |
+| --------        | --------          | ----------------------------------------------                                |
+| QO              | BOOL              | Qualifies the event outputs                                                   |
+| STATUS          | STRING            | Status message (e.g., "OK" or error code)                                     |
+| IN              | WORD              | Current 16-bit counter value (pulse counter)                                  |
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -62,14 +62,14 @@ Error handling is provided via the `STATUS` output and the `QO` flag. If an erro
 
 The FB (Function Block) cycles through classic service interface states:
 
-| State | Description |
-| ------------- | ----------------------------------------------------------------- |
-| **IDLE** | Waiting for INIT or REQ. Hardware is not yet assigned. |
-| **INIT** | INIT received – Parameterization and hardware reservation are in progress. |
-| **ACTIVE** | Initialization successful – Channel is ready for operation. |
-| **REQUEST** | REQ received – Querying the current counter value. |
-| **INDICATE** | Asynchronous condition met – Sending an IND event. |
-| **ERROR** | Error occurred (e.g., incorrect parameter, hardware error). |
+| State        | Description                                                                |
+| ------------ | -------------------------------------------------------------------------- |
+| **IDLE**     | Waiting for INIT or REQ. Hardware is not yet assigned.                     |
+| **INIT**     | INIT received – Parameterization and hardware reservation are in progress. |
+| **ACTIVE**   | Initialization successful – Channel is ready for operation.                |
+| **REQUEST**  | REQ received – Querying the current counter value.                         |
+| **INDICATE** | Asynchronous condition met – Sending an IND event.                         |
+| **ERROR**    | Error occurred (e.g., incorrect parameter, hardware error).                |
 
 After an error, only a new INIT can return the FB to the IDLE state.
 

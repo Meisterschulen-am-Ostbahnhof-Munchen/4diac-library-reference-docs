@@ -34,24 +34,24 @@ Nicht zutreffend, da `ST16B` ein Datentyp und kein Funktionsblock ist und daher 
 
 `ST16B` besteht aus 16 einzelnen Variablen vom Typ `BYTE`, die sequenziell angeordnet sind:
 
-| Name | Typ    | Beschreibung |
-| :--- | :----- | :----------- |
-| B_00 | BYTE   | BYTE 00      |
-| B_01 | BYTE   | BYTE 01      |
-| B_02 | BYTE   | BYTE 02      |
-| B_03 | BYTE   | BYTE 03      |
-| B_04 | BYTE   | BYTE 04      |
-| B_05 | BYTE   | BYTE 05      |
-| B_06 | BYTE   | BYTE 06      |
-| B_07 | BYTE   | BYTE 07      |
-| B_08 | BYTE   | BYTE 08      |
-| B_09 | BYTE   | BYTE 09      |
-| B_10 | BYTE   | BYTE 10      |
-| B_11 | BYTE   | BYTE 11      |
-| B_12 | BYTE   | BYTE 12      |
-| B_13 | BYTE   | BYTE 13      |
-| B_14 | BYTE   | BYTE 14      |
-| B_15 | BYTE   | BYTE 15      |
+| Name | Typ  | Beschreibung |
+| :--- | :--- | :----------- |
+| B_00 | BYTE | BYTE 00      |
+| B_01 | BYTE | BYTE 01      |
+| B_02 | BYTE | BYTE 02      |
+| B_03 | BYTE | BYTE 03      |
+| B_04 | BYTE | BYTE 04      |
+| B_05 | BYTE | BYTE 05      |
+| B_06 | BYTE | BYTE 06      |
+| B_07 | BYTE | BYTE 07      |
+| B_08 | BYTE | BYTE 08      |
+| B_09 | BYTE | BYTE 09      |
+| B_10 | BYTE | BYTE 10      |
+| B_11 | BYTE | BYTE 11      |
+| B_12 | BYTE | BYTE 12      |
+| B_13 | BYTE | BYTE 13      |
+| B_14 | BYTE | BYTE 14      |
+| B_15 | BYTE | BYTE 15      |
 
 ## Funktionsweise
 

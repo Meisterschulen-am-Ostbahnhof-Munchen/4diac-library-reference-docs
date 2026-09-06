@@ -49,11 +49,13 @@ ID_NULL (65535) is not a valid command target — the command is answered by the
 
 - `INIT` without parameters
 - `INITO` confirms operational readiness
+
 1. **Mask Locking**:
 
 - `REQ` with lock command, mask ID, and timeout
 - Controls the screen refresh of the mask
 - `CNF` provides operating status and previous values
+
 1. **Timeout Behavior**:
 
 - Automatic unlocking after expiration
@@ -67,21 +69,21 @@ ID_NULL (65535) is not a valid command target — the command is answered by the
 
 ## Command Reference
 
-| u8LockCmd | Function |
-| ----------- | ------------------------------ |
-| 0 | Unlock mask |
-| 1 | Lock mask |
+| u8LockCmd | Function    |
+| --------- | ----------- |
+| 0         | Unlock mask |
+| 1         | Lock mask   |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful execution |
-| -6 | VT_E_OVERFLOW | Buffer overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful execution   |
+| -6   | VT_E_OVERFLOW             | Buffer overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -92,12 +94,12 @@ ID_NULL (65535) is not a valid command target — the command is answered by the
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
---------------- | ------------------ | ---------------- | -------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Timeout | ✔ | ✖ | ✔ |
-| Mask-Specific | ✔ | ✔ | ✖ |
-| Bidirectional | ✔ | ✖ | ✔ |
+| Feature       | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
+| ------------- | ---------------- | ------------- | ------------ |
+| ISO Standard  | ✔                | ✖             | ✖            |
+| Timeout       | ✔                | ✖             | ✔            |
+| Mask-Specific | ✔                | ✔             | ✖            |
+| Bidirectional | ✔                | ✖             | ✔            |
 
 ## Conclusion
 

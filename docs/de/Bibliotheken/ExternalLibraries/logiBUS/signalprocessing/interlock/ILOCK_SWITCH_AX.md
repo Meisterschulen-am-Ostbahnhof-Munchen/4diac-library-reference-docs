@@ -30,12 +30,12 @@ Keine (sämtliche Daten werden über die Adapter-Plugs übertragen).
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-| ------ | ----- | ---------- | ----------- |
-| UP_IN | `adapter::types::unidirectional::AX` | Socket | Eingang für Vorwärts-/Aufwärts-Richtung |
-| DOWN_IN | `adapter::types::unidirectional::AX` | Socket | Eingang für Rückwärts-/Abwärts-Richtung |
-| UP_OUT | `adapter::types::unidirectional::AX` | Plug | Ausgang für Vorwärts-/Aufwärts-Richtung |
-| DOWN_OUT | `adapter::types::unidirectional::AX` | Plug | Ausgang für Rückwärts-/Abwärts-Richtung |
+| Name     | Typ                                  | Richtung | Kommentar                               |
+| -------- | ------------------------------------ | -------- | --------------------------------------- |
+| UP_IN    | `adapter::types::unidirectional::AX` | Socket   | Eingang für Vorwärts-/Aufwärts-Richtung |
+| DOWN_IN  | `adapter::types::unidirectional::AX` | Socket   | Eingang für Rückwärts-/Abwärts-Richtung |
+| UP_OUT   | `adapter::types::unidirectional::AX` | Plug     | Ausgang für Vorwärts-/Aufwärts-Richtung |
+| DOWN_OUT | `adapter::types::unidirectional::AX` | Plug     | Ausgang für Rückwärts-/Abwärts-Richtung |
 
 Jeder Adapter stellt einen Ereignisausgang `E1` und einen Daten-Eingang/Ausgang `D1` (vom Typ BOOL) bereit. Die Sockets empfangen Anforderungen, die Plugs geben die geschalteten Zustände weiter.
 
@@ -62,13 +62,13 @@ Fällt der aktive Eingang weg, ohne dass der andere aktiv wird, wird ein Zwische
 
 ## Zustandsübersicht
 
-| Zustand | UP_OUT.D1 | DOWN_OUT.D1 | Beschreibung |
-| --------- | ----------- | ------------- | -------------- |
-| `STOP` | FALSE | FALSE | Ruhezustand, keine Richtung aktiv |
-| `UP` | TRUE | FALSE | Vorwärts-/Aufwärts-Richtung aktiv |
-| `DOWN` | FALSE | TRUE | Rückwärts-/Abwärts-Richtung aktiv |
-| `UP_STOP` | FALSE | FALSE | Zwischenzustand nach Verlassen von UP |
-| `DOWN_STOP` | FALSE | FALSE | Zwischenzustand nach Verlassen von DOWN |
+| Zustand     | UP_OUT.D1 | DOWN_OUT.D1 | Beschreibung                            |
+| ----------- | --------- | ----------- | --------------------------------------- |
+| `STOP`      | FALSE     | FALSE       | Ruhezustand, keine Richtung aktiv       |
+| `UP`        | TRUE      | FALSE       | Vorwärts-/Aufwärts-Richtung aktiv       |
+| `DOWN`      | FALSE     | TRUE        | Rückwärts-/Abwärts-Richtung aktiv       |
+| `UP_STOP`   | FALSE     | FALSE       | Zwischenzustand nach Verlassen von UP   |
+| `DOWN_STOP` | FALSE     | FALSE       | Zwischenzustand nach Verlassen von DOWN |
 
 ## Anwendungsszenarien
 

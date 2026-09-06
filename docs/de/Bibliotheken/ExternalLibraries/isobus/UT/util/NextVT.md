@@ -12,30 +12,30 @@ Der Funktionsblock **NextVT** ist ein Service-Interface-Block, der das Umschalte
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Mit Variablen | Beschreibung |
-|----------|----------|---------------|---------------|
-| INIT     | EInit    | QI            | Service-Initialisierung. Wird ausgelöst, um den Baustein zu konfigurieren. |
+| Ereignis | Datentyp | Mit Variablen | Beschreibung                                                                         |
+| -------- | -------- | ------------- | ------------------------------------------------------------------------------------ |
+| INIT     | EInit    | QI            | Service-Initialisierung. Wird ausgelöst, um den Baustein zu konfigurieren.           |
 | REQ      | Event    | QI            | Service-Anforderung. Startet den Vorgang zum Umschalten zum nächsten verfügbaren VT. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Mit Variablen | Beschreibung |
-|----------|----------|---------------|---------------|
-| INITO    | EInit    | QO, STATUS    | Bestätigung der Initialisierung. Signalisiert, ob die Initialisierung erfolgreich war. |
+| Ereignis | Datentyp | Mit Variablen         | Beschreibung                                                                                           |
+| -------- | -------- | --------------------- | ------------------------------------------------------------------------------------------------------ |
+| INITO    | EInit    | QO, STATUS            | Bestätigung der Initialisierung. Signalisiert, ob die Initialisierung erfolgreich war.                 |
 | CNF      | Event    | QO, STATUS, s16Result | Bestätigung des Umschaltvorgangs. Wird ausgegeben, sobald der Wechsel zum nächsten VT initiiert wurde. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|---------------|
-| QI       | BOOL  | Qualitätseingang. TRUE aktiviert den Dienst. Bei FALSE werden keine Aktionen ausgeführt. |
+| Variable | Typ  | Beschreibung                                                                             |
+| -------- | ---- | ---------------------------------------------------------------------------------------- |
+| QI       | BOOL | Qualitätseingang. TRUE aktiviert den Dienst. Bei FALSE werden keine Aktionen ausgeführt. |
 
 ### **Daten-Ausgänge**
 
-| Variable  | Typ    | Beschreibung |
-|-----------|--------|---------------|
-| QO        | BOOL   | Qualitätsausgang. TRUE, wenn der Dienst erfolgreich ausgeführt wurde. |
-| STATUS    | STRING | Statusmeldung zum Ergebnis des letzten Vorgangs. |
+| Variable  | Typ    | Beschreibung                                                             |
+| --------- | ------ | ------------------------------------------------------------------------ |
+| QO        | BOOL   | Qualitätsausgang. TRUE, wenn der Dienst erfolgreich ausgeführt wurde.    |
+| STATUS    | STRING | Statusmeldung zum Ergebnis des letzten Vorgangs.                         |
 | s16Result | INT    | Rückgabewert: 0 = E\_NO\_ERR (erfolgreich), negativer Wert = Fehlercode. |
 
 ### **Adapter**

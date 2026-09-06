@@ -28,10 +28,10 @@ Der Baustein besitzt keine eigenständigen Daten-Ausgänge auf der Fassade. Die 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AW` | 16‑Bit Wort als Eingang, Ereignis-Eingang `E1`, Daten-Eingang `D1` |
-| **Plug** (Ausgang) | `BIT_00` … `BIT_15` | `adapter::types::unidirectional::AX` | Jeweils ein Bit des Wortes, Ereignis-Ausgang `E1`, Daten-Ausgang `D1` |
+| Richtung             | Name                | Typ                                  | Kommentar                                                             |
+| -------------------- | ------------------- | ------------------------------------ | --------------------------------------------------------------------- |
+| **Socket** (Eingang) | `IN`                | `adapter::types::unidirectional::AW` | 16‑Bit Wort als Eingang, Ereignis-Eingang `E1`, Daten-Eingang `D1`    |
+| **Plug** (Ausgang)   | `BIT_00` … `BIT_15` | `adapter::types::unidirectional::AX` | Jeweils ein Bit des Wortes, Ereignis-Ausgang `E1`, Daten-Ausgang `D1` |
 
 ## Funktionsweise
 

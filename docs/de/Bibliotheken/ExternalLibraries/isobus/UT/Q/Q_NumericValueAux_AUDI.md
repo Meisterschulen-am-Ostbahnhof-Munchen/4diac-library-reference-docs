@@ -12,36 +12,36 @@ Der Funktionsblock realisiert das Kommando **Change Numeric Value** gemäß ISO 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                           | Mitgeführte Variable |
-|----------|-------|-------------------------------------|----------------------|
-| `INIT`   | EInit | Service‑Initialisierung             | `u16ObjId`           |
+| Ereignis | Typ   | Kommentar               | Mitgeführte Variable |
+| -------- | ----- | ----------------------- | -------------------- |
+| `INIT`   | EInit | Service‑Initialisierung | `u16ObjId`           |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ    | Kommentar                         | Mitgeführte Variable  |
-|----------|--------|-----------------------------------|-----------------------|
-| `INITO`  | EInit  | Initialisierungsbestätigung       | –                     |
-| `CNF`    | Event  | Bestätigung des angeforderten Dienstes | `STATUS`, `s16result` |
+| Ereignis | Typ   | Kommentar                              | Mitgeführte Variable  |
+| -------- | ----- | -------------------------------------- | --------------------- |
+| `INITO`  | EInit | Initialisierungsbestätigung            | –                     |
+| `CNF`    | Event | Bestätigung des angeforderten Dienstes | `STATUS`, `s16result` |
 
 ### **Daten-Eingänge**
 
-| Variable    | Typ   | Kommentar  | Initialwert |
-|-------------|-------|------------|-------------|
-| `u16ObjId`  | UINT  | Objekt‑ID  | `ID_NULL`   |
+| Variable   | Typ  | Kommentar | Initialwert |
+| ---------- | ---- | --------- | ----------- |
+| `u16ObjId` | UINT | Objekt‑ID | `ID_NULL`   |
 
 ### **Daten-Ausgänge**
 
-| Variable    | Typ    | Kommentar                   |
-|-------------|--------|-----------------------------|
-| `STATUS`    | STRING | Dienst‑Status               |
+| Variable    | Typ    | Kommentar                         |
+| ----------- | ------ | --------------------------------- |
+| `STATUS`    | STRING | Dienst‑Status                     |
 | `s16result` | INT    | Rückgabewert (siehe Beschreibung) |
 
 ### **Adapter**
 
-| Adapter         | Richtung | Typ                                  | Kommentar                   |
-|-----------------|----------|--------------------------------------|-----------------------------|
-| `u32OldValue`   | Plug     | `adapter::types::unidirectional::AUDI` | Alter Wert der ID           |
-| `u32NewValue`   | Socket   | `adapter::types::unidirectional::AUDI` | Neuer Wert der ID           |
+| Adapter       | Richtung | Typ                                    | Kommentar         |
+| ------------- | -------- | -------------------------------------- | ----------------- |
+| `u32OldValue` | Plug     | `adapter::types::unidirectional::AUDI` | Alter Wert der ID |
+| `u32NewValue` | Socket   | `adapter::types::unidirectional::AUDI` | Neuer Wert der ID |
 
 ## Gültige Objekt-IDs
 

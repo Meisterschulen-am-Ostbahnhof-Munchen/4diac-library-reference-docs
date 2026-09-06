@@ -12,37 +12,37 @@ Der Funktionsblock `NVS_AIS` dient zum Speichern und Laden von Zeichenketten (ST
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung                                            | Mitgeführte Daten |
-|----------|-------|----------------------------------------------------------|-------------------|
+| Ereignis | Typ   | Beschreibung                                                                         | Mitgeführte Daten      |
+| -------- | ----- | ------------------------------------------------------------------------------------ | ---------------------- |
 | INIT     | EInit | **Service Initialization** – Startet den Baustein und die Kommunikation mit dem NVS. | QI, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung                                            | Mitgeführte Daten |
-|----------|-------|----------------------------------------------------------|-------------------|
-| INITO    | EInit | **Initialization Confirm** – Bestätigt die erfolgreiche Initialisierung oder signalisiert einen Fehler. | QO, STATUS |
+| Ereignis | Typ   | Beschreibung                                                                                            | Mitgeführte Daten |
+| -------- | ----- | ------------------------------------------------------------------------------------------------------- | ----------------- |
+| INITO    | EInit | **Initialization Confirm** – Bestätigt die erfolgreiche Initialisierung oder signalisiert einen Fehler. | QO, STATUS        |
 
 ### **Daten-Eingänge**
 
-| Name          | Datentyp | Beschreibung                                                                                     |
-|---------------|----------|--------------------------------------------------------------------------------------------------|
-| QI            | BOOL     | **Event Input Qualifier** – Steuert das Verhalten während der INIT‑Phase (z. B. Aktivierung).   |
-| KEY           | STRING   | **Key name** – Der Schlüssel, unter dem der Wert im NVS gespeichert/abgerufen wird.              |
+| Name          | Datentyp | Beschreibung                                                                                         |
+| ------------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| QI            | BOOL     | **Event Input Qualifier** – Steuert das Verhalten während der INIT‑Phase (z. B. Aktivierung).        |
+| KEY           | STRING   | **Key name** – Der Schlüssel, unter dem der Wert im NVS gespeichert/abgerufen wird.                  |
 | DEFAULT_VALUE | STRING   | **Default value** – Wert, der gelesen wird, falls im NVS kein Eintrag zum angegebenen KEY existiert. |
 
 ### **Daten-Ausgänge**
 
-| Name   | Datentyp | Beschreibung                                                                 |
-|--------|----------|------------------------------------------------------------------------------|
+| Name   | Datentyp | Beschreibung                                                                |
+| ------ | -------- | --------------------------------------------------------------------------- |
 | QO     | BOOL     | **Event Output Qualifier** – Gibt den Erfolg der letzten Operation an.      |
 | STATUS | STRING   | **Service Status** – Rückmeldung des NVS‑Treiberstatus (z. B. Fehlertexte). |
 
 ### **Adapter**
 
-| Adapter  | Typ                                           | Beschreibung                                                                                         |
-|----------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
-| AIS_IN   | `adapter::types::unidirectional::AIS` (Socket) | **Value to store (SET)** – Empfängt einen zu speichernden STRING‑Wert über das AIS‑Protokoll.        |
-| AIS_OUT  | `adapter::types::unidirectional::AIS` (Plug)   | **Stored value output (GETO)** – Sendet den gelesenen STRING‑Wert aus dem NVS über das AIS‑Protokoll. |
+| Adapter | Typ                                            | Beschreibung                                                                                          |
+| ------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| AIS_IN  | `adapter::types::unidirectional::AIS` (Socket) | **Value to store (SET)** – Empfängt einen zu speichernden STRING‑Wert über das AIS‑Protokoll.         |
+| AIS_OUT | `adapter::types::unidirectional::AIS` (Plug)   | **Stored value output (GETO)** – Sendet den gelesenen STRING‑Wert aus dem NVS über das AIS‑Protokoll. |
 
 ## Funktionsweise
 

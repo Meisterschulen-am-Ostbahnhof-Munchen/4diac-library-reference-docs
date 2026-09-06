@@ -28,12 +28,12 @@ Keine
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-| ------------- | ----- | ---------- | -------------- |
-| IN | `adapter::types::unidirectional::AS` | Socket | Eingangsadapter – Datenquelle, die auf drei Ausgänge verteilt wird. |
-| OUT1 | `adapter::types::unidirectional::AS` | Plug | Erster Ausgang – erhält die unveränderten Daten von IN. |
-| OUT2 | `adapter::types::unidirectional::AS` | Plug | Zweiter Ausgang – erhält die unveränderten Daten von IN. |
-| OUT3 | `adapter::types::unidirectional::AS` | Plug | Dritter Ausgang – erhält die unveränderten Daten von IN. |
+| Bezeichnung | Typ                                  | Richtung | Beschreibung                                                        |
+| ----------- | ------------------------------------ | -------- | ------------------------------------------------------------------- |
+| IN          | `adapter::types::unidirectional::AS` | Socket   | Eingangsadapter – Datenquelle, die auf drei Ausgänge verteilt wird. |
+| OUT1        | `adapter::types::unidirectional::AS` | Plug     | Erster Ausgang – erhält die unveränderten Daten von IN.             |
+| OUT2        | `adapter::types::unidirectional::AS` | Plug     | Zweiter Ausgang – erhält die unveränderten Daten von IN.            |
+| OUT3        | `adapter::types::unidirectional::AS` | Plug     | Dritter Ausgang – erhält die unveränderten Daten von IN.            |
 
 ## Funktionsweise
 

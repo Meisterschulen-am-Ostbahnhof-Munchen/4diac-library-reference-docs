@@ -30,16 +30,16 @@ Keine (der Funktionsblock besitzt keine direkten Daten-Ausgänge; die Datenüber
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AIWS` | **IN** | Socket (Eingang) | Empfängt den zu verteilenden AIWS-Datenstrom. |
-| `adapter::types::unidirectional::AIWS` | **OUT1** | Plug (Ausgang) | Erster identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT2** | Plug (Ausgang) | Zweiter identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT3** | Plug (Ausgang) | Dritter identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT4** | Plug (Ausgang) | Vierter identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT5** | Plug (Ausgang) | Fünfter identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT6** | Plug (Ausgang) | Sechster identischer Ausgangskanal. |
-| `adapter::types::unidirectional::AIWS` | **OUT7** | Plug (Ausgang) | Siebter identischer Ausgangskanal. |
+| Typ                                    | Name     | Richtung         | Beschreibung                                  |
+| -------------------------------------- | -------- | ---------------- | --------------------------------------------- |
+| `adapter::types::unidirectional::AIWS` | **IN**   | Socket (Eingang) | Empfängt den zu verteilenden AIWS-Datenstrom. |
+| `adapter::types::unidirectional::AIWS` | **OUT1** | Plug (Ausgang)   | Erster identischer Ausgangskanal.             |
+| `adapter::types::unidirectional::AIWS` | **OUT2** | Plug (Ausgang)   | Zweiter identischer Ausgangskanal.            |
+| `adapter::types::unidirectional::AIWS` | **OUT3** | Plug (Ausgang)   | Dritter identischer Ausgangskanal.            |
+| `adapter::types::unidirectional::AIWS` | **OUT4** | Plug (Ausgang)   | Vierter identischer Ausgangskanal.            |
+| `adapter::types::unidirectional::AIWS` | **OUT5** | Plug (Ausgang)   | Fünfter identischer Ausgangskanal.            |
+| `adapter::types::unidirectional::AIWS` | **OUT6** | Plug (Ausgang)   | Sechster identischer Ausgangskanal.           |
+| `adapter::types::unidirectional::AIWS` | **OUT7** | Plug (Ausgang)   | Siebter identischer Ausgangskanal.            |
 
 ## Funktionsweise
 

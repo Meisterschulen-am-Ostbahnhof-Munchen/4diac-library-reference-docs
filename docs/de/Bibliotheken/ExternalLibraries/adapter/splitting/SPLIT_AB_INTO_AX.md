@@ -28,17 +28,17 @@ Der Baustein besitzt keine expliziten Ereignis-Ausgänge auf der obersten Ebene.
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                               |
-|---------|------------------------------|----------|--------------------------------------------|
-| IN      | adapter::types::unidirectional::AB | Socket (Eingang) | BYTE‑Wert, wird in Einzelbits zerlegt     |
-| BIT_00  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 0 (LSB)           |
-| BIT_01  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 1                 |
-| BIT_02  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 2                 |
-| BIT_03  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 3                 |
-| BIT_04  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 4                 |
-| BIT_05  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 5                 |
-| BIT_06  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 6                 |
-| BIT_07  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 7 (MSB)           |
+| Adapter | Typ                                | Richtung         | Beschreibung                          |
+| ------- | ---------------------------------- | ---------------- | ------------------------------------- |
+| IN      | adapter::types::unidirectional::AB | Socket (Eingang) | BYTE‑Wert, wird in Einzelbits zerlegt |
+| BIT_00  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 0 (LSB)       |
+| BIT_01  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 1             |
+| BIT_02  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 2             |
+| BIT_03  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 3             |
+| BIT_04  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 4             |
+| BIT_05  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 5             |
+| BIT_06  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 6             |
+| BIT_07  | adapter::types::unidirectional::AX | Plug (Ausgang)   | Boolescher Wert von Bit 7 (MSB)       |
 
 ## Funktionsweise
 

@@ -12,34 +12,34 @@ Der Funktionsblock **AX_FB_TOF_LTIME** realisiert einen Standard-Timer für die 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `REQ` | Normaler Ausführungsauftrag (nicht auslösend) – startet bzw. aktualisiert die Timerberechnung. Der zugehörige Daten-Eingang ist `PT`. |
+| Ereignis | Kommentar                                                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `REQ`    | Normaler Ausführungsauftrag (nicht auslösend) – startet bzw. aktualisiert die Timerberechnung. Der zugehörige Daten-Eingang ist `PT`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `CNF` | Bestätigung der Ausführung – signalisiert den Abschluss einer Timeraktualisierung. Der zugehörige Daten-Ausgang ist `ET`. |
+| Ereignis | Kommentar                                                                                                                 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `CNF`    | Bestätigung der Ausführung – signalisiert den Abschluss einer Timeraktualisierung. Der zugehörige Daten-Ausgang ist `ET`. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `PT` | `LTIME` | Prozesszeit – die gewünschte Ausschaltverzögerungsdauer. |
+| Variable | Typ     | Kommentar                                                |
+| -------- | ------- | -------------------------------------------------------- |
+| `PT`     | `LTIME` | Prozesszeit – die gewünschte Ausschaltverzögerungsdauer. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `ET` | `LTIME` | Verstrichene Zeit – die bereits abgelaufene Zeit seit Start der Verzögerung. |
+| Variable | Typ     | Kommentar                                                                    |
+| -------- | ------- | ---------------------------------------------------------------------------- |
+| `ET`     | `LTIME` | Verstrichene Zeit – die bereits abgelaufene Zeit seit Start der Verzögerung. |
 
 ### **Adapter**
 
-| Richtung | Adaptertyp | Kommentar |
-|----------|------------|-----------|
-| **Socket** `IN` | `adapter::types::unidirectional::AX` | Eingangsadapter – nimmt das binäre Steuersignal entgegen (z. B. über Ereignis `E1` und Daten `D1`). |
-| **Plug** `Q` | `adapter::types::unidirectional::AX` | Ausgangsadapter – gibt das zeitverzögerte Ausgangssignal weiter (über Ereignis `E1` und Daten `D1`). |
+| Richtung        | Adaptertyp                           | Kommentar                                                                                            |
+| --------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| **Socket** `IN` | `adapter::types::unidirectional::AX` | Eingangsadapter – nimmt das binäre Steuersignal entgegen (z. B. über Ereignis `E1` und Daten `D1`).  |
+| **Plug** `Q`    | `adapter::types::unidirectional::AX` | Ausgangsadapter – gibt das zeitverzögerte Ausgangssignal weiter (über Ereignis `E1` und Daten `D1`). |
 
 ## Funktionsweise
 
@@ -67,11 +67,11 @@ Die Variable `ET` wird direkt vom Timer übernommen und zeigt jederzeit die aktu
 
 ## Zustandsübersicht
 
-| Zustand | Eingang `IN` | Ausgang `Q` | Verstrichene Zeit `ET` |
-| --------- | -------------- | ------------- | ------------------------ |
-| Inaktiv / Bereit | TRUE | TRUE | 0 (Null) |
-| Verzögerung läuft | FALSE → TRUE‑Rückkehr möglich | TRUE | 0 … PT |
-| Verzögerung abgelaufen | FALSE | FALSE | PT (konstant) |
+| Zustand                | Eingang `IN`                  | Ausgang `Q` | Verstrichene Zeit `ET` |
+| ---------------------- | ----------------------------- | ----------- | ---------------------- |
+| Inaktiv / Bereit       | TRUE                          | TRUE        | 0 (Null)               |
+| Verzögerung läuft      | FALSE → TRUE‑Rückkehr möglich | TRUE        | 0 … PT                 |
+| Verzögerung abgelaufen | FALSE                         | FALSE       | PT (konstant)          |
 
 Ein erneuter Wechsel von `IN` auf **TRUE** setzt den Timer zurück und führt sofort wieder in den Zustand „Inaktiv / Bereit“. Ein Wechsel auf **FALSE** startet die Verzögerung von Neuem.
 

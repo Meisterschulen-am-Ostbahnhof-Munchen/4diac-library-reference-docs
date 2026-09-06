@@ -33,10 +33,10 @@ The block communicates exclusively via adapter interfaces. Traditional discrete 
 
 ### **Adapter**
 
-| Name | Type | Direction | Description |
-| :--- | :--- | :--- | :--- |
-| **Q1** | `adapter::types::unidirectional::AX` | Plug (Output) | The output adapter that provides the current state (Q) and the associated event. |
-| **SET1** | `adapter::types::unidirectional::AX` | Socket (Input) | The set input adapter. A `TRUE` signal here sets the output to `TRUE`. |
+| Name      | Type                                 | Direction      | Description                                                                                       |
+| :-------- | :----------------------------------- | :------------- | :------------------------------------------------------------------------------------------------ |
+| **Q1**    | `adapter::types::unidirectional::AX` | Plug (Output)  | The output adapter that provides the current state (Q) and the associated event.                  |
+| **SET1**  | `adapter::types::unidirectional::AX` | Socket (Input) | The set input adapter. A `TRUE` signal here sets the output to `TRUE`.                            |
 | **RESET** | `adapter::types::unidirectional::AX` | Socket (Input) | The reset input adapter. A `TRUE` signal here sets the output to `FALSE` (if SET1 is not active). |
 
 *Note: The adapter type `AX` typically implies a combination of a Boolean data point (`D1`) and an event (`E1`).*
@@ -61,13 +61,13 @@ Q1.D1 := SET1.D1 OR ((NOT RESET.D1) AND Q1.D1);
 
 The following truth table describes the behavior of the function block (where `Q_n` is the old state and `Q_n+1` is the new state):
 
-| SET1.D1 | RESET.D1 | Q_n (Old State) | Q_n+1 (New State) | Description |
-| :---: | :---: | :---: | :---: | :--- |
-| 0 | 0 | 0 | 0 | Hold State |
-| 0 | 0 | 1 | 1 | Hold State |
-| 0 | 1 | X | 0 | Reset |
-| 1 | 0 | X | 1 | Set |
-| 1 | 1 | X | 1 | **Set (Dominant)** |
+| SET1.D1 | RESET.D1 | Q_n (Old State) | Q_n+1 (New State) | Description        |
+| :-----: | :------: | :-------------: | :---------------: | :----------------- |
+| 0       | 0        | 0               | 0                 | Hold State         |
+| 0       | 0        | 1               | 1                 | Hold State         |
+| 0       | 1        | X               | 0                 | Reset              |
+| 1       | 0        | X               | 1                 | Set                |
+| 1       | 1        | X               | 1                 | **Set (Dominant)** |
 
 ## Application Scenarios
 

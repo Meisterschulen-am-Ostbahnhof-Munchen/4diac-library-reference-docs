@@ -9,7 +9,7 @@ The function block `F_WSTRING_AS_WORD` converts a WSTRING data type to a WORD da
 - **IN**: Expects an input of type `WSTRING`, which is to be converted into a `WORD` value.
 - **OUT**: Returns the result of the conversion as `WORD`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

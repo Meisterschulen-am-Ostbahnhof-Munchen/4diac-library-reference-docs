@@ -14,40 +14,40 @@ Der Funktionsblock `ADI_TO_AB` dient als Komposit-Baustein zur Umwandlung eines 
 
 Der Baustein besitzt keine direkten Ereignis‑Eingänge. Der Ereignis‑Empfang erfolgt über den **Socket‑Adapter ADI_IN**:
 
-| Adapter‑Port | Typ        | Beschreibung                          |
-|--------------|------------|---------------------------------------|
-| ADI_IN.E1    | Ereignis   | Startet die Konvertierung am Eingang. |
+| Adapter‑Port | Typ      | Beschreibung                          |
+| ------------ | -------- | ------------------------------------- |
+| ADI_IN.E1    | Ereignis | Startet die Konvertierung am Eingang. |
 
 ### **Ereignis‑Ausgänge**
 
 Auch die Ereignis‑Ausgabe erfolgt ausschließlich über den **Plug‑Adapter AB_OUT**:
 
-| Adapter‑Port | Typ        | Beschreibung                         |
-|--------------|------------|--------------------------------------|
-| AB_OUT.E1    | Ereignis   | Signalisiert, dass der Wert konvertiert und am Ausgang bereitsteht. |
+| Adapter‑Port | Typ      | Beschreibung                                                        |
+| ------------ | -------- | ------------------------------------------------------------------- |
+| AB_OUT.E1    | Ereignis | Signalisiert, dass der Wert konvertiert und am Ausgang bereitsteht. |
 
 ### **Daten‑Eingänge**
 
 Die Daten werden über den ADI_IN‑Adapter bereitgestellt:
 
-| Adapter‑Port | Typ  | Beschreibung                     |
-|--------------|------|----------------------------------|
-| ADI_IN.D1    | DINT | 32‑Bit‑Integer‑Eingangswert.     |
+| Adapter‑Port | Typ  | Beschreibung                 |
+| ------------ | ---- | ---------------------------- |
+| ADI_IN.D1    | DINT | 32‑Bit‑Integer‑Eingangswert. |
 
 ### **Daten‑Ausgänge**
 
 Die konvertierten Daten werden über den AB_OUT‑Adapter ausgegeben:
 
-| Adapter‑Port | Typ  | Beschreibung               |
-|--------------|------|----------------------------|
-| AB_OUT.D1    | BYTE | 8‑Bit‑Byte‑Ausgangswert.   |
+| Adapter‑Port | Typ  | Beschreibung             |
+| ------------ | ---- | ------------------------ |
+| AB_OUT.D1    | BYTE | 8‑Bit‑Byte‑Ausgangswert. |
 
 ### **Adapter**
 
-| Name    | Richtung | Typ des Adapters                         | Beschreibung                   |
-|---------|----------|------------------------------------------|--------------------------------|
-| ADI_IN  | Socket   | `adapter::types::unidirectional::ADI`    | DINT‑Adapter als Eingang.      |
-| AB_OUT  | Plug     | `adapter::types::unidirectional::AB`     | BYTE‑Adapter als Ausgang.      |
+| Name   | Richtung | Typ des Adapters                      | Beschreibung              |
+| ------ | -------- | ------------------------------------- | ------------------------- |
+| ADI_IN | Socket   | `adapter::types::unidirectional::ADI` | DINT‑Adapter als Eingang. |
+| AB_OUT | Plug     | `adapter::types::unidirectional::AB`  | BYTE‑Adapter als Ausgang. |
 
 ## Funktionsweise
 

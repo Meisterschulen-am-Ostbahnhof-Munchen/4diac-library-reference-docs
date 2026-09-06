@@ -32,14 +32,14 @@ Es sind keine Daten-Ausgänge vorhanden.
 
 Der Baustein besitzt einen Socket (Eingang) und fünf Plugs (Ausgänge):
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang | IN | `adapter::types::unidirectional::ALR` | Empfängt das zu verteilende ALR-Signal |
-| Ausgang | OUT1 | `adapter::types::unidirectional::ALR` | Erster Ausgang mit dem identischen ALR-Signal |
-| Ausgang | OUT2 | `adapter::types::unidirectional::ALR` | Zweiter Ausgang mit dem identischen ALR-Signal |
-| Ausgang | OUT3 | `adapter::types::unidirectional::ALR` | Dritter Ausgang mit dem identischen ALR-Signal |
-| Ausgang | OUT4 | `adapter::types::unidirectional::ALR` | Vierter Ausgang mit dem identischen ALR-Signal |
-| Ausgang | OUT5 | `adapter::types::unidirectional::ALR` | Fünfter Ausgang mit dem identischen ALR-Signal |
+| Richtung | Name | Typ                                   | Beschreibung                                   |
+| -------- | ---- | ------------------------------------- | ---------------------------------------------- |
+| Eingang  | IN   | `adapter::types::unidirectional::ALR` | Empfängt das zu verteilende ALR-Signal         |
+| Ausgang  | OUT1 | `adapter::types::unidirectional::ALR` | Erster Ausgang mit dem identischen ALR-Signal  |
+| Ausgang  | OUT2 | `adapter::types::unidirectional::ALR` | Zweiter Ausgang mit dem identischen ALR-Signal |
+| Ausgang  | OUT3 | `adapter::types::unidirectional::ALR` | Dritter Ausgang mit dem identischen ALR-Signal |
+| Ausgang  | OUT4 | `adapter::types::unidirectional::ALR` | Vierter Ausgang mit dem identischen ALR-Signal |
+| Ausgang  | OUT5 | `adapter::types::unidirectional::ALR` | Fünfter Ausgang mit dem identischen ALR-Signal |
 
 ## Funktionsweise
 

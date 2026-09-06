@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge. Die Datenausgabe erfolgt über die angeschlosse
 
 ### **Adapter**
 
-| Richtung | Name                                | Typ                              | Beschreibung                              |
-|----------|-------------------------------------|----------------------------------|-------------------------------------------|
-| Socket   | **AUI_IN**                          | adapter::types::unidirectional::AUI | UINT Eingangsadapter (Quelle)             |
-| Plug     | **AUS_OUT**                         | adapter::types::unidirectional::AUS | USINT Ausgangsadapter (Ziel)              |
+| Richtung | Name        | Typ                                 | Beschreibung                  |
+| -------- | ----------- | ----------------------------------- | ----------------------------- |
+| Socket   | **AUI_IN**  | adapter::types::unidirectional::AUI | UINT Eingangsadapter (Quelle) |
+| Plug     | **AUS_OUT** | adapter::types::unidirectional::AUS | USINT Ausgangsadapter (Ziel)  |
 
 Der Socket `AUI_IN` nimmt den UINT-Wert (16‑Bit ohne Vorzeichen) sowie das zugehörige Ereignissignal auf. Der Plug `AUS_OUT` gibt den konvertierten USINT-Wert (8‑Bit ohne Vorzeichen) mit dem entsprechenden Ereignis aus.
 

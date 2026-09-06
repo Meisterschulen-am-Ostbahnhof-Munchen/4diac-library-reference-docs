@@ -34,6 +34,7 @@ The **F_MUL** is a standards-compliant function block for multiplying numeric va
 
 - `REQ` event with values for IN1 and IN2
 - Both inputs must be of type ANY_NUM be
+
 1. **Multiplication**:
 
 - Type-preserving calculation (IN1 × IN2)
@@ -41,6 +42,7 @@ The **F_MUL** is a standards-compliant function block for multiplying numeric va
 - Integers (INT, DINT)
 - Floating-point numbers (REAL, LREAL)
 - Mixed types (automatic conversion)
+
 1. **Result output**:
 
 - `CNF` event with calculated product
@@ -72,11 +74,11 @@ The **F_MUL** is a standards-compliant function block for multiplying numeric va
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_MUL | F_ADD | F_DIV |
-| --------------- | -------- | -------- | -------- |
-| Operation | Multiplication | Addition | Division |
-| Inputs | 2 | 2 | 2 |
-| Type support | ANY_NUM | ANY_NUM | ANY_NUM |
+| Feature      | F_MUL          | F_ADD    | F_DIV    |
+| ------------ | -------------- | -------- | -------- |
+| Operation    | Multiplication | Addition | Division |
+| Inputs       | 2              | 2        | 2        |
+| Type support | ANY_NUM        | ANY_NUM  | ANY_NUM  |
 
 ## 🛠️ Related Exercises
 

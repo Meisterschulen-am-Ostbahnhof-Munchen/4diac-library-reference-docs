@@ -22,8 +22,8 @@ Auch hier existieren keine direkten Ereignis-Ausgänge. Der Ausgangsadapter **OU
 
 Die Daten werden über die beiden Socket-Adapter eingelesen:
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
+| Adapter   | Typ                                  | Beschreibung                                               |
+| --------- | ------------------------------------ | ---------------------------------------------------------- |
 | `WORD_00` | `adapter::types::unidirectional::AW` | Erstes 16‑Bit‑Wort (niederwertiger Anteil des Doppelworts) |
 | `WORD_01` | `adapter::types::unidirectional::AW` | Zweites 16‑Bit‑Wort (höherwertiger Anteil des Doppelworts) |
 
@@ -33,9 +33,9 @@ Jeder dieser Adapter stellt einen Datenausgang (`D1`) mit dem eigentlichen WORD�
 
 Der Ausgang erfolgt über einen Plug-Adapter:
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
-| `OUT` | `adapter::types::unidirectional::AD` | Zusammengesetztes 32‑Bit‑Doppelwort (DWORD) |
+| Adapter | Typ                                  | Beschreibung                                |
+| ------- | ------------------------------------ | ------------------------------------------- |
+| `OUT`   | `adapter::types::unidirectional::AD` | Zusammengesetztes 32‑Bit‑Doppelwort (DWORD) |
 
 Der Adapter `OUT` besitzt einen Dateneingang (`D1`), der intern mit dem gespeicherten Ergebnis verbunden ist.
 
@@ -66,11 +66,11 @@ Auf diese Weise wird sichergestellt, dass der Ausgangswert nur bei tatsächliche
 
 Der FB selbst besitzt keinen expliziten Zustandsautomaten. Der interne Ablauf lässt sich aber durch die Zustände des D‑Flipflops charakterisieren:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **Warten auf Ereignis** | Das Flipflop hält den zuletzt berechneten Wert; es liegt kein neues Eingangsereignis an. |
-| **Berechnung aktiv** | Ein Ereignis von WORD_00 oder WORD_01 triggert die Zusammenführung und das Flipflop wird getaktet. |
-| **Ausgabe aktiv** | Nach dem Takt wird der neue Wert an `OUT` weitergegeben und das Ausgangsereignis wird gesendet. |
+| Zustand                 | Beschreibung                                                                                       |
+| ----------------------- | -------------------------------------------------------------------------------------------------- |
+| **Warten auf Ereignis** | Das Flipflop hält den zuletzt berechneten Wert; es liegt kein neues Eingangsereignis an.           |
+| **Berechnung aktiv**    | Ein Ereignis von WORD_00 oder WORD_01 triggert die Zusammenführung und das Flipflop wird getaktet. |
+| **Ausgabe aktiv**       | Nach dem Takt wird der neue Wert an `OUT` weitergegeben und das Ausgangsereignis wird gesendet.    |
 
 Der Wechsel der Zustände erfolgt streng durch die Ereigniskette.
 

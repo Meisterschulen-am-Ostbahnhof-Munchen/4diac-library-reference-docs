@@ -53,6 +53,7 @@ The function block `F_SEL_E_2` selects between two input variables based on the 
 
 - `REQ0` selects `IN0`.
 - `REQ1` selects `IN1`.
+
 1. **Confirmation State**: After selection, `CNF` is output, and the block returns to its initial state.
 
 ## Application Scenarios

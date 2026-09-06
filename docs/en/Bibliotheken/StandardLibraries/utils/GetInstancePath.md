@@ -11,7 +11,7 @@ The function block `GetInstancePath` is used to determine the instance path of t
 - **Sep**: Separator character (CHAR) for the generated path. The default value is `'/'`.
 - **Path**: The determined instance path as a STRING.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -23,7 +23,7 @@ The function block `GetInstancePath` is used to determine the instance path of t
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 No adapters available.
 

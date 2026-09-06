@@ -12,27 +12,27 @@ Der Funktionsbaustein **SET_LREAL** dient dazu, einen Wert vom Typ LREAL an eine
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Mit Variablen | Beschreibung |
-|----------|---------------|--------------|
+| Ereignis | Mit Variablen | Beschreibung                                                                                    |
+| -------- | ------------- | ----------------------------------------------------------------------------------------------- |
 | REQ      | IN, OUT       | Normaler Ausführungsanforderung. Löst das Schreiben des Eingangswertes in die Zielvariable aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Mit Variablen | Beschreibung |
-|----------|---------------|--------------|
+| Ereignis | Mit Variablen | Beschreibung                                                                   |
+| -------- | ------------- | ------------------------------------------------------------------------------ |
 | CNF      | OUT           | Bestätigung der erfolgreichen Ausführung. Die Zielvariable wurde aktualisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Initialwert | Beschreibung                    |
-|------|-------|-------------|----------------------------------|
-| IN   | LREAL | 0.0         | Wert, der in die Zielvariable geschrieben werden soll. |
+| Name | Typ   | Initialwert | Beschreibung                                                                    |
+| ---- | ----- | ----------- | ------------------------------------------------------------------------------- |
+| IN   | LREAL | 0.0         | Wert, der in die Zielvariable geschrieben werden soll.                          |
 | OUT  | LREAL | 0.0         | (InOut) Eingangsseite der Zielvariablen. Der aktuelle Wert kann gelesen werden. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ   | Initialwert | Beschreibung                          |
-|------|-------|-------------|----------------------------------------|
+| Name | Typ   | Initialwert | Beschreibung                                                                                   |
+| ---- | ----- | ----------- | ---------------------------------------------------------------------------------------------- |
 | OUT  | LREAL | 0.0         | (InOut) Ausgangsseite der Zielvariablen. Nach Ausführung wird hier der Wert von IN ausgegeben. |
 
 ### **Adapter**

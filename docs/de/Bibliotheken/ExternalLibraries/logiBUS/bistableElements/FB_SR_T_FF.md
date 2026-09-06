@@ -12,29 +12,29 @@ Der Funktionsbaustein `FB_SR_T_FF` realisiert ein bistabiles, set-dominantes RS-
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| REQ | Event | Normaler Ausführungsauftrag (löst Verarbeitung aus) |
+| Name | Typ   | Kommentar                                           |
+| ---- | ----- | --------------------------------------------------- |
+| REQ  | Event | Normaler Ausführungsauftrag (löst Verarbeitung aus) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| CNF | Event | Bestätigung der Ausführung |
+| Name | Typ   | Kommentar                  |
+| ---- | ----- | -------------------------- |
+| CNF  | Event | Bestätigung der Ausführung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-| ------ | ----- | ------------- | ----------- |
-| S1 | BOOL | - | Set-Eingang (dominant) |
-| R | BOOL | - | Reset-Eingang |
-| CLK | BOOL | - | Taktsignal (steigende Flanke löst Toggle aus) |
+| Name | Typ  | Initialwert | Kommentar                                     |
+| ---- | ---- | ----------- | --------------------------------------------- |
+| S1   | BOOL | -           | Set-Eingang (dominant)                        |
+| R    | BOOL | -           | Reset-Eingang                                 |
+| CLK  | BOOL | -           | Taktsignal (steigende Flanke löst Toggle aus) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| Q1 | BOOL | - | Ausgangssignal |
+| Name | Typ  | Initialwert | Kommentar      |
+| ---- | ---- | ----------- | -------------- |
+| Q1   | BOOL | -           | Ausgangssignal |
 
 ### **Adapter**
 
@@ -63,9 +63,9 @@ Der Algorithmus wird in Structured Text (ST) implementiert und nach jeder Verarb
 
 Der Baustein besitzt einen funktionalen Zustandsautomaten mit einem Zustand `REQ`. Dieser Zustand führt den Algorithmus aus und sendet anschließend `CNF`. Es gibt keine weiteren expliziten Zustände im Automaten, da das Flipflop-Verhalten rein datengetrieben im Algorithmus abgebildet wird.
 
-| Zustand | Eingehende Ereignisse | Aktion | Ausgehende Ereignisse |
-|---------|-----------------------|--------|------------------------|
-| REQ | REQ | Ausführen des Algorithmus, Aktualisierung von `Q1` und `EDGE` | CNF |
+| Zustand | Eingehende Ereignisse | Aktion                                                        | Ausgehende Ereignisse |
+| ------- | --------------------- | ------------------------------------------------------------- | --------------------- |
+| REQ     | REQ                   | Ausführen des Algorithmus, Aktualisierung von `Q1` und `EDGE` | CNF                   |
 
 ## Anwendungsszenarien
 

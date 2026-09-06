@@ -34,12 +34,14 @@ The **F_ADD_TOD_TIME** function block is a specialized function module for addin
 
 - Triggered by the `REQ` event
 - Processes TIME_OF_DAY and TIME values
+
 1. **Calculation**:
 
 - Adds time duration (IN2) to time of day (IN1)
 - Automatically takes into account:
 - Day transitions (24-hour format)
 - Millisecond accuracy
+
 1. **Result Output**:
 
 - `CNF` event with new TIME_OF_DAY
@@ -70,11 +72,11 @@ The **F_ADD_TOD_TIME** function block is a specialized function module for addin
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_ADD_TOD_TIME | F_ADD_DT_TIME |
----------------- | ---------------- | --------------- |
-| Input Type 1 | TIME_OF_DAY | DATE_AND_TIME |
-| Output Type | TIME_OF_DAY | DATE_AND_TIME |
-| Range | Daily Cycle | Absolute Date |
+| Feature      | F_ADD_TOD_TIME | F_ADD_DT_TIME |
+| ------------ | -------------- | ------------- |
+| Input Type 1 | TIME_OF_DAY    | DATE_AND_TIME |
+| Output Type  | TIME_OF_DAY    | DATE_AND_TIME |
+| Range        | Daily Cycle    | Absolute Date |
 
 ## Conclusion
 

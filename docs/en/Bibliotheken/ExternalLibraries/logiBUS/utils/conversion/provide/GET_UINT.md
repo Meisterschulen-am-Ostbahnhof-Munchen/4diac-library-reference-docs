@@ -12,29 +12,29 @@ The **GET_UINT** function block reads the current value of a source `UINT` passe
 
 ### **Event Inputs**
 
-| Event | Description |
-|----------|--------------|
+| Event   | Description                                                                            |
+| ------- | -------------------------------------------------------------------------------------- |
 | **REQ** | Normal execution command; triggers reading the InOut variable and updating the output. |
 
 ### **Event Outputs**
 
-| Event | Description |
-|----------|--------------|
+| Event   | Description                                                                      |
+| ------- | -------------------------------------------------------------------------------- |
 | **CNF** | Confirms the successful execution of REQ and signals that the outputs are valid. |
 
 ### **Data Inputs**
 
-| Variable | Type | Description |
-|----------|-------|--------------|
-| **IN** | UINT | Source variable provided as an InOut parameter. The value is read during REQ and passed unchanged to the output. Default value: `0`. |
+| Variable | Type | Description                                                                                                                          |
+| -------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **IN**   | UINT | Source variable provided as an InOut parameter. The value is read during REQ and passed unchanged to the output. Default value: `0`. |
 
 **Note:** `IN` is declared as an InOut variable, but is only used for reading within the function block.
 
 ### **Data Outputs**
 
-| Variable | Type | Description |
-|----------|-------|--------------|
-| **OUT** | UINT | Buffered output value containing the value read from `IN` during the last REQ execution. Default value: `0`. |
+| Variable | Type | Description                                                                                                  |
+| -------- | ---- | ------------------------------------------------------------------------------------------------------------ |
+| **OUT**  | UINT | Buffered output value containing the value read from `IN` during the last REQ execution. Default value: `0`. |
 
 ### **Adapter**
 
@@ -62,8 +62,8 @@ Processing is strictly sequential and instantaneous.
 
 ## State Overview
 
-| State | Description |
-|---------|--------------|
+| State   | Description                                                                                                     |
+| ------- | --------------------------------------------------------------------------------------------------------------- |
 | **REQ** | Waits for the arrival of event `REQ` and then performs the assignment `OUT := IN`. Subsequently, `CNF` is sent. |
 
 There is no explicit start or end state; after execution, the function block remains in state `REQ`, ready for the next task.

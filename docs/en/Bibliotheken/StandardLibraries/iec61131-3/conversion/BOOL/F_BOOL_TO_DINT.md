@@ -9,7 +9,7 @@ The function block `F_BOOL_TO_DINT` converts a Boolean value (`BOOL`) into a 32-
 - **IN**: The Boolean input value (`BOOL`) to be converted to a `DINT` value.
 - **OUT**: The converted 32-bit integer value (`DINT`). The value is `1` if `IN` is `TRUE`, otherwise `0`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

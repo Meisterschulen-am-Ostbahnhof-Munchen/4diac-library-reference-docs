@@ -74,18 +74,18 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Positionsbereich
 
-| Parameter | Bereich        | Beschreibung               |
-|-----------|---------------|----------------------------|
-| X-Position| -32768 - +32767| Horizontale Position       |
-| Y-Position| -32768 - +32767| Vertikale Position         |
+| Parameter  | Bereich         | Beschreibung         |
+| ---------- | --------------- | -------------------- |
+| X-Position | -32768 - +32767 | Horizontale Position |
+| Y-Position | -32768 - +32767 | Vertikale Position   |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Position außerhalb des gültigen Bereichs |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
+| Code | Konstante           | Bedeutung                                |
+| ---- | ------------------- | ---------------------------------------- |
+| 0    | VT_E_NO_ERR         | Erfolgreich                              |
+| -6   | VT_E_OVERFLOW       | Position außerhalb des gültigen Bereichs |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Objekt-ID                      |
 
 ## Anwendungsszenarien
 
@@ -96,11 +96,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ChildPosition | Q_ChildLocation | VtAbsoluteMove |
-|---------------|-----------------|-----------------|----------------|
-| ISO-Standard  | ✔               | ✔               | ✖              |
-| Positionstyp  | Absolut         | Relativ         | Absolut        |
-| Wertebereich  | ±32767 Pixel    | ±127 Pixel      | ±32767 Pixel   |
+| Feature      | Q_ChildPosition | Q_ChildLocation | VtAbsoluteMove |
+| ------------ | --------------- | --------------- | -------------- |
+| ISO-Standard | ✔               | ✔               | ✖              |
+| Positionstyp | Absolut         | Relativ         | Absolut        |
+| Wertebereich | ±32767 Pixel    | ±127 Pixel      | ±32767 Pixel   |
 
 ## Fazit
 

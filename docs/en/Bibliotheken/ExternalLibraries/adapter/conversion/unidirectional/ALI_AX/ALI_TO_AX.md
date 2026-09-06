@@ -35,10 +35,10 @@ The function block serves as a bidirectional bridge between adapters based on di
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Description |
-| --------- | ---------- | ----- | -------------- |
-| **ALI_IN** | Socket (Input) | `adapter::types::unidirectional::ALI` | Input adapter with a LINT value. |
-| **AX_OUT** | Plug (Output) | `adapter::types::unidirectional::AX` | Output adapter with a BOOL value. |
+| Adapter    | Direction      | Type                                  | Description                       |
+| ---------- | -------------- | ------------------------------------- | --------------------------------- |
+| **ALI_IN** | Socket (Input) | `adapter::types::unidirectional::ALI` | Input adapter with a LINT value.  |
+| **AX_OUT** | Plug (Output)  | `adapter::types::unidirectional::AX`  | Output adapter with a BOOL value. |
 
 ## Functionality
 
@@ -53,6 +53,7 @@ The function block internally uses the comparison function block **F_NE** ("Not 
 
 - **TRUE** if `IN1 ≠ 0`
 - **FALSE** if `IN1 = 0`
+
 1. After the comparison is complete, `F_NE` sends a `CNF` event, which triggers the output adapter `AX_OUT` via its `E1`.
 2. Simultaneously, the BOOL value is output as `AX_OUT.D1`.
 

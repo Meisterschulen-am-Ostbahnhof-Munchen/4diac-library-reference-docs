@@ -12,38 +12,38 @@ The function block `INI_AUI` is used to read and store **UINT data** (more preci
 
 ### **Event Inputs**
 
-| Event | Type | Short Description |
-|----------|-------|---------------------------------------------------------------|
-| INIT | EInit | Service Initialization: Triggers loading the value from the INI file |
+| Event | Type  | Short Description                                                    |
+| ----- | ----- | -------------------------------------------------------------------- |
+| INIT  | EInit | Service Initialization: Triggers loading the value from the INI file |
 
 ### **Event Outputs**
 
-| Event | Type | Short Description |
-|----------|-------|--------------------------------------------------------------|
+| Event | Type  | Short Description                                                               |
+| ----- | ----- | ------------------------------------------------------------------------------- |
 | INITO | EInit | Initialization Acknowledgement (sent after completion of read/write operations) |
 
 ### **Data Inputs**
 
-| Name | Type | Short Description |
-| ---------------- | -------- | --------------------------------------------------------------- |
-| QI | BOOL | Qualifier for the event input (enables processing) |
-| SECTION | STRING | Name of the section in `settings.ini` (e.g., `[MySection]`) |
-| KEY | STRING | Key name within the section |
-| DEFAULT_VALUE | UDINT | Value returned if no entry exists |
+| Name          | Type   | Short Description                                           |
+| ------------- | ------ | ----------------------------------------------------------- |
+| QI            | BOOL   | Qualifier for the event input (enables processing)          |
+| SECTION       | STRING | Name of the section in `settings.ini` (e.g., `[MySection]`) |
+| KEY           | STRING | Key name within the section                                 |
+| DEFAULT_VALUE | UDINT  | Value returned if no entry exists                           |
 
 ### **Data Outputs**
 
-| Name | Type | Short Description |
-| -------- | -------- | -------------------------------------------------------------- |
-| QO | BOOL | Qualifier for the event output (indicates successful execution) |
-| STATUS | STRING | Status message (e.g., Error or Success) |
+| Name   | Type   | Short Description                                               |
+| ------ | ------ | --------------------------------------------------------------- |
+| QO     | BOOL   | Qualifier for the event output (indicates successful execution) |
+| STATUS | STRING | Status message (e.g., Error or Success)                         |
 
 ### **Adapters**
 
-| Direction | Adapter Type | Short Description |
-| ----------- | ------------------------------------- | --------------------------------------------------------------------------------- |
-| Plug | `adapter::types::unidirectional::AUI` | **Output (OUT):** Provides the read/written value via the adapter |
-| Socket | `adapter::types::unidirectional::AUI` | **Input (IN):** Receives the value to be stored via the adapter |
+| Direction | Adapter Type                          | Short Description                                                 |
+| --------- | ------------------------------------- | ----------------------------------------------------------------- |
+| Plug      | `adapter::types::unidirectional::AUI` | **Output (OUT):** Provides the read/written value via the adapter |
+| Socket    | `adapter::types::unidirectional::AUI` | **Input (IN):** Receives the value to be stored via the adapter   |
 
 ## Functionality
 
@@ -56,6 +56,7 @@ The `INI_AUI` function block encapsulates an internal `INI` function block (`ecl
 - After successful processing, `INI.INITO` sends the confirmation event and internally triggers `INI.GET` to load the value from the file.
 - The read value appears at `INI.VALUEO` and is output via the **AUI_OUT** adapter (plug) as `D1`.
 - Simultaneously, `QO` and `STATUS` are taken from the internal function block.
+
 1. **Writing a Value**
 
 - An event at the **AUI_IN.Socket** (via the input adapter) triggers the internal `INI.SET`.

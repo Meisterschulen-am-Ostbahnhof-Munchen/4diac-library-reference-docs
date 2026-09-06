@@ -33,6 +33,7 @@ The adapter supports two basic processes:
 
 - The plug sends `START` with a value for `DT`.
 - The socket processes the time and sends back `TimeOut` after the time expires.
+
 1. **Premature Termination**:
 
 - The plug sends `START`.
@@ -50,11 +51,11 @@ The adapter supports two basic processes:
 
 ## ⚖️ Comparison with ARTimeOut
 
-| Feature | ATimeOut (this) | ARTimeOut |
-| ---------------- | ------------------- | ----------- |
-| Type | Adapter | Adapter |
-| Retriggerable | No | Yes |
-| Event START | Start Timer | Start/Reset Timer |
+| Feature       | ATimeOut (this) | ARTimeOut         |
+| ------------- | --------------- | ----------------- |
+| Type          | Adapter         | Adapter           |
+| Retriggerable | No              | Yes               |
+| Event START   | Start Timer     | Start/Reset Timer |
 
 ## Conclusion
 

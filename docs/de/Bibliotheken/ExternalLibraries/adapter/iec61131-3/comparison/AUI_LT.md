@@ -12,37 +12,37 @@ Der Funktionsblock `AUI_LT` realisiert einen Kleiner-als-Vergleich (`<`) zwische
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Beschreibung |
-|------------|--------------|
-| IN1.E1     | Ereignis am Socket-Adapter IN1; löst den Vergleich aus, sobald ein neuer Wert an IN1 anliegt. |
-| IN2.E1     | Ereignis am Socket-Adapter IN2; löst den Vergleich aus, sobald ein neuer Wert an IN2 anliegt. |
+| Bezeichnung | Beschreibung                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| IN1.E1      | Ereignis am Socket-Adapter IN1; löst den Vergleich aus, sobald ein neuer Wert an IN1 anliegt. |
+| IN2.E1      | Ereignis am Socket-Adapter IN2; löst den Vergleich aus, sobald ein neuer Wert an IN2 anliegt. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Beschreibung |
-|------------|--------------|
-| OUT.E1     | Ereignis am Plug-Adapter OUT; signalisiert, dass nach einem Vergleich ein gültiges Ergebnis an OUT.D1 anliegt. |
+| Bezeichnung | Beschreibung                                                                                                   |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| OUT.E1      | Ereignis am Plug-Adapter OUT; signalisiert, dass nach einem Vergleich ein gültiges Ergebnis an OUT.D1 anliegt. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Beschreibung |
-|------------|--------------|
-| IN1.D1     | Erster Wert des Vergleichs (ANY_BIT-kompatibel). |
-| IN2.D1     | Zweiter Wert des Vergleichs (ANY_BIT-kompatibel). |
+| Bezeichnung | Beschreibung                                      |
+| ----------- | ------------------------------------------------- |
+| IN1.D1      | Erster Wert des Vergleichs (ANY_BIT-kompatibel).  |
+| IN2.D1      | Zweiter Wert des Vergleichs (ANY_BIT-kompatibel). |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Beschreibung |
-|------------|--------------|
-| OUT.D1     | Ergebnis des Vergleichs: `true`, wenn IN1.D1 < IN2.D1; sonst `false`. |
+| Bezeichnung | Beschreibung                                                          |
+| ----------- | --------------------------------------------------------------------- |
+| OUT.D1      | Ergebnis des Vergleichs: `true`, wenn IN1.D1 < IN2.D1; sonst `false`. |
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-| ------------ | ------------------- | ---------- | -------------- |
-| IN1 | AUI (unidirectional) | Socket | Eingangsadapter für den ersten Wert und dessen Ereignis. |
-| IN2 | AUI (unidirectional) | Socket | Eingangsadapter für den zweiten Wert und dessen Ereignis. |
-| OUT | AX (unidirectional) | Plug | Ausgangsadapter für das Vergleichsergebnis und das zugehörige Ereignis. |
+| Bezeichnung | Typ                  | Richtung | Beschreibung                                                            |
+| ----------- | -------------------- | -------- | ----------------------------------------------------------------------- |
+| IN1         | AUI (unidirectional) | Socket   | Eingangsadapter für den ersten Wert und dessen Ereignis.                |
+| IN2         | AUI (unidirectional) | Socket   | Eingangsadapter für den zweiten Wert und dessen Ereignis.               |
+| OUT         | AX (unidirectional)  | Plug     | Ausgangsadapter für das Vergleichsergebnis und das zugehörige Ereignis. |
 
 ## Funktionsweise
 
@@ -65,8 +65,8 @@ Der Vergleich erfolgt nach der Logik: **IN1.D1 < IN2.D1 ⇒ OUT.D1 = true**, and
 
 Da der `AUI_LT` keine explizite Zustandsmaschine besitzt, existiert lediglich ein **impliziter Zustand**:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand    | Beschreibung                                                                                                                                                                          |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Bereit** | Wartet auf ein Ereignis an IN1.E1 oder IN2.E1. Nach Auslösung wird der Vergleich durchgeführt und das Ergebnis über OUT ausgegeben. Der FB kehrt sofort in den Bereit-Zustand zurück. |
 
 ## Anwendungsszenarien
@@ -78,12 +78,12 @@ Da der `AUI_LT` keine explizite Zustandsmaschine besitzt, existiert lediglich ei
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein    | Funktion              | Schnittstelle | Besonderheit |
-|-------------|-----------------------|---------------|--------------|
-| **AUI_LT**  | Kleiner als (`<`)     | Adapter (AUI, AX) | Asynchron, zwei separate Ereigniseingänge |
-| **F_LT**    | Kleiner als (`<`)     | Standard-Ports (REQ/CNF, ANY_BIT) | Direkte Ereignis-/Datenports, kein Adapter |
-| **AUI_EQ**  | Gleich (`=`)          | Adapter (AUI, AX) | Gleiche Struktur, anderer Vergleichsoperator |
-| **AUI_GT**  | Größer als (`>`)      | Adapter (AUI, AX) | Gleiche Struktur, anderer Vergleichsoperator |
+| Baustein   | Funktion          | Schnittstelle                     | Besonderheit                                 |
+| ---------- | ----------------- | --------------------------------- | -------------------------------------------- |
+| **AUI_LT** | Kleiner als (`<`) | Adapter (AUI, AX)                 | Asynchron, zwei separate Ereigniseingänge    |
+| **F_LT**   | Kleiner als (`<`) | Standard-Ports (REQ/CNF, ANY_BIT) | Direkte Ereignis-/Datenports, kein Adapter   |
+| **AUI_EQ** | Gleich (`=`)      | Adapter (AUI, AX)                 | Gleiche Struktur, anderer Vergleichsoperator |
+| **AUI_GT** | Größer als (`>`)  | Adapter (AUI, AX)                 | Gleiche Struktur, anderer Vergleichsoperator |
 
 Der `AUI_LT` bietet durch die Adapter-Schnittstellen eine besonders flexible Integration in IEC 61131-3-konforme Systeme, während der interne `F_LT` die standardisierte Vergleichslogik bereitstellt.
 

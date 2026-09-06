@@ -12,8 +12,8 @@ The function block `AR_CALIBRATE` is used for offset and scale calibration of an
 
 ### **Event Inputs**
 
-| Event | Type | With | Description |
-|----------|-----|-----|--------------|
+| Event | Type    | With                  | Description                                                |
+| ----- | ------- | --------------------- | ---------------------------------------------------------- |
 | `SET` | `EInit` | `Y_Offset`, `Y_Scale` | Sets the reference values for offset and scale calibration |
 
 ### **Event Outputs**
@@ -22,10 +22,10 @@ This function block does not have its own event outputs. However, events are sen
 
 ### **Data Inputs**
 
-| Name | Type | Description |
-| ------ | ----- | --------------- |
+| Name       | Type   | Description                            |
+| ---------- | ------ | -------------------------------------- |
 | `Y_Offset` | `REAL` | Reference value for offset calibration |
-| `Y_Scale` | `REAL` | Reference value for scale calibration |
+| `Y_Scale`  | `REAL` | Reference value for scale calibration  |
 
 ### **Data Outputs**
 
@@ -35,19 +35,19 @@ The FB has no direct data outputs. The calculated values are provided via the ad
 
 **Plugs (providing interfaces):**
 
-| Adapter | Type | Description |
-| --------- | ----- | -------------- |
-| `Y` | `adapter::types::unidirectional::AR` | Calibrated output (data + event) |
+| Adapter  | Type                                 | Description                                         |
+| -------- | ------------------------------------ | --------------------------------------------------- |
+| `Y`      | `adapter::types::unidirectional::AR` | Calibrated output (data + event)                    |
 | `OFFSET` | `adapter::types::bidirectional::AR2` | Returns the calculated offset value (bidirectional) |
-| `SCALE` | `adapter::types::bidirectional::AR2` | Returns the calculated scale factor (bidirectional) |
+| `SCALE`  | `adapter::types::bidirectional::AR2` | Returns the calculated scale factor (bidirectional) |
 
 **Sockets (user interfaces):**
 
-| Adapter | Type | Description |
-| --------- | ----- | -------------- |
-| `X` | `adapter::types::unidirectional::AR` | Analog input value (unidirectional) |
-| `CO` | `adapter::types::unidirectional::AX` | Trigger for offset calibration (event + data) |
-| `CS` | `adapter::types::unidirectional::AX` | Trigger for Scale Calibration (Event + Data) |
+| Adapter | Type                                 | Description                                   |
+| ------- | ------------------------------------ | --------------------------------------------- |
+| `X`     | `adapter::types::unidirectional::AR` | Analog input value (unidirectional)           |
+| `CO`    | `adapter::types::unidirectional::AX` | Trigger for offset calibration (event + data) |
+| `CS`    | `adapter::types::unidirectional::AX` | Trigger for Scale Calibration (Event + Data)  |
 
 ## Functionality
 
@@ -95,11 +95,11 @@ The transitions between the states are defined as follows:
 
 ## State Overview
 
-| State | Description | Action |
-| --------- | -------------- | -------- |
-| **REQ** | Normal Operation – Calculation of the Calibrated Output | Executes algorithm `REQ`, sends event to `Y.E1` |
-| **CO** | Offset Calibration | Executes algorithm `CO`, sends event to `OFFSET.EO1` |
-| **CS** | Scale Calibration | Executes algorithm `CS`, sends event to `SCALE.EO1` |
+| State   | Description                                             | Action                                               |
+| ------- | ------------------------------------------------------- | ---------------------------------------------------- |
+| **REQ** | Normal Operation – Calculation of the Calibrated Output | Executes algorithm `REQ`, sends event to `Y.E1`      |
+| **CO**  | Offset Calibration                                      | Executes algorithm `CO`, sends event to `OFFSET.EO1` |
+| **CS**  | Scale Calibration                                       | Executes algorithm `CS`, sends event to `SCALE.EO1`  |
 
 ## Application Scenarios
 

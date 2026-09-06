@@ -12,37 +12,37 @@ Der Funktionsblock **NVS_AUDI** ermöglicht das Speichern und Laden von **UDINT*
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Mitgeführte Daten         | Kommentar                     |
-|-------|-------|---------------------------|-------------------------------|
-| INIT  | EInit | QI, KEY, DEFAULT_VALUE    | Initialisiert den Dienst      |
+| Name | Typ   | Mitgeführte Daten      | Kommentar                |
+| ---- | ----- | ---------------------- | ------------------------ |
+| INIT | EInit | QI, KEY, DEFAULT_VALUE | Initialisiert den Dienst |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Mitgeführte Daten | Kommentar                        |
-|-------|-------|-------------------|----------------------------------|
-| INITO | EInit | QO, STATUS        | Bestätigung der Initialisierung  |
+| Name  | Typ   | Mitgeführte Daten | Kommentar                       |
+| ----- | ----- | ----------------- | ------------------------------- |
+| INITO | EInit | QO, STATUS        | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ    | Kommentar                                        |
-|---------------|--------|--------------------------------------------------|
-| QI            | BOOL   | Ereignis-Eingangs-Qualifikator                   |
-| KEY           | STRING | Schlüsselname für den NVS-Zugriff                |
-| DEFAULT_VALUE | UDINT  | Standardwert, falls kein Wert im NVS vorhanden   |
+| Name          | Typ    | Kommentar                                      |
+| ------------- | ------ | ---------------------------------------------- |
+| QI            | BOOL   | Ereignis-Eingangs-Qualifikator                 |
+| KEY           | STRING | Schlüsselname für den NVS-Zugriff              |
+| DEFAULT_VALUE | UDINT  | Standardwert, falls kein Wert im NVS vorhanden |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Kommentar                    |
-|--------|--------|------------------------------|
+| Name   | Typ    | Kommentar                      |
+| ------ | ------ | ------------------------------ |
 | QO     | BOOL   | Ereignis-Ausgangs-Qualifikator |
-| STATUS | STRING | Dienststatus (Fehler/Ok)     |
+| STATUS | STRING | Dienststatus (Fehler/Ok)       |
 
 ### **Adapter**
 
-| Name     | Typ                                 | Kommentar                          |
-|----------|--------------------------------------|------------------------------------|
-| AUDI_IN  | adapter::types::unidirectional::AUDI | Wert zum Speichern (SET)           |
-| AUDI_OUT | adapter::types::unidirectional::AUDI | Gespeicherter/geladener Wert (GETO)|
+| Name     | Typ                                  | Kommentar                           |
+| -------- | ------------------------------------ | ----------------------------------- |
+| AUDI_IN  | adapter::types::unidirectional::AUDI | Wert zum Speichern (SET)            |
+| AUDI_OUT | adapter::types::unidirectional::AUDI | Gespeicherter/geladener Wert (GETO) |
 
 ## Funktionsweise
 

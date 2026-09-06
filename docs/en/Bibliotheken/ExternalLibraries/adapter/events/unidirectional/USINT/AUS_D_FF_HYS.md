@@ -12,20 +12,20 @@ The function block `AUS_D_FF_HYS` implements a data latch (D flip-flop) with hys
 
 ### **Event Inputs**
 
-| Event | Type | Comment | With Parameter |
-|----------|-------|--------------------------------|---------------|
-| `INIT` | EInit | Set Hysteresis | `HYSTERESIS` |
+| Event  | Type  | Comment        | With Parameter |
+| ------ | ----- | -------------- | -------------- |
+| `INIT` | EInit | Set Hysteresis | `HYSTERESIS`   |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|----------|-------|--------------------|
+| Event   | Type  | Comment           |
+| ------- | ----- | ----------------- |
 | `INITO` | EInit | Init Confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|--------------|-------|------------------|
+| Name         | Type  | Comment         |
+| ------------ | ----- | --------------- |
 | `HYSTERESIS` | USINT | Hysteresis band |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ The FB has no direct data outputs. The latched value is provided via the adapter
 
 ### **Adapters**
 
-| Name | Type | Direction | Comment |
-| ------ | ---------------------------------------------- | ----------- | ---------------- |
-| `I` | `adapter::types::unidirectional::AUS` | Socket | Value to latch |
-| `Q` | `adapter::types::unidirectional::AUS` | Plug | Latched value |
+| Name | Type                                  | Direction | Comment        |
+| ---- | ------------------------------------- | --------- | -------------- |
+| `I`  | `adapter::types::unidirectional::AUS` | Socket    | Value to latch |
+| `Q`  | `adapter::types::unidirectional::AUS` | Plug      | Latched value  |
 
 The adapters are unidirectional and each contains an event (`E1`) and a data value (`D1`). The input value and its acceptance event are received via `I`, and the output value and an acknowledgment event are sent via `Q`.
 
@@ -69,10 +69,10 @@ Since the FB does not explicitly expose a state machine, its behavior is determi
 
 State transitions occur only when the respective hysteresis thresholds are exceeded:
 
-| Transition | Condition (Input Value) |
-| ---------- | ---------------------------------------------- |
-| 0 → 1 | Input exceeds upper threshold |
-| 1 → 0 | Input falls below lower threshold |
+| Transition | Condition (Input Value)           |
+| ---------- | --------------------------------- |
+| 0 → 1      | Input exceeds upper threshold     |
+| 1 → 0      | Input falls below lower threshold |
 
 The thresholds are offset by the hysteresis value relative to a mean or reference value (typically upper threshold = reference + hysteresis/2, lower threshold = reference - hysteresis/2).
 
@@ -85,11 +85,11 @@ The thresholds are offset by the hysteresis value relative to a mean or referenc
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Properties | Difference to `AUS_D_FF_HYS` |
----------- | --------------- | ------------------------------- |
-| Standard D flip-flop (`E_D_FF`) | Transfers data on clock edge, no hysteresis | No noise suppression; state changes on every edge. |
+| Function Block                     | Properties                                                | Difference to `AUS_D_FF_HYS`                                                                          |
+| ---------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Standard D flip-flop (`E_D_FF`)    | Transfers data on clock edge, no hysteresis               | No noise suppression; state changes on every edge.                                                    |
 | Schmitt trigger (`E_D_FF_ANY_HYS`) | Flip-flop with hysteresis, but usually data-type specific | `AUS_D_FF_HYS` encapsulates the generic adapter and provides a uniform interface for arbitrary types. |
-| SR flip-flop (`E_SR_FF`) | Set/reset function without clock | No edge-triggered data transfer; Hysteresis not directly integrated. |
+| SR flip-flop (`E_SR_FF`)           | Set/reset function without clock                          | No edge-triggered data transfer; Hysteresis not directly integrated.                                  |
 
 ## Conclusion
 

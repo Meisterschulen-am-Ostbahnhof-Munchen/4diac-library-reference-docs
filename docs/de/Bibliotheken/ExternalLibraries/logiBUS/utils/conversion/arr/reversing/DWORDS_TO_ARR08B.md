@@ -12,28 +12,28 @@ Der Funktionsblock **DWORDS_TO_ARR08B** wandelt zwei 32‑Bit‑DWORD-Werte in e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                              |
+| -------- | ----------------------------------------------------------------------------------------- |
 | `REQ`    | Startet die Konvertierung. Die aktuellen Werte von `IN_00` und `IN_01` werden eingelesen. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                |
+| -------- | ----------------------------------------------------------- |
 | `CNF`    | Wird gesendet, sobald die Ausgabe `OUT` aktualisiert wurde. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Beschreibung      |
-|----------|--------|-------------------|
-| `IN_00`  | DWORD  | Erstes 32‑Bit‑Wort (niederwertig). |
-| `IN_01`  | DWORD  | Zweites 32‑Bit‑Wort (höherwertig). |
+| Variable | Typ   | Beschreibung                       |
+| -------- | ----- | ---------------------------------- |
+| `IN_00`  | DWORD | Erstes 32‑Bit‑Wort (niederwertig). |
+| `IN_01`  | DWORD | Zweites 32‑Bit‑Wort (höherwertig). |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ               | Beschreibung                                          |
-|----------|-------------------|-------------------------------------------------------|
-| `OUT`    | ARRAY[0..7] OF BYTE| Ausgabearray mit 8 Bytes (Bytes 0–3 aus `IN_00`, Bytes 4–7 aus `IN_01`). |
+| Variable | Typ                 | Beschreibung                                                             |
+| -------- | ------------------- | ------------------------------------------------------------------------ |
+| `OUT`    | ARRAY[0..7] OF BYTE | Ausgabearray mit 8 Bytes (Bytes 0–3 aus `IN_00`, Bytes 4–7 aus `IN_01`). |
 
 ### **Adapter**
 

@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge auf FB‑Ebene. Die Datenausgabe erfolgt über de
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
-| **I** (Socket) | `adapter::types::unidirectional::AW` | Eingangsadapter – erhält das zu latchende Datum (D1) und das Taktsignal (E1). |
-| **Q** (Plug) | `adapter::types::unidirectional::AW` | Ausgangsadapter – gibt das latched Datum (D1) sowie ein Bestätigungsereignis (E1) aus. |
+| Adapter        | Typ                                  | Beschreibung                                                                           |
+| -------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
+| **I** (Socket) | `adapter::types::unidirectional::AW` | Eingangsadapter – erhält das zu latchende Datum (D1) und das Taktsignal (E1).          |
+| **Q** (Plug)   | `adapter::types::unidirectional::AW` | Ausgangsadapter – gibt das latched Datum (D1) sowie ein Bestätigungsereignis (E1) aus. |
 
 Beide Adapter sind vom gleichen unidirektionalen Typ und kapseln jeweils ein Ereignis und einen Datenwert.
 
@@ -43,10 +43,10 @@ Bei einer positiven Flanke des Taktsignals (Ereignis `E1` am Adapter **I**) wird
 Die logische Tabelle (D‑Flipflop) lautet:
 
 | Takt (E1) | Eingang D | Ausgang Q (nach Takt) |
-|-----------|-----------|----------------------|
-| ↑         | 0         | 0                    |
-| ↑         | 1         | 1                    |
-| sonst     | beliebig  | unverändert          |
+| --------- | --------- | --------------------- |
+| ↑         | 0         | 0                     |
+| ↑         | 1         | 1                     |
+| sonst     | beliebig  | unverändert           |
 
 ## Technische Besonderheiten
 
@@ -73,12 +73,12 @@ Es gibt keinen internen weiteren Zustandsautomaten; die Funktionalität ist rein
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied zu AW_D_FF |
-| ---------- | ------------- | ------------------------ |
-| **RS‑Flipflop** | Setzt/rücksetzt asynchron | AW_D_FF benötigt Takt, keine getrennten Set‑/Reset‑Eingänge. |
-| **T‑Flipflop** | Toggelt bei Takt | AW_D_FF übernimmt den Wert von D, keine Toggle‑Funktion. |
-| **JK‑Flipflop** | Universell (Set, Reset, Toggle) | AW_D_FF ist einfacher (nur D‑Eingang), kein Toggle‑Modus. |
-| **E_D_FF_ANY** | Direkt nutzbar mit Events/Daten | AW_D_FF kapselt diesen Baustein und bietet eine Adapter‑Schnittstelle. |
+| Baustein        | Eigenschaft                     | Unterschied zu AW_D_FF                                                 |
+| --------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| **RS‑Flipflop** | Setzt/rücksetzt asynchron       | AW_D_FF benötigt Takt, keine getrennten Set‑/Reset‑Eingänge.           |
+| **T‑Flipflop**  | Toggelt bei Takt                | AW_D_FF übernimmt den Wert von D, keine Toggle‑Funktion.               |
+| **JK‑Flipflop** | Universell (Set, Reset, Toggle) | AW_D_FF ist einfacher (nur D‑Eingang), kein Toggle‑Modus.              |
+| **E_D_FF_ANY**  | Direkt nutzbar mit Events/Daten | AW_D_FF kapselt diesen Baustein und bietet eine Adapter‑Schnittstelle. |
 
 ## Fazit
 

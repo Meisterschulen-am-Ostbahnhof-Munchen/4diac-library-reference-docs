@@ -31,9 +31,9 @@ The function block **ATM_PUBLISH_1** is a composite function block that encapsul
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::ATM | Socket (Input) | TIME value to be published |
+| Adapter | Type                                | Direction      | Description                |
+| ------- | ----------------------------------- | -------------- | -------------------------- |
+| IN      | adapter::types::unidirectional::ATM | Socket (Input) | TIME value to be published |
 
 ## Functionality
 

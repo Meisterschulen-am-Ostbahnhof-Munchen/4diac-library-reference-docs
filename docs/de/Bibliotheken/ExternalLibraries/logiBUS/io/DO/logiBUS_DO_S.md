@@ -14,9 +14,9 @@ Als strukturierter Datentyp besitzt `logiBUS_DO_S` keine Ereignis- oder Adapters
 
 Die Struktur selbst enthält folgendes Datenfeld, das bei der Instanziierung des Typs befüllt wird:
 
-| Name | Datentyp | Initialwert | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `Pin` | `USINT` (Unsigned Short Integer) | 255 | Definiert die Nummer des physischen Ausgangspins, der angesteuert werden soll. Der Wert 255 stellt einen ungültigen/undefinierten Zustand dar und dient als Standardinitialisierung. |
+| Name  | Datentyp                         | Initialwert | Beschreibung                                                                                                                                                                         |
+| :---- | :------------------------------- | :---------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Pin` | `USINT` (Unsigned Short Integer) | 255         | Definiert die Nummer des physischen Ausgangspins, der angesteuert werden soll. Der Wert 255 stellt einen ungültigen/undefinierten Zustand dar und dient als Standardinitialisierung. |
 
 ### **Ereignis-Eingänge**
 

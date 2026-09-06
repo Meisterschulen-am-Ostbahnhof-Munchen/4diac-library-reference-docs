@@ -12,45 +12,45 @@ Der Funktionsblock `ILOCK_BLOCK_PROTECT_AX` realisiert eine priorisierte Verrieg
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Mitgeführte Daten | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `UPDATE` | Event | `DT_PROTECT` | Ereignis zum dynamischen Aktualisieren der Schutzzeit `DT_PROTECT`. |
+| Name     | Typ   | Mitgeführte Daten | Beschreibung                                                        |
+| :------- | :---- | :---------------- | :------------------------------------------------------------------ |
+| `UPDATE` | Event | `DT_PROTECT`      | Ereignis zum dynamischen Aktualisieren der Schutzzeit `DT_PROTECT`. |
 
 ### **Ereignis-Ausgänge**
 
 Der FB besitzt keine eigenständigen Ereignis-Ausgänge. Ereignisse werden über die als *Plugs* ausgeführten Adapter `UP_OUT`, `DOWN_OUT` und `timeOut` bereitgestellt.
 
-| Adapter-Ausgang | Ereignis | Beschreibung |
-| :--- | :--- | :--- |
-| `UP_OUT` | `E1` | Wird ausgelöst, wenn der UP-Zustand aktiv ist oder der UP_STOP-Zustand erreicht wird. |
-| `DOWN_OUT` | `E1` | Wird ausgelöst, wenn der DOWN-Zustand aktiv ist oder der DOWN_STOP-Zustand erreicht wird. |
-| `timeOut` | `TimeOut` | Wird ausgelöst, wenn die eingestellte Schutzzeit abgelaufen ist (vom Adapter selbst generiert). |
+| Adapter-Ausgang | Ereignis  | Beschreibung                                                                                    |
+| :-------------- | :-------- | :---------------------------------------------------------------------------------------------- |
+| `UP_OUT`        | `E1`      | Wird ausgelöst, wenn der UP-Zustand aktiv ist oder der UP_STOP-Zustand erreicht wird.           |
+| `DOWN_OUT`      | `E1`      | Wird ausgelöst, wenn der DOWN-Zustand aktiv ist oder der DOWN_STOP-Zustand erreicht wird.       |
+| `timeOut`       | `TimeOut` | Wird ausgelöst, wenn die eingestellte Schutzzeit abgelaufen ist (vom Adapter selbst generiert). |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `DT_PROTECT` | TIME | `T#50ms` | Schutzzeit, die nach einer Deaktivierung eines Eingangs verstreicht, bevor eine erneute Bewertung der Eingänge erfolgt. |
+| Name         | Typ  | Initialwert | Beschreibung                                                                                                            |
+| :----------- | :--- | :---------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `DT_PROTECT` | TIME | `T#50ms`    | Schutzzeit, die nach einer Deaktivierung eines Eingangs verstreicht, bevor eine erneute Bewertung der Eingänge erfolgt. |
 
 ### **Daten-Ausgänge**
 
 Der FB besitzt keine eigenständigen Daten-Ausgänge. Ausgangsdaten werden über die Adapter `UP_OUT`, `DOWN_OUT` und `timeOut` bereitgestellt.
 
-| Adapter-Ausgang | Daten | Beschreibung |
-| :--- | :--- | :--- |
-| `UP_OUT` | `D1` (BOOL) | Signalisiert den aktiven UP-Zustand (`TRUE`) oder inaktiven UP-Zustand (`FALSE`). |
-| `DOWN_OUT` | `D1` (BOOL) | Signalisiert den aktiven DOWN-Zustand (`TRUE`) oder inaktiven DOWN-Zustand (`FALSE`). |
-| `timeOut` | `DT` (TIME) | Wird vom Algorithmus auf den Wert von `DT_PROTECT` gesetzt und bestimmt die Timer-Dauer. |
+| Adapter-Ausgang | Daten       | Beschreibung                                                                             |
+| :-------------- | :---------- | :--------------------------------------------------------------------------------------- |
+| `UP_OUT`        | `D1` (BOOL) | Signalisiert den aktiven UP-Zustand (`TRUE`) oder inaktiven UP-Zustand (`FALSE`).        |
+| `DOWN_OUT`      | `D1` (BOOL) | Signalisiert den aktiven DOWN-Zustand (`TRUE`) oder inaktiven DOWN-Zustand (`FALSE`).    |
+| `timeOut`       | `DT` (TIME) | Wird vom Algorithmus auf den Wert von `DT_PROTECT` gesetzt und bestimmt die Timer-Dauer. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `adapter::types::unidirectional::AX` | `UP_IN` | Socket | Eingang für die UP-Richtung. Das Event `E1` (steigende Flanke) aktiviert die Verarbeitung; `D1` (BOOL) gibt den gewünschten Zustand vor. |
-| `adapter::types::unidirectional::AX` | `DOWN_IN` | Socket | Eingang für die DOWN-Richtung. Analog zu `UP_IN`. |
-| `adapter::types::unidirectional::AX` | `UP_OUT` | Plug | Ausgang für die UP-Richtung. Stellt Ereignis und Daten für die angeschlossene Logik bereit. |
-| `adapter::types::unidirectional::AX` | `DOWN_OUT` | Plug | Ausgang für die DOWN-Richtung. Stellt Ereignis und Daten bereit. |
-| `iec61499::events::ATimeOut` | `timeOut` | Plug | Adapter für einen Timer. Der FB setzt die Zeitdauer (`DT`) und startet den Timer über das Ereignis `START`. Das Ereignis `TimeOut` signalisiert den Ablauf. |
+| Typ                                  | Name       | Richtung | Beschreibung                                                                                                                                                |
+| :----------------------------------- | :--------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AX` | `UP_IN`    | Socket   | Eingang für die UP-Richtung. Das Event `E1` (steigende Flanke) aktiviert die Verarbeitung; `D1` (BOOL) gibt den gewünschten Zustand vor.                    |
+| `adapter::types::unidirectional::AX` | `DOWN_IN`  | Socket   | Eingang für die DOWN-Richtung. Analog zu `UP_IN`.                                                                                                           |
+| `adapter::types::unidirectional::AX` | `UP_OUT`   | Plug     | Ausgang für die UP-Richtung. Stellt Ereignis und Daten für die angeschlossene Logik bereit.                                                                 |
+| `adapter::types::unidirectional::AX` | `DOWN_OUT` | Plug     | Ausgang für die DOWN-Richtung. Stellt Ereignis und Daten bereit.                                                                                            |
+| `iec61499::events::ATimeOut`         | `timeOut`  | Plug     | Adapter für einen Timer. Der FB setzt die Zeitdauer (`DT`) und startet den Timer über das Ereignis `START`. Das Ereignis `TimeOut` signalisiert den Ablauf. |
 
 ## Funktionsweise
 
@@ -79,14 +79,14 @@ Der Baustein arbeitet als zustandsgesteuerte Verriegelung mit zwei Prioritätsei
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Aktivitäten |
-| :--- | :--- | :--- |
-| `STOP` | Initial- und Ruhezustand. Keine Richtung aktiv. | – |
-| `UP` | UP-Richtung aktiv. | Algorithmus `UP`: setzt `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und sendet `UP_OUT.E1`. |
-| `DOWN` | DOWN-Richtung aktiv. | Algorithmus `DOWN`: setzt `DOWN_OUT.D1 = TRUE`, `UP_OUT.D1 = FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und sendet `DOWN_OUT.E1`. |
-| `UP_STOP` | Wartezeit nach Deaktivierung von UP. | Algorithmus `STOP`: setzt beide Ausgänge auf `FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und startet den Timer mit `timeOut.START`. |
-| `DOWN_STOP` | Wartezeit nach Deaktivierung von DOWN. | Algorithmus `STOP` (analog zu `UP_STOP`). |
-| `EVAL` | Evaluierung nach Ablauf der Schutzzeit. | Kein Algorithmus; die Transitionen entscheiden über den nächsten Zustand basierend auf den aktuellen Eingangsdaten. |
+| Zustand     | Beschreibung                                    | Aktivitäten                                                                                                                             |
+| :---------- | :---------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| `STOP`      | Initial- und Ruhezustand. Keine Richtung aktiv. | –                                                                                                                                       |
+| `UP`        | UP-Richtung aktiv.                              | Algorithmus `UP`: setzt `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und sendet `UP_OUT.E1`.       |
+| `DOWN`      | DOWN-Richtung aktiv.                            | Algorithmus `DOWN`: setzt `DOWN_OUT.D1 = TRUE`, `UP_OUT.D1 = FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und sendet `DOWN_OUT.E1`.   |
+| `UP_STOP`   | Wartezeit nach Deaktivierung von UP.            | Algorithmus `STOP`: setzt beide Ausgänge auf `FALSE`, überträgt `DT_PROTECT` an `timeOut.DT` und startet den Timer mit `timeOut.START`. |
+| `DOWN_STOP` | Wartezeit nach Deaktivierung von DOWN.          | Algorithmus `STOP` (analog zu `UP_STOP`).                                                                                               |
+| `EVAL`      | Evaluierung nach Ablauf der Schutzzeit.         | Kein Algorithmus; die Transitionen entscheiden über den nächsten Zustand basierend auf den aktuellen Eingangsdaten.                     |
 
 **Transitionen (vereinfacht):**
 
@@ -110,13 +110,13 @@ Der Baustein arbeitet als zustandsgesteuerte Verriegelung mit zwei Prioritätsei
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein / Eigenschaft | `ILOCK_BLOCK_PROTECT_AX` | Einfacher Interlock (ohne Totzeit) | Interlock mit fester Totzeit |
-| :--- | :--- | :--- | :--- |
-| Totzeit | Dynamisch konfigurierbar über `UPDATE` | Keine | Fest (meist im Baustein verdrahtet) |
-| Schnittstelle | Adapter (AX), lose Kopplung | Meist direkte Ein-/Ausgänge | Direkte Ein-/Ausgänge |
-| Priorität | Erster aktiver Eingang | Oft festgelegte Priorität | Unterscheidet sich |
-| Evaluierung nach Totzeit | Ja, mit klarer Zustandsmaschine | Nein | Teilweise |
-| Flexibilität | Hoch (Laufzeitänderung) | Gering | Mittel |
+| Baustein / Eigenschaft   | `ILOCK_BLOCK_PROTECT_AX`               | Einfacher Interlock (ohne Totzeit) | Interlock mit fester Totzeit        |
+| :----------------------- | :------------------------------------- | :--------------------------------- | :---------------------------------- |
+| Totzeit                  | Dynamisch konfigurierbar über `UPDATE` | Keine                              | Fest (meist im Baustein verdrahtet) |
+| Schnittstelle            | Adapter (AX), lose Kopplung            | Meist direkte Ein-/Ausgänge        | Direkte Ein-/Ausgänge               |
+| Priorität                | Erster aktiver Eingang                 | Oft festgelegte Priorität          | Unterscheidet sich                  |
+| Evaluierung nach Totzeit | Ja, mit klarer Zustandsmaschine        | Nein                               | Teilweise                           |
+| Flexibilität             | Hoch (Laufzeitänderung)                | Gering                             | Mittel                              |
 
 Der `ILOCK_BLOCK_PROTECT_AX` bietet eine besonders flexible Lösung durch die Adapter-Schnittstelle und die dynamisch änderbare Totzeit. Er ist ideal für modulare, wiederverwendbare Steuerungsprojekte nach IEC 61499.
 

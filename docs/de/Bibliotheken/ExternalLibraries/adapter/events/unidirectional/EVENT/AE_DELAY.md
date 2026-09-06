@@ -15,8 +15,8 @@ Der Baustein kapselt die Funktionalität eines Einschaltverzögerungs-Timers (On
 
 ### **Ereignis-Eingänge**
 
-| Name | Kommentar |
-| :--- | :--- |
+| Name    | Kommentar                                                    |
+| :------ | :----------------------------------------------------------- |
 | **REQ** | Dient zur Aktualisierung des Zeitwerts am Dateneingang `DT`. |
 
 ### **Ereignis-Ausgänge**
@@ -25,9 +25,9 @@ Dieser Baustein verfügt über keine direkten Ereignis-Ausgänge auf der Haupteb
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-| :--- | :--- | :--- |
-| **DT** | TIME | **Delay Time**: Die Zeitdauer, um die das Eingangsereignis verzögert werden soll. |
+| Name   | Datentyp | Kommentar                                                                         |
+| :----- | :------- | :-------------------------------------------------------------------------------- |
+| **DT** | TIME     | **Delay Time**: Die Zeitdauer, um die das Eingangsereignis verzögert werden soll. |
 
 ### **Daten-Ausgänge**
 
@@ -35,11 +35,11 @@ Dieser Baustein verfügt über keine Daten-Ausgänge.
 
 ### **Adapter**
 
-| Name | Typ | Art | Kommentar |
-| :--- | :--- | :--- | :--- |
-| **START** | adapter::types::unidirectional::AE | Socket (Eingang) | Startet die Zeitverzögerung (löst intern `START` aus). |
-| **STOP** | adapter::types::unidirectional::AE | Socket (Eingang) | Stoppt/bricht die Zeitverzögerung ab (löst intern `STOP` aus). |
-| **EO** | adapter::types::unidirectional::AE | Plug (Ausgang) | **Event Output**: Gibt das Ereignis nach Ablauf der Zeit `DT` aus. |
+| Name      | Typ                                | Art              | Kommentar                                                          |
+| :-------- | :--------------------------------- | :--------------- | :----------------------------------------------------------------- |
+| **START** | adapter::types::unidirectional::AE | Socket (Eingang) | Startet die Zeitverzögerung (löst intern `START` aus).             |
+| **STOP**  | adapter::types::unidirectional::AE | Socket (Eingang) | Stoppt/bricht die Zeitverzögerung ab (löst intern `STOP` aus).     |
+| **EO**    | adapter::types::unidirectional::AE | Plug (Ausgang)   | **Event Output**: Gibt das Ereignis nach Ablauf der Zeit `DT` aus. |
 
 ## Funktionsweise
 
@@ -73,11 +73,11 @@ Der Baustein selbst besitzt keine explizite Zustandsmaschine (ECC), da es sich u
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| :--- | :--- |
-| **E_DELAY** | Der Standard-Baustein mit direkten Event-Pins (START, STOP, EO). **AE_DELAY** ist der Wrapper hierfür. |
-| **E_CYCLE** | Erzeugt periodische Ereignisse, während **AE_DELAY** ein Ereignis nur einmalig verzögert weiterleitet. |
-| **AE_SPLIT** | Dient zum Aufteilen von Adapter-Ereignissen, bietet aber keine Zeitverzögerung. |
+| Baustein     | Unterschied                                                                                            |
+| :----------- | :----------------------------------------------------------------------------------------------------- |
+| **E_DELAY**  | Der Standard-Baustein mit direkten Event-Pins (START, STOP, EO). **AE_DELAY** ist der Wrapper hierfür. |
+| **E_CYCLE**  | Erzeugt periodische Ereignisse, während **AE_DELAY** ein Ereignis nur einmalig verzögert weiterleitet. |
+| **AE_SPLIT** | Dient zum Aufteilen von Adapter-Ereignissen, bietet aber keine Zeitverzögerung.                        |
 
 ## Fazit
 

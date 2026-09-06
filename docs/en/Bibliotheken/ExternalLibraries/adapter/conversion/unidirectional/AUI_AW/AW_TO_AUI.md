@@ -28,10 +28,10 @@ The FB does not have any standalone data outputs. The date `D1` of type `UINT` i
 
 ### **Adapter**
 
-| Name | Direction | Type | Description |
-| ---------- | ---------- | ----------------------------------------- | ---------------------------------- |
-| `AW_IN` | Input | `adapter::types::unidirectional::AW` | WORD Adapter Input (Socket) |
-| `AUI_OUT` | Output | `adapter::types::unidirectional::AUI` | UINT Adapter Output (Plug) |
+| Name      | Direction | Type                                  | Description                 |
+| --------- | --------- | ------------------------------------- | --------------------------- |
+| `AW_IN`   | Input     | `adapter::types::unidirectional::AW`  | WORD Adapter Input (Socket) |
+| `AUI_OUT` | Output    | `adapter::types::unidirectional::AUI` | UINT Adapter Output (Plug)  |
 
 ## Functionality
 
@@ -41,6 +41,7 @@ This function block acts as a conversion layer between two different adapter typ
 
 - An incoming event at socket `AW_IN.E1` triggers the conversion process (`Convert.REQ`).
 - After the conversion is complete, the internal block generates an acknowledgment event (`Convert.CNF`), which is forwarded to plug `AUI_OUT.E1`.
+
 1. **Data Flow**:
 
 - The value `WORD`, provided by socket `AW_IN.D1`, is passed to input `Convert.IN`.

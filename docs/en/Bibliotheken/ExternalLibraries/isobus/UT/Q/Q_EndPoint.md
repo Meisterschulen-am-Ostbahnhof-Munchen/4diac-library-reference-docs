@@ -49,11 +49,13 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with Line Object ID
 - `INITO` confirms operational readiness
+
 1. **Endpoint Change**:
 
 - `REQ` with new position and direction parameters
 - Changes the endpoint and orientation of the line
 - `CNF` returns the result and the old values
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -78,12 +80,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Invalid position values |
-| -128 | VT_E_HANDLE_INVALID | Invalid line object ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid instance |
+| Code | Constant                  | Meaning                 |
+| ---- | ------------------------- | ----------------------- |
+| 0    | VT_E_NO_ERR               | Success                 |
+| -6   | VT_E_OVERFLOW             | Invalid position values |
+| -128 | VT_E_HANDLE_INVALID       | Invalid line object ID  |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid instance        |
 
 ## Application Scenarios
 
@@ -94,11 +96,11 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Feature | Q_EndPoint | VtLineEditor | VtDynamicLine |
-| ---------------- | --------------- | --------------- | --------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Control | Endpoint | Full | Position Only |
-| Directions | 4 Options | 8 Options | None |
+| Feature      | Q_EndPoint | VtLineEditor | VtDynamicLine |
+| ------------ | ---------- | ------------ | ------------- |
+| ISO Standard | ✔          | ✖            | ✖             |
+| Control      | Endpoint   | Full         | Position Only |
+| Directions   | 4 Options  | 8 Options    | None          |
 
 ## Conclusion
 

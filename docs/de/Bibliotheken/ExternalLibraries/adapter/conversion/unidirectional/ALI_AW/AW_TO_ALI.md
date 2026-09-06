@@ -55,11 +55,11 @@ Damit ist die Datenkonvertierung zu einem sicheren, ereignisgesteuerten Zeitpunk
 
 - **Bit-Reinterpretation, werterhaltend** (Zielbreite ist gleich groß oder größer als der Quell-Bit-String).
 
-*   **Composite‑Baustein** – Die Konvertierungslogik ist vollständig in einem inneren Netzwerk gekapselt, das nur aus einem einzigen Konvertierungs‑FB besteht. Der Baustein besitzt keinen eigenen ECC‑Zustandsautomaten.
-*   **Adapter‑basierte Schnittstelle** – Statt einzelner Ereignis‑/Daten‑Ein‑/Ausgänge werden Adapter verwendet. Dies ermöglicht eine modulare, wieder verwendbare Verbindung in Adapter‑basierten Steuerungsarchitekturen.
-*   **Paket‑Struktur** – Der Baustein ist im Paket `adapter::conversion::unidirectional` abgelegt und verwendet den Konverter `iec61131::conversion::F_WORD_TO_LINT` aus der IEC‑61131‑Konvertierungsbibliothek.
-*   **Unidirektionale Richtung** – Daten fließen nur vom Eingangsadapter zum Ausgangsadapter; Rückwärtskommunikation ist nicht vorgesehen.
-*   **Lizenz** – Der Quellcode unterliegt der Eclipse Public License 2.0 (EPL‑2.0), entwickelt von der HR Agrartechnik GmbH.
+-   **Composite‑Baustein** – Die Konvertierungslogik ist vollständig in einem inneren Netzwerk gekapselt, das nur aus einem einzigen Konvertierungs‑FB besteht. Der Baustein besitzt keinen eigenen ECC‑Zustandsautomaten.
+-   **Adapter‑basierte Schnittstelle** – Statt einzelner Ereignis‑/Daten‑Ein‑/Ausgänge werden Adapter verwendet. Dies ermöglicht eine modulare, wieder verwendbare Verbindung in Adapter‑basierten Steuerungsarchitekturen.
+-   **Paket‑Struktur** – Der Baustein ist im Paket `adapter::conversion::unidirectional` abgelegt und verwendet den Konverter `iec61131::conversion::F_WORD_TO_LINT` aus der IEC‑61131‑Konvertierungsbibliothek.
+-   **Unidirektionale Richtung** – Daten fließen nur vom Eingangsadapter zum Ausgangsadapter; Rückwärtskommunikation ist nicht vorgesehen.
+-   **Lizenz** – Der Quellcode unterliegt der Eclipse Public License 2.0 (EPL‑2.0), entwickelt von der HR Agrartechnik GmbH.
 
 ## Zustandsübersicht
 
@@ -73,11 +73,11 @@ Da es sich um einen zusammengesetzten Baustein ohne eigenen Zustandsautomaten (E
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingang(sadapter) | Ausgang(sadapter) | Konvertierung | Besonderheiten |
-| ---------- | ------------------- | ------------------- | --------------- | ---------------- |
-| **AW_TO_ALI** | AW (WORD) | ALI (LINT) | WORD → LINT | Unidirektional, Composite |
-| `F_WORD_TO_LINT` (IEC 61131) | Einzelner REQ‑Eingang, IN (WORD) | Einzelner CNF‑Ausgang, OUT (LINT) | WORD → LINT | Standard‑FB, kein Adapter |
-| `ALI_TO_AW` (hypothetisch) | ALI (LINT) | AW (WORD) | LINT → WORD | Umgekehrte Richtung |
+| Baustein                     | Eingang(sadapter)                | Ausgang(sadapter)                 | Konvertierung | Besonderheiten            |
+| ---------------------------- | -------------------------------- | --------------------------------- | ------------- | ------------------------- |
+| **AW_TO_ALI**                | AW (WORD)                        | ALI (LINT)                        | WORD → LINT   | Unidirektional, Composite |
+| `F_WORD_TO_LINT` (IEC 61131) | Einzelner REQ‑Eingang, IN (WORD) | Einzelner CNF‑Ausgang, OUT (LINT) | WORD → LINT   | Standard‑FB, kein Adapter |
+| `ALI_TO_AW` (hypothetisch)   | ALI (LINT)                       | AW (WORD)                         | LINT → WORD   | Umgekehrte Richtung       |
 
 Der Vorteil von AW_TO_ALI liegt in der nahtlosen Integration in adapterbasierte Systeme, während der reine IEC‑Baustein `F_WORD_TO_LINT` separat verdrahtet werden müsste. Bausteine mit Adapter‑Schnittstellen vereinfachen den Steuerungsentwurf, da sie standardisierte Stecker (Plugs/Sockets) bieten.
 

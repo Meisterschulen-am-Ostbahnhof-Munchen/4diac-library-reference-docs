@@ -12,17 +12,17 @@ Der Funktionsblock **E_T_FF_SR_SYM** ist ein ereignisgesteuerter, bistabiler Kip
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| S | Event | Setzen des Ausgangs Q (auf TRUE) |
-| R | Event | Zurücksetzen des Ausgangs Q (auf FALSE) |
-| CLK | Event | Takt zum Umschalten des Ausgangs Q (Toggle) |
+| Name | Typ   | Kommentar                                   |
+| ---- | ----- | ------------------------------------------- |
+| S    | Event | Setzen des Ausgangs Q (auf TRUE)            |
+| R    | Event | Zurücksetzen des Ausgangs Q (auf FALSE)     |
+| CLK  | Event | Takt zum Umschalten des Ausgangs Q (Toggle) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mit Variable | Kommentar |
-|------|-----|--------------|-----------|
-| EO | Event | Q | Ausgang Q hat sich geändert |
+| Name | Typ   | Mit Variable | Kommentar                   |
+| ---- | ----- | ------------ | --------------------------- |
+| EO   | Event | Q            | Ausgang Q hat sich geändert |
 
 ### **Daten-Eingänge**
 
@@ -30,9 +30,9 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| Q | BOOL | Wert des Flipflops (TRUE = gesetzt, FALSE = zurückgesetzt) |
+| Name | Typ  | Kommentar                                                  |
+| ---- | ---- | ---------------------------------------------------------- |
+| Q    | BOOL | Wert des Flipflops (TRUE = gesetzt, FALSE = zurückgesetzt) |
 
 ### **Adapter**
 
@@ -64,23 +64,23 @@ Das **Toggle**-Verhalten ist dadurch realisiert, dass ein CLK-Ereignis immer den
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| START | Initialzustand nach Aktivierung des Bausteins |
-| SET | Ausgang Q = TRUE |
-| RESET | Ausgang Q = FALSE |
+| Zustand | Beschreibung                                  |
+| ------- | --------------------------------------------- |
+| START   | Initialzustand nach Aktivierung des Bausteins |
+| SET     | Ausgang Q = TRUE                              |
+| RESET   | Ausgang Q = FALSE                             |
 
 **Übergänge** (Ereignis → Zielzustand):
 
 | Ausgangszustand | Ereignis | Zielzustand |
-| ----------------- | ---------- | ------------- |
-| START | S | SET |
-| START | R | RESET |
-| START | CLK | SET |
-| SET | R | RESET |
-| SET | CLK | RESET |
-| RESET | S | SET |
-| RESET | CLK | SET |
+| --------------- | -------- | ----------- |
+| START           | S        | SET         |
+| START           | R        | RESET       |
+| START           | CLK      | SET         |
+| SET             | R        | RESET       |
+| SET             | CLK      | RESET       |
+| RESET           | S        | SET         |
+| RESET           | CLK      | SET         |
 
 Hinweis: Verbleiben S‑Ereignisse im SET‑Zustand oder R‑Ereignisse im RESET‑Zustand werden nicht explizit abgebildet – der Zustand bleibt erhalten, und es erfolgt keine EO‑Ausgabe.
 
@@ -92,12 +92,12 @@ Hinweis: Verbleiben S‑Ereignisse im SET‑Zustand oder R‑Ereignisse im RESET
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| ---------- | ------------- |
-| E_FF_SR | Reines SR-Flipflop ohne Toggle. Keine Taktfunktion. |
-| E_FF_Toggle | Reines Toggle-Flipflop, kein Set/Reset. |
-| E_T_FF_SR | Ähnlich, jedoch ohne symmetrisches Startverhalten. Hier führt CLK im START-Zustand ggf. zu undefiniertem Verhalten. |
-| E_T_FF_SR_SYM | Kombiniert SR und Toggle mit definiertem Startverhalten für alle Eingangssignale. |
+| Baustein      | Unterschied                                                                                                         |
+| ------------- | ------------------------------------------------------------------------------------------------------------------- |
+| E_FF_SR       | Reines SR-Flipflop ohne Toggle. Keine Taktfunktion.                                                                 |
+| E_FF_Toggle   | Reines Toggle-Flipflop, kein Set/Reset.                                                                             |
+| E_T_FF_SR     | Ähnlich, jedoch ohne symmetrisches Startverhalten. Hier führt CLK im START-Zustand ggf. zu undefiniertem Verhalten. |
+| E_T_FF_SR_SYM | Kombiniert SR und Toggle mit definiertem Startverhalten für alle Eingangssignale.                                   |
 
 ## Fazit
 

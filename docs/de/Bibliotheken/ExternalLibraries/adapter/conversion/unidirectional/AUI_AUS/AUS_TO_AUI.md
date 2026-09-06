@@ -12,34 +12,34 @@ Der Funktionsblock **AUS_TO_AUI** ist ein Composite-Baustein, der eine Schnittst
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| E1 | Event | Ereignis-Eingang des AUS-Adapters; wird unverändert an den Ausgang weitergeleitet. |
+| Bezeichnung | Datentyp | Beschreibung                                                                       |
+| ----------- | -------- | ---------------------------------------------------------------------------------- |
+| E1          | Event    | Ereignis-Eingang des AUS-Adapters; wird unverändert an den Ausgang weitergeleitet. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| E1 | Event | Ereignis-Ausgang des AUI-Adapters; übernimmt das Ereignis vom Eingang. |
+| Bezeichnung | Datentyp | Beschreibung                                                           |
+| ----------- | -------- | ---------------------------------------------------------------------- |
+| E1          | Event    | Ereignis-Ausgang des AUI-Adapters; übernimmt das Ereignis vom Eingang. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| D1 | USINT | Datenwert (8‑Bit) vom AUS-Adapter; wird nach UINT konvertiert und weitergegeben. |
+| Bezeichnung | Datentyp | Beschreibung                                                                     |
+| ----------- | -------- | -------------------------------------------------------------------------------- |
+| D1          | USINT    | Datenwert (8‑Bit) vom AUS-Adapter; wird nach UINT konvertiert und weitergegeben. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| D1 | UINT | Datenwert (16‑Bit) des AUI-Adapters; enthält den konvertierten USINT-Wert. |
+| Bezeichnung | Datentyp | Beschreibung                                                               |
+| ----------- | -------- | -------------------------------------------------------------------------- |
+| D1          | UINT     | Datenwert (16‑Bit) des AUI-Adapters; enthält den konvertierten USINT-Wert. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| adapter::types::unidirectional::AUS | AUS_IN | Socket (Eingang) | AUS-Adapter mit USINT-Daten und einem Ereignis. |
-| adapter::types::unidirectional::AUI | AUI_OUT | Plug (Ausgang) | AUI-Adapter mit UINT-Daten und einem Ereignis. |
+| Typ                                 | Name    | Richtung         | Beschreibung                                    |
+| ----------------------------------- | ------- | ---------------- | ----------------------------------------------- |
+| adapter::types::unidirectional::AUS | AUS_IN  | Socket (Eingang) | AUS-Adapter mit USINT-Daten und einem Ereignis. |
+| adapter::types::unidirectional::AUI | AUI_OUT | Plug (Ausgang)   | AUI-Adapter mit UINT-Daten und einem Ereignis.  |
 
 ## Funktionsweise
 

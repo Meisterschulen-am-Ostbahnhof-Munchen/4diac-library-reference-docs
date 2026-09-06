@@ -12,33 +12,33 @@ Der Funktionsblock **ILOCK_CONFLICT_TRIP** dient der **priorisierten Verriegelun
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-| ---------- | -------------- |
-| **EI_UP** | Ereignis zur Verarbeitung einer „Aufwärts“-Anforderung (mit Daten `DI_UP`) |
-| **EI_DOWN** | Ereignis zur Verarbeitung einer „Abwärts“-Anforderung (mit Daten `DI_DOWN`) |
-| **EI_RESET** | Ereignis zum Zurücksetzen des Trip-Zustands (liest beide Dateneingänge) |
+| Ereignis     | Beschreibung                                                                |
+| ------------ | --------------------------------------------------------------------------- |
+| **EI_UP**    | Ereignis zur Verarbeitung einer „Aufwärts“-Anforderung (mit Daten `DI_UP`)  |
+| **EI_DOWN**  | Ereignis zur Verarbeitung einer „Abwärts“-Anforderung (mit Daten `DI_DOWN`) |
+| **EI_RESET** | Ereignis zum Zurücksetzen des Trip-Zustands (liest beide Dateneingänge)     |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-| ---------- | -------------- |
-| **EO_UP** | Bestätigt die Ausgabe des „Aufwärts“-Befehls (bei aktivem Zustand UP) |
+| Ereignis    | Beschreibung                                                           |
+| ----------- | ---------------------------------------------------------------------- |
+| **EO_UP**   | Bestätigt die Ausgabe des „Aufwärts“-Befehls (bei aktivem Zustand UP)  |
 | **EO_DOWN** | Bestätigt die Ausgabe des „Abwärts“-Befehls (bei aktivem Zustand DOWN) |
-| **EO_TRIP** | Zeigt an, dass ein Trip-Zustand vorliegt (bei aktivem Zustand TRIP) |
+| **EO_TRIP** | Zeigt an, dass ein Trip-Zustand vorliegt (bei aktivem Zustand TRIP)    |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ    | Beschreibung |
-|----------|--------|--------------|
-| **DI_UP**   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
+| Name        | Typ  | Beschreibung                                              |
+| ----------- | ---- | --------------------------------------------------------- |
+| **DI_UP**   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn       |
 | **DI_DOWN** | BOOL | TRUE = rückwärts, abwärts, links, gegen den Uhrzeigersinn |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Beschreibung |
-|-----------|--------|--------------|
-| **DO_UP**   | BOOL | TRUE = Ausgabe „Aufwärts“ aktiv |
-| **DO_DOWN** | BOOL | TRUE = Ausgabe „Abwärts“ aktiv |
+| Name        | Typ  | Beschreibung                       |
+| ----------- | ---- | ---------------------------------- |
+| **DO_UP**   | BOOL | TRUE = Ausgabe „Aufwärts“ aktiv    |
+| **DO_DOWN** | BOOL | TRUE = Ausgabe „Abwärts“ aktiv     |
 | **DO_TRIP** | BOOL | TRUE = Konflikt/Trip-Zustand aktiv |
 
 ### **Adapter**
@@ -79,12 +79,12 @@ Der Funktionsblock besitzt vier Betriebszustände: **STOP**, **UP**, **DOWN** un
 
 ## Zustandsübersicht
 
-| Zustand | DO_UP | DO_DOWN | DO_TRIP | Beschreibung |
-| --------- | ------- | --------- | --------- | -------------- |
-| **STOP** | FALSE | FALSE | FALSE | Ruhezustand, keine Richtung aktiv |
-| **UP** | TRUE | FALSE | FALSE | Aufwärts-Richtung aktiv |
-| **DOWN** | FALSE | TRUE | FALSE | Abwärts-Richtung aktiv |
-| **TRIP** | FALSE | FALSE | TRUE | Konflikt/Sperre aktiv |
+| Zustand  | DO_UP | DO_DOWN | DO_TRIP | Beschreibung                      |
+| -------- | ----- | ------- | ------- | --------------------------------- |
+| **STOP** | FALSE | FALSE   | FALSE   | Ruhezustand, keine Richtung aktiv |
+| **UP**   | TRUE  | FALSE   | FALSE   | Aufwärts-Richtung aktiv           |
+| **DOWN** | FALSE | TRUE    | FALSE   | Abwärts-Richtung aktiv            |
+| **TRIP** | FALSE | FALSE   | TRUE    | Konflikt/Sperre aktiv             |
 
 ## Anwendungsszenarien
 

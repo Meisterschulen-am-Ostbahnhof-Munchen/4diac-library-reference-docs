@@ -10,7 +10,7 @@ The function block `ARRAY2VALUES_2_LREAL` is a service interface module designed
 - **OUT_1**: The first output value of type `LREAL`, corresponding to the first element of the `IN` array.
 - **OUT_1**: The first output value of type `LREAL`, corresponding to the first element of the `IN` array. * **OUT_2**: The second output value of type `LREAL`, corresponding to the second element of the `IN` array.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -52,12 +52,12 @@ Similar components could be generic array splitters that can divide a variable n
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2014 Profactor GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2014-07-09, Matthias Plasch) |
-| 4diac Package | eclipse4diac::convert |
+| Attribute     | Value                                                               |
+| :------------ | :------------------------------------------------------------------ |
+| Copyright     | (c) 2014 Profactor GmbH                                             |
+| License       | EPL-2.0                                                             |
+| Version       | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2014-07-09, Matthias Plasch) |
+| 4diac Package | eclipse4diac::convert                                               |
 
 The `ARRAY2VALUES_2_LREAL` function block is a useful tool for the targeted conversion of a size 2 `LREAL` array into two separate `LREAL` outputs. It offers a simple and efficient solution for data preparation and interface adaptation in 4diac applications where this specific conversion is required.
 

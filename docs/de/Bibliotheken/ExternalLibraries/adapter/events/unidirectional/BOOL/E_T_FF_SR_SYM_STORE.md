@@ -12,17 +12,17 @@ Der Funktionsblock `E_T_FF_SR_SYM_STORE` realisiert ein ereignisgesteuertes bist
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| `S` | Event | Setzen des Ausgangs Q auf TRUE |
-| `R` | Event | Rücksetzen des Ausgangs Q auf FALSE |
+| Name  | Typ   | Kommentar                                            |
+| ----- | ----- | ---------------------------------------------------- |
+| `S`   | Event | Setzen des Ausgangs Q auf TRUE                       |
+| `R`   | Event | Rücksetzen des Ausgangs Q auf FALSE                  |
 | `CLK` | Event | Toggle – wechselt Q (TRUE → FALSE oder FALSE → TRUE) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mit Daten | Kommentar |
-|------|-----|-----------|-----------|
-| `EO`  | Event | Q | Zeigt an, dass sich der Wert von Q geändert hat |
+| Name | Typ   | Mit Daten | Kommentar                                       |
+| ---- | ----- | --------- | ----------------------------------------------- |
+| `EO` | Event | Q         | Zeigt an, dass sich der Wert von Q geändert hat |
 
 ### **Daten-Eingänge**
 
@@ -30,14 +30,14 @@ Keine (alle Eingaben erfolgen über Ereignisse).
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `Q`   | BOOL | Aktueller Wert des Flipflops (TRUE oder FALSE) |
+| Name | Typ  | Kommentar                                      |
+| ---- | ---- | ---------------------------------------------- |
+| `Q`  | BOOL | Aktueller Wert des Flipflops (TRUE oder FALSE) |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name     | Typ                                  | Kommentar                                                                                                                                                                                                                                                                                                       |
+| -------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Q_INIT` | `adapter::types::bidirectional::AX2` | Legt den Startwert von Q beim INIT‑Ereignis fest. Der Adapter stellt einen ereignisgesteuerten bidirektionalen Kanal bereit: Q_INIT.EI1 löst die Initialisierung aus, Q_INIT.DI1 liefert den gewünschten Initialwert (TRUE oder FALSE). Zusätzlich gibt der Baustein über Q_INIT.DO1 den gesetzten Wert zurück. |
 
 ## Funktionsweise
@@ -69,12 +69,12 @@ Der Ausgang `EO` wird bei jeder Zustandsänderung von Q aktiviert.
 
 Die Zustandsmaschine (ECC) umfasst vier Zustände:
 
-| Zustand | Beschreibung | Ausgehende Transitionen |
-| --------- | -------------- | -------------------------- |
-| `START` | Initialer Ruhezustand nach dem Einschalten | → `Init` bei `Q_INIT.EI1` |
-| `Init` | Initialisierungs‑Zustand – entscheidet über Startwert | → `SET` bei `TRUE = Q_INIT.DI1`<br>→ `RESET` bei `FALSE = Q_INIT.DI1` |
-| `SET` | Q = TRUE | → `RESET` bei `R` oder `CLK` |
-| `RESET` | Q = FALSE | → `SET` bei `S` oder `CLK` |
+| Zustand | Beschreibung                                          | Ausgehende Transitionen                                               |
+| ------- | ----------------------------------------------------- | --------------------------------------------------------------------- |
+| `START` | Initialer Ruhezustand nach dem Einschalten            | → `Init` bei `Q_INIT.EI1`                                             |
+| `Init`  | Initialisierungs‑Zustand – entscheidet über Startwert | → `SET` bei `TRUE = Q_INIT.DI1`<br>→ `RESET` bei `FALSE = Q_INIT.DI1` |
+| `SET`   | Q = TRUE                                              | → `RESET` bei `R` oder `CLK`                                          |
+| `RESET` | Q = FALSE                                             | → `SET` bei `S` oder `CLK`                                            |
 
 Nach dem Verlassen von `Init` wird der Zustand `SET` oder `RESET` erreicht; die Zustände `START` und `Init` werden im Normalbetrieb nicht mehr durchlaufen.
 
@@ -86,12 +86,12 @@ Nach dem Verlassen von `Init` wird der Zustand `SET` oder `RESET` erreicht; die 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften | Unterschied zu `E_T_FF_SR_SYM_STORE` |
-| ---------- | -------------- | --------------------------------------- |
-| `E_SR_FF` (Standard‑SR‑Flipflop) | Setzen, Rücksetzen; meist kein Toggle, kein konfigurierbarer Startwert | Fehlende Toggle‑Funktion; Startwert oft fest auf FALSE |
-| `E_RS_FF` | Setzen priorisiert | Andere Priorisierung; kein Toggle |
-| `E_D_FF` (D‑Flipflop) | Übernahme eines Dateneingangs mit Takt | Kein Setzen/Rücksetzen ohne Daten; kein symmetrischer Start |
-| `E_CTU` (Zähler) | Zählen von Ereignissen | kein bistabiles Verhalten, sondern Zählerstand |
+| Baustein                         | Eigenschaften                                                          | Unterschied zu `E_T_FF_SR_SYM_STORE`                        |
+| -------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `E_SR_FF` (Standard‑SR‑Flipflop) | Setzen, Rücksetzen; meist kein Toggle, kein konfigurierbarer Startwert | Fehlende Toggle‑Funktion; Startwert oft fest auf FALSE      |
+| `E_RS_FF`                        | Setzen priorisiert                                                     | Andere Priorisierung; kein Toggle                           |
+| `E_D_FF` (D‑Flipflop)            | Übernahme eines Dateneingangs mit Takt                                 | Kein Setzen/Rücksetzen ohne Daten; kein symmetrischer Start |
+| `E_CTU` (Zähler)                 | Zählen von Ereignissen                                                 | kein bistabiles Verhalten, sondern Zählerstand              |
 
 Der `E_T_FF_SR_SYM_STORE` vereint SR‑Funktion, Toggle und initialisierten Startwert in einem Baustein – eine seltene Kombination in der IEC 61499‑Welt.
 

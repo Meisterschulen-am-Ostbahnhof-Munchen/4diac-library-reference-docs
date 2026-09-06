@@ -12,28 +12,28 @@ The function block `FIELDBUS_QUARTER_TO_SIGNAL` serves as a signal validation an
 
 ### **Event Inputs**
 
-| Name | Type | Comment | With Variables |
-|--------|-------|------------------------------|---------------|
-| `REQ` | Event | Normal Execution Order | `IN` |
+| Name  | Type  | Comment                | With Variables |
+| ----- | ----- | ---------------------- | -------------- |
+| `REQ` | Event | Normal Execution Order | `IN`           |
 
 ### **Event Outputs**
 
-| Name | Type | Comment | With Variables |
-|-------|-------|-----------------------------|-------------------|
+| Name  | Type  | Comment                | With Variables |
+| ----- | ----- | ---------------------- | -------------- |
 | `CNF` | Event | Execution Confirmation | `OUT`, `VALID` |
 
 ### **Data Inputs**
 
-| Name | Type | Comment | Initial Value |
-|------|--------|--------------------|--------------------------------|
+| Name | Type   | Comment      | Initial Value                            |
+| ---- | ------ | ------------ | ---------------------------------------- |
 | `IN` | `BYTE` | Input Signal | `NOT_AVAILABLE_2bit` (Imported Constant) |
 
 ### **Data Outputs**
 
-| Name | Type | Comment | Initial Value |
-| --------- | -------- | --------------------------------- | ------------- |
-| `OUT` | `BYTE` | Filtered Output Signal | `16#00` |
-| `VALID` | `BOOL` | `TRUE`, if the signal is valid | `FALSE` |
+| Name    | Type   | Comment                        | Initial Value |
+| ------- | ------ | ------------------------------ | ------------- |
+| `OUT`   | `BYTE` | Filtered Output Signal         | `16#00`       |
+| `VALID` | `BOOL` | `TRUE`, if the signal is valid | `FALSE`       |
 
 ### **Adapter**
 
@@ -48,10 +48,12 @@ When an event occurs at input `REQ`, the algorithm `REQ` is executed:
 
 - `OUT` receives the value of `IN`.
 - `VALID` is set to `TRUE`.
+
 1. Otherwise (if `IN` is greater than or equal to `DONT_CARE_2bit`), the signal is classified as invalid:
 
 - `OUT` is reset to `BYTE#0`.
 - `VALID` is set to `FALSE`.
+
 1. After processing, the event `CNF` is triggered.
 
 The comparison uses the semantics of the imported constants:
@@ -68,9 +70,9 @@ DONT_CARE_2bit` defines the threshold above which values are considered "irrelev
 
 Only one state exists:
 
-| State | Description | Output Event | Output Actions |
-|---------|--------------------------------------------------|----------------|--------------------------|
-| `REQ` | Processes the input and updates outputs | `CNF` | Set `OUT` and `VALID` |
+| State | Description                             | Output Event | Output Actions        |
+| ----- | --------------------------------------- | ------------ | --------------------- |
+| `REQ` | Processes the input and updates outputs | `CNF`        | Set `OUT` and `VALID` |
 
 ## Application Scenarios
 

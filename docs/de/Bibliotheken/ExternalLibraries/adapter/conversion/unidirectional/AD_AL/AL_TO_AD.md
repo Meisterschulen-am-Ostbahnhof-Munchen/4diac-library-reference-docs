@@ -28,10 +28,10 @@ Der Funktionsblock **AL_TO_AD** ist ein Composite-FB, der einen unidirektionalen
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ------ | ------ | ---------- | -------------- |
-| Socket | AL_IN | Eingang | Unidirektionaler LWORD-Adapter mit einem Ereignis-Eingang (`E1`) und einem Daten-Eingang (`D1` vom Typ `LWORD`) |
-| Plug | AD_OUT | Ausgang | Unidirektionaler DWORD-Adapter mit einem Ereignis-Ausgang (`E1`) und einem Daten-Ausgang (`D1` vom Typ `DWORD`) |
+| Typ    | Name   | Richtung | Beschreibung                                                                                                    |
+| ------ | ------ | -------- | --------------------------------------------------------------------------------------------------------------- |
+| Socket | AL_IN  | Eingang  | Unidirektionaler LWORD-Adapter mit einem Ereignis-Eingang (`E1`) und einem Daten-Eingang (`D1` vom Typ `LWORD`) |
+| Plug   | AD_OUT | Ausgang  | Unidirektionaler DWORD-Adapter mit einem Ereignis-Ausgang (`E1`) und einem Daten-Ausgang (`D1` vom Typ `DWORD`) |
 
 ## Funktionsweise
 

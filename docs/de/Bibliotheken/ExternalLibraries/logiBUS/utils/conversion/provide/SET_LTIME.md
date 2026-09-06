@@ -12,27 +12,27 @@ Der Funktionsblock **SET_LTIME** dient dazu, einen Eingangswert vom Typ `LTIME` 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                                           |
+| ---- | ----- | ------------------------------------------------------------------- |
 | REQ  | Event | Normaler Ausführungsanstoß. Verbunden mit den Daten `IN` und `OUT`. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                                            |
+| ---- | ----- | -------------------------------------------------------------------- |
 | CNF  | Event | Bestätigung der erfolgreichen Ausführung. Verbunden mit Daten `OUT`. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| IN   | LTIME | LT#0s | Wert, der in die Zielvariable geschrieben werden soll. |
+| Name | Typ   | Initialwert | Kommentar                                              |
+| ---- | ----- | ----------- | ------------------------------------------------------ |
+| IN   | LTIME | LT#0s       | Wert, der in die Zielvariable geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| OUT  | LTIME | LT#0s | **InOut-Variable** – Zielvariable, die den übergebenen Wert erhält. Der FB schreibt den Wert von `IN` in diese Variable. Als InOut kann sie sowohl gelesen als auch von außen beschrieben werden. |
+| Name | Typ   | Initialwert | Kommentar                                                                                                                                                                                         |
+| ---- | ----- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OUT  | LTIME | LT#0s       | **InOut-Variable** – Zielvariable, die den übergebenen Wert erhält. Der FB schreibt den Wert von `IN` in diese Variable. Als InOut kann sie sowohl gelesen als auch von außen beschrieben werden. |
 
 ### **Adapter**
 
@@ -62,9 +62,9 @@ OUT := IN;
 
 Der FB besitzt genau einen Zustand:
 
-| Zustand | Aktion | Ausgabe |
-|---------|--------|---------|
-| REQ     | `REQ` (OUT := IN) | CNF |
+| Zustand | Aktion            | Ausgabe |
+| ------- | ----------------- | ------- |
+| REQ     | `REQ` (OUT := IN) | CNF     |
 
 Es gibt keine Verzweigungen oder Zeitsteuerungen. Der FB ist im Grunde kombinatorisch, da er sofort auf das Eingangsereignis reagiert.
 

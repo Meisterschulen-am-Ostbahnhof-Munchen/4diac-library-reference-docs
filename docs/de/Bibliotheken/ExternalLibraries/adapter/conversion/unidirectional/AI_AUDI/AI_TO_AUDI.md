@@ -14,34 +14,34 @@ Der Baustein besitzt keine klassischen Ereignis- und Datenein-/ausgänge, sonder
 
 ### Ereignis-Eingänge
 
-| Port   | Adapter | Beschreibung                              |
-|--------|---------|-------------------------------------------|
-| `E1`   | `AI_IN` | Startet die Konvertierung des INT-Wertes. |
+| Port | Adapter | Beschreibung                              |
+| ---- | ------- | ----------------------------------------- |
+| `E1` | `AI_IN` | Startet die Konvertierung des INT-Wertes. |
 
 ### Ereignis-Ausgänge
 
-| Port   | Adapter   | Beschreibung                              |
-|--------|-----------|-------------------------------------------|
-| `E1`   | `AUDI_OUT`| Signalisiert Abschluss der Konvertierung. |
+| Port | Adapter    | Beschreibung                              |
+| ---- | ---------- | ----------------------------------------- |
+| `E1` | `AUDI_OUT` | Signalisiert Abschluss der Konvertierung. |
 
 ### Daten-Eingänge
 
-| Port   | Adapter | Datentyp | Beschreibung                     |
-|--------|---------|----------|----------------------------------|
-| `D1`   | `AI_IN` | `INT`    | Zu konvertierender Integer-Wert. |
+| Port | Adapter | Datentyp | Beschreibung                     |
+| ---- | ------- | -------- | -------------------------------- |
+| `D1` | `AI_IN` | `INT`    | Zu konvertierender Integer-Wert. |
 
 ### Daten-Ausgänge
 
-| Port   | Adapter   | Datentyp | Beschreibung                   |
-|--------|-----------|----------|--------------------------------|
-| `D1`   | `AUDI_OUT`| `UDINT`  | Konvertierter unsigned Integer. |
+| Port | Adapter    | Datentyp | Beschreibung                    |
+| ---- | ---------- | -------- | ------------------------------- |
+| `D1` | `AUDI_OUT` | `UDINT`  | Konvertierter unsigned Integer. |
 
 ### Adapter
 
-| Richtung | Name       | Typ                          | Beschreibung                 |
-|----------|------------|------------------------------|-----------------------------|
-| Socket   | `AI_IN`    | `adapter::types::unidirectional::AI`    | Eingangsadapter (INT).      |
-| Plug     | `AUDI_OUT` | `adapter::types::unidirectional::AUDI`  | Ausgangsadapter (UDINT).    |
+| Richtung | Name       | Typ                                    | Beschreibung             |
+| -------- | ---------- | -------------------------------------- | ------------------------ |
+| Socket   | `AI_IN`    | `adapter::types::unidirectional::AI`   | Eingangsadapter (INT).   |
+| Plug     | `AUDI_OUT` | `adapter::types::unidirectional::AUDI` | Ausgangsadapter (UDINT). |
 
 ## Funktionsweise
 

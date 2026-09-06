@@ -32,17 +32,17 @@ Keine.
 
 **Socket (Eingang)**
 
-| Bezeichnung | Typ                                      | Beschreibung |
-|-------------|------------------------------------------|--------------|
-| `IN`        | `adapter::types::unidirectional::AQ`     | Eingangs-Adapter, dessen Signal auf drei Ausgänge verteilt wird |
+| Bezeichnung | Typ                                  | Beschreibung                                                    |
+| ----------- | ------------------------------------ | --------------------------------------------------------------- |
+| `IN`        | `adapter::types::unidirectional::AQ` | Eingangs-Adapter, dessen Signal auf drei Ausgänge verteilt wird |
 
 **Plug (Ausgänge)**
 
-| Bezeichnung | Typ                                      | Beschreibung |
-|-------------|------------------------------------------|--------------|
-| `OUT1`      | `adapter::types::unidirectional::AQ`     | Erster Ausgang (Kopie des Eingangssignals) |
-| `OUT2`      | `adapter::types::unidirectional::AQ`     | Zweiter Ausgang (Kopie des Eingangssignals) |
-| `OUT3`      | `adapter::types::unidirectional::AQ`     | Dritter Ausgang (Kopie des Eingangssignals) |
+| Bezeichnung | Typ                                  | Beschreibung                                |
+| ----------- | ------------------------------------ | ------------------------------------------- |
+| `OUT1`      | `adapter::types::unidirectional::AQ` | Erster Ausgang (Kopie des Eingangssignals)  |
+| `OUT2`      | `adapter::types::unidirectional::AQ` | Zweiter Ausgang (Kopie des Eingangssignals) |
+| `OUT3`      | `adapter::types::unidirectional::AQ` | Dritter Ausgang (Kopie des Eingangssignals) |
 
 ## Funktionsweise
 

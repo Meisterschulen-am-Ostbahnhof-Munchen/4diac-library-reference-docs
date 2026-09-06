@@ -28,11 +28,11 @@ Der Funktionsblock besitzt keine separaten Daten-Ausgänge. Ausgangsdaten werden
 
 ### **Adapter**
 
-| Bezeichnung | Typ                   | Richtung | Beschreibung                                                                 |
-|-------------|-----------------------|----------|-----------------------------------------------------------------------------|
-| `IN`        | AUI (unidirectional)  | Socket   | Empfängt das rohe Feldbussignal als `UINT`. Stellt Ereignis `E1` und Daten `D1` bereit. |
-| `OUT`       | AUI (unidirectional)  | Plug     | Gibt das gefilterte Signal als `UINT` aus. Ereignis `E1` signalisiert anliegende Daten. |
-| `VALID`     | AX (unidirectional)   | Plug     | Liefert ein Gültigkeitssignal (`TRUE`/`FALSE`) über `D1`; Ereignis `E1` zeigt Aktualisierung an. |
+| Bezeichnung | Typ                  | Richtung | Beschreibung                                                                                     |
+| ----------- | -------------------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `IN`        | AUI (unidirectional) | Socket   | Empfängt das rohe Feldbussignal als `UINT`. Stellt Ereignis `E1` und Daten `D1` bereit.          |
+| `OUT`       | AUI (unidirectional) | Plug     | Gibt das gefilterte Signal als `UINT` aus. Ereignis `E1` signalisiert anliegende Daten.          |
+| `VALID`     | AX (unidirectional)  | Plug     | Liefert ein Gültigkeitssignal (`TRUE`/`FALSE`) über `D1`; Ereignis `E1` zeigt Aktualisierung an. |
 
 ## Funktionsweise
 
@@ -56,12 +56,12 @@ Der Funktionsblock besitzt keine separaten Daten-Ausgänge. Ausgangsdaten werden
 
 Der FB selbst besitzt keine explizite Zustandsmaschine. Sein Verhalten kann jedoch durch die interne Logik beschrieben werden:
 
-| Zustand                | Beschreibung                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| **Idle**               | Kein Eingangsereignis; die Ausgänge `OUT` und `VALID` behalten ihre letzten Werte. |
-| **Processing**         | Ein Ereignis an `IN.E1` startet die Verarbeitung. |
-| **Output**             | Nach Abschluss werden `OUT.D1` und `VALID.D1` aktualisiert und die Ereignisse an `OUT.E1` und `VALID.E1` gesendet. |
-| **Hold**               | Der Gültigkeitswert wird im Flip‑Flop gehalten, bis das nächste Ereignis eintrifft. |
+| Zustand        | Beschreibung                                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Idle**       | Kein Eingangsereignis; die Ausgänge `OUT` und `VALID` behalten ihre letzten Werte.                                 |
+| **Processing** | Ein Ereignis an `IN.E1` startet die Verarbeitung.                                                                  |
+| **Output**     | Nach Abschluss werden `OUT.D1` und `VALID.D1` aktualisiert und die Ereignisse an `OUT.E1` und `VALID.E1` gesendet. |
+| **Hold**       | Der Gültigkeitswert wird im Flip‑Flop gehalten, bis das nächste Ereignis eintrifft.                                |
 
 ## Anwendungsszenarien
 
@@ -71,11 +71,11 @@ Der FB selbst besitzt keine explizite Zustandsmaschine. Sein Verhalten kann jedo
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                       | Unterschied / Gemeinsamkeit                                                 |
-|--------------------------------|-----------------------------------------------------------------------------|
-| `FIELDBUS_UINT_TO_SIGNAL`      | Enthält nur die reine Datenumsetzung ohne Gültigkeits‑Zwischenspeicher.     |
-| `AUI_SIGNAL_FILTER`            | Filtert Signale, bietet aber keine explizite Gültigkeitsanzeige.            |
-| `E_D_FF`                       | Reines Flip‑Flop ohne Datenumsetzung – hier als Hilfsbaustein genutzt.      |
+| Baustein                  | Unterschied / Gemeinsamkeit                                             |
+| ------------------------- | ----------------------------------------------------------------------- |
+| `FIELDBUS_UINT_TO_SIGNAL` | Enthält nur die reine Datenumsetzung ohne Gültigkeits‑Zwischenspeicher. |
+| `AUI_SIGNAL_FILTER`       | Filtert Signale, bietet aber keine explizite Gültigkeitsanzeige.        |
+| `E_D_FF`                  | Reines Flip‑Flop ohne Datenumsetzung – hier als Hilfsbaustein genutzt.  |
 
 Der vorliegende FB kombiniert die Umsetzung mit einer **ereignisgesteuerten Gültigkeitshaltung**, was ihn für sequenzielle Feldbusprotokolle besonders geeignet macht.
 

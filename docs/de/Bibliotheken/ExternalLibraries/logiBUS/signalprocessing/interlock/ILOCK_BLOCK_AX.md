@@ -64,12 +64,12 @@ Die Algorithmen setzen die Ausgangssignale:
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Ausgangssignale |
-| --------- | -------------- | ----------------- |
-| **STOP** | Ruhezustand, keine Richtung aktiv | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = FALSE` |
-| **UP** | Aufwärts-Richtung aktiv | `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE` |
-| **DOWN** | Abwärts-Richtung aktiv | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = TRUE` |
-| **UP_STOP** | Deaktivierung von UP (wird sofort verlassen) | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = FALSE` |
+| Zustand       | Beschreibung                                   | Ausgangssignale                            |
+| ------------- | ---------------------------------------------- | ------------------------------------------ |
+| **STOP**      | Ruhezustand, keine Richtung aktiv              | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = FALSE` |
+| **UP**        | Aufwärts-Richtung aktiv                        | `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE`  |
+| **DOWN**      | Abwärts-Richtung aktiv                         | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = TRUE`  |
+| **UP_STOP**   | Deaktivierung von UP (wird sofort verlassen)   | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = FALSE` |
 | **DOWN_STOP** | Deaktivierung von DOWN (wird sofort verlassen) | `UP_OUT.D1 = FALSE`, `DOWN_OUT.D1 = FALSE` |
 
 **Übergänge:**

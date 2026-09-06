@@ -10,7 +10,7 @@ The function block `F_USINT_TO_REAL` converts an unsigned 8-bit integer value (U
 - **IN**: An unsigned 8-bit integer value (USINT) to be converted to a REAL value.
 - **OUT**: The resulting 32-bit floating-point value (REAL) after the conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_USINT_TO_REAL` converts an unsigned 8-bit integer value (U
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 This function block does not use any adapters.
 

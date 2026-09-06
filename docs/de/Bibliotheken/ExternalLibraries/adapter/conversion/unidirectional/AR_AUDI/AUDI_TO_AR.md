@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
+| Name      | Typ                                    | Richtung         | Beschreibung                                                                                                                                                       |
+| --------- | -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Liefert einen UDINT‑Wert sowie ein zugehöriges Ereignis. Der Adapter stellt intern einen Ereignisausgang `E1` und einen Datenausgang `D1` (Datentyp UDINT) bereit. |
-| `AR_OUT`  | `adapter::types::unidirectional::AR`  | Plug (Ausgang)  | Gibt den konvertierten REAL‑Wert aus. Der Adapter besitzt intern einen Ereigniseingang `E1` und einen Dateneingang `D1` (Datentyp REAL). |
+| `AR_OUT`  | `adapter::types::unidirectional::AR`   | Plug (Ausgang)   | Gibt den konvertierten REAL‑Wert aus. Der Adapter besitzt intern einen Ereigniseingang `E1` und einen Dateneingang `D1` (Datentyp REAL).                           |
 
 ## Funktionsweise
 

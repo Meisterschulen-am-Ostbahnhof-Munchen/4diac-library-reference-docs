@@ -90,12 +90,12 @@ Entwickelt unter EPL-2.0 Lizenz.
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Funktion            | `TIMESTAMP_NS`        | `NOW()`               | `F_NOW_MONOTONIC`     |
-|---------------------|-----------------------|-----------------------|-----------------------|
-| **Ausgabeformat**   | Nanosekunden (ULINT)  | Zeitintervall (TIME)  | Zeitintervall (TIME)  |
-| **Referenzpunkt**   | Konfigurierbar        | Systemstart           | Hardwareabhängig      |
-| **Präzision**       | 1 ns                  | 1 ms                  | 1 ns (typisch)        |
-| **Anwendungsfall**  | Absolute Zeitstempel  | Relative Zeitmessung  | Monotone Messung      |
+| Funktion           | `TIMESTAMP_NS`       | `NOW()`              | `F_NOW_MONOTONIC`    |
+| ------------------ | -------------------- | -------------------- | -------------------- |
+| **Ausgabeformat**  | Nanosekunden (ULINT) | Zeitintervall (TIME) | Zeitintervall (TIME) |
+| **Referenzpunkt**  | Konfigurierbar       | Systemstart          | Hardwareabhängig     |
+| **Präzision**      | 1 ns                 | 1 ms                 | 1 ns (typisch)       |
+| **Anwendungsfall** | Absolute Zeitstempel | Relative Zeitmessung | Monotone Messung     |
 
 ---
 

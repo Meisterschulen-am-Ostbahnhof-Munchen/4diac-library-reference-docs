@@ -12,27 +12,27 @@ Der Funktionsblock **F_PERCENT_TO_FRACTION** rechnet einen Prozentwert (REAL 0.0
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| REQ | Event | Umrechnung anfordern; verarbeitet den aktuellen Wert von `rPercent`. |
+| Ereignis | Datentyp | Kommentar                                                            |
+| -------- | -------- | -------------------------------------------------------------------- |
+| REQ      | Event    | Umrechnung anfordern; verarbeitet den aktuellen Wert von `rPercent`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| CNF | Event | Umrechnung abgeschlossen; `rFraction` wurde aktualisiert. |
+| Ereignis | Datentyp | Kommentar                                                 |
+| -------- | -------- | --------------------------------------------------------- |
+| CNF      | Event    | Umrechnung abgeschlossen; `rFraction` wurde aktualisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| rPercent | REAL | Prozentwert, wird auf 0.0-100.0 begrenzt. |
+| Name     | Datentyp | Kommentar                                 |
+| -------- | -------- | ----------------------------------------- |
+| rPercent | REAL     | Prozentwert, wird auf 0.0-100.0 begrenzt. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| rFraction | REAL | Anteil 0.0-1.0. |
+| Name      | Datentyp | Kommentar       |
+| --------- | -------- | --------------- |
+| rFraction | REAL     | Anteil 0.0-1.0. |
 
 ### **Adapter**
 
@@ -65,9 +65,9 @@ END_IF;
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ | Führt den Algorithmus **REQ** aus (Klemmen + Division durch 100) | CNF |
+| Zustand | Aktion                                                           | Ausgabeereignis |
+| ------- | ---------------------------------------------------------------- | --------------- |
+| REQ     | Führt den Algorithmus **REQ** aus (Klemmen + Division durch 100) | CNF             |
 
 Es gibt keine weiteren Warte- oder Initialisierungszustände.
 

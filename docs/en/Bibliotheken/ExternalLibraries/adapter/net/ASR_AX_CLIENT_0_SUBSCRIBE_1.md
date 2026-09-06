@@ -35,9 +35,9 @@ The **ASR_AX_CLIENT_0_SUBSCRIBE_1** function block is a composite function block
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------|-----------|--------------|
-| S_R | adapter::types::bidirectional::ASR_AX | Socket – Set/Reset (output), state (input) | Set/Reset out, state back |
+| Adapter | Type                                  | Direction                                  | Description               |
+| ------- | ------------------------------------- | ------------------------------------------ | ------------------------- |
+| S_R     | adapter::types::bidirectional::ASR_AX | Socket – Set/Reset (output), state (input) | Set/Reset out, state back |
 
 ## Functionality
 

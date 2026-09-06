@@ -28,8 +28,8 @@ Keine Daten-Ausgänge vorhanden. Die Ausgaben erfolgen über die Adapter-Ausgän
 
 ### **Adapter**
 
-| Rolle  | Name | Typ                                | Richtung |
-|--------|------|-----------------------------------|----------|
+| Rolle  | Name | Typ                                  | Richtung |
+| ------ | ---- | ------------------------------------ | -------- |
 | Socket | IN   | `adapter::types::unidirectional::AB` | Eingang  |
 | Plug   | OUT1 | `adapter::types::unidirectional::AB` | Ausgang  |
 | Plug   | OUT2 | `adapter::types::unidirectional::AB` | Ausgang  |

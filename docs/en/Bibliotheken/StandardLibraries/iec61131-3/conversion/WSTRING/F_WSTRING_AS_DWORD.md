@@ -9,7 +9,7 @@ The function block `F_WSTRING_AS_DWORD` is used to convert a WSTRING value to a 
 - **IN**: Input of type WSTRING. The string to be converted to a DWORD value.
 - **OUT**: Output of type DWORD. The converted numeric value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -21,7 +21,7 @@ The function block `F_WSTRING_AS_DWORD` is used to convert a WSTRING value to a 
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 No adapters available.
 

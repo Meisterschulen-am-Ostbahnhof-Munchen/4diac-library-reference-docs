@@ -28,10 +28,10 @@ None.
 
 ### **Adapter**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AR` | IN | Socket | Incoming AR adapter, which is distributed to the seven outputs. |
-| `adapter::types::unidirectional::AR` | OUT1 … OUT7 | Plug | Seven output adapters to which the incoming AR adapter is passed on unchanged. |
+| Type                                 | Name        | Direction | Description                                                                    |
+| ------------------------------------ | ----------- | --------- | ------------------------------------------------------------------------------ |
+| `adapter::types::unidirectional::AR` | IN          | Socket    | Incoming AR adapter, which is distributed to the seven outputs.                |
+| `adapter::types::unidirectional::AR` | OUT1 … OUT7 | Plug      | Seven output adapters to which the incoming AR adapter is passed on unchanged. |
 
 ## Functionality
 

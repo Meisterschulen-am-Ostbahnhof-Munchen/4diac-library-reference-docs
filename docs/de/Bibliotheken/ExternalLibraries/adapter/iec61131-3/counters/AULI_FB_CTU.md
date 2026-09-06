@@ -16,9 +16,9 @@ Keine eigenständigen Ereignis-Eingänge. Ereignisse werden ausschließlich übe
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| CNF | Event | Bestätigung der Ausführung (Execution Confirmation) – wird bei jeder Aktualisierung des Zählers ausgelöst |
+| Name | Typ   | Kommentar                                                                                                 |
+| ---- | ----- | --------------------------------------------------------------------------------------------------------- |
+| CNF  | Event | Bestätigung der Ausführung (Execution Confirmation) – wird bei jeder Aktualisierung des Zählers ausgelöst |
 
 ### **Daten-Eingänge**
 
@@ -30,13 +30,13 @@ Keine direkten Daten-Ausgänge. Die Ergebniswerte (aktueller Zählerstand CV und
 
 ### **Adapter**
 
-| Richtung | Adapter‑Name | Typ | Kommentar |
-| ---------- | -------------- | ----- | ----------- |
-| **Socket (Eingang)** | CU | `adapter::types::unidirectional::AX` | Count‑Up‑Impuls (Ereignis + Daten) |
-| **Socket (Eingang)** | R | `adapter::types::unidirectional::AX` | Reset‑Impuls (Ereignis + Daten) |
-| **Socket (Eingang)** | PV | `adapter::types::unidirectional::AULI` | Preset‑Wert (Vergleichswert für Q‑Ausgang) |
-| **Plug (Ausgang)** | Q | `adapter::types::unidirectional::AX` | Zählerstand ≥ Preset? (Bool‑Status) |
-| **Plug (Ausgang)** | CV | `adapter::types::unidirectional::AULI` | Aktueller Zählerstand (ULINT) |
+| Richtung             | Adapter‑Name | Typ                                    | Kommentar                                  |
+| -------------------- | ------------ | -------------------------------------- | ------------------------------------------ |
+| **Socket (Eingang)** | CU           | `adapter::types::unidirectional::AX`   | Count‑Up‑Impuls (Ereignis + Daten)         |
+| **Socket (Eingang)** | R            | `adapter::types::unidirectional::AX`   | Reset‑Impuls (Ereignis + Daten)            |
+| **Socket (Eingang)** | PV           | `adapter::types::unidirectional::AULI` | Preset‑Wert (Vergleichswert für Q‑Ausgang) |
+| **Plug (Ausgang)**   | Q            | `adapter::types::unidirectional::AX`   | Zählerstand ≥ Preset? (Bool‑Status)        |
+| **Plug (Ausgang)**   | CV           | `adapter::types::unidirectional::AULI` | Aktueller Zählerstand (ULINT)              |
 
 ## Funktionsweise
 

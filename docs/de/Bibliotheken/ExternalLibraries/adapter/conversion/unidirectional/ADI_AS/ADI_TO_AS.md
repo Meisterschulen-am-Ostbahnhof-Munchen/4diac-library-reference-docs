@@ -28,8 +28,8 @@ Keine separaten Daten‑Ausgänge – der konvertierte Wert wird über den **AS�
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Kommentar |
-|---------|----------|-----|-----------|
+| Adapter    | Richtung         | Typ                                   | Kommentar            |
+| ---------- | ---------------- | ------------------------------------- | -------------------- |
 | **ADI_IN** | Socket (Eingang) | `adapter::types::unidirectional::ADI` | DINT‑Adapter‑Eingang |
 | **AS_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AS`  | SINT‑Adapter‑Ausgang |
 

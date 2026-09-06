@@ -33,9 +33,9 @@ Der Funktionsblock **ASR_CLIENT_0** ist ein Composite-Funktionsblock, der zwei u
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| S_R | adapter::types::unidirectional::ASR | Socket (Eingang) | Set/Reset |
+| Adapter | Typ                                 | Richtung         | Beschreibung |
+| ------- | ----------------------------------- | ---------------- | ------------ |
+| S_R     | adapter::types::unidirectional::ASR | Socket (Eingang) | Set/Reset    |
 
 ## Funktionsweise
 

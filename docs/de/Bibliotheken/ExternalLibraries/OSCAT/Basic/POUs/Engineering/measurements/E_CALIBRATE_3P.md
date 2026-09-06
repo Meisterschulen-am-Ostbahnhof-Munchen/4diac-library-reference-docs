@@ -54,11 +54,11 @@ Jeder dieser vier Zustände kehrt unmittelbar zu `START` zurück, von wo aus all
 
 **Beispiel** (Joystick mit Mittelpunkt-Drift, Rohbereich `0..1000`, gewünschter Ausgabebereich `-100..0..100`):
 
-| Schritt | Aktion | Ergebnis |
-| --- | --- | --- |
-| 1 | Joystick auf **Minimum**, `EI_MIN` feuern | `X_MIN = 50` (Drift gegenüber ideal `0`) |
-| 2 | Joystick auf **Mitte**, `EI_MID` feuern | `X_MID = 520` (Drift gegenüber ideal `500`) |
-| 3 | Joystick auf **Maximum**, `EI_MAX` feuern | `X_MAX = 980` (Drift gegenüber ideal `1000`) |
+| Schritt | Aktion                                    | Ergebnis                                     |
+| ------- | ----------------------------------------- | -------------------------------------------- |
+| 1       | Joystick auf **Minimum**, `EI_MIN` feuern | `X_MIN = 50` (Drift gegenüber ideal `0`)     |
+| 2       | Joystick auf **Mitte**, `EI_MID` feuern   | `X_MID = 520` (Drift gegenüber ideal `500`)  |
+| 3       | Joystick auf **Maximum**, `EI_MAX` feuern | `X_MAX = 980` (Drift gegenüber ideal `1000`) |
 
 Ergebnis: `Y` wird zwischen `MIN_REF=-100`, `MID_REF=0` und `MAX_REF=100` interpoliert und begrenzt.
 

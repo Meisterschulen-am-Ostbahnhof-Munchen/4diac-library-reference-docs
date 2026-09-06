@@ -12,20 +12,20 @@ Der Baustein **AR_D_FF_TMIN** realisiert ein Data-Latch (D-Flipflop) mit einem E
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                        |
-|------|-------|----------------------------------|
+| Name | Typ   | Kommentar                                          |
+| ---- | ----- | -------------------------------------------------- |
 | INIT | EInit | Initialisierungsanforderung (mit Parameter `Tmin`) |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                       |
-|-------|-------|---------------------------------|
-| INITO | EInit | Initialisierungsbestätigung     |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar                                  |
-|------|------|--------------------------------------------|
+| Name | Typ  | Kommentar                                       |
+| ---- | ---- | ----------------------------------------------- |
 | Tmin | TIME | Mindestverzögerung zwischen zwei EO-Ereignissen |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine eigenständigen Daten-Ausgänge; der Wert wird über den Adapter `Q` ausge
 
 ### **Adapter**
 
-| Richtung | Name | Typ                                              | Kommentar               |
-|----------|------|---------------------------------------------------|-------------------------|
-| Socket   | I    | `adapter::types::unidirectional::AR`              | zu übernehmender Wert   |
-| Plug     | Q    | `adapter::types::unidirectional::AR`              | gelatchter Wert         |
+| Richtung | Name | Typ                                  | Kommentar             |
+| -------- | ---- | ------------------------------------ | --------------------- |
+| Socket   | I    | `adapter::types::unidirectional::AR` | zu übernehmender Wert |
+| Plug     | Q    | `adapter::types::unidirectional::AR` | gelatchter Wert       |
 
 Der Adapter `adapter::types::unidirectional::AR` vereint ein Ereignis (`E1`) und ein Datenwort (`D1`) pro Richtung.
 

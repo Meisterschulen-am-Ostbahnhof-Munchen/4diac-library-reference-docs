@@ -30,15 +30,15 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | `IN` | `adapter::types::unidirectional::A2X` | Empfängt das eingehende A2X-Adapter-Signal |
-| Ausgang (Plug) 1 | `OUT1` | `adapter::types::unidirectional::A2X` | Erster ausgehender A2X-Adapter |
-| Ausgang (Plug) 2 | `OUT2` | `adapter::types::unidirectional::A2X` | Zweiter ausgehender A2X-Adapter |
-| Ausgang (Plug) 3 | `OUT3` | `adapter::types::unidirectional::A2X` | Dritter ausgehender A2X-Adapter |
-| Ausgang (Plug) 4 | `OUT4` | `adapter::types::unidirectional::A2X` | Vierter ausgehender A2X-Adapter |
-| Ausgang (Plug) 5 | `OUT5` | `adapter::types::unidirectional::A2X` | Fünfter ausgehender A2X-Adapter |
-| Ausgang (Plug) 6 | `OUT6` | `adapter::types::unidirectional::A2X` | Sechster ausgehender A2X-Adapter |
+| Richtung         | Name   | Typ                                   | Beschreibung                               |
+| ---------------- | ------ | ------------------------------------- | ------------------------------------------ |
+| Eingang (Socket) | `IN`   | `adapter::types::unidirectional::A2X` | Empfängt das eingehende A2X-Adapter-Signal |
+| Ausgang (Plug) 1 | `OUT1` | `adapter::types::unidirectional::A2X` | Erster ausgehender A2X-Adapter             |
+| Ausgang (Plug) 2 | `OUT2` | `adapter::types::unidirectional::A2X` | Zweiter ausgehender A2X-Adapter            |
+| Ausgang (Plug) 3 | `OUT3` | `adapter::types::unidirectional::A2X` | Dritter ausgehender A2X-Adapter            |
+| Ausgang (Plug) 4 | `OUT4` | `adapter::types::unidirectional::A2X` | Vierter ausgehender A2X-Adapter            |
+| Ausgang (Plug) 5 | `OUT5` | `adapter::types::unidirectional::A2X` | Fünfter ausgehender A2X-Adapter            |
+| Ausgang (Plug) 6 | `OUT6` | `adapter::types::unidirectional::A2X` | Sechster ausgehender A2X-Adapter           |
 
 ## Funktionsweise
 

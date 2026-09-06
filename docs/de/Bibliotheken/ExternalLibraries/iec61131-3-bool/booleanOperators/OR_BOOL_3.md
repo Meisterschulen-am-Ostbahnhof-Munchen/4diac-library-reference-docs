@@ -43,15 +43,15 @@ Bei jedem Eintreffen des Ereignisses `REQ` führt der Funktionsblock eine logisc
 Die logische Funktion lässt sich durch folgende Wahrheitstabelle beschreiben:
 
 | IN1 | IN2 | IN3 | OUT (IN1 OR IN2 OR IN3) |
-|:---:|:---:|:---:|:-----------------------:|
-|  0  |  0  |  0  |            0            |
-|  0  |  0  |  1  |            1            |
-|  0  |  1  |  0  |            1            |
-|  0  |  1  |  1  |            1            |
-|  1  |  0  |  0  |            1            |
-|  1  |  0  |  1  |            1            |
-|  1  |  1  |  0  |            1            |
-|  1  |  1  |  1  |            1            |
+| :-: | :-: | :-: | :---------------------: |
+| 0   | 0   | 0   | 0                       |
+| 0   | 0   | 1   | 1                       |
+| 0   | 1   | 0   | 1                       |
+| 0   | 1   | 1   | 1                       |
+| 1   | 0   | 0   | 1                       |
+| 1   | 0   | 1   | 1                       |
+| 1   | 1   | 0   | 1                       |
+| 1   | 1   | 1   | 1                       |
 
 Der Ausgang `OUT` ist genau dann `TRUE` (1), wenn mindestens einer der drei Eingänge `TRUE` ist.
 

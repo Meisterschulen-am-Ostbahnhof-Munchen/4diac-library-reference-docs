@@ -45,11 +45,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with container object ID
 - `INITO` confirms operational readiness
+
 1. **Visibility Change**:
 
 - `REQ` with desired visibility status
 - Changes the display of the container and all contained objects
 - `CNF` returns operational status and previous state
+
 1. **Special Cases**:
 
 - VT_E_HANDLE_INVALID is returned for invalid object IDs
@@ -63,21 +65,21 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## State reference
 
-| qVisible | Container state |
-|----------|----------------------|
-| FALSE (0)| Invisible |
-| TRUE (1) | Visible |
+| qVisible  | Container state |
+| --------- | --------------- |
+| FALSE (0) | Invisible       |
+| TRUE (1)  | Visible         |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful execution |
-| -6 | VT_E_OVERFLOW | Buffer overflow |
-| -8 | VT_E_NOACT | VT not ready | | -21 | VT_E_NO_INSTANCE | No VT client available |
-| -128 | VT_E_HANDLE_INVALID | Invalid container ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning              |     |     |                  |                        |
+| ---- | ------------------------- | -------------------- | --- | --- | ---------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful execution |     |     |                  |                        |
+| -6   | VT_E_OVERFLOW             | Buffer overflow      |     |     |                  |                        |
+| -8   | VT_E_NOACT                | VT not ready         |     | -21 | VT_E_NO_INSTANCE | No VT client available |
+| -128 | VT_E_HANDLE_INVALID       | Invalid container ID |     |     |                  |                        |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance  |     |     |                  |                        |
+| -130 | VT_E_NOT_ALIVE            | VT not active        |     |     |                  |                        |
 
 ## Application Scenarios
 
@@ -88,12 +90,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with similar components
 
-| Feature | Q_ObjHideShow | VtContainerControl | VtVisibilityManager |
-| --------------- | --------------- | -------------------- | --------------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Container Focus | ✔ | ✔ | ✖ |
-| Cascading | ✔ | ✖ | ✔ |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature         | Q_ObjHideShow | VtContainerControl | VtVisibilityManager |
+| --------------- | ------------- | ------------------ | ------------------- |
+| ISO Standard    | ✔             | ✖                  | ✖                   |
+| Container Focus | ✔             | ✔                  | ✖                   |
+| Cascading       | ✔             | ✖                  | ✔                   |
+| Feedback        | ✔             | ✖                  | ✔                   |
 
 ## 🛠️ Related Exercises
 

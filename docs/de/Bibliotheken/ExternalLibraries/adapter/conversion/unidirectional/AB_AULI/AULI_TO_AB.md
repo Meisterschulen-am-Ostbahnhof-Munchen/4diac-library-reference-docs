@@ -30,10 +30,10 @@ Keine (Daten werden über den AB-Adapter gesendet).
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-|------|-----|----------|-----------|
-| `AULI_IN` | `adapter::types::unidirectional::AULI` | Socket (Eingangs-Adapter) | ULINT-Adapter, der die zu konvertierenden Werte und das Auslöse-Ereignis liefert |
-| `AB_OUT` | `adapter::types::unidirectional::AB` | Plug (Ausgangs-Adapter) | BYTE-Adapter, der die konvertierten Werte und das Bestätigungs-Ereignis bereitstellt |
+| Name      | Typ                                    | Richtung                  | Kommentar                                                                            |
+| --------- | -------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------ |
+| `AULI_IN` | `adapter::types::unidirectional::AULI` | Socket (Eingangs-Adapter) | ULINT-Adapter, der die zu konvertierenden Werte und das Auslöse-Ereignis liefert     |
+| `AB_OUT`  | `adapter::types::unidirectional::AB`   | Plug (Ausgangs-Adapter)   | BYTE-Adapter, der die konvertierten Werte und das Bestätigungs-Ereignis bereitstellt |
 
 ## Funktionsweise
 

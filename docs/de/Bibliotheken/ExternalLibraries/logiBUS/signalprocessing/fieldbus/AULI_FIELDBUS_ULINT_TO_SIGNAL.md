@@ -14,37 +14,37 @@ Der Baustein besitzt keine klassischen Ereignis- oder Datenports auf oberster Eb
 
 ### **Ereignis-Eingänge**
 
-| Port | Bezeichnung | Beschreibung |
-|------|-------------|--------------|
+| Port    | Bezeichnung                       | Beschreibung                                        |
+| ------- | --------------------------------- | --------------------------------------------------- |
 | `IN.E1` | Ereignis-Eingang (über Socket IN) | Löst die Verarbeitung eines neuen ULINT-Wertes aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Port | Bezeichnung | Beschreibung |
-|------|-------------|--------------|
-| `OUT.E1` | Ereignis-Ausgang (über Plug OUT) | Signalisiert die Fertigstellung der Ausgabe des gespiegelten Wertes. |
-| `VALID.E1` | Ereignis-Ausgang (über Plug VALID) | Zeigt an, dass das Gültigkeitssignal aktualisiert wurde. |
+| Port       | Bezeichnung                        | Beschreibung                                                         |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------- |
+| `OUT.E1`   | Ereignis-Ausgang (über Plug OUT)   | Signalisiert die Fertigstellung der Ausgabe des gespiegelten Wertes. |
+| `VALID.E1` | Ereignis-Ausgang (über Plug VALID) | Zeigt an, dass das Gültigkeitssignal aktualisiert wurde.             |
 
 ### **Daten-Eingänge**
 
-| Port | Bezeichnung | Datentyp | Beschreibung |
-|------|-------------|----------|--------------|
-| `IN.D1` | Daten-Eingang (über Socket IN) | ULINT | Der zu verarbeitende Feldbus-Wert. |
+| Port    | Bezeichnung                    | Datentyp | Beschreibung                       |
+| ------- | ------------------------------ | -------- | ---------------------------------- |
+| `IN.D1` | Daten-Eingang (über Socket IN) | ULINT    | Der zu verarbeitende Feldbus-Wert. |
 
 ### **Daten-Ausgänge**
 
-| Port | Bezeichnung | Datentyp | Beschreibung |
-|------|-------------|----------|--------------|
-| `OUT.D1` | Daten-Ausgang (über Plug OUT) | ULINT | Der gespiegelte Eingangswert (wenn gültig). |
-| `VALID.D1` | Daten-Ausgang (über Plug VALID) | BOOL | Gültigkeitssignal (TRUE = Wert ist gültig). |
+| Port       | Bezeichnung                     | Datentyp | Beschreibung                                |
+| ---------- | ------------------------------- | -------- | ------------------------------------------- |
+| `OUT.D1`   | Daten-Ausgang (über Plug OUT)   | ULINT    | Der gespiegelte Eingangswert (wenn gültig). |
+| `VALID.D1` | Daten-Ausgang (über Plug VALID) | BOOL     | Gültigkeitssignal (TRUE = Wert ist gültig). |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| `IN` | Socket (Eingang) | `adapter::types::unidirectional::AULI` | Nimmt den ULINT-Wert und das zugehörige Ereignis entgegen. |
-| `OUT` | Plug (Ausgang) | `adapter::types::unidirectional::AULI` | Gibt den verarbeiteten ULINT-Wert und ein Ereignis aus. |
-| `VALID` | Plug (Ausgang) | `adapter::types::unidirectional::AX` | Stellt das Gültigkeitssignal (BOOL) und ein Ereignis bereit. |
+| Adapter | Richtung         | Typ                                    | Beschreibung                                                 |
+| ------- | ---------------- | -------------------------------------- | ------------------------------------------------------------ |
+| `IN`    | Socket (Eingang) | `adapter::types::unidirectional::AULI` | Nimmt den ULINT-Wert und das zugehörige Ereignis entgegen.   |
+| `OUT`   | Plug (Ausgang)   | `adapter::types::unidirectional::AULI` | Gibt den verarbeiteten ULINT-Wert und ein Ereignis aus.      |
+| `VALID` | Plug (Ausgang)   | `adapter::types::unidirectional::AX`   | Stellt das Gültigkeitssignal (BOOL) und ein Ereignis bereit. |
 
 ## Funktionsweise
 

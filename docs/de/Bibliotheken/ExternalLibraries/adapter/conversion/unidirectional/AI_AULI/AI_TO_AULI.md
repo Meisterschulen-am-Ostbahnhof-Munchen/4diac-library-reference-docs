@@ -18,33 +18,33 @@ Der Baustein besitzt keine klassischen Ereignis- oder Datenein-/ausgänge, sonde
 
 Der Ereigniseingang wird über den Socket-Adapter `AI_IN` bereitgestellt.
 
-| Name   | Adapter | Kommentar                           |
-|--------|---------|-------------------------------------|
-| `E1`   | `AI_IN` | Ereignis, das die Konvertierung auslöst |
+| Name | Adapter | Kommentar                               |
+| ---- | ------- | --------------------------------------- |
+| `E1` | `AI_IN` | Ereignis, das die Konvertierung auslöst |
 
 ### **Ereignis-Ausgänge**
 
 Der Ereignisausgang wird über den Plug-Adapter `AULI_OUT` bereitgestellt.
 
-| Name   | Adapter   | Kommentar                              |
-|--------|-----------|----------------------------------------|
-| `E1`   | `AULI_OUT`| Ereignis nach erfolgreicher Konvertierung |
+| Name | Adapter    | Kommentar                                 |
+| ---- | ---------- | ----------------------------------------- |
+| `E1` | `AULI_OUT` | Ereignis nach erfolgreicher Konvertierung |
 
 ### **Daten-Eingänge**
 
 Der Dateneingang wird über den Socket-Adapter `AI_IN` bereitgestellt.
 
-| Name   | Adapter | Typ  | Kommentar               |
-|--------|---------|------|-------------------------|
-| `D1`   | `AI_IN` | `INT`| Eingangsdaten (16‑Bit Integer) |
+| Name | Adapter | Typ   | Kommentar                      |
+| ---- | ------- | ----- | ------------------------------ |
+| `D1` | `AI_IN` | `INT` | Eingangsdaten (16‑Bit Integer) |
 
 ### **Daten-Ausgänge**
 
 Der Datenausgang wird über den Plug-Adapter `AULI_OUT` bereitgestellt.
 
-| Name   | Adapter   | Typ    | Kommentar                |
-|--------|-----------|--------|--------------------------|
-| `D1`   | `AULI_OUT`| `ULINT`| Ausgangsdaten (64‑Bit vorzeichenloser Integer) |
+| Name | Adapter    | Typ     | Kommentar                                      |
+| ---- | ---------- | ------- | ---------------------------------------------- |
+| `D1` | `AULI_OUT` | `ULINT` | Ausgangsdaten (64‑Bit vorzeichenloser Integer) |
 
 ### **Adapter**
 
@@ -94,11 +94,11 @@ Da der Baustein als reines Composite ohne eigene zustandsbehaftete Logik realisi
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein          | Quelltyp | Zieltyp | Adapterbasiert | Eigene Zustände |
-|-------------------|----------|---------|----------------|-----------------|
-| `F_INT_TO_ULINT`  | `INT`    | `ULINT` | Nein (reine FB) | Nein            |
-| `AI_TO_AULI`      | `AI`     | `AULI`  | Ja (Adapter)   | Nein            |
-| `ANY_TO_ANY`      | variabel | variabel| möglich        | je nach Implementierung |
+| Baustein         | Quelltyp | Zieltyp  | Adapterbasiert  | Eigene Zustände         |
+| ---------------- | -------- | -------- | --------------- | ----------------------- |
+| `F_INT_TO_ULINT` | `INT`    | `ULINT`  | Nein (reine FB) | Nein                    |
+| `AI_TO_AULI`     | `AI`     | `AULI`   | Ja (Adapter)    | Nein                    |
+| `ANY_TO_ANY`     | variabel | variabel | möglich         | je nach Implementierung |
 
 Während der Basisbaustein `F_INT_TO_ULINT` nur die Datenkonvertierung vornimmt, kapselt `AI_TO_AULI` diese zusammen mit der Ereignissteuerung in einer adapterkompatiblen Schnittstelle. Dadurch wird die Wiederverwendbarkeit in adapterbasierten Systemen erhöht.
 

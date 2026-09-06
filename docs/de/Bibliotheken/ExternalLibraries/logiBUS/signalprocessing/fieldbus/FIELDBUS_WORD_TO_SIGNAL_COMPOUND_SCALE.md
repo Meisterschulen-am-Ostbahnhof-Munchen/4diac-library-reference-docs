@@ -22,19 +22,19 @@ Dieser Funktionsbaustein bildet einen 16‑Bit‑Wort‑Eingang auf einen skalie
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-| ------ | ----- | ------------- | -------------- |
-| `IN` | WORD | `NOT_AVAILABLE_WM` | Das zu verarbeitende 16‑Bit‑Feldbussignal. |
-| `SCALE_HIGH` | REAL | 0.256 | Skalierungsfaktor für das obere Byte (High‑Byte). |
-| `SCALE_LOW` | REAL | 0.001 | Skalierungsfaktor für das untere Byte (Low‑Byte). |
-| `OFFSET` | DINT | 0 | Ganzzahliger Offset, der nach der Skalierung addiert wird. |
+| Name         | Typ  | Initialwert        | Beschreibung                                               |
+| ------------ | ---- | ------------------ | ---------------------------------------------------------- |
+| `IN`         | WORD | `NOT_AVAILABLE_WM` | Das zu verarbeitende 16‑Bit‑Feldbussignal.                 |
+| `SCALE_HIGH` | REAL | 0.256              | Skalierungsfaktor für das obere Byte (High‑Byte).          |
+| `SCALE_LOW`  | REAL | 0.001              | Skalierungsfaktor für das untere Byte (Low‑Byte).          |
+| `OFFSET`     | DINT | 0                  | Ganzzahliger Offset, der nach der Skalierung addiert wird. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| `OUT` | REAL | 0.0 | Berechneter skalarer Ausgangswert. |
-| `VALID` | BOOL | FALSE | Zeigt an, ob das Eingangssignal gültig ist (`TRUE`) oder nicht (`FALSE`). |
+| Name    | Typ  | Initialwert | Beschreibung                                                              |
+| ------- | ---- | ----------- | ------------------------------------------------------------------------- |
+| `OUT`   | REAL | 0.0         | Berechneter skalarer Ausgangswert.                                        |
+| `VALID` | BOOL | FALSE       | Zeigt an, ob das Eingangssignal gültig ist (`TRUE`) oder nicht (`FALSE`). |
 
 ### **Adapter**
 
@@ -90,10 +90,10 @@ END_IF;
 
 Der Baustein verfügt über zwei einfache Zustände, die direkt den Ereignissen entsprechen:
 
-| Zustand | Ausgelöst durch | Ausgeführte Aktion | Ausgangsereignis |
-|---------|----------------|--------------------|------------------|
-| `INIT`  | Ereignis `INIT` | Algorithmus `INIT` (leer) | `INITO` |
-| `REQ`   | Ereignis `REQ`  | Algorithmus `REQ` (Skalierung) | `CNF` |
+| Zustand | Ausgelöst durch | Ausgeführte Aktion             | Ausgangsereignis |
+| ------- | --------------- | ------------------------------ | ---------------- |
+| `INIT`  | Ereignis `INIT` | Algorithmus `INIT` (leer)      | `INITO`          |
+| `REQ`   | Ereignis `REQ`  | Algorithmus `REQ` (Skalierung) | `CNF`            |
 
 Weitere Zustände oder Verzweigungen sind nicht vorhanden.
 

@@ -12,34 +12,34 @@ Der Funktionsblock `AS_TO_AUI` ist ein zusammengesetzter Baustein (Composite FB)
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `E1` (über `AS_IN`) | EVENT | Startet die Konvertierung des anliegenden SINT-Werts. |
+| Bezeichnung         | Datentyp | Beschreibung                                          |
+| ------------------- | -------- | ----------------------------------------------------- |
+| `E1` (über `AS_IN`) | EVENT    | Startet die Konvertierung des anliegenden SINT-Werts. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `E1` (über `AUI_OUT`) | EVENT | Bestätigt die abgeschlossene Konvertierung und Ausgabe des UINT-Werts. |
+| Bezeichnung           | Datentyp | Beschreibung                                                           |
+| --------------------- | -------- | ---------------------------------------------------------------------- |
+| `E1` (über `AUI_OUT`) | EVENT    | Bestätigt die abgeschlossene Konvertierung und Ausgabe des UINT-Werts. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `D1` (über `AS_IN`) | SINT | Der zu konvertierende vorzeichenbehaftete 8‑Bit‑Wert. |
+| Bezeichnung         | Datentyp | Beschreibung                                          |
+| ------------------- | -------- | ----------------------------------------------------- |
+| `D1` (über `AS_IN`) | SINT     | Der zu konvertierende vorzeichenbehaftete 8‑Bit‑Wert. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `D1` (über `AUI_OUT`) | UINT | Der konvertierte vorzeichenlose 16‑Bit‑Wert. |
+| Bezeichnung           | Datentyp | Beschreibung                                 |
+| --------------------- | -------- | -------------------------------------------- |
+| `D1` (über `AUI_OUT`) | UINT     | Der konvertierte vorzeichenlose 16‑Bit‑Wert. |
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| `AS_IN` | `adapter::types::unidirectional::AS` | Socket (Eingang) | Stellt den SINT-Wert und das auslösende Ereignis bereit. |
-| `AUI_OUT` | `adapter::types::unidirectional::AUI` | Plug (Ausgang) | Gibt den konvertierten UINT-Wert und das Bestätigungsereignis aus. |
+| Bezeichnung | Typ                                   | Richtung         | Beschreibung                                                       |
+| ----------- | ------------------------------------- | ---------------- | ------------------------------------------------------------------ |
+| `AS_IN`     | `adapter::types::unidirectional::AS`  | Socket (Eingang) | Stellt den SINT-Wert und das auslösende Ereignis bereit.           |
+| `AUI_OUT`   | `adapter::types::unidirectional::AUI` | Plug (Ausgang)   | Gibt den konvertierten UINT-Wert und das Bestätigungsereignis aus. |
 
 ## Funktionsweise
 

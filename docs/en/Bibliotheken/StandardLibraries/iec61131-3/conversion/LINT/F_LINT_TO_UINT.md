@@ -9,7 +9,7 @@ The function block `F_LINT_TO_UINT` is used to convert a 64-bit integer value (`
 - **IN**: This input expects a value of type `LINT` (64-bit integer) to be converted.
 - **OUT**: This output returns the converted value of type `UINT` (16-bit unsigned integer).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

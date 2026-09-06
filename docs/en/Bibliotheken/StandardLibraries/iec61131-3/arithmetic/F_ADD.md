@@ -34,16 +34,19 @@ The **F_ADD** is a standards-compliant arithmetic function block according to IE
 
 - Triggered by the `REQ` event
 - Processes both input values simultaneously
+
 1. **Type Handling**:
 
 - Supports all ANY_MAGNITUDE types:
 - Numeric types (INT, DINT, REAL, LREAL)
 - Time types (TIME, LTIME)
 - Automatic type conversion
+
 1. **Computation**:
 
 - Executes IN1 + IN2
 - Maintains the highest input accuracy
+
 1. **Result Output**:
 
 - `CNF` event with computation result
@@ -58,12 +61,12 @@ The **F_ADD** is a standards-compliant arithmetic function block according to IE
 
 ## Supported Data Types
 
-| Category | Examples |
------------------ | -------------------------- |
-| Integers | INT, DINT, UINT, UDINT |
-| Floating Point | REAL, LREAL |
-| Time | TIME, LTIME |
-| Mixed | INT + REAL → REAL |
+| Category       | Examples               |
+| -------------- | ---------------------- |
+| Integers       | INT, DINT, UINT, UDINT |
+| Floating Point | REAL, LREAL            |
+| Time           | TIME, LTIME            |
+| Mixed          | INT + REAL → REAL      |
 
 ## Application Examples
 
@@ -74,11 +77,11 @@ The **F_ADD** is a standards-compliant arithmetic function block according to IE
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_ADD | F_SUB | F_MUL |
-| -------------- | --------- | --------- | --------- |
-| Operation | Addition | Subtraction | Multiplication |
-| Input Types | ANY_MAGNITUDE | ANY_MAGNITUDE | ANY_NUM |
-| Output Type | Equals Input Type | Equals | Equals |
+| Feature     | F_ADD             | F_SUB         | F_MUL          |
+| ----------- | ----------------- | ------------- | -------------- |
+| Operation   | Addition          | Subtraction   | Multiplication |
+| Input Types | ANY_MAGNITUDE     | ANY_MAGNITUDE | ANY_NUM        |
+| Output Type | Equals Input Type | Equals        | Equals         |
 
 ## Error Handling
 

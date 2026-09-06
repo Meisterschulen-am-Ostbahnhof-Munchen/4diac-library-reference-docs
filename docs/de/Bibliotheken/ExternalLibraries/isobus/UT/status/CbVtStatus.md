@@ -51,11 +51,11 @@ Der **CbVtStatus** ist ein standardisierter Callback-Baustein für Virtual-Termi
 
 ## Unterstützte Betriebsmodi
 
-| Modus         | Beschreibung                     |
-|---------------|----------------------------------|
-| Einzelgerät   | Standardbetrieb mit u8Instance=0 |
-| Multi-ECU     | Parallele Instanzen (1-255)      |
-| Diagnose      | STATUS-Meldungen für Service     |
+| Modus       | Beschreibung                     |
+| ----------- | -------------------------------- |
+| Einzelgerät | Standardbetrieb mit u8Instance=0 |
+| Multi-ECU   | Parallele Instanzen (1-255)      |
+| Diagnose    | STATUS-Meldungen für Service     |
 
 ## Anwendungsszenarien
 
@@ -66,11 +66,11 @@ Der **CbVtStatus** ist ein standardisierter Callback-Baustein für Virtual-Termi
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | CbVtStatus | VtPageManager | VtEventLogger |
-|---------------|------------|---------------|---------------|
-| Seitenwechsel | ✔          | ✔             | ✖             |
-| Multi-ECU     | ✔          | ✖             | ✖             |
-| STATUS-Rückmeldung | ✔     | ✖             | ✔             |
+| Feature            | CbVtStatus | VtPageManager | VtEventLogger |
+| ------------------ | ---------- | ------------- | ------------- |
+| Seitenwechsel      | ✔          | ✔             | ✖             |
+| Multi-ECU          | ✔          | ✖             | ✖             |
+| STATUS-Rückmeldung | ✔          | ✖             | ✔             |
 
 ## Fehlerbehandlung
 

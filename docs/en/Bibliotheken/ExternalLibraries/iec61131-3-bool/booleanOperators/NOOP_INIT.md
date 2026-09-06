@@ -12,29 +12,29 @@ The function block **NOOP_INIT** (No Operation with INIT) serves as a simple pas
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-----|------------|
-| INIT | EInit | Initialization Request |
-| REQ | Event | Normal Execution Request (connected to IN) |
+| Name | Type  | Comment                                    |
+| ---- | ----- | ------------------------------------------ |
+| INIT | EInit | Initialization Request                     |
+| REQ  | Event | Normal Execution Request (connected to IN) |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-| ------ | ----- | ----------- |
-| INITO | EInit | Initialization Acknowledgement |
-| CNF | Event | Execution Acknowledgement (connected to OUT) |
+| Name  | Type  | Comment                                      |
+| ----- | ----- | -------------------------------------------- |
+| INITO | EInit | Initialization Acknowledgement               |
+| CNF   | Event | Execution Acknowledgement (connected to OUT) |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| IN | BOOL | Input Signal |
+| Name | Type | Comment      |
+| ---- | ---- | ------------ |
+| IN   | BOOL | Input Signal |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| OUT | BOOL | Output Signal (corresponds to IN after one iteration) |
+| Name | Type | Comment                                               |
+| ---- | ---- | ----------------------------------------------------- |
+| OUT  | BOOL | Output Signal (corresponds to IN after one iteration) |
 
 ### **Adapters**
 
@@ -48,6 +48,7 @@ The function block processes incoming events as follows:
 
 - An **INITO** event is immediately triggered.
 - Simultaneously, the `F_MOVE` function block is triggered internally, which copies the value from `IN` to `OUT`. Upon completion of this copy operation, the **CNF** event is triggered.
+
 1. **REQ Event**:
 
 - The same `F_MOVE` function block is activated, which transfers `IN` to `OUT`. Upon completion, **CNF** is triggered.

@@ -28,10 +28,10 @@ Der FB besitzt keine direkten Daten-Ausgänge. Die konvertierten UDINT-Daten wer
 
 ### **Adapter**
 
-| Adaptertyp | Name      | Beschreibung                                          |
-|------------|-----------|-------------------------------------------------------|
-| Socket     | `AL_IN`   | LWORD-Adaptereingang (Typ: `adapter::types::unidirectional::AL`) |
-| Plug       | `AUDI_OUT`| UDINT-Adapterausgang (Typ: `adapter::types::unidirectional::AUDI`) |
+| Adaptertyp | Name       | Beschreibung                                                       |
+| ---------- | ---------- | ------------------------------------------------------------------ |
+| Socket     | `AL_IN`    | LWORD-Adaptereingang (Typ: `adapter::types::unidirectional::AL`)   |
+| Plug       | `AUDI_OUT` | UDINT-Adapterausgang (Typ: `adapter::types::unidirectional::AUDI`) |
 
 ## Funktionsweise
 

@@ -36,10 +36,10 @@ Data is passed through the **AB_OUT** adapter:
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| ----------- | ---------------------------------------- | ---------- | -------------- |
-| **AUS_IN** | `adapter::types::unidirectional::AUS` | Socket | Input adapter for USINT data and events. |
-| **AB_OUT** | `adapter::types::unidirectional::AB` | Plug | Output adapter for BYTE data and events. |
+| Name       | Type                                  | Direction | Description                              |
+| ---------- | ------------------------------------- | --------- | ---------------------------------------- |
+| **AUS_IN** | `adapter::types::unidirectional::AUS` | Socket    | Input adapter for USINT data and events. |
+| **AB_OUT** | `adapter::types::unidirectional::AB`  | Plug      | Output adapter for BYTE data and events. |
 
 ## Functionality
 

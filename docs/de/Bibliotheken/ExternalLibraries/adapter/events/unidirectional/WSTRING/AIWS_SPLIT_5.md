@@ -28,14 +28,14 @@ Keine Daten‑Ausgänge vorhanden. Die Ausgabe geschieht über die Plug‑Adapte
 
 ### **Adapter**
 
-| Typ | Bezeichnung | Richtung | Adapter‑Typ |
-| ----- | ------------- | ---------- | ------------- |
-| **Socket (Eingang)** | IN | Eingang | `adapter::types::unidirectional::AIWS` |
-| **Plug (Ausgang)** | OUT1 | Ausgang | `adapter::types::unidirectional::AIWS` |
-| **Plug (Ausgang)** | OUT2 | Ausgang | `adapter::types::unidirectional::AIWS` |
-| **Plug (Ausgang)** | OUT3 | Ausgang | `adapter::types::unidirectional::AIWS` |
-| **Plug (Ausgang)** | OUT4 | Ausgang | `adapter::types::unidirectional::AIWS` |
-| **Plug (Ausgang)** | OUT5 | Ausgang | `adapter::types::unidirectional::AIWS` |
+| Typ                  | Bezeichnung | Richtung | Adapter‑Typ                            |
+| -------------------- | ----------- | -------- | -------------------------------------- |
+| **Socket (Eingang)** | IN          | Eingang  | `adapter::types::unidirectional::AIWS` |
+| **Plug (Ausgang)**   | OUT1        | Ausgang  | `adapter::types::unidirectional::AIWS` |
+| **Plug (Ausgang)**   | OUT2        | Ausgang  | `adapter::types::unidirectional::AIWS` |
+| **Plug (Ausgang)**   | OUT3        | Ausgang  | `adapter::types::unidirectional::AIWS` |
+| **Plug (Ausgang)**   | OUT4        | Ausgang  | `adapter::types::unidirectional::AIWS` |
+| **Plug (Ausgang)**   | OUT5        | Ausgang  | `adapter::types::unidirectional::AIWS` |
 
 Der FB enthält einen einzelnen **Socket** (`IN`) und fünf **Plugs** (`OUT1` … `OUT5`), die alle vom gleichen, unidirektionalen **AIWS‑Adaptertyp** sind.
 
@@ -61,12 +61,12 @@ Der **AIWS_SPLIT_5** besitzt keine explizite Zustandsmaschine. Seine Funktionali
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Typ | Besonderheit |
-| ---------- | ----------------- | ----- | -------------- |
-| **AIWS_SPLIT_5** | 5 | AIWS‑Adapter | Generisch, keine Events/Daten |
-| AIWS_SPLIT_2 | 2 | AIWS‑Adapter | Gleiche Funktionsweise, minimale Verteilung |
-| AIWS_SPLIT_3 | 3 | AIWS‑Adapter | Mittlere Anzahl Ausgänge |
-| AIWS_SPLIT_4 | 4 | AIWS‑Adapter | Alternative zu **5** |
+| Baustein         | Anzahl Ausgänge | Typ          | Besonderheit                                |
+| ---------------- | --------------- | ------------ | ------------------------------------------- |
+| **AIWS_SPLIT_5** | 5               | AIWS‑Adapter | Generisch, keine Events/Daten               |
+| AIWS_SPLIT_2     | 2               | AIWS‑Adapter | Gleiche Funktionsweise, minimale Verteilung |
+| AIWS_SPLIT_3     | 3               | AIWS‑Adapter | Mittlere Anzahl Ausgänge                    |
+| AIWS_SPLIT_4     | 4               | AIWS‑Adapter | Alternative zu **5**                        |
 
 Alle Split‑Varianten basieren auf demselben Prinzip und unterscheiden sich lediglich in der Anzahl der Ausgangsadapter. Der **AIWS_SPLIT_5** deckt einen mittleren Verteilungsbedarf ab und ist besonders dann vorteilhaft, wenn genau fünf parallele Ausgänge benötigt werden.
 

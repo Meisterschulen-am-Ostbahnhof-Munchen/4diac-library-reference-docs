@@ -14,7 +14,7 @@ The **AIS_PUBLISH_1** function block is a composite function block that encapsul
 - **QO** (BOOL): Qualifier output, block execution status
 - **STATUS** (WSTRING): Status information as a Unicode string
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -28,9 +28,9 @@ The **AIS_PUBLISH_1** function block is a composite function block that encapsul
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AIS | Socket (Input) | STRING value to be published |
+| Adapter | Type                                | Direction      | Description                  |
+| ------- | ----------------------------------- | -------------- | ---------------------------- |
+| IN      | adapter::types::unidirectional::AIS | Socket (Input) | STRING value to be published |
 
 ## Functionality
 

@@ -20,10 +20,10 @@ Der Datentyp `AuxiliaryState_S` ist eine strukturierte Datenstruktur (Struct), d
 
 ### **Strukturierte Datenfelder**
 
-| Name | Datentyp | Initialwert | Kommentar |
-| :--- | :--- | :--- | :--- |
-| `value` | `USINT` (0...255) | 255 | Repräsentiert den Wert des Hilfseingangs. |
-| `bCyclic` | `BOOL` | `TRUE` | Steuert die zyklische Übertragung. Wenn auf `FALSE` gesetzt, wird die Nachricht nicht alle 200 ms wiederholt. |
+| Name      | Datentyp          | Initialwert | Kommentar                                                                                                     |
+| :-------- | :---------------- | :---------- | :------------------------------------------------------------------------------------------------------------ |
+| `value`   | `USINT` (0...255) | 255         | Repräsentiert den Wert des Hilfseingangs.                                                                     |
+| `bCyclic` | `BOOL`            | `TRUE`      | Steuert die zyklische Übertragung. Wenn auf `FALSE` gesetzt, wird die Nachricht nicht alle 200 ms wiederholt. |
 
 ## Funktionsweise
 

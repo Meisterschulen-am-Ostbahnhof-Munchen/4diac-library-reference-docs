@@ -38,8 +38,7 @@ This function block has no adapter interfaces.
 When triggered by the `REQ` event, the block evaluates the value at the input `I`. The processing is performed via a `CASE` instruction:
 
 - If `I` has the value `BOOL#TRUE`, the output `QB` is set to the constant `quarter::COMMAND_ENABLE`.
-
-# ** ... * In all other cases (i.e., by default with `FALSE`), the output `QB` is set to the constant `quarter::COMMAND_DISABLE`.
+- In all other cases (i.e., by default with `FALSE`), the output `QB` is set to the constant `quarter::COMMAND_DISABLE`.
 
 Immediately after the assignment, the `CNF` event is output along with the new value of `QB`.
 

@@ -12,29 +12,29 @@ Der Funktionsblock **GET_BYTE** dient dem Auslesen einer `BYTE`-Variablen, die �
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                     | Mit Variablen |
-|------|-------|-------------------------------|---------------|
-| REQ  | Event | Normaler Ausführungsanstoß     | IN            |
+| Name | Typ   | Kommentar                  | Mit Variablen |
+| ---- | ----- | -------------------------- | ------------- |
+| REQ  | Event | Normaler Ausführungsanstoß | IN            |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                    | Mit Variablen       |
-|------|-------|------------------------------|---------------------|
-| CNF  | Event | Bestätigung der Ausführung   | OUT, IN            |
+| Name | Typ   | Kommentar                  | Mit Variablen |
+| ---- | ----- | -------------------------- | ------------- |
+| CNF  | Event | Bestätigung der Ausführung | OUT, IN       |
 
 ### **Daten-Eingänge**
 
 Der Baustein besitzt keine klassischen Dateneingänge, sondern nutzt einen **InOut-Parameter**, der gleichzeitig als Ein- und Ausgang genutzt werden kann:
 
-| Name | Typ    | Initialwert | Kommentar                          |
-|------|--------|-------------|------------------------------------|
-| IN   | BYTE   | 0           | Quellvariable (lesend über InOut)  |
+| Name | Typ  | Initialwert | Kommentar                         |
+| ---- | ---- | ----------- | --------------------------------- |
+| IN   | BYTE | 0           | Quellvariable (lesend über InOut) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ    | Initialwert | Kommentar                              |
-|------|--------|-------------|----------------------------------------|
-| OUT  | BYTE   | 0           | Gepufferter Ausgabewert                 |
+| Name | Typ  | Initialwert | Kommentar               |
+| ---- | ---- | ----------- | ----------------------- |
+| OUT  | BYTE | 0           | Gepufferter Ausgabewert |
 
 ### **Adapter**
 
@@ -60,9 +60,9 @@ Da `IN` als InOut-Parameter deklariert ist, muss die aufrufende Applikation eine
 
 Der Baustein verfügt über genau einen internen Zustand:
 
-| Zustand | Beschreibung                                             | Ausgangsereignis |
-|---------|----------------------------------------------------------|------------------|
-| REQ     | Kein Warten; sofortiger Ablauf der Leseoperation         | CNF              |
+| Zustand | Beschreibung                                     | Ausgangsereignis |
+| ------- | ------------------------------------------------ | ---------------- |
+| REQ     | Kein Warten; sofortiger Ablauf der Leseoperation | CNF              |
 
 Es gibt keine Wartezustände oder Verzweigungen.
 
@@ -74,11 +74,11 @@ Es gibt keine Wartezustände oder Verzweigungen.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein   | Beschreibung                                           | Unterschied zu GET_BYTE                                      |
-|------------|--------------------------------------------------------|--------------------------------------------------------------|
-| GET_VALUE  | Liest einen Wert aus einem InOut-Parameter aus (typ‑unspezifisch) | GET_BYTE ist auf den Datentyp `BYTE` spezialisiert und daher typsicherer. |
-| MOVE       | Kopiert einen Wert von einem Eingang zu einem Ausgang  | MOVE benötigt separate Eingänge und gibt keinen Puffer – GET_BYTE nutzt InOut. |
-| READ_BYTE  | Liest ein Byte über eine Hardware-Adresse              | GET_BYTE arbeitet auf der Variablenebene, nicht auf Hardware-Adressen. |
+| Baustein  | Beschreibung                                                      | Unterschied zu GET_BYTE                                                        |
+| --------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| GET_VALUE | Liest einen Wert aus einem InOut-Parameter aus (typ‑unspezifisch) | GET_BYTE ist auf den Datentyp `BYTE` spezialisiert und daher typsicherer.      |
+| MOVE      | Kopiert einen Wert von einem Eingang zu einem Ausgang             | MOVE benötigt separate Eingänge und gibt keinen Puffer – GET_BYTE nutzt InOut. |
+| READ_BYTE | Liest ein Byte über eine Hardware-Adresse                         | GET_BYTE arbeitet auf der Variablenebene, nicht auf Hardware-Adressen.         |
 
 ## Fazit
 

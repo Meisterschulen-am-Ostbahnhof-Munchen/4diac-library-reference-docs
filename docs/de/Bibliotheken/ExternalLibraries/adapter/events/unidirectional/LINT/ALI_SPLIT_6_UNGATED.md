@@ -30,15 +30,15 @@ Der Funktionsblock ALI_SPLIT_6_UNGATED dient dazu, ein eingehendes unidirektiona
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::ALI` | `IN` | Socket (Eingang) | Ein ALI-Adapter, dessen Signal auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::ALI` | `OUT1` | Plug (Ausgang) | Erster Ausgang mit dem Signal des Eingangs. |
-| `adapter::types::unidirectional::ALI` | `OUT2` | Plug (Ausgang) | Zweiter Ausgang mit dem Signal des Eingangs. |
-| `adapter::types::unidirectional::ALI` | `OUT3` | Plug (Ausgang) | Dritter Ausgang mit dem Signal des Eingangs. |
-| `adapter::types::unidirectional::ALI` | `OUT4` | Plug (Ausgang) | Vierter Ausgang mit dem Signal des Eingangs. |
-| `adapter::types::unidirectional::ALI` | `OUT5` | Plug (Ausgang) | Fünfter Ausgang mit dem Signal des Eingangs. |
-| `adapter::types::unidirectional::ALI` | `OUT6` | Plug (Ausgang) | Sechster Ausgang mit dem Signal des Eingangs. |
+| Typ                                   | Name   | Richtung         | Beschreibung                                                    |
+| ------------------------------------- | ------ | ---------------- | --------------------------------------------------------------- |
+| `adapter::types::unidirectional::ALI` | `IN`   | Socket (Eingang) | Ein ALI-Adapter, dessen Signal auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::ALI` | `OUT1` | Plug (Ausgang)   | Erster Ausgang mit dem Signal des Eingangs.                     |
+| `adapter::types::unidirectional::ALI` | `OUT2` | Plug (Ausgang)   | Zweiter Ausgang mit dem Signal des Eingangs.                    |
+| `adapter::types::unidirectional::ALI` | `OUT3` | Plug (Ausgang)   | Dritter Ausgang mit dem Signal des Eingangs.                    |
+| `adapter::types::unidirectional::ALI` | `OUT4` | Plug (Ausgang)   | Vierter Ausgang mit dem Signal des Eingangs.                    |
+| `adapter::types::unidirectional::ALI` | `OUT5` | Plug (Ausgang)   | Fünfter Ausgang mit dem Signal des Eingangs.                    |
+| `adapter::types::unidirectional::ALI` | `OUT6` | Plug (Ausgang)   | Sechster Ausgang mit dem Signal des Eingangs.                   |
 
 ## Funktionsweise
 
@@ -62,12 +62,12 @@ Der FB besitzt keine eigenen Zustände oder Verhaltensmodi, da er nur eine struk
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ausgänge | Besonderheit |
-| ---------- | ---------- | -------------- |
-| ALI_SPLIT_2 | 2 | Zweifachverteilung |
-| ALI_SPLIT_4 | 4 | Vierfachverteilung |
-| **ALI_SPLIT_6_UNGATED** | **6** | **Sechsfachverteilung, generisch** |
-| ALI_SPLIT_8 | 8 | Achtfachverteilung |
+| Baustein                | Ausgänge | Besonderheit                       |
+| ----------------------- | -------- | ---------------------------------- |
+| ALI_SPLIT_2             | 2        | Zweifachverteilung                 |
+| ALI_SPLIT_4             | 4        | Vierfachverteilung                 |
+| **ALI_SPLIT_6_UNGATED** | **6**    | **Sechsfachverteilung, generisch** |
+| ALI_SPLIT_8             | 8        | Achtfachverteilung                 |
 
 Der ALI_SPLIT_6_UNGATED unterscheidet sich von anderen Split-Varianten lediglich durch die Anzahl der Ausgänge. Alle Bausteine dieser Familie arbeiten nach dem gleichen passiven Verteilerprinzip. Der hier beschriebene FB ist als generischer Baustein ausgeführt, während andere Varianten möglicherweise als einfache FB-Typen ohne Generizität implementiert sind.
 

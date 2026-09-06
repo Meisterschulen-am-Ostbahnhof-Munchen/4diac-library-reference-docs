@@ -31,9 +31,9 @@ The function block **AI_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AI | Plug (Output) | Buffered received INT value |
+| Adapter | Type                               | Direction     | Description                 |
+| ------- | ---------------------------------- | ------------- | --------------------------- |
+| OUT     | adapter::types::unidirectional::AI | Plug (Output) | Buffered received INT value |
 
 ## Functionality
 

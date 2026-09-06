@@ -30,10 +30,10 @@ Der Baustein besitzt **keine direkten Ereignis- oder Datenschnittstellen** auf o
 
 ### **Adapter**
 
-| Name   | Typ                                    | Richtung | Beschreibung                     |
-|--------|----------------------------------------|----------|----------------------------------|
-| AS_IN  | adapter::types::unidirectional::AS     | Socket   | SINT-Adapter (Eingang)           |
-| AL_OUT | adapter::types::unidirectional::AL     | Plug     | LWORD-Adapter (Ausgang)          |
+| Name   | Typ                                | Richtung | Beschreibung            |
+| ------ | ---------------------------------- | -------- | ----------------------- |
+| AS_IN  | adapter::types::unidirectional::AS | Socket   | SINT-Adapter (Eingang)  |
+| AL_OUT | adapter::types::unidirectional::AL | Plug     | LWORD-Adapter (Ausgang) |
 
 ## Funktionsweise
 

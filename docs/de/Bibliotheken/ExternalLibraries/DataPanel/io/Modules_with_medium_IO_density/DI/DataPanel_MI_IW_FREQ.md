@@ -14,37 +14,37 @@ Der Funktionsblock **DataPanel_MI_IW_FREQ** ist ein Service-Interface-Funktionsb
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit |
-|----------|--------------|-----|
-| **INIT** | Service-Initialisierung | `QI`, `PARAMS`, `u8SAMember`, `Input`, `FreqDelta`, `TimeDelta` |
-| **REQ** | Service-Anforderung (aktuelle Frequenz auslesen) | `QI` |
+| Ereignis | Beschreibung                                     | Mit                                                             |
+| -------- | ------------------------------------------------ | --------------------------------------------------------------- |
+| **INIT** | Service-Initialisierung                          | `QI`, `PARAMS`, `u8SAMember`, `Input`, `FreqDelta`, `TimeDelta` |
+| **REQ**  | Service-Anforderung (aktuelle Frequenz auslesen) | `QI`                                                            |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit |
-| ---------- | -------------- | ----- |
-| **INITO** | Bestätigung der Initialisierung | `QO`, `STATUS` |
-| **CNF** | Bestätigung einer angeforderten Abfrage | `QO`, `STATUS`, `IN` |
-| **IND** | Asynchrone Indikation (Frequenzänderung oder Zeitablauf) | `QO`, `STATUS`, `IN` |
+| Ereignis  | Beschreibung                                             | Mit                  |
+| --------- | -------------------------------------------------------- | -------------------- |
+| **INITO** | Bestätigung der Initialisierung                          | `QO`, `STATUS`       |
+| **CNF**   | Bestätigung einer angeforderten Abfrage                  | `QO`, `STATUS`, `IN` |
+| **IND**   | Asynchrone Indikation (Frequenzänderung oder Zeitablauf) | `QO`, `STATUS`, `IN` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Anfangswert | Beschreibung |
-| ------ | ----- | ------------- | -------------- |
-| `QI` | BOOL | – | Ereignis-Eingangsqualifizierer (Steuert die Verarbeitung) |
-| `PARAMS` | STRING | – | Service-Parameter (gerätespezifische Konfiguration) |
-| `u8SAMember` | USINT | `MI::MI_00` | Knotenadresse (SA) des Datensammelmoduls (Wertebereich 224…239) |
-| `Input` | `DataPanel::io::MI::DI::DataPanel_MI_DI_S` | `Invalid` | Identifiziert den physikalischen Eingang (muss `7A` oder `8A` sein) |
-| `FreqDelta` | WORD | – | Schwellwert der Frequenzänderung [Hz], der eine `IND` auslöst |
-| `TimeDelta` | DWORD | – | Zeitintervall [ms], nach dem eine `IND` gesendet wird (auch ohne Änderung) |
+| Name         | Typ                                        | Anfangswert | Beschreibung                                                               |
+| ------------ | ------------------------------------------ | ----------- | -------------------------------------------------------------------------- |
+| `QI`         | BOOL                                       | –           | Ereignis-Eingangsqualifizierer (Steuert die Verarbeitung)                  |
+| `PARAMS`     | STRING                                     | –           | Service-Parameter (gerätespezifische Konfiguration)                        |
+| `u8SAMember` | USINT                                      | `MI::MI_00` | Knotenadresse (SA) des Datensammelmoduls (Wertebereich 224…239)            |
+| `Input`      | `DataPanel::io::MI::DI::DataPanel_MI_DI_S` | `Invalid`   | Identifiziert den physikalischen Eingang (muss `7A` oder `8A` sein)        |
+| `FreqDelta`  | WORD                                       | –           | Schwellwert der Frequenzänderung [Hz], der eine `IND` auslöst              |
+| `TimeDelta`  | DWORD                                      | –           | Zeitintervall [ms], nach dem eine `IND` gesendet wird (auch ohne Änderung) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| `QO` | BOOL | Ereignis-Ausgangsqualifizierer (zeigt erfolgreiche Ausführung an) |
-| `STATUS` | STRING | Servicestatus (z. B. Fehlermeldungen oder Bestätigungstexte) |
-| `IN` | WORD | Aktuelle Frequenz in Hz |
+| Name     | Typ    | Beschreibung                                                      |
+| -------- | ------ | ----------------------------------------------------------------- |
+| `QO`     | BOOL   | Ereignis-Ausgangsqualifizierer (zeigt erfolgreiche Ausführung an) |
+| `STATUS` | STRING | Servicestatus (z. B. Fehlermeldungen oder Bestätigungstexte)      |
+| `IN`     | WORD   | Aktuelle Frequenz in Hz                                           |
 
 ### **Adapter**
 
@@ -76,11 +76,11 @@ Die Ereignisse `INIT` und `REQ` werden nur ausgeführt, wenn der zugehörige Qua
 
 Der FB durchläuft intern folgende logische Zustände:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **IDLE** | Warten auf `INIT` – keine Verbindung |
-| **INIT** | Verbindung zum Eingang aufbauen und Parameter anwenden |
-| **RUN** | Betriebsbereit – wartet auf `REQ` oder sendet `IND` bei Änderungen/Zeitablauf |
+| Zustand   | Beschreibung                                                                                  |
+| --------- | --------------------------------------------------------------------------------------------- |
+| **IDLE**  | Warten auf `INIT` – keine Verbindung                                                          |
+| **INIT**  | Verbindung zum Eingang aufbauen und Parameter anwenden                                        |
+| **RUN**   | Betriebsbereit – wartet auf `REQ` oder sendet `IND` bei Änderungen/Zeitablauf                 |
 | **ERROR** | Fehlerzustand (z. B. falscher `Input`, Kommunikationsfehler) – `STATUS` enthält Fehlermeldung |
 
 Ein Wechsel in den Fehlerzustand erfolgt, wenn die Initialisierung fehlschlägt. Aus dem Fehlerzustand kann nur durch erneutes `INIT` zurückgekehrt werden.
@@ -93,11 +93,11 @@ Ein Wechsel in den Fehlerzustand erfolgt, wenn die Initialisierung fehlschlägt.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Funktionsblock | Typ | Besonderheit |
-| ---------------- | ----- | -------------- |
-| `DataPanel_MI_IW_FREQ` | Frequenzeingang (SIFB) | Ereignisgesteuert, asynchrone IND, parametrierbare Schwell- und Zeitwerte |
-| `DataPanel_MI_DI` | Digitaleingang (SIFB) | Nur binäre Zustände, keine frequenzabhängigen Auslöser |
-| Generischer `SIFB` mit INIT/REQ/IND | Allgemein | Keine eingebauten Frequenzfunktionen, muss selbst entwickelt werden |
+| Funktionsblock                      | Typ                    | Besonderheit                                                              |
+| ----------------------------------- | ---------------------- | ------------------------------------------------------------------------- |
+| `DataPanel_MI_IW_FREQ`              | Frequenzeingang (SIFB) | Ereignisgesteuert, asynchrone IND, parametrierbare Schwell- und Zeitwerte |
+| `DataPanel_MI_DI`                   | Digitaleingang (SIFB)  | Nur binäre Zustände, keine frequenzabhängigen Auslöser                    |
+| Generischer `SIFB` mit INIT/REQ/IND | Allgemein              | Keine eingebauten Frequenzfunktionen, muss selbst entwickelt werden       |
 
 Der **DataPanel_MI_IW_FREQ** ist speziell für die Verarbeitung von Frequenzsignalen optimiert, während andere Bausteine entweder nur diskrete Zustände oder generische Schnittstellen bereitstellen.
 

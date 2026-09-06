@@ -31,9 +31,9 @@ The function block **AIWS_SUBSCRIBE_1** is a composite function block that encap
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AIWS | Plug (Output) | Buffered received WSTRING value |
+| Adapter | Type                                 | Direction     | Description                     |
+| ------- | ------------------------------------ | ------------- | ------------------------------- |
+| OUT     | adapter::types::unidirectional::AIWS | Plug (Output) | Buffered received WSTRING value |
 
 ## Functionality
 

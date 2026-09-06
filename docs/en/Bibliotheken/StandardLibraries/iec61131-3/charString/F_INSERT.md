@@ -11,7 +11,7 @@ The function block `F_INSERT` is used to manipulate character strings. It insert
 - `P` (`ANY_INT`): The position in `IN1` where `IN2` is to be inserted.
 - `OUT` (`ANY_STRING`): The resulting string after the insertion operation.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

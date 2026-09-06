@@ -72,11 +72,11 @@ Der **F_MUL** ist ein standardkonformer Funktionsbaustein zur Multiplikation num
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_MUL  | F_ADD  | F_DIV  |
-|---------------|--------|--------|--------|
-| Operation     | Multiplikation | Addition | Division |
-| Eingänge      | 2      | 2      | 2      |
-| Typunterstützung | ANY_NUM | ANY_NUM | ANY_NUM |
+| Feature          | F_MUL          | F_ADD    | F_DIV    |
+| ---------------- | -------------- | -------- | -------- |
+| Operation        | Multiplikation | Addition | Division |
+| Eingänge         | 2              | 2        | 2        |
+| Typunterstützung | ANY_NUM        | ANY_NUM  | ANY_NUM  |
 
 ## 🛠️ Zugehörige Übungen
 

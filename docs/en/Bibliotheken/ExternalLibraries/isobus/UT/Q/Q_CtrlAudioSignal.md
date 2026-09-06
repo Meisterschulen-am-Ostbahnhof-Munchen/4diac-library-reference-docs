@@ -45,11 +45,13 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 
 - `INIT` without parameters
 - `INITO` confirmed Operational Readiness
+
 1. **Audio Control**:
 
 - Trigger `REQ` with signal parameters
 - Generates tone with a configurable pattern
 - `CNF` returns result and previous values
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -64,20 +66,20 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 
 ## Standard Parameter Ranges
 
-| Parameter | Range | Typical Value |
------------------ | ------------ | ---------------- |
-| Frequency | 0-65535 Hz | 2000 Hz |
-| Duty Cycle | 0-65535 ms | 200 ms |
-| Shutdown time | 0-65535 ms | 100 ms |
-| Repetitions | 1-255 | 3 |
+| Parameter     | Range      | Typical Value |
+| ------------- | ---------- | ------------- |
+| Frequency     | 0-65535 Hz | 2000 Hz       |
+| Duty Cycle    | 0-65535 ms | 200 ms        |
+| Shutdown time | 0-65535 ms | 100 ms        |
+| Repetitions   | 1-255      | 3             |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Invalid parameter values |
-| -8 | VT_E_NOACT | VT in incorrect state |
+| Code | Constant            | Meaning                     |
+| ---- | ------------------- | --------------------------- |
+| 0    | VT_E_NO_ERR         | Success                     |
+| -6   | VT_E_OVERFLOW       | Invalid parameter values    |
+| -8   | VT_E_NOACT          | VT in incorrect state       |
 | -128 | VT_E_HANDLE_INVALID | Invalid audio configuration |
 
 ## Application Scenarios
@@ -89,11 +91,11 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 
 ## ⚖️ Comparison with similar modules
 
-| Feature | Q_CtrlAudioSignal | VtSoundManager | VtAudioAlert |
-| --------------- | ------------------- | ---------------- | -------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Parameterization | Full | Partial | Simple |
-| Frequency Control | Yes | No | No |
+| Feature           | Q_CtrlAudioSignal | VtSoundManager | VtAudioAlert |
+| ----------------- | ----------------- | -------------- | ------------ |
+| ISO Standard      | ✔                 | ✖              | ✖            |
+| Parameterization  | Full              | Partial        | Simple       |
+| Frequency Control | Yes               | No             | No           |
 
 ## 🛠️ Related Exercises
 

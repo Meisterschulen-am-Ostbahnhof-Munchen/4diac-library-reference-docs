@@ -34,6 +34,7 @@ The **E_SELECT** is a basic function block according to IEC 61499 (Annex A) that
 
 - Upon input of EI0 or EI1, the G-value is evaluated.
 - Only the event matching the G-value is passed on.
+
 1. **State Machine** (ECC):
 
 - **START**: Wait state
@@ -42,6 +43,7 @@ The **E_SELECT** is a basic function block according to IEC 61499 (Annex A) that
 - EI0 at G=0 → EO
 - EI1 at G=1 → EO
 - Always returns to START
+
 1. **Execution Logic**:
 
 - Deterministic event selection
@@ -64,11 +66,11 @@ The **E_SELECT** is a basic function block according to IEC 61499 (Annex A) that
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | E_SELECT | E_SWITCH | E_MERGE |
-| --------------- | ---------- | ---------- | ---------- |
-| Selection Criterion | Boolean (`G`) | Boolean (`G`) | None |
-| Direction | 2:1 (Multiplexer) | 1:2 (Demultiplexer) | n:1 (OR Gate) |
-| State Model | BasicFB | BasicFB | BasicFB/Generic |
+| Feature             | E_SELECT          | E_SWITCH            | E_MERGE         |
+| ------------------- | ----------------- | ------------------- | --------------- |
+| Selection Criterion | Boolean (`G`)     | Boolean (`G`)       | None            |
+| Direction           | 2:1 (Multiplexer) | 1:2 (Demultiplexer) | n:1 (OR Gate)   |
+| State Model         | BasicFB           | BasicFB             | BasicFB/Generic |
 
 ## 🛠️ Related Exercises
 

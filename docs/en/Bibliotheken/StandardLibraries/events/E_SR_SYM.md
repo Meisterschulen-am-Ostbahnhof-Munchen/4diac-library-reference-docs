@@ -37,11 +37,11 @@ Identical to [E_RS_SYM](E_RS_SYM.md): the ECC has the states `START`, `SET`, and
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
+| State | Meaning                                           |
+| ----- | ------------------------------------------------- |
 | START | Initial state, waits symmetrically for `S` or `R` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| SET   | `Q = TRUE`                                        |
+| RESET | `Q = FALSE`                                       |
 
 ## Application Scenarios
 

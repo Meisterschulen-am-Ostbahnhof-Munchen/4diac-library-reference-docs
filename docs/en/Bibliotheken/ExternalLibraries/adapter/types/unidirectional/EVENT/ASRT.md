@@ -8,8 +8,8 @@ unidirectional adapter interface for 3 events
 
 ### Events
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| SET | Set / Switch on | |
-| RESET | Reset / Switch off | |
-| TOGGLE | Toggle / Switch output | |
+| Name   | Comment                | With |
+| :----- | :--------------------- | :--- |
+| SET    | Set / Switch on        |      |
+| RESET  | Reset / Switch off     |      |
+| TOGGLE | Toggle / Switch output |      |

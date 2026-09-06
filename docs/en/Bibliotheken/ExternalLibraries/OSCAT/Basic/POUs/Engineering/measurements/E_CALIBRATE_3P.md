@@ -54,11 +54,11 @@ Each of these four states returns immediately to `START`, from which all four ev
 
 **Example** (joystick with center drift, raw range `0..1000`, desired output range `-100..0..100`):
 
-| Step | Action | Result |
-| --- | --- | --- |
-| 1 | Move joystick to **minimum**, fire `EI_MIN` | `X_MIN = 50` (drift from ideal `0`) |
-| 2 | Move joystick to **center**, fire `EI_MID` | `X_MID = 520` (drift from ideal `500`) |
-| 3 | Move joystick to **maximum**, fire `EI_MAX` | `X_MAX = 980` (drift from ideal `1000`) |
+| Step | Action                                      | Result                                  |
+| ---- | ------------------------------------------- | --------------------------------------- |
+| 1    | Move joystick to **minimum**, fire `EI_MIN` | `X_MIN = 50` (drift from ideal `0`)     |
+| 2    | Move joystick to **center**, fire `EI_MID`  | `X_MID = 520` (drift from ideal `500`)  |
+| 3    | Move joystick to **maximum**, fire `EI_MAX` | `X_MAX = 980` (drift from ideal `1000`) |
 
 Result: `Y` is interpolated and clipped between `MIN_REF=-100`, `MID_REF=0` and `MAX_REF=100`.
 

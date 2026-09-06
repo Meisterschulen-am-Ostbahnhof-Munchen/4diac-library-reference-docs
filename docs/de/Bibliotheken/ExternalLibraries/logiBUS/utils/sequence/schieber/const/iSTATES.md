@@ -34,13 +34,13 @@ Keine.
 
 Der Baustein **iSTATES** stellt fünf symbolische Konstanten bereit, die in der gesamten Applikation verwendet werden können. Jede Konstante repräsentiert einen diskreten Zustand eines Schiebers oder ähnlichen Aktors. Die Werte sind als `USINT` (unsigned short integer) definiert und wie folgt belegt:
 
-| Konstante  | Wert (USINT) | Bedeutung        |
-|------------|--------------|------------------|
-| Unknown    | 0            | Unbekannter Zustand |
-| Closed     | 1            | Geschlossen      |
-| Opening    | 2            | Öffnet           |
-| Opened     | 3            | Geöffnet         |
-| Closing    | 4            | Schließt         |
+| Konstante | Wert (USINT) | Bedeutung           |
+| --------- | ------------ | ------------------- |
+| Unknown   | 0            | Unbekannter Zustand |
+| Closed    | 1            | Geschlossen         |
+| Opening   | 2            | Öffnet              |
+| Opened    | 3            | Geöffnet            |
+| Closing   | 4            | Schließt            |
 
 Diese Werte können in FB-Netzwerken direkt zur Initialisierung von Variablen oder zum Vergleich mit Zustandsrückmeldungen verwendet werden.
 

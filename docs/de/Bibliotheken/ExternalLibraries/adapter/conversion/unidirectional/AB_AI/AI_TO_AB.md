@@ -28,10 +28,10 @@ Keine eigenständigen Daten-Ausgänge. Der konvertierte BYTE-Wert wird über den
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | `AI_IN` | `adapter::types::unidirectional::AI` | Stellt den INT-Eingangswert (D1) sowie das auslösende Ereignis (E1) bereit. |
-| Plug (Ausgang)  | `AB_OUT` | `adapter::types::unidirectional::AB` | Gibt den konvertierten BYTE-Wert (D1) sowie das zugehörige Ereignis (E1) aus. |
+| Richtung         | Name     | Typ                                  | Beschreibung                                                                  |
+| ---------------- | -------- | ------------------------------------ | ----------------------------------------------------------------------------- |
+| Socket (Eingang) | `AI_IN`  | `adapter::types::unidirectional::AI` | Stellt den INT-Eingangswert (D1) sowie das auslösende Ereignis (E1) bereit.   |
+| Plug (Ausgang)   | `AB_OUT` | `adapter::types::unidirectional::AB` | Gibt den konvertierten BYTE-Wert (D1) sowie das zugehörige Ereignis (E1) aus. |
 
 ## Funktionsweise
 

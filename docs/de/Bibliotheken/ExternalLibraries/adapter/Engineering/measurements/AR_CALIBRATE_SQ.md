@@ -95,11 +95,11 @@ Die Kalibrierung verläuft in zwei sequenziellen Hauptschritten, die mathematisc
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | AR_CALIBRATE | AR_CALIBRATE_SQ |
-| :--- | :--- | :--- |
-| **CO-Berechnungsformel** | $\text{OFFSET} := Y\_Offset - X$ | $\text{OFFSET} := \frac{Y\_Offset}{\text{SCALE}} - X$ |
-| **Ausgang Y nach CO** | $Y = Y\_Offset \cdot \text{SCALE}$ (nur korrekt für $\text{SCALE} = 1$) | $Y = Y\_Offset$ (immer mathematisch korrekt) |
-| **Ablaufsteuerung** | Keine Einschränkung (CO und CS beliebig triggerbar) | ECC-erzwungen (CO muss zwingend vor CS erfolgen) |
+| Merkmal                  | AR_CALIBRATE                                                            | AR_CALIBRATE_SQ                                       |
+| :----------------------- | :---------------------------------------------------------------------- | :---------------------------------------------------- |
+| **CO-Berechnungsformel** | $\text{OFFSET} := Y\_Offset - X$                                        | $\text{OFFSET} := \frac{Y\_Offset}{\text{SCALE}} - X$ |
+| **Ausgang Y nach CO**    | $Y = Y\_Offset \cdot \text{SCALE}$ (nur korrekt für $\text{SCALE} = 1$) | $Y = Y\_Offset$ (immer mathematisch korrekt)          |
+| **Ablaufsteuerung**      | Keine Einschränkung (CO und CS beliebig triggerbar)                     | ECC-erzwungen (CO muss zwingend vor CS erfolgen)      |
 
 ## Fazit
 

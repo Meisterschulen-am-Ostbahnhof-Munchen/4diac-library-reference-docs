@@ -31,9 +31,9 @@ The function block **AQ_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AQ | Plug (Output) | Buffered received BYTE value |
+| Adapter | Type                               | Direction     | Description                  |
+| ------- | ---------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AQ | Plug (Output) | Buffered received BYTE value |
 
 ## Functionality
 

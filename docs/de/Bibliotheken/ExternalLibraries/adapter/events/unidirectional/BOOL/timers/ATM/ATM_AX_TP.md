@@ -12,9 +12,9 @@ Der **ATM_AX_TP** ist ein spezieller Timer-Funktionsblock, der aus einem Eingang
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                    |
-|------|-------|------------------------------|
-| R    | Event | Setzt den Timer zurück       |
+| Name | Typ   | Kommentar              |
+| ---- | ----- | ---------------------- |
+| R    | Event | Setzt den Timer zurück |
 
 ### **Ereignis-Ausgänge**
 
@@ -30,11 +30,11 @@ Keine direkten Datenausgänge. Der Ausgangswert (Q) wird über den Adapter **Q**
 
 ### **Adapter**
 
-| Bezeichnung | Typ    | Richtung | Beschreibung                                     |
-|-------------|--------|----------|--------------------------------------------------|
-| **Q**       | AX     | Plug     | Ausgang: liefert das Impulssignal                |
-| **IN**      | AX     | Socket   | Eingang: Empfängt das auslösende Signal          |
-| **PT**      | ATM    | Socket   | Eingang: Stellt die Impulsdauer (Pulszeit) bereit |
+| Bezeichnung | Typ | Richtung | Beschreibung                                      |
+| ----------- | --- | -------- | ------------------------------------------------- |
+| **Q**       | AX  | Plug     | Ausgang: liefert das Impulssignal                 |
+| **IN**      | AX  | Socket   | Eingang: Empfängt das auslösende Signal           |
+| **PT**      | ATM | Socket   | Eingang: Stellt die Impulsdauer (Pulszeit) bereit |
 
 **Hinweis:** Die Adapter sind vom Typ *adapter::types::unidirectional::AX* (bzw. *ATM*) und übertragen ein Ereignis zusammen mit einem Datenwert.
 
@@ -80,11 +80,11 @@ Nach Ablauf der Timer‑Zeit wechselt E_TP selbstständig von ACTIVE nach IDLE.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Eigenschaften                                                                 | Unterschied zum ATM_AX_TP                            |
-|-----------------|-------------------------------------------------------------------------------|------------------------------------------------------|
-| **E_TP** (Standard) | Direkte Ereignis‑/Datenanschlüsse, kein Adapter.                           | ATM_AX_TP kapselt E_TP und stellt Adapter bereit.   |
-| **E_R_TRIG**    | Flankenerkennung ohne Impulsverlängerung.                                     | Erzeugt nur einen sehr kurzen Impuls, keine Zeitsteuerung. |
-| **E_CYCLE**     | Zyklischer Timer, wiederholt Impulse.                                        | Einmaliger Impuls (pulse).                           |
+| Baustein            | Eigenschaften                                    | Unterschied zum ATM_AX_TP                                  |
+| ------------------- | ------------------------------------------------ | ---------------------------------------------------------- |
+| **E_TP** (Standard) | Direkte Ereignis‑/Datenanschlüsse, kein Adapter. | ATM_AX_TP kapselt E_TP und stellt Adapter bereit.          |
+| **E_R_TRIG**        | Flankenerkennung ohne Impulsverlängerung.        | Erzeugt nur einen sehr kurzen Impuls, keine Zeitsteuerung. |
+| **E_CYCLE**         | Zyklischer Timer, wiederholt Impulse.            | Einmaliger Impuls (pulse).                                 |
 
 ## Fazit
 

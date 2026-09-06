@@ -69,11 +69,11 @@ Der **F_MOVE** ist ein universeller Funktionsbaustein zur typsicheren Datenüber
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal        | F_MOVE  | F_BLOCK_MOVE | F_CAST |
-|----------------|---------|--------------|--------|
-| Funktionsumfang| Einzelwert | Speicherblock | Typkonvertierung |
-| Typunterstützung | ANY    | BYTE-Array   | ANY    |
-| Latenz         | 1 Zyklus | Variabel     | 1 Zyklus |
+| Merkmal          | F_MOVE     | F_BLOCK_MOVE  | F_CAST           |
+| ---------------- | ---------- | ------------- | ---------------- |
+| Funktionsumfang  | Einzelwert | Speicherblock | Typkonvertierung |
+| Typunterstützung | ANY        | BYTE-Array    | ANY              |
+| Latenz           | 1 Zyklus   | Variabel      | 1 Zyklus         |
 
 ## 🛠️ Zugehörige Übungen
 

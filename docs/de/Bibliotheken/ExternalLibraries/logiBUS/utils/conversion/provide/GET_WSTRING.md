@@ -12,26 +12,26 @@ Der Funktionsblock **GET_WSTRING** dient dem Auslesen einer WSTRING-Variablen ü
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Beschreibung |
-|----------|----------|--------------|
+| Ereignis | Datentyp | Beschreibung                                                             |
+| -------- | -------- | ------------------------------------------------------------------------ |
 | REQ      | Event    | Normale Ausführungsanforderung – löst das Lesen der InOut-Variablen aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Beschreibung |
-|----------|----------|--------------|
+| Ereignis | Datentyp | Beschreibung                                                                     |
+| -------- | -------- | -------------------------------------------------------------------------------- |
 | CNF      | Event    | Bestätigung der Ausführung – wird nach dem erfolgreichen Kopiervorgang gesendet. |
 
 ### **Daten-Eingänge**
 
-| Variable | Datentyp | Beschreibung |
-|----------|----------|--------------|
+| Variable | Datentyp | Beschreibung                                                                          |
+| -------- | -------- | ------------------------------------------------------------------------------------- |
 | IN       | WSTRING  | InOut-Quellvariable, deren Wert ausgelesen wird. (Die Variable wird nicht verändert.) |
 
 ### **Daten-Ausgänge**
 
-| Variable | Datentyp | Beschreibung |
-|----------|----------|--------------|
+| Variable | Datentyp | Beschreibung                                                                                     |
+| -------- | -------- | ------------------------------------------------------------------------------------------------ |
 | OUT      | WSTRING  | Gepufferter Ausgabewert – enthält den zum Zeitpunkt des REQ-Ereignisses gelesenen Inhalt von IN. |
 
 ### **Adapter**
@@ -57,8 +57,8 @@ Die InOut‑Variable bleibt unverändert; es findet lediglich ein lesender Zugri
 
 Der FB besitzt nur einen aktiven Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ     | Initial- und Arbeitszustand. Bei jedem **REQ**-Ereignis wird der Algorithmus ausgeführt und **CNF** gesendet. Es gibt keine weiteren Verzweigungen oder Wartezustände. |
 
 ## Anwendungsszenarien
@@ -69,10 +69,10 @@ Der FB besitzt nur einen aktiven Zustand:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Datentyp | Besonderheit |
-|----------|----------|--------------|
-| GET_STRING | STRING | Analoger FB für ASCII-Zeichenketten (nicht Unicode). |
-| GET_DINT   | DINT   | Für 32‑Bit‑Ganzzahlen. |
+| Baustein   | Datentyp  | Besonderheit                                                                             |
+| ---------- | --------- | ---------------------------------------------------------------------------------------- |
+| GET_STRING | STRING    | Analoger FB für ASCII-Zeichenketten (nicht Unicode).                                     |
+| GET_DINT   | DINT      | Für 32‑Bit‑Ganzzahlen.                                                                   |
 | FORCE      | Jeder Typ | Erzwingt einen Wert unabhängig von der Quelle, oft mit zusätzlichem Rücksetzmechanismus. |
 
 **GET_WSTRING** unterscheidet sich von diesen durch die spezifische Unterstützung des breiten Zeichentyps (WSTRING), der für Unicode‑Zeichenfolgen (UTF‑16) verwendet wird. Es handelt sich um einen einfachen, auf Lesen und Puffern beschränkten Baustein ohne Nebenwirkungen.

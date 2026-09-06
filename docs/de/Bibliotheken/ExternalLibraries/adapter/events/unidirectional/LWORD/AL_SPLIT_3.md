@@ -28,12 +28,12 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AL` | IN | Socket | Eingangs-Adapter, der das zu verteilende Signal bereitstellt. |
-| `adapter::types::unidirectional::AL` | OUT1 | Plug | Erster Ausgangs-Adapter – identische Kopie des Eingangssignals. |
-| `adapter::types::unidirectional::AL` | OUT2 | Plug | Zweiter Ausgangs-Adapter – identische Kopie des Eingangssignals. |
-| `adapter::types::unidirectional::AL` | OUT3 | Plug | Dritter Ausgangs-Adapter – identische Kopie des Eingangssignals. |
+| Typ                                  | Name | Richtung | Beschreibung                                                     |
+| ------------------------------------ | ---- | -------- | ---------------------------------------------------------------- |
+| `adapter::types::unidirectional::AL` | IN   | Socket   | Eingangs-Adapter, der das zu verteilende Signal bereitstellt.    |
+| `adapter::types::unidirectional::AL` | OUT1 | Plug     | Erster Ausgangs-Adapter – identische Kopie des Eingangssignals.  |
+| `adapter::types::unidirectional::AL` | OUT2 | Plug     | Zweiter Ausgangs-Adapter – identische Kopie des Eingangssignals. |
+| `adapter::types::unidirectional::AL` | OUT3 | Plug     | Dritter Ausgangs-Adapter – identische Kopie des Eingangssignals. |
 
 ## Funktionsweise
 

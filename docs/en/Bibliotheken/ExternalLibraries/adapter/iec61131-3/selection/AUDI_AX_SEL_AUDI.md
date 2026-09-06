@@ -38,12 +38,12 @@ The FB does not have dedicated data outputs. The selected data value is output v
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Comment |
-| --------- | ---------- | ----- | ----------- |
-| **IN0** | Socket (Input) | `adapter::types::unidirectional::AUDI` | First selectable input |
-| **IN1** | Socket (Input) | `adapter::types::unidirectional::AUDI` | Second selectable input |
-| **G** | Socket (Input) | `adapter::types::unidirectional::AX` | Selector (Event + Data) |
-| **OUT** | Plug (Output) | `adapter::types::unidirectional::AUDI` | Output field with event and data |
+| Adapter | Direction      | Type                                   | Comment                          |
+| ------- | -------------- | -------------------------------------- | -------------------------------- |
+| **IN0** | Socket (Input) | `adapter::types::unidirectional::AUDI` | First selectable input           |
+| **IN1** | Socket (Input) | `adapter::types::unidirectional::AUDI` | Second selectable input          |
+| **G**   | Socket (Input) | `adapter::types::unidirectional::AX`   | Selector (Event + Data)          |
+| **OUT** | Plug (Output)  | `adapter::types::unidirectional::AUDI` | Output field with event and data |
 
 ## Functionality
 
@@ -55,6 +55,7 @@ The function block internally contains an instance of the IEC 61131 function blo
 
 - If the selector field is **False** (or 0), **IN0** is selected.
 - If the selector field is **True** (or not equal to 0), **IN1** is selected.
+
 1. **Output**: The selected signal is passed on to **OUT.D1**. Simultaneously, an event is sent to **OUT.E1** to inform downstream processing.
 
 The internal flow is event-driven and avoids continuous read accesses, enabling efficient communication in time-controlled environments.
@@ -86,13 +87,13 @@ The use of user-defined adapter types (`AUDI`, `AX`) allows for easy adaptation 
 
 ## Comparison with Similar Function Blocks
 
-| Criterion | **AUDI_AX_SEL_AUDI** | Simple Boolean MUX (e.g., `F_SEL`) |
-| ----------- | ------------------------ | --------------------------------------- |
-| **Interface** | Pure adapters (event and data encapsulated) | Separate input/output pins |
-| **Data Type** | User-defined types (`AUDI`, `AX`) | Arbitrary (configurable) |
-| **Selector** | Event-driven (via adapter) | Data-driven, without extra events |
+| Criterion       | **AUDI_AX_SEL_AUDI**                        | Simple Boolean MUX (e.g., `F_SEL`) |
+| --------------- | ------------------------------------------- | ---------------------------------- |
+| **Interface**   | Pure adapters (event and data encapsulated) | Separate input/output pins         |
+| **Data Type**   | User-defined types (`AUDI`, `AX`)           | Arbitrary (configurable)           |
+| **Selector**    | Event-driven (via adapter)                  | Data-driven, without extra events  |
 | **Reusability** | Higher due to type safety and encapsulation | More flexible, but loosely coupled |
-| **Complexity** | Medium (adapters require prior knowledge) | Low (direct pins) |
+| **Complexity**  | Medium (adapters require prior knowledge)   | Low (direct pins)                  |
 
 The **AUDI_AX_SEL_AUDI** offers higher integration into adapter-based architectures and is particularly suitable for modular, type-bound systems, while a pure `F_SEL` is more universal.
 

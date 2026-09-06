@@ -36,12 +36,12 @@ Keine eigenen Daten-Ausgänge. Alle Daten werden über die Adapter-Plugs übertr
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AX` | Startsignal |
-| Socket (Eingang) | `PT` | `adapter::types::unidirectional::ATM` | Sollzeit |
-| Plug (Ausgang) | `Q` | `adapter::types::unidirectional::AX` | Ausgang, bleibt TRUE bis `PT` nach dem Abfallen von `IN` |
-| Plug (Ausgang) | `ET` | `adapter::types::unidirectional::ATM` | Abgelaufene Zeit, Event nur bei Wertänderung |
+| Richtung         | Name | Typ                                   | Beschreibung                                             |
+| ---------------- | ---- | ------------------------------------- | -------------------------------------------------------- |
+| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AX`  | Startsignal                                              |
+| Socket (Eingang) | `PT` | `adapter::types::unidirectional::ATM` | Sollzeit                                                 |
+| Plug (Ausgang)   | `Q`  | `adapter::types::unidirectional::AX`  | Ausgang, bleibt TRUE bis `PT` nach dem Abfallen von `IN` |
+| Plug (Ausgang)   | `ET` | `adapter::types::unidirectional::ATM` | Abgelaufene Zeit, Event nur bei Wertänderung             |
 
 ## Funktionsweise
 

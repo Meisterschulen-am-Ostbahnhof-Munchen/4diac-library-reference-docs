@@ -30,18 +30,18 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** | `IN` | `adapter::types::unidirectional::AIWS` | Eingehendes AIWS-Signal, das auf die neun Ausgänge verteilt wird. |
-| **Plug** | `OUT1` | `adapter::types::unidirectional::AIWS` | Erster ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT2` | `adapter::types::unidirectional::AIWS` | Zweiter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT3` | `adapter::types::unidirectional::AIWS` | Dritter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT4` | `adapter::types::unidirectional::AIWS` | Vierter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT5` | `adapter::types::unidirectional::AIWS` | Fünfter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT6` | `adapter::types::unidirectional::AIWS` | Sechster ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT7` | `adapter::types::unidirectional::AIWS` | Siebter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT8` | `adapter::types::unidirectional::AIWS` | Achter ausgehender AIWS-Ausgang. |
-| **Plug** | `OUT9` | `adapter::types::unidirectional::AIWS` | Neunter ausgehender AIWS-Ausgang. |
+| Richtung   | Name   | Typ                                    | Beschreibung                                                      |
+| ---------- | ------ | -------------------------------------- | ----------------------------------------------------------------- |
+| **Socket** | `IN`   | `adapter::types::unidirectional::AIWS` | Eingehendes AIWS-Signal, das auf die neun Ausgänge verteilt wird. |
+| **Plug**   | `OUT1` | `adapter::types::unidirectional::AIWS` | Erster ausgehender AIWS-Ausgang.                                  |
+| **Plug**   | `OUT2` | `adapter::types::unidirectional::AIWS` | Zweiter ausgehender AIWS-Ausgang.                                 |
+| **Plug**   | `OUT3` | `adapter::types::unidirectional::AIWS` | Dritter ausgehender AIWS-Ausgang.                                 |
+| **Plug**   | `OUT4` | `adapter::types::unidirectional::AIWS` | Vierter ausgehender AIWS-Ausgang.                                 |
+| **Plug**   | `OUT5` | `adapter::types::unidirectional::AIWS` | Fünfter ausgehender AIWS-Ausgang.                                 |
+| **Plug**   | `OUT6` | `adapter::types::unidirectional::AIWS` | Sechster ausgehender AIWS-Ausgang.                                |
+| **Plug**   | `OUT7` | `adapter::types::unidirectional::AIWS` | Siebter ausgehender AIWS-Ausgang.                                 |
+| **Plug**   | `OUT8` | `adapter::types::unidirectional::AIWS` | Achter ausgehender AIWS-Ausgang.                                  |
+| **Plug**   | `OUT9` | `adapter::types::unidirectional::AIWS` | Neunter ausgehender AIWS-Ausgang.                                 |
 
 ## Funktionsweise
 

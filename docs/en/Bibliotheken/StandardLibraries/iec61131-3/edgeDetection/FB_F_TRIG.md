@@ -10,7 +10,7 @@ The function block `FB_F_TRIG` is used to detect the falling edge of a Boolean s
 - `CLK` (BOOL): The signal to be monitored, whose falling edge is to be detected.
 - `Q` (BOOL): Outputs `TRUE` if a falling edge is detected, otherwise `FALSE`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -37,6 +37,7 @@ The function block stores the previous state of the `CLK` signal in an internal 
 
 - When `CLK` transitions from `TRUE` to `FALSE`, `Q` is set to `TRUE`.
 - In all other cases, `Q` is set to `FALSE`.
+
 1. **Saving the Current State**: The current state of `CLK` is saved to `MEM`.
 
 - Detection of button or switch actuations in control systems.

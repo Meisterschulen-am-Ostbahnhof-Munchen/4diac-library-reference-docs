@@ -75,10 +75,10 @@ Der Baustein realisiert eine klassische Multiplexer-Logik (Äquivalent zu `SEL` 
 
 ## Zustandsübersicht
 
-| Selektor-Zustand (`G.D1`) | Ausgangswert (`OUT.D1`) | Trigger-Ereignis |
-| :--- | :--- | :--- |
-| `FALSE` (0) | Wert von `IN0.D1` | Ereignis auf `IN0` oder `G` |
-| `TRUE` (1) | Wert von `IN1.D1` | Ereignis auf `IN1` oder `G` |
+| Selektor-Zustand (`G.D1`) | Ausgangswert (`OUT.D1`) | Trigger-Ereignis            |
+| :------------------------ | :---------------------- | :-------------------------- |
+| `FALSE` (0)               | Wert von `IN0.D1`       | Ereignis auf `IN0` oder `G` |
+| `TRUE` (1)                | Wert von `IN1.D1`       | Ereignis auf `IN1` oder `G` |
 
 ---
 

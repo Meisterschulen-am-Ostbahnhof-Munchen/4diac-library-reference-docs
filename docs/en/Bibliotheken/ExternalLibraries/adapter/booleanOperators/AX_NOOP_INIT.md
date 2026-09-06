@@ -39,6 +39,7 @@ The function block operates as a simple pass-through module:
 
 - The INIT event is forwarded to `INITO` and to `OUT.E1`.
 - The event `IN.E1` is passed directly to `OUT.E1`.
+
 1. **Data Forwarding**:
 
 - The value of `IN.D1` is copied unchanged to `OUT.D1`.

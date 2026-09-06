@@ -32,11 +32,11 @@ Der Baustein besitzt keine direkten Ereignis- oder Dateneingänge und -ausgänge
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| IN1 | `ATM` (Socket) | Eingang | Adapter für den ersten Vergleichswert und das zugehörige Ereignis |
-| IN2 | `ATM` (Socket) | Eingang | Adapter für den zweiten Vergleichswert und das zugehörige Ereignis |
-| OUT | `AX` (Plug) | Ausgang | Adapter für das Vergleichsergebnis und das Ausgangsereignis |
+| Adapter | Typ            | Richtung | Beschreibung                                                       |
+| ------- | -------------- | -------- | ------------------------------------------------------------------ |
+| IN1     | `ATM` (Socket) | Eingang  | Adapter für den ersten Vergleichswert und das zugehörige Ereignis  |
+| IN2     | `ATM` (Socket) | Eingang  | Adapter für den zweiten Vergleichswert und das zugehörige Ereignis |
+| OUT     | `AX` (Plug)    | Ausgang  | Adapter für das Vergleichsergebnis und das Ausgangsereignis        |
 
 Die Adapter `ATM` und `AX` sind unidirektionale Schnittstellen, die je einen Ereignis- und einen Datenkanal bereitstellen.
 

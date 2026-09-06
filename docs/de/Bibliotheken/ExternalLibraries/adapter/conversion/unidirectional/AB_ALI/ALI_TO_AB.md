@@ -14,40 +14,40 @@ Der Funktionsblock **ALI_TO_AB** ist ein zusammengesetzter Baustein (Composite F
 
 Der FB besitzt keine direkten Ereignis-Eingänge. Ereignisse werden ausschließlich über den Adapter **ALI_IN** (Socket) empfangen.
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis           | Beschreibung                            |
+| ------------------ | --------------------------------------- |
 | *E1 (über ALI_IN)* | Signal zur Auslösung der Konvertierung. |
 
 ### **Ereignis-Ausgänge**
 
 Der FB besitzt keine direkten Ereignis-Ausgänge. Ereignisse werden ausschließlich über den Adapter **AB_OUT** (Plug) gesendet.
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis           | Beschreibung                               |
+| ------------------ | ------------------------------------------ |
 | *E1 (über AB_OUT)* | Quittung nach erfolgreicher Konvertierung. |
 
 ### **Daten-Eingänge**
 
 Der FB besitzt keine direkten Daten-Eingänge. Daten werden ausschließlich über den Adapter **ALI_IN** (Socket) bereitgestellt.
 
-| Daten | Typ | Beschreibung |
-|-------|-----|--------------|
+| Daten              | Typ  | Beschreibung                                  |
+| ------------------ | ---- | --------------------------------------------- |
 | *D1 (über ALI_IN)* | LINT | 64‑Bit Ganzzahl, die konvertiert werden soll. |
 
 ### **Daten-Ausgänge**
 
 Der FB besitzt keine direkten Daten-Ausgänge. Daten werden ausschließlich über den Adapter **AB_OUT** (Plug) ausgegeben.
 
-| Daten | Typ | Beschreibung |
-|-------|-----|--------------|
+| Daten              | Typ  | Beschreibung              |
+| ------------------ | ---- | ------------------------- |
 | *D1 (über AB_OUT)* | BYTE | 8‑Bit konvertierter Wert. |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **ALI_IN** | Socket (Eingang) | `adapter::types::unidirectional::ALI` | Nimmt den LINT‑Wert sowie ein zugehöriges Ereignis entgegen. |
-| **AB_OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AB` | Gibt den konvertierten BYTE‑Wert sowie ein Quittungsereignis aus. |
+| Adapter    | Richtung         | Typ                                   | Beschreibung                                                      |
+| ---------- | ---------------- | ------------------------------------- | ----------------------------------------------------------------- |
+| **ALI_IN** | Socket (Eingang) | `adapter::types::unidirectional::ALI` | Nimmt den LINT‑Wert sowie ein zugehöriges Ereignis entgegen.      |
+| **AB_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AB`  | Gibt den konvertierten BYTE‑Wert sowie ein Quittungsereignis aus. |
 
 ## Funktionsweise
 

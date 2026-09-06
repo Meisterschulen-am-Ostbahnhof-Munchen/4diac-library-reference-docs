@@ -1,6 +1,6 @@
-![E_TON](E_TON.svg)
-
 # E_TON
+
+![E_TON](E_TON.svg)
 
 ## 🎧 Podcast
 

@@ -63,23 +63,23 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Attribut-Typen
 
-| Kategorie       | Beispiel-IDs             | Beschreibung                     |
-|----------------|--------------------------|----------------------------------|
-| Grundattribute | 0x01 - 0x0F             | Sichtbarkeit, Aktivität         |
-| Darstellung    | 0x10 - 0x2F             | Farben, Rahmen, Ausrichtung     |
-| Inhalte        | 0x30 - 0x4F             | Textwerte, Numerische Werte     |
-| Zustände       | 0x50 - 0x6F             | Alarmstatus, Betriebsmodi       |
+| Kategorie      | Beispiel-IDs | Beschreibung                |
+| -------------- | ------------ | --------------------------- |
+| Grundattribute | 0x01 - 0x0F  | Sichtbarkeit, Aktivität     |
+| Darstellung    | 0x10 - 0x2F  | Farben, Rahmen, Ausrichtung |
+| Inhalte        | 0x30 - 0x4F  | Textwerte, Numerische Werte |
+| Zustände       | 0x50 - 0x6F  | Alarmstatus, Betriebsmodi   |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Abfrage              |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Abfrage     |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -90,11 +90,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_GetAttribute | VtReadValue | VtObjectQuery |
-|---------------|----------------|-------------|---------------|
-| ISO-Standard  | ✔              | ✖           | ✖             |
-| VT-Version    | 4+             | Alle        | Alle          |
-| Attributbreite| Universal      | Werte-only  | Limitierte IDs|
+| Feature        | Q_GetAttribute | VtReadValue | VtObjectQuery  |
+| -------------- | -------------- | ----------- | -------------- |
+| ISO-Standard   | ✔              | ✖           | ✖              |
+| VT-Version     | 4+             | Alle        | Alle           |
+| Attributbreite | Universal      | Werte-only  | Limitierte IDs |
 
 ## Fazit
 

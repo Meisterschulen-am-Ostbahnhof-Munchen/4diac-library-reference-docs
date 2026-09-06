@@ -12,27 +12,27 @@ Der Funktionsblock NOOP („No Operation“) dient als reiner Durchlaufbaustein.
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar                  |
+| -------- | ----- | -------------------------- |
 | `REQ`    | Event | Normaler Ausführungsimpuls |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar                  |
+| -------- | ----- | -------------------------- |
 | `CNF`    | Event | Bestätigung der Ausführung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ  | Kommentar      |
+| ---- | ---- | -------------- |
 | `IN` | BOOL | Eingangssignal |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `OUT`| BOOL | Ausgangssignal (identisch mit `IN`) |
+| Name  | Typ  | Kommentar                           |
+| ----- | ---- | ----------------------------------- |
+| `OUT` | BOOL | Ausgangssignal (identisch mit `IN`) |
 
 ### **Adapter**
 

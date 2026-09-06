@@ -12,27 +12,27 @@ The **GET_ULINT** function block reads the current value of a variable of type `
 
 ### **Event Inputs**
 
-| Name | Type | Comment | With Data |
-|-------|--------|-------------------------|-----------|
-| `REQ` | Event | Normal Execution Request | `IN` |
+| Name  | Type  | Comment                  | With Data |
+| ----- | ----- | ------------------------ | --------- |
+| `REQ` | Event | Normal Execution Request | `IN`      |
 
 ### **Event Outputs**
 
-| Name | Type | Comment | With Data |
-|-------|--------|--------------------------|-----------------|
+| Name  | Type  | Comment                | With Data   |
+| ----- | ----- | ---------------------- | ----------- |
 | `CNF` | Event | Execution Confirmation | `OUT`, `IN` |
 
 ### **Data Inputs**
 
 | Name | Type | Comment |
-|------|--------|-----------------|
-| - | - | - |
+| ---- | ---- | ------- |
+| -    | -    | -       |
 
 ### **Data Outputs**
 
-| Name | Type | Comment | Initial Value |
-|------|--------|--------------------------|-------------|
-| `OUT`| ULINT | Buffered output value | 0 |
+| Name  | Type  | Comment               | Initial Value |
+| ----- | ----- | --------------------- | ------------- |
+| `OUT` | ULINT | Buffered output value | 0             |
 
 ### **Adapters**
 
@@ -69,9 +69,9 @@ By using an InOut variable, the block can access memory outside its own context 
 
 The function block is implemented as a SimpleFB with a single ECC state:
 
-| State | Action | Output Event | Meaning |
-|---------|--------|------------------|-----------|
-| `REQ` | `REQ` (OUT := IN) | `CNF` | Upon a request, the value is read and acknowledged. |
+| State | Action            | Output Event | Meaning                                             |
+| ----- | ----------------- | ------------ | --------------------------------------------------- |
+| `REQ` | `REQ` (OUT := IN) | `CNF`        | Upon a request, the value is read and acknowledged. |
 
 There are no other states, no branches, and no internal memory variables (except for the output `OUT` itself, which buffers the last read value).
 

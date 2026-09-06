@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | IN | `adapter::types::unidirectional::AIS` | Eingehender AIS-Datenstrom, der auf alle Ausgänge verteilt wird. |
-| Plug (Ausgang) | OUT1 … OUT7 | `adapter::types::unidirectional::AIS` | Sieben identische Ausgänge, die den eingehenden AIS-Datenstrom jeweils unverändert weiterleiten. |
+| Richtung         | Name        | Typ                                   | Beschreibung                                                                                     |
+| ---------------- | ----------- | ------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Socket (Eingang) | IN          | `adapter::types::unidirectional::AIS` | Eingehender AIS-Datenstrom, der auf alle Ausgänge verteilt wird.                                 |
+| Plug (Ausgang)   | OUT1 … OUT7 | `adapter::types::unidirectional::AIS` | Sieben identische Ausgänge, die den eingehenden AIS-Datenstrom jeweils unverändert weiterleiten. |
 
 ## Funktionsweise
 

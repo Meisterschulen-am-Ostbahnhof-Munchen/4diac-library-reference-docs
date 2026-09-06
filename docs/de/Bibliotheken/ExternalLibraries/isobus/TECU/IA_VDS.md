@@ -12,37 +12,37 @@ Der Funktionsblock **IA_VDS** ist ein ISOBUS-Adapter für die Fahrzeugrichtung u
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                                           |
+| -------- | ----- | ------------------------------------------------------ |
 | INIT     | EInit | Initialisiert den Baustein. Erwartet den Qualifier QI. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                                                       |
+| -------- | ----- | ------------------------------------------------------------------ |
 | INITO    | EInit | Bestätigt die erfolgreiche Initialisierung. Liefert QO und STATUS. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Beschreibung |
-|------|--------|--------------|
-| QI   | BOOL   | Event‑Input Qualifier (TRUE = Initialisierung aktiv). |
+| Name | Typ  | Beschreibung                                          |
+| ---- | ---- | ----------------------------------------------------- |
+| QI   | BOOL | Event‑Input Qualifier (TRUE = Initialisierung aktiv). |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Beschreibung |
-|--------|--------|--------------|
-| QO     | BOOL   | Event‑Output Qualifier (TRUE = Initialisierung ok). |
+| Name   | Typ    | Beschreibung                                          |
+| ------ | ------ | ----------------------------------------------------- |
+| QO     | BOOL   | Event‑Output Qualifier (TRUE = Initialisierung ok).   |
 | STATUS | STRING | Meldungstext (z. B. Fehlerbeschreibung oder “Ready”). |
 
 ### **Adapter**
 
-| Adapter      | Typ  | Beschreibung |
-|--------------|------|--------------|
-| NAV_SPEED    | AUI  | Navigationsbasierte Fahrzeuggeschwindigkeit (unidirektional, Empfänger). |
-| BEARING      | AUI  | Kompassrichtung (unidirektional, Empfänger). |
-| ALTITUDE     | AUI  | Höhe über dem Meeresspiegel (unidirektional, Empfänger). |
-| TIMEOUT      | AX   | Timeout‑Status (unidirektional, Empfänger). |
+| Adapter   | Typ | Beschreibung                                                             |
+| --------- | --- | ------------------------------------------------------------------------ |
+| NAV_SPEED | AUI | Navigationsbasierte Fahrzeuggeschwindigkeit (unidirektional, Empfänger). |
+| BEARING   | AUI | Kompassrichtung (unidirektional, Empfänger).                             |
+| ALTITUDE  | AUI | Höhe über dem Meeresspiegel (unidirektional, Empfänger).                 |
+| TIMEOUT   | AX  | Timeout‑Status (unidirektional, Empfänger).                              |
 
 Alle Adapter sind als Plugs (out‑going) realisiert – der IA_VDS sendet die Daten an die angeschlossenen Senken.
 

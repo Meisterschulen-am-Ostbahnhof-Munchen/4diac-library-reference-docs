@@ -42,10 +42,10 @@ Bei jedem `CLK`-Ereignis vergleicht die ECC den neuen Wert `D` mit dem aktuell g
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Anfangszustand, erster `CLK` übernimmt `D` unbedingt |
-| SET | `Q` enthält den zuletzt übernommenen Wert; weitere `CLK`-Ereignisse lösen nur bei `NE(Q, D)` erneut `EO` aus |
+| Zustand | Bedeutung                                                                                                    |
+| ------- | ------------------------------------------------------------------------------------------------------------ |
+| START   | Anfangszustand, erster `CLK` übernimmt `D` unbedingt                                                         |
+| SET     | `Q` enthält den zuletzt übernommenen Wert; weitere `CLK`-Ereignisse lösen nur bei `NE(Q, D)` erneut `EO` aus |
 
 ## Anwendungsszenarien
 

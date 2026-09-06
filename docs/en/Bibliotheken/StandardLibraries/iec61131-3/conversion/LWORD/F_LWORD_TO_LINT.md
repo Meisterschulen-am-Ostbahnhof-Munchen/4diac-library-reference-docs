@@ -10,7 +10,7 @@ The function block `F_LWORD_TO_LINT` converts a `LWORD` value (64-bit unsigned) 
 - **IN**: Input for the `LWORD` value to be converted.
 - **OUT**: Output for the converted `LINT` value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

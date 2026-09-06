@@ -34,10 +34,10 @@ Der Baustein besitzt keine direkten Ereignis- oder Datenein-/-ausgänge. Die ges
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Kommentar |
-|-------------|-----|----------|-----------|
+| Bezeichnung | Typ                                   | Richtung         | Kommentar                                                                |
+| ----------- | ------------------------------------- | ---------------- | ------------------------------------------------------------------------ |
 | `ADI_IN`    | `adapter::types::unidirectional::ADI` | Socket (Eingang) | Liefert einen DINT-Wert und steuert die Verarbeitung über Ereignis `E1`. |
-| `AL_OUT`    | `adapter::types::unidirectional::AL`  | Plug (Ausgang)   | Gibt den konvertierten LWORD-Wert aus und quittiert über Ereignis `E1`. |
+| `AL_OUT`    | `adapter::types::unidirectional::AL`  | Plug (Ausgang)   | Gibt den konvertierten LWORD-Wert aus und quittiert über Ereignis `E1`.  |
 
 ## Funktionsweise
 

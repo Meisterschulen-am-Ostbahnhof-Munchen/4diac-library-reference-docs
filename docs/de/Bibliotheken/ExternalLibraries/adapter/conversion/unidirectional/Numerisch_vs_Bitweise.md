@@ -1,6 +1,7 @@
 # Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Alle Bausteine in diesem Ordner (`AB_TO_AR`, `AD_TO_ADI`, `AI_TO_AR`, usw.) sowie die zugrunde liegenden Standard-Funktionsblöcke `iec61131::conversion::F_X_TO_Y` (Teil der 4diac-IDE-Standardbibliothek, nicht in diesem Repository vendored) wandeln einen Wert von einem IEC-61131-Datentyp in einen anderen um. Für einen Teil dieser Kombinationen ist das eine **echte Zahlenwert-Umwandlung**; für einen anderen Teil ist es eine **reine Bit-Reinterpretation**, bei der der Zahlenwert bewusst ignoriert und stattdessen das rohe Bitmuster übernommen wird. Wer den Unterschied nicht kennt, produziert leicht einen stillen, schwer zu findenden Bug — siehe `AD_TO_AR_TODO.md` im Quell-Repository für den konkreten Fall, der diese Seite ausgelöst hat.
@@ -9,12 +10,12 @@ Alle Bausteine in diesem Ordner (`AB_TO_AR`, `AD_TO_ADI`, `AI_TO_AR`, usw.) sowi
 
 IEC 61131-3 unterscheidet vier relevante Kategorien:
 
-| Kategorie | Typen | Bedeutung |
-|---|---|---|
-| **ANY_BIT** | `BOOL`, `BYTE`, `WORD`, `DWORD`, `LWORD` | reine Bitmuster ohne eigene Zahlenwert-Semantik |
-| **ANY_INT** (vorzeichenbehaftet) | `SINT`, `INT`, `DINT`, `LINT` | Ganzzahlen mit Vorzeichen |
-| **ANY_INT** (vorzeichenlos) | `USINT`, `UINT`, `UDINT`, `ULINT` | Ganzzahlen ohne Vorzeichen |
-| **ANY_REAL** | `REAL`, `LREAL` | IEEE754-Gleitkommazahlen |
+| Kategorie                        | Typen                                    | Bedeutung                                       |
+| -------------------------------- | ---------------------------------------- | ----------------------------------------------- |
+| **ANY_BIT**                      | `BOOL`, `BYTE`, `WORD`, `DWORD`, `LWORD` | reine Bitmuster ohne eigene Zahlenwert-Semantik |
+| **ANY_INT** (vorzeichenbehaftet) | `SINT`, `INT`, `DINT`, `LINT`            | Ganzzahlen mit Vorzeichen                       |
+| **ANY_INT** (vorzeichenlos)      | `USINT`, `UINT`, `UDINT`, `ULINT`        | Ganzzahlen ohne Vorzeichen                      |
+| **ANY_REAL**                     | `REAL`, `LREAL`                          | IEEE754-Gleitkommazahlen                        |
 
 Die Adapter-Präfixe in diesem Ordner entsprechen: `AB`=BYTE, `AW`=WORD, `AD`=DWORD, `AL`=LWORD, `AX`=BOOL, `AS`=SINT, `AI`=INT, `ADI`=DINT, `ALI`=LINT, `AUS`=USINT, `AUI`=UINT, `AUDI`=UDINT, `AULI`=ULINT, `AR`=REAL, `ALR`=LREAL.
 
@@ -22,12 +23,12 @@ Die Adapter-Präfixe in diesem Ordner entsprechen: `AB`=BYTE, `AW`=WORD, `AD`=DW
 
 Verifiziert im FORTE-Kern (`core/include/forte/datatypes/forte_any.h`, `CIEC_ANY::cast<U,T>`, sowie `forte_real.cpp`/`forte_lreal.cpp`, `CIEC_REAL::castRealData`) — dieselbe Logik hinter jedem `F_X_TO_Y`-Baustein und jedem Adapter-Wrapper in diesem Ordner:
 
-| Quelle ＼ Ziel | → ANY_BIT | → ANY_INT | → ANY_REAL |
-|---|---|---|---|
-| **ANY_BIT** (außer BOOL) | Bit-Kopie (strukturell, kein Zahlenwert) | Bit-Reinterpretation — **werterhaltend**, wenn Ziel gleich breit oder breiter ist; schneidet sonst ab | ⚠️ **Bit-Reinterpretation — KEIN Zahlenwert!** IEEE754-Fehlinterpretation |
-| **BOOL** | Paritäts-/LSB-Test | numerisch (0/1) | numerisch (0.0/1.0) — Sonderfall, siehe unten |
-| **ANY_INT** | speichert das Bitmuster (erwartetes Verhalten für ein Bit-String-Ziel) | numerisch (Vorzeichenerweiterung/Nullerweiterung sicher, Verengung kann abschneiden) | **numerisch** (korrekter Cast) |
-| **ANY_REAL** | Bit-Extraktion (beabsichtigt, z. B. Serialisierung via `F_REAL_TO_DWORD`) | numerisch (Rundung, `llrint`) | numerisch (Auf-/Abrunden der Genauigkeit) |
+| Quelle ＼ Ziel            | → ANY_BIT                                                                 | → ANY_INT                                                                                             | → ANY_REAL                                                                |
+| ------------------------ | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **ANY_BIT** (außer BOOL) | Bit-Kopie (strukturell, kein Zahlenwert)                                  | Bit-Reinterpretation — **werterhaltend**, wenn Ziel gleich breit oder breiter ist; schneidet sonst ab | ⚠️ **Bit-Reinterpretation — KEIN Zahlenwert!** IEEE754-Fehlinterpretation |
+| **BOOL**                 | Paritäts-/LSB-Test                                                        | numerisch (0/1)                                                                                       | numerisch (0.0/1.0) — Sonderfall, siehe unten                             |
+| **ANY_INT**              | speichert das Bitmuster (erwartetes Verhalten für ein Bit-String-Ziel)    | numerisch (Vorzeichenerweiterung/Nullerweiterung sicher, Verengung kann abschneiden)                  | **numerisch** (korrekter Cast)                                            |
+| **ANY_REAL**             | Bit-Extraktion (beabsichtigt, z. B. Serialisierung via `F_REAL_TO_DWORD`) | numerisch (Rundung, `llrint`)                                                                         | numerisch (Auf-/Abrunden der Genauigkeit)                                 |
 
 **Die einzige echte Falle** ist also die Zelle **ANY_BIT (außer BOOL) → ANY_REAL** (rot markiert): `BYTE`/`WORD`/`DWORD`/`LWORD` als Quelle einer Umwandlung nach `REAL`/`LREAL`. In dieser Bibliothek betrifft das konkret zwei Bausteine:
 
@@ -56,4 +57,4 @@ Die hier dokumentierten Adapter-Bausteine (`AD_TO_AR` etc.) sind dünne Wrapper 
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

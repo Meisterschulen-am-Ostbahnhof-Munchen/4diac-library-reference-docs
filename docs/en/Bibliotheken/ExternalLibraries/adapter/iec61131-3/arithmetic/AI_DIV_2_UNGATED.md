@@ -32,11 +32,11 @@ There are no direct data outputs.
 
 ### **Adapter**
 
-| Name | Type | Interface Type | Description |
-| :--- | :--- | :--- | :--- |
-| **IN1** | `adapter::types::unidirectional::AI` | Socket | First Input Value (Dividend) |
-| **IN2** | `adapter::types::unidirectional::AI` | Socket | Second Input Value (Divisor) |
-| **OUT** | `adapter::types::unidirectional::AI` | Plug | Result of Division (Quotient) |
+| Name    | Type                                 | Interface Type | Description                   |
+| :------ | :----------------------------------- | :------------- | :---------------------------- |
+| **IN1** | `adapter::types::unidirectional::AI` | Socket         | First Input Value (Dividend)  |
+| **IN2** | `adapter::types::unidirectional::AI` | Socket         | Second Input Value (Divisor)  |
+| **OUT** | `adapter::types::unidirectional::AI` | Plug           | Result of Division (Quotient) |
 
 ---
 

@@ -12,27 +12,27 @@ The function block **GET_WSTRING** is used to read a WSTRING variable via an InO
 
 ### **Event Inputs**
 
-| Event | Data Type | Description |
-|----------|----------|--------------|
-| REQ | Event | Normal execution request – triggers the reading of the InOut variable. |
+| Event | Data Type | Description                                                            |
+| ----- | --------- | ---------------------------------------------------------------------- |
+| REQ   | Event     | Normal execution request – triggers the reading of the InOut variable. |
 
 ### **Event Outputs**
 
-| Event | Data Type | Description |
-|----------|----------|--------------|
-| CNF | Event | Confirmation of execution – sent after successful copying. |
+| Event | Data Type | Description                                                |
+| ----- | --------- | ---------------------------------------------------------- |
+| CNF   | Event     | Confirmation of execution – sent after successful copying. |
 
 ### **Data Inputs**
 
-| Variable | Data Type | Description |
-|----------|----------|--------------|
-| IN | WSTRING | InOut source variable whose value is read. (The variable is not modified.) |
+| Variable | Data Type | Description                                                                |
+| -------- | --------- | -------------------------------------------------------------------------- |
+| IN       | WSTRING   | InOut source variable whose value is read. (The variable is not modified.) |
 
 ### **Data Outputs**
 
-| Variable | Data Type | Description |
-|----------|-----------|--------------|
-| OUT | WSTRING | Buffered output value – contains the content of IN read at the time of the REQ event. |
+| Variable | Data Type | Description                                                                           |
+| -------- | --------- | ------------------------------------------------------------------------------------- |
+| OUT      | WSTRING   | Buffered output value – contains the content of IN read at the time of the REQ event. |
 
 ### **Adapter**
 
@@ -57,9 +57,9 @@ The InOut variable remains unchanged; only a read access takes place.
 
 The FB has only one active state:
 
-| State | Description |
-|---------|--------------|
-| REQ | Initial and operating state. The algorithm is executed and a CNF is sent on every **REQ** event. There are no further branches or wait states. |
+| State | Description                                                                                                                                    |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| REQ   | Initial and operating state. The algorithm is executed and a CNF is sent on every **REQ** event. There are no further branches or wait states. |
 
 ## Application Scenarios
 
@@ -69,11 +69,11 @@ The FB has only one active state:
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Data Type | Special Feature |
-| ---------- | ---------- | -------------- |
-| GET_STRING | STRING | Analog function block for ASCII strings (not Unicode). |
-| GET_DINT | DINT | For 32-bit integers. |
-| FORCE | Any type | Forces a value regardless of the source, often with an additional reset mechanism. |
+| Function Block | Data Type | Special Feature                                                                    |
+| -------------- | --------- | ---------------------------------------------------------------------------------- |
+| GET_STRING     | STRING    | Analog function block for ASCII strings (not Unicode).                             |
+| GET_DINT       | DINT      | For 32-bit integers.                                                               |
+| FORCE          | Any type  | Forces a value regardless of the source, often with an additional reset mechanism. |
 
 **GET_WSTRING** differs from these by its specific support for the wide character type (WSTRING), used for Unicode strings (UTF-16). It is a simple function block limited to reading and buffering, with no side effects.
 

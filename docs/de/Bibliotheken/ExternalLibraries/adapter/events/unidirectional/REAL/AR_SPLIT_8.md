@@ -28,10 +28,10 @@ Keine.
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung |
-|-------------|-----|----------|
-| **IN** | `adapter::types::unidirectional::AR` | Socket (Eingang) |
-| **OUT1** – **OUT8** | `adapter::types::unidirectional::AR` | Plug (Ausgang) |
+| Bezeichnung         | Typ                                  | Richtung         |
+| ------------------- | ------------------------------------ | ---------------- |
+| **IN**              | `adapter::types::unidirectional::AR` | Socket (Eingang) |
+| **OUT1** – **OUT8** | `adapter::types::unidirectional::AR` | Plug (Ausgang)   |
 
 ## Funktionsweise
 

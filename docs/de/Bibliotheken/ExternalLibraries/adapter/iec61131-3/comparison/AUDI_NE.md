@@ -29,11 +29,11 @@ Der Ausgangsadapter **OUT** stellt einen Ereignis-Ausgang (E1) bereit. Dieser si
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| IN1     | `adapter::types::unidirectional::AUDI` | Socket | Aufnahme des ersten Eingangswertes |
-| IN2     | `adapter::types::unidirectional::AUDI` | Socket | Aufnahme des zweiten Eingangswertes |
-| OUT     | `adapter::types::unidirectional::AX`   | Plug   | Ausgabe des Vergleichsergebnisses |
+| Adapter | Typ                                    | Richtung | Beschreibung                        |
+| ------- | -------------------------------------- | -------- | ----------------------------------- |
+| IN1     | `adapter::types::unidirectional::AUDI` | Socket   | Aufnahme des ersten Eingangswertes  |
+| IN2     | `adapter::types::unidirectional::AUDI` | Socket   | Aufnahme des zweiten Eingangswertes |
+| OUT     | `adapter::types::unidirectional::AX`   | Plug     | Ausgabe des Vergleichsergebnisses   |
 
 ## Funktionsweise
 

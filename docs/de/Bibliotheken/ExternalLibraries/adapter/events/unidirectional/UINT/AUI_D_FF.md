@@ -28,10 +28,10 @@ Keine – die Datenausgabe erfolgt ausschließlich über den Adapter **Q**.
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| **I** | `adapter::types::unidirectional::AUI` | Socket (Eingang) | Eingangswert (D) und Taktereignis (CLK) |
-| **Q** | `adapter::types::unidirectional::AUI` | Plug (Ausgang) | Gespeicherter Wert (Q) und Ausgabeereignis (EO) |
+| Bezeichnung | Typ                                   | Richtung         | Beschreibung                                    |
+| ----------- | ------------------------------------- | ---------------- | ----------------------------------------------- |
+| **I**       | `adapter::types::unidirectional::AUI` | Socket (Eingang) | Eingangswert (D) und Taktereignis (CLK)         |
+| **Q**       | `adapter::types::unidirectional::AUI` | Plug (Ausgang)   | Gespeicherter Wert (Q) und Ausgabeereignis (EO) |
 
 Der Adaptertyp **AUI** bietet einen unidirektionalen Kanal, der genau ein Ereignis und einen Datenwert überträgt. Somit werden die internen Verbindungen zwischen dem Flipflop und der Außenwelt über Adapter realisiert.
 
@@ -53,9 +53,9 @@ Der FB nutzt intern den Baustein `E_D_FF_ANY` aus der IEC‑61499‑Standardbibl
 
 Der FB besitzt zwei logische Zustände, die dem internen Flipflop entsprechen:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| **Q = 0** | Ausgangswert ist LOW (logisch 0). |
+| Zustand   | Beschreibung                       |
+| --------- | ---------------------------------- |
+| **Q = 0** | Ausgangswert ist LOW (logisch 0).  |
 | **Q = 1** | Ausgangswert ist HIGH (logisch 1). |
 
 Der Zustand wechselt ausschließlich bei einer steigenden Flanke des Taktereignisses (sofern das Ereignis im Adapter ausgelöst wird).

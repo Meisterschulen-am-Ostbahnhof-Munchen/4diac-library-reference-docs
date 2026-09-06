@@ -16,13 +16,13 @@ Dieses Element ist eine Sammlung globaler Konstanten und besitzt keine ereignis-
 
 Die Datei definiert die folgenden Konstanten vom Typ `USINT` (Unsigned Short Integer):
 
-| Name    | Typ   | Initialwert | Kommentar        |
-| :------ | :---- | :---------- | :--------------- |
-| `NODE1` | USINT | 0           | Kennung für CAN 1 |
-| `NODE2` | USINT | 1           | Kennung für CAN 2 |
-| `NODE3` | USINT | 2           | Kennung für CAN 3 |
-| `NODE4` | USINT | 3           | Kennung für CAN 4 |
-| `INVALID`| USINT | USINT#16#FF | Kennung für einen ungültigen oder nicht konfigurierten CAN-Knoten (dezimal: 255) |
+| Name      | Typ   | Initialwert | Kommentar                                                                        |
+| :-------- | :---- | :---------- | :------------------------------------------------------------------------------- |
+| `NODE1`   | USINT | 0           | Kennung für CAN 1                                                                |
+| `NODE2`   | USINT | 1           | Kennung für CAN 2                                                                |
+| `NODE3`   | USINT | 2           | Kennung für CAN 3                                                                |
+| `NODE4`   | USINT | 3           | Kennung für CAN 4                                                                |
+| `INVALID` | USINT | USINT#16#FF | Kennung für einen ungültigen oder nicht konfigurierten CAN-Knoten (dezimal: 255) |
 
 ## Funktionsweise
 

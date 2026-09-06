@@ -52,11 +52,11 @@ The three calibration points can be calibrated in **any order** and repeated ind
 
 **Example** (joystick with center drift, raw range `0..1000`, desired output range `-100..0..100`):
 
-| Step | Action | Result |
-| --- | --- | --- |
-| 1 | Move joystick to **minimum**, `C_MIN=TRUE` | `X_MIN = 50` (drift from ideal `0`) |
-| 2 | Move joystick to **center**, `C_MID=TRUE` | `X_MID = 520` (drift from ideal `500`) |
-| 3 | Move joystick to **maximum**, `C_MAX=TRUE` | `X_MAX = 980` (drift from ideal `1000`) |
+| Step | Action                                     | Result                                  |
+| ---- | ------------------------------------------ | --------------------------------------- |
+| 1    | Move joystick to **minimum**, `C_MIN=TRUE` | `X_MIN = 50` (drift from ideal `0`)     |
+| 2    | Move joystick to **center**, `C_MID=TRUE`  | `X_MID = 520` (drift from ideal `500`)  |
+| 3    | Move joystick to **maximum**, `C_MAX=TRUE` | `X_MAX = 980` (drift from ideal `1000`) |
 
 Result: `Y` is interpolated and clipped between `MIN_REF=-100`, `MID_REF=0` and `MAX_REF=100` -- the joystick's actual (drifted) center position now yields exactly `Y=0`.
 

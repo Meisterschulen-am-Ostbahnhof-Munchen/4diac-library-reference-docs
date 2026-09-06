@@ -36,10 +36,10 @@ Die Daten werden über die **Adapter-Sockets** in Form von 4-Bit-Werten (Nibbles
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
-| `adapter::types::unidirectional::AQ` | Socket (Eingang) | `QUARTER_BYTE_00` .. `QUARTER_BYTE_03` | Vier Quartal-Adapter, die jeweils ein Nibble und ein Ereignis liefern. |
-| `adapter::types::unidirectional::AB` | Plug (Ausgang) | `OUT` | Byte-Adapter, der das zusammengesetzte Byte und ein Ereignis bereitstellt. |
+| Typ                                  | Richtung         | Name                                   | Beschreibung                                                               |
+| ------------------------------------ | ---------------- | -------------------------------------- | -------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | Socket (Eingang) | `QUARTER_BYTE_00` .. `QUARTER_BYTE_03` | Vier Quartal-Adapter, die jeweils ein Nibble und ein Ereignis liefern.     |
+| `adapter::types::unidirectional::AB` | Plug (Ausgang)   | `OUT`                                  | Byte-Adapter, der das zusammengesetzte Byte und ein Ereignis bereitstellt. |
 
 ## Funktionsweise
 

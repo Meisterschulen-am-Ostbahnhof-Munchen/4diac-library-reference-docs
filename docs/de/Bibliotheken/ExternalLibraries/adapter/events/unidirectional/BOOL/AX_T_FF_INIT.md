@@ -12,35 +12,35 @@ Der Funktionsblock **AX_T_FF_INIT** realisiert ein getriggertes Toggle-Flipflop 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                                                                                                                 |
+| ---- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | INIT | EInit | Initialisierungsanforderung; triggert die Initialisierung des Flipflops. Die zugehörigen Daten-Eingänge QI und Q_INIT werden ausgewertet. |
-| CLK | Event | Takteingang; bei jedem Ereignis wechselt der interne Zustand zwischen SET und RESET. |
+| CLK  | Event | Takteingang; bei jedem Ereignis wechselt der interne Zustand zwischen SET und RESET.                                                      |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                                                                                               |
+| ----- | ----- | ------------------------------------------------------------------------------------------------------- |
 | INITO | EInit | Initialisierungsbestätigung; wird nach erfolgreicher Initialisierung oder Deinitialisierung ausgegeben. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| QI | BOOL | Eingangsqualifizierer; steuert, ob Aktionen tatsächlich ausgeführt werden (TRUE = aktiv). |
+| Name   | Typ  | Kommentar                                                                                   |
+| ------ | ---- | ------------------------------------------------------------------------------------------- |
+| QI     | BOOL | Eingangsqualifizierer; steuert, ob Aktionen tatsächlich ausgeführt werden (TRUE = aktiv).   |
 | Q_INIT | BOOL | Wert, der dem Flipflop bei der Initialisierung zugewiesen wird (TRUE = SET, FALSE = RESET). |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| QO | BOOL | Ausgangsqualifizierer; spiegelt den Wert von QI wider, wenn eine Aktion ausgeführt wurde, sonst FALSE. |
+| Name | Typ  | Kommentar                                                                                              |
+| ---- | ---- | ------------------------------------------------------------------------------------------------------ |
+| QO   | BOOL | Ausgangsqualifizierer; spiegelt den Wert von QI wider, wenn eine Aktion ausgeführt wurde, sonst FALSE. |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| Q | Adapter `adapter::types::unidirectional::AX` | Adapterausgang, der den aktuellen Flipflop-Zustand (TRUE oder FALSE) an verbundene Bausteine weitergibt. |
+| Name | Typ                                          | Kommentar                                                                                                |
+| ---- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Q    | Adapter `adapter::types::unidirectional::AX` | Adapterausgang, der den aktuellen Flipflop-Zustand (TRUE oder FALSE) an verbundene Bausteine weitergibt. |
 
 ## Funktionsweise
 
@@ -77,13 +77,13 @@ Der Baustein bleibt im Startzustand, bis ein INIT mit QI=TRUE eintrifft. Ohne In
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --------- | ----------- |
-| START | Warte auf erstes INIT-Ereignis. |
-| Init | Initialisierung läuft; QO wird auf QI gesetzt, dann Übergang zu SET oder RESET abhängig von Q_INIT. |
-| DeInit | Deinitialisierung läuft; QO wird auf FALSE gesetzt, Rückkehr zu START. |
-| SET | Flipflop ist im gesetzten Zustand; Adapterausgang Q.D1 = TRUE (bei QI=TRUE). |
-| RESET | Flipflop ist im zurückgesetzten Zustand; Adapterausgang Q.D1 = FALSE (bei QI=TRUE). |
+| Zustand | Bedeutung                                                                                           |
+| ------- | --------------------------------------------------------------------------------------------------- |
+| START   | Warte auf erstes INIT-Ereignis.                                                                     |
+| Init    | Initialisierung läuft; QO wird auf QI gesetzt, dann Übergang zu SET oder RESET abhängig von Q_INIT. |
+| DeInit  | Deinitialisierung läuft; QO wird auf FALSE gesetzt, Rückkehr zu START.                              |
+| SET     | Flipflop ist im gesetzten Zustand; Adapterausgang Q.D1 = TRUE (bei QI=TRUE).                        |
+| RESET   | Flipflop ist im zurückgesetzten Zustand; Adapterausgang Q.D1 = FALSE (bei QI=TRUE).                 |
 
 Die Zustandsübergänge werden durch die Ereignisse INIT (mit entsprechender Bedingung an QI) und CLK gesteuert.
 
@@ -95,12 +95,12 @@ Die Zustandsübergänge werden durch die Ereignisse INIT (mit entsprechender Bed
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Kriterium | AX_T_FF_INIT | Einfaches Toggle-FF (ohne INIT) | SR-Flipflop |
-| ----------- | -------------- | ------------------------------ | ------------- |
-| Initialisierung | Ja, über INIT mit Q_INIT | Nein, Zustand nach Start undefiniert | Nein (set/reset über separate Eingänge) |
-| Zustandswechsel | Gettaktet durch CLK | Gettaktet durch CLK | Asynchron über S und R |
-| Ausgang | Über Adapter (typisiert) | Oft als BOOL-Datenausgang | BOOL-Datenausgang |
-| Qualifizierer QI | Steuert, ob Aktion ausgeführt wird | Nicht vorhanden | Nicht vorhanden |
+| Kriterium        | AX_T_FF_INIT                       | Einfaches Toggle-FF (ohne INIT)      | SR-Flipflop                             |
+| ---------------- | ---------------------------------- | ------------------------------------ | --------------------------------------- |
+| Initialisierung  | Ja, über INIT mit Q_INIT           | Nein, Zustand nach Start undefiniert | Nein (set/reset über separate Eingänge) |
+| Zustandswechsel  | Gettaktet durch CLK                | Gettaktet durch CLK                  | Asynchron über S und R                  |
+| Ausgang          | Über Adapter (typisiert)           | Oft als BOOL-Datenausgang            | BOOL-Datenausgang                       |
+| Qualifizierer QI | Steuert, ob Aktion ausgeführt wird | Nicht vorhanden                      | Nicht vorhanden                         |
 
 Der **AX_T_FF_INIT** bietet im Vergleich zu einem einfachen Toggle-Flipflop die Möglichkeit einer definierten Initialisierung und verwendet einen Adapter für den Ausgang, was in komplexen Systemen die Konfiguration vereinfacht.
 

@@ -3,6 +3,7 @@
 ![SAFE_ADD_2](SAFE_ADD_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **SAFE_ADD_2** is part of the **SafeArithmetic** library (`SafeArithmetic::arithmetic`, EPL-2.0,

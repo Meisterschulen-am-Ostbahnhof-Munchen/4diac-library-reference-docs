@@ -34,11 +34,13 @@ The **F_SUB_TOD_TOD** function block is a standards-compliant function block for
 
 - `REQ` event with two TIME_OF_DAY values
 - Valid range: TOD#00:00:00 to TOD#23:59:59.999999
+
 1. **Difference Calculation**:
 
 - Conversion of both values to seconds since midnight
 - Difference calculation with 24-hour overflow consideration
 - Result as TIME data type
+
 1. **Result Output**:
 
 - `CNF` event with calculated interval
@@ -73,10 +75,10 @@ The **F_SUB_TOD_TOD** function block is a standards-compliant function block for
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_SUB_TOD_TOD | F_SUB_DT_DT | F_SUB_TIME |
-| --------------- | --------------- | --------------- | -------------- |
-| Input Types | TOD - TOD | DT - DT | TIME - TIME |
-| Output Type | TIME | TIME | TIME |
+| Feature          | F_SUB_TOD_TOD    | F_SUB_DT_DT    | F_SUB_TIME        |
+| ---------------- | ---------------- | -------------- | ----------------- |
+| Input Types      | TOD - TOD        | DT - DT        | TIME - TIME       |
+| Output Type      | TIME             | TIME           | TIME              |
 | Special Features | 24-hour circular | Calendar-based | Simple difference |
 
 ## Conclusion

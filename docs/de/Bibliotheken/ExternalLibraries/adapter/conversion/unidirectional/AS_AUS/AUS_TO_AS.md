@@ -30,10 +30,10 @@ Keine direkt sichtbaren Datenausgänge. Die Daten werden über den Plug-Adapter 
 
 ### **Adapter**
 
-| Name     | Typ                                           | Richtung | Kommentar                     |
-|----------|-----------------------------------------------|----------|-------------------------------|
-| `AUS_IN` | `adapter::types::unidirectional::AUS` (Socket) | Eingang  | USINT-Adapter-Eingang         |
-| `AS_OUT` | `adapter::types::unidirectional::AS` (Plug)  | Ausgang  | SINT-Adapter-Ausgang          |
+| Name     | Typ                                            | Richtung | Kommentar             |
+| -------- | ---------------------------------------------- | -------- | --------------------- |
+| `AUS_IN` | `adapter::types::unidirectional::AUS` (Socket) | Eingang  | USINT-Adapter-Eingang |
+| `AS_OUT` | `adapter::types::unidirectional::AS` (Plug)    | Ausgang  | SINT-Adapter-Ausgang  |
 
 Die Schnittstelle der Adapter selbst enthält:
 

@@ -70,11 +70,11 @@ Der **F_SUB_DT_DT** ist ein standardkonformer Funktionsbaustein zur präzisen Be
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_SUB_DT_DT    | F_SUB_DATE_DATE | F_SUB_TIME |
-|---------------|----------------|-----------------|------------|
-| Genauigkeit   | Mikrosekunden  | Tage            | Nanosekunden |
-| Eingangstyp   | DATE_AND_TIME  | DATE            | TIME       |
-| Typische Anwendung | Prozessdiagnose | Terminplanung | Zykluszeit |
+| Feature            | F_SUB_DT_DT     | F_SUB_DATE_DATE | F_SUB_TIME   |
+| ------------------ | --------------- | --------------- | ------------ |
+| Genauigkeit        | Mikrosekunden   | Tage            | Nanosekunden |
+| Eingangstyp        | DATE_AND_TIME   | DATE            | TIME         |
+| Typische Anwendung | Prozessdiagnose | Terminplanung   | Zykluszeit   |
 
 ## Fazit
 

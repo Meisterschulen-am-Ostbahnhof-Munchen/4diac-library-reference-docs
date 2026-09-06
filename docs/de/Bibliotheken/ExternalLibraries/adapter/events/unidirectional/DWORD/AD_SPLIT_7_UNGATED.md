@@ -32,16 +32,16 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AD` | Empfängt das zu verteilende Adaptersignal. |
+| Richtung         | Name   | Typ                                  | Beschreibung                                           |
+| ---------------- | ------ | ------------------------------------ | ------------------------------------------------------ |
+| Socket (Eingang) | `IN`   | `adapter::types::unidirectional::AD` | Empfängt das zu verteilende Adaptersignal.             |
 | Plug (Ausgang) 1 | `OUT1` | `adapter::types::unidirectional::AD` | Erster Ausgang – identische Kopie des Eingangssignals. |
-| Plug (Ausgang) 2 | `OUT2` | `adapter::types::unidirectional::AD` | Zweiter Ausgang. |
-| Plug (Ausgang) 3 | `OUT3` | `adapter::types::unidirectional::AD` | Dritter Ausgang. |
-| Plug (Ausgang) 4 | `OUT4` | `adapter::types::unidirectional::AD` | Vierter Ausgang. |
-| Plug (Ausgang) 5 | `OUT5` | `adapter::types::unidirectional::AD` | Fünfter Ausgang. |
-| Plug (Ausgang) 6 | `OUT6` | `adapter::types::unidirectional::AD` | Sechster Ausgang. |
-| Plug (Ausgang) 7 | `OUT7` | `adapter::types::unidirectional::AD` | Siebter Ausgang. |
+| Plug (Ausgang) 2 | `OUT2` | `adapter::types::unidirectional::AD` | Zweiter Ausgang.                                       |
+| Plug (Ausgang) 3 | `OUT3` | `adapter::types::unidirectional::AD` | Dritter Ausgang.                                       |
+| Plug (Ausgang) 4 | `OUT4` | `adapter::types::unidirectional::AD` | Vierter Ausgang.                                       |
+| Plug (Ausgang) 5 | `OUT5` | `adapter::types::unidirectional::AD` | Fünfter Ausgang.                                       |
+| Plug (Ausgang) 6 | `OUT6` | `adapter::types::unidirectional::AD` | Sechster Ausgang.                                      |
+| Plug (Ausgang) 7 | `OUT7` | `adapter::types::unidirectional::AD` | Siebter Ausgang.                                       |
 
 ---
 
@@ -77,12 +77,12 @@ Der Baustein besitzt keine Zustände oder Zustandsautomaten. Das Verhalten ist r
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Besonderheit |
-| ---------- | ----------------- | -------------- |
-| `AD_SPLIT_2` | 2 | Einfache 1:2-Verteilung |
-| `AD_SPLIT_4` | 4 | Typisch für 4‑kanalige Systeme |
-| **`AD_SPLIT_7_UNGATED`** | **7** | Erweiterte Verteilung für sieben parallele Pfade |
-| `AD_MERGE` | – | Führt mehrere Eingänge zu einem Ausgang zusammen |
+| Baustein                 | Anzahl Ausgänge | Besonderheit                                     |
+| ------------------------ | --------------- | ------------------------------------------------ |
+| `AD_SPLIT_2`             | 2               | Einfache 1:2-Verteilung                          |
+| `AD_SPLIT_4`             | 4               | Typisch für 4‑kanalige Systeme                   |
+| **`AD_SPLIT_7_UNGATED`** | **7**           | Erweiterte Verteilung für sieben parallele Pfade |
+| `AD_MERGE`               | –               | Führt mehrere Eingänge zu einem Ausgang zusammen |
 
 Gegensätzlich zu einem Merge-Baustein dient `AD_SPLIT_7_UNGATED` ausschließlich der Vervielfältigung eines Signals ohne Datenkombination.
 

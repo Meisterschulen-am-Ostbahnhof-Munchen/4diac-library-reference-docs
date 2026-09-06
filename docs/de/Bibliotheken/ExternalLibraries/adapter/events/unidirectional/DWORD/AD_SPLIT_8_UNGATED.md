@@ -30,17 +30,17 @@ Keine
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket | **IN** | `adapter::types::unidirectional::AD` | Eingangsadapter – aufzuteilendes Signal |
-| Plug | **OUT1** | `adapter::types::unidirectional::AD` | Erster Ausgang |
-| Plug | **OUT2** | `adapter::types::unidirectional::AD` | Zweiter Ausgang |
-| Plug | **OUT3** | `adapter::types::unidirectional::AD` | Dritter Ausgang |
-| Plug | **OUT4** | `adapter::types::unidirectional::AD` | Vierter Ausgang |
-| Plug | **OUT5** | `adapter::types::unidirectional::AD` | Fünfter Ausgang |
-| Plug | **OUT6** | `adapter::types::unidirectional::AD` | Sechster Ausgang |
-| Plug | **OUT7** | `adapter::types::unidirectional::AD` | Siebter Ausgang |
-| Plug | **OUT8** | `adapter::types::unidirectional::AD` | Achter Ausgang |
+| Richtung | Name     | Typ                                  | Beschreibung                            |
+| -------- | -------- | ------------------------------------ | --------------------------------------- |
+| Socket   | **IN**   | `adapter::types::unidirectional::AD` | Eingangsadapter – aufzuteilendes Signal |
+| Plug     | **OUT1** | `adapter::types::unidirectional::AD` | Erster Ausgang                          |
+| Plug     | **OUT2** | `adapter::types::unidirectional::AD` | Zweiter Ausgang                         |
+| Plug     | **OUT3** | `adapter::types::unidirectional::AD` | Dritter Ausgang                         |
+| Plug     | **OUT4** | `adapter::types::unidirectional::AD` | Vierter Ausgang                         |
+| Plug     | **OUT5** | `adapter::types::unidirectional::AD` | Fünfter Ausgang                         |
+| Plug     | **OUT6** | `adapter::types::unidirectional::AD` | Sechster Ausgang                        |
+| Plug     | **OUT7** | `adapter::types::unidirectional::AD` | Siebter Ausgang                         |
+| Plug     | **OUT8** | `adapter::types::unidirectional::AD` | Achter Ausgang                          |
 
 ## Funktionsweise
 

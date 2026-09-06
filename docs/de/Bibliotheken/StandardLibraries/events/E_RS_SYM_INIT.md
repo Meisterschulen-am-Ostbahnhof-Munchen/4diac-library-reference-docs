@@ -44,13 +44,13 @@ Aus `START` führt `INIT` mit `QI = TRUE` in den Zustand `Init`, der `QO := QI` 
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Unkonfigurierter Anfangszustand |
-| Init | Initialisierung läuft, `QO := QI` |
-| DeInit | Deinitialisierung läuft, `QO := FALSE` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| Zustand | Bedeutung                              |
+| ------- | -------------------------------------- |
+| START   | Unkonfigurierter Anfangszustand        |
+| Init    | Initialisierung läuft, `QO := QI`      |
+| DeInit  | Deinitialisierung läuft, `QO := FALSE` |
+| SET     | `Q = TRUE`                             |
+| RESET   | `Q = FALSE`                            |
 
 ## Anwendungsszenarien
 

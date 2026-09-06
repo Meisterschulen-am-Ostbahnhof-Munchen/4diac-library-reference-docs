@@ -3,6 +3,7 @@
 ![SAFE_DIV](SAFE_DIV.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **SAFE_DIV** is part of the **SafeArithmetic** library (`SafeArithmetic::arithmetic`, EPL-2.0,

@@ -28,11 +28,11 @@ Keine
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ | Kommentar |
-| ------------- | ---------- | ----- | ----------- |
-| `IN1` | Socket | `adapter::types::unidirectional::AR` | ADD input 1 |
-| `IN2` | Socket | `adapter::types::unidirectional::AR` | ADD input 2 |
-| `OUT` | Plug | `adapter::types::unidirectional::AR` | ADD result |
+| Bezeichnung | Richtung | Typ                                  | Kommentar   |
+| ----------- | -------- | ------------------------------------ | ----------- |
+| `IN1`       | Socket   | `adapter::types::unidirectional::AR` | ADD input 1 |
+| `IN2`       | Socket   | `adapter::types::unidirectional::AR` | ADD input 2 |
+| `OUT`       | Plug     | `adapter::types::unidirectional::AR` | ADD result  |
 
 Die Adapter sind vom Typ `unidirectional::AR` und ermöglichen die typsichere Verbindung mit anderen Bausteinen, die denselben Adaptertyp unterstützen.
 

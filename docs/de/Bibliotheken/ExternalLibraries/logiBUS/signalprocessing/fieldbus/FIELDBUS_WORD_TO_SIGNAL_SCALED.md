@@ -12,31 +12,31 @@ Der Funktionsblock **FIELDBUS_WORD_TO_SIGNAL_SCALED** dient dazu, einen digitale
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|-------------|
+| Ereignis | Beschreibung                                                                |
+| -------- | --------------------------------------------------------------------------- |
 | `INIT`   | Initialisierungsanfrage; setzt die Skalierungsfaktoren (`SCALE`, `OFFSET`). |
-| `REQ`    | Normale Verarbeitungsanfrage; wertet den aktuellen Eingang `IN` aus. |
+| `REQ`    | Normale Verarbeitungsanfrage; wertet den aktuellen Eingang `IN` aus.        |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|-------------|
-| `INITO`  | Bestätigung der Initialisierung. |
+| Ereignis | Beschreibung                                                                                         |
+| -------- | ---------------------------------------------------------------------------------------------------- |
+| `INITO`  | Bestätigung der Initialisierung.                                                                     |
 | `CNF`    | Bestätigung der Verarbeitung; signalisiert, dass die Ausgänge `OUT` und `VALID` aktualisiert wurden. |
 
 ### **Daten-Eingänge**
 
-| Name    | Datentyp | Vorgabewert     | Beschreibung |
-|---------|----------|-----------------|-------------|
-| `IN`    | WORD     | `NOT_AVAILABLE_WM` | Rohwert vom Feldbus (z. B. 0…65535). Die Konstante `NOT_AVAILABLE_WM` kennzeichnet einen ungültigen Startwert. |
-| `SCALE` | REAL     | `1.0`           | Skalierungsfaktor (wird mit dem eingelesenen Wert multipliziert). |
-| `OFFSET`| DINT     | `0`             | Ganzzahliger Offset, der nach der Skalierung addiert wird (als REAL konvertiert). |
+| Name     | Datentyp | Vorgabewert        | Beschreibung                                                                                                   |
+| -------- | -------- | ------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `IN`     | WORD     | `NOT_AVAILABLE_WM` | Rohwert vom Feldbus (z. B. 0…65535). Die Konstante `NOT_AVAILABLE_WM` kennzeichnet einen ungültigen Startwert. |
+| `SCALE`  | REAL     | `1.0`              | Skalierungsfaktor (wird mit dem eingelesenen Wert multipliziert).                                              |
+| `OFFSET` | DINT     | `0`                | Ganzzahliger Offset, der nach der Skalierung addiert wird (als REAL konvertiert).                              |
 
 ### **Daten-Ausgänge**
 
-| Name    | Datentyp | Vorgabewert | Beschreibung |
-|---------|----------|-------------|-------------|
-| `OUT`   | REAL     | `0.0`       | Skalierter Signalwert. Nur gültig, wenn `VALID = TRUE`. |
+| Name    | Datentyp | Vorgabewert | Beschreibung                                                                             |
+| ------- | -------- | ----------- | ---------------------------------------------------------------------------------------- |
+| `OUT`   | REAL     | `0.0`       | Skalierter Signalwert. Nur gültig, wenn `VALID = TRUE`.                                  |
 | `VALID` | BOOL     | `FALSE`     | Gültigkeitsflag – `TRUE`, wenn der eingehende Rohwert als gültiges Signal erkannt wurde. |
 
 ### **Adapter**
@@ -76,10 +76,10 @@ Der Vergleichswert `VALID_SIGNAL_W` sowie der Standard‑Eingangswert `NOT_AVAIL
 
 ## Zustandsübersicht
 
-| Zustand | Inhalt | Aktion | Ausgangsereignis |
-|---------|--------|--------|-----------------|
-| `INIT`  | Initialisierung (leerer Algorithmus) | – | `INITO` |
-| `REQ`   | Signalverarbeitung | Berechnung von `OUT` und `VALID` | `CNF` |
+| Zustand | Inhalt                               | Aktion                           | Ausgangsereignis |
+| ------- | ------------------------------------ | -------------------------------- | ---------------- |
+| `INIT`  | Initialisierung (leerer Algorithmus) | –                                | `INITO`          |
+| `REQ`   | Signalverarbeitung                   | Berechnung von `OUT` und `VALID` | `CNF`            |
 
 Der FB kennt keine weiteren Zustände; nach jedem Ereignis kehrt er in den entsprechenden Startzustand zurück. Es gibt keine explizite Fehlerbehandlung oder Timeouts.
 
@@ -91,11 +91,11 @@ Der FB kennt keine weiteren Zustände; nach jedem Ereignis kehrt er in den entsp
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschiede |
-| ---------- | ------------- |
-| **FIELDBUS_WORD_TO_SIGNAL** (ohne Skalierung) | Bildet den Rohwert 1:1 ab, ohne Multiplikation/Addition. |
-| **WORD_TO_REAL** (Standard‑IEC‑Baustein) | Reine Typumwandlung ohne Gültigkeitsprüfung und Skalierung. |
-| **SCALING_FB** | Meist mit separatem Gültigkeits- und Skalierungszweig; dieser FB vereint beides in einem Schritt. |
+| Baustein                                      | Unterschiede                                                                                      |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **FIELDBUS_WORD_TO_SIGNAL** (ohne Skalierung) | Bildet den Rohwert 1:1 ab, ohne Multiplikation/Addition.                                          |
+| **WORD_TO_REAL** (Standard‑IEC‑Baustein)      | Reine Typumwandlung ohne Gültigkeitsprüfung und Skalierung.                                       |
+| **SCALING_FB**                                | Meist mit separatem Gültigkeits- und Skalierungszweig; dieser FB vereint beides in einem Schritt. |
 
 Die Stärke von `FIELDBUS_WORD_TO_SIGNAL_SCALED` liegt in der **Kombination aus Gültigkeitsprüfung, Skalierung und Offset** in einem einzigen, überschaubaren FB.
 

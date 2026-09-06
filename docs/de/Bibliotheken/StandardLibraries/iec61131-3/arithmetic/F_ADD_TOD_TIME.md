@@ -71,11 +71,11 @@ Der **F_ADD_TOD_TIME** ist ein spezialisierter Funktionsbaustein zur Addition vo
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal        | F_ADD_TOD_TIME | F_ADD_DT_TIME |
-|----------------|----------------|---------------|
-| Eingangstyp 1  | TIME_OF_DAY    | DATE_AND_TIME |
-| Ausgangstyp    | TIME_OF_DAY    | DATE_AND_TIME |
-| Bereich        | Tageszyklus    | Absolutes Datum |
+| Merkmal       | F_ADD_TOD_TIME | F_ADD_DT_TIME   |
+| ------------- | -------------- | --------------- |
+| Eingangstyp 1 | TIME_OF_DAY    | DATE_AND_TIME   |
+| Ausgangstyp   | TIME_OF_DAY    | DATE_AND_TIME   |
+| Bereich       | Tageszyklus    | Absolutes Datum |
 
 ## Fazit
 

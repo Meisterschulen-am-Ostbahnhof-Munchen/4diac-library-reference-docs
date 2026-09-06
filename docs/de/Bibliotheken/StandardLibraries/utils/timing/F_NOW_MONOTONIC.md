@@ -84,11 +84,11 @@ Die Funktion dient als Wrapper für die ST-Funktion `NOW_MONOTONIC()`.
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Funktion            | `F_NOW_MONOTONIC`      | `NOW()`               | `NOW_SYSTEM()`        |
-|---------------------|------------------------|-----------------------|-----------------------|
-| **Zeitquelle**      | Monoton (Hardware)     | Systemzeit            | Systemzeit (UTC)      |
-| **Beeinflussbar**   | Nein                   | Ja (NTP, Zeitzone)    | Ja (NTP)              |
-| **Anwendungsfall**  | Echtzeit-Messungen     | Allgemeine Zeitstempel| Zeitstempel (global)  |
+| Funktion           | `F_NOW_MONOTONIC`  | `NOW()`                | `NOW_SYSTEM()`       |
+| ------------------ | ------------------ | ---------------------- | -------------------- |
+| **Zeitquelle**     | Monoton (Hardware) | Systemzeit             | Systemzeit (UTC)     |
+| **Beeinflussbar**  | Nein               | Ja (NTP, Zeitzone)     | Ja (NTP)             |
+| **Anwendungsfall** | Echtzeit-Messungen | Allgemeine Zeitstempel | Zeitstempel (global) |
 
 ---
 

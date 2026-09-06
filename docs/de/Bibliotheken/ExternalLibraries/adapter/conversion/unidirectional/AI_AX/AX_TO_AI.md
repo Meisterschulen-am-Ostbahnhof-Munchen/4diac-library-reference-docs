@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Der Daten-Ausgang des Bausteins wird über den P
 
 ### **Adapter**
 
-| Richtung | Name   | Typ (Adapter) | Erläuterung                        |
-|----------|--------|---------------|------------------------------------|
-| Socket   | AX_IN  | `AX`          | Boolescher Eingangsadapter (BOOL)  |
-| Plug     | AI_OUT | `AI`          | Integer-Ausgangsadapter (INT)      |
+| Richtung | Name   | Typ (Adapter) | Erläuterung                       |
+| -------- | ------ | ------------- | --------------------------------- |
+| Socket   | AX_IN  | `AX`          | Boolescher Eingangsadapter (BOOL) |
+| Plug     | AI_OUT | `AI`          | Integer-Ausgangsadapter (INT)     |
 
 Der Adapter `AX` stellt einen Ereignis-Eingang `E1` und einen Daten-Eingang `D1` (BOOL) zur Verfügung.
 Der Adapter `AI` stellt einen Ereignis-Ausgang `E1` und einen Daten-Ausgang `D1` (INT) zur Verfügung.
@@ -75,11 +75,11 @@ Dieses Verhalten wird implizit durch die Ereignisverkabelung im Netzwerk gesteue
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein            | Funktion                                  | Unterschied zu AX_TO_AI                                     |
-|---------------------|-------------------------------------------|-------------------------------------------------------------|
-| `DI_TO_AI`          | Wandelt digitalen Input in INT-Adapter um | Benötigt separate Ein-/Ausgangsports; keine Adapter-Schnittstelle |
-| `AX_TO_DINT`        | BOOL‑Adapter → DINT‑Adapter               | Liefert einen 32‑Bit‑Integer; hier wird 16‑Bit INT verwendet |
-| `F_BOOL_TO_INT`     | Standard-Konvertierung (BOOL→INT)         | Kein Adapter‑Wrapper; nur als interner Baustein verfügbar   |
+| Baustein        | Funktion                                  | Unterschied zu AX_TO_AI                                           |
+| --------------- | ----------------------------------------- | ----------------------------------------------------------------- |
+| `DI_TO_AI`      | Wandelt digitalen Input in INT-Adapter um | Benötigt separate Ein-/Ausgangsports; keine Adapter-Schnittstelle |
+| `AX_TO_DINT`    | BOOL‑Adapter → DINT‑Adapter               | Liefert einen 32‑Bit‑Integer; hier wird 16‑Bit INT verwendet      |
+| `F_BOOL_TO_INT` | Standard-Konvertierung (BOOL→INT)         | Kein Adapter‑Wrapper; nur als interner Baustein verfügbar         |
 
 Im Gegensatz zu diesen Alternativen bietet AX_TO_AI eine adressierbare, ereignisgesteuerte Adapter‑Schnittstelle und erleichtert die modulare Verschaltung in IEC 61499‑Projekten.
 

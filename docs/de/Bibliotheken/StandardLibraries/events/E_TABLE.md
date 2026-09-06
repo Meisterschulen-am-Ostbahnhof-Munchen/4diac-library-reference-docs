@@ -65,11 +65,11 @@ Der `E_TABLE` (Event Table) ist ein Funktionsbaustein nach IEC 61499, der eine e
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | E_TABLE | E_CYCLE | E_N_TABLE |
-| -------------- | ----------- | --------- | ----------- |
-| Ereignisabstand | Variabel (Array `DT`) | Fix (`DT`) | Variabel (Array `DT`) |
-| Ausgänge | Ein `EO`-Kanal | Ein `EO`-Kanal | Mehrere (`EO0`..`EO3`) |
-| Zähler-Ausgang (`CV`) | Ja | Nein | Nein (intern) |
+| Merkmal               | E_TABLE               | E_CYCLE        | E_N_TABLE              |
+| --------------------- | --------------------- | -------------- | ---------------------- |
+| Ereignisabstand       | Variabel (Array `DT`) | Fix (`DT`)     | Variabel (Array `DT`)  |
+| Ausgänge              | Ein `EO`-Kanal        | Ein `EO`-Kanal | Mehrere (`EO0`..`EO3`) |
+| Zähler-Ausgang (`CV`) | Ja                    | Nein           | Nein (intern)          |
 
 ## 🛠️ Zugehörige Übungen
 

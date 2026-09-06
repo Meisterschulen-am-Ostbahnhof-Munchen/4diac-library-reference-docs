@@ -12,15 +12,15 @@ Der Funktionsblock **GET_ANY** liest einen beliebigen Wert (Typ `ANY`) aus einer
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Mit Variablen | Beschreibung |
-|------|-----|---------------|--------------|
-| REQ | Event | IN | Normaler Ausführungsauftrag; liest den aktuellen Wert von IN. |
+| Name | Typ   | Mit Variablen | Beschreibung                                                  |
+| ---- | ----- | ------------- | ------------------------------------------------------------- |
+| REQ  | Event | IN            | Normaler Ausführungsauftrag; liest den aktuellen Wert von IN. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mit Variablen | Beschreibung |
-|------|-----|---------------|--------------|
-| CNF | Event | IN, OUT | Bestätigung nach erfolgreicher Ausführung; die Werte von IN und OUT sind dann gültig. |
+| Name | Typ   | Mit Variablen | Beschreibung                                                                          |
+| ---- | ----- | ------------- | ------------------------------------------------------------------------------------- |
+| CNF  | Event | IN, OUT       | Bestätigung nach erfolgreicher Ausführung; die Werte von IN und OUT sind dann gültig. |
 
 ### **Daten-Eingänge**
 
@@ -28,9 +28,9 @@ Der FB besitzt keine separaten Dateneingänge. Die Quelldaten werden über die I
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
-| OUT | ANY | Gepufferter Ausgangswert. Enthält den zum Zeitpunkt der letzten REQ-Ausführung gelesenen Wert von IN. |
+| Name | Typ | Beschreibung                                                                                          |
+| ---- | --- | ----------------------------------------------------------------------------------------------------- |
+| OUT  | ANY | Gepufferter Ausgangswert. Enthält den zum Zeitpunkt der letzten REQ-Ausführung gelesenen Wert von IN. |
 
 ### **Adapter**
 
@@ -54,9 +54,9 @@ Keine.
 
 Der FB ist als **SimpleFB** implementiert mit genau einem Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| REQ | Führt den Algorithmus `REQ` aus und sendet CNF aus. Nach der Aktion kehrt der FB in diesen Zustand zurück (default). |
+| Zustand | Beschreibung                                                                                                         |
+| ------- | -------------------------------------------------------------------------------------------------------------------- |
+| REQ     | Führt den Algorithmus `REQ` aus und sendet CNF aus. Nach der Aktion kehrt der FB in diesen Zustand zurück (default). |
 
 Es sind keine weiteren Zustände (z. B. Warten, Fehler) definiert.
 

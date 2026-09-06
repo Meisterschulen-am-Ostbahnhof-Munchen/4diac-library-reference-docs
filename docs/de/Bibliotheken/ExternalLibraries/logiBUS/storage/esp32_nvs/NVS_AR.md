@@ -66,11 +66,11 @@ Der `NVS_AR`-Baustein verfügt über keine explizite Zustandsmaschine in der XML
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | `NVS_AR` | Direkter `NVS`-Baustein |
-| --------- | ----------- | ------------------------- |
-| Schnittstelle | AR-Adapter (unidirektional) | Standard‑Ereignis-/Dateneingänge |
-| Einsatzzweck | Einfache Einbindung in adapterbasierte Netzwerke | Flexibel, aber aufwändigere Verdrahtung |
-| Datentyp | REAL | Mehrere Typen (über generischen Parameter) |
+| Merkmal       | `NVS_AR`                                         | Direkter `NVS`-Baustein                    |
+| ------------- | ------------------------------------------------ | ------------------------------------------ |
+| Schnittstelle | AR-Adapter (unidirektional)                      | Standard‑Ereignis-/Dateneingänge           |
+| Einsatzzweck  | Einfache Einbindung in adapterbasierte Netzwerke | Flexibel, aber aufwändigere Verdrahtung    |
+| Datentyp      | REAL                                             | Mehrere Typen (über generischen Parameter) |
 
 Der `NVS_AR` vereinfacht die Integration, indem er die Adapter‑Anbindung standardisiert, während der reine `NVS`-Baustein eine breitere Typenunterstützung bietet.
 

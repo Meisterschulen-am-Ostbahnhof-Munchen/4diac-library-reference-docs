@@ -33,11 +33,11 @@ Keine (Daten werden über den Adapter `Q1` gesendet).
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** (Eingang) | `CLK` | `adapter::types::unidirectional::AX` | Taktsignal – bei jedem eingehenden Ereignis (E1) wird der Bool‑Wert (D1) als Taktpegel ausgewertet. |
+| Richtung             | Name  | Typ                                  | Beschreibung                                                                                                            |
+| -------------------- | ----- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Socket** (Eingang) | `CLK` | `adapter::types::unidirectional::AX` | Taktsignal – bei jedem eingehenden Ereignis (E1) wird der Bool‑Wert (D1) als Taktpegel ausgewertet.                     |
 | **Socket** (Eingang) | `RST` | `adapter::types::unidirectional::AX` | Reset – bei einem eingehenden Ereignis (E1) wird der Ausgang unabhängig vom Takt auf FALSE gesetzt (asynchroner Reset). |
-| **Plug** (Ausgang) | `Q1` | `adapter::types::unidirectional::AX` | Ausgang – bei jedem Taktwechsel oder Reset wird ein Ereignis (E1) ausgelöst und der aktuelle Bool‑Wert (D1) gesendet. |
+| **Plug** (Ausgang)   | `Q1`  | `adapter::types::unidirectional::AX` | Ausgang – bei jedem Taktwechsel oder Reset wird ein Ereignis (E1) ausgelöst und der aktuelle Bool‑Wert (D1) gesendet.   |
 
 Die Adapter vom Typ `unidirectional::AX` besitzen intern:
 
@@ -75,9 +75,9 @@ Er besitzt einen internen Speicher `EDGE`, der den letzten Taktpegel speichert.
 Der ECC besteht aus einem einzigen Zustand `REQ`.
 Jeder eingehende Ereignisimpuls (über `CLK.E1` oder `RST.E1`) führt zur Ausführung des Algorithmus `REQ` und einem sofortigen Ausgangsereignis auf `Q1.E1`.
 
-| aktueller Zustand | eingehendes Ereignis | nächster Zustand | ausgeführte Aktion |
-|-------------------|----------------------|------------------|--------------------|
-| REQ               | `RST.E1`             | REQ              | RESET: Q1.D1 = FALSE |
+| aktueller Zustand | eingehendes Ereignis | nächster Zustand | ausgeführte Aktion                                      |
+| ----------------- | -------------------- | ---------------- | ------------------------------------------------------- |
+| REQ               | `RST.E1`             | REQ              | RESET: Q1.D1 = FALSE                                    |
 | REQ               | `CLK.E1`             | REQ              | Toggle bei steigender Flanke und aktualisieren von EDGE |
 
 Keine weiteren Zustände oder Verweilzeiten.

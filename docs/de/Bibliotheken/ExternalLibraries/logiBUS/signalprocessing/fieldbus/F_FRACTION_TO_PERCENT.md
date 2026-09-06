@@ -12,27 +12,27 @@ Der Funktionsblock **F_FRACTION_TO_PERCENT** ist das Gegenstück zu [`F_PERCENT_
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| REQ | Event | Umrechnung anfordern; verarbeitet den aktuellen Wert von `rFraction`. |
+| Ereignis | Datentyp | Kommentar                                                             |
+| -------- | -------- | --------------------------------------------------------------------- |
+| REQ      | Event    | Umrechnung anfordern; verarbeitet den aktuellen Wert von `rFraction`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| CNF | Event | Umrechnung abgeschlossen; `rPercent` wurde aktualisiert. |
+| Ereignis | Datentyp | Kommentar                                                |
+| -------- | -------- | -------------------------------------------------------- |
+| CNF      | Event    | Umrechnung abgeschlossen; `rPercent` wurde aktualisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| rFraction | REAL | Anteil 0.0-1.0. |
+| Name      | Datentyp | Kommentar       |
+| --------- | -------- | --------------- |
+| rFraction | REAL     | Anteil 0.0-1.0. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| rPercent | REAL | Prozentwert 0.0-100.0. |
+| Name     | Datentyp | Kommentar              |
+| -------- | -------- | ---------------------- |
+| rPercent | REAL     | Prozentwert 0.0-100.0. |
 
 ### **Adapter**
 
@@ -57,9 +57,9 @@ Anschließend wird das Ereignis `CNF` ausgegeben.
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ | Führt den Algorithmus **REQ** aus (Multiplikation mit 100) | CNF |
+| Zustand | Aktion                                                     | Ausgabeereignis |
+| ------- | ---------------------------------------------------------- | --------------- |
+| REQ     | Führt den Algorithmus **REQ** aus (Multiplikation mit 100) | CNF             |
 
 Es gibt keine weiteren Warte- oder Initialisierungszustände.
 

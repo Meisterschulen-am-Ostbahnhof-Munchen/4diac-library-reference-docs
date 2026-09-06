@@ -28,17 +28,17 @@ Es sind keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name  | Typ              | Beschreibung                                    |
-|----------|-------|------------------|-------------------------------------------------|
-| Socket   | IN    | ADI (unidirektional) | Eingangsschnittstelle, die auf acht Ausgänge verteilt wird. |
-| Plug     | OUT1  | ADI (unidirektional) | Erster ausgehender Adapter (identisch zu IN).   |
-| Plug     | OUT2  | ADI (unidirektional) | Zweiter ausgehender Adapter.                    |
-| Plug     | OUT3  | ADI (unidirektional) | Dritter ausgehender Adapter.                    |
-| Plug     | OUT4  | ADI (unidirektional) | Vierter ausgehender Adapter.                    |
-| Plug     | OUT5  | ADI (unidirektional) | Fünfter ausgehender Adapter.                    |
-| Plug     | OUT6  | ADI (unidirektional) | Sechster ausgehender Adapter.                   |
-| Plug     | OUT7  | ADI (unidirektional) | Siebter ausgehender Adapter.                    |
-| Plug     | OUT8  | ADI (unidirektional) | Achter ausgehender Adapter.                     |
+| Richtung | Name | Typ                  | Beschreibung                                                |
+| -------- | ---- | -------------------- | ----------------------------------------------------------- |
+| Socket   | IN   | ADI (unidirektional) | Eingangsschnittstelle, die auf acht Ausgänge verteilt wird. |
+| Plug     | OUT1 | ADI (unidirektional) | Erster ausgehender Adapter (identisch zu IN).               |
+| Plug     | OUT2 | ADI (unidirektional) | Zweiter ausgehender Adapter.                                |
+| Plug     | OUT3 | ADI (unidirektional) | Dritter ausgehender Adapter.                                |
+| Plug     | OUT4 | ADI (unidirektional) | Vierter ausgehender Adapter.                                |
+| Plug     | OUT5 | ADI (unidirektional) | Fünfter ausgehender Adapter.                                |
+| Plug     | OUT6 | ADI (unidirektional) | Sechster ausgehender Adapter.                               |
+| Plug     | OUT7 | ADI (unidirektional) | Siebter ausgehender Adapter.                                |
+| Plug     | OUT8 | ADI (unidirektional) | Achter ausgehender Adapter.                                 |
 
 ## Funktionsweise
 

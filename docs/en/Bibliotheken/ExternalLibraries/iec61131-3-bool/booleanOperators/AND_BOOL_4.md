@@ -12,7 +12,7 @@ The function block `AND_BOOL_4` is a standard function block for calculating the
 - **IN4** (BOOL): Fourth operand for the AND operation.
 - **OUT** (BOOL): Result of the logical AND operation of all four inputs. The output is only `TRUE` if **all** inputs `IN1`, `IN2`, `IN3`, and `IN4` have the value `TRUE`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -31,11 +31,11 @@ This function block does not use any adapters.
 Whenever a `REQ` event occurs, the function block reads the current values at the four Boolean data inputs. It then calculates the logical AND of these four values according to the following truth table:
 
 | IN1 | IN2 | IN3 | IN4 | OUT |
-| :---: | :---: | :---: | :---: | :---: |
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
+| :-: | :-: | :-: | :-: | :-: |
+| 0   | 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 1   | 0   |
 | ... | ... | ... | ... | ... |
-| 1 | 1 | 1 | 1 | 1 |
+| 1   | 1   | 1   | 1   | 1   |
 
 The result is set at the data output `OUT`, and simultaneously the `CNF` event is triggered to signal the completion of the operation.
 

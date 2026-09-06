@@ -15,16 +15,16 @@ Der Funktionsblock **AI_FB_CTD** ist ein nach IEC 61499-2 standardisierter Abwä
 Der FB besitzt keine direkten, separaten Ereignis-Eingänge. Die erforderlichen Ereignisse werden über die **Socket-Adapter** (CD, LD, PV) bereitgestellt – jedes dieser Module führt ein Ereignis (E1) mit sich, das die Zählerlogik triggert.
 
 | Socket | Ereignis (im Adapter) | Beschreibung                 |
-|--------|-----------------------|------------------------------|
+| ------ | --------------------- | ---------------------------- |
 | CD     | E1                    | Zählereignis (Abwärtszähler) |
 | LD     | E1                    | Ladeereignis (Setzen auf PV) |
 | PV     | E1                    | Vorgabeaktualisierung        |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ    | Beschreibung                                              |
-|------|--------|-----------------------------------------------------------|
-| CNF  | Event  | Bestätigungsereignis nach jeder Zähleraktualisierung (CD, LD, PV) |
+| Name | Typ   | Beschreibung                                                      |
+| ---- | ----- | ----------------------------------------------------------------- |
+| CNF  | Event | Bestätigungsereignis nach jeder Zähleraktualisierung (CD, LD, PV) |
 
 Zusätzlich werden die Ausgangsereignisse auch über die **Plug-Adapter** Q und CV (jeweils E1) weitergegeben.
 
@@ -45,13 +45,13 @@ Es gibt keine direkten Daten-Ausgänge. Die Ausgangsdaten werden über die Plug-
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ                               | Beschreibung                                         |
-|-------------|----------|-----------------------------------|------------------------------------------------------|
-| CD          | Socket   | `adapter::types::unidirectional::AX` | Zählereingang (Ereignis + Daten) für Abwärtszählen   |
-| LD          | Socket   | `adapter::types::unidirectional::AX` | Ladeeingang (Ereignis + Daten) zum Setzen auf PV     |
-| PV          | Socket   | `adapter::types::unidirectional::AI` | Vorgabeeingang (Ereignis + Daten) für den Preset-Wert|
-| Q           | Plug     | `adapter::types::unidirectional::AX` | Ausgangssignal (Ereignis + Daten) – Zähler ≤ 0       |
-| CV          | Plug     | `adapter::types::unidirectional::AI` | Ausgangszählerwert (Ereignis + aktueller Zählerstand)|
+| Bezeichnung | Richtung | Typ                                  | Beschreibung                                          |
+| ----------- | -------- | ------------------------------------ | ----------------------------------------------------- |
+| CD          | Socket   | `adapter::types::unidirectional::AX` | Zählereingang (Ereignis + Daten) für Abwärtszählen    |
+| LD          | Socket   | `adapter::types::unidirectional::AX` | Ladeeingang (Ereignis + Daten) zum Setzen auf PV      |
+| PV          | Socket   | `adapter::types::unidirectional::AI` | Vorgabeeingang (Ereignis + Daten) für den Preset-Wert |
+| Q           | Plug     | `adapter::types::unidirectional::AX` | Ausgangssignal (Ereignis + Daten) – Zähler ≤ 0        |
+| CV          | Plug     | `adapter::types::unidirectional::AI` | Ausgangszählerwert (Ereignis + aktueller Zählerstand) |
 
 ## Funktionsweise
 
@@ -100,12 +100,12 @@ Eine grafische Zustandsmaschine ist daher nicht erforderlich.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Zählrichtung | Schnittstellen       | Besonderheit                                      |
-|-----------------|--------------|----------------------|---------------------------------------------------|
-| **AI_FB_CTD**   | Abwärts      | Nur Adapter (AX, AI) | Ausgang bei jeder Aktualisierung                  |
-| **AI_FB_CTU**   | Aufwärts     | Nur Adapter (AX, AI) | Aufwärtszähler, analoge Struktur                  |
-| **FB_CTD** (Standard) | Abwärts | Direkte Events/Daten | Klassischer Variablenanschluss, ohne Adapter      |
-| **FB_CTUD**     | Beide        | Direkt               | Kombinierter Auf-/Abwärtszähler, erweiterte Logik |
+| Baustein              | Zählrichtung | Schnittstellen       | Besonderheit                                      |
+| --------------------- | ------------ | -------------------- | ------------------------------------------------- |
+| **AI_FB_CTD**         | Abwärts      | Nur Adapter (AX, AI) | Ausgang bei jeder Aktualisierung                  |
+| **AI_FB_CTU**         | Aufwärts     | Nur Adapter (AX, AI) | Aufwärtszähler, analoge Struktur                  |
+| **FB_CTD** (Standard) | Abwärts      | Direkte Events/Daten | Klassischer Variablenanschluss, ohne Adapter      |
+| **FB_CTUD**           | Beide        | Direkt               | Kombinierter Auf-/Abwärtszähler, erweiterte Logik |
 
 Der **AI_FB_CTD** hebt sich durch die konsequente Adapter-Nutzung hervor, was ihn ideal für hierarchische und wiederverwendbare Steuerungsmodelle macht. Im Unterschied zum Standard-FB_CTD entfallen separate Daten- und Eventeingänge – alles wird über die Adapter geführt.
 

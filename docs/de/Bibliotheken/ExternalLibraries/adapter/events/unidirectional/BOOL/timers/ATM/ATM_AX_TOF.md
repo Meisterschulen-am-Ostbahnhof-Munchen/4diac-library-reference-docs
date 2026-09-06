@@ -12,8 +12,8 @@ Der Funktionsblock `ATM_AX_TOF` realisiert eine Ausschaltverzögerung (off-delay
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar |
-|------|-------|-----------|
+| Name | Typ   | Kommentar                      |
+| ---- | ----- | ------------------------------ |
 | R    | Event | Setzt den Timer zurück (Reset) |
 
 ### **Ereignis-Ausgänge**
@@ -30,11 +30,11 @@ Keine direkten Daten-Ausgänge vorhanden. Der Ausgang erfolgt über den Adapter 
 
 ### **Adapter**
 
-| Name | Richtung | Typ  | Beschreibung |
-|------|----------|------|--------------|
-| IN   | Socket   | AX   | Eingangsadapter: Liefert das boolsche Triggersignal (D1: BOOL) und einen Event (E1) zur Auslösung der Timer-Funktion |
-| PT   | Socket   | ATM  | Zeitadapter: Liefert die Verzögerungszeit (D1: TIME) |
-| Q    | Plug     | AX   | Ausgangsadapter: Stellt das boolsche Ausgangssignal (D1: BOOL) und einen Bestätigungs-Event (E1) bereit |
+| Name | Richtung | Typ | Beschreibung                                                                                                         |
+| ---- | -------- | --- | -------------------------------------------------------------------------------------------------------------------- |
+| IN   | Socket   | AX  | Eingangsadapter: Liefert das boolsche Triggersignal (D1: BOOL) und einen Event (E1) zur Auslösung der Timer-Funktion |
+| PT   | Socket   | ATM | Zeitadapter: Liefert die Verzögerungszeit (D1: TIME)                                                                 |
+| Q    | Plug     | AX  | Ausgangsadapter: Stellt das boolsche Ausgangssignal (D1: BOOL) und einen Bestätigungs-Event (E1) bereit              |
 
 ## Funktionsweise
 
@@ -57,12 +57,12 @@ Die Auslösung erfolgt durch den Event `IN.E1` – ein neuer Wert an `IN.D1` wir
 
 Der FB durchläuft folgende Betriebszustände:
 
-| Zustand         | Bedingungen                       | Q.D1  | Beschreibung |
-|-----------------|-----------------------------------|-------|--------------|
-| **Idle**        | IN.D1 = FALSE, Timer läuft nicht  | FALSE | Ruhezustand nach Ablauf oder Reset |
-| **Active**      | IN.D1 = TRUE                      | TRUE  | Eingang aktiv, Ausgang sofort TRUE |
-| **Timing**      | IN.D1 von TRUE → FALSE, Timer aktiv | TRUE | Verzögerungsphase: Ausgang bleibt TRUE für Dauer PT |
-| **Resetting**   | Ereignis R während Timing oder Active | FALSE | Timer wird sofort gestoppt, Ausgang geht auf FALSE |
+| Zustand       | Bedingungen                           | Q.D1  | Beschreibung                                        |
+| ------------- | ------------------------------------- | ----- | --------------------------------------------------- |
+| **Idle**      | IN.D1 = FALSE, Timer läuft nicht      | FALSE | Ruhezustand nach Ablauf oder Reset                  |
+| **Active**    | IN.D1 = TRUE                          | TRUE  | Eingang aktiv, Ausgang sofort TRUE                  |
+| **Timing**    | IN.D1 von TRUE → FALSE, Timer aktiv   | TRUE  | Verzögerungsphase: Ausgang bleibt TRUE für Dauer PT |
+| **Resetting** | Ereignis R während Timing oder Active | FALSE | Timer wird sofort gestoppt, Ausgang geht auf FALSE  |
 
 ## Anwendungsszenarien
 
@@ -73,13 +73,13 @@ Der FB durchläuft folgende Betriebszustände:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Eigenschaft             | ATM_AX_TOF                               | E_TOF (Standard)                     |
-|-------------------------|------------------------------------------|--------------------------------------|
-| Schnittstelle           | Adapter (AX/ATM)                         | Direkte Events/Daten                 |
-| Reset-Funktion          | Ja (Ereignis R)                          | Ja (Ereignis R)                      |
-| Auslösung               | Ereignisgesteuert über Adapter-Event     | Ereignisgesteuert über REQ           |
-| Flexibilität            | Höher durch Adapter-Kopplung             | Einfacher, aber starrer              |
-| Einsatzbereich          | Modulare Automatisierungssysteme         | Grundfunktion in IEC 61499-Editoren  |
+| Eigenschaft    | ATM_AX_TOF                           | E_TOF (Standard)                    |
+| -------------- | ------------------------------------ | ----------------------------------- |
+| Schnittstelle  | Adapter (AX/ATM)                     | Direkte Events/Daten                |
+| Reset-Funktion | Ja (Ereignis R)                      | Ja (Ereignis R)                     |
+| Auslösung      | Ereignisgesteuert über Adapter-Event | Ereignisgesteuert über REQ          |
+| Flexibilität   | Höher durch Adapter-Kopplung         | Einfacher, aber starrer             |
+| Einsatzbereich | Modulare Automatisierungssysteme     | Grundfunktion in IEC 61499-Editoren |
 
 ## Fazit
 

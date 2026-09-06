@@ -30,10 +30,10 @@ Keine separaten Daten-Ausgänge. Daten werden über den Plug-Adapter gesendet.
 
 ### **Adapter**
 
-| Name   | Typ                                    | Richtung | Kommentar                 |
-|--------|----------------------------------------|----------|---------------------------|
-| AW_IN  | adapter::types::unidirectional::AW     | Socket   | WORD-Adapter-Eingang      |
-| AX_OUT | adapter::types::unidirectional::AX     | Plug     | BOOL-Adapter-Ausgang      |
+| Name   | Typ                                | Richtung | Kommentar            |
+| ------ | ---------------------------------- | -------- | -------------------- |
+| AW_IN  | adapter::types::unidirectional::AW | Socket   | WORD-Adapter-Eingang |
+| AX_OUT | adapter::types::unidirectional::AX | Plug     | BOOL-Adapter-Ausgang |
 
 Der Socket **AW_IN** stellt die Ereignis- und Datenschnittstelle eines **WORD**-wertigen Adapters zur Verfügung.
 Der Plug **AX_OUT** stellt die Ereignis- und Datenschnittstelle eines **BOOL**-wertigen Adapters bereit.

@@ -12,38 +12,38 @@ Der Funktionsblock **INI_AIS** dient zum Laden und Speichern von Zeichenketten (
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Beschreibung                         |
-|-------|--------|--------------------------------------|
-| INIT  | EInit  | Service-Initialisierung              |
+| Name | Typ   | Beschreibung            |
+| ---- | ----- | ----------------------- |
+| INIT | EInit | Service-Initialisierung |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Beschreibung                         |
-|-------|--------|--------------------------------------|
-| INITO | EInit  | Bestätigung der Initialisierung      |
+| Name  | Typ   | Beschreibung                    |
+| ----- | ----- | ------------------------------- |
+| INITO | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ    | Beschreibung                                              |
-|---------------|--------|-----------------------------------------------------------|
-| QI            | BOOL   | Qualifikator für den Ereigniseingang                       |
-| SECTION       | STRING | Name des Abschnitts in der Konfigurationsdatei             |
-| KEY           | STRING | Name des Schlüssels im angegebenen Abschnitt              |
-| DEFAULT_VALUE | STRING | Standardwert, falls der Eintrag nicht existiert            |
+| Name          | Typ    | Beschreibung                                    |
+| ------------- | ------ | ----------------------------------------------- |
+| QI            | BOOL   | Qualifikator für den Ereigniseingang            |
+| SECTION       | STRING | Name des Abschnitts in der Konfigurationsdatei  |
+| KEY           | STRING | Name des Schlüssels im angegebenen Abschnitt    |
+| DEFAULT_VALUE | STRING | Standardwert, falls der Eintrag nicht existiert |
 
 ### **Daten-Ausgänge**
 
 | Name   | Typ    | Beschreibung                         |
-|--------|--------|--------------------------------------|
-| QO     | BOOL   | Qualifikator für den Ereignisausgang  |
-| STATUS | STRING | Statusmeldung (z. B. Fehlertext)      |
+| ------ | ------ | ------------------------------------ |
+| QO     | BOOL   | Qualifikator für den Ereignisausgang |
+| STATUS | STRING | Statusmeldung (z. B. Fehlertext)     |
 
 ### **Adapter**
 
-| Name    | Typ                          | Richtung  | Beschreibung                                        |
-|---------|------------------------------|-----------|-----------------------------------------------------|
-| AIS_OUT | adapter::types::unidirectional::AIS | Plug      | Ausgang für den gelesenen Wert (GETO)               |
-| AIS_IN  | adapter::types::unidirectional::AIS | Socket    | Eingang für den zu speichernden Wert (SET)          |
+| Name    | Typ                                 | Richtung | Beschreibung                               |
+| ------- | ----------------------------------- | -------- | ------------------------------------------ |
+| AIS_OUT | adapter::types::unidirectional::AIS | Plug     | Ausgang für den gelesenen Wert (GETO)      |
+| AIS_IN  | adapter::types::unidirectional::AIS | Socket   | Eingang für den zu speichernden Wert (SET) |
 
 ## Funktionsweise
 
@@ -87,10 +87,10 @@ Der Baustein besitzt keine explizit programmierten Zustände. Der interne INI-Ba
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein      | Beschreibung                                                                 |
-|---------------|-------------------------------------------------------------------------------|
-| INI           | Direkter Zugriff auf INI-Dateien mit separaten Ereignissen für GET und SET.   |
-| **INI_AIS**   | Erweitert INI um eine adapterbasierte Schnittstelle, die das Koppeln anderer Bausteine vereinfacht und die Handhabung von Lese- und Schreiboperationen integriert. |
+| Baustein    | Beschreibung                                                                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| INI         | Direkter Zugriff auf INI-Dateien mit separaten Ereignissen für GET und SET.                                                                                        |
+| **INI_AIS** | Erweitert INI um eine adapterbasierte Schnittstelle, die das Koppeln anderer Bausteine vereinfacht und die Handhabung von Lese- und Schreiboperationen integriert. |
 
 - Im Gegensatz zum bloßen `INI`-Baustein bietet INI_AIS eine einheitliche, ereignisorientierte Schnittstelle für lesende und schreibende Komponenten.
 - Die Verwendung von Adaptern ermöglicht eine flexible Verbindung in größeren Automatisierungsnetzwerken, ohne dass die Datenleitungen einzeln verdrahtet werden müssen.

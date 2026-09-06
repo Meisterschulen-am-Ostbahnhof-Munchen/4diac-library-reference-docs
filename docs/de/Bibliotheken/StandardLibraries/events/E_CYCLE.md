@@ -54,11 +54,11 @@ Die Funktionalität des `E_CYCLE` basiert intern auf einer Rückkopplungsschleif
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal      | E_CYCLE                 | E_DELAY                      | E_PULSE (hypothetisch)       |
-|--------------|-------------------------|------------------------------|------------------------------|
-| Funktion     | Periodischer Taktgeber  | Einmalige Verzögerung        | Einmaliger Impuls fester Dauer|
-| Wiederholung | Kontinuierlich          | Einmalig pro `START`-Ereignis| Einmalig pro `REQ`-Ereignis |
-| Steuerung    | START/STOP              | START/STOP                   | REQ                          |
+| Merkmal      | E_CYCLE                | E_DELAY                       | E_PULSE (hypothetisch)         |
+| ------------ | ---------------------- | ----------------------------- | ------------------------------ |
+| Funktion     | Periodischer Taktgeber | Einmalige Verzögerung         | Einmaliger Impuls fester Dauer |
+| Wiederholung | Kontinuierlich         | Einmalig pro `START`-Ereignis | Einmalig pro `REQ`-Ereignis    |
+| Steuerung    | START/STOP             | START/STOP                    | REQ                            |
 
 ## 🛠️ Zugehörige Übungen
 

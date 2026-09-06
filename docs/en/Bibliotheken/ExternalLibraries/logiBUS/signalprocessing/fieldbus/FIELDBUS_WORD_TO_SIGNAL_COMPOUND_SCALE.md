@@ -22,19 +22,19 @@ This function block maps a 16-bit word input to a scaled real value. The incomin
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Description |
-| ------ | ----- | -------------- | -------------- |
-| `IN` | WORD | `NOT_AVAILABLE_WM` | The 16-bit fieldbus signal to be processed. |
-| `SCALE_HIGH` | REAL | 0.256 | Scaling factor for the upper byte (high byte). |
-| `SCALE_LOW` | REAL | 0.001 | Scaling factor for the lower byte (low byte). |
-| `OFFSET` | DINT | 0 | Integer offset added after scaling. |
+| Name         | Type | Initial Value      | Description                                    |
+| ------------ | ---- | ------------------ | ---------------------------------------------- |
+| `IN`         | WORD | `NOT_AVAILABLE_WM` | The 16-bit fieldbus signal to be processed.    |
+| `SCALE_HIGH` | REAL | 0.256              | Scaling factor for the upper byte (high byte). |
+| `SCALE_LOW`  | REAL | 0.001              | Scaling factor for the lower byte (low byte).  |
+| `OFFSET`     | DINT | 0                  | Integer offset added after scaling.            |
 
 ### **Data Outputs**
 
-| Name | Type | Initial Value | Description |
-| ------ | ----- | ------------- | -------------- |
-| `OUT` | REAL | 0.0 | Calculated scalar output value. |
-| `VALID` | BOOL | FALSE | Indicates whether the input signal is valid (`TRUE`) or not (`FALSE`). |
+| Name    | Type | Initial Value | Description                                                            |
+| ------- | ---- | ------------- | ---------------------------------------------------------------------- |
+| `OUT`   | REAL | 0.0           | Calculated scalar output value.                                        |
+| `VALID` | BOOL | FALSE         | Indicates whether the input signal is valid (`TRUE`) or not (`FALSE`). |
 
 ### **Adapters**
 
@@ -48,6 +48,7 @@ The function block operates in two steps, controlled by events:
 
 - The internal algorithm is empty; only the event output `INITO` is set.
 - The scaling parameters (`SCALE_HIGH`, `SCALE_LOW`, `OFFSET`) are passed during the initialization event but are not used until the **REQ** cycle.
+
 1. **Processing (REQ)**
 
 - The incoming value `IN` is compared to the external constant `VALID_SIGNAL_W`.
@@ -92,10 +93,10 @@ END_IF;
 
 The component has two simple states that directly correspond to the events:
 
-| State | Triggered by | Action performed | Output event |
-| --------- | ---------------- | -------------------- | ------------------ |
-| `INIT` | Event `INIT` | Algorithm `INIT` (empty) | `INITO` |
-| `REQ` | Event `REQ` | Algorithm `REQ` (Scaling) | `CNF` |
+| State  | Triggered by | Action performed          | Output event |
+| ------ | ------------ | ------------------------- | ------------ |
+| `INIT` | Event `INIT` | Algorithm `INIT` (empty)  | `INITO`      |
+| `REQ`  | Event `REQ`  | Algorithm `REQ` (Scaling) | `CNF`        |
 
 No further states or branches exist.
 

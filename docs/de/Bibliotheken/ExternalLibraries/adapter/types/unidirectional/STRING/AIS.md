@@ -18,8 +18,8 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar |
-|------|-------|-----------|
+| Name | Typ   | Kommentar                                                                      |
+| ---- | ----- | ------------------------------------------------------------------------------ |
 | E1   | Event | Indikation (oder Request) – das Ereignis wird beim Senden der Daten ausgelöst. |
 
 ### **Daten-Eingänge**
@@ -28,8 +28,8 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ    | Kommentar |
-|------|--------|-----------|
+| Name | Typ    | Kommentar                                         |
+| ---- | ------ | ------------------------------------------------- |
 | D1   | STRING | Die zum Ereignis gehörenden Daten (Zeichenkette). |
 
 ### **Adapter**

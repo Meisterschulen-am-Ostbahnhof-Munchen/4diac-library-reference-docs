@@ -12,15 +12,15 @@ Der Funktionsblock **GET_BOOL** dient dem Auslesen eines BOOL-Wertes aus einer a
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|--------------|---------------|
-| REQ      | Normale Ausführungsanforderung | IN |
+| Ereignis | Beschreibung                   | Mit Variablen |
+| -------- | ------------------------------ | ------------- |
+| REQ      | Normale Ausführungsanforderung | IN            |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|--------------|---------------|
-| CNF      | Bestätigung der Ausführung | OUT, IN |
+| Ereignis | Beschreibung               | Mit Variablen |
+| -------- | -------------------------- | ------------- |
+| CNF      | Bestätigung der Ausführung | OUT, IN       |
 
 ### **Daten-Eingänge**
 
@@ -28,9 +28,9 @@ Es existieren keine deklarierten Dateneingänge (*InputVars*). Der Zugriff auf d
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Initialwert | Beschreibung               |
-|----------|-------|-------------|----------------------------|
-| OUT      | BOOL  | FALSE       | Gepufferter Ausgangswert   |
+| Variable | Typ  | Initialwert | Beschreibung             |
+| -------- | ---- | ----------- | ------------------------ |
+| OUT      | BOOL | FALSE       | Gepufferter Ausgangswert |
 
 ### **Adapter**
 
@@ -54,9 +54,9 @@ Der Ausgang `OUT` bleibt solange auf dem zuletzt gelesenen Wert, bis ein erneute
 
 Der Baustein besitzt einen einzigen Zustand:
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ     | `OUT := IN` | CNF |
+| Zustand | Aktion      | Ausgabeereignis |
+| ------- | ----------- | --------------- |
+| REQ     | `OUT := IN` | CNF             |
 
 Nach Ausführung des Algorithmus wird sofort der Ausgangszustand wieder verlassen (kein Haltezustand). Der Baustein ist somit ereignisgesteuert und wartet nach Abarbeitung auf die nächste Anforderung.
 
@@ -68,12 +68,12 @@ Nach Ausführung des Algorithmus wird sofort der Ausgangszustand wieder verlasse
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Zweck | Datentyp |
-| ---------- | ------- | ---------- |
-| GET_BOOL | Lesen eines BOOL-Wertes über InOut | BOOL |
-| GET_INT | Lesen eines INT-Wertes über InOut | INT |
-| GET_REAL | Lesen eines REAL-Wertes über InOut | REAL |
-| SET_BOOL | Schreiben eines BOOL-Wertes über InOut (schreibend) | BOOL |
+| Baustein | Zweck                                               | Datentyp |
+| -------- | --------------------------------------------------- | -------- |
+| GET_BOOL | Lesen eines BOOL-Wertes über InOut                  | BOOL     |
+| GET_INT  | Lesen eines INT-Wertes über InOut                   | INT      |
+| GET_REAL | Lesen eines REAL-Wertes über InOut                  | REAL     |
+| SET_BOOL | Schreiben eines BOOL-Wertes über InOut (schreibend) | BOOL     |
 
 Gemeinsam ist allen `GET_*`-Bausteinen die Verwendung eines InOut-Parameters und die ereignisgesteuerte Werteübernahme. Der Unterschied liegt allein im verwendeten Datentyp. Im Gegensatz zu `SET_BOOL` verändert `GET_BOOL` die Quellvariable nicht.
 

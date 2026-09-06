@@ -61,21 +61,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Makro-Eigenschaften
 
-| Feature        | Beschreibung                     |
-|---------------|----------------------------------|
-| Speicherort   | Im VT dauerhaft gespeichert      |
-| Größe         | Bis zu 255 Befehle               |
-| Inhalt        | VT-Kommandosequenzen             |
-| ID-Bereich    | 0x01 - 0xFF (8-bit)              |
+| Feature     | Beschreibung                |
+| ----------- | --------------------------- |
+| Speicherort | Im VT dauerhaft gespeichert |
+| Größe       | Bis zu 255 Befehle          |
+| Inhalt      | VT-Kommandosequenzen        |
+| ID-Bereich  | 0x01 - 0xFF (8-bit)         |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Ausführung           |
-| -6   | VT_E_OVERFLOW           | Makro zu komplex                  |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
+| Code | Konstante                 | Bedeutung               |
+| ---- | ------------------------- | ----------------------- |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Ausführung |
+| -6   | VT_E_OVERFLOW             | Makro zu komplex        |
+| -8   | VT_E_NOACT                | VT nicht bereit         |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz    |
 
 ## Anwendungsszenarien
 
@@ -86,11 +86,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ExecuteMacro | Q_ExecuteExtendedMacro | VtMacroRunner |
-|---------------|----------------|------------------------|---------------|
-| ISO-Standard  | ✔              | ✔                     | ✖             |
-| VT-Version    | 4+             | 5+                    | Alle          |
-| ID-Typ        | 8-bit          | 16-bit                | 8-bit         |
+| Feature      | Q_ExecuteMacro | Q_ExecuteExtendedMacro | VtMacroRunner |
+| ------------ | -------------- | ---------------------- | ------------- |
+| ISO-Standard | ✔              | ✔                      | ✖             |
+| VT-Version   | 4+             | 5+                     | Alle          |
+| ID-Typ       | 8-bit          | 16-bit                 | 8-bit         |
 
 ## Fazit
 

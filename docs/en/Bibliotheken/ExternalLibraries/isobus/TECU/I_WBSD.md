@@ -40,12 +40,12 @@ The block enables the precise monitoring of vehicle movements and operating cond
 
 ## Driving Direction States
 
-| Code | State | Description |
-| ------ | --------- | -------------- |
-| 0 | Stationary | No movement |
-| 1 | Forward | Forward travel |
-| 2 | Reverse | Reverse travel |
-| 3 | Undefined | Direction not determinable |
+| Code | State      | Description                |
+| ---- | ---------- | -------------------------- |
+| 0    | Stationary | No movement                |
+| 1    | Forward    | Forward travel             |
+| 2    | Reverse    | Reverse travel             |
+| 3    | Undefined  | Direction not determinable |
 
 ## Functionality
 
@@ -53,10 +53,12 @@ The block enables the precise monitoring of vehicle movements and operating cond
 
 - `INIT` with `QI`=TRUE starts wheel sensor calibration
 - `INITO` confirms operational readiness with system status
+
 1. **Data Provision**:
 
 - `IND` provides continuously updated motion data
 - Automatic adjustment of the update rate (100 ms at >0.5 m/s)
+
 1. **Error Handling**:
 
 - `TIMEOUT` in case of signal loss from the wheel speed sensors
@@ -78,25 +80,25 @@ The block enables the precise monitoring of vehicle movements and operating cond
 
 ## Status Codes
 
-| Parameter | Code | Meaning |
-| ----------- | ------ | ----------- |
-| `KEYSWITCHSTATE` | 0 | Off |
-| | 1 | On |
-| | 2 | Start |
-| | 3 | Undefined |
-| `START_STOP_STATE` | 0 | Stop |
-| | 1 | Start |
-| | 2 | Pause |
-| | 3 | Reserved |
+| Parameter          | Code | Meaning   |
+| ------------------ | ---- | --------- |
+| `KEYSWITCHSTATE`   | 0    | Off       |
+|                    | 1    | On        |
+|                    | 2    | Start     |
+|                    | 3    | Undefined |
+| `START_STOP_STATE` | 0    | Stop      |
+|                    | 1    | Start     |
+|                    | 2    | Pause     |
+|                    | 3    | Reserved  |
 
 ## ⚖️ Comparison with similar systems
 
-| Feature | I_WBSD | Standard | GPS-based |
-| --------- | -------- | ---------- | ----------- |
-| Accuracy | ±0.5% | ±2% | ±5% |
-| Low speed | Good | Excellent | Poor |
-| Signal stability | High | Medium | Low |
-| ISO compliance | Full | Partial | Full |
+| Feature          | I_WBSD | Standard  | GPS-based |
+| ---------------- | ------ | --------- | --------- |
+| Accuracy         | ±0.5%  | ±2%       | ±5%       |
+| Low speed        | Good   | Excellent | Poor      |
+| Signal stability | High   | Medium    | Low       |
+| ISO compliance   | Full   | Partial   | Full      |
 
 ## 🛠️ Related exercises
 

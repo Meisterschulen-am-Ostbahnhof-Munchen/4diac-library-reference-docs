@@ -22,18 +22,18 @@ Der Funktionsblock **FIELDBUS_UINT_TO_SIGNAL_SCALED** dient der Aufbereitung ein
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Initialwert                     | Beschreibung                                              |
-|--------|-------|----------------------------------|-----------------------------------------------------------|
-| IN     | UINT  | WORD_TO_UINT(NOT_AVAILABLE_WM)   | Rohwert vom Feldbus, der skaliert werden soll.            |
-| SCALE  | REAL  | REAL#1.0                        | Skalierungsfaktor (Multiplikation).                       |
-| OFFSET | DINT  | DINT#0                          | Additiver Offset, der nach der Skalierung addiert wird.   |
+| Name   | Typ  | Initialwert                    | Beschreibung                                            |
+| ------ | ---- | ------------------------------ | ------------------------------------------------------- |
+| IN     | UINT | WORD_TO_UINT(NOT_AVAILABLE_WM) | Rohwert vom Feldbus, der skaliert werden soll.          |
+| SCALE  | REAL | REAL#1.0                       | Skalierungsfaktor (Multiplikation).                     |
+| OFFSET | DINT | DINT#0                         | Additiver Offset, der nach der Skalierung addiert wird. |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ   | Initialwert | Beschreibung                                              |
-|--------|-------|-------------|-----------------------------------------------------------|
-| OUT    | REAL  | REAL#0.0    | Skalierter Ausgangswert. Bei ungültigem Signal = 0.0.     |
-| VALID  | BOOL  | FALSE       | Gültigkeitsflag: TRUE wenn das Eingangssignal gültig ist. |
+| Name  | Typ  | Initialwert | Beschreibung                                              |
+| ----- | ---- | ----------- | --------------------------------------------------------- |
+| OUT   | REAL | REAL#0.0    | Skalierter Ausgangswert. Bei ungültigem Signal = 0.0.     |
+| VALID | BOOL | FALSE       | Gültigkeitsflag: TRUE wenn das Eingangssignal gültig ist. |
 
 ### **Adapter**
 
@@ -68,7 +68,7 @@ Die Gültigkeitsschwelle wird als Teil der importierten Bibliothek bereitgestell
 Der FB besitzt genau zwei EC-States:
 
 | Zustand | Eingang | Algorithmus | Ausgangsereignis |
-|---------|---------|-------------|------------------|
+| ------- | ------- | ----------- | ---------------- |
 | INIT    | INIT    | – (leer)    | INITO            |
 | REQ     | REQ     | REQ         | CNF              |
 

@@ -6,28 +6,28 @@ multiplies a time by a real number and returns a time
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | TM, MM |
+| Name | Comment | With   |
+| :--- | :------ | :----- |
+| REQ  |         | TM, MM |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| TM | TIME | |
-| MM | REAL | |
+| :--- | :--- | :------ |
+| TM   | TIME |         |
+| MM   | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | TIME | |
+| :--- | :--- | :------ |
+|      | TIME |         |
 
 ## 🛠️ Related exercises
 

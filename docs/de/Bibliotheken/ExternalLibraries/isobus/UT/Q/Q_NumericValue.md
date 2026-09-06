@@ -64,21 +64,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Wertebereich
 
-| Parameter    | Typ       | Wertebereich          |
-|-------------|-----------|-----------------------|
-| u32NewValue | UDINT     | 0 bis 4.294.967.295   |
+| Parameter   | Typ   | Wertebereich        |
+| ----------- | ----- | ------------------- |
+| u32NewValue | UDINT | 0 bis 4.294.967.295 |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Änderung             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Änderung    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -128 | VT_E_HANDLE_INVALID       | Ungültige Objekt-ID      |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -89,12 +89,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_NumericValue | VtNumberUpdate | VtDataManager |
-|---------------|----------------|----------------|---------------|
-| ISO-Standard  | ✔              | ✖              | ✖             |
-| Wertebereich  | 32-bit         | 16-bit         | 32-bit        |
-| Rückmeldung   | ✔              | ✖              | ✔             |
-| Objekttyp     | Numerisch      | Alle           | Alle          |
+| Feature      | Q_NumericValue | VtNumberUpdate | VtDataManager |
+| ------------ | -------------- | -------------- | ------------- |
+| ISO-Standard | ✔              | ✖              | ✖             |
+| Wertebereich | 32-bit         | 16-bit         | 32-bit        |
+| Rückmeldung  | ✔              | ✖              | ✔             |
+| Objekttyp    | Numerisch      | Alle           | Alle          |
 
 ## 🛠️ Zugehörige Übungen
 

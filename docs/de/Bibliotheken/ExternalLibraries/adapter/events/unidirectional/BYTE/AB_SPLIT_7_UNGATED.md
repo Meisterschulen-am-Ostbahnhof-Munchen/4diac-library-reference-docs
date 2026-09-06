@@ -30,16 +30,16 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| IN | `adapter::types::unidirectional::AB` | Socket (Eingang) | Eingehender Adapter, der auf die Ausgänge verteilt wird. |
-| OUT1 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Erster ausgehender Adapter, identisch mit dem Eingang. |
-| OUT2 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Zweiter ausgehender Adapter. |
-| OUT3 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Dritter ausgehender Adapter. |
-| OUT4 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Vierter ausgehender Adapter. |
-| OUT5 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Fünfter ausgehender Adapter. |
-| OUT6 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Sechster ausgehender Adapter. |
-| OUT7 | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Siebter ausgehender Adapter. |
+| Name | Typ                                  | Richtung         | Beschreibung                                             |
+| ---- | ------------------------------------ | ---------------- | -------------------------------------------------------- |
+| IN   | `adapter::types::unidirectional::AB` | Socket (Eingang) | Eingehender Adapter, der auf die Ausgänge verteilt wird. |
+| OUT1 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Erster ausgehender Adapter, identisch mit dem Eingang.   |
+| OUT2 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Zweiter ausgehender Adapter.                             |
+| OUT3 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Dritter ausgehender Adapter.                             |
+| OUT4 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Vierter ausgehender Adapter.                             |
+| OUT5 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Fünfter ausgehender Adapter.                             |
+| OUT6 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Sechster ausgehender Adapter.                            |
+| OUT7 | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Siebter ausgehender Adapter.                             |
 
 ## Funktionsweise
 

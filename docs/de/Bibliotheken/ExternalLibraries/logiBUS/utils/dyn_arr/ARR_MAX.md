@@ -14,27 +14,27 @@ Der Funktionsbaustein `ARR_MAX` berechnet den Maximalwert eines eindimensionalen
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Mit Var | Beschreibung |
-|------|-----|---------|--------------|
-| `REQ` | Event | `A` | Startet die Berechnung des Maximums. Das Array `A` muss zum Zeitpunkt des Ereignisses gültig und mit Werten belegt sein. |
+| Name  | Typ   | Mit Var | Beschreibung                                                                                                             |
+| ----- | ----- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `REQ` | Event | `A`     | Startet die Berechnung des Maximums. Das Array `A` muss zum Zeitpunkt des Ereignisses gültig und mit Werten belegt sein. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mit Var | Beschreibung |
-|------|-----|---------|--------------|
+| Name  | Typ   | Mit Var     | Beschreibung                                                                                                                                                 |
+| ----- | ----- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `CNF` | Event | (leer), `A` | Bestätigt das Ende der Berechnung. Das Ereignis wird ausgelöst, sobald der Maximalwert ermittelt wurde. Das Array `A` bleibt während des Ereignisses gültig. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Anfangswert | Beschreibung |
-|------|-----|-------------|--------------|
-| `A` (IN/OUT) | `ARRAY[*] OF INT` | – | Eindimensionales Integer-Array, dessen Maximum berechnet werden soll. Die Größe wird zur Laufzeit dynamisch ermittelt. |
+| Name         | Typ               | Anfangswert | Beschreibung                                                                                                           |
+| ------------ | ----------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `A` (IN/OUT) | `ARRAY[*] OF INT` | –           | Eindimensionales Integer-Array, dessen Maximum berechnet werden soll. Die Größe wird zur Laufzeit dynamisch ermittelt. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Anfangswert | Beschreibung |
-|------|-----|-------------|--------------|
-| `MAX` | `INT` | – | Der ermittelte Maximalwert des Arrays `A`. (Der Name `MAX` ergibt sich aus der Funktion – in der XML-Definition ist der Ausgang ohne Namen versehen, wird aber als Funktionsrückgabewert behandelt.) |
+| Name  | Typ   | Anfangswert | Beschreibung                                                                                                                                                                                         |
+| ----- | ----- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MAX` | `INT` | –           | Der ermittelte Maximalwert des Arrays `A`. (Der Name `MAX` ergibt sich aus der Funktion – in der XML-Definition ist der Ausgang ohne Namen versehen, wird aber als Funktionsrückgabewert behandelt.) |
 
 ### **Adapter**
 
@@ -73,12 +73,12 @@ Eine explizite Zustandsgrafik entfällt daher.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschied zu ARR_MAX |
-| ---------- | ---------- | ------------------------ |
-| `ARR_MIN` | Minimum eines Arrays | Analog, aber Minimum statt Maximum. |
-| `ARR_SUM` | Summe der Array-Elemente | Andere mathematische Operation; kein Vergleich zwischen Elementen. |
-| `ARR_MEAN` | Arithmetischer Mittelwert | Erfordert zusätzlich Division durch die Anzahl; nicht nur Vergleich. |
-| `MAX` (IEC 61131-3) | Maximum zweier Werte | Arbeitet nur mit Skalaren, nicht mit Arrays. `ARR_MAX` erweitert dies auf ganze Arrays. |
+| Baustein            | Funktion                  | Unterschied zu ARR_MAX                                                                  |
+| ------------------- | ------------------------- | --------------------------------------------------------------------------------------- |
+| `ARR_MIN`           | Minimum eines Arrays      | Analog, aber Minimum statt Maximum.                                                     |
+| `ARR_SUM`           | Summe der Array-Elemente  | Andere mathematische Operation; kein Vergleich zwischen Elementen.                      |
+| `ARR_MEAN`          | Arithmetischer Mittelwert | Erfordert zusätzlich Division durch die Anzahl; nicht nur Vergleich.                    |
+| `MAX` (IEC 61131-3) | Maximum zweier Werte      | Arbeitet nur mit Skalaren, nicht mit Arrays. `ARR_MAX` erweitert dies auf ganze Arrays. |
 
 `ARR_MAX` kombiniert die Array-Durchlauf-Fähigkeit mit der einfachen Maximums-Bestimmung und ist daher ein spezialisierter, aber wiederverwendbarer Baustein für dynamische Arrays.
 

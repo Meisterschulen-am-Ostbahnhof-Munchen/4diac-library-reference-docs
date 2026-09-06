@@ -32,11 +32,11 @@ The function block has no direct event or data inputs and outputs, but communica
 
 ### **Adapters**
 
-| Adapter | Type | Direction | Description |
-| --------- | ----- | ---------- | -------------- |
-| IN1 | `ALI` (Socket) | Input | Adapter for the first comparison value and its associated event |
-| IN2 | `ALI` (Socket) | Input | Adapter for the second comparison value and its associated event |
-| OUT | `AX` (Plug) | Output | Adapter for the comparison result and the output event |
+| Adapter | Type           | Direction | Description                                                      |
+| ------- | -------------- | --------- | ---------------------------------------------------------------- |
+| IN1     | `ALI` (Socket) | Input     | Adapter for the first comparison value and its associated event  |
+| IN2     | `ALI` (Socket) | Input     | Adapter for the second comparison value and its associated event |
+| OUT     | `AX` (Plug)    | Output    | Adapter for the comparison result and the output event           |
 
 The adapters `ALI` and `AX` are unidirectional interfaces, each providing one event channel and one data channel.
 

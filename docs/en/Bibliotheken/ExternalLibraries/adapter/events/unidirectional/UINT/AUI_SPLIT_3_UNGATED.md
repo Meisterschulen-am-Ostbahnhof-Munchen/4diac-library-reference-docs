@@ -30,12 +30,12 @@ None – the FB has no independent data outputs. Data is transmitted via the AUI
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Input) | `IN` | `adapter::types::unidirectional::AUI` | Incoming AUI interface distributed across three outputs. |
-| Plug (Output) | `OUT1` | `adapter::types::unidirectional::AUI` | First outgoing AUI output (identical to the input signal). |
-| Plug (Output) | `OUT2` | `adapter::types::unidirectional::AUI` | Second outgoing AUI output (identical to the input signal). |
-| Plug (Output) | `OUT3` | `adapter::types::unidirectional::AUI` | Third outgoing AUI output (identical to the input signal). |
+| Direction      | Name   | Type                                  | Description                                                 |
+| -------------- | ------ | ------------------------------------- | ----------------------------------------------------------- |
+| Socket (Input) | `IN`   | `adapter::types::unidirectional::AUI` | Incoming AUI interface distributed across three outputs.    |
+| Plug (Output)  | `OUT1` | `adapter::types::unidirectional::AUI` | First outgoing AUI output (identical to the input signal).  |
+| Plug (Output)  | `OUT2` | `adapter::types::unidirectional::AUI` | Second outgoing AUI output (identical to the input signal). |
+| Plug (Output)  | `OUT3` | `adapter::types::unidirectional::AUI` | Third outgoing AUI output (identical to the input signal).  |
 
 ## Functionality
 
@@ -60,11 +60,11 @@ The function block does not have an internal state machine. There is only one co
 
 ## Comparison with Similar Components
 
-| Component | Outputs | Properties |
-| ---------- | ---------- | --------------- |
-| `AUI_SPLIT_2` | 2 | Same functionality, but only two outputs. |
-| `AUI_SPLIT_4` | 4 | Extended version with four outputs. |
-| `AUI_MERGE` | – | Combines multiple AUI inputs into one output (opposite function). |
+| Component     | Outputs | Properties                                                        |
+| ------------- | ------- | ----------------------------------------------------------------- |
+| `AUI_SPLIT_2` | 2       | Same functionality, but only two outputs.                         |
+| `AUI_SPLIT_4` | 4       | Extended version with four outputs.                               |
+| `AUI_MERGE`   | –       | Combines multiple AUI inputs into one output (opposite function). |
 
 The `AUI_SPLIT_3_UNGATED` represents a specific configuration that provides exactly three identical outputs. It can be replaced by other splitter variants if needed.
 

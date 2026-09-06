@@ -12,21 +12,21 @@ Der Funktionsbaustein `AUDI_D_FF_HYS` realisiert ein datengetriggertes Flip‑Fl
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar       | Mit Variable |
-|----------|-------|-----------------|--------------|
-| `INIT`   | EInit | Set Hysteresis  | `HYSTERESIS` |
+| Ereignis | Typ   | Kommentar      | Mit Variable |
+| -------- | ----- | -------------- | ------------ |
+| `INIT`   | EInit | Set Hysteresis | `HYSTERESIS` |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar          |
-|----------|-------|--------------------|
-| `INITO`  | EInit | Init Confirmation  |
+| Ereignis | Typ   | Kommentar         |
+| -------- | ----- | ----------------- |
+| `INITO`  | EInit | Init Confirmation |
 
 ### **Daten-Eingänge**
 
-| Variable      | Typ   | Kommentar        |
-|---------------|-------|------------------|
-| `HYSTERESIS`  | UDINT | Hysteresis band  |
+| Variable     | Typ   | Kommentar       |
+| ------------ | ----- | --------------- |
+| `HYSTERESIS` | UDINT | Hysteresis band |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge – die Ausgabedaten werden über den Adapter `Q` 
 
 ### **Adapter**
 
-| Rolle   | Name | Typ (Adapter)               | Kommentar          |
-|---------|------|-----------------------------|--------------------|
-| Plug    | `Q`  | `adapter::types::unidirectional::AUDI` | Latched value     |
-| Socket  | `I`  | `adapter::types::unidirectional::AUDI` | Value to latch    |
+| Rolle  | Name | Typ (Adapter)                          | Kommentar      |
+| ------ | ---- | -------------------------------------- | -------------- |
+| Plug   | `Q`  | `adapter::types::unidirectional::AUDI` | Latched value  |
+| Socket | `I`  | `adapter::types::unidirectional::AUDI` | Value to latch |
 
 Der Adapter `AUDI` enthält jeweils einen Ereignis‑ und einen Datenkanal:  
 

@@ -60,11 +60,11 @@ Bei Auslösung des `REQ`-Ereignisses berechnet der FB die XOR-Verknüpfung aller
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | XOR_9       | Standard-XOR (2 Eingänge) |
-|---------------|-------------|---------------------------|
-| Eingangsanzahl | 9           | 2                         |
-| Datentyp       | ANY_BIT     | Typabhängig (z.B. BOOL)   |
-| Flexibilität   | Hoch        | Gering                    |
+| Feature        | XOR_9   | Standard-XOR (2 Eingänge) |
+| -------------- | ------- | ------------------------- |
+| Eingangsanzahl | 9       | 2                         |
+| Datentyp       | ANY_BIT | Typabhängig (z.B. BOOL)   |
+| Flexibilität   | Hoch    | Gering                    |
 
 ## Fazit
 

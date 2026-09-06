@@ -12,34 +12,34 @@ Der Baustein **ADI_TO_AULI** ist ein Composite-Funktionsblock (FB) gemäß IEC 6
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Typ | Beschreibung |
-|-------------|-----|--------------|
+| Bezeichnung | Typ                 | Beschreibung                                                         |
+| ----------- | ------------------- | -------------------------------------------------------------------- |
 | ADI_IN.E1   | Ereignis (implizit) | Auslöser für die Konvertierung; wird vom ADI‑Adapter bereitgestellt. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Typ | Beschreibung |
-|-------------|-----|--------------|
+| Bezeichnung | Typ                 | Beschreibung                                                                          |
+| ----------- | ------------------- | ------------------------------------------------------------------------------------- |
 | AULI_OUT.E1 | Ereignis (implizit) | Signalisiert den Abschluss der Konvertierung; wird an den AULI‑Adapter weitergegeben. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Typ   | Beschreibung |
-|-------------|-------|--------------|
-| ADI_IN.D1   | DINT  | Eingangswert, der in ULINT konvertiert werden soll. |
+| Bezeichnung | Typ  | Beschreibung                                        |
+| ----------- | ---- | --------------------------------------------------- |
+| ADI_IN.D1   | DINT | Eingangswert, der in ULINT konvertiert werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Typ    | Beschreibung |
-|-------------|--------|--------------|
-| AULI_OUT.D1 | ULINT  | Konvertierter Ausgangswert (vorzeichenlos). |
+| Bezeichnung | Typ   | Beschreibung                                |
+| ----------- | ----- | ------------------------------------------- |
+| AULI_OUT.D1 | ULINT | Konvertierter Ausgangswert (vorzeichenlos). |
 
 ### **Adapter**
 
-| Name      | Typ (Schnittstelle)   | Richtung | Beschreibung |
-|-----------|-----------------------|----------|--------------|
-| ADI_IN    | ADI (Socket)          | Input    | Nimmt den DINT‑Wert über einen unidirektionalen ADI‑Adapter entgegen. |
-| AULI_OUT  | AULI (Plug)           | Output   | Stellt den konvertierten ULINT‑Wert über einen unidirektionalen AULI‑Adapter bereit. |
+| Name     | Typ (Schnittstelle) | Richtung | Beschreibung                                                                         |
+| -------- | ------------------- | -------- | ------------------------------------------------------------------------------------ |
+| ADI_IN   | ADI (Socket)        | Input    | Nimmt den DINT‑Wert über einen unidirektionalen ADI‑Adapter entgegen.                |
+| AULI_OUT | AULI (Plug)         | Output   | Stellt den konvertierten ULINT‑Wert über einen unidirektionalen AULI‑Adapter bereit. |
 
 ## Funktionsweise
 

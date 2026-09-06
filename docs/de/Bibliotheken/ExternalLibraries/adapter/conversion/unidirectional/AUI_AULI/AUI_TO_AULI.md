@@ -14,34 +14,34 @@ Der Baustein besitzt keine eigenständigen Ereignis- oder Daten-Ein-/Ausgänge, 
 
 ### **Ereignis-Eingänge**
 
-| Signal | Beschreibung |
-|--------|--------------|
+| Signal           | Beschreibung                                                                                                                        |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | (E1 über AUI_IN) | Ereigniseingang des angeschlossenen AUI-Adapters (Socket). Ein eingehendes Ereignis wird direkt an den AULI-Adapter weitergeleitet. |
 
 ### **Ereignis-Ausgänge**
 
-| Signal | Beschreibung |
-|--------|--------------|
+| Signal             | Beschreibung                                                                                                            |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | (E1 über AULI_OUT) | Ereignisausgang des angeschlossenen AULI-Adapters (Plug). Das vom AUI-Adapter empfangene Ereignis wird hier ausgegeben. |
 
 ### **Daten-Eingänge**
 
-| Signal | Datentyp | Beschreibung |
-|--------|----------|--------------|
+| Signal           | Datentyp        | Beschreibung                                                                               |
+| ---------------- | --------------- | ------------------------------------------------------------------------------------------ |
 | (D1 über AUI_IN) | `UINT` (16 Bit) | Dateneingang des AUI-Adapters. Der eingehende Wert wird als 16-Bit-Ganzzahl interpretiert. |
 
 ### **Daten-Ausgänge**
 
-| Signal | Datentyp | Beschreibung |
-|--------|----------|--------------|
+| Signal             | Datentyp         | Beschreibung                                                                                                              |
+| ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | (D1 über AULI_OUT) | `ULINT` (64 Bit) | Datenausgang des AULI-Adapters. Der vom AUI-Adapter übernommene Wert wird als 64-Bit-Ganzzahl ohne Vorzeichen ausgegeben. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AUI` | `AUI_IN` | Socket (Eingang) | Adapter für den Empfang von Ereignissen und Daten im Format `UINT`. |
-| `adapter::types::unidirectional::AULI` | `AULI_OUT` | Plug (Ausgang) | Adapter für das Senden von Ereignissen und Daten im Format `ULINT`. |
+| Typ                                    | Name       | Richtung         | Beschreibung                                                        |
+| -------------------------------------- | ---------- | ---------------- | ------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AUI`  | `AUI_IN`   | Socket (Eingang) | Adapter für den Empfang von Ereignissen und Daten im Format `UINT`. |
+| `adapter::types::unidirectional::AULI` | `AULI_OUT` | Plug (Ausgang)   | Adapter für das Senden von Ereignissen und Daten im Format `ULINT`. |
 
 ## Funktionsweise
 

@@ -32,11 +32,11 @@ Der Baustein besitzt keine direkten Ein-/Ausgangs-Ereignisse oder Daten, sondern
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AUDI` | Socket | Signal-Eingang (liest Daten und Ereignisse) |
-| `OUT` | `adapter::types::unidirectional::AUDI` | Plug | Gefilterter Signal-Ausgang |
-| `VALID` | `adapter::types::unidirectional::AX` | Plug | Gültigkeitsanzeige (Ausgang für Bool & Ereignis) |
+| Adapter | Typ                                    | Richtung | Beschreibung                                     |
+| ------- | -------------------------------------- | -------- | ------------------------------------------------ |
+| `IN`    | `adapter::types::unidirectional::AUDI` | Socket   | Signal-Eingang (liest Daten und Ereignisse)      |
+| `OUT`   | `adapter::types::unidirectional::AUDI` | Plug     | Gefilterter Signal-Ausgang                       |
+| `VALID` | `adapter::types::unidirectional::AX`   | Plug     | Gültigkeitsanzeige (Ausgang für Bool & Ereignis) |
 
 ## Funktionsweise
 
@@ -68,10 +68,10 @@ Somit wird das Gültigkeitssignal erst nach Abschluss der Signalverarbeitung akt
 
 Der FB besitzt keinen eigenen Zustandsautomaten; das Verhalten wird durch das interne D‑Flipflop bestimmt. Dieses kennt zwei Zustände:
 
-| Zustand | Q (Ausgang) | Bedeutung |
-|---------|-------------|-----------|
-| 0 | `FALSE` | Signal derzeit ungültig |
-| 1 | `TRUE`  | Signal gültig |
+| Zustand | Q (Ausgang) | Bedeutung               |
+| ------- | ----------- | ----------------------- |
+| 0       | `FALSE`     | Signal derzeit ungültig |
+| 1       | `TRUE`      | Signal gültig           |
 
 Der Zustandswechsel erfolgt bei jeder steigenden Taktflanke (`CLK`) auf den aktuellen Wert von `D`. Ein Zurücksetzen (Reset) ist nicht vorgesehen – bei ungültigem Signal bleibt Q auf dem letzten bekannten gültigen Wert, bis ein neuer Takt mit `D = FALSE` eintrifft.
 
@@ -83,11 +83,11 @@ Der Zustandswechsel erfolgt bei jeder steigenden Taktflanke (`CLK`) auf den aktu
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Merkmal |
-| ---------- | --------- |
-| `FIELDBUS_UDINT_TO_SIGNAL` allein | Gibt das Signal sofort ungültig weiter – ohne Synchronisation der Gültigkeit. |
-| `AUDI_FIELDBUS_UDINT_TO_SIGNAL` (dieser FB) | **Zusätzliche Synchronisation** des Gültigkeitssignals über ein D‑Flipflop, sodass `VALID` erst mit dem nächsten Takt aktualisiert wird. |
-| Andere Validierungs‑Bausteine | Oft ohne dynamische Synchronisation; dieser Baustein eignet sich besonders für zyklische Bus‑Systeme, bei denen Daten und Gültigkeit zeitlich versetzt ankommen können. |
+| Baustein                                    | Merkmal                                                                                                                                                                 |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `FIELDBUS_UDINT_TO_SIGNAL` allein           | Gibt das Signal sofort ungültig weiter – ohne Synchronisation der Gültigkeit.                                                                                           |
+| `AUDI_FIELDBUS_UDINT_TO_SIGNAL` (dieser FB) | **Zusätzliche Synchronisation** des Gültigkeitssignals über ein D‑Flipflop, sodass `VALID` erst mit dem nächsten Takt aktualisiert wird.                                |
+| Andere Validierungs‑Bausteine               | Oft ohne dynamische Synchronisation; dieser Baustein eignet sich besonders für zyklische Bus‑Systeme, bei denen Daten und Gültigkeit zeitlich versetzt ankommen können. |
 
 ## Fazit
 

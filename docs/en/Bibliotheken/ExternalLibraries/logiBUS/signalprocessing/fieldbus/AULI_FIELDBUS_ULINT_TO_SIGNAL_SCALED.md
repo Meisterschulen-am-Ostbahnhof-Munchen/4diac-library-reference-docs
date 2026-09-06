@@ -17,16 +17,16 @@ The function block **AULI_FIELDBUS_ULINT_TO_SIGNAL_SCALED** is used for the scal
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|-------|-----------------------|
+| Name  | Type  | Comment           |
+| ----- | ----- | ----------------- |
 | INITO | EInit | Init Confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Comment |
-| -------- | ------- | -------------- | ----------------------------------- |
-| SCALE | LREAL | 1.0 | Scaling Factor |
-| OFFSET | DINT | 0 | Offset added after scaling |
+| Name   | Type  | Initial Value | Comment                    |
+| ------ | ----- | ------------- | -------------------------- |
+| SCALE  | LREAL | 1.0           | Scaling Factor             |
+| OFFSET | DINT  | 0             | Offset added after scaling |
 
 ### **Data Outputs**
 
@@ -36,16 +36,16 @@ The function block **AULI_FIELDBUS_ULINT_TO_SIGNAL_SCALED** is used for the scal
 
 #### **Socket (Input)**
 
-| Name | Type | Comment |
-|------|--------------------------------------------------|-----------|
-| IN | adapter::types::unidirectional::AULI | Input |
+| Name | Type                                 | Comment |
+| ---- | ------------------------------------ | ------- |
+| IN   | adapter::types::unidirectional::AULI | Input   |
 
 #### **Plug (Output)**
 
-| Name | Type | Comment |
-| ------- | -------------------------------------------------- | --------------------- |
-| OUT | adapter::types::unidirectional::ALR | Filtered Output |
-| VALID | adapter::types::unidirectional::AX | TRUE if Signal is VALID |
+| Name  | Type                                | Comment                 |
+| ----- | ----------------------------------- | ----------------------- |
+| OUT   | adapter::types::unidirectional::ALR | Filtered Output         |
+| VALID | adapter::types::unidirectional::AX  | TRUE if Signal is VALID |
 
 ## Functionality
 

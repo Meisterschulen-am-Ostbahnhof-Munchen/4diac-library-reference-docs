@@ -1,6 +1,7 @@
 # Numeric vs. bitwise: the FORTE conversion trap
 
 * * * * * * * * * *
+
 ## Introduction
 
 Every block in this folder (`AB_TO_AR`, `AD_TO_ADI`, `AI_TO_AR`, etc.) as well as the underlying standard function blocks `iec61131::conversion::F_X_TO_Y` (part of the 4diac IDE standard library, not vendored in this repository) convert a value from one IEC 61131 data type to another. For some of these combinations that is a **real numeric value conversion**; for others it is a **pure bit-reinterpretation**, where the numeric value is deliberately ignored and the raw bit pattern is copied instead. Not knowing the difference easily produces a silent, hard-to-find bug — see `AD_TO_AR_TODO.md` in the source repository for the concrete case that triggered this page.
@@ -9,12 +10,12 @@ Every block in this folder (`AB_TO_AR`, `AD_TO_ADI`, `AI_TO_AR`, etc.) as well a
 
 IEC 61131-3 distinguishes four relevant categories:
 
-| Category | Types | Meaning |
-|---|---|---|
-| **ANY_BIT** | `BOOL`, `BYTE`, `WORD`, `DWORD`, `LWORD` | pure bit patterns with no numeric semantics of their own |
-| **ANY_INT** (signed) | `SINT`, `INT`, `DINT`, `LINT` | signed integers |
-| **ANY_INT** (unsigned) | `USINT`, `UINT`, `UDINT`, `ULINT` | unsigned integers |
-| **ANY_REAL** | `REAL`, `LREAL` | IEEE754 floating-point numbers |
+| Category               | Types                                    | Meaning                                                  |
+| ---------------------- | ---------------------------------------- | -------------------------------------------------------- |
+| **ANY_BIT**            | `BOOL`, `BYTE`, `WORD`, `DWORD`, `LWORD` | pure bit patterns with no numeric semantics of their own |
+| **ANY_INT** (signed)   | `SINT`, `INT`, `DINT`, `LINT`            | signed integers                                          |
+| **ANY_INT** (unsigned) | `USINT`, `UINT`, `UDINT`, `ULINT`        | unsigned integers                                        |
+| **ANY_REAL**           | `REAL`, `LREAL`                          | IEEE754 floating-point numbers                           |
 
 The adapter prefixes in this folder correspond to: `AB`=BYTE, `AW`=WORD, `AD`=DWORD, `AL`=LWORD, `AX`=BOOL, `AS`=SINT, `AI`=INT, `ADI`=DINT, `ALI`=LINT, `AUS`=USINT, `AUI`=UINT, `AUDI`=UDINT, `AULI`=ULINT, `AR`=REAL, `ALR`=LREAL.
 
@@ -22,12 +23,12 @@ The adapter prefixes in this folder correspond to: `AB`=BYTE, `AW`=WORD, `AD`=DW
 
 Verified against the FORTE core (`core/include/forte/datatypes/forte_any.h`, `CIEC_ANY::cast<U,T>`, and `forte_real.cpp`/`forte_lreal.cpp`, `CIEC_REAL::castRealData`) — the same logic behind every `F_X_TO_Y` block and every adapter wrapper in this folder:
 
-| Source ＼ Destination | → ANY_BIT | → ANY_INT | → ANY_REAL |
-|---|---|---|---|
-| **ANY_BIT** (except BOOL) | bit copy (structural, no numeric meaning) | bit-reinterpretation — **value-preserving** if the destination is same-or-wider width; truncates otherwise | ⚠️ **bit-reinterpretation — NOT a numeric value!** IEEE754 misinterpretation |
-| **BOOL** | parity/LSB test | numeric (0/1) | numeric (0.0/1.0) — special case, see below |
-| **ANY_INT** | stores the bit pattern (expected behavior for a bit-string destination) | numeric (sign-/zero-extension is safe, narrowing may truncate) | **numeric** (correct cast) |
-| **ANY_REAL** | bit extraction (intentional, e.g. serialization via `F_REAL_TO_DWORD`) | numeric (rounding, `llrint`) | numeric (widen/narrow precision) |
+| Source ＼ Destination      | → ANY_BIT                                                               | → ANY_INT                                                                                                  | → ANY_REAL                                                                   |
+| ------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **ANY_BIT** (except BOOL) | bit copy (structural, no numeric meaning)                               | bit-reinterpretation — **value-preserving** if the destination is same-or-wider width; truncates otherwise | ⚠️ **bit-reinterpretation — NOT a numeric value!** IEEE754 misinterpretation |
+| **BOOL**                  | parity/LSB test                                                         | numeric (0/1)                                                                                              | numeric (0.0/1.0) — special case, see below                                  |
+| **ANY_INT**               | stores the bit pattern (expected behavior for a bit-string destination) | numeric (sign-/zero-extension is safe, narrowing may truncate)                                             | **numeric** (correct cast)                                                   |
+| **ANY_REAL**              | bit extraction (intentional, e.g. serialization via `F_REAL_TO_DWORD`)  | numeric (rounding, `llrint`)                                                                               | numeric (widen/narrow precision)                                             |
 
 **The one genuine trap** is therefore the **ANY_BIT (except BOOL) → ANY_REAL** cell: using `BYTE`/`WORD`/`DWORD`/`LWORD` as the source of a conversion to `REAL`/`LREAL`. In this library that concretely affects two blocks:
 
@@ -56,4 +57,4 @@ The adapter blocks documented here (`AD_TO_AR` etc.) are thin wrappers around th
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

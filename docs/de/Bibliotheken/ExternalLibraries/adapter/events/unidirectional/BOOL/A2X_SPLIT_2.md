@@ -28,11 +28,11 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::A2X` | `IN` | Socket | Eingangs-Adapter, der das zu verteilende A2X-Signal empfängt. |
-| `adapter::types::unidirectional::A2X` | `OUT1` | Plug | Erster Ausgangs-Adapter, der eine identische Kopie des Eingangssignals bereitstellt. |
-| `adapter::types::unidirectional::A2X` | `OUT2` | Plug | Zweiter Ausgangs-Adapter, der eine identische Kopie des Eingangssignals bereitstellt. |
+| Typ                                   | Name   | Richtung | Beschreibung                                                                          |
+| ------------------------------------- | ------ | -------- | ------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::A2X` | `IN`   | Socket   | Eingangs-Adapter, der das zu verteilende A2X-Signal empfängt.                         |
+| `adapter::types::unidirectional::A2X` | `OUT1` | Plug     | Erster Ausgangs-Adapter, der eine identische Kopie des Eingangssignals bereitstellt.  |
+| `adapter::types::unidirectional::A2X` | `OUT2` | Plug     | Zweiter Ausgangs-Adapter, der eine identische Kopie des Eingangssignals bereitstellt. |
 
 ## Funktionsweise
 

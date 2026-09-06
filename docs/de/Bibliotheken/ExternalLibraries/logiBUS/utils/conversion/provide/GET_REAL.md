@@ -12,28 +12,28 @@ Der Funktionsblock **GET_REAL** dient dazu, einen REAL-Wert aus einer **InOut-Va
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|---------------|----------------|
-| **REQ**  | Normale Ausführungsanforderung – löst das Lesen der InOut-Variable aus. | `IN` |
+| Ereignis | Beschreibung                                                            | Mit Variablen |
+| -------- | ----------------------------------------------------------------------- | ------------- |
+| **REQ**  | Normale Ausführungsanforderung – löst das Lesen der InOut-Variable aus. | `IN`          |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|---------------|----------------|
-| **CNF**  | Bestätigung der Ausführung – wird nach der Bearbeitung von `REQ` gesendet. | `OUT`, `IN` |
+| Ereignis | Beschreibung                                                               | Mit Variablen |
+| -------- | -------------------------------------------------------------------------- | ------------- |
+| **CNF**  | Bestätigung der Ausführung – wird nach der Bearbeitung von `REQ` gesendet. | `OUT`, `IN`   |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ  | Initialwert | Beschreibung |
-|----------|------|-------------|--------------|
+| Variable | Typ  | Initialwert | Beschreibung                                       |
+| -------- | ---- | ----------- | -------------------------------------------------- |
 | **IN**   | REAL | 0.0         | InOut-Variable, deren aktueller Wert gelesen wird. |
 
 > **Hinweis:** `IN` ist als *InOut-Variable* deklariert – sie kann sowohl gelesen als auch geschrieben werden. In diesem FB wird sie jedoch nur gelesen.
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ  | Initialwert | Beschreibung |
-|----------|------|-------------|--------------|
+| Variable | Typ  | Initialwert | Beschreibung                                                                            |
+| -------- | ---- | ----------- | --------------------------------------------------------------------------------------- |
 | **OUT**  | REAL | 0.0         | Gepufferter Ausgang – hält den gelesenen Wert von `IN` bis zur nächsten Aktualisierung. |
 
 ### **Adapter**
@@ -78,12 +78,12 @@ Es gibt keine weiteren Zustände oder Verzweigungen – der FB ist deterministis
 
 Ähnliche Bausteine existieren für andere Datentypen, z. B. `GET_BOOL`, `GET_INT`, `GET_LREAL` etc. Sie alle teilen das gleiche Prinzip: Lesen einer InOut-Variable und Bereitstellen als gepufferten Ausgang. Der Unterschied liegt ausschließlich im Datentyp und der damit verbundenen Genauigkeit bzw. Wertebereich.
 
-| Baustein   | Datentyp | Einsatzbereich |
-|------------|----------|----------------|
-| GET_BOOL   | BOOL     | Binäre Signale |
-| GET_INT    | INT      | Ganzzahlen (16 Bit) |
-| GET_REAL   | REAL     | Gleitkommazahlen (32 Bit) |
-| GET_LREAL  | LREAL    | Präzise Gleitkommazahlen (64 Bit) |
+| Baustein  | Datentyp | Einsatzbereich                    |
+| --------- | -------- | --------------------------------- |
+| GET_BOOL  | BOOL     | Binäre Signale                    |
+| GET_INT   | INT      | Ganzzahlen (16 Bit)               |
+| GET_REAL  | REAL     | Gleitkommazahlen (32 Bit)         |
+| GET_LREAL | LREAL    | Präzise Gleitkommazahlen (64 Bit) |
 
 Alle diese Bausteine lassen sich analog verwenden und bieten eine einheitliche Schnittstelle für den Zugriff auf InOut-Variablen.
 

@@ -33,11 +33,13 @@ The **F_MOVE** is a universal function block for type-safe data transfer, develo
 
 - Triggered by the `REQ` event
 - Processes any data type (ANY)
+
 1. **Data Transfer**:
 
 - 1:1 copy of the input value
 - Type-preserving transfer
 - Supports all IEC 61131-3 Data Types
+
 1. **Confirmation**:
 
 - `CNF` event after successful transfer
@@ -68,11 +70,11 @@ The **F_MOVE** is a universal function block for type-safe data transfer, develo
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_MOVE | F_BLOCK_MOVE | F_CAST |
----------------- | --------- | -------------- | -------- |
+| Feature       | F_MOVE       | F_BLOCK_MOVE | F_CAST          |
+| ------------- | ------------ | ------------ | --------------- |
 | Functionality | Single Value | Memory Block | Type Conversion |
-| Type Support | ANY | BYTE Array | ANY |
-| Latency | 1 Cycle | Variable | 1 Cycle |
+| Type Support  | ANY          | BYTE Array   | ANY             |
+| Latency       | 1 Cycle      | Variable     | 1 Cycle         |
 
 ## 🛠️ Related Exercises
 

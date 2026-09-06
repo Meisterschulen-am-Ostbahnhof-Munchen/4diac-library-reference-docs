@@ -14,34 +14,34 @@ Der Funktionsblock **AUI_TO_AB** ist ein Composite-Baustein, der eine AUI-Schnit
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung | Datentyp |
-|------|--------------|----------|
+| Name        | Beschreibung                                                           | Datentyp |
+| ----------- | ---------------------------------------------------------------------- | -------- |
 | `AUI_IN.E1` | Ereignis über den AUI-Adapter (Socket), das die Konvertierung auslöst. | Ereignis |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung | Datentyp |
-|------|--------------|----------|
+| Name        | Beschreibung                                                                             | Datentyp |
+| ----------- | ---------------------------------------------------------------------------------------- | -------- |
 | `AB_OUT.E1` | Ereignis über den AB-Adapter (Plug), das nach erfolgreicher Konvertierung gesendet wird. | Ereignis |
 
 ### **Daten-Eingänge**
 
-| Name | Beschreibung | Datentyp |
-|------|--------------|----------|
-| `AUI_IN.D1` | UINT-Wert, der über den AUI-Adapter empfangen und konvertiert wird. | UINT |
+| Name        | Beschreibung                                                        | Datentyp |
+| ----------- | ------------------------------------------------------------------- | -------- |
+| `AUI_IN.D1` | UINT-Wert, der über den AUI-Adapter empfangen und konvertiert wird. | UINT     |
 
 ### **Daten-Ausgänge**
 
-| Name | Beschreibung | Datentyp |
-|------|--------------|----------|
-| `AB_OUT.D1` | Konvertierter BYTE-Wert, der über den AB-Adapter ausgegeben wird. | BYTE |
+| Name        | Beschreibung                                                      | Datentyp |
+| ----------- | ----------------------------------------------------------------- | -------- |
+| `AB_OUT.D1` | Konvertierter BYTE-Wert, der über den AB-Adapter ausgegeben wird. | BYTE     |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-|-----|------|----------|-----------|
-| `adapter::types::unidirectional::AUI` | `AUI_IN` | Socket | UINT-Adapter-Eingang |
-| `adapter::types::unidirectional::AB` | `AB_OUT` | Plug | BYTE-Adapter-Ausgang |
+| Typ                                   | Name     | Richtung | Kommentar            |
+| ------------------------------------- | -------- | -------- | -------------------- |
+| `adapter::types::unidirectional::AUI` | `AUI_IN` | Socket   | UINT-Adapter-Eingang |
+| `adapter::types::unidirectional::AB`  | `AB_OUT` | Plug     | BYTE-Adapter-Ausgang |
 
 ## Funktionsweise
 

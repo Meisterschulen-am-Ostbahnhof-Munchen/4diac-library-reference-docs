@@ -28,15 +28,15 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Bezeichner | Typ                           | Beschreibung                                      |
-|----------|------------|-------------------------------|---------------------------------------------------|
-| In       | IN         | adapter::types::unidirectional::AL | Unidirektionaler AL‑Adapter als Eingangssignal.   |
-| Out      | OUT1       | adapter::types::unidirectional::AL | Erster Ausgangskanal (identisch zu IN).          |
-| Out      | OUT2       | adapter::types::unidirectional::AL | Zweiter Ausgangskanal.                           |
-| Out      | OUT3       | adapter::types::unidirectional::AL | Dritter Ausgangskanal.                           |
-| Out      | OUT4       | adapter::types::unidirectional::AL | Vierter Ausgangskanal.                           |
-| Out      | OUT5       | adapter::types::unidirectional::AL | Fünfter Ausgangskanal.                           |
-| Out      | OUT6       | adapter::types::unidirectional::AL | Sechster Ausgangskanal.                          |
+| Richtung | Bezeichner | Typ                                | Beschreibung                                    |
+| -------- | ---------- | ---------------------------------- | ----------------------------------------------- |
+| In       | IN         | adapter::types::unidirectional::AL | Unidirektionaler AL‑Adapter als Eingangssignal. |
+| Out      | OUT1       | adapter::types::unidirectional::AL | Erster Ausgangskanal (identisch zu IN).         |
+| Out      | OUT2       | adapter::types::unidirectional::AL | Zweiter Ausgangskanal.                          |
+| Out      | OUT3       | adapter::types::unidirectional::AL | Dritter Ausgangskanal.                          |
+| Out      | OUT4       | adapter::types::unidirectional::AL | Vierter Ausgangskanal.                          |
+| Out      | OUT5       | adapter::types::unidirectional::AL | Fünfter Ausgangskanal.                          |
+| Out      | OUT6       | adapter::types::unidirectional::AL | Sechster Ausgangskanal.                         |
 
 ## Funktionsweise
 

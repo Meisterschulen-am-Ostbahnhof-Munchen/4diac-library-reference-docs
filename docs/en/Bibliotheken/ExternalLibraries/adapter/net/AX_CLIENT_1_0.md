@@ -33,9 +33,9 @@ The generic `CLIENT_1_0` network client writes to a **remote** server identified
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AX | Socket (Input) | BOOL value to be sent |
+| Adapter | Type                               | Direction      | Description           |
+| ------- | ---------------------------------- | -------------- | --------------------- |
+| IN      | adapter::types::unidirectional::AX | Socket (Input) | BOOL value to be sent |
 
 ## Functionality
 

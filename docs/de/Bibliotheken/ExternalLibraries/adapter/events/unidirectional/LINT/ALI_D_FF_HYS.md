@@ -12,21 +12,21 @@ Der Funktionsblock **ALI_D_FF_HYS** realisiert ein Datenlatch (D-Flipflop) mit e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis  | Typ    | Kommentar                                 |
-|-----------|--------|-------------------------------------------|
-| `INIT`    | EInit  | Setzt den Hysteresewert für die Schaltschwelle. |
+| Ereignis | Typ   | Kommentar                                       |
+| -------- | ----- | ----------------------------------------------- |
+| `INIT`   | EInit | Setzt den Hysteresewert für die Schaltschwelle. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis  | Typ    | Kommentar                                 |
-|-----------|--------|-------------------------------------------|
-| `INITO`   | EInit  | Bestätigung der erfolgreichen Initialisierung. |
+| Ereignis | Typ   | Kommentar                                      |
+| -------- | ----- | ---------------------------------------------- |
+| `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Variable      | Typ  | Kommentar                                     |
-|---------------|------|-----------------------------------------------|
-| `HYSTERESIS`  | LINT | Hysterese-Bandbreite (z. B. als Ganzzahl)     |
+| Variable     | Typ  | Kommentar                                 |
+| ------------ | ---- | ----------------------------------------- |
+| `HYSTERESIS` | LINT | Hysterese-Bandbreite (z. B. als Ganzzahl) |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge – die Ausgabe erfolgt über den Adapter `Q`.
 
 ### **Adapter**
 
-| Richtung | Name | Typ                                        | Kommentar                    |
-|----------|------|--------------------------------------------|------------------------------|
-| Socket   | `I`  | `adapter::types::unidirectional::ALI`      | Eingangswert (Daten + Takt) |
-| Plug     | `Q`  | `adapter::types::unidirectional::ALI`      | Ausgangswert (gelatchter Wert) |
+| Richtung | Name | Typ                                   | Kommentar                      |
+| -------- | ---- | ------------------------------------- | ------------------------------ |
+| Socket   | `I`  | `adapter::types::unidirectional::ALI` | Eingangswert (Daten + Takt)    |
+| Plug     | `Q`  | `adapter::types::unidirectional::ALI` | Ausgangswert (gelatchter Wert) |
 
 Der Adapter `I` liefert zwei Signale:
 
@@ -90,12 +90,12 @@ Typische Einsatzfelder dieses Bausteins sind:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein               | Merkmal                                              |
-|------------------------|------------------------------------------------------|
-| **ALI_D_FF** (ohne Hyst.) | Einfaches D-FF ohne Rauschunterdrückung           |
+| Baustein                  | Merkmal                                                   |
+| ------------------------- | --------------------------------------------------------- |
+| **ALI_D_FF** (ohne Hyst.) | Einfaches D-FF ohne Rauschunterdrückung                   |
 | **ALI_D_FF_HYS** (dieser) | D-FF mit parametrierbarer Hysterese zur Störungsfilterung |
-| Schmitt-Trigger-FB     | Ähnliche Funktion, jedoch oft mit festen Schwellen   |
-| **E_D_FF_ANY_HYS**     | Interne Logik, allgemeiner Typ (kein Adapter-Format) |
+| Schmitt-Trigger-FB        | Ähnliche Funktion, jedoch oft mit festen Schwellen        |
+| **E_D_FF_ANY_HYS**        | Interne Logik, allgemeiner Typ (kein Adapter-Format)      |
 
 Der Vorteil von **ALI_D_FF_HYS** liegt in der direkten Adapteranbindung, die eine nahtlose Integration in bestehende IEC 61499-Adapter-Netzwerke ermöglicht.
 

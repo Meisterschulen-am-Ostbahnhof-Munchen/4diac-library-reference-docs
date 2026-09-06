@@ -28,10 +28,10 @@ The FB has no direct data outputs. A data value is output via the plug adapter *
 
 ### **Adapters**
 
-| Adapter | Type | Direction | Comment |
-| --------- | ----- | ---------- | ----------- |
-| I | `adapter::types::unidirectional::ATM` | Socket (incoming) | Latch value |
-| Q | `adapter::types::unidirectional::ATM` | Plug (outgoing) | Stored value |
+| Adapter | Type                                  | Direction         | Comment      |
+| ------- | ------------------------------------- | ----------------- | ------------ |
+| I       | `adapter::types::unidirectional::ATM` | Socket (incoming) | Latch value  |
+| Q       | `adapter::types::unidirectional::ATM` | Plug (outgoing)   | Stored value |
 
 ## Functionality
 

@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| SOCKET | IN | `adapter::types::unidirectional::AUS` | Eingehendes AUS‑Signal |
-| PLUG | OUT1 … OUT9 | `adapter::types::unidirectional::AUS` | Neun ausgehende AUS‑Signale |
+| Richtung | Name        | Typ                                   | Beschreibung                |
+| -------- | ----------- | ------------------------------------- | --------------------------- |
+| SOCKET   | IN          | `adapter::types::unidirectional::AUS` | Eingehendes AUS‑Signal      |
+| PLUG     | OUT1 … OUT9 | `adapter::types::unidirectional::AUS` | Neun ausgehende AUS‑Signale |
 
 ## Funktionsweise
 
@@ -57,11 +57,11 @@ Der Baustein besitzt keine eigenen Zustände oder eine Ereignisablaufsteuerung (
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Ausgänge | Besonderheit |
-| ---------- | ----- | ---------- | -------------- |
-| AUS_SPLIT_9_UNGATED | Adapter | 9 | Generisch, für unidirektionale AUS‑Adapter |
-| AUS_SPLIT_4 | Adapter | 4 | Geringere Ausgangsanzahl |
-| SPLIT_1_2 (z.B. für Daten) | Daten | beliebig | Arbeitet mit Daten‑Ereignis‑Kombinationen |
+| Baustein                   | Typ     | Ausgänge | Besonderheit                               |
+| -------------------------- | ------- | -------- | ------------------------------------------ |
+| AUS_SPLIT_9_UNGATED        | Adapter | 9        | Generisch, für unidirektionale AUS‑Adapter |
+| AUS_SPLIT_4                | Adapter | 4        | Geringere Ausgangsanzahl                   |
+| SPLIT_1_2 (z.B. für Daten) | Daten   | beliebig | Arbeitet mit Daten‑Ereignis‑Kombinationen  |
 
 Im Gegensatz zu datenbasierten Split‑Bausteinen benötigt AUS_SPLIT_9_UNGATED keine Ereignissteuerung, da die Adapterverbindung die Datenweitergabe implizit abwickelt.
 

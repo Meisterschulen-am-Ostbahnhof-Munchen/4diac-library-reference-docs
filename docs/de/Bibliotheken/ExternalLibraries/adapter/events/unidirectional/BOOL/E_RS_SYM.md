@@ -12,16 +12,16 @@ Der Funktionsblock **E_RS_SYM** ist ein ereignisgesteuertes, bistabiles Flipflop
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ    | Beschreibung            |
-|------|--------|-------------------------|
-| `R`  | Event  | Reset des Ausgangs Q    |
-| `S`  | Event  | Setzen des Ausgangs Q   |
+| Name | Typ   | Beschreibung          |
+| ---- | ----- | --------------------- |
+| `R`  | Event | Reset des Ausgangs Q  |
+| `S`  | Event | Setzen des Ausgangs Q |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ    | Beschreibung                        | Mit Daten |
-|------|--------|-------------------------------------|-----------|
-| `EO` | Event  | Ausgang Q hat sich geändert         | Ja (mit Q)|
+| Name | Typ   | Beschreibung                | Mit Daten  |
+| ---- | ----- | --------------------------- | ---------- |
+| `EO` | Event | Ausgang Q hat sich geändert | Ja (mit Q) |
 
 ### **Daten-Eingänge**
 
@@ -29,9 +29,9 @@ Keine Daten-Eingänge vorhanden.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ    | Beschreibung              |
-|------|--------|---------------------------|
-| `Q`  | BOOL   | Wert des Flipflops (TRUE/FALSE) |
+| Name | Typ  | Beschreibung                    |
+| ---- | ---- | ------------------------------- |
+| `Q`  | BOOL | Wert des Flipflops (TRUE/FALSE) |
 
 ### **Adapter**
 
@@ -57,11 +57,11 @@ Das symmetrische Startverhalten bedeutet, dass unmittelbar nach der Initialisier
 
 Der FB besitzt drei Zustände:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                               |
+| ------- | -------------------------------------------------------------------------- |
 | START   | Initialzustand nach dem Einschalten; wartet auf erstes S- oder R-Ereignis. |
-| SET     | Q = TRUE; kann durch R in den RESET-Zustand wechseln. |
-| RESET   | Q = FALSE; kann durch S in den SET-Zustand wechseln. |
+| SET     | Q = TRUE; kann durch R in den RESET-Zustand wechseln.                      |
+| RESET   | Q = FALSE; kann durch S in den SET-Zustand wechseln.                       |
 
 **Transitionen:**
 
@@ -78,11 +78,11 @@ Der FB besitzt drei Zustände:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| **E_RS** | Klassisches RS-Flipflop mit meist asymmetrischem Startverhalten (Q initial FALSE). |
-| **E_RS_SYM** | Wie E_RS, aber mit symmetrischem Startverhalten – kein voreingestellter Wert, Startzustand akzeptiert beide Ereignisse gleich. |
-| **SR-Flipflop** | Ähnliche Funktion, jedoch häufig mit Priorität für Set oder Reset; E_RS_SYM ist prioritätsneutral. |
+| Baustein        | Eigenschaft                                                                                                                    |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **E_RS**        | Klassisches RS-Flipflop mit meist asymmetrischem Startverhalten (Q initial FALSE).                                             |
+| **E_RS_SYM**    | Wie E_RS, aber mit symmetrischem Startverhalten – kein voreingestellter Wert, Startzustand akzeptiert beide Ereignisse gleich. |
+| **SR-Flipflop** | Ähnliche Funktion, jedoch häufig mit Priorität für Set oder Reset; E_RS_SYM ist prioritätsneutral.                             |
 
 ## Fazit
 

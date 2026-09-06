@@ -28,13 +28,13 @@ Keine
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ | Kommentar |
-| ------------- | ---------- | ----- | ----------- |
-| `IN1` | Socket | `adapter::types::unidirectional::ATM` | ADD input 1 |
-| `IN2` | Socket | `adapter::types::unidirectional::ATM` | ADD input 2 |
-| `IN3` | Socket | `adapter::types::unidirectional::ATM` | ADD input 3 |
-| `IN4` | Socket | `adapter::types::unidirectional::ATM` | ADD input 4 |
-| `OUT` | Plug | `adapter::types::unidirectional::ATM` | ADD result |
+| Bezeichnung | Richtung | Typ                                   | Kommentar   |
+| ----------- | -------- | ------------------------------------- | ----------- |
+| `IN1`       | Socket   | `adapter::types::unidirectional::ATM` | ADD input 1 |
+| `IN2`       | Socket   | `adapter::types::unidirectional::ATM` | ADD input 2 |
+| `IN3`       | Socket   | `adapter::types::unidirectional::ATM` | ADD input 3 |
+| `IN4`       | Socket   | `adapter::types::unidirectional::ATM` | ADD input 4 |
+| `OUT`       | Plug     | `adapter::types::unidirectional::ATM` | ADD result  |
 
 Die Adapter sind vom Typ `unidirectional::ATM` und ermöglichen die typsichere Verbindung mit anderen Bausteinen, die denselben Adaptertyp unterstützen.
 

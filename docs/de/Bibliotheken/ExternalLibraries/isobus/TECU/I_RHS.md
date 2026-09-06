@@ -35,14 +35,14 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65093) für die
 
 ## Kupplungsparameter
 
-| Parameter | Typ | Beschreibung | SPN | Bit-Länge | Skalierung |
-| ----------- | ------ | -------------- | ----- | ----------- | ------------ |
-| `REAR_HITCH_POSITION` | USINT | Kupplungsposition | 1873 | 8 | 0.4 %/bit |
-| `REAR_HITCH_WORK_INDICATION` | BYTE | Arbeitszustand | 1877 | 2 | 4 Zustände/2 bit |
-| `REAR_HITCH_POS_LIMIT_STATUS` | BYTE | Positionslimitierung | 5151 | 3 | 8 Zustände/3 bit |
-| `REAR_HITCH_NOMINAL_LOWER_LINK_FORCE` | USINT | Unterlenkerkraft | 1881 | 8 | 0.8 %/bit (-100% Offset) |
-| `REAR_HITCH_DRAFT` | UINT | Zugkraft | 1879 | 16 | 10 N/bit (-320kN Offset) |
-| `REAR_HITCH_EXIT_REASON_CODE` | BYTE | Fehlergrundcode | 5819 | 6 | 64 Zustände/6 bit |
+| Parameter                             | Typ   | Beschreibung         | SPN  | Bit-Länge | Skalierung               |
+| ------------------------------------- | ----- | -------------------- | ---- | --------- | ------------------------ |
+| `REAR_HITCH_POSITION`                 | USINT | Kupplungsposition    | 1873 | 8         | 0.4 %/bit                |
+| `REAR_HITCH_WORK_INDICATION`          | BYTE  | Arbeitszustand       | 1877 | 2         | 4 Zustände/2 bit         |
+| `REAR_HITCH_POS_LIMIT_STATUS`         | BYTE  | Positionslimitierung | 5151 | 3         | 8 Zustände/3 bit         |
+| `REAR_HITCH_NOMINAL_LOWER_LINK_FORCE` | USINT | Unterlenkerkraft     | 1881 | 8         | 0.8 %/bit (-100% Offset) |
+| `REAR_HITCH_DRAFT`                    | UINT  | Zugkraft             | 1879 | 16        | 10 N/bit (-320kN Offset) |
+| `REAR_HITCH_EXIT_REASON_CODE`         | BYTE  | Fehlergrundcode      | 5819 | 6         | 64 Zustände/6 bit        |
 
 ## Funktionsweise
 
@@ -67,21 +67,21 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65093) für die
 
 ## Kupplungseigenschaften
 
-| Feature | Beschreibung |
-| --------- | -------------- |
+| Feature          | Beschreibung            |
+| ---------------- | ----------------------- |
 | Positionsbereich | 0-100% (0 = ganz unten) |
-| Kraftmessung | ±100% der Nennlast |
-| Zugkraftbereich | -320kN bis +350kN |
-| Update-Rate | 100ms im Normalbetrieb |
+| Kraftmessung     | ±100% der Nennlast      |
+| Zugkraftbereich  | -320kN bis +350kN       |
+| Update-Rate      | 100ms im Normalbetrieb  |
 
 ## Rückgabecodes (REAR_HITCH_EXIT_REASON_CODE)
 
-| Codebereich | Bedeutung |
-| ------------ | ----------- |
-| 0-15 | Systemfehler |
-| 16-31 | Positionsfehler |
-| 32-47 | Kraftmessfehler |
-| 48-63 | Reserviert |
+| Codebereich | Bedeutung       |
+| ----------- | --------------- |
+| 0-15        | Systemfehler    |
+| 16-31       | Positionsfehler |
+| 32-47       | Kraftmessfehler |
+| 48-63       | Reserviert      |
 
 ## Anwendungsszenarien
 
@@ -92,12 +92,12 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65093) für die
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | I_RHS | Standard | Premium |
-| --------- | ------- | ---------- | --------- |
-| Genauigkeit | ±0.4% | ±2% | ±0.2% |
-| Kraftmessung | Bidirektional | Nur Zug | Triaxial |
-| Diagnosecodes | 64 | 8 | 128 |
-| ISO-Konformität | Voll | Teilweise | Voll |
+| Feature         | I_RHS         | Standard  | Premium  |
+| --------------- | ------------- | --------- | -------- |
+| Genauigkeit     | ±0.4%         | ±2%       | ±0.2%    |
+| Kraftmessung    | Bidirektional | Nur Zug   | Triaxial |
+| Diagnosecodes   | 64            | 8         | 128      |
+| ISO-Konformität | Voll          | Teilweise | Voll     |
 
 ## 🛠️ Zugehörige Übungen
 

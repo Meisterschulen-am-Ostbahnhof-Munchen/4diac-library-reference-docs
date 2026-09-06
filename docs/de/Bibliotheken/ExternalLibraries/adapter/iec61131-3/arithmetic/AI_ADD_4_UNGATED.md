@@ -82,12 +82,12 @@ Der Baustein verhält sich rein reaktiv (ereignisgesteuert):
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Feature / Baustein | `AI_ADD_4_UNGATED` | Standard `ADD` (IEC 61131-3) |
-| :--- | :--- | :--- |
-| **Schnittstellentyp** | Adapter-basiert (`AI`) | Standard-Daten- und Ereignispins |
-| **Anzahl Eingänge** | Fest (4) | Variabel / Fest (meist 2) |
-| **Verdrahtungsaufwand** | Sehr gering (nur 5 Verbindungen) | Hoch (separate Event- und Datenlinien) |
-| **Typisierung** | Generisch über Adapter | Explizit über FB-Typisierung (z.B. `ADD_REAL`) |
+| Feature / Baustein      | `AI_ADD_4_UNGATED`               | Standard `ADD` (IEC 61131-3)                   |
+| :---------------------- | :------------------------------- | :--------------------------------------------- |
+| **Schnittstellentyp**   | Adapter-basiert (`AI`)           | Standard-Daten- und Ereignispins               |
+| **Anzahl Eingänge**     | Fest (4)                         | Variabel / Fest (meist 2)                      |
+| **Verdrahtungsaufwand** | Sehr gering (nur 5 Verbindungen) | Hoch (separate Event- und Datenlinien)         |
+| **Typisierung**         | Generisch über Adapter           | Explizit über FB-Typisierung (z.B. `ADD_REAL`) |
 
 - **[`AI_ADD_4`](AI_ADD_4.md)**: Die gegatete Variante – aktualisiert den Ausgang nur bei tatsächlicher Wertänderung.
 

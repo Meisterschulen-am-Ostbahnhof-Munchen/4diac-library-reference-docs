@@ -77,12 +77,12 @@ The function block behaves purely reactively (event-driven):
 
 ## Comparison with Similar Function Blocks
 
-| Feature / Function Block | `AI_ADD_4` | Standard `ADD` (IEC 61131-3) |
-| :--- | :--- | :--- |
-| **Interface Type** | Adapter-based (`AI`) | Standard Data and Event Pins |
-| **Number of Inputs** | Fixed (4) | Variable / Fixed (usually 2) |
-| **Wiring Effort** | Very low (only 5 connections) | High (separate event and data lines) |
-| **Typing** | Generic via adapter | Explicit via FB typing (e.g., `ADD_REAL`) |
+| Feature / Function Block | `AI_ADD_4`                    | Standard `ADD` (IEC 61131-3)              |
+| :----------------------- | :---------------------------- | :---------------------------------------- |
+| **Interface Type**       | Adapter-based (`AI`)          | Standard Data and Event Pins              |
+| **Number of Inputs**     | Fixed (4)                     | Variable / Fixed (usually 2)              |
+| **Wiring Effort**        | Very low (only 5 connections) | High (separate event and data lines)      |
+| **Typing**               | Generic via adapter           | Explicit via FB typing (e.g., `ADD_REAL`) |
 
 ## Change Detection
 

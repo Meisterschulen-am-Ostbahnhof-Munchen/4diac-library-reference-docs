@@ -10,14 +10,14 @@
 
 `<Color1><Color2>Background<N>[_aux][_AX][S][C]`
 
-| Component | Meaning |
-|---|---|
-| **Color pair** (`GreenWhite`, `GreenRed`, `GreenBlue`, `RedGreen`, `RedWhite`) | `TRUE` → first color, `FALSE` → second color (e.g. `GreenWhiteBackground`: TRUE→green, FALSE→white) |
-| **N** (1–4) | Number of VT objects colored **simultaneously from the same selector bit** (not: number of independent channels) |
-| **`_aux`** (N=1 only) | Uses `Q_BackgroundColourAux` instead of `Q_BackgroundColour` — targets an ISOBUS **Auxiliary Function** object instead of a regular softkey/button/data-mask object. For N≥2 variants, this role may already be baked into one specific position (see the individual page). |
-| **`_AX`** (test_AX only) | The selector signal arrives via an `AX` adapter socket (`DI1`), not as a plain data input. In test_B this suffix is absent — there, `DI1` is a plain `BOOL` data input. |
-| **`S`** | Object ID(s) are passed via the structured type `isobus::UT::Q::types::s1ObjectID` (`u16ObjIds`, unpacked internally via `F_MOVE`) instead of individual `UINT u16ObjId` inputs — a later unification of object-ID passing in the library. |
-| **`C`** ("Compact") | A thin wrapper that just instantiates the base variant (`_AX` or `_AXS`) and doesn't expose the `CNF` event outputs/intermediate values (`STATUS_n`, `u8OldColour_n`, `result_n`) — for the common case where those diagnostic values aren't needed. |
+| Component                                                                      | Meaning                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Color pair** (`GreenWhite`, `GreenRed`, `GreenBlue`, `RedGreen`, `RedWhite`) | `TRUE` → first color, `FALSE` → second color (e.g. `GreenWhiteBackground`: TRUE→green, FALSE→white)                                                                                                                                                                         |
+| **N** (1–4)                                                                    | Number of VT objects colored **simultaneously from the same selector bit** (not: number of independent channels)                                                                                                                                                            |
+| **`_aux`** (N=1 only)                                                          | Uses `Q_BackgroundColourAux` instead of `Q_BackgroundColour` — targets an ISOBUS **Auxiliary Function** object instead of a regular softkey/button/data-mask object. For N≥2 variants, this role may already be baked into one specific position (see the individual page). |
+| **`_AX`** (test_AX only)                                                       | The selector signal arrives via an `AX` adapter socket (`DI1`), not as a plain data input. In test_B this suffix is absent — there, `DI1` is a plain `BOOL` data input.                                                                                                     |
+| **`S`**                                                                        | Object ID(s) are passed via the structured type `isobus::UT::Q::types::s1ObjectID` (`u16ObjIds`, unpacked internally via `F_MOVE`) instead of individual `UINT u16ObjId` inputs — a later unification of object-ID passing in the library.                                  |
+| **`C`** ("Compact")                                                            | A thin wrapper that just instantiates the base variant (`_AX` or `_AXS`) and doesn't expose the `CNF` event outputs/intermediate values (`STATUS_n`, `u8OldColour_n`, `result_n`) — for the common case where those diagnostic values aren't needed.                        |
 
 Examples: `GreenWhiteBackground1_AX` (base, 1 object, adapter), `GreenWhiteBackground1_AXC` (compact wrapper of it), `GreenWhiteBackground1_AXS` (with struct object ID), `GreenWhiteBackground1_AXSC` (struct ID + compact), `GreenWhiteBackground1_aux_AX` (like base, but for an AUX-function object).
 
@@ -39,13 +39,13 @@ With multiple objects (`GreenRedBackground4_AX` and similar), there is still **o
 
 ## Family Overview
 
-| Color pair | test_AX (base/_aux, each also with S/SC/C) | test_B (base/_aux, each also with S/SC/C) |
-|---|---|---|
-| Green/White | 1, 2, 3, 4 | 1, 2, 3, 4 |
-| Green/Red | 1, 2, 3, 4 | 1, 2, 3, 4 |
-| Green/Blue | 1 | 1 |
-| Red/Green | 1, 4 | 1, 4 |
-| Red/White | 1, 2, 3, 4 | 1, 2, 3, 4 |
+| Color pair  | test_AX (base/_aux, each also with S/SC/C) | test_B (base/_aux, each also with S/SC/C) |
+| ----------- | ------------------------------------------ | ----------------------------------------- |
+| Green/White | 1, 2, 3, 4                                 | 1, 2, 3, 4                                |
+| Green/Red   | 1, 2, 3, 4                                 | 1, 2, 3, 4                                |
+| Green/Blue  | 1                                          | 1                                         |
+| Red/Green   | 1, 4                                       | 1, 4                                      |
+| Red/White   | 1, 2, 3, 4                                 | 1, 2, 3, 4                                |
 
 In test_AX every combination additionally carries the `_AX` suffix; in test_B it's absent (selector is a `BOOL` data input instead of an adapter socket) — see [MyLib (test_B) → sys](../../MyLib_B/sys/index.md).
 

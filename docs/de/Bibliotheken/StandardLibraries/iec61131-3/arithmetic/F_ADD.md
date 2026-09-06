@@ -58,12 +58,12 @@ Der **F_ADD** ist ein standardkonformer arithmetischer Funktionsbaustein nach IE
 
 ## Unterstützte Datentypen
 
-| Kategorie       | Beispiele                |
-|-----------------|--------------------------|
-| Ganzzahlen      | INT, DINT, UINT, UDINT   |
-| Fließkomma      | REAL, LREAL              |
-| Zeit            | TIME, LTIME              |
-| Gemischt        | INT + REAL → REAL        |
+| Kategorie  | Beispiele              |
+| ---------- | ---------------------- |
+| Ganzzahlen | INT, DINT, UINT, UDINT |
+| Fließkomma | REAL, LREAL            |
+| Zeit       | TIME, LTIME            |
+| Gemischt   | INT + REAL → REAL      |
 
 ## Anwendungsbeispiele
 
@@ -74,11 +74,11 @@ Der **F_ADD** ist ein standardkonformer arithmetischer Funktionsbaustein nach IE
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal       | F_ADD   | F_SUB   | F_MUL   |
-|--------------|---------|---------|---------|
-| Operation    | Addition| Subtraktion| Multiplikation|
-| Eingangstypen| ANY_MAGNITUDE | ANY_MAGNITUDE | ANY_NUM |
-| Ausgangstyp  | Entspricht Eingangstyp | Gleich | Gleich |
+| Merkmal       | F_ADD                  | F_SUB         | F_MUL          |
+| ------------- | ---------------------- | ------------- | -------------- |
+| Operation     | Addition               | Subtraktion   | Multiplikation |
+| Eingangstypen | ANY_MAGNITUDE          | ANY_MAGNITUDE | ANY_NUM        |
+| Ausgangstyp   | Entspricht Eingangstyp | Gleich        | Gleich         |
 
 ## Fehlerbehandlung
 

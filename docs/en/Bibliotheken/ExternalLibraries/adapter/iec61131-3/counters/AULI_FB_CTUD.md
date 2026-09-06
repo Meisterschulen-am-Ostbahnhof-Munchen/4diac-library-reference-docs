@@ -50,16 +50,16 @@ There are no separate data outputs. The output data is sent via the adapter plug
 
 ### **Adapter**
 
-| Adapter | Direction | Type | Purpose |
-| --------- | ---------- | ------- | ------- |
-| **CU** | Socket | AX | Count Up – Event + Boolean enable |
-| **CD** | Socket | AX | Count Down – Event + Boolean enable |
-| **R** | Socket | AX | Reset – Event + Boolean enable |
-| **LD** | Socket | AX | Load – Event + Boolean enable |
-| **PV** | Socket | AULI | Preset Value – Event + ULINT value |
-| **QU** | Plug | AX | Output Up – Event + Boolean State |
-| **QD** | Plug | AX | Output Down – Event + Boolean State |
-| **CV** | Plug | AULI | Current Value – Event + ULINT Counter Value |
+| Adapter | Direction | Type | Purpose                                     |
+| ------- | --------- | ---- | ------------------------------------------- |
+| **CU**  | Socket    | AX   | Count Up – Event + Boolean enable           |
+| **CD**  | Socket    | AX   | Count Down – Event + Boolean enable         |
+| **R**   | Socket    | AX   | Reset – Event + Boolean enable              |
+| **LD**  | Socket    | AX   | Load – Event + Boolean enable               |
+| **PV**  | Socket    | AULI | Preset Value – Event + ULINT value          |
+| **QU**  | Plug      | AX   | Output Up – Event + Boolean State           |
+| **QD**  | Plug      | AX   | Output Down – Event + Boolean State         |
+| **CV**  | Plug      | AULI | Current Value – Event + ULINT Counter Value |
 
 ## Functionality
 
@@ -104,11 +104,11 @@ After a reset (`R`) or load (`LD`), the counter can immediately jump to one of t
 
 ## Comparison with Similar Components
 
-| Component | Properties |
-| ---------- | --------------- |
-| `FB_CTUD_ULINT` | Same counter logic, but with separate event and data inputs/outputs (no adapters). |
-| AULI_FB_CTU` | Up counter only, as an adapter version. |
-| AULI_FB_CTD` | Down counter only, as an adapter version. |
+| Component                  | Properties                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------ |
+| `FB_CTUD_ULINT`            | Same counter logic, but with separate event and data inputs/outputs (no adapters).               |
+| AULI_FB_CTU`               | Up counter only, as an adapter version.                                                          |
+| AULI_FB_CTD`               | Down counter only, as an adapter version.                                                        |
 | CTUD` (Standard IEC 61499) | Similar functionality, but usually with different data types (e.g., INT) and without an adapter. |
 
 The `AULI_FB_CTUD` combines up and down counting in one block and offers particularly flexible integration with other adapter-based components via its adapter interfaces.

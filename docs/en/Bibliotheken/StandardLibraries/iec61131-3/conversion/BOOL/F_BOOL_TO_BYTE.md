@@ -10,7 +10,7 @@ The function block `F_BOOL_TO_BYTE` converts a Boolean value (`BOOL`) into a byt
 - **IN** (`BOOL`): The Boolean input value to be converted into a byte.
 - **OUT** (`BYTE`): The resulting byte value after conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

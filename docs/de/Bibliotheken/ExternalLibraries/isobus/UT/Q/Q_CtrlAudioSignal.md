@@ -64,21 +64,21 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ## Standardparameterbereiche
 
-| Parameter       | Bereich     | Typischer Wert |
-|-----------------|------------|----------------|
-| Frequenz        | 0-65535 Hz | 2000 Hz        |
-| Einschaltdauer  | 0-65535 ms | 200 ms         |
-| Ausschaltdauer  | 0-65535 ms | 100 ms         |
-| Wiederholungen  | 1-255      | 3              |
+| Parameter      | Bereich    | Typischer Wert |
+| -------------- | ---------- | -------------- |
+| Frequenz       | 0-65535 Hz | 2000 Hz        |
+| Einschaltdauer | 0-65535 ms | 200 ms         |
+| Ausschaltdauer | 0-65535 ms | 100 ms         |
+| Wiederholungen | 1-255      | 3              |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Ungültige Parameterwerte          |
-| -8   | VT_E_NOACT              | VT im falschen Zustand            |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Audio-Konfiguration     |
+| Code | Konstante           | Bedeutung                     |
+| ---- | ------------------- | ----------------------------- |
+| 0    | VT_E_NO_ERR         | Erfolgreich                   |
+| -6   | VT_E_OVERFLOW       | Ungültige Parameterwerte      |
+| -8   | VT_E_NOACT          | VT im falschen Zustand        |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Audio-Konfiguration |
 
 ## Anwendungsszenarien
 
@@ -89,11 +89,11 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_CtrlAudioSignal | VtSoundManager | VtAudioAlert |
-|---------------|-------------------|----------------|--------------|
-| ISO-Standard  | ✔                 | ✖              | ✖            |
-| Parametrierung| Vollständig       | Teilweise      | Einfach      |
-| Frequenzkontrolle | Ja           | Nein           | Nein         |
+| Feature           | Q_CtrlAudioSignal | VtSoundManager | VtAudioAlert |
+| ----------------- | ----------------- | -------------- | ------------ |
+| ISO-Standard      | ✔                 | ✖              | ✖            |
+| Parametrierung    | Vollständig       | Teilweise      | Einfach      |
+| Frequenzkontrolle | Ja                | Nein           | Nein         |
 
 ## 🛠️ Zugehörige Übungen
 

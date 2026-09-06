@@ -12,20 +12,20 @@ Der Funktionsblock `SET_BOOL` dient dazu, einen booleschen Eingangswert (`IN`) a
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                  |
+| ---- | ----- | -------------------------- |
 | REQ  | Event | Normaler Ausführungsanstoß |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                  |
+| ---- | ----- | -------------------------- |
 | CNF  | Event | Bestätigung der Ausführung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
+| Name | Typ  | Initialwert | Kommentar                                              |
+| ---- | ---- | ----------- | ------------------------------------------------------ |
 | IN   | BOOL | FALSE       | Wert, der auf die Zielvariable geschrieben werden soll |
 
 ### **Daten-Ausgänge**
@@ -48,9 +48,9 @@ Wird das Ereignis `REQ` empfangen, führt der Baustein die Zuweisung `OUT := IN`
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ereignisausgang | Beschreibung |
-|---------|--------|----------------|--------------|
-| REQ     | `OUT := IN` | CNF | Bei Ereignis REQ wird der Eingangswert auf die InOut-Variable geschrieben und die Ausführung bestätigt. |
+| Zustand | Aktion      | Ereignisausgang | Beschreibung                                                                                            |
+| ------- | ----------- | --------------- | ------------------------------------------------------------------------------------------------------- |
+| REQ     | `OUT := IN` | CNF             | Bei Ereignis REQ wird der Eingangswert auf die InOut-Variable geschrieben und die Ausführung bestätigt. |
 
 Der Baustein besitzt nur einen aktiven Zustand. Nach der Ausführung verharrt er wartend auf das nächste `REQ`-Ereignis.
 

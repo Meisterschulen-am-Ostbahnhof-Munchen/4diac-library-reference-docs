@@ -32,10 +32,10 @@ Keine
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AW` | IN | Socket | Eingangs-Adapter für das zu verteilende AW-Signal |
-| `adapter::types::unidirectional::AW` | OUT1 – OUT6 | Plugs | Sechs Ausgangs-Adapter, die jeweils eine identische Kopie des Eingangssignals bereitstellen |
+| Typ                                  | Name        | Richtung | Beschreibung                                                                                |
+| ------------------------------------ | ----------- | -------- | ------------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AW` | IN          | Socket   | Eingangs-Adapter für das zu verteilende AW-Signal                                           |
+| `adapter::types::unidirectional::AW` | OUT1 – OUT6 | Plugs    | Sechs Ausgangs-Adapter, die jeweils eine identische Kopie des Eingangssignals bereitstellen |
 
 ## Funktionsweise
 

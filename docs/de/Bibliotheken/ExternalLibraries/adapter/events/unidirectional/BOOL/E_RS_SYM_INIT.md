@@ -12,32 +12,32 @@ Der Funktionsblock **E_RS_SYM_INIT** ist ein ereignisgesteuerter, bistabiler Kip
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar                                                                  |
+| -------- | ----- | -------------------------------------------------------------------------- |
 | **INIT** | EInit | Initialisierungsanforderung; übernimmt die Werte von **QI** und **Q_INIT** |
-| **R**    | Event | Setzt den Ausgang **Q** zurück (Reset) |
-| **S**    | Event | Setzt den Ausgang **Q** (Set) |
+| **R**    | Event | Setzt den Ausgang **Q** zurück (Reset)                                     |
+| **S**    | Event | Setzt den Ausgang **Q** (Set)                                              |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| **INITO**| EInit | Bestätigung der Initialisierung; übergibt den Wert von **QO** |
-| **EO**   | Event | Zeigt an, dass sich der Ausgang **Q** geändert hat |
+| Ereignis  | Typ   | Kommentar                                                     |
+| --------- | ----- | ------------------------------------------------------------- |
+| **INITO** | EInit | Bestätigung der Initialisierung; übergibt den Wert von **QO** |
+| **EO**    | Event | Zeigt an, dass sich der Ausgang **Q** geändert hat            |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
-| **QI**   | BOOL | Ereignisqualifizierer: Nur wenn *QI=TRUE* werden Set-/Reset-Operationen ausgeführt. Bei Initialisierung legt *QI* den Wert von **QO** fest. |
-| **Q_INIT** | BOOL | Legt den Anfangswert von **Q** fest, der während der Initialisierung übernommen wird. |
+| Variable   | Typ  | Kommentar                                                                                                                                   |
+| ---------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **QI**     | BOOL | Ereignisqualifizierer: Nur wenn *QI=TRUE* werden Set-/Reset-Operationen ausgeführt. Bei Initialisierung legt *QI* den Wert von **QO** fest. |
+| **Q_INIT** | BOOL | Legt den Anfangswert von **Q** fest, der während der Initialisierung übernommen wird.                                                       |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
+| Variable | Typ  | Kommentar                                                                            |
+| -------- | ---- | ------------------------------------------------------------------------------------ |
 | **QO**   | BOOL | Ausgangsqualifizierer: Gibt an, ob eine Operation gültig war (Übernahme von **QI**). |
-| **Q**    | BOOL | Der eigentliche Flipflop-Ausgang. |
+| **Q**    | BOOL | Der eigentliche Flipflop-Ausgang.                                                    |
 
 ### **Adapter**
 
@@ -64,13 +64,13 @@ Der **E_RS_SYM_INIT** arbeitet als Zustandsautomat mit fünf Zuständen: **START
 
 ## Zustandsübersicht
 
-| Zustand   | Beschreibung                                                                 | Aktion beim Eintritt | Ausgangsereignis |
-|-----------|-----------------------------------------------------------------------------|----------------------|------------------|
-| **START** | Initialer Ruhezustand nach Systemstart oder nach Deinitialisierung          | keine                | –                |
-| **Init**  | Initialisierung wurde angefordert (**INIT** mit **QI=TRUE**)                 | setzt **QO** = **QI** | INITO           |
-| **DeInit**| Deinitialisierung wurde angefordert (**INIT** mit **QI=FALSE**)              | setzt **QO** = FALSE | INITO           |
-| **SET**   | Flipflop ist gesetzt (**Q = TRUE**)                                          | Setzen von **Q** auf TRUE (nur wenn **QI=TRUE**) | EO  |
-| **RESET** | Flipflop ist zurückgesetzt (**Q = FALSE**)                                   | Setzen von **Q** auf FALSE (nur wenn **QI=TRUE**) | EO  |
+| Zustand    | Beschreibung                                                       | Aktion beim Eintritt                              | Ausgangsereignis |
+| ---------- | ------------------------------------------------------------------ | ------------------------------------------------- | ---------------- |
+| **START**  | Initialer Ruhezustand nach Systemstart oder nach Deinitialisierung | keine                                             | –                |
+| **Init**   | Initialisierung wurde angefordert (**INIT** mit **QI=TRUE**)       | setzt **QO** = **QI**                             | INITO            |
+| **DeInit** | Deinitialisierung wurde angefordert (**INIT** mit **QI=FALSE**)    | setzt **QO** = FALSE                              | INITO            |
+| **SET**    | Flipflop ist gesetzt (**Q = TRUE**)                                | Setzen von **Q** auf TRUE (nur wenn **QI=TRUE**)  | EO               |
+| **RESET**  | Flipflop ist zurückgesetzt (**Q = FALSE**)                         | Setzen von **Q** auf FALSE (nur wenn **QI=TRUE**) | EO               |
 
 **Übergänge:**
 
@@ -92,12 +92,12 @@ Der **E_RS_SYM_INIT** arbeitet als Zustandsautomat mit fünf Zuständen: **START
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied zu E_RS_SYM_INIT |
-| ---------- | ------------------------------- |
-| **E_RS** (Standard RS-Flipflop) | Kein explizites Startverhalten; bei INIT wird **Q** nicht definiert. **Q_INIT** fehlt. |
-| **E_SR** (Set-Dominant-Flipflop) | Dominanz von Set über Reset; kein initialisierbarer Startzustand. |
-| **E_RS_SYM** | Symmetrische RS-Logik ohne INIT-Funktion; kein Startverhalten. |
-| **E_RS_SYM_INIT** (dieser) | Kombiniert symmetrische RS-Logik mit wählbarem Initialwert und Deinitialisierung. |
+| Baustein                         | Unterschied zu E_RS_SYM_INIT                                                           |
+| -------------------------------- | -------------------------------------------------------------------------------------- |
+| **E_RS** (Standard RS-Flipflop)  | Kein explizites Startverhalten; bei INIT wird **Q** nicht definiert. **Q_INIT** fehlt. |
+| **E_SR** (Set-Dominant-Flipflop) | Dominanz von Set über Reset; kein initialisierbarer Startzustand.                      |
+| **E_RS_SYM**                     | Symmetrische RS-Logik ohne INIT-Funktion; kein Startverhalten.                         |
+| **E_RS_SYM_INIT** (dieser)       | Kombiniert symmetrische RS-Logik mit wählbarem Initialwert und Deinitialisierung.      |
 
 ## Fazit
 

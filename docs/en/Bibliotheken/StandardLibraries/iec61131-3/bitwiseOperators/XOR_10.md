@@ -10,7 +10,7 @@ The XOR_10 function block is a generic function block for calculating a bitwise 
 - **IN1** to **IN10** (ANY_BIT): Up to 10 input values for XOR calculation. Each input can contain any bit data type (BOOL, BYTE, WORD, DWORD, LWORD).
 - **OUT** (ANY_BIT): Result of the bitwise XOR operation of all active inputs.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

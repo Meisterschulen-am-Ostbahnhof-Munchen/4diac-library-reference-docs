@@ -28,10 +28,10 @@ Keine – die konvertierten Daten werden über den `ADI_OUT`-Adapter ausgegeben.
 
 ### **Adapter**
 
-| Typ     | Name    | Richtung | Kommentar                        |
-|---------|---------|----------|----------------------------------|
-| Socket  | `AB_IN` | Eingang  | BYTE-Adapter (Eingang)           |
-| Plug    | `ADI_OUT` | Ausgang  | DINT-Adapter (Ausgang)           |
+| Typ    | Name      | Richtung | Kommentar              |
+| ------ | --------- | -------- | ---------------------- |
+| Socket | `AB_IN`   | Eingang  | BYTE-Adapter (Eingang) |
+| Plug   | `ADI_OUT` | Ausgang  | DINT-Adapter (Ausgang) |
 
 ## Funktionsweise
 

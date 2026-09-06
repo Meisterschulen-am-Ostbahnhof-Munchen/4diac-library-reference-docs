@@ -47,19 +47,19 @@ AuxiliaryState definiert eine Reihe von vordefinierten Konstanten für den Daten
 
 Die definierten Konstanten umfassen folgende Zustände:
 
-| Konstante | Wert | Beschreibung |
-| ----------- | ------ | -------------- |
-| `AuxDisabled` | 0 | Aus - rückwärts, unten, links oder nicht gedrückt |
-| `AuxDisabled_START` | 0 | Aus - rückwärts, unten, links oder nicht gedrückt (mit bCyclic=FALSE) |
-| `AuxEnabled` | 1 | Ein - vorwärts, oben, rechts oder gedrückt |
-| `AuxEnabled_START` | 1 | Ein - vorwärts, oben, rechts oder gedrückt (mit bCyclic=FALSE) |
-| `AuxHeld` | 2 | Gehalten (vorwärts, oben oder rechts) |
-| `AuxHeld_START` | 2 | Gehalten (vorwärts, oben oder rechts) (mit bCyclic=FALSE) |
-| `AuxEnabledBackwards` | 4 | Momentan ein - rückwärts, unten oder links |
-| `AuxHeldBackwards` | 8 | Gehalten (rückwärts, unten oder links) |
-| `AuxHeldBackwards_START` | 8 | Gehalten (rückwärts, unten oder links) (mit bCyclic=FALSE) |
-| `AuxDefault` | 9 | Standardwert |
-| `Invalid` | 255 | Ungültiger Wert |
+| Konstante                | Wert | Beschreibung                                                          |
+| ------------------------ | ---- | --------------------------------------------------------------------- |
+| `AuxDisabled`            | 0    | Aus - rückwärts, unten, links oder nicht gedrückt                     |
+| `AuxDisabled_START`      | 0    | Aus - rückwärts, unten, links oder nicht gedrückt (mit bCyclic=FALSE) |
+| `AuxEnabled`             | 1    | Ein - vorwärts, oben, rechts oder gedrückt                            |
+| `AuxEnabled_START`       | 1    | Ein - vorwärts, oben, rechts oder gedrückt (mit bCyclic=FALSE)        |
+| `AuxHeld`                | 2    | Gehalten (vorwärts, oben oder rechts)                                 |
+| `AuxHeld_START`          | 2    | Gehalten (vorwärts, oben oder rechts) (mit bCyclic=FALSE)             |
+| `AuxEnabledBackwards`    | 4    | Momentan ein - rückwärts, unten oder links                            |
+| `AuxHeldBackwards`       | 8    | Gehalten (rückwärts, unten oder links)                                |
+| `AuxHeldBackwards_START` | 8    | Gehalten (rückwärts, unten oder links) (mit bCyclic=FALSE)            |
+| `AuxDefault`             | 9    | Standardwert                                                          |
+| `Invalid`                | 255  | Ungültiger Wert                                                       |
 
 ## Anwendungsszenarien
 

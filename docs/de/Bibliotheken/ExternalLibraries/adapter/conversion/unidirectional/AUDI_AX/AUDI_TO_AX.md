@@ -28,10 +28,10 @@ Der FB besitzt keine eigenen Daten-Ausgänge. Das Ergebnis (BOOL) wird über den
 
 ### **Adapter**
 
-| Name | Typ | Typ des Adapters | Richtung | Kommentar |
-|------|-----|------------------|----------|-----------|
-| `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Socket | Eingang | Stellt den UDINT-Wert (D1) und das zugehörige Ereignis (E1) bereit |
-| `AX_OUT` | `adapter::types::unidirectional::AX` | Plug | Ausgang | Liefert den BOOL-Wert (D1) und das Bestätigungsereignis (E1) |
+| Name      | Typ                                    | Typ des Adapters | Richtung | Kommentar                                                          |
+| --------- | -------------------------------------- | ---------------- | -------- | ------------------------------------------------------------------ |
+| `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Socket           | Eingang  | Stellt den UDINT-Wert (D1) und das zugehörige Ereignis (E1) bereit |
+| `AX_OUT`  | `adapter::types::unidirectional::AX`   | Plug             | Ausgang  | Liefert den BOOL-Wert (D1) und das Bestätigungsereignis (E1)       |
 
 ## Funktionsweise
 

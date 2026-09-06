@@ -12,36 +12,36 @@ Der Funktionsbaustein **StringValue_AIWS** ist ein Eingabe-Service-Interface-Bau
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit-Variablen | Kommentar |
-| --- | --- | --- | --- |
-| `INIT` | EInit | `QI`, `PARAMS`, `u16ObjId` | Initialisierung des Dienstes |
-| `REQ` | Event | `QI` | Dienstanforderung (Abfrage) |
+| Ereignis | Typ   | Mit-Variablen              | Kommentar                    |
+| -------- | ----- | -------------------------- | ---------------------------- |
+| `INIT`   | EInit | `QI`, `PARAMS`, `u16ObjId` | Initialisierung des Dienstes |
+| `REQ`    | Event | `QI`                       | Dienstanforderung (Abfrage)  |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit-Variablen | Kommentar |
-|---|---|---|---|
-| `INITO` | EInit | `QO`, `STATUS` | Bestätigung der Initialisierung |
+| Ereignis | Typ   | Mit-Variablen  | Kommentar                       |
+| -------- | ----- | -------------- | ------------------------------- |
+| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-| --- | --- | --- | --- |
-| `QI` | BOOL | – | Ereignis-Qualifier (Freigabe) |
-| `PARAMS` | STRING | – | Dienstparameter (z. B. Konfigurationsstring) |
-| `u16ObjId` | UINT | `ID_NULL` | Objekt‑ID (z. B. ISOBUS-Objektkennung) |
+| Name       | Typ    | Initialwert | Kommentar                                    |
+| ---------- | ------ | ----------- | -------------------------------------------- |
+| `QI`       | BOOL   | –           | Ereignis-Qualifier (Freigabe)                |
+| `PARAMS`   | STRING | –           | Dienstparameter (z. B. Konfigurationsstring) |
+| `u16ObjId` | UINT   | `ID_NULL`   | Objekt‑ID (z. B. ISOBUS-Objektkennung)       |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-| --- | --- | --- |
-| `QO` | BOOL | Ausgangs-Qualifier (Status der letzten Operation) |
+| Name     | Typ    | Kommentar                                            |
+| -------- | ------ | ---------------------------------------------------- |
+| `QO`     | BOOL   | Ausgangs-Qualifier (Status der letzten Operation)    |
 | `STATUS` | STRING | Statusmeldung (z. B. Fehlertext oder Erfolgsmeldung) |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|---|---|---|
+| Name | Typ                                    | Kommentar                                                        |
+| ---- | -------------------------------------- | ---------------------------------------------------------------- |
 | `IN` | `adapter::types::unidirectional::AIWS` | Eingabe von Wide-String-Daten aus der Ressource (unidirektional) |
 
 Der Adapter `IN` empfängt die eigentlichen Zeichenketten und stellt sie dem Baustein zur Verfügung. Die Verbindung erfolgt über die Ereignisleitung `E1` und den Datenkanal `D1`.
@@ -78,11 +78,11 @@ Der Baustein besitzt keine explizite Zustandsmaschine, das Verhalten wird durch 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Schnittstelle | Besonderheit |
-| --- | --- | --- |
-| `StringValue_AIWS` | Adapter (Eingang) | Empfängt Wide-Strings über den Adapter `AIWS` |
-| `StringValue_IWS` | Direkte Events/Daten | Interne Logik, keine Adapter-Schnittstelle |
-| `StringValue` (Standard) | Events/Daten | Einfacher Wide-String-Eingang (ohne Adapter) |
+| Baustein                 | Schnittstelle        | Besonderheit                                  |
+| ------------------------ | -------------------- | --------------------------------------------- |
+| `StringValue_AIWS`       | Adapter (Eingang)    | Empfängt Wide-Strings über den Adapter `AIWS` |
+| `StringValue_IWS`        | Direkte Events/Daten | Interne Logik, keine Adapter-Schnittstelle    |
+| `StringValue` (Standard) | Events/Daten         | Einfacher Wide-String-Eingang (ohne Adapter)  |
 
 Der `StringValue_AIWS` hebt sich durch seine Adapter-basierte Schnittstelle hervor, die eine lose Kopplung zwischen Ressource und Dienst ermöglicht. Er eignet sich besonders für modulare Systeme, bei denen die Datenquelle dynamisch wechseln kann.
 

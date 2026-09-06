@@ -41,12 +41,12 @@ Der Block initialisiert den openPOWERLINK Stack auf dem angegebenen Ethernet-Int
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2011 AIT |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac-Paket | powerlink |
+| Attribut    | Wert                             |
+| :---------- | :------------------------------- |
+| Copyright   | (c) 2011 AIT                     |
+| Lizenz      | EPL-2.0                          |
+| Version     | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac-Paket | powerlink                        |
 
 ---
 

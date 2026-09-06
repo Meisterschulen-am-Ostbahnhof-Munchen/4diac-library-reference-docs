@@ -12,33 +12,33 @@ Der Funktionsblock **AX_TO_AQ** dient der Umwandlung eines booleschen Signals (A
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------- |
 | `IN.E1`  | Startet die Konvertierung des eingehenden Bool‑Werts. Wird als Befehl (COMMAND) interpretiert. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                                |
+| -------- | ----------------------------------------------------------------------------------------------------------- |
 | `OUT.E1` | Bestätigt die abgeschlossene Konvertierung und signalisiert die Gültigkeit des Ausgangs‑Quarter‑Byte‑Werts. |
 
 ### **Daten-Eingänge**
 
-| Daten | Typ | Beschreibung |
-|-------|-----|--------------|
+| Daten   | Typ                    | Beschreibung                                                              |
+| ------- | ---------------------- | ------------------------------------------------------------------------- |
 | `IN.D1` | BOOL (über AX‑Adapter) | Boolescher Eingangswert, der in ein Quarter‑Byte umgewandelt werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Daten | Typ | Beschreibung |
-|-------|-----|--------------|
+| Daten    | Typ                            | Beschreibung                                                      |
+| -------- | ------------------------------ | ----------------------------------------------------------------- |
 | `OUT.D1` | Quarter Byte (über AQ‑Adapter) | Ausgangswert – das umgewandelte Quarter‑Byte (4‑Bit‑Darstellung). |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `IN`    | Socket   | `adapter::types::unidirectional::AX` | Empfängt das boolesche Signal. Der AX‑Adapter stellt einen unidirektionalen Bool‑Kanal bereit. |
+| Adapter | Richtung | Typ                                  | Beschreibung                                                                                                    |
+| ------- | -------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| `IN`    | Socket   | `adapter::types::unidirectional::AX` | Empfängt das boolesche Signal. Der AX‑Adapter stellt einen unidirektionalen Bool‑Kanal bereit.                  |
 | `OUT`   | Plug     | `adapter::types::unidirectional::AQ` | Stellt das konvertierte Quarter‑Byte‑Signal bereit. Der AQ‑Adapter ist ein unidirektionaler Quarter‑Byte‑Kanal. |
 
 ## Funktionsweise
@@ -72,11 +72,11 @@ Der Funktionsblock besitzt keine explizite Zustandsmaschine. Er arbeitet als rei
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Aufgabe | Unterschied |
-| ---------- | --------- | ------------- |
-| `BOOL_TO_BYTE` | Konvertiert BOOL in ein Byte (8‑Bit) | Arbeitet mit 8‑Bit‑ statt 4‑Bit‑Ausgabe. Benötigt andere Adaptertypen (z. B. `AB`). |
-| `BOOL_TO_WORD` | Konvertiert BOOL in ein Word (16‑Bit) | Liefert eine breitere Ausgabe, oft für analoge oder digitale Wort‑Signale. |
-| `AX_TO_AQ` | Konvertiert BOOL (AX) in Quarter Byte (AQ) | Speziell auf die unidirektionale Adapterkombination AX↔AQ zugeschnitten und erzeugt nur 4‑Bit‑Werte. |
+| Baustein       | Aufgabe                                    | Unterschied                                                                                          |
+| -------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `BOOL_TO_BYTE` | Konvertiert BOOL in ein Byte (8‑Bit)       | Arbeitet mit 8‑Bit‑ statt 4‑Bit‑Ausgabe. Benötigt andere Adaptertypen (z. B. `AB`).                  |
+| `BOOL_TO_WORD` | Konvertiert BOOL in ein Word (16‑Bit)      | Liefert eine breitere Ausgabe, oft für analoge oder digitale Wort‑Signale.                           |
+| `AX_TO_AQ`     | Konvertiert BOOL (AX) in Quarter Byte (AQ) | Speziell auf die unidirektionale Adapterkombination AX↔AQ zugeschnitten und erzeugt nur 4‑Bit‑Werte. |
 
 ## Fazit
 

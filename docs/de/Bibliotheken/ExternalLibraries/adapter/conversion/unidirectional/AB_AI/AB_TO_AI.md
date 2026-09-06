@@ -36,9 +36,9 @@ Der FB besitzt keine direkten Daten-Ausgänge. Der Ausgangswert wird über den A
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| **AB_IN**   | `adapter::types::unidirectional::AB` | Socket (Eingang) | BYTE-adapter, der den zu konvertierenden Wert sowie das Start-Ereignis liefert. |
+| Bezeichnung | Typ                                  | Richtung         | Beschreibung                                                                        |
+| ----------- | ------------------------------------ | ---------------- | ----------------------------------------------------------------------------------- |
+| **AB_IN**   | `adapter::types::unidirectional::AB` | Socket (Eingang) | BYTE-adapter, der den zu konvertierenden Wert sowie das Start-Ereignis liefert.     |
 | **AI_OUT**  | `adapter::types::unidirectional::AI` | Plug (Ausgang)   | INT-adapter, der den konvertierten Wert und das Bestätigungs-Ereignis bereitstellt. |
 
 ## Funktionsweise

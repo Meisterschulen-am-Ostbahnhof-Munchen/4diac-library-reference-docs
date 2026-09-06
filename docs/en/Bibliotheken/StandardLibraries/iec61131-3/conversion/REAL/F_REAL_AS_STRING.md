@@ -9,7 +9,7 @@ The function block `F_REAL_AS_STRING` converts a REAL value to a STRING value. I
 - **IN**: The REAL value to be converted to a STRING.
 - **OUT**: The converted STRING value of input `IN`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -21,7 +21,7 @@ The function block `F_REAL_AS_STRING` converts a REAL value to a STRING value. I
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 This function block has no adapters.
 

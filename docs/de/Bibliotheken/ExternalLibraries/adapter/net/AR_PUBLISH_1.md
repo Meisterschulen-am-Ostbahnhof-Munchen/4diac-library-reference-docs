@@ -31,8 +31,8 @@ Der Funktionsblock **AR_PUBLISH_1** ist ein Composite-Funktionsblock, der den ne
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                    |
+| ------- | ---------------------------------- | ---------------- | ------------------------------- |
 | IN      | adapter::types::unidirectional::AR | Socket (Eingang) | Zu veröffentlichender REAL-Wert |
 
 ## Funktionsweise

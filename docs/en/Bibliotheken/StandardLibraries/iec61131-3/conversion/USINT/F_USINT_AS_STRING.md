@@ -9,7 +9,7 @@ The function block `F_USINT_AS_STRING` converts an unsigned 8-bit integer value 
 - **IN**: An unsigned 8-bit integer value (USINT) to be converted to a string.
 - **OUT**: The resulting string (STRING) containing the converted value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -21,7 +21,7 @@ The function block `F_USINT_AS_STRING` converts an unsigned 8-bit integer value 
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 - No adapters are present.
 

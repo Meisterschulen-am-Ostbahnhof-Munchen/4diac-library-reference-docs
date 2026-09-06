@@ -31,9 +31,9 @@ The function block **AL_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AL | Plug (Output) | Buffered received LWORD value |
+| Adapter | Type                               | Direction     | Description                   |
+| ------- | ---------------------------------- | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::AL | Plug (Output) | Buffered received LWORD value |
 
 ## Functionality
 

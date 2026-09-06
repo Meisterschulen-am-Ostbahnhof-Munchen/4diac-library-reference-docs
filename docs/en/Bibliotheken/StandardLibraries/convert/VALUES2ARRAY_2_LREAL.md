@@ -23,7 +23,7 @@ The function block `VALUES2ARRAY_2_LREAL` is used to convert two individual floa
 - Comment: Array output
 - Description: An array of type LREAL containing the values of `IN_1` and `IN_2`. `IN_1` occupies the first index, and `IN_2` the second index of the array.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -64,12 +64,12 @@ This function block is specifically for converting two LREAL values into an LREA
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2014 Profactor GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2014-07-09, Matthias Plasch) |
-| 4diac package | eclipse4diac::convert |
+| Attribute     | Value                                                               |
+| :------------ | :------------------------------------------------------------------ |
+| Copyright     | (c) 2014 Profactor GmbH                                             |
+| License       | EPL-2.0                                                             |
+| Version       | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2014-07-09, Matthias Plasch) |
+| 4diac package | eclipse4diac::convert                                               |
 
 The `VALUES2ARRAY_2_LREAL` function block is a useful and efficient block for the specific task of converting two LREAL values into a fixed-dimensional LREAL array. Its simplicity and event-driven operation make it a natural component in scenarios where such data aggregation is required, and contribute to the modularity and readability of the application.
 

@@ -46,11 +46,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with alarm mask ID
 - `INITO` confirms operational readiness
+
 1. **Priority change**:
 
 - `REQ` with new priority value
 - Updates the alarm display order
 - `CNF` provides result status and previous value
+
 1. **Priority logic**:
 
 - Lower numbers = Higher priority
@@ -66,23 +68,23 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Priority Reference
 
-| Priority | Typical Use |
-| ----------- | ----------------------------- |
-| 0-31 | Critical System Alarms |
-| 32-63 | Important Process Alarms |
-| 64-127 | Standard Warnings |
-| 128-255 | Informational Messages |
+| Priority | Typical Use              |
+| -------- | ------------------------ |
+| 0-31     | Critical System Alarms   |
+| 32-63    | Important Process Alarms |
+| 64-127   | Standard Warnings        |
+| 128-255  | Informational Messages   |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful Change |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | VT Not Ready |
-| -21 | VT_E_NO_INSTANCE | No VT Client Available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance |
-| -130 | VT_E_NOT_ALIVE | VT Not Active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful Change      |
+| -6   | VT_E_OVERFLOW             | Buffer Overflow        |
+| -8   | VT_E_NOACT                | VT Not Ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT Client Available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance    |
+| -130 | VT_E_NOT_ALIVE            | VT Not Active          |
 
 ## Application Scenarios
 
@@ -93,12 +95,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | Q_Priority | VtAlarmPriority | VtEventManager |
-| --------------- | ------------ | ----------------- | ---------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Real-time effect | ✔ | ✔ | ✖ |
-| Value range | 0-255 | 0-127 | 0-31 |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature          | Q_Priority | VtAlarmPriority | VtEventManager |
+| ---------------- | ---------- | --------------- | -------------- |
+| ISO Standard     | ✔          | ✖               | ✖              |
+| Real-time effect | ✔          | ✔               | ✖              |
+| Value range      | 0-255      | 0-127           | 0-31           |
+| Feedback         | ✔          | ✖               | ✔              |
 
 ## Conclusion
 

@@ -12,27 +12,27 @@ The function block **SET_TIME** is used to write a time value (type `TIME`) prov
 
 ### **Event Inputs**
 
-| Event | Description |
-|----------|--------------|
+| Event | Description                                                                                                             |
+| ----- | ----------------------------------------------------------------------------------------------------------------------- |
 | `REQ` | Normal execution request. Trigger the algorithm that copies the value from `IN` to `OUT`. Associated data: `IN`, `OUT`. |
 
 ### **Event Outputs**
 
-| Event | Description |
-|----------|--------------|
+| Event | Description                                                                                       |
+| ----- | ------------------------------------------------------------------------------------------------- |
 | `CNF` | Confirmation of successful execution. Sent after the algorithm completes. Associated data: `OUT`. |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Description |
-|------|-----|-------------|--------------|
-| `IN` | `TIME` | `T#0s` | The time value to be written to the target variable. |
+| Name | Type   | Initial Value | Description                                          |
+| ---- | ------ | ------------- | ---------------------------------------------------- |
+| `IN` | `TIME` | `T#0s`        | The time value to be written to the target variable. |
 
 ### **Data Outputs**
 
-| Name | Type | Initial Value | Description |
-|------|-----|--------------|--------------|
-| `OUT` | `TIME` (InOut) | `T#0s` | Target variable passed as an InOut parameter during the call. The value of `IN` is copied into this variable. |
+| Name  | Type           | Initial Value | Description                                                                                                   |
+| ----- | -------------- | ------------- | ------------------------------------------------------------------------------------------------------------- |
+| `OUT` | `TIME` (InOut) | `T#0s`        | Target variable passed as an InOut parameter during the call. The value of `IN` is copied into this variable. |
 
 > **Note:** `OUT` is an **InOut** parameter, meaning it serves as both an input and an output. The caller must provide a writable variable.
 
@@ -59,8 +59,8 @@ Execution takes place in a single EC state (`REQ`), which runs the algorithm exa
 
 The function block has exactly one state:
 
-| State | Description |
-|---------|--------------|
+| State | Description                                                                                             |
+| ----- | ------------------------------------------------------------------------------------------------------- |
 | `REQ` | Initial state upon initialization. Activated when `REQ` occurs. Executes the algorithm and sends `CNF`. |
 
 There are no other states. The function block returns to the initial state after completing the algorithm and waits for the next `REQ` event.

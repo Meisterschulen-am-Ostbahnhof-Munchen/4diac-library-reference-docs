@@ -20,7 +20,7 @@ Since this function block is implemented as a composite network and is entirely 
 
 *No direct data outputs are available.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -32,7 +32,7 @@ Since this function block is implemented as a composite network and is entirely 
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 #### **Sockets (Input Adapters)**
 
@@ -62,6 +62,7 @@ The module encapsulates an internal network that extracts and processes the adap
 
 - If `G.D1` = `0` (or `FALSE`), the value of `IN0` is set to the output.
 - If `G.D1` = `1` (or `TRUE`), the value of `IN1` is set to the output.
+
 1. **Output:** The result is passed via another flip-flop (`E_D_FF_ANY_OUT`) to the output adapter `OUT`, triggering the event `OUT.E1` simultaneously with the provision of the data on `OUT.D1`.
 
 - **Event-driven:** The output is updated immediately with every change to the inputs or the selector and assigned a new event.
@@ -70,10 +71,10 @@ The module encapsulates an internal network that extracts and processes the adap
 
 Since this is a composite function block without its own Execution Control Chart (ECC), its behavior is determined purely by the signal flow:
 
-| State Selector (`G.D1`) | Trigger Event | Output Activity (`OUT`) |
-| :--- | :--- | :--- |
-| `0` / `FALSE` | Any (`G.E1`, `IN0.E1`, `IN1.E1`) | Returns the value of `IN0.D1`; triggers `OUT.E1`. |
-| `1` / `TRUE` | Any (`G.E1`, `IN0.E1`, `IN1.E1`) | Returns the value of `IN1.D1`; Triggers `OUT.E1`. |
+| State Selector (`G.D1`) | Trigger Event                    | Output Activity (`OUT`)                           |
+| :---------------------- | :------------------------------- | :------------------------------------------------ |
+| `0` / `FALSE`           | Any (`G.E1`, `IN0.E1`, `IN1.E1`) | Returns the value of `IN0.D1`; triggers `OUT.E1`. |
+| `1` / `TRUE`            | Any (`G.E1`, `IN0.E1`, `IN1.E1`) | Returns the value of `IN1.D1`; Triggers `OUT.E1`. |
 
 - **Setpoint Switching:** Dynamic switching of a target variable (e.g., a speed or stage of type `USINT`) between automatic operation (`IN1`) and manual operation (`IN0`).
 - **Recipe Selection:** Selection between two predefined operating modes or parameter sets in a machine via a higher-level controller.

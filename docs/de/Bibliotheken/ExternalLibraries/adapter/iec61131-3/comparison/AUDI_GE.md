@@ -33,11 +33,11 @@ Die Datenwerte, die verglichen werden sollen, werden über die Adapter bezogen:
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| `IN1` | Socket | `adapter::types::unidirectional::AUDI` | Erster Eingabewert |
-| `IN2` | Socket | `adapter::types::unidirectional::AUDI` | Zweiter Eingabewert |
-| `OUT` | Plug | `adapter::types::unidirectional::AX` | Ausgabe: `IN1 >= IN2` (boolesch) |
+| Adapter | Richtung | Typ                                    | Beschreibung                     |
+| ------- | -------- | -------------------------------------- | -------------------------------- |
+| `IN1`   | Socket   | `adapter::types::unidirectional::AUDI` | Erster Eingabewert               |
+| `IN2`   | Socket   | `adapter::types::unidirectional::AUDI` | Zweiter Eingabewert              |
+| `OUT`   | Plug     | `adapter::types::unidirectional::AX`   | Ausgabe: `IN1 >= IN2` (boolesch) |
 
 ## Funktionsweise
 

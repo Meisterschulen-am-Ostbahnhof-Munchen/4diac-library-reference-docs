@@ -14,30 +14,30 @@ Der Baustein ist besonders geeignet für den Einsatz in sicherheitskritischen od
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                                                                       |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ      | Normaler Ausführungsanforderung – löst die Verarbeitung des Eingangswerts IN aus. Der Ereignisausgang CNF wird nach Abschluss der Aktion gesendet. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                      |
+| -------- | --------------------------------------------------------------------------------- |
 | CNF      | Bestätigung der Ausführung – wird nach der Berechnung von OUT und VALID gesendet. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Initialwert                                    | Beschreibung |
-|------|-------|------------------------------------------------|--------------|
+| Name | Typ   | Initialwert                         | Beschreibung                         |
+| ---- | ----- | ----------------------------------- | ------------------------------------ |
 | IN   | ULINT | `LWORD_TO_ULINT(NOT_AVAILABLE_LWM)` | Eingangssignal (Rohwert vom Feldbus) |
 
 *Hinweis:* `NOT_AVAILABLE_LWM` ist eine aus der Bibliothek `FIELDBUS_SIGNAL` importierte Konstante, die einen ungültigen oder nicht verfügbaren Signalwert repräsentiert.
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ   | Initialwert               | Beschreibung |
-|-------|-------|----------------------------|--------------|
-| OUT   | ULINT | `16#0000000000000000`      | Gefilterter Ausgangswert – entspricht IN, wenn gültig, andernfalls 0. |
-| VALID | BOOL  | `FALSE`                    | Signalvalidität – `TRUE` bei gültigem Eingang, sonst `FALSE`. |
+| Name  | Typ   | Initialwert           | Beschreibung                                                          |
+| ----- | ----- | --------------------- | --------------------------------------------------------------------- |
+| OUT   | ULINT | `16#0000000000000000` | Gefilterter Ausgangswert – entspricht IN, wenn gültig, andernfalls 0. |
+| VALID | BOOL  | `FALSE`               | Signalvalidität – `TRUE` bei gültigem Eingang, sonst `FALSE`.         |
 
 ### **Adapter**
 
@@ -71,8 +71,8 @@ Anschließend wird der Ereignisausgang **CNF** ausgelöst.
 
 Der Funktionsblock ist als **SimpleFB** realisiert und besitzt nur einen einzigen Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                                                               |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | REQ     | Eingangszustand: Wartet auf Ereignis REQ. Bei Eintritt wird der Algorithmus `REQ` ausgeführt und anschließend der Ausgang `CNF` gesendet. Danach verbleibt der Baustein im selben Zustand. |
 
 Es existieren keine weiteren Zustände oder Verzweigungen – die Funktionsweise ist rein ablauforientiert.

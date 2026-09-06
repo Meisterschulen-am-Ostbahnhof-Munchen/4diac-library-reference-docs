@@ -9,7 +9,7 @@ The `E_SPLIT_3` is a basic function block according to IEC 61499 that splits a s
 - **EO1**: The first output event of the sequence.
 - **EO3**: The third output event of the sequence.
 
-### Event Outputs
+## Event Outputs
 
 ### **Ereignis-Eingang**
 

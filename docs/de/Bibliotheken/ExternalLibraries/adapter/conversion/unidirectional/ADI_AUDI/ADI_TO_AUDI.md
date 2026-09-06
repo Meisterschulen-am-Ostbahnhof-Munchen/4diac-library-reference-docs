@@ -14,42 +14,42 @@ Der Funktionsblock ADI_TO_AUDI dient der Konvertierung eines Adapters vom Typ AD
 
 Der Baustein besitzt keine direkten Ereignis-Eingänge. Ereignisse werden über den eingehenden Adapter **ADI_IN** bereitgestellt. Der Adapter ADI definiert einen Ereignis-Ausgang E1, der mit dem Ereignis-Eingang REQ des internen Konvertierungsbausteins verbunden ist.
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| (über ADI_IN.E1) | EVENT | Auslöser für die Konvertierung |
+| Bezeichnung      | Datentyp | Beschreibung                   |
+| ---------------- | -------- | ------------------------------ |
+| (über ADI_IN.E1) | EVENT    | Auslöser für die Konvertierung |
 
 ### **Ereignis-Ausgänge**
 
 Der Baustein besitzt keine direkten Ereignis-Ausgänge. Ereignisse werden über den ausgehenden Adapter **AUDI_OUT** weitergegeben. Der interne Konvertierungsbaustein signalisiert die Fertigstellung über CNF, das mit dem Ereignis-Eingang E1 des Adapters AUDI verbunden ist.
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| (über AUDI_OUT.E1) | EVENT | Bestätigung der abgeschlossenen Konvertierung |
+| Bezeichnung        | Datentyp | Beschreibung                                  |
+| ------------------ | -------- | --------------------------------------------- |
+| (über AUDI_OUT.E1) | EVENT    | Bestätigung der abgeschlossenen Konvertierung |
 
 ### **Daten-Eingänge**
 
 Der Baustein besitzt keine direkten Daten-Eingänge. Der zu konvertierende DINT-Wert wird über den eingehenden Adapter **ADI_IN** (Ausgang D1) bereitgestellt.
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| (über ADI_IN.D1) | DINT | Der als DINT vorliegende Wert, der in UDINT konvertiert werden soll |
+| Bezeichnung      | Datentyp | Beschreibung                                                        |
+| ---------------- | -------- | ------------------------------------------------------------------- |
+| (über ADI_IN.D1) | DINT     | Der als DINT vorliegende Wert, der in UDINT konvertiert werden soll |
 
 ### **Daten-Ausgänge**
 
 Der Baustein besitzt keine direkten Daten-Ausgänge. Der konvertierte UDINT-Wert wird über den ausgehenden Adapter **AUDI_OUT** (Eingang D1) ausgegeben.
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| (über AUDI_OUT.D1) | UDINT | Das Ergebnis der Konvertierung als UDINT |
+| Bezeichnung        | Datentyp | Beschreibung                             |
+| ------------------ | -------- | ---------------------------------------- |
+| (über AUDI_OUT.D1) | UDINT    | Das Ergebnis der Konvertierung als UDINT |
 
 ### **Adapter**
 
 Der Baustein stellt zwei Adapter-Schnittstellen bereit:
 
-| Name | Richtung | Typ | Beschreibung |
-|------|----------|-----|--------------|
-| ADI_IN | Socket | adi (unidirectional) | Eingangsadapter – liefert DINT-Daten und ein Ereignis zur Auslösung |
-| AUDI_OUT | Plug | audi (unidirectional) | Ausgangsadapter – gibt konvertierte UDINT-Daten und ein Bestätigungsereignis aus |
+| Name     | Richtung | Typ                   | Beschreibung                                                                     |
+| -------- | -------- | --------------------- | -------------------------------------------------------------------------------- |
+| ADI_IN   | Socket   | adi (unidirectional)  | Eingangsadapter – liefert DINT-Daten und ein Ereignis zur Auslösung              |
+| AUDI_OUT | Plug     | audi (unidirectional) | Ausgangsadapter – gibt konvertierte UDINT-Daten und ein Bestätigungsereignis aus |
 
 Die Adapter sind unidirektional, d.h. sie übertragen Daten und Ereignisse nur in eine Richtung.
 

@@ -31,8 +31,8 @@ Der Funktionsblock **AI_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                     |
+| ------- | ---------------------------------- | -------------- | -------------------------------- |
 | OUT     | adapter::types::unidirectional::AI | Plug (Ausgang) | Gepufferter empfangener INT-Wert |
 
 ## Funktionsweise

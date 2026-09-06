@@ -11,7 +11,7 @@ The `E_DEMUX_2` (Event Demultiplexer) is a function block according to IEC 61499
 - **EO2**: Triggered when `EI` arrives and the selection index is `K = 1`.
 - **K**: The zero-based selection index that determines which output is triggered (data type: `UINT`).
 
-### Data Inputs
+## Data Inputs
 
 ### Event Outputs
 

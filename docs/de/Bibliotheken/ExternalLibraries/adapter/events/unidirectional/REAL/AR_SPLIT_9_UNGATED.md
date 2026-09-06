@@ -30,10 +30,10 @@ Keine Daten‑Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Adapter | Typ | Beschreibung |
-|----------|---------|-----|--------------|
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AR` | Eingehendes AR‑Signal, das verteilt wird. |
-| **Plug** (Ausgang) | `OUT1` … `OUT9` | `adapter::types::unidirectional::AR` | Neun identische Ausgänge, die das eingehende AR‑Signal weiterleiten. |
+| Richtung             | Adapter         | Typ                                  | Beschreibung                                                         |
+| -------------------- | --------------- | ------------------------------------ | -------------------------------------------------------------------- |
+| **Socket** (Eingang) | `IN`            | `adapter::types::unidirectional::AR` | Eingehendes AR‑Signal, das verteilt wird.                            |
+| **Plug** (Ausgang)   | `OUT1` … `OUT9` | `adapter::types::unidirectional::AR` | Neun identische Ausgänge, die das eingehende AR‑Signal weiterleiten. |
 
 ## Funktionsweise
 
@@ -57,11 +57,11 @@ Der Funktionsblock besitzt keinen internen Zustand (keine Zustandsmaschine). Das
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Bemerkung |
-| ---------- | ------------------ | ----------- |
-| `AR_SPLIT_4` | 4 | Gleiche Funktionsweise, aber nur vier Ausgänge. |
-| `AR_SPLIT_9_UNGATED` | 9 | Vorliegender Baustein (neun Ausgänge). |
-| `AR_SPLIT_2` | 2 | Minimaler Splitter für zwei Pfade. |
+| Baustein             | Anzahl Ausgänge | Bemerkung                                       |
+| -------------------- | --------------- | ----------------------------------------------- |
+| `AR_SPLIT_4`         | 4               | Gleiche Funktionsweise, aber nur vier Ausgänge. |
+| `AR_SPLIT_9_UNGATED` | 9               | Vorliegender Baustein (neun Ausgänge).          |
+| `AR_SPLIT_2`         | 2               | Minimaler Splitter für zwei Pfade.              |
 
 Die Bausteine unterscheiden sich lediglich in der Anzahl der Ausgänge; die Funktionsweise und die generische Eigenschaft sind identisch.
 

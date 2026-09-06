@@ -17,9 +17,9 @@ None.
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|-------|-----------|
-| E1 | Event | Indication (or Request) – the event is triggered when the data is sent. |
+| Name | Type  | Comment                                                                 |
+| ---- | ----- | ----------------------------------------------------------------------- |
+| E1   | Event | Indication (or Request) – the event is triggered when the data is sent. |
 
 ### **Data Inputs**
 
@@ -27,9 +27,9 @@ None.
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-|------|--------|-----------|
-| D1 | STRING | The data (string) associated with the event. |
+| Name | Type   | Comment                                      |
+| ---- | ------ | -------------------------------------------- |
+| D1   | STRING | The data (string) associated with the event. |
 
 ### **Adapter**
 

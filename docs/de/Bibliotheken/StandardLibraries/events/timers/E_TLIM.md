@@ -38,11 +38,11 @@ Der `E_TLIM` (Time-Limiting) begrenzt, wie lange `Q` maximal `TRUE` bleiben kann
 
 ## Zustandsübersicht
 
-| Zustand (implizit über `E_SR`/`E_DELAY`) | Bedeutung |
-| --- | --- |
-| Q = FALSE, Timer inaktiv | Ruhezustand, `IN = FALSE` |
-| Q = TRUE, Timer läuft | `IN` ist `TRUE`, `PT` noch nicht abgelaufen |
-| Q = FALSE (Timeout) | `IN` war länger als `PT` `TRUE`, automatisch zurückgesetzt |
+| Zustand (implizit über `E_SR`/`E_DELAY`) | Bedeutung                                                  |
+| ---------------------------------------- | ---------------------------------------------------------- |
+| Q = FALSE, Timer inaktiv                 | Ruhezustand, `IN = FALSE`                                  |
+| Q = TRUE, Timer läuft                    | `IN` ist `TRUE`, `PT` noch nicht abgelaufen                |
+| Q = FALSE (Timeout)                      | `IN` war länger als `PT` `TRUE`, automatisch zurückgesetzt |
 
 ## Anwendungsszenarien
 

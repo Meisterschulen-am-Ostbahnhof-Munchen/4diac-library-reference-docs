@@ -7,23 +7,23 @@ this function returns the fraction of a real number
 ### Event Inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | x |
+| :--- | :------ | :--- |
+| REQ  |         | x    |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| x | REAL | |
+| :--- | :--- | :------ |
+| x    | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | REAL | |
+| :--- | :--- | :------ |
+|      | REAL |         |

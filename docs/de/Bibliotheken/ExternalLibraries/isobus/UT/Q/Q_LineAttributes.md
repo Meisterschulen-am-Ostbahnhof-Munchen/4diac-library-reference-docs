@@ -69,22 +69,22 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Attribut-Referenz
 
-| Attribut     | Wertebereich          | Beschreibung                     |
-|--------------|-----------------------|----------------------------------|
-| Farbe        | 0-255 (8-bit)        | Farbindex nach ISO 11783-6 A.3   |
-| Breite       | 1-255 Pixel          | Linienstärke in Pixeln           |
-| Stil         | 16-bit Bitmaske      | Linienart nach B.14.3            |
+| Attribut | Wertebereich    | Beschreibung                   |
+| -------- | --------------- | ------------------------------ |
+| Farbe    | 0-255 (8-bit)   | Farbindex nach ISO 11783-6 A.3 |
+| Breite   | 1-255 Pixel     | Linienstärke in Pixeln         |
+| Stil     | 16-bit Bitmaske | Linienart nach B.14.3          |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Änderung             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Änderung    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -95,12 +95,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_LineAttributes | VtLineStyle | VtGraphicAttributes |
-|---------------|------------------|-------------|---------------------|
-| ISO-Standard  | ✔                | ✖           | ✖                   |
-| Farbsteuerung | ✔                | ✔           | ✔                   |
-| Breitensteuerung | ✔            | ✔           | ✖                   |
-| Stilsteuerung | ✔                | ✔           | ✔                   |
+| Feature          | Q_LineAttributes | VtLineStyle | VtGraphicAttributes |
+| ---------------- | ---------------- | ----------- | ------------------- |
+| ISO-Standard     | ✔                | ✖           | ✖                   |
+| Farbsteuerung    | ✔                | ✔           | ✔                   |
+| Breitensteuerung | ✔                | ✔           | ✖                   |
+| Stilsteuerung    | ✔                | ✔           | ✔                   |
 
 ## Fazit
 

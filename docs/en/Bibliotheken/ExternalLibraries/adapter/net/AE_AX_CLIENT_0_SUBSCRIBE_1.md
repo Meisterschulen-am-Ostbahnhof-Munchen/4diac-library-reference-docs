@@ -33,8 +33,8 @@ The **AE_AX_CLIENT_0_SUBSCRIBE_1** function block is a composite function block 
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------|-----------|--------------|
+| Adapter | Type                                 | Direction                                | Description                      |
+| ------- | ------------------------------------ | ---------------------------------------- | -------------------------------- |
 | TRIGGER | adapter::types::bidirectional::AE_AX | Socket – trigger (output), state (input) | Triggering event out, state back |
 
 ## Functionality

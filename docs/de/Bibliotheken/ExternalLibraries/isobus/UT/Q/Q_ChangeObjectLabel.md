@@ -71,18 +71,18 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Standardparameter
 
-| Parameter          | NULL-Wert | Beschreibung               |
-|--------------------|-----------|----------------------------|
-| u16ObIdStringVar   | 0xFFFF    | Kein Text                  |
-| u16ObIdGrafic      | 0xFFFF    | Keine Grafik               |
+| Parameter        | NULL-Wert | Beschreibung |
+| ---------------- | --------- | ------------ |
+| u16ObIdStringVar | 0xFFFF    | Kein Text    |
+| u16ObIdGrafic    | 0xFFFF    | Keine Grafik |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf (Text zu lang)     |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
+| Code | Konstante           | Bedeutung                     |
+| ---- | ------------------- | ----------------------------- |
+| 0    | VT_E_NO_ERR         | Erfolgreich                   |
+| -6   | VT_E_OVERFLOW       | Pufferüberlauf (Text zu lang) |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Objekt-ID           |
 
 ## Anwendungsszenarien
 
@@ -93,11 +93,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ChangeObjectLabel | VtDynamicLabel | VtTextManager |
-|---------------|---------------------|----------------|---------------|
-| ISO-Standard  | ✔                   | ✖              | ✖             |
-| Beschriftung  | Text + Grafik       | Nur Text       | Nur Text      |
-| Schriftart    | Steuerbar           | Fest           | Teilweise     |
+| Feature      | Q_ChangeObjectLabel | VtDynamicLabel | VtTextManager |
+| ------------ | ------------------- | -------------- | ------------- |
+| ISO-Standard | ✔                   | ✖              | ✖             |
+| Beschriftung | Text + Grafik       | Nur Text       | Nur Text      |
+| Schriftart   | Steuerbar           | Fest           | Teilweise     |
 
 ## Fazit
 

@@ -13,7 +13,7 @@ The FB_CTU (Up Counter) is a function block that acts as an up counter. It incre
 - **Q** (BOOL): Outputs `TRUE` when the counter value (`CV`) reaches or exceeds the predefined value (`PV`).
 - **CV** (INT): Current counter value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

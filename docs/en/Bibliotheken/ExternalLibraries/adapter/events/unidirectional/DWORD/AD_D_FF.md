@@ -13,7 +13,7 @@ No direct data inputs. The value to be latched is provided via the **data channe
 
 No direct data outputs. The latched value is provided via the **data channel of the output adapter `Q`**.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -27,10 +27,10 @@ No direct data outputs. The latched value is provided via the **data channel of 
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Description |
-| --------- | ---------- | ----- | -------------- |
-| `I` (Socket) | Input | `adapter::types::unidirectional::AD` | Provides the clock signal (E1) and the data value to be stored (D1). |
-| `Q` (Plug) | Output | `adapter::types::unidirectional::AD` | Outputs the stored data value after the clock event (E1 as acknowledgment, D1 as data). |
+| Adapter      | Direction | Type                                 | Description                                                                             |
+| ------------ | --------- | ------------------------------------ | --------------------------------------------------------------------------------------- |
+| `I` (Socket) | Input     | `adapter::types::unidirectional::AD` | Provides the clock signal (E1) and the data value to be stored (D1).                    |
+| `Q` (Plug)   | Output    | `adapter::types::unidirectional::AD` | Outputs the stored data value after the clock event (E1 as acknowledgment, D1 as data). |
 
 The adapters of type `unidirectional::AD` each define one event channel (`E1`) and one data channel (`D1`). The exact data types are defined by the adapter definition (usually `ANY`).
 

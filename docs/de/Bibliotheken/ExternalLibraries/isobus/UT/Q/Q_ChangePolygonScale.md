@@ -59,21 +59,21 @@ Der **Q_ChangePolygonScale** ist ein standardkonformer Funktionsbaustein zur Ska
 
 ## Skalierungsverhalten
 
-| Parameter  | Wirkung                     |
-|------------|-----------------------------|
-| Breite     | Horizontale Skalierung      |
-| Höhe       | Vertikale Skalierung        |
+| Parameter | Wirkung                |
+| --------- | ---------------------- |
+| Breite    | Horizontale Skalierung |
+| Höhe      | Vertikale Skalierung   |
 
 Die VT skaliert gemäß Annex F.54 alle Polygonpunkte mit 32-Bit-Integer-Arithmetik: `new_x = [(old_x × new_width) + (old_width/2)] / old_width` und analog für `new_y`.
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Ungültige Abmessungen             |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Polygon-ID              |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz                |
+| Code | Konstante                 | Bedeutung             |
+| ---- | ------------------------- | --------------------- |
+| 0    | VT_E_NO_ERR               | Erfolgreich           |
+| -6   | VT_E_OVERFLOW             | Ungültige Abmessungen |
+| -128 | VT_E_HANDLE_INVALID       | Ungültige Polygon-ID  |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige Instanz     |
 
 ## Anwendungsszenarien
 
@@ -84,11 +84,11 @@ Die VT skaliert gemäß Annex F.54 alle Polygonpunkte mit 32-Bit-Integer-Arithme
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ChangePolygonScale | VtGeometryScaler | VtDynamicResize |
-|---------------|----------------------|------------------|-----------------|
-| ISO-Standard  | ✔                    | ✖                | ✖               |
-| Skalierung    | Proportional         | Frei             | Nur Breite      |
-| Auflösung     | 16-bit               | 8-bit            | 16-bit          |
+| Feature      | Q_ChangePolygonScale | VtGeometryScaler | VtDynamicResize |
+| ------------ | -------------------- | ---------------- | --------------- |
+| ISO-Standard | ✔                    | ✖                | ✖               |
+| Skalierung   | Proportional         | Frei             | Nur Breite      |
+| Auflösung    | 16-bit               | 8-bit            | 16-bit          |
 
 ## Fazit
 

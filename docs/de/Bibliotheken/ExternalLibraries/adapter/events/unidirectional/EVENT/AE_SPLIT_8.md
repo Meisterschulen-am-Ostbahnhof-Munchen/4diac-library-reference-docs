@@ -30,17 +30,17 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** | `IN` | `adapter::types::unidirectional::AE` | Eingehender unidirektionaler AE-Adapter |
-| **Plug** | `OUT1` | `adapter::types::unidirectional::AE` | Erster ausgehender AE-Adapter |
-| **Plug** | `OUT2` | `adapter::types::unidirectional::AE` | Zweiter ausgehender AE-Adapter |
-| **Plug** | `OUT3` | `adapter::types::unidirectional::AE` | Dritter ausgehender AE-Adapter |
-| **Plug** | `OUT4` | `adapter::types::unidirectional::AE` | Vierter ausgehender AE-Adapter |
-| **Plug** | `OUT5` | `adapter::types::unidirectional::AE` | Fünfter ausgehender AE-Adapter |
-| **Plug** | `OUT6` | `adapter::types::unidirectional::AE` | Sechster ausgehender AE-Adapter |
-| **Plug** | `OUT7` | `adapter::types::unidirectional::AE` | Siebter ausgehender AE-Adapter |
-| **Plug** | `OUT8` | `adapter::types::unidirectional::AE` | Achter ausgehender AE-Adapter |
+| Richtung   | Name   | Typ                                  | Beschreibung                            |
+| ---------- | ------ | ------------------------------------ | --------------------------------------- |
+| **Socket** | `IN`   | `adapter::types::unidirectional::AE` | Eingehender unidirektionaler AE-Adapter |
+| **Plug**   | `OUT1` | `adapter::types::unidirectional::AE` | Erster ausgehender AE-Adapter           |
+| **Plug**   | `OUT2` | `adapter::types::unidirectional::AE` | Zweiter ausgehender AE-Adapter          |
+| **Plug**   | `OUT3` | `adapter::types::unidirectional::AE` | Dritter ausgehender AE-Adapter          |
+| **Plug**   | `OUT4` | `adapter::types::unidirectional::AE` | Vierter ausgehender AE-Adapter          |
+| **Plug**   | `OUT5` | `adapter::types::unidirectional::AE` | Fünfter ausgehender AE-Adapter          |
+| **Plug**   | `OUT6` | `adapter::types::unidirectional::AE` | Sechster ausgehender AE-Adapter         |
+| **Plug**   | `OUT7` | `adapter::types::unidirectional::AE` | Siebter ausgehender AE-Adapter          |
+| **Plug**   | `OUT8` | `adapter::types::unidirectional::AE` | Achter ausgehender AE-Adapter           |
 
 ## Funktionsweise
 

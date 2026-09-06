@@ -34,11 +34,13 @@ The **F_SUB_TOD_TIME** function block is a standards-compliant function block fo
 
 - `REQ` event with TIME_OF_DAY and TIME value
 - Valid range: TOD#00:00:00 to TOD#23:59:59.999999
+
 1. **Time Calculation**:
 
 - Conversion to seconds since midnight
 - Subtraction of the time interval
 - Time-of-day calculation with overflow handling
+
 1. **Result Output**:
 
 - `CNF` event with new time of day
@@ -69,11 +71,11 @@ The **F_SUB_TOD_TIME** function block is a standards-compliant function block fo
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_SUB_TOD_TIME | F_ADD_TOD_TIME | F_SUB_DT_TIME |
-| --------------- | ---------------- | ---------------- | --------------- |
+| Feature   | F_SUB_TOD_TIME         | F_ADD_TOD_TIME         | F_SUB_DT_TIME        |
+| --------- | ---------------------- | ---------------------- | -------------------- |
 | Operation | Time of Day - Interval | Time of Day + Interval | Timestamp - Interval |
-| Result | TIME_OF_DAY | TIME_OF_DAY | DATE_AND_TIME |
-| Overflow | 24-hour Circular | 24-hour Circular | Calendar-based |
+| Result    | TIME_OF_DAY            | TIME_OF_DAY            | DATE_AND_TIME        |
+| Overflow  | 24-hour Circular       | 24-hour Circular       | Calendar-based       |
 
 ## Conclusion
 

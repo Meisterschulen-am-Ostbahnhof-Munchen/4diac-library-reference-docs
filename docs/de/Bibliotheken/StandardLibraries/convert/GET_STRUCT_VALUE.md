@@ -14,29 +14,29 @@ Der Funktionsblock (FB) `GET_STRUCT_VALUE` ist ein Service-Schnittstellen-Bauste
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Beschreibung                     | Daten mit |
-| :--- | :---- | :------------------------------- | :-------- |
-| `REQ`| `Event`| Fordert das Auslesen eines Wertes aus der Struktur an. | `member`, `in_struct` |
+| Name  | Typ     | Beschreibung                                           | Daten mit             |
+| :---- | :------ | :----------------------------------------------------- | :-------------------- |
+| `REQ` | `Event` | Fordert das Auslesen eines Wertes aus der Struktur an. | `member`, `in_struct` |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Beschreibung                     | Daten mit |
-| :--- | :---- | :------------------------------- | :-------- |
-| `CNF`| `Event`| Bestätigt den Abschluss des `REQ`-Ereignisses. | `QO`, `output`    |
+| Name  | Typ     | Beschreibung                                   | Daten mit      |
+| :---- | :------ | :--------------------------------------------- | :------------- |
+| `CNF` | `Event` | Bestätigt den Abschluss des `REQ`-Ereignisses. | `QO`, `output` |
 
 ### **Daten-Eingänge**
 
-| Name      | Typ      | Beschreibung                                                                                              |
-| :-------- | :------- | :-------------------------------------------------------------------------------------------------------- |
-| `in_struct`| `ANY`    | Die Datenstruktur, aus der ein Wert ausgelesen werden soll.                                                |
-| `member`  | `STRING` | Der Name des Members der Struktur, der abgerufen werden soll. Innere Member werden über den Punkt-Operator (`.`) angesprochen. |
+| Name        | Typ      | Beschreibung                                                                                                                   |
+| :---------- | :------- | :----------------------------------------------------------------------------------------------------------------------------- |
+| `in_struct` | `ANY`    | Die Datenstruktur, aus der ein Wert ausgelesen werden soll.                                                                    |
+| `member`    | `STRING` | Der Name des Members der Struktur, der abgerufen werden soll. Innere Member werden über den Punkt-Operator (`.`) angesprochen. |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ   | Beschreibung                                          |
-| :----- | :---- | :---------------------------------------------------- |
-| `QO`   | `BOOL`| `TRUE`, wenn keine Fehler aufgetreten sind, andernfalls `FALSE`. |
-| `output`| `ANY` | Der Wert des ausgewählten Members, wenn `QO = TRUE`. Andernfalls bleibt dieser Wert unverändert. |
+| Name     | Typ    | Beschreibung                                                                                     |
+| :------- | :----- | :----------------------------------------------------------------------------------------------- |
+| `QO`     | `BOOL` | `TRUE`, wenn keine Fehler aufgetreten sind, andernfalls `FALSE`.                                 |
+| `output` | `ANY`  | Der Wert des ausgewählten Members, wenn `QO = TRUE`. Andernfalls bleibt dieser Wert unverändert. |
 
 ### **Adapter**
 
@@ -69,12 +69,12 @@ Es gibt in der Standardbibliothek von 4diac keine direkt vergleichbaren Funktion
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2018 fortiss GmbH |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2018-10-16, Jose Cabral) |
-| 4diac-Paket | eclipse4diac::convert |
+| Attribut    | Wert                                                            |
+| :---------- | :-------------------------------------------------------------- |
+| Copyright   | (c) 2018 fortiss GmbH                                           |
+| Lizenz      | EPL-2.0                                                         |
+| Version     | 3.0 (2025-04-14, Patrick Aigner), 1.0 (2018-10-16, Jose Cabral) |
+| 4diac-Paket | eclipse4diac::convert                                           |
 
 ## 🛠️ Zugehörige Übungen
 

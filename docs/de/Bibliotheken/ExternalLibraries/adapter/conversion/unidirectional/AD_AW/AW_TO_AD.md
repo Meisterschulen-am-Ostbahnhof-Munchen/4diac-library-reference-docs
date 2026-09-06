@@ -28,10 +28,10 @@ Der Funktionsbaustein **AW_TO_AD** ist ein zusammengesetzter Baustein (Composite
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| `AW_IN` | `adapter::types::unidirectional::AW` | Socket (Eingang) | WORD-Adapter, der Ereignis‑ und Dateneingänge bereitstellt |
-| `AD_OUT` | `adapter::types::unidirectional::AD` | Plug (Ausgang) | DWORD-Adapter, der Ereignis‑ und Datenausgänge bereitstellt |
+| Name     | Typ                                  | Richtung         | Beschreibung                                                |
+| -------- | ------------------------------------ | ---------------- | ----------------------------------------------------------- |
+| `AW_IN`  | `adapter::types::unidirectional::AW` | Socket (Eingang) | WORD-Adapter, der Ereignis‑ und Dateneingänge bereitstellt  |
+| `AD_OUT` | `adapter::types::unidirectional::AD` | Plug (Ausgang)   | DWORD-Adapter, der Ereignis‑ und Datenausgänge bereitstellt |
 
 ## Funktionsweise
 
@@ -64,11 +64,11 @@ Da der FB als Composite ohne ECC realisiert ist, existiert kein interner Zustand
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung |
-| ---------- | -------------- |
-| `WORD_TO_DWORD` | Reine Datenkonvertierung ohne Adapter-Schnittstelle |
-| `AW_TO_AD` | Konvertiert komplette unidirektionale Adapter (Ereignis + Daten) |
-| `AD_TO_AW` (nicht vorhanden) | Theoretischer Baustein für die umgekehrte Richtung |
+| Baustein                     | Beschreibung                                                     |
+| ---------------------------- | ---------------------------------------------------------------- |
+| `WORD_TO_DWORD`              | Reine Datenkonvertierung ohne Adapter-Schnittstelle              |
+| `AW_TO_AD`                   | Konvertiert komplette unidirektionale Adapter (Ereignis + Daten) |
+| `AD_TO_AW` (nicht vorhanden) | Theoretischer Baustein für die umgekehrte Richtung               |
 
 Im Gegensatz zu einem reinen Datenkonverter berücksichtigt `AW_TO_AD` auch die Ereignisweiterleitung und ist direkt in Adapter-basierte Architekturen integrierbar.
 

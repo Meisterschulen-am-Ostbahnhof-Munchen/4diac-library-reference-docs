@@ -13,7 +13,7 @@ The function block `E_BLINK_TRAIN` simulates a flashing signal that is switched 
 - `N` (UINT): Number of blink cycles to generate.
 - `OUT` (BOOL): Output value that alternates between `TRUE` and `FALSE`. Starts with `FALSE`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

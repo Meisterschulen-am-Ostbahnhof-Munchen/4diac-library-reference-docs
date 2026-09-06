@@ -74,10 +74,10 @@ Der Baustein kapsele ein internes Netzwerk, welches die Adapter-Signale extrahie
 
 Da es sich um einen Composite-Funktionsbaustein ohne eigene Execution Control Chart (ECC) handelt, wird das Verhalten rein durch den Signalfluss bestimmt:
 
-| Zustand Selektor (`G.D1`) | Trigger-Ereignis | Aktivität am Ausgang (`OUT`) |
-| :--- | :--- | :--- |
-| `0` / `FALSE` | Beliebig (`G.E1`, `IN0.E1`, `IN1.E1`) | Gibt den Wert von `IN0.D1` aus; triggert `OUT.E1`. |
-| `1` / `TRUE` | Beliebig (`G.E1`, `IN0.E1`, `IN1.E1`) | Gibt den Wert von `IN1.D1` aus; triggert `OUT.E1`. |
+| Zustand Selektor (`G.D1`) | Trigger-Ereignis                      | Aktivität am Ausgang (`OUT`)                       |
+| :------------------------ | :------------------------------------ | :------------------------------------------------- |
+| `0` / `FALSE`             | Beliebig (`G.E1`, `IN0.E1`, `IN1.E1`) | Gibt den Wert von `IN0.D1` aus; triggert `OUT.E1`. |
+| `1` / `TRUE`              | Beliebig (`G.E1`, `IN0.E1`, `IN1.E1`) | Gibt den Wert von `IN1.D1` aus; triggert `OUT.E1`. |
 
 ## Anwendungsszenarien
 

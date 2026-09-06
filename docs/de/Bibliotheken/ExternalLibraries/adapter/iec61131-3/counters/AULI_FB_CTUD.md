@@ -50,16 +50,16 @@ Es gibt keine separaten Datenausgänge. Die Ausgangsdaten werden über die Adapt
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ   | Zweck |
-|---------|----------|-------|-------|
-| **CU**  | Socket   | AX    | Count Up – Ereignis + Boolesche Freigabe |
-| **CD**  | Socket   | AX    | Count Down – Ereignis + Boolesche Freigabe |
-| **R**   | Socket   | AX    | Reset – Ereignis + Boolesche Freigabe |
-| **LD**  | Socket   | AX    | Load – Ereignis + Boolesche Freigabe |
-| **PV**  | Socket   | AULI  | Preset Value – Ereignis + ULINT-Wert |
-| **QU**  | Plug     | AX    | Output Up – Ereignis + Boolescher Zustand |
-| **QD**  | Plug     | AX    | Output Down – Ereignis + Boolescher Zustand |
-| **CV**  | Plug     | AULI  | Current Value – Ereignis + ULINT-Zählerstand |
+| Adapter | Richtung | Typ  | Zweck                                        |
+| ------- | -------- | ---- | -------------------------------------------- |
+| **CU**  | Socket   | AX   | Count Up – Ereignis + Boolesche Freigabe     |
+| **CD**  | Socket   | AX   | Count Down – Ereignis + Boolesche Freigabe   |
+| **R**   | Socket   | AX   | Reset – Ereignis + Boolesche Freigabe        |
+| **LD**  | Socket   | AX   | Load – Ereignis + Boolesche Freigabe         |
+| **PV**  | Socket   | AULI | Preset Value – Ereignis + ULINT-Wert         |
+| **QU**  | Plug     | AX   | Output Up – Ereignis + Boolescher Zustand    |
+| **QD**  | Plug     | AX   | Output Down – Ereignis + Boolescher Zustand  |
+| **CV**  | Plug     | AULI | Current Value – Ereignis + ULINT-Zählerstand |
 
 ## Funktionsweise
 
@@ -104,12 +104,12 @@ Nach Reset (`R`) oder Load (`LD`) kann der Zähler sofort in einen dieser Zustä
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| `FB_CTUD_ULINT` | Gleiche Zählerlogik, aber mit separaten Ereignis‑ und Dateneingängen/-ausgängen (keine Adapter). |
-| `AULI_FB_CTU` | Nur Aufwärtszähler, als Adapterversion. |
-| `AULI_FB_CTD` | Nur Abwärtszähler, als Adapterversion. |
-| `CTUD` (Standard IEC 61499) | Ähnliche Funktionalität, aber meist mit anderen Datentypen (z. B. INT) und ohne Adapter. |
+| Baustein                    | Eigenschaften                                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------------------------ |
+| `FB_CTUD_ULINT`             | Gleiche Zählerlogik, aber mit separaten Ereignis‑ und Dateneingängen/-ausgängen (keine Adapter). |
+| `AULI_FB_CTU`               | Nur Aufwärtszähler, als Adapterversion.                                                          |
+| `AULI_FB_CTD`               | Nur Abwärtszähler, als Adapterversion.                                                           |
+| `CTUD` (Standard IEC 61499) | Ähnliche Funktionalität, aber meist mit anderen Datentypen (z. B. INT) und ohne Adapter.         |
 
 Der `AULI_FB_CTUD` vereint Auf‑ und Abwärtszählung in einem Block und bietet durch die Adapter‑Schnittstellen eine besonders flexible Anbindung an andere adapterbasierte Komponenten.
 

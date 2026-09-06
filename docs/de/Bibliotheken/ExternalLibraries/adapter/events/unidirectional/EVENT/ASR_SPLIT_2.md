@@ -28,11 +28,11 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::ASR` | Eingang (Socket) | **IN** | Eingehendes ASR-Signal |
-| `adapter::types::unidirectional::ASR` | Ausgang (Plug) | **OUT1** | Erster ausgehender ASR-Pfad |
-| `adapter::types::unidirectional::ASR` | Ausgang (Plug) | **OUT2** | Zweiter ausgehender ASR-Pfad |
+| Typ                                   | Richtung         | Name     | Beschreibung                 |
+| ------------------------------------- | ---------------- | -------- | ---------------------------- |
+| `adapter::types::unidirectional::ASR` | Eingang (Socket) | **IN**   | Eingehendes ASR-Signal       |
+| `adapter::types::unidirectional::ASR` | Ausgang (Plug)   | **OUT1** | Erster ausgehender ASR-Pfad  |
+| `adapter::types::unidirectional::ASR` | Ausgang (Plug)   | **OUT2** | Zweiter ausgehender ASR-Pfad |
 
 ## Funktionsweise
 

@@ -12,35 +12,35 @@ Der Funktionsblock ILOCK_FB_SR realisiert ein bistabiles set-dominantes SR-Latch
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-|----------|--------------|-------------------|
-| `REQ` | Ausführungsanforderung zur Verarbeitung der Set- und Reset-Signale | `S1`, `R` |
+| Ereignis | Beschreibung                                                       | Mitgeführte Daten |
+| -------- | ------------------------------------------------------------------ | ----------------- |
+| `REQ`    | Ausführungsanforderung zur Verarbeitung der Set- und Reset-Signale | `S1`, `R`         |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-|----------|--------------|-------------------|
-| `CNF` | Bestätigung der Ausführung, gibt den aktuellen Ausgangswert aus | `Q1` |
+| Ereignis | Beschreibung                                                    | Mitgeführte Daten |
+| -------- | --------------------------------------------------------------- | ----------------- |
+| `CNF`    | Bestätigung der Ausführung, gibt den aktuellen Ausgangswert aus | `Q1`              |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `S1` | `BOOL` | Set-Eingang |
-| `R`  | `BOOL` | Reset-Eingang |
+| Name | Datentyp | Beschreibung  |
+| ---- | -------- | ------------- |
+| `S1` | `BOOL`   | Set-Eingang   |
+| `R`  | `BOOL`   | Reset-Eingang |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `Q1` | `BOOL` | Ausgang des Latches (set-dominant) |
+| Name | Datentyp | Beschreibung                       |
+| ---- | -------- | ---------------------------------- |
+| `Q1` | `BOOL`   | Ausgang des Latches (set-dominant) |
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| `ILOCK_IN` | `adapter::types::bidirectional::AX2` | Socket | Empfängt Daten und Ereignisse von einem vorgelagerten Interlock-Baustein |
-| `ILOCK_OUT` | `adapter::types::bidirectional::AX2` | Plug | Sendet Daten und Ereignisse an einen nachgelagerten Interlock-Baustein |
+| Adapter     | Typ                                  | Richtung | Beschreibung                                                             |
+| ----------- | ------------------------------------ | -------- | ------------------------------------------------------------------------ |
+| `ILOCK_IN`  | `adapter::types::bidirectional::AX2` | Socket   | Empfängt Daten und Ereignisse von einem vorgelagerten Interlock-Baustein |
+| `ILOCK_OUT` | `adapter::types::bidirectional::AX2` | Plug     | Sendet Daten und Ereignisse an einen nachgelagerten Interlock-Baustein   |
 
 Die Adapter ermöglichen eine bidirektionale Verkettung von Interlock-Bausteinen, indem sie sowohl den Empfang von Freigabe-/Verriegelungssignalen als auch die Weitergabe von Zuständen erlauben.
 
@@ -66,16 +66,16 @@ Durch diese Struktur können mehrere Interlock-Bausteine kaskadiert werden: Ein 
 
 Das interne SR-Latch kennt vier Zustände basierend auf den (kombinierten) Eingängen:
 
-| S1 (nach Logik) | R | Q1 (vorheriger) | Q1 (neuer) |
-| ----------------- | --- | ----------------- | ------------ |
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 |
+| S1 (nach Logik) | R   | Q1 (vorheriger) | Q1 (neuer) |
+| --------------- | --- | --------------- | ---------- |
+| 0               | 0   | 0               | 0          |
+| 0               | 0   | 1               | 1          |
+| 0               | 1   | 0               | 0          |
+| 0               | 1   | 1               | 0          |
+| 1               | 0   | 0               | 1          |
+| 1               | 0   | 1               | 1          |
+| 1               | 1   | 0               | 1          |
+| 1               | 1   | 1               | 1          |
 
 Die effektiven Werte für S1 (Set) ergeben sich aus der ODER-Verknüpfung von `S1`, `ILOCK_IN.DO1` und `ILOCK_OUT.DI1`.
 

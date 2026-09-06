@@ -38,11 +38,11 @@ The function block does not have any direct, classic event or data inputs on its
 
 ### **Adapters**
 
-| Type | Name | Adapter Type | Description |
-| :--- | :--- | :--- | :--- |
-| **Socket** (Female) | `IN1` | `adapter::types::unidirectional::AUDI` | First input value for division (dividend). |
-| **Socket** (Female) | `IN2` | `adapter::types::unidirectional::AUDI` | Second input value for the division (divisor). |
-| **Plug** (connector) | `OUT` | `adapter::types::unidirectional::AUDI` | Result of the division (quotient). |
+| Type                 | Name  | Adapter Type                           | Description                                    |
+| :------------------- | :---- | :------------------------------------- | :--------------------------------------------- |
+| **Socket** (Female)  | `IN1` | `adapter::types::unidirectional::AUDI` | First input value for division (dividend).     |
+| **Socket** (Female)  | `IN2` | `adapter::types::unidirectional::AUDI` | Second input value for the division (divisor). |
+| **Plug** (connector) | `OUT` | `adapter::types::unidirectional::AUDI` | Result of the division (quotient).             |
 
 ---
 
@@ -107,10 +107,10 @@ Execution follows a simple, event-driven pattern:
 
 ## Comparison with Similar Components
 
-| Component Type | Interface Type | Wiring Effort | Flexibility |
-| :--- | :--- | :--- | :--- |
-| **Standard `DIV`** | Individual Pins (REQ, IN1, IN2, OUT, CNF) | High (many lines) | Low (fixed data types per instance) |
-| **`AUDI_DIV_2`** | Adapter (`IN1`, `IN2`, `OUT`) | Very low | High (generic adaptation via adapter) |
+| Component Type     | Interface Type                            | Wiring Effort     | Flexibility                           |
+| :----------------- | :---------------------------------------- | :---------------- | :------------------------------------ |
+| **Standard `DIV`** | Individual Pins (REQ, IN1, IN2, OUT, CNF) | High (many lines) | Low (fixed data types per instance)   |
+| **`AUDI_DIV_2`**   | Adapter (`IN1`, `IN2`, `OUT`)             | Very low          | High (generic adaptation via adapter) |
 
 ---
 

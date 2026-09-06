@@ -28,16 +28,16 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ------------------- | ------------- |
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::ALI` | Eingangsadapter, dessen Daten und Ereignisse verteilt werden. |
-| Plug (Ausgang) | `OUT1` | `adapter::types::unidirectional::ALI` | Erster Ausgangsadapter. |
-| Plug (Ausgang) | `OUT2` | `adapter::types::unidirectional::ALI` | Zweiter Ausgangsadapter. |
-| Plug (Ausgang) | `OUT3` | `adapter::types::unidirectional::ALI` | Dritter Ausgangsadapter. |
-| Plug (Ausgang) | `OUT4` | `adapter::types::unidirectional::ALI` | Vierter Ausgangsadapter. |
-| Plug (Ausgang) | `OUT5` | `adapter::types::unidirectional::ALI` | Fünfter Ausgangsadapter. |
-| Plug (Ausgang) | `OUT6` | `adapter::types::unidirectional::ALI` | Sechster Ausgangsadapter. |
-| Plug (Ausgang) | `OUT7` | `adapter::types::unidirectional::ALI` | Siebter Ausgangsadapter. |
+| Richtung         | Name   | Typ                                   | Beschreibung                                                  |
+| ---------------- | ------ | ------------------------------------- | ------------------------------------------------------------- |
+| Socket (Eingang) | `IN`   | `adapter::types::unidirectional::ALI` | Eingangsadapter, dessen Daten und Ereignisse verteilt werden. |
+| Plug (Ausgang)   | `OUT1` | `adapter::types::unidirectional::ALI` | Erster Ausgangsadapter.                                       |
+| Plug (Ausgang)   | `OUT2` | `adapter::types::unidirectional::ALI` | Zweiter Ausgangsadapter.                                      |
+| Plug (Ausgang)   | `OUT3` | `adapter::types::unidirectional::ALI` | Dritter Ausgangsadapter.                                      |
+| Plug (Ausgang)   | `OUT4` | `adapter::types::unidirectional::ALI` | Vierter Ausgangsadapter.                                      |
+| Plug (Ausgang)   | `OUT5` | `adapter::types::unidirectional::ALI` | Fünfter Ausgangsadapter.                                      |
+| Plug (Ausgang)   | `OUT6` | `adapter::types::unidirectional::ALI` | Sechster Ausgangsadapter.                                     |
+| Plug (Ausgang)   | `OUT7` | `adapter::types::unidirectional::ALI` | Siebter Ausgangsadapter.                                      |
 
 ## Funktionsweise
 

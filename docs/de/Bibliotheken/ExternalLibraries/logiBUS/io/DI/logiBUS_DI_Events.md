@@ -25,22 +25,22 @@ Doku zu den einzelnen Events: <https://components.espressif.com/components/espre
 
 Die Ereigniskonstanten decken folgende Zustände ab:
 
-| EType | Konstante | Beschreibung |
-| ------- | ----------- | -------------- |
-| 0 | BUTTON_PRESS_DOWN | Taster gedrückt |
-| 1 | BUTTON_PRESS_UP | Taster losgelassen |
-| 2 | BUTTON_PRESS_REPEAT | Taster wiederholt gedrückt |
-| 3 | BUTTON_PRESS_REPEAT_DONE | Taster-Wiederholung beendet |
-| 4 | BUTTON_SINGLE_CLICK | Einfacher Tastenklick |
-| 5 | BUTTON_DOUBLE_CLICK | Doppelklick |
-| 6 | BUTTON_MULTIPLE_CLICK | Mehrfachklick |
-| 7 | BUTTON_LONG_PRESS_START | Langer Tastendruck beginnt |
-| 8 | BUTTON_LONG_PRESS_HOLD | Langer Tastendruck wird gehalten |
-| 9 | BUTTON_LONG_PRESS_UP | Langer Tastendruck beendet |
-| 10 | BUTTON_PRESS_END | Tastendruck beendet |
-| 11 | BUTTON_EVENT_MAX | Maximale Ereignis-ID |
-| 12 | BUTTON_NONE_PRESS | Kein Tastendruck |
-| 255 | Invalid | Ungültiges Ereignis |
+| EType | Konstante                | Beschreibung                     |
+| ----- | ------------------------ | -------------------------------- |
+| 0     | BUTTON_PRESS_DOWN        | Taster gedrückt                  |
+| 1     | BUTTON_PRESS_UP          | Taster losgelassen               |
+| 2     | BUTTON_PRESS_REPEAT      | Taster wiederholt gedrückt       |
+| 3     | BUTTON_PRESS_REPEAT_DONE | Taster-Wiederholung beendet      |
+| 4     | BUTTON_SINGLE_CLICK      | Einfacher Tastenklick            |
+| 5     | BUTTON_DOUBLE_CLICK      | Doppelklick                      |
+| 6     | BUTTON_MULTIPLE_CLICK    | Mehrfachklick                    |
+| 7     | BUTTON_LONG_PRESS_START  | Langer Tastendruck beginnt       |
+| 8     | BUTTON_LONG_PRESS_HOLD   | Langer Tastendruck wird gehalten |
+| 9     | BUTTON_LONG_PRESS_UP     | Langer Tastendruck beendet       |
+| 10    | BUTTON_PRESS_END         | Tastendruck beendet              |
+| 11    | BUTTON_EVENT_MAX         | Maximale Ereignis-ID             |
+| 12    | BUTTON_NONE_PRESS        | Kein Tastendruck                 |
+| 255   | Invalid                  | Ungültiges Ereignis              |
 
 ## Anwendungsszenarien
 

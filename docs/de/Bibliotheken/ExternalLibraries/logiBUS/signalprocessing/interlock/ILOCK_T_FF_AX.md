@@ -12,9 +12,9 @@ Der Funktionsblock `ILOCK_T_FF_AX` ist ein zusammengesetzter (Composite) Baustei
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ    | Beschreibung                                  |
-|----------|--------|-----------------------------------------------|
-| `CLK`    | Event  | Taktsignal, das einen Zustandswechsel (Toggle) auslöst. |
+| Ereignis | Typ   | Beschreibung                                            |
+| -------- | ----- | ------------------------------------------------------- |
+| `CLK`    | Event | Taktsignal, das einen Zustandswechsel (Toggle) auslöst. |
 
 ### **Ereignis-Ausgänge**
 
@@ -30,11 +30,11 @@ Keine direkten Datenausgänge. Der aktuelle Zustand wird über den AX-Adapter be
 
 ### **Adapter**
 
-| Adapter      | Typ                                                 | Richtung     | Beschreibung                                                                 |
-|--------------|------------------------------------------------------|--------------|-------------------------------------------------------------------------------|
-| `Q`          | `adapter::types::unidirectional::AX`                | Plug/Output  | Unidirektionaler Ausgangsadapter, der den aktuellen Zustand (boolescher Wert) als Datum liefert und ein Ereignis bei Zustandsänderung ausgibt. |
-| `ILOCK_IN`   | `adapter::types::bidirectional::AE2`                | Socket       | Bidirektionaler Adapter (Eingang) zur Aufnahme von Verriegelungssignalen.     |
-| `ILOCK_OUT`  | `adapter::types::bidirectional::AE2`                | Plug         | Bidirektionaler Adapter (Ausgang) zur Weitergabe von Verriegelungsereignissen an die übergeordnete Logik. |
+| Adapter     | Typ                                  | Richtung    | Beschreibung                                                                                                                                   |
+| ----------- | ------------------------------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Q`         | `adapter::types::unidirectional::AX` | Plug/Output | Unidirektionaler Ausgangsadapter, der den aktuellen Zustand (boolescher Wert) als Datum liefert und ein Ereignis bei Zustandsänderung ausgibt. |
+| `ILOCK_IN`  | `adapter::types::bidirectional::AE2` | Socket      | Bidirektionaler Adapter (Eingang) zur Aufnahme von Verriegelungssignalen.                                                                      |
+| `ILOCK_OUT` | `adapter::types::bidirectional::AE2` | Plug        | Bidirektionaler Adapter (Ausgang) zur Weitergabe von Verriegelungsereignissen an die übergeordnete Logik.                                      |
 
 Die AE2-Adapter besitzen je zwei Ereignispaare (`EI1/EO1`, `EI2/EO2`) und zwei zugehörige Datenports. In diesem Baustein werden nur die ersten Ports (`EI1/EO1`) genutzt.
 
@@ -64,9 +64,9 @@ Der Baustein realisiert somit einen flankengetriggerten Toggle-Flip-Flop, der du
 
 Der interne Zustand des Flip-Flops ist binär:
 
-| Zustand | Beschreibung                                                        |
-|---------|----------------------------------------------------------------------|
-| `0` (false) | Ausgang `Q` ist inaktiv. Bei nächstem `CLK` wird der Baustein setzen. |
+| Zustand     | Beschreibung                                                              |
+| ----------- | ------------------------------------------------------------------------- |
+| `0` (false) | Ausgang `Q` ist inaktiv. Bei nächstem `CLK` wird der Baustein setzen.     |
 | `1` (true)  | Ausgang `Q` ist aktiv. Bei nächstem `CLK` wird der Baustein zurücksetzen. |
 
 Die Zustandsübergänge erfolgen ausschließlich bei einem `CLK`-Ereignis (Toggle) oder bei einem Verriegelungs-Reset über `ILOCK_IN.EO1` bzw. `ILOCK_OUT.EI1`. Ein gleichzeitiges Setzen und Rücksetzen wird durch die Logik des SR-Flip-Flops aufgelöst (Reset hat Priorität, sofern beide Ereignisse eintreffen).

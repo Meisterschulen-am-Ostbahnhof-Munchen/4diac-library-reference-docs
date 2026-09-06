@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge vorhanden. Die Datenweiterleitung erfolgt über 
 
 ### **Adapter**
 
-| Rolle | Name | Typ | Kommentar |
-|-------|------|-----|-----------|
-| **Socket (Eingang)** | AUS_IN | `adapter::types::unidirectional::AUS` | USINT‑Adapter‑Eingang |
-| **Plug (Ausgang)**  | ALR_OUT | `adapter::types::unidirectional::ALR` | LREAL‑Adapter‑Ausgang |
+| Rolle                | Name    | Typ                                   | Kommentar             |
+| -------------------- | ------- | ------------------------------------- | --------------------- |
+| **Socket (Eingang)** | AUS_IN  | `adapter::types::unidirectional::AUS` | USINT‑Adapter‑Eingang |
+| **Plug (Ausgang)**   | ALR_OUT | `adapter::types::unidirectional::ALR` | LREAL‑Adapter‑Ausgang |
 
 - Der **AUS_IN**‑Adapter stellt die Schnittstelle für eingehende USINT-Daten inklusive eines zugehörigen Ereignisses bereit.
 - Der **ALR_OUT**‑Adapter stellt die Schnittstelle für ausgehende LREAL-Daten inklusive eines zugehörigen Ereignisses bereit.
@@ -65,12 +65,12 @@ Der Baustein besitzt **keine eigene Zustandsmaschine**. Er arbeitet transparent:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | AUS_TO_ALR | Typische Konvertierungs‑FBs (z. B. USINT_TO_LREAL) |
-| --------- | ------------ | ----------------------------------------------------- |
-| Eingang / Ausgang | Adapter‑Schnittstellen | Einzelne Daten‑Eingänge/-Ausgänge |
-| Ereignisverarbeitung | Durchleitung über Adapter | Eigene Ereignis‑E/K‑Paare |
-| Implementierung | Composite (nur Verbindungen) | Ausführbare Algorithmen |
-| Typumwandlung | Nicht im FB enthalten | Explizite Konvertierung durch Algorithmus |
+| Merkmal              | AUS_TO_ALR                   | Typische Konvertierungs‑FBs (z. B. USINT_TO_LREAL) |
+| -------------------- | ---------------------------- | -------------------------------------------------- |
+| Eingang / Ausgang    | Adapter‑Schnittstellen       | Einzelne Daten‑Eingänge/-Ausgänge                  |
+| Ereignisverarbeitung | Durchleitung über Adapter    | Eigene Ereignis‑E/K‑Paare                          |
+| Implementierung      | Composite (nur Verbindungen) | Ausführbare Algorithmen                            |
+| Typumwandlung        | Nicht im FB enthalten        | Explizite Konvertierung durch Algorithmus          |
 
 Während ein klassischer *USINT_TO_LREAL*‑FB die Wertkonvertierung selbst vornimmt, bietet **AUS_TO_ALR** nur die Adapter‑Anpassung. Für die eigentliche Datenumwandlung muss ein separater Funktionsbaustein zwischengeschaltet werden.
 

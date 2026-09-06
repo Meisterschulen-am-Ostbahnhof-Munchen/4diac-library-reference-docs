@@ -14,22 +14,22 @@ Der Funktionsblock **AUDI_D_FF_HYS_TMIN** realisiert ein taktflankengesteuertes 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                                    |
-|----------|-------|----------------------------------------------|
+| Ereignis | Typ   | Kommentar                                                |
+| -------- | ----- | -------------------------------------------------------- |
 | INIT     | EInit | Initialisierungsanfrage, setzt Hysterese und Mindestzeit |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar                                    |
-|----------|-------|----------------------------------------------|
-| INITO    | EInit | Initialisierungsbestätigung                  |
+| Ereignis | Typ   | Kommentar                   |
+| -------- | ----- | --------------------------- |
+| INITO    | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Variable     | Typ   | Kommentar                                                 |
-|--------------|-------|-----------------------------------------------------------|
-| HYSTERESIS   | UDINT | Hysterese-Band (Breite der Totzone zur Störunterdrückung) |
-| Tmin         | TIME  | Mindestzeit zwischen zwei aufeinanderfolgenden Ausgangsereignissen |
+| Variable   | Typ   | Kommentar                                                          |
+| ---------- | ----- | ------------------------------------------------------------------ |
+| HYSTERESIS | UDINT | Hysterese-Band (Breite der Totzone zur Störunterdrückung)          |
+| Tmin       | TIME  | Mindestzeit zwischen zwei aufeinanderfolgenden Ausgangsereignissen |
 
 ### **Daten-Ausgänge**
 
@@ -37,8 +37,8 @@ Keine direkten Datenausgänge – die Ausgangsdaten werden über den Adapter **Q
 
 ### **Adapter**
 
-| Bezeichnung | Typ                                | Richtung | Kommentar                  |
-|-------------|------------------------------------|----------|----------------------------|
+| Bezeichnung | Typ                                    | Richtung | Kommentar                  |
+| ----------- | -------------------------------------- | -------- | -------------------------- |
 | I           | `adapter::types::unidirectional::AUDI` | Eingang  | Zu übernehmender Datenwert |
 | Q           | `adapter::types::unidirectional::AUDI` | Ausgang  | Latched Wert               |
 

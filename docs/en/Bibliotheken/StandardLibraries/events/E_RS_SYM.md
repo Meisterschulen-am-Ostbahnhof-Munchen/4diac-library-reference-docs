@@ -37,11 +37,11 @@ The ECC has three states: `START`, `SET`, and `RESET`. From `START`, both an `S`
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
-| START | Initial state, waits symmetrically for `S` or `R` |
-| SET | `Q = TRUE`, reachable from `START` (via `S`) or `RESET` (via `S`) |
-| RESET | `Q = FALSE`, reachable from `START` (via `R`) or `SET` (via `R`) |
+| State | Meaning                                                           |
+| ----- | ----------------------------------------------------------------- |
+| START | Initial state, waits symmetrically for `S` or `R`                 |
+| SET   | `Q = TRUE`, reachable from `START` (via `S`) or `RESET` (via `S`) |
+| RESET | `Q = FALSE`, reachable from `START` (via `R`) or `SET` (via `R`)  |
 
 ## Application Scenarios
 

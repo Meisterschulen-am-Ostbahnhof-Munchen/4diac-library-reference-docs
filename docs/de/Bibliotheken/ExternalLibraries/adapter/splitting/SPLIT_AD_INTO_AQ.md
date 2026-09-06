@@ -28,10 +28,10 @@ Der FB besitzt keine eigenständigen Daten-Ausgänge. Die aufgeteilten Daten wer
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| `IN` | `adapter::types::unidirectional::AD` | Socket (Eingang) | DWORD-Eingangsadapter (32 Bit). Über `E1` und `D1` werden Ereignis und Daten empfangen. |
-| `QUARTER_BYTE_00` bis `QUARTER_BYTE_15` | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | 16 Ausgangsadapter, die jeweils ein Quarter (2 Bit) des ursprünglichen DWORDs bereitstellen. Jeder Adapter besitzt einen Ereignisausgang `E1` und einen Datenausgang `D1`. |
+| Name                                    | Typ                                  | Richtung         | Beschreibung                                                                                                                                                               |
+| --------------------------------------- | ------------------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `IN`                                    | `adapter::types::unidirectional::AD` | Socket (Eingang) | DWORD-Eingangsadapter (32 Bit). Über `E1` und `D1` werden Ereignis und Daten empfangen.                                                                                    |
+| `QUARTER_BYTE_00` bis `QUARTER_BYTE_15` | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | 16 Ausgangsadapter, die jeweils ein Quarter (2 Bit) des ursprünglichen DWORDs bereitstellen. Jeder Adapter besitzt einen Ereignisausgang `E1` und einen Datenausgang `D1`. |
 
 ## Funktionsweise
 
@@ -64,11 +64,11 @@ Als Composite-FB besitzt `SPLIT_AD_INTO_AQ` keinen eigenen Zustandsautomaten. Di
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied zu `SPLIT_AD_INTO_AQ` |
-| ---------- | -------------- | ----------------------------------- |
-| `SPLIT_DWORD_INTO_QUARTERS` | Zerlegt einen DWORD in 16 Quarter-Werte und gibt diese als direkte Datenausgänge aus. | `SPLIT_AD_INTO_AQ` kapselt diese Zerlegung zusätzlich in Adapter-Schnittstellen und fügt eine Flip-Flop-Synchronisation hinzu. |
-| `SPLIT_INT_INTO_BITS` | Teilt ein Integer in einzelne Bits auf. | Arbeitet auf Bit-Ebene und nicht auf 2-Bit-Quarters; Ausgabe erfolgt typischerweise als boolesche Werte. |
-| Manuelle Aufteilung mit `MUX` oder `DEMUX` | Könnte verwendet werden, um eine Datenaufteilung ohne Adapter zu realisieren. | `SPLIT_AD_INTO_AQ` ist speziell für die Adapter-Kommunikation optimiert und bietet eine gebündelte, synchronisierte Lösung. |
+| Baustein                                   | Beschreibung                                                                          | Unterschied zu `SPLIT_AD_INTO_AQ`                                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `SPLIT_DWORD_INTO_QUARTERS`                | Zerlegt einen DWORD in 16 Quarter-Werte und gibt diese als direkte Datenausgänge aus. | `SPLIT_AD_INTO_AQ` kapselt diese Zerlegung zusätzlich in Adapter-Schnittstellen und fügt eine Flip-Flop-Synchronisation hinzu. |
+| `SPLIT_INT_INTO_BITS`                      | Teilt ein Integer in einzelne Bits auf.                                               | Arbeitet auf Bit-Ebene und nicht auf 2-Bit-Quarters; Ausgabe erfolgt typischerweise als boolesche Werte.                       |
+| Manuelle Aufteilung mit `MUX` oder `DEMUX` | Könnte verwendet werden, um eine Datenaufteilung ohne Adapter zu realisieren.         | `SPLIT_AD_INTO_AQ` ist speziell für die Adapter-Kommunikation optimiert und bietet eine gebündelte, synchronisierte Lösung.    |
 
 ## Fazit
 

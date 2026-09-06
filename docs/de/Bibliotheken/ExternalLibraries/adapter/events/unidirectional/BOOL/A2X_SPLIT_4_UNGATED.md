@@ -30,13 +30,13 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Bezeichner | Typ | Beschreibung |
-| ---------- | ------------ | ----- | -------------- |
-| **Socket (Eingang)** | IN | `adapter::types::unidirectional::A2X` | Ein eingehendes A2X-Signal (unidirektional) |
-| **Plug (Ausgang 1)** | OUT1 | `adapter::types::unidirectional::A2X` | Erster ausgehender A2X-Kanal |
-| **Plug (Ausgang 2)** | OUT2 | `adapter::types::unidirectional::A2X` | Zweiter ausgehender A2X-Kanal |
-| **Plug (Ausgang 3)** | OUT3 | `adapter::types::unidirectional::A2X` | Dritter ausgehender A2X-Kanal |
-| **Plug (Ausgang 4)** | OUT4 | `adapter::types::unidirectional::A2X` | Vierter ausgehender A2X-Kanal |
+| Richtung             | Bezeichner | Typ                                   | Beschreibung                                |
+| -------------------- | ---------- | ------------------------------------- | ------------------------------------------- |
+| **Socket (Eingang)** | IN         | `adapter::types::unidirectional::A2X` | Ein eingehendes A2X-Signal (unidirektional) |
+| **Plug (Ausgang 1)** | OUT1       | `adapter::types::unidirectional::A2X` | Erster ausgehender A2X-Kanal                |
+| **Plug (Ausgang 2)** | OUT2       | `adapter::types::unidirectional::A2X` | Zweiter ausgehender A2X-Kanal               |
+| **Plug (Ausgang 3)** | OUT3       | `adapter::types::unidirectional::A2X` | Dritter ausgehender A2X-Kanal               |
+| **Plug (Ausgang 4)** | OUT4       | `adapter::types::unidirectional::A2X` | Vierter ausgehender A2X-Kanal               |
 
 ## Funktionsweise
 

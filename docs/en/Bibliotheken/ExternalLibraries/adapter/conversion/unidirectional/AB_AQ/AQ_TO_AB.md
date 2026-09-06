@@ -28,10 +28,10 @@ The FB has no explicit top-level data outputs. Data transmission occurs via the 
 
 ### **Adapters**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AQ` | IN | Input (Socket) | AQ adapter as input interface for quarter-byte data |
-| `adapter::types::unidirectional::AB` | OUT | Output (Plug) | AB adapter as output interface for byte data |
+| Type                                 | Name | Direction      | Description                                         |
+| ------------------------------------ | ---- | -------------- | --------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | IN   | Input (Socket) | AQ adapter as input interface for quarter-byte data |
+| `adapter::types::unidirectional::AB` | OUT  | Output (Plug)  | AB adapter as output interface for byte data        |
 
 ## Functionality
 
@@ -59,7 +59,7 @@ The function block does not have a state machine. Its behavior is deterministic:
 - **Protocol Implementation:** Use in libraries to make different adapter types compatible.
 - **Test Environments:** Use as a simple adapter in test setups to adapt interfaces.
 
-# State Overview ## Comparison with Similar Function Blocks
+## Comparison with Similar Function Blocks
 
 - **AB_TO_AQ:** Performs the reverse conversion (AB → AQ).
 - **AQ_TO_BYTE_EXT:** A hypothetical function block that additionally performs data conversions (e.g., scaling, formatting), while `AQ_TO_AB` only changes the interface.

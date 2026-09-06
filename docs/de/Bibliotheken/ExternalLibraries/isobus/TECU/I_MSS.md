@@ -35,23 +35,23 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65097) für pr�
 
 ## Geschwindigkeitsparameter
 
-| Parameter | Typ | Beschreibung | SPN | Bit-Länge | Skalierung |
-| ----------- | ------ | -------------- | ----- | ----------- | ------------ |
-| `SELECTEDMACHINESPEED` | UINT | Maschinengeschwindigkeit | 4305 | 16 | 0.001 m/s/bit (LSB), 0.256 m/s/bit (MSB) |
-| `SELECTEDMACHINEDISTANCE` | UDINT | Zurückgelegte Distanz | 4306 | 32 | 0.001 m/bit |
-| `SELECTEDMACHINELIMITSTATUS` | BYTE | Geschwindigkeitsbegrenzungsstatus | 4307 | 3 | 8 Zustände/3 bit |
-| `SELECTEDMACHINESOURCE` | BYTE | Geschwindigkeitsquelle | 4308 | 3 | 8 Zustände/3 bit |
-| `SELECTEDMACHINEDIRECTION` | BYTE | Fahrtrichtung | 4309 | 2 | 4 Zustände/2 bit |
-| `SELECTEDMACHINE_EXIT_REASON_CODE` | BYTE | Grundcode für Geschwindigkeitsausfall | 5818 | 6 | 64 Zustände/6 bit |
+| Parameter                          | Typ   | Beschreibung                          | SPN  | Bit-Länge | Skalierung                               |
+| ---------------------------------- | ----- | ------------------------------------- | ---- | --------- | ---------------------------------------- |
+| `SELECTEDMACHINESPEED`             | UINT  | Maschinengeschwindigkeit              | 4305 | 16        | 0.001 m/s/bit (LSB), 0.256 m/s/bit (MSB) |
+| `SELECTEDMACHINEDISTANCE`          | UDINT | Zurückgelegte Distanz                 | 4306 | 32        | 0.001 m/bit                              |
+| `SELECTEDMACHINELIMITSTATUS`       | BYTE  | Geschwindigkeitsbegrenzungsstatus     | 4307 | 3         | 8 Zustände/3 bit                         |
+| `SELECTEDMACHINESOURCE`            | BYTE  | Geschwindigkeitsquelle                | 4308 | 3         | 8 Zustände/3 bit                         |
+| `SELECTEDMACHINEDIRECTION`         | BYTE  | Fahrtrichtung                         | 4309 | 2         | 4 Zustände/2 bit                         |
+| `SELECTEDMACHINE_EXIT_REASON_CODE` | BYTE  | Grundcode für Geschwindigkeitsausfall | 5818 | 6         | 64 Zustände/6 bit                        |
 
 ## Fahrtrichtungszustände
 
-| Wert | Zustand | Beschreibung |
-| ------ | --------- | -------------- |
-| 0 | Stillstand | Keine Bewegung erkannt |
-| 1 | Vorwärts | Bewegung in Vorwärtsrichtung |
-| 2 | Rückwärts | Bewegung in Rückwärtsrichtung |
-| 3 | Undefiniert | Richtung nicht bestimmbar |
+| Wert | Zustand     | Beschreibung                  |
+| ---- | ----------- | ----------------------------- |
+| 0    | Stillstand  | Keine Bewegung erkannt        |
+| 1    | Vorwärts    | Bewegung in Vorwärtsrichtung  |
+| 2    | Rückwärts   | Bewegung in Rückwärtsrichtung |
+| 3    | Undefiniert | Richtung nicht bestimmbar     |
 
 ## Funktionsweise
 
@@ -83,21 +83,21 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65097) für pr�
 
 ## Geschwindigkeitsquellen
 
-| Code | Quelle | Typische Anwendung |
-| ------ | -------- | --------------------- |
-| 0 | Undefiniert | Systemstart |
-| 1 | Radsensor | Standardbetrieb |
-| 2 | Bodensensor | Präzisionslandwirtschaft |
-| 3 | GPS | Überwachung |
-| 4-7 | Reserviert | Herstellerspezifisch |
+| Code | Quelle      | Typische Anwendung       |
+| ---- | ----------- | ------------------------ |
+| 0    | Undefiniert | Systemstart              |
+| 1    | Radsensor   | Standardbetrieb          |
+| 2    | Bodensensor | Präzisionslandwirtschaft |
+| 3    | GPS         | Überwachung              |
+| 4-7  | Reserviert  | Herstellerspezifisch     |
 
 ## ⚖️ Vergleich mit ähnlichen Systemen
 
-| Feature | I_MSS | Standard | GPS-basiert |
-| --------- | ------- | ---------- | ------------- |
-| Genauigkeit | ±0.2% | ±1-2% | ±5-10% |
-| Reaktionszeit | <100ms | 200ms | 1-2s |
-| Quellenflexibilität | 8 | 1-2 | 1 |
+| Feature                | I_MSS     | Standard  | GPS-basiert   |
+| ---------------------- | --------- | --------- | ------------- |
+| Genauigkeit            | ±0.2%     | ±1-2%     | ±5-10%        |
+| Reaktionszeit          | <100ms    | 200ms     | 1-2s          |
+| Quellenflexibilität    | 8         | 1-2       | 1             |
 | Niedriggeschwindigkeit | ✔ Optimal | ✖ Ungenau | ✖ Unbrauchbar |
 
 ## 🛠️ Zugehörige Übungen

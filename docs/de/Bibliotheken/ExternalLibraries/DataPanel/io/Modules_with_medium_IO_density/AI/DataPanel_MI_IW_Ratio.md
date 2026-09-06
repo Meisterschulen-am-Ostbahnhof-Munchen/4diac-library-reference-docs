@@ -12,36 +12,36 @@ Der Funktionsblock **DataPanel_MI_IW_Ratio** ist ein Service-Interface-Funktions
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit-Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| INIT | EInit | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis | Service Initialization |
-| REQ | Event | QI | Service Request |
+| Ereignis | Typ   | Mit-Variablen                                         | Kommentar              |
+| -------- | ----- | ----------------------------------------------------- | ---------------------- |
+| INIT     | EInit | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis | Service Initialization |
+| REQ      | Event | QI                                                    | Service Request        |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit-Variablen | Kommentar |
-| ---------- | ----- | --------------- | ----------- |
-| INITO | EInit | QO, STATUS | Initialization Confirm |
-| CNF | Event | QO, STATUS, IN | Confirmation of Requested Service |
-| IND | Event | QO, STATUS, IN | Indication from Resource |
+| Ereignis | Typ   | Mit-Variablen  | Kommentar                         |
+| -------- | ----- | -------------- | --------------------------------- |
+| INITO    | EInit | QO, STATUS     | Initialization Confirm            |
+| CNF      | Event | QO, STATUS, IN | Confirmation of Requested Service |
+| IND      | Event | QO, STATUS, IN | Indication from Resource          |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Initialwert | Kommentar |
-| ---------- | ----- | ------------- | ----------- |
-| QI | BOOL | – | Event Input Qualifier |
-| PARAMS | STRING | – | Service Parameters |
-| u8SAMember | USINT | MI::MI_00 | Node SA 224..239 |
-| Input | DataPanel::io::MI::AI::DataPanel_MI_AI_S | Invalid | Identify the Input AnalogInput_1A..8B |
-| AnalogInput_hysteresis | WORD | – | (keine Angabe) |
+| Variable               | Typ                                      | Initialwert | Kommentar                             |
+| ---------------------- | ---------------------------------------- | ----------- | ------------------------------------- |
+| QI                     | BOOL                                     | –           | Event Input Qualifier                 |
+| PARAMS                 | STRING                                   | –           | Service Parameters                    |
+| u8SAMember             | USINT                                    | MI::MI_00   | Node SA 224..239                      |
+| Input                  | DataPanel::io::MI::AI::DataPanel_MI_AI_S | Invalid     | Identify the Input AnalogInput_1A..8B |
+| AnalogInput_hysteresis | WORD                                     | –           | (keine Angabe)                        |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-| ---------- | ----- | ----------- |
-| QO | BOOL | Event Output Qualifier |
-| STATUS | STRING | Service Status |
-| IN | WORD | Input data from resource |
+| Variable | Typ    | Kommentar                |
+| -------- | ------ | ------------------------ |
+| QO       | BOOL   | Event Output Qualifier   |
+| STATUS   | STRING | Service Status           |
+| IN       | WORD   | Input data from resource |
 
 ### **Adapter**
 
@@ -89,11 +89,11 @@ Im Fehlerfall wird `QO = FALSE` gesetzt und `STATUS` enthält einen entsprechend
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Merkmal |
-| ---------- | --------- |
-| `DataPanel_MI_AI` | Standardanaloger Eingang ohne explizite ratiometrische Auslegung. |
-| `DataPanel_MI_IW_Voltage` | Spannungsmessung mit absoluten Werten (z. B. mV). |
-| **DataPanel_MI_IW_Ratio** | Speziell für ratiometrische Sensoren optimiert. |
+| Baustein                  | Merkmal                                                           |
+| ------------------------- | ----------------------------------------------------------------- |
+| `DataPanel_MI_AI`         | Standardanaloger Eingang ohne explizite ratiometrische Auslegung. |
+| `DataPanel_MI_IW_Voltage` | Spannungsmessung mit absoluten Werten (z. B. mV).                 |
+| **DataPanel_MI_IW_Ratio** | Speziell für ratiometrische Sensoren optimiert.                   |
 
 Der hier beschriebene Baustein unterscheidet sich vor allem durch die Verwendung des ratiometrischen Messprinzips, das bei vielen modernen Sensoren (z. B. Hallgebern, Potentiometern) zum Einsatz kommt.
 

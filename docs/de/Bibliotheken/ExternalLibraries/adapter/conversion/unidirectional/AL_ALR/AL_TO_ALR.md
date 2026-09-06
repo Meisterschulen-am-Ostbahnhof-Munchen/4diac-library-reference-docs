@@ -30,10 +30,10 @@ Der FB besitzt keine direkten Daten-Ausgänge. Der konvertierte LREAL‑Wert wir
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **AL_IN** | Socket (Eingang) | `adapter::types::unidirectional::AL` | LWORD‑Adapter, der das Eingangssignal (LWORD) und ein Auslöseereignis bereitstellt. |
-| **ALR_OUT** | Plug (Ausgang) | `adapter::types::unidirectional::ALR` | LREAL‑Adapter, der das konvertierte Signal (LREAL) und ein Bestätigungsereignis ausgibt. |
+| Adapter     | Richtung         | Typ                                   | Beschreibung                                                                             |
+| ----------- | ---------------- | ------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **AL_IN**   | Socket (Eingang) | `adapter::types::unidirectional::AL`  | LWORD‑Adapter, der das Eingangssignal (LWORD) und ein Auslöseereignis bereitstellt.      |
+| **ALR_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::ALR` | LREAL‑Adapter, der das konvertierte Signal (LREAL) und ein Bestätigungsereignis ausgibt. |
 
 ## Funktionsweise
 
@@ -82,4 +82,4 @@ Da der innere FB in einem einzigen Ausführungsschritt arbeitet, sind die Zustä
 
 ### 📖 Hintergrund
 
-* [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)
+- [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)

@@ -30,10 +30,10 @@ Das Ziel ist es, ein `TRUE`-Signal am Ausgang zu erzeugen, wenn das Eingangssign
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-| :--- | :--- | :--- |
+| Name    | Typ                                  | Kommentar                                                                                                                         |
+| :------ | :----------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
 | **CLK** | `adapter::types::unidirectional::AX` | **Socket (Eingang):** Der Takteingang (Clock), der überwacht wird. Enthält das Datensignal (D1) und das zugehörige Ereignis (E1). |
-| **Q** | `adapter::types::unidirectional::AX` | **Plug (Ausgang):** Der Impulsausgang. Liefert `TRUE` nur bei einer positiven Flanke am Eingang `CLK`. |
+| **Q**   | `adapter::types::unidirectional::AX` | **Plug (Ausgang):** Der Impulsausgang. Liefert `TRUE` nur bei einer positiven Flanke am Eingang `CLK`.                            |
 
 ## Funktionsweise
 

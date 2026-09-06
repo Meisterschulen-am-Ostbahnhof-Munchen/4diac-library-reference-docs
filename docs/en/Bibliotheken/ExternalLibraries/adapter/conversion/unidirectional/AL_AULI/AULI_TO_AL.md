@@ -12,34 +12,34 @@ The function block `AULI_TO_AL` is a composite function block for converting an 
 
 ### **Event Inputs**
 
-| Name | Description |
-|---------------|------------------------------------------------------|
+| Name       | Description                                                |
+| ---------- | ---------------------------------------------------------- |
 | AULI_IN.E1 | Event input via the AULI_IN socket. Starts the conversion. |
 
 ### **Event Outputs**
 
-| Name | Description |
-|---------------|------------------------------------------------------|
+| Name      | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
 | AL_OUT.E1 | Event output via the AL_OUT plug. Signals the completion of the conversion. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Description |
-|---------------|----------|------------------------------------------------------|
-| AULI_IN.D1 | ULINT | Input value to be converted to LWORD. |
+| Name       | Data Type | Description                           |
+| ---------- | --------- | ------------------------------------- |
+| AULI_IN.D1 | ULINT     | Input value to be converted to LWORD. |
 
 ### **Data Outputs**
 
-| Name | Data Type | Description |
-|---------------|----------|-----------------------------------------------------|
-| AL_OUT.D1 | LWORD | Converted output value. |
+| Name      | Data Type | Description             |
+| --------- | --------- | ----------------------- |
+| AL_OUT.D1 | LWORD     | Converted output value. |
 
 ### **Adapter**
 
-| Name | Type | Direction | Description |
-| ------------- | ----------- | ---------- | ------------------------------------------ |
-| AULI_IN | AULI (ULINT) | Socket | Unidirectional input adapter. |
-| AL_OUT | AL (LWORD) | Plug | Unidirectional output adapter. |
+| Name    | Type         | Direction | Description                    |
+| ------- | ------------ | --------- | ------------------------------ |
+| AULI_IN | AULI (ULINT) | Socket    | Unidirectional input adapter.  |
+| AL_OUT  | AL (LWORD)   | Plug      | Unidirectional output adapter. |
 
 ## Functionality
 

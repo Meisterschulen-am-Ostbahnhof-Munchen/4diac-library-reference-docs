@@ -12,27 +12,27 @@ Der Funktionsblock **SET_TIME** dient dazu, einen über den Dateneingang `IN` be
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `REQ` | Normaler Ausführungsrequest. Lösen den Algorithmus aus, der den Wert von `IN` nach `OUT` kopiert. Assoziierte Daten: `IN`, `OUT`. |
+| Ereignis | Beschreibung                                                                                                                      |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `REQ`    | Normaler Ausführungsrequest. Lösen den Algorithmus aus, der den Wert von `IN` nach `OUT` kopiert. Assoziierte Daten: `IN`, `OUT`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `CNF` | Bestätigung der erfolgreichen Ausführung. Wird nach Abschluss des Algorithmus gesendet. Assoziierte Daten: `OUT`. |
+| Ereignis | Beschreibung                                                                                                      |
+| -------- | ----------------------------------------------------------------------------------------------------------------- |
+| `CNF`    | Bestätigung der erfolgreichen Ausführung. Wird nach Abschluss des Algorithmus gesendet. Assoziierte Daten: `OUT`. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| `IN` | `TIME` | `T#0s` | Der Zeitwert, der in die Zielvariable geschrieben werden soll. |
+| Name | Typ    | Initialwert | Beschreibung                                                   |
+| ---- | ------ | ----------- | -------------------------------------------------------------- |
+| `IN` | `TIME` | `T#0s`      | Der Zeitwert, der in die Zielvariable geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| `OUT` | `TIME` (InOut) | `T#0s` | Zielvariable, die beim Aufruf als InOut-Parameter übergeben wird. Der Wert von `IN` wird in diese Variable kopiert. |
+| Name  | Typ            | Initialwert | Beschreibung                                                                                                        |
+| ----- | -------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| `OUT` | `TIME` (InOut) | `T#0s`      | Zielvariable, die beim Aufruf als InOut-Parameter übergeben wird. Der Wert von `IN` wird in diese Variable kopiert. |
 
 > **Hinweis:** `OUT` ist ein **InOut**-Parameter, d.h. er dient gleichzeitig als Ein- und Ausgang. Der Aufrufer muss eine beschreibbare Variable bereitstellen.
 
@@ -58,9 +58,9 @@ Die Ausführung erfolgt in einem einzigen EC-Zustand (`REQ`), der den Algorithmu
 
 Der Funktionsblock besitzt genau einen Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| `REQ` | Startzustand bei Initialisierung. Wird beim Eintreten von `REQ` aktiviert. Führt den Algorithmus aus und sendet `CNF`. |
+| Zustand | Beschreibung                                                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `REQ`   | Startzustand bei Initialisierung. Wird beim Eintreten von `REQ` aktiviert. Führt den Algorithmus aus und sendet `CNF`. |
 
 Es gibt keine weiteren Zustände. Der Baustein kehrt nach Abschluss des Algorithmus in den Startzustand zurück und wartet auf das nächste `REQ`-Ereignis.
 

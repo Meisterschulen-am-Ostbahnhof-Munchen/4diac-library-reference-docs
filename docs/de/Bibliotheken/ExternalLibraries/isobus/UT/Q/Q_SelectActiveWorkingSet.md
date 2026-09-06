@@ -55,23 +55,23 @@ Der **Q_SelectActiveWorkingSet** ist ein standardkonformer Funktionsbaustein zur
 
 ## ISO-NAME Struktur
 
-| Byte | Inhalt                  |
-|------|-------------------------|
-| 0-1  | Herstellerkennung       |
-| 2-3  | Gerätekennung           |
-| 4-5  | Geräteinstanz           |
-| 6-7  | Arbeitsbereichskennung  |
+| Byte | Inhalt                 |
+| ---- | ---------------------- |
+| 0-1  | Herstellerkennung      |
+| 2-3  | Gerätekennung          |
+| 4-5  | Geräteinstanz          |
+| 6-7  | Arbeitsbereichskennung |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreicher Wechsel             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreicher Wechsel    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -82,12 +82,12 @@ Der **Q_SelectActiveWorkingSet** ist ein standardkonformer Funktionsbaustein zur
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_SelectActiveWorkingSet | VtContextSwitch | VtWorkspaceManager |
-|---------------|--------------------------|-----------------|--------------------|
-| ISO-Standard  | ✔                        | ✖               | ✖                  |
-| VT-Version    | 6+                       | Alle            | Alle               |
-| ISO-NAME      | ✔                        | ✖               | ✖                  |
-| Rückmeldung   | ✔                        | ✖               | ✔                  |
+| Feature      | Q_SelectActiveWorkingSet | VtContextSwitch | VtWorkspaceManager |
+| ------------ | ------------------------ | --------------- | ------------------ |
+| ISO-Standard | ✔                        | ✖               | ✖                  |
+| VT-Version   | 6+                       | Alle            | Alle               |
+| ISO-NAME     | ✔                        | ✖               | ✖                  |
+| Rückmeldung  | ✔                        | ✖               | ✔                  |
 
 ## Fazit
 

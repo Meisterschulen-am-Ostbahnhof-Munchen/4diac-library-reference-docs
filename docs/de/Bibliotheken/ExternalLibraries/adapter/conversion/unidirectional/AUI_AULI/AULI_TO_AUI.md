@@ -28,10 +28,10 @@ Der Funktionsblock **AULI_TO_AUI** ist ein zusammengesetzter Baustein (Composite
 
 ### **Adapter**
 
-| Name     | Richtung | Typ                        |
-|----------|----------|----------------------------|
-| AULI_IN  | Socket   | `adapter::types::unidirectional::AULI` |
-| AUI_OUT  | Plug     | `adapter::types::unidirectional::AUI`  |
+| Name    | Richtung | Typ                                    |
+| ------- | -------- | -------------------------------------- |
+| AULI_IN | Socket   | `adapter::types::unidirectional::AULI` |
+| AUI_OUT | Plug     | `adapter::types::unidirectional::AUI`  |
 
 ## Funktionsweise
 
@@ -65,11 +65,11 @@ Der Baustein besitzt keinen eigenen endlichen Automaten. Die interne Konvertieru
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein      | Eingangstyp | Ausgangstyp | Besonderheit |
-|---------------|-------------|-------------|--------------|
-| `AULI_TO_AUI` | `ULINT`     | `UINT`      | Adapter‑Wrapper, ereignisgesteuert |
-| `F_ULINT_TO_UINT` | `ULINT` | `UINT`      | Reine Funktion, kein Adapter |
-| `AUI_TO_AULI` | `UINT`      | `ULINT`     | Umgekehrte Richtung (nicht vorhanden) |
+| Baustein          | Eingangstyp | Ausgangstyp | Besonderheit                          |
+| ----------------- | ----------- | ----------- | ------------------------------------- |
+| `AULI_TO_AUI`     | `ULINT`     | `UINT`      | Adapter‑Wrapper, ereignisgesteuert    |
+| `F_ULINT_TO_UINT` | `ULINT`     | `UINT`      | Reine Funktion, kein Adapter          |
+| `AUI_TO_AULI`     | `UINT`      | `ULINT`     | Umgekehrte Richtung (nicht vorhanden) |
 
 Der vorliegende Baustein bietet im Gegensatz zur nackten IEC‑Funktion eine adapterkonforme Ein‑ und Ausgangsschnittstelle und ermöglicht damit die einfache Einbindung in adapterbasierte Architekturen.
 

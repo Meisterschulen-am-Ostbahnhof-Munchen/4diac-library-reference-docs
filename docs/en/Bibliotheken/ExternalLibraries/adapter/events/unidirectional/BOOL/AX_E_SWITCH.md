@@ -7,20 +7,21 @@
 ## Introduction
 
 The **AX_E_SWITCH** function block implements event-driven demultiplexing (switching) based on a Boolean signal. It receives an event at input **EI** and forwards it to either output **EO0** or **EO1**, depending on the value of adapter **G**. This allows event flows to be split based on states or decisions
+
 ---
 
 ## Interface Structure
 
 ### **Event Inputs**
 
-| Name | Type | Description |
-|-------------|--------|-------------------------------|
+| Name   | Type  | Description                  |
+| ------ | ----- | ---------------------------- |
 | **EI** | Event | Event input that is switched |
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-| ------------- | -------- | -------------------------------------------- |
+| Name    | Type  | Description              |
+| ------- | ----- | ------------------------ |
 | **EO0** | Event | Activated when **G** = 0 |
 | **EO1** | Event | Activated when **G** = 1 |
 
@@ -34,8 +35,8 @@ No data outputs are available.
 
 ### **Adapter**
 
-| Name | Type | Description |
-|-------------|-----------------------------------|---------------------------------------------------------------------------|
+| Name  | Type                                 | Description                                                            |
+| ----- | ------------------------------------ | ---------------------------------------------------------------------- |
 | **G** | `adapter::types::unidirectional::AX` | Boolean interface; provides the value for switching (0 → EO0, 1 → EO1) |
 
 ---

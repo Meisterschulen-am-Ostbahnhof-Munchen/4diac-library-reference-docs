@@ -16,34 +16,34 @@ Der Baustein kapselt drei Unterbausteine:
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `INIT` | EInit | Service‑Initialisierung – lädt die Objektparameter (`stObj`) in den Baustein |
-| `REQ` | Event | Service‑Anforderung – wandelt `rPhys` um und schreibt den Wert auf das ISOBUS‑Objekt |
+| Name   | Typ   | Kommentar                                                                            |
+| ------ | ----- | ------------------------------------------------------------------------------------ |
+| `INIT` | EInit | Service‑Initialisierung – lädt die Objektparameter (`stObj`) in den Baustein         |
+| `REQ`  | Event | Service‑Anforderung – wandelt `rPhys` um und schreibt den Wert auf das ISOBUS‑Objekt |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `INITO` | EInit | Bestätigung der Initialisierung |
-| `CNF` | Event | Bestätigung der durchgeführten Wertänderung – enthält Ergebnisdaten |
+| Name    | Typ   | Kommentar                                                           |
+| ------- | ----- | ------------------------------------------------------------------- |
+| `INITO` | EInit | Bestätigung der Initialisierung                                     |
+| `CNF`   | Event | Bestätigung der durchgeführten Wertänderung – enthält Ergebnisdaten |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name    | Typ                                                     | Kommentar                                                                                       |
+| ------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Struktur mit Objekt‑ID, Skalierung, Offset und Dezimalstellen (Initialwert: ID_NULL, 1.0, 0, 0) |
-| `rPhys` | REAL | Physikalischer Wert, der gesetzt werden soll (z.B. Temperatur, Druck) |
+| `rPhys` | REAL                                                    | Physikalischer Wert, der gesetzt werden soll (z.B. Temperatur, Druck)                           |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| `STATUS` | STRING | Statusmeldung des Dienstes (z.B. Fehler‑ oder Erfolgsmeldung) |
-| `u32OldValue` | UDINT | Alter Rohwert des ISOBUS‑Objekts vor der Änderung |
-| `s16result` | INT | Rückgabewert der Schreiboperation (siehe `Q_NumericValue`) |
-| `xOver` | BOOL | Wahr, wenn der physikalische Wert die obere Grenze des ISOBUS‑Wertebereichs überschreitet |
-| `xUnder` | BOOL | Wahr, wenn der physikalische Wert die untere Grenze des ISOBUS‑Wertebereichs unterschreitet |
+| Name          | Typ    | Kommentar                                                                                   |
+| ------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `STATUS`      | STRING | Statusmeldung des Dienstes (z.B. Fehler‑ oder Erfolgsmeldung)                               |
+| `u32OldValue` | UDINT  | Alter Rohwert des ISOBUS‑Objekts vor der Änderung                                           |
+| `s16result`   | INT    | Rückgabewert der Schreiboperation (siehe `Q_NumericValue`)                                  |
+| `xOver`       | BOOL   | Wahr, wenn der physikalische Wert die obere Grenze des ISOBUS‑Wertebereichs überschreitet   |
+| `xUnder`      | BOOL   | Wahr, wenn der physikalische Wert die untere Grenze des ISOBUS‑Wertebereichs unterschreitet |
 
 ### **Adapter**
 
@@ -98,11 +98,11 @@ Während der Ausführung eines Durchlaufs ist der Baustein nicht für neue Ereig
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschied zu `Q_NumericValue_PHYS` |
-| ---------- | ---------- | -------------------------------------- |
+| Baustein                               | Funktion                                            | Unterschied zu `Q_NumericValue_PHYS`                                                |
+| -------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | `Q_NumericValue` (aus `isobus::UT::Q`) | Schreiben eines rohen (bereits umgerechneten) Werts | Erwartet `u32NewValue` direkt – ohne physikalische Umrechnung und ohne Grenzprüfung |
-| `F_PHYS_TO_RAW` | Reine Umrechnung physikalisch → roh | Liefert nur `xOver`, `xUnder` und den Rohwert – keine ISOBUS‑Kommunikation |
-| `Q_NumericValue_PHYS` | Kombinierte Umrechnung + Schreibzugriff | Bietet eine vollständige Schnittstelle für physikalische Werte in einem Schritt |
+| `F_PHYS_TO_RAW`                        | Reine Umrechnung physikalisch → roh                 | Liefert nur `xOver`, `xUnder` und den Rohwert – keine ISOBUS‑Kommunikation          |
+| `Q_NumericValue_PHYS`                  | Kombinierte Umrechnung + Schreibzugriff             | Bietet eine vollständige Schnittstelle für physikalische Werte in einem Schritt     |
 
 Der vorliegende Baustein vereinfacht die Anwendung, da der Anwender keinen separaten Umrechnungsschritt programmieren muss. Er eignet sich besonders für Steuerungen, die Werte in gebräuchlichen Einheiten verarbeiten.
 

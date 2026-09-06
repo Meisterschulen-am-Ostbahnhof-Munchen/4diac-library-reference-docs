@@ -36,10 +36,10 @@ Der FB besitzt keinen expliziten Daten-Ausgang. Das Ergebnis wird über den Adap
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | ALR_IN | `adapter::types::unidirectional::ALR` | Unidirektionaler Adapter für LREAL-Daten und Ereignisse. Enthält Ereignis-Port E1 und Daten-Port D1 (LREAL). |
-| Plug (Ausgang) | ALI_OUT | `adapter::types::unidirectional::ALI` | Unidirektionaler Adapter für LINT-Daten und Ereignisse. Enthält Ereignis-Port E1 und Daten-Port D1 (LINT). |
+| Richtung         | Name    | Typ                                   | Beschreibung                                                                                                 |
+| ---------------- | ------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Socket (Eingang) | ALR_IN  | `adapter::types::unidirectional::ALR` | Unidirektionaler Adapter für LREAL-Daten und Ereignisse. Enthält Ereignis-Port E1 und Daten-Port D1 (LREAL). |
+| Plug (Ausgang)   | ALI_OUT | `adapter::types::unidirectional::ALI` | Unidirektionaler Adapter für LINT-Daten und Ereignisse. Enthält Ereignis-Port E1 und Daten-Port D1 (LINT).   |
 
 ## Funktionsweise
 

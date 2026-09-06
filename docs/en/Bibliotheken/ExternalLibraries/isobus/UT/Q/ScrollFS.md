@@ -57,15 +57,15 @@ No adapters available.
    state machine, reused directly (no separate state machine needed). The eight `ScrollFS`
    events map 1:1 to `RampLimitFS` events:
 
-   | `ScrollFS` event | `RampLimitFS` event | Effect on `OUT` |
-   | --- | --- | --- |
-   | `FIRST` | `ZERO` | `OUT := 0` |
-   | `PAGE_UP` | `DOWN_FAST` | `OUT -= stObj.i32Step` (clamped at 0) |
-   | `LINE_UP` | `DOWN_SLOW` | `OUT -= 1` (clamped at 0) |
-   | `LINE_DOWN` | `UP_SLOW` | `OUT += 1` (clamped at `i32PosMax`) |
-   | `PAGE_DOWN` | `UP_FAST` | `OUT += stObj.i32Step` (clamped at `i32PosMax`) |
-   | `LAST` | `FULL` | `OUT := stObj.i32PosMax` |
-   | `GOTO` | `LOAD` (with `PV := SET_POS`) | `OUT := SET_POS`, clamped to `0…i32PosMax` |
+| `ScrollFS` event | `RampLimitFS` event           | Effect on `OUT`                                 |
+| ---------------- | ----------------------------- | ----------------------------------------------- |
+| `FIRST`          | `ZERO`                        | `OUT := 0`                                      |
+| `PAGE_UP`        | `DOWN_FAST`                   | `OUT -= stObj.i32Step` (clamped at 0)           |
+| `LINE_UP`        | `DOWN_SLOW`                   | `OUT -= 1` (clamped at 0)                       |
+| `LINE_DOWN`      | `UP_SLOW`                     | `OUT += 1` (clamped at `i32PosMax`)             |
+| `PAGE_DOWN`      | `UP_FAST`                     | `OUT += stObj.i32Step` (clamped at `i32PosMax`) |
+| `LAST`           | `FULL`                        | `OUT := stObj.i32PosMax`                        |
+| `GOTO`           | `LOAD` (with `PV := SET_POS`) | `OUT := SET_POS`, clamped to `0…i32PosMax`      |
 
    `VAL_ZERO := 0`, `VAL_FULL := Snap.OUT.i32PosMax`, `SLOW := 1`, `FAST := Snap.OUT.i32Step`.
 3. **`ListY`** (`F_ScrollListY`) and **`BarY`** (`F_ScrollBarY`): on every `Ramp.CNF`, compute the

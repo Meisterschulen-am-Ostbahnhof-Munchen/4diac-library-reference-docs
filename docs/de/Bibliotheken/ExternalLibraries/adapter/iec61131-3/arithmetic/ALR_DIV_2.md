@@ -33,11 +33,11 @@ Im Gegensatz zu klassischen arithmetischen Bausteinen, die mit direkten Daten- u
 
 ### **Adapter**
 
-| Typ | Name | Adapter-Typ | Beschreibung |
-| :--- | :--- | :--- | :--- |
+| Typ                  | Name  | Adapter-Typ                           | Beschreibung                           |
+| :------------------- | :---- | :------------------------------------ | :------------------------------------- |
 | **Socket (Eingang)** | `IN1` | `adapter::types::unidirectional::ALR` | Erster Operand der Division (Dividend) |
 | **Socket (Eingang)** | `IN2` | `adapter::types::unidirectional::ALR` | Zweiter Operand der Division (Divisor) |
-| **Plug (Ausgang)** | `OUT` | `adapter::types::unidirectional::ALR` | Ergebnis der Division (Quotient) |
+| **Plug (Ausgang)**   | `OUT` | `adapter::types::unidirectional::ALR` | Ergebnis der Division (Quotient)       |
 
 ## Funktionsweise
 

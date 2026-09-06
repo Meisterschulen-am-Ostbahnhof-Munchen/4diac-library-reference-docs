@@ -28,10 +28,10 @@ Keine
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| Socket | IN | Eingang | Eingehender A2X-Adapter, dessen Signale auf die neun Ausgänge verteilt werden. |
-| Plug | OUT1 … OUT9 | Ausgang | Neun gleichartige A2X-Ausgangsadapter, die die Daten des Eingangs weiterleiten. |
+| Typ    | Name        | Richtung | Beschreibung                                                                    |
+| ------ | ----------- | -------- | ------------------------------------------------------------------------------- |
+| Socket | IN          | Eingang  | Eingehender A2X-Adapter, dessen Signale auf die neun Ausgänge verteilt werden.  |
+| Plug   | OUT1 … OUT9 | Ausgang  | Neun gleichartige A2X-Ausgangsadapter, die die Daten des Eingangs weiterleiten. |
 
 ## Funktionsweise
 

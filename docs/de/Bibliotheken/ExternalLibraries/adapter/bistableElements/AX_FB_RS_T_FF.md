@@ -38,12 +38,12 @@ Die folgenden Adapter-Ereignisse lösen die Verarbeitung aus:
 
 ### **Adapter**
 
-| Adapter | Typ | Rolle | Kommentar |
-| -------- | ------ | ------- | ----------- |
-| `SET` | adapter::types::unidirectional::AX | Eingang | Setzen |
+| Adapter  | Typ                                | Rolle   | Kommentar    |
+| -------- | ---------------------------------- | ------- | ------------ |
+| `SET`    | adapter::types::unidirectional::AX | Eingang | Setzen       |
 | `RESET1` | adapter::types::unidirectional::AX | Eingang | Zurücksetzen |
-| `CLK` | adapter::types::unidirectional::AX | Eingang | Takt |
-| `Q1` | adapter::types::unidirectional::AX | Ausgang | Ausgabe |
+| `CLK`    | adapter::types::unidirectional::AX | Eingang | Takt         |
+| `Q1`     | adapter::types::unidirectional::AX | Ausgang | Ausgabe      |
 
 Alle Adapter sind vom Typ `AX` (unidirektional) und stellen jeweils einen Ereigniskanal (`.E1`) sowie einen Datenkanal (`.D1`) zur Verfügung.
 
@@ -76,9 +76,9 @@ Nach der Ausführung des Algorithmus wird stets das Ereignis `Q1.E1` gesendet.
 
 Der Baustein ist als **Basic FB** mit folgendem ECC realisiert:
 
-| Zustand | Aktion | Ausgabe |
-|---------|--------|---------|
-| `REQ` | Führe Algorithmus `REQ` aus | `Q1.E1` (nach Algorithmus) |
+| Zustand | Aktion                      | Ausgabe                    |
+| ------- | --------------------------- | -------------------------- |
+| `REQ`   | Führe Algorithmus `REQ` aus | `Q1.E1` (nach Algorithmus) |
 
 Übergänge:
 

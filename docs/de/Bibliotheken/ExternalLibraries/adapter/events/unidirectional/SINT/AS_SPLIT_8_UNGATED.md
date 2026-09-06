@@ -30,17 +30,17 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| --- | --- | --- | --- |
-| `adapter::types::unidirectional::AS` | IN | Socket (Eingang) | Empfängt den zu verteilenden AS-Datenstrom. |
-| `adapter::types::unidirectional::AS` | OUT1 | Plug (Ausgang) | Erste Kopie des eingehenden AS-Datenstroms. |
-| `adapter::types::unidirectional::AS` | OUT2 | Plug (Ausgang) | Zweite Kopie des eingehenden AS-Datenstroms. |
-| `adapter::types::unidirectional::AS` | OUT3 | Plug (Ausgang) | Dritte Kopie. |
-| `adapter::types::unidirectional::AS` | OUT4 | Plug (Ausgang) | Vierte Kopie. |
-| `adapter::types::unidirectional::AS` | OUT5 | Plug (Ausgang) | Fünfte Kopie. |
-| `adapter::types::unidirectional::AS` | OUT6 | Plug (Ausgang) | Sechste Kopie. |
-| `adapter::types::unidirectional::AS` | OUT7 | Plug (Ausgang) | Siebte Kopie. |
-| `adapter::types::unidirectional::AS` | OUT8 | Plug (Ausgang) | Achte Kopie. |
+| Typ                                  | Name | Richtung         | Beschreibung                                 |
+| ------------------------------------ | ---- | ---------------- | -------------------------------------------- |
+| `adapter::types::unidirectional::AS` | IN   | Socket (Eingang) | Empfängt den zu verteilenden AS-Datenstrom.  |
+| `adapter::types::unidirectional::AS` | OUT1 | Plug (Ausgang)   | Erste Kopie des eingehenden AS-Datenstroms.  |
+| `adapter::types::unidirectional::AS` | OUT2 | Plug (Ausgang)   | Zweite Kopie des eingehenden AS-Datenstroms. |
+| `adapter::types::unidirectional::AS` | OUT3 | Plug (Ausgang)   | Dritte Kopie.                                |
+| `adapter::types::unidirectional::AS` | OUT4 | Plug (Ausgang)   | Vierte Kopie.                                |
+| `adapter::types::unidirectional::AS` | OUT5 | Plug (Ausgang)   | Fünfte Kopie.                                |
+| `adapter::types::unidirectional::AS` | OUT6 | Plug (Ausgang)   | Sechste Kopie.                               |
+| `adapter::types::unidirectional::AS` | OUT7 | Plug (Ausgang)   | Siebte Kopie.                                |
+| `adapter::types::unidirectional::AS` | OUT8 | Plug (Ausgang)   | Achte Kopie.                                 |
 
 ## Funktionsweise
 

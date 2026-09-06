@@ -34,10 +34,10 @@ Der Baustein kommuniziert ausschließlich über Adapter-Schnittstellen. Klassisc
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Q1** | `adapter::types::unidirectional::AX` | Plug (Ausgang) | Der Ausgangsadapter, der den aktuellen Zustand (Q) und das zugehörige Ereignis bereitstellt. |
-| **SET1** | `adapter::types::unidirectional::AX` | Socket (Eingang) | Der Setz-Eingangsadapter. Ein `TRUE`-Signal hier setzt den Ausgang auf `TRUE`. |
+| Name      | Typ                                  | Richtung         | Beschreibung                                                                                                      |
+| :-------- | :----------------------------------- | :--------------- | :---------------------------------------------------------------------------------------------------------------- |
+| **Q1**    | `adapter::types::unidirectional::AX` | Plug (Ausgang)   | Der Ausgangsadapter, der den aktuellen Zustand (Q) und das zugehörige Ereignis bereitstellt.                      |
+| **SET1**  | `adapter::types::unidirectional::AX` | Socket (Eingang) | Der Setz-Eingangsadapter. Ein `TRUE`-Signal hier setzt den Ausgang auf `TRUE`.                                    |
 | **RESET** | `adapter::types::unidirectional::AX` | Socket (Eingang) | Der Rücksetz-Eingangsadapter. Ein `TRUE`-Signal hier setzt den Ausgang auf `FALSE` (sofern SET1 nicht aktiv ist). |
 
 *Hinweis: Der Adapter-Typ `AX` impliziert typischerweise eine Kombination aus einem booleschen Datenpunkt (`D1`) und einem Ereignis (`E1`).*
@@ -70,13 +70,13 @@ Nach der Berechnung des neuen Zustands wird das Ereignis am Ausgangsadapter (`Q1
 
 Die folgende Wahrheitstabelle beschreibt das Verhalten des Bausteins (wobei `Q_n` der alte Zustand und `Q_n+1` der neue Zustand ist):
 
-| SET1.D1 | RESET.D1 | Q_n (Alter Zustand) | Q_n+1 (Neuer Zustand) | Beschreibung |
-| :---: | :---: | :---: | :---: | :--- |
-| 0 | 0 | 0 | 0 | Zustand halten |
-| 0 | 0 | 1 | 1 | Zustand halten |
-| 0 | 1 | X | 0 | Rücksetzen |
-| 1 | 0 | X | 1 | Setzen |
-| 1 | 1 | X | 1 | **Setzen (Dominant)** |
+| SET1.D1 | RESET.D1 | Q_n (Alter Zustand) | Q_n+1 (Neuer Zustand) | Beschreibung          |
+| :-----: | :------: | :-----------------: | :-------------------: | :-------------------- |
+| 0       | 0        | 0                   | 0                     | Zustand halten        |
+| 0       | 0        | 1                   | 1                     | Zustand halten        |
+| 0       | 1        | X                   | 0                     | Rücksetzen            |
+| 1       | 0        | X                   | 1                     | Setzen                |
+| 1       | 1        | X                   | 1                     | **Setzen (Dominant)** |
 
 ## Anwendungsszenarien
 

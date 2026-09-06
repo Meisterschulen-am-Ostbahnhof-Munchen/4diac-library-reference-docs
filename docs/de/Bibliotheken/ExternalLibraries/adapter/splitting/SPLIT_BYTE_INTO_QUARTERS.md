@@ -30,13 +30,13 @@ Nicht vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AB` | Byte‑Eingang, der die aufzuteilenden Daten liefert. |
-| **Plug** (Ausgang) | `QUARTER_BYTE_00` | `adapter::types::unidirectional::AQ` | Ausgang für das erste Quarter (niederwertigste 2 Bit). |
-| **Plug** (Ausgang) | `QUARTER_BYTE_01` | `adapter::types::unidirectional::AQ` | Ausgang für das zweite Quarter (Bit 2‑3). |
-| **Plug** (Ausgang) | `QUARTER_BYTE_02` | `adapter::types::unidirectional::AQ` | Ausgang für das dritte Quarter (Bit 4‑5). |
-| **Plug** (Ausgang) | `QUARTER_BYTE_03` | `adapter::types::unidirectional::AQ` | Ausgang für das vierte Quarter (höchstwertigste 2 Bit). |
+| Richtung             | Name              | Typ                                  | Beschreibung                                            |
+| -------------------- | ----------------- | ------------------------------------ | ------------------------------------------------------- |
+| **Socket** (Eingang) | `IN`              | `adapter::types::unidirectional::AB` | Byte‑Eingang, der die aufzuteilenden Daten liefert.     |
+| **Plug** (Ausgang)   | `QUARTER_BYTE_00` | `adapter::types::unidirectional::AQ` | Ausgang für das erste Quarter (niederwertigste 2 Bit).  |
+| **Plug** (Ausgang)   | `QUARTER_BYTE_01` | `adapter::types::unidirectional::AQ` | Ausgang für das zweite Quarter (Bit 2‑3).               |
+| **Plug** (Ausgang)   | `QUARTER_BYTE_02` | `adapter::types::unidirectional::AQ` | Ausgang für das dritte Quarter (Bit 4‑5).               |
+| **Plug** (Ausgang)   | `QUARTER_BYTE_03` | `adapter::types::unidirectional::AQ` | Ausgang für das vierte Quarter (höchstwertigste 2 Bit). |
 
 ## Funktionsweise
 

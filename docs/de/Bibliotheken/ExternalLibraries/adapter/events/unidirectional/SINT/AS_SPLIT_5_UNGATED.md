@@ -30,14 +30,14 @@ Keine Daten-Ausgänge definiert.
 
 ### **Adapter**
 
-| Rolle | Name | Typ | Beschreibung |
-| ------- | ------ | ----- | -------------- |
-| Socket | IN | adapter::types::unidirectional::AS | Eingangs-Adapter, der das zu verteilende AS-Signal empfängt. |
-| Plug | OUT1 | adapter::types::unidirectional::AS | Erster Ausgangs-Adapter für das verteilte Signal. |
-| Plug | OUT2 | adapter::types::unidirectional::AS | Zweiter Ausgangs-Adapter. |
-| Plug | OUT3 | adapter::types::unidirectional::AS | Dritter Ausgangs-Adapter. |
-| Plug | OUT4 | adapter::types::unidirectional::AS | Vierter Ausgangs-Adapter. |
-| Plug | OUT5 | adapter::types::unidirectional::AS | Fünfter Ausgangs-Adapter. |
+| Rolle  | Name | Typ                                | Beschreibung                                                 |
+| ------ | ---- | ---------------------------------- | ------------------------------------------------------------ |
+| Socket | IN   | adapter::types::unidirectional::AS | Eingangs-Adapter, der das zu verteilende AS-Signal empfängt. |
+| Plug   | OUT1 | adapter::types::unidirectional::AS | Erster Ausgangs-Adapter für das verteilte Signal.            |
+| Plug   | OUT2 | adapter::types::unidirectional::AS | Zweiter Ausgangs-Adapter.                                    |
+| Plug   | OUT3 | adapter::types::unidirectional::AS | Dritter Ausgangs-Adapter.                                    |
+| Plug   | OUT4 | adapter::types::unidirectional::AS | Vierter Ausgangs-Adapter.                                    |
+| Plug   | OUT5 | adapter::types::unidirectional::AS | Fünfter Ausgangs-Adapter.                                    |
 
 ## Funktionsweise
 

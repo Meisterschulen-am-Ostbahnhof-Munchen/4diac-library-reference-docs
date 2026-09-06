@@ -41,6 +41,7 @@ The counter performs the following operations on the `REQ` event:
 
 - When `CU` is active (and not simultaneously `CD`), the counter is incremented (up to the maximum value). 18446744073709551615)
 - When `CD` is active (and not simultaneously `CU`), the counter counts down (to the minimum value of 0).
+
 1. The outputs `QU` and `QD` are updated according to the current counter value.
 
 ## Technical Features

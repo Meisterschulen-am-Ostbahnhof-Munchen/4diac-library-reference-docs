@@ -12,37 +12,37 @@ Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von REAL-Werten aus o
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT | EInit | Initialisierungsereignis; startet den Lese- oder Schreibvorgang abhängig von der angeschlossenen Adapterlogik. Die mitgegebenen Daten legen Section, Key und einen Standardwert fest. |
+| Ereignis | Typ   | Beschreibung                                                                                                                                                                          |
+| -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| INIT     | EInit | Initialisierungsereignis; startet den Lese- oder Schreibvorgang abhängig von der angeschlossenen Adapterlogik. Die mitgegebenen Daten legen Section, Key und einen Standardwert fest. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INITO | EInit | Bestätigung der Initialisierung. Wird ausgelöst, nachdem der Lese-/Schreibzugriff abgeschlossen ist. |
+| Ereignis | Typ   | Beschreibung                                                                                         |
+| -------- | ----- | ---------------------------------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der Initialisierung. Wird ausgelöst, nachdem der Lese-/Schreibzugriff abgeschlossen ist. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Beschreibung |
-| ---------- | ----- | -------------- |
-| QI | BOOL | Qualifizierer für den Ereigniseingang; steuert die Ausführung. |
-| SECTION | STRING | Name des Abschnitts (Section) in der `settings.ini`. |
-| KEY | STRING | Name des Schlüssels (Key) innerhalb des Abschnitts. |
-| DEFAULT_VALUE | REAL | Der Wert, der zurückgegeben wird, falls der Schlüssel in der `settings.ini` nicht existiert. |
+| Variable      | Typ    | Beschreibung                                                                                 |
+| ------------- | ------ | -------------------------------------------------------------------------------------------- |
+| QI            | BOOL   | Qualifizierer für den Ereigniseingang; steuert die Ausführung.                               |
+| SECTION       | STRING | Name des Abschnitts (Section) in der `settings.ini`.                                         |
+| KEY           | STRING | Name des Schlüssels (Key) innerhalb des Abschnitts.                                          |
+| DEFAULT_VALUE | REAL   | Der Wert, der zurückgegeben wird, falls der Schlüssel in der `settings.ini` nicht existiert. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| QO | BOOL | Ausgangsqualifizierer; zeigt erfolgreiche Ausführung an. |
-| STATUS | STRING | Statusmeldung des Dienstes (z. B. Fehlertexte oder „OK“). |
+| Variable | Typ    | Beschreibung                                              |
+| -------- | ------ | --------------------------------------------------------- |
+| QO       | BOOL   | Ausgangsqualifizierer; zeigt erfolgreiche Ausführung an.  |
+| STATUS   | STRING | Statusmeldung des Dienstes (z. B. Fehlertexte oder „OK“). |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
-| VAL | adapter::types::bidirectional::AB2 | Bidirektionaler Adapter zum Austausch von REAL-Werten. Der eingehende Wert (`DO1`) wird in die INI-Datei geschrieben; der ausgehende Wert (`DI1`) wird aus der INI-Datei gelesen und weitergereicht. |
+| Adapter | Typ                                | Beschreibung                                                                                                                                                                                         |
+| ------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| VAL     | adapter::types::bidirectional::AB2 | Bidirektionaler Adapter zum Austausch von REAL-Werten. Der eingehende Wert (`DO1`) wird in die INI-Datei geschrieben; der ausgehende Wert (`DI1`) wird aus der INI-Datei gelesen und weitergereicht. |
 
 ## Funktionsweise
 

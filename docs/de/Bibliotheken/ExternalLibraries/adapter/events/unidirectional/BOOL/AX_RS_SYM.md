@@ -12,10 +12,10 @@ Der **AX_RS_SYM** ist ein ereignisgesteuerter, bistabiler Funktionsblock (RS‑F
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `R` | Event | Setzt den Ausgang `Q.D1` auf `FALSE` und feuert `Q.E1` |
-| `S` | Event | Setzt den Ausgang `Q.D1` auf `TRUE` und feuert `Q.E1` |
+| Name | Typ   | Kommentar                                              |
+| ---- | ----- | ------------------------------------------------------ |
+| `R`  | Event | Setzt den Ausgang `Q.D1` auf `FALSE` und feuert `Q.E1` |
+| `S`  | Event | Setzt den Ausgang `Q.D1` auf `TRUE` und feuert `Q.E1`  |
 
 ### **Ereignis-Ausgänge**
 
@@ -31,9 +31,9 @@ Der FB besitzt keine separaten Daten-Ausgänge. Der aktuelle Zustand wird über 
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `Q` | `adapter::types::unidirectional::AX` | Bietet den Flip‑Flop‑Wert (D1) und ein Bestätigungsereignis (E1) |
+| Name | Typ                                  | Kommentar                                                        |
+| ---- | ------------------------------------ | ---------------------------------------------------------------- |
+| `Q`  | `adapter::types::unidirectional::AX` | Bietet den Flip‑Flop‑Wert (D1) und ein Bestätigungsereignis (E1) |
 
 ## Funktionsweise
 
@@ -54,11 +54,11 @@ Das Besondere ist das **symmetrische Start‑Up‑Verhalten**: Unmittelbar nach 
 
 Die interne Zustandsmaschine besteht aus folgenden Zuständen und Transitionen:
 
-| Zustand | Bedeutung | Aktion bei Eintritt |
-| --------- | ----------- | --------------------- |
-| START | Initialzustand nach dem Einschalten | Keine Aktion (wartet auf erstes Ereignis) |
-| SET | Ausgang `Q.D1` ist `TRUE` | Führt Algorithmus `SET` aus: `Q.D1 := TRUE` und feuert `Q.E1` |
-| RESET | Ausgang `Q.D1` ist `FALSE` | Führt Algorithmus `RESET` aus: `Q.D1 := FALSE` und feuert `Q.E1` |
+| Zustand | Bedeutung                           | Aktion bei Eintritt                                              |
+| ------- | ----------------------------------- | ---------------------------------------------------------------- |
+| START   | Initialzustand nach dem Einschalten | Keine Aktion (wartet auf erstes Ereignis)                        |
+| SET     | Ausgang `Q.D1` ist `TRUE`           | Führt Algorithmus `SET` aus: `Q.D1 := TRUE` und feuert `Q.E1`    |
+| RESET   | Ausgang `Q.D1` ist `FALSE`          | Führt Algorithmus `RESET` aus: `Q.D1 := FALSE` und feuert `Q.E1` |
 
 **Transitionen:**
 

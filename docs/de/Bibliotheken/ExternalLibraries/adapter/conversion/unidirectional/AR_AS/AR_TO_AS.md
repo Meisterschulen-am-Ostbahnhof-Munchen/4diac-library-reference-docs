@@ -30,10 +30,10 @@ Keine eigenen Daten-Ausgänge vorhanden. Daten werden über den **AR_IN‑Adapte
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| `AR_IN` | `adapter::types::unidirectional::AR` | Socket (eingehend) | Unidirektionaler REAL‑Adapter. Liefert einen REAL‑Wert (D1) und ein zugehöriges Ereignis (E1). |
-| `AS_OUT` | `adapter::types::unidirectional::AS` | Plug (ausgehend) | Unidirektionaler SINT‑Adapter. Empfängt einen SINT‑Wert (D1) und ein zugehöriges Ereignis (E1). |
+| Adapter  | Typ                                  | Richtung           | Beschreibung                                                                                    |
+| -------- | ------------------------------------ | ------------------ | ----------------------------------------------------------------------------------------------- |
+| `AR_IN`  | `adapter::types::unidirectional::AR` | Socket (eingehend) | Unidirektionaler REAL‑Adapter. Liefert einen REAL‑Wert (D1) und ein zugehöriges Ereignis (E1).  |
+| `AS_OUT` | `adapter::types::unidirectional::AS` | Plug (ausgehend)   | Unidirektionaler SINT‑Adapter. Empfängt einen SINT‑Wert (D1) und ein zugehöriges Ereignis (E1). |
 
 ## Funktionsweise
 

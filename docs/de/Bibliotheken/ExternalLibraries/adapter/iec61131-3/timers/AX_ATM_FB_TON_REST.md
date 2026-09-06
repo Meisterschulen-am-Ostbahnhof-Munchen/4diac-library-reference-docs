@@ -36,13 +36,13 @@ Keine eigenen. Alle Daten werden über die Adapter-Plugs übertragen.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AX` | Startsignal |
-| Socket (Eingang) | `PT` | `adapter::types::unidirectional::ATM` | Sollzeit |
-| Plug (Ausgang) | `Q` | `adapter::types::unidirectional::AX` | Ausgang, TRUE sobald `IN` seit `PT` ansteht |
-| Plug (Ausgang) | `ET` | `adapter::types::unidirectional::ATM` | Abgelaufene Zeit, Event nur bei Wertänderung |
-| Plug (Ausgang) | `REST` | `adapter::types::unidirectional::AR` | Verbleibende Zeit `PT - ET` in Sekunden, kein Sentinel-Wert |
+| Richtung         | Name   | Typ                                   | Beschreibung                                                |
+| ---------------- | ------ | ------------------------------------- | ----------------------------------------------------------- |
+| Socket (Eingang) | `IN`   | `adapter::types::unidirectional::AX`  | Startsignal                                                 |
+| Socket (Eingang) | `PT`   | `adapter::types::unidirectional::ATM` | Sollzeit                                                    |
+| Plug (Ausgang)   | `Q`    | `adapter::types::unidirectional::AX`  | Ausgang, TRUE sobald `IN` seit `PT` ansteht                 |
+| Plug (Ausgang)   | `ET`   | `adapter::types::unidirectional::ATM` | Abgelaufene Zeit, Event nur bei Wertänderung                |
+| Plug (Ausgang)   | `REST` | `adapter::types::unidirectional::AR`  | Verbleibende Zeit `PT - ET` in Sekunden, kein Sentinel-Wert |
 
 ## Funktionsweise
 
@@ -96,9 +96,10 @@ für `AX`/`ATM`/`AR`.
 ## Zustandsübersicht
 
 Dieselben vier Zustände wie `AX_ATM_FB_TON`, wobei `REST` durchgehend `PT - ET` folgt:
+
 1. **Ruhezustand**: `IN` ist FALSE, `Q` ist FALSE, `ET` ist 0, `REST` entspricht `PT` in Sekunden.
-3. **Ausgelöst**: `ET` hat `PT` erreicht, `REST` erreicht 0, `Q` wird TRUE.
-4. **Reset**: `IN` wird FALSE, `Q` wird FALSE, `ET` wird 0, `REST` kehrt zu `PT` zurück.
+2. **Ausgelöst**: `ET` hat `PT` erreicht, `REST` erreicht 0, `Q` wird TRUE.
+3. **Reset**: `IN` wird FALSE, `Q` wird FALSE, `ET` wird 0, `REST` kehrt zu `PT` zurück.
 
 ## Anwendungsszenarien
 

@@ -31,9 +31,9 @@ The function block **AX_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::AX | Plug (Output) | Buffered received BOOL value |
+| Adapter | Type                               | Direction     | Description                  |
+| ------- | ---------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AX | Plug (Output) | Buffered received BOOL value |
 
 ## Functionality
 

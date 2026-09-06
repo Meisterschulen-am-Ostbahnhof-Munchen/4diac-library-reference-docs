@@ -43,14 +43,14 @@ Die ButtonActivationCode-Konstanten definieren verschiedene Tastenaktivierungszu
 
 ## Zustandsübersicht
 
-| Konstante | Code | Beschreibung |
-| ----------- | ------ | -------------- |
-| BT_RELEASED_UNLATCHED | 0 | Taste wurde entriegelt oder losgelassen (Zustandsänderung) |
-| BT_PRESSED_LATCHED | 1 | Taste wurde "gedrückt" oder verriegelt (Zustandsänderung) |
-| BT_STILL_HELD | 2 | Taste wird weiterhin gehalten (verriegelbare Tasten wiederholen sich nicht) |
-| BT_STILL_HELD_START | 2 | Taste wird weiterhin gehalten (mit bCyclic := FALSE) |
-| BT_ABORTED | 3 | Tastendruck abgebrochen (gilt für VT Version 4 und höher) |
-| Invalid | 255 | Ungültiger Zustand |
+| Konstante             | Code | Beschreibung                                                                |
+| --------------------- | ---- | --------------------------------------------------------------------------- |
+| BT_RELEASED_UNLATCHED | 0    | Taste wurde entriegelt oder losgelassen (Zustandsänderung)                  |
+| BT_PRESSED_LATCHED    | 1    | Taste wurde "gedrückt" oder verriegelt (Zustandsänderung)                   |
+| BT_STILL_HELD         | 2    | Taste wird weiterhin gehalten (verriegelbare Tasten wiederholen sich nicht) |
+| BT_STILL_HELD_START   | 2    | Taste wird weiterhin gehalten (mit bCyclic := FALSE)                        |
+| BT_ABORTED            | 3    | Tastendruck abgebrochen (gilt für VT Version 4 und höher)                   |
+| Invalid               | 255  | Ungültiger Zustand                                                          |
 
 ## Anwendungsszenarien
 

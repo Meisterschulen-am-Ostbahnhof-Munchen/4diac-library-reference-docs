@@ -43,13 +43,13 @@
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
-| START | Unconfigured initial state |
-| Init | Initialization in progress, `QO := QI` |
+| State  | Meaning                                     |
+| ------ | ------------------------------------------- |
+| START  | Unconfigured initial state                  |
+| Init   | Initialization in progress, `QO := QI`      |
 | DeInit | Deinitialization in progress, `QO := FALSE` |
-| SET | `Q = TRUE`, switches to `RESET` on `CLK` |
-| RESET | `Q = FALSE`, switches to `SET` on `CLK` |
+| SET    | `Q = TRUE`, switches to `RESET` on `CLK`    |
+| RESET  | `Q = FALSE`, switches to `SET` on `CLK`     |
 
 ## Application Scenarios
 

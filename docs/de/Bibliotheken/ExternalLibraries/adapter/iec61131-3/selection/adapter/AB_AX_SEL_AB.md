@@ -33,12 +33,12 @@ Da es sich um einen adapterbasierten Funktionsbaustein handelt, sind die klassis
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **OUT** | Plug (Consumer) | `adapter::types::unidirectional::AB` | Der ausgewählte Ausgang (Selected Output). Gibt das weitergeleitete Signal aus. |
+| Name    | Richtung          | Typ                                  | Beschreibung                                                                                  |
+| :------ | :---------------- | :----------------------------------- | :-------------------------------------------------------------------------------------------- |
+| **OUT** | Plug (Consumer)   | `adapter::types::unidirectional::AB` | Der ausgewählte Ausgang (Selected Output). Gibt das weitergeleitete Signal aus.               |
 | **IN0** | Socket (Provider) | `adapter::types::unidirectional::AB` | Erster auswählbarer Eingang (wird selektiert, wenn der Selektor `G` den Zustand `FALSE` hat). |
 | **IN1** | Socket (Provider) | `adapter::types::unidirectional::AB` | Zweiter auswählbarer Eingang (wird selektiert, wenn der Selektor `G` den Zustand `TRUE` hat). |
-| **G** | Socket (Provider) | `adapter::types::unidirectional::AX` | Selektor-Adapter (Steuersignal für die Auswahl). |
+| **G**   | Socket (Provider) | `adapter::types::unidirectional::AX` | Selektor-Adapter (Steuersignal für die Auswahl).                                              |
 
 *Hinweis zu den Adaptertypen:*
 
@@ -69,14 +69,14 @@ Im Inneren des Funktionsblocks befindet sich ein Netzwerk aus Standard-Funktions
 
 ## Zustandsübersicht
 
-| Zustand Selektor `G` | Ereignis an Eingang | Verhalten am Ausgang `OUT` |
-| :--- | :--- | :--- |
-| `FALSE` | Ereignis an `IN0` | Wert von `IN0` wird an `OUT` übergeben; Ereignis `OUT.E1` wird ausgelöst. |
-| `FALSE` | Ereignis an `IN1` | Wert von `IN1` wird intern aktualisiert, jedoch **nicht** an `OUT` weitergeleitet. |
-| `TRUE` | Ereignis an `IN0` | Wert von `IN0` wird intern aktualisiert, jedoch **nicht** an `OUT` weitergeleitet. |
-| `TRUE` | Ereignis an `IN1` | Wert von `IN1` wird an `OUT` übergeben; Ereignis `OUT.E1` wird ausgelöst. |
-| Wechsel `FALSE` $\rightarrow$ `TRUE` | Ereignis an `G` | Der aktuell gespeicherte Wert von `IN1` wird an `OUT` durchgeschaltet; `OUT.E1` wird ausgelöst. |
-| Wechsel `TRUE` $\rightarrow$ `FALSE` | Ereignis an `G` | Der aktuell gespeicherte Wert von `IN0` wird an `OUT` durchgeschaltet; `OUT.E1` wird ausgelöst. |
+| Zustand Selektor `G`                 | Ereignis an Eingang | Verhalten am Ausgang `OUT`                                                                      |
+| :----------------------------------- | :------------------ | :---------------------------------------------------------------------------------------------- |
+| `FALSE`                              | Ereignis an `IN0`   | Wert von `IN0` wird an `OUT` übergeben; Ereignis `OUT.E1` wird ausgelöst.                       |
+| `FALSE`                              | Ereignis an `IN1`   | Wert von `IN1` wird intern aktualisiert, jedoch **nicht** an `OUT` weitergeleitet.              |
+| `TRUE`                               | Ereignis an `IN0`   | Wert von `IN0` wird intern aktualisiert, jedoch **nicht** an `OUT` weitergeleitet.              |
+| `TRUE`                               | Ereignis an `IN1`   | Wert von `IN1` wird an `OUT` übergeben; Ereignis `OUT.E1` wird ausgelöst.                       |
+| Wechsel `FALSE` $\rightarrow$ `TRUE` | Ereignis an `G`     | Der aktuell gespeicherte Wert von `IN1` wird an `OUT` durchgeschaltet; `OUT.E1` wird ausgelöst. |
+| Wechsel `TRUE` $\rightarrow$ `FALSE` | Ereignis an `G`     | Der aktuell gespeicherte Wert von `IN0` wird an `OUT` durchgeschaltet; `OUT.E1` wird ausgelöst. |
 
 ## Anwendungsszenarien
 

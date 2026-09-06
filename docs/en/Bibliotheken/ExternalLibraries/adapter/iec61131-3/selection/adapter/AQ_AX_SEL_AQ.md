@@ -34,9 +34,9 @@ There are no direct data outputs. Data is provided encapsulated via the plug.
 - **Data**: `D1` (Output value of the selected input).
 - **Event**: `E1` (Output event for signaling a new valid value).
 
-#### **Plugs (Ausgangs-Schnittstellen)**
+## **Plugs (Ausgangs-Schnittstellen)**
 
-#### **Sockets (Eingangs-Schnittstellen)**
+### **Sockets (Eingangs-Schnittstellen)**
 
 ### Data Outputs
 
@@ -62,19 +62,20 @@ The function block is implemented internally as a function block network and ope
 
 - If `G.D1` is set to `FALSE`, the value of `IN0` is passed through.
 - If `G.D1` is set to `TRUE`, the value of `IN1` is passed through.
+
 1. **Output**: The selected value is passed to the output plug `OUT.D1`. Simultaneously, the output event `OUT.E1` is triggered to inform subsequent program components in the control network about the value change.
 
 - **Event-Data Consistency**: The use of internal D flip-flops ensures that the data values are read and processed at the exact moment the corresponding change event occurs.
 - **Typing**: The function block internally uses `F_MOVE` with the data type `BYTE` to encapsulate and assign the adapter data. This means that the `AQ` interfaces used transmit binary- or byte-compatible data structures.
 
-- ## State Overview
+## State Overview
 
 Since `AQ_AX_SEL_AQ` is a purely data- and event-driven combination block without its own internal state machine (ECC), its behavior can be described using the following logical table:
 
-| Selector (`G.D1`) | Value `IN0.D1` | Value `IN1.D1` | Output (`OUT.D1`) | Behavior of the Output Event (`OUT.E1`) |
-| :---: | :---: | :---: | :---: | :--- |
-| **FALSE** | `Wert_A` | `Wert_B` | **`Wert_A`** | Fires as soon as an event occurs at `IN0.E1`, `IN1.E1`, or `G.E1`. |
-| **TRUE** | `Wert_A` | `Wert_B` | **`Wert_B`** | Fires as soon as an event occurs at `IN0.E1`, `IN1.E1`, or `G.E1`. |
+| Selector (`G.D1`) | Value `IN0.D1` | Value `IN1.D1` | Output (`OUT.D1`) | Behavior of the Output Event (`OUT.E1`)                            |
+| :---------------: | :------------: | :------------: | :---------------: | :----------------------------------------------------------------- |
+| **FALSE**         | `Wert_A`       | `Wert_B`       | **`Wert_A`**      | Fires as soon as an event occurs at `IN0.E1`, `IN1.E1`, or `G.E1`. |
+| **TRUE**          | `Wert_A`       | `Wert_B`       | **`Wert_B`**      | Fires as soon as an event occurs at `IN0.E1`, `IN1.E1`, or `G.E1`. |
 
 - **Sensor Redundancy / Switchover**: Automatic or manual switching between a primary sensor (`IN0`) and a secondary/backup sensor (`IN1`) in case of a fault via the control signal `G`.
 - **Manual/Automatic Operation**: Selection of setpoints for actuators. In automatic mode (`G = TRUE`), the calculated controller value (`IN1`) is used; in manual mode (`G = FALSE`), a predefined fixed value or a manually specified parameter (`IN0`) is used.
@@ -88,8 +89,6 @@ Since `AQ_AX_SEL_AQ` is a purely data- and event-driven combination block withou
 The `AQ_AX_SEL_AQ` is a useful infrastructure component for modular 4diac applications. By completely encapsulating the signals in adapter connections, it significantly contributes to clarity in the application window and ensures robust, event-driven signal forwarding.
 
 ## Technical Features
-
-## State Overview
 
 ## Application Scenarios
 

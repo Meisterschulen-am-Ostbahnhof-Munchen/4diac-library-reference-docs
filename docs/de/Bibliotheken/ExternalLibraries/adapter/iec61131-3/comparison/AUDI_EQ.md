@@ -32,11 +32,11 @@ Der FB besitzt ausschließlich Adapter-Schnittstellen. Es sind keine direkten Er
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Kurzbeschreibung |
-|---------|----------|-----|------------------|
-| `IN1`   | Socket   | `adapter::types::unidirectional::AUDI` | Liefert den ersten analogen Wert inkl. Ereignis. |
-| `IN2`   | Socket   | `adapter::types::unidirectional::AUDI` | Liefert den zweiten analogen Wert inkl. Ereignis. |
-| `OUT`   | Plug     | `adapter::types::unidirectional::AX` | Gibt das Vergleichsergebnis (boolesch) mit Ereignis aus. |
+| Adapter | Richtung | Typ                                    | Kurzbeschreibung                                         |
+| ------- | -------- | -------------------------------------- | -------------------------------------------------------- |
+| `IN1`   | Socket   | `adapter::types::unidirectional::AUDI` | Liefert den ersten analogen Wert inkl. Ereignis.         |
+| `IN2`   | Socket   | `adapter::types::unidirectional::AUDI` | Liefert den zweiten analogen Wert inkl. Ereignis.        |
+| `OUT`   | Plug     | `adapter::types::unidirectional::AX`   | Gibt das Vergleichsergebnis (boolesch) mit Ereignis aus. |
 
 ## Funktionsweise
 

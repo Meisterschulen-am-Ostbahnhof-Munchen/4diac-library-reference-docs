@@ -55,11 +55,13 @@ Timestamp in nanoseconds since the defined `startDate`.
 
 - Activated by the `REQ` event.
 - Uses the current system time (`NOW()`).
+
 1. **Calculation**:
 
 - Subtracts `startDate` from the current system time.
 - Converts the difference to nanoseconds via `TIME_IN_NS_TO_ULINT()`.
 - Outputs the result as `ULINT` and triggers `CNF`.
+
 1. **Error Handling**:
 
 - No explicit error message, but overflow is possible in the case of:
@@ -103,12 +105,12 @@ Calculation of intervals from arbitrary reference points.
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Function | `TIMESTAMP_NS` | `NOW()` | `F_NOW_MONOTONIC` |
-| --------------------- | ----------------------- | ----------------------- | ----------------------- |
-| **Output Format** | Nanoseconds (ULINT) | Time Interval (TIME) | Time Interval (TIME) |
-| **Reference Point** | Configurable | System Startup | Hardware Dependent |
-| **Precision** | 1 ns | 1 ms | 1 ns (typical) |
-| **Use Case** | Absolute Timestamps | Relative Time Measurement | Monotonical Measurement |
+| Function            | `TIMESTAMP_NS`      | `NOW()`                   | `F_NOW_MONOTONIC`       |
+| ------------------- | ------------------- | ------------------------- | ----------------------- |
+| **Output Format**   | Nanoseconds (ULINT) | Time Interval (TIME)      | Time Interval (TIME)    |
+| **Reference Point** | Configurable        | System Startup            | Hardware Dependent      |
+| **Precision**       | 1 ns                | 1 ms                      | 1 ns (typical)          |
+| **Use Case**        | Absolute Timestamps | Relative Time Measurement | Monotonical Measurement |
 
 ---
 

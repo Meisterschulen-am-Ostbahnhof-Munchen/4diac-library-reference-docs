@@ -9,7 +9,7 @@ The function block `F_BOOL_TO_ULINT` converts a Boolean value (`BOOL`) into an u
 - **IN**: Input for the Boolean value (`BOOL`) to be converted.
 - **OUT**: Output for the converted unsigned 64-bit integer value (`ULINT`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

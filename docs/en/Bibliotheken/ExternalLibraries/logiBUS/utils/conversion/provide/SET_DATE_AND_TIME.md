@@ -12,21 +12,21 @@ The SET_DATE_AND_TIME function block is used to write an incoming DATE_AND_TIME 
 
 ### **Event Inputs**
 
-| Event | Description |
-|----------|--------------|
-| REQ | Normal execution request; starts writing the input value to the InOut variable. |
+| Event | Description                                                                     |
+| ----- | ------------------------------------------------------------------------------- |
+| REQ   | Normal execution request; starts writing the input value to the InOut variable. |
 
 ### **Event Outputs**
 
-| Event | Description |
-|----------|--------------|
-| CNF | Confirmation of successful execution. |
+| Event | Description                           |
+| ----- | ------------------------------------- |
+| CNF   | Confirmation of successful execution. |
 
 ### **Data Inputs**
 
-| Name | Type | Description |
-|------|---------------|--------------|
-| IN | DATE_AND_TIME | The value to be written to the target variable. |
+| Name | Type          | Description                                     |
+| ---- | ------------- | ----------------------------------------------- |
+| IN   | DATE_AND_TIME | The value to be written to the target variable. |
 
 ### **Data Outputs**
 
@@ -50,9 +50,9 @@ As soon as an event occurs at input `REQ`, the ST instruction `OUT := IN` is exe
 
 The function block has a single state:
 
-| State | Action | Output Event |
-|---------|----------------------------------|-----------------|
-| REQ | `OUT := IN` | CNF |
+| State | Action      | Output Event |
+| ----- | ----------- | ------------ |
+| REQ   | `OUT := IN` | CNF          |
 
 The state machine starts in this state upon receiving `REQ`, executes the action, and immediately sends `CNF`.
 

@@ -34,10 +34,10 @@ Der FB besitzt keine eigenen Ereignis- oder Datenports auf der obersten Ebene. D
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **AB_IN** | Socket (Eingang) | `adapter::types::unidirectional::AB` | Nimmt BYTE-Daten und ein Trigger-Ereignis vom Quellsystem entgegen. |
-| **AS_OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AS` | Stellt die konvertierten SINT-Daten mit einem Bestätigungsereignis für das Zielsystem bereit. |
+| Adapter    | Richtung         | Typ                                  | Beschreibung                                                                                  |
+| ---------- | ---------------- | ------------------------------------ | --------------------------------------------------------------------------------------------- |
+| **AB_IN**  | Socket (Eingang) | `adapter::types::unidirectional::AB` | Nimmt BYTE-Daten und ein Trigger-Ereignis vom Quellsystem entgegen.                           |
+| **AS_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AS` | Stellt die konvertierten SINT-Daten mit einem Bestätigungsereignis für das Zielsystem bereit. |
 
 ## Funktionsweise
 

@@ -74,18 +74,18 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Positionsänderungsbereich
 
-| Parameter | Bereich     | Beschreibung               |
-|-----------|------------|----------------------------|
-| X-Änderung| -128 - +127| Horizontale Verschiebung   |
-| Y-Änderung| -128 - +127| Vertikale Verschiebung     |
+| Parameter  | Bereich     | Beschreibung             |
+| ---------- | ----------- | ------------------------ |
+| X-Änderung | -128 - +127 | Horizontale Verschiebung |
+| Y-Änderung | -128 - +127 | Vertikale Verschiebung   |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Ungültige Positionswerte          |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
+| Code | Konstante           | Bedeutung                |
+| ---- | ------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR         | Erfolgreich              |
+| -6   | VT_E_OVERFLOW       | Ungültige Positionswerte |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Objekt-ID      |
 
 ## Anwendungsszenarien
 
@@ -96,11 +96,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ChildLocation | VtAbsolutePosition | VtGroupMove |
-|---------------|-----------------|--------------------|-------------|
-| ISO-Standard  | ✔               | ✖                  | ✖           |
-| Bewegung      | Relativ         | Absolut            | Gruppen     |
-| Wertebereich  | ±127 Pixel      | 0-65535 Pixel      | ±127 Pixel  |
+| Feature      | Q_ChildLocation | VtAbsolutePosition | VtGroupMove |
+| ------------ | --------------- | ------------------ | ----------- |
+| ISO-Standard | ✔               | ✖                  | ✖           |
+| Bewegung     | Relativ         | Absolut            | Gruppen     |
+| Wertebereich | ±127 Pixel      | 0-65535 Pixel      | ±127 Pixel  |
 
 ## Fazit
 

@@ -28,15 +28,15 @@ Keine.
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| IN | Socket (Eingang) | adapter::types::unidirectional::AULI | Empfängt das zu verteilende AULI-Signal. |
-| OUT1 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Erster identischer Ausgang des verteilten Signals. |
-| OUT2 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Zweiter identischer Ausgang. |
-| OUT3 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Dritter identischer Ausgang. |
-| OUT4 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Vierter identischer Ausgang. |
-| OUT5 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Fünfter identischer Ausgang. |
-| OUT6 | Plug (Ausgang) | adapter::types::unidirectional::AULI | Sechster identischer Ausgang. |
+| Adapter | Richtung         | Typ                                  | Beschreibung                                       |
+| ------- | ---------------- | ------------------------------------ | -------------------------------------------------- |
+| IN      | Socket (Eingang) | adapter::types::unidirectional::AULI | Empfängt das zu verteilende AULI-Signal.           |
+| OUT1    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Erster identischer Ausgang des verteilten Signals. |
+| OUT2    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Zweiter identischer Ausgang.                       |
+| OUT3    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Dritter identischer Ausgang.                       |
+| OUT4    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Vierter identischer Ausgang.                       |
+| OUT5    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Fünfter identischer Ausgang.                       |
+| OUT6    | Plug (Ausgang)   | adapter::types::unidirectional::AULI | Sechster identischer Ausgang.                      |
 
 ## Funktionsweise
 
@@ -63,11 +63,11 @@ Da der Baustein keine Ereignissteuerung besitzt und keine internen Zustände ver
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Besonderheit |
-| ---------- | ------------------ | -------------- |
-| AULI_SPLIT_6 | 6 | Fester Splitter für AULI-Adapter |
-| AULI_SPLIT_2 | 2 | Kleinere Variante für zwei Ausgänge |
-| AULI_SPLIT_4 | 4 | Mittlere Variante für vier Ausgänge |
+| Baustein     | Anzahl Ausgänge | Besonderheit                        |
+| ------------ | --------------- | ----------------------------------- |
+| AULI_SPLIT_6 | 6               | Fester Splitter für AULI-Adapter    |
+| AULI_SPLIT_2 | 2               | Kleinere Variante für zwei Ausgänge |
+| AULI_SPLIT_4 | 4               | Mittlere Variante für vier Ausgänge |
 
 Der **AULI_SPLIT_6** bietet im Vergleich zu kleineren Splittern eine höhere Anzahl an Ausgängen, was den Verdrahtungsaufwand in komplexen Systemen reduziert und gleichzeitig eine saubere Signalstruktur erhält.
 

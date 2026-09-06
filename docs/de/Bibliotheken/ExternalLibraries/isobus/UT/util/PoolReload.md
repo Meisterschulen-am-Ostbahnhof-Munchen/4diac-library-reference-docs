@@ -12,32 +12,32 @@ Der Funktionsblock `PoolReload` ist ein Service-Interface-Baustein gemäß ISO 1
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INIT` | `EInit` | Initialisierung des Dienstes (mit den Parametern `QI` und `poolFileName`) |
-| `REQ` | `Event` | Dienstaufforderung – führt das Nachladen des Pools aus (mit `QI`) |
+| Ereignis | Typ     | Kommentar                                                                 |
+| -------- | ------- | ------------------------------------------------------------------------- |
+| `INIT`   | `EInit` | Initialisierung des Dienstes (mit den Parametern `QI` und `poolFileName`) |
+| `REQ`    | `Event` | Dienstaufforderung – führt das Nachladen des Pools aus (mit `QI`)         |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INITO` | `EInit` | Bestätigung der Initialisierung (gibt `QO` und `STATUS` aus) |
-| `CNF` | `Event` | Bestätigung – Pool-Nachladen abgeschlossen (gibt `QO`, `STATUS` und `s16Result` aus) |
+| Ereignis | Typ     | Kommentar                                                                            |
+| -------- | ------- | ------------------------------------------------------------------------------------ |
+| `INITO`  | `EInit` | Bestätigung der Initialisierung (gibt `QO` und `STATUS` aus)                         |
+| `CNF`    | `Event` | Bestätigung – Pool-Nachladen abgeschlossen (gibt `QO`, `STATUS` und `s16Result` aus) |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `QI` | `BOOL` | Quality Input: `TRUE` schaltet den Dienst aktiv |
+| Name           | Typ      | Kommentar                                       |
+| -------------- | -------- | ----------------------------------------------- |
+| `QI`           | `BOOL`   | Quality Input: `TRUE` schaltet den Dienst aktiv |
 | `poolFileName` | `STRING` | Pfad zur Pool-Datei (z. B. `pools/pool_de.iop`) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| `QO` | `BOOL` | Quality Output: `TRUE`, wenn das Nachladen erfolgreich war |
-| `STATUS` | `STRING` | Dienststatus (z. B. Fehlermeldung oder Erfolgsmeldung) |
-| `s16Result` | `INT` | Rückgabewert: `0` = `E_NO_ERR` (Erfolg), negative Werte entsprechen Fehlercodes |
+| Name        | Typ      | Kommentar                                                                       |
+| ----------- | -------- | ------------------------------------------------------------------------------- |
+| `QO`        | `BOOL`   | Quality Output: `TRUE`, wenn das Nachladen erfolgreich war                      |
+| `STATUS`    | `STRING` | Dienststatus (z. B. Fehlermeldung oder Erfolgsmeldung)                          |
+| `s16Result` | `INT`    | Rückgabewert: `0` = `E_NO_ERR` (Erfolg), negative Werte entsprechen Fehlercodes |
 
 ### **Adapter**
 
@@ -68,13 +68,13 @@ Der Baustein kapselt die ISOBUS-Funktion `VTC_PoolReload()`. Der Ablauf gliedert
 
 Der Baustein kann folgende grundlegende Zustände durchlaufen:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **IDLE** | Warten auf ein INIT-Ereignis. |
-| **INIT_PENDING** | Initialisierung wird ausgeführt; nach Abschluss wird `INITO` gesendet. |
-| **READY** | Nach erfolgreicher Initialisierung bereit für `REQ`. |
-| **REQ_PENDING** | Pool-Nachladen läuft; nach Abschluss wird `CNF` gesendet. |
-| **ERROR** | Bei fehlgeschlagener Initialisierung oder Nachladen wird ein Fehlerstatus gemeldet und der Baustein verharrt im Fehlerzustand, bis ein erneutes INIT erfolgt. |
+| Zustand          | Beschreibung                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE**         | Warten auf ein INIT-Ereignis.                                                                                                                                 |
+| **INIT_PENDING** | Initialisierung wird ausgeführt; nach Abschluss wird `INITO` gesendet.                                                                                        |
+| **READY**        | Nach erfolgreicher Initialisierung bereit für `REQ`.                                                                                                          |
+| **REQ_PENDING**  | Pool-Nachladen läuft; nach Abschluss wird `CNF` gesendet.                                                                                                     |
+| **ERROR**        | Bei fehlgeschlagener Initialisierung oder Nachladen wird ein Fehlerstatus gemeldet und der Baustein verharrt im Fehlerzustand, bis ein erneutes INIT erfolgt. |
 
 ## Anwendungsszenarien
 
@@ -84,10 +84,10 @@ Der Baustein kann folgende grundlegende Zustände durchlaufen:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung |
-| ---------- | -------------- |
-| `PoolLoader` | Lädt den Pool nur beim Systemstart; kein Nachladen zur Laufzeit. |
-| `PoolActivate` | Schaltet zwischen bereits geladenen Pools um, erfordert aber vorheriges Laden. |
+| Baustein         | Beschreibung                                                                                                |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| `PoolLoader`     | Lädt den Pool nur beim Systemstart; kein Nachladen zur Laufzeit.                                            |
+| `PoolActivate`   | Schaltet zwischen bereits geladenen Pools um, erfordert aber vorheriges Laden.                              |
 | **`PoolReload`** | Vereint Laden und Aktualisieren in einem Schritt und ermöglicht dynamisches Nachladen während der Laufzeit. |
 
 ## Fazit

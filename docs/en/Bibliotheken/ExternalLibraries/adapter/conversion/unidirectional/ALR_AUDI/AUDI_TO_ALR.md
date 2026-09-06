@@ -12,34 +12,34 @@ The **AUDI_TO_ALR** function block is a composite module that converts a unidire
 
 ### **Event Inputs**
 
-| Name | Comment |
-|------|-----------|
+| Name         | Comment                                                            |
+| ------------ | ------------------------------------------------------------------ |
 | `AUDI_IN.E1` | Event input of the AUDI adapter (passed through to the ALR output) |
 
 ### **Event Outputs**
 
-| Name | Comment |
-|------|-----------|
+| Name         | Comment                                                         |
+| ------------ | --------------------------------------------------------------- |
 | `ALR_OUT.E1` | Event output of the ALR adapter (inherited from the AUDI input) |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| `AUDI_IN.D1` | `UDINT` | Data input of the AUDI adapter (passed directly as LREAL) |
+| Name         | Data Type | Comment                                                   |
+| ------------ | --------- | --------------------------------------------------------- |
+| `AUDI_IN.D1` | `UDINT`   | Data input of the AUDI adapter (passed directly as LREAL) |
 
 ### **Data Outputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| `ALR_OUT.D1` | `LREAL` | Data output of the ALR adapter (value from the AUDI input, type-converted) |
+| Name         | Data Type | Comment                                                                    |
+| ------------ | --------- | -------------------------------------------------------------------------- |
+| `ALR_OUT.D1` | `LREAL`   | Data output of the ALR adapter (value from the AUDI input, type-converted) |
 
 ### **Adapter**
 
-| Direction | Name | Type | Comment |
-| ---------- | ------ | ----- | ----------- |
+| Direction      | Name      | Type                                   | Comment                                          |
+| -------------- | --------- | -------------------------------------- | ------------------------------------------------ |
 | Socket (Input) | `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Receives the UDINT data and the associated event |
-| Plug (Output) | `ALR_OUT` | `adapter::types::unidirectional::ALR` | Provides the converted LREAL data and the event |
+| Plug (Output)  | `ALR_OUT` | `adapter::types::unidirectional::ALR`  | Provides the converted LREAL data and the event  |
 
 ## Functionality
 

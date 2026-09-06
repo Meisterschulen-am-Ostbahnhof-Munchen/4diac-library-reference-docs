@@ -33,11 +33,11 @@ Output events occur via the PLUG adapters `DWORD_00.E1` and `DWORD_01.E1` as soo
 
 ### **Adapter**
 
-| Type | Name | Direction | Comment |
-| ------- | ------------ | ---------- | ------------------------------------ |
-| SOCKET | `IN` | Input | AL (LWORD) – Source Adapter |
-| PLUG | `DWORD_00` | Output | AD (DWORD) – First Destination Adapter |
-| PLUG | `DWORD_01` | Output | AD (DWORD) – Second Destination Adapter |
+| Type   | Name       | Direction | Comment                                 |
+| ------ | ---------- | --------- | --------------------------------------- |
+| SOCKET | `IN`       | Input     | AL (LWORD) – Source Adapter             |
+| PLUG   | `DWORD_00` | Output    | AD (DWORD) – First Destination Adapter  |
+| PLUG   | `DWORD_01` | Output    | AD (DWORD) – Second Destination Adapter |
 
 ## Functionality
 

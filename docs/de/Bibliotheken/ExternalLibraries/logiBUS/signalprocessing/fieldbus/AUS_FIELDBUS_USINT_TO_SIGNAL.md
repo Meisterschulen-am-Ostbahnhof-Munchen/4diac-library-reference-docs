@@ -12,37 +12,37 @@ Der Funktionsblock `AUS_FIELDBUS_USINT_TO_SIGNAL` dient der Weitergabe eines USI
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Beschreibung |
-|-------------|--------------|
-| `IN.E1` | Über den Adapter `IN` (Socket) eingehendes Ereignis, das die Verarbeitung anstößt. |
+| Bezeichnung | Beschreibung                                                                       |
+| ----------- | ---------------------------------------------------------------------------------- |
+| `IN.E1`     | Über den Adapter `IN` (Socket) eingehendes Ereignis, das die Verarbeitung anstößt. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Beschreibung |
-|-------------|--------------|
-| `OUT.E1` | Über den Adapter `OUT` (Plug) ausgegebenes Ereignis nach erfolgreicher Spiegelung des gültigen Signals. |
-| `VALID.E1` | Über den Adapter `VALID` (Plug) ausgegebenes Ereignis nach Aktualisierung des Gültigkeitsstatus. |
+| Bezeichnung | Beschreibung                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| `OUT.E1`    | Über den Adapter `OUT` (Plug) ausgegebenes Ereignis nach erfolgreicher Spiegelung des gültigen Signals. |
+| `VALID.E1`  | Über den Adapter `VALID` (Plug) ausgegebenes Ereignis nach Aktualisierung des Gültigkeitsstatus.        |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Typ | Beschreibung |
-|-------------|-----|--------------|
-| `IN.D1` | USINT (implizit) | Eingangsdatenwert, der auf Gültigkeit geprüft und gespiegelt wird. |
+| Bezeichnung | Typ              | Beschreibung                                                       |
+| ----------- | ---------------- | ------------------------------------------------------------------ |
+| `IN.D1`     | USINT (implizit) | Eingangsdatenwert, der auf Gültigkeit geprüft und gespiegelt wird. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Typ | Beschreibung |
-|-------------|-----|--------------|
-| `OUT.D1` | (analog zu IN) | Ausgangsdatenwert, der bei gültigem Signal den Eingangswert widerspiegelt. |
-| `VALID.D1` | BOOL | Gültigkeitsflag: `TRUE` wenn das Eingangssignal als gültig erkannt wurde, sonst `FALSE`. |
+| Bezeichnung | Typ            | Beschreibung                                                                             |
+| ----------- | -------------- | ---------------------------------------------------------------------------------------- |
+| `OUT.D1`    | (analog zu IN) | Ausgangsdatenwert, der bei gültigem Signal den Eingangswert widerspiegelt.               |
+| `VALID.D1`  | BOOL           | Gültigkeitsflag: `TRUE` wenn das Eingangssignal als gültig erkannt wurde, sonst `FALSE`. |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AUS` | Socket | Empfängt das Rohsignal (Ereignis + Daten) vom Feldbus. |
-| `OUT` | `adapter::types::unidirectional::AUS` | Plug | Gibt das validierte Signal an nachgelagerte Komponenten weiter. |
-| `VALID` | `adapter::types::unidirectional::AX` | Plug | Stellt den Gültigkeitsstatus (Ereignis + BOOL) zur Verfügung. |
+| Name    | Typ                                   | Richtung | Beschreibung                                                    |
+| ------- | ------------------------------------- | -------- | --------------------------------------------------------------- |
+| `IN`    | `adapter::types::unidirectional::AUS` | Socket   | Empfängt das Rohsignal (Ereignis + Daten) vom Feldbus.          |
+| `OUT`   | `adapter::types::unidirectional::AUS` | Plug     | Gibt das validierte Signal an nachgelagerte Komponenten weiter. |
+| `VALID` | `adapter::types::unidirectional::AX`  | Plug     | Stellt den Gültigkeitsstatus (Ereignis + BOOL) zur Verfügung.   |
 
 ## Funktionsweise
 
@@ -65,10 +65,10 @@ Zusammengefasst: Der Ausgang `OUT` spiegelt den Eingang `IN`, sofern das Signal 
 
 Der interne Zustand wird durch das D-Flip-Flop `E_D_FF` definiert. Es besitzt zwei Zustände:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand               | Beschreibung                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ |
 | `Q = FALSE` (Initial) | Ausgang `VALID.D1` zeigt „ungültig“ an. Nach jedem Ereignis wird der aktuelle `VALID`-Wert (`D`) übernommen. |
-| `Q = TRUE` | Ausgang `VALID.D1` zeigt „gültig“ an. Der Zustand bleibt bis zum nächsten Ereignis stabil. |
+| `Q = TRUE`            | Ausgang `VALID.D1` zeigt „gültig“ an. Der Zustand bleibt bis zum nächsten Ereignis stabil.                   |
 
 Zustandsübergänge erfolgen ausschließlich bei jeder steigenden Flanke des Taktsignals (Ereignis `CNF` des Fieldbus-Bausteins).
 

@@ -31,9 +31,9 @@ The function block **AD_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AD | Plug (Output) | Buffered received DWORD value |
+| Adapter | Type                               | Direction     | Description                   |
+| ------- | ---------------------------------- | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::AD | Plug (Output) | Buffered received DWORD value |
 
 ## Functionality
 

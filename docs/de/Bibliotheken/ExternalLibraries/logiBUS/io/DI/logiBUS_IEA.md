@@ -12,37 +12,37 @@ Der Composite-Funktionsblock `logiBUS_IEA` dient der ereignisgesteuerten Verarbe
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar | Mitgeführte Daten |
-|------|-----|-----------|-------------------|
+| Name   | Typ   | Kommentar              | Mitgeführte Daten                     |
+| ------ | ----- | ---------------------- | ------------------------------------- |
 | `INIT` | EInit | Service Initialization | `QI`, `PARAMS`, `Input`, `InputEvent` |
-| `REQ` | Event | Service Request | `QI` |
+| `REQ`  | Event | Service Request        | `QI`                                  |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar | Mitgeführte Daten |
-|------|-----|-----------|-------------------|
-| `INITO` | EInit | Initialization Confirm | `QO`, `STATUS` |
+| Name    | Typ   | Kommentar              | Mitgeführte Daten |
+| ------- | ----- | ---------------------- | ----------------- |
+| `INITO` | EInit | Initialization Confirm | `QO`, `STATUS`    |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar | Initialwert |
-| ------ | ----- | ----------- | ------------- |
-| `QI` | BOOL | Event Input Qualifier | – |
-| `PARAMS` | STRING | Service Parameters | – |
-| `Input` | `logiBUS::io::DI::logiBUS_DI_S` | Identifiziert den Eingang (z. B. Input_I1..I8) | `logiBUS_DI::Invalid` |
+| Name         | Typ                                    | Kommentar                                                               | Initialwert                  |
+| ------------ | -------------------------------------- | ----------------------------------------------------------------------- | ---------------------------- |
+| `QI`         | BOOL                                   | Event Input Qualifier                                                   | –                            |
+| `PARAMS`     | STRING                                 | Service Parameters                                                      | –                            |
+| `Input`      | `logiBUS::io::DI::logiBUS_DI_S`        | Identifiziert den Eingang (z. B. Input_I1..I8)                          | `logiBUS_DI::Invalid`        |
 | `InputEvent` | `logiBUS::io::DI::logiBUS_DI_Events_S` | Identifiziert das Ereignis (z. B. Down, Up, Single-Click, Double-Click) | `logiBUS_DI_Events::Invalid` |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `QO` | BOOL | Event Output Qualifier |
-| `STATUS` | STRING | Service Status |
+| Name     | Typ    | Kommentar              |
+| -------- | ------ | ---------------------- |
+| `QO`     | BOOL   | Event Output Qualifier |
+| `STATUS` | STRING | Service Status         |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ                                  | Kommentar                |
+| ---- | ------------------------------------ | ------------------------ |
 | `IN` | `adapter::types::unidirectional::AE` | Indication from Resource |
 
 Der Adapter `IN` nimmt die vom internen Baustein erzeugten Ereignisse (`DI.IND` und `DI.CNF`) entgegen und leitet sie als „Indication“ an die übergeordnete Ressource weiter.
@@ -87,11 +87,11 @@ Die Zustandsübergänge werden durch die Ereignisse `IND` und `CNF` sichtbar und
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| FB-Typ | Eigenschaft |
-| -------- | ------------- |
-| `logiBUS_DI` | Reiner Digitaleingang ohne Ereignisdetektion; einfacher Pegelabruf |
-| `logiBUS_IEA` | **Dieser FB:** Ereignisbasierte Eingabe mit Initialisierung und Adapter für Indikation |
-| `logiBUS_DI_Events` | Ereignisdetektion auf einem einzelnen Eingang, aber ohne Initialisierungslogik |
+| FB-Typ              | Eigenschaft                                                                            |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| `logiBUS_DI`        | Reiner Digitaleingang ohne Ereignisdetektion; einfacher Pegelabruf                     |
+| `logiBUS_IEA`       | **Dieser FB:** Ereignisbasierte Eingabe mit Initialisierung und Adapter für Indikation |
+| `logiBUS_DI_Events` | Ereignisdetektion auf einem einzelnen Eingang, aber ohne Initialisierungslogik         |
 
 Gegenüber dem einfachen Digitaleingang bietet `logiBUS_IEA` eine vollständige Initialisierungsschnittstelle und eine standardisierte Ereignissignalisierung über einen Adapter. Im Vergleich zu einem reinen Ereignisbaustein enthält er zusätzlich die INIT-Funktionalität, die für die Inbetriebnahme eines logiBUS-Teilnehmers erforderlich ist.
 

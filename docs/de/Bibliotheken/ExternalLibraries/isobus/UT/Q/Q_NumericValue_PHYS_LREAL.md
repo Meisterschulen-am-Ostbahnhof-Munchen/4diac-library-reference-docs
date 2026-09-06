@@ -14,34 +14,34 @@ Der Baustein kapselt die notwendigen Schritte der physikalischen Umrechnung und 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `INIT`   | Initialisiert den Baustein mit den Objekt-Pool-Eigenschaften (`stObj`). |
+| Ereignis | Beschreibung                                                                                 |
+| -------- | -------------------------------------------------------------------------------------------- |
+| `INIT`   | Initialisiert den Baustein mit den Objekt-Pool-Eigenschaften (`stObj`).                      |
 | `REQ`    | Startet die Verarbeitung: der physikalische Wert (`lrPhys`) wird an das Zielobjekt gesendet. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `INITO`  | Quittiert die erfolgreiche Initialisierung. |
+| Ereignis | Beschreibung                                                         |
+| -------- | -------------------------------------------------------------------- |
+| `INITO`  | Quittiert die erfolgreiche Initialisierung.                          |
 | `CNF`    | Quittiert die Ausführung des Befehls; die Ausgangsdaten sind gültig. |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ | Beschreibung |
-|--------|-----|--------------|
-| `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Objekt-Pool-Eigenschaften (Objekt‑ID, Skalierung, Offset, Dezimalstellen). Standardwert: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`. |
-| `lrPhys` | `LREAL` | Der physikalische Wert (z. B. Druck, Temperatur), der gesendet werden soll. Hinweis: Vor der Übergabe sollte der Wert ggf. mit `F_PHYS_LREAL_TO_RAW` umgerechnet werden; der Baustein führt dies intern automatisch durch. |
+| Name     | Typ                                                     | Beschreibung                                                                                                                                                                                                               |
+| -------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `stObj`  | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Objekt-Pool-Eigenschaften (Objekt‑ID, Skalierung, Offset, Dezimalstellen). Standardwert: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`.                                                        |
+| `lrPhys` | `LREAL`                                                 | Der physikalische Wert (z. B. Druck, Temperatur), der gesendet werden soll. Hinweis: Vor der Übergabe sollte der Wert ggf. mit `F_PHYS_LREAL_TO_RAW` umgerechnet werden; der Baustein führt dies intern automatisch durch. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| `STATUS` | `STRING` | Statusmeldung des durchgeführten Dienstes. |
-| `u32OldValue` | `UDINT` | Alter Rohwert des Objekts vor der Änderung. |
-| `s16result` | `INT` | Rückgabewert (siehe `Q_NumericValue`). |
-| `xOver` | `BOOL` | `TRUE`, wenn der physikalische Wert den oberen ISOBUS‑Grenzwert überschreitet. |
-| `xUnder` | `BOOL` | `TRUE`, wenn der physikalische Wert den unteren ISOBUS‑Grenzwert unterschreitet. |
+| Name          | Typ      | Beschreibung                                                                     |
+| ------------- | -------- | -------------------------------------------------------------------------------- |
+| `STATUS`      | `STRING` | Statusmeldung des durchgeführten Dienstes.                                       |
+| `u32OldValue` | `UDINT`  | Alter Rohwert des Objekts vor der Änderung.                                      |
+| `s16result`   | `INT`    | Rückgabewert (siehe `Q_NumericValue`).                                           |
+| `xOver`       | `BOOL`   | `TRUE`, wenn der physikalische Wert den oberen ISOBUS‑Grenzwert überschreitet.   |
+| `xUnder`      | `BOOL`   | `TRUE`, wenn der physikalische Wert den unteren ISOBUS‑Grenzwert unterschreitet. |
 
 ### **Adapter**
 
@@ -74,10 +74,10 @@ Die Ausgänge `STATUS`, `u32OldValue` und `s16result` stammen direkt von `Q_Nume
 
 Der Baustein besitzt keinen expliziten Zustandsautomaten im Sinne einer ECC, sondern arbeitet ereignisgesteuert nach folgender Logik:
 
-| Zustand / Ablauf | Beschreibung |
-| ------------------ | -------------- |
-| **Initialisierung** | Nach einem `INIT`-Ereignis werden die Objekt‑Eigenschaften intern gespeichert. Anschließend wird `INITO` gesendet. |
-| **Befehl senden** | Nach einem `REQ`-Ereignis wird der physikalische Wert umgerechnet, der Befehl abgesetzt und nach Abschluss `CNF` mit den Ergebnisdaten gesendet. |
+| Zustand / Ablauf     | Beschreibung                                                                                                                                                                                                    |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Initialisierung**  | Nach einem `INIT`-Ereignis werden die Objekt‑Eigenschaften intern gespeichert. Anschließend wird `INITO` gesendet.                                                                                              |
+| **Befehl senden**    | Nach einem `REQ`-Ereignis wird der physikalische Wert umgerechnet, der Befehl abgesetzt und nach Abschluss `CNF` mit den Ergebnisdaten gesendet.                                                                |
 | **Fehlerbehandlung** | Tritt bei der Umrechnung ein Über‑/Unterlauf auf, werden `xOver` bzw. `xUnder` bereits vor dem Absetzen des Befehls gesetzt. Ein fehlerhafter Befehl wird durch `s16result` und die Statusmeldung signalisiert. |
 
 ## Anwendungsszenarien

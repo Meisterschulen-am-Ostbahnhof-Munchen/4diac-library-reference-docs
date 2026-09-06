@@ -28,10 +28,10 @@ Der Funktionsblock `AL_TO_ALI` ist ein zusammengesetzter Baustein (Composite FB)
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Datentyp | Beschreibung |
-|-----|------|----------|----------|--------------|
-| `adapter::types::unidirectional::AL` | `AL_IN` | Socket (Eingang) | LWORD | LWORD-Adapter als Eingangsschnittstelle. Stellt die zu konvertierenden Daten bereit. |
-| `adapter::types::unidirectional::ALI` | `ALI_OUT` | Plug (Ausgang) | LINT | LINT-Adapter als Ausgangsschnittstelle. Liefert die konvertierten Daten. |
+| Typ                                   | Name      | Richtung         | Datentyp | Beschreibung                                                                         |
+| ------------------------------------- | --------- | ---------------- | -------- | ------------------------------------------------------------------------------------ |
+| `adapter::types::unidirectional::AL`  | `AL_IN`   | Socket (Eingang) | LWORD    | LWORD-Adapter als Eingangsschnittstelle. Stellt die zu konvertierenden Daten bereit. |
+| `adapter::types::unidirectional::ALI` | `ALI_OUT` | Plug (Ausgang)   | LINT     | LINT-Adapter als Ausgangsschnittstelle. Liefert die konvertierten Daten.             |
 
 ## Funktionsweise
 

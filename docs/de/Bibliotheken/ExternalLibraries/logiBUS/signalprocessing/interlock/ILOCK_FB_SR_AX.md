@@ -12,47 +12,47 @@ Der Funktionsblock **ILOCK_FB_SR_AX** realisiert ein set-dominantes (Set-vorrang
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datenherkunft | Beschreibung |
-| ---------- | --------------- | -------------- |
-| `SET1.E1` | Socket SET1 | Setzt den Ausgang Q1 (set-dominant) |
-| `RESET.E1` | Socket RESET | Setzt den Ausgang Q1 zurück (nur wirksam, wenn SET1 = 0) |
-| `ILOCK_IN.EO1` | Socket ILOCK_IN | Empfängt das Propagationsereignis von der übergeordneten Interlock-Stufe |
-| `ILOCK_OUT.EI1` | Plug ILOCK_OUT | Empfängt ein Ereignis von der untergeordneten Interlock-Stufe (z. B. Bestätigung) |
+| Ereignis        | Datenherkunft   | Beschreibung                                                                      |
+| --------------- | --------------- | --------------------------------------------------------------------------------- |
+| `SET1.E1`       | Socket SET1     | Setzt den Ausgang Q1 (set-dominant)                                               |
+| `RESET.E1`      | Socket RESET    | Setzt den Ausgang Q1 zurück (nur wirksam, wenn SET1 = 0)                          |
+| `ILOCK_IN.EO1`  | Socket ILOCK_IN | Empfängt das Propagationsereignis von der übergeordneten Interlock-Stufe          |
+| `ILOCK_OUT.EI1` | Plug ILOCK_OUT  | Empfängt ein Ereignis von der untergeordneten Interlock-Stufe (z. B. Bestätigung) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datenherkunft | Beschreibung |
-| ---------- | --------------- | -------------- |
-| `Q1.E1` | Plug Q1 | Ausgangsereignis nach jeder Aktualisierung von Q1 |
-| `ILOCK_IN.EI1` | Socket ILOCK_IN | Sendet Propagationsereignis an die übergeordnete Stufe |
-| `ILOCK_OUT.EO1` | Plug ILOCK_OUT | Sendet Propagationsereignis an die untergeordnete Stufe |
+| Ereignis        | Datenherkunft   | Beschreibung                                            |
+| --------------- | --------------- | ------------------------------------------------------- |
+| `Q1.E1`         | Plug Q1         | Ausgangsereignis nach jeder Aktualisierung von Q1       |
+| `ILOCK_IN.EI1`  | Socket ILOCK_IN | Sendet Propagationsereignis an die übergeordnete Stufe  |
+| `ILOCK_OUT.EO1` | Plug ILOCK_OUT  | Sendet Propagationsereignis an die untergeordnete Stufe |
 
 ### **Daten-Eingänge**
 
-| Daten | Typ | Beschreibung |
-| ------- | ----- | -------------- |
-| `SET1.D1` | BOOL | Set-Eingang (dominant) |
-| `RESET.D1` | BOOL | Reset-Eingang (aktiv, wenn SET1=0) |
-| `ILOCK_IN.DO1` | BOOL | Daten von der übergeordneten Interlock-Stufe (Propagationssignal) |
-| `ILOCK_OUT.DI1` | BOOL | Daten von der untergeordneten Interlock-Stufe (Rückkopplung) |
+| Daten           | Typ  | Beschreibung                                                      |
+| --------------- | ---- | ----------------------------------------------------------------- |
+| `SET1.D1`       | BOOL | Set-Eingang (dominant)                                            |
+| `RESET.D1`      | BOOL | Reset-Eingang (aktiv, wenn SET1=0)                                |
+| `ILOCK_IN.DO1`  | BOOL | Daten von der übergeordneten Interlock-Stufe (Propagationssignal) |
+| `ILOCK_OUT.DI1` | BOOL | Daten von der untergeordneten Interlock-Stufe (Rückkopplung)      |
 
 ### **Daten-Ausgänge**
 
-| Daten | Typ | Beschreibung |
-| ------- | ----- | -------------- |
-| `Q1.D1` | BOOL | Ausgang des Latches (gesetzt durch Set oder Interlock) |
-| `ILOCK_IN.DI1` | BOOL | Propagiertes Set-Signal an die übergeordnete Stufe |
-| `ILOCK_OUT.DO1` | BOOL | Propagiertes Set-Signal an die untergeordnete Stufe |
+| Daten           | Typ  | Beschreibung                                           |
+| --------------- | ---- | ------------------------------------------------------ |
+| `Q1.D1`         | BOOL | Ausgang des Latches (gesetzt durch Set oder Interlock) |
+| `ILOCK_IN.DI1`  | BOOL | Propagiertes Set-Signal an die übergeordnete Stufe     |
+| `ILOCK_OUT.DO1` | BOOL | Propagiertes Set-Signal an die untergeordnete Stufe    |
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `Q1` | AX (unidirectional) | Plug | Ausgang des Latches |
-| `ILOCK_OUT` | AX2 (bidirectional) | Plug | Interlock-Schnittstelle zur untergeordneten Stufe |
-| `SET1` | AX (unidirectional) | Socket | Set-Eingang |
-| `RESET` | AX (unidirectional) | Socket | Reset-Eingang |
-| `ILOCK_IN` | AX2 (bidirectional) | Socket | Interlock-Schnittstelle zur übergeordneten Stufe |
+| Adapter     | Typ                 | Richtung | Beschreibung                                      |
+| ----------- | ------------------- | -------- | ------------------------------------------------- |
+| `Q1`        | AX (unidirectional) | Plug     | Ausgang des Latches                               |
+| `ILOCK_OUT` | AX2 (bidirectional) | Plug     | Interlock-Schnittstelle zur untergeordneten Stufe |
+| `SET1`      | AX (unidirectional) | Socket   | Set-Eingang                                       |
+| `RESET`     | AX (unidirectional) | Socket   | Reset-Eingang                                     |
+| `ILOCK_IN`  | AX2 (bidirectional) | Socket   | Interlock-Schnittstelle zur übergeordneten Stufe  |
 
 ## Funktionsweise
 

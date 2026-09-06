@@ -12,24 +12,24 @@ Der Funktionsblock `sequence_E_08_AX_DM` realisiert eine ereignisgesteuerte Abla
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-| ---------- | -------------- |
-| `START_S1` | Wechsel vom Startzustand zu Zustand 1 (State_01) |
-| `S1_S2` | Wechsel von Zustand 1 zu Zustand 2 (State_02) |
-| `S2_S3` | Wechsel von Zustand 2 zu Zustand 3 (State_03) |
-| `S3_S4` | Wechsel von Zustand 3 zu Zustand 4 (State_04) |
-| `S4_S5` | Wechsel von Zustand 4 zu Zustand 5 (State_05) |
-| `S5_S6` | Wechsel von Zustand 5 zu Zustand 6 (State_06) |
-| `S6_S7` | Wechsel von Zustand 6 zu Zustand 7 (State_07) |
-| `S7_S8` | Wechsel von Zustand 7 zu Zustand 8 (State_08) |
-| `S8_START` | Wechsel von Zustand 8 zum Startzustand (State_00) |
-| `RESET` | Rücksetzen aus jedem Zustand in den Startzustand (State_00) |
+| Ereignis   | Beschreibung                                                |
+| ---------- | ----------------------------------------------------------- |
+| `START_S1` | Wechsel vom Startzustand zu Zustand 1 (State_01)            |
+| `S1_S2`    | Wechsel von Zustand 1 zu Zustand 2 (State_02)               |
+| `S2_S3`    | Wechsel von Zustand 2 zu Zustand 3 (State_03)               |
+| `S3_S4`    | Wechsel von Zustand 3 zu Zustand 4 (State_04)               |
+| `S4_S5`    | Wechsel von Zustand 4 zu Zustand 5 (State_05)               |
+| `S5_S6`    | Wechsel von Zustand 5 zu Zustand 6 (State_06)               |
+| `S6_S7`    | Wechsel von Zustand 6 zu Zustand 7 (State_07)               |
+| `S7_S8`    | Wechsel von Zustand 7 zu Zustand 8 (State_08)               |
+| `S8_START` | Wechsel von Zustand 8 zum Startzustand (State_00)           |
+| `RESET`    | Rücksetzen aus jedem Zustand in den Startzustand (State_00) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Mit Variable | Beschreibung |
-|----------|--------------|--------------|
-| `CNF` | `STATE_NR` | Bestätigung der Zustandsänderung; liefert gleichzeitig die aktuelle Zustandsnummer |
+| Ereignis | Mit Variable | Beschreibung                                                                       |
+| -------- | ------------ | ---------------------------------------------------------------------------------- |
+| `CNF`    | `STATE_NR`   | Bestätigung der Zustandsänderung; liefert gleichzeitig die aktuelle Zustandsnummer |
 
 ### **Daten-Eingänge**
 
@@ -37,23 +37,23 @@ Keine Daten-Eingänge vorhanden.
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
+| Variable   | Typ  | Beschreibung                                                          |
+| ---------- | ---- | --------------------------------------------------------------------- |
 | `STATE_NR` | SINT | Aktuelle Zustandsnummer (0 = State_00, 1 = State_01, …, 8 = State_08) |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Plug | `DO_S1` | unidirectional::AX | Ausgang für Zustand 1 (State_01 aktiv) |
-| Plug | `DO_S2` | unidirectional::AX | Ausgang für Zustand 2 (State_02 aktiv) |
-| Plug | `DO_S3` | unidirectional::AX | Ausgang für Zustand 3 (State_03 aktiv) |
-| Plug | `DO_S4` | unidirectional::AX | Ausgang für Zustand 4 (State_04 aktiv) |
-| Plug | `DO_S5` | unidirectional::AX | Ausgang für Zustand 5 (State_05 aktiv) |
-| Plug | `DO_S6` | unidirectional::AX | Ausgang für Zustand 6 (State_06 aktiv) |
-| Plug | `DO_S7` | unidirectional::AX | Ausgang für Zustand 7 (State_07 aktiv) |
-| Plug | `DO_S8` | unidirectional::AX | Ausgang für Zustand 8 (State_08 aktiv) |
-| Socket | `DM` | unidirectional::AX | Totmannschalter (Deadman); liefert das Ereignis `DM.E1` und den Datenwert `DM.D1` |
+| Richtung | Name    | Typ                | Beschreibung                                                                      |
+| -------- | ------- | ------------------ | --------------------------------------------------------------------------------- |
+| Plug     | `DO_S1` | unidirectional::AX | Ausgang für Zustand 1 (State_01 aktiv)                                            |
+| Plug     | `DO_S2` | unidirectional::AX | Ausgang für Zustand 2 (State_02 aktiv)                                            |
+| Plug     | `DO_S3` | unidirectional::AX | Ausgang für Zustand 3 (State_03 aktiv)                                            |
+| Plug     | `DO_S4` | unidirectional::AX | Ausgang für Zustand 4 (State_04 aktiv)                                            |
+| Plug     | `DO_S5` | unidirectional::AX | Ausgang für Zustand 5 (State_05 aktiv)                                            |
+| Plug     | `DO_S6` | unidirectional::AX | Ausgang für Zustand 6 (State_06 aktiv)                                            |
+| Plug     | `DO_S7` | unidirectional::AX | Ausgang für Zustand 7 (State_07 aktiv)                                            |
+| Plug     | `DO_S8` | unidirectional::AX | Ausgang für Zustand 8 (State_08 aktiv)                                            |
+| Socket   | `DM`    | unidirectional::AX | Totmannschalter (Deadman); liefert das Ereignis `DM.E1` und den Datenwert `DM.D1` |
 
 ## Funktionsweise
 
@@ -74,19 +74,19 @@ Der Funktionsblock arbeitet als endlicher Automat mit folgenden Zuständen: `xST
 
 ## Zustandsübersicht
 
-| Zustand | Bezeichnung | Ausgang aktiv | Transitionen |
-| --------- | ------------- | --------------- | -------------- |
-| `xSTART` | Initialzustand | keiner | → `sState_01` bei `START_S1`; Selbsttransition bei `DM.E1` |
-| `sState_01` | Sequenzschritt 1 | `DO_S1` | → `sState_02` bei `S1_S2`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_02` | Sequenzschritt 2 | `DO_S2` | → `sState_03` bei `S2_S3`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_03` | Sequenzschritt 3 | `DO_S3` | → `sState_04` bei `S3_S4`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_04` | Sequenzschritt 4 | `DO_S4` | → `sState_05` bei `S4_S5`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_05` | Sequenzschritt 5 | `DO_S5` | → `sState_06` bei `S5_S6`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_06` | Sequenzschritt 6 | `DO_S6` | → `sState_07` bei `S6_S7`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_07` | Sequenzschritt 7 | `DO_S7` | → `sState_08` bei `S7_S8`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_08` | Sequenzschritt 8 | `DO_S8` | → `sState_00` bei `S8_START`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
-| `sState_00` | Ruhezustand (nach Sequenz) | keiner | → `sState_01` bei `START_S1`; Selbsttrans. bei `DM.E1` |
-| `sRESET` | Rückstellzustand | alle deaktiviert | Automatisch → `sState_00` |
+| Zustand     | Bezeichnung                | Ausgang aktiv    | Transitionen                                                                   |
+| ----------- | -------------------------- | ---------------- | ------------------------------------------------------------------------------ |
+| `xSTART`    | Initialzustand             | keiner           | → `sState_01` bei `START_S1`; Selbsttransition bei `DM.E1`                     |
+| `sState_01` | Sequenzschritt 1           | `DO_S1`          | → `sState_02` bei `S1_S2`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_02` | Sequenzschritt 2           | `DO_S2`          | → `sState_03` bei `S2_S3`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_03` | Sequenzschritt 3           | `DO_S3`          | → `sState_04` bei `S3_S4`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_04` | Sequenzschritt 4           | `DO_S4`          | → `sState_05` bei `S4_S5`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_05` | Sequenzschritt 5           | `DO_S5`          | → `sState_06` bei `S5_S6`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_06` | Sequenzschritt 6           | `DO_S6`          | → `sState_07` bei `S6_S7`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_07` | Sequenzschritt 7           | `DO_S7`          | → `sState_08` bei `S7_S8`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET`    |
+| `sState_08` | Sequenzschritt 8           | `DO_S8`          | → `sState_00` bei `S8_START`; Selbsttrans. bei `DM.E1`; → `sRESET` bei `RESET` |
+| `sState_00` | Ruhezustand (nach Sequenz) | keiner           | → `sState_01` bei `START_S1`; Selbsttrans. bei `DM.E1`                         |
+| `sRESET`    | Rückstellzustand           | alle deaktiviert | Automatisch → `sState_00`                                                      |
 
 ## Anwendungsszenarien
 

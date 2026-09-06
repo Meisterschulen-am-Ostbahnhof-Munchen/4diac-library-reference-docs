@@ -8,24 +8,24 @@ The function block `E_D_FF_ANY_HYS_TMIN` is a composite function block for IEC 6
 
 This block is used to filter continuous or high-frequency changes in a numerical input signal. A new output event is only generated if the signal change exceeds the defined hysteresis and a defined minimum time interval has elapsed since the last output event. This effectively prevents so-called "event flooding" in distributed control systems.
 
-| Event | Type | Description | Associated Data |
-| :--- | :--- | :--- | :--- |
-| **INIT** | EInit | Initializes the function block and sets the minimum time limit. | `Tmin` |
-| **CLK** | Event | Clock signal. When this event occurs, the value at input `D` is evaluated. | `D`, `HYSTERESIS` |
-| Event | Type | Description | Associated Data |
-| :--- | :--- | :--- | :--- |
-| **INITO** | EInit | Confirmation of successful initialization. | None |
-| **EO** | Event | Triggered when a CLK event has caused a valid change to the output value `Q` and the minimum time `Tmin` has elapsed. | `Q` |
-| Variable | Type | Description |
-| :--- | :--- | :--- |
-| **D** | ANY_NUM | The input value (Data) to be stored. |
-| **HYSTERESIS** | ANY_NUM | The hysteresis band. Determines how much `D` must differ from the current output value `Q` to trigger a change. |
-| **Tmin** | TIME | The minimum time interval that must elapse between two consecutive `EO` events. |
-| Variable | Type | Description |
-| :--- | :--- | :--- |
-| **Q** | ANY_NUM | The stored and filtered output value (latched value). |
+| Event          | Type    | Description                                                                                                           | Associated Data   |
+| :------------- | :------ | :-------------------------------------------------------------------------------------------------------------------- | :---------------- |
+| **INIT**       | EInit   | Initializes the function block and sets the minimum time limit.                                                       | `Tmin`            |
+| **CLK**        | Event   | Clock signal. When this event occurs, the value at input `D` is evaluated.                                            | `D`, `HYSTERESIS` |
+| Event          | Type    | Description                                                                                                           | Associated Data   |
+| :---           | :---    | :---                                                                                                                  | :---              |
+| **INITO**      | EInit   | Confirmation of successful initialization.                                                                            | None              |
+| **EO**         | Event   | Triggered when a CLK event has caused a valid change to the output value `Q` and the minimum time `Tmin` has elapsed. | `Q`               |
+| Variable       | Type    | Description                                                                                                           |                   |
+| :---           | :---    | :---                                                                                                                  |                   |
+| **D**          | ANY_NUM | The input value (Data) to be stored.                                                                                  |                   |
+| **HYSTERESIS** | ANY_NUM | The hysteresis band. Determines how much `D` must differ from the current output value `Q` to trigger a change.       |                   |
+| **Tmin**       | TIME    | The minimum time interval that must elapse between two consecutive `EO` events.                                       |                   |
+| Variable       | Type    | Description                                                                                                           |                   |
+| :---           | :---    | :---                                                                                                                  |                   |
+| **Q**          | ANY_NUM | The stored and filtered output value (latched value).                                                                 |                   |
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

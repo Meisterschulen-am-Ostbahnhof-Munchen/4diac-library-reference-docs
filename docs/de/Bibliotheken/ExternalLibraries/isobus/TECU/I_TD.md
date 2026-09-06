@@ -12,41 +12,41 @@ Der Funktionsblock **I_TD** (Time/Date) ist ein spezieller Baustein für den ISO
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Mit Variable | Beschreibung |
-|----------|-------------|--------------|
-| `INIT`   | `QI`        | Initialisierung des Bausteins. |
+| Ereignis | Mit Variable | Beschreibung                   |
+| -------- | ------------ | ------------------------------ |
+| `INIT`   | `QI`         | Initialisierung des Bausteins. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis   | Mit Variablen | Beschreibung |
-|------------|---------------|--------------|
-| `INITO`    | `QO`, `STATUS` | Bestätigung der erfolgreichen Initialisierung. |
-| `IND`      | `QO`, `timestamp_data`, `STATUS`, `Q_timeout`, `SECONDS`, `MINUTES`, `HOURS`, `MONTH`, `DAY`, `YEAR`, `LOCAL_MINUTE_OFFSET`, `LOCAL_HOUR_OFFSET` | Anzeige eines empfangenen Zeit-/Datums-Telegramms. |
-| `TIMEOUT`  | `timestamp_timeout`, `STATUS`, `Q_timeout` | Zeitüberschreitungsereignis, falls kein gültiges Telegramm innerhalb einer erwarteten Frist eintrifft. |
+| Ereignis  | Mit Variablen                                                                                                                                    | Beschreibung                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `INITO`   | `QO`, `STATUS`                                                                                                                                   | Bestätigung der erfolgreichen Initialisierung.                                                         |
+| `IND`     | `QO`, `timestamp_data`, `STATUS`, `Q_timeout`, `SECONDS`, `MINUTES`, `HOURS`, `MONTH`, `DAY`, `YEAR`, `LOCAL_MINUTE_OFFSET`, `LOCAL_HOUR_OFFSET` | Anzeige eines empfangenen Zeit-/Datums-Telegramms.                                                     |
+| `TIMEOUT` | `timestamp_timeout`, `STATUS`, `Q_timeout`                                                                                                       | Zeitüberschreitungsereignis, falls kein gültiges Telegramm innerhalb einer erwarteten Frist eintrifft. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| `QI`     | BOOL  | Qualifier für die Initialisierung (TRUE = aktivieren). |
+| Variable | Typ  | Beschreibung                                           |
+| -------- | ---- | ------------------------------------------------------ |
+| `QI`     | BOOL | Qualifier für die Initialisierung (TRUE = aktivieren). |
 
 ### **Daten-Ausgänge**
 
-| Variable              | Typ    | Beschreibung (mit ISOBUS‑Attributen) |
-|-----------------------|--------|--------------------------------------|
-| `QO`                  | BOOL   | Ausgangsqualifier (TRUE = Betrieb bereit). |
-| `STATUS`              | STRING | Statusmeldung (z. B. Fehler oder Erfolg). |
-| `Q_timeout`           | BOOL   | Signalisiert, ob ein Timeout aufgetreten ist. |
-| `timestamp_timeout`   | DINT   | Zeitstempel des Timeouts (falls aufgetreten). |
-| `timestamp_data`      | DINT   | Zeitstempel des empfangenen Datentelegramms. |
-| `SECONDS`             | USINT  | Sekunden (Skalierung 0,25 s/bit, Offset 0). |
-| `MINUTES`             | USINT  | Minuten (Skalierung 1 min/bit, Offset 0). |
-| `HOURS`               | USINT  | Stunden (Skalierung 1 h/bit, Offset 0). |
-| `MONTH`               | USINT  | Monat (Skalierung 1 Monat/bit, Offset 0). |
-| `DAY`                 | USINT  | Tag (Skalierung 0,25 d/bit, Offset 0). |
+| Variable              | Typ    | Beschreibung (mit ISOBUS‑Attributen)                                            |
+| --------------------- | ------ | ------------------------------------------------------------------------------- |
+| `QO`                  | BOOL   | Ausgangsqualifier (TRUE = Betrieb bereit).                                      |
+| `STATUS`              | STRING | Statusmeldung (z. B. Fehler oder Erfolg).                                       |
+| `Q_timeout`           | BOOL   | Signalisiert, ob ein Timeout aufgetreten ist.                                   |
+| `timestamp_timeout`   | DINT   | Zeitstempel des Timeouts (falls aufgetreten).                                   |
+| `timestamp_data`      | DINT   | Zeitstempel des empfangenen Datentelegramms.                                    |
+| `SECONDS`             | USINT  | Sekunden (Skalierung 0,25 s/bit, Offset 0).                                     |
+| `MINUTES`             | USINT  | Minuten (Skalierung 1 min/bit, Offset 0).                                       |
+| `HOURS`               | USINT  | Stunden (Skalierung 1 h/bit, Offset 0).                                         |
+| `MONTH`               | USINT  | Monat (Skalierung 1 Monat/bit, Offset 0).                                       |
+| `DAY`                 | USINT  | Tag (Skalierung 0,25 d/bit, Offset 0).                                          |
 | `YEAR`                | UINT   | Jahr (Skalierung 1 y/bit, Offset 1985, Initialwert 0xFFFF = „nicht verfügbar”). |
-| `LOCAL_MINUTE_OFFSET` | SINT   | Lokaler Minuten‑Offset (Skalierung 1 min/bit, Offset −125). |
-| `LOCAL_HOUR_OFFSET`   | SINT   | Lokaler Stunden‑Offset (Skalierung 1 h/bit, Offset −125). |
+| `LOCAL_MINUTE_OFFSET` | SINT   | Lokaler Minuten‑Offset (Skalierung 1 min/bit, Offset −125).                     |
+| `LOCAL_HOUR_OFFSET`   | SINT   | Lokaler Stunden‑Offset (Skalierung 1 h/bit, Offset −125).                       |
 
 ### **Adapter**
 

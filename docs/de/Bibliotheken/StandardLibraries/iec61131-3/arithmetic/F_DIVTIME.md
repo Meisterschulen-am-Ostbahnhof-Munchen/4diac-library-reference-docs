@@ -80,11 +80,11 @@ Der **F_DIVTIME** ist ein spezialisierter Funktionsbaustein zur Division von Zei
 
 ## ⚖️ Vergleich mit Standard-F_DIV
 
-| Merkmal        | F_DIVTIME | F_DIV       |
-|----------------|-----------|-------------|
-| Eingangstyp 1  | TIME      | ANY_NUM     |
-| Eingangstyp 2  | ANY_NUM   | ANY_NUM     |
-| Ausgangstyp    | TIME      | ANY_NUM     |
+| Merkmal       | F_DIVTIME | F_DIV   |
+| ------------- | --------- | ------- |
+| Eingangstyp 1 | TIME      | ANY_NUM |
+| Eingangstyp 2 | ANY_NUM   | ANY_NUM |
+| Ausgangstyp   | TIME      | ANY_NUM |
 
 ## Fazit
 

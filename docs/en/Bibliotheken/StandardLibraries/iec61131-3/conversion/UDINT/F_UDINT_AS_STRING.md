@@ -10,7 +10,7 @@ The function block `F_UDINT_AS_STRING` converts an unsigned 32-bit integer value
 - **IN**: The unsigned 32-bit integer value (UDINT) to be converted to a string.
 - **OUT**: The resulting string (STRING) after conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_UDINT_AS_STRING` converts an unsigned 32-bit integer value
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 - No adapters are available.
 

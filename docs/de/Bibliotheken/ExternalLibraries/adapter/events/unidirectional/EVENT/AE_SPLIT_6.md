@@ -28,15 +28,15 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket (Eingang)** | IN | `adapter::types::unidirectional::AE` | Eingehender AE‑Adapter, dessen Signal auf alle Ausgänge vervielfältigt wird. |
-| **Plug (Ausgang)** | OUT1 | `adapter::types::unidirectional::AE` | Erster Ausgang, identische Kopie des Eingangssignals. |
-| **Plug (Ausgang)** | OUT2 | `adapter::types::unidirectional::AE` | Zweiter Ausgang, identische Kopie des Eingangssignals. |
-| **Plug (Ausgang)** | OUT3 | `adapter::types::unidirectional::AE` | Dritter Ausgang, identische Kopie des Eingangssignals. |
-| **Plug (Ausgang)** | OUT4 | `adapter::types::unidirectional::AE` | Vierter Ausgang, identische Kopie des Eingangssignals. |
-| **Plug (Ausgang)** | OUT5 | `adapter::types::unidirectional::AE` | Fünfter Ausgang, identische Kopie des Eingangssignals. |
-| **Plug (Ausgang)** | OUT6 | `adapter::types::unidirectional::AE` | Sechster Ausgang, identische Kopie des Eingangssignals. |
+| Richtung             | Name | Typ                                  | Beschreibung                                                                 |
+| -------------------- | ---- | ------------------------------------ | ---------------------------------------------------------------------------- |
+| **Socket (Eingang)** | IN   | `adapter::types::unidirectional::AE` | Eingehender AE‑Adapter, dessen Signal auf alle Ausgänge vervielfältigt wird. |
+| **Plug (Ausgang)**   | OUT1 | `adapter::types::unidirectional::AE` | Erster Ausgang, identische Kopie des Eingangssignals.                        |
+| **Plug (Ausgang)**   | OUT2 | `adapter::types::unidirectional::AE` | Zweiter Ausgang, identische Kopie des Eingangssignals.                       |
+| **Plug (Ausgang)**   | OUT3 | `adapter::types::unidirectional::AE` | Dritter Ausgang, identische Kopie des Eingangssignals.                       |
+| **Plug (Ausgang)**   | OUT4 | `adapter::types::unidirectional::AE` | Vierter Ausgang, identische Kopie des Eingangssignals.                       |
+| **Plug (Ausgang)**   | OUT5 | `adapter::types::unidirectional::AE` | Fünfter Ausgang, identische Kopie des Eingangssignals.                       |
+| **Plug (Ausgang)**   | OUT6 | `adapter::types::unidirectional::AE` | Sechster Ausgang, identische Kopie des Eingangssignals.                      |
 
 ## Funktionsweise
 

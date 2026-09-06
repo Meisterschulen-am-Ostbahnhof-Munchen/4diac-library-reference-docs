@@ -12,36 +12,36 @@ Der Funktionsblock **NumericValue_PHYSA** ist ein Eingangs-Service-Interface-Fun
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name | Typ   | Beschreibung                                                |
+| ---- | ----- | ----------------------------------------------------------- |
 | INIT | EInit | Initialisiert den Baustein (mit Parametern und Objekt-Pool) |
-| REQ  | Event | Löst die Ausgabe des aktuellen physikalischen Wertes aus |
+| REQ  | Event | Löst die Ausgabe des aktuellen physikalischen Wertes aus    |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name  | Typ   | Beschreibung                                  |
+| ----- | ----- | --------------------------------------------- |
 | INITO | EInit | Bestätigung der erfolgreichen Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | ------------- |
-| QI | BOOL | Eingangsqualifizierer (aktiviert/steuert die Verarbeitung) |
-| PARAMS | STRING | Parameter für den Dienst (z. B. Konfigurationsstring) |
-| stObj | *NumericObjectPool_S* | Objekt-Pool-Eigenschaften: Objekt-ID (UINT16), Skalierung, Offset, Dezimalstellen |
+| Name   | Typ                   | Beschreibung                                                                      |
+| ------ | --------------------- | --------------------------------------------------------------------------------- |
+| QI     | BOOL                  | Eingangsqualifizierer (aktiviert/steuert die Verarbeitung)                        |
+| PARAMS | STRING                | Parameter für den Dienst (z. B. Konfigurationsstring)                             |
+| stObj  | *NumericObjectPool_S* | Objekt-Pool-Eigenschaften: Objekt-ID (UINT16), Skalierung, Offset, Dezimalstellen |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| QO    | BOOL   | Ausgangsqualifizierer (zeigt erfolgreiche Verarbeitung an) |
-| STATUS| STRING | Statusmeldung (OK oder Fehlertext) |
+| Name   | Typ    | Beschreibung                                               |
+| ------ | ------ | ---------------------------------------------------------- |
+| QO     | BOOL   | Ausgangsqualifizierer (zeigt erfolgreiche Verarbeitung an) |
+| STATUS | STRING | Statusmeldung (OK oder Fehlertext)                         |
 
 ### **Adapter**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name  | Typ                                  | Beschreibung                                                                                              |
+| ----- | ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | rPhys | *adapter::types::unidirectional::AR* | Adapter-Schnittstelle zur Ausgabe des physikalischen REAL-Wertes (Ereigniskanal `E1` und Datenkanal `D1`) |
 
 ## Funktionsweise

@@ -12,9 +12,9 @@ Der Funktionsblock **AX_SR_SYM** ist ein ereignisgesteuertes, bistabiles Flipflo
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Beschreibung               |
-|------|-------|----------------------------|
-| S    | Event | Setzt den Ausgang Q auf TRUE. |
+| Name | Typ   | Beschreibung                   |
+| ---- | ----- | ------------------------------ |
+| S    | Event | Setzt den Ausgang Q auf TRUE.  |
 | R    | Event | Setzt den Ausgang Q auf FALSE. |
 
 ### **Ereignis-Ausgänge**
@@ -31,9 +31,9 @@ Keine (der Ausgangswert wird über einen Adapter bereitgestellt).
 
 ### **Adapter**
 
-| Name | Typ                                          | Beschreibung                          |
-|------|----------------------------------------------|---------------------------------------|
-| Q    | `adapter::types::unidirectional::AX`         | Bietet den aktuellen binären Zustand. Der Adapter stellt ein Ereignis (`E1`) und einen Datenwert (`D1`) bereit. Nach jeder Zustandsänderung wird `Q.E1` ausgelöst und der neue Wert an `Q.D1` ausgegeben. |
+| Name | Typ                                  | Beschreibung                                                                                                                                                                                              |
+| ---- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Q    | `adapter::types::unidirectional::AX` | Bietet den aktuellen binären Zustand. Der Adapter stellt ein Ereignis (`E1`) und einen Datenwert (`D1`) bereit. Nach jeder Zustandsänderung wird `Q.E1` ausgelöst und der neue Wert an `Q.D1` ausgegeben. |
 
 ## Funktionsweise
 
@@ -52,11 +52,11 @@ Die Transitionen erfolgen ausschließlich durch die Ereignisse `S` und `R`. Aus 
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung                                         |
-|---------|------------------------------------------------------|
+| Zustand | Beschreibung                                            |
+| ------- | ------------------------------------------------------- |
 | START   | Warte auf erstes Ereignis; kein Ausgangswert definiert. |
-| SET     | Ausgangswert TRUE; gesetzt durch Ereignis `S`.        |
-| RESET   | Ausgangswert FALSE; zurückgesetzt durch Ereignis `R`. |
+| SET     | Ausgangswert TRUE; gesetzt durch Ereignis `S`.          |
+| RESET   | Ausgangswert FALSE; zurückgesetzt durch Ereignis `R`.   |
 
 **Transitionen:**
 

@@ -22,9 +22,9 @@ The function block has **no independent event inputs**. Events are provided via 
 
 This function block has **no independent event outputs**. Events are output via the **plug adapter** `AL_OUT`:
 
-| Adapter | Event / Signal | Description |
-|---------|-------------------|--------------|
-| AL_OUT | E1 | Confirmation event after conversion is complete |
+| Adapter | Event / Signal | Description                                     |
+| ------- | -------------- | ----------------------------------------------- |
+| AL_OUT  | E1             | Confirmation event after conversion is complete |
 
 ### **Data Inputs**
 
@@ -38,9 +38,9 @@ There are also **no direct data inputs**. Data is supplied via the socket adapte
 
 No direct data outputs. Output data is provided via the plug adapter `AL_OUT`:
 
-| Adapter | Data / Signal | Data Type | Description |
-|---------|----------------|----------|--------------|
-| AL_OUT | D1 | LWORD | Converted output value in LWORD format |
+| Adapter | Data / Signal | Data Type | Description                            |
+| ------- | ------------- | --------- | -------------------------------------- |
+| AL_OUT  | D1            | LWORD     | Converted output value in LWORD format |
 
 ### **Adapters**
 

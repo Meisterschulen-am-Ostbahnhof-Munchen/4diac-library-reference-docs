@@ -10,7 +10,7 @@ USERFUNC_e` is a collection of global constants and not a function block. Theref
 
 *Not applicable.* The constants are referenced directly in the application code.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

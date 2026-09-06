@@ -49,10 +49,10 @@ Der FB arbeitet als **getakteter Speicher** und eignet sich besonders für die S
 
 Der interne Zustand des D-Flipflops kann logisch 0 oder 1 sein. Da der Datenwert beliebig sein kann, entspricht der Zustand dem zuletzt gelatchten Wert. Ein explizites Zustandsdiagramm ist nicht erforderlich, da das Verhalten durch die einfache Flankensteuerung vollständig beschrieben wird.
 
-| Takt (I.E1) | Vorheriger Q-Wert | Neuer Q-Wert |
-|-------------|-------------------|--------------|
-| Ereignis    | beliebig          | Wert von I.D1|
-| kein Ereignis| unverändert       | unverändert  |
+| Takt (I.E1)   | Vorheriger Q-Wert | Neuer Q-Wert  |
+| ------------- | ----------------- | ------------- |
+| Ereignis      | beliebig          | Wert von I.D1 |
+| kein Ereignis | unverändert       | unverändert   |
 
 ## Anwendungsszenarien
 
@@ -63,12 +63,12 @@ Der interne Zustand des D-Flipflops kann logisch 0 oder 1 sein. Da der Datenwert
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied zu AULI_D_FF |
-|----------|--------------|----------------------------|
-| SR-FF    | Set-Reset-Flipflop | Erfordert zwei getrennte Eingänge; kann illegale Zustände haben. |
-| JK-FF    | Universelles Flipflop | Komplexer, mit Toggle-Funktion; hier nicht benötigt. |
-| T-FF     | Toggle-Flipflop | Ändert den Zustand bei jedem Takt; kein Dateneingang. |
-| AULI_D_FF| D-Flipflop | Einfach, kein Toggle, keine illegalen Zustände, ideal zum Speichern eines Werts. |
+| Baustein  | Beschreibung          | Unterschied zu AULI_D_FF                                                         |
+| --------- | --------------------- | -------------------------------------------------------------------------------- |
+| SR-FF     | Set-Reset-Flipflop    | Erfordert zwei getrennte Eingänge; kann illegale Zustände haben.                 |
+| JK-FF     | Universelles Flipflop | Komplexer, mit Toggle-Funktion; hier nicht benötigt.                             |
+| T-FF      | Toggle-Flipflop       | Ändert den Zustand bei jedem Takt; kein Dateneingang.                            |
+| AULI_D_FF | D-Flipflop            | Einfach, kein Toggle, keine illegalen Zustände, ideal zum Speichern eines Werts. |
 
 ## Fazit
 

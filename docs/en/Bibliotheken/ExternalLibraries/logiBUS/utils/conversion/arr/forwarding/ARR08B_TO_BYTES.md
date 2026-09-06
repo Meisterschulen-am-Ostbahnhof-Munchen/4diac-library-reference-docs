@@ -16,7 +16,7 @@ The function block `ARR08B_TO_BYTES` is used to decompose an 8-element byte arra
 - **OUT_06** (`BYTE`): Contains the value of the array element with index 6 (`IN[6]`).
 - **OUT_07** (`BYTE`): Contains the value of the array element with index 7 (`IN[7]`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

@@ -12,15 +12,15 @@ The function block `GET_LREAL` provides read access to a `LREAL` variable (64-bi
 
 ### **Event Inputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| REQ | Event | Normal Execution Trigger; Reads the value of `IN` |
+| Event | Data Type | Comment                                           |
+| ----- | --------- | ------------------------------------------------- |
+| REQ   | Event     | Normal Execution Trigger; Reads the value of `IN` |
 
 ### **Event Outputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| CNF | Event | Confirmation of execution; sent after reading |
+| Event | Data Type | Comment                                       |
+| ----- | --------- | --------------------------------------------- |
+| CNF   | Event     | Confirmation of execution; sent after reading |
 
 ### **Data Inputs**
 
@@ -28,9 +28,9 @@ This function block does not have its own data inputs. The source data is provid
 
 ### **Data Outputs**
 
-| Output | Data Type | Initial Value | Comment |
-|---------|-----------|--------------|----------------------------|
-| OUT | LREAL | 0.0 | Buffered Output Value |
+| Output | Data Type | Initial Value | Comment               |
+| ------ | --------- | ------------- | --------------------- |
+| OUT    | LREAL     | 0.0           | Buffered Output Value |
 
 ### **Adapter**
 
@@ -52,9 +52,9 @@ No adapters available.
 
 Since this is a simple function block (SimpleFB), there is only one ECC state:
 
-| State | Action | Output Event |
-|---------|--------|-----------------|
-| REQ | `OUT := IN;` | CNF |
+| State | Action       | Output Event |
+| ----- | ------------ | ------------ |
+| REQ   | `OUT := IN;` | CNF          |
 
 ## Application Scenarios
 

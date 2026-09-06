@@ -12,7 +12,7 @@ No separate data inputs are available. The input data (DWORD) is obtained via th
 
 No separate data outputs are available. The output data (LINT) is output via the **ALI_OUT** adapter (Data *D1*).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -26,10 +26,10 @@ No separate data outputs are available. The output data (LINT) is output via the
 
 ### **Adapters**
 
-| Adapter | Type | Direction | Description |
-| --------- | ----- | ---------- | -------------- |
-| **AD_IN** | `adapter::types::unidirectional::AD` | Socket | Receives a DWORD value (*D1*) and an input event (*E1*). |
-| **ALI_OUT** | `adapter::types::unidirectional::ALI` | Plug | Sends the converted LINT value (*D1*) and an output event (*E1*).
+| Adapter     | Type                                  | Direction | Description                                                       |
+| ----------- | ------------------------------------- | --------- | ----------------------------------------------------------------- |
+| **AD_IN**   | `adapter::types::unidirectional::AD`  | Socket    | Receives a DWORD value (*D1*) and an input event (*E1*).          |
+| **ALI_OUT** | `adapter::types::unidirectional::ALI` | Plug      | Sends the converted LINT value (*D1*) and an output event (*E1*). |
 
 ## Functionality
 

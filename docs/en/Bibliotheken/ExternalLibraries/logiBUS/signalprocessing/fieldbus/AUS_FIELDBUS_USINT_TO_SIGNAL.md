@@ -12,37 +12,37 @@ The function block `AUS_FIELDBUS_USINT_TO_SIGNAL` is used to pass a USINT signal
 
 ### **Event Inputs**
 
-| Name | Description |
-|-------------|--------------|
+| Name    | Description                                                        |
+| ------- | ------------------------------------------------------------------ |
 | `IN.E1` | Event received via adapter `IN` (socket) that triggers processing. |
 
 ### **Event Outputs**
 
-| Name | Description |
-| ------------- | -------------- |
-| `OUT.E1` | Event output via adapter `OUT` (plug) after successful mirroring of the valid signal. |
-| `VALID.E1` | Event output via adapter `VALID` (plug) after updating the validity status. |
+| Name       | Description                                                                           |
+| ---------- | ------------------------------------------------------------------------------------- |
+| `OUT.E1`   | Event output via adapter `OUT` (plug) after successful mirroring of the valid signal. |
+| `VALID.E1` | Event output via adapter `VALID` (plug) after updating the validity status.           |
 
 ### **Data Inputs**
 
-| Name | Type | Description |
-|-------------|-----|--------------|
+| Name    | Type             | Description                                                 |
+| ------- | ---------------- | ----------------------------------------------------------- |
 | `IN.D1` | USINT (implicit) | Input data value that is checked for validity and mirrored. |
 
 ### **Data Outputs**
 
-| Name | Type | Description |
-| ------------- | ----- | -------------- |
-| `OUT.D1` | (analogous to IN) | Output data value that mirrors the input value if the signal is valid. |
-| `VALID.D1` | BOOL | Validation flag: `TRUE` if the input signal is recognized as valid, otherwise `FALSE`. |
+| Name       | Type              | Description                                                                            |
+| ---------- | ----------------- | -------------------------------------------------------------------------------------- |
+| `OUT.D1`   | (analogous to IN) | Output data value that mirrors the input value if the signal is valid.                 |
+| `VALID.D1` | BOOL              | Validation flag: `TRUE` if the input signal is recognized as valid, otherwise `FALSE`. |
 
 ### **Adapter**
 
-| Name | Type | Direction | Description |
-| ------ | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AUS` | Socket | Receives the raw signal (event + data) from the fieldbus. |
-| `OUT` | `adapter::types::unidirectional::AUS` | Plug | Passes the validated signal to downstream components. |
-| `VALID` | `adapter::types::unidirectional::AX` | Plug | Provides the validity status (event + BOOL). |
+| Name    | Type                                  | Direction | Description                                               |
+| ------- | ------------------------------------- | --------- | --------------------------------------------------------- |
+| `IN`    | `adapter::types::unidirectional::AUS` | Socket    | Receives the raw signal (event + data) from the fieldbus. |
+| `OUT`   | `adapter::types::unidirectional::AUS` | Plug      | Passes the validated signal to downstream components.     |
+| `VALID` | `adapter::types::unidirectional::AX`  | Plug      | Provides the validity status (event + BOOL).              |
 
 ## Functionality
 
@@ -65,10 +65,10 @@ In summary: The output `OUT` mirrors the input `IN`, provided the signal is reco
 
 The internal state is defined by the D flip-flop `E_D_FF`. It has two states:
 
-| State | Description |
-| --------- | --------------- |
+| State                 | Description                                                                                          |
+| --------------------- | ---------------------------------------------------------------------------------------------------- |
 | `Q = FALSE` (Initial) | Output `VALID.D1` indicates "invalid". After each event, the current value of `VALID` (`D`) is used. |
-| `Q = TRUE` | Output `VALID.D1` indicates "valid". The state remains stable until the next event. |
+| `Q = TRUE`            | Output `VALID.D1` indicates "valid". The state remains stable until the next event.                  |
 
 State transitions occur exclusively on each rising edge of the clock signal (event `CNF` of the fieldbus function block).
 

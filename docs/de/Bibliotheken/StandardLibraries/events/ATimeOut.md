@@ -51,10 +51,10 @@ Der Adapter unterstützt zwei grundlegende Abläufe:
 
 ## ⚖️ Vergleich mit ARTimeOut
 
-| Feature        | ATimeOut (dieser) | ARTimeOut |
-|----------------|-------------------|-----------|
-| Typ            | Adapter           | Adapter   |
-| Nachtriggerbar | Nein              | Ja        |
+| Feature        | ATimeOut (dieser) | ARTimeOut             |
+| -------------- | ----------------- | --------------------- |
+| Typ            | Adapter           | Adapter               |
+| Nachtriggerbar | Nein              | Ja                    |
 | Ereignis START | Startet Timer     | Startet/Resetet Timer |
 
 ## Fazit

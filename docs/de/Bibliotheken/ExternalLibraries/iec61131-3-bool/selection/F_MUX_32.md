@@ -12,30 +12,30 @@ Der Funktionsblock **F_MUX_32** ist ein generischer Multiplexer (Auswahlfunktion
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                                                  |
-|------|-------|------------------------------------------------------------|
-| REQ  | Event | Service Request – löst die Auswahl aus                    |
+| Name | Typ   | Kommentar                              |
+| ---- | ----- | -------------------------------------- |
+| REQ  | Event | Service Request – löst die Auswahl aus |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                                                 |
-|------|-------|-----------------------------------------------------------|
-| CNF  | Event | Confirmation – bestätigt die Durchführung der Auswahl    |
+| Name | Typ   | Kommentar                                             |
+| ---- | ----- | ----------------------------------------------------- |
+| CNF  | Event | Confirmation – bestätigt die Durchführung der Auswahl |
 
 ### **Daten-Eingänge**
 
-| Name | Typ        | Kommentar                                            |
-|------|------------|------------------------------------------------------|
-| K    | ANY_INT    | Selektionswert (0 … 31), wählt einen der 32 Eingänge |
-| IN1  | ANY        | Eingangswert 1                                       |
-| IN2  | ANY        | Eingangswert 2                                       |
-| …    | …          | …                                                    |
-| IN32 | ANY        | Eingangswert 32                                      |
+| Name | Typ     | Kommentar                                            |
+| ---- | ------- | ---------------------------------------------------- |
+| K    | ANY_INT | Selektionswert (0 … 31), wählt einen der 32 Eingänge |
+| IN1  | ANY     | Eingangswert 1                                       |
+| IN2  | ANY     | Eingangswert 2                                       |
+| …    | …       | …                                                    |
+| IN32 | ANY     | Eingangswert 32                                      |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar                                                |
-|------|-----|----------------------------------------------------------|
+| Name | Typ | Kommentar                                                       |
+| ---- | --- | --------------------------------------------------------------- |
 | OUT  | ANY | Ausgangswert: IN1 , wenn K=0; IN2, wenn K=1; …; IN32, wenn K=31 |
 
 ### **Adapter**

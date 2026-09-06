@@ -32,11 +32,11 @@ The block has no direct elementary data outputs. The calculation result is provi
 
 ### **Adapters**
 
-| Type | Name | Adapter Type | Description |
-| :--- | :--- | :--- | :--- |
-| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::AUS` | First input value for division (Dividend). |
-| **Socket (Input)** | `IN2` | `adapter::types::unidirectional::AUS` | Second input value for the division (divisor). |
-| **Plug (Output)** | `OUT` | `adapter::types::unidirectional::AUS` | Output for the result of the division (quotient). |
+| Type               | Name  | Adapter Type                          | Description                                       |
+| :----------------- | :---- | :------------------------------------ | :------------------------------------------------ |
+| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::AUS` | First input value for division (Dividend).        |
+| **Socket (Input)** | `IN2` | `adapter::types::unidirectional::AUS` | Second input value for the division (divisor).    |
+| **Plug (Output)**  | `OUT` | `adapter::types::unidirectional::AUS` | Output for the result of the division (quotient). |
 
 ## Functionality
 

@@ -30,13 +30,13 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                        | Beschreibung                               |
-|----------|--------|----------------------------|--------------------------------------------|
-| Socket   | `IN`   | `adapter::types::unidirectional::AUI` | Eingangssignal (AUI)                       |
-| Plug     | `OUT1` | `adapter::types::unidirectional::AUI` | Erster Ausgang (identisch zu IN)           |
-| Plug     | `OUT2` | `adapter::types::unidirectional::AUI` | Zweiter Ausgang (identisch zu IN)          |
-| Plug     | `OUT3` | `adapter::types::unidirectional::AUI` | Dritter Ausgang (identisch zu IN)          |
-| Plug     | `OUT4` | `adapter::types::unidirectional::AUI` | Vierter Ausgang (identisch zu IN)          |
+| Richtung | Name   | Typ                                   | Beschreibung                      |
+| -------- | ------ | ------------------------------------- | --------------------------------- |
+| Socket   | `IN`   | `adapter::types::unidirectional::AUI` | Eingangssignal (AUI)              |
+| Plug     | `OUT1` | `adapter::types::unidirectional::AUI` | Erster Ausgang (identisch zu IN)  |
+| Plug     | `OUT2` | `adapter::types::unidirectional::AUI` | Zweiter Ausgang (identisch zu IN) |
+| Plug     | `OUT3` | `adapter::types::unidirectional::AUI` | Dritter Ausgang (identisch zu IN) |
+| Plug     | `OUT4` | `adapter::types::unidirectional::AUI` | Vierter Ausgang (identisch zu IN) |
 
 ## Funktionsweise
 

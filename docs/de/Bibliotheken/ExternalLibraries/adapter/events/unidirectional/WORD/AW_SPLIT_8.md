@@ -28,17 +28,17 @@ Keine Daten-Ausgänge vorhanden. Die Ausgangsdaten werden über die Plug-Adapter
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ------ | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AW` | `IN` | Socket (Eingang) | Quell-Adapter, der das aufzuteilende Signal liefert |
-| `adapter::types::unidirectional::AW` | `OUT1` | Plug (Ausgang) | Erster Ausgang, identisch zum IN-Signal |
-| `adapter::types::unidirectional::AW` | `OUT2` | Plug (Ausgang) | Zweiter Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT3` | Plug (Ausgang) | Dritter Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT4` | Plug (Ausgang) | Vierter Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT5` | Plug (Ausgang) | Fünfter Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT6` | Plug (Ausgang) | Sechster Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT7` | Plug (Ausgang) | Siebter Ausgang |
-| `adapter::types::unidirectional::AW` | `OUT8` | Plug (Ausgang) | Achter Ausgang |
+| Typ                                  | Name   | Richtung         | Beschreibung                                        |
+| ------------------------------------ | ------ | ---------------- | --------------------------------------------------- |
+| `adapter::types::unidirectional::AW` | `IN`   | Socket (Eingang) | Quell-Adapter, der das aufzuteilende Signal liefert |
+| `adapter::types::unidirectional::AW` | `OUT1` | Plug (Ausgang)   | Erster Ausgang, identisch zum IN-Signal             |
+| `adapter::types::unidirectional::AW` | `OUT2` | Plug (Ausgang)   | Zweiter Ausgang                                     |
+| `adapter::types::unidirectional::AW` | `OUT3` | Plug (Ausgang)   | Dritter Ausgang                                     |
+| `adapter::types::unidirectional::AW` | `OUT4` | Plug (Ausgang)   | Vierter Ausgang                                     |
+| `adapter::types::unidirectional::AW` | `OUT5` | Plug (Ausgang)   | Fünfter Ausgang                                     |
+| `adapter::types::unidirectional::AW` | `OUT6` | Plug (Ausgang)   | Sechster Ausgang                                    |
+| `adapter::types::unidirectional::AW` | `OUT7` | Plug (Ausgang)   | Siebter Ausgang                                     |
+| `adapter::types::unidirectional::AW` | `OUT8` | Plug (Ausgang)   | Achter Ausgang                                      |
 
 ## Funktionsweise
 

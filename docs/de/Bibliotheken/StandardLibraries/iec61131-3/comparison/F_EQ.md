@@ -14,7 +14,7 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine Norm, die sich mit der Funktionsbausteinmodellierung für industrielle Prozessmess- und Steuerungssysteme beschäftigt. Sie bietet ein Framework für die Entwicklung von verteilten Steuerungssystemen, das auf der Verwendung von Funktionsbausteinen basiert. Ein zentrales Element in dieser Norm ist die Definition von Operatoren, die in den Funktionsbausteinen verwendet werden, um logische und arithmetische Operationen durchzuführen. Einer dieser Operatoren ist der EQ-Operator, der in diesem Aufsatz näher betrachtet werden soll.
 
-### Was ist der EQ-Operator?
+## Was ist der EQ-Operator?
 
 Der EQ-Operator, auch bekannt als Gleichheitsoperator, ist ein logischer Operator, der verwendet wird, um zu überprüfen, ob zwei Werte gleich sind. In der IEC 61499 wird dieser Operator häufig in den Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen zu treffen. Der EQ-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (TRUE oder FALSE) zurück, je nachdem, ob die Werte gleich sind oder nicht.
 

@@ -64,11 +64,11 @@ Der Funktionsblock besitzt keinen expliziten internen Zustandsautomaten, sondern
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung |
-| ---------- | -------------- |
-| **AB_SR_FF** | Set-Reset-Flipflop, speichert zwei Zustände (Set/Reset) ohne Datenwert. |
-| **AB_T_FF** | Toggle-Flipflop, wechselt den Ausgangszustand bei jedem Ereignis. |
-| **E_D_FF** | Standard-D-Flipflop ohne Adapter-Schnittstelle, direkte Ereignis- und Daten-Pins. |
+| Baustein     | Beschreibung                                                                      |
+| ------------ | --------------------------------------------------------------------------------- |
+| **AB_SR_FF** | Set-Reset-Flipflop, speichert zwei Zustände (Set/Reset) ohne Datenwert.           |
+| **AB_T_FF**  | Toggle-Flipflop, wechselt den Ausgangszustand bei jedem Ereignis.                 |
+| **E_D_FF**   | Standard-D-Flipflop ohne Adapter-Schnittstelle, direkte Ereignis- und Daten-Pins. |
 
 Der **AB_D_FF** bietet durch die Adapter-Schnittstelle eine typsichere und wiederverwendbare Kapselung, während vergleichbare Bausteine oft auf feste Datentypen angewiesen sind.
 

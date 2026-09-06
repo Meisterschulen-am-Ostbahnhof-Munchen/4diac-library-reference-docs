@@ -44,13 +44,13 @@ From `START`, `INIT` with `QI = TRUE` leads into state `Init`, which sets `QO :=
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
-| START | Unconfigured initial state |
-| Init | Initialization in progress, `QO := QI` |
+| State  | Meaning                                     |
+| ------ | ------------------------------------------- |
+| START  | Unconfigured initial state                  |
+| Init   | Initialization in progress, `QO := QI`      |
 | DeInit | Deinitialization in progress, `QO := FALSE` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| SET    | `Q = TRUE`                                  |
+| RESET  | `Q = FALSE`                                 |
 
 ## Application Scenarios
 

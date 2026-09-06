@@ -28,10 +28,10 @@ Keine
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
-| Socket | Eingang | AS_IN | Adapter vom Typ `AS` (SINT, 8‑Bit signed integer) – nimmt das SINT-Signal auf. |
-| Plug | Ausgang | ADI_OUT | Adapter vom Typ `ADI` (DINT, 32‑Bit signed integer) – gibt das umgewandelte DINT-Signal weiter. |
+| Typ    | Richtung | Name    | Beschreibung                                                                                    |
+| ------ | -------- | ------- | ----------------------------------------------------------------------------------------------- |
+| Socket | Eingang  | AS_IN   | Adapter vom Typ `AS` (SINT, 8‑Bit signed integer) – nimmt das SINT-Signal auf.                  |
+| Plug   | Ausgang  | ADI_OUT | Adapter vom Typ `ADI` (DINT, 32‑Bit signed integer) – gibt das umgewandelte DINT-Signal weiter. |
 
 ## Funktionsweise
 

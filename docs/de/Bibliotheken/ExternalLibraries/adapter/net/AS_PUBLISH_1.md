@@ -31,8 +31,8 @@ Der Funktionsblock **AS_PUBLISH_1** ist ein Composite-Funktionsblock, der den ne
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                    |
+| ------- | ---------------------------------- | ---------------- | ------------------------------- |
 | IN      | adapter::types::unidirectional::AS | Socket (Eingang) | Zu veröffentlichender SINT-Wert |
 
 ## Funktionsweise

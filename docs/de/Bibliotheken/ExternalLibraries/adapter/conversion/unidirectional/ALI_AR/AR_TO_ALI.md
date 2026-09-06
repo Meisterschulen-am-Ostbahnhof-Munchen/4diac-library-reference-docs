@@ -30,10 +30,10 @@ Keine eigenständigen Daten-Ausgänge. Die Daten werden über den Plug `ALI_OUT`
 
 ### **Adapter**
 
-| Richtung | Bezeichnung | Typ | Kompatibler Adaptertyp | Beschreibung |
-|----------|-------------|-----|------------------------|--------------|
-| Socket   | `AR_IN`    | `adapter::types::unidirectional::AR` | AR‑Adapter (REAL) | Aufnehmender Adapter für den REAL‑Wert. |
-| Plug     | `ALI_OUT`  | `adapter::types::unidirectional::ALI` | ALI‑Adapter (LINT) | Bereitstellender Adapter für den konvertierten LINT‑Wert. |
+| Richtung | Bezeichnung | Typ                                   | Kompatibler Adaptertyp | Beschreibung                                              |
+| -------- | ----------- | ------------------------------------- | ---------------------- | --------------------------------------------------------- |
+| Socket   | `AR_IN`     | `adapter::types::unidirectional::AR`  | AR‑Adapter (REAL)      | Aufnehmender Adapter für den REAL‑Wert.                   |
+| Plug     | `ALI_OUT`   | `adapter::types::unidirectional::ALI` | ALI‑Adapter (LINT)     | Bereitstellender Adapter für den konvertierten LINT‑Wert. |
 
 ## Funktionsweise
 
@@ -63,11 +63,11 @@ Der Composite FB selbst besitzt keinen eigenen Zustandsautomaten. Sein Verhalten
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| FB | Konvertierung | Schnittstelle | Anmerkung |
-|----|---------------|---------------|-----------|
-| `AR_TO_ALI`  | REAL → LINT | AR / ALI‑Adapter | Speziell für Adapter‑kopplung |
-| `F_REAL_TO_LINT` | REAL → LINT | Eigenständige E/A (REQ/CNF, IN/OUT) | Direkter Konverter ohne Adapter |
-| `AR_TO_ALI` umschließt `F_REAL_TO_LINT` und fügt die Adapter‑Anschlüsse hinzu. Der Vorteil liegt in der einfachen adapternetzwerktauglichen Anbindung. Ein direkter Konverter ohne Adapter wäre in Adapter‑Strukturen nicht einsetzbar. |
+| FB                                                                                                                                                                                                                                      | Konvertierung | Schnittstelle                       | Anmerkung                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ----------------------------------- | ------------------------------- |
+| `AR_TO_ALI`                                                                                                                                                                                                                             | REAL → LINT   | AR / ALI‑Adapter                    | Speziell für Adapter‑kopplung   |
+| `F_REAL_TO_LINT`                                                                                                                                                                                                                        | REAL → LINT   | Eigenständige E/A (REQ/CNF, IN/OUT) | Direkter Konverter ohne Adapter |
+| `AR_TO_ALI` umschließt `F_REAL_TO_LINT` und fügt die Adapter‑Anschlüsse hinzu. Der Vorteil liegt in der einfachen adapternetzwerktauglichen Anbindung. Ein direkter Konverter ohne Adapter wäre in Adapter‑Strukturen nicht einsetzbar. |               |                                     |                                 |
 
 ## Fazit
 

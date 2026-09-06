@@ -28,10 +28,10 @@ Keine eigenständigen Daten-Ausgänge. Die Ausgangsdaten werden über den Plug-A
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Kommentar |
-|---------|----------|-----|-----------|
-| `AD_IN` | Socket | `adapter::types::unidirectional::AD` | DWORD-Eingangsadapter – liefert Ereignis und DWORD-Daten. |
-| `AX_OUT` | Plug | `adapter::types::unidirectional::AX` | BOOL-Ausgangsadapter – gibt Ereignis und Boolesches Ergebnis aus. |
+| Adapter  | Richtung | Typ                                  | Kommentar                                                         |
+| -------- | -------- | ------------------------------------ | ----------------------------------------------------------------- |
+| `AD_IN`  | Socket   | `adapter::types::unidirectional::AD` | DWORD-Eingangsadapter – liefert Ereignis und DWORD-Daten.         |
+| `AX_OUT` | Plug     | `adapter::types::unidirectional::AX` | BOOL-Ausgangsadapter – gibt Ereignis und Boolesches Ergebnis aus. |
 
 Die Adapter folgen dem unidirektionalen Muster und stellen jeweils einen Ereignisausgang (`E1`) und einen Datenausgang (`D1`) zur Verfügung:
 

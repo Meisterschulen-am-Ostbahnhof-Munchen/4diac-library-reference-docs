@@ -14,34 +14,34 @@ Der FB besitzt **keine direkten** Ereignis‑ oder Datenein-/-ausgänge. Die Kom
 
 ### **Ereignis-Eingänge**
 
-| Signal | Quelle | Datentyp | Beschreibung |
-|--------|--------|----------|--------------|
-| E1 | über Socket `ALR_IN` | (Ereignis) | Startet die Konvertierung eines eingehenden LREAL-Wertes. |
+| Signal | Quelle               | Datentyp   | Beschreibung                                              |
+| ------ | -------------------- | ---------- | --------------------------------------------------------- |
+| E1     | über Socket `ALR_IN` | (Ereignis) | Startet die Konvertierung eines eingehenden LREAL-Wertes. |
 
 ### **Ereignis-Ausgänge**
 
-| Signal | Ziel | Datentyp | Beschreibung |
-|--------|------|----------|--------------|
-| E1 | über Plug `AULI_OUT` | (Ereignis) | Signalisiert, dass der konvertierte ULINT-Wert am Ausgang anliegt. |
+| Signal | Ziel                 | Datentyp   | Beschreibung                                                       |
+| ------ | -------------------- | ---------- | ------------------------------------------------------------------ |
+| E1     | über Plug `AULI_OUT` | (Ereignis) | Signalisiert, dass der konvertierte ULINT-Wert am Ausgang anliegt. |
 
 ### **Daten-Eingänge**
 
-| Signal | Quelle | Datentyp | Beschreibung |
-|--------|--------|----------|--------------|
-| D1 | über Socket `ALR_IN` | LREAL | Der umzuwandelnde Gleitkomma‑Wert. |
+| Signal | Quelle               | Datentyp | Beschreibung                       |
+| ------ | -------------------- | -------- | ---------------------------------- |
+| D1     | über Socket `ALR_IN` | LREAL    | Der umzuwandelnde Gleitkomma‑Wert. |
 
 ### **Daten-Ausgänge**
 
-| Signal | Ziel | Datentyp | Beschreibung |
-|--------|------|----------|--------------|
-| D1 | über Plug `AULI_OUT` | ULINT | Der konvertierte ganzzahlige Wert ohne Vorzeichen. |
+| Signal | Ziel                 | Datentyp | Beschreibung                                       |
+| ------ | -------------------- | -------- | -------------------------------------------------- |
+| D1     | über Plug `AULI_OUT` | ULINT    | Der konvertierte ganzzahlige Wert ohne Vorzeichen. |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| `ALR_IN` | `adapter::types::unidirectional::ALR` | Socket (Eingang) | Nimmt den LREAL‑Wert sowie das dazugehörige Ereignis entgegen. |
-| `AULI_OUT` | `adapter::types::unidirectional::AULI` | Plug (Ausgang) | Gibt den konvertierten ULINT‑Wert mit einem Bestätigungsereignis aus. |
+| Name       | Typ                                    | Richtung         | Beschreibung                                                          |
+| ---------- | -------------------------------------- | ---------------- | --------------------------------------------------------------------- |
+| `ALR_IN`   | `adapter::types::unidirectional::ALR`  | Socket (Eingang) | Nimmt den LREAL‑Wert sowie das dazugehörige Ereignis entgegen.        |
+| `AULI_OUT` | `adapter::types::unidirectional::AULI` | Plug (Ausgang)   | Gibt den konvertierten ULINT‑Wert mit einem Bestätigungsereignis aus. |
 
 ## Funktionsweise
 

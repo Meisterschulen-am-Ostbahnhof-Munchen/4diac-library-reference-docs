@@ -12,35 +12,35 @@ Der Funktionsblock **AX_SR_SYM_INIT** realisiert ein ereignisgesteuertes, bistab
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                                 |
+| -------- | ----- | ------------------------------------------------------------ |
 | INIT     | EInit | Initialisierungsanforderung; mit `QI` und `Q_INIT` verknüpft |
-| S        | Event | Setzt den Ausgang `Q` (über Adapter) |
-| R        | Event | Setzt den Ausgang `Q` zurück |
+| S        | Event | Setzt den Ausgang `Q` (über Adapter)                         |
+| R        | Event | Setzt den Ausgang `Q` zurück                                 |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                    |
+| -------- | ----- | ----------------------------------------------- |
 | INITO    | EInit | Initialisierungsbestätigung; mit `QO` verknüpft |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| QI       | BOOL | Eingangsqualifier – steuert, ob Aktionen ausgeführt werden |
+| Variable | Typ  | Beschreibung                                                 |
+| -------- | ---- | ------------------------------------------------------------ |
+| QI       | BOOL | Eingangsqualifier – steuert, ob Aktionen ausgeführt werden   |
 | Q_INIT   | BOOL | Gewünschter Wert des Ausgangs `Q` nach einer Initialisierung |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Variable | Typ  | Beschreibung                                                                             |
+| -------- | ---- | ---------------------------------------------------------------------------------------- |
 | QO       | BOOL | Ausgangsqualifier – spiegelt den Wert von `QI` zum Zeitpunkt des auslösenden Ereignisses |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
+| Adapter | Typ                                | Beschreibung                                                            |
+| ------- | ---------------------------------- | ----------------------------------------------------------------------- |
 | Q       | adapter::types::unidirectional::AX | Wert des Flipflops – wird über die Schnittstelle gesetzt/ zurückgesetzt |
 
 ## Funktionsweise

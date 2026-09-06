@@ -31,8 +31,8 @@ Der Funktionsblock **AW_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                      |
+| ------- | ---------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::AW | Plug (Ausgang) | Gepufferter empfangener WORD-Wert |
 
 ## Funktionsweise

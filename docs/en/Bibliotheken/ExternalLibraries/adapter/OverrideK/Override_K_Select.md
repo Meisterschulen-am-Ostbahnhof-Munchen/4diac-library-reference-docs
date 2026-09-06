@@ -34,11 +34,11 @@ None of its own. The result is emitted through the `K` adapter plug.
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ----------- | ------ | ------ | -------------- |
-| Socket (input) | `Aktiv` | `adapter::types::unidirectional::AX` | `Override.Aktiv` |
-| Socket (input) | `Wert` | `adapter::types::unidirectional::AX` | `Override.Wert` |
-| Plug (output) | `K` | `adapter::types::unidirectional::AUI` | 0=Normal (`Aktiv`=FALSE), 1=Force FALSE (`Aktiv`=TRUE, `Wert`=FALSE), 2=Force TRUE (`Aktiv`=TRUE, `Wert`=TRUE) |
+| Direction      | Name    | Type                                  | Description                                                                                                    |
+| -------------- | ------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Socket (input) | `Aktiv` | `adapter::types::unidirectional::AX`  | `Override.Aktiv`                                                                                               |
+| Socket (input) | `Wert`  | `adapter::types::unidirectional::AX`  | `Override.Wert`                                                                                                |
+| Plug (output)  | `K`     | `adapter::types::unidirectional::AUI` | 0=Normal (`Aktiv`=FALSE), 1=Force FALSE (`Aktiv`=TRUE, `Wert`=FALSE), 2=Force TRUE (`Aktiv`=TRUE, `Wert`=TRUE) |
 
 ## Functionality
 
@@ -81,11 +81,11 @@ Internally the block uses two chained, generic `F_SEL` blocks (the standard IEC 
 The block has no state machine of its own (a composite FB without an ECC); its behavior is purely
 combinational, recomputed on every change to `Aktiv` or `Wert`.
 
-| Aktiv | Wert | K |
-| :---: | :---: | :---: |
-| FALSE | — | 0 (Normal) |
-| TRUE | FALSE | 1 (Force FALSE) |
-| TRUE | TRUE | 2 (Force TRUE) |
+| Aktiv | Wert  | K               |
+| :---: | :---: | :-------------: |
+| FALSE | —     | 0 (Normal)      |
+| TRUE  | FALSE | 1 (Force FALSE) |
+| TRUE  | TRUE  | 2 (Force TRUE)  |
 
 ## Application Scenarios
 

@@ -12,26 +12,26 @@ Der Funktionsblock **GET_DATE_AND_TIME** dient dazu, einen Wert vom Typ `DATE_AN
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Mit | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Mit | Beschreibung                                                          |
+| -------- | --- | --------------------------------------------------------------------- |
 | REQ      | IN  | Normale Ausführungsanforderung; löst das Auslesen der Quelldaten aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Mit              | Beschreibung |
-|----------|------------------|--------------|
-| CNF      | OUT, IN          | Bestätigung der Ausführung; signalisiert, dass der Ausgang aktualisiert wurde. |
+| Ereignis | Mit     | Beschreibung                                                                   |
+| -------- | ------- | ------------------------------------------------------------------------------ |
+| CNF      | OUT, IN | Bestätigung der Ausführung; signalisiert, dass der Ausgang aktualisiert wurde. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ           | Beschreibung |
-|------|---------------|--------------|
+| Name | Typ           | Beschreibung                                                                 |
+| ---- | ------------- | ---------------------------------------------------------------------------- |
 | IN   | DATE_AND_TIME | InOut-Variable als Quelle der Daten. Sie wird gelesen, aber nicht verändert. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ           | Beschreibung |
-|------|---------------|--------------|
+| Name | Typ           | Beschreibung                                                                      |
+| ---- | ------------- | --------------------------------------------------------------------------------- |
 | OUT  | DATE_AND_TIME | Gepufferter Ausgangswert, der bei jedem REQ aus der InOut-Quelle übernommen wird. |
 
 ### **Adapter**
@@ -56,9 +56,9 @@ Anschließend wird das Ereignis `CNF` gesendet. Der Wert der InOut-Variable `IN`
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ     | `OUT := IN;` | CNF |
+| Zustand | Aktion       | Ausgabeereignis |
+| ------- | ------------ | --------------- |
+| REQ     | `OUT := IN;` | CNF             |
 
 Es gibt keinen Initialzustand oder sonstige Zustände; der Baustein wartet auf das Ereignis `REQ` und führt sofort den Algorithmus aus.
 

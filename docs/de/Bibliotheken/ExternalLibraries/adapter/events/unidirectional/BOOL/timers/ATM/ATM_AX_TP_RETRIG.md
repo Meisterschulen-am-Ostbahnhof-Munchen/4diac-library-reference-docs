@@ -48,10 +48,10 @@ Der Baustein verwendet intern den Standard-Funktionsblock `E_TP_RETRIG`. Ein Ere
 
 Der Baustein kennt zwei Hauptzustände:
 
-| Zustand  | Q.D1  | Beschreibung                                                     |
-|----------|-------|------------------------------------------------------------------|
-| **IDLE** | FALSE | Ruhezustand, kein Impuls aktiv.                                  |
-| **TIMING** | TRUE  | Impuls läuft, Timer zählt die Dauer PT herab.                    |
+| Zustand    | Q.D1  | Beschreibung                                  |
+| ---------- | ----- | --------------------------------------------- |
+| **IDLE**   | FALSE | Ruhezustand, kein Impuls aktiv.               |
+| **TIMING** | TRUE  | Impuls läuft, Timer zählt die Dauer PT herab. |
 
 **Übergänge:**
 

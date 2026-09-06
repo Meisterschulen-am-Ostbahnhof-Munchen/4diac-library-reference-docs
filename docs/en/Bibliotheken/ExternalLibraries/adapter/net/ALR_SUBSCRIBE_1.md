@@ -31,9 +31,9 @@ The function block **ALR_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::ALR | Plug (Output) | Buffered received LREAL value |
+| Adapter | Type                                | Direction     | Description                   |
+| ------- | ----------------------------------- | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::ALR | Plug (Output) | Buffered received LREAL value |
 
 ## Functionality
 

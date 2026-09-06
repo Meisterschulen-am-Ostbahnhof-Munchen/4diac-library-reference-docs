@@ -1,4 +1,4 @@
-![EliteBoard](EliteBoard.svg)
-
 # eliteboard
+
+![EliteBoard](EliteBoard.svg)
 

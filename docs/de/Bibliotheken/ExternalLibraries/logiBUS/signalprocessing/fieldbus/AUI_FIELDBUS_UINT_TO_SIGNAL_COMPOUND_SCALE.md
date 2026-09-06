@@ -12,23 +12,23 @@ Der Funktionsblock `AUI_FIELDBUS_UINT_TO_SIGNAL_COMPOUND_SCALE` dient der Umwand
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|-------------|
-| INIT | EInit | Initialisierungsanforderung; versetzt den Baustein in einen definierten Startzustand. |
+| Ereignis | Typ   | Beschreibung                                                                          |
+| -------- | ----- | ------------------------------------------------------------------------------------- |
+| INIT     | EInit | Initialisierungsanforderung; versetzt den Baustein in einen definierten Startzustand. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|-------------|
-| INITO | EInit | Initialisierungsbestätigung; wird nach erfolgreicher Initialisierung gesendet. |
+| Ereignis | Typ   | Beschreibung                                                                   |
+| -------- | ----- | ------------------------------------------------------------------------------ |
+| INITO    | EInit | Initialisierungsbestätigung; wird nach erfolgreicher Initialisierung gesendet. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Initialwert | Beschreibung |
-| ---------- | ----- | ------------- | ------------- |
-| SCALE_HIGH | REAL | 0.256 | Skalierungsfaktor für das obere Byte des eingehenden Wertes. |
-| SCALE_LOW | REAL | 0.001 | Skalierungsfaktor für das untere Byte des eingehenden Wertes. |
-| OFFSET | DINT | 0 | Ganzzahliger Offset, der nach der Skalierung addiert wird. |
+| Variable   | Typ  | Initialwert | Beschreibung                                                  |
+| ---------- | ---- | ----------- | ------------------------------------------------------------- |
+| SCALE_HIGH | REAL | 0.256       | Skalierungsfaktor für das obere Byte des eingehenden Wertes.  |
+| SCALE_LOW  | REAL | 0.001       | Skalierungsfaktor für das untere Byte des eingehenden Wertes. |
+| OFFSET     | DINT | 0           | Ganzzahliger Offset, der nach der Skalierung addiert wird.    |
 
 ### **Daten-Ausgänge**
 
@@ -36,11 +36,11 @@ Der Baustein besitzt keine separaten Datenausgänge als `VarDeclaration`. Die Au
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|-------------|
-| IN      | Socket   | adapter::types::unidirectional::AUI | Eingang für den zu verarbeitenden Feldbus‑Datenwert. |
+| Adapter | Richtung | Typ                                 | Beschreibung                                                                         |
+| ------- | -------- | ----------------------------------- | ------------------------------------------------------------------------------------ |
+| IN      | Socket   | adapter::types::unidirectional::AUI | Eingang für den zu verarbeitenden Feldbus‑Datenwert.                                 |
 | OUT     | Plug     | adapter::types::unidirectional::AR  | Ausgang des skalierten Werts (z. B. REAL oder DINT, abhängig vom internen Baustein). |
-| VALID   | Plug     | adapter::types::unidirectional::AX  | Ausgangssignal: TRUE, wenn der aktuelle Ausgangswert gültig ist. |
+| VALID   | Plug     | adapter::types::unidirectional::AX  | Ausgangssignal: TRUE, wenn der aktuelle Ausgangswert gültig ist.                     |
 
 ## Funktionsweise
 

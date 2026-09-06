@@ -37,6 +37,7 @@ The `E_TABLE` (Event Table) is a function block according to IEC 61499 that gene
 - It waits for the time interval defined in `DT[0]`. Then, the first `EO` event is triggered, and `CV` is set to `0`.
 - It waits for the time interval defined in `DT[1]`. Then, the second `EO` event is triggered, and `CV` is set to `1`.
 - This process repeats until `N` events have been generated.
+
 1. **End of Sequence**: The sequence ends automatically after `N` events have been triggered.
 2. **Stop**: A `STOP` event immediately terminates the sequence at any point.
 
@@ -64,11 +65,11 @@ The `E_TABLE` (Event Table) is a function block according to IEC 61499 that gene
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | E_TABLE | E_CYCLE | E_N_TABLE |
-| -------------- | ----------- | --------- | ---------- |
-| Event Interval | Variable (Array `DT`) | Fixed (`DT`) | Variable (Array `DT`) |
-| Outputs | One `EO` channel | One `EO` channel | Multiple (`EO0`..`EO3`) |
-| Counter Output (`CV`) | Yes | No | No (internal) |
+| Feature               | E_TABLE               | E_CYCLE          | E_N_TABLE               |
+| --------------------- | --------------------- | ---------------- | ----------------------- |
+| Event Interval        | Variable (Array `DT`) | Fixed (`DT`)     | Variable (Array `DT`)   |
+| Outputs               | One `EO` channel      | One `EO` channel | Multiple (`EO0`..`EO3`) |
+| Counter Output (`CV`) | Yes                   | No               | No (internal)           |
 
 ## 🛠️ Related Exercises
 

@@ -37,9 +37,9 @@ Der Funktionsblock **ASRT_AX_CLIENT_0_SUBSCRIBE_1** ist ein Composite-Funktionsb
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| S_R_T | adapter::types::bidirectional::ASRT_AX | Socket – Set/Reset/Toggle (Ausgang), Zustand (Eingang) | Set/Reset/Toggle nach außen, Zustand zurück |
+| Adapter | Typ                                    | Richtung                                               | Beschreibung                                |
+| ------- | -------------------------------------- | ------------------------------------------------------ | ------------------------------------------- |
+| S_R_T   | adapter::types::bidirectional::ASRT_AX | Socket – Set/Reset/Toggle (Ausgang), Zustand (Eingang) | Set/Reset/Toggle nach außen, Zustand zurück |
 
 ## Funktionsweise
 

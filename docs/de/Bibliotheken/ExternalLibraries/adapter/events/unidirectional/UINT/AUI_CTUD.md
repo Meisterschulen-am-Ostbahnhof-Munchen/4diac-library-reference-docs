@@ -12,39 +12,39 @@ Der Funktionsblock **AUI_CTUD** ist ein ereignisgesteuerter Aufwärts-/Abwärtsz
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| **CU**   | Zähler um 1 erhöhen (Count Up)   |
-| **CD**   | Zähler um 1 verringern (Count Down) |
-| **R**    | Zähler auf 0 zurücksetzen (Reset)   |
+| Ereignis | Beschreibung                                 |
+| -------- | -------------------------------------------- |
+| **CU**   | Zähler um 1 erhöhen (Count Up)               |
+| **CD**   | Zähler um 1 verringern (Count Down)          |
+| **R**    | Zähler auf 0 zurücksetzen (Reset)            |
 | **LD**   | Zähler mit dem Preset-Wert (PV) laden (Load) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| **CUO**  | Bestätigung für einen erfolgten Count-Up-Vorgang |
+| Ereignis | Beschreibung                                       |
+| -------- | -------------------------------------------------- |
+| **CUO**  | Bestätigung für einen erfolgten Count-Up-Vorgang   |
 | **CDO**  | Bestätigung für einen erfolgten Count-Down-Vorgang |
-| **RO**   | Bestätigung für einen erfolgten Reset           |
-| **LDO**  | Bestätigung für einen erfolgten Load-Vorgang    |
+| **RO**   | Bestätigung für einen erfolgten Reset              |
+| **LDO**  | Bestätigung für einen erfolgten Load-Vorgang       |
 
 ### **Daten-Eingänge**
 
 Der Baustein besitzt keine direkten Dateneingänge. Der Preset-Wert (PV) wird über einen **Socket-Adapter** bereitgestellt:
 
-| Adapter (Socket) | Typ | Beschreibung |
-|------------------|-----|--------------|
+| Adapter (Socket) | Typ                                   | Beschreibung                         |
+| ---------------- | ------------------------------------- | ------------------------------------ |
 | **PV**           | `adapter::types::unidirectional::AUI` | Preset-Wert (Vorwahl) für den Zähler |
 
 ### **Daten-Ausgänge**
 
 Der Baustein besitzt keine direkten Datenausgänge. Die Ergebnisse werden über **Plug-Adapter** ausgegeben:
 
-| Adapter (Plug) | Typ | Beschreibung |
-|----------------|-----|--------------|
-| **QU**         | `adapter::types::unidirectional::AX` | Wahr, wenn der aktuelle Zählerwert ≥ PV ist |
-| **QD**         | `adapter::types::unidirectional::AX` | Wahr, wenn der aktuelle Zählerwert ≤ 0 ist |
-| **CV**         | `adapter::types::unidirectional::AUI` | Aktueller Zählerwert (Unsigned Integer) |
+| Adapter (Plug) | Typ                                   | Beschreibung                                |
+| -------------- | ------------------------------------- | ------------------------------------------- |
+| **QU**         | `adapter::types::unidirectional::AX`  | Wahr, wenn der aktuelle Zählerwert ≥ PV ist |
+| **QD**         | `adapter::types::unidirectional::AX`  | Wahr, wenn der aktuelle Zählerwert ≤ 0 ist  |
+| **CV**         | `adapter::types::unidirectional::AUI` | Aktueller Zählerwert (Unsigned Integer)     |
 
 ### **Adapter**
 
@@ -79,18 +79,18 @@ Der Baustein arbeitet als ereignisgesteuerter Zähler mit einer Auflösung von 0
 
 ## Zustandsübersicht
 
-| Zustand        | Beschreibung |
-|----------------|--------------|
-| **START**      | Warten auf ein Eingangsereignis (CU, CD, R, LD) oder eine PV‑Änderung |
-| **CU**         | Zähler erhöhen und neuen Wert über CV‑Adapter ausgeben |
-| **CD**         | Zähler verringern und neuen Wert über CV‑Adapter ausgeben |
-| **R**          | Zähler auf 0 setzen und neuen Wert über CV‑Adapter ausgeben |
-| **LD**         | Zähler mit PV laden und neuen Wert über CV‑Adapter ausgeben |
-| **UPDATE_PV**  | Neuberechnung von QU und QD nach PV‑Änderung (ohne Zähleränderung) |
-| **CHECK_QU**   | Prüfung, ob sich QU geändert hat (Vergleich mit QU_OLD) |
-| **FIRE_QU**    | Wenn QU geändert: QU_OLD aktualisieren und Ereignis auf QU‑Adapter senden |
-| **CHECK_QD**   | Prüfung, ob sich QD geändert hat (Vergleich mit QD_OLD) |
-| **FIRE_QD**    | Wenn QD geändert: QD_OLD aktualisieren und Ereignis auf QD‑Adapter senden |
+| Zustand       | Beschreibung                                                              |
+| ------------- | ------------------------------------------------------------------------- |
+| **START**     | Warten auf ein Eingangsereignis (CU, CD, R, LD) oder eine PV‑Änderung     |
+| **CU**        | Zähler erhöhen und neuen Wert über CV‑Adapter ausgeben                    |
+| **CD**        | Zähler verringern und neuen Wert über CV‑Adapter ausgeben                 |
+| **R**         | Zähler auf 0 setzen und neuen Wert über CV‑Adapter ausgeben               |
+| **LD**        | Zähler mit PV laden und neuen Wert über CV‑Adapter ausgeben               |
+| **UPDATE_PV** | Neuberechnung von QU und QD nach PV‑Änderung (ohne Zähleränderung)        |
+| **CHECK_QU**  | Prüfung, ob sich QU geändert hat (Vergleich mit QU_OLD)                   |
+| **FIRE_QU**   | Wenn QU geändert: QU_OLD aktualisieren und Ereignis auf QU‑Adapter senden |
+| **CHECK_QD**  | Prüfung, ob sich QD geändert hat (Vergleich mit QD_OLD)                   |
+| **FIRE_QD**   | Wenn QD geändert: QD_OLD aktualisieren und Ereignis auf QD‑Adapter senden |
 
 Die Zustandsübergänge werden durch die Ereignisse und die Bedingungen `[QU.D1 <> QU_OLD]`, `[QD.D1 <> QD_OLD]` gesteuert. Nach Abschluss der Change Detection kehrt der Baustein in den START‑Zustand zurück.
 
@@ -105,13 +105,13 @@ Die Zustandsübergänge werden durch die Ereignisse und die Bedingungen `[QU.D1 
 
 Der Standardbaustein **E_CTUD** (aus der IEC 61499‑Bibliothek) bietet ebenfalls einen Aufwärts-/Abwärtszähler mit Ereignissteuerung, jedoch:
 
-| Merkmal               | **E_CTUD** (Standard)                         | **AUI_CTUD** (Adapter-Version)                  |
-|-----------------------|-----------------------------------------------|-------------------------------------------------|
-| Schnittstelle         | Feste Event‑ und Daten‑Ports (z. B. CV als BOOL) | Lose Kopplung über Adapter (Plug/Socket)        |
-| Ausgabe Zählerwert    | Datenport CV (INT/UDINT)                      | Adapter CV (Typ AUI)                            |
-| Grenzwertausgabe      | Bool‑Ports QU, QD                             | Adapter QU, QD (Typ AX)                         |
-| Ereignis bei Änderung | Keine Change Detection; QU/QD werden bei jedem Zählvorgang berechnet | On-Change-Triggerung: Ereignis nur bei Zustandswechsel |
-| Rückmeldung über Aktionen | Keine eigenen Rücksignal-Ereignisse       | CUO, CDO, RO, LDO als Bestätigungsereignisse    |
+| Merkmal                   | **E_CTUD** (Standard)                                                | **AUI_CTUD** (Adapter-Version)                         |
+| ------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------ |
+| Schnittstelle             | Feste Event‑ und Daten‑Ports (z. B. CV als BOOL)                     | Lose Kopplung über Adapter (Plug/Socket)               |
+| Ausgabe Zählerwert        | Datenport CV (INT/UDINT)                                             | Adapter CV (Typ AUI)                                   |
+| Grenzwertausgabe          | Bool‑Ports QU, QD                                                    | Adapter QU, QD (Typ AX)                                |
+| Ereignis bei Änderung     | Keine Change Detection; QU/QD werden bei jedem Zählvorgang berechnet | On-Change-Triggerung: Ereignis nur bei Zustandswechsel |
+| Rückmeldung über Aktionen | Keine eigenen Rücksignal-Ereignisse                                  | CUO, CDO, RO, LDO als Bestätigungsereignisse           |
 
 Der AUI_CTUD ist daher flexibler in der Verschaltung und reduziert die Ereignislast in verteilten Systemen. Für einfache Anwendungen ohne Adapter kann jedoch der Standard‑E_CTUD ausreichend sein.
 

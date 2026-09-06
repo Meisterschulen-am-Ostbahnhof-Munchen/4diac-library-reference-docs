@@ -31,8 +31,8 @@ Der Funktionsblock **AD_PUBLISH_1** ist ein Composite-Funktionsblock, der den ne
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                     |
+| ------- | ---------------------------------- | ---------------- | -------------------------------- |
 | IN      | adapter::types::unidirectional::AD | Socket (Eingang) | Zu veröffentlichender DWORD-Wert |
 
 ## Funktionsweise

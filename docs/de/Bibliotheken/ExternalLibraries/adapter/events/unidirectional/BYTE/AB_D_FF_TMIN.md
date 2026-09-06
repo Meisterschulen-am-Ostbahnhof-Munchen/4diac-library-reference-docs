@@ -12,20 +12,20 @@ Der **AB_D_FF_TMIN** ist ein Adapter-basierter Funktionsbaustein (FB) nach IEC 6
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ    | Kommentar                           |
-|--------|--------|-------------------------------------|
-| `INIT` | EInit  | Initialisierungsanforderung (setzt die minimale Zeit) |
+| Name   | Typ   | Kommentar                                             |
+| ------ | ----- | ----------------------------------------------------- |
+| `INIT` | EInit | Initialisierungsanforderung (setzt die minimale Zeit) |
 
 ### **Ereignis-Ausgänge**
 
-| Name    | Typ    | Kommentar                           |
-|---------|--------|-------------------------------------|
-| `INITO` | EInit  | Initialisierungsbestätigung         |
+| Name    | Typ   | Kommentar                   |
+| ------- | ----- | --------------------------- |
+| `INITO` | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ  | Kommentar                                      |
-|--------|------|------------------------------------------------|
+| Name   | Typ  | Kommentar                                        |
+| ------ | ---- | ------------------------------------------------ |
 | `Tmin` | TIME | Mindestzeit zwischen zwei Ausgangsereignissen EO |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge; die Datenausgabe erfolgt über den Adapter-Plug `
 
 ### **Adapter**
 
-| Richtung | Name | Typ                              | Kommentar                                                   |
-|----------|------|----------------------------------|-------------------------------------------------------------|
+| Richtung | Name | Typ                                | Kommentar                                                                         |
+| -------- | ---- | ---------------------------------- | --------------------------------------------------------------------------------- |
 | Socket   | `I`  | adapter::types::unidirectional::AB | Eingangsadapter: liefert Ereignis `E1` und Datenwert `D1` (der zu latchende Wert) |
-| Plug     | `Q`  | adapter::types::unidirectional::AB | Ausgangsadapter: gibt den gelatchten Datenwert `D1` sowie das Ereignis `E1` aus |
+| Plug     | `Q`  | adapter::types::unidirectional::AB | Ausgangsadapter: gibt den gelatchten Datenwert `D1` sowie das Ereignis `E1` aus   |
 
 *Hinweis:* Der Adapter `unidirectional::AB` definiert ein Ereignis `E1` und einen Datenwert `D1` (typischerweise ein boolescher oder beliebiger generischer Typ). Die genaue Typdefinition des Adapters liegt außerhalb dieses Bausteins.
 
@@ -94,11 +94,11 @@ Der Baustein besitzt keinen expliziten sichtbaren Zustandsautomaten; der Zustand
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein          | Eigenschaften                                                                 |
-|-------------------|-------------------------------------------------------------------------------|
-| **AB_D_FF**       | Reines D-Flipflop ohne minimale Ausgabezeit – Ereignisse werden sofort weitergegeben. |
-| **E_D_FF_ANY**    | Standard-Ereignis-Daten-Flipflop ohne Zeitbeschränkung, aber mit diskreten Ports (keine Adapter). |
-| **AB_D_FF_TMIN**  | Kombiniert Adapter-Kapselung mit einer konfigurierbaren Mindestzeit zwischen Ausgangsereignissen. |
+| Baustein            | Eigenschaften                                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------- |
+| **AB_D_FF**         | Reines D-Flipflop ohne minimale Ausgabezeit – Ereignisse werden sofort weitergegeben.             |
+| **E_D_FF_ANY**      | Standard-Ereignis-Daten-Flipflop ohne Zeitbeschränkung, aber mit diskreten Ports (keine Adapter). |
+| **AB_D_FF_TMIN**    | Kombiniert Adapter-Kapselung mit einer konfigurierbaren Mindestzeit zwischen Ausgangsereignissen. |
 | **R_TRIG / F_TRIG** | Detektieren von steigenden/fallenden Flanken – keine Funktionalität zum Latchen eines Datenwerts. |
 
 Der **AB_D_FF_TMIN** hebt sich durch die Integration einer Zeitsteuerung in eine Adapter-basierte D-Flipflop-Logik ab und ist daher besonders für Anwendungen geeignet, die sowohl Datenlatching als auch zeitliche Entkopplung erfordern.

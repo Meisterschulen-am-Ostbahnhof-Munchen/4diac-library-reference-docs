@@ -54,16 +54,16 @@ Die Ergebnisdaten werden über die **Plugs** bereitgestellt:
 
 ### **Adapter**
 
-| Typ | Richtung | Adapter-Typ | Beschreibung |
-| ------ | ---------- | ------------- | -------------- |
-| **CU** | Socket | `adapter::types::unidirectional::AX` | Aufwärtszähl‑Eingang (Ereignis+BOOL) |
-| **CD** | Socket | `adapter::types::unidirectional::AX` | Abwärtszähl‑Eingang (Ereignis+BOOL) |
-| **R** | Socket | `adapter::types::unidirectional::AX` | Reset‑Eingang (Ereignis+BOOL) |
-| **LD** | Socket | `adapter::types::unidirectional::AX` | Load‑Eingang (Ereignis+BOOL) |
-| **PV** | Socket | `adapter::types::unidirectional::ALI` | Preset‑Wert‑Eingang (Ereignis+LINT) |
-| **QU** | Plug | `adapter::types::unidirectional::AX` | Aufwärts‑Ausgang (Ereignis+BOOL) |
-| **QD** | Plug | `adapter::types::unidirectional::AX` | Abwärts‑Ausgang (Ereignis+BOOL) |
-| **CV** | Plug | `adapter::types::unidirectional::ALI` | Zählerwert‑Ausgang (Ereignis+LINT) |
+| Typ    | Richtung | Adapter-Typ                           | Beschreibung                         |
+| ------ | -------- | ------------------------------------- | ------------------------------------ |
+| **CU** | Socket   | `adapter::types::unidirectional::AX`  | Aufwärtszähl‑Eingang (Ereignis+BOOL) |
+| **CD** | Socket   | `adapter::types::unidirectional::AX`  | Abwärtszähl‑Eingang (Ereignis+BOOL)  |
+| **R**  | Socket   | `adapter::types::unidirectional::AX`  | Reset‑Eingang (Ereignis+BOOL)        |
+| **LD** | Socket   | `adapter::types::unidirectional::AX`  | Load‑Eingang (Ereignis+BOOL)         |
+| **PV** | Socket   | `adapter::types::unidirectional::ALI` | Preset‑Wert‑Eingang (Ereignis+LINT)  |
+| **QU** | Plug     | `adapter::types::unidirectional::AX`  | Aufwärts‑Ausgang (Ereignis+BOOL)     |
+| **QD** | Plug     | `adapter::types::unidirectional::AX`  | Abwärts‑Ausgang (Ereignis+BOOL)      |
+| **CV** | Plug     | `adapter::types::unidirectional::ALI` | Zählerwert‑Ausgang (Ereignis+LINT)   |
 
 ## Funktionsweise
 

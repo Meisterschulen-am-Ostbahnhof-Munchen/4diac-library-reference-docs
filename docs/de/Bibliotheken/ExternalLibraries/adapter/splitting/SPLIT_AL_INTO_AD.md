@@ -31,11 +31,11 @@ Der Funktionsblock `SPLIT_AL_INTO_AD` dient dazu, einen eingehenden **AL (LWORD)
 
 ### **Adapter**
 
-| Typ   | Name       | Richtung | Kommentar                          |
-|-------|------------|----------|------------------------------------|
-| SOCKET | `IN`       | Eingang  | AL (LWORD) – Quelladapter          |
-| PLUG  | `DWORD_00` | Ausgang  | AD (DWORD) – erster Zieladapter    |
-| PLUG  | `DWORD_01` | Ausgang  | AD (DWORD) – zweiter Zieladapter   |
+| Typ    | Name       | Richtung | Kommentar                        |
+| ------ | ---------- | -------- | -------------------------------- |
+| SOCKET | `IN`       | Eingang  | AL (LWORD) – Quelladapter        |
+| PLUG   | `DWORD_00` | Ausgang  | AD (DWORD) – erster Zieladapter  |
+| PLUG   | `DWORD_01` | Ausgang  | AD (DWORD) – zweiter Zieladapter |
 
 ## Funktionsweise
 

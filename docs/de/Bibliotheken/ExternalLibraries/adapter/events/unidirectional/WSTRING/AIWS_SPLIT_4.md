@@ -28,13 +28,13 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AIWS` | Socket | **IN** | Eingangsadapter für die zu verteilende AIWS-Verbindung |
-| `adapter::types::unidirectional::AIWS` | Plug | **OUT1** | Erster Ausgangsadapter |
-| `adapter::types::unidirectional::AIWS` | Plug | **OUT2** | Zweiter Ausgangsadapter |
-| `adapter::types::unidirectional::AIWS** | Plug | **OUT3** | Dritter Ausgangsadapter |
-| `adapter::types::unidirectional::AIWS` | Plug | **OUT4** | Vierter Ausgangsadapter |
+| Typ                                     | Richtung | Name     | Beschreibung                                           |
+| --------------------------------------- | -------- | -------- | ------------------------------------------------------ |
+| `adapter::types::unidirectional::AIWS`  | Socket   | **IN**   | Eingangsadapter für die zu verteilende AIWS-Verbindung |
+| `adapter::types::unidirectional::AIWS`  | Plug     | **OUT1** | Erster Ausgangsadapter                                 |
+| `adapter::types::unidirectional::AIWS`  | Plug     | **OUT2** | Zweiter Ausgangsadapter                                |
+| `adapter::types::unidirectional::AIWS** | Plug     | **OUT3** | Dritter Ausgangsadapter                                |
+| `adapter::types::unidirectional::AIWS`  | Plug     | **OUT4** | Vierter Ausgangsadapter                                |
 
 ## Funktionsweise
 

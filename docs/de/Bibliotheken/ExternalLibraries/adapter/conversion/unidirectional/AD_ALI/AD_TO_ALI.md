@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge vorhanden. Die Ausgangsdaten (LINT) werden über
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **AD_IN** | `adapter::types::unidirectional::AD` | Socket | Empfängt einen DWORD-Wert (*D1*) sowie ein Eingangsereignis (*E1*). |
-| **ALI_OUT** | `adapter::types::unidirectional::ALI` | Plug | Sendet den konvertierten LINT-Wert (*D1*) sowie ein Ausgangsereignis (*E1*). |
+| Adapter     | Typ                                   | Richtung | Beschreibung                                                                 |
+| ----------- | ------------------------------------- | -------- | ---------------------------------------------------------------------------- |
+| **AD_IN**   | `adapter::types::unidirectional::AD`  | Socket   | Empfängt einen DWORD-Wert (*D1*) sowie ein Eingangsereignis (*E1*).          |
+| **ALI_OUT** | `adapter::types::unidirectional::ALI` | Plug     | Sendet den konvertierten LINT-Wert (*D1*) sowie ein Ausgangsereignis (*E1*). |
 
 ## Funktionsweise
 

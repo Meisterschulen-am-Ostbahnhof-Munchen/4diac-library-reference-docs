@@ -30,10 +30,10 @@ Der Baustein besitzt keine direkten Ein‑/Ausgangs‑Events oder Datenports. Al
 
 ### **Adapter**
 
-| Rolle | Name  | Typ | Richtung | Kommentar |
-|-------|-------|-----|----------|-----------|
-| Socket | AD_IN | `adapter::types::unidirectional::AD` | Eingang (DWORD) | Liefert DWORD‑Daten und Ereignis. |
-| Plug   | AW_OUT| `adapter::types::unidirectional::AW` | Ausgang (WORD) | Stellt WORD‑Daten und Ereignis bereit. |
+| Rolle  | Name   | Typ                                  | Richtung        | Kommentar                              |
+| ------ | ------ | ------------------------------------ | --------------- | -------------------------------------- |
+| Socket | AD_IN  | `adapter::types::unidirectional::AD` | Eingang (DWORD) | Liefert DWORD‑Daten und Ereignis.      |
+| Plug   | AW_OUT | `adapter::types::unidirectional::AW` | Ausgang (WORD)  | Stellt WORD‑Daten und Ereignis bereit. |
 
 Beide Adapter sind vom Typ *unidirectional*, d. h. die Kommunikation erfolgt in eine Richtung.
 

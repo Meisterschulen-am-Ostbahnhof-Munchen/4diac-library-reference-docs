@@ -14,17 +14,17 @@ Der AUI_CTU ist ein ereignisgesteuerter Aufwärtszähler mit Adapterschnittstell
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `CU` | Event | Zähle hoch (Count Up) |
+| Name | Typ   | Kommentar                       |
+| ---- | ----- | ------------------------------- |
+| `CU` | Event | Zähle hoch (Count Up)           |
 | `R`  | Event | Setze den Zähler zurück (Reset) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                             |
+| ----- | ----- | ------------------------------------- |
 | `CUO` | Event | Ausgabe nach erfolgreichem Hochzählen |
-| `RO` | Event | Ausgabe nach erfolgreichem Rücksetzen |
+| `RO`  | Event | Ausgabe nach erfolgreichem Rücksetzen |
 
 ### **Daten-Eingänge**
 
@@ -36,11 +36,11 @@ Direkte Daten-Ausgänge sind nicht vorhanden. Der aktuelle Zählerwert (`CV`) un
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AX` | Plug (Ausgang) | `Q` | Gibt `TRUE` aus, wenn `CV >= PV`, sonst `FALSE`. Das Ereignis `Q.E1` wird nur bei Zustandsänderung gesendet. |
-| `adapter::types::unidirectional::AUI` | Plug (Ausgang) | `CV` | Liefert den aktuellen Zählerwert (vorzeichenloser Ganzzahl). Das Ereignis `CV.E1` wird nach jedem Hochzählen oder Rücksetzen ausgelöst. |
-| `adapter::types::unidirectional::AUI` | Socket (Eingang) | `PV` | Empfängt den Schwellwert (Grenzwert) vom Typ `UINT`. Eine Änderung dieses Wertes führt automatisch zur Neuberechnung von `Q`. |
+| Typ                                   | Richtung         | Name | Beschreibung                                                                                                                            |
+| ------------------------------------- | ---------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AX`  | Plug (Ausgang)   | `Q`  | Gibt `TRUE` aus, wenn `CV >= PV`, sonst `FALSE`. Das Ereignis `Q.E1` wird nur bei Zustandsänderung gesendet.                            |
+| `adapter::types::unidirectional::AUI` | Plug (Ausgang)   | `CV` | Liefert den aktuellen Zählerwert (vorzeichenloser Ganzzahl). Das Ereignis `CV.E1` wird nach jedem Hochzählen oder Rücksetzen ausgelöst. |
+| `adapter::types::unidirectional::AUI` | Socket (Eingang) | `PV` | Empfängt den Schwellwert (Grenzwert) vom Typ `UINT`. Eine Änderung dieses Wertes führt automatisch zur Neuberechnung von `Q`.           |
 
 ## Funktionsweise
 
@@ -72,13 +72,13 @@ Ablauf:
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Aktionen | Ausgehende Transitionen |
-| --------- | -------------- | ---------- | ------------------------- |
-| `START` | Ruhezustand, wartet auf Ereignisse | – | `CU` → `CU`, `R` → `R`, `PV.E1` → `UPDATE_PV` |
-| `CU` | Hochzählen | `CU`-Algorithmus, sende `CV.E1` und `CUO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `R` | Rücksetzen | `R`-Algorithmus, sende `CV.E1` und `RO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `UPDATE_PV` | Neuberechnung nach PV-Änderung | `UPDATE`-Algorithmus | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `EMIT_Q` | Emission des Q-Ereignisses | `SAVE_Q`-Algorithmus, sende `Q.E1` | 1 → `START` |
+| Zustand     | Beschreibung                       | Aktionen                                  | Ausgehende Transitionen                             |
+| ----------- | ---------------------------------- | ----------------------------------------- | --------------------------------------------------- |
+| `START`     | Ruhezustand, wartet auf Ereignisse | –                                         | `CU` → `CU`, `R` → `R`, `PV.E1` → `UPDATE_PV`       |
+| `CU`        | Hochzählen                         | `CU`-Algorithmus, sende `CV.E1` und `CUO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `R`         | Rücksetzen                         | `R`-Algorithmus, sende `CV.E1` und `RO`   | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `UPDATE_PV` | Neuberechnung nach PV-Änderung     | `UPDATE`-Algorithmus                      | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `EMIT_Q`    | Emission des Q-Ereignisses         | `SAVE_Q`-Algorithmus, sende `Q.E1`        | 1 → `START`                                         |
 
 Die Transitionen sind durch Bedingungen ausgelöst:
 
@@ -96,13 +96,13 @@ Die Transitionen sind durch Bedingungen ausgelöst:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | `AUI_CTU` | Standard `CTU` (IEC 61131-3) | `CTUD` (Auf-/Abwärtszähler) |
-| --------- | ----------- | ------------------------------ | ------------------------------ |
-| Schnittstelle | Adapter-basiert | Direkte Ein-/Ausgänge | Direkte Ein-/Ausgänge |
-| Ereignis bei Q-Änderung | Ja (On-Change) | Nein (immer bei Zählereignis) | Nein |
-| Reaktion auf PV-Änderung | Automatisch | Nicht vorgesehen | Nicht vorgesehen |
-| Überlaufschutz | Ja (max. 65535) | Ja, über Konfiguration | Ja |
-| Abwärtszählen | Nein | Nein | Ja |
+| Merkmal                  | `AUI_CTU`       | Standard `CTU` (IEC 61131-3)  | `CTUD` (Auf-/Abwärtszähler) |
+| ------------------------ | --------------- | ----------------------------- | --------------------------- |
+| Schnittstelle            | Adapter-basiert | Direkte Ein-/Ausgänge         | Direkte Ein-/Ausgänge       |
+| Ereignis bei Q-Änderung  | Ja (On-Change)  | Nein (immer bei Zählereignis) | Nein                        |
+| Reaktion auf PV-Änderung | Automatisch     | Nicht vorgesehen              | Nicht vorgesehen            |
+| Überlaufschutz           | Ja (max. 65535) | Ja, über Konfiguration        | Ja                          |
+| Abwärtszählen            | Nein            | Nein                          | Ja                          |
 
 Der `AUI_CTU` ist speziell für ereignisgesteuerte Systeme mit Adapterkonzept optimiert. Die On-Change-Triggerung und die automatische PV-Neuberechnung sind markante Unterschiede zu klassischen Zählern.
 

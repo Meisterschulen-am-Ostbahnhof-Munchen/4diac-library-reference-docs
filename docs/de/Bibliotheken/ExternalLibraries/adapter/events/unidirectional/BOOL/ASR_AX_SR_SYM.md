@@ -35,10 +35,10 @@ Der Ausgangswert wird über den Plug-Adapter `Q` bereitgestellt:
 
 ### Adapter  
 
-| Bezeichnung | Typ                                    | Richtung | Beschreibung                       |
-|-------------|----------------------------------------|----------|------------------------------------|
-| `S_R`       | `adapter::types::unidirectional::ASR`  | Socket   | Set-/Reset-Ereignisse (Eingang)    |
-| `Q`         | `adapter::types::unidirectional::AX`   | Plug     | Zustandsausgabe (Ereignis + Daten) |
+| Bezeichnung | Typ                                   | Richtung | Beschreibung                       |
+| ----------- | ------------------------------------- | -------- | ---------------------------------- |
+| `S_R`       | `adapter::types::unidirectional::ASR` | Socket   | Set-/Reset-Ereignisse (Eingang)    |
+| `Q`         | `adapter::types::unidirectional::AX`  | Plug     | Zustandsausgabe (Ereignis + Daten) |
 
 ## Funktionsweise  
 
@@ -65,11 +65,11 @@ Der Baustein bleibt nach dem ersten Übergang in einem der beiden stabilen Zust�
 
 *(Hinweis: Ein grafisches Zustandsdiagramm kann aus dem ECC‑XML extrahiert werden, ist hier jedoch nicht als Bild eingebettet.)*
 
-| Zustand | Beschreibung                      | Aktion                | Ausgang                                         |
-|---------|-----------------------------------|-----------------------|-------------------------------------------------|
-| START   | Initialer Wartezustand            | –                     | keine Ausgabe                                   |
-| SET     | Gespeicherter Zustand „gesetzt“   | `Q.D1 := TRUE`        | Auslösen von `Q.E1`                             |
-| RESET   | Gespeicherter Zustand „rückgesetzt“| `Q.D1 := FALSE`       | Auslösen von `Q.E1`                             |
+| Zustand | Beschreibung                        | Aktion          | Ausgang             |
+| ------- | ----------------------------------- | --------------- | ------------------- |
+| START   | Initialer Wartezustand              | –               | keine Ausgabe       |
+| SET     | Gespeicherter Zustand „gesetzt“     | `Q.D1 := TRUE`  | Auslösen von `Q.E1` |
+| RESET   | Gespeicherter Zustand „rückgesetzt“ | `Q.D1 := FALSE` | Auslösen von `Q.E1` |
 
 **Übergänge:**  
 

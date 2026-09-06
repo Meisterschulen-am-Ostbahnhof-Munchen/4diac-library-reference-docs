@@ -12,20 +12,20 @@ Der Funktionsblock **SET_SINT** dient dazu, einen SINT-Wert von seinem Dateneing
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                    |
+| -------- | ------------------------------------------------------------------------------- |
 | **REQ**  | Normale Ausführungsanforderung. Löst die Zuweisung von **IN** nach **OUT** aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                            |
+| -------- | ----------------------------------------------------------------------- |
 | **CNF**  | Bestätigung der Ausführung. Wird nach erfolgreicher Zuweisung gesendet. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Initialwert | Beschreibung |
-|------|------|-------------|--------------|
+| Name   | Typ  | Initialwert | Beschreibung                           |
+| ------ | ---- | ----------- | -------------------------------------- |
 | **IN** | SINT | 0           | Der Wert, der geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
@@ -56,9 +56,9 @@ Nach Abschluss der Zuweisung wird das Ereignis **CNF** ausgegeben. Die InOut-Var
 
 Der Funktionsblock besitzt einen einzigen Zustand (ECState) mit dem Namen **REQ**:
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ     | `OUT := IN` | CNF |
+| Zustand | Aktion      | Ausgabeereignis |
+| ------- | ----------- | --------------- |
+| REQ     | `OUT := IN` | CNF             |
 
 Es gibt nur diesen einen Zustand; nach Ausführung kehrt der Baustein in den initialen Zustand zurück. Eine explizite Zustandsmaschine mit mehreren Zuständen liegt nicht vor.
 

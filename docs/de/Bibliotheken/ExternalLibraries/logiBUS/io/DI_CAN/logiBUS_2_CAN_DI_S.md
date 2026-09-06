@@ -14,9 +14,9 @@ Dies ist ein strukturierter Datentyp (STRUCT) und besitzt daher keine Ereignis- 
 
 Da es sich um einen Datentyp handelt, werden diese Elemente innerhalb eines übergeordneten Funktionsbausteins als Eingangsdaten verwendet.
 
-| Name | Datentyp | Initialwert | Kommentar |
-|---|---|---|---|
-| `Pin` | `USINT` (Unsigned Short Integer) | 255 | Definiert die Nummer des physischen Eingangspins am logiBUS-CAN-Modul. |
+| Name  | Datentyp                         | Initialwert | Kommentar                                                              |
+| ----- | -------------------------------- | ----------- | ---------------------------------------------------------------------- |
+| `Pin` | `USINT` (Unsigned Short Integer) | 255         | Definiert die Nummer des physischen Eingangspins am logiBUS-CAN-Modul. |
 
 ### **Daten-Ausgänge**
 

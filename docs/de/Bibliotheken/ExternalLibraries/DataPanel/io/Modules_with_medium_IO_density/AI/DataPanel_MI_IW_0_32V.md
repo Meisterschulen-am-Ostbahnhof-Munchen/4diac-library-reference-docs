@@ -12,36 +12,36 @@ Der Funktionsblock **DataPanel_MI_IW_0_32V** ist ein Service-Interface-Funktions
 
 ### **Ereignis-Eingänge**
 
-| Event | Kommentar | Mit (With) |
-|-------|-----------|------------|
-| **INIT** | Service-Initialisierung | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis |
-| **REQ** | Service-Anforderung (Messwertabruf) | QI |
+| Event    | Kommentar                           | Mit (With)                                            |
+| -------- | ----------------------------------- | ----------------------------------------------------- |
+| **INIT** | Service-Initialisierung             | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis |
+| **REQ**  | Service-Anforderung (Messwertabruf) | QI                                                    |
 
 ### **Ereignis-Ausgänge**
 
-| Event | Kommentar | Mit (With) |
-| ------- | ----------- | ------------ |
-| **INITO** | Bestätigung der Initialisierung | QO, STATUS |
-| **CNF** | Bestätigung der angeforderten Serviceleistung | QO, STATUS, IN |
-| **IND** | Indikation eines neuen Messwerts von der Ressource | QO, STATUS, IN |
+| Event     | Kommentar                                          | Mit (With)     |
+| --------- | -------------------------------------------------- | -------------- |
+| **INITO** | Bestätigung der Initialisierung                    | QO, STATUS     |
+| **CNF**   | Bestätigung der angeforderten Serviceleistung      | QO, STATUS, IN |
+| **IND**   | Indikation eines neuen Messwerts von der Ressource | QO, STATUS, IN |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-| ------ | ----- | ------------- | ----------- |
-| **QI** | BOOL | – | Ereignis-Eingangsqualifizierer |
-| **PARAMS** | STRING | – | Service-Parameter (z. B. Adressen, Baudrate) |
-| **u8SAMember** | USINT | `MI::MI_00` | Knoten‑SA‑Adresse (224..239) |
-| **Input** | DataPanel::io::MI::AI::DataPanel_MI_AI_S | `Invalid` | Auswahl des analogen Eingangs (AnalogInput_1A … 8B) |
-| **AnalogInput_hysteresis** | WORD | – | Hysterese für den Analogwert (Konfiguration) |
+| Name                       | Typ                                      | Initialwert | Kommentar                                           |
+| -------------------------- | ---------------------------------------- | ----------- | --------------------------------------------------- |
+| **QI**                     | BOOL                                     | –           | Ereignis-Eingangsqualifizierer                      |
+| **PARAMS**                 | STRING                                   | –           | Service-Parameter (z. B. Adressen, Baudrate)        |
+| **u8SAMember**             | USINT                                    | `MI::MI_00` | Knoten‑SA‑Adresse (224..239)                        |
+| **Input**                  | DataPanel::io::MI::AI::DataPanel_MI_AI_S | `Invalid`   | Auswahl des analogen Eingangs (AnalogInput_1A … 8B) |
+| **AnalogInput_hysteresis** | WORD                                     | –           | Hysterese für den Analogwert (Konfiguration)        |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| **QO** | BOOL | Ereignis-Ausgangsqualifizierer |
-| **STATUS** | STRING | Dienststatus (z. B. Fehler-/Erfolgsmeldungen) |
-| **IN** | WORD | Gemessener Analogwert (0..32 V skaliert als WORD) |
+| Name       | Typ    | Kommentar                                         |
+| ---------- | ------ | ------------------------------------------------- |
+| **QO**     | BOOL   | Ereignis-Ausgangsqualifizierer                    |
+| **STATUS** | STRING | Dienststatus (z. B. Fehler-/Erfolgsmeldungen)     |
+| **IN**     | WORD   | Gemessener Analogwert (0..32 V skaliert als WORD) |
 
 ### **Adapter**
 

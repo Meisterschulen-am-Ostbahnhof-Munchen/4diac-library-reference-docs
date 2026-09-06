@@ -27,7 +27,7 @@ The image above illustrates this exact case.
 
 ...
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -69,12 +69,12 @@ The `STRUCT_DEMUX` is a stateless function block that operates according to a si
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2020 Johannes Kepler University Linz |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac Package | eclipse4diac::convert |
+| Attribute     | Value                                    |
+| :------------ | :--------------------------------------- |
+| Copyright     | (c) 2020 Johannes Kepler University Linz |
+| License       | EPL-2.0                                  |
+| Version       | 3.0 (2025-04-14, Patrick Aigner)         |
+| 4diac Package | eclipse4diac::convert                    |
 
 - [Uebung_051](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_051/)
 - [Uebung_120](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_120/)

@@ -10,7 +10,7 @@ The function block `SPLIT_WORD_INTO_BOOLS` is used to decompose a 16-bit word in
 - `IN` (WORD): The 16-bit word to be decomposed into individual bits.
 - `BIT_00` to `BIT_15` (BOOL): The individual bits of the input word, where `BIT_00` represents the least significant bit (LSB) and `BIT_15` represents the most significant bit (MSB).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

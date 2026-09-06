@@ -72,11 +72,11 @@ Da es sich um einen Composite-Baustein ohne eigene ECC (Execution Control Chart)
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingabetyp | Ausgabetyp | Funktion |
-| ---------- | ------------ | ------------ | ---------- |
-| **AUI_TO_AX** | AUI (UINT) | AX (BOOL) | Ungleichheit mit Null |
-| *AUI_TO_AX_INV* (hypothetisch) | AUI (UINT) | AX (BOOL) | Gleichheit mit Null (invertiert) |
-| *CONV_UINT_TO_BOOL* (direkt) | UINT (Data) | BOOL (Data) | Direkter Datenwandler, kein Adapter |
+| Baustein                       | Eingabetyp  | Ausgabetyp  | Funktion                            |
+| ------------------------------ | ----------- | ----------- | ----------------------------------- |
+| **AUI_TO_AX**                  | AUI (UINT)  | AX (BOOL)   | Ungleichheit mit Null               |
+| *AUI_TO_AX_INV* (hypothetisch) | AUI (UINT)  | AX (BOOL)   | Gleichheit mit Null (invertiert)    |
+| *CONV_UINT_TO_BOOL* (direkt)   | UINT (Data) | BOOL (Data) | Direkter Datenwandler, kein Adapter |
 
 Der Baustein hebt sich durch die vollständige Adapterkonformität und die integrierte Ereignissteuerung von einfachen Datenkonvertern ab.
 

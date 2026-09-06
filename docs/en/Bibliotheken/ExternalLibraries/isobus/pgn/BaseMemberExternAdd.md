@@ -1,6 +1,6 @@
-![BaseMemberExternAdd](BaseMemberExternAdd.svg)
-
 # BaseMemberExternAdd
+
+![BaseMemberExternAdd](BaseMemberExternAdd.svg)
 
 Adds an external member to the network list manually.
 The use of this function is not ISO 11783 Part 5 conform.
@@ -15,30 +15,30 @@ The added CF will be set to announced in the next iso_DlCyclicGlobal() run.
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INIT | Service Initialization | |
-| REQ | Add external member | u8SA, u8CanIdx |
+| Name | Comment                | With           |
+| :--- | :--------------------- | :------------- |
+| INIT | Service Initialization |                |
+| REQ  | Add external member    | u8SA, u8CanIdx |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INITO | Initialization Confirm | |
-| CNF | Confirmation | s16Handle |
+| Name  | Comment                | With      |
+| :---- | :--------------------- | :-------- |
+| INITO | Initialization Confirm |           |
+| CNF   | Confirmation           | s16Handle |
 
 ### Input Vars
 
-| Name | Type | Initial Value | Comment |
-| :--- | :--- | :--- | :--- |
-| u8CanIdx | USINT | NODE1 | CAN node index |
-| u8SA | USINT | | Source Address of the CF to add |
+| Name     | Type  | Initial Value | Comment                         |
+| :------- | :---- | :------------ | :------------------------------ |
+| u8CanIdx | USINT | NODE1         | CAN node index                  |
+| u8SA     | USINT |               | Source Address of the CF to add |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| s16Handle | INT | Handle of the added member |
+| Name      | Type | Comment                    |
+| :-------- | :--- | :------------------------- |
+| s16Handle | INT  | Handle of the added member |
 
 ## 🛠️ Related exercises
 

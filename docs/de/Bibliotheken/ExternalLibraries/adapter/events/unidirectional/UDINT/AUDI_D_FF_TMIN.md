@@ -12,20 +12,20 @@ Der Funktionsblock **AUDI_D_FF_TMIN** realisiert ein D‑Flipflop (Data Latch) m
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Beschreibung                                |
-|-------|-------|---------------------------------------------|
-| INIT  | EInit | Initialisierung des Bausteins; setzt die minimale Zeit zwischen zwei EO-Ereignissen. |
+| Name | Typ   | Beschreibung                                                                         |
+| ---- | ----- | ------------------------------------------------------------------------------------ |
+| INIT | EInit | Initialisierung des Bausteins; setzt die minimale Zeit zwischen zwei EO-Ereignissen. |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Beschreibung                                |
-|-------|-------|---------------------------------------------|
+| Name  | Typ   | Beschreibung                                     |
+| ----- | ----- | ------------------------------------------------ |
 | INITO | EInit | Bestätigung der abgeschlossenen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Beschreibung                                                   |
-|------|------|----------------------------------------------------------------|
+| Name | Typ  | Beschreibung                                                                                        |
+| ---- | ---- | --------------------------------------------------------------------------------------------------- |
 | Tmin | TIME | Minimale Zeitdauer, die zwischen zwei aufeinanderfolgenden EO-Ereignissen mindestens vergehen muss. |
 
 ### **Daten-Ausgänge**
@@ -34,9 +34,9 @@ Keine direkten Datenausgänge; der gelatchte Wert wird über den Adapter **Q** b
 
 ### **Adapter**
 
-| Name | Typ (unidirektional) | Rolle                                            |
-|------|----------------------|--------------------------------------------------|
-| I    | AUDI                 | Eingangsadapter: liefert den zu latchnden Wert (über D1) und das Latch-Ereignis (über E1). |
+| Name | Typ (unidirektional) | Rolle                                                                                         |
+| ---- | -------------------- | --------------------------------------------------------------------------------------------- |
+| I    | AUDI                 | Eingangsadapter: liefert den zu latchnden Wert (über D1) und das Latch-Ereignis (über E1).    |
 | Q    | AUDI                 | Ausgangsadapter: gibt den gelatchten Wert (über D1) sowie ein Ausgangsereignis (über E1) aus. |
 
 ## Funktionsweise
@@ -86,11 +86,11 @@ Ein INIT‑Ereignis setzt alle Zustände zurück.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein            | Besonderheit                                                      |
-|---------------------|-------------------------------------------------------------------|
-| **AUDI_D_FF**       | Reines D‑Flipflop ohne zeitliche Begrenzung zwischen EO-Ereignissen. |
-| **E_D_FF_ANY**      | Standard‑D‑Flipflop mit universellen Datentypen, jedoch ohne minimale Wartezeit. |
-| **AUDI_D_FF_TMIN**  | Wie AUDI_D_FF, aber mit zusätzlicher `Tmin`-Parameter zur Steuerung der Mindestpause zwischen Ausgangsereignissen. |
+| Baustein           | Besonderheit                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| **AUDI_D_FF**      | Reines D‑Flipflop ohne zeitliche Begrenzung zwischen EO-Ereignissen.                                               |
+| **E_D_FF_ANY**     | Standard‑D‑Flipflop mit universellen Datentypen, jedoch ohne minimale Wartezeit.                                   |
+| **AUDI_D_FF_TMIN** | Wie AUDI_D_FF, aber mit zusätzlicher `Tmin`-Parameter zur Steuerung der Mindestpause zwischen Ausgangsereignissen. |
 
 ## Fazit
 

@@ -30,18 +30,18 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ------ | ------ | ---------- | ------------- |
-| `adapter::types::unidirectional::AW` | `IN` | Socket (Eingang) | Eingehender AW‑Adapter, der auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AW` | `OUT1` | Plug (Ausgang) | Erster ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT2` | Plug (Ausgang) | Zweiter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT3` | Plug (Ausgang) | Dritter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT4` | Plug (Ausgang) | Vierter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT5` | Plug (Ausgang) | Fünfter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT6` | Plug (Ausgang) | Sechster ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT7` | Plug (Ausgang) | Siebter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT8` | Plug (Ausgang) | Achter ausgehender AW‑Adapter. |
-| `adapter::types::unidirectional::AW` | `OUT9` | Plug (Ausgang) | Neunter ausgehender AW‑Adapter. |
+| Typ                                  | Name   | Richtung         | Beschreibung                                                 |
+| ------------------------------------ | ------ | ---------------- | ------------------------------------------------------------ |
+| `adapter::types::unidirectional::AW` | `IN`   | Socket (Eingang) | Eingehender AW‑Adapter, der auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AW` | `OUT1` | Plug (Ausgang)   | Erster ausgehender AW‑Adapter.                               |
+| `adapter::types::unidirectional::AW` | `OUT2` | Plug (Ausgang)   | Zweiter ausgehender AW‑Adapter.                              |
+| `adapter::types::unidirectional::AW` | `OUT3` | Plug (Ausgang)   | Dritter ausgehender AW‑Adapter.                              |
+| `adapter::types::unidirectional::AW` | `OUT4` | Plug (Ausgang)   | Vierter ausgehender AW‑Adapter.                              |
+| `adapter::types::unidirectional::AW` | `OUT5` | Plug (Ausgang)   | Fünfter ausgehender AW‑Adapter.                              |
+| `adapter::types::unidirectional::AW` | `OUT6` | Plug (Ausgang)   | Sechster ausgehender AW‑Adapter.                             |
+| `adapter::types::unidirectional::AW` | `OUT7` | Plug (Ausgang)   | Siebter ausgehender AW‑Adapter.                              |
+| `adapter::types::unidirectional::AW` | `OUT8` | Plug (Ausgang)   | Achter ausgehender AW‑Adapter.                               |
+| `adapter::types::unidirectional::AW` | `OUT9` | Plug (Ausgang)   | Neunter ausgehender AW‑Adapter.                              |
 
 ## Funktionsweise
 

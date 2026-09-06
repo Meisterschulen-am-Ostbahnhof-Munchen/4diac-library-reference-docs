@@ -28,11 +28,11 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ              | Beschreibung                                       |
-|----------|------|------------------|----------------------------------------------------|
+| Richtung | Name | Typ                  | Beschreibung                                            |
+| -------- | ---- | -------------------- | ------------------------------------------------------- |
 | Sockets  | IN   | AUS (unidirectional) | Eingangsadapter, der das zu verteilende Signal empfängt |
-| Plugs    | OUT1 | AUS (unidirectional) | Erster Ausgangsadapter, identisch zum Eingangssignal |
-| Plugs    | OUT2 | AUS (unidirectional) | Zweiter Ausgangsadapter, identisch zum Eingangssignal |
+| Plugs    | OUT1 | AUS (unidirectional) | Erster Ausgangsadapter, identisch zum Eingangssignal    |
+| Plugs    | OUT2 | AUS (unidirectional) | Zweiter Ausgangsadapter, identisch zum Eingangssignal   |
 
 ## Funktionsweise
 

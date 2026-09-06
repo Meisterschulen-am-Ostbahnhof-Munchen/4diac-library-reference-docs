@@ -12,33 +12,33 @@ Der Funktionsblock `BasicOne_AX` ist ein grundlegender IEC 61499-Baustein des Ty
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| `INIT` | `EInit` | `QI` | Initialisierungsanforderung |
+| Ereignis | Typ     | Mit Variablen | Kommentar                   |
+| -------- | ------- | ------------- | --------------------------- |
+| `INIT`   | `EInit` | `QI`          | Initialisierungsanforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| `INITO` | `EInit` | `QO` | Initialisierungsbestätigung |
+| Ereignis | Typ     | Mit Variablen | Kommentar                   |
+| -------- | ------- | ------------- | --------------------------- |
+| `INITO`  | `EInit` | `QO`          | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `QI` | `BOOL` | Eingangsqualifizierer (Schaltet die Initialisierung ein/aus) |
+| Variable | Typ    | Kommentar                                                    |
+| -------- | ------ | ------------------------------------------------------------ |
+| `QI`     | `BOOL` | Eingangsqualifizierer (Schaltet die Initialisierung ein/aus) |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `QO` | `BOOL` | Ausgangsqualifizierer (Spiegelt den Initialisierungszustand) |
+| Variable | Typ    | Kommentar                                                    |
+| -------- | ------ | ------------------------------------------------------------ |
+| `QO`     | `BOOL` | Ausgangsqualifizierer (Spiegelt den Initialisierungszustand) |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Plug (Ausgang) | `DO1` | `adapter::types::unidirectional::AX` | Unidirektionaler Adapter zur Datenweitergabe (AX-Schnittstelle) |
+| Richtung         | Name  | Typ                                  | Kommentar                                                         |
+| ---------------- | ----- | ------------------------------------ | ----------------------------------------------------------------- |
+| Plug (Ausgang)   | `DO1` | `adapter::types::unidirectional::AX` | Unidirektionaler Adapter zur Datenweitergabe (AX-Schnittstelle)   |
 | Socket (Eingang) | `DI1` | `adapter::types::unidirectional::AX` | Unidirektionaler Adapter zum Empfang von Daten (AX-Schnittstelle) |
 
 ## Funktionsweise
@@ -65,13 +65,13 @@ Zusammenfassend arbeitet der Baustein als *getriggerte Durchschaltung*: Der Adap
 
 Der ECC (Execution Control Chart) des Bausteins umfasst fünf Zustände:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| `START` | Wartet auf erstes `INIT`-Ereignis mit `QI=TRUE`. |
-| `Init` | Führt Initialisierungsalgorithmus aus, setzt `QO=QI` und sendet `INITO`. |
+| Zustand       | Beschreibung                                                                                               |
+| ------------- | ---------------------------------------------------------------------------------------------------------- |
+| `START`       | Wartet auf erstes `INIT`-Ereignis mit `QI=TRUE`.                                                           |
+| `Init`        | Führt Initialisierungsalgorithmus aus, setzt `QO=QI` und sendet `INITO`.                                   |
 | `Initialized` | Ruhezustand nach erfolgreicher Initialisierung; wartet auf `DI1.E1` oder erneutes `INIT` (mit `QI=FALSE`). |
-| `NormalOp` | Führt Durchschaltung durch (kopiert `DI1.D1` nach `DO1.D1`, falls `QI=TRUE`). |
-| `DeInit` | Führt Deinitialisierung durch (setzt `QO` und `DO1.D1` auf `FALSE`), sendet `INITO`. |
+| `NormalOp`    | Führt Durchschaltung durch (kopiert `DI1.D1` nach `DO1.D1`, falls `QI=TRUE`).                              |
+| `DeInit`      | Führt Deinitialisierung durch (setzt `QO` und `DO1.D1` auf `FALSE`), sendet `INITO`.                       |
 
 ## Anwendungsszenarien
 

@@ -16,8 +16,8 @@ Der Baustein besitzt auf oberster Ebene keine diskreten Ereignis-Eingänge. Alle
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ     | Kommentar                                                                                     |
+| ----- | ------- | --------------------------------------------------------------------------------------------- |
 | `CNF` | `Event` | Ausführungsbestätigung – wird bei jeder Bearbeitung eines eingehenden Ereignisses ausgegeben. |
 
 Zusätzlich werden Ereignisse über die ausgehenden Adapter (Plugs) gesendet.
@@ -32,16 +32,16 @@ Auf oberster Ebene existieren keine direkten Daten-Ausgänge. Die Ergebnisdaten 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-| ---------- | ------ | ----- | ----------- |
-| **Socket (Eingang)** | `CU` | `adapter::types::unidirectional::AX` | Count up – Ereignis und Daten (BOOL) zum Hochzählen |
-| **Socket (Eingang)** | `CD` | `adapter::types::unidirectional::AX` | Count down – Ereignis und Daten (BOOL) zum Herunterzählen |
-| **Socket (Eingang)** | `R` | `adapter::types::unidirectional::AX` | Reset – Ereignis und Daten (BOOL) zum Rücksetzen des Zählers |
-| **Socket (Eingang)** | `LD` | `adapter::types::unidirectional::AX` | Load – Ereignis und Daten (BOOL) zum Laden des Preset-Wertes |
-| **Socket (Eingang)** | `PV` | `adapter::types::unidirectional::AUDI` | Preset value – Ereignis und Daten (UDINT) für den Vorgabewert |
-| **Plug (Ausgang)** | `QU` | `adapter::types::unidirectional::AX` | Output Up – Ereignis und Daten (BOOL), aktiv wenn der aktuelle Zählwert den Wert 0 erreicht |
-| **Plug (Ausgang)** | `QD` | `adapter::types::unidirectional::AX` | Output Down – Ereignis und Daten (BOOL), aktiv wenn der aktuelle Zählwert den Wert >= PV erreicht |
-| **Plug (Ausgang)** | `CV` | `adapter::types::unidirectional::AUDI` | Count value – Ereignis und Daten (UDINT) mit dem aktuellen Zählwert |
+| Richtung             | Name | Typ                                    | Kommentar                                                                                         |
+| -------------------- | ---- | -------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Socket (Eingang)** | `CU` | `adapter::types::unidirectional::AX`   | Count up – Ereignis und Daten (BOOL) zum Hochzählen                                               |
+| **Socket (Eingang)** | `CD` | `adapter::types::unidirectional::AX`   | Count down – Ereignis und Daten (BOOL) zum Herunterzählen                                         |
+| **Socket (Eingang)** | `R`  | `adapter::types::unidirectional::AX`   | Reset – Ereignis und Daten (BOOL) zum Rücksetzen des Zählers                                      |
+| **Socket (Eingang)** | `LD` | `adapter::types::unidirectional::AX`   | Load – Ereignis und Daten (BOOL) zum Laden des Preset-Wertes                                      |
+| **Socket (Eingang)** | `PV` | `adapter::types::unidirectional::AUDI` | Preset value – Ereignis und Daten (UDINT) für den Vorgabewert                                     |
+| **Plug (Ausgang)**   | `QU` | `adapter::types::unidirectional::AX`   | Output Up – Ereignis und Daten (BOOL), aktiv wenn der aktuelle Zählwert den Wert 0 erreicht       |
+| **Plug (Ausgang)**   | `QD` | `adapter::types::unidirectional::AX`   | Output Down – Ereignis und Daten (BOOL), aktiv wenn der aktuelle Zählwert den Wert >= PV erreicht |
+| **Plug (Ausgang)**   | `CV` | `adapter::types::unidirectional::AUDI` | Count value – Ereignis und Daten (UDINT) mit dem aktuellen Zählwert                               |
 
 ## Funktionsweise
 
@@ -60,15 +60,15 @@ Der `AUDI_FB_CTUD` nutzt intern den Baustein `FB_CTUD_UDINT` aus der IEC‑61131
 
 Der interne `FB_CTUD_UDINT` durchläuft folgende Zustände, abhängig von den eingehenden Befehlen:
 
-| Bedingung | Aktion |
-| ----------- | -------- |
-| `CU` = TRUE (steigende Flanke) und `CD` = FALSE | Zähler erhöht sich um 1 |
-| `CD` = TRUE (steigende Flanke) und `CU` = FALSE | Zähler verringert sich um 1 |
-| `R` = TRUE (steigende Flanke) | Zähler wird auf 0 zurückgesetzt |
-| `LD` = TRUE (steigende Flanke) | Zähler wird auf den Wert von `PV` gesetzt |
-| Gleichzeitige `CU`- und `CD`-Flanken | Zählerstand bleibt unverändert (Priorität: keine) |
-| `QU` = TRUE | Aktueller Wert = 0 |
-| `QD` = TRUE | Aktueller Wert ≥ `PV` |
+| Bedingung                                       | Aktion                                            |
+| ----------------------------------------------- | ------------------------------------------------- |
+| `CU` = TRUE (steigende Flanke) und `CD` = FALSE | Zähler erhöht sich um 1                           |
+| `CD` = TRUE (steigende Flanke) und `CU` = FALSE | Zähler verringert sich um 1                       |
+| `R` = TRUE (steigende Flanke)                   | Zähler wird auf 0 zurückgesetzt                   |
+| `LD` = TRUE (steigende Flanke)                  | Zähler wird auf den Wert von `PV` gesetzt         |
+| Gleichzeitige `CU`- und `CD`-Flanken            | Zählerstand bleibt unverändert (Priorität: keine) |
+| `QU` = TRUE                                     | Aktueller Wert = 0                                |
+| `QD` = TRUE                                     | Aktueller Wert ≥ `PV`                             |
 
 ## Anwendungsszenarien
 
@@ -79,13 +79,13 @@ Der interne `FB_CTUD_UDINT` durchläuft folgende Zustände, abhängig von den ei
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | `AUDI_FB_CTUD` | Standard `CTUD` (IEC 61131) |
-| --------- | ---------------- | ---------------------------- |
-| **Schnittstelle** | Reine Adapter (Sockets/Plugs) | Direkte Ereignis- und Datenein‑/ausgänge |
-| **Datenformat** | UDINT (über AUDI‑Adapter) | UDINT (direkt) |
-| **Ereignisverhalten** | Jedes eingehende Event feuert alle Ausgänge | Ereignis wird nur bei relevanten Änderungen ausgegeben |
-| **Flexibilität** | Höher durch adapterbasierte Verkabelung | Geringer, aber einfacher in klassischen SPS‑Umgebungen |
-| **Empfohlener Filter** | Zusätzlicher `AX_D_FF` für flankengesteuerte Ausgabe | Kein Filter nötig, da flankenempfindlich |
+| Merkmal                | `AUDI_FB_CTUD`                                       | Standard `CTUD` (IEC 61131)                            |
+| ---------------------- | ---------------------------------------------------- | ------------------------------------------------------ |
+| **Schnittstelle**      | Reine Adapter (Sockets/Plugs)                        | Direkte Ereignis- und Datenein‑/ausgänge               |
+| **Datenformat**        | UDINT (über AUDI‑Adapter)                            | UDINT (direkt)                                         |
+| **Ereignisverhalten**  | Jedes eingehende Event feuert alle Ausgänge          | Ereignis wird nur bei relevanten Änderungen ausgegeben |
+| **Flexibilität**       | Höher durch adapterbasierte Verkabelung              | Geringer, aber einfacher in klassischen SPS‑Umgebungen |
+| **Empfohlener Filter** | Zusätzlicher `AX_D_FF` für flankengesteuerte Ausgabe | Kein Filter nötig, da flankenempfindlich               |
 
 ## Fazit
 

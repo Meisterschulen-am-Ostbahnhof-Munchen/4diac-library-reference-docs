@@ -12,29 +12,29 @@ Der Funktionsbaustein `F_NOT_BOOL_INIT` realisiert die logische Negation (NOT) e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Variablen | Beschreibung |
-|----------|-------|---------------|--------------|
-| `INIT`   | EInit | `IN`          | Initialisierungsanforderung – der FB wird einmalig initialisiert und der Eingang negiert. |
+| Ereignis | Typ   | Mit Variablen | Beschreibung                                                                                             |
+| -------- | ----- | ------------- | -------------------------------------------------------------------------------------------------------- |
+| `INIT`   | EInit | `IN`          | Initialisierungsanforderung – der FB wird einmalig initialisiert und der Eingang negiert.                |
 | `REQ`    | Event | `IN`          | Normale Verarbeitungsanforderung – die logische Negation wird auf den aktuellen Eingangswert angewendet. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Variablen | Beschreibung |
-|----------|-------|---------------|--------------|
-| `INITO`  | EInit | `OUT`         | Bestätigung der Initialisierung – wird nach erfolgreicher Initialisierung ausgegeben. |
+| Ereignis | Typ   | Mit Variablen | Beschreibung                                                                           |
+| -------- | ----- | ------------- | -------------------------------------------------------------------------------------- |
+| `INITO`  | EInit | `OUT`         | Bestätigung der Initialisierung – wird nach erfolgreicher Initialisierung ausgegeben.  |
 | `CNF`    | Event | `OUT`         | Bestätigung der normalen Verarbeitung – wird nach jeder Ausführung auf `REQ` gesendet. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Beschreibung |
-|----------|--------|--------------|
-| `IN`     | BOOL   | Eingangswert, der negiert werden soll. |
+| Variable | Typ  | Beschreibung                           |
+| -------- | ---- | -------------------------------------- |
+| `IN`     | BOOL | Eingangswert, der negiert werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Beschreibung |
-|----------|--------|--------------|
-| `OUT`    | BOOL   | Negierter Wert des Eingangs (`NOT IN`). |
+| Variable | Typ  | Beschreibung                            |
+| -------- | ---- | --------------------------------------- |
+| `OUT`    | BOOL | Negierter Wert des Eingangs (`NOT IN`). |
 
 ### **Adapter**
 
@@ -74,9 +74,9 @@ Eine wiederholte Auslösung von `INIT` (z. B. nach einem Reset) führt erneut zu
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein           | Beschreibung                                  | Unterschied zu `F_NOT_BOOL_INIT` |
-|--------------------|-----------------------------------------------|----------------------------------|
-| `F_NOT` (Standard) | Reine Negation ohne Initialisierungsereignis. | Fehlt das `INIT`/`INITO`-Paar; nach Systemstart ist der Ausgang nicht definiert. |
+| Baustein           | Beschreibung                                               | Unterschied zu `F_NOT_BOOL_INIT`                                                                    |
+| ------------------ | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `F_NOT` (Standard) | Reine Negation ohne Initialisierungsereignis.              | Fehlt das `INIT`/`INITO`-Paar; nach Systemstart ist der Ausgang nicht definiert.                    |
 | `F_NOT_BOOL_INIT`  | Wie `F_NOT`, aber mit explizitem Initialisierungsereignis. | Bietet definiertes Startverhalten und gibt bei Initialisierung ein separates Quittungsereignis aus. |
 
 Der Standard `F_NOT` ist ausreichend, wenn das Startverhalten durch den übergeordneten Steuerungsablauf geregelt wird. Der initialisierbare Baustein ist dann vorteilhaft, wenn der FB selbst die Kontrolle über seine erste Ausführung besitzen soll.

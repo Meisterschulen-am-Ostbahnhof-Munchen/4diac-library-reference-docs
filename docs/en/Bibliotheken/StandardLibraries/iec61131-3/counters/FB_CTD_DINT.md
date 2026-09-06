@@ -34,6 +34,7 @@ The function block `FB_CTD_DINT` is a down counter for 32-bit integers (DINT). I
 
 - If `LD` is TRUE, the counter is set to the value of `PV`
 - If `CD` is TRUE and the current value (`CV`) is greater than -2147483648, `CV` is decremented by 1
+
 1. The output signal `Q` is set to TRUE if `CV` is less than or equal to 0 is
 2. Upon completion, the `CNF` event is triggered
 

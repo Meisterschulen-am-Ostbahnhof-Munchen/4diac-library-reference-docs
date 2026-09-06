@@ -28,14 +28,14 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ            | Beschreibung                         |
-|----------|------|----------------|--------------------------------------|
-| Socket   | IN   | A2X (unidirectional) | Eingangsadapter (wird aufgeteilt)   |
-| Plug     | OUT1 | A2X (unidirectional) | Erster Ausgangsadapter               |
-| Plug     | OUT2 | A2X (unidirectional) | Zweiter Ausgangsadapter              |
-| Plug     | OUT3 | A2X (unidirectional) | Dritter Ausgangsadapter              |
-| Plug     | OUT4 | A2X (unidirectional) | Vierter Ausgangsadapter              |
-| Plug     | OUT5 | A2X (unidirectional) | Fünfter Ausgangsadapter              |
+| Richtung | Name | Typ                  | Beschreibung                      |
+| -------- | ---- | -------------------- | --------------------------------- |
+| Socket   | IN   | A2X (unidirectional) | Eingangsadapter (wird aufgeteilt) |
+| Plug     | OUT1 | A2X (unidirectional) | Erster Ausgangsadapter            |
+| Plug     | OUT2 | A2X (unidirectional) | Zweiter Ausgangsadapter           |
+| Plug     | OUT3 | A2X (unidirectional) | Dritter Ausgangsadapter           |
+| Plug     | OUT4 | A2X (unidirectional) | Vierter Ausgangsadapter           |
+| Plug     | OUT5 | A2X (unidirectional) | Fünfter Ausgangsadapter           |
 
 ## Funktionsweise
 

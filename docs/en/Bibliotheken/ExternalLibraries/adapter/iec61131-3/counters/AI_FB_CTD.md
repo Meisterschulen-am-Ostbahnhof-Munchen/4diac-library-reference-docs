@@ -14,17 +14,17 @@ The function block **AI_FB_CTD** is a down counter for integer values, standardi
 
 The function block does not have direct, separate event inputs. The necessary events are provided via the **Socket Adapters** (CD, LD, PV) – each of these modules carries an event (E1) that triggers the counter logic.
 
-| Socket | Event (in the adapter) | Description |
-| -------- | ----------------------- | ------------------------------ |
-| CD | E1 | Counting event (down counter) |
-| LD | E1 | Load event (set to PV) |
-| PV | E1 | Default update |
+| Socket | Event (in the adapter) | Description                   |
+| ------ | ---------------------- | ----------------------------- |
+| CD     | E1                     | Counting event (down counter) |
+| LD     | E1                     | Load event (set to PV)        |
+| PV     | E1                     | Default update                |
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-|------|--------|-----------------------------------------------------------|
-| CNF | Event | Acknowledge event after each counter update (CD, LD, PV) |
+| Name | Type  | Description                                              |
+| ---- | ----- | -------------------------------------------------------- |
+| CNF  | Event | Acknowledge event after each counter update (CD, LD, PV) |
 
 Additionally, the output events are also transmitted via the **Plug Adapters** Q and CV (E1 each).
 
@@ -45,13 +45,13 @@ There are no direct data outputs. The output data is provided via the plug adapt
 
 ### **Adapters**
 
-| Label | Direction | Type | Description |
-| ------------- | ---------- | ----------------------------------- | ------------------------------------------------------ |
-| CD | Socket | `adapter::types::unidirectional::AX` | Counter input (event + data) for counting down |
-| LD | Socket | `adapter::types::unidirectional::AX` | Load input (event + data) for setting to PV |
-| PV | Socket | `adapter::types::unidirectional::AI` | Default input (event + data) for the preset value |
-| Q | Plug | `adapter::types::unidirectional::AX` | Output signal (event + data) – counter ≤ 0 |
-| CV | Plug | `adapter::types::unidirectional::AI` | Output counter value (event + current counter reading) |
+| Label | Direction | Type                                 | Description                                            |
+| ----- | --------- | ------------------------------------ | ------------------------------------------------------ |
+| CD    | Socket    | `adapter::types::unidirectional::AX` | Counter input (event + data) for counting down         |
+| LD    | Socket    | `adapter::types::unidirectional::AX` | Load input (event + data) for setting to PV            |
+| PV    | Socket    | `adapter::types::unidirectional::AI` | Default input (event + data) for the preset value      |
+| Q     | Plug      | `adapter::types::unidirectional::AX` | Output signal (event + data) – counter ≤ 0             |
+| CV    | Plug      | `adapter::types::unidirectional::AI` | Output counter value (event + current counter reading) |
 
 ## Functionality
 
@@ -63,11 +63,13 @@ The function block internally contains a function block `iec61131::counters::FB_
 - On a **CD** event, the counter is decremented by 1 (if the associated date is TRUE).
 - On a **LD** event, the counter is set to the current value of **PV** (if the load date is TRUE).
 - In the event of a **PV** event, the default value is updated internally (the counter remains unchanged).
+
 1. After processing, the internal FB generates its `CNF` event. This is distributed to the external outputs:
 
 - `CNF` (direct event output)
 - `Q.E1` (event of plug adapter Q)
 - `CV.E1` (event of plug adapter CV)
+
 1. Simultaneously, the following data is transferred:
 
 - `FB_CTD.Q` (BOOL) → `Q.D1`
@@ -104,12 +106,12 @@ Therefore, a graphical state machine is not required.
 
 ## Comparison with Similar Components
 
-| Component | Counting Direction | Interfaces | Special Feature |
------------------ | -------------- | ---------------------- | --------------------------------------------------- |
-| **AI_FB_CTD** | Downward | Adapters only (AX, AI) | Output on every update |
-| **AI_FB_CTU** | Upward | Adapters only (AX, AI) | Upward counter, analog structure |
-| **FB_CTD** (Standard) | Downward | Direct Events/Data | Classic Variable Connection, without Adapter |
-| **FB_CTUD** | Both | Direct | Combined Increment/Decrement Counter, Extended Logic |
+| Component             | Counting Direction | Interfaces             | Special Feature                                      |
+| --------------------- | ------------------ | ---------------------- | ---------------------------------------------------- |
+| **AI_FB_CTD**         | Downward           | Adapters only (AX, AI) | Output on every update                               |
+| **AI_FB_CTU**         | Upward             | Adapters only (AX, AI) | Upward counter, analog structure                     |
+| **FB_CTD** (Standard) | Downward           | Direct Events/Data     | Classic Variable Connection, without Adapter         |
+| **FB_CTUD**           | Both               | Direct                 | Combined Increment/Decrement Counter, Extended Logic |
 
 The **AI_FB_CTD** stands out due to its consistent use of adapters, making it ideal for hierarchical and reusable control models. Unlike the standard FB_CTD, separate data and event inputs are eliminated – everything is handled via the adapters.
 

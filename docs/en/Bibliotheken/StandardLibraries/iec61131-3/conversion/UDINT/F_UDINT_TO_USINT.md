@@ -10,7 +10,7 @@ The function block `F_UDINT_TO_USINT` converts a 32-bit unsigned integer value (
 - **IN**: The input expects a 32-bit unsigned integer value (UDINT) to be converted.
 - **OUT**: The output provides the converted 8-bit unsigned integer value (USINT).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_UDINT_TO_USINT` converts a 32-bit unsigned integer value (
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 No adapters are present.
 

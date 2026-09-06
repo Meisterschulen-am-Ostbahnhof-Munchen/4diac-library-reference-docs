@@ -30,11 +30,11 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AR` | IN | Socket | Eingangssignal (AR) |
-| `adapter::types::unidirectional::AR` | OUT1 | Plug | Erster Ausgang (identisch zu IN) |
-| `adapter::types::unidirectional::AR` | OUT2 | Plug | Zweiter Ausgang (identisch zu IN) |
+| Typ                                  | Name | Richtung | Beschreibung                      |
+| ------------------------------------ | ---- | -------- | --------------------------------- |
+| `adapter::types::unidirectional::AR` | IN   | Socket   | Eingangssignal (AR)               |
+| `adapter::types::unidirectional::AR` | OUT1 | Plug     | Erster Ausgang (identisch zu IN)  |
+| `adapter::types::unidirectional::AR` | OUT2 | Plug     | Zweiter Ausgang (identisch zu IN) |
 
 ## Funktionsweise
 

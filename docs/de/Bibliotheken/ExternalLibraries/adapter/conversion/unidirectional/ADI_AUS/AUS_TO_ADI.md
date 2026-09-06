@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge vorhanden. Die konvertierten Daten werden über 
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-|------|----------|-----|--------------|
-| `AUS_IN` | Socket (Eingang) | `adapter::types::unidirectional::AUS` | Unidirektionaler Adapter‑Eingang, der einen `USINT`‑Wert (und ein zugehöriges Ereignis) bereitstellt. |
-| `ADI_OUT` | Plug (Ausgang) | `adapter::types::unidirectional::ADI` | Unidirektionaler Adapter‑Ausgang, der den konvertierten `DINT`‑Wert (und ein zugehöriges Ereignis) ausgibt. |
+| Name      | Richtung         | Typ                                   | Beschreibung                                                                                                |
+| --------- | ---------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `AUS_IN`  | Socket (Eingang) | `adapter::types::unidirectional::AUS` | Unidirektionaler Adapter‑Eingang, der einen `USINT`‑Wert (und ein zugehöriges Ereignis) bereitstellt.       |
+| `ADI_OUT` | Plug (Ausgang)   | `adapter::types::unidirectional::ADI` | Unidirektionaler Adapter‑Ausgang, der den konvertierten `DINT`‑Wert (und ein zugehöriges Ereignis) ausgibt. |
 
 ## Funktionsweise
 

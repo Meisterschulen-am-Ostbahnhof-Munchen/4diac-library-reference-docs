@@ -19,7 +19,7 @@ The function block `F_MUX_4` is a four-input multiplexer that selects one of fou
 - `IN4` (`ANY`): Input value 4.
 - `OUT` (`ANY`): Output value corresponding to the input selected by `K`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

@@ -12,36 +12,36 @@ Der Baustein IA_RPTO ist ein ISOBUS-Adapter für die hintere Zapfwelle (Rear Pow
 
 ### **Ereignis‑Eingänge**
 
-| Name  | Typ    | Kommentar                     | Mit Daten |
-|-------|--------|-------------------------------|-----------|
-| INIT  | EInit  | Service Initialization        | QI        |
+| Name | Typ   | Kommentar              | Mit Daten |
+| ---- | ----- | ---------------------- | --------- |
+| INIT | EInit | Service Initialization | QI        |
 
 ### **Ereignis‑Ausgänge**
 
-| Name  | Typ    | Kommentar                     | Mit Daten          |
-|-------|--------|-------------------------------|--------------------|
-| INITO | EInit  | Initialization Confirm        | QO, STATUS         |
+| Name  | Typ   | Kommentar              | Mit Daten  |
+| ----- | ----- | ---------------------- | ---------- |
+| INITO | EInit | Initialization Confirm | QO, STATUS |
 
 ### **Daten‑Eingänge**
 
-| Name | Typ    | Kommentar                    |
-|------|--------|------------------------------|
-| QI   | BOOL   | Event Input Qualifier        |
+| Name | Typ  | Kommentar             |
+| ---- | ---- | --------------------- |
+| QI   | BOOL | Event Input Qualifier |
 
 ### **Daten‑Ausgänge**
 
-| Name   | Typ    | Kommentar                     |
-|--------|--------|-------------------------------|
-| QO     | BOOL   | Event Output Qualifier        |
-| STATUS | STRING | Statusmeldung                 |
+| Name   | Typ    | Kommentar              |
+| ------ | ------ | ---------------------- |
+| QO     | BOOL   | Event Output Qualifier |
+| STATUS | STRING | Statusmeldung          |
 
 ### **Adapter**
 
-| Name      | Typ                                    | Kommentar                                   |
-|-----------|----------------------------------------|---------------------------------------------|
-| SPEED     | adapter::types::unidirectional::AUI    | Rear PTO output shaft speed                 |
-| SPEED_SET | adapter::types::unidirectional::AUI    | Rear PTO output shaft speed set point       |
-| TIMEOUT   | adapter::types::unidirectional::AX     | Timeout Status                              |
+| Name      | Typ                                 | Kommentar                             |
+| --------- | ----------------------------------- | ------------------------------------- |
+| SPEED     | adapter::types::unidirectional::AUI | Rear PTO output shaft speed           |
+| SPEED_SET | adapter::types::unidirectional::AUI | Rear PTO output shaft speed set point |
+| TIMEOUT   | adapter::types::unidirectional::AX  | Timeout Status                        |
 
 ## Funktionsweise
 

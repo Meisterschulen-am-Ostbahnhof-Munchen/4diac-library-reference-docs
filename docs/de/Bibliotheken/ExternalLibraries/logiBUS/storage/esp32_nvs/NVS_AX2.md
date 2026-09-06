@@ -12,36 +12,36 @@ Der Funktionsblock **NVS_AX2** dient dem Laden und Speichern von REAL-Daten im n
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ    | Kommentar                        | Mitgeführte Variablen     |
-|----------|--------|----------------------------------|---------------------------|
-| `INIT`   | EInit  | Service Initialization           | QI, KEY, DEFAULT_VALUE    |
+| Ereignis | Typ   | Kommentar              | Mitgeführte Variablen  |
+| -------- | ----- | ---------------------- | ---------------------- |
+| `INIT`   | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ    | Kommentar                        | Mitgeführte Variablen     |
-|----------|--------|----------------------------------|---------------------------|
-| `INITO`  | EInit  | Initialization Confirm           | QO, STATUS                |
+| Ereignis | Typ   | Kommentar              | Mitgeführte Variablen |
+| -------- | ----- | ---------------------- | --------------------- |
+| `INITO`  | EInit | Initialization Confirm | QO, STATUS            |
 
 ### **Daten-Eingänge**
 
-| Name           | Typ    | Kommentar                                               |
-|----------------|--------|---------------------------------------------------------|
-| `QI`           | BOOL   | Event Input Qualifier (Freigabe der Initialisierung)    |
-| `KEY`          | STRING | Schlüsselname für den NVS-Eintrag                       |
-| `DEFAULT_VALUE`| BOOL   | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: FALSE) |
+| Name            | Typ    | Kommentar                                                                        |
+| --------------- | ------ | -------------------------------------------------------------------------------- |
+| `QI`            | BOOL   | Event Input Qualifier (Freigabe der Initialisierung)                             |
+| `KEY`           | STRING | Schlüsselname für den NVS-Eintrag                                                |
+| `DEFAULT_VALUE` | BOOL   | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: FALSE) |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ    | Kommentar                        |
-|----------|--------|----------------------------------|
-| `QO`     | BOOL   | Event Output Qualifier           |
-| `STATUS` | STRING | Dienststatus                     |
+| Name     | Typ    | Kommentar              |
+| -------- | ------ | ---------------------- |
+| `QO`     | BOOL   | Event Output Qualifier |
+| `STATUS` | STRING | Dienststatus           |
 
 ### **Adapter**
 
-| Adapter | Typ                                       | Kommentar      |
-|---------|-------------------------------------------|----------------|
-| `VAL`   | `adapter::types::bidirectional::AX2` (Socket) | Wert (REAL)    |
+| Adapter | Typ                                           | Kommentar   |
+| ------- | --------------------------------------------- | ----------- |
+| `VAL`   | `adapter::types::bidirectional::AX2` (Socket) | Wert (REAL) |
 
 Der Adapter **VAL** stellt eine bidirektionale Verbindung zu einem externen Baustein her. Über diesen Adapter kann der gespeicherte REAL-Wert gelesen und geschrieben werden. Der Adaptertyp AX2 definiert ein Ereignis- und Datenprotokoll für den Datentransfer.
 

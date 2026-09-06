@@ -30,14 +30,14 @@ Der Funktionsblock `ALI_SPLIT_5_UNGATED` ist ein generischer Adapter‑Split‑B
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | `IN` | `adapter::types::unidirectional::ALI` | Einziger Eingang: enthält die ALI‑Daten, die auf die fünf Ausgänge verteilt werden sollen. |
-| Ausgang (Plug) | `OUT1` | `adapter::types::unidirectional::ALI` | Erster Ausgang (identische Signale wie am Eingang). |
-| Ausgang (Plug) | `OUT2` | `adapter::types::unidirectional::ALI` | Zweiter Ausgang. |
-| Ausgang (Plug) | `OUT3` | `adapter::types::unidirectional::ALI` | Dritter Ausgang. |
-| Ausgang (Plug) | `OUT4` | `adapter::types::unidirectional::ALI` | Vierter Ausgang. |
-| Ausgang (Plug) | `OUT5` | `adapter::types::unidirectional::ALI` | Fünfter Ausgang. |
+| Richtung         | Name   | Typ                                   | Beschreibung                                                                               |
+| ---------------- | ------ | ------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Eingang (Socket) | `IN`   | `adapter::types::unidirectional::ALI` | Einziger Eingang: enthält die ALI‑Daten, die auf die fünf Ausgänge verteilt werden sollen. |
+| Ausgang (Plug)   | `OUT1` | `adapter::types::unidirectional::ALI` | Erster Ausgang (identische Signale wie am Eingang).                                        |
+| Ausgang (Plug)   | `OUT2` | `adapter::types::unidirectional::ALI` | Zweiter Ausgang.                                                                           |
+| Ausgang (Plug)   | `OUT3` | `adapter::types::unidirectional::ALI` | Dritter Ausgang.                                                                           |
+| Ausgang (Plug)   | `OUT4` | `adapter::types::unidirectional::ALI` | Vierter Ausgang.                                                                           |
+| Ausgang (Plug)   | `OUT5` | `adapter::types::unidirectional::ALI` | Fünfter Ausgang.                                                                           |
 
 ## Funktionsweise
 

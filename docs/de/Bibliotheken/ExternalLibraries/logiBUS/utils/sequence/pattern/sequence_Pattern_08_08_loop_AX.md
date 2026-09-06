@@ -65,18 +65,18 @@ Der Baustein arbeitet als endlicher Automat (State Machine) mit einer zyklischen
 
 ## Zustandsübersicht
 
-| Zustands-ID | Name | Beschreibung | Ausgangslogik | Übergang nach |
-| :--- | :--- | :--- | :--- | :--- |
-| **0** | xSTART | Wartezustand / Reset | Keine | State_01 (bei START_S1) |
-| **1** | sState_01 | Schritt 1 | Q1-Q8 gemäß P_S1 | State_02 |
-| **2** | sState_02 | Schritt 2 | Q1-Q8 gemäß P_S2 | State_03 |
-| **3** | sState_03 | Schritt 3 | Q1-Q8 gemäß P_S3 | State_04 |
-| **4** | sState_04 | Schritt 4 | Q1-Q8 gemäß P_S4 | State_05 |
-| **5** | sState_05 | Schritt 5 | Q1-Q8 gemäß P_S5 | State_06 |
-| **6** | sState_06 | Schritt 6 | Q1-Q8 gemäß P_S6 | State_07 |
-| **7** | sState_07 | Schritt 7 | Q1-Q8 gemäß P_S7 | State_08 |
-| **8** | sState_08 | Schritt 8 | Q1-Q8 gemäß P_S8 | State_01 (Loop) |
-| **-** | sRESET | Reset-Zustand | Q1-Q8 = FALSE | xSTART |
+| Zustands-ID | Name      | Beschreibung         | Ausgangslogik    | Übergang nach           |
+| :---------- | :-------- | :------------------- | :--------------- | :---------------------- |
+| **0**       | xSTART    | Wartezustand / Reset | Keine            | State_01 (bei START_S1) |
+| **1**       | sState_01 | Schritt 1            | Q1-Q8 gemäß P_S1 | State_02                |
+| **2**       | sState_02 | Schritt 2            | Q1-Q8 gemäß P_S2 | State_03                |
+| **3**       | sState_03 | Schritt 3            | Q1-Q8 gemäß P_S3 | State_04                |
+| **4**       | sState_04 | Schritt 4            | Q1-Q8 gemäß P_S4 | State_05                |
+| **5**       | sState_05 | Schritt 5            | Q1-Q8 gemäß P_S5 | State_06                |
+| **6**       | sState_06 | Schritt 6            | Q1-Q8 gemäß P_S6 | State_07                |
+| **7**       | sState_07 | Schritt 7            | Q1-Q8 gemäß P_S7 | State_08                |
+| **8**       | sState_08 | Schritt 8            | Q1-Q8 gemäß P_S8 | State_01 (Loop)         |
+| **-**       | sRESET    | Reset-Zustand        | Q1-Q8 = FALSE    | xSTART                  |
 
 ## Anwendungsszenarien
 

@@ -28,10 +28,10 @@ Keine direkten Datenausgänge. Der gespeicherte Datenwert wird über den Adapter
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **I** | Socket (Eingang) | `adapter::types::unidirectional::AS` | Stellt das Eingangsereignis (`E1`) und den zu latchenden Datenwert (`D1`) bereit. |
-| **Q** | Plug (Ausgang) | `adapter::types::unidirectional::AS` | Gibt ein Ausgangsereignis (`E1`) und den gespeicherten Datenwert (`D1`) aus. |
+| Adapter | Richtung         | Typ                                  | Beschreibung                                                                      |
+| ------- | ---------------- | ------------------------------------ | --------------------------------------------------------------------------------- |
+| **I**   | Socket (Eingang) | `adapter::types::unidirectional::AS` | Stellt das Eingangsereignis (`E1`) und den zu latchenden Datenwert (`D1`) bereit. |
+| **Q**   | Plug (Ausgang)   | `adapter::types::unidirectional::AS` | Gibt ein Ausgangsereignis (`E1`) und den gespeicherten Datenwert (`D1`) aus.      |
 
 ## Funktionsweise
 
@@ -71,11 +71,11 @@ Der Zustand wird durch ein Ereignis auf `I.E1` umgeschaltet (sofern sich der Dat
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied zu AS_D_FF |
-| ---------- | ------------- | ------------------------ |
-| **SR_FF** | Set-Reset-Flipflop | Hat separate Set- und Reset-Eingänge, kein Taktsignal. |
-| **E_D_FF_ANY** | Reines D-Flipflop mit direkten E/A | Bietet keine Adapter-Schnittstelle; erfordert direkte Verbindungen. |
-| **AS_FF_RS** (hypothetisch) | RS-Flipflop mit Adaptern | Verwendet zwei Adapter für Set und Reset, kein Taktsignal. |
+| Baustein                    | Eigenschaft                        | Unterschied zu AS_D_FF                                              |
+| --------------------------- | ---------------------------------- | ------------------------------------------------------------------- |
+| **SR_FF**                   | Set-Reset-Flipflop                 | Hat separate Set- und Reset-Eingänge, kein Taktsignal.              |
+| **E_D_FF_ANY**              | Reines D-Flipflop mit direkten E/A | Bietet keine Adapter-Schnittstelle; erfordert direkte Verbindungen. |
+| **AS_FF_RS** (hypothetisch) | RS-Flipflop mit Adaptern           | Verwendet zwei Adapter für Set und Reset, kein Taktsignal.          |
 
 Der **AS_D_FF** kombiniert die klare Logik eines D-Flipflops mit der Flexibilität einer Adapter-basierten Schnittstelle. Er eignet sich besonders für Systeme, die eine standardisierte, unidirektionale Kommunikation bevorzugen.
 

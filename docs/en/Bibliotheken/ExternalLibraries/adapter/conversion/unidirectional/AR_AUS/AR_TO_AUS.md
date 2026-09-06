@@ -10,7 +10,7 @@ The AR_TO_AUS function block is a composite block for converting a REAL value to
 - **AR_IN.D1** (via Socket `AR_IN`, Type: REAL): Input value to be converted to USINT.
 - **AUS_OUT.D1** (via Plug `AUS_OUT`, Type: USINT): Converted output value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

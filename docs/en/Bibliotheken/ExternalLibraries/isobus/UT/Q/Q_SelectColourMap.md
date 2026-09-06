@@ -47,11 +47,13 @@ The **Q_SelectColourMap** is a standards-compliant function block for managing c
 
 - `INIT` without parameters
 - `INITO` confirms operational readiness
+
 1. **Pallet Change**:
 
 - `REQ` with target color palette ID
 - Global color management change
 - `CNF` provides operational status and previous palette
+
 1. **Special Values**:
 
 - `0xFFFF`: Sets the default ISO color table
@@ -65,21 +67,21 @@ The **Q_SelectColourMap** is a standards-compliant function block for managing c
 
 ## Color Palette Reference
 
-| Value | Meaning |
-| ------------ | ------------------------------- |
-| 0x0001-FFFE | User-defined palettes |
-| 0xFFFF | ISO Standard Palette (A.3) |
+| Value       | Meaning                    |
+| ----------- | -------------------------- |
+| 0x0001-FFFE | User-defined palettes      |
+| 0xFFFF      | ISO Standard Palette (A.3) |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful switch |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | VT Not Ready |
-| -21 | VT_E_NO_INSTANCE | No VT Client Available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance |
-| -130 | VT_E_NOT_ALIVE | VT Not Active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful switch      |
+| -6   | VT_E_OVERFLOW             | Buffer Overflow        |
+| -8   | VT_E_NOACT                | VT Not Ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT Client Available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance    |
+| -130 | VT_E_NOT_ALIVE            | VT Not Active          |
 
 ## Application Scenarios
 
@@ -90,12 +92,12 @@ The **Q_SelectColourMap** is a standards-compliant function block for managing c
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | Q_SelectColourMap | VtColorManager | VtPaletteControl |
---------------- | ------------------- | ---------------- | ------------------ |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Global Effect | ✔ | ✖ | ✔ |
-| Standard Palette | ✔ | ✖ | ✖ |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature          | Q_SelectColourMap | VtColorManager | VtPaletteControl |
+| ---------------- | ----------------- | -------------- | ---------------- |
+| ISO Standard     | ✔                 | ✖              | ✖                |
+| Global Effect    | ✔                 | ✖              | ✔                |
+| Standard Palette | ✔                 | ✖              | ✖                |
+| Feedback         | ✔                 | ✖              | ✔                |
 
 ## Conclusion
 

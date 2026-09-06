@@ -12,33 +12,33 @@ Der Funktionsblock **ILOCK_IO** realisiert eine kaskadierbare, momentane (nicht 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                          |
+| -------- | -------- | ------------------------------------------------------------------ |
 | REQ      | Event    | Ausführungsanforderung (triggert die Verarbeitung des Eingangs IN) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                      |
+| -------- | -------- | ------------------------------------------------------------------------------ |
 | CNF      | Event    | Ausführungsbestätigung (signalisiert, dass der Ausgang OUT aktualisiert wurde) |
 
 ### **Daten-Eingänge**
 
-| Variable | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Variable | Datentyp | Kommentar                      |
+| -------- | -------- | ------------------------------ |
 | IN       | BOOL     | Eingangswert (Setzanforderung) |
 
 ### **Daten-Ausgänge**
 
-| Variable | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Variable | Datentyp | Kommentar                           |
+| -------- | -------- | ----------------------------------- |
 | OUT      | BOOL     | Ausgangswert (freigegeben/gesperrt) |
 
 ### **Adapter**
 
-| Bezeichnung | Typ                          | Richtung | Beschreibung |
-|-------------|------------------------------|----------|--------------|
-| ILOCK_IN    | adapter::types::bidirectional::AX2 | Socket   | Eingangsadapter zum Empfang von Verriegelungsinformationen aus der Kette (vom Vorgänger) |
+| Bezeichnung | Typ                                | Richtung | Beschreibung                                                                               |
+| ----------- | ---------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| ILOCK_IN    | adapter::types::bidirectional::AX2 | Socket   | Eingangsadapter zum Empfang von Verriegelungsinformationen aus der Kette (vom Vorgänger)   |
 | ILOCK_OUT   | adapter::types::bidirectional::AX2 | Plug     | Ausgangsadapter zum Senden von Verriegelungsinformationen an die Kette (an den Nachfolger) |
 
 Die Adapter vom Typ `AX2` sind bidirektional und enthalten die Datenpunkte `DI1` (Data Input 1) und `DO1` (Data Output 1). In der Kette werden `ILOCK_OUT.DO1` und `ILOCK_IN.DI1` sowie `ILOCK_OUT.DI1` und `ILOCK_IN.DO1` paarweise miteinander verbunden, um die Verriegelungslogik zu realisieren.
@@ -67,8 +67,8 @@ Die Kette ist so aufgebaut, dass immer nur ein Baustein aktiv sein kann. Wenn `I
 
 Der Baustein besitzt einen einzigen **algorithmischen Zustand** `REQ`. Bei jedem Aufruf von `REQ` wird der Algorithmus ausgeführt, und es erfolgt sofort die Transition zurück zum selben Zustand. Es gibt keine Zustandsspeicherung – die Logik ist rein kombinatorisch mit Rückkopplung über die Adapter.
 
-| Zustand | Aktion | Ausgang |
-|---------|--------|---------|
+| Zustand | Aktion                      | Ausgang                             |
+| ------- | --------------------------- | ----------------------------------- |
 | REQ     | Führe Algorithmus `REQ` aus | `CNF` wird nach Berechnung gesendet |
 
 ## Anwendungsszenarien

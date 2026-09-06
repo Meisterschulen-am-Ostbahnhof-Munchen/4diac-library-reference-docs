@@ -13,17 +13,17 @@ The AUI_CTU is an event-driven up counter with an adapter interface. It incremen
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
+| Name | Type  | Comment  |
+| ---- | ----- | -------- |
 | `CU` | Event | Count Up |
-| `R` | Event | Reset |
+| `R`  | Event | Reset    |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-| ------ | ----- | ----------- |
+| Name  | Type  | Comment                           |
+| ----- | ----- | --------------------------------- |
 | `CUO` | Event | Output after successful increment |
-| `RO` | Event | Output after successful reset |
+| `RO`  | Event | Output after successful reset     |
 
 ### **Data Inputs**
 
@@ -35,11 +35,11 @@ Direct data outputs are not available. The current counter value (`CV`) and the 
 
 ### **Adapters**
 
-| Type | Direction | Name | Description |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AX` | Plug (Output) | `Q` | Outputs `TRUE` if `CV >= PV`, otherwise `FALSE`. The event `Q.E1` is only sent on state changes. |
-| `adapter::types::unidirectional::AUI` | Plug (Output) | `CV` | Returns the current counter value (unsigned integer). The event `CV.E1` is triggered after each increment or reset. |
-| `adapter::types::unidirectional::AUI` | Socket (Input) | `PV` | Receives the threshold value of type `UINT`. Changing this value automatically recalculates `Q`. |
+| Type                                  | Direction      | Name | Description                                                                                                         |
+| ------------------------------------- | -------------- | ---- | ------------------------------------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AX`  | Plug (Output)  | `Q`  | Outputs `TRUE` if `CV >= PV`, otherwise `FALSE`. The event `Q.E1` is only sent on state changes.                    |
+| `adapter::types::unidirectional::AUI` | Plug (Output)  | `CV` | Returns the current counter value (unsigned integer). The event `CV.E1` is triggered after each increment or reset. |
+| `adapter::types::unidirectional::AUI` | Socket (Input) | `PV` | Receives the threshold value of type `UINT`. Changing this value automatically recalculates `Q`.                    |
 
 ## Functionality
 
@@ -56,6 +56,7 @@ Process:
 
 - If `Q` has changed compared to the last stored value (`Q_OLD`), the state changes to `EMIT_Q`.
 - Otherwise, the function block returns to state `START`.
+
 1. **Event `R`**: Transition to state `R`. The counter is reset, `Q` is recalculated, and `CV.E1` and `RO` are output. Then, analogous to `CU`, a decision is made whether to reach `EMIT_Q` or return to `START`.
 2. **Adapter event `PV.E1`** (limit change): Transition to state `UPDATE_PV`. The algorithm `UPDATE` recalculates `Q`. Here too, the state `EMIT_Q` is only traversed when `Q` changes.
 3. **State `EMIT_Q`**: Executes the algorithm `SAVE_Q` (stores the new `Q` value in `Q_OLD`) and sends the event `Q.E1`. Afterward, the function block always returns to `START`.
@@ -72,13 +73,13 @@ The function block then always returns to `START`.
 
 ## State Overview
 
-| State | Description | Actions | Outgoing Transitions |
-| --------- | -------------- | ---------- | ------------------------- |
-| `START` | Idle state, waiting for events | – | `CU` → `CU`, `R` → `R`, `PV.E1` → `UPDATE_PV` |
-| `CU` | Count up | `CU` algorithm, send `CV.E1` and `CUO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `R` | Reset | `R` algorithm, send `CV.E1` and `RO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `UPDATE_PV` | Recalculation after PV change | `UPDATE` algorithm | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
-| `EMIT_Q` | Emission of the Q event | `SAVE_Q` algorithm, send `Q.E1` | 1 → `START` |
+| State       | Description                    | Actions                                | Outgoing Transitions                                |
+| ----------- | ------------------------------ | -------------------------------------- | --------------------------------------------------- |
+| `START`     | Idle state, waiting for events | –                                      | `CU` → `CU`, `R` → `R`, `PV.E1` → `UPDATE_PV`       |
+| `CU`        | Count up                       | `CU` algorithm, send `CV.E1` and `CUO` | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `R`         | Reset                          | `R` algorithm, send `CV.E1` and `RO`   | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `UPDATE_PV` | Recalculation after PV change  | `UPDATE` algorithm                     | `[Q != Q_OLD]` → `EMIT_Q`, `[Q == Q_OLD]` → `START` |
+| `EMIT_Q`    | Emission of the Q event        | `SAVE_Q` algorithm, send `Q.E1`        | 1 → `START`                                         |
 
 The transitions are triggered by conditions:
 
@@ -96,13 +97,13 @@ The transitions are triggered by conditions:
 
 ## Comparison with Similar Function Blocks
 
-| Feature | `AUI_CTU` | Standard `CTU` (IEC 61131-3) | `CTUD` (Up/Down Counter) |
---------- | ----------- | ------------------------------ | ------------------------------ |
-| Interface | Adapter-based | Direct Inputs/Outputs | Direct Inputs/Outputs |
-| Event on Q Change | Yes (On-Change) | No (Always on Counting Event) | No |
-| Response to PV Change | Automatic | Not Provided | Not Provided |
-| Overflow Protection | Yes (max. 65535) | Yes, via configuration | Yes |
-| Down Count | No | No | Yes |
+| Feature               | `AUI_CTU`        | Standard `CTU` (IEC 61131-3)  | `CTUD` (Up/Down Counter) |
+| --------------------- | ---------------- | ----------------------------- | ------------------------ |
+| Interface             | Adapter-based    | Direct Inputs/Outputs         | Direct Inputs/Outputs    |
+| Event on Q Change     | Yes (On-Change)  | No (Always on Counting Event) | No                       |
+| Response to PV Change | Automatic        | Not Provided                  | Not Provided             |
+| Overflow Protection   | Yes (max. 65535) | Yes, via configuration        | Yes                      |
+| Down Count            | No               | No                            | Yes                      |
 
 The `AUI_CTU` is specifically optimized for event-driven systems with an adapter concept. On-change triggering and automatic PV recalculation are key differences compared to traditional meters.
 

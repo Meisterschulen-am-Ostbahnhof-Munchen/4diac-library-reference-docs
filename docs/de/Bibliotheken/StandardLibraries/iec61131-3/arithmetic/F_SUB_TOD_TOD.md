@@ -72,11 +72,11 @@ Der **F_SUB_TOD_TOD** ist ein standardkonformer Funktionsbaustein zur Berechnung
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_SUB_TOD_TOD | F_SUB_DT_DT   | F_SUB_TIME   |
-|---------------|---------------|---------------|-------------|
-| Eingangstypen | TOD - TOD     | DT - DT       | TIME - TIME |
-| Ausgangstyp   | TIME          | TIME          | TIME        |
-| Besonderheit  | 24h-zirkulär  | Kalenderbasiert| Einfache Differenz |
+| Feature       | F_SUB_TOD_TOD | F_SUB_DT_DT     | F_SUB_TIME         |
+| ------------- | ------------- | --------------- | ------------------ |
+| Eingangstypen | TOD - TOD     | DT - DT         | TIME - TIME        |
+| Ausgangstyp   | TIME          | TIME            | TIME               |
+| Besonderheit  | 24h-zirkulär  | Kalenderbasiert | Einfache Differenz |
 
 ## Fazit
 

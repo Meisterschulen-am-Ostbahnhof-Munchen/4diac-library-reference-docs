@@ -10,12 +10,12 @@
 
 `SwitchPic[Col]_<states>_<variant>[_aux]`
 
-| Component | Meaning |
-|---|---|
-| **`Col`** (optional) | In addition to the picture, also switches a background color (`Q_BackgroundColour`) to match the state, not just a picture (`Q_NumericValue`). |
-| **States** (`2` or `5`) | `2` = boolean selector `DI1` (`up`/`down`, type `s2x1ObjectIDs`/`s2x2ObjectIDs`); `5` = `iSTATE` selector (`USINT`, slide-valve state machine Unknown/Closed/Opening/Opened/Closing, type `SchieberStruct`/`SchieberAuxInStruct`), evaluated via `F_MUX_5`. |
-| **Variant** (`1`/`2`/`3`, `SwitchPic` only) | Number/kind of VT objects updated simultaneously: `1`=regular VT object only (softkey/data mask), `2`=plus an AUX object, `3`=plus an AUX object AND a second regular object ("button"). |
-| **`_aux`** | Only AUX object(s) are switched, no regular VT object (counterpart to variant `1`, but exclusively for auxiliary function objects). |
+| Component                                   | Meaning                                                                                                                                                                                                                                                     |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Col`** (optional)                        | In addition to the picture, also switches a background color (`Q_BackgroundColour`) to match the state, not just a picture (`Q_NumericValue`).                                                                                                              |
+| **States** (`2` or `5`)                     | `2` = boolean selector `DI1` (`up`/`down`, type `s2x1ObjectIDs`/`s2x2ObjectIDs`); `5` = `iSTATE` selector (`USINT`, slide-valve state machine Unknown/Closed/Opening/Opened/Closing, type `SchieberStruct`/`SchieberAuxInStruct`), evaluated via `F_MUX_5`. |
+| **Variant** (`1`/`2`/`3`, `SwitchPic` only) | Number/kind of VT objects updated simultaneously: `1`=regular VT object only (softkey/data mask), `2`=plus an AUX object, `3`=plus an AUX object AND a second regular object ("button").                                                                    |
+| **`_aux`**                                  | Only AUX object(s) are switched, no regular VT object (counterpart to variant `1`, but exclusively for auxiliary function objects).                                                                                                                         |
 
 ## Functionality
 

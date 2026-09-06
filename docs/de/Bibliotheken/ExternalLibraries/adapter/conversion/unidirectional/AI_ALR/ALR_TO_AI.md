@@ -14,33 +14,33 @@ Der **ALR_TO_AI** Funktionsblock ist ein Composite-Baustein, der einen Adapter d
 
 Der FB besitzt keine eigenständigen Ereignis-Eingänge auf der obersten Ebene. Die Ereignissteuerung erfolgt über den angeschlossenen Socket `ALR_IN`:
 
-| Eingang | Typ | Beschreibung |
-|---------|-----|--------------|
+| Eingang  | Typ          | Beschreibung                                                     |
+| -------- | ------------ | ---------------------------------------------------------------- |
 | `ALR_IN` | ALR (Socket) | Adapter, der über sein Ereignis (`E1`) die Konvertierung anstößt |
 
 ### **Ereignis-Ausgänge**
 
 Der FB besitzt keine eigenständigen Ereignis-Ausgänge auf der obersten Ebene. Die Ereignisrückmeldung erfolgt über den angeschlossenen Plug `AI_OUT`:
 
-| Ausgang | Typ | Beschreibung |
-|---------|-----|--------------|
+| Ausgang  | Typ       | Beschreibung                                                                        |
+| -------- | --------- | ----------------------------------------------------------------------------------- |
 | `AI_OUT` | AI (Plug) | Adapter, der das konvertierte Ereignis (`E1`) nach erfolgreicher Umwandlung ausgibt |
 
 ### **Daten-Eingänge**
 
 Über den Socket `ALR_IN` wird das **Daten-Eingangssignal** bereitgestellt:
 
-| Adapter-Eingang | Datentyp | Beschreibung |
-|-----------------|----------|--------------|
-| `ALR_IN.D1` | LREAL | Der umzuwandelnde Gleitkommawert |
+| Adapter-Eingang | Datentyp | Beschreibung                     |
+| --------------- | -------- | -------------------------------- |
+| `ALR_IN.D1`     | LREAL    | Der umzuwandelnde Gleitkommawert |
 
 ### **Daten-Ausgänge**
 
 Über den Plug `AI_OUT` wird das **Daten-Ausgangssignal** bereitgestellt:
 
-| Adapter-Ausgang | Datentyp | Beschreibung |
-|-----------------|----------|--------------|
-| `AI_OUT.D1` | INT | Der konvertierte Integer-Wert |
+| Adapter-Ausgang | Datentyp | Beschreibung                  |
+| --------------- | -------- | ----------------------------- |
+| `AI_OUT.D1`     | INT      | Der konvertierte Integer-Wert |
 
 ### **Adapter**
 
@@ -64,9 +64,9 @@ Der gesamte Ablauf erfolgt synchron in einem Schritt.
 
 - **Numerische Umwandlung**: wertgetreue Zahlenwert-Konvertierung (Verengung kann abschneiden, Erweiterung/Vorzeichenerweiterung ist sicher).
 
-* Der FB ist ein **Composite-Baustein** – er besitzt keine eigene Zustandsmaschine (ECC), sondern realisiert die Logik über ein internes Subnetzwerk.
-* Die Konvertierung folgt der IEC 61131-3-Funktion `LREAL_TO_INT`: Nachkommastellen werden abgeschnitten (Abschneiden gegen Null), Über- oder Unterläufe sind implementierungsabhängig.
-* Der Baustein ist als unidirektionale Adapter-Kopplung ausgelegt – es werden keine Rückkanäle unterstützt.
+- Der FB ist ein **Composite-Baustein** – er besitzt keine eigene Zustandsmaschine (ECC), sondern realisiert die Logik über ein internes Subnetzwerk.
+- Die Konvertierung folgt der IEC 61131-3-Funktion `LREAL_TO_INT`: Nachkommastellen werden abgeschnitten (Abschneiden gegen Null), Über- oder Unterläufe sind implementierungsabhängig.
+- Der Baustein ist als unidirektionale Adapter-Kopplung ausgelegt – es werden keine Rückkanäle unterstützt.
 
 ## Zustandsübersicht
 
@@ -80,11 +80,11 @@ Als Composite-FB besitzt **ALR_TO_AI** kein eigenes Zustandsdiagramm. Der intern
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| FB | Funktion | Unterschied |
-| ---- | ---------- | ------------- |
-| **ALR_TO_AI** | Konvertiert LREAL → INT über Adapter | Composite, keine eigene Zustandsmaschine; verwendet IEC 61131-Konverter |
-| `F_LREAL_TO_INT` | Reine Datenkonvertierung ohne Adapter | Direkter FB, benötigt separate Adapter-Anbindung |
-| `AI_TO_ALR` | Umgekehrte Richtung INT → LREAL | Anderer Datentyp und Konvertierungsrichtung |
+| FB               | Funktion                              | Unterschied                                                             |
+| ---------------- | ------------------------------------- | ----------------------------------------------------------------------- |
+| **ALR_TO_AI**    | Konvertiert LREAL → INT über Adapter  | Composite, keine eigene Zustandsmaschine; verwendet IEC 61131-Konverter |
+| `F_LREAL_TO_INT` | Reine Datenkonvertierung ohne Adapter | Direkter FB, benötigt separate Adapter-Anbindung                        |
+| `AI_TO_ALR`      | Umgekehrte Richtung INT → LREAL       | Anderer Datentyp und Konvertierungsrichtung                             |
 
 Der **ALR_TO_AI** vereinfacht die Wiederverwendung durch Kapselung der Adapterlogik und der Konvertierung in einem Baustein.
 

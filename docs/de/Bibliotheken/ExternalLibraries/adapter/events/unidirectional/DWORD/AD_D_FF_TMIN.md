@@ -12,21 +12,21 @@ Der Funktionsblock **AD_D_FF_TMIN** realisiert ein datenrückhaltendes Flip-Flop
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                              |
+| ---- | ----- | ------------------------------------------------------ |
 | INIT | EInit | Initialisierungsanforderung (Übergabe der Mindestzeit) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| Tmin | TIME | Minimale Zeit zwischen zwei aufeinanderfolgenden Ereignissen am Socket *I* |
+| Name | Datentyp | Kommentar                                                                  |
+| ---- | -------- | -------------------------------------------------------------------------- |
+| Tmin | TIME     | Minimale Zeit zwischen zwei aufeinanderfolgenden Ereignissen am Socket *I* |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge vorhanden; die Ausgabe erfolgt ausschließlich üb
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Kommentar |
-|-----|----------|------|-----------|
-| adapter::types::unidirectional::AD | **Plug** (Ausgang) | Q | Liefert den gelatchten Wert |
-| adapter::types::unidirectional::AD | **Socket** (Eingang) | I | Empfängt den zu latchnden Wert sowie das Taktereignis |
+| Typ                                | Richtung             | Name | Kommentar                                             |
+| ---------------------------------- | -------------------- | ---- | ----------------------------------------------------- |
+| adapter::types::unidirectional::AD | **Plug** (Ausgang)   | Q    | Liefert den gelatchten Wert                           |
+| adapter::types::unidirectional::AD | **Socket** (Eingang) | I    | Empfängt den zu latchnden Wert sowie das Taktereignis |
 
 ## Funktionsweise
 
@@ -72,11 +72,11 @@ Der Baustein selbst besitzt keinen expliziten Zustandsautomaten (keine ECC‑Def
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied |
-| ---------- | ------------- | ------------- |
-| **E_D_FF** | Standard‑D‑Flip‑Flop | Keine zeitliche Einschränkung; jedes Taktereignis wird verarbeitet. |
-| **E_CTD** / **E_CTU** | Zähler | Andere Grundfunktion; zählt Ereignisse. |
-| **AD_D_FF_TMIN** | D‑Flip‑Flop mit *Minimum inter‑disposal Time* | Verhindert zu schnelle Taktfolgen durch parametrierbare Sperrzeit. |
+| Baustein              | Eigenschaft                                   | Unterschied                                                         |
+| --------------------- | --------------------------------------------- | ------------------------------------------------------------------- |
+| **E_D_FF**            | Standard‑D‑Flip‑Flop                          | Keine zeitliche Einschränkung; jedes Taktereignis wird verarbeitet. |
+| **E_CTD** / **E_CTU** | Zähler                                        | Andere Grundfunktion; zählt Ereignisse.                             |
+| **AD_D_FF_TMIN**      | D‑Flip‑Flop mit *Minimum inter‑disposal Time* | Verhindert zu schnelle Taktfolgen durch parametrierbare Sperrzeit.  |
 
 ## Fazit
 

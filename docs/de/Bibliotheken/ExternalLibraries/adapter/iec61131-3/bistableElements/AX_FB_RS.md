@@ -32,11 +32,11 @@ Da dieser Baustein ausschließlich auf Adaptern basiert, sind die klassischen Er
 
 Der Baustein verwendet den Adapter-Typ `adapter::types::unidirectional::AX`. Dieser Adaptertyp bündelt typischerweise ein boolesches Signal (`D1`) und ein zugehöriges Ereignis (`E1`).
 
-| Name | Typ | Richtung | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Q1** | AX | Plug (Ausgang) | Der Ausgang des Flip-Flops (Status). |
-| **SET** | AX | Socket (Eingang) | Der Setz-Eingang. Wenn aktiv, wird der Ausgang `Q1` auf TRUE gesetzt (sofern `RESET1` nicht aktiv ist). |
-| **RESET1** | AX | Socket (Eingang) | Der Rücksetz-Eingang. Wenn aktiv, wird der Ausgang `Q1` auf FALSE gesetzt. Dieser Eingang hat Priorität vor `SET`. |
+| Name       | Typ | Richtung         | Beschreibung                                                                                                       |
+| :--------- | :-- | :--------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **Q1**     | AX  | Plug (Ausgang)   | Der Ausgang des Flip-Flops (Status).                                                                               |
+| **SET**    | AX  | Socket (Eingang) | Der Setz-Eingang. Wenn aktiv, wird der Ausgang `Q1` auf TRUE gesetzt (sofern `RESET1` nicht aktiv ist).            |
+| **RESET1** | AX  | Socket (Eingang) | Der Rücksetz-Eingang. Wenn aktiv, wird der Ausgang `Q1` auf FALSE gesetzt. Dieser Eingang hat Priorität vor `SET`. |
 
 ## Funktionsweise
 
@@ -79,11 +79,11 @@ Dies bedeutet, dass der Baustein immer bereit ist, Eingangssignale zu verarbeite
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | AX_FB_RS | AX_FB_SR | RS (Standard) |
-| :--- | :--- | :--- | :--- |
-| **Dominanz** | **Reset-Dominant** (Ausgang FALSE bei S=1, R=1) | Set-Dominant (Ausgang TRUE bei S=1, R=1) | Reset-Dominant |
-| **Schnittstelle** | Adapter (`AX`) | Adapter (`AX`) | Boolesche Ereignis-/Datenports |
-| **Verdrahtung** | Minimalistisch (gebündelt) | Minimalistisch (gebündelt) | Klassisch (getrennte Leitungen) |
+| Merkmal           | AX_FB_RS                                        | AX_FB_SR                                 | RS (Standard)                   |
+| :---------------- | :---------------------------------------------- | :--------------------------------------- | :------------------------------ |
+| **Dominanz**      | **Reset-Dominant** (Ausgang FALSE bei S=1, R=1) | Set-Dominant (Ausgang TRUE bei S=1, R=1) | Reset-Dominant                  |
+| **Schnittstelle** | Adapter (`AX`)                                  | Adapter (`AX`)                           | Boolesche Ereignis-/Datenports  |
+| **Verdrahtung**   | Minimalistisch (gebündelt)                      | Minimalistisch (gebündelt)               | Klassisch (getrennte Leitungen) |
 
 ## Fazit
 

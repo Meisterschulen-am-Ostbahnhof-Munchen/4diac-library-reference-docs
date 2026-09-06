@@ -14,17 +14,17 @@ Der Baustein besitzt keine eigenen Ereignis- oder Daten-Ein-/Ausgänge. Die gesa
 
 ### **Adapter (Socket – Eingang)**
 
-| Bezeichnung | Typ | Kommentar |
-|---|---|---|
-| `AR_IN` | `adapter::types::unidirectional::AR` | Unidirektionaler REAL‑Adapter als Eingang |
+| Bezeichnung | Typ                                  | Kommentar                                 |
+| ----------- | ------------------------------------ | ----------------------------------------- |
+| `AR_IN`     | `adapter::types::unidirectional::AR` | Unidirektionaler REAL‑Adapter als Eingang |
 
 Der Adapter `AR_IN` liefert ein Ereignis `E1` und einen Daten-Eingang `D1` vom Typ `REAL`.
 
 ### **Adapter (Plug – Ausgang)**
 
-| Bezeichnung | Typ | Kommentar |
-|---|---|---|
-| `AUDI_OUT` | `adapter::types::unidirectional::AUDI` | Unidirektionaler UDINT‑Adapter als Ausgang |
+| Bezeichnung | Typ                                    | Kommentar                                  |
+| ----------- | -------------------------------------- | ------------------------------------------ |
+| `AUDI_OUT`  | `adapter::types::unidirectional::AUDI` | Unidirektionaler UDINT‑Adapter als Ausgang |
 
 Der Adapter `AUDI_OUT` erwartet ein Ereignis `E1` und einen Daten-Ausgang `D1` vom Typ `UDINT`.
 

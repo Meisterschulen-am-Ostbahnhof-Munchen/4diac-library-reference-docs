@@ -44,11 +44,13 @@ The **E_CTD** (Event-Driven Down Counter) is an event-driven down counter accord
 - When an **LD** event occurs, the counter value `CV` is set to the value of **PV**.
 - The output flag `Q` is updated based on the condition `CV = 0`.
 - The **LDO** event is triggered and outputs the new counter value `CV` and the flag `Q`.
+
 1. **Countdown:**
 
 - With each **CD** event, the counter value **CV** is decremented by 1 if it is greater than 0.
 - The output flag `Q` is then updated based on the new condition `CV = 0`.
 - The **CDO** event is triggered and outputs the current counter value `CV` and the flag `Q`.
+
 1. **Counter Reload:**
 
 - A subsequent **LD** event resets **CV** back to **PV** at any time and triggers **LDO**.
@@ -66,11 +68,11 @@ The **E_CTD** (Event-Driven Down Counter) is an event-driven down counter accord
 
 ## ⚖️ Comparison with similar modules
 
-| Feature | E_CTD | E_CTU (Up Counter) | E_CTUD (Up/Down Counter) |
-| ------------------ | ------------------- | -------------------- | -------------------------- |
-| Counting Direction | Down | Up | Both |
-| Event-Driven | Yes | Yes | Yes |
-| Reset Function | LD (Reload) | R (Reset) | R (Reset) |
+| Feature            | E_CTD       | E_CTU (Up Counter) | E_CTUD (Up/Down Counter) |
+| ------------------ | ----------- | ------------------ | ------------------------ |
+| Counting Direction | Down        | Up                 | Both                     |
+| Event-Driven       | Yes         | Yes                | Yes                      |
+| Reset Function     | LD (Reload) | R (Reset)          | R (Reset)                |
 
 ## 🛠️ Related Exercises
 

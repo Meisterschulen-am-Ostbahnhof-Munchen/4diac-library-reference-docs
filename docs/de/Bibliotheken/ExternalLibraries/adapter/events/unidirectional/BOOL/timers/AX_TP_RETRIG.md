@@ -14,9 +14,9 @@ Der Baustein ist für den Einsatz in IEC 61499‑basierten Automatisierungssyste
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| **R** | Reset – Setzt die Impulszeit **PT** vor und beendet einen laufenden Impuls sofort. |
+| Ereignis | Beschreibung                                                                       |
+| -------- | ---------------------------------------------------------------------------------- |
+| **R**    | Reset – Setzt die Impulszeit **PT** vor und beendet einen laufenden Impuls sofort. |
 
 ### **Ereignis-Ausgänge**
 
@@ -24,8 +24,8 @@ Keine eigenen Ereignisausgänge – die Ausgabe erfolgt über den Adapter **Q** 
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Beschreibung |
-|------|-------|--------------|
+| Name   | Typ  | Beschreibung            |
+| ------ | ---- | ----------------------- |
 | **PT** | TIME | Impulsdauer (Pulszeit). |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine eigenen Datenausgänge – die Ausgabe des Impulszustands erfolgt über de
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| **IN** | `adapter::types::unidirectional::AX` | Socket | Eingang – Empfängt das Startsignal (Ereignis **E1**) und den logischen Wert (**D1**). Eine steigende Flanke auf **E1** triggert den Impuls. |
-| **Q** | `adapter::types::unidirectional::AX` | Plug | Ausgang – Gibt den Impuls aus: Solange der Impuls aktiv ist, ist **D1** = `TRUE`, sonst `FALSE**. Das Ereignis **E1** wird bei jedem Zustandswechsel gesendet. |
+| Name   | Typ                                  | Richtung | Beschreibung                                                                                                                                                   |
+| ------ | ------------------------------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IN** | `adapter::types::unidirectional::AX` | Socket   | Eingang – Empfängt das Startsignal (Ereignis **E1**) und den logischen Wert (**D1**). Eine steigende Flanke auf **E1** triggert den Impuls.                    |
+| **Q**  | `adapter::types::unidirectional::AX` | Plug     | Ausgang – Gibt den Impuls aus: Solange der Impuls aktiv ist, ist **D1** = `TRUE`, sonst `FALSE**. Das Ereignis **E1** wird bei jedem Zustandswechsel gesendet. |
 
 ## Funktionsweise
 
@@ -58,11 +58,11 @@ Keine eigenen Datenausgänge – die Ausgabe des Impulszustands erfolgt über de
 
 Der Baustein durchläuft folgende Zustände (basierend auf dem internen Timer‑Baustein):
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **IDLE** | Kein Impuls aktiv; **Q.D1** = `FALSE`. |
+| Zustand     | Beschreibung                                                                                                                                          |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE**    | Kein Impuls aktiv; **Q.D1** = `FALSE`.                                                                                                                |
 | **RUNNING** | Impuls aktiv; **Q.D1** = `TRUE`. Der Timer läuft für die Dauer **PT**. Bei erneutem Trigger wird der Timer zurückgesetzt (bleibt im Zustand RUNNING). |
-| **TIMEOUT** | Impuls beendet; Wechsel zurück zu IDLE. |
+| **TIMEOUT** | Impuls beendet; Wechsel zurück zu IDLE.                                                                                                               |
 
 Hinweis: Der Reset (Ereignis **R**) führt immer sofort in den Zustand IDLE.
 
@@ -75,12 +75,12 @@ Hinweis: Der Reset (Ereignis **R**) führt immer sofort in den Zustand IDLE.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| **AX_TP_RETRIG** | Retriggerbarer Puls-Timer mit AX‑Adapter. |
+| Baustein                      | Eigenschaft                                                                                        |
+| ----------------------------- | -------------------------------------------------------------------------------------------------- |
+| **AX_TP_RETRIG**              | Retriggerbarer Puls-Timer mit AX‑Adapter.                                                          |
 | **E_TP** (Standard IEC 61499) | Einfacher Puls-Timer, nicht retriggerbar – ein erneuter Start während des Impulses wird ignoriert. |
-| **E_TP_RETRIG** | Retriggerbare Version ohne Adapter (reine Event/Daten‑Schnittstelle). |
-| **E_DELAY** (Verzögerung) | Verzögert ein Signal um eine feste Zeit, erzeugt aber keinen Impuls fester Dauer. |
+| **E_TP_RETRIG**               | Retriggerbare Version ohne Adapter (reine Event/Daten‑Schnittstelle).                              |
+| **E_DELAY** (Verzögerung)     | Verzögert ein Signal um eine feste Zeit, erzeugt aber keinen Impuls fester Dauer.                  |
 
 Der **AX_TP_RETRIG** kombiniert die Retrigger‑Funktionalität mit der kompakten Adapter‑Schnittstelle und eignet sich daher besonders für modulare, adapterbasierte Systeme.
 

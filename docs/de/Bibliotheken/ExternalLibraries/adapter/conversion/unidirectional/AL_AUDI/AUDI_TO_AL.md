@@ -36,10 +36,10 @@ Der Baustein besitzt keine eigenen Daten-Ausgänge. Das konvertierte Ergebnis wi
 
 ### **Adapter**
 
-| Name    | Richtung | Typ                                          | Beschreibung                                      |
-|---------|----------|----------------------------------------------|---------------------------------------------------|
-| AUDI_IN | Socket   | `adapter::types::unidirectional::AUDI`       | UDINT-Adapter als Eingangsschnittstelle           |
-| AL_OUT  | Plug     | `adapter::types::unidirectional::AL`         | LWORD-Adapter als Ausgangsschnittstelle           |
+| Name    | Richtung | Typ                                    | Beschreibung                            |
+| ------- | -------- | -------------------------------------- | --------------------------------------- |
+| AUDI_IN | Socket   | `adapter::types::unidirectional::AUDI` | UDINT-Adapter als Eingangsschnittstelle |
+| AL_OUT  | Plug     | `adapter::types::unidirectional::AL`   | LWORD-Adapter als Ausgangsschnittstelle |
 
 ## Funktionsweise
 

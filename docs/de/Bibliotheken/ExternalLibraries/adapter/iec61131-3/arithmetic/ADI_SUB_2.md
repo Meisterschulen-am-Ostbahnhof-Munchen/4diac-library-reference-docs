@@ -38,11 +38,11 @@ Es sind keine direkten Daten-Ausgänge definiert. Das Ergebnis wird über den Au
 
 ### **Adapter**
 
-| Typ | Name | Adaptertyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Socket (Eingang)** | `IN1` | `adapter::types::unidirectional::ADI` | Erster Eingangswert (Minuend) für die Subtraktion. |
-| **Socket (Eingang)** | `IN2` | `adapter::types::unidirectional::ADI` | Zweiter Eingangswert (Subtrahend) für die Subtraktion. |
-| **Plug (Ausgang)** | `OUT` | `adapter::types::unidirectional::ADI` | Ergebnis (Differenz) der Subtraktion ($OUT = IN1 - IN2$). |
+| Typ                  | Name  | Adaptertyp                            | Beschreibung                                              |
+| :------------------- | :---- | :------------------------------------ | :-------------------------------------------------------- |
+| **Socket (Eingang)** | `IN1` | `adapter::types::unidirectional::ADI` | Erster Eingangswert (Minuend) für die Subtraktion.        |
+| **Socket (Eingang)** | `IN2` | `adapter::types::unidirectional::ADI` | Zweiter Eingangswert (Subtrahend) für die Subtraktion.    |
+| **Plug (Ausgang)**   | `OUT` | `adapter::types::unidirectional::ADI` | Ergebnis (Differenz) der Subtraktion ($OUT = IN1 - IN2$). |
 
 ## Funktionsweise
 

@@ -32,10 +32,10 @@ Der Baustein besitzt keine direkten (einzelnen) Ereignis- oder Daten-Ein-/Ausgä
 
 ### **Adapter**
 
-| Name   | Typ                                       | Richtung | Beschreibung                                                                 |
-|--------|--------------------------------------------|----------|-----------------------------------------------------------------------------|
-| AD_IN  | `adapter::types::unidirectional::AD`      | Socket   | Empfängt ein Ereignis (E1) und einen DWORD-Wert (D1) zur Konvertierung.    |
-| AR_OUT | `adapter::types::unidirectional::AR`      | Plug     | Sendet ein Ereignis (E1) mit dem konvertierten REAL-Wert (D1) aus.         |
+| Name   | Typ                                  | Richtung | Beschreibung                                                            |
+| ------ | ------------------------------------ | -------- | ----------------------------------------------------------------------- |
+| AD_IN  | `adapter::types::unidirectional::AD` | Socket   | Empfängt ein Ereignis (E1) und einen DWORD-Wert (D1) zur Konvertierung. |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug     | Sendet ein Ereignis (E1) mit dem konvertierten REAL-Wert (D1) aus.      |
 
 ## Funktionsweise
 
@@ -79,7 +79,7 @@ Der **AD_TO_AR**-Baustein bietet eine kompakte Lösung, um ein DWORD-Bitmuster �
 
 ### 📖 Hintergrund
 
-* [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)
+- [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)
 
 ---
 

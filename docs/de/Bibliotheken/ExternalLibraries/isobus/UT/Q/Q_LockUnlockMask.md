@@ -67,21 +67,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel — das Kommando wird vom VT mit
 
 ## Kommandoreferenz
 
-| u8LockCmd | Funktion                     |
-|-----------|------------------------------|
-| 0         | Maske entsperren             |
-| 1         | Maske sperren                |
+| u8LockCmd | Funktion         |
+| --------- | ---------------- |
+| 0         | Maske entsperren |
+| 1         | Maske sperren    |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Ausführung           |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Ausführung  |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -92,12 +92,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel — das Kommando wird vom VT mit
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
-|---------------|------------------|---------------|--------------|
-| ISO-Standard  | ✔                | ✖             | ✖            |
-| Timeout       | ✔                | ✖             | ✔            |
-| Maskenspezifisch | ✔            | ✔             | ✖            |
-| Bidirektional | ✔                | ✖             | ✔            |
+| Feature          | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
+| ---------------- | ---------------- | ------------- | ------------ |
+| ISO-Standard     | ✔                | ✖             | ✖            |
+| Timeout          | ✔                | ✖             | ✔            |
+| Maskenspezifisch | ✔                | ✔             | ✖            |
+| Bidirektional    | ✔                | ✖             | ✔            |
 
 ## Fazit
 

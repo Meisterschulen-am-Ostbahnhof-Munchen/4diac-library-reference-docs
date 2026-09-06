@@ -33,10 +33,10 @@ Die konvertierten Daten (Datentyp `SINT`) verlassen den Baustein über den Plug 
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                                    | Beschreibung                     |
-|----------|--------|----------------------------------------|----------------------------------|
-| Socket   | AUI_IN | `adapter::types::unidirectional::AUI` | Eingangsadapter (UINT-Daten)     |
-| Plug     | AS_OUT | `adapter::types::unidirectional::AS`  | Ausgangsadapter (SINT-Daten)     |
+| Richtung | Name   | Typ                                   | Beschreibung                 |
+| -------- | ------ | ------------------------------------- | ---------------------------- |
+| Socket   | AUI_IN | `adapter::types::unidirectional::AUI` | Eingangsadapter (UINT-Daten) |
+| Plug     | AS_OUT | `adapter::types::unidirectional::AS`  | Ausgangsadapter (SINT-Daten) |
 
 ## Funktionsweise
 

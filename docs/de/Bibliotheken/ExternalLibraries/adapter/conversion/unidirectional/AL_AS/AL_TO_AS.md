@@ -28,10 +28,10 @@ Der Funktionsblock **AL_TO_AS** ist ein Composite-Baustein, der einen unidirekti
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| Socket | AL_IN | Input | Unidirektionaler AL-Adapter, der LWORD-Daten bereitstellt. |
-| Plug   | AS_OUT | Output | Unidirektionaler AS-Adapter, der die konvertierten SINT-Daten ausgibt. |
+| Typ    | Name   | Richtung | Beschreibung                                                           |
+| ------ | ------ | -------- | ---------------------------------------------------------------------- |
+| Socket | AL_IN  | Input    | Unidirektionaler AL-Adapter, der LWORD-Daten bereitstellt.             |
+| Plug   | AS_OUT | Output   | Unidirektionaler AS-Adapter, der die konvertierten SINT-Daten ausgibt. |
 
 ## Funktionsweise
 
@@ -64,12 +64,12 @@ Der FB besitzt keinen eigenen Zustandsautomaten. Sein Verhalten ist rein kombina
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingangstyp | Ausgangstyp | Besonderheit |
-| ---------- | ------------- | ------------- | -------------- |
-| **AL_TO_AS** | LWORD (Adapter) | SINT (Adapter) | Composite; verwendet `F_LWORD_TO_SINT` |
-| `F_LWORD_TO_SINT` | LWORD (Daten) | SINT (Daten) | Reiner Datenkonverter, keine Adaptereinbindung |
-| `F_LWORD_TO_DINT` | LWORD | DINT | Konvertierung zu 32‑Bit-Integer |
-| `F_SINT_TO_LWORD` | SINT | LWORD | Rückrichtung (sofern vorhanden) |
+| Baustein          | Eingangstyp     | Ausgangstyp    | Besonderheit                                   |
+| ----------------- | --------------- | -------------- | ---------------------------------------------- |
+| **AL_TO_AS**      | LWORD (Adapter) | SINT (Adapter) | Composite; verwendet `F_LWORD_TO_SINT`         |
+| `F_LWORD_TO_SINT` | LWORD (Daten)   | SINT (Daten)   | Reiner Datenkonverter, keine Adaptereinbindung |
+| `F_LWORD_TO_DINT` | LWORD           | DINT           | Konvertierung zu 32‑Bit-Integer                |
+| `F_SINT_TO_LWORD` | SINT            | LWORD          | Rückrichtung (sofern vorhanden)                |
 
 Der **AL_TO_AS** hebt sich durch seine Adapter‑zu‑Adapter‑Schnittstelle ab, die eine direkte Verbindung zwischen zwei unterschiedlichen Adaptertypen ohne zusätzliche manuelle Verkabelung von Einzelereignissen und Daten ermöglicht.
 

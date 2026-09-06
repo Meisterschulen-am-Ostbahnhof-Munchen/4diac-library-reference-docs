@@ -37,9 +37,9 @@ The **ASRT_AX_SERVER_0_CLIENT_1_0** function block is a composite function block
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------|-----------|--------------|
-| S_R_T | adapter::types::bidirectional::ASRT_AX | Plug – Set/Reset/Toggle (input), state (output) | Received Set/Reset/Toggle, state out |
+| Adapter | Type                                   | Direction                                       | Description                          |
+| ------- | -------------------------------------- | ----------------------------------------------- | ------------------------------------ |
+| S_R_T   | adapter::types::bidirectional::ASRT_AX | Plug – Set/Reset/Toggle (input), state (output) | Received Set/Reset/Toggle, state out |
 
 ## Functionality
 

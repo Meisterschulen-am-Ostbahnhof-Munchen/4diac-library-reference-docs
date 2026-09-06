@@ -31,8 +31,8 @@ Der Funktionsblock **AX_PUBLISH_1** ist ein Composite-Funktionsblock, der den ne
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                    |
+| ------- | ---------------------------------- | ---------------- | ------------------------------- |
 | IN      | adapter::types::unidirectional::AX | Socket (Eingang) | Zu veröffentlichender BOOL-Wert |
 
 ## Funktionsweise

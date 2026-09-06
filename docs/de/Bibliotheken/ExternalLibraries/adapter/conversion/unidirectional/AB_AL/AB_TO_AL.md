@@ -20,22 +20,22 @@ Der Baustein besitzt keine direkten Ereignisausgänge. Der ausgehende Ereignisfl
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `AB_IN.D1` | BYTE | 8‑Bit‑Eingangswert (über den Socket-Adapter) |
+| Name       | Datentyp | Beschreibung                                 |
+| ---------- | -------- | -------------------------------------------- |
+| `AB_IN.D1` | BYTE     | 8‑Bit‑Eingangswert (über den Socket-Adapter) |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `AL_OUT.D1` | LWORD | 64‑Bit‑Ausgangswert (über den Plug-Adapter) |
+| Name        | Datentyp | Beschreibung                                |
+| ----------- | -------- | ------------------------------------------- |
+| `AL_OUT.D1` | LWORD    | 64‑Bit‑Ausgangswert (über den Plug-Adapter) |
 
 ### **Adapter**
 
-| Name | Richtung | Adapter-Typ | Beschreibung |
-|------|----------|-------------|--------------|
-| `AB_IN` | Socket | `adapter::types::unidirectional::AB` | Eingangsadapter, liefert BYTE-Daten und ein Ereignis |
-| `AL_OUT` | Plug | `adapter::types::unidirectional::AL` | Ausgangsadapter, erwartet LWORD-Daten und gibt ein Ereignis weiter |
+| Name     | Richtung | Adapter-Typ                          | Beschreibung                                                       |
+| -------- | -------- | ------------------------------------ | ------------------------------------------------------------------ |
+| `AB_IN`  | Socket   | `adapter::types::unidirectional::AB` | Eingangsadapter, liefert BYTE-Daten und ein Ereignis               |
+| `AL_OUT` | Plug     | `adapter::types::unidirectional::AL` | Ausgangsadapter, erwartet LWORD-Daten und gibt ein Ereignis weiter |
 
 ## Funktionsweise
 

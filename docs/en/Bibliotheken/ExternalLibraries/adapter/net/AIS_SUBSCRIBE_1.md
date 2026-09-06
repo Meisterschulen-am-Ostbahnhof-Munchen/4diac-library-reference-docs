@@ -31,9 +31,9 @@ The function block **AIS_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AIS | Plug (Output) | Buffered received STRING value |
+| Adapter | Type                                | Direction     | Description                    |
+| ------- | ----------------------------------- | ------------- | ------------------------------ |
+| OUT     | adapter::types::unidirectional::AIS | Plug (Output) | Buffered received STRING value |
 
 ## Functionality
 

@@ -12,20 +12,20 @@ The function block **AUI_D_FF_TMIN** implements a data-locking D flip-flop (data
 
 ### **Event Inputs**
 
-| Event | Comment |
-|----------|-----------|
+| Event    | Comment                                                                 |
+| -------- | ----------------------------------------------------------------------- |
 | **INIT** | Initialization request; configures the block with the parameter `Tmin`. |
 
 ### **Event Outputs**
 
-| Event | Comment |
-|----------|-----------|
+| Event     | Comment                                    |
+| --------- | ------------------------------------------ |
 | **INITO** | Confirmation of successful initialization. |
 
 ### **Data Inputs**
 
-| Variable | Type | Comment |
-|----------|-------|-----------|
+| Variable | Type | Comment                                                         |
+| -------- | ---- | --------------------------------------------------------------- |
 | **Tmin** | TIME | Minimum time that must elapse between two output events (`EO`). |
 
 ### **Data Outputs**
@@ -34,9 +34,9 @@ The function block **AUI_D_FF_TMIN** implements a data-locking D flip-flop (data
 
 ### **Adapter**
 
-| Direction | Name | Type | Comment |
-| ---------- | ------ | ----- | ----------- |
-| **Plug** (Output) | **Q** | `adapter::types::unidirectional::AUI` | Provides the locked data value (event and data line). |
+| Direction          | Name  | Type                                  | Comment                                                     |
+| ------------------ | ----- | ------------------------------------- | ----------------------------------------------------------- |
+| **Plug** (Output)  | **Q** | `adapter::types::unidirectional::AUI` | Provides the locked data value (event and data line).       |
 | **Socket** (Input) | **I** | `adapter::types::unidirectional::AUI` | Receives the data value to be locked (event and data line). |
 
 ## Functionality
@@ -71,11 +71,11 @@ The block behaves like an edge-triggered D flip-flop, where each valid clock cyc
 
 The function block does not have an externally visible state machine (ECC). Internally, the used `E_D_FF_ANY_TMIN` can have the following implicit states:
 
-| State | Description |
-| --------- | -------------- |
-| **Idle** | Waiting for an event at input `I`. |
-| **Timed** | Data has been received; output is held back until `Tmin` expires. |
-| **Output** | Minimum time has been met – output event is sent. |
+| State      | Description                                                       |
+| ---------- | ----------------------------------------------------------------- |
+| **Idle**   | Waiting for an event at input `I`.                                |
+| **Timed**  | Data has been received; output is held back until `Tmin` expires. |
+| **Output** | Minimum time has been met – output event is sent.                 |
 
 These states are transparent to the user.
 
@@ -87,11 +87,11 @@ These states are transparent to the user.
 
 ## Comparison with Similar Components
 
-| Component | Feature |
-| ---------- | --------- |
-| **E_D_FF** (Standard D Flip-Flop) | No time limit; each event is output immediately. |
-| **E_D_FF_ANY_TMIN** | Same behavior, but without adapter encapsulation; Direct event-/data-based connection. |
-| **AUI_D_FF_TMIN** (this block) | Combines D flip-flop functionality with time-based throttling and provides an adapter-based interface. |
+| Component                         | Feature                                                                                                |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **E_D_FF** (Standard D Flip-Flop) | No time limit; each event is output immediately.                                                       |
+| **E_D_FF_ANY_TMIN**               | Same behavior, but without adapter encapsulation; Direct event-/data-based connection.                 |
+| **AUI_D_FF_TMIN** (this block)    | Combines D flip-flop functionality with time-based throttling and provides an adapter-based interface. |
 
 ## Conclusion
 

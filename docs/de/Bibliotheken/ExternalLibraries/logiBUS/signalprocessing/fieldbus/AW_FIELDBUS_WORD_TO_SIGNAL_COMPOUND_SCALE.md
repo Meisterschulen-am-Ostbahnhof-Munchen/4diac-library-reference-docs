@@ -12,23 +12,23 @@ Der Funktionsblock **AW_FIELDBUS_WORD_TO_SIGNAL_COMPOUND_SCALE** dient der Umwan
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung               |
-|----------|-------|----------------------------|
-| INIT     | EInit | Init‑Anforderung           |
+| Ereignis | Typ   | Beschreibung     |
+| -------- | ----- | ---------------- |
+| INIT     | EInit | Init‑Anforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung                 |
-|----------|-------|------------------------------|
-| INITO    | EInit | Init‑Bestätigung             |
+| Ereignis | Typ   | Beschreibung     |
+| -------- | ----- | ---------------- |
+| INITO    | EInit | Init‑Bestätigung |
 
 ### **Daten-Eingänge**
 
-| Name       | Typ  | Initialwert | Beschreibung                           |
-|------------|------|-------------|----------------------------------------|
-| SCALE_HIGH | REAL | 0.256       | Skalierungsfaktor für das obere Byte   |
-| SCALE_LOW  | REAL | 0.001       | Skalierungsfaktor für das untere Byte  |
-| OFFSET     | DINT | 0           | Additiver Offset nach der Skalierung   |
+| Name       | Typ  | Initialwert | Beschreibung                          |
+| ---------- | ---- | ----------- | ------------------------------------- |
+| SCALE_HIGH | REAL | 0.256       | Skalierungsfaktor für das obere Byte  |
+| SCALE_LOW  | REAL | 0.001       | Skalierungsfaktor für das untere Byte |
+| OFFSET     | DINT | 0           | Additiver Offset nach der Skalierung  |
 
 ### **Daten-Ausgänge**
 
@@ -36,11 +36,11 @@ Der FB besitzt keine eigenständigen Datenausgänge. Die Ausgangsdaten werden ü
 
 ### **Adapter**
 
-| Adapter | Typ (Richtung)                      | Beschreibung                          |
-|---------|-------------------------------------|---------------------------------------|
-| IN      | `adapter::types::unidirectional::AW` | Eingehendes 16‑Bit‑Wort               |
-| OUT     | `adapter::types::unidirectional::AR` | Ausgangssignal (skaliert)             |
-| VALID   | `adapter::types::unidirectional::AX` | Gültigkeitssignal (TRUE = gültig)     |
+| Adapter | Typ (Richtung)                       | Beschreibung                      |
+| ------- | ------------------------------------ | --------------------------------- |
+| IN      | `adapter::types::unidirectional::AW` | Eingehendes 16‑Bit‑Wort           |
+| OUT     | `adapter::types::unidirectional::AR` | Ausgangssignal (skaliert)         |
+| VALID   | `adapter::types::unidirectional::AX` | Gültigkeitssignal (TRUE = gültig) |
 
 ## Funktionsweise
 
@@ -78,10 +78,10 @@ Das interne Flip‑Flop sorgt dafür, dass das Gültigkeitssignal erst beim näc
 
 Der FB besitzt einen internen Zustand, der durch das Flip‑Flop `E_D_FF` abgebildet wird:
 
-| Zustand | Beschreibung                                                      |
-|---------|-------------------------------------------------------------------|
-| UNVALID | Kein gültiges Signal. Der **VALID**-Ausgang liefert FALSE.        |
-| VALID   | Gültiges Signal erkannt. Der **VALID**-Ausgang zeigt TRUE an.     |
+| Zustand | Beschreibung                                                  |
+| ------- | ------------------------------------------------------------- |
+| UNVALID | Kein gültiges Signal. Der **VALID**-Ausgang liefert FALSE.    |
+| VALID   | Gültiges Signal erkannt. Der **VALID**-Ausgang zeigt TRUE an. |
 
 Der Zustand wechselt mit jedem neuen Eingangsereignis (also mit jeder Übergabe eines Worts) entsprechend der Gültigkeitsinformation des internen Skalierungsmoduls.
 

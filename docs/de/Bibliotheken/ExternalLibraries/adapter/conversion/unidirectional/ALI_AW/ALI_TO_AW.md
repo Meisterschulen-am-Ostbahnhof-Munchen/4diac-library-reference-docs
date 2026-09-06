@@ -30,10 +30,10 @@ Der Baustein besitzt keine direkten Ereignis- oder Datenein-/ausgänge auf FB-Eb
 
 ### **Adapter**
 
-| Adapter-Name | Typ | Richtung | Kommentar |
-|--------------|-----|----------|-----------|
-| `ALI_IN` | `adapter::types::unidirectional::ALI` | Socket (Eingang) | LINT-Adapter-Eingang; liefert Ereignis auf `E1` und LINT-Daten auf `D1` |
-| `AW_OUT` | `adapter::types::unidirectional::AW` | Plug (Ausgang) | WORD-Adapter-Ausgang; sendet Ereignis auf `E1` und WORD-Daten auf `D1` |
+| Adapter-Name | Typ                                   | Richtung         | Kommentar                                                               |
+| ------------ | ------------------------------------- | ---------------- | ----------------------------------------------------------------------- |
+| `ALI_IN`     | `adapter::types::unidirectional::ALI` | Socket (Eingang) | LINT-Adapter-Eingang; liefert Ereignis auf `E1` und LINT-Daten auf `D1` |
+| `AW_OUT`     | `adapter::types::unidirectional::AW`  | Plug (Ausgang)   | WORD-Adapter-Ausgang; sendet Ereignis auf `E1` und WORD-Daten auf `D1`  |
 
 ## Funktionsweise
 
@@ -57,10 +57,10 @@ Somit stellt der FB die vom Eingangsadapter bereitgestellten Daten in konvertier
 
 Da es sich um einen zusammengesetzten Baustein handelt, besitzt `ALI_TO_AW` keinen eigenen Zustandsautomaten. Der interne Konverter `F_LINT_TO_WORD` realisiert typischerweise folgende implizite Zustände:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| IDLE    | Warten auf ein Ereignis am Eingang `ALI_IN.E1`. |
-| CONVERT | Nach Empfang von `REQ` wird die Konvertierung durchgeführt. |
+| Zustand | Beschreibung                                                                                          |
+| ------- | ----------------------------------------------------------------------------------------------------- |
+| IDLE    | Warten auf ein Ereignis am Eingang `ALI_IN.E1`.                                                       |
+| CONVERT | Nach Empfang von `REQ` wird die Konvertierung durchgeführt.                                           |
 | DONE    | Nach Abschluss der Konvertierung wird `CNF` aktiviert und der Ergebniswert am Ausgang bereitgestellt. |
 
 Anschließend kehrt der interne Baustein in den IDLE-Zustand zurück.

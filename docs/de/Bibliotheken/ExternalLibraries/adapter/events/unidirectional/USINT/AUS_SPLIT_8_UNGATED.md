@@ -30,17 +30,17 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Schnittstelle | Typ | Richtung | Beschreibung |
-| --- | --- | --- | --- |
-| **IN** | `adapter::types::unidirectional::AUS` | Socket | Eingang – empfängt das zu verteilende AUS-Signal |
-| **OUT1** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 1 – gibt das eingehende Signal weiter |
-| **OUT2** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 2 – gibt das eingehende Signal weiter |
-| **OUT3** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 3 – gibt das eingehende Signal weiter |
-| **OUT4** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 4 – gibt das eingehende Signal weiter |
-| **OUT5** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 5 – gibt das eingehende Signal weiter |
-| **OUT6** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 6 – gibt das eingehende Signal weiter |
-| **OUT7** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 7 – gibt das eingehende Signal weiter |
-| **OUT8** | `adapter::types::unidirectional::AUS` | Plug | Ausgang 8 – gibt das eingehende Signal weiter |
+| Schnittstelle | Typ                                   | Richtung | Beschreibung                                     |
+| ------------- | ------------------------------------- | -------- | ------------------------------------------------ |
+| **IN**        | `adapter::types::unidirectional::AUS` | Socket   | Eingang – empfängt das zu verteilende AUS-Signal |
+| **OUT1**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 1 – gibt das eingehende Signal weiter    |
+| **OUT2**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 2 – gibt das eingehende Signal weiter    |
+| **OUT3**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 3 – gibt das eingehende Signal weiter    |
+| **OUT4**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 4 – gibt das eingehende Signal weiter    |
+| **OUT5**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 5 – gibt das eingehende Signal weiter    |
+| **OUT6**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 6 – gibt das eingehende Signal weiter    |
+| **OUT7**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 7 – gibt das eingehende Signal weiter    |
+| **OUT8**      | `adapter::types::unidirectional::AUS` | Plug     | Ausgang 8 – gibt das eingehende Signal weiter    |
 
 ## Funktionsweise
 

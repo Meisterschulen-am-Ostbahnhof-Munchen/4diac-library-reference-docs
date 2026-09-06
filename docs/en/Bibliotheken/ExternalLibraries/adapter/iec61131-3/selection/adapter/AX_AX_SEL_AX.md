@@ -62,6 +62,7 @@ Internally, the `AX_AX_SEL_AX` is based on an event-driven network that processe
 
 - If the signal at adapter `G` equals `FALSE`, the internal block `F_SEL` switches the value of `IN0` to the output.
 - - ... * If the signal at adapter `G` equals `TRUE`, the value of `IN1` is set to the output.
+
 1. **Output:** The selected value is passed to the flip-flop of the output adapter, which triggers the event `OUT.E1` and updates the data point `OUT.D1`.
 
 ---
@@ -77,10 +78,10 @@ Internally, the `AX_AX_SEL_AX` is based on an event-driven network that processe
 
 Since this is a composite function block (FB), its behavior is directly determined by the data and event flow:
 
-| State Selector `G.D1` | Output `OUT.D1` | Behavior on Event at Inputs |
-| :--- | :--- | :--- |
-| `FALSE` | Value of `IN0.D1` | Events at `IN0.E1` or `G.E1` trigger an update of `OUT.E1`. |
-| `TRUE` | Value of `IN1.D1` | Events at `IN1.E1` or `G.E1` trigger an update of `OUT.E1`. |
+| State Selector `G.D1` | Output `OUT.D1`   | Behavior on Event at Inputs                                 |
+| :-------------------- | :---------------- | :---------------------------------------------------------- |
+| `FALSE`               | Value of `IN0.D1` | Events at `IN0.E1` or `G.E1` trigger an update of `OUT.E1`. |
+| `TRUE`                | Value of `IN1.D1` | Events at `IN1.E1` or `G.E1` trigger an update of `OUT.E1`. |
 
 --
 

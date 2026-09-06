@@ -13,7 +13,7 @@ The function block `hsv2rgb` is a utility block for color space conversion. It c
 - **g (UDINT):** The calculated green component in the RGB model.
 - **b (UDINT):** The calculated blue component in the RGB model.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

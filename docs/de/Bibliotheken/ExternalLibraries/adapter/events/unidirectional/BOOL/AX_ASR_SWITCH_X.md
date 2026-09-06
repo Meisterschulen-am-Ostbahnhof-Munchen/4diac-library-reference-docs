@@ -33,10 +33,10 @@ Der Baustein interagiert hauptsächlich über Adapter-Schnittstellen.
 
 ### **Adapter**
 
-| Name | Typ | Komponente | Kommentar |
-| :--- | :--- | :--- | :--- |
-| **G** | `adapter::types::unidirectional::AX` | Socket (Input) | Boolescher Eingangsadapter (enthält Ereignis `E1` und Daten `D1`). |
-| **Q** | `adapter::types::unidirectional::ASR` | Plug (Output) | Set/Reset Ausgangsadapter (enthält Ereignisse `SET` und `RESET`). |
+| Name  | Typ                                   | Komponente     | Kommentar                                                          |
+| :---- | :------------------------------------ | :------------- | :----------------------------------------------------------------- |
+| **G** | `adapter::types::unidirectional::AX`  | Socket (Input) | Boolescher Eingangsadapter (enthält Ereignis `E1` und Daten `D1`). |
+| **Q** | `adapter::types::unidirectional::ASR` | Plug (Output)  | Set/Reset Ausgangsadapter (enthält Ereignisse `SET` und `RESET`).  |
 
 ## Funktionsweise
 
@@ -62,10 +62,10 @@ Zusammenfassend:
 
 Da es sich um einen Composite Function Block ohne eigene Zustandsmaschine (ECC) handelt, wird das Verhalten rein durch die Signaldurchleitung definiert.
 
-| Eingang G (D1) bei Event G (E1) | Ausgelöstes Ereignis bei Q | Logische Bedeutung |
-| :--- | :--- | :--- |
-| **TRUE** | **RESET** | Rücksetzen / Stoppen |
-| **FALSE** | **SET** | Setzen / Starten |
+| Eingang G (D1) bei Event G (E1) | Ausgelöstes Ereignis bei Q | Logische Bedeutung   |
+| :------------------------------ | :------------------------- | :------------------- |
+| **TRUE**                        | **RESET**                  | Rücksetzen / Stoppen |
+| **FALSE**                       | **SET**                    | Setzen / Starten     |
 
 ## Anwendungsszenarien
 

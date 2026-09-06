@@ -61,13 +61,13 @@ After each of these actions, the status flags `QU` and `QD` are updated based on
 - **Fill Level Control**: Detecting inflows and outflows in a tank.
 - **Storage Location Management**: Counting incoming and outgoing pallets.
 
-| Feature | E_CTUD (Up/Down) | E_CTU (Up) | E_CTD (Down) |
--------------- | ------------------ | ----------------- | ------------------ |
-| Counting Direction | Up & Down | Up Only | Down Only |
-| Reset (to 0) | Yes (`R`) | Yes (`R`) | No |
-| Load (to PV) | Yes (`LD`) | No | Yes (`LD`) |
-| Top Status | `QU` (`CV >= PV`) | `Q` (`CV >= PV`) | No |
-| Bottom Status | `QD` (`CV = 0`) | No | `Q` (`CV = 0`) |
+| Feature            | E_CTUD (Up/Down)  | E_CTU (Up)       | E_CTD (Down)   |
+| ------------------ | ----------------- | ---------------- | -------------- |
+| Counting Direction | Up & Down         | Up Only          | Down Only      |
+| Reset (to 0)       | Yes (`R`)         | Yes (`R`)        | No             |
+| Load (to PV)       | Yes (`LD`)        | No               | Yes (`LD`)     |
+| Top Status         | `QU` (`CV >= PV`) | `Q` (`CV >= PV`) | No             |
+| Bottom Status      | `QD` (`CV = 0`)   | No               | `Q` (`CV = 0`) |
 
 - [Exercise_082](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_082/)
 

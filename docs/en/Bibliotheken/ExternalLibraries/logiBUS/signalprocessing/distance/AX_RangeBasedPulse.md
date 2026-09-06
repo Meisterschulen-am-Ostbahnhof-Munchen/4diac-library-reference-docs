@@ -43,6 +43,7 @@ The function block operates according to a hysteresis principle with two thresho
 
 - If the current output is LOW (FALSE) and the new distance `DIST_IN.D1` reaches or exceeds the value `LastDist + DIST_LOW`, `OUT.D1` is set to TRUE and `LastDist` is updated to the current distance value.
 - If the output is HIGH (TRUE) and the new distance reaches or exceeds the value `LastDist + DIST_HIGH`, `OUT.D1` is set to FALSE and `LastDist` is updated.
+
 1. **Output:** When the state of `OUT.D1` changes, the event `OUT.E1` is sent, and the new state is stored in `LastState` for the next check.
 
 ## Technical Features

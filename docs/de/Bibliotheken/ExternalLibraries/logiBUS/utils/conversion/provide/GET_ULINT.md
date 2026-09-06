@@ -12,27 +12,27 @@ Der Funktionsblock **GET_ULINT** dient dazu, den aktuellen Wert einer als InOut-
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar               | Mit Daten |
-|-------|--------|-------------------------|-----------|
-| `REQ` | Event  | Normal Execution Request | `IN`      |
+| Name  | Typ   | Kommentar                | Mit Daten |
+| ----- | ----- | ------------------------ | --------- |
+| `REQ` | Event | Normal Execution Request | `IN`      |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                | Mit Daten       |
-|-------|--------|--------------------------|-----------------|
-| `CNF` | Event  | Execution Confirmation   | `OUT`, `IN`     |
+| Name  | Typ   | Kommentar              | Mit Daten   |
+| ----- | ----- | ---------------------- | ----------- |
+| `CNF` | Event | Execution Confirmation | `OUT`, `IN` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Kommentar       |
-|------|--------|-----------------|
-| -    | -      | -               |
+| Name | Typ | Kommentar |
+| ---- | --- | --------- |
+| -    | -   | -         |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ    | Kommentar                | Initialwert |
-|------|--------|--------------------------|-------------|
-| `OUT`| ULINT  | Buffered output value    | 0           |
+| Name  | Typ   | Kommentar             | Initialwert |
+| ----- | ----- | --------------------- | ----------- |
+| `OUT` | ULINT | Buffered output value | 0           |
 
 ### **Adapter**
 
@@ -42,9 +42,9 @@ Keine Adapter vorhanden.
 
 Zusätzlich zu den reinen Ein‑/Ausgängen besitzt der Baustein eine InOut‑Variable:
 
-| Name | Typ    | Kommentar                    | Initialwert |
-|------|--------|------------------------------|-------------|
-| `IN` | ULINT  | Source variable (InOut)      | 0           |
+| Name | Typ   | Kommentar               | Initialwert |
+| ---- | ----- | ----------------------- | ----------- |
+| `IN` | ULINT | Source variable (InOut) | 0           |
 
 ## Funktionsweise
 
@@ -68,9 +68,9 @@ Durch die Verwendung einer InOut‑Variablen kann der Baustein auf einen Speiche
 
 Der Baustein ist als SimpleFB mit einem einzigen ECC‑Zustand implementiert:
 
-| Zustand | Aktion | Ausgabeereignis | Bedeutung |
-|---------|--------|------------------|-----------|
-| `REQ`   | `REQ` (OUT := IN) | `CNF` | Auf eine Anfrage wird der Wert gelesen und bestätigt. |
+| Zustand | Aktion            | Ausgabeereignis | Bedeutung                                             |
+| ------- | ----------------- | --------------- | ----------------------------------------------------- |
+| `REQ`   | `REQ` (OUT := IN) | `CNF`           | Auf eine Anfrage wird der Wert gelesen und bestätigt. |
 
 Es gibt keine weiteren Zustände, keine Verzweigungen und keine internen Speichervariablen (außer dem Ausgang `OUT` selbst, der den letzten gelesenen Wert puffert).
 

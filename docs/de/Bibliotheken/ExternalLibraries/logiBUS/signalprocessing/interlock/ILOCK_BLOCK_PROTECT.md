@@ -12,38 +12,38 @@ Der Funktionsblock `ILOCK_BLOCK_PROTECT` realisiert eine interlock-geschützte R
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | mit Variablen | Beschreibung |
-|----------|---------------|--------------|
-| `EI_UP`  | `DI_UP`, `DT_PROTECT` | Ereignis zur Aktivierung der Vorwärts-Richtung |
-| `EI_DOWN`| `DI_DOWN`, `DT_PROTECT` | Ereignis zur Aktivierung der Rückwärts-Richtung |
+| Ereignis  | mit Variablen           | Beschreibung                                    |
+| --------- | ----------------------- | ----------------------------------------------- |
+| `EI_UP`   | `DI_UP`, `DT_PROTECT`   | Ereignis zur Aktivierung der Vorwärts-Richtung  |
+| `EI_DOWN` | `DI_DOWN`, `DT_PROTECT` | Ereignis zur Aktivierung der Rückwärts-Richtung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | mit Variablen | Beschreibung |
-|----------|---------------|--------------|
-| `EO_UP`  | `DO_UP`       | Quittierung der aktiven Vorwärts-Richtung |
-| `EO_DOWN`| `DO_DOWN`     | Quittierung der aktiven Rückwärts-Richtung |
+| Ereignis  | mit Variablen | Beschreibung                               |
+| --------- | ------------- | ------------------------------------------ |
+| `EO_UP`   | `DO_UP`       | Quittierung der aktiven Vorwärts-Richtung  |
+| `EO_DOWN` | `DO_DOWN`     | Quittierung der aktiven Rückwärts-Richtung |
 
 ### **Daten-Eingänge**
 
-| Variable     | Typ    | Initialwert | Beschreibung |
-|--------------|--------|-------------|--------------|
-| `DI_UP`      | BOOL   | –           | `TRUE` = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
-| `DI_DOWN`    | BOOL   | –           | `TRUE` = rückwärts, abwärts, links, gegen Uhrzeigersinn |
-| `DT_PROTECT` | TIME   | `T#50ms`    | Schutzzeit (Totzeit) nach Rücksetzen einer Richtung |
+| Variable     | Typ  | Initialwert | Beschreibung                                            |
+| ------------ | ---- | ----------- | ------------------------------------------------------- |
+| `DI_UP`      | BOOL | –           | `TRUE` = vorwärts, aufwärts, rechts, im Uhrzeigersinn   |
+| `DI_DOWN`    | BOOL | –           | `TRUE` = rückwärts, abwärts, links, gegen Uhrzeigersinn |
+| `DT_PROTECT` | TIME | `T#50ms`    | Schutzzeit (Totzeit) nach Rücksetzen einer Richtung     |
 
 ### **Daten-Ausgänge**
 
-| Variable  | Typ  | Beschreibung |
-|-----------|------|--------------|
-| `DO_UP`   | BOOL | `TRUE` = Vorwärts-Richtung aktiv |
+| Variable  | Typ  | Beschreibung                      |
+| --------- | ---- | --------------------------------- |
+| `DO_UP`   | BOOL | `TRUE` = Vorwärts-Richtung aktiv  |
 | `DO_DOWN` | BOOL | `TRUE` = Rückwärts-Richtung aktiv |
 
 ### **Adapter**
 
-| Adapter   | Typ                            | Beschreibung |
-|-----------|--------------------------------|--------------|
-| `timeOut` | `iec61499::events::ATimeOut`   | Adapter für die zeitliche Steuerung der Totzeit |
+| Adapter   | Typ                          | Beschreibung                                    |
+| --------- | ---------------------------- | ----------------------------------------------- |
+| `timeOut` | `iec61499::events::ATimeOut` | Adapter für die zeitliche Steuerung der Totzeit |
 
 ## Funktionsweise
 
@@ -79,14 +79,14 @@ Der Baustein arbeitet nach dem Prinzip der **ersten Priorität**:
 
 ## Zustandsübersicht
 
-| Zustand      | Beschreibung |
-|--------------|--------------|
-| `STOP`       | Ruhezustand: beide Ausgänge `FALSE`, warten auf erstes gültiges Ereignis |
-| `UP`         | Vorwärts-Richtung aktiv: `DO_UP = TRUE`, `DO_DOWN = FALSE` |
-| `DOWN`       | Rückwärts-Richtung aktiv: `DO_DOWN = TRUE`, `DO_UP = FALSE` |
-| `UP_STOP`    | Schutzphase nach Rücksetzen der Vorwärts-Richtung: `DO_UP` auf `FALSE`, Timer läuft |
-| `DOWN_STOP`  | Schutzphase nach Rücksetzen der Rückwärts-Richtung: `DO_DOWN` auf `FALSE`, Timer läuft |
-| `EVAL`       | Auswertungszustand nach Timerablauf: Entscheidung über nächste Richtung oder Rückkehr zu `STOP` |
+| Zustand     | Beschreibung                                                                                    |
+| ----------- | ----------------------------------------------------------------------------------------------- |
+| `STOP`      | Ruhezustand: beide Ausgänge `FALSE`, warten auf erstes gültiges Ereignis                        |
+| `UP`        | Vorwärts-Richtung aktiv: `DO_UP = TRUE`, `DO_DOWN = FALSE`                                      |
+| `DOWN`      | Rückwärts-Richtung aktiv: `DO_DOWN = TRUE`, `DO_UP = FALSE`                                     |
+| `UP_STOP`   | Schutzphase nach Rücksetzen der Vorwärts-Richtung: `DO_UP` auf `FALSE`, Timer läuft             |
+| `DOWN_STOP` | Schutzphase nach Rücksetzen der Rückwärts-Richtung: `DO_DOWN` auf `FALSE`, Timer läuft          |
+| `EVAL`      | Auswertungszustand nach Timerablauf: Entscheidung über nächste Richtung oder Rückkehr zu `STOP` |
 
 ## Anwendungsszenarien
 
@@ -97,12 +97,12 @@ Der Baustein arbeitet nach dem Prinzip der **ersten Priorität**:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| **SR-Flipflop** | Einfache Set/Reset-Logik, keine Totzeit, kein Schutz gegen gleichzeitige Signale |
-| **ILOCK_BLOCK_PROTECT** | Priorisierung des ersten aktiven Eingangs, Totzeit nach jedem Richtungswechsel, beide Ausgänge nie gleichzeitig `TRUE` |
-| **Interlock-Baustein ohne Timer** | Nur Sperrlogik, sofortige Umschaltung möglich, keine Schutzzeit |
-| **RS-Sperre mit Zeitverzögerung** | Ähnlich, aber oft weniger konfigurierbar und ereignisgesteuert |
+| Baustein                          | Eigenschaften                                                                                                          |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **SR-Flipflop**                   | Einfache Set/Reset-Logik, keine Totzeit, kein Schutz gegen gleichzeitige Signale                                       |
+| **ILOCK_BLOCK_PROTECT**           | Priorisierung des ersten aktiven Eingangs, Totzeit nach jedem Richtungswechsel, beide Ausgänge nie gleichzeitig `TRUE` |
+| **Interlock-Baustein ohne Timer** | Nur Sperrlogik, sofortige Umschaltung möglich, keine Schutzzeit                                                        |
+| **RS-Sperre mit Zeitverzögerung** | Ähnlich, aber oft weniger konfigurierbar und ereignisgesteuert                                                         |
 
 Der `ILOCK_BLOCK_PROTECT` bietet eine integrierte, konfigurierbare Totzeit und ist speziell für ereignisgesteuerte Systeme nach IEC 61499 optimiert.
 

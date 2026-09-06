@@ -32,11 +32,11 @@ Keine
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| IN | adapter::types::unidirectional::AI | Eingang (Socket) | Nimmt ein analoges Eingangssignal auf. |
-| OUT1 | adapter::types::unidirectional::AI | Ausgang (Plug) | Gibt das an IN anliegende Signal unverändert weiter. |
-| OUT2 | adapter::types::unidirectional::AI | Ausgang (Plug) | Gibt das an IN anliegende Signal unverändert weiter. |
+| Adapter | Typ                                | Richtung         | Beschreibung                                         |
+| ------- | ---------------------------------- | ---------------- | ---------------------------------------------------- |
+| IN      | adapter::types::unidirectional::AI | Eingang (Socket) | Nimmt ein analoges Eingangssignal auf.               |
+| OUT1    | adapter::types::unidirectional::AI | Ausgang (Plug)   | Gibt das an IN anliegende Signal unverändert weiter. |
+| OUT2    | adapter::types::unidirectional::AI | Ausgang (Plug)   | Gibt das an IN anliegende Signal unverändert weiter. |
 
 ## Funktionsweise
 

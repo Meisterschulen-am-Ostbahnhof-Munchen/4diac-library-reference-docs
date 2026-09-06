@@ -69,10 +69,10 @@ Der Funktionsblock arbeitet als Multiplexer für die Adapter-Signale:
 
 Der Funktionsblock besitzt keine eigene Zustandshierarchie (kein ECC), da er als zusammengesetzter Netzwerk-Funktionsblock (Composite FB) realisiert ist. Sein Verhalten ist rein daten- und ereignisflussgesteuert:
 
-| Zustand Selektor (`G.D1`) | Trigger-Ereignis | Aktion / Ergebnis |
-| :--- | :--- | :--- |
-| `FALSE` | Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` | Wert von `IN0.D1` wird an `OUT.D1` übergeben; `OUT.E1` wird ausgelöst. |
-| `TRUE` | Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` | Wert von `IN1.D1` wird an `OUT.D1` übergeben; `OUT.E1` wird ausgelöst. |
+| Zustand Selektor (`G.D1`) | Trigger-Ereignis                           | Aktion / Ergebnis                                                      |
+| :------------------------ | :----------------------------------------- | :--------------------------------------------------------------------- |
+| `FALSE`                   | Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` | Wert von `IN0.D1` wird an `OUT.D1` übergeben; `OUT.E1` wird ausgelöst. |
+| `TRUE`                    | Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` | Wert von `IN1.D1` wird an `OUT.D1` übergeben; `OUT.E1` wird ausgelöst. |
 
 ---
 

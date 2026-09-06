@@ -13,33 +13,33 @@ The function block **NumericValue_PHYS** is an input service interface block acc
 
 ### **Event Inputs**
 
-| Event | Type | With Variables | Comment |
-| ---------- | ----- | ---------------- | ----------- |
-| INIT | EInit | QI, PARAMS, stObj | Initialize the block |
-| REQ | Event | QI | Request a new physical value |
+| Event | Type  | With Variables    | Comment                      |
+| ----- | ----- | ----------------- | ---------------------------- |
+| INIT  | EInit | QI, PARAMS, stObj | Initialize the block         |
+| REQ   | Event | QI                | Request a new physical value |
 
 ### **Event Outputs**
 
-| Event | Type | With variables | Comment |
-| ---------- | ----- | --------------- | ------------ |
-| INITO | EInit | QO, STATUS | Confirm initialization |
-| IND | Event | QO, STATUS, rPhys | Output the calculated physical value |
+| Event | Type  | With variables    | Comment                              |
+| ----- | ----- | ----------------- | ------------------------------------ |
+| INITO | EInit | QO, STATUS        | Confirm initialization               |
+| IND   | Event | QO, STATUS, rPhys | Output the calculated physical value |
 
 ### **Data Inputs**
 
-| Variable | Type | Comment |
-| ---------- | ----- | ----------- |
-| QI | BOOL | Input qualifier (enables processing) |
-| PARAMS | STRING | Service parameter (e.g., configuration string) |
-| stObj | logiBUS::utils::conversion::phys::NumericObjectPool_S | Object pool properties: Object ID (16 bits), scaling, offset, decimal places |
+| Variable | Type                                                  | Comment                                                                      |
+| -------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
+| QI       | BOOL                                                  | Input qualifier (enables processing)                                         |
+| PARAMS   | STRING                                                | Service parameter (e.g., configuration string)                               |
+| stObj    | logiBUS::utils::conversion::phys::NumericObjectPool_S | Object pool properties: Object ID (16 bits), scaling, offset, decimal places |
 
 ### **Data Outputs**
 
-| Variable | Type | Comment |
-| ---------- | ----- | ----------- |
-| QO | BOOL | Output qualifier (processing status) |
-| STATUS | STRING | Status message (error or success message) |
-| rPhys | REAL | Physical value after applying scaling/offset |
+| Variable | Type   | Comment                                      |
+| -------- | ------ | -------------------------------------------- |
+| QO       | BOOL   | Output qualifier (processing status)         |
+| STATUS   | STRING | Status message (error or success message)    |
+| rPhys    | REAL   | Physical value after applying scaling/offset |
 
 ### **Adapters**
 
@@ -53,6 +53,7 @@ The internal process is controlled via the INIT and REQ events and utilizes four
 
 - The passed structure parameter `stObj` is copied via the sub-function block `F_MOVE` (of type `iec61131::selection::F_MOVE`).
 - The copied value (`stObj.u16ObjId`) is forwarded to the sub-function block `NumericValue_ID`, which is thereby initialized (`NumericValue_ID.INIT`).
+
 1. **REQ** (or re-output after INIT)
 
 - The sub-function block `NumericValue_ID` is triggered by `REQ`. It outputs a raw DWORD value from the ISOBUS object pool via its output `IN`.

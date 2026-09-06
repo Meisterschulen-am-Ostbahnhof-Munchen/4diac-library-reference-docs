@@ -34,10 +34,10 @@ Das konvertierte Ergebnis wird über den Ausgangsadapter bereitgestellt (siehe A
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket | `AX_IN` | `adapter::types::unidirectional::AX` | BOOL‑Adapter‑Eingang. Stellt über das Ereignis `E1` und das Datum `D1` (BOOL‑Wert) die Eingangsdaten bereit. |
-| Plug | `AULI_OUT` | `adapter::types::unidirectional::AULI` | ULINT‑Adapter‑Ausgang. Gibt über das Ereignis `E1` und das Datum `D1` (ULINT‑Wert) das Konvertierungsergebnis aus. |
+| Richtung | Name       | Typ                                    | Beschreibung                                                                                                       |
+| -------- | ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Socket   | `AX_IN`    | `adapter::types::unidirectional::AX`   | BOOL‑Adapter‑Eingang. Stellt über das Ereignis `E1` und das Datum `D1` (BOOL‑Wert) die Eingangsdaten bereit.       |
+| Plug     | `AULI_OUT` | `adapter::types::unidirectional::AULI` | ULINT‑Adapter‑Ausgang. Gibt über das Ereignis `E1` und das Datum `D1` (ULINT‑Wert) das Konvertierungsergebnis aus. |
 
 ## Funktionsweise
 

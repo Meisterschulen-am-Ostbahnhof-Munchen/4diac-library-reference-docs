@@ -69,22 +69,22 @@ ID_NULL (65535) ist für `u16ObjId` kein gültiges Kommandoziel, deaktiviert abe
 
 ## Index-Referenz
 
-| Index | Beschreibung               |
-|-------|----------------------------|
-| 0     | Erster Listeneintrag       |
-| ...   |                            |
-| 255   | Maximaler Index (uint8_t)  |
+| Index | Beschreibung              |
+| ----- | ------------------------- |
+| 0     | Erster Listeneintrag      |
+| ...   |                           |
+| 255   | Maximaler Index (uint8_t) |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Änderung             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Änderung    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -95,12 +95,12 @@ ID_NULL (65535) ist für `u16ObjId` kein gültiges Kommandoziel, deaktiviert abe
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ListItem | VtListManager | VtDynamicMenu |
-|---------------|------------|---------------|---------------|
-| ISO-Standard  | ✔          | ✖             | ✖             |
-| Echtzeitänderung | ✔      | ✔             | ✖             |
-| Leereinträge  | ✔          | ✖             | ✔             |
-| Indexrückgabe | ✔          | ✖             | ✖             |
+| Feature          | Q_ListItem | VtListManager | VtDynamicMenu |
+| ---------------- | ---------- | ------------- | ------------- |
+| ISO-Standard     | ✔          | ✖             | ✖             |
+| Echtzeitänderung | ✔          | ✔             | ✖             |
+| Leereinträge     | ✔          | ✖             | ✔             |
+| Indexrückgabe    | ✔          | ✖             | ✖             |
 
 ## Fazit
 

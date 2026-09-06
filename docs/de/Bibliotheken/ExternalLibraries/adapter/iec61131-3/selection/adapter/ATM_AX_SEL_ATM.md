@@ -76,10 +76,10 @@ Die interne Struktur des `ATM_AX_SEL_ATM` besteht aus einem Netzwerk standardisi
 
 Da es sich um ein zusammengesetztes Funktionsbaustein-Netzwerk (Composite FB) handelt, besitzt der Baustein keine eigene klassische ECC (Event Execution Control) Zustandsmaschine. Das Verhalten ist rein datenfluss- und ereignisgesteuert:
 
-| Zustand Selector `G.D1` | Triggerndes Ereignis | Zustand Ausgang `OUT.D1` | Ausgegebenes Ereignis |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Änderung an `IN0.E1` oder `G.E1` | Wert von `IN0.D1` | `OUT.E1` |
-| `TRUE` | Änderung an `IN1.E1` oder `G.E1` | Wert von `IN1.D1` | `OUT.E1` |
+| Zustand Selector `G.D1` | Triggerndes Ereignis             | Zustand Ausgang `OUT.D1` | Ausgegebenes Ereignis |
+| :---------------------- | :------------------------------- | :----------------------- | :-------------------- |
+| `FALSE`                 | Änderung an `IN0.E1` oder `G.E1` | Wert von `IN0.D1`        | `OUT.E1`              |
+| `TRUE`                  | Änderung an `IN1.E1` oder `G.E1` | Wert von `IN1.D1`        | `OUT.E1`              |
 
 ---
 

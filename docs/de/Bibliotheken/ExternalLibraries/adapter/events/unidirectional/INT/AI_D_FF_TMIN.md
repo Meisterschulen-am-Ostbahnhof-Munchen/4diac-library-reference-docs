@@ -12,20 +12,20 @@ Der Baustein **AI_D_FF_TMIN** realisiert ein D‑Flip‑Flop (Data Latch) mit ei
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Typ   | Mit Variable | Kommentar                          |
-|-------------|-------|--------------|------------------------------------|
-| `INIT`      | EInit | `Tmin`       | Initialisierungsanforderung        |
+| Bezeichnung | Typ   | Mit Variable | Kommentar                   |
+| ----------- | ----- | ------------ | --------------------------- |
+| `INIT`      | EInit | `Tmin`       | Initialisierungsanforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Typ   | Mit Variable | Kommentar                             |
-|-------------|-------|--------------|---------------------------------------|
-| `INITO`     | EInit | –            | Bestätigung der Initialisierung       |
+| Bezeichnung | Typ   | Mit Variable | Kommentar                       |
+| ----------- | ----- | ------------ | ------------------------------- |
+| `INITO`     | EInit | –            | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Typ  | Kommentar                                    |
-|-------------|------|----------------------------------------------|
+| Bezeichnung | Typ  | Kommentar                                        |
+| ----------- | ---- | ------------------------------------------------ |
 | `Tmin`      | TIME | Minimale Zeitspanne zwischen zwei EO‑Ereignissen |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der Baustein besitzt keine eigenständigen Daten-Ausgänge; die Ausgabe erfolgt 
 
 ### **Adapter**
 
-| Bezeichnung | Typ (Adapter)                      | Richtung | Kommentar                    |
-|-------------|------------------------------------|----------|------------------------------|
-| `I`         | `adapter::types::unidirectional::AI` | Socket   | Eingangsdaten zum Latchen         |
-| `Q`         | `adapter::types::unidirectional::AI` | Plug     | Gelatchter Ausgabewert           |
+| Bezeichnung | Typ (Adapter)                        | Richtung | Kommentar                 |
+| ----------- | ------------------------------------ | -------- | ------------------------- |
+| `I`         | `adapter::types::unidirectional::AI` | Socket   | Eingangsdaten zum Latchen |
+| `Q`         | `adapter::types::unidirectional::AI` | Plug     | Gelatchter Ausgabewert    |
 
 ## Funktionsweise
 
@@ -74,12 +74,12 @@ Der Baustein besitzt keinen explizit sichtbaren Zustandsautomaten; das Zeitverha
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Beschreibung                                    | Unterschied zu AI_D_FF_TMIN                     |
-|-----------------|------------------------------------------------|-------------------------------------------------|
-| `E_D_FF`        | Einfaches D‑Flip‑Flop ohne Zeitbegrenzung      | Keine Mindestzeit zwischen Ausgabeereignissen   |
-| `E_D_FF_ANY`    | D‑Flip‑Flop für beliebige Datentypen           | Ebenfalls ohne zeitliche Steuerung              |
-| `AI_D_FF`       | D‑Flip‑Flop mit Adapter‑Schnittstelle          | Fehlende `Tmin`‑Option                          |
-| `E_CYCLE`       | Takterzeuger mit einstellbarer Periode          | Erzeugt periodische Ereignisse, kein Latch      |
+| Baustein     | Beschreibung                              | Unterschied zu AI_D_FF_TMIN                   |
+| ------------ | ----------------------------------------- | --------------------------------------------- |
+| `E_D_FF`     | Einfaches D‑Flip‑Flop ohne Zeitbegrenzung | Keine Mindestzeit zwischen Ausgabeereignissen |
+| `E_D_FF_ANY` | D‑Flip‑Flop für beliebige Datentypen      | Ebenfalls ohne zeitliche Steuerung            |
+| `AI_D_FF`    | D‑Flip‑Flop mit Adapter‑Schnittstelle     | Fehlende `Tmin`‑Option                        |
+| `E_CYCLE`    | Takterzeuger mit einstellbarer Periode    | Erzeugt periodische Ereignisse, kein Latch    |
 
 Der `AI_D_FF_TMIN` vereint die Funktionalität eines Adapter‑gekapselten Flip‑Flops mit einer frei konfigurierbaren Ausgabesperre – eine Kombination, die in Standard‑Flip‑Flops nicht enthalten ist.
 

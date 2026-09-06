@@ -12,27 +12,27 @@ The function block **SET_LTIME** is used to write an input value of type `LTIME`
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-----|------------|
-| REQ | Event | Normal execution trigger. Associated with the data `IN` and `OUT`. |
+| Name | Type  | Comment                                                            |
+| ---- | ----- | ------------------------------------------------------------------ |
+| REQ  | Event | Normal execution trigger. Associated with the data `IN` and `OUT`. |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| CNF | Event | Confirmation of successful execution. Associated with data `OUT`. |
+| Name | Type  | Comment                                                           |
+| ---- | ----- | ----------------------------------------------------------------- |
+| CNF  | Event | Confirmation of successful execution. Associated with data `OUT`. |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Comment |
-|------|-----|-------------|-----------|
-| IN | LTIME | LT#0s | Value to be written to the target variable. |
+| Name | Type  | Initial Value | Comment                                     |
+| ---- | ----- | ------------- | ------------------------------------------- |
+| IN   | LTIME | LT#0s         | Value to be written to the target variable. |
 
 ### **Data Outputs**
 
-| Name | Type | Initial Value | Comment |
-|------|-----|--------------|-----------|
-| OUT | LTIME | LT#0s | **InOut Variable** – Target variable that receives the passed value. The function block writes the value of `IN` to this variable. As an InOut variable, it can be both read from and written to externally. |
+| Name | Type  | Initial Value | Comment                                                                                                                                                                                                      |
+| ---- | ----- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| OUT  | LTIME | LT#0s         | **InOut Variable** – Target variable that receives the passed value. The function block writes the value of `IN` to this variable. As an InOut variable, it can be both read from and written to externally. |
 
 ### **Adapter**
 

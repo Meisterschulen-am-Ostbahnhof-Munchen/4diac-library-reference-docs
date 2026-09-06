@@ -12,38 +12,38 @@ Der Funktionsblock **logiBUS_QDA_PWM** ist ein Composite-Baustein zur Ansteuerun
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| INIT | EInit | Service-Initialisierung |
-| *kein weiterer Ereignis-Eingang* | | *Alle Trigger erfolgen über den Adapter* |
+| Ereignis                         | Typ   | Kommentar                                |
+| -------------------------------- | ----- | ---------------------------------------- |
+| INIT                             | EInit | Service-Initialisierung                  |
+| *kein weiterer Ereignis-Eingang* |       | *Alle Trigger erfolgen über den Adapter* |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| INITO | EInit | Bestätigung der Initialisierung |
-| CNF | Event | Bestätigung eines angeforderten Dienstes |
+| Ereignis | Typ   | Kommentar                                |
+| -------- | ----- | ---------------------------------------- |
+| INITO    | EInit | Bestätigung der Initialisierung          |
+| CNF      | Event | Bestätigung eines angeforderten Dienstes |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-| ---------- | ----- | ----------- |
-| QI | BOOL | Eingangs-Qualifier (Initialisierung freigeben) |
-| PARAMS | STRING | Service-Parameter (z. B. Adressierung, Konfiguration) |
-| Output | logiBUS::io::DQ::logiBUS_DO_S | Identifikation des Ausgangs (z. B. Output_Q1..Q8); Initialwert: *Invalid* |
+| Variable | Typ                           | Kommentar                                                                 |
+| -------- | ----------------------------- | ------------------------------------------------------------------------- |
+| QI       | BOOL                          | Eingangs-Qualifier (Initialisierung freigeben)                            |
+| PARAMS   | STRING                        | Service-Parameter (z. B. Adressierung, Konfiguration)                     |
+| Output   | logiBUS::io::DQ::logiBUS_DO_S | Identifikation des Ausgangs (z. B. Output_Q1..Q8); Initialwert: *Invalid* |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| QO | BOOL | Ausgangs-Qualifier (Initialisierungsstatus) |
-| STATUS | STRING | Dienststatus (Fehler-/Erfolgsmeldung) |
+| Variable | Typ    | Kommentar                                   |
+| -------- | ------ | ------------------------------------------- |
+| QO       | BOOL   | Ausgangs-Qualifier (Initialisierungsstatus) |
+| STATUS   | STRING | Dienststatus (Fehler-/Erfolgsmeldung)       |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-|-----|------|----------|-----------|
-| adapter::types::unidirectional::AD | OUT | Socket | Empfängt Trigger-Ereignis (E1) und Ausgangsdaten (D1) von der Ressource |
+| Typ                                | Name | Richtung | Kommentar                                                               |
+| ---------------------------------- | ---- | -------- | ----------------------------------------------------------------------- |
+| adapter::types::unidirectional::AD | OUT  | Socket   | Empfängt Trigger-Ereignis (E1) und Ausgangsdaten (D1) von der Ressource |
 
 ## Funktionsweise
 
@@ -83,11 +83,11 @@ Der interne FB wechselt zwischen diesen Zuständen abhängig von den Ereignissen
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Besonderheit |
-| ---------- | ----- | -------------- |
-| logiBUS_QD_PWM | Composite/ Basic | Direkt ansteuerbar über INIT, REQ, CNF; ohne Adapter-Schnittstelle. |
-| **logiBUS_QDA_PWM** | Composite | Wie logiBUS_QD_PWM, aber mit Adapter für externe Triggerung und Datenversorgung. |
-| logiBUS_DO (einfach) | Basic | Einfacher digitaler Ausgang, keine PWM-Funktion. |
+| Baustein             | Typ              | Besonderheit                                                                     |
+| -------------------- | ---------------- | -------------------------------------------------------------------------------- |
+| logiBUS_QD_PWM       | Composite/ Basic | Direkt ansteuerbar über INIT, REQ, CNF; ohne Adapter-Schnittstelle.              |
+| **logiBUS_QDA_PWM**  | Composite        | Wie logiBUS_QD_PWM, aber mit Adapter für externe Triggerung und Datenversorgung. |
+| logiBUS_DO (einfach) | Basic            | Einfacher digitaler Ausgang, keine PWM-Funktion.                                 |
 
 Der hier beschriebene Baustein bietet eine höhere Flexibilität, da die eigentliche Ausgabe über den Adapter asynchron von der Initialisierung erfolgen kann. Nachteilig ist die Abhängigkeit von der korrekten Bereitstellung der Adapter-Signale.
 

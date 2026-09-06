@@ -34,10 +34,6 @@ The PKP_2200_LI_DI is a global constant definition for Blink Marine PowerKey Dig
 
 The PKP_2200_LI_DI defines global constants of type `PKP_2200_LI_DI_S`, which specify the pin numbers for digital inputs of a Blink Marine PowerKey system. Each constant represents a specific key configuration with associated hardware pins.
 
-*No data outputs available - this is a global constant definition*
-
-# Functionality #
-
 - **Data Type**: All constants use the structure type `PKP_2200_LI_DI_S`
 - **Pin Assignments**:
 - DigitalInput_Key_1: Pin 1

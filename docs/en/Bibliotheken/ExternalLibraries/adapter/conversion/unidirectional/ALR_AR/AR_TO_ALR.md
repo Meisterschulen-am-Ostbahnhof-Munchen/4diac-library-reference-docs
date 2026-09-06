@@ -12,27 +12,27 @@ Composite function block for converting an AR adapter (REAL) to an ALR adapter (
 
 ### **Event Inputs**
 
-| Name | Description |
-|------|--------------|
+| Name                | Description                    |
+| ------------------- | ------------------------------ |
 | **E1** (from AR_IN) | Event to trigger data transfer |
 
 ### **Event Outputs**
 
-| Name | Description |
-|------|--------------|
+| Name                  | Description                              |
+| --------------------- | ---------------------------------------- |
 | **E1** (from ALR_OUT) | Event output after successful conversion |
 
 ### **Data Inputs**
 
-| Name | Data Type | Description |
-|------|----------|--------------|
-| **D1** (from AR_IN) | REAL | 32-bit floating-point number |
+| Name                | Data Type | Description                  |
+| ------------------- | --------- | ---------------------------- |
+| **D1** (from AR_IN) | REAL      | 32-bit floating-point number |
 
 ### **Data Outputs**
 
-| Name | Data Type | Description |
-|------|----------|--------------|
-| **D1** (from ALR_OUT) | LREAL | 64-bit floating-point number |
+| Name                  | Data Type | Description                  |
+| --------------------- | --------- | ---------------------------- |
+| **D1** (from ALR_OUT) | LREAL     | 64-bit floating-point number |
 
 ### **Adapters**
 

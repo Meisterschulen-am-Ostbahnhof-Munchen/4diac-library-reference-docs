@@ -30,17 +30,17 @@ Keine direkten Daten-Ausgänge. Ausgehende Informationen werden über die Plug-A
 
 ### **Adapter**
 
-| Name  | Typ                                   | Richtung | Beschreibung                                   |
-|-------|---------------------------------------|----------|------------------------------------------------|
-| `IN`  | `adapter::types::unidirectional::AB`  | Socket   | Eingangsadapter, der das zu verteilende Signal empfängt. |
-| `OUT1` | `adapter::types::unidirectional::AB`  | Plug     | Erster Ausgangsadapter (identisch zum Eingangssignal). |
-| `OUT2` | `adapter::types::unidirectional::AB`  | Plug     | Zweiter Ausgangsadapter.                       |
-| `OUT3` | `adapter::types::unidirectional::AB`  | Plug     | Dritter Ausgangsadapter.                       |
-| `OUT4` | `adapter::types::unidirectional::AB`  | Plug     | Vierter Ausgangsadapter.                       |
-| `OUT5` | `adapter::types::unidirectional::AB`  | Plug     | Fünfter Ausgangsadapter.                       |
-| `OUT6` | `adapter::types::unidirectional::AB`  | Plug     | Sechster Ausgangsadapter.                      |
-| `OUT7` | `adapter::types::unidirectional::AB`  | Plug     | Siebter Ausgangsadapter.                       |
-| `OUT8` | `adapter::types::unidirectional::AB`  | Plug     | Achter Ausgangsadapter.                        |
+| Name   | Typ                                  | Richtung | Beschreibung                                             |
+| ------ | ------------------------------------ | -------- | -------------------------------------------------------- |
+| `IN`   | `adapter::types::unidirectional::AB` | Socket   | Eingangsadapter, der das zu verteilende Signal empfängt. |
+| `OUT1` | `adapter::types::unidirectional::AB` | Plug     | Erster Ausgangsadapter (identisch zum Eingangssignal).   |
+| `OUT2` | `adapter::types::unidirectional::AB` | Plug     | Zweiter Ausgangsadapter.                                 |
+| `OUT3` | `adapter::types::unidirectional::AB` | Plug     | Dritter Ausgangsadapter.                                 |
+| `OUT4` | `adapter::types::unidirectional::AB` | Plug     | Vierter Ausgangsadapter.                                 |
+| `OUT5` | `adapter::types::unidirectional::AB` | Plug     | Fünfter Ausgangsadapter.                                 |
+| `OUT6` | `adapter::types::unidirectional::AB` | Plug     | Sechster Ausgangsadapter.                                |
+| `OUT7` | `adapter::types::unidirectional::AB` | Plug     | Siebter Ausgangsadapter.                                 |
+| `OUT8` | `adapter::types::unidirectional::AB` | Plug     | Achter Ausgangsadapter.                                  |
 
 ## Funktionsweise
 

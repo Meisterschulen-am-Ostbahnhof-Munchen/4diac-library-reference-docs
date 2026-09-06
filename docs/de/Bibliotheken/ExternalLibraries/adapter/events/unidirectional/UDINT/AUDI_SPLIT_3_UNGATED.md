@@ -30,12 +30,12 @@ Der Funktionsblock **AUDI_SPLIT_3_UNGATED** dient der Vervielfachung eines einge
 
 ### **Adapter**
 
-| Typ | Name | Beschreibung |
-| ----- | ------ | -------------- |
-| Socket (adapter::types::unidirectional::AUDI) | **IN** | Eingangsadapter zum Empfang des AUDI-Signals |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT1** | Erster Ausgangsadapter |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT2** | Zweiter Ausgangsadapter |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT3** | Dritter Ausgangsadapter |
+| Typ                                           | Name     | Beschreibung                                 |
+| --------------------------------------------- | -------- | -------------------------------------------- |
+| Socket (adapter::types::unidirectional::AUDI) | **IN**   | Eingangsadapter zum Empfang des AUDI-Signals |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT1** | Erster Ausgangsadapter                       |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT2** | Zweiter Ausgangsadapter                      |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT3** | Dritter Ausgangsadapter                      |
 
 ## Funktionsweise
 

@@ -28,10 +28,10 @@ Nicht vorhanden – die Datenübergabe erfolgt über die Adapter.
 
 ### **Adapter**
 
-| Typ | Name | Kommentar |
-| ------ | ------ | ----------- |
-| Socket | `ALI_IN` | Eingangsadapter vom Typ `adapter::types::unidirectional::ALI` – liefert LINT-Wert und assoziiertes Ereignis. |
-| Plug | `AUI_OUT` | Ausgangsadapter vom Typ `adapter::types::unidirectional::AUI` – stellt den umgewandelten UINT-Wert und zugehöriges Ereignis bereit. |
+| Typ    | Name      | Kommentar                                                                                                                           |
+| ------ | --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Socket | `ALI_IN`  | Eingangsadapter vom Typ `adapter::types::unidirectional::ALI` – liefert LINT-Wert und assoziiertes Ereignis.                        |
+| Plug   | `AUI_OUT` | Ausgangsadapter vom Typ `adapter::types::unidirectional::AUI` – stellt den umgewandelten UINT-Wert und zugehöriges Ereignis bereit. |
 
 ## Funktionsweise
 

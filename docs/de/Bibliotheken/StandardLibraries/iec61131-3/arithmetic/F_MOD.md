@@ -80,11 +80,11 @@ Der **F_MOD** ist ein arithmetischer Funktionsbaustein zur Berechnung des Divisi
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal        | F_MOD  | F_DIV   | F_REM   |
-|----------------|--------|---------|---------|
-| Operation      | Modulo | Division | Remainder |
-| Eingangstypen  | ANY_INT| ANY_NUM | ANY_NUM |
-| Ausgangstyp    | ANY_NUM| ANY_NUM | ANY_NUM |
+| Merkmal       | F_MOD   | F_DIV    | F_REM     |
+| ------------- | ------- | -------- | --------- |
+| Operation     | Modulo  | Division | Remainder |
+| Eingangstypen | ANY_INT | ANY_NUM  | ANY_NUM   |
+| Ausgangstyp   | ANY_NUM | ANY_NUM  | ANY_NUM   |
 
 ## Fazit
 

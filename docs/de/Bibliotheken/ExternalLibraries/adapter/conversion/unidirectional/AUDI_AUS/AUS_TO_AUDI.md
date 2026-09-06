@@ -28,10 +28,10 @@ Der Baustein besitzt keine eigenen Daten-Ausgänge. Daten werden über den **Plu
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AUS` | `AUS_IN` | Socket (Eingang) | Unidirektionaler Adapter, der Daten im USINT-Format (8 Bit) sowie ein Ereignis bereitstellt. |
-| `adapter::types::unidirectional::AUDI` | `AUDI_OUT` | Plug (Ausgang) | Unidirektionaler Adapter, der Daten im UDINT-Format (32 Bit) sowie ein Ereignis erwartet. |
+| Typ                                    | Name       | Richtung         | Beschreibung                                                                                 |
+| -------------------------------------- | ---------- | ---------------- | -------------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AUS`  | `AUS_IN`   | Socket (Eingang) | Unidirektionaler Adapter, der Daten im USINT-Format (8 Bit) sowie ein Ereignis bereitstellt. |
+| `adapter::types::unidirectional::AUDI` | `AUDI_OUT` | Plug (Ausgang)   | Unidirektionaler Adapter, der Daten im UDINT-Format (32 Bit) sowie ein Ereignis erwartet.    |
 
 Der interne Netzwerkaufbau verbindet das Ereignis `E1` und den Datenwert `D1` des Eingangsadapters direkt mit den gleichnamigen Schnittstellen des Ausgangsadapters.
 

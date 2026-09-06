@@ -14,36 +14,36 @@ Der FB verfügt über keine direkten Ereignis- oder Datenein-/ausgänge. Die ges
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
+| Typ                                   | Name     | Richtung         | Beschreibung                                               |
+| ------------------------------------- | -------- | ---------------- | ---------------------------------------------------------- |
 | `adapter::types::unidirectional::ADI` | `ADI_IN` | Socket (Eingang) | DINT-Adapter, der den zu konvertierenden Wert bereitstellt |
-| `adapter::types::unidirectional::AW` | `AW_OUT` | Plug (Ausgang) | WORD-Adapter, der den konvertierten Wert ausgibt |
+| `adapter::types::unidirectional::AW`  | `AW_OUT` | Plug (Ausgang)   | WORD-Adapter, der den konvertierten Wert ausgibt           |
 
 Die internen Ereignis- und Datenverbindungen des Composite-FBs ergeben sich aus den genutzten Adapter-Schnittstellen:
 
 ### **Ereignis-Eingänge** (über ADI_IN)
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `E1` | Trigger für die Konvertierung des DINT-Wertes |
+| Ereignis | Beschreibung                                  |
+| -------- | --------------------------------------------- |
+| `E1`     | Trigger für die Konvertierung des DINT-Wertes |
 
 ### **Ereignis-Ausgänge** (über AW_OUT)
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `E1` | Bestätigung der erfolgten Konvertierung und Ausgabe des WORD-Wertes |
+| Ereignis | Beschreibung                                                        |
+| -------- | ------------------------------------------------------------------- |
+| `E1`     | Bestätigung der erfolgten Konvertierung und Ausgabe des WORD-Wertes |
 
 ### **Daten-Eingänge** (über ADI_IN)
 
-| Bezeichner | Typ | Beschreibung |
-|------------|-----|--------------|
-| `D1` | `DINT` | Der zu konvertierende Ganzzahlwert |
+| Bezeichner | Typ    | Beschreibung                       |
+| ---------- | ------ | ---------------------------------- |
+| `D1`       | `DINT` | Der zu konvertierende Ganzzahlwert |
 
 ### **Daten-Ausgänge** (über AW_OUT)
 
-| Bezeichner | Typ | Beschreibung |
-|------------|-----|--------------|
-| `D1` | `WORD` | Der konvertierte Bitmuster-Wert (16 Bit) |
+| Bezeichner | Typ    | Beschreibung                             |
+| ---------- | ------ | ---------------------------------------- |
+| `D1`       | `WORD` | Der konvertierte Bitmuster-Wert (16 Bit) |
 
 ## Funktionsweise
 
@@ -78,11 +78,11 @@ Da es sich um einen rein strukturierten Composite-FB ohne eigene ECC (Execution 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschied |
-| ---------- | ---------- | ------------- |
-| `F_DINT_TO_WORD` | Direkte Konvertierung DINT → WORD | Keine Adapter-Kapselung; muss manuell in ein Netzwerk integriert werden |
-| `ADI_TO_AW` | Adapterbasierte Kapselung derselben Konvertierung | Bietet sofort einsatzbereite Adapter-Schnittstellen; vereinfacht die Wiederverwendung |
-| `WORD_TO_DINT` | Umgekehrte Konvertierung | Andere Richtung; eigener Adapter-Typ erforderlich |
+| Baustein         | Funktion                                          | Unterschied                                                                           |
+| ---------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `F_DINT_TO_WORD` | Direkte Konvertierung DINT → WORD                 | Keine Adapter-Kapselung; muss manuell in ein Netzwerk integriert werden               |
+| `ADI_TO_AW`      | Adapterbasierte Kapselung derselben Konvertierung | Bietet sofort einsatzbereite Adapter-Schnittstellen; vereinfacht die Wiederverwendung |
+| `WORD_TO_DINT`   | Umgekehrte Konvertierung                          | Andere Richtung; eigener Adapter-Typ erforderlich                                     |
 
 Der `ADI_TO_AW` ist speziell für Umgebungen optimiert, in denen Adapter als standardisierte Schnittstellen gefordert sind.
 

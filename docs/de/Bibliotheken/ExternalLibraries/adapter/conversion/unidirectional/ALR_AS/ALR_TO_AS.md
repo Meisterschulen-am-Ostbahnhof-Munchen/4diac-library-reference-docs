@@ -28,10 +28,10 @@ Der Baustein besitzt keine separaten Daten-Ausgänge. Die Ausgangsdaten (SINT‑
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `ALR_IN` | Socket | `adapter::types::unidirectional::ALR` | LREAL‑Adapter‑Eingang: liefert den zu konvertierenden LREAL‑Wert sowie ein Auslöseereignis (`E1`). |
-| `AS_OUT` | Plug | `adapter::types::unidirectional::AS` | SINT‑Adapter‑Ausgang: stellt den konvertierten SINT‑Wert sowie ein Bestätigungsereignis (`E1`) bereit. |
+| Adapter  | Richtung | Typ                                   | Beschreibung                                                                                           |
+| -------- | -------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `ALR_IN` | Socket   | `adapter::types::unidirectional::ALR` | LREAL‑Adapter‑Eingang: liefert den zu konvertierenden LREAL‑Wert sowie ein Auslöseereignis (`E1`).     |
+| `AS_OUT` | Plug     | `adapter::types::unidirectional::AS`  | SINT‑Adapter‑Ausgang: stellt den konvertierten SINT‑Wert sowie ein Bestätigungsereignis (`E1`) bereit. |
 
 ## Funktionsweise
 

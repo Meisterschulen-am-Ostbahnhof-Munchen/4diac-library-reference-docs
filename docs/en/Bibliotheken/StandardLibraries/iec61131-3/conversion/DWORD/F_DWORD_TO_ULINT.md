@@ -10,7 +10,7 @@ The function block `F_DWORD_TO_ULINT` converts a `DWORD` value to a `ULINT` valu
 - **IN**: The input expects a `DWORD` value, which is to be converted to a `ULINT` value.
 - **OUT**: The output provides the converted `ULINT` value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

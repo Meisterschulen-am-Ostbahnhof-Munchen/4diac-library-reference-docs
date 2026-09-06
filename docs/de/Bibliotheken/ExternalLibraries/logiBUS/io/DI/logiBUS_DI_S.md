@@ -14,9 +14,9 @@ Als strukturierter Datentyp besitzt `logiBUS_DI_S` keine Ereignis- oder Adapters
 
 Die Struktur selbst stellt die konfigurierbaren Dateneingänge dar. Sie wird als Ganzes an einen übergeordneten Funktionsblock übergeben.
 
-| Name | Datentyp | Initialwert | Kommentar |
-| :--- | :--- | :--- | :--- |
-| `Pin` | `USINT` (Unsigned Short Integer) | 255 | Definiert die Nummer des anzusteuernden Eingangspins oder Kanals. |
+| Name  | Datentyp                         | Initialwert | Kommentar                                                         |
+| :---- | :------------------------------- | :---------- | :---------------------------------------------------------------- |
+| `Pin` | `USINT` (Unsigned Short Integer) | 255         | Definiert die Nummer des anzusteuernden Eingangspins oder Kanals. |
 
 ### **Daten-Ausgänge**
 

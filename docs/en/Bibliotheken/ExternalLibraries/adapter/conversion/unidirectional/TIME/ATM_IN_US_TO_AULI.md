@@ -28,10 +28,10 @@ The function block **ATM_IN_US_TO_AULI** is a composite block that converts a `T
 
 ### **Adapters**
 
-| Adapter | Role | Type | Description |
-| --------- | ------- | ----- | -------------- |
-| IN | Socket | adapter::types::unidirectional::ATM | Unidirectional `TIME` adapter as input interface. |
-| OUT | Plug | adapter::types::unidirectional::AULI | Unidirectional `ULINT` adapter as output interface, value of `IN` expressed in microseconds. |
+| Adapter | Role   | Type                                 | Description                                                                                  |
+| ------- | ------ | ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| IN      | Socket | adapter::types::unidirectional::ATM  | Unidirectional `TIME` adapter as input interface.                                            |
+| OUT     | Plug   | adapter::types::unidirectional::AULI | Unidirectional `ULINT` adapter as output interface, value of `IN` expressed in microseconds. |
 
 ## Functionality
 
@@ -56,12 +56,12 @@ The entire process is synchronous and without intermediate storage – each succ
 
 The function block does not have its own state machine. The process can be described as a simple step:
 
-| Step | Action |
-| --------- | -------- |
-| 1 | Wait for event at **IN.E1** |
-| 2 | Convert the data value from `TIME` (microseconds) to `ULINT` via `F_TIME_IN_US_TO_ULINT` |
-| 3 | Output the converted value to **OUT.D1** and event to **OUT.E1** |
-| 4 | Return to step 1 |
+| Step | Action                                                                                   |
+| ---- | ---------------------------------------------------------------------------------------- |
+| 1    | Wait for event at **IN.E1**                                                              |
+| 2    | Convert the data value from `TIME` (microseconds) to `ULINT` via `F_TIME_IN_US_TO_ULINT` |
+| 3    | Output the converted value to **OUT.D1** and event to **OUT.E1**                         |
+| 4    | Return to step 1                                                                         |
 
 ## Application Scenarios
 

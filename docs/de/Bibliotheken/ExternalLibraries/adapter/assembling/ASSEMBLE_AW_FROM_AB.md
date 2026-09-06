@@ -14,16 +14,16 @@ Der FB besitzt keine direkten Ereignis- oder Datenein-/ausgänge, sondern kommun
 
 ### **Adapter (Plugs – Ausgang)**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| OUT | `adapter::types::unidirectional::AW` | Plug | WORD‑Ausgabe (16 Bit) |
+| Name | Typ                                  | Richtung | Beschreibung          |
+| ---- | ------------------------------------ | -------- | --------------------- |
+| OUT  | `adapter::types::unidirectional::AW` | Plug     | WORD‑Ausgabe (16 Bit) |
 
 ### **Adapter (Sockets – Eingänge)**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| BYTE_00 | `adapter::types::unidirectional::AB` | Socket | Byte 0 (niedrigwertiges Byte) |
-| BYTE_01 | `adapter::types::unidirectional::AB` | Socket | Byte 1 (höherwertiges Byte) |
+| Name    | Typ                                  | Richtung | Beschreibung                  |
+| ------- | ------------------------------------ | -------- | ----------------------------- |
+| BYTE_00 | `adapter::types::unidirectional::AB` | Socket   | Byte 0 (niedrigwertiges Byte) |
+| BYTE_01 | `adapter::types::unidirectional::AB` | Socket   | Byte 1 (höherwertiges Byte)   |
 
 **Hinweis:** Die Adapter vom Typ `AB` und `AW` sind unidirektional ausgeführt. Jeder Adapter enthält die Signale `E1` (Event‑Ausgang des Sockets/Plug – intern verbunden) und `D1` (Datensignal).
 

@@ -31,9 +31,9 @@ The function block **AULI_PUBLISH_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AULI | Socket (Input) | ULINT value to be published |
+| Adapter | Type                                 | Direction      | Description                 |
+| ------- | ------------------------------------ | -------------- | --------------------------- |
+| IN      | adapter::types::unidirectional::AULI | Socket (Input) | ULINT value to be published |
 
 ## Functionality
 

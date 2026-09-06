@@ -42,10 +42,10 @@ No dedicated data outputs.
 
 ### **Adapter**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| Socket | `AX_IN` | `adapter::types::unidirectional::AX` | BOOL adapter input. Provides input data via the event `E1` and the date `D1` (BOOL value). |
-| Plug | `AULI_OUT` | `adapter::types::unidirectional::AULI` | ULINT adapter output. Outputs the conversion result via the event `E1` and the date `D1` (ULINT value).
+| Direction | Name       | Type                                   | Description                                                                                             |
+| --------- | ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Socket    | `AX_IN`    | `adapter::types::unidirectional::AX`   | BOOL adapter input. Provides input data via the event `E1` and the date `D1` (BOOL value).              |
+| Plug      | `AULI_OUT` | `adapter::types::unidirectional::AULI` | ULINT adapter output. Outputs the conversion result via the event `E1` and the date `D1` (ULINT value). |
 
 ## Functionality
 
@@ -57,6 +57,7 @@ The connections are as follows:
 
 - The event `AX_IN.E1` (from the input adapter) is passed to the event input `Convert.REQ` and starts the conversion.
 - After the conversion is complete, the event `Convert.CNF` is passed to the event output `AULI_OUT.E1` to finally update the output adapter.
+
 1. **Data Flow**:
 
 - The Boolean value of `AX_IN.D1` is mirrored to the data input `Convert.IN`.

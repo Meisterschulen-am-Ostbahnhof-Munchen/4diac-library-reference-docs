@@ -61,10 +61,10 @@ Der Baustein verwendet einen **Socket** (Buchse) vom Typ `ARTimeOut`. Da es sich
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
 | Feature        | E_RTimeOut | E_DELAY | E_TABLE |
-|---------------|------------|---------|---------|
-| Reset-Funktion | ✔️        | ❌      | ❌      |
-| Schnittstelle | Adapter    | Direkt  | Direkt  |
-| Standard      | 61499-2    | 61499-1 | 61499-1 |
+| -------------- | ---------- | ------- | ------- |
+| Reset-Funktion | ✔️         | ❌       | ❌       |
+| Schnittstelle  | Adapter    | Direkt  | Direkt  |
+| Standard       | 61499-2    | 61499-1 | 61499-1 |
 
 ## 🛠️ Zugehörige Übungen
 

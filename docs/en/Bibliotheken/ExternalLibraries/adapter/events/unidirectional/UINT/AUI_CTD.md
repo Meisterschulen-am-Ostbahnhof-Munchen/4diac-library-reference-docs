@@ -12,17 +12,17 @@ The **AUI_CTD** is an event-driven down counter with adapter interfaces. It feat
 
 ### **Event Inputs**
 
-| Event | Description |
-| ---------- | ---------------------------------------------- |
-| **CD** | Count Down – reduces the counter value by 1. |
+| Event  | Description                                                         |
+| ------ | ------------------------------------------------------------------- |
+| **CD** | Count Down – reduces the counter value by 1.                        |
 | **LD** | Load – loads the counter value **CV** with the preset value **PV**. |
 
 ### **Event Outputs**
 
-| Event | Description |
-| ---------- | ---------------------------------------------------------- |
+| Event   | Description                                    |
+| ------- | ---------------------------------------------- |
 | **CDO** | Count Down Output – output after each CD step. |
-| **LDO** | Load Output – output after a successful load. |
+| **LDO** | Load Output – output after a successful load.  |
 
 ### **Data Inputs**
 
@@ -34,11 +34,11 @@ The FB has no direct data outputs. The current values of **CV** and **Q** are ou
 
 ### **Adapter**
 
-| Port | Type | Direction | Description |
-| ------- | ------------------------------------------------ | ---------- | ------------------------------------------------------ |
-| **Q** | `adapter::types::unidirectional::AX` (BOOL) | Plug | Status output: `TRUE`, if **CV ≤ 0**. |
-| **CV** | `adapter::types::unidirectional::AUI` (INT) | Plug | Current counter value. |
-| **PV** | `adapter::types::unidirectional::AUI` (INT) | Socket | Preset value loaded into **CV** during the LD event. |
+| Port   | Type                                        | Direction | Description                                          |
+| ------ | ------------------------------------------- | --------- | ---------------------------------------------------- |
+| **Q**  | `adapter::types::unidirectional::AX` (BOOL) | Plug      | Status output: `TRUE`, if **CV ≤ 0**.                |
+| **CV** | `adapter::types::unidirectional::AUI` (INT) | Plug      | Current counter value.                               |
+| **PV** | `adapter::types::unidirectional::AUI` (INT) | Socket    | Preset value loaded into **CV** during the LD event. |
 
 ## Functionality
 
@@ -68,13 +68,13 @@ When the **PV** adapter reports (event **PV.E1**), **Q** is recalculated (using 
 
 The process is controlled by the following ECC states:
 
-| State | Description | Actions |
-| --------------- | -------------------------------------------------------------- | ---------------------------------- |
-| **START** | Waits for incoming events (CD, LD, PV.E1). | – |
-| **CD** | Executes the countdown algorithm. | `CD (CV--, Q aktualisieren)`, `CV.E1`, `CDO` |
-| **LD** | Loads **PV** into **CV**. | `LOAD (CV:=PV; Q aktualisieren)`, `CV.E1`, `LDO` |
-| **UPDATE_PV** | Recalculates **Q** when **PV** changes. | `UPDATE (Q aus CV berechnen)` |
-| **EMIT_Q** | Saves the current **Q** value and triggers **Q.E1**. | `SAVE_Q (Q_OLD:=Q)`, `Q.E1` |
+| State         | Description                                          | Actions                                          |
+| ------------- | ---------------------------------------------------- | ------------------------------------------------ |
+| **START**     | Waits for incoming events (CD, LD, PV.E1).           | –                                                |
+| **CD**        | Executes the countdown algorithm.                    | `CD (CV--, Q aktualisieren)`, `CV.E1`, `CDO`     |
+| **LD**        | Loads **PV** into **CV**.                            | `LOAD (CV:=PV; Q aktualisieren)`, `CV.E1`, `LDO` |
+| **UPDATE_PV** | Recalculates **Q** when **PV** changes.              | `UPDATE (Q aus CV berechnen)`                    |
+| **EMIT_Q**    | Saves the current **Q** value and triggers **Q.E1**. | `SAVE_Q (Q_OLD:=Q)`, `Q.E1`                      |
 
 **Transitions**:
 
@@ -90,11 +90,11 @@ The process is controlled by the following ECC states:
 
 ## Comparison with similar function blocks
 
-| Function block | Special feature | Difference to AUI_CTD |
-| ---------- | ---------------------------------- | ----------------------------------------------------- |
-| **E_CTD** | Standard down counter without adapters | Uses direct data inputs/outputs and no adapters. No on-change triggering. |
-| **E_CTUD** | Up/down counter | Offers both counting directions, but without adapters and without on-change. |
-| **AUI_CTU** | Up counter with adapters | Counts upwards, analog adapter structure, also on-change. |
+| Function block | Special feature                        | Difference to AUI_CTD                                                        |
+| -------------- | -------------------------------------- | ---------------------------------------------------------------------------- |
+| **E_CTD**      | Standard down counter without adapters | Uses direct data inputs/outputs and no adapters. No on-change triggering.    |
+| **E_CTUD**     | Up/down counter                        | Offers both counting directions, but without adapters and without on-change. |
+| **AUI_CTU**    | Up counter with adapters               | Counts upwards, analog adapter structure, also on-change.                    |
 
 The **AUI_CTD** fills the gap of a specialized down counter with more modern adapter concepts and reduced event volume.
 

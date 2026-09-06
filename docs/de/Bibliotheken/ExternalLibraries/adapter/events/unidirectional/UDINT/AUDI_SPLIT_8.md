@@ -29,10 +29,10 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
-| `adapter::types::unidirectional::AUDI` | Socket (Eingang) | `IN` | Eingangsadapter, der das zu verteilende Signal empfängt. |
-| `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | `OUT1` .. `OUT8` | Acht Ausgangsadapter, die jeweils das identische Signal des Eingangs bereitstellen. |
+| Typ                                    | Richtung         | Name             | Beschreibung                                                                        |
+| -------------------------------------- | ---------------- | ---------------- | ----------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AUDI` | Socket (Eingang) | `IN`             | Eingangsadapter, der das zu verteilende Signal empfängt.                            |
+| `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | `OUT1` .. `OUT8` | Acht Ausgangsadapter, die jeweils das identische Signal des Eingangs bereitstellen. |
 
 ## Funktionsweise
 

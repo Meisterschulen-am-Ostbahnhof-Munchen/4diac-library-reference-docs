@@ -32,16 +32,16 @@ Keine
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| IN | `adapter::types::unidirectional::ALR` | Socket (Eingang) | Eingehendes ALR-Signal, das auf die Ausgänge verteilt wird. |
-| OUT1 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Erster Ausgang des geteilten Signals. |
-| OUT2 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Zweiter Ausgang des geteilten Signals. |
-| OUT3 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Dritter Ausgang des geteilten Signals. |
-| OUT4 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Vierter Ausgang des geteilten Signals. |
-| OUT5 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Fünfter Ausgang des geteilten Signals. |
-| OUT6 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Sechster Ausgang des geteilten Signals. |
-| OUT7 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Siebter Ausgang des geteilten Signals. |
+| Name | Typ                                   | Richtung         | Beschreibung                                                |
+| ---- | ------------------------------------- | ---------------- | ----------------------------------------------------------- |
+| IN   | `adapter::types::unidirectional::ALR` | Socket (Eingang) | Eingehendes ALR-Signal, das auf die Ausgänge verteilt wird. |
+| OUT1 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Erster Ausgang des geteilten Signals.                       |
+| OUT2 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Zweiter Ausgang des geteilten Signals.                      |
+| OUT3 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Dritter Ausgang des geteilten Signals.                      |
+| OUT4 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Vierter Ausgang des geteilten Signals.                      |
+| OUT5 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Fünfter Ausgang des geteilten Signals.                      |
+| OUT6 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Sechster Ausgang des geteilten Signals.                     |
+| OUT7 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Siebter Ausgang des geteilten Signals.                      |
 
 ## Funktionsweise
 
@@ -65,12 +65,12 @@ Der Funktionsblock besitzt keinen internen Zustandsautomaten. Es gibt keine Zust
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Besonderheit |
-| ---------- | ------------------ | -------------- |
-| `ALR_SPLIT_2` | 2 | Einfache Zweifachverteilung |
-| `ALR_SPLIT_4` | 4 | Vierfachverteilung |
-| `ALR_SPLIT_7_UNGATED` | 7 | Siebenfachverteilung (dieser Baustein) |
-| `ALR_SPLIT_N` (generisch) | Parametrierbar | Flexibler Splitter mit einstellbarer Anzahl |
+| Baustein                  | Anzahl Ausgänge | Besonderheit                                |
+| ------------------------- | --------------- | ------------------------------------------- |
+| `ALR_SPLIT_2`             | 2               | Einfache Zweifachverteilung                 |
+| `ALR_SPLIT_4`             | 4               | Vierfachverteilung                          |
+| `ALR_SPLIT_7_UNGATED`     | 7               | Siebenfachverteilung (dieser Baustein)      |
+| `ALR_SPLIT_N` (generisch) | Parametrierbar  | Flexibler Splitter mit einstellbarer Anzahl |
 
 Alle Variationen basieren auf dem gleichen Prinzip: unidirektionale Verteilung ohne Signalveränderung.
 

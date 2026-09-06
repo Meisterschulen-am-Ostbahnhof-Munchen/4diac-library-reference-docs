@@ -8,12 +8,12 @@
 
 `RedGreenBackground4_AX` switches the VT background color of 4 objects based on a boolean selector signal: `TRUE` → **Rot**, `FALSE` → **Grün**. The selector signal arrives via an `AX` adapter socket (`DI1`). The object ID is passed via inputs `u16ObjId, u16ObjIdA, u16ObjIdB`.
 
-| Position | Object ID source | Block |
-|---|---|---|
-| 1 | `u16ObjId` | `Q_BackgroundColour` (regular object) |
-| 2 | `u16ObjIdA` | `Q_BackgroundColour` (regular object) |
-| 3 | `u16ObjIdA` | `Q_BackgroundColourAux` (auxiliary function object) |
-| 4 | `u16ObjIdB` | `Q_BackgroundColour` (regular object) |
+| Position | Object ID source | Block                                               |
+| -------- | ---------------- | --------------------------------------------------- |
+| 1        | `u16ObjId`       | `Q_BackgroundColour` (regular object)               |
+| 2        | `u16ObjIdA`      | `Q_BackgroundColour` (regular object)               |
+| 3        | `u16ObjIdA`      | `Q_BackgroundColourAux` (auxiliary function object) |
+| 4        | `u16ObjIdB`      | `Q_BackgroundColour` (regular object)               |
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 

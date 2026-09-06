@@ -12,21 +12,21 @@ Der Funktionsblock **ADI_D_FF_HYS** realisiert ein datengetaktetes (D‑) Flipfl
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ  | Beschreibung                     |
-|----------|------|----------------------------------|
+| Ereignis | Typ   | Beschreibung                                                     |
+| -------- | ----- | ---------------------------------------------------------------- |
 | `INIT`   | EInit | Setzt die Hysterese-Bandbreite (in Verbindung mit `HYSTERESIS`). |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ  | Beschreibung                     |
-|----------|------|----------------------------------|
+| Ereignis | Typ   | Beschreibung                         |
+| -------- | ----- | ------------------------------------ |
 | `INITO`  | EInit | Bestätigt die Ausführung von `INIT`. |
 
 ### **Daten-Eingänge**
 
-| Variable      | Typ | Beschreibung                     |
-|---------------|-----|----------------------------------|
-| `HYSTERESIS`  | DINT | Hysterese-Bandbreite (ganzzahliger Wert). |
+| Variable     | Typ  | Beschreibung                              |
+| ------------ | ---- | ----------------------------------------- |
+| `HYSTERESIS` | DINT | Hysterese-Bandbreite (ganzzahliger Wert). |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Der Baustein besitzt keine direkten Datenausgänge; der latched Wert wird über 
 
 ### **Adapter**
 
-| Schnittstelle | Typ | Richtung | Beschreibung                     |
-|---------------|-----|----------|----------------------------------|
-| `I`           | `adapter::types::unidirectional::ADI` | Socket | Eingangswert (bestehend aus Event `E1` und Data `D1`). |
-| `Q`           | `adapter::types::unidirectional::ADI` | Plug   | Latched Ausgabewert (bestehend aus Event `E1` und Data `D1`). |
+| Schnittstelle | Typ                                   | Richtung | Beschreibung                                                  |
+| ------------- | ------------------------------------- | -------- | ------------------------------------------------------------- |
+| `I`           | `adapter::types::unidirectional::ADI` | Socket   | Eingangswert (bestehend aus Event `E1` und Data `D1`).        |
+| `Q`           | `adapter::types::unidirectional::ADI` | Plug     | Latched Ausgabewert (bestehend aus Event `E1` und Data `D1`). |
 
 **Hinweis:** Der Adapter `ADI` (unidirectional) stellt standardmäßig einen Event- (E1) und einen Datenkanal (D1) zur Verfügung.
 
@@ -82,11 +82,11 @@ Eine Änderung des Ausgangs erfolgt nur, wenn der neue Eingangswert das Hysteres
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein             | Eigenschaften                                      |
-|----------------------|----------------------------------------------------|
-| **E_D_FF**           | Standard-D‑Flipflop ohne Hysterese (direkte Übernahme). |
-| **E_D_FF_ANY_HYS**   | Identische Funktion, jedoch mit direkten Datenports statt Adaptern. |
-| **Schmitt-Trigger**  | Ähnliches Verhalten, jedoch keine Parametrierbarkeit der Hysterese zur Laufzeit. |
+| Baustein            | Eigenschaften                                                                    |
+| ------------------- | -------------------------------------------------------------------------------- |
+| **E_D_FF**          | Standard-D‑Flipflop ohne Hysterese (direkte Übernahme).                          |
+| **E_D_FF_ANY_HYS**  | Identische Funktion, jedoch mit direkten Datenports statt Adaptern.              |
+| **Schmitt-Trigger** | Ähnliches Verhalten, jedoch keine Parametrierbarkeit der Hysterese zur Laufzeit. |
 
 Der **ADI_D_FF_HYS** bietet durch die Adapterschnittstelle eine besonders flexible Einbindung in heterogene Systeme, während die Hysterese zur Laufzeit konfiguriert werden kann.
 

@@ -140,21 +140,21 @@ als Ring aus zwei linearen Ketten:
 
 ## Zustandsübersicht
 
-| Zustandsname | Beschreibung | Aktive Motoren | Übergangsbedingung zum nächsten Zustand |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Initialer Idle-Zustand. | — | `1` (sofort nach `sAUS`) |
-| **sAUS** | Ring-Grundzustand, unten. | keine | `EIN[NOT (STOERUNG_M1..M6)]` → `sVOR1` |
-| **sVOR1** | Vorlauf-Schritt 1. | M6 | `timeOut.TimeOut` → `sVOR2`; `AUS` → `sNACH5`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sVOR2** | Vorlauf-Schritt 2. | M5, M6 | `timeOut.TimeOut` → `sVOR3`; `AUS` → `sNACH4`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sVOR3** | Vorlauf-Schritt 3. | M4, M5, M6 | `timeOut.TimeOut` → `sVOR4`; `AUS` → `sNACH3`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sVOR4** | Vorlauf-Schritt 4. | M3, M4, M5, M6 | `timeOut.TimeOut` → `sVOR5`; `AUS` → `sNACH2`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sVOR5** | Vorlauf-Schritt 5. | M2, M3, M4, M5, M6 | `timeOut.TimeOut` → `sLAEUFT`; `AUS` → `sNACH1`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sLAEUFT** | Ring-Pol, oben — Dauerbetrieb. | M1..M6 (alle) | `AUS` → `sNACH1`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sNACH1** | Nachlauf-Schritt 1 (M1 gestoppt). | M2..M6 | `timeOut.TimeOut` → `sNACH2`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sNACH2** | Nachlauf-Schritt 2 (M1, M2 gestoppt). | M3..M6 | `timeOut.TimeOut` → `sNACH3`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sNACH3** | Nachlauf-Schritt 3 (M1..M3 gestoppt). | M4, M5, M6 | `timeOut.TimeOut` → `sNACH4`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sNACH4** | Nachlauf-Schritt 4 (M1..M4 gestoppt). | M5, M6 | `timeOut.TimeOut` → `sNACH5`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
-| **sNACH5** | Nachlauf-Schritt 5 (M1..M5 gestoppt). | M6 | `timeOut.TimeOut` → `sAUS`; `EI_M6` → `sAUS` |
+| Zustandsname | Beschreibung                          | Aktive Motoren     | Übergangsbedingung zum nächsten Zustand                                              |
+| :----------- | :------------------------------------ | :----------------- | :----------------------------------------------------------------------------------- |
+| **xSTART**   | Initialer Idle-Zustand.               | —                  | `1` (sofort nach `sAUS`)                                                             |
+| **sAUS**     | Ring-Grundzustand, unten.             | keine              | `EIN[NOT (STOERUNG_M1..M6)]` → `sVOR1`                                               |
+| **sVOR1**    | Vorlauf-Schritt 1.                    | M6                 | `timeOut.TimeOut` → `sVOR2`; `AUS` → `sNACH5`; `EI_Mx` → passendes `sNACHx`/`sAUS`   |
+| **sVOR2**    | Vorlauf-Schritt 2.                    | M5, M6             | `timeOut.TimeOut` → `sVOR3`; `AUS` → `sNACH4`; `EI_Mx` → passendes `sNACHx`/`sAUS`   |
+| **sVOR3**    | Vorlauf-Schritt 3.                    | M4, M5, M6         | `timeOut.TimeOut` → `sVOR4`; `AUS` → `sNACH3`; `EI_Mx` → passendes `sNACHx`/`sAUS`   |
+| **sVOR4**    | Vorlauf-Schritt 4.                    | M3, M4, M5, M6     | `timeOut.TimeOut` → `sVOR5`; `AUS` → `sNACH2`; `EI_Mx` → passendes `sNACHx`/`sAUS`   |
+| **sVOR5**    | Vorlauf-Schritt 5.                    | M2, M3, M4, M5, M6 | `timeOut.TimeOut` → `sLAEUFT`; `AUS` → `sNACH1`; `EI_Mx` → passendes `sNACHx`/`sAUS` |
+| **sLAEUFT**  | Ring-Pol, oben — Dauerbetrieb.        | M1..M6 (alle)      | `AUS` → `sNACH1`; `EI_Mx` → passendes `sNACHx`/`sAUS`                                |
+| **sNACH1**   | Nachlauf-Schritt 1 (M1 gestoppt).     | M2..M6             | `timeOut.TimeOut` → `sNACH2`; `EI_Mx` → passendes `sNACHx`/`sAUS`                    |
+| **sNACH2**   | Nachlauf-Schritt 2 (M1, M2 gestoppt). | M3..M6             | `timeOut.TimeOut` → `sNACH3`; `EI_Mx` → passendes `sNACHx`/`sAUS`                    |
+| **sNACH3**   | Nachlauf-Schritt 3 (M1..M3 gestoppt). | M4, M5, M6         | `timeOut.TimeOut` → `sNACH4`; `EI_Mx` → passendes `sNACHx`/`sAUS`                    |
+| **sNACH4**   | Nachlauf-Schritt 4 (M1..M4 gestoppt). | M5, M6             | `timeOut.TimeOut` → `sNACH5`; `EI_Mx` → passendes `sNACHx`/`sAUS`                    |
+| **sNACH5**   | Nachlauf-Schritt 5 (M1..M5 gestoppt). | M6                 | `timeOut.TimeOut` → `sAUS`; `EI_M6` → `sAUS`                                         |
 
 **Globale Störungs-Kaskade**: Aus jedem Zustand vor einem `sNACH_x` führt `EI_Mx[STOERUNG_Mx]`
 direkt und ohne Umweg in genau diesen Zustand (bzw. nach `sAUS` bei `x=6`) — insgesamt 51 solcher

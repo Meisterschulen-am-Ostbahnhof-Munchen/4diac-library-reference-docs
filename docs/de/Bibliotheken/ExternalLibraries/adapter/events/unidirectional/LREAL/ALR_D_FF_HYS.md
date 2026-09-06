@@ -12,20 +12,20 @@ Der Funktionsblock **ALR_D_FF_HYS** realisiert ein Data‑Latch (D‑Flip‑Flop
 
 ### **Ereignis-Eingänge**
 
-| Event | Typ | Beschreibung |
-|-------|-----|--------------|
+| Event | Typ   | Beschreibung                                                                          |
+| ----- | ----- | ------------------------------------------------------------------------------------- |
 | INIT  | EInit | Setzt die Hysterese (mit dem Datenwert `HYSTERESIS`) und startet die Initialisierung. |
 
 ### **Ereignis-Ausgänge**
 
-| Event  | Typ | Beschreibung |
-|--------|-----|--------------|
-| INITO  | EInit | Bestätigt die erfolgreiche Initialisierung. |
+| Event | Typ   | Beschreibung                                |
+| ----- | ----- | ------------------------------------------- |
+| INITO | EInit | Bestätigt die erfolgreiche Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
+| Variable   | Typ   | Beschreibung                                                    |
+| ---------- | ----- | --------------------------------------------------------------- |
 | HYSTERESIS | LREAL | Größe des Hysterese‑Bandes (wird beim `INIT`‑Event übernommen). |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der FB besitzt keine direkten Daten‑Ausgänge. Der gelatchte Wert wird ausschl
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| I (Socket) | `adapter::types::unidirectional::ALR` | Eingang | Empfängt den zu latchnden Wert über das Ereignis `I.E1` und den zugehörigen Datenwert `I.D1`. |
-| Q (Plug)   | `adapter::types::unidirectional::ALR` | Ausgang | Gibt den gelatchten Wert über das Ereignis `Q.E1` und den Datenwert `Q.D1` aus. |
+| Bezeichnung | Typ                                   | Richtung | Beschreibung                                                                                  |
+| ----------- | ------------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| I (Socket)  | `adapter::types::unidirectional::ALR` | Eingang  | Empfängt den zu latchnden Wert über das Ereignis `I.E1` und den zugehörigen Datenwert `I.D1`. |
+| Q (Plug)    | `adapter::types::unidirectional::ALR` | Ausgang  | Gibt den gelatchten Wert über das Ereignis `Q.E1` und den Datenwert `Q.D1` aus.               |
 
 Der verwendete Adapter **ALR** ist ein unidirektionaler Daten‑Adapter mit einem Ereignis (`E1`) und einem Datenwert (`D1`).
 
@@ -71,11 +71,11 @@ Da der FB das Verhalten über einen internen Baustein realisiert, ergibt sich ke
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| Einfaches D‑Flip‑Flop (z. B. `E_D_FF`) | Latch ohne Hysterese – jede Änderung am Eingang wird sofort übernommen. |
-| D‑Flip‑Flop mit Totband (`E_D_FF_TOTBAND`) | Hat ein Totband, das Änderungen blockiert, solange der Wert innerhalb des Bandes bleibt. |
-| **ALR_D_FF_HYS** | Hysterese wird nur in einer Richtung wirksam (Schwellwertverhalten), typisch zur Vermeidung von Flattern. |
+| Baustein                                   | Eigenschaft                                                                                               |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Einfaches D‑Flip‑Flop (z. B. `E_D_FF`)     | Latch ohne Hysterese – jede Änderung am Eingang wird sofort übernommen.                                   |
+| D‑Flip‑Flop mit Totband (`E_D_FF_TOTBAND`) | Hat ein Totband, das Änderungen blockiert, solange der Wert innerhalb des Bandes bleibt.                  |
+| **ALR_D_FF_HYS**                           | Hysterese wird nur in einer Richtung wirksam (Schwellwertverhalten), typisch zur Vermeidung von Flattern. |
 
 ## Fazit
 

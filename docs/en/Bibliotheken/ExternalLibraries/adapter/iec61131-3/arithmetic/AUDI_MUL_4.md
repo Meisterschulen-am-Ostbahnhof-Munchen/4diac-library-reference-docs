@@ -28,13 +28,13 @@ The function block **AUDI_MUL_4** performs an arithmetic multiplication based on
 
 ### **Adapter**
 
-| Type | Name | Direction | Comment |
-| ------ | ------ | ---------- | ----------- |
-| `adapter::types::unidirectional::AUDI` | IN1 | Input (Socket) | MUL input 1 |
-| `adapter::types::unidirectional::AUDI` | IN2 | Input (Socket) | MUL input 2 |
-| `adapter::types::unidirectional::AUDI` | IN3 | Input (Socket) | MUL input 3 |
-| `adapter::types::unidirectional::AUDI` | IN4 | Input (Socket) | MUL input 4 |
-| `adapter::types::unidirectional::AUDI` | OUT | Output (Plug) | MUL result |
+| Type                                   | Name | Direction      | Comment     |
+| -------------------------------------- | ---- | -------------- | ----------- |
+| `adapter::types::unidirectional::AUDI` | IN1  | Input (Socket) | MUL input 1 |
+| `adapter::types::unidirectional::AUDI` | IN2  | Input (Socket) | MUL input 2 |
+| `adapter::types::unidirectional::AUDI` | IN3  | Input (Socket) | MUL input 3 |
+| `adapter::types::unidirectional::AUDI` | IN4  | Input (Socket) | MUL input 4 |
+| `adapter::types::unidirectional::AUDI` | OUT  | Output (Plug)  | MUL result  |
 
 The adapter `AUDI` is defined as a unidirectional data type and transports the respective numerical values as well as the result.
 

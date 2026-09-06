@@ -32,11 +32,11 @@ Keine direkten Datenports. Das Ergebnis wird über den Adapter `OUT` ausgegeben.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** (Eingang) | `IN1` | `adapter::types::unidirectional::AUDI` | Erster Multiplikationsoperand |
-| **Socket** (Eingang) | `IN2` | `adapter::types::unidirectional::AUDI` | Zweiter Multiplikationsoperand |
-| **Plug** (Ausgang) | `OUT` | `adapter::types::unidirectional::AUDI` | Produkt der beiden Eingangswerte |
+| Richtung             | Name  | Typ                                    | Beschreibung                     |
+| -------------------- | ----- | -------------------------------------- | -------------------------------- |
+| **Socket** (Eingang) | `IN1` | `adapter::types::unidirectional::AUDI` | Erster Multiplikationsoperand    |
+| **Socket** (Eingang) | `IN2` | `adapter::types::unidirectional::AUDI` | Zweiter Multiplikationsoperand   |
+| **Plug** (Ausgang)   | `OUT` | `adapter::types::unidirectional::AUDI` | Produkt der beiden Eingangswerte |
 
 *Anmerkung:* Der Adaptertyp `AUDI` ist ein unidirektionaler, typisierter Adapter, der den eigentlichen numerischen Wert kapselt.
 

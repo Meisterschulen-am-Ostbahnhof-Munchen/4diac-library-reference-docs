@@ -12,34 +12,34 @@ Der Funktionsblock **AUI_TO_AD** ist ein zusammengesetzter Baustein (Composite F
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name      | Beschreibung                                             |
+| --------- | -------------------------------------------------------- |
 | AUI_IN.E1 | Ereignis vom AUI-Adapter, das die Konvertierung auslöst. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name      | Beschreibung                                                                          |
+| --------- | ------------------------------------------------------------------------------------- |
 | AD_OUT.E1 | Ereignis zum AD-Adapter, das die Verfügbarkeit des konvertierten Wertes signalisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| AUI_IN.D1 | UINT | Eingangswert vom AUI-Adapter, der in einen DWORD-Wert umgewandelt wird. |
+| Name      | Datentyp | Beschreibung                                                            |
+| --------- | -------- | ----------------------------------------------------------------------- |
+| AUI_IN.D1 | UINT     | Eingangswert vom AUI-Adapter, der in einen DWORD-Wert umgewandelt wird. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| AD_OUT.D1 | DWORD | Ausgangswert, der den konvertierten DWORD-Wert an den AD-Adapter weitergibt. |
+| Name      | Datentyp | Beschreibung                                                                 |
+| --------- | -------- | ---------------------------------------------------------------------------- |
+| AD_OUT.D1 | DWORD    | Ausgangswert, der den konvertierten DWORD-Wert an den AD-Adapter weitergibt. |
 
 ### **Adapter**
 
-| Typ | Name | Rolle |
-|-----|------|-------|
-| `adapter::types::unidirectional::AUI` | AUI_IN | Socket – Eingangsadapter für den UINT-Wert und das zugehörige Ereignis. |
-| `adapter::types::unidirectional::AD` | AD_OUT | Plug – Ausgangsadapter für den konvertierten DWORD-Wert und das Bestätigungsereignis. |
+| Typ                                   | Name   | Rolle                                                                                 |
+| ------------------------------------- | ------ | ------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AUI` | AUI_IN | Socket – Eingangsadapter für den UINT-Wert und das zugehörige Ereignis.               |
+| `adapter::types::unidirectional::AD`  | AD_OUT | Plug – Ausgangsadapter für den konvertierten DWORD-Wert und das Bestätigungsereignis. |
 
 ## Funktionsweise
 

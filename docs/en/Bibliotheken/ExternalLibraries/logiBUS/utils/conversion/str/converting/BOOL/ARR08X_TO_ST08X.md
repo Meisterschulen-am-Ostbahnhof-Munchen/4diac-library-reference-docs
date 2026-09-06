@@ -11,7 +11,7 @@ This function block (FB) is used to convert an array of 8 BOOL values (ARR08X) i
 - **IN**: An array of 8 BOOL values (BOOL[0..7]) representing the source data for the conversion.
 - **OUT**: A structure of type `logiBUS::utils::conversion::types::ST08X` containing the converted 8 BOOL values.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

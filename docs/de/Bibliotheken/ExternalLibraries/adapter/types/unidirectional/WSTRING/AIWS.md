@@ -16,8 +16,8 @@ Keine Ereignis-Eingänge vorhanden.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar               |
+| ---- | ----- | ----------------------- |
 | E1   | Event | Indication (or Request) |
 
 ### **Daten-Eingänge**
@@ -26,8 +26,8 @@ Keine Daten-Eingänge vorhanden.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ     | Kommentar                      |
-|------|---------|--------------------------------|
+| Name | Typ     | Kommentar                              |
+| ---- | ------- | -------------------------------------- |
 | D1   | WSTRING | Indication (or Request) Data from Plug |
 
 ### **Adapter**
@@ -57,11 +57,11 @@ Der Adapter selbst besitzt keinen internen Zustand. Er dient ausschließlich als
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ereignisse | Daten | Richtung | Besonderheit |
-| ---------- | ------------ | ------- | ---------- | -------------- |
-| **AIWS** | 1 Output | 1 WSTRING | Unidirektional | Einfachster Adapter für WSTRING |
-| **AI** (hypothetisch) | 1 Output | 1 ANY (generisch) | Unidirektional | Flexibler Datentyp, aber aufwendiger |
-| **BIWS** (bidirektional) | 2 Events (in/out) | 2 WSTRING in beide Richtungen | Bidirektional | Erfordert Handshake |
+| Baustein                 | Ereignisse        | Daten                         | Richtung       | Besonderheit                         |
+| ------------------------ | ----------------- | ----------------------------- | -------------- | ------------------------------------ |
+| **AIWS**                 | 1 Output          | 1 WSTRING                     | Unidirektional | Einfachster Adapter für WSTRING      |
+| **AI** (hypothetisch)    | 1 Output          | 1 ANY (generisch)             | Unidirektional | Flexibler Datentyp, aber aufwendiger |
+| **BIWS** (bidirektional) | 2 Events (in/out) | 2 WSTRING in beide Richtungen | Bidirektional  | Erfordert Handshake                  |
 
 Der **AIWS** sticht durch seine minimale Schnittstelle hervor und eignet sich besonders für einfache, klar definierte Punkt-zu-Punkt-Verbindungen, bei denen kein Rückkanal benötigt wird.
 

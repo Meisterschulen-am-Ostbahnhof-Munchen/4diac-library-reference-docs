@@ -37,11 +37,11 @@ Identisch zu [E_RS_SYM](E_RS_SYM.md): Die ECC besitzt die Zustände `START`, `SE
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Anfangszustand, wartet symmetrisch auf `S` oder `R` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| Zustand | Bedeutung                                           |
+| ------- | --------------------------------------------------- |
+| START   | Anfangszustand, wartet symmetrisch auf `S` oder `R` |
+| SET     | `Q = TRUE`                                          |
+| RESET   | `Q = FALSE`                                         |
 
 ## Anwendungsszenarien
 

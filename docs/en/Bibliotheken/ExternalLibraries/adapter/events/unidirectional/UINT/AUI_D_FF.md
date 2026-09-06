@@ -28,10 +28,10 @@ None – data output is exclusively via the **Q** adapter.
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| ------------- | ----- | ---------- | ------------- |
-| **I** | `adapter::types::unidirectional::AUI` | Socket (Input) | Input value (D) and clock event (CLK) |
-| **Q** | `adapter::types::unidirectional::AUI` | Plug (Output) | Stored value (Q) and output event (EO) |
+| Name  | Type                                  | Direction      | Description                            |
+| ----- | ------------------------------------- | -------------- | -------------------------------------- |
+| **I** | `adapter::types::unidirectional::AUI` | Socket (Input) | Input value (D) and clock event (CLK)  |
+| **Q** | `adapter::types::unidirectional::AUI` | Plug (Output)  | Stored value (Q) and output event (EO) |
 
 The **AUI** adapter type provides a unidirectional channel that transmits exactly one event and one data value. Thus, the internal connections between the flip-flop and the outside world are implemented via adapters.
 
@@ -53,9 +53,9 @@ The function block internally uses the function block `E_D_FF_ANY` from the IEC 
 
 The function block has two logical states, corresponding to the internal flip-flop:
 
-| State | Description |
-| --------- | -------------- |
-| **Q = 0** | Output value is LOW (logical 0). |
+| State     | Description                       |
+| --------- | --------------------------------- |
+| **Q = 0** | Output value is LOW (logical 0).  |
 | **Q = 1** | Output value is HIGH (logical 1). |
 
 The state changes only on a rising edge of the clock event (provided the event is triggered in the adapter).

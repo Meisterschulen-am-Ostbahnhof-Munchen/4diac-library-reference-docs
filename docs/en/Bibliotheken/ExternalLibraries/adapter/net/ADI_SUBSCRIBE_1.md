@@ -31,9 +31,9 @@ The function block **ADI_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::ADI | Plug (Output) | Buffered received DINT value |
+| Adapter | Type                                | Direction     | Description                  |
+| ------- | ----------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::ADI | Plug (Output) | Buffered received DINT value |
 
 ## Functionality
 

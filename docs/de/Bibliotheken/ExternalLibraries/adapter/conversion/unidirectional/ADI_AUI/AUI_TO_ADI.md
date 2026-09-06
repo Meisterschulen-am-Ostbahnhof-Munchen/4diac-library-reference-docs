@@ -28,10 +28,10 @@ Keine. Die Datenausgabe erfolgt über den ADI-Adapter.
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-|------|----------|-----|--------------|
-| AUI_IN | Socket (Eingang) | `adapter::types::unidirectional::AUI` | UINT-Adapter zum Empfangen von Eingangsdaten und Ereignissen. |
-| ADI_OUT | Plug (Ausgang) | `adapter::types::unidirectional::ADI` | DINT-Adapter zum Senden der konvertierten Daten und Ereignisse. |
+| Name    | Richtung         | Typ                                   | Beschreibung                                                    |
+| ------- | ---------------- | ------------------------------------- | --------------------------------------------------------------- |
+| AUI_IN  | Socket (Eingang) | `adapter::types::unidirectional::AUI` | UINT-Adapter zum Empfangen von Eingangsdaten und Ereignissen.   |
+| ADI_OUT | Plug (Ausgang)   | `adapter::types::unidirectional::ADI` | DINT-Adapter zum Senden der konvertierten Daten und Ereignisse. |
 
 ## Funktionsweise
 

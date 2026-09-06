@@ -12,36 +12,36 @@ Der Funktionsblock **I_TD_TD** ist ein Wrapper um den Basisbaustein `I_TD` und e
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                               |
+| ---- | ----- | ------------------------------------------------------- |
 | INIT | EInit | Service-Initialisierung, gesteuert durch Qualifier `QI` |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mitgeführte Daten |
-| ------ | ----- | -------------------- |
-| INITO | EInit | `QO`, `STATUS` |
-| IND | Event | `QO`, `timestamp_data`, `STATUS`, `Q_timeout`, `LOCAL_MINUTE_OFFSET`, `LOCAL_HOUR_OFFSET` |
-| TIMEOUT | Event | `timestamp_timeout`, `STATUS`, `Q_timeout` |
+| Name    | Typ   | Mitgeführte Daten                                                                         |
+| ------- | ----- | ----------------------------------------------------------------------------------------- |
+| INITO   | EInit | `QO`, `STATUS`                                                                            |
+| IND     | Event | `QO`, `timestamp_data`, `STATUS`, `Q_timeout`, `LOCAL_MINUTE_OFFSET`, `LOCAL_HOUR_OFFSET` |
+| TIMEOUT | Event | `timestamp_timeout`, `STATUS`, `Q_timeout`                                                |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| QI | BOOL | Eingangsqualifier (Steuerung des Initialisierungsvorgangs) |
+| Name | Typ  | Kommentar                                                  |
+| ---- | ---- | ---------------------------------------------------------- |
+| QI   | BOOL | Eingangsqualifier (Steuerung des Initialisierungsvorgangs) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| QO | BOOL | Ausgangsqualifier (Status der Verarbeitung) |
-| STATUS | STRING | Statusmeldung |
-| Q_timeout | BOOL | Zeitüberschreitungs-Flag |
-| timestamp_timeout | DINT | Zeitstempel der Zeitüberschreitung |
-| timestamp_data | DINT | Zeitstempel der gültigen Daten |
-| TD | DT | Kombinierte Zeit-/Datum (IEC 61131-3 `DT`) |
-| LOCAL_MINUTE_OFFSET | SINT | Lokaler Minutenversatz (SPN 1601, Einheit: 1 min/bit, Offset -125) |
-| LOCAL_HOUR_OFFSET | SINT | Lokaler Stundenversatz (SPN 1602, Einheit: 1 h/bit, Offset -125) |
+| Name                | Typ    | Kommentar                                                          |
+| ------------------- | ------ | ------------------------------------------------------------------ |
+| QO                  | BOOL   | Ausgangsqualifier (Status der Verarbeitung)                        |
+| STATUS              | STRING | Statusmeldung                                                      |
+| Q_timeout           | BOOL   | Zeitüberschreitungs-Flag                                           |
+| timestamp_timeout   | DINT   | Zeitstempel der Zeitüberschreitung                                 |
+| timestamp_data      | DINT   | Zeitstempel der gültigen Daten                                     |
+| TD                  | DT     | Kombinierte Zeit-/Datum (IEC 61131-3 `DT`)                         |
+| LOCAL_MINUTE_OFFSET | SINT   | Lokaler Minutenversatz (SPN 1601, Einheit: 1 min/bit, Offset -125) |
+| LOCAL_HOUR_OFFSET   | SINT   | Lokaler Stundenversatz (SPN 1602, Einheit: 1 h/bit, Offset -125)   |
 
 ### **Adapter**
 

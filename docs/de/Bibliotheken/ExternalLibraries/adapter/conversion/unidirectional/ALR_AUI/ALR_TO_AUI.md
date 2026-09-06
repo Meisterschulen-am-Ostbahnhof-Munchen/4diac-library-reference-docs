@@ -36,10 +36,10 @@ Die konvertierten Daten werden über den **AUI_OUT**-Adapter ausgegeben:
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| **ALR_IN** | `adapter::types::unidirectional::ALR` | Socket (Eingang) | Liefert den LREAL-Wert und das Trigger-Ereignis. |
-| **AUI_OUT** | `adapter::types::unidirectional::AUI` | Plug (Ausgang) | Gibt den konvertierten UINT-Wert und das Bestätigungsereignis aus. |
+| Bezeichnung | Typ                                   | Richtung         | Beschreibung                                                       |
+| ----------- | ------------------------------------- | ---------------- | ------------------------------------------------------------------ |
+| **ALR_IN**  | `adapter::types::unidirectional::ALR` | Socket (Eingang) | Liefert den LREAL-Wert und das Trigger-Ereignis.                   |
+| **AUI_OUT** | `adapter::types::unidirectional::AUI` | Plug (Ausgang)   | Gibt den konvertierten UINT-Wert und das Bestätigungsereignis aus. |
 
 ## Funktionsweise
 
@@ -78,11 +78,11 @@ Da es sich um einen zusammengesetzten Baustein ohne eigenen ECC (Execution Contr
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingangstyp | Ausgangstyp | Beschreibung |
-| ---------- | ------------- | ------------- | -------------- |
-| **ALR_TO_AUI** | ALR (LREAL) | AUI (UINT) | Adapter‑basierte Konvertierung LREAL→UINT. |
-| `F_LREAL_TO_UINT` | LREAL | UINT | Reine Datenkonvertierung ohne Adapter. |
-| `LREAL_TO_INT` | LREAL | INT | Konvertierung in einen vorzeichenbehafteten Integer. |
+| Baustein          | Eingangstyp | Ausgangstyp | Beschreibung                                         |
+| ----------------- | ----------- | ----------- | ---------------------------------------------------- |
+| **ALR_TO_AUI**    | ALR (LREAL) | AUI (UINT)  | Adapter‑basierte Konvertierung LREAL→UINT.           |
+| `F_LREAL_TO_UINT` | LREAL       | UINT        | Reine Datenkonvertierung ohne Adapter.               |
+| `LREAL_TO_INT`    | LREAL       | INT         | Konvertierung in einen vorzeichenbehafteten Integer. |
 
 Im Gegensatz zu den reinen Datenwandlern arbeitet **ALR_TO_AUI** auf Adapterebene, sodass sowohl die Daten als auch die zugehörigen Ereignisse über die Adapterschnittstellen ausgetauscht werden. Dies vereinfacht die Integration in adapterbasierte Architekturen.
 

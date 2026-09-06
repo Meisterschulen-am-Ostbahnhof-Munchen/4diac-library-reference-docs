@@ -10,7 +10,7 @@ The function block `F_LINT_TO_WORD` converts a LINT data type (64-bit integer) t
 - `IN` (LINT): The input value to be converted from LINT to WORD.
 - `OUT` (WORD): The converted output value in WORD format.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

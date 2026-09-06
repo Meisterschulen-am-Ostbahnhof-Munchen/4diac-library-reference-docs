@@ -12,34 +12,34 @@ Der Funktionsblock **ALI_TO_AI** ist ein zusammengesetzter Baustein (Composite F
 
 ### **Ereignis-Eingänge**
 
-| Name     | Datentyp | Beschreibung                                        |
-|----------|----------|-----------------------------------------------------|
-| ALI_IN   | Ereignis | Steuersignal des ALI‑Adapters, löst die Konvertierung aus |
+| Name   | Datentyp | Beschreibung                                              |
+| ------ | -------- | --------------------------------------------------------- |
+| ALI_IN | Ereignis | Steuersignal des ALI‑Adapters, löst die Konvertierung aus |
 
 ### **Ereignis-Ausgänge**
 
-| Name     | Datentyp | Beschreibung                                          |
-|----------|----------|-------------------------------------------------------|
-| AI_OUT   | Ereignis | Bestätigungssignal des AI‑Adapters nach erfolgreicher Konvertierung |
+| Name   | Datentyp | Beschreibung                                                        |
+| ------ | -------- | ------------------------------------------------------------------- |
+| AI_OUT | Ereignis | Bestätigungssignal des AI‑Adapters nach erfolgreicher Konvertierung |
 
 ### **Daten-Eingänge**
 
-| Name     | Datentyp | Beschreibung                       |
-|----------|----------|------------------------------------|
-| ALI_IN.D1| LINT     | Der umzuwandelnde LINT‑Wert        |
+| Name      | Datentyp | Beschreibung                |
+| --------- | -------- | --------------------------- |
+| ALI_IN.D1 | LINT     | Der umzuwandelnde LINT‑Wert |
 
 ### **Daten-Ausgänge**
 
-| Name     | Datentyp | Beschreibung                       |
-|----------|----------|------------------------------------|
-| AI_OUT.D1| INT      | Der konvertierte INT‑Wert          |
+| Name      | Datentyp | Beschreibung              |
+| --------- | -------- | ------------------------- |
+| AI_OUT.D1 | INT      | Der konvertierte INT‑Wert |
 
 ### **Adapter**
 
-| Richtung | Name    | Typ          | Beschreibung                              |
-|----------|---------|--------------|-------------------------------------------|
-| Socket   | ALI_IN  | ALI (unidirectional) | Liefert LINT‑Werte und Steuereignisse   |
-| Plug     | AI_OUT  | AI (unidirectional) | Gibt konvertierte INT‑Werte und Ereignisse aus |
+| Richtung | Name   | Typ                  | Beschreibung                                   |
+| -------- | ------ | -------------------- | ---------------------------------------------- |
+| Socket   | ALI_IN | ALI (unidirectional) | Liefert LINT‑Werte und Steuereignisse          |
+| Plug     | AI_OUT | AI (unidirectional)  | Gibt konvertierte INT‑Werte und Ereignisse aus |
 
 ## Funktionsweise
 
@@ -76,11 +76,11 @@ Als zusammengesetzter Baustein ohne eigenes Zustandsdiagramm hat **ALI_TO_AI** k
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Funktion                                  | Unterschied                                                      |
-|-----------------|-------------------------------------------|------------------------------------------------------------------|
-| ALI_TO_AI       | LINT → INT über Adapter                   | Speziell für unidirektionale ALI‑/AI‑Schnittstellen              |
-| LINT_TO_INT     | Direkte Konvertierung LINT → INT          | Keine Adapterintegration – reine Datenkonvertierung               |
-| AI_TO_ALI       | INT → LINT (umgekehrte Richtung)          | Gleiche Struktur, aber entgegengesetzte Datenrichtung             |
+| Baustein    | Funktion                         | Unterschied                                           |
+| ----------- | -------------------------------- | ----------------------------------------------------- |
+| ALI_TO_AI   | LINT → INT über Adapter          | Speziell für unidirektionale ALI‑/AI‑Schnittstellen   |
+| LINT_TO_INT | Direkte Konvertierung LINT → INT | Keine Adapterintegration – reine Datenkonvertierung   |
+| AI_TO_ALI   | INT → LINT (umgekehrte Richtung) | Gleiche Struktur, aber entgegengesetzte Datenrichtung |
 
 ## Fazit
 

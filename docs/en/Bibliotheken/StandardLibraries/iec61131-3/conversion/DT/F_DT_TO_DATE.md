@@ -10,7 +10,7 @@ The function block `F_DT_TO_DATE` converts a date-time value (DT) into a date (D
 - `IN` (DT): The input for the date-time value to be converted.
 - `OUT` (DATE): The output for the converted date.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_DT_TO_DATE` converts a date-time value (DT) into a date (D
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 This function block does not use any adapters.
 

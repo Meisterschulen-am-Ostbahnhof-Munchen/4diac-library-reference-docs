@@ -47,11 +47,13 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with target object ID
 - `INITO` confirms operational readiness
+
 1. **Text Update**:
 
 - `REQ` with new text string
 - Immediately updates the VT text object
 - `CNF` returns operational status and previous text
+
 1. **String Requirements**:
 
 - Maximum `ISO_VTC_CMD_STR_MAX_LENGTH` including null termination
@@ -69,22 +71,22 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## String format
 
-| Parameters | Requirements |
-| -------------------- | ---------------------------------- |
-| Maximum length | ISO_VTC_CMD_STR_MAX_LENGTH |
-| Termination | '\0' at the end is mandatory |
-| Character set | ISO-8859-1 (Latin-1) recommended |
+| Parameters     | Requirements                     |
+| -------------- | -------------------------------- |
+| Maximum length | ISO_VTC_CMD_STR_MAX_LENGTH       |
+| Termination    | '\0' at the end is mandatory     |
+| Character set  | ISO-8859-1 (Latin-1) recommended |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Update successful |
-| -6 | VT_E_OVERFLOW | String too long or buffer full |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                        |
+| ---- | ------------------------- | ------------------------------ |
+| 0    | VT_E_NO_ERR               | Update successful              |
+| -6   | VT_E_OVERFLOW             | String too long or buffer full |
+| -8   | VT_E_NOACT                | VT not ready                   |
+| -21  | VT_E_NO_INSTANCE          | No VT client available         |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance            |
+| -130 | VT_E_NOT_ALIVE            | VT not active                  |
 
 ## Application Scenarios
 
@@ -95,12 +97,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | Q_StringValue | VtTextUpdate | VtStringManager |
-| -------------- | --------------- | -------------- | ------------------ |
-| ISO Standard | ✔ | ✖ | ✖ |
-| FIFO Update | ✔ | ✖ | ✔ |
-| Length Check | ✔ | ✔ | ✖ |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature      | Q_StringValue | VtTextUpdate | VtStringManager |
+| ------------ | ------------- | ------------ | --------------- |
+| ISO Standard | ✔             | ✖            | ✖               |
+| FIFO Update  | ✔             | ✖            | ✔               |
+| Length Check | ✔             | ✔            | ✖               |
+| Feedback     | ✔             | ✖            | ✔               |
 
 ## 🛠️ Related Exercises
 

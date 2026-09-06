@@ -21,7 +21,7 @@ Input data (LINT) is provided via the socket adapter **ALI_IN** (data point D1).
 
 Output data (LWORD) is provided via the plug adapter **AL_OUT** (data point D1).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -35,10 +35,10 @@ Output data (LWORD) is provided via the plug adapter **AL_OUT** (data point D1).
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Description |
-| --------- | ---------- | ----- | -------------- |
-| **ALI_IN** | Socket | `adapter::types::unidirectional::ALI` | Receives a LINT value and an event. |
-| **AL_OUT** | Plug | `adapter::types::unidirectional::AL` | Sends an LWORD value and an event. |
+| Adapter    | Direction | Type                                  | Description                         |
+| ---------- | --------- | ------------------------------------- | ----------------------------------- |
+| **ALI_IN** | Socket    | `adapter::types::unidirectional::ALI` | Receives a LINT value and an event. |
+| **AL_OUT** | Plug      | `adapter::types::unidirectional::AL`  | Sends an LWORD value and an event.  |
 
 ## Functionality
 

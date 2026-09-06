@@ -34,10 +34,10 @@ Die Daten werden über den **AR_OUT**‑Adapter als Real-Wert ausgegeben.
 
 ### **Adapter**
 
-| Name   | Typ                                          | Richtung | Beschreibung          |
-|--------|----------------------------------------------|----------|-----------------------|
-| AI_IN  | `adapter::types::unidirectional::AI`        | Socket   | Integer‑Adapter (Eingang) |
-| AR_OUT | `adapter::types::unidirectional::AR`        | Plug     | Real‑Adapter (Ausgang)    |
+| Name   | Typ                                  | Richtung | Beschreibung              |
+| ------ | ------------------------------------ | -------- | ------------------------- |
+| AI_IN  | `adapter::types::unidirectional::AI` | Socket   | Integer‑Adapter (Eingang) |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug     | Real‑Adapter (Ausgang)    |
 
 ## Funktionsweise
 
@@ -68,11 +68,11 @@ Der Baustein besitzt keinen Zustandsautomaten. Die Verarbeitung erfolgt direkt o
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein  | Funktion                                        | Besonderheit                          |
-|-----------|-------------------------------------------------|---------------------------------------|
-| AI_TO_AR  | Durchleitung von INT nach REAL über Adapter     | Keine eigene Logik, reine Adaptervermittlung |
-| REAL_TO_INT | Konvertierung von REAL nach INT (i.d.R. mit Rundung) | Enhält oft einen eigenen Algorithmus |
-| ADAPTER_COUPLER | Allgemeine Adapterkopplung ohne Typanpassung   | Erfordert identische Datentypen       |
+| Baustein        | Funktion                                             | Besonderheit                                 |
+| --------------- | ---------------------------------------------------- | -------------------------------------------- |
+| AI_TO_AR        | Durchleitung von INT nach REAL über Adapter          | Keine eigene Logik, reine Adaptervermittlung |
+| REAL_TO_INT     | Konvertierung von REAL nach INT (i.d.R. mit Rundung) | Enhält oft einen eigenen Algorithmus         |
+| ADAPTER_COUPLER | Allgemeine Adapterkopplung ohne Typanpassung         | Erfordert identische Datentypen              |
 
 Im Gegensatz zu dedizierten Konvertern nimmt **AI_TO_AR** keine aktive Wertumwandlung vor, sondern verlässt sich auf die Kompatibilität der angeschlossenen Adapter.
 

@@ -28,15 +28,15 @@ Es existieren keine expliziten Daten-Ausgänge. Die aufgeteilten Daten werden ü
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AB` | `IN` | Socket | Eingangsadapter, der die zu verteilenden Daten liefert. |
-| `adapter::types::unidirectional::AB` | `OUT1` | Plug | Erster Ausgangsadapter – erhält eine Kopie der Eingangsdaten. |
-| `adapter::types::unidirectional::AB` | `OUT2` | Plug | Zweiter Ausgangsadapter. |
-| `adapter::types::unidirectional::AB` | `OUT3` | Plug | Dritter Ausgangsadapter. |
-| `adapter::types::unidirectional::AB` | `OUT4` | Plug | Vierter Ausgangsadapter. |
-| `adapter::types::unidirectional::AB` | `OUT5` | Plug | Fünfter Ausgangsadapter. |
-| `adapter::types::unidirectional::AB` | `OUT6` | Plug | Sechster Ausgangsadapter. |
+| Typ                                  | Name   | Richtung | Beschreibung                                                  |
+| ------------------------------------ | ------ | -------- | ------------------------------------------------------------- |
+| `adapter::types::unidirectional::AB` | `IN`   | Socket   | Eingangsadapter, der die zu verteilenden Daten liefert.       |
+| `adapter::types::unidirectional::AB` | `OUT1` | Plug     | Erster Ausgangsadapter – erhält eine Kopie der Eingangsdaten. |
+| `adapter::types::unidirectional::AB` | `OUT2` | Plug     | Zweiter Ausgangsadapter.                                      |
+| `adapter::types::unidirectional::AB` | `OUT3` | Plug     | Dritter Ausgangsadapter.                                      |
+| `adapter::types::unidirectional::AB` | `OUT4` | Plug     | Vierter Ausgangsadapter.                                      |
+| `adapter::types::unidirectional::AB` | `OUT5` | Plug     | Fünfter Ausgangsadapter.                                      |
+| `adapter::types::unidirectional::AB` | `OUT6` | Plug     | Sechster Ausgangsadapter.                                     |
 
 ## Funktionsweise
 

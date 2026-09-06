@@ -33,8 +33,8 @@ Im Unterschied zu `CLIENT_1_0` (Remote-Write eines Datenwerts) ruft `CLIENT_0` e
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                                |
+| ------- | ---------------------------------- | ---------------- | ------------------------------------------- |
 | TRIGGER | adapter::types::unidirectional::AE | Socket (Eingang) | Auslösendes Ereignis für den Methodenaufruf |
 
 ## Funktionsweise

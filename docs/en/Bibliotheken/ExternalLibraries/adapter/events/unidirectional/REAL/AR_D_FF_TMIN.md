@@ -12,20 +12,20 @@ The function block **AR_D_FF_TMIN** implements a data latch (D flip-flop) with o
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-------|----------------------------------|
+| Name | Type  | Comment                                        |
+| ---- | ----- | ---------------------------------------------- |
 | INIT | EInit | Initialization Request (with parameter `Tmin`) |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|-------|---------------------------------|
+| Name  | Type  | Comment                        |
+| ----- | ----- | ------------------------------ |
 | INITO | EInit | Initialization Acknowledgement |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|------|------|--------------------------------------------|
+| Name | Type | Comment                             |
+| ---- | ---- | ----------------------------------- |
 | Tmin | TIME | Minimum Delay Between Two EO Events |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ No standalone data outputs; the value is output via the `Q` adapter.
 
 ### **Adapter**
 
-| Direction | Name | Type | Comment |
-| ---------- | ------ | --------------------------------------------------- | ------------------------- |
-| Socket | I | `adapter::types::unidirectional::AR` | Value to be transferred |
-| Plug | Q | `adapter::types::unidirectional::AR` | Latched value |
+| Direction | Name | Type                                 | Comment                 |
+| --------- | ---- | ------------------------------------ | ----------------------- |
+| Socket    | I    | `adapter::types::unidirectional::AR` | Value to be transferred |
+| Plug      | Q    | `adapter::types::unidirectional::AR` | Latched value           |
 
 The adapter `adapter::types::unidirectional::AR` combines one event (`E1`) and one data word (`D1`) per direction.
 

@@ -28,11 +28,11 @@ Keine dedizierten Daten-Ausgänge. Die verteilten Daten werden über die beiden 
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| **Socket** | `IN` | Eingang | Unidirektionaler ALI‑Adapter, der die eingehenden Daten/Ereignisse empfängt. |
-| **Plug** | `OUT1` | Ausgang | Erster unidirektionaler ALI‑Adapter, an den die Daten/Ereignisse weitergeleitet werden. |
-| **Plug** | `OUT2` | Ausgang | Zweiter unidirektionaler ALI‑Adapter, an den die Daten/Ereignisse weitergeleitet werden. |
+| Typ        | Name   | Richtung | Beschreibung                                                                             |
+| ---------- | ------ | -------- | ---------------------------------------------------------------------------------------- |
+| **Socket** | `IN`   | Eingang  | Unidirektionaler ALI‑Adapter, der die eingehenden Daten/Ereignisse empfängt.             |
+| **Plug**   | `OUT1` | Ausgang  | Erster unidirektionaler ALI‑Adapter, an den die Daten/Ereignisse weitergeleitet werden.  |
+| **Plug**   | `OUT2` | Ausgang  | Zweiter unidirektionaler ALI‑Adapter, an den die Daten/Ereignisse weitergeleitet werden. |
 
 Alle Adapter sind vom Typ `adapter::types::unidirectional::ALI`.
 
@@ -58,12 +58,12 @@ Da der Baustein keine Ereignis‑Eingänge/Ausgänge oder internen Zustände bes
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschied |
-| ---------- | ---------- | ------------- |
-| **ALI_SPLIT_2** | Verteilt einen ALI‑Eingang auf zwei ALI‑Ausgänge. | – |
-| **ALI_SPLIT_3** (hypothetisch) | Verteilt auf drei Ausgänge. | Höhere Ausgangszahl. |
-| **ALI_MERGE_2** | Fasst zwei ALI‑Eingänge zu einem ALI‑Ausgang zusammen. | Gegenteilige Funktion (Join). |
-| **ALI_FILTER** | Leitet nur bestimmte Daten/Ereignisse weiter. | Enthält Filterlogik. |
+| Baustein                       | Funktion                                               | Unterschied                   |
+| ------------------------------ | ------------------------------------------------------ | ----------------------------- |
+| **ALI_SPLIT_2**                | Verteilt einen ALI‑Eingang auf zwei ALI‑Ausgänge.      | –                             |
+| **ALI_SPLIT_3** (hypothetisch) | Verteilt auf drei Ausgänge.                            | Höhere Ausgangszahl.          |
+| **ALI_MERGE_2**                | Fasst zwei ALI‑Eingänge zu einem ALI‑Ausgang zusammen. | Gegenteilige Funktion (Join). |
+| **ALI_FILTER**                 | Leitet nur bestimmte Daten/Ereignisse weiter.          | Enthält Filterlogik.          |
 
 - **[`ALI_SPLIT_2_UNGATED`](ALI_SPLIT_2_UNGATED.md)**: Ungegatete Variante – aktualisiert den Ausgang bei jedem Durchlauf, auch ohne Wertänderung.
 

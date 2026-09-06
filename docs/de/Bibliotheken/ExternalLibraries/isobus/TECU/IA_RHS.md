@@ -12,37 +12,37 @@ Der Funktionsblock **IA_RHS** (ISOBUS Adapter for Rear Hitch Status) dient als S
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar               | Mit Daten |
-|------|-------|-------------------------|-----------|
-| INIT | EInit | Service Initialization  | QI        |
+| Name | Typ   | Kommentar              | Mit Daten |
+| ---- | ----- | ---------------------- | --------- |
+| INIT | EInit | Service Initialization | QI        |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                | Mit Daten      |
-|-------|-------|--------------------------|----------------|
-| INITO | EInit | Initialization Confirm   | QO, STATUS     |
+| Name  | Typ   | Kommentar              | Mit Daten  |
+| ----- | ----- | ---------------------- | ---------- |
+| INITO | EInit | Initialization Confirm | QO, STATUS |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar               |
-|------|------|-------------------------|
-| QI   | BOOL | Event Input Qualifier   |
+| Name | Typ  | Kommentar             |
+| ---- | ---- | --------------------- |
+| QI   | BOOL | Event Input Qualifier |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Kommentar                |
-|--------|--------|--------------------------|
-| QO     | BOOL   | Event Output Qualifier   |
-| STATUS | STRING | Statusmeldung            |
+| Name   | Typ    | Kommentar              |
+| ------ | ------ | ---------------------- |
+| QO     | BOOL   | Event Output Qualifier |
+| STATUS | STRING | Statusmeldung          |
 
 ### **Adapter**
 
-| Name    | Typ      | Kommentar                                 |
-|---------|----------|-------------------------------------------|
-| POSITION| AUS      | Rear Hitch Position                       |
-| FORCE   | AUS      | Rear Nominal Lower Link Force             |
-| DRAFT   | AUI      | Rear Draft                                |
-| TIMEOUT | AX       | Timeout Status                            |
+| Name     | Typ | Kommentar                     |
+| -------- | --- | ----------------------------- |
+| POSITION | AUS | Rear Hitch Position           |
+| FORCE    | AUS | Rear Nominal Lower Link Force |
+| DRAFT    | AUI | Rear Draft                    |
+| TIMEOUT  | AX  | Timeout Status                |
 
 ## Funktionsweise
 

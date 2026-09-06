@@ -28,11 +28,11 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket (Eingang)** | IN | AULI (unidirektional) | Eingehender AULI‑Datenstrom |
-| **Plug (Ausgang)** | OUT1 | AULI (unidirektional) | Erster Ausgang, identische Kopie von IN |
-| **Plug (Ausgang)** | OUT2 | AULI (unidirektional) | Zweiter Ausgang, identische Kopie von IN |
+| Richtung             | Name | Typ                   | Beschreibung                             |
+| -------------------- | ---- | --------------------- | ---------------------------------------- |
+| **Socket (Eingang)** | IN   | AULI (unidirektional) | Eingehender AULI‑Datenstrom              |
+| **Plug (Ausgang)**   | OUT1 | AULI (unidirektional) | Erster Ausgang, identische Kopie von IN  |
+| **Plug (Ausgang)**   | OUT2 | AULI (unidirektional) | Zweiter Ausgang, identische Kopie von IN |
 
 ## Funktionsweise
 
@@ -56,11 +56,11 @@ Da der Funktionsblock keine interne Logik oder Zustandsmaschine enthält, existi
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion |
-| ---------- | ---------- |
-| **AULI_SPLIT_2** | Split auf zwei Ausgänge (identisch zu IN) |
+| Baustein         | Funktion                                                         |
+| ---------------- | ---------------------------------------------------------------- |
+| **AULI_SPLIT_2** | Split auf zwei Ausgänge (identisch zu IN)                        |
 | **AULI_SPLIT_N** | Generalisierte Variante mit konfigurierbarer Anzahl an Ausgängen |
-| **AULI_MERGE** | Zusammenführung mehrerer Eingänge auf einen Ausgang |
+| **AULI_MERGE**   | Zusammenführung mehrerer Eingänge auf einen Ausgang              |
 
 Während **AULI_SPLIT_2** eine feste 1‑zu‑2‑Aufteilung vornimmt, erlauben generische Splitter eine flexible Anzahl von Ausgängen. Zusammenführer wie **AULI_MERGE** lösen die umgekehrte Aufgabe.
 

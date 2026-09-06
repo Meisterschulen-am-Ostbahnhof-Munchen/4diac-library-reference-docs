@@ -86,12 +86,12 @@ Since this is a purely computational function block (arithmetic function), it do
 
 Compared to a standard multiplication function block (such as the IEC 61199 `MUL` function block), the `AULI_MUL_2_UNGATED` offers the following advantages and disadvantages:
 
-| Feature | Standard `MUL` function block | `AULI_MUL_2_UNGATED` |
-| :--- | :--- | :--- |
-| **Interfaces** | Individual event and data pins | Bundled adapters (`AULI`) |
-| **Wiring Effort** | High (separate event and data lines) | Minimal (only one adapter line per signal) |
-| **Flexibility** | High (direct mapping of variables) | Requires the use of the `AULI` adapter type |
-| **Readability** | Can become cluttered with many function blocks | Very clean and modular |
+| Feature           | Standard `MUL` function block                  | `AULI_MUL_2_UNGATED`                        |
+| :---------------- | :--------------------------------------------- | :------------------------------------------ |
+| **Interfaces**    | Individual event and data pins                 | Bundled adapters (`AULI`)                   |
+| **Wiring Effort** | High (separate event and data lines)           | Minimal (only one adapter line per signal)  |
+| **Flexibility**   | High (direct mapping of variables)             | Requires the use of the `AULI` adapter type |
+| **Readability**   | Can become cluttered with many function blocks | Very clean and modular                      |
 
 ---
 

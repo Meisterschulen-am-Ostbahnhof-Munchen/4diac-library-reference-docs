@@ -28,16 +28,16 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | IN | `adapter::types::unidirectional::AULI` | Empfängt das aufzuteilende AULI-Signal |
-| Plug (Ausgang) | OUT1 | `adapter::types::unidirectional::AULI` | Erster Ausgang für das AULI-Signal |
-| Plug (Ausgang) | OUT2 | `adapter::types::unidirectional::AULI` | Zweiter Ausgang |
-| Plug (Ausgang) | OUT3 | `adapter::types::unidirectional::AULI` | Dritter Ausgang |
-| Plug (Ausgang) | OUT4 | `adapter::types::unidirectional::AULI` | Vierter Ausgang |
-| Plug (Ausgang) | OUT5 | `adapter::types::unidirectional::AULI` | Fünfter Ausgang |
-| Plug (Ausgang) | OUT6 | `adapter::types::unidirectional::AULI` | Sechster Ausgang |
-| Plug (Ausgang) | OUT7 | `adapter::types::unidirectional::AULI` | Siebter Ausgang |
+| Richtung         | Name | Typ                                    | Beschreibung                           |
+| ---------------- | ---- | -------------------------------------- | -------------------------------------- |
+| Socket (Eingang) | IN   | `adapter::types::unidirectional::AULI` | Empfängt das aufzuteilende AULI-Signal |
+| Plug (Ausgang)   | OUT1 | `adapter::types::unidirectional::AULI` | Erster Ausgang für das AULI-Signal     |
+| Plug (Ausgang)   | OUT2 | `adapter::types::unidirectional::AULI` | Zweiter Ausgang                        |
+| Plug (Ausgang)   | OUT3 | `adapter::types::unidirectional::AULI` | Dritter Ausgang                        |
+| Plug (Ausgang)   | OUT4 | `adapter::types::unidirectional::AULI` | Vierter Ausgang                        |
+| Plug (Ausgang)   | OUT5 | `adapter::types::unidirectional::AULI` | Fünfter Ausgang                        |
+| Plug (Ausgang)   | OUT6 | `adapter::types::unidirectional::AULI` | Sechster Ausgang                       |
+| Plug (Ausgang)   | OUT7 | `adapter::types::unidirectional::AULI` | Siebter Ausgang                        |
 
 ## Funktionsweise
 

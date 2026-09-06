@@ -5,19 +5,19 @@
 * * * * * * * * * *
 The function block **AS_D_FF_TMIN** implements a data-locking D flip-flop that takes over a data value supplied via an adapter upon the arrival of an event and outputs it via another adapter. Its special feature is a configurable minimum time (`Tmin`) between two consecutive take-over events. This suppresses excessively rapid event sequences, which can be used, for example, for debouncing or to enforce process constraints.
 
-| Event | Type | Comment |
-| ---------- | ------- | ------------------------------------------- |
-| INIT | EInit | Initialization Request (reads `Tmin`) |
-| Event | Type | Comment |
-| ---------- | ------- | ------------------------------------- |
-| INITO | EInit | Initialization Confirmation |
-| Name | Type | Comment |
-| ------ | ------ | --------------------------------------------------------------- |
-| Tmin | TIME | Minimum time between two consecutive CLK events |
+| Event      | Type    | Comment                                                         |
+| ---------- | ------- | --------------------------------------------------------------- |
+| INIT       | EInit   | Initialization Request (reads `Tmin`)                           |
+| Event      | Type    | Comment                                                         |
+| ---------- | ------- | -------------------------------------                           |
+| INITO      | EInit   | Initialization Confirmation                                     |
+| Name       | Type    | Comment                                                         |
+| ------     | ------  | --------------------------------------------------------------- |
+| Tmin       | TIME    | Minimum time between two consecutive CLK events                 |
 
 This block has no explicit data outputs; output is exclusively via the **Q** adapter.
 
-### **Daten‑Ausgänge**
+## **Daten‑Ausgänge**
 
 ### **Daten‑Eingänge**
 
@@ -60,11 +60,11 @@ The block does not have explicit state machines in the sense of a statechart. Ho
 - **Clock Synchronization in Time-Critical Systems**: Prevents data transfers faster than a predefined system clock threshold.
 - **Rate Limiting for Communication Interfaces**: A new value is only accepted every `Tmin` seconds (e.g., for bus accesses).
 
-| Function Block | Time Filtering | Additional Features |
-| ------------------ | ----------------------------------- | ------------------------------------------- |
-| AS_D_FF | No (immediate transfer) | Simple D flip-flop without time limit |
-| AS_D_FF_TMIN (this one) | Yes, configurable via `Tmin` | Suppresses excessively fast clock sequences |
-| AS_D_FF_TMAX | Yes, maximum time between clock cycles | Enforces regular takeovers |
+| Function Block          | Time Filtering                         | Additional Features                         |
+| ----------------------- | -------------------------------------- | ------------------------------------------- |
+| AS_D_FF                 | No (immediate transfer)                | Simple D flip-flop without time limit       |
+| AS_D_FF_TMIN (this one) | Yes, configurable via `Tmin`           | Suppresses excessively fast clock sequences |
+| AS_D_FF_TMAX            | Yes, maximum time between clock cycles | Enforces regular takeovers                  |
 
 The **AS_D_FF_TMIN** function block extends a simple D flip-flop by adding an adjustable minimum time between two takeover events. Thanks to its adapter interface and the clear separation of initialization and operation, it is particularly suitable for industrial control systems and discrete-time processing applications where excessively fast switching must be avoided.
 

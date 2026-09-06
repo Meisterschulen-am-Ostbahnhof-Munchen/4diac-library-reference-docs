@@ -61,11 +61,11 @@ Laut XML-Spezifikation besteht der Baustein aus:
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | E_R_TRIG (dieser) | E_F_TRIG | E_D_FF |
-| --------------- | ---------- | ---------- | -------- |
-| Erkannte Flanke | Steigend (benannt), Fallend (implementiert) | Fallend (benannt), Steigend (implementiert) | Taktflanke |
-| Ereignisausgang | Ja | Ja | Ja |
-| Speicherverhalten | Ja | Ja | Ja |
+| Feature           | E_R_TRIG (dieser)                           | E_F_TRIG                                    | E_D_FF     |
+| ----------------- | ------------------------------------------- | ------------------------------------------- | ---------- |
+| Erkannte Flanke   | Steigend (benannt), Fallend (implementiert) | Fallend (benannt), Steigend (implementiert) | Taktflanke |
+| Ereignisausgang   | Ja                                          | Ja                                          | Ja         |
+| Speicherverhalten | Ja                                          | Ja                                          | Ja         |
 
 ## 🛠️ Zugehörige Übungen
 

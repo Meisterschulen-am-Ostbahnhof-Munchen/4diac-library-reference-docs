@@ -18,7 +18,7 @@ Since this function block relies entirely on adapter-based communication, it has
 
 *No direct data outputs available.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -70,6 +70,7 @@ The standard selection block `F_SEL` performs the actual selection:
 
 - If the value of `G.D1` equals `FALSE`, the signal from `IN0` is passed to the output.
 - If the value of `G.D1` is equal to `TRUE`, the signal is passed on to `IN1`.
+
 1. **Output:**
 
 The selected signal is passed via another `F_MOVE` block to the output flip-flop `E_D_FF_ANY_OUT`. This flip-flop generates the output event `E1` at plug `OUT` and makes the selected value available to `OUT.D1`.
@@ -84,10 +85,10 @@ The selected signal is passed via another `F_MOVE` block to the output flip-flop
 
 The behavior can be described using the following simple logic table:
 
-| State Selector (`G.D1`) | Value at Output (`OUT.D1`) | Triggering Event |
-| :--- | :--- | :--- |
-| `FALSE` | Value of `IN0.D1` | Event at `IN0.E1` or Change at `G.E1` |
-| `TRUE` | Value of `IN1.D1` | Event at `IN1.E1` or Change at `G.E1` |
+| State Selector (`G.D1`) | Value at Output (`OUT.D1`) | Triggering Event                      |
+| :---------------------- | :------------------------- | :------------------------------------ |
+| `FALSE`                 | Value of `IN0.D1`          | Event at `IN0.E1` or Change at `G.E1` |
+| `TRUE`                  | Value of `IN1.D1`          | Event at `IN1.E1` or Change at `G.E1` |
 
 ---
 

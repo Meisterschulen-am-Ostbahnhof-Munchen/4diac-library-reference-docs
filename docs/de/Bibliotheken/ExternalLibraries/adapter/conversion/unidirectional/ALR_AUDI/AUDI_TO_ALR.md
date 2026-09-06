@@ -12,34 +12,34 @@ Der Funktionsblock **AUDI_TO_ALR** ist ein Composite-Baustein, der einen unidire
 
 ### **Ereignis-Eingänge**
 
-| Name | Kommentar |
-|------|-----------|
+| Name         | Kommentar                                                             |
+| ------------ | --------------------------------------------------------------------- |
 | `AUDI_IN.E1` | Ereignis-Eingang des AUDI-Adapters (durchgeschliffen zum ALR-Ausgang) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Kommentar |
-|------|-----------|
+| Name         | Kommentar                                                       |
+| ------------ | --------------------------------------------------------------- |
 | `ALR_OUT.E1` | Ereignis-Ausgang des ALR-Adapters (übernommen vom AUDI-Eingang) |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| `AUDI_IN.D1` | `UDINT` | Daten-Eingang des AUDI-Adapters (wird direkt als LREAL weitergegeben) |
+| Name         | Datentyp | Kommentar                                                             |
+| ------------ | -------- | --------------------------------------------------------------------- |
+| `AUDI_IN.D1` | `UDINT`  | Daten-Eingang des AUDI-Adapters (wird direkt als LREAL weitergegeben) |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| `ALR_OUT.D1` | `LREAL` | Daten-Ausgang des ALR-Adapters (Wert vom AUDI-Eingang, typkonvertiert) |
+| Name         | Datentyp | Kommentar                                                              |
+| ------------ | -------- | ---------------------------------------------------------------------- |
+| `ALR_OUT.D1` | `LREAL`  | Daten-Ausgang des ALR-Adapters (Wert vom AUDI-Eingang, typkonvertiert) |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Socket (Eingang) | `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Nimmt die UDINT-Daten und das zugehörige Ereignis entgegen |
-| Plug (Ausgang) | `ALR_OUT` | `adapter::types::unidirectional::ALR` | Stellt die konvertierten LREAL-Daten und das Ereignis bereit |
+| Richtung         | Name      | Typ                                    | Kommentar                                                    |
+| ---------------- | --------- | -------------------------------------- | ------------------------------------------------------------ |
+| Socket (Eingang) | `AUDI_IN` | `adapter::types::unidirectional::AUDI` | Nimmt die UDINT-Daten und das zugehörige Ereignis entgegen   |
+| Plug (Ausgang)   | `ALR_OUT` | `adapter::types::unidirectional::ALR`  | Stellt die konvertierten LREAL-Daten und das Ereignis bereit |
 
 ## Funktionsweise
 

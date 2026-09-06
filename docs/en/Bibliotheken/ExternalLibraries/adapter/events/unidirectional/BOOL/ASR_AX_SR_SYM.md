@@ -35,10 +35,10 @@ The output value is provided via the plug adapter `Q`:
 
 ### Adapter
 
-| Name | Type | Direction | Description |
-| ------------- | ---------------------------------------- | ---------- | ------------------------------------- |
-| `S_R` | `adapter::types::unidirectional::ASR` | Socket | Set/Reset Events (Input) |
-| `Q` | `adapter::types::unidirectional::AX` | Plug | State Output (Event + Data) |
+| Name  | Type                                  | Direction | Description                 |
+| ----- | ------------------------------------- | --------- | --------------------------- |
+| `S_R` | `adapter::types::unidirectional::ASR` | Socket    | Set/Reset Events (Input)    |
+| `Q`   | `adapter::types::unidirectional::AX`  | Plug      | State Output (Event + Data) |
 
 ## Functionality
 
@@ -69,10 +69,10 @@ After the first transition, the function block remains in one of the two stable 
 
 *(Note: A graphical state diagram can be extracted from the ECC XML, but is not embedded here as an image.)*
 
-| State | Description | Action | Output |
-| --------- | ----------------------------------- | ----------------------- | ------------------------------------------------- |
-| START | Initial wait state | – | No output |
-| SET | Stored state "set" | `Q.D1 := TRUE` | Triggering `Q.E1` |
+| State | Description         | Action          | Output            |
+| ----- | ------------------- | --------------- | ----------------- |
+| START | Initial wait state  | –               | No output         |
+| SET   | Stored state "set"  | `Q.D1 := TRUE`  | Triggering `Q.E1` |
 | RESET | Saved state "reset" | `Q.D1 := FALSE` | Triggering `Q.E1` |
 
 **Transitions:**

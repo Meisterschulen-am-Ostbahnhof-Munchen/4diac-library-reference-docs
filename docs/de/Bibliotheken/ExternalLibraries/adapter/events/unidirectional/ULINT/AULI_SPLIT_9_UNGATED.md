@@ -34,10 +34,10 @@ Die Ausgabe der Daten erfolgt ausschließlich über die Adapter **OUT1** bis **O
 
 ### Adapter
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
-| Socket | Eingang | **IN** | Unidirektionaler AULI‑Adapter – empfängt den zu verteilenden Datensatz. |
-| Plug | Ausgang | **OUT1** … **OUT9** | Neun unidirektionale AULI‑Adapter – geben den identischen Eingangsdatensatz aus. |
+| Typ    | Richtung | Name                | Beschreibung                                                                     |
+| ------ | -------- | ------------------- | -------------------------------------------------------------------------------- |
+| Socket | Eingang  | **IN**              | Unidirektionaler AULI‑Adapter – empfängt den zu verteilenden Datensatz.          |
+| Plug   | Ausgang  | **OUT1** … **OUT9** | Neun unidirektionale AULI‑Adapter – geben den identischen Eingangsdatensatz aus. |
 
 ## Funktionsweise
 

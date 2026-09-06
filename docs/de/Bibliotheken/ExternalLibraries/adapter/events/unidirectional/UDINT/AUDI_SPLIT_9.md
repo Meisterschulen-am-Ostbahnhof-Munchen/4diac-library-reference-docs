@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge vorhanden. Die Ausgangsdaten werden über die neu
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| `IN` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Empfängt das zu verteilende AUDI-Signal. |
-| `OUT1` ... `OUT9` | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | Neun Ausgänge, die den Wert von `IN` replizieren. Jeder Ausgang ist identisch und unabhängig. |
+| Adapter           | Typ                                    | Richtung         | Beschreibung                                                                                  |
+| ----------------- | -------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------- |
+| `IN`              | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Empfängt das zu verteilende AUDI-Signal.                                                      |
+| `OUT1` ... `OUT9` | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | Neun Ausgänge, die den Wert von `IN` replizieren. Jeder Ausgang ist identisch und unabhängig. |
 
 ## Funktionsweise
 

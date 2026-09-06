@@ -70,11 +70,11 @@ Der **F_MULTIME** ist ein standardkonformer Funktionsbaustein zur Multiplikation
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_MULTIME | F_MUL  | F_DIVTIME |
-|---------------|-----------|--------|-----------|
-| Operation     | Zeitmultiplikation | Numerische Multiplikation | Zeitdivision |
-| Eingänge      | TIME × ANY_NUM | ANY_NUM × ANY_NUM | TIME ÷ ANY_NUM |
-| Ausgangstyp   | TIME      | ANY_NUM | TIME      |
+| Feature     | F_MULTIME          | F_MUL                     | F_DIVTIME      |
+| ----------- | ------------------ | ------------------------- | -------------- |
+| Operation   | Zeitmultiplikation | Numerische Multiplikation | Zeitdivision   |
+| Eingänge    | TIME × ANY_NUM     | ANY_NUM × ANY_NUM         | TIME ÷ ANY_NUM |
+| Ausgangstyp | TIME               | ANY_NUM                   | TIME           |
 
 ## 🛠️ Zugehörige Übungen
 

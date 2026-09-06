@@ -9,6 +9,7 @@
 The **AD_TO_AR** function block is a composite function block that maps a DWORD value from a unidirectional AD adapter (socket) onto a REAL value at an AR adapter (plug).
 
 > **⚠️ Warning — not a numeric value conversion:** `AD_TO_AR` internally uses `F_DWORD_TO_REAL`, which in the FORTE core is a pure IEEE754 **bit-reinterpretation** for bit-string source types (BYTE/WORD/DWORD/LWORD), not a numeric cast. A raw counter or analog value such as `DWORD#2048` will therefore **not** become `REAL#2048.0`, but a meaningless value near zero. For an actual numeric DWORD→REAL conversion, see [`AD_TO_AR_NUM`](./AD_TO_AR_NUM.md) (via UDINT). `AD_TO_AR` is only correct when `AD_IN` is already a bit pattern meant to be interpreted as REAL (e.g. the result of `F_REAL_TO_DWORD`).
+>
 ## Interface Structure
 
 The function block has no direct (individual) event or data inputs/outputs. All communication takes place via two adapter interfaces:
@@ -31,10 +32,10 @@ The function block has no direct (individual) event or data inputs/outputs. All 
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| -------- | -------------------------------------------- | ---------- | ---------------------------------------------------------------------------- |
-| AD_IN | `adapter::types::unidirectional::AD` | Socket | Receives an event (E1) and a DWORD value (D1) for conversion. |
-| AR_OUT | `adapter::types::unidirectional::AR` | Plug | Sends an event (E1) with the converted REAL value (D1). |
+| Name   | Type                                 | Direction | Description                                                   |
+| ------ | ------------------------------------ | --------- | ------------------------------------------------------------- |
+| AD_IN  | `adapter::types::unidirectional::AD` | Socket    | Receives an event (E1) and a DWORD value (D1) for conversion. |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug      | Sends an event (E1) with the converted REAL value (D1).       |
 
 ## Functionality
 
@@ -78,7 +79,7 @@ The **AD_TO_AR** block offers a compact way to expose a DWORD bit pattern as REA
 
 ### 📖 Background
 
-* [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)
+- [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)
 
 ---
 

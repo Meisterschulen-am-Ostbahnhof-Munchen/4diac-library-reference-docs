@@ -30,10 +30,10 @@ Der FB hat keine direkten Daten-Ausgänge. Daten werden über den **ADI_OUT**-Pl
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| ALR_IN | Socket | adapter::types::unidirectional::ALR | Liefert ein Ereignis (E1) und einen Datenwert (D1) vom Typ LREAL. |
-| ADI_OUT | Plug | adapter::types::unidirectional::ADI | Erwartet ein Ereignis (E1) und gibt einen Datenwert (D1) vom Typ DINT aus. |
+| Adapter | Richtung | Typ                                 | Beschreibung                                                               |
+| ------- | -------- | ----------------------------------- | -------------------------------------------------------------------------- |
+| ALR_IN  | Socket   | adapter::types::unidirectional::ALR | Liefert ein Ereignis (E1) und einen Datenwert (D1) vom Typ LREAL.          |
+| ADI_OUT | Plug     | adapter::types::unidirectional::ADI | Erwartet ein Ereignis (E1) und gibt einen Datenwert (D1) vom Typ DINT aus. |
 
 ## Funktionsweise
 

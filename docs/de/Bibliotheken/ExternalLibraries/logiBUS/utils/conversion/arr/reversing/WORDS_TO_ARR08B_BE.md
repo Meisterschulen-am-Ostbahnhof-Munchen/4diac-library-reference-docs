@@ -14,30 +14,30 @@ Der Funktionsblock **WORDS_TO_ARR08B_BE** fasst vier 16‑Bit‑Wörter (WORD) z
 
 ### **Ereignis‑Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                         |
+| -------- | ---------------------------------------------------- |
 | `REQ`    | Startet die Konvertierung aller vier Eingangswörter. |
 
 ### **Ereignis‑Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                        |
+| -------- | ------------------------------------------------------------------- |
 | `CNF`    | Wird gesendet, sobald das Ausgabearray vollständig berechnet wurde. |
 
 ### **Daten‑Eingänge**
 
-| Name    | Typ   | Kommentar |
-|---------|-------|-----------|
-| `IN_00` | WORD  | Word 00 (erstes Wort) |
-| `IN_01` | WORD  | Word 01 (zweites Wort) |
-| `IN_02` | WORD  | Word 02 (drittes Wort) |
-| `IN_03` | WORD  | Word 03 (viertes Wort) |
+| Name    | Typ  | Kommentar              |
+| ------- | ---- | ---------------------- |
+| `IN_00` | WORD | Word 00 (erstes Wort)  |
+| `IN_01` | WORD | Word 01 (zweites Wort) |
+| `IN_02` | WORD | Word 02 (drittes Wort) |
+| `IN_03` | WORD | Word 03 (viertes Wort) |
 
 ### **Daten‑Ausgänge**
 
-| Name | Typ             | Kommentar |
-|------|-----------------|-----------|
-| `OUT`| ARRAY[0..7] OF BYTE | 8‑Byte‑Array im Big‑Endian‑Format |
+| Name  | Typ                 | Kommentar                         |
+| ----- | ------------------- | --------------------------------- |
+| `OUT` | ARRAY[0..7] OF BYTE | 8‑Byte‑Array im Big‑Endian‑Format |
 
 ### **Adapter**
 
@@ -76,13 +76,13 @@ Der Funktionsblock besitzt keinen expliziten internen Zustand (zustandslos). Er 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                    | Besonderheit |
-|-----------------------------|--------------|
-| WORDS_TO_ARR08B_BE          | Big‑Endian, 4 WORDS → 8 Bytes |
-| WORDS_TO_ARR08B_LE          | Little‑Endian (Low‑Byte zuerst) |
-| BYTES_TO_WORDS_BE / LE      | Rückwärtskonvertierung |
-| WORDS_TO_ARR16B_BE          | Big‑Endian, 8 WORDS → 16 Bytes |
-| WORDS_TO_ARR08N             | Ggf. unspezifische Endianness |
+| Baustein               | Besonderheit                    |
+| ---------------------- | ------------------------------- |
+| WORDS_TO_ARR08B_BE     | Big‑Endian, 4 WORDS → 8 Bytes   |
+| WORDS_TO_ARR08B_LE     | Little‑Endian (Low‑Byte zuerst) |
+| BYTES_TO_WORDS_BE / LE | Rückwärtskonvertierung          |
+| WORDS_TO_ARR16B_BE     | Big‑Endian, 8 WORDS → 16 Bytes  |
+| WORDS_TO_ARR08N        | Ggf. unspezifische Endianness   |
 
 Der vorliegende Baustein ist speziell für Big‑Endian‑Anwendungen optimiert und kompakt gehalten.
 

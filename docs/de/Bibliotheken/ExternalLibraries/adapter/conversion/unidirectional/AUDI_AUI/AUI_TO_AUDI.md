@@ -28,10 +28,10 @@ Keine eigenen Daten-Ausgänge: Der Baustein besitzt keine direkten Daten-Ausgän
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-|------|-----|----------|-----------|
-| AUI_IN | `adapter::types::unidirectional::AUI` | Socket (Eingang) | Empfängt UINT-Daten und zugehöriges Ereignis |
-| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | Sendet UDINT-Daten und zugehöriges Ereignis |
+| Name     | Typ                                    | Richtung         | Kommentar                                    |
+| -------- | -------------------------------------- | ---------------- | -------------------------------------------- |
+| AUI_IN   | `adapter::types::unidirectional::AUI`  | Socket (Eingang) | Empfängt UINT-Daten und zugehöriges Ereignis |
+| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | Sendet UDINT-Daten und zugehöriges Ereignis  |
 
 ## Funktionsweise
 

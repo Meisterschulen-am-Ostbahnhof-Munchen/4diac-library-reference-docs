@@ -14,22 +14,22 @@ Der Funktionsblock **AUDI_FIELDBUS_UDINT_TO_SIGNAL_SCALED** dient dazu, einen em
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                     |
-|-------|--------|-------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung   |
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
+| INIT | EInit | Initialisierungsanforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                     |
-|-------|--------|-------------------------------|
-| INITO | EInit  | Initialisierungsbestätigung   |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Kommentar                          | Initialwert      |
-|--------|-------|------------------------------------|------------------|
-| SCALE  | LREAL | Skalierungsfaktor                  | LREAL#1.0        |
-| OFFSET | DINT  | Offset, der nach der Skalierung addiert wird | DINT#0           |
+| Name   | Typ   | Kommentar                                    | Initialwert |
+| ------ | ----- | -------------------------------------------- | ----------- |
+| SCALE  | LREAL | Skalierungsfaktor                            | LREAL#1.0   |
+| OFFSET | DINT  | Offset, der nach der Skalierung addiert wird | DINT#0      |
 
 ### **Daten-Ausgänge**
 
@@ -37,11 +37,11 @@ Keine separaten Datenausgänge – die skalierten Daten werden über den Adapter
 
 ### **Adapter**
 
-| Name  | Typ              | Richtung | Kommentar                     |
-|-------|------------------|----------|-------------------------------|
-| IN    | unidirectional::AUDI | Eingang  | Feldbus-UDINT-Eingangssignal  |
+| Name  | Typ                  | Richtung | Kommentar                        |
+| ----- | -------------------- | -------- | -------------------------------- |
+| IN    | unidirectional::AUDI | Eingang  | Feldbus-UDINT-Eingangssignal     |
 | OUT   | unidirectional::ALR  | Ausgang  | Skaliertes Signal (falls gültig) |
-| VALID | unidirectional::AX   | Ausgang  | Gültigkeitsflag (TRUE = gültig) |
+| VALID | unidirectional::AX   | Ausgang  | Gültigkeitsflag (TRUE = gültig)  |
 
 ## Funktionsweise
 

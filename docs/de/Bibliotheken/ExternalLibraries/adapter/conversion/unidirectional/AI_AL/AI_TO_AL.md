@@ -28,10 +28,10 @@ Keine eigenständigen Daten-Ausgänge am Baustein. Der konvertierte LWORD-Wert w
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Kommentar |
-|-------------|-----|----------|-----------|
-| `AI_IN` | `adapter::types::unidirectional::AI` | Socket (Input) | INT-Adapter-Eingang |
-| `AL_OUT` | `adapter::types::unidirectional::AL` | Plug (Output) | LWORD-Adapter-Ausgang |
+| Bezeichnung | Typ                                  | Richtung       | Kommentar             |
+| ----------- | ------------------------------------ | -------------- | --------------------- |
+| `AI_IN`     | `adapter::types::unidirectional::AI` | Socket (Input) | INT-Adapter-Eingang   |
+| `AL_OUT`    | `adapter::types::unidirectional::AL` | Plug (Output)  | LWORD-Adapter-Ausgang |
 
 ## Funktionsweise
 

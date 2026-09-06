@@ -12,33 +12,33 @@ The function block `AR_TO_AD` serves as a composite function block (FB) for conv
 
 ### **Event Inputs**
 
-| Input | Type | Description |
-|---------|-----|---------------|
+| Input      | Type          | Description                                                                  |
+| ---------- | ------------- | ---------------------------------------------------------------------------- |
 | `AR_IN.E1` | Adapter Event | Receives the trigger event from the AR adapter, which starts the conversion. |
 
 ### **Event Outputs**
 
-| Output | Type | Description |
-|---------|-----|--------------|
+| Output      | Type          | Description                                                                         |
+| ----------- | ------------- | ----------------------------------------------------------------------------------- |
 | `AD_OUT.E1` | Adapter Event | Sends an event to the AD adapter as soon as the converted DWORD value is available. |
 
 ### **Data Inputs**
 
-| Input | Type | Description |
-|---------|-----|--------------|
+| Input      | Type | Description                                                 |
+| ---------- | ---- | ----------------------------------------------------------- |
 | `AR_IN.D1` | REAL | The REAL value to be converted, provided by the AR adapter. |
 
 ### **Data Outputs**
 
-| Output | Type | Description |
-|---------|-----|---------------|
+| Output      | Type  | Description                                                 |
+| ----------- | ----- | ----------------------------------------------------------- |
 | `AD_OUT.D1` | DWORD | The converted DWORD value that is passed to the AD adapter. |
 
 ### **Adapters**
 
 The FB has a **socket** of type `adapter::types::unidirectional::AR` (labeled `AR_IN`) and a **plug** of type `adapter::types::unidirectional::AD` (labeled `AD_OUT`). The actual input and output signals are accessible via the event and data pins of these adapters.
 
-## **Adapters** #
+## Functionality
 
 1. The function block (FB) waits for an event at the event input `AR_IN.E1`.
 2. Simultaneously, the current value at the data input `AR_IN.D1` (REAL) is retrieved.

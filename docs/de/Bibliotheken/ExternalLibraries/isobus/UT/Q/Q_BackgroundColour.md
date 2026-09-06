@@ -65,22 +65,22 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Standardfarbpalette (Auszug)
 
-| Code | Farbe       | RGB-Äquivalent |
-|------|-------------|----------------|
-| 0    | Schwarz     | #000000        |
-| 1    | Rot         | #FF0000        |
-| 2    | Grün        | #00FF00        |
-| 3    | Gelb        | #FFFF00        |
-| 4    | Blau        | #0000FF        |
+| Code | Farbe   | RGB-Äquivalent |
+| ---- | ------- | -------------- |
+| 0    | Schwarz | #000000        |
+| 1    | Rot     | #FF0000        |
+| 2    | Grün    | #00FF00        |
+| 3    | Gelb    | #FFFF00        |
+| 4    | Blau    | #0000FF        |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich                       |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                    |
-| -8   | VT_E_NOACT              | Ungültiger Zustand                |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Objekt-ID               |
+| Code | Konstante           | Bedeutung           |
+| ---- | ------------------- | ------------------- |
+| 0    | VT_E_NO_ERR         | Erfolgreich         |
+| -6   | VT_E_OVERFLOW       | Pufferüberlauf      |
+| -8   | VT_E_NOACT          | Ungültiger Zustand  |
+| -128 | VT_E_HANDLE_INVALID | Ungültige Objekt-ID |
 
 ## Anwendungsszenarien
 
@@ -91,8 +91,8 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_BackgroundColour | VtColourManager | VtDynamicStyle |
-|---------------|--------------------|-----------------|----------------|
+| Feature       | Q_BackgroundColour | VtColourManager | VtDynamicStyle |
+| ------------- | ------------------ | --------------- | -------------- |
 | ISO-Standard  | ✔                  | ✖               | ✖              |
 | Farbpalette   | Standard           | Erweitert       | Benutzerdef.   |
 | Objektbindung | Explizit           | Implizit        | Stylesheet     |

@@ -28,10 +28,10 @@ Der FB besitzt keine expliziten Daten-Ausgänge. Die konvertierten Daten werden 
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | ------------- |
-| **AL_IN** | Socket (Eingang) | `adapter::types::unidirectional::AL` | Liefert ein LWORD (über Daten-Port D1) sowie ein Ereignis (E1). |
-| **AI_OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AI` | Stellt ein INT (über Daten-Port D1) sowie ein Ereignis (E1) bereit. |
+| Adapter    | Richtung         | Typ                                  | Beschreibung                                                        |
+| ---------- | ---------------- | ------------------------------------ | ------------------------------------------------------------------- |
+| **AL_IN**  | Socket (Eingang) | `adapter::types::unidirectional::AL` | Liefert ein LWORD (über Daten-Port D1) sowie ein Ereignis (E1).     |
+| **AI_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AI` | Stellt ein INT (über Daten-Port D1) sowie ein Ereignis (E1) bereit. |
 
 ## Funktionsweise
 

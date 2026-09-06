@@ -52,12 +52,12 @@ Der CLIENT_1_0 Block baut über INIT eine Verbindung auf. Wenn das REQ-Ereignis 
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2017, 2025 fortiss GmbH, JKU Linz |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-19-26, Alois Zoitl) |
-| 4diac-Paket | iec61499::net |
+| Attribut    | Wert                                  |
+| :---------- | :------------------------------------ |
+| Copyright   | (c) 2017, 2025 fortiss GmbH, JKU Linz |
+| Lizenz      | EPL-2.0                               |
+| Version     | 3.0 (2025-19-26, Alois Zoitl)         |
+| 4diac-Paket | iec61499::net                         |
 
 ---
 

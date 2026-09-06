@@ -1,6 +1,6 @@
-![Callback](Callback.svg)
-
 # Callback
+
+![Callback](Callback.svg)
 
 Message callback
 
@@ -8,21 +8,21 @@ Message callback
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | Request from Socket | |
+| Name | Comment             | With |
+| :--- | :------------------ | :--- |
+| REQ  | Request from Socket |      |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | Confirmation from Plug | DO1 |
+| Name | Comment                | With |
+| :--- | :--------------------- | :--- |
+| CNF  | Confirmation from Plug | DO1  |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| DO1 | isobus::pgn::CAN_MSG | |
+| Name | Type                 | Comment |
+| :--- | :------------------- | :------ |
+| DO1  | isobus::pgn::CAN_MSG |         |
 
 ## 🛠️ Related exercises
 

@@ -34,20 +34,20 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65097) for precise mot
 
 ## Movement data parameters
 
-| Parameter | Type | Description | SPN | Bit length | Scale | Accuracy |
-| ----------- | ------ | -------------- | ----- | ------------ | ------------ | ------------- |
-| `GROUNDBASEDMACHINESPEED` | UINT | Machine speed | 1859 | 16 | 0.001 m/s per bit | ±0.1% at >1 m/s |
-| `GROUNDBASEDMACHINEDISTANCE` | UDINT | Distance traveled | 1860 | 32 | 0.001 m per bit | ±0.5% cumulative |
-| `GROUNDBASEDMACHINEDIRECTION` | BYTE | Direction of travel | 1861 | 2 | 4 states/2 bits | - |
+| Parameter                     | Type  | Description         | SPN  | Bit length | Scale             | Accuracy         |
+| ----------------------------- | ----- | ------------------- | ---- | ---------- | ----------------- | ---------------- |
+| `GROUNDBASEDMACHINESPEED`     | UINT  | Machine speed       | 1859 | 16         | 0.001 m/s per bit | ±0.1% at >1 m/s  |
+| `GROUNDBASEDMACHINEDISTANCE`  | UDINT | Distance traveled   | 1860 | 32         | 0.001 m per bit   | ±0.5% cumulative |
+| `GROUNDBASEDMACHINEDIRECTION` | BYTE  | Direction of travel | 1861 | 2          | 4 states/2 bits   | -                |
 
 ## Direction of travel states
 
-| Value | State | Description |
-| ------ | --------- | --------------- |
-| 0 | Stationary | No movement detected |
-| 1 | Forward | Moving forward |
-| 2 | Reverse | Moving backward |
-| 3 | Undefined | Direction cannot be determined |
+| Value | State      | Description                    |
+| ----- | ---------- | ------------------------------ |
+| 0     | Stationary | No movement detected           |
+| 1     | Forward    | Moving forward                 |
+| 2     | Reverse    | Moving backward                |
+| 3     | Undefined  | Direction cannot be determined |
 
 ## Functionality
 
@@ -55,10 +55,12 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65097) for precise mot
 
 - `INIT` with `QI`=TRUE starts sensor calibration
 - `INITO` confirms operational readiness with system status
+
 1. **Data Update**:
 
 - `IND` delivers all motion data with a 100ms update rate
 - Distance measurement as a free-running counter (32-bit)
+
 1. **Special Operating Modes**:
 
 - Automatic accuracy adjustment at low speeds (<0.5 m/s)
@@ -81,19 +83,19 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65097) for precise mot
 ## Genauigkeitsmerkmale
 
 | Geschwindigkeitsbereich | Typische Genauigkeit | Update-Rate |
-| ------------------------ | ---------------------- | ------------- |
-| > 2 m/s (7.2 km/h) | ±0.1% | 100 ms |
-| 0.5 - 2 m/s | ±1% | 200 ms |
-| < 0.5 m/s | ±5% | 500 ms |
+| ----------------------- | -------------------- | ----------- |
+| > 2 m/s (7.2 km/h)      | ±0.1%                | 100 ms      |
+| 0.5 - 2 m/s             | ±1%                  | 200 ms      |
+| < 0.5 m/s               | ±5%                  | 500 ms      |
 
 ## ⚖️ Comparison with similar systems
 
-| Feature | I_GBSD | Wheel-based | GPS-based |
-| --------- | -------- | ------------ | ------------ |
-| Ground contact | ✔ Direct | ✔ Indirect | ✖ |
-| Low speed | ✔ Good | ✖ Inaccurate | ✖ Inaccurate |
-| Direction detection | ✔ Precise | ✔ | ✖ Ambiguous |
-| Signal loss | Robust | Susceptible | Prone to interference |
+| Feature             | I_GBSD    | Wheel-based  | GPS-based             |
+| ------------------- | --------- | ------------ | --------------------- |
+| Ground contact      | ✔ Direct  | ✔ Indirect   | ✖                     |
+| Low speed           | ✔ Good    | ✖ Inaccurate | ✖ Inaccurate          |
+| Direction detection | ✔ Precise | ✔            | ✖ Ambiguous           |
+| Signal loss         | Robust    | Susceptible  | Prone to interference |
 
 ## 🛠️ Related exercises
 

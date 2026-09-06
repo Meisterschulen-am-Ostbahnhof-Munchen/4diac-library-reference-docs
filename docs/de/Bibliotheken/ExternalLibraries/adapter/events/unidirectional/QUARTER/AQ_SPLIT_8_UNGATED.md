@@ -30,10 +30,10 @@ Keine – siehe Daten-Eingänge.
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **IN** | `adapter::types::unidirectional::AQ` | Socket (Eingang) | Empfängt das zu verteilende AQ-Signal. |
-| **OUT1** – **OUT8** | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | Identische Ausgänge, die das Signal von `IN` weiterleiten. |
+| Adapter             | Typ                                  | Richtung         | Beschreibung                                               |
+| ------------------- | ------------------------------------ | ---------------- | ---------------------------------------------------------- |
+| **IN**              | `adapter::types::unidirectional::AQ` | Socket (Eingang) | Empfängt das zu verteilende AQ-Signal.                     |
+| **OUT1** – **OUT8** | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | Identische Ausgänge, die das Signal von `IN` weiterleiten. |
 
 ## Funktionsweise
 

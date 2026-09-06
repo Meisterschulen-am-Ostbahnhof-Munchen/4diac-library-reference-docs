@@ -31,8 +31,8 @@ Der Funktionsblock **AD_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                       |
+| ------- | ---------------------------------- | -------------- | ---------------------------------- |
 | OUT     | adapter::types::unidirectional::AD | Plug (Ausgang) | Gepufferter empfangener DWORD-Wert |
 
 ## Funktionsweise

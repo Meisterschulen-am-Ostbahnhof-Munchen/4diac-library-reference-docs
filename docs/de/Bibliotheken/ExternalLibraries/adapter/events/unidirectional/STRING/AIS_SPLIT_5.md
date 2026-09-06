@@ -28,10 +28,10 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | IN | `adapter::types::unidirectional::AIS` | Eingehendes AIS-Adapter-Signal |
-| Plug (Ausgang 1) | OUT1 | `adapter::types::unidirectional::AIS` | Erster ausgehender AIS-Adapter-Anschluss |
+| Richtung         | Name | Typ                                   | Beschreibung                              |
+| ---------------- | ---- | ------------------------------------- | ----------------------------------------- |
+| Socket (Eingang) | IN   | `adapter::types::unidirectional::AIS` | Eingehendes AIS-Adapter-Signal            |
+| Plug (Ausgang 1) | OUT1 | `adapter::types::unidirectional::AIS` | Erster ausgehender AIS-Adapter-Anschluss  |
 | Plug (Ausgang 2) | OUT2 | `adapter::types::unidirectional::AIS` | Zweiter ausgehender AIS-Adapter-Anschluss |
 | Plug (Ausgang 3) | OUT3 | `adapter::types::unidirectional::AIS` | Dritter ausgehender AIS-Adapter-Anschluss |
 | Plug (Ausgang 4) | OUT4 | `adapter::types::unidirectional::AIS` | Vierter ausgehender AIS-Adapter-Anschluss |

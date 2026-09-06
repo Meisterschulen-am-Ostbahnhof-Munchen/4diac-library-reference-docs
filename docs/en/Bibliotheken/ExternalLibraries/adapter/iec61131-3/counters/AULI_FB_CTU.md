@@ -7,15 +7,15 @@ The function block **AULI_FB_CTU** implements an up counter based on the ULINT (
 
 No dedicated event inputs. Events are received exclusively via the **AX adapters** of the sockets (CU, R, PV).
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| CNF | Event | Execution Confirmation – triggered with each counter update |
+| Name | Type  | Comment                                                     |
+| ---- | ----- | ----------------------------------------------------------- |
+| CNF  | Event | Execution Confirmation – triggered with each counter update |
 
 No direct data inputs. The required data (CU pulse, reset signal, preset value) is provided via the **AULI or AX adapters** of the sockets.
 
 No direct data outputs. The result values (current counter value CV and threshold status Q) are output via the **AULI or AX adapters** of the plugs.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

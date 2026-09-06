@@ -12,15 +12,15 @@ Der Funktionsblock **GET_INT** dient dazu, den aktuellen Wert einer INT-Variable
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| **REQ** | Normaler Ausführungsrequest; löst das Auslesen der InOut-Variablen **IN** aus. |
+| Ereignis | Beschreibung                                                                   |
+| -------- | ------------------------------------------------------------------------------ |
+| **REQ**  | Normaler Ausführungsrequest; löst das Auslesen der InOut-Variablen **IN** aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| **CNF** | Bestätigung der Ausführung; signalisiert, dass der Wert von **IN** gepuffert und am Ausgang **OUT** bereitsteht. |
+| Ereignis | Beschreibung                                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------------------------------- |
+| **CNF**  | Bestätigung der Ausführung; signalisiert, dass der Wert von **IN** gepuffert und am Ausgang **OUT** bereitsteht. |
 
 ### **Daten-Eingänge**
 
@@ -30,8 +30,8 @@ Der Eingabewert wird über den InOut-Parameter **IN** bereitgestellt (siehe näc
 
 ### **Daten-Ausgänge**
 
-| Ausgang | Typ | Beschreibung |
-|---------|-----|--------------|
+| Ausgang | Typ | Beschreibung                                                                                |
+| ------- | --- | ------------------------------------------------------------------------------------------- |
 | **OUT** | INT | Gepufferter Ausgabewert, der den letzten gelesenen Wert von **IN** enthält. Initialwert: 0. |
 
 ### **Adapter**
@@ -40,9 +40,9 @@ Der Eingabewert wird über den InOut-Parameter **IN** bereitgestellt (siehe näc
 
 ### **InOut-Variablen (implizit)**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| **IN** | INT | Quelle des auszulesenden Werts. Kann sowohl als Eingabe als auch als Ausgabe verwendet werden (hier nur lesend). Initialwert: 0. |
+| Variable | Typ | Beschreibung                                                                                                                     |
+| -------- | --- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **IN**   | INT | Quelle des auszulesenden Werts. Kann sowohl als Eingabe als auch als Ausgabe verwendet werden (hier nur lesend). Initialwert: 0. |
 
 ## Funktionsweise
 
@@ -71,9 +71,9 @@ Der FB besitzt einen einzigen Zustand **REQ**:
 
 - **REQ**: Bei Aktivierung wird der Algorithmus `REQ` ausgeführt, danach das Ereignis **CNF** gesendet. Der Zustand bleibt bestehen (kein Übergang in einen anderen Zustand).
 
-| Zustand | Eintrittsbedingung | Aktion | Ausgangsereignis |
-|---------|-------------------|--------|------------------|
-| REQ     | Ereignis **REQ** empfangen | `OUT := IN;` | CNF |
+| Zustand | Eintrittsbedingung         | Aktion       | Ausgangsereignis |
+| ------- | -------------------------- | ------------ | ---------------- |
+| REQ     | Ereignis **REQ** empfangen | `OUT := IN;` | CNF              |
 
 ## Anwendungsszenarien
 
@@ -83,11 +83,11 @@ Der FB besitzt einen einzigen Zustand **REQ**:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ des Eingangs | Pufferung | Besonderheit |
-| ---------- | ------------------ | ----------- | -------------- |
-| **GET_INT** | InOut (INT) | Ja (einmaliges Lesen bei REQ) | Zugriff auf Originalvariable, keine zusätzliche Variable erforderlich |
-| **MOVE** (z.B. IEC 61131-3) | Eingang (INT) | Ja (bei jeder Ausführung) | Kopiert Wert von einem expliziten Eingang in einen Ausgang |
-| **F_TRIG / R_TRIG** | Eingang (BOOL) | Nein (nur Flankenerkennung) | Arbeitet mit Booleschen Werten |
+| Baustein                    | Typ des Eingangs | Pufferung                     | Besonderheit                                                          |
+| --------------------------- | ---------------- | ----------------------------- | --------------------------------------------------------------------- |
+| **GET_INT**                 | InOut (INT)      | Ja (einmaliges Lesen bei REQ) | Zugriff auf Originalvariable, keine zusätzliche Variable erforderlich |
+| **MOVE** (z.B. IEC 61131-3) | Eingang (INT)    | Ja (bei jeder Ausführung)     | Kopiert Wert von einem expliziten Eingang in einen Ausgang            |
+| **F_TRIG / R_TRIG**         | Eingang (BOOL)   | Nein (nur Flankenerkennung)   | Arbeitet mit Booleschen Werten                                        |
 
 Der Hauptunterschied liegt im Verzicht auf einen separaten Dateneingang durch die Nutzung eines InOut-Parameters.
 

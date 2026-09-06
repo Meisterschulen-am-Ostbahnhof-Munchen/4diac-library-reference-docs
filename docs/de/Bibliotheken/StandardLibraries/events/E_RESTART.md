@@ -64,11 +64,11 @@ Der **E_RESTART** ist ein spezieller Service-Interface-Funktionsbaustein nach IE
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | E_RESTART | E_CYCLE | E_DELAY |
-|---------------|-----------|---------|---------|
-| Zweck         | Systemsteuerung | Zeitsteuerung | Ereignisverzögerung |
-| Ereignistyp   | Steuerbefehle | Periodisch | Einmalig |
-| Standard      | Annex A   | Core     | Core     |
+| Feature     | E_RESTART       | E_CYCLE       | E_DELAY             |
+| ----------- | --------------- | ------------- | ------------------- |
+| Zweck       | Systemsteuerung | Zeitsteuerung | Ereignisverzögerung |
+| Ereignistyp | Steuerbefehle   | Periodisch    | Einmalig            |
+| Standard    | Annex A         | Core          | Core                |
 
 ## 🛠️ Zugehörige Übungen
 

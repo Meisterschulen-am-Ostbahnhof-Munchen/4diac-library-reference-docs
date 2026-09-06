@@ -28,12 +28,12 @@ Nicht vorhanden – das Ergebnis wird über den **Plug OUT** als Adapter ausgege
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-| ------ | ---------- | ----- | -------------- |
-| **IN1** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Erster Multiplikationsfaktor. |
-| **IN2** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Zweiter Multiplikationsfaktor. |
-| **IN3** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Dritter Multiplikationsfaktor. |
-| **OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AUDI` | Ergebnis der Multiplikation `IN1 * IN2 * IN3`. |
+| Name    | Richtung         | Typ                                    | Beschreibung                                   |
+| ------- | ---------------- | -------------------------------------- | ---------------------------------------------- |
+| **IN1** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Erster Multiplikationsfaktor.                  |
+| **IN2** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Zweiter Multiplikationsfaktor.                 |
+| **IN3** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Dritter Multiplikationsfaktor.                 |
+| **OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AUDI` | Ergebnis der Multiplikation `IN1 * IN2 * IN3`. |
 
 ## Funktionsweise
 

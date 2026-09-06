@@ -12,33 +12,33 @@ Der Funktionsblock **AX_TO_AL** ist ein Composite-Baustein zur bidirektionalen K
 
 ### **Ereignis-Eingänge**
 
-| Name | Adapter | Beschreibung |
-|------|---------|--------------|
+| Name     | Adapter   | Beschreibung                                              |
+| -------- | --------- | --------------------------------------------------------- |
 | AX_IN.E1 | AX (BOOL) | Ereigniseingang, der über den AX-Adapter angebunden wird. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Adapter | Beschreibung |
-|------|---------|--------------|
+| Name      | Adapter    | Beschreibung                                                         |
+| --------- | ---------- | -------------------------------------------------------------------- |
 | AL_OUT.E1 | AL (LWORD) | Ereignisausgang, der das eingehende Ereignis unverändert weitergibt. |
 
 ### **Daten-Eingänge**
 
-| Name | Adapter | Typ | Beschreibung |
-|------|---------|-----|--------------|
+| Name     | Adapter   | Typ  | Beschreibung                            |
+| -------- | --------- | ---- | --------------------------------------- |
 | AX_IN.D1 | AX (BOOL) | BOOL | Dateneingang für ein boolesches Signal. |
 
 ### **Daten-Ausgänge**
 
-| Name | Adapter | Typ | Beschreibung |
-|------|---------|-----|--------------|
+| Name      | Adapter    | Typ   | Beschreibung                                                                                                                        |
+| --------- | ---------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | AL_OUT.D1 | AL (LWORD) | LWORD | Datenausgang, der das boolesche Signal als LWORD (64‑Bit-Speicher) darstellt. Die Typkonvertierung erfolgt außerhalb des Bausteins. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung |
-|-----|------|----------|
-| Socket | AX_IN | Eingang (BOOL) |
+| Typ    | Name   | Richtung        |
+| ------ | ------ | --------------- |
+| Socket | AX_IN  | Eingang (BOOL)  |
 | Plug   | AL_OUT | Ausgang (LWORD) |
 
 ## Funktionsweise

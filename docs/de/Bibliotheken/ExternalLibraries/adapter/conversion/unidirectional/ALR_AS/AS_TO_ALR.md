@@ -14,34 +14,34 @@ Der Funktionsblock **AS_TO_ALR** ist ein zusammengesetzter Baustein (Composite F
 
 ### **Ereignis-Eingänge**
 
-| Name  | Kommentar                          |
-|-------|------------------------------------|
-| E1    | Ereignis vom AS-Adapter (Socket AS_IN) |
+| Name | Kommentar                              |
+| ---- | -------------------------------------- |
+| E1   | Ereignis vom AS-Adapter (Socket AS_IN) |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Kommentar                            |
-|-------|--------------------------------------|
-| E1    | Ereignis zum ALR-Adapter (Plug ALR_OUT) |
+| Name | Kommentar                               |
+| ---- | --------------------------------------- |
+| E1   | Ereignis zum ALR-Adapter (Plug ALR_OUT) |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar                       |
-|------|----------|---------------------------------|
+| Name | Datentyp | Kommentar                               |
+| ---- | -------- | --------------------------------------- |
 | D1   | SINT     | Datenwert vom AS-Adapter (Socket AS_IN) |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar                         |
-|------|----------|-----------------------------------|
+| Name | Datentyp | Kommentar                                |
+| ---- | -------- | ---------------------------------------- |
 | D1   | LREAL    | Datenwert zum ALR-Adapter (Plug ALR_OUT) |
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                                   | Kommentar                  |
-|----------|--------|---------------------------------------|----------------------------|
-| Socket   | AS_IN  | `adapter::types::unidirectional::AS`  | Eingangs‑Adapter (SINT)    |
-| Plug     | ALR_OUT| `adapter::types::unidirectional::ALR` | Ausgangs‑Adapter (LREAL)   |
+| Richtung | Name    | Typ                                   | Kommentar                |
+| -------- | ------- | ------------------------------------- | ------------------------ |
+| Socket   | AS_IN   | `adapter::types::unidirectional::AS`  | Eingangs‑Adapter (SINT)  |
+| Plug     | ALR_OUT | `adapter::types::unidirectional::ALR` | Ausgangs‑Adapter (LREAL) |
 
 ## Funktionsweise
 

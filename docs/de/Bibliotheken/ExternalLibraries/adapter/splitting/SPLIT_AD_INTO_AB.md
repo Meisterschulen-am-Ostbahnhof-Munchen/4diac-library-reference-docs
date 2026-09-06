@@ -14,18 +14,18 @@ Der FB besitzt keine klassischen Ereignis‑ oder Datenschnittstellen. Die gesam
 
 ### **Adapter (Sockets)**
 
-| Adapter | Typ | Kommentar |
-|---------|-----|------------|
-| IN | `adapter::types::unidirectional::AD` | DWORD‑Eingang (32‑Bit) |
+| Adapter | Typ                                  | Kommentar              |
+| ------- | ------------------------------------ | ---------------------- |
+| IN      | `adapter::types::unidirectional::AD` | DWORD‑Eingang (32‑Bit) |
 
 ### **Adapter (Plugs)**
 
-| Adapter | Typ | Kommentar |
-| --------- | ----- | ------------ |
+| Adapter | Typ                                  | Kommentar                      |
+| ------- | ------------------------------------ | ------------------------------ |
 | BYTE_00 | `adapter::types::unidirectional::AB` | Byte 0 (niederwertigstes Byte) |
-| BYTE_01 | `adapter::types::unidirectional::AB` | Byte 1 |
-| BYTE_02 | `adapter::types::unidirectional::AB` | Byte 2 |
-| BYTE_03 | `adapter::types::unidirectional::AB` | Byte 3 (höchstwertiges Byte) |
+| BYTE_01 | `adapter::types::unidirectional::AB` | Byte 1                         |
+| BYTE_02 | `adapter::types::unidirectional::AB` | Byte 2                         |
+| BYTE_03 | `adapter::types::unidirectional::AB` | Byte 3 (höchstwertiges Byte)   |
 
 Jeder AB‑Adapter besitzt mindestens einen Ereignisausgang (E1) und einen Datenausgang (D1), die mit den internen Flipflops verbunden sind.
 

@@ -71,11 +71,11 @@ Der `E_CTU`-Baustein hat zwei Hauptfunktionen: Zählen und Zurücksetzen.
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal          | E_CTU (Up Counter) | E_CTD (Down Counter) | E_CTUD (Up/Down Counter) |
-|------------------|--------------------|----------------------|--------------------------|
-| Zählrichtung     | Aufwärts           | Abwärts              | Beides                   |
-| Ereignisgesteuert| Ja                 | Ja                   | Ja                       |
-| Reset-Funktion   | R (Reset auf 0)    | LD (Setzen auf PV)   | R (Reset auf 0)          |
+| Merkmal           | E_CTU (Up Counter) | E_CTD (Down Counter) | E_CTUD (Up/Down Counter) |
+| ----------------- | ------------------ | -------------------- | ------------------------ |
+| Zählrichtung      | Aufwärts           | Abwärts              | Beides                   |
+| Ereignisgesteuert | Ja                 | Ja                   | Ja                       |
+| Reset-Funktion    | R (Reset auf 0)    | LD (Setzen auf PV)   | R (Reset auf 0)          |
 
 ## 🛠️ Zugehörige Übungen
 

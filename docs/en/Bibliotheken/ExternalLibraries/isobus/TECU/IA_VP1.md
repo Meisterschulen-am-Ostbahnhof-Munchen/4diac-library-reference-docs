@@ -12,35 +12,35 @@ The function block **IA_VP1** is an ISOBUS adapter for Vehicle Position 1 (VP1) 
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|----------|-----|-----------|
-| INIT | EInit | Service Initialization |
+| Event | Type  | Comment                |
+| ----- | ----- | ---------------------- |
+| INIT  | EInit | Service Initialization |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|----------|-----|-----------|
+| Event | Type  | Comment                |
+| ----- | ----- | ---------------------- |
 | INITO | EInit | Initialization Confirm |
 
 ### **Data Inputs**
 
-| Variable | Type | Comment |
-|----------|-----|-----------|
-| QI | BOOL | Event Input Qualifier |
+| Variable | Type | Comment               |
+| -------- | ---- | --------------------- |
+| QI       | BOOL | Event Input Qualifier |
 
 ### **Data Outputs**
 
-| Variable | Type | Comment |
-| ---------- | ----- | ----------- |
-| QO | BOOL | Event Output Qualifier |
-| STATUS | STRING | Status Information |
+| Variable | Type   | Comment                |
+| -------- | ------ | ---------------------- |
+| QO       | BOOL   | Event Output Qualifier |
+| STATUS   | STRING | Status Information     |
 
 ### **Adapters**
 
-| Adapter | Type | Comment |
-| --------- | ----- | ----------- |
-| LAT | adapter::types::unidirectional::AR | Latitude |
-| LON | adapter::types::unidirectional::AR | Longitude |
+| Adapter | Type                               | Comment        |
+| ------- | ---------------------------------- | -------------- |
+| LAT     | adapter::types::unidirectional::AR | Latitude       |
+| LON     | adapter::types::unidirectional::AR | Longitude      |
 | TIMEOUT | adapter::types::unidirectional::AX | Timeout Status |
 
 ## Functionality

@@ -14,33 +14,33 @@ Der Funktionsblock `E_T_FF_SR_SYM_INIT` realisiert ein ereignisgesteuertes, bist
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                                |
-|-------|--------|------------------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung              |
-| S     | Event  | Setzt den Ausgang Q (gesetzt)            |
-| R     | Event  | Setzt den Ausgang Q (zurückgesetzt)      |
-| CLK   | Event  | Takt für das Umschalten (Toggle) von Q   |
+| Name | Typ   | Kommentar                              |
+| ---- | ----- | -------------------------------------- |
+| INIT | EInit | Initialisierungsanforderung            |
+| S    | Event | Setzt den Ausgang Q (gesetzt)          |
+| R    | Event | Setzt den Ausgang Q (zurückgesetzt)    |
+| CLK  | Event | Takt für das Umschalten (Toggle) von Q |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                                |
-|-------|--------|------------------------------------------|
-| INITO | EInit  | Bestätigung der Initialisierung          |
-| EO    | Event  | Signalisiert eine Änderung von Q         |
+| Name  | Typ   | Kommentar                        |
+| ----- | ----- | -------------------------------- |
+| INITO | EInit | Bestätigung der Initialisierung  |
+| EO    | Event | Signalisiert eine Änderung von Q |
 
 ### **Daten-Eingänge**
 
-| Name    | Typ   | Kommentar                                    |
-|---------|-------|----------------------------------------------|
-| QI      | BOOL  | Ereignisqualifier (steuert die Ausführung)   |
-| Q_INIT  | BOOL  | Wert, den Q bei INIT annehmen soll           |
+| Name   | Typ  | Kommentar                                  |
+| ------ | ---- | ------------------------------------------ |
+| QI     | BOOL | Ereignisqualifier (steuert die Ausführung) |
+| Q_INIT | BOOL | Wert, den Q bei INIT annehmen soll         |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ   | Kommentar                                |
-|------|-------|------------------------------------------|
-| QO   | BOOL  | Ausgangsqualifier (Spiegel von QI)       |
-| Q    | BOOL  | Wert des Flipflops                       |
+| Name | Typ  | Kommentar                          |
+| ---- | ---- | ---------------------------------- |
+| QO   | BOOL | Ausgangsqualifier (Spiegel von QI) |
+| Q    | BOOL | Wert des Flipflops                 |
 
 ### **Adapter**
 
@@ -76,13 +76,13 @@ Der Baustein durchläuft einen endlichen Automaten mit fünf Zuständen: `START`
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung                                 | Aktion bei Eintritt                         |
-|---------|----------------------------------------------|---------------------------------------------|
-| START   | Warten auf Initialisierung                   | –                                           |
-| Init    | Initialisierung von QO                       | `QO := QI`; Auslösen von `INITO`           |
-| DeInit  | Deinitialisierung (bei QI=false)            | `QO := FALSE`; Auslösen von `INITO`        |
-| SET     | Q ist gesetzt (`TRUE`)                       | `Q := TRUE` (nur wenn QI=true); Auslösen `EO` |
-| RESET   | Q ist zurückgesetzt (`FALSE`)                | `Q := FALSE` (nur wenn QI=true); Auslösen `EO` |
+| Zustand | Beschreibung                     | Aktion bei Eintritt                            |
+| ------- | -------------------------------- | ---------------------------------------------- |
+| START   | Warten auf Initialisierung       | –                                              |
+| Init    | Initialisierung von QO           | `QO := QI`; Auslösen von `INITO`               |
+| DeInit  | Deinitialisierung (bei QI=false) | `QO := FALSE`; Auslösen von `INITO`            |
+| SET     | Q ist gesetzt (`TRUE`)           | `Q := TRUE` (nur wenn QI=true); Auslösen `EO`  |
+| RESET   | Q ist zurückgesetzt (`FALSE`)    | `Q := FALSE` (nur wenn QI=true); Auslösen `EO` |
 
 Übergänge:
 

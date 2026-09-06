@@ -22,25 +22,25 @@ Keine
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| (keine) | – | – |
+| Name    | Typ | Kommentar |
+| ------- | --- | --------- |
+| (keine) | –   | –         |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| (keine) | – | – |
+| Name    | Typ | Kommentar |
+| ------- | --- | --------- |
+| (keine) | –   | –         |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AR` | **IN** | Socket (Eingang) | Einzugehender AR-Adaptersignal, das auf die vier Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AR` | **OUT1** | Plug (Ausgang) | Erster ausgehender AR-Kanal. |
-| `adapter::types::unidirectional::AR` | **OUT2** | Plug (Ausgang) | Zweiter ausgehender AR-Kanal. |
-| `adapter::types::unidirectional::AR` | **OUT3** | Plug (Ausgang) | Dritter ausgehender AR-Kanal. |
-| `adapter::types::unidirectional::AR` | **OUT4** | Plug (Ausgang) | Vierter ausgehender AR-Kanal. |
+| Typ                                  | Name     | Richtung         | Beschreibung                                                             |
+| ------------------------------------ | -------- | ---------------- | ------------------------------------------------------------------------ |
+| `adapter::types::unidirectional::AR` | **IN**   | Socket (Eingang) | Einzugehender AR-Adaptersignal, das auf die vier Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AR` | **OUT1** | Plug (Ausgang)   | Erster ausgehender AR-Kanal.                                             |
+| `adapter::types::unidirectional::AR` | **OUT2** | Plug (Ausgang)   | Zweiter ausgehender AR-Kanal.                                            |
+| `adapter::types::unidirectional::AR` | **OUT3** | Plug (Ausgang)   | Dritter ausgehender AR-Kanal.                                            |
+| `adapter::types::unidirectional::AR` | **OUT4** | Plug (Ausgang)   | Vierter ausgehender AR-Kanal.                                            |
 
 ## Funktionsweise
 

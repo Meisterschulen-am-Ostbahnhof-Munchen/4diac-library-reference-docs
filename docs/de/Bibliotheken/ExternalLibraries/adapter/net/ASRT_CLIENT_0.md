@@ -35,9 +35,9 @@ Der Funktionsblock **ASRT_CLIENT_0** ist ein Composite-Funktionsblock, der drei 
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| S_R_T | adapter::types::unidirectional::ASRT | Socket (Eingang) | Set/Reset/Toggle |
+| Adapter | Typ                                  | Richtung         | Beschreibung     |
+| ------- | ------------------------------------ | ---------------- | ---------------- |
+| S_R_T   | adapter::types::unidirectional::ASRT | Socket (Eingang) | Set/Reset/Toggle |
 
 ## Funktionsweise
 

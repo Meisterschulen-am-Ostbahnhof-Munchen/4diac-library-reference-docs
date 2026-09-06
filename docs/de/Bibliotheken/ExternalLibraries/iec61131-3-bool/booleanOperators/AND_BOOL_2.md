@@ -48,11 +48,11 @@ Die Funktionsweise des `AND_BOOL_2`-Blocks ist deterministisch und folgt der kla
 Die Operation kann durch folgende Wahrheitstabelle beschrieben werden:
 
 | IN1 | IN2 | OUT (IN1 AND IN2) |
-|:---:|:---:|:-----------------:|
-|  0  |  0  |         0         |
-|  0  |  1  |         0         |
-|  1  |  0  |         0         |
-|  1  |  1  |         1         |
+| :-: | :-: | :---------------: |
+| 0   | 0   | 0                 |
+| 0   | 1   | 0                 |
+| 1   | 0   | 0                 |
+| 1   | 1   | 1                 |
 
 ## Technische Besonderheiten
 

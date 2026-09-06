@@ -51,10 +51,10 @@ On every `REQ`, `CALIBRATE` first checks `CO` and `CS` (as an `ELSIF` chain, so 
 
 **Example** (4-20 mA pressure sensor via logiBUS, normalized to `0.0..1.0`, desired output range `0.0..500.0`):
 
-| Step | Action | Result |
-| --- | --- | --- |
-| 1 | Apply 4 mA (`X=0.0`), `Y_Offset=0.0`, `CO=TRUE` | `OFFSET = 0` |
-| 2 | Apply 20 mA (`X=1.0`), `Y_Scale=500.0`, `CS=TRUE` | `SCALE = 500` |
+| Step | Action                                            | Result        |
+| ---- | ------------------------------------------------- | ------------- |
+| 1    | Apply 4 mA (`X=0.0`), `Y_Offset=0.0`, `CO=TRUE`   | `OFFSET = 0`  |
+| 2    | Apply 20 mA (`X=1.0`), `Y_Scale=500.0`, `CS=TRUE` | `SCALE = 500` |
 
 Result: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 

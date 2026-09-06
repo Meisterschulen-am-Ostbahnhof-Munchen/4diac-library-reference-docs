@@ -14,18 +14,18 @@ Der Datentyp `NAMEFIELD_T` repräsentiert eine strukturierte Datenkomponente zur
 
 *(Als strukturierter Datentyp besitzt `NAMEFIELD_T` keine Ereignisse, sondern ausschließlich Datenfelder. Diese werden hier als Bestandteile der Struktur aufgeführt.)*
 
-| Name | Datentyp | Initialwert | Kommentar |
-| :--- | :--- | :--- | :--- |
-| `bSelfConf` | `BOOL` | `TRUE` | Gibt an, ob es sich um eine selbstkonfigurierbare Adress-ECU handelt. |
-| `bIndGroup` | `BYTE` | `16#FF` | Weist den NAME einer Industriegruppe zu (Bereich 0..7). |
-| `bDevClassInst` | `BYTE` | `16#FF` | Identifikator, wenn eine Geräteklasse mehrfach im Netzwerk vorkommt (0..15). |
-| `bDevClass` | `BYTE` | `16#FF` | ISO-definierte Geräteklasse (0..127). |
-| `bReserved` | `BOOL` | `TRUE` | Reserviertes Bit (nicht verwendet). |
-| `bFunction` | `BYTE` | `16#FF` | ISO-definierte Funktion, entspricht der Source Address (SA) (0..255). |
-| `bFunctionInst` | `BYTE` | `16#FF` | Untergruppe einer Funktion (0..31). |
-| `bEcuInstance` | `BYTE` | `16#FF` | Gibt an, welches Steuergerät einer bestimmten Funktion zugeordnet ist (0..7). |
-| `wManufCode` | `WORD` | `16#FFFF` | ISO-definierter Herstellercode (0..2047). |
-| `dwIdentNumb` | `DWORD` | `16#FFFFFFFF` | Eindeutige Seriennummer; wird verwendet, wenn der NAME im selben Netzwerk nicht eindeutig ist (0..2.097.151). |
+| Name            | Datentyp | Initialwert   | Kommentar                                                                                                     |
+| :-------------- | :------- | :------------ | :------------------------------------------------------------------------------------------------------------ |
+| `bSelfConf`     | `BOOL`   | `TRUE`        | Gibt an, ob es sich um eine selbstkonfigurierbare Adress-ECU handelt.                                         |
+| `bIndGroup`     | `BYTE`   | `16#FF`       | Weist den NAME einer Industriegruppe zu (Bereich 0..7).                                                       |
+| `bDevClassInst` | `BYTE`   | `16#FF`       | Identifikator, wenn eine Geräteklasse mehrfach im Netzwerk vorkommt (0..15).                                  |
+| `bDevClass`     | `BYTE`   | `16#FF`       | ISO-definierte Geräteklasse (0..127).                                                                         |
+| `bReserved`     | `BOOL`   | `TRUE`        | Reserviertes Bit (nicht verwendet).                                                                           |
+| `bFunction`     | `BYTE`   | `16#FF`       | ISO-definierte Funktion, entspricht der Source Address (SA) (0..255).                                         |
+| `bFunctionInst` | `BYTE`   | `16#FF`       | Untergruppe einer Funktion (0..31).                                                                           |
+| `bEcuInstance`  | `BYTE`   | `16#FF`       | Gibt an, welches Steuergerät einer bestimmten Funktion zugeordnet ist (0..7).                                 |
+| `wManufCode`    | `WORD`   | `16#FFFF`     | ISO-definierter Herstellercode (0..2047).                                                                     |
+| `dwIdentNumb`   | `DWORD`  | `16#FFFFFFFF` | Eindeutige Seriennummer; wird verwendet, wenn der NAME im selben Netzwerk nicht eindeutig ist (0..2.097.151). |
 
 ### **Daten-Ausgänge**
 

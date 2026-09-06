@@ -13,37 +13,37 @@ Der **logiBUS_QWA_SERVO** ist ein Composite-Funktionsblock (CFB) für die Ausgab
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Variablen          | Beschreibung            |
-|----------|-------|------------------------|-------------------------|
+| Ereignis | Typ   | Mit Variablen            | Beschreibung            |
+| -------- | ----- | ------------------------ | ----------------------- |
 | `INIT`   | EInit | `QI`, `PARAMS`, `Output` | Service Initialisierung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Variablen | Beschreibung                          |
-|----------|-------|---------------|---------------------------------------|
-| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der Initialisierung       |
-| `CNF`    | Event | `QO`, `STATUS` | Bestätigung einer angeforderten Aktion|
+| Ereignis | Typ   | Mit Variablen  | Beschreibung                           |
+| -------- | ----- | -------------- | -------------------------------------- |
+| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der Initialisierung        |
+| `CNF`    | Event | `QO`, `STATUS` | Bestätigung einer angeforderten Aktion |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ         | Initialwert | Beschreibung                                      |
-|----------|-------------|-------------|---------------------------------------------------|
-| `QI`     | `BOOL`      | –           | Ereignis-Eingangsqualifizierer                    |
-| `PARAMS` | `STRING`    | –           | Service-Parameter (z. B. Bus‑Konfiguration)       |
-| `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Identifiziert den Ausgang (`Output_Q1` … `Output_Q8`)|
+| Name     | Typ                             | Initialwert | Beschreibung                                          |
+| -------- | ------------------------------- | ----------- | ----------------------------------------------------- |
+| `QI`     | `BOOL`                          | –           | Ereignis-Eingangsqualifizierer                        |
+| `PARAMS` | `STRING`                        | –           | Service-Parameter (z. B. Bus‑Konfiguration)           |
+| `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Identifiziert den Ausgang (`Output_Q1` … `Output_Q8`) |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ      | Beschreibung                    |
-|----------|----------|---------------------------------|
-| `QO`     | `BOOL`   | Ereignis-Ausgangsqualifizierer  |
-| `STATUS` | `STRING` | Statusmeldung (Fehler, OK, etc.)|
+| Name     | Typ      | Beschreibung                     |
+| -------- | -------- | -------------------------------- |
+| `QO`     | `BOOL`   | Ereignis-Ausgangsqualifizierer   |
+| `STATUS` | `STRING` | Statusmeldung (Fehler, OK, etc.) |
 
 ### **Adapter**
 
-| Adapter | Typ                                   | Richtung | Beschreibung                          |
-|---------|---------------------------------------|----------|---------------------------------------|
-| `OUT`   | `adapter::types::unidirectional::AW`  | Socket   | Ausgangsdaten zur Ressource (Wortausgabe)|
+| Adapter | Typ                                  | Richtung | Beschreibung                              |
+| ------- | ------------------------------------ | -------- | ----------------------------------------- |
+| `OUT`   | `adapter::types::unidirectional::AW` | Socket   | Ausgangsdaten zur Ressource (Wortausgabe) |
 
 ## Funktionsweise
 
@@ -73,14 +73,14 @@ Die eigentliche Ansteuerung der Servo-Hardware erfolgt über den Adapter `OUT`, 
 
 Der FB besitzt keine explizit modellierte Zustandsmaschine, jedoch ergibt sich aus den Ereignis‑Abläufen folgende implizite Zustandslogik:
 
-| Zustand       | Auslöser                | Reaktion                                     |
-|---------------|-------------------------|----------------------------------------------|
-| **Idle**      | –                       | Warten auf `INIT`                            |
-| **Initialize**| `INIT` empfangen        | Interner FB wird gestartet                   |
-| **Ready**     | `INITO` gesendet        | Bereit für Anforderungen über den Adapter    |
-| **Busy**      | `OUT.E1` empfangen      | Aktion wird ausgeführt (`REQ` läuft)         |
-| **Done**      | `CNF` gesendet          | Aktion abgeschlossen, zurück zu **Ready**    |
-| **Error**     | Fehler während Initialisierung oder Aktion | `STATUS` enthält Fehlerbeschreibung; evtl. erneute Initialisierung nötig |
+| Zustand        | Auslöser                                   | Reaktion                                                                 |
+| -------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
+| **Idle**       | –                                          | Warten auf `INIT`                                                        |
+| **Initialize** | `INIT` empfangen                           | Interner FB wird gestartet                                               |
+| **Ready**      | `INITO` gesendet                           | Bereit für Anforderungen über den Adapter                                |
+| **Busy**       | `OUT.E1` empfangen                         | Aktion wird ausgeführt (`REQ` läuft)                                     |
+| **Done**       | `CNF` gesendet                             | Aktion abgeschlossen, zurück zu **Ready**                                |
+| **Error**      | Fehler während Initialisierung oder Aktion | `STATUS` enthält Fehlerbeschreibung; evtl. erneute Initialisierung nötig |
 
 ## Anwendungsszenarien
 

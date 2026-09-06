@@ -12,37 +12,37 @@ Der Funktionsblock **NVS_AS** dient als Schnittstelle zum Lesen und Schreiben vo
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
+| Ereignis | Beschreibung                                                                  | Mitgeführte Variablen  |
+| -------- | ----------------------------------------------------------------------------- | ---------------------- |
 | INIT     | Initialisiert den NVS und löst das erste Laden eines gespeicherten Werts aus. | QI, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
-| INITO    | Bestätigung der Initialisierung und des ersten Ladevorgangs. | QO, STATUS |
+| Ereignis | Beschreibung                                                 | Mitgeführte Variablen |
+| -------- | ------------------------------------------------------------ | --------------------- |
+| INITO    | Bestätigung der Initialisierung und des ersten Ladevorgangs. | QO, STATUS            |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Beschreibung |
-|----------|--------|--------------|
-| QI       | BOOL   | Freigabe der Initialisierung (TRUE = aktivieren). |
-| KEY      | STRING | Schlüssel, unter dem der Wert im NVS gespeichert ist. |
-| DEFAULT_VALUE | SINT | Standardwert, der gelesen wird, falls kein Wert unter dem Schlüssel existiert. |
+| Variable      | Typ    | Beschreibung                                                                   |
+| ------------- | ------ | ------------------------------------------------------------------------------ |
+| QI            | BOOL   | Freigabe der Initialisierung (TRUE = aktivieren).                              |
+| KEY           | STRING | Schlüssel, unter dem der Wert im NVS gespeichert ist.                          |
+| DEFAULT_VALUE | SINT   | Standardwert, der gelesen wird, falls kein Wert unter dem Schlüssel existiert. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Beschreibung |
-|----------|--------|--------------|
+| Variable | Typ    | Beschreibung                                                     |
+| -------- | ------ | ---------------------------------------------------------------- |
 | QO       | BOOL   | Bestätigt erfolgreiche Initialisierung und Betriebsbereitschaft. |
-| STATUS   | STRING | Statusmeldung (z. B. „Success“ oder Fehlertext). |
+| STATUS   | STRING | Statusmeldung (z. B. „Success“ oder Fehlertext).                 |
 
 ### **Adapter**
 
-| Adapter   | Typ      | Richtung | Beschreibung |
-|-----------|----------|----------|--------------|
-| AS_IN     | AS       | SOCKET   | Empfängt einen zu speichernden SINT-Wert über ein unidirektionales Adapterprotokoll (Event + Data). |
-| AS_OUT    | AS       | PLUG     | Sendet den gelesenen SINT-Wert über ein unidirektionales Adapterprotokoll an verbundene Bausteine. |
+| Adapter | Typ | Richtung | Beschreibung                                                                                        |
+| ------- | --- | -------- | --------------------------------------------------------------------------------------------------- |
+| AS_IN   | AS  | SOCKET   | Empfängt einen zu speichernden SINT-Wert über ein unidirektionales Adapterprotokoll (Event + Data). |
+| AS_OUT  | AS  | PLUG     | Sendet den gelesenen SINT-Wert über ein unidirektionales Adapterprotokoll an verbundene Bausteine.  |
 
 ## Funktionsweise
 
@@ -76,12 +76,12 @@ Der Baustein arbeitet also als **lesender und schreibender Speicherzugriff mit a
 
 Der interne NVS-Baustein besitzt einen eigenen Zustandsautomaten. Für den Anwender relevant sind folgende Abläufe:
 
-| Phase | Zustand |
-| ------- | --------- |
-| 1 | Warten auf INIT-Ereignis. |
-| 2 | INIT ausgeführt → NVS initialisiert → GET gestartet. |
-| 3 | GET abgeschlossen → Wert über AS_OUT gesendet → Bereit für Schreibaufträge über AS_IN. |
-| 4 | Ereignis über AS_IN → SET ausgeführt → Wert gespeichert → Wert über AS_OUT gesendet → zurück zu Phase 3. |
+| Phase | Zustand                                                                                                  |
+| ----- | -------------------------------------------------------------------------------------------------------- |
+| 1     | Warten auf INIT-Ereignis.                                                                                |
+| 2     | INIT ausgeführt → NVS initialisiert → GET gestartet.                                                     |
+| 3     | GET abgeschlossen → Wert über AS_OUT gesendet → Bereit für Schreibaufträge über AS_IN.                   |
+| 4     | Ereignis über AS_IN → SET ausgeführt → Wert gespeichert → Wert über AS_OUT gesendet → zurück zu Phase 3. |
 
 Ein erneutes INIT-Ereignis kann jederzeit eine Neuinitialisierung erzwingen.
 

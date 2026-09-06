@@ -12,32 +12,32 @@ Der Funktionsblock **SET_UDINT** dient dazu, einen Wert vom Dateneingang `IN` au
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| `REQ` | Event | Normaler Ausführungsauftrag; triggert das Schreiben des Eingangswertes auf die Ausgangsvariable. |
+| Ereignis | Datentyp | Kommentar                                                                                        |
+| -------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `REQ`    | Event    | Normaler Ausführungsauftrag; triggert das Schreiben des Eingangswertes auf die Ausgangsvariable. |
 
 *Mit `REQ` verknüpfte Daten:* `IN`, `OUT`
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| `CNF` | Event | Bestätigung der Ausführung; wird ausgegeben, sobald der Wert erfolgreich zugewiesen wurde. |
+| Ereignis | Datentyp | Kommentar                                                                                  |
+| -------- | -------- | ------------------------------------------------------------------------------------------ |
+| `CNF`    | Event    | Bestätigung der Ausführung; wird ausgegeben, sobald der Wert erfolgreich zugewiesen wurde. |
 
 *Mit `CNF` verknüpfte Daten:* `OUT`
 
 ### **Daten-Eingänge**
 
-| Bezeichner | Datentyp | Initialwert | Kommentar |
-|------------|----------|-------------|-----------|
-| `IN` | UDINT | 0 | Wert, der auf die Zielvariable geschrieben werden soll. |
-| `OUT` (InOut) | UDINT | 0 | Zielvariable, die sowohl als Eingang (lesbar) als auch als Ausgang (beschreibbar) fungiert. |
+| Bezeichner    | Datentyp | Initialwert | Kommentar                                                                                   |
+| ------------- | -------- | ----------- | ------------------------------------------------------------------------------------------- |
+| `IN`          | UDINT    | 0           | Wert, der auf die Zielvariable geschrieben werden soll.                                     |
+| `OUT` (InOut) | UDINT    | 0           | Zielvariable, die sowohl als Eingang (lesbar) als auch als Ausgang (beschreibbar) fungiert. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichner | Datentyp | Kommentar |
-|------------|----------|-----------|
-| `OUT` (InOut) | UDINT | Dieselbe Variable wie am Eingang; nach der Ausführung enthält sie den Wert von `IN`. |
+| Bezeichner    | Datentyp | Kommentar                                                                            |
+| ------------- | -------- | ------------------------------------------------------------------------------------ |
+| `OUT` (InOut) | UDINT    | Dieselbe Variable wie am Eingang; nach der Ausführung enthält sie den Wert von `IN`. |
 
 ### **Adapter**
 
@@ -63,9 +63,9 @@ Die InOut-Variable `OUT` ist dabei sowohl lesbar als auch schreibbar. Der zugewi
 
 Der Baustein enthält einen einzigen Zustand `REQ` (Ereignisverarbeitung):
 
-| Zustand | Aktion | Ausgangsereignis |
-|---------|--------|------------------|
-| `REQ` | Führe Algorithmus `REQ` aus (OUT := IN) | CNF |
+| Zustand | Aktion                                  | Ausgangsereignis |
+| ------- | --------------------------------------- | ---------------- |
+| `REQ`   | Führe Algorithmus `REQ` aus (OUT := IN) | CNF              |
 
 Nach Ausführung von `CNF` kehrt der Baustein in den Grundzustand zurück und wartet auf das nächste `REQ`-Ereignis.
 

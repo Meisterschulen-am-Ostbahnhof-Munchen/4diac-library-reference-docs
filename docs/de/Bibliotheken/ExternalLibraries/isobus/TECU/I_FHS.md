@@ -34,14 +34,14 @@ Entwickelt unter EPL-2.0 Lizenz,ermöglicht er die Überwachung und Steuerung vo
 
 ## Parameter (SPN-Details)
 
-| Parameter | SPN | Typ | Länge | Skalierung | Wertebereich | Beschreibung |
-| ----------- | ------ | ------- | ------- | ------------ | -------------- | -------------- |
-| `FRONT_HITCH_POSITION` | 1872 | USINT | 8 bit | 0.4 %/bit | 0-100% | Aktuelle Position des Front-Anbaugeräts |
-| `FRONT_HITCH_WORK_INDICATION` | 1876 | BYTE | 2 bit | 4 Zustände | 0-3 | Arbeitsstatusindikator |
-| `FRONT_HITCH_POS_LIMIT_STATUS` | 5150 | BYTE | 3 bit | 8 Zustände | 0-7 | Positionslimit-Status |
-| `FRONT_HITCH_NOMINAL_LOWER_LINK_FORCE` | 1880 | USINT | 8 bit | 0.8 %/bit | -100% bis +100% | Normale Unterlenkerkraft |
-| `FRONT_HITCH_DRAFT` | 1878 | UINT | 16 bit | 10 N/bit | -320 kN bis +320 kN | Zugkraft am Front-Anbaugerät |
-| `FRONT_HITCH_EXIT_REASON_CODE` | 5816 | BYTE | 6 bit | 64 Zustände | 0-63 | Grundcode für Systemabbruch |
+| Parameter                              | SPN  | Typ   | Länge  | Skalierung  | Wertebereich        | Beschreibung                            |
+| -------------------------------------- | ---- | ----- | ------ | ----------- | ------------------- | --------------------------------------- |
+| `FRONT_HITCH_POSITION`                 | 1872 | USINT | 8 bit  | 0.4 %/bit   | 0-100%              | Aktuelle Position des Front-Anbaugeräts |
+| `FRONT_HITCH_WORK_INDICATION`          | 1876 | BYTE  | 2 bit  | 4 Zustände  | 0-3                 | Arbeitsstatusindikator                  |
+| `FRONT_HITCH_POS_LIMIT_STATUS`         | 5150 | BYTE  | 3 bit  | 8 Zustände  | 0-7                 | Positionslimit-Status                   |
+| `FRONT_HITCH_NOMINAL_LOWER_LINK_FORCE` | 1880 | USINT | 8 bit  | 0.8 %/bit   | -100% bis +100%     | Normale Unterlenkerkraft                |
+| `FRONT_HITCH_DRAFT`                    | 1878 | UINT  | 16 bit | 10 N/bit    | -320 kN bis +320 kN | Zugkraft am Front-Anbaugerät            |
+| `FRONT_HITCH_EXIT_REASON_CODE`         | 5816 | BYTE  | 6 bit  | 64 Zustände | 0-63                | Grundcode für Systemabbruch             |
 
 ## Funktionsweise
 
@@ -73,8 +73,8 @@ Entwickelt unter EPL-2.0 Lizenz,ermöglicht er die Überwachung und Steuerung vo
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | I_FHS | Standard Hitch Control | Advanced Hitch Manager |
-|---------------|-------|------------------------|------------------------|
+| Feature       | I_FHS | Standard Hitch Control | Advanced Hitch Manager |
+| ------------- | ----- | ---------------------- | ---------------------- |
 | ISO-Standard  | ✔     | ✖                      | ✖                      |
 | Front-Anbau   | ✔     | ✖                      | ✔                      |
 | Kraftmessung  | ✔     | ✔                      | ✔                      |

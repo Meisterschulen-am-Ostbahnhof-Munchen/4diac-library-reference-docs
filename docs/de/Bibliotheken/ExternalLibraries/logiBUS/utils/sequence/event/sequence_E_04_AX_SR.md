@@ -12,22 +12,22 @@ Der Funktionsblock `sequence_E_04_AX_SR` realisiert einen ereignisgesteuerten Se
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-| ---------- | -------------- |
-| `START_S1` | Übergang von START/State_00 nach State_01 |
-| `S1_S2` | Übergang von State_01 nach State_02 |
-| `S2_S3` | Übergang von State_02 nach State_03 |
-| `S3_S4` | Übergang von State_03 nach State_04 |
-| `S4_START` | Übergang von State_04 zurück zu State_00 |
-| `STOP` | Unterbricht den aktuellen Zustand sofort – alle Ausgänge werden ausgeschaltet (Dead-Man-Stop) |
-| `RESUME` | Setzt die Sequenz aus dem pausierten Zustand fort (Ausgänge werden wieder aktiviert) |
-| `RESET` | Setzt die Sequenz aus jedem Zustand zurück in den START-Zustand (State_00) |
+| Ereignis   | Beschreibung                                                                                  |
+| ---------- | --------------------------------------------------------------------------------------------- |
+| `START_S1` | Übergang von START/State_00 nach State_01                                                     |
+| `S1_S2`    | Übergang von State_01 nach State_02                                                           |
+| `S2_S3`    | Übergang von State_02 nach State_03                                                           |
+| `S3_S4`    | Übergang von State_03 nach State_04                                                           |
+| `S4_START` | Übergang von State_04 zurück zu State_00                                                      |
+| `STOP`     | Unterbricht den aktuellen Zustand sofort – alle Ausgänge werden ausgeschaltet (Dead-Man-Stop) |
+| `RESUME`   | Setzt die Sequenz aus dem pausierten Zustand fort (Ausgänge werden wieder aktiviert)          |
+| `RESET`    | Setzt die Sequenz aus jedem Zustand zurück in den START-Zustand (State_00)                    |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
-| `CNF` | Bestätigung der Ausführung. Mitgeführte Ausgabedaten: `STATE_NR`, `PAUSED` |
+| Ereignis | Beschreibung                                                               |
+| -------- | -------------------------------------------------------------------------- |
+| `CNF`    | Bestätigung der Ausführung. Mitgeführte Ausgabedaten: `STATE_NR`, `PAUSED` |
 
 ### **Daten-Eingänge**
 
@@ -35,19 +35,19 @@ Keine externen Dateneingänge.
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Variable   | Typ  | Beschreibung                                                      |
+| ---------- | ---- | ----------------------------------------------------------------- |
 | `STATE_NR` | SINT | Aktuelle Zustandsnummer: START = 0, State_01 = 1, …, State_04 = 4 |
-| `PAUSED`   | BOOL | `TRUE`, wenn der Sequenzer pausiert ist (STOP aktiv) |
+| `PAUSED`   | BOOL | `TRUE`, wenn der Sequenzer pausiert ist (STOP aktiv)              |
 
 ### **Adapter**
 
-| Adapter  | Typ                                | Beschreibung |
-|----------|------------------------------------|--------------|
-| `DO_S1`  | `adapter::types::unidirectional::AX` | Ausgang, der in State_01 aktiv ist (D1 = TRUE) |
-| `DO_S2`  | `adapter::types::unidirectional::AX` | Ausgang, der in State_02 aktiv ist |
-| `DO_S3`  | `adapter::types::unidirectional::AX` | Ausgang, der in State_03 aktiv ist |
-| `DO_S4`  | `adapter::types::unidirectional::AX` | Ausgang, der in State_04 aktiv ist |
+| Adapter | Typ                                  | Beschreibung                                   |
+| ------- | ------------------------------------ | ---------------------------------------------- |
+| `DO_S1` | `adapter::types::unidirectional::AX` | Ausgang, der in State_01 aktiv ist (D1 = TRUE) |
+| `DO_S2` | `adapter::types::unidirectional::AX` | Ausgang, der in State_02 aktiv ist             |
+| `DO_S3` | `adapter::types::unidirectional::AX` | Ausgang, der in State_03 aktiv ist             |
+| `DO_S4` | `adapter::types::unidirectional::AX` | Ausgang, der in State_04 aktiv ist             |
 
 ## Funktionsweise
 
@@ -75,20 +75,20 @@ Der `RESET`-Befehl bringt den Sequenzer unabhängig vom aktuellen Zustand in ein
 
 ## Zustandsübersicht
 
-| Zustand          | Aktiver Ausgang | `STATE_NR` | `PAUSED` |
-|------------------|-----------------|------------|----------|
-| xSTART           | keiner          | 0          | FALSE    |
-| sState_00        | keiner          | 0          | FALSE    |
-| sState_01        | DO_S1          | 1          | FALSE    |
-| sState_02        | DO_S2          | 2          | FALSE    |
-| sState_03        | DO_S3          | 3          | FALSE    |
-| sState_04        | DO_S4          | 4          | FALSE    |
-| sPAUSED_S0       | keiner          | gespeichert | TRUE     |
-| sPAUSED_S1       | keiner          | gespeichert | TRUE     |
-| sPAUSED_S2       | keiner          | gespeichert | TRUE     |
-| sPAUSED_S3       | keiner          | gespeichert | TRUE     |
-| sPAUSED_S4       | keiner          | gespeichert | TRUE     |
-| sRESET           | keiner          | –           | –        |
+| Zustand    | Aktiver Ausgang | `STATE_NR`  | `PAUSED` |
+| ---------- | --------------- | ----------- | -------- |
+| xSTART     | keiner          | 0           | FALSE    |
+| sState_00  | keiner          | 0           | FALSE    |
+| sState_01  | DO_S1           | 1           | FALSE    |
+| sState_02  | DO_S2           | 2           | FALSE    |
+| sState_03  | DO_S3           | 3           | FALSE    |
+| sState_04  | DO_S4           | 4           | FALSE    |
+| sPAUSED_S0 | keiner          | gespeichert | TRUE     |
+| sPAUSED_S1 | keiner          | gespeichert | TRUE     |
+| sPAUSED_S2 | keiner          | gespeichert | TRUE     |
+| sPAUSED_S3 | keiner          | gespeichert | TRUE     |
+| sPAUSED_S4 | keiner          | gespeichert | TRUE     |
+| sRESET     | keiner          | –           | –        |
 
 ## Anwendungsszenarien
 

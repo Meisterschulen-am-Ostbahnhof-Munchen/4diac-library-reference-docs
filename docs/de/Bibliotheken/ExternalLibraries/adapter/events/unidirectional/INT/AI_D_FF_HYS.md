@@ -12,21 +12,21 @@ Der Funktionsblock **AI_D_FF_HYS** realisiert ein taktgesteuertes D‑Flipflop (
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Variablen | Beschreibung                |
-|----------|-------|---------------|-----------------------------|
+| Ereignis | Typ   | Mit Variablen | Beschreibung                                    |
+| -------- | ----- | ------------- | ----------------------------------------------- |
 | INIT     | EInit | HYSTERESIS    | Initialisierung und Vorgabe des Hysteresebandes |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung             |
-|----------|-------|--------------------------|
+| Ereignis | Typ   | Beschreibung                    |
+| -------- | ----- | ------------------------------- |
 | INITO    | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Typ  | Beschreibung                           |
-|-------------|------|----------------------------------------|
-| HYSTERESIS  | INT  | Hysterese-Bandbreite (z. B. in digitalen Schritten) |
+| Bezeichnung | Typ | Beschreibung                                        |
+| ----------- | --- | --------------------------------------------------- |
+| HYSTERESIS  | INT | Hysterese-Bandbreite (z. B. in digitalen Schritten) |
 
 ### **Daten-Ausgänge**
 
@@ -34,9 +34,9 @@ Der Baustein besitzt keine direkten Daten-Ausgänge. Der verriegelte Wert wird �
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung                                      |
-|-------------|-----|----------|---------------------------------------------------|
-| I           | AI  | Socket   | Eingangsadapter: Taktsignal (**E1**) und Daten (**D1**) |
+| Bezeichnung | Typ | Richtung | Beschreibung                                                              |
+| ----------- | --- | -------- | ------------------------------------------------------------------------- |
+| I           | AI  | Socket   | Eingangsadapter: Taktsignal (**E1**) und Daten (**D1**)                   |
 | Q           | AI  | Plug     | Ausgangsadapter: latched value (**D1**) und zugehöriges Ereignis (**E1**) |
 
 Der verwendete Adaptertyp `adapter::types::unidirectional::AI` ist ein unidirektionaler Daten- und Ereigniskanal. Über den Socket **I** werden die Werte des Takts (E1) und der Daten (D1) empfangen; über den Plug **Q** wird der latched Wert (D1) zusammen mit einem Bestätigungsereignis (E1) ausgegeben.
@@ -74,11 +74,11 @@ Der verwendete Adaptertyp `adapter::types::unidirectional::AI` ist ein unidirekt
 
 Der FB kennt keine expliziten Zustände im Sinne einer Endlichen Automaten. Er befindet sich nach der **INIT**-Behandlung in einem Betriebszustand, in dem er auf Taktereignisse wartet. Ein erneuter **INIT**‑Aufruf setzt die Hysterese neu und initialisiert die interne Logik.
 
-| Zustand              | Beschreibung                                  |
-|----------------------|-----------------------------------------------|
-| Initialisiert        | Nach erfolgreichem **INIT** bereit zur Verarbeitung |
-| Warten auf Takt      | Erwartet ein **I.E1**-Ereignis am Eingangsadapter |
-| Datenverarbeitung    | Bei **I.E1**: Hysterese-Vergleich und ggf. Übernahme |
+| Zustand           | Beschreibung                                         |
+| ----------------- | ---------------------------------------------------- |
+| Initialisiert     | Nach erfolgreichem **INIT** bereit zur Verarbeitung  |
+| Warten auf Takt   | Erwartet ein **I.E1**-Ereignis am Eingangsadapter    |
+| Datenverarbeitung | Bei **I.E1**: Hysterese-Vergleich und ggf. Übernahme |
 
 ## Anwendungsszenarien
 
@@ -96,12 +96,12 @@ Der FB kennt keine expliziten Zustände im Sinne einer Endlichen Automaten. Er b
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein          | Hysterese | Takteingang | Ausgabeart            | Besonderheit                     |
-|-------------------|-----------|-------------|-----------------------|----------------------------------|
-| **AI_D_FF_HYS**   | Ja        | Ja          | Adapter (AI)          | Flexible Adapter-Kopplung        |
-| Standard D‑FF (61499) | Nein    | Ja          | Direkte Datenausgänge | Keine Störunterdrückung          |
-| SR‑Flipflop       | Nein      | Nein        | Direkt                | Set/Reset, kein Takt             |
-| Schmitt‑Trigger   | Ja        | Nein        | Analoge Schwelle      | Nur Schwellwert, kein Speicher   |
+| Baustein              | Hysterese | Takteingang | Ausgabeart            | Besonderheit                   |
+| --------------------- | --------- | ----------- | --------------------- | ------------------------------ |
+| **AI_D_FF_HYS**       | Ja        | Ja          | Adapter (AI)          | Flexible Adapter-Kopplung      |
+| Standard D‑FF (61499) | Nein      | Ja          | Direkte Datenausgänge | Keine Störunterdrückung        |
+| SR‑Flipflop           | Nein      | Nein        | Direkt                | Set/Reset, kein Takt           |
+| Schmitt‑Trigger       | Ja        | Nein        | Analoge Schwelle      | Nur Schwellwert, kein Speicher |
 
 Der AI_D_FF_HYS kombiniert die Eigenschaften eines getakteten D‑Flipflops mit einer einstellbaren Hysterese und bietet durch die Adapter‑Schnittstelle eine plattformunabhängige Integration in IEC‑61499‑Systeme.
 

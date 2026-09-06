@@ -28,15 +28,15 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | ------------- |
-| `adapter::types::unidirectional::AR` | **IN** | Socket (Eingang) | Ein eingehender AR-Adapter, der auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AR` | **OUT1** | Plug (Ausgang) | Erster ausgehender AR-Adapter (identisch mit IN). |
-| `adapter::types::unidirectional::AR` | **OUT2** | Plug (Ausgang) | Zweiter ausgehender AR-Adapter (identisch mit IN). |
-| `adapter::types::unidirectional::AR` | **OUT3** | Plug (Ausgang) | Dritter ausgehender AR-Adapter (identisch mit IN). |
-| `adapter::types::unidirectional::AR` | **OUT4** | Plug (Ausgang) | Vierter ausgehender AR-Adapter (identisch mit IN). |
-| `adapter::types::unidirectional::AR` | **OUT5** | Plug (Ausgang) | Fünfter ausgehender AR-Adapter (identisch mit IN). |
-| `adapter::types::unidirectional::AR` | **OUT6** | Plug (Ausgang) | Sechster ausgehender AR-Adapter (identisch mit IN). |
+| Typ                                  | Name     | Richtung         | Beschreibung                                                     |
+| ------------------------------------ | -------- | ---------------- | ---------------------------------------------------------------- |
+| `adapter::types::unidirectional::AR` | **IN**   | Socket (Eingang) | Ein eingehender AR-Adapter, der auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AR` | **OUT1** | Plug (Ausgang)   | Erster ausgehender AR-Adapter (identisch mit IN).                |
+| `adapter::types::unidirectional::AR` | **OUT2** | Plug (Ausgang)   | Zweiter ausgehender AR-Adapter (identisch mit IN).               |
+| `adapter::types::unidirectional::AR` | **OUT3** | Plug (Ausgang)   | Dritter ausgehender AR-Adapter (identisch mit IN).               |
+| `adapter::types::unidirectional::AR` | **OUT4** | Plug (Ausgang)   | Vierter ausgehender AR-Adapter (identisch mit IN).               |
+| `adapter::types::unidirectional::AR` | **OUT5** | Plug (Ausgang)   | Fünfter ausgehender AR-Adapter (identisch mit IN).               |
+| `adapter::types::unidirectional::AR` | **OUT6** | Plug (Ausgang)   | Sechster ausgehender AR-Adapter (identisch mit IN).              |
 
 ## Funktionsweise
 

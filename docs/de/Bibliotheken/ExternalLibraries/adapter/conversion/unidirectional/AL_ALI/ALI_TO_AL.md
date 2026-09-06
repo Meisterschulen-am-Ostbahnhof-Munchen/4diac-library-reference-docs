@@ -32,10 +32,10 @@ Der Funktionsblock **ALI_TO_AL** ist ein Composite-Baustein, der einen **ALI-Ada
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **ALI_IN** | Socket | `adapter::types::unidirectional::ALI` | Empfängt einen LINT-Wert sowie ein Ereignis. |
-| **AL_OUT** | Plug | `adapter::types::unidirectional::AL` | Sendet einen LWORD-Wert sowie ein Ereignis. |
+| Adapter    | Richtung | Typ                                   | Beschreibung                                 |
+| ---------- | -------- | ------------------------------------- | -------------------------------------------- |
+| **ALI_IN** | Socket   | `adapter::types::unidirectional::ALI` | Empfängt einen LINT-Wert sowie ein Ereignis. |
+| **AL_OUT** | Plug     | `adapter::types::unidirectional::AL`  | Sendet einen LWORD-Wert sowie ein Ereignis.  |
 
 ## Funktionsweise
 

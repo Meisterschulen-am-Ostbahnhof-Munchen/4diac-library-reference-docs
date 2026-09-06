@@ -34,6 +34,7 @@ The **F_ADD_DT_TIME** function block is a specialized function module for adding
 
 - Triggered by the `REQ` event
 - Processes DATE_AND_TIME and TIME values
+
 1. **Calculation**:
 
 - Adds time duration (IN2) to timestamp (IN1)
@@ -41,6 +42,7 @@ The **F_ADD_DT_TIME** function block is a specialized function module for adding
 - Leap years
 - Month lengths
 - Time zones (if configured)
+
 1. **Result output**:
 
 - `CNF` event with new DATE_AND_TIME
@@ -72,11 +74,11 @@ The **F_ADD_DT_TIME** function block is a specialized function module for adding
 
 ## ⚖️ Comparison with standard F_ADD
 
-| Feature | F_ADD_DT_TIME | F_ADD |
-| ---------------- | --------------- | ------------- |
-| Input type 1 | DATE_AND_TIME | ANY_MAGNITUDE |
-| Input type 2 | TIME | ANY_MAGNITUDE |
-| Operation | Specialized time addition | Generic addition |
+| Feature      | F_ADD_DT_TIME             | F_ADD            |
+| ------------ | ------------------------- | ---------------- |
+| Input type 1 | DATE_AND_TIME             | ANY_MAGNITUDE    |
+| Input type 2 | TIME                      | ANY_MAGNITUDE    |
+| Operation    | Specialized time addition | Generic addition |
 
 ## Conclusion
 

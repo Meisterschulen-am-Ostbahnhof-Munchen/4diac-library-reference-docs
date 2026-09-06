@@ -14,32 +14,32 @@ Der Funktionsblock **ALR_TO_AL** ist ein Composite-Baustein (zusammengesetzter B
 
 Der Funktionsblock besitzt **keine eigenständigen Ereignis-Eingänge**. Ereignisse werden über den **Socket-Adapter** `ALR_IN` bereitgestellt:
 
-| Adapter | Ereignis / Signal | Beschreibung |
-|---------|-------------------|--------------|
+| Adapter | Ereignis / Signal | Beschreibung                                     |
+| ------- | ----------------- | ------------------------------------------------ |
 | ALR_IN  | E1                | Trigger-Ereignis zur Auslösung der Konvertierung |
 
 ### **Ereignis-Ausgänge**
 
 Der Funktionsblock besitzt **keine eigenständigen Ereignis-Ausgänge**. Ereignisse werden über den **Plug-Adapter** `AL_OUT` ausgegeben:
 
-| Adapter | Ereignis / Signal | Beschreibung |
-|---------|-------------------|--------------|
+| Adapter | Ereignis / Signal | Beschreibung                                            |
+| ------- | ----------------- | ------------------------------------------------------- |
 | AL_OUT  | E1                | Bestätigungsereignis nach abgeschlossener Konvertierung |
 
 ### **Daten-Eingänge**
 
 Auch hier gibt es **keine direkten Dateneingänge**. Die Daten werden über den Socket-Adapter `ALR_IN` hereingeführt:
 
-| Adapter | Daten / Signal | Datentyp | Beschreibung |
-|---------|----------------|----------|--------------|
+| Adapter | Daten / Signal | Datentyp | Beschreibung                 |
+| ------- | -------------- | -------- | ---------------------------- |
 | ALR_IN  | D1             | LREAL    | Eingangswert im LREAL-Format |
 
 ### **Daten-Ausgänge**
 
 Keine direkten Datenausgänge. Die Ausgabedaten erfolgen über den Plug-Adapter `AL_OUT`:
 
-| Adapter | Daten / Signal | Datentyp | Beschreibung |
-|---------|----------------|----------|--------------|
+| Adapter | Daten / Signal | Datentyp | Beschreibung                               |
+| ------- | -------------- | -------- | ------------------------------------------ |
 | AL_OUT  | D1             | LWORD    | Konvertierter Ausgangswert im LWORD-Format |
 
 ### **Adapter**

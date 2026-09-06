@@ -1,7 +1,5 @@
 # isobus
 
-# isobus
-
 ## 🎧 Podcast
 
 - [The Working Set Object: Understanding the Brain of the ISOBUS User Interface – From Standard to Practice in the ISO Designer](https://podcasters.spotify.com/pod/show/isobus-vt-objects/episodes/Das-Working-Set-Objekt-Das-Gehirn-der-ISOBUS-Bedienoberflche-verstehen--Von-der-Norm-zur-Praxis-im-ISO-Designer-e36cl5v)

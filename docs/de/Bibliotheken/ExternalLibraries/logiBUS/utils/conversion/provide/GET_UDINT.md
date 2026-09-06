@@ -12,9 +12,9 @@ Der Funktionsblock **GET_UDINT** dient dazu, den aktuellen Wert einer als InOut 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| REQ | Event | Normaler Ausführungsanforderung |
+| Name | Typ   | Kommentar                       |
+| ---- | ----- | ------------------------------- |
+| REQ  | Event | Normaler Ausführungsanforderung |
 
 *Assoziierte Daten:*
 
@@ -22,9 +22,9 @@ Der Funktionsblock **GET_UDINT** dient dazu, den aktuellen Wert einer als InOut 
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| CNF | Event | Bestätigung der Ausführung |
+| Name | Typ   | Kommentar                  |
+| ---- | ----- | -------------------------- |
+| CNF  | Event | Bestätigung der Ausführung |
 
 *Assoziierte Daten:*
 
@@ -33,15 +33,15 @@ Der Funktionsblock **GET_UDINT** dient dazu, den aktuellen Wert einer als InOut 
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Vorgabewert | Kommentar |
-|------|-----|-------------|-----------|
-| IN | UDINT (InOut) | 0 | Quellvariable, die gelesen wird |
+| Name | Typ           | Vorgabewert | Kommentar                       |
+| ---- | ------------- | ----------- | ------------------------------- |
+| IN   | UDINT (InOut) | 0           | Quellvariable, die gelesen wird |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Vorgabewert | Kommentar |
-|------|-----|-------------|-----------|
-| OUT | UDINT | 0 | Gepufferter Ausgangswert |
+| Name | Typ   | Vorgabewert | Kommentar                |
+| ---- | ----- | ----------- | ------------------------ |
+| OUT  | UDINT | 0           | Gepufferter Ausgangswert |
 
 ### **Adapter**
 

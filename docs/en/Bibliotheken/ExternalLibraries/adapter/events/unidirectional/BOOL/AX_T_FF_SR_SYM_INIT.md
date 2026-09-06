@@ -12,37 +12,37 @@ The function block **AX_T_FF_SR_SYM_INIT** implements an event-driven bistable f
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-| ------- | --------- | ----------------------------------------------- |
-| INIT | EInit | Initialization Request |
-| S | Event | Set output Q (dependent on QI) |
-| R | Event | Reset output Q (dependent on QI) |
-| CLK | Event | Clock to toggle Q |
+| Event | Type  | Comment                          |
+| ----- | ----- | -------------------------------- |
+| INIT  | EInit | Initialization Request           |
+| S     | Event | Set output Q (dependent on QI)   |
+| R     | Event | Reset output Q (dependent on QI) |
+| CLK   | Event | Clock to toggle Q                |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|--------|---------|-----------------------------------------|
+| Event | Type  | Comment                     |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialization Confirmation |
 
 ### **Data Inputs**
 
-| Variable | Type | Comment |
-| ----------- | -------- | ------------------------------------------------ |
-| QI | BOOL | Event Qualifier (Enable Actions) |
-| Q_INIT | BOOL | Value of Q on the INIT event |
+| Variable | Type | Comment                          |
+| -------- | ---- | -------------------------------- |
+| QI       | BOOL | Event Qualifier (Enable Actions) |
+| Q_INIT   | BOOL | Value of Q on the INIT event     |
 
 ### **Data Outputs**
 
-| Variable | Type | Comment |
-|----------|--------|-------------------------------------------------|
-| QO | BOOL | Output Event Qualifier |
+| Variable | Type | Comment                |
+| -------- | ---- | ---------------------- |
+| QO       | BOOL | Output Event Qualifier |
 
 ### **Adapters**
 
-| Adapter | Type | Comment |
-|---------|-------------------------------------|-----------------------------|
-| Q | adapter::types::unidirectional::AX | Value of the flip-flop (D1) |
+| Adapter | Type                               | Comment                     |
+| ------- | ---------------------------------- | --------------------------- |
+| Q       | adapter::types::unidirectional::AX | Value of the flip-flop (D1) |
 
 ## Functionality
 
@@ -71,17 +71,17 @@ The output `QO` is set to the current value of `QI` with each executed algorithm
 
 ## State Overview
 
-| State | Action | Output/Event | Description |
-| --- | --- | --- | --- |
-| **START** | – | – | Waits for first INIT event. |
-| **Init** | `initialize` | INITO | Sets `QO := QI`; Then switch to SET or RESET depending on `Q_INIT`. |
-| **DeInit** | `deInitialize` | INITO | Sets `QO := FALSE`; then returns to START. |
-| **SET** | `SET` | Q.E1 | Sets `Q.D1 := TRUE` (if QI = TRUE) and `QO := QI`. |
-| **RESET** | `RESET` | Q.E1 | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`. |
-| **DeInit** | `RESET` | Q.E1 | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`. |
-| **DeInit** | `Q_INIT = FALSE` | INITO | Sets `QO := FALSE` (if QI = TRUE) and `QO := QI`. |
-| **Set** | `SET` | Q.E1 | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`. |
-| **Set** | `Q_INIT = FALSE` | Q.E1 | **Transitions** (excerpt):
+| State      | Action           | Output/Event | Description                                                         |
+| ---------- | ---------------- | ------------ | ------------------------------------------------------------------- |
+| **START**  | –                | –            | Waits for first INIT event.                                         |
+| **Init**   | `initialize`     | INITO        | Sets `QO := QI`; Then switch to SET or RESET depending on `Q_INIT`. |
+| **DeInit** | `deInitialize`   | INITO        | Sets `QO := FALSE`; then returns to START.                          |
+| **SET**    | `SET`            | Q.E1         | Sets `Q.D1 := TRUE` (if QI = TRUE) and `QO := QI`.                  |
+| **RESET**  | `RESET`          | Q.E1         | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`.                 |
+| **DeInit** | `RESET`          | Q.E1         | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`.                 |
+| **DeInit** | `Q_INIT = FALSE` | INITO        | Sets `QO := FALSE` (if QI = TRUE) and `QO := QI`.                   |
+| **Set**    | `SET`            | Q.E1         | Sets `Q.D1 := FALSE` (if QI = TRUE) and `QO := QI`.                 |
+| **Set**    | `Q_INIT = FALSE` | Q.E1         | **Transitions** (excerpt):                                          |
 
 - START → Init: `INIT[QI = TRUE]`
 - Init → SET: `Q_INIT = TRUE`
@@ -101,12 +101,12 @@ The output `QO` is set to the current value of `QI` with each executed algorithm
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Special Feature |
-| --- | --- |
-| `E_SR` (Standard IEC 61499) | Pure set/reset flip-flop without toggle and without INIT symmetry. |
-| `E_RS` | Like E_SR, but Reset takes precedence. |
-| `E_Toggle` | Toggle function only, no Set/Reset, no Initialization. |
-| `AX_T_FF_SR_SYM_INIT` | Combines Set, Reset, **Toggle**, **Symmetric INIT Preset**, and Event Qualifier `QI`. |
+| Function Block              | Special Feature                                                                       |
+| --------------------------- | ------------------------------------------------------------------------------------- |
+| `E_SR` (Standard IEC 61499) | Pure set/reset flip-flop without toggle and without INIT symmetry.                    |
+| `E_RS`                      | Like E_SR, but Reset takes precedence.                                                |
+| `E_Toggle`                  | Toggle function only, no Set/Reset, no Initialization.                                |
+| `AX_T_FF_SR_SYM_INIT`       | Combines Set, Reset, **Toggle**, **Symmetric INIT Preset**, and Event Qualifier `QI`. |
 
 The function block described here thus offers greater flexibility for applications requiring multiple operating modes and a defined initial state.
 

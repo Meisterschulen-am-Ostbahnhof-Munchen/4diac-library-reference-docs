@@ -12,32 +12,32 @@ Der Funktionsblock **FIELDBUS_USINT_TO_SIGNAL_SCALED** dient der Umwandlung eine
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-| :--- | :--- | :--- |
-| `INIT` | EInit | Initialisierungsanfrage; mit den Parametern `SCALE` und `OFFSET` verknüpft. |
-| `REQ` | Event | Normale Ausführungsanfrage; mit dem Daten-Eingang `IN` verknüpft. |
+| Ereignis | Typ   | Beschreibung                                                                |
+| :------- | :---- | :-------------------------------------------------------------------------- |
+| `INIT`   | EInit | Initialisierungsanfrage; mit den Parametern `SCALE` und `OFFSET` verknüpft. |
+| `REQ`    | Event | Normale Ausführungsanfrage; mit dem Daten-Eingang `IN` verknüpft.           |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-| :--- | :--- | :--- |
-| `INITO` | EInit | Bestätigung der Initialisierung. |
-| `CNF` | Event | Bestätigung der Ausführung; mit den Ausgängen `OUT` und `VALID` verknüpft. |
+| Ereignis | Typ   | Beschreibung                                                               |
+| :------- | :---- | :------------------------------------------------------------------------- |
+| `INITO`  | EInit | Bestätigung der Initialisierung.                                           |
+| `CNF`    | Event | Bestätigung der Ausführung; mit den Ausgängen `OUT` und `VALID` verknüpft. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Initialwert | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `IN` | USINT | `BYTE_TO_USINT(NOT_AVAILABLE_B)` | Eingangssignal als vorzeichenloser 8‑Bit‑Wert. Der Initialwert entspricht dem Signal „nicht verfügbar“. |
-| `SCALE` | REAL | `REAL#1.0` | Skalierungsfaktor (Multiplikation). |
-| `OFFSET` | DINT | `DINT#0` | Offset, der nach der Skalierung addiert wird. |
+| Name     | Datentyp | Initialwert                      | Beschreibung                                                                                            |
+| :------- | :------- | :------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| `IN`     | USINT    | `BYTE_TO_USINT(NOT_AVAILABLE_B)` | Eingangssignal als vorzeichenloser 8‑Bit‑Wert. Der Initialwert entspricht dem Signal „nicht verfügbar“. |
+| `SCALE`  | REAL     | `REAL#1.0`                       | Skalierungsfaktor (Multiplikation).                                                                     |
+| `OFFSET` | DINT     | `DINT#0`                         | Offset, der nach der Skalierung addiert wird.                                                           |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Initialwert | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| `OUT` | REAL | `REAL#0.0` | Skalierter Ausgangswert. |
-| `VALID` | BOOL | `FALSE` | Gültigkeitsflag: `TRUE`, wenn das Eingangssignal gültig ist. |
+| Name    | Datentyp | Initialwert | Beschreibung                                                 |
+| :------ | :------- | :---------- | :----------------------------------------------------------- |
+| `OUT`   | REAL     | `REAL#0.0`  | Skalierter Ausgangswert.                                     |
+| `VALID` | BOOL     | `FALSE`     | Gültigkeitsflag: `TRUE`, wenn das Eingangssignal gültig ist. |
 
 ### **Adapter**
 
@@ -70,10 +70,10 @@ Das Verhalten spiegelt den Eingang 1:1 auf den Ausgang wider, sofern das Signal 
 
 Der Funktionsblock besitzt zwei elementare Zustände als einfacher FB:
 
-| Zustand | Aktion | Ausgangsereignis |
-| :--- | :--- | :--- |
-| `INIT` | Führe Algorithmus `INIT` aus (leer) | `INITO` |
-| `REQ` | Führe Algorithmus `REQ` aus | `CNF` |
+| Zustand | Aktion                              | Ausgangsereignis |
+| :------ | :---------------------------------- | :--------------- |
+| `INIT`  | Führe Algorithmus `INIT` aus (leer) | `INITO`          |
+| `REQ`   | Führe Algorithmus `REQ` aus         | `CNF`            |
 
 Es existieren keine weiteren Wartezustände – jeder eingehende Event führt sofort zur Bearbeitung des zugehörigen Algorithmus und zur Ausgabe des zugehörigen Ausgangsereignisses.
 
