@@ -30,14 +30,14 @@ The function block `AD_SPLIT_5_UNGATED` is a generic function block that splits 
 
 ### **Adapters**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AD` | `IN` | Socket (Input) | Incoming adapter signal, which is distributed to all outputs. |
-| `adapter::types::unidirectional::AD` | `OUT1` | Plug (Output) | First outgoing adapter, identical to the input signal. |
-| `adapter::types::unidirectional::AD` | `OUT2` | Plug (Output) | Second outgoing adapter. |
-| `adapter::types::unidirectional::AD` | `OUT3` | Plug (Output) | Third outgoing adapter. |
-| `adapter::types::unidirectional::AD` | `OUT4` | Plug (Output) | Fourth outgoing adapter. |
-| `adapter::types::unidirectional::AD` | `OUT5` | Plug (Output) | Fifth outgoing adapter. |
+| Type                                 | Name   | Direction      | Description                                                   |
+| ------------------------------------ | ------ | -------------- | ------------------------------------------------------------- |
+| `adapter::types::unidirectional::AD` | `IN`   | Socket (Input) | Incoming adapter signal, which is distributed to all outputs. |
+| `adapter::types::unidirectional::AD` | `OUT1` | Plug (Output)  | First outgoing adapter, identical to the input signal.        |
+| `adapter::types::unidirectional::AD` | `OUT2` | Plug (Output)  | Second outgoing adapter.                                      |
+| `adapter::types::unidirectional::AD` | `OUT3` | Plug (Output)  | Third outgoing adapter.                                       |
+| `adapter::types::unidirectional::AD` | `OUT4` | Plug (Output)  | Fourth outgoing adapter.                                      |
+| `adapter::types::unidirectional::AD` | `OUT5` | Plug (Output)  | Fifth outgoing adapter.                                       |
 
 ## Functionality
 

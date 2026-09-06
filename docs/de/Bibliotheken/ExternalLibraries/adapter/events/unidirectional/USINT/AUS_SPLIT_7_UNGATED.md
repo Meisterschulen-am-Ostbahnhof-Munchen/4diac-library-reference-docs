@@ -32,10 +32,10 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AUS` | Einheitliches AUS-Eingangssignal |
-| **Plug** (Ausgang) | `OUT1` – `OUT7` | `adapter::types::unidirectional::AUS` | Sieben parallel ausgegebene AUS-Signale |
+| Richtung             | Name            | Typ                                   | Beschreibung                            |
+| -------------------- | --------------- | ------------------------------------- | --------------------------------------- |
+| **Socket** (Eingang) | `IN`            | `adapter::types::unidirectional::AUS` | Einheitliches AUS-Eingangssignal        |
+| **Plug** (Ausgang)   | `OUT1` – `OUT7` | `adapter::types::unidirectional::AUS` | Sieben parallel ausgegebene AUS-Signale |
 
 ## Funktionsweise
 

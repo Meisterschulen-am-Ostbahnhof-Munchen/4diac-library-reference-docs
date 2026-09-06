@@ -12,34 +12,34 @@ Der Baustein **AX_FB_TON_LTIME** realisiert eine Einschaltverzögerung (On-Delay
 
 ### **Ereignis-Eingänge**  
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| REQ | `Event` | Normaler Ausführungsanstoß (nicht flankengetriggert); startet die Zeitmessung, wenn das Signal am Dateneingang `IN` oder am Adapter `IN.E1` aktiv ist. |
+| Name | Typ     | Beschreibung                                                                                                                                           |
+| ---- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| REQ  | `Event` | Normaler Ausführungsanstoß (nicht flankengetriggert); startet die Zeitmessung, wenn das Signal am Dateneingang `IN` oder am Adapter `IN.E1` aktiv ist. |
 
 ### **Ereignis-Ausgänge**  
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| CNF | `Event` | Bestätigung der Ausführung. Wird ausgelöst, sobald der Timer abläuft oder die Bedingung erfüllt ist. |
+| Name | Typ     | Beschreibung                                                                                         |
+| ---- | ------- | ---------------------------------------------------------------------------------------------------- |
+| CNF  | `Event` | Bestätigung der Ausführung. Wird ausgelöst, sobald der Timer abläuft oder die Bedingung erfüllt ist. |
 
 ### **Daten-Eingänge**  
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| PT | `LTIME` | Vorgabezeit (Preset Time) für die Einschaltverzögerung. |
+| Name | Typ     | Beschreibung                                            |
+| ---- | ------- | ------------------------------------------------------- |
+| PT   | `LTIME` | Vorgabezeit (Preset Time) für die Einschaltverzögerung. |
 
 ### **Daten-Ausgänge**  
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| ET | `LTIME` | Abgelaufene Zeit (Elapsed Time) seit dem Start der Zeitmessung. |
+| Name | Typ     | Beschreibung                                                    |
+| ---- | ------- | --------------------------------------------------------------- |
+| ET   | `LTIME` | Abgelaufene Zeit (Elapsed Time) seit dem Start der Zeitmessung. |
 
 ### **Adapter**  
 
-| Typ | Richtung | Beschreibung |
-|-----|----------|-------------|
+| Typ  | Richtung       | Beschreibung                                                                                                                                                                                  |
+| ---- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `IN` | Socket (Input) | Unidirektionaler AX‑Adapter für Eingangsdaten. Enthält ein Ereignis (`E1`) und einen Datenwert (`D1`). Das Ereignis startet die Zeitmessung; der Datenwert bestimmt den Timer‑Eingang (`IN`). |
-| `Q` | Plug (Output) | Unidirektionaler AX‑Adapter für Ausgangsdaten. Gibt das Ergebnis der Zeitprüfung aus: `1`, wenn die abgelaufene Zeit die Vorgabezeit erreicht hat, sonst `0`. |
+| `Q`  | Plug (Output)  | Unidirektionaler AX‑Adapter für Ausgangsdaten. Gibt das Ergebnis der Zeitprüfung aus: `1`, wenn die abgelaufene Zeit die Vorgabezeit erreicht hat, sonst `0`.                                 |
 
 ## Funktionsweise  
 

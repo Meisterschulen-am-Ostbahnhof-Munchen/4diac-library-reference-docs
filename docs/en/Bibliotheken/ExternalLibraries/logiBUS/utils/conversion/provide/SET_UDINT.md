@@ -12,32 +12,32 @@ The function block **SET_UDINT** is used to write a value from the data input `I
 
 ### **Event Inputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| `REQ` | Event | Normal execution job; triggers writing the input value to the output variable. |
+| Event | Data Type | Comment                                                                        |
+| ----- | --------- | ------------------------------------------------------------------------------ |
+| `REQ` | Event     | Normal execution job; triggers writing the input value to the output variable. |
 
 *Data associated with `REQ`:* `IN`, `OUT`
 
 ### **Event Outputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| `CNF` | Event | Execution confirmation; outputs once the value has been successfully assigned. |
+| Event | Data Type | Comment                                                                        |
+| ----- | --------- | ------------------------------------------------------------------------------ |
+| `CNF` | Event     | Execution confirmation; outputs once the value has been successfully assigned. |
 
 *Data associated with `CNF`:* `OUT`
 
 ### **Data Inputs**
 
-| Identifier | Data Type | Initial Value | Comment |
-| ------------ | ---------- | ------------- | ----------- |
-| `IN` | UDINT | 0 | Value to be written to the target variable. |
-| `OUT` (InOut) | UDINT | 0 | Target variable that functions as both an input (readable) and an output (writable). |
+| Identifier    | Data Type | Initial Value | Comment                                                                              |
+| ------------- | --------- | ------------- | ------------------------------------------------------------------------------------ |
+| `IN`          | UDINT     | 0             | Value to be written to the target variable.                                          |
+| `OUT` (InOut) | UDINT     | 0             | Target variable that functions as both an input (readable) and an output (writable). |
 
 ### **Data Outputs**
 
-| Identifier | Data Type | Comment |
-|------------|----------|-----------|
-| `OUT` (InOut) | UDINT | Same variable as the input; after execution, it contains the value of `IN`. |
+| Identifier    | Data Type | Comment                                                                     |
+| ------------- | --------- | --------------------------------------------------------------------------- |
+| `OUT` (InOut) | UDINT     | Same variable as the input; after execution, it contains the value of `IN`. |
 
 ### **Adapters**
 
@@ -63,9 +63,9 @@ The InOut variable `OUT` is both readable and writable. The assigned value remai
 
 The function block contains a single state, `REQ` (event handling):
 
-| State | Action | Output Event |
-|---------|--------|------------------|
-| `REQ` | Execute algorithm `REQ` (OUT := IN) | CNF |
+| State | Action                              | Output Event |
+| ----- | ----------------------------------- | ------------ |
+| `REQ` | Execute algorithm `REQ` (OUT := IN) | CNF          |
 
 After `CNF` is executed, the function block returns to its initial state and waits for the next `REQ` event.
 

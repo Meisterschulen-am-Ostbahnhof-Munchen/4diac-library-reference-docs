@@ -4,11 +4,11 @@ Der Funktionsbaustein **RS** ist ein bistabiles Element (Flip-Flop), bei dem das
 
 ## Schnittstelle
 
-| Typ | Name | Datentyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Eingang** | S | BOOL | Setz-Eingang (Set) |
-| **Eingang** | R1 | BOOL | Rücksetz-Eingang (Reset) |
-| **Ausgang** | Q1 | BOOL | Ausgangszustand |
+| Typ         | Name | Datentyp | Beschreibung             |
+| :---------- | :--- | :------- | :----------------------- |
+| **Eingang** | S    | BOOL     | Setz-Eingang (Set)       |
+| **Eingang** | R1   | BOOL     | Rücksetz-Eingang (Reset) |
+| **Ausgang** | Q1   | BOOL     | Ausgangszustand          |
 
 ## Funktion
 
@@ -16,12 +16,12 @@ Das Verhalten entspricht der **Tabelle 43** (Bistabile Standardfunktionsbaustein
 
 Die Logik wird durch folgende Wahrheitstabelle beschrieben:
 
-| S | R1 | Q1 (aktuell) | Beschreibung |
-| :---: | :---: | :---: | :--- |
-| 0 | 0 | Q1 (alt) | Zustand halten |
-| 0 | 1 | 0 | Rücksetzen |
-| 1 | 0 | 1 | Setzen |
-| 1 | 1 | 0 | **Vorrangig Rücksetzen** |
+| S   | R1  | Q1 (aktuell) | Beschreibung             |
+| :-: | :-: | :----------: | :----------------------- |
+| 0   | 0   | Q1 (alt)     | Zustand halten           |
+| 0   | 1   | 0            | Rücksetzen               |
+| 1   | 0   | 1            | Setzen                   |
+| 1   | 1   | 0            | **Vorrangig Rücksetzen** |
 
 *Anmerkung: Der Anfangszustand der Ausgangsvariable `Q1` ist standardmäßig `0` (FALSE).*
 

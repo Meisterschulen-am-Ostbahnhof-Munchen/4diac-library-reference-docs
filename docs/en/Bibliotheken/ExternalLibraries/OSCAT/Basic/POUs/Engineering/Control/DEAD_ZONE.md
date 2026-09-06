@@ -8,24 +8,24 @@ to 0.
 ### Event inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | X, L |
+| :--- | :------ | :--- |
+| REQ  |         | X, L |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| X | REAL | |
-| L | REAL | |
+| :--- | :--- | :------ |
+| X    | REAL |         |
+| L    | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | REAL | |
+| :--- | :--- | :------ |
+|      | REAL |         |

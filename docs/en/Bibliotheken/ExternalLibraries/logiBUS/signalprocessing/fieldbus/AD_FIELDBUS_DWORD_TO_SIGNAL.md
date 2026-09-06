@@ -12,37 +12,37 @@ The function block `AD_FIELDBUS_DWORD_TO_SIGNAL` is used to forward an incoming 
 
 The function block has only adapter interfaces; there are no separate event or data ports at the top level. The following adapters define the inputs and outputs:
 
-| Adapter | Type | Direction | Description |
-| --------- | ----- | ----------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AD` | Socket (Input) | Input data word and associated event |
-| `OUT` | `adapter::types::unidirectional::AD` | Plug (Output) | Filtered output data word (DWORD) |
-| `VALID` | `adapter::types::unidirectional::AX` | Plug (Output) | Validation signal (BOOL) of the current data word |
+| Adapter | Type                                 | Direction      | Description                                       |
+| ------- | ------------------------------------ | -------------- | ------------------------------------------------- |
+| `IN`    | `adapter::types::unidirectional::AD` | Socket (Input) | Input data word and associated event              |
+| `OUT`   | `adapter::types::unidirectional::AD` | Plug (Output)  | Filtered output data word (DWORD)                 |
+| `VALID` | `adapter::types::unidirectional::AX` | Plug (Output)  | Validation signal (BOOL) of the current data word |
 
 ### **Event Inputs** (via adapter `IN`)
 
-| Port | Description |
-|------|--------------|
+| Port | Description                               |
+| ---- | ----------------------------------------- |
 | `E1` | Event to start processing a new data word |
 
 ### **Event Outputs** (via adapters `OUT` and `VALID`)
 
-| Adapter | Port | Description |
-|---------|------|--------------|
-| `OUT` | `E1` | Signals that the filtered data word is present at the output |
+| Adapter | Port | Description                                                    |
+| ------- | ---- | -------------------------------------------------------------- |
+| `OUT`   | `E1` | Signals that the filtered data word is present at the output   |
 | `VALID` | `E1` | Signals that the validity status (TRUE/FALSE) has been updated |
 
 ### **Data Inputs** (via adapter `IN`)
 
-| Port | Type (assumed) | Description |
-|------|------------------|--------------|
-| `D1` | `DWORD` | The data word to be processed |
+| Port | Type (assumed) | Description                   |
+| ---- | -------------- | ----------------------------- |
+| `D1` | `DWORD`        | The data word to be processed |
 
 ### **Data Outputs** (via adapters `OUT` and `VALID`)
 
-| Adapter | Port | Type (assumed) | Description |
-|---------|------|------------------|--------------|
-| `OUT` | `D1` | `DWORD` | The filtered – possibly identical – data word |
-| `VALID` | `D1` | `BOOL` | `TRUE` if the attached data word is considered valid, otherwise `FALSE` |
+| Adapter | Port | Type (assumed) | Description                                                             |
+| ------- | ---- | -------------- | ----------------------------------------------------------------------- |
+| `OUT`   | `D1` | `DWORD`        | The filtered – possibly identical – data word                           |
+| `VALID` | `D1` | `BOOL`         | `TRUE` if the attached data word is considered valid, otherwise `FALSE` |
 
 ### **Adapters**
 
@@ -60,10 +60,12 @@ The interaction of the internal function blocks can be described in the followin
 
 - The (possibly identical) data word at `OUT`
 - A Boolean signal `VALID` indicating whether the data word is valid.
+
 1. After processing is complete, the internal function block (FB) signals with `CNF`:
 
 - The event is forwarded to `OUT.E1` → the output adapter releases the new data word.
 - Simultaneously, the event clocks the edge-triggered D flip-flop `E_D_FF` via its `CLK`.
+
 1. The flip-flop receives the current validity status (`VALID` signal) from `FIELDBUS_DWORD_TO_SIGNAL` at its `D` input and outputs it at its `Q` output.
 
 The flip-flop receives the current validity status (`VALID` signal) from `FIELDBUS_DWORD_TO_SIGNAL` at its `D` input and outputs it at its `Q` output. 5. The `EO` output of the flip-flop generates an event that is sent to `VALID.E1` – thus updating the validity status in sync with the data word.
@@ -82,10 +84,10 @@ In other words: The function block *mirrors* the input DWORD to the output, prov
 
 The function block (FB) does not have an explicit state machine, but operates purely on data flow. The internal flip-flop `E_D_FF` has two internal states:
 
-| State | Description |
-| --------- | --------------- |
+| State       | Description                                                                           |
+| ----------- | ------------------------------------------------------------------------------------- |
 | `Q = FALSE` | The currently transmitted `VALID` signal is `FALSE` (data word is considered invalid) |
-| `Q = TRUE` | The currently transmitted `VALID` signal is `TRUE` (data word is considered valid) |
+| `Q = TRUE`  | The currently transmitted `VALID` signal is `TRUE` (data word is considered valid)    |
 
 The state changes only on a rising edge at `CLK` (corresponds to the `CNF` event of the internal fieldbus module).
 

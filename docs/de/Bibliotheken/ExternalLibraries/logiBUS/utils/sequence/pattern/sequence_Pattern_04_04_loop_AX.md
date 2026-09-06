@@ -77,14 +77,14 @@ Der Baustein implementiert eine State-Machine (ECC), die zyklisch durch vier akt
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Ausgangslogik (Q1-Q4) | Nächster Zustand (Auto/Manuell) |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Ruhezustand | Inaktiv | sState_01 (via `START_S1`) |
-| **sState_01** | Schritt 1 | P_S1 | sState_02 |
-| **sState_02** | Schritt 2 | P_S2 | sState_03 |
-| **sState_03** | Schritt 3 | P_S3 | sState_04 |
-| **sState_04** | Schritt 4 | P_S4 | sState_01 (Loop) |
-| **sRESET** | Reset-Logik | Alle FALSE | xSTART |
+| Zustand       | Beschreibung | Ausgangslogik (Q1-Q4) | Nächster Zustand (Auto/Manuell) |
+| :------------ | :----------- | :-------------------- | :------------------------------ |
+| **xSTART**    | Ruhezustand  | Inaktiv               | sState_01 (via `START_S1`)      |
+| **sState_01** | Schritt 1    | P_S1                  | sState_02                       |
+| **sState_02** | Schritt 2    | P_S2                  | sState_03                       |
+| **sState_03** | Schritt 3    | P_S3                  | sState_04                       |
+| **sState_04** | Schritt 4    | P_S4                  | sState_01 (Loop)                |
+| **sRESET**    | Reset-Logik  | Alle FALSE            | xSTART                          |
 
 ## Anwendungsszenarien
 

@@ -28,10 +28,10 @@ Auch auf dieser Ebene sind keine dedizierten Ereignis-Ausgänge vorhanden; die A
 
 ### **Adapter**
 
-| Name      | Richtung | Typ                                      | Beschreibung                                |
-|-----------|----------|------------------------------------------|---------------------------------------------|
-| `AULI_IN` | Socket   | `adapter::types::unidirectional::AULI`   | ULINT-Eingangsadapter (analoger Wert)       |
-| `AI_OUT`  | Plug     | `adapter::types::unidirectional::AI`     | INT-Ausgangsadapter (konvertierter Wert)    |
+| Name      | Richtung | Typ                                    | Beschreibung                             |
+| --------- | -------- | -------------------------------------- | ---------------------------------------- |
+| `AULI_IN` | Socket   | `adapter::types::unidirectional::AULI` | ULINT-Eingangsadapter (analoger Wert)    |
+| `AI_OUT`  | Plug     | `adapter::types::unidirectional::AI`   | INT-Ausgangsadapter (konvertierter Wert) |
 
 ## Funktionsweise
 
@@ -71,11 +71,11 @@ Interner Ablauf (vereinfacht):
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein            | Eingabetyp | Ausgabetyp | Beschreibung                                   |
-|---------------------|------------|------------|------------------------------------------------|
-| `AULI_TO_AI`        | AULI (ULINT) | AI (INT) | Konvertiert ganze Adapter-Schnittstellen.      |
-| `F_ULINT_TO_INT`    | ULINT      | INT        | Nur Datenkonvertierung, keine Adapter.         |
-| `AI_TO_AULI` (ggf.) | AI (INT)   | AULI (ULINT) | Umgekehrte Richtung (nicht vorhanden).       |
+| Baustein            | Eingabetyp   | Ausgabetyp   | Beschreibung                              |
+| ------------------- | ------------ | ------------ | ----------------------------------------- |
+| `AULI_TO_AI`        | AULI (ULINT) | AI (INT)     | Konvertiert ganze Adapter-Schnittstellen. |
+| `F_ULINT_TO_INT`    | ULINT        | INT          | Nur Datenkonvertierung, keine Adapter.    |
+| `AI_TO_AULI` (ggf.) | AI (INT)     | AULI (ULINT) | Umgekehrte Richtung (nicht vorhanden).    |
 
 Der wesentliche Unterschied zu reinen Datenkonvertierungsbausteinen liegt in der Adapter-Ein-/Ausgabe, die eine vollständige Schnittstellenumsetzung ermöglicht.
 

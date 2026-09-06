@@ -12,27 +12,27 @@ Composite-Funktionsblock zur Konvertierung eines AR-Adapters (REAL) in einen ALR
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name               | Beschreibung                             |
+| ------------------ | ---------------------------------------- |
 | **E1** (von AR_IN) | Ereignis zur Auslösung der Datenübergabe |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name                 | Beschreibung                                                   |
+| -------------------- | -------------------------------------------------------------- |
 | **E1** (von ALR_OUT) | Ereignis, das nach erfolgreicher Konvertierung ausgegeben wird |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| **D1** (von AR_IN) | REAL | 32‑Bit Gleitkommazahl |
+| Name               | Datentyp | Beschreibung          |
+| ------------------ | -------- | --------------------- |
+| **D1** (von AR_IN) | REAL     | 32‑Bit Gleitkommazahl |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| **D1** (von ALR_OUT) | LREAL | 64‑Bit Gleitkommazahl |
+| Name                 | Datentyp | Beschreibung          |
+| -------------------- | -------- | --------------------- |
+| **D1** (von ALR_OUT) | LREAL    | 64‑Bit Gleitkommazahl |
 
 ### **Adapter**
 

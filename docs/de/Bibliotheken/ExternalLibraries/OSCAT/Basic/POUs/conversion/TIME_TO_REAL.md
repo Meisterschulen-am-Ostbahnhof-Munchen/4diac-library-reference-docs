@@ -7,23 +7,23 @@ Converts TIME to REAL
 ### Event Inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | TM |
+| :--- | :------ | :--- |
+| REQ  |         | TM   |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| TM | TIME | |
+| :--- | :--- | :------ |
+| TM   | TIME |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | REAL | |
+| :--- | :--- | :------ |
+|      | REAL |         |

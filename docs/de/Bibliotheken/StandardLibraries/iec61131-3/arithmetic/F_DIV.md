@@ -73,19 +73,19 @@ Der **F_DIV** ist ein standardkonformer Funktionsbaustein zur Division numerisch
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_DIV  | F_MUL  | F_ADD  |
-|---------------|--------|--------|--------|
-| Operation     | Division | Multiplikation | Addition |
-| Eingänge      | 2      | 2      | 2      |
-| Typunterstützung | ANY_NUM | ANY_NUM | ANY_NUM |
+| Feature          | F_DIV    | F_MUL          | F_ADD    |
+| ---------------- | -------- | -------------- | -------- |
+| Operation        | Division | Multiplikation | Addition |
+| Eingänge         | 2        | 2              | 2        |
+| Typunterstützung | ANY_NUM  | ANY_NUM        | ANY_NUM  |
 
 ## Unterstützte Datentypen
 
-| Kategorie      | Beispiele               |
-|----------------|-------------------------|
-| Ganzzahlen     | INT, DINT, UDINT       |
-| Fließkomma     | REAL, LREAL            |
-| Typkombination | INT/REAL, DINT/LREAL   |
+| Kategorie      | Beispiele            |
+| -------------- | -------------------- |
+| Ganzzahlen     | INT, DINT, UDINT     |
+| Fließkomma     | REAL, LREAL          |
+| Typkombination | INT/REAL, DINT/LREAL |
 
 ## 🛠️ Zugehörige Übungen
 

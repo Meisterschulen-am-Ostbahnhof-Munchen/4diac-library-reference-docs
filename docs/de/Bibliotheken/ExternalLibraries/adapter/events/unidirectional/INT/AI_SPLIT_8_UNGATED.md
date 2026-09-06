@@ -30,10 +30,10 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| **IN** | `adapter::types::unidirectional::AI` | Socket (Eingang) | Empfängt das analoge Signal, das auf alle Ausgänge verteilt wird. |
-| **OUT1** – **OUT8** | `adapter::types::unidirectional::AI` | Plug (Ausgang) | Acht identische Ausgänge, die das am Eingang anliegende Signal bereitstellen. |
+| Name                | Typ                                  | Richtung         | Beschreibung                                                                  |
+| ------------------- | ------------------------------------ | ---------------- | ----------------------------------------------------------------------------- |
+| **IN**              | `adapter::types::unidirectional::AI` | Socket (Eingang) | Empfängt das analoge Signal, das auf alle Ausgänge verteilt wird.             |
+| **OUT1** – **OUT8** | `adapter::types::unidirectional::AI` | Plug (Ausgang)   | Acht identische Ausgänge, die das am Eingang anliegende Signal bereitstellen. |
 
 ## Funktionsweise
 

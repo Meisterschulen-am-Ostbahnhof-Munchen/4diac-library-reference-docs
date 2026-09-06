@@ -5,8 +5,8 @@ Funk_DI Struct
 ## Structure
 
 | Name | Type | Initial Value |
-| :--- | :--- | :--- |
-| Pin | SINT | 127 |
+| :--- | :--- | :------------ |
+| Pin  | SINT | 127           |
 
 ## 🛠️ Zugehörige Übungen
 

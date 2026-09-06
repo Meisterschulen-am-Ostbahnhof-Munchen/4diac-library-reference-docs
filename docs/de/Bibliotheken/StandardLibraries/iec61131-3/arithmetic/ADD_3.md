@@ -63,11 +63,11 @@ Der **ADD_3** ist eine erweiterte Version des Addierers zur Berechnung der Summe
 
 ## ⚖️ Vergleich mit ADD_2
 
-| Feature        | ADD_3  | ADD_2  |
-|---------------|--------|--------|
-| Eingänge      | 3      | 2      |
-| Berechnung    | IN1+IN2+IN3 | IN1+IN2 |
-| Performance   | Höhere Effizienz bei 3 Werten | Leichtgewichtiger |
+| Feature     | ADD_3                         | ADD_2             |
+| ----------- | ----------------------------- | ----------------- |
+| Eingänge    | 3                             | 2                 |
+| Berechnung  | IN1+IN2+IN3                   | IN1+IN2           |
+| Performance | Höhere Effizienz bei 3 Werten | Leichtgewichtiger |
 
 ## Fehlerbehandlung
 

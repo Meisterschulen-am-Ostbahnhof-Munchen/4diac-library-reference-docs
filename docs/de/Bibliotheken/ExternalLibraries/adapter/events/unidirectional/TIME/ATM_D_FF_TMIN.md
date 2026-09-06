@@ -12,21 +12,21 @@ Der Funktionsblock `ATM_D_FF_TMIN` realisiert ein taktgesteuertes D‑Flipflop (
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                        |
-|-------|--------|----------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung (mit `Tmin`) |
+| Name | Typ   | Kommentar                                |
+| ---- | ----- | ---------------------------------------- |
+| INIT | EInit | Initialisierungsanforderung (mit `Tmin`) |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                        |
-|-------|--------|----------------------------------|
-| INITO | EInit  | Initialisierungsbestätigung      |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name  | Typ    | Kommentar                                      |
-|-------|--------|------------------------------------------------|
-| Tmin  | TIME   | Minimaler zeitlicher Abstand zwischen zwei EO-Ereignissen |
+| Name | Typ  | Kommentar                                                 |
+| ---- | ---- | --------------------------------------------------------- |
+| Tmin | TIME | Minimaler zeitlicher Abstand zwischen zwei EO-Ereignissen |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Der Baustein besitzt keine direkten Datenausgänge. Der gespeicherte Wert wird �
 
 ### **Adapter**
 
-| Richtung | Name | Typ                                      | Kommentar            |
-|----------|------|------------------------------------------|----------------------|
-| Eingang (Socket) | I    | `adapter::types::unidirectional::ATM`    | Zu übernehmender Wert |
-| Ausgang (Plug)   | Q    | `adapter::types::unidirectional::ATM`    | Gespeicherter Wert    |
+| Richtung         | Name | Typ                                   | Kommentar             |
+| ---------------- | ---- | ------------------------------------- | --------------------- |
+| Eingang (Socket) | I    | `adapter::types::unidirectional::ATM` | Zu übernehmender Wert |
+| Ausgang (Plug)   | Q    | `adapter::types::unidirectional::ATM` | Gespeicherter Wert    |
 
 Der Adapter `ATM` bietet je einen Ereignis- und einen Datenkanal (`E1`, `D1` für Eingang; `E1`, `D1` für Ausgang).
 

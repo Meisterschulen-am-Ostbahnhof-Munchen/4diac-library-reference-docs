@@ -35,12 +35,12 @@ Der RT_E_DELAY Funktionsblock verzögert ein Ereignis um eine definierte Zeit (D
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2008, 2014 ACIN, Profactor GmbH |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac-Paket | eclipse4diac::rtevents |
+| Attribut    | Wert                                |
+| :---------- | :---------------------------------- |
+| Copyright   | (c) 2008, 2014 ACIN, Profactor GmbH |
+| Lizenz      | EPL-2.0                             |
+| Version     | 3.0 (2025-04-14, Patrick Aigner)    |
+| 4diac-Paket | eclipse4diac::rtevents              |
 
 ---
 

@@ -16,27 +16,27 @@ Er wird typischerweise in landwirtschaftlichen Steuerungen eingesetzt, um Sensor
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Beschreibung |
-|------|-------|--------------|
+| Name | Typ   | Beschreibung                                                      |
+| ---- | ----- | ----------------------------------------------------------------- |
 | REQ  | Event | Startet die Umrechnung eines Rohwerts (mit `u32Raw` und `stObj`). |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Beschreibung |
-|------|-------|--------------|
+| Name | Typ   | Beschreibung                                                                  |
+| ---- | ----- | ----------------------------------------------------------------------------- |
 | CNF  | Event | Bestätigt, dass die Berechnung abgeschlossen und der Ausgangswert gültig ist. |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Beschreibung |
-|--------|-------|--------------|
-| u32Raw | UDINT | Der rohe Integerwert (z. B. aus einem ISOBUS‑Message‑Objekt). |
+| Name   | Typ                   | Beschreibung                                                                                         |
+| ------ | --------------------- | ---------------------------------------------------------------------------------------------------- |
+| u32Raw | UDINT                 | Der rohe Integerwert (z. B. aus einem ISOBUS‑Message‑Objekt).                                        |
 | stObj  | `NumericObjectPool_S` | Struktur, die den Offset (`i32Offset : DINT`) und den Skalierungsfaktor (`r32Scale : REAL`) enthält. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ  | Beschreibung |
-|------|------|--------------|
+| Name                   | Typ  | Beschreibung                                                      |
+| ---------------------- | ---- | ----------------------------------------------------------------- |
 | (kein expliziter Name) | REAL | Der berechnete physikalische Wert, ausgegeben als Gleitkommazahl. |
 
 ### **Adapter**

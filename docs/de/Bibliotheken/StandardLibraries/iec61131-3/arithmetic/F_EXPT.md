@@ -78,11 +78,11 @@ Der **F_EXPT** ist ein mathematischer Funktionsbaustein zur Berechnung von Poten
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal        | F_EXPT  | F_LN    | F_POWER |
-|----------------|---------|---------|---------|
-| Funktion       | a^b     | ln(a)   | a^b     |
-| Eingangstypen  | ANY_REAL| ANY_REAL| ANY_NUM |
-| Genauigkeit    | Hoch    | Hoch    | Mittel  |
+| Merkmal       | F_EXPT   | F_LN     | F_POWER |
+| ------------- | -------- | -------- | ------- |
+| Funktion      | a^b      | ln(a)    | a^b     |
+| Eingangstypen | ANY_REAL | ANY_REAL | ANY_NUM |
+| Genauigkeit   | Hoch     | Hoch     | Mittel  |
 
 ## Fazit
 

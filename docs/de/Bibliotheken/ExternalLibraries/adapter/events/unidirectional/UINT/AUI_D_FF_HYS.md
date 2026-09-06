@@ -12,21 +12,21 @@ Der Funktionsbaustein `AUI_D_FF_HYS` realisiert ein Daten-Latch (D-Flipflop) mit
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                |
-|----------|-------|--------------------------|
+| Ereignis | Typ   | Kommentar                 |
+| -------- | ----- | ------------------------- |
 | INIT     | EInit | Setzt die Hysteresebreite |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar                |
-|----------|-------|--------------------------|
+| Ereignis | Typ   | Kommentar                       |
+| -------- | ----- | ------------------------------- |
 | INITO    | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Daten        | Typ  | Kommentar                        |
-|--------------|------|----------------------------------|
-| HYSTERESIS   | UINT | Breite des Hysteresebandes       |
+| Daten      | Typ  | Kommentar                  |
+| ---------- | ---- | -------------------------- |
+| HYSTERESIS | UINT | Breite des Hysteresebandes |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine dedizierten Datenausgänge; der latched Wert wird über den Adapter `Q` be
 
 ### **Adapter**
 
-| Name | Typ                                 | Richtung | Kommentar                |
-|------|--------------------------------------|----------|--------------------------|
-| I    | adapter::types::unidirectional::AUI  | Socket   | Wert zum Latchen         |
-| Q    | adapter::types::unidirectional::AUI  | Plug     | Gelatchter Wert          |
+| Name | Typ                                 | Richtung | Kommentar        |
+| ---- | ----------------------------------- | -------- | ---------------- |
+| I    | adapter::types::unidirectional::AUI | Socket   | Wert zum Latchen |
+| Q    | adapter::types::unidirectional::AUI | Plug     | Gelatchter Wert  |
 
 Die Adapter `I` und `Q` vom Typ `AUI` (unidirektional) transportieren sowohl Daten (z.B. `D1`) als auch zugehörige Ereignisse (z.B. `E1`).
 

@@ -32,13 +32,13 @@ Keine.
 
 Der Baustein kommuniziert ausschließlich über Adapter vom Typ `adapter::types::unidirectional::AUS`. Es handelt sich um einen unidirektionalen Adapter, der ein boolesches Signal (AUS-Kommando) überträgt.
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket (Eingang)** | `IN` | `adapter::types::unidirectional::AUS` | Empfängt das ursprüngliche AUS-Signal. |
-| **Plug (Ausgang)** | `OUT1` | `adapter::types::unidirectional::AUS` | Erster ausgehender AUS-Pfad. |
-| **Plug (Ausgang)** | `OUT2` | `adapter::types::unidirectional::AUS` | Zweiter ausgehender AUS-Pfad. |
-| **Plug (Ausgang)** | `OUT3` | `adapter::types::unidirectional::AUS` | Dritter ausgehender AUS-Pfad. |
-| **Plug (Ausgang)** | `OUT4` | `adapter::types::unidirectional::AUS` | Vierter ausgehender AUS-Pfad. |
+| Richtung             | Name   | Typ                                   | Beschreibung                           |
+| -------------------- | ------ | ------------------------------------- | -------------------------------------- |
+| **Socket (Eingang)** | `IN`   | `adapter::types::unidirectional::AUS` | Empfängt das ursprüngliche AUS-Signal. |
+| **Plug (Ausgang)**   | `OUT1` | `adapter::types::unidirectional::AUS` | Erster ausgehender AUS-Pfad.           |
+| **Plug (Ausgang)**   | `OUT2` | `adapter::types::unidirectional::AUS` | Zweiter ausgehender AUS-Pfad.          |
+| **Plug (Ausgang)**   | `OUT3` | `adapter::types::unidirectional::AUS` | Dritter ausgehender AUS-Pfad.          |
+| **Plug (Ausgang)**   | `OUT4` | `adapter::types::unidirectional::AUS` | Vierter ausgehender AUS-Pfad.          |
 
 ## Funktionsweise
 
@@ -67,12 +67,12 @@ Der Baustein besitzt keine Zustandsmaschine. Die Ausgangssignale folgen direkt d
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Besonderheit |
-| ---------- | ---------- | -------------- |
-| `AUS_SPLIT_2` | Verteilt ein AUS-Signal auf zwei Ausgänge | Weniger Ports, kompakter. |
-| `AUS_SPLIT_4_UNGATED` | Verteilt auf vier Ausgänge | Dieses FB. |
-| `AUS_SPLIT_N` | Parametrierbarer Splitter (z. B. durch generische Adapterlisten) | Flexiblere Anzahl, aber aufwändiger in der Konfiguration. |
-| `AUS_MERGE` | Fasst mehrere AUS-Eingänge zu einem Ausgang zusammen | Gegenstück zum Splitter. |
+| Baustein              | Funktion                                                         | Besonderheit                                              |
+| --------------------- | ---------------------------------------------------------------- | --------------------------------------------------------- |
+| `AUS_SPLIT_2`         | Verteilt ein AUS-Signal auf zwei Ausgänge                        | Weniger Ports, kompakter.                                 |
+| `AUS_SPLIT_4_UNGATED` | Verteilt auf vier Ausgänge                                       | Dieses FB.                                                |
+| `AUS_SPLIT_N`         | Parametrierbarer Splitter (z. B. durch generische Adapterlisten) | Flexiblere Anzahl, aber aufwändiger in der Konfiguration. |
+| `AUS_MERGE`           | Fasst mehrere AUS-Eingänge zu einem Ausgang zusammen             | Gegenstück zum Splitter.                                  |
 
 Der `AUS_SPLIT_4_UNGATED` liegt in der Mitte zwischen einem einfachen 2‑fach-Splitter und einem vollparametrierbaren Splitter. Er ist ideal, wenn exakt vier Ausgänge benötigt werden – ohne zusätzliche Konfiguration.
 

@@ -32,13 +32,13 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AS` | IN | Socket | Eingehender AS-Signalpfad (Eingang) |
-| `adapter::types::unidirectional::AS` | OUT1 | Plug | Erster Ausgang (identisch zu IN) |
-| `adapter::types::unidirectional::AS` | OUT2 | Plug | Zweiter Ausgang (identisch zu IN) |
-| `adapter::types::unidirectional::AS` | OUT3 | Plug | Dritter Ausgang (identisch zu IN) |
-| `adapter::types::unidirectional::AS` | OUT4 | Plug | Vierter Ausgang (identisch zu IN) |
+| Typ                                  | Name | Richtung | Beschreibung                        |
+| ------------------------------------ | ---- | -------- | ----------------------------------- |
+| `adapter::types::unidirectional::AS` | IN   | Socket   | Eingehender AS-Signalpfad (Eingang) |
+| `adapter::types::unidirectional::AS` | OUT1 | Plug     | Erster Ausgang (identisch zu IN)    |
+| `adapter::types::unidirectional::AS` | OUT2 | Plug     | Zweiter Ausgang (identisch zu IN)   |
+| `adapter::types::unidirectional::AS` | OUT3 | Plug     | Dritter Ausgang (identisch zu IN)   |
+| `adapter::types::unidirectional::AS` | OUT4 | Plug     | Vierter Ausgang (identisch zu IN)   |
 
 ## Funktionsweise
 

@@ -28,13 +28,13 @@ Es gibt keinen direkten Daten-Ausgang. Der zusammengeführte DWORD‑Wert wird �
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| BYTE_00 | `adapter::types::unidirectional::AB` | Socket | Byte 0 (niederwertigstes Byte) |
-| BYTE_01 | `adapter::types::unidirectional::AB` | Socket | Byte 1 |
-| BYTE_02 | `adapter::types::unidirectional::AB` | Socket | Byte 2 |
-| BYTE_03 | `adapter::types::unidirectional::AB` | Socket | Byte 3 (höchstwertiges Byte) |
-| OUT | `adapter::types::unidirectional::AD` | Plug | 32‑Bit DWORD‑Ausgang |
+| Name    | Typ                                  | Richtung | Beschreibung                   |
+| ------- | ------------------------------------ | -------- | ------------------------------ |
+| BYTE_00 | `adapter::types::unidirectional::AB` | Socket   | Byte 0 (niederwertigstes Byte) |
+| BYTE_01 | `adapter::types::unidirectional::AB` | Socket   | Byte 1                         |
+| BYTE_02 | `adapter::types::unidirectional::AB` | Socket   | Byte 2                         |
+| BYTE_03 | `adapter::types::unidirectional::AB` | Socket   | Byte 3 (höchstwertiges Byte)   |
+| OUT     | `adapter::types::unidirectional::AD` | Plug     | 32‑Bit DWORD‑Ausgang           |
 
 ## Funktionsweise
 

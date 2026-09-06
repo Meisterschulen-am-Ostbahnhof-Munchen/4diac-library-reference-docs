@@ -1,6 +1,6 @@
-![GEN_SQR](GEN_SQR.svg)
-
 # GEN_SQR
+
+![GEN_SQR](GEN_SQR.svg)
 
 this signal generator generates a square wave output
 this signal generator generates a square wave output. The square wave signal is defined by period time (PT),
@@ -14,32 +14,32 @@ in addition to an analog output Out there is a second boolean output Q.
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INIT | InitRequest | PT, AM, OS, DC, DL |
-| REQ | Normal Execution Request | PT, AM, OS, DC, DL |
-| RST | Reset | |
+| Name | Comment                  | With               |
+| :--- | :----------------------- | :----------------- |
+| INIT | InitRequest              | PT, AM, OS, DC, DL |
+| REQ  | Normal Execution Request | PT, AM, OS, DC, DL |
+| RST  | Reset                    |                    |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INITO | Init Confirmation | Q, Out |
-| CNF | Execution Confirmation | Q, Out |
+| Name  | Comment                | With   |
+| :---- | :--------------------- | :----- |
+| INITO | Init Confirmation      | Q, Out |
+| CNF   | Execution Confirmation | Q, Out |
 
 ### Input Vars
 
-| Name | Type | Initial Value | Comment |
-| :--- | :--- | :--- | :--- |
-| PT | TIME | | Period Time |
-| AM | REAL | 1.0 | Amplitude |
-| OS | REAL | | offset |
-| DC | REAL | 0.5 | Duty Cycle |
-| DL | REAL | | Delay |
+| Name | Type | Initial Value | Comment     |
+| :--- | :--- | :------------ | :---------- |
+| PT   | TIME |               | Period Time |
+| AM   | REAL | 1.0           | Amplitude   |
+| OS   | REAL |               | offset      |
+| DC   | REAL | 0.5           | Duty Cycle  |
+| DL   | REAL |               | Delay       |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| Q | BOOL | Pulse Output |
-| Out | REAL | Signal Output |
+| Name | Type | Comment       |
+| :--- | :--- | :------------ |
+| Q    | BOOL | Pulse Output  |
+| Out  | REAL | Signal Output |

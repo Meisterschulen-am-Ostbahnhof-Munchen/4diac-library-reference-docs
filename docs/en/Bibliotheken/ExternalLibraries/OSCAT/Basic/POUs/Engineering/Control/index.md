@@ -1,7 +1,5 @@
 # Control
 
-# Control
-
 ## 🎧 Podcast
 
 - [Eclipse 4diac: Revolutionizing Industrial Control with Open-Source Cyber-Physical Systems](https://podcasters.spotify.com/pod/show/eclipse-4diac-en/episodes/Eclipse-4diac-Revolutionizing-Industrial-Control-with-Open-Source-Cyber-Physical-Systems-e368lqu)

@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | `AW_IN` | `adapter::types::unidirectional::AW` | Erwartet einen `WORD`-Wert über den Datenport `D1` und ein Ereignis über `E1`. |
-| Plug (Ausgang) | `AUS_OUT` | `adapter::types::unidirectional::AUS` | Liefert den konvertierten `USINT`-Wert über den Datenport `D1` und ein Bestätigungsereignis über `E1`. |
+| Richtung         | Name      | Typ                                   | Beschreibung                                                                                           |
+| ---------------- | --------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Socket (Eingang) | `AW_IN`   | `adapter::types::unidirectional::AW`  | Erwartet einen `WORD`-Wert über den Datenport `D1` und ein Ereignis über `E1`.                         |
+| Plug (Ausgang)   | `AUS_OUT` | `adapter::types::unidirectional::AUS` | Liefert den konvertierten `USINT`-Wert über den Datenport `D1` und ein Bestätigungsereignis über `E1`. |
 
 ## Funktionsweise
 

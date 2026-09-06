@@ -12,36 +12,36 @@ Der Funktionsblock **IA_WBSD** (ISOBUS Adapter for Wheel Based Speed and Distanc
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar              |
+| -------- | ----- | ---------------------- |
 | INIT     | EInit | Service Initialization |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar              |
+| -------- | ----- | ---------------------- |
 | INITO    | EInit | Initialization Confirm |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ  | Kommentar                                        |
+| ---- | ---- | ------------------------------------------------ |
 | QI   | BOOL | Event Input Qualifier (Initialisierungsfreigabe) |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ   | Kommentar |
-|--------|-------|-----------|
-| QO     | BOOL  | Event Output Qualifier (Initialisierungsergebnis) |
-| STATUS | STRING| Statusmeldung (z. B. Fehler oder Erfolg) |
+| Name   | Typ    | Kommentar                                         |
+| ------ | ------ | ------------------------------------------------- |
+| QO     | BOOL   | Event Output Qualifier (Initialisierungsergebnis) |
+| STATUS | STRING | Statusmeldung (z. B. Fehler oder Erfolg)          |
 
 ### **Adapter**
 
-| Adapter  | Typ | Kommentar |
-|----------|-----|-----------|
-| SPEED    | adapter::types::unidirectional::AUI | Wheel‑based machine speed (unidirektional, analoger Wert) |
-| DISTANCE | adapter::types::unidirectional::AUDI | Wheel‑based machine distance (unidirektional) |
-| TIMEOUT  | adapter::types::unidirectional::AX   | Timeout Status (unidirektional) |
+| Adapter  | Typ                                  | Kommentar                                                 |
+| -------- | ------------------------------------ | --------------------------------------------------------- |
+| SPEED    | adapter::types::unidirectional::AUI  | Wheel‑based machine speed (unidirektional, analoger Wert) |
+| DISTANCE | adapter::types::unidirectional::AUDI | Wheel‑based machine distance (unidirektional)             |
+| TIMEOUT  | adapter::types::unidirectional::AX   | Timeout Status (unidirektional)                           |
 
 ## Funktionsweise
 

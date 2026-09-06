@@ -12,22 +12,22 @@ Der Funktionsblock **AUS_D_FF_HYS_TMIN** realisiert ein datengetriggertes Flip-F
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Variablen         | Beschreibung                                      |
-|----------|-------|-----------------------|---------------------------------------------------|
-| `INIT`   | EInit | `HYSTERESIS`, `Tmin`  | Initialisierungsanforderung; setzt Hysterese und Mindestzeit. |
+| Ereignis | Typ   | Mit Variablen        | Beschreibung                                                  |
+| -------- | ----- | -------------------- | ------------------------------------------------------------- |
+| `INIT`   | EInit | `HYSTERESIS`, `Tmin` | Initialisierungsanforderung; setzt Hysterese und Mindestzeit. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Variablen | Beschreibung                                  |
-|----------|-------|---------------|-----------------------------------------------|
+| Ereignis | Typ   | Mit Variablen | Beschreibung                                     |
+| -------- | ----- | ------------- | ------------------------------------------------ |
 | `INITO`  | EInit | –             | Bestätigung der abgeschlossenen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name         | Typ      | Beschreibung                                                     |
-|--------------|----------|------------------------------------------------------------------|
-| `HYSTERESIS` | ANY_NUM  | Hystereseband – Schwellwertdifferenz, die über‑/unterschritten werden muss, damit ein neuer Wert gelatcht wird. |
-| `Tmin`       | TIME     | Minimale Zeitspanne zwischen zwei eingehenden Ereignissen (Inter‑arrival‑Time). |
+| Name         | Typ     | Beschreibung                                                                                                    |
+| ------------ | ------- | --------------------------------------------------------------------------------------------------------------- |
+| `HYSTERESIS` | ANY_NUM | Hystereseband – Schwellwertdifferenz, die über‑/unterschritten werden muss, damit ein neuer Wert gelatcht wird. |
+| `Tmin`       | TIME    | Minimale Zeitspanne zwischen zwei eingehenden Ereignissen (Inter‑arrival‑Time).                                 |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Der Funktionsblock **AUS_D_FF_HYS_TMIN** realisiert ein datengetriggertes Flip-F
 
 ### **Adapter**
 
-| Adapter | Richtung    | Typ                                 | Beschreibung                                                              |
-|---------|-------------|--------------------------------------|---------------------------------------------------------------------------|
-| `I`     | Socket (In) | `adapter::types::unidirectional::AUS`| Empfängt das zu latchende Ereignis und den dazugehörigen Datenwert.      |
-| `Q`     | Plug (Out)  | `adapter::types::unidirectional::AUS`| Gibt das verarbeitete Ereignis und den gelatchten Datenwert nach außen.   |
+| Adapter | Richtung    | Typ                                   | Beschreibung                                                            |
+| ------- | ----------- | ------------------------------------- | ----------------------------------------------------------------------- |
+| `I`     | Socket (In) | `adapter::types::unidirectional::AUS` | Empfängt das zu latchende Ereignis und den dazugehörigen Datenwert.     |
+| `Q`     | Plug (Out)  | `adapter::types::unidirectional::AUS` | Gibt das verarbeitete Ereignis und den gelatchten Datenwert nach außen. |
 
 ## Funktionsweise
 
@@ -78,12 +78,12 @@ Da der Baustein kein eigenes Zustandsdiagramm besitzt (die Logik liegt im intern
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                     | Eigenschaften                                                                 |
-|------------------------------|-------------------------------------------------------------------------------|
-| Standard‑D‑Flip‑Flop         | Latcht bei jeder steigenden Flanke ohne Hysterese oder Zeitbegrenzung.        |
-| `E_D_FF_HYS` (ohne Tmin)     | Nur Hysterese, keine zeitliche Entprellung.                                   |
-| `E_D_FF_TMIN` (ohne Hys)     | Nur Mindestzeit, keine Hysterese.                                             |
-| **`AUS_D_FF_HYS_TMIN`**      | Kombiniert Hysterese **und** Mindestzeit – robuster gegen Rauschen und Bursts.|
+| Baustein                 | Eigenschaften                                                                  |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| Standard‑D‑Flip‑Flop     | Latcht bei jeder steigenden Flanke ohne Hysterese oder Zeitbegrenzung.         |
+| `E_D_FF_HYS` (ohne Tmin) | Nur Hysterese, keine zeitliche Entprellung.                                    |
+| `E_D_FF_TMIN` (ohne Hys) | Nur Mindestzeit, keine Hysterese.                                              |
+| **`AUS_D_FF_HYS_TMIN`**  | Kombiniert Hysterese **und** Mindestzeit – robuster gegen Rauschen und Bursts. |
 
 Der vorliegende Baustein eignet sich daher besonders dann, wenn beide Effekte (Signaltoleranz und zeitliche Begrenzung) gleichzeitig erforderlich sind.
 

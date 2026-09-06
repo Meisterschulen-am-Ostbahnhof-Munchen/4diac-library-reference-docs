@@ -30,23 +30,23 @@ Keine. Das zusammengesetzte LWORD wird über den Adapter `OUT` ausgegeben.
 
 **Sockets (Eingangsadapter)**
 
-| Name | Datentyp | Beschreibung |
-| ------ | ---------- | -------------- |
+| Name      | Datentyp                             | Beschreibung                   |
+| --------- | ------------------------------------ | ------------------------------ |
 | `BYTE_00` | `adapter::types::unidirectional::AB` | Byte 0 (niederwertigstes Byte) |
-| `BYTE_01` | `adapter::types::unidirectional::AB` | Byte 1 |
-| `BYTE_02` | `adapter::types::unidirectional::AB` | Byte 2 |
-| `BYTE_03` | `adapter::types::unidirectional::AB` | Byte 3 |
-| `BYTE_04` | `adapter::types::unidirectional::AB` | Byte 4 |
-| `BYTE_05` | `adapter::types::unidirectional::AB` | Byte 5 |
-| `BYTE_06` | `adapter::types::unidirectional::AB` | Byte 6 |
-| `BYTE_07` | `adapter::types::unidirectional::AD` | Byte 7 (höchstwertiges Byte) |
+| `BYTE_01` | `adapter::types::unidirectional::AB` | Byte 1                         |
+| `BYTE_02` | `adapter::types::unidirectional::AB` | Byte 2                         |
+| `BYTE_03` | `adapter::types::unidirectional::AB` | Byte 3                         |
+| `BYTE_04` | `adapter::types::unidirectional::AB` | Byte 4                         |
+| `BYTE_05` | `adapter::types::unidirectional::AB` | Byte 5                         |
+| `BYTE_06` | `adapter::types::unidirectional::AB` | Byte 6                         |
+| `BYTE_07` | `adapter::types::unidirectional::AD` | Byte 7 (höchstwertiges Byte)   |
 
 Jeder Byte-Adapter stellt ein Ereignis (`E1`) und ein Datenbyte (`D1`) bereit.
 
 **Plugs (Ausgangsadapter)**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
+| Name  | Datentyp                             | Beschreibung                                                                     |
+| ----- | ------------------------------------ | -------------------------------------------------------------------------------- |
 | `OUT` | `adapter::types::unidirectional::AL` | Ausgang: zusammengesetztes LWORD; Ereignisausgang über `E1`, Datenwert über `D1` |
 
 ## Funktionsweise

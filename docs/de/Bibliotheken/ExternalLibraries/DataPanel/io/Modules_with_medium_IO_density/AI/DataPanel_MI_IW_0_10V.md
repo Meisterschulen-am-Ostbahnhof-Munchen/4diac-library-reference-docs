@@ -12,36 +12,36 @@ Der Funktionsblock **DataPanel_MI_IW_0_10V** ist ein service-orientierter Schnit
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mitgeführte Daten | Beschreibung |
-|----------|-----|-------------------|--------------|
-| `INIT` | `EInit` | `QI`, `PARAMS`, `u8SAMember`, `Input`, `AnalogInput_hysteresis` | Dienstinitialisierung: Konfiguration der Hardware-Anbindung |
-| `REQ` | `Event` | `QI` | Dienstanforderung: Auslösen einer Messwertabfrage |
+| Ereignis | Typ     | Mitgeführte Daten                                               | Beschreibung                                                |
+| -------- | ------- | --------------------------------------------------------------- | ----------------------------------------------------------- |
+| `INIT`   | `EInit` | `QI`, `PARAMS`, `u8SAMember`, `Input`, `AnalogInput_hysteresis` | Dienstinitialisierung: Konfiguration der Hardware-Anbindung |
+| `REQ`    | `Event` | `QI`                                                            | Dienstanforderung: Auslösen einer Messwertabfrage           |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mitgeführte Daten | Beschreibung |
-| ---------- | ----- | ------------------- | -------------- |
-| `INITO` | `EInit` | `QO`, `STATUS` | Bestätigung der Initialisierung |
-| `CNF` | `Event` | `QO`, `STATUS`, `IN` | Bestätigung der Messwertabfrage |
-| `IND` | `Event` | `QO`, `STATUS`, `IN` | Asynchrone Anzeige (z. B. spontane Messwertaktualisierung aus der Ressource) |
+| Ereignis | Typ     | Mitgeführte Daten    | Beschreibung                                                                 |
+| -------- | ------- | -------------------- | ---------------------------------------------------------------------------- |
+| `INITO`  | `EInit` | `QO`, `STATUS`       | Bestätigung der Initialisierung                                              |
+| `CNF`    | `Event` | `QO`, `STATUS`, `IN` | Bestätigung der Messwertabfrage                                              |
+| `IND`    | `Event` | `QO`, `STATUS`, `IN` | Asynchrone Anzeige (z. B. spontane Messwertaktualisierung aus der Ressource) |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-| ------ | ----- | ------------- | -------------- |
-| `QI` | `BOOL` | – | Eingangsqualifizierer (steuert die Ausführung) |
-| `PARAMS` | `STRING` | – | Dienstparameter (z. B. Kommunikationskonfiguration) |
-| `u8SAMember` | `USINT` | `MI::MI_00` | Knoten‑SA-Adresse (gültiger Bereich 224…239) |
-| `Input` | `DataPanel::io::MI::AI::DataPanel_MI_AI_S` | `Invalid` | Auswahl des analogen Eingangs (z. B. `AnalogInput_1A` … `AnalogInput_8B`) |
-| `AnalogInput_hysteresis` | `WORD` | – | Hysteresewert für die Signalglättung |
+| Name                     | Typ                                        | Initialwert | Beschreibung                                                              |
+| ------------------------ | ------------------------------------------ | ----------- | ------------------------------------------------------------------------- |
+| `QI`                     | `BOOL`                                     | –           | Eingangsqualifizierer (steuert die Ausführung)                            |
+| `PARAMS`                 | `STRING`                                   | –           | Dienstparameter (z. B. Kommunikationskonfiguration)                       |
+| `u8SAMember`             | `USINT`                                    | `MI::MI_00` | Knoten‑SA-Adresse (gültiger Bereich 224…239)                              |
+| `Input`                  | `DataPanel::io::MI::AI::DataPanel_MI_AI_S` | `Invalid`   | Auswahl des analogen Eingangs (z. B. `AnalogInput_1A` … `AnalogInput_8B`) |
+| `AnalogInput_hysteresis` | `WORD`                                     | –           | Hysteresewert für die Signalglättung                                      |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| `QO` | `BOOL` | Ausgangsqualifizierer (zeigt gültige Verarbeitung an) |
-| `STATUS` | `STRING` | Dienststatus (Fehler-/Erfolgsmeldung) |
-| `IN` | `WORD` | Digitalisierter Analogwert (0…10 V, roher WORD‑Wert) |
+| Name     | Typ      | Beschreibung                                          |
+| -------- | -------- | ----------------------------------------------------- |
+| `QO`     | `BOOL`   | Ausgangsqualifizierer (zeigt gültige Verarbeitung an) |
+| `STATUS` | `STRING` | Dienststatus (Fehler-/Erfolgsmeldung)                 |
+| `IN`     | `WORD`   | Digitalisierter Analogwert (0…10 V, roher WORD‑Wert)  |
 
 ### **Adapter**
 
@@ -85,11 +85,11 @@ Eine detaillierte Zustandsmaschine (ECC) liegt im XML‑Modell nicht vor, das be
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Spannungsbereich | Plattform | Besonderheiten |
-| ---------- | ------------------ | ----------- | ---------------- |
-| `DataPanel_MI_IW_0_10V` | 0‑10 V | HR DataPanel MI | Hysterese, SA‑Adressierung |
-| `DataPanel_MI_IW_4_20mA` | 4‑20 mA | HR DataPanel MI | Analoge Stromeingänge |
-| `GenericAnalogInput` | variabel | Standard IEC 61131 | Allgemeiner Eingang, keine Hysterese |
+| Baustein                 | Spannungsbereich | Plattform          | Besonderheiten                       |
+| ------------------------ | ---------------- | ------------------ | ------------------------------------ |
+| `DataPanel_MI_IW_0_10V`  | 0‑10 V           | HR DataPanel MI    | Hysterese, SA‑Adressierung           |
+| `DataPanel_MI_IW_4_20mA` | 4‑20 mA          | HR DataPanel MI    | Analoge Stromeingänge                |
+| `GenericAnalogInput`     | variabel         | Standard IEC 61131 | Allgemeiner Eingang, keine Hysterese |
 
 Der vorliegende Baustein ist speziell für die DataPanel‑MI‑Hardware optimiert und bietet eine enge Kopplung an die gerätespezifischen Parameter.
 

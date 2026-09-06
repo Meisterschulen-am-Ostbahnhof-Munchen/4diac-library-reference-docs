@@ -17,7 +17,7 @@ Since this component is designed as an adapter coupler, it does not have any cla
 
 *No direct data outputs available.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -38,7 +38,7 @@ Since this component is designed as an adapter coupler, it does not have any cla
 - **Plugs (Output Interfaces):**
 - `OUT` (Type: `adapter::types::unidirectional::ALR`): Output carrying the selected signal.
 
-- ## Functionality
+## Functionality
 
 This module implements a software-controlled 1-out-of-2 selection based on adapters:
 
@@ -48,6 +48,7 @@ This module implements a software-controlled 1-out-of-2 selection based on adapt
 
 - If the signal at `G.D1` equals `FALSE`, the value of `IN0.D1` is passed to the output.
 - If the signal at `G.D1` equals `TRUE`, the value of `IN1.D1` is passed to the output.
+
 1. **Output Triggering:** Any change to one of the inputs or the selector triggers an update of the output adapter `OUT`, signaled by the event `OUT.E1` and the new data value `OUT.D1`.
 
 - **Precise Data Processing (LREAL):** The internal data paths are designed for the data type `LREAL`, enabling lossless transmission of highly accurate analog measurements.
@@ -56,10 +57,10 @@ This module implements a software-controlled 1-out-of-2 selection based on adapt
 
 The behavior of the function block is determined by the data and event flow in the internal network:
 
-| State Selector `G.D1` | Channel Passed | Output Value `OUT.D1` | Output Event `OUT.E1` |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Channel 0 (`IN0`) | Value of `IN0.D1` | Triggers on events on `IN0.E1` or changes to `G` |
-| `TRUE` | Channel 1 (`IN1`) | Value of `IN1.D1` | Triggered by events on `IN1.E1` or a change in `G` |
+| State Selector `G.D1` | Channel Passed    | Output Value `OUT.D1` | Output Event `OUT.E1`                              |
+| :-------------------- | :---------------- | :-------------------- | :------------------------------------------------- |
+| `FALSE`               | Channel 0 (`IN0`) | Value of `IN0.D1`     | Triggers on events on `IN0.E1` or changes to `G`   |
+| `TRUE`                | Channel 1 (`IN1`) | Value of `IN1.D1`     | Triggered by events on `IN1.E1` or a change in `G` |
 
 - **Sensor Redundancy / Failover:** Switching between a primary sensor (`IN0`) and a backup sensor (`IN1`) in case of failure or signal interference, controlled by a diagnostic signal at `G`.
 - **Setpoint Switching:** Switching between an automatic setpoint and a manual target value in process control loops.
@@ -68,8 +69,6 @@ The behavior of the function block is determined by the data and event flow in t
 Compared to a classic IEC 61131-3 `SEL` function block, `ALR_AX_SEL_ALR` completely encapsulates the signal paths in adapter structures. This significantly reduces the visual complexity in 4diac application diagrams, as only structured adapter lines need to be drawn instead of multiple individual connections.
 
 The `ALR_AX_SEL_ALR` is a robust and reusable function block for structured signal switching in IEC 61499. Through the consistent use of adapters and the support of high-resolution `LREAL` data, it is ideally suited for modern control concepts in industrial automation.
-
-## Functionality
 
 ## Technical Features
 

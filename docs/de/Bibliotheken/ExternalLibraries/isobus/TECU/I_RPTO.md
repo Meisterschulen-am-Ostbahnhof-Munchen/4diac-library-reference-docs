@@ -35,27 +35,27 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65091) für die
 
 ## Zapfwellenparameter
 
-| Parameter | Typ | Beschreibung | SPN | Bit-Länge | Skalierung |
-| ----------- | ------ | -------------- | ----- | ----------- | ------------ |
-| `REAR_PTO_OUTP_SHAFT_SPEED` | UINT | Aktuelle Drehzahl | 1883 | 16 | 0.125 1/min/bit |
-| `REAR_PTO_OUTP_SH_SPEED_SET` | UINT | Soll-Drehzahl | 1885 | 16 | 0.125 1/min/bit |
-| `REAR_PTO_ENGAGEMENT` | BYTE | Kupplungszustand | 2408 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_MODE` | BYTE | Betriebsmodus | 1890 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_ECONOMY_MODE` | BYTE | Economy-Modus | 1892 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_ENGAGEMENT_REQ` | BYTE | Kupplungsanforderung | 5156 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_MODE_REQ_STATUS` | BYTE | Modusanforderung | 5157 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_ECONOMY_MODE_REQ_STAT` | BYTE | Economy-Modus-Anforderung | 5158 | 2 | 4 Zustände/2 bit |
-| `REAR_PTO_SH_SPEED_LIMIT_STAT` | BYTE | Drehzahlbegrenzung | 5159 | 3 | 8 Zustände/3 bit |
-| `REAR_PTO_EXIT_REASON_CODE` | BYTE | Fehlergrundcode | 5820 | 6 | 64 Zustände/6 bit |
+| Parameter                        | Typ  | Beschreibung              | SPN  | Bit-Länge | Skalierung        |
+| -------------------------------- | ---- | ------------------------- | ---- | --------- | ----------------- |
+| `REAR_PTO_OUTP_SHAFT_SPEED`      | UINT | Aktuelle Drehzahl         | 1883 | 16        | 0.125 1/min/bit   |
+| `REAR_PTO_OUTP_SH_SPEED_SET`     | UINT | Soll-Drehzahl             | 1885 | 16        | 0.125 1/min/bit   |
+| `REAR_PTO_ENGAGEMENT`            | BYTE | Kupplungszustand          | 2408 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_MODE`                  | BYTE | Betriebsmodus             | 1890 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_ECONOMY_MODE`          | BYTE | Economy-Modus             | 1892 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_ENGAGEMENT_REQ`        | BYTE | Kupplungsanforderung      | 5156 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_MODE_REQ_STATUS`       | BYTE | Modusanforderung          | 5157 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_ECONOMY_MODE_REQ_STAT` | BYTE | Economy-Modus-Anforderung | 5158 | 2         | 4 Zustände/2 bit  |
+| `REAR_PTO_SH_SPEED_LIMIT_STAT`   | BYTE | Drehzahlbegrenzung        | 5159 | 3         | 8 Zustände/3 bit  |
+| `REAR_PTO_EXIT_REASON_CODE`      | BYTE | Fehlergrundcode           | 5820 | 6         | 64 Zustände/6 bit |
 
 ## Betriebsmodi
 
-| Code | Modus | Beschreibung |
-| ------ | ------- | -------------- |
-| 0 | Standby | Bereitschaftsmodus |
-| 1 | Geschwindigkeitsmodus | Konstante Drehzahl |
-| 2 | Lastmodus | Lastabhängige Regelung |
-| 3 | Reserviert | Herstellerspezifisch |
+| Code | Modus                 | Beschreibung           |
+| ---- | --------------------- | ---------------------- |
+| 0    | Standby               | Bereitschaftsmodus     |
+| 1    | Geschwindigkeitsmodus | Konstante Drehzahl     |
+| 2    | Lastmodus             | Lastabhängige Regelung |
+| 3    | Reserviert            | Herstellerspezifisch   |
 
 ## Funktionsweise
 
@@ -87,12 +87,12 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65091) für die
 
 ## ⚖️ Vergleich mit ähnlichen Systemen
 
-| Feature | I_RPTO | Standard | Premium |
-| --------- | -------- | ---------- | --------- |
-| Drehzahlgenauigkeit | ±0.2% | ±1% | ±0.1% |
-| Betriebsmodi | 4 | 2 | 6 |
-| Diagnoseumfang | 64 Codes | 8 Codes | 128 Codes |
-| Reaktionszeit | <100ms | 200ms | 50ms |
+| Feature             | I_RPTO   | Standard | Premium   |
+| ------------------- | -------- | -------- | --------- |
+| Drehzahlgenauigkeit | ±0.2%    | ±1%      | ±0.1%     |
+| Betriebsmodi        | 4        | 2        | 6         |
+| Diagnoseumfang      | 64 Codes | 8 Codes  | 128 Codes |
+| Reaktionszeit       | <100ms   | 200ms    | 50ms      |
 
 ## 🛠️ Zugehörige Übungen
 

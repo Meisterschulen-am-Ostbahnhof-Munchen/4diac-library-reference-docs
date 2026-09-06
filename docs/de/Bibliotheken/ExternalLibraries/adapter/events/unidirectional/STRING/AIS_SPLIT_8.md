@@ -28,17 +28,17 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name  | Typ                              | Beschreibung                                      |
-|----------|-------|----------------------------------|---------------------------------------------------|
-| Eingang  | IN    | `adapter::types::unidirectional::AIS` | Eingehendes AIS-Signal, das verteilt werden soll. |
-| Ausgang  | OUT1  | `adapter::types::unidirectional::AIS` | Erster Ausgangskanal (identisch zu IN).           |
-| Ausgang  | OUT2  | `adapter::types::unidirectional::AIS` | Zweiter Ausgangskanal (identisch zu IN).          |
-| Ausgang  | OUT3  | `adapter::types::unidirectional::AIS` | Dritter Ausgangskanal (identisch zu IN).          |
-| Ausgang  | OUT4  | `adapter::types::unidirectional::AIS` | Vierter Ausgangskanal (identisch zu IN).          |
-| Ausgang  | OUT5  | `adapter::types::unidirectional::AIS` | Fünfter Ausgangskanal (identisch zu IN).          |
-| Ausgang  | OUT6  | `adapter::types::unidirectional::AIS` | Sechster Ausgangskanal (identisch zu IN).         |
-| Ausgang  | OUT7  | `adapter::types::unidirectional::AIS` | Siebter Ausgangskanal (identisch zu IN).          |
-| Ausgang  | OUT8  | `adapter::types::unidirectional::AIS` | Achter Ausgangskanal (identisch zu IN).           |
+| Richtung | Name | Typ                                   | Beschreibung                                      |
+| -------- | ---- | ------------------------------------- | ------------------------------------------------- |
+| Eingang  | IN   | `adapter::types::unidirectional::AIS` | Eingehendes AIS-Signal, das verteilt werden soll. |
+| Ausgang  | OUT1 | `adapter::types::unidirectional::AIS` | Erster Ausgangskanal (identisch zu IN).           |
+| Ausgang  | OUT2 | `adapter::types::unidirectional::AIS` | Zweiter Ausgangskanal (identisch zu IN).          |
+| Ausgang  | OUT3 | `adapter::types::unidirectional::AIS` | Dritter Ausgangskanal (identisch zu IN).          |
+| Ausgang  | OUT4 | `adapter::types::unidirectional::AIS` | Vierter Ausgangskanal (identisch zu IN).          |
+| Ausgang  | OUT5 | `adapter::types::unidirectional::AIS` | Fünfter Ausgangskanal (identisch zu IN).          |
+| Ausgang  | OUT6 | `adapter::types::unidirectional::AIS` | Sechster Ausgangskanal (identisch zu IN).         |
+| Ausgang  | OUT7 | `adapter::types::unidirectional::AIS` | Siebter Ausgangskanal (identisch zu IN).          |
+| Ausgang  | OUT8 | `adapter::types::unidirectional::AIS` | Achter Ausgangskanal (identisch zu IN).           |
 
 ## Funktionsweise
 

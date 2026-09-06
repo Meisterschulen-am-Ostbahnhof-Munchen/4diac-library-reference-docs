@@ -12,21 +12,21 @@ The function block **SET_LINT** is used to write a value of type `LINT` (64-bit 
 
 ### **Event Inputs**
 
-| Name | Type | Description | With Variables |
-|------|-------|---------------------------------------|----------------|
-| REQ | Event | Triggers Write Operation | IN, OUT |
+| Name | Type  | Description              | With Variables |
+| ---- | ----- | ------------------------ | -------------- |
+| REQ  | Event | Triggers Write Operation | IN, OUT        |
 
 ### **Event Outputs**
 
-| Name | Type | Description | With Variables |
-|------|-------|---------------------------------------|----------------|
-| CNF | Event | Confirmation after successful write | OUT |
+| Name | Type  | Description                         | With Variables |
+| ---- | ----- | ----------------------------------- | -------------- |
+| CNF  | Event | Confirmation after successful write | OUT            |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Description |
-|------|------|--------------|-----------------------------|
-| IN | LINT | 0 | The value to be written |
+| Name | Type | Initial Value | Description             |
+| ---- | ---- | ------------- | ----------------------- |
+| IN   | LINT | 0             | The value to be written |
 
 ### **Data Outputs**
 

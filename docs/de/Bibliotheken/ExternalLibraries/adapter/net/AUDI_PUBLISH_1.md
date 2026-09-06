@@ -31,8 +31,8 @@ Der Funktionsblock **AUDI_PUBLISH_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                  | Richtung         | Beschreibung                     |
+| ------- | ------------------------------------ | ---------------- | -------------------------------- |
 | IN      | adapter::types::unidirectional::AUDI | Socket (Eingang) | Zu veröffentlichender UDINT-Wert |
 
 ## Funktionsweise

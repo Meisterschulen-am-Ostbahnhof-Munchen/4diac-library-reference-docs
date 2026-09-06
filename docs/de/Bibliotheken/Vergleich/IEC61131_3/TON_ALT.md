@@ -4,12 +4,12 @@ Der Funktionsbaustein **TON** (Timer On-Delay) implementiert eine Einschaltverz�
 
 ## Schnittstelle
 
-| Typ | Name | Datentyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Eingang** | IN | BOOL | Startsignal |
-| **Eingang** | PT | TIME | Preset Time (Verzögerungszeit) |
-| **Ausgang** | Q | BOOL | Ausgangssignal |
-| **Ausgang** | ET | TIME | Elapsed Time (verstrichene Zeit) |
+| Typ         | Name | Datentyp | Beschreibung                     |
+| :---------- | :--- | :------- | :------------------------------- |
+| **Eingang** | IN   | BOOL     | Startsignal                      |
+| **Eingang** | PT   | TIME     | Preset Time (Verzögerungszeit)   |
+| **Ausgang** | Q    | BOOL     | Ausgangssignal                   |
+| **Ausgang** | ET   | TIME     | Elapsed Time (verstrichene Zeit) |
 
 ## Funktion
 

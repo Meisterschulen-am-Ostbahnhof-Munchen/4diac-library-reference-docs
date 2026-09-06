@@ -12,22 +12,22 @@ The function block **ALI_D_FF_HYS_TMIN** implements a data-driven D flip-flop wi
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|-------|-----------|
+| Name | Type  | Comment                                                                  |
+| ---- | ----- | ------------------------------------------------------------------------ |
 | INIT | EInit | Initialization request – sets the hysteresis width and the minimum time. |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|-------|-----------|
+| Name  | Type  | Comment                                    |
+| ----- | ----- | ------------------------------------------ |
 | INITO | EInit | Confirmation of successful initialization. |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-| ------------ | ------ | ----------- |
-| HYSTERESIS | LINT | Hysteresis band as an integer value (LINT). |
-| Tmin | TIME | Minimum time between two output events (Inter-Disposal Time). |
+| Name       | Type | Comment                                                       |
+| ---------- | ---- | ------------------------------------------------------------- |
+| HYSTERESIS | LINT | Hysteresis band as an integer value (LINT).                   |
+| Tmin       | TIME | Minimum time between two output events (Inter-Disposal Time). |
 
 ### **Data Outputs**
 
@@ -71,6 +71,7 @@ The function block goes through the following states:
 
 - *Hysteresis violated:* The value is ignored, returning to **IDLE**.
 - *Hysteresis satisfied:* Transition to state **WAIT_TMIN**.
+
 1. **WAIT_TMIN** – The new value is saved; release is delayed by **Tmin**.
 
 - After the time has elapsed, output is made via **Q**, and the data returns to **IDLE**.
@@ -85,11 +86,11 @@ A formal state machine is not visible via the XML interface, but it can be deduc
 
 ## Comparison with Similar Components
 
-| Component | Hysteresis | Minimum Time | Adapter Interface |
-| ---------- | ----------- | ------------- | ---------------------- |
-| `E_D_FF` (simple) | No | No | No (direct I/O) |
-| `E_D_FF_HYS` | Yes | No | No |
-| `ALI_D_FF_HYS_TMIN` | Yes | Yes | Yes (adapter usage) |
+| Component           | Hysteresis | Minimum Time | Adapter Interface   |
+| ------------------- | ---------- | ------------ | ------------------- |
+| `E_D_FF` (simple)   | No         | No           | No (direct I/O)     |
+| `E_D_FF_HYS`        | Yes        | No           | No                  |
+| `ALI_D_FF_HYS_TMIN` | Yes        | Yes          | Yes (adapter usage) |
 
 The function block described here combines the advantages of hysteresis and minimum time intervals and, thanks to its adapter interface, is particularly well-suited for a modular, event-driven architecture according to IEC 61499.
 

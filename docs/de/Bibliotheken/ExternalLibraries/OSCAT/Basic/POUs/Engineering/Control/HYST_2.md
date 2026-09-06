@@ -10,27 +10,27 @@ a separate output mid is set if the input stays between low and high value.
 
 ### Event Inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | IN, VAL, HYS |
+| Name | Comment | With         |
+| :--- | :------ | :----------- |
+| REQ  |         | IN, VAL, HYS |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | Q, WIN |
+| Name | Comment | With   |
+| :--- | :------ | :----- |
+| CNF  |         | Q, WIN |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| IN | REAL | |
-| VAL | REAL | |
-| HYS | REAL | |
+| :--- | :--- | :------ |
+| IN   | REAL |         |
+| VAL  | REAL |         |
+| HYS  | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| Q | BOOL | |
-| WIN | BOOL | |
+| :--- | :--- | :------ |
+| Q    | BOOL |         |
+| WIN  | BOOL |         |

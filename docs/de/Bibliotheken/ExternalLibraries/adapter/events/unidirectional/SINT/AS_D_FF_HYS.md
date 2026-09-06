@@ -12,20 +12,20 @@ Der Funktionsblock **AS_D_FF_HYS** realisiert ein datengetaktetes Flip-Flop (D-L
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ    | Kommentar           | Mit Daten |
-|--------|--------|---------------------|-----------|
-| `INIT` | EInit  | Setzt den Hysterese-Wert | `HYSTERESIS` |
+| Name   | Typ   | Kommentar                | Mit Daten    |
+| ------ | ----- | ------------------------ | ------------ |
+| `INIT` | EInit | Setzt den Hysterese-Wert | `HYSTERESIS` |
 
 ### **Ereignis-Ausgänge**
 
-| Name    | Typ    | Kommentar            |
-|---------|--------|----------------------|
-| `INITO` | EInit  | Bestätigung der INIT-Verarbeitung |
+| Name    | Typ   | Kommentar                         |
+| ------- | ----- | --------------------------------- |
+| `INITO` | EInit | Bestätigung der INIT-Verarbeitung |
 
 ### **Daten-Eingänge**
 
-| Name         | Typ  | Kommentar                     |
-|--------------|------|-------------------------------|
+| Name         | Typ  | Kommentar                                |
+| ------------ | ---- | ---------------------------------------- |
 | `HYSTERESIS` | SINT | Hysterese-Bandbreite (ganzzahliger Wert) |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge – der Ausgangswert wird über den Adapter `Q` be
 
 ### **Adapter**
 
-| Richtung | Name | Typ                                     | Kommentar                          |
-|----------|------|-----------------------------------------|------------------------------------|
-| Socket   | `I`  | `adapter::types::unidirectional::AS`    | Eingangssignal (Wert und Takt)     |
-| Plug     | `Q`  | `adapter::types::unidirectional::AS`    | Ausgangssignal (gelatcht mit Hysterese) |
+| Richtung | Name | Typ                                  | Kommentar                               |
+| -------- | ---- | ------------------------------------ | --------------------------------------- |
+| Socket   | `I`  | `adapter::types::unidirectional::AS` | Eingangssignal (Wert und Takt)          |
+| Plug     | `Q`  | `adapter::types::unidirectional::AS` | Ausgangssignal (gelatcht mit Hysterese) |
 
 Die Adapter vom Typ `AS` (unidirectional) besitzen typischerweise einen Ereignis-Port `E1` und einen Daten-Port `D1`. Der Socket `I` liefert über `I.E1` das Taktsignal und über `I.D1` den Datenwert, der gelatcht werden soll. Der Plug `Q` gibt über `Q.E1` ein Ereignis und über `Q.D1` den gefilterten Ausgangswert aus.
 
@@ -69,11 +69,11 @@ Der FB besitzt **keine explizite Zustandsmaschine**, die nach außen sichtbar is
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein          | Eigenschaft                                         | Unterschied zu AS_D_FF_HYS                          |
-|-------------------|-----------------------------------------------------|-----------------------------------------------------|
-| `E_D_FF`          | Klassisches D-Flip-Flop ohne Hysterese              | Keine Filterung; Ausgang folgt jedem Takt.          |
-| `E_D_FF_HYS`      | D-Flip-Flop mit Hysterese (gleiche Logik)           | Kein eigener `INIT`-Eingang; Hysterese wird ggf. über Daten gesetzt. |
-| `AS_FF_HYS`       | Flip-Flop mit Hysterese und eigener Adapter-Schnittstelle | Möglicherweise andere Kopplung, ähnliche Funktion. |
+| Baustein     | Eigenschaft                                               | Unterschied zu AS_D_FF_HYS                                           |
+| ------------ | --------------------------------------------------------- | -------------------------------------------------------------------- |
+| `E_D_FF`     | Klassisches D-Flip-Flop ohne Hysterese                    | Keine Filterung; Ausgang folgt jedem Takt.                           |
+| `E_D_FF_HYS` | D-Flip-Flop mit Hysterese (gleiche Logik)                 | Kein eigener `INIT`-Eingang; Hysterese wird ggf. über Daten gesetzt. |
+| `AS_FF_HYS`  | Flip-Flop mit Hysterese und eigener Adapter-Schnittstelle | Möglicherweise andere Kopplung, ähnliche Funktion.                   |
 
 ## Fazit
 

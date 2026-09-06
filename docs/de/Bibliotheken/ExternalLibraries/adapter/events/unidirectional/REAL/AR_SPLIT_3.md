@@ -28,12 +28,12 @@ Keine – alle Daten werden über die drei Ausgangsadapter (`OUT1`, `OUT2`, `OUT
 
 ### **Adapter**
 
-| Richtung | Name  | Typ                        | Beschreibung                                    |
-|----------|-------|----------------------------|-------------------------------------------------|
-| Socket   | `IN`  | `adapter::types::unidirectional::AR` | Eingehender Adapter als Quelle der Daten/Ereignisse. |
-| Plug     | `OUT1`| `adapter::types::unidirectional::AR` | Erster ausgehender Adapter (Ziel 1).            |
-| Plug     | `OUT2`| `adapter::types::unidirectional::AR` | Zweiter ausgehender Adapter (Ziel 2).           |
-| Plug     | `OUT3`| `adapter::types::unidirectional::AR` | Dritter ausgehender Adapter (Ziel 3).           |
+| Richtung | Name   | Typ                                  | Beschreibung                                         |
+| -------- | ------ | ------------------------------------ | ---------------------------------------------------- |
+| Socket   | `IN`   | `adapter::types::unidirectional::AR` | Eingehender Adapter als Quelle der Daten/Ereignisse. |
+| Plug     | `OUT1` | `adapter::types::unidirectional::AR` | Erster ausgehender Adapter (Ziel 1).                 |
+| Plug     | `OUT2` | `adapter::types::unidirectional::AR` | Zweiter ausgehender Adapter (Ziel 2).                |
+| Plug     | `OUT3` | `adapter::types::unidirectional::AR` | Dritter ausgehender Adapter (Ziel 3).                |
 
 ## Funktionsweise
 
@@ -60,11 +60,11 @@ Der Baustein ist **zustandslos** (kombinatorisch). Es gibt keine internen Zustä
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein       | Beschreibung                                                                 |
-|----------------|-----------------------------------------------------------------------------|
-| **AR_SPLIT_2** | Verteilung auf zwei Ausgänge – kompakter für kleinere Anwendungen.          |
-| **AR_SPLIT_N** | Verteilung auf eine konfigurierbare Anzahl von Ausgängen (generischer).     |
-| **AR_CONNECT** | Einfache 1:1-Verbindung (keine Verteilung).                                 |
+| Baustein       | Beschreibung                                                            |
+| -------------- | ----------------------------------------------------------------------- |
+| **AR_SPLIT_2** | Verteilung auf zwei Ausgänge – kompakter für kleinere Anwendungen.      |
+| **AR_SPLIT_N** | Verteilung auf eine konfigurierbare Anzahl von Ausgängen (generischer). |
+| **AR_CONNECT** | Einfache 1:1-Verbindung (keine Verteilung).                             |
 
 Im Gegensatz zu dedizierten Splittern mit Daten‑ oder Ereignis‑Ein‑/Ausgängen arbeitet der `AR_SPLIT_3` ausschließlich über Adapter, was ihn besonders flexibel und typenunabhängig macht.
 

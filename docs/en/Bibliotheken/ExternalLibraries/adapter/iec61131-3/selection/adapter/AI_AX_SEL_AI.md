@@ -18,7 +18,7 @@ The function block does not have traditional discrete inputs and outputs for dat
 
 *No direct data outputs available (fully encapsulated via adapters).*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -50,11 +50,13 @@ The module's internal logic controls the data and event flow as follows:
 
 - Each time an event (`E1`) arrives at one of the input adapters (`IN0`, `IN1`, or `G`), the corresponding data element (`D1`) is temporarily stored via internal edge- or event-triggered memory modules (`E_D_FF` and `E_D_FF_ANY`).
 - - Internal `F_MOVE` function blocks convert and pass the values (as data type `INT`) to the central selection function block.
+
 1. **Selection Logic:**
 
 - The core function block `F_SEL` (a standardized IEC 61131-3 selection function block) evaluates the control signal `G`.
 - If the control signal `G` is `FALSE`, the value of `IN0` is selected.
 - - If the control signal `G` is on `TRUE`, the value of `IN1` is selected.
+
 1. **Output:**
 
 - After successful selection, the selected value is passed via another `F_MOVE` block and an output flip-flop (`E_D_FF_ANY_OUT`) to the output plug `OUT`.
@@ -70,10 +72,10 @@ The module's internal logic controls the data and event flow as follows:
 
 The function block operates purely on an event- and data-flow-driven basis. There are no complex internal states (no state machine/ECC in the classical sense), but rather a direct dependency of the output on the inputs:
 
-| Selector input (`G.D1`) | Active path | Output value (`OUT.D1`) | Output event (`OUT.E1`) |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | `IN0` | Value of `IN0.D1` | Triggered on every event |
-| `TRUE` | `IN1` | Value of `IN1.D1` | Triggered on every event |
+| Selector input (`G.D1`) | Active path | Output value (`OUT.D1`) | Output event (`OUT.E1`)  |
+| :---------------------- | :---------- | :---------------------- | :----------------------- |
+| `FALSE`                 | `IN0`       | Value of `IN0.D1`       | Triggered on every event |
+| `TRUE`                  | `IN1`       | Value of `IN1.D1`       | Triggered on every event |
 
 ---
 

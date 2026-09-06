@@ -73,11 +73,11 @@ Der **F_SUB** ist ein standardkonformer Funktionsbaustein zur Subtraktion numeri
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_SUB  | F_ADD  | F_MUL  |
-|---------------|--------|--------|--------|
-| Operation     | Subtraktion | Addition | Multiplikation |
-| Eingänge      | 2      | 2      | 2      |
-| Typunterstützung | ANY_MAGNITUDE | ANY_NUM | ANY_NUM |
+| Feature          | F_SUB         | F_ADD    | F_MUL          |
+| ---------------- | ------------- | -------- | -------------- |
+| Operation        | Subtraktion   | Addition | Multiplikation |
+| Eingänge         | 2             | 2        | 2              |
+| Typunterstützung | ANY_MAGNITUDE | ANY_NUM  | ANY_NUM        |
 
 ## 🛠️ Zugehörige Übungen
 

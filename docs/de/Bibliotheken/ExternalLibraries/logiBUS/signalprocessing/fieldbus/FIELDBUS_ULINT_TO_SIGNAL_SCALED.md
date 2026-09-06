@@ -12,32 +12,32 @@ Der Funktionsblock **FIELDBUS_ULINT_TO_SIGNAL_SCALED** dient zur Konvertierung e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung | Mit Variablen |
-|----------|-----|--------------|---------------|
-| **INIT** | EInit | Initialisierungsanforderung | SCALE, OFFSET |
-| **REQ**  | Event | Normale Ausführungsanforderung | IN |
+| Ereignis | Typ   | Beschreibung                   | Mit Variablen |
+| -------- | ----- | ------------------------------ | ------------- |
+| **INIT** | EInit | Initialisierungsanforderung    | SCALE, OFFSET |
+| **REQ**  | Event | Normale Ausführungsanforderung | IN            |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung | Mit Variablen |
-|----------|-----|--------------|---------------|
-| **INITO** | EInit | Bestätigung der Initialisierung | – |
-| **CNF**   | Event | Bestätigung der Ausführung | OUT, VALID |
+| Ereignis  | Typ   | Beschreibung                    | Mit Variablen |
+| --------- | ----- | ------------------------------- | ------------- |
+| **INITO** | EInit | Bestätigung der Initialisierung | –             |
+| **CNF**   | Event | Bestätigung der Ausführung      | OUT, VALID    |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Initialwert | Beschreibung |
-| ---------- | ----- | ------------- | -------------- |
-| **IN** | ULINT | `LWORD_TO_ULINT(NOT_AVAILABLE_LWM)` | Rohwert vom Feldbus |
-| **SCALE** | LREAL | `1.0` | Skalierungsfaktor |
-| **OFFSET** | DINT | `0` | Offset, der nach der Skalierung addiert wird |
+| Variable   | Typ   | Initialwert                         | Beschreibung                                 |
+| ---------- | ----- | ----------------------------------- | -------------------------------------------- |
+| **IN**     | ULINT | `LWORD_TO_ULINT(NOT_AVAILABLE_LWM)` | Rohwert vom Feldbus                          |
+| **SCALE**  | LREAL | `1.0`                               | Skalierungsfaktor                            |
+| **OFFSET** | DINT  | `0`                                 | Offset, der nach der Skalierung addiert wird |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Initialwert | Beschreibung |
-|----------|-----|-------------|--------------|
-| **OUT** | LREAL | `0.0` | Skalierter Ausgangswert (nur gültig, wenn VALID = TRUE) |
-| **VALID** | BOOL | `FALSE` | Gültigkeitssignal: TRUE, wenn IN ≤ `VALID_SIGNAL_LW`, sonst FALSE |
+| Variable  | Typ   | Initialwert | Beschreibung                                                      |
+| --------- | ----- | ----------- | ----------------------------------------------------------------- |
+| **OUT**   | LREAL | `0.0`       | Skalierter Ausgangswert (nur gültig, wenn VALID = TRUE)           |
+| **VALID** | BOOL  | `FALSE`     | Gültigkeitssignal: TRUE, wenn IN ≤ `VALID_SIGNAL_LW`, sonst FALSE |
 
 ### **Adapter**
 
@@ -77,10 +77,10 @@ Die Konstanten `NOT_AVAILABLE_LWM` und `VALID_SIGNAL_LW` stammen aus dem importi
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Auslöser | Ausgabeereignis |
-|---------|--------------|----------|-----------------|
-| **INIT** | Initialisierung (keine Aktion) | INIT | INITO |
-| **REQ**  | Verarbeitung des Eingangssignals (Skalierung oder Fehlerfall) | REQ | CNF |
+| Zustand  | Beschreibung                                                  | Auslöser | Ausgabeereignis |
+| -------- | ------------------------------------------------------------- | -------- | --------------- |
+| **INIT** | Initialisierung (keine Aktion)                                | INIT     | INITO           |
+| **REQ**  | Verarbeitung des Eingangssignals (Skalierung oder Fehlerfall) | REQ      | CNF             |
 
 ## Anwendungsszenarien
 

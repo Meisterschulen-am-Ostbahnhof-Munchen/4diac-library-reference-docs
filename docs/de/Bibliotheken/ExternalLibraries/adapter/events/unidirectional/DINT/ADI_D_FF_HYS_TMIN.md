@@ -46,10 +46,10 @@ Der Baustein verwendet intern den FB `E_D_FF_ANY_HYS_TMIN`. Er verarbeitet die �
 
 Der FB besitzt zwei stabile interne Zustände (z. B. HIGH/LOW oder TRUE/FALSE), die den gelatchten Ausgangswert repräsentieren. Ein Zustandswechsel erfolgt nur, wenn der eingehende Wert (über **I**) die Hystereseschwelle überschreitet und die seit dem letzten Ausgangsereignis verstrichene Zeit mindestens `Tmin` beträgt. Andernfalls wird das Ereignis unterdrückt.
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| LOW  | Ausgangswert ist logisch 0 bzw. niedrig |
-| HIGH | Ausgangswert ist logisch 1 bzw. hoch |
+| Zustand | Beschreibung                            |
+| ------- | --------------------------------------- |
+| LOW     | Ausgangswert ist logisch 0 bzw. niedrig |
+| HIGH    | Ausgangswert ist logisch 1 bzw. hoch    |
 
 Wechsel zwischen den Zuständen erfolgen gemäß der Hysterese- und Zeitbedingungen.
 

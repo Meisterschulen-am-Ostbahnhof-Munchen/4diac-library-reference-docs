@@ -69,23 +69,23 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Attribut-Eigenschaften
 
-| Feature        | Beschreibung                     |
-|---------------|----------------------------------|
-| Fülltypen     | Nach ISO 11783-6 B.14.4          |
-| Farbpalette   | 8-bit Farbindex                  |
-| Muster        | 16-bit Musterreferenzen          |
-| Objektbereich | Alle füllfähigen VT-Objekte      |
+| Feature       | Beschreibung                |
+| ------------- | --------------------------- |
+| Fülltypen     | Nach ISO 11783-6 B.14.4     |
+| Farbpalette   | 8-bit Farbindex             |
+| Muster        | 16-bit Musterreferenzen     |
+| Objektbereich | Alle füllfähigen VT-Objekte |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Änderung             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Änderung    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -96,12 +96,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_FillAttributes | VtSetColor | VtPatternManager |
-|---------------|------------------|------------|------------------|
-| ISO-Standard  | ✔                | ✖          | ✖                |
-| Farbsteuerung | ✔                | ✔          | ✖                |
-| Mustersteuerung | ✔              | ✖          | ✔                |
-| Typsteuerung  | ✔                | ✖          | ✖                |
+| Feature         | Q_FillAttributes | VtSetColor | VtPatternManager |
+| --------------- | ---------------- | ---------- | ---------------- |
+| ISO-Standard    | ✔                | ✖          | ✖                |
+| Farbsteuerung   | ✔                | ✔          | ✖                |
+| Mustersteuerung | ✔                | ✖          | ✔                |
+| Typsteuerung    | ✔                | ✖          | ✖                |
 
 ## Fazit
 

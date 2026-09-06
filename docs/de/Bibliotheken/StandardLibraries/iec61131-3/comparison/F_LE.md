@@ -16,7 +16,7 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine internationale Norm, die sich mit der Modellierung von Funktionsbausteinen für industrielle Automatisierungssysteme beschäftigt. Sie bietet ein standardisiertes Framework für die Entwicklung von verteilten Steuerungssystemen, wobei logische und arithmetische Operatoren eine zentrale Rolle spielen. Einer dieser Operatoren ist der **LE-Operator** (Less Than or Equal To, „kleiner oder gleich“), der in diesem Aufsatz näher beleuchtet werden soll.
 
-### Was ist der LE-Operator?
+## Was ist der LE-Operator?
 
 Der LE-Operator ist ein Vergleichsoperator, der verwendet wird, um festzustellen, ob ein Wert kleiner oder gleich einem anderen Wert ist. In der IEC 61499 wird dieser Operator häufig in Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen basierend auf numerischen Vergleichen zu treffen. Der LE-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (`TRUE` oder `FALSE`) zurück, je nachdem, ob der erste Wert kleiner oder gleich dem zweiten Wert ist.
 

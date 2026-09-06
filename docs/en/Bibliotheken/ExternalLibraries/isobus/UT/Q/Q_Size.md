@@ -47,11 +47,13 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with target object ID
 - `INITO` confirms operational readiness
+
 1. **Resize**:
 
 - `REQ` with new dimensions
 - Dynamically adjusts the object geometry
 - `CNF` provides operational status and previous dimensions
+
 1. **Unit of measurement**:
 
 - All values in screen pixels
@@ -65,21 +67,21 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## Size reference
 
-| Parameter | Value range | Description |
-| ----------- | --------------- | -------------------- |
-| Width | 1-65535 pixels | Horizontal extent |
-| Height | 1-65535 pixels | Vertical extent |
+| Parameter | Value range    | Description       |
+| --------- | -------------- | ----------------- |
+| Width     | 1-65535 pixels | Horizontal extent |
+| Height    | 1-65535 pixels | Vertical extent   |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful change |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | VT Not Ready |
-| -21 | VT_E_NO_INSTANCE | No VT Client Available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance |
-| -130 | VT_E_NOT_ALIVE | VT Not Active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful change      |
+| -6   | VT_E_OVERFLOW             | Buffer Overflow        |
+| -8   | VT_E_NOACT                | VT Not Ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT Client Available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT Instance    |
+| -130 | VT_E_NOT_ALIVE            | VT Not Active          |
 
 ## Application Scenarios
 
@@ -90,12 +92,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Feature | Q_Size | VtResizeObject | VtGeometryManager |
-| --------------- | -------- | ---------------- | ------------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Real-time Update | ✔ | ✔ | ✖ |
-| 2D Control | ✔ | ✔ | ✔ |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature          | Q_Size | VtResizeObject | VtGeometryManager |
+| ---------------- | ------ | -------------- | ----------------- |
+| ISO Standard     | ✔      | ✖              | ✖                 |
+| Real-time Update | ✔      | ✔              | ✖                 |
+| 2D Control       | ✔      | ✔              | ✔                 |
+| Feedback         | ✔      | ✖              | ✔                 |
 
 ## Conclusion
 

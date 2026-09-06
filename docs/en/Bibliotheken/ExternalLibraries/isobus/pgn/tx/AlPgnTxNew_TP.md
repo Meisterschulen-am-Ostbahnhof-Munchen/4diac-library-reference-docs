@@ -52,6 +52,7 @@ The module operates in two main phases:
 - First, the module must be initialized via `INIT`.
 - Then, the PGN is configured via the event `install`. This process defines the PGN ID (`u32Pgn`), the target (`NmDestin`), the size (`u16DaSize`), and the priority (`u8Priority`).
 - After successful installation, the event `installO` is triggered, and a `PGN_handle` handle is provided. This handle represents the registered PGN in the system.
+
 1. **Data Transfer:**
 
 - Data must be provided in the `Data` array before it can be sent.

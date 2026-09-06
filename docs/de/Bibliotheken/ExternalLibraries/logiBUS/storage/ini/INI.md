@@ -12,37 +12,37 @@ Der Funktionsblock **INI** dient dem sicheren Lesen und Schreiben von Konfigurat
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ     | Kommentar                                    |
-|--------|---------|----------------------------------------------|
-| INIT   | EInit   | Initialisiert den Baustein und öffnet die INI-Datei |
-| SET    | Event   | Schreibt den Wert von `VALUE` für den aktuellen Schlüssel   |
-| GET    | Event   | Liest den Wert des aktuellen Schlüssels              |
+| Name | Typ   | Kommentar                                                 |
+| ---- | ----- | --------------------------------------------------------- |
+| INIT | EInit | Initialisiert den Baustein und öffnet die INI-Datei       |
+| SET  | Event | Schreibt den Wert von `VALUE` für den aktuellen Schlüssel |
+| GET  | Event | Liest den Wert des aktuellen Schlüssels                   |
 
 ### **Ereignis-Ausgänge**
 
-| Name   | Typ     | Kommentar                                    |
-|--------|---------|----------------------------------------------|
-| INITO  | EInit   | Bestätigung der Initialisierung             |
-| SETO   | Event   | Bestätigung des Schreibvorgangs            |
-| GETO   | Event   | Bestätigung des Lesevorgangs               |
+| Name  | Typ   | Kommentar                       |
+| ----- | ----- | ------------------------------- |
+| INITO | EInit | Bestätigung der Initialisierung |
+| SETO  | Event | Bestätigung des Schreibvorgangs |
+| GETO  | Event | Bestätigung des Lesevorgangs    |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ    | Kommentar                                    |
-|---------------|--------|------------------------------------------------|
-| QI            | BOOL   | Event-Input-Qualifier (steuert die Ausführung) |
-| SECTION       | STRING | Name des Abschnitts in der INI-Datei          |
-| KEY           | STRING | Schlüsselname innerhalb des Abschnitts        |
-| VALUE         | ANY    | Wert, der gesetzt werden soll (bei SET)       |
+| Name          | Typ    | Kommentar                                               |
+| ------------- | ------ | ------------------------------------------------------- |
+| QI            | BOOL   | Event-Input-Qualifier (steuert die Ausführung)          |
+| SECTION       | STRING | Name des Abschnitts in der INI-Datei                    |
+| KEY           | STRING | Schlüsselname innerhalb des Abschnitts                  |
+| VALUE         | ANY    | Wert, der gesetzt werden soll (bei SET)                 |
 | DEFAULT_VALUE | ANY    | Standardwert, falls Schlüssel nicht existiert (bei GET) |
 
 ### **Daten-Ausgänge**
 
-| Name    | Typ    | Kommentar                                    |
-|---------|--------|------------------------------------------------|
-| QO      | BOOL   | Event-Output-Qualifier (zeigt Erfolg/Misserfolg an) |
-| STATUS  | STRING | Statusinformationen (z. B. Fehlertext)        |
-| VALUEO  | ANY    | Ausgelesener Wert (bei GET) oder bestätigter gesetzter Wert |
+| Name   | Typ    | Kommentar                                                   |
+| ------ | ------ | ----------------------------------------------------------- |
+| QO     | BOOL   | Event-Output-Qualifier (zeigt Erfolg/Misserfolg an)         |
+| STATUS | STRING | Statusinformationen (z. B. Fehlertext)                      |
+| VALUEO | ANY    | Ausgelesener Wert (bei GET) oder bestätigter gesetzter Wert |
 
 ### **Adapter**
 
@@ -85,11 +85,11 @@ Die Zustandsübergänge werden durch die Ereignisse INIT, SET und GET sowie die 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein   | Datenquelle      | Typunterstützung      | Ereignisschnittstelle |
-|------------|------------------|-----------------------|-----------------------|
-| INI        | settings.ini     | ANY (generisch)       | INIT, SET, GET        |
-| FILE_READ  | Textdatei        | STRING                | REQ, CNF              |
-| PARAM_DB   | Datenbank        | typspezifisch         | komplexer             |
+| Baustein  | Datenquelle  | Typunterstützung | Ereignisschnittstelle |
+| --------- | ------------ | ---------------- | --------------------- |
+| INI       | settings.ini | ANY (generisch)  | INIT, SET, GET        |
+| FILE_READ | Textdatei    | STRING           | REQ, CNF              |
+| PARAM_DB  | Datenbank    | typspezifisch    | komplexer             |
 
 Der INI-Baustein punktet durch seine Einfachheit und die direkte Anbindung an INI-Dateien, ohne zusätzliche Treiber oder Datenbanken. Andere Bausteine bieten entweder mehr Flexibilität (Datenbank) oder sind auf reine Text-Ein-/Ausgabe beschränkt.
 

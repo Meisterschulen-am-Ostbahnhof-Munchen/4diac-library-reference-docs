@@ -12,9 +12,9 @@ Der Funktionsblock **AR_CALIBRATE_3P** ermöglicht eine 3‑Punkt‑Kalibrierung
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| SET | Event | Setzt die Referenzwerte (MIN_REF, MID_REF, MAX_REF) für die Kalibrierungskennlinie. Löst keine Berechnung aus, sondern legt nur die Zielausgabewerte fest. |
+| Name | Typ   | Kommentar                                                                                                                                                  |
+| ---- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SET  | Event | Setzt die Referenzwerte (MIN_REF, MID_REF, MAX_REF) für die Kalibrierungskennlinie. Löst keine Berechnung aus, sondern legt nur die Zielausgabewerte fest. |
 
 ### **Ereignis-Ausgänge**
 
@@ -22,11 +22,11 @@ Keine expliziten Ereignisausgänge vorhanden. Die Ausgabe erfolgt ausschließlic
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Vorgabewert | Kommentar |
-| ------ | ---------- | ------------- | ----------- |
-| MIN_REF | REAL | 0.0 | Zielwert für den kleinsten Eingangswert (Min). |
-| MID_REF | REAL | 50.0 | Zielwert für den Mittelwert (Mid). |
-| MAX_REF | REAL | 100.0 | Zielwert für den größten Eingangswert (Max). |
+| Name    | Datentyp | Vorgabewert | Kommentar                                      |
+| ------- | -------- | ----------- | ---------------------------------------------- |
+| MIN_REF | REAL     | 0.0         | Zielwert für den kleinsten Eingangswert (Min). |
+| MID_REF | REAL     | 50.0        | Zielwert für den Mittelwert (Mid).             |
+| MAX_REF | REAL     | 100.0       | Zielwert für den größten Eingangswert (Max).   |
 
 ### **Daten-Ausgänge**
 
@@ -34,16 +34,16 @@ Keine direkten Datenausgänge – alle Ausgaben werden über die **Plugs** (Ausg
 
 ### **Adapter**
 
-| Richtung | Name | Adaptertyp | Kommentar |
-| ---------- | ------ | ------------ | ----------- |
-| **Plug** (Ausgang) | Y | `adapter::types::unidirectional::AR` | Kalibrierter Ausgabewert (Analogwert plus Ereignis). |
-| **Plug** (Ausgang) | X_MIN | `adapter::types::bidirectional::AR2` | Gespeicherter Minimalwert (vom Rohwert). |
-| **Plug** (Ausgang) | X_MID | `adapter::types::bidirectional::AR2` | Gespeicherter Mittelwert (vom Rohwert). |
-| **Plug** (Ausgang) | X_MAX | `adapter::types::bidirectional::AR2` | Gespeicherter Maximalwert (vom Rohwert). |
-| **Socket** (Eingang) | X | `adapter::types::unidirectional::AR` | Rohwert vom Sensor (Analogwert plus Ereignis). |
+| Richtung             | Name  | Adaptertyp                           | Kommentar                                                                 |
+| -------------------- | ----- | ------------------------------------ | ------------------------------------------------------------------------- |
+| **Plug** (Ausgang)   | Y     | `adapter::types::unidirectional::AR` | Kalibrierter Ausgabewert (Analogwert plus Ereignis).                      |
+| **Plug** (Ausgang)   | X_MIN | `adapter::types::bidirectional::AR2` | Gespeicherter Minimalwert (vom Rohwert).                                  |
+| **Plug** (Ausgang)   | X_MID | `adapter::types::bidirectional::AR2` | Gespeicherter Mittelwert (vom Rohwert).                                   |
+| **Plug** (Ausgang)   | X_MAX | `adapter::types::bidirectional::AR2` | Gespeicherter Maximalwert (vom Rohwert).                                  |
+| **Socket** (Eingang) | X     | `adapter::types::unidirectional::AR` | Rohwert vom Sensor (Analogwert plus Ereignis).                            |
 | **Socket** (Eingang) | C_MIN | `adapter::types::unidirectional::AX` | Ereignis zum Kalibrieren des Minimalpunkts (liest den aktuellen Rohwert). |
-| **Socket** (Eingang) | C_MID | `adapter::types::unidirectional::AX` | Ereignis zum Kalibrieren des Mittelpunkts. |
-| **Socket** (Eingang) | C_MAX | `adapter::types::unidirectional::AX` | Ereignis zum Kalibrieren des Maximalpunkts. |
+| **Socket** (Eingang) | C_MID | `adapter::types::unidirectional::AX` | Ereignis zum Kalibrieren des Mittelpunkts.                                |
+| **Socket** (Eingang) | C_MAX | `adapter::types::unidirectional::AX` | Ereignis zum Kalibrieren des Maximalpunkts.                               |
 
 ## Funktionsweise
 
@@ -78,13 +78,13 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **IDLE** | Warte – kein Ereignis anliegend. Transitionen: Bei `SET` → IDLE (nur Referenzwerte setzen); bei `X_MIN.EI1`, `X_MID.EI1`, `X_MAX.EI1` → IDLE (keine Aktion); bei `C_MIN.E1[C_MIN.D1]` → CAL_MIN; bei `C_MID.E1[C_MID.D1]` → CAL_MID; bei `C_MAX.E1[C_MAX.D1]` → CAL_MAX; bei `X.E1` → REQ. |
-| **REQ** | Berechnung des kalibrierten Ausgangswerts. Nach Ausführung sofort zurück zu IDLE. |
-| **CAL_MIN** | Speichert den aktuellen Rohwert als Minimum (`X_MIN.DO1 := X.D1`). Geht automatisch nach IDLE. |
-| **CAL_MID** | Speichert den aktuellen Rohwert als Mittelwert. Geht automatisch nach IDLE. |
-| **CAL_MAX** | Speichert den aktuellen Rohwert als Maximum. Geht automatisch nach IDLE. |
+| Zustand     | Beschreibung                                                                                                                                                                                                                                                                               |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **IDLE**    | Warte – kein Ereignis anliegend. Transitionen: Bei `SET` → IDLE (nur Referenzwerte setzen); bei `X_MIN.EI1`, `X_MID.EI1`, `X_MAX.EI1` → IDLE (keine Aktion); bei `C_MIN.E1[C_MIN.D1]` → CAL_MIN; bei `C_MID.E1[C_MID.D1]` → CAL_MID; bei `C_MAX.E1[C_MAX.D1]` → CAL_MAX; bei `X.E1` → REQ. |
+| **REQ**     | Berechnung des kalibrierten Ausgangswerts. Nach Ausführung sofort zurück zu IDLE.                                                                                                                                                                                                          |
+| **CAL_MIN** | Speichert den aktuellen Rohwert als Minimum (`X_MIN.DO1 := X.D1`). Geht automatisch nach IDLE.                                                                                                                                                                                             |
+| **CAL_MID** | Speichert den aktuellen Rohwert als Mittelwert. Geht automatisch nach IDLE.                                                                                                                                                                                                                |
+| **CAL_MAX** | Speichert den aktuellen Rohwert als Maximum. Geht automatisch nach IDLE.                                                                                                                                                                                                                   |
 
 **Übergangsbedingungen:**
 
@@ -102,12 +102,12 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| **AR_SCALE** | Einfache lineare Skalierung (2‑Punkt) – ohne Korrektur von Nichtlinearitäten in der Mitte. |
-| **AR_CALIBRATE_2P** | Zwei‑Punkt‑Kalibrierung (Min, Max) – kann Mittenversatz nicht adressieren. |
+| Baustein                              | Eigenschaft                                                                                          |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **AR_SCALE**                          | Einfache lineare Skalierung (2‑Punkt) – ohne Korrektur von Nichtlinearitäten in der Mitte.           |
+| **AR_CALIBRATE_2P**                   | Zwei‑Punkt‑Kalibrierung (Min, Max) – kann Mittenversatz nicht adressieren.                           |
 | **AR_CALIBRATE_3P** (dieser Baustein) | Drei‑Punkt‑Kalibrierung mit separater Kalibrierung der Mitte – ideal für Joysticks mit Center‑Drift. |
-| **Tabellenbasierte Korrektur** | Aufwändiger, erfordert viele Stützstellen; AR_CALIBRATE_3P ist einfacher und schneller. |
+| **Tabellenbasierte Korrektur**        | Aufwändiger, erfordert viele Stützstellen; AR_CALIBRATE_3P ist einfacher und schneller.              |
 
 Der entscheidende Vorteil liegt in der expliziten Behandlung des Mittelpunkts, die bei vielen einfachen Skalierungen vernachlässigt wird.
 

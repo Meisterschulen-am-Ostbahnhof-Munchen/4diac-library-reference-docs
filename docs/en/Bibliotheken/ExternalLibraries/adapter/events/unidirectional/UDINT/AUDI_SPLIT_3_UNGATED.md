@@ -30,12 +30,12 @@ The function block **AUDI_SPLIT_3_UNGATED** is used to multiply an incoming **AU
 
 ### **Adapter**
 
-| Type | Name | Description |
-| ----- | ------ | --------------- |
-| Socket (adapter::types::unidirectional::AUDI) | **IN** | Input adapter for receiving the AUDI signal |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT1** | First output adapter |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT2** | Second output adapter |
-| Plug (adapter::types::unidirectional::AUDI) | **OUT3** | Third output adapter |
+| Type                                          | Name     | Description                                 |
+| --------------------------------------------- | -------- | ------------------------------------------- |
+| Socket (adapter::types::unidirectional::AUDI) | **IN**   | Input adapter for receiving the AUDI signal |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT1** | First output adapter                        |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT2** | Second output adapter                       |
+| Plug (adapter::types::unidirectional::AUDI)   | **OUT3** | Third output adapter                        |
 
 ## Functionality
 

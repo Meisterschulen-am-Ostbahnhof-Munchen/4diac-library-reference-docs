@@ -14,36 +14,36 @@ Der Funktionsblock **IA_FPTO** dient als ISOBUS-Adapter für die Frontzapfwelle 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung | Mit Variablen |
-|----------|-----|--------------|---------------|
-| INIT | EInit | Service-Initialisierung | QI |
+| Ereignis | Typ   | Beschreibung            | Mit Variablen |
+| -------- | ----- | ----------------------- | ------------- |
+| INIT     | EInit | Service-Initialisierung | QI            |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung | Mit Variablen |
-|----------|-----|--------------|---------------|
-| INITO | EInit | Bestätigung der Initialisierung | QO, STATUS |
+| Ereignis | Typ   | Beschreibung                    | Mit Variablen |
+| -------- | ----- | ------------------------------- | ------------- |
+| INITO    | EInit | Bestätigung der Initialisierung | QO, STATUS    |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| QI | BOOL | Qualifikator für den INIT-Eingang |
+| Variable | Typ  | Beschreibung                      |
+| -------- | ---- | --------------------------------- |
+| QI       | BOOL | Qualifikator für den INIT-Eingang |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| QO | BOOL | Qualifikator für den INITO-Ausgang |
-| STATUS | STRING | Statusmeldung nach der Initialisierung |
+| Variable | Typ    | Beschreibung                           |
+| -------- | ------ | -------------------------------------- |
+| QO       | BOOL   | Qualifikator für den INITO-Ausgang     |
+| STATUS   | STRING | Statusmeldung nach der Initialisierung |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-| --------- | ----- | -------------- |
-| SPEED | adapter::types::unidirectional::AUI | Ausgangsdrehzahl der Frontzapfwellenwelle (Istwert) |
-| SPEED_SET | adapter::types::unidirectional::AUI | Sollwert der Frontzapfwellendrehzahl |
-| TIMEOUT | adapter::types::unidirectional::AX | Timeout-Status der Kommunikation |
+| Adapter   | Typ                                 | Beschreibung                                        |
+| --------- | ----------------------------------- | --------------------------------------------------- |
+| SPEED     | adapter::types::unidirectional::AUI | Ausgangsdrehzahl der Frontzapfwellenwelle (Istwert) |
+| SPEED_SET | adapter::types::unidirectional::AUI | Sollwert der Frontzapfwellendrehzahl                |
+| TIMEOUT   | adapter::types::unidirectional::AX  | Timeout-Status der Kommunikation                    |
 
 Alle Adapter sind unidirektional ausgeführt: Die Werte werden vom FB gesendet, aber nicht empfangen.
 

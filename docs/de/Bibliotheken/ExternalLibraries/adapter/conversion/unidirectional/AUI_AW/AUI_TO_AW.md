@@ -12,34 +12,34 @@ Der Funktionsblock `AUI_TO_AW` ist ein zusammengesetzter (Composite) Baustein, d
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name        | Typ                     | Kommentar                                             |
+| ----------- | ----------------------- | ----------------------------------------------------- |
 | `AUI_IN.E1` | Ereignis (über Adapter) | Trigger zur Konvertierung des eingehenden UINT-Wertes |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name        | Typ                     | Kommentar                                                         |
+| ----------- | ----------------------- | ----------------------------------------------------------------- |
 | `AW_OUT.E1` | Ereignis (über Adapter) | Bestätigung, dass der konvertierte WORD-Wert bereitgestellt wurde |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
+| Name        | Datentyp            | Kommentar                          |
+| ----------- | ------------------- | ---------------------------------- |
 | `AUI_IN.D1` | UINT (über Adapter) | Der zu konvertierende Eingangswert |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
+| Name        | Datentyp            | Kommentar                     |
+| ----------- | ------------------- | ----------------------------- |
 | `AW_OUT.D1` | WORD (über Adapter) | Der konvertierte Ausgangswert |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
+| Richtung         | Name     | Typ                                   | Kommentar               |
+| ---------------- | -------- | ------------------------------------- | ----------------------- |
 | Socket (Eingang) | `AUI_IN` | `adapter::types::unidirectional::AUI` | UINT‑Adapter als Quelle |
-| Plug (Ausgang) | `AW_OUT` | `adapter::types::unidirectional::AW` | WORD‑Adapter als Senke |
+| Plug (Ausgang)   | `AW_OUT` | `adapter::types::unidirectional::AW`  | WORD‑Adapter als Senke  |
 
 ## Funktionsweise
 

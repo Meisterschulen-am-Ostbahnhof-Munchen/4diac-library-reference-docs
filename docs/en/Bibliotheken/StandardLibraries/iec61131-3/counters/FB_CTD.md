@@ -14,6 +14,7 @@ The FB_CTD (Down Counter) is a function block that acts as a down counter. It co
 - **CV (INT)**: Count Value - Current counter value.
 
 ## **Adapters**
+
 No adapters available.
 
 ### **Adapter**

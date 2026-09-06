@@ -8,12 +8,12 @@ An Ethernet network segment for connecting devices.
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2008 Profactor GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac Package | iec61499::system |
+| Attribute     | Value                            |
+| :------------ | :------------------------------- |
+| Copyright     | (c) 2008 Profactor GmbH          |
+| License       | EPL-2.0                          |
+| Version       | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac Package | iec61499::system                 |
 
 --
 

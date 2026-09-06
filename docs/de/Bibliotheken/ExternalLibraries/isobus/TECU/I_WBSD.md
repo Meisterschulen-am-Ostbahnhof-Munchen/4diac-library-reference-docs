@@ -27,26 +27,26 @@ Der Baustein ermöglicht die präzise Überwachung von Fahrzeugbewegungen und Be
 
 ### **Daten-Ausgänge**
 
-| Parameter | Typ | SPN | Bit | Skalierung | Bereich | Beschreibung |
-| ----------- | ----- | ----- | ----- | ------------ | --------- | -------------- |
-| `QO` | BOOL | - | 1 | - | TRUE/FALSE | Ereignisqualifier |
-| `STATUS` | STRING | - | - | - | - | Systemstatusmeldung |
-| `WHEELBASEDMACHINESPEED` | UINT | 1862 | 16 | 0.001 m/s/bit | 0-65.535 m/s | Radbasierte Geschwindigkeit |
-| `WHEELBASEDMACHINEDISTANCE` | UDINT | 1863 | 32 | 0.001 m/bit | 0-4,294,967 km | Zurückgelegte Distanz |
-| `MAXI_TIMEOFTRACPOWER` | USINT | 1866 | 8 | 1 min/bit | 0-255 min | Maximale Betriebszeit |
-| `WHEELBASEDMACHINEDIRECTION` | BYTE | 1864 | 2 | 4 Zustände | 0-3 | Fahrtrichtung |
-| `KEYSWITCHSTATE` | BYTE | 1865 | 2 | 4 Zustände | 0-3 | Zündschalterzustand |
-| `START_STOP_STATE` | BYTE | 5203 | 2 | 4 Zustände | 0-3 | Start/Stop-Status |
-| `OPERATOR_DIREC_REVERSED` | BYTE | 5244 | 2 | 4 Zustände | 0-3 | Richtungsumkehr |
+| Parameter                    | Typ    | SPN  | Bit | Skalierung    | Bereich        | Beschreibung                |
+| ---------------------------- | ------ | ---- | --- | ------------- | -------------- | --------------------------- |
+| `QO`                         | BOOL   | -    | 1   | -             | TRUE/FALSE     | Ereignisqualifier           |
+| `STATUS`                     | STRING | -    | -   | -             | -              | Systemstatusmeldung         |
+| `WHEELBASEDMACHINESPEED`     | UINT   | 1862 | 16  | 0.001 m/s/bit | 0-65.535 m/s   | Radbasierte Geschwindigkeit |
+| `WHEELBASEDMACHINEDISTANCE`  | UDINT  | 1863 | 32  | 0.001 m/bit   | 0-4,294,967 km | Zurückgelegte Distanz       |
+| `MAXI_TIMEOFTRACPOWER`       | USINT  | 1866 | 8   | 1 min/bit     | 0-255 min      | Maximale Betriebszeit       |
+| `WHEELBASEDMACHINEDIRECTION` | BYTE   | 1864 | 2   | 4 Zustände    | 0-3            | Fahrtrichtung               |
+| `KEYSWITCHSTATE`             | BYTE   | 1865 | 2   | 4 Zustände    | 0-3            | Zündschalterzustand         |
+| `START_STOP_STATE`           | BYTE   | 5203 | 2   | 4 Zustände    | 0-3            | Start/Stop-Status           |
+| `OPERATOR_DIREC_REVERSED`    | BYTE   | 5244 | 2   | 4 Zustände    | 0-3            | Richtungsumkehr             |
 
 ## Fahrtrichtungszustände
 
-| Code | Zustand | Beschreibung |
-| ------ | --------- | -------------- |
-| 0 | Stillstand | Keine Bewegung |
-| 1 | Vorwärts | Vorwärtsfahrt |
-| 2 | Rückwärts | Rückwärtsfahrt |
-| 3 | Undefiniert | Richtung nicht bestimmbar |
+| Code | Zustand     | Beschreibung              |
+| ---- | ----------- | ------------------------- |
+| 0    | Stillstand  | Keine Bewegung            |
+| 1    | Vorwärts    | Vorwärtsfahrt             |
+| 2    | Rückwärts   | Rückwärtsfahrt            |
+| 3    | Undefiniert | Richtung nicht bestimmbar |
 
 ## Funktionsweise
 
@@ -78,25 +78,25 @@ Der Baustein ermöglicht die präzise Überwachung von Fahrzeugbewegungen und Be
 
 ## Zustandscodes
 
-| Parameter | Code | Bedeutung |
-| ----------- | ------ | ----------- |
-| `KEYSWITCHSTATE` | 0 | Aus |
-| | 1 | Ein |
-| | 2 | Start |
-| | 3 | Undefiniert |
-| `START_STOP_STATE` | 0 | Stopp |
-| | 1 | Start |
-| | 2 | Pause |
-| | 3 | Reserviert |
+| Parameter          | Code | Bedeutung   |
+| ------------------ | ---- | ----------- |
+| `KEYSWITCHSTATE`   | 0    | Aus         |
+|                    | 1    | Ein         |
+|                    | 2    | Start       |
+|                    | 3    | Undefiniert |
+| `START_STOP_STATE` | 0    | Stopp       |
+|                    | 1    | Start       |
+|                    | 2    | Pause       |
+|                    | 3    | Reserviert  |
 
 ## ⚖️ Vergleich mit ähnlichen Systemen
 
-| Feature | I_WBSD | Standard | GPS-basiert |
-| --------- | -------- | ---------- | ------------- |
-| Genauigkeit | ±0.5% | ±2% | ±5% |
-| Niedriggeschwindigkeit | Gut | Ausgezeichnet | Schlecht |
-| Signalstabilität | Hoch | Mittel | Niedrig |
-| ISO-Konformität | Voll | Teilweise | Voll |
+| Feature                | I_WBSD | Standard      | GPS-basiert |
+| ---------------------- | ------ | ------------- | ----------- |
+| Genauigkeit            | ±0.5%  | ±2%           | ±5%         |
+| Niedriggeschwindigkeit | Gut    | Ausgezeichnet | Schlecht    |
+| Signalstabilität       | Hoch   | Mittel        | Niedrig     |
+| ISO-Konformität        | Voll   | Teilweise     | Voll        |
 
 ## 🛠️ Zugehörige Übungen
 

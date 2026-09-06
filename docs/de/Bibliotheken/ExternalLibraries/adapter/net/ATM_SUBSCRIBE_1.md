@@ -31,8 +31,8 @@ Der Funktionsblock **ATM_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                 | Richtung       | Beschreibung                      |
+| ------- | ----------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::ATM | Plug (Ausgang) | Gepufferter empfangener TIME-Wert |
 
 ## Funktionsweise

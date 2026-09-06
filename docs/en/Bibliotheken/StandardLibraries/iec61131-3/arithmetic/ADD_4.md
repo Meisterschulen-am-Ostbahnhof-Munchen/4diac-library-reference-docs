@@ -36,10 +36,12 @@ The **ADD_4** is a powerful function block for summing four values, developed un
 
 - A single `REQ` event processes all four inputs
 - Parallel value acquisition
+
 1. **Type Handling**:
 
 - Automatic type conversion for mixed inputs
 - Result in the "largest" input type
+
 1. **Calculation Order**:
 
 - Mathematically associative (IN1+(IN2+(IN3+IN4)))
@@ -55,12 +57,12 @@ The **ADD_4** is a powerful function block for summing four values, developed un
 
 ## Supported Data Types
 
-| Category | Examples |
----------------- | ------------------------- |
-| Integers | INT, DINT, UDINT |
-| Floating Point | REAL, LREAL |
-| Time Values | TIME, LTIME |
-| Special Types | DATE_AND_TIME |
+| Category       | Examples         |
+| -------------- | ---------------- |
+| Integers       | INT, DINT, UDINT |
+| Floating Point | REAL, LREAL      |
+| Time Values    | TIME, LTIME      |
+| Special Types  | DATE_AND_TIME    |
 
 ## Application Scenarios
 
@@ -71,11 +73,11 @@ The **ADD_4** is a powerful function block for summing four values, developed un
 
 ## ⚖️ Comparison with Other Adders
 
-| Function Block | Inputs | Advantages |
-| ---------- | ---------- | ---------- |
-| ADD_2 | 2 | Simplest Variant |
-| ADD_3 | 3 | Compromise |
-| ADD_4 | 4 | Maximum Integration |
+| Function Block | Inputs | Advantages          |
+| -------------- | ------ | ------------------- |
+| ADD_2          | 2      | Simplest Variant    |
+| ADD_3          | 3      | Compromise          |
+| ADD_4          | 4      | Maximum Integration |
 
 ## Error Management
 

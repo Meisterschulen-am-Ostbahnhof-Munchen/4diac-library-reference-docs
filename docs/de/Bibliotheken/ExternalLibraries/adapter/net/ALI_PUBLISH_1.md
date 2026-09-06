@@ -31,8 +31,8 @@ Der Funktionsblock **ALI_PUBLISH_1** ist ein Composite-Funktionsblock, der den n
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                 | Richtung         | Beschreibung                    |
+| ------- | ----------------------------------- | ---------------- | ------------------------------- |
 | IN      | adapter::types::unidirectional::ALI | Socket (Eingang) | Zu veröffentlichender LINT-Wert |
 
 ## Funktionsweise

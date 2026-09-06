@@ -28,15 +28,15 @@ Keine
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| IN | `adapter::types::unidirectional::ALR` | Socket (Eingang) | ALR-Eingangssignal, das auf alle Ausgänge kopiert wird |
-| OUT1 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Erster ALR-Ausgang |
-| OUT2 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Zweiter ALR-Ausgang |
-| OUT3 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Dritter ALR-Ausgang |
-| OUT4 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Vierter ALR-Ausgang |
-| OUT5 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Fünfter ALR-Ausgang |
-| OUT6 | `adapter::types::unidirectional::ALR` | Plug (Ausgang) | Sechster ALR-Ausgang |
+| Name | Typ                                   | Richtung         | Beschreibung                                           |
+| ---- | ------------------------------------- | ---------------- | ------------------------------------------------------ |
+| IN   | `adapter::types::unidirectional::ALR` | Socket (Eingang) | ALR-Eingangssignal, das auf alle Ausgänge kopiert wird |
+| OUT1 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Erster ALR-Ausgang                                     |
+| OUT2 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Zweiter ALR-Ausgang                                    |
+| OUT3 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Dritter ALR-Ausgang                                    |
+| OUT4 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Vierter ALR-Ausgang                                    |
+| OUT5 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Fünfter ALR-Ausgang                                    |
+| OUT6 | `adapter::types::unidirectional::ALR` | Plug (Ausgang)   | Sechster ALR-Ausgang                                   |
 
 ## Funktionsweise
 

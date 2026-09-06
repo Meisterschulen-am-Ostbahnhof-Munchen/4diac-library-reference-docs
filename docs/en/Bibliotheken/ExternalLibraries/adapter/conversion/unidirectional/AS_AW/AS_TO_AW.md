@@ -36,10 +36,10 @@ The function block has a **plug** of type `AW`, which indirectly provides an eve
 
 ### **Adapter**
 
-| Type | Name | Direction | Comment |
-| ------ | ------ | ---------- | ----------- |
-| `AS` (unidirectional) | **AS_IN** | Socket (input) | SINT Adapter input |
-| `AW` (unidirectional) | **AW_OUT** | Plug (output) | WORD Adapter output |
+| Type                  | Name       | Direction      | Comment             |
+| --------------------- | ---------- | -------------- | ------------------- |
+| `AS` (unidirectional) | **AS_IN**  | Socket (input) | SINT Adapter input  |
+| `AW` (unidirectional) | **AW_OUT** | Plug (output)  | WORD Adapter output |
 
 ## Functionality
 
@@ -83,11 +83,11 @@ The function block is not stateful in the sense of a state machine – the inter
 
 ## Comparison with Similar Blocks
 
-| Block | Function | Difference |
-| ---------- | ---------- | ------------- |
-| **AS_TO_AW** | SINT → WORD | Specific conversion for unidirectional adapters |
-| **General Converters** (e.g., `F_SINT_TO_WORD`) | Pure data conversion without adapter encapsulation | AS_TO_AW provides a ready-made adapter interface and can be used directly in adapter-based networks |
-| **Other Adapter Converters** (e.g., `BOOL_TO_BYTE`) | Other data types | AS_TO_AW specializes in SINT ↔ WORD |
+| Block                                               | Function                                           | Difference                                                                                          |
+| --------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **AS_TO_AW**                                        | SINT → WORD                                        | Specific conversion for unidirectional adapters                                                     |
+| **General Converters** (e.g., `F_SINT_TO_WORD`)     | Pure data conversion without adapter encapsulation | AS_TO_AW provides a ready-made adapter interface and can be used directly in adapter-based networks |
+| **Other Adapter Converters** (e.g., `BOOL_TO_BYTE`) | Other data types                                   | AS_TO_AW specializes in SINT ↔ WORD                                                                 |
 
 ## Conclusion
 

@@ -1,6 +1,6 @@
-![CTRL_PI](CTRL_PI.svg)
-
 # CTRL_PI
+
+![CTRL_PI](CTRL_PI.svg)
 
 FT_PI is a PI controller with manual functionality.
 
@@ -26,39 +26,39 @@ default values for KP = 1, TN = 1, TV = 1, LIMIT_L = -1000, LIMIT_H = +1000.
 
 ### Event Inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | Normal Execution Request | ACT, SET, SUP, OFS, M_I, MAN, KP, KI, LL, LH |
-| RST | Reset | |
+| Name | Comment                  | With                                         |
+| :--- | :----------------------- | :------------------------------------------- |
+| REQ  | Normal Execution Request | ACT, SET, SUP, OFS, M_I, MAN, KP, KI, LL, LH |
+| RST  | Reset                    |                                              |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | Execution Confirmation | Y, DIFF, LIM |
+| Name | Comment                | With         |
+| :--- | :--------------------- | :----------- |
+| CNF  | Execution Confirmation | Y, DIFF, LIM |
 
 ### Input Vars
 
-| Name | Type | Initial Value | Comment |
-| :--- | :--- | :--- | :--- |
-| ACT | REAL | | Actual Value |
-| SET | REAL | | Set Point |
-| SUP | REAL | | Noise Suppression |
-| OFS | REAL | | Offset |
-| M_I | REAL | | Manual Input Value |
-| MAN | BOOL | | Manual Mode |
-| KP | REAL | 1.0 | Proportional Gain |
-| KI | REAL | 1.0 | Integral Gain |
-| LL | REAL | -1000.0 | Lower Limit |
-| LH | REAL | 1000.0 | Upper Limit |
+| Name | Type | Initial Value | Comment            |
+| :--- | :--- | :------------ | :----------------- |
+| ACT  | REAL |               | Actual Value       |
+| SET  | REAL |               | Set Point          |
+| SUP  | REAL |               | Noise Suppression  |
+| OFS  | REAL |               | Offset             |
+| M_I  | REAL |               | Manual Input Value |
+| MAN  | BOOL |               | Manual Mode        |
+| KP   | REAL | 1.0           | Proportional Gain  |
+| KI   | REAL | 1.0           | Integral Gain      |
+| LL   | REAL | -1000.0       | Lower Limit        |
+| LH   | REAL | 1000.0        | Upper Limit        |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| Y | REAL | Control Output |
+| Name | Type | Comment            |
+| :--- | :--- | :----------------- |
+| Y    | REAL | Control Output     |
 | DIFF | REAL | Difference (Error) |
-| LIM | BOOL | Limit Reached Flag |
+| LIM  | BOOL | Limit Reached Flag |
 
 ## 🛠️ Zugehörige Übungen
 

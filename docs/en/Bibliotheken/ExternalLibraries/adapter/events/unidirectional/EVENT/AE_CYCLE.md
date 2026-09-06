@@ -39,6 +39,7 @@ The **AE_CYCLE** is implemented as a Composite Function Block. Internally, its l
 
 - It is forwarded to the adapter **EO** to output the signal.
 - It is fed directly back to the `START` input of the internal `E_DELAY`.
+
 1. **Cycle**: This feedback immediately restarts the timer, creating a continuous loop.
 2. **Stop**: The `STOP` event immediately interrupts the internal `E_DELAY` module and ends the loop.
 

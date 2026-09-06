@@ -12,37 +12,37 @@ Der Funktionsblock **AX_T_FF_SR_SYM_INIT** realisiert ein ereignisgesteuertes bi
 
 ### **Ereignis-Eingänge**
 
-| Event | Typ     | Kommentar                                     |
-|-------|---------|-----------------------------------------------|
-| INIT  | EInit   | Initialisierungsanforderung                   |
-| S     | Event   | Setzen des Ausgangs Q (abhängig von QI)       |
-| R     | Event   | Rücksetzen des Ausgangs Q (abhängig von QI)   |
-| CLK   | Event   | Takt zum Umschalten (Toggle) von Q            |
+| Event | Typ   | Kommentar                                   |
+| ----- | ----- | ------------------------------------------- |
+| INIT  | EInit | Initialisierungsanforderung                 |
+| S     | Event | Setzen des Ausgangs Q (abhängig von QI)     |
+| R     | Event | Rücksetzen des Ausgangs Q (abhängig von QI) |
+| CLK   | Event | Takt zum Umschalten (Toggle) von Q          |
 
 ### **Ereignis-Ausgänge**
 
-| Event  | Typ     | Kommentar                               |
-|--------|---------|-----------------------------------------|
-| INITO  | EInit   | Bestätigung der Initialisierung         |
+| Event | Typ   | Kommentar                       |
+| ----- | ----- | ------------------------------- |
+| INITO | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Variable  | Typ    | Kommentar                                      |
-|-----------|--------|------------------------------------------------|
-| QI        | BOOL   | Ereignisqualifizierer (Freigabe von Aktionen)  |
-| Q_INIT    | BOOL   | Wert von Q beim INIT‑Ereignis                  |
+| Variable | Typ  | Kommentar                                     |
+| -------- | ---- | --------------------------------------------- |
+| QI       | BOOL | Ereignisqualifizierer (Freigabe von Aktionen) |
+| Q_INIT   | BOOL | Wert von Q beim INIT‑Ereignis                 |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Kommentar                                       |
-|----------|--------|-------------------------------------------------|
-| QO       | BOOL   | Ausgangs‑Ereignisqualifizierer                  |
+| Variable | Typ  | Kommentar                      |
+| -------- | ---- | ------------------------------ |
+| QO       | BOOL | Ausgangs‑Ereignisqualifizierer |
 
 ### **Adapter**
 
-| Adapter | Typ                                 | Kommentar                   |
-|---------|-------------------------------------|-----------------------------|
-| Q       | adapter::types::unidirectional::AX  | Wert des Flip‑Flops (D1)    |
+| Adapter | Typ                                | Kommentar                |
+| ------- | ---------------------------------- | ------------------------ |
+| Q       | adapter::types::unidirectional::AX | Wert des Flip‑Flops (D1) |
 
 ## Funktionsweise
 
@@ -69,13 +69,13 @@ Der Ausgang `QO` wird bei jedem ausgeführten Algorithmus auf den aktuellen Wert
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ausgang/Ereignis | Beschreibung |
-| --- | --- | --- | --- |
-| **START** | – | – | Wartet auf erstes INIT‑Ereignis. |
-| **Init** | `initialize` | INITO | Setzt `QO := QI`; danach Wechsel zu SET oder RESET je nach `Q_INIT`. |
-| **DeInit** | `deInitialize` | INITO | Setzt `QO := FALSE`; danach Rücksprung zu START. |
-| **SET** | `SET` | Q.E1 | Setzt `Q.D1 := TRUE` (falls QI = TRUE) und `QO := QI`. |
-| **RESET** | `RESET` | Q.E1 | Setzt `Q.D1 := FALSE` (falls QI = TRUE) und `QO := QI`. |
+| Zustand    | Aktion         | Ausgang/Ereignis | Beschreibung                                                         |
+| ---------- | -------------- | ---------------- | -------------------------------------------------------------------- |
+| **START**  | –              | –                | Wartet auf erstes INIT‑Ereignis.                                     |
+| **Init**   | `initialize`   | INITO            | Setzt `QO := QI`; danach Wechsel zu SET oder RESET je nach `Q_INIT`. |
+| **DeInit** | `deInitialize` | INITO            | Setzt `QO := FALSE`; danach Rücksprung zu START.                     |
+| **SET**    | `SET`          | Q.E1             | Setzt `Q.D1 := TRUE` (falls QI = TRUE) und `QO := QI`.               |
+| **RESET**  | `RESET`        | Q.E1             | Setzt `Q.D1 := FALSE` (falls QI = TRUE) und `QO := QI`.              |
 
 **Transitionen** (auszugsweise):
 
@@ -97,12 +97,12 @@ Der Ausgang `QO` wird bei jedem ausgeführten Algorithmus auf den aktuellen Wert
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Besonderheit |
-| --- | --- |
-| `E_SR` (Standard IEC 61499) | Reines Set/Reset‑Flip‑Flop ohne Toggle und ohne INIT‑Symmetrie. |
-| `E_RS` | Wie E_SR, aber Reset hat Vorrang. |
-| `E_Toggle` | Nur Toggle‑Funktion, kein Set/Reset, keine Initialisierung. |
-| `AX_T_FF_SR_SYM_INIT` | Kombiniert Set, Reset, **Toggle**, **symmetrische INIT‑Voreinstellung** und Ereignisqualifizierer `QI`. |
+| Baustein                    | Besonderheit                                                                                            |
+| --------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `E_SR` (Standard IEC 61499) | Reines Set/Reset‑Flip‑Flop ohne Toggle und ohne INIT‑Symmetrie.                                         |
+| `E_RS`                      | Wie E_SR, aber Reset hat Vorrang.                                                                       |
+| `E_Toggle`                  | Nur Toggle‑Funktion, kein Set/Reset, keine Initialisierung.                                             |
+| `AX_T_FF_SR_SYM_INIT`       | Kombiniert Set, Reset, **Toggle**, **symmetrische INIT‑Voreinstellung** und Ereignisqualifizierer `QI`. |
 
 Der hier beschriebene FB bietet somit eine höhere Flexibilität für Anwendungen, die mehrere Betriebsmodi und einen definierten Anfangszustand erfordern.
 

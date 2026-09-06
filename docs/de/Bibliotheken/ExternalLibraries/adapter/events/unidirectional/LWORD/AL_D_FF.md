@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Der gespeicherte Datenwert wird über den Adapte
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-|------|-----|----------|-----------|
-| I | `adapter::types::unidirectional::AL` | Socket | Wert, der gelatcht werden soll |
-| Q | `adapter::types::unidirectional::AL` | Plug | Gelatchter Wert |
+| Name | Typ                                  | Richtung | Kommentar                      |
+| ---- | ------------------------------------ | -------- | ------------------------------ |
+| I    | `adapter::types::unidirectional::AL` | Socket   | Wert, der gelatcht werden soll |
+| Q    | `adapter::types::unidirectional::AL` | Plug     | Gelatchter Wert                |
 
 Die Adapter sind unidirektional und vom Typ `AL`. Jeder Adapter enthält einen Ereigniseingang/-ausgang (E1) und einen Dateneingang/-ausgang (D1). Der Socket **I** dient als Eingangsschnittstelle, der Plug **Q** als Ausgangsschnittstelle.
 

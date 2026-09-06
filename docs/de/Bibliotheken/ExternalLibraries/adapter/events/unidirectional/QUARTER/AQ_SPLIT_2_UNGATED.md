@@ -30,11 +30,11 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ------ | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AQ` | `IN` | Socket (Eingang) | Eingangsadapter für das zu teilende AQ-Signal. |
-| `adapter::types::unidirectional::AQ` | `OUT1` | Plug (Ausgang) | Erster Ausgang – liefert unverändertes Eingangssignal. |
-| `adapter::types::unidirectional::AQ` | `OUT2` | Plug (Ausgang) | Zweiter Ausgang – liefert ebenfalls unverändertes Eingangssignal. |
+| Typ                                  | Name   | Richtung         | Beschreibung                                                      |
+| ------------------------------------ | ------ | ---------------- | ----------------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | `IN`   | Socket (Eingang) | Eingangsadapter für das zu teilende AQ-Signal.                    |
+| `adapter::types::unidirectional::AQ` | `OUT1` | Plug (Ausgang)   | Erster Ausgang – liefert unverändertes Eingangssignal.            |
+| `adapter::types::unidirectional::AQ` | `OUT2` | Plug (Ausgang)   | Zweiter Ausgang – liefert ebenfalls unverändertes Eingangssignal. |
 
 ## Funktionsweise
 

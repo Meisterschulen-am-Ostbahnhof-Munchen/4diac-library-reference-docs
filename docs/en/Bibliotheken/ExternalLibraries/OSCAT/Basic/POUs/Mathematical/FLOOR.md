@@ -9,23 +9,23 @@
 ### Event inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | X |
+| :--- | :------ | :--- |
+| REQ  |         | X    |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| X | REAL | |
+| :--- | :--- | :------ |
+| X    | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | INT | |
+| :--- | :--- | :------ |
+|      | INT  |         |

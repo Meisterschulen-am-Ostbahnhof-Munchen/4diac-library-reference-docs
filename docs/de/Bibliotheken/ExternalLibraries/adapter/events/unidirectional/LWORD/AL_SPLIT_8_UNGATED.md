@@ -30,10 +30,10 @@ Keine
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AL` | `IN` | Socket (Eingang) | Eingehendes AL-Signal |
-| `adapter::types::unidirectional::AL` | `OUT1` … `OUT8` | Plugs (Ausgang) | Acht ausgehende AL-Signale |
+| Typ                                  | Name            | Richtung         | Beschreibung               |
+| ------------------------------------ | --------------- | ---------------- | -------------------------- |
+| `adapter::types::unidirectional::AL` | `IN`            | Socket (Eingang) | Eingehendes AL-Signal      |
+| `adapter::types::unidirectional::AL` | `OUT1` … `OUT8` | Plugs (Ausgang)  | Acht ausgehende AL-Signale |
 
 ## Funktionsweise
 

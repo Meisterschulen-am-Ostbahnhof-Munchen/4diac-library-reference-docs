@@ -16,52 +16,52 @@ Diese Version des Bausteins („AX Adapter Version“) nutzt spezielle Adapter (
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-| :--- | :--- | :--- |
-| **INIT** | EInit | Initialisierungsanfrage. Setzt alle Werte und Parameter. |
-| **Open** | Event | Befehl zum Öffnen des Schiebers. |
-| **Close** | Event | Befehl zum Schließen des Schiebers. |
-| **RESET** | Event | Setzt den Baustein in einen unbekannten Zustand („Unknown“) zurück. |
+| Ereignis       | Typ   | Kommentar                                                                    |
+| :------------- | :---- | :--------------------------------------------------------------------------- |
+| **INIT**       | EInit | Initialisierungsanfrage. Setzt alle Werte und Parameter.                     |
+| **Open**       | Event | Befehl zum Öffnen des Schiebers.                                             |
+| **Close**      | Event | Befehl zum Schließen des Schiebers.                                          |
+| **RESET**      | Event | Setzt den Baustein in einen unbekannten Zustand („Unknown“) zurück.          |
 | **INPUT_DATA** | Event | Aktualisiert die Konfigurationsdaten für UI-Elemente (Button, Softkey, Aux). |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-| :--- | :--- | :--- |
-| **INITO** | EInit | Bestätigung der Initialisierung. |
-| **EO** | EInit | Ereignis bei Zustandsänderung oder Aktualisierung der Ausgänge (Button, Softkey, Status). |
-| **EO1** | Event | Internes Ereignis (oft genutzt nach dem initialen Starten). |
+| Ereignis  | Typ   | Kommentar                                                                                 |
+| :-------- | :---- | :---------------------------------------------------------------------------------------- |
+| **INITO** | EInit | Bestätigung der Initialisierung.                                                          |
+| **EO**    | EInit | Ereignis bei Zustandsänderung oder Aktualisierung der Ausgänge (Button, Softkey, Status). |
+| **EO1**   | Event | Internes Ereignis (oft genutzt nach dem initialen Starten).                               |
 
 ### **Daten-Eingänge**
 
-| Variable | Datentyp | Kommentar |
-| :--- | :--- | :--- |
-| **QI** | BOOL | Input Event Qualifier (True = Normalbetrieb, False = De-Init). |
-| **BT** | SchieberStruct | Konfigurationsstruktur für Button-Zustände (je nach Schieberstatus). |
-| **SK** | SchieberStruct | Konfigurationsstruktur für Softkey-Zustände. |
-| **AUXC** | SchieberAuxInStruct | Konfigurationsstruktur für Hilfssteuerungen (Bilder/Farben). |
-| **DT_Opening** | TIME | Zeitdauer für den Öffnungsvorgang. |
-| **DT_Closing** | TIME | Zeitdauer für den Schließvorgang. |
-| **START** | UINT | Startkonfiguration (Definiert, in welchem Zustand der Baustein startet). Standard: `STARTUnknown`. |
+| Variable       | Datentyp            | Kommentar                                                                                          |
+| :------------- | :------------------ | :------------------------------------------------------------------------------------------------- |
+| **QI**         | BOOL                | Input Event Qualifier (True = Normalbetrieb, False = De-Init).                                     |
+| **BT**         | SchieberStruct      | Konfigurationsstruktur für Button-Zustände (je nach Schieberstatus).                               |
+| **SK**         | SchieberStruct      | Konfigurationsstruktur für Softkey-Zustände.                                                       |
+| **AUXC**       | SchieberAuxInStruct | Konfigurationsstruktur für Hilfssteuerungen (Bilder/Farben).                                       |
+| **DT_Opening** | TIME                | Zeitdauer für den Öffnungsvorgang.                                                                 |
+| **DT_Closing** | TIME                | Zeitdauer für den Schließvorgang.                                                                  |
+| **START**      | UINT                | Startkonfiguration (Definiert, in welchem Zustand der Baustein startet). Standard: `STARTUnknown`. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Datentyp | Kommentar |
-| :--- | :--- | :--- |
-| **QO** | BOOL | Output Event Qualifier. |
-| **Button** | UINT | Aktueller Button-Status (basierend auf dem internen Zustand). |
-| **Softkey** | UINT | Aktueller Softkey-Status. |
-| **Auxiliary** | SchieberAuxOutStruct | Aktuelle Hilfsdaten (z.B. Bild-ID, Farbe) für die Visualisierung. |
-| **STATE** | STRING | Textuelle Repräsentation des aktuellen Zustands (z.B. "Opened", "Closing"). |
+| Variable      | Datentyp             | Kommentar                                                                   |
+| :------------ | :------------------- | :-------------------------------------------------------------------------- |
+| **QO**        | BOOL                 | Output Event Qualifier.                                                     |
+| **Button**    | UINT                 | Aktueller Button-Status (basierend auf dem internen Zustand).               |
+| **Softkey**   | UINT                 | Aktueller Softkey-Status.                                                   |
+| **Auxiliary** | SchieberAuxOutStruct | Aktuelle Hilfsdaten (z.B. Bild-ID, Farbe) für die Visualisierung.           |
+| **STATE**     | STRING               | Textuelle Repräsentation des aktuellen Zustands (z.B. "Opened", "Closing"). |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-| :--- | :--- | :--- |
-| **POWERED** | AX | Adapter zur Ansteuerung des „Öffnen“-Ventils (Pneumatik/Hauptversorgung). Aktiv während des Öffnens und im offenen Zustand. |
-| **OPEN** | AX | Adapter zur Ansteuerung des „Öffnen“-Signals. |
-| **CLOSE** | AX | Adapter zur Ansteuerung des „Schließen“-Signals. |
-| **timeOut** | ATimeOut | Adapter für Timer-Funktionalität (überwacht die Öffnungs-/Schließzeiten). |
+| Name        | Typ      | Kommentar                                                                                                                   |
+| :---------- | :------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| **POWERED** | AX       | Adapter zur Ansteuerung des „Öffnen“-Ventils (Pneumatik/Hauptversorgung). Aktiv während des Öffnens und im offenen Zustand. |
+| **OPEN**    | AX       | Adapter zur Ansteuerung des „Öffnen“-Signals.                                                                               |
+| **CLOSE**   | AX       | Adapter zur Ansteuerung des „Schließen“-Signals.                                                                            |
+| **timeOut** | ATimeOut | Adapter für Timer-Funktionalität (überwacht die Öffnungs-/Schließzeiten).                                                   |
 
 ## Funktionsweise
 

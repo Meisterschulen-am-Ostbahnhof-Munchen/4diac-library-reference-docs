@@ -28,8 +28,8 @@ Der Funktionsblock **ALI_D_FF** realisiert ein taktgesteuertes D-Flip-Flop (Data
 
 ### **Adapter**
 
-| Bezeichnung | Typ                          | Richtung | Beschreibung                       |
-|-------------|------------------------------|----------|------------------------------------|
+| Bezeichnung | Typ                                   | Richtung | Beschreibung                       |
+| ----------- | ------------------------------------- | -------- | ---------------------------------- |
 | I           | `adapter::types::unidirectional::ALI` | Socket   | Bietet Ereignis- und Dateneingang. |
 | Q           | `adapter::types::unidirectional::ALI` | Plug     | Bietet Ereignis- und Datenausgang. |
 

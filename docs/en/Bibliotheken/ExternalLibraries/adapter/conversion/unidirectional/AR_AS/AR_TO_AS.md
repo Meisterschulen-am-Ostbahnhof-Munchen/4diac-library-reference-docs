@@ -14,7 +14,7 @@ No dedicated data inputs. Data is received via the **AS_OUT adapter** (see Adapt
 
 No dedicated data outputs. Data is sent via the **AR_IN adapter** (see Adapters).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -28,10 +28,10 @@ No dedicated data outputs. Data is sent via the **AR_IN adapter** (see Adapters)
 
 ### **Adapters**
 
-| Adapter | Type | Direction | Description |
-| --------- | ----- | ----------- | -------------- |
-| `AR_IN` | `adapter::types::unidirectional::AR` | Socket (inbound) | Unidirectional REAL adapter. Returns a REAL value (D1) and an associated event (E1). |
-| `AS_OUT` | `adapter::types::unidirectional::AS` | Plug (outbound) | Unidirectional SINT adapter. Receives a SINT value (D1) and an associated event (E1). |
+| Adapter  | Type                                 | Direction        | Description                                                                           |
+| -------- | ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------- |
+| `AR_IN`  | `adapter::types::unidirectional::AR` | Socket (inbound) | Unidirectional REAL adapter. Returns a REAL value (D1) and an associated event (E1).  |
+| `AS_OUT` | `adapter::types::unidirectional::AS` | Plug (outbound)  | Unidirectional SINT adapter. Receives a SINT value (D1) and an associated event (E1). |
 
 ## Functionality
 

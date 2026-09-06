@@ -28,10 +28,12 @@ The **E_RESTART** is a special service interface function block according to IEC
 
 - Upon an external `start` command to the resource
 - Triggers the `COLD` event
+
 1. **Warm Start Sequence**:
 
 - Upon `restart` resource command
 - Generation of the `WARM` event
+
 1. **Stop Sequence**:
 
 - Upon receiving the `stop` signal
@@ -42,9 +44,11 @@ The **E_RESTART** is a special service interface function block according to IEC
 1. **cold_restart**:
 
 - `start` → `COLD` (Full reinitialization)
+
 1. **warm_restart**:
 
 - `restart` → `WARM` (State-preserving restart)
+
 1. **stopping**:
 
 - `stop` → `STOP` (Ordered Shutdown)
@@ -65,11 +69,11 @@ The **E_RESTART** is a special service interface function block according to IEC
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | E_RESTART | E_CYCLE | E_DELAY |
-| --------------- | ----------- | ---------- | --------- |
-| Purpose | System Control | Time Control | Event Delay |
-| Event Type | Control Commands | Periodic | One-Time |
-| Standard | Annex A | Core | Core |
+| Feature    | E_RESTART        | E_CYCLE      | E_DELAY     |
+| ---------- | ---------------- | ------------ | ----------- |
+| Purpose    | System Control   | Time Control | Event Delay |
+| Event Type | Control Commands | Periodic     | One-Time    |
+| Standard   | Annex A          | Core         | Core        |
 
 ## 🛠️ Related Exercises
 

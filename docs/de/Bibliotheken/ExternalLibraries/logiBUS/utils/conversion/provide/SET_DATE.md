@@ -12,28 +12,28 @@ Der Funktionsblock **SET_DATE** dient dazu, einen Datumswert (Datentyp `DATE`) v
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|--------------|---------------|
-| REQ      | Normaler Ausführungsauftrag | IN, OUT |
+| Ereignis | Beschreibung                | Mit Variablen |
+| -------- | --------------------------- | ------------- |
+| REQ      | Normaler Ausführungsauftrag | IN, OUT       |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit Variablen |
-|----------|--------------|---------------|
-| CNF      | Bestätigung der Ausführung | OUT |
+| Ereignis | Beschreibung               | Mit Variablen |
+| -------- | -------------------------- | ------------- |
+| CNF      | Bestätigung der Ausführung | OUT           |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| IN       | DATE  | Wert, der in die Zielvariable geschrieben werden soll |
-| OUT      | DATE  | Zielvariable (InOut) – initialer Wert kann gelesen werden, wird aber überschrieben |
+| Variable | Typ  | Beschreibung                                                                       |
+| -------- | ---- | ---------------------------------------------------------------------------------- |
+| IN       | DATE | Wert, der in die Zielvariable geschrieben werden soll                              |
+| OUT      | DATE | Zielvariable (InOut) – initialer Wert kann gelesen werden, wird aber überschrieben |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| OUT      | DATE  | Zielvariable (InOut) – enthält nach Ausführung den Wert von IN |
+| Variable | Typ  | Beschreibung                                                   |
+| -------- | ---- | -------------------------------------------------------------- |
+| OUT      | DATE | Zielvariable (InOut) – enthält nach Ausführung den Wert von IN |
 
 ### **Adapter**
 
@@ -56,8 +56,8 @@ Die InOut-Variable `OUT` dient gleichzeitig als Eingang und Ausgang. Vor der Aus
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                           |
+| ------- | ------------------------------------------------------ |
 | REQ     | Führt die Wertzuweisung `OUT := IN` aus und sendet CNF |
 
 Es existiert kein weiterer Zustand; der Baustein ist sofort ausführungsbereit.

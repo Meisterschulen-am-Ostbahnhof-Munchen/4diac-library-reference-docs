@@ -12,15 +12,15 @@ Der Funktionsblock **sequence_E_08_AX_AX** realisiert eine sequenzielle Ablaufst
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `S8_START` | Event | Springt von `State_08` zurück in den Startzustand `START` |
-| `RESET` | Event | Setzt aus jedem beliebigen Zustand zurück in den Startzustand `START` |
+| Name       | Typ   | Kommentar                                                             |
+| ---------- | ----- | --------------------------------------------------------------------- |
+| `S8_START` | Event | Springt von `State_08` zurück in den Startzustand `START`             |
+| `RESET`    | Event | Setzt aus jedem beliebigen Zustand zurück in den Startzustand `START` |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                                             |
+| ----- | ----- | ----------------------------------------------------- |
 | `CNF` | Event | Bestätigung der Ausführung (gekoppelt mit `STATE_NR`) |
 
 ### **Daten-Eingänge**
@@ -29,16 +29,16 @@ Keine (die Zustandsübergänge werden ausschließlich über Ereignisse gesteuert
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name       | Typ  | Kommentar                                                               |
+| ---------- | ---- | ----------------------------------------------------------------------- |
 | `STATE_NR` | SINT | Aktuelle Zustandsnummer: `START` = 0, `State_01` = 1, …, `State_08` = 8 |
 
 ### **Adapter**
 
 **Plugs (Ausgänge – unidirektionaler AX-Adapter)**
 
-| Name | Type | Kommentar |
-| ------ | ------ | ----------- |
+| Name    | Type                               | Kommentar                                |
+| ------- | ---------------------------------- | ---------------------------------------- |
 | `DO_S1` | adapter::types::unidirectional::AX | Ausgang aktiv, wenn `State_01` aktiv ist |
 | `DO_S2` | adapter::types::unidirectional::AX | Ausgang aktiv, wenn `State_02` aktiv ist |
 | `DO_S3` | adapter::types::unidirectional::AX | Ausgang aktiv, wenn `State_03` aktiv ist |
@@ -50,9 +50,9 @@ Keine (die Zustandsübergänge werden ausschließlich über Ereignisse gesteuert
 
 **Sockets (Eingänge – unidirektionaler AX-Adapter)**
 
-| Name | Type | Kommentar |
-| ------ | ------ | ----------- |
-| `DI_S1` | adapter::types::unidirectional::AX | Springt von `START` nach `State_01` |
+| Name    | Type                               | Kommentar                              |
+| ------- | ---------------------------------- | -------------------------------------- |
+| `DI_S1` | adapter::types::unidirectional::AX | Springt von `START` nach `State_01`    |
 | `DI_S2` | adapter::types::unidirectional::AX | Springt von `State_01` nach `State_02` |
 | `DI_S3` | adapter::types::unidirectional::AX | Springt von `State_02` nach `State_03` |
 | `DI_S4` | adapter::types::unidirectional::AX | Springt von `State_03` nach `State_04` |
@@ -74,19 +74,19 @@ Der Baustein arbeitet nach dem Prinzip einer ereignisgesteuerten Schrittkette. N
 
 ## Zustandsübersicht
 
-| Zustand (ECC) | Bedeutung | Aktionen |
-| --------------- | ----------- | ---------- |
-| `xSTART` | Initialer Ruhezustand nach Aktivierung | Keine Ausgabe, erwartet `DI_S1` |
-| `sState_01` | Erster Schritt der Sequenz | Setzt `DO_S1.D1` auf `DI_S1.D1`; Ausgabe `STATE_NR=1` |
-| `sState_02` | Zweiter Schritt | Setzt `DO_S2.D1` auf `DI_S2.D1`; `STATE_NR=2` |
-| `sState_03` | Dritter Schritt | Setzt `DO_S3.D1` auf `DI_S3.D1`; `STATE_NR=3` |
-| `sState_04` | Vierter Schritt | Setzt `DO_S4.D1` auf `DI_S4.D1`; `STATE_NR=4` |
-| `sState_05` | Fünfter Schritt | Setzt `DO_S5.D1` auf `DI_S5.D1`; `STATE_NR=5` |
-| `sState_06` | Sechster Schritt | Setzt `DO_S6.D1` auf `DI_S6.D1`; `STATE_NR=6` |
-| `sState_07` | Siebter Schritt | Setzt `DO_S7.D1` auf `DI_S7.D1`; `STATE_NR=7` |
-| `sState_08` | Achter Schritt | Setzt `DO_S8.D1` auf `DI_S8.D1`; `STATE_NR=8` |
-| `sState_00` | Ruhezustand nach Sequenzdurchlauf oder Reset | Keine Ausgabe; `STATE_NR=0` |
-| `sRESET` | Zwischenzustand bei Reset | Setzt **alle** `DO_Sx.D1` auf `FALSE`; danach Übergang zu `sState_00` |
+| Zustand (ECC) | Bedeutung                                    | Aktionen                                                              |
+| ------------- | -------------------------------------------- | --------------------------------------------------------------------- |
+| `xSTART`      | Initialer Ruhezustand nach Aktivierung       | Keine Ausgabe, erwartet `DI_S1`                                       |
+| `sState_01`   | Erster Schritt der Sequenz                   | Setzt `DO_S1.D1` auf `DI_S1.D1`; Ausgabe `STATE_NR=1`                 |
+| `sState_02`   | Zweiter Schritt                              | Setzt `DO_S2.D1` auf `DI_S2.D1`; `STATE_NR=2`                         |
+| `sState_03`   | Dritter Schritt                              | Setzt `DO_S3.D1` auf `DI_S3.D1`; `STATE_NR=3`                         |
+| `sState_04`   | Vierter Schritt                              | Setzt `DO_S4.D1` auf `DI_S4.D1`; `STATE_NR=4`                         |
+| `sState_05`   | Fünfter Schritt                              | Setzt `DO_S5.D1` auf `DI_S5.D1`; `STATE_NR=5`                         |
+| `sState_06`   | Sechster Schritt                             | Setzt `DO_S6.D1` auf `DI_S6.D1`; `STATE_NR=6`                         |
+| `sState_07`   | Siebter Schritt                              | Setzt `DO_S7.D1` auf `DI_S7.D1`; `STATE_NR=7`                         |
+| `sState_08`   | Achter Schritt                               | Setzt `DO_S8.D1` auf `DI_S8.D1`; `STATE_NR=8`                         |
+| `sState_00`   | Ruhezustand nach Sequenzdurchlauf oder Reset | Keine Ausgabe; `STATE_NR=0`                                           |
+| `sRESET`      | Zwischenzustand bei Reset                    | Setzt **alle** `DO_Sx.D1` auf `FALSE`; danach Übergang zu `sState_00` |
 
 ## Anwendungsszenarien
 

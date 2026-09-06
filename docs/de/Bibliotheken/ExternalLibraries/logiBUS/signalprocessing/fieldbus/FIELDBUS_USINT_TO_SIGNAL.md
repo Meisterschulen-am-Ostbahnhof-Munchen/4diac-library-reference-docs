@@ -12,28 +12,28 @@ Der Funktionsblock FIELDBUS_USINT_TO_SIGNAL dient der Aufbereitung eines USINT-S
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit |
-|----------|--------------|-----|
-| REQ      | Normaler Ausführungsauftrag | IN |
+| Ereignis | Beschreibung                | Mit |
+| -------- | --------------------------- | --- |
+| REQ      | Normaler Ausführungsauftrag | IN  |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit |
-|----------|--------------|-----|
+| Ereignis | Beschreibung           | Mit        |
+| -------- | ---------------------- | ---------- |
 | CNF      | Ausführungsbestätigung | OUT, VALID |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Kommentar | Initialwert |
-|------|-------|-----------|-------------|
+| Name | Typ   | Kommentar                | Initialwert                    |
+| ---- | ----- | ------------------------ | ------------------------------ |
 | IN   | USINT | Eingangswert vom Feldbus | BYTE_TO_USINT(NOT_AVAILABLE_B) |
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ   | Kommentar | Initialwert |
-|-------|-------|-----------|-------------|
-| OUT   | USINT | Gefilterter Ausgangswert | 16#00 |
-| VALID | BOOL  | TRUE, wenn Signal gültig | FALSE |
+| Name  | Typ   | Kommentar                | Initialwert |
+| ----- | ----- | ------------------------ | ----------- |
+| OUT   | USINT | Gefilterter Ausgangswert | 16#00       |
+| VALID | BOOL  | TRUE, wenn Signal gültig | FALSE       |
 
 ### **Adapter**
 

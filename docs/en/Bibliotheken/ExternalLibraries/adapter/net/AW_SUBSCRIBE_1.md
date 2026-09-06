@@ -31,9 +31,9 @@ The function block **AW_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::AW | Plug (Output) | Buffered received WORD value |
+| Adapter | Type                               | Direction     | Description                  |
+| ------- | ---------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AW | Plug (Output) | Buffered received WORD value |
 
 ## Functionality
 

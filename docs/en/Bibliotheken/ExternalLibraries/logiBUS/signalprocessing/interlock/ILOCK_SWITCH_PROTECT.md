@@ -12,37 +12,37 @@ The **ILOCK_SWITCH_PROTECT** function block implements a prioritized interlock b
 
 ### **Event Inputs**
 
-| Name | With Parameters | Description |
-| --------- | -------------------------------- | ------------------------------------------------------ |
-| EI_UP | `DI_UP`, `DT_PROTECT` | Event requesting the "Up" direction |
+| Name    | With Parameters         | Description                           |
+| ------- | ----------------------- | ------------------------------------- |
+| EI_UP   | `DI_UP`, `DT_PROTECT`   | Event requesting the "Up" direction   |
 | EI_DOWN | `DI_DOWN`, `DT_PROTECT` | Event requesting the "Down" direction |
 
 ### **Event Outputs**
 
-| Name | With Parameters | Description |
-| --------- | ---------------- | ------------------------------------------------------ |
-| EO_UP | `DO_UP` | Confirmation that the "Up" direction has been activated |
-| EO_DOWN | `DO_DOWN` | Confirmation that the "Down" direction has been activated |
+| Name    | With Parameters | Description                                               |
+| ------- | --------------- | --------------------------------------------------------- |
+| EO_UP   | `DO_UP`         | Confirmation that the "Up" direction has been activated   |
+| EO_DOWN | `DO_DOWN`       | Confirmation that the "Down" direction has been activated |
 
 ### **Data Inputs**
 
-| Name | Data Type | Initial Value | Description |
-| ------------ | ---------- | ------------- | ------------------------------------------------------- |
-| DI_UP | BOOL | – | TRUE = forward, up, right, clockwise |
-| DI_DOWN | BOOL | – | TRUE = backward, down, left, counterclockwise |
-| DT_PROTECT | TIME | T#50ms | Protection delay (dead time) before a change of direction |
+| Name       | Data Type | Initial Value | Description                                               |
+| ---------- | --------- | ------------- | --------------------------------------------------------- |
+| DI_UP      | BOOL      | –             | TRUE = forward, up, right, clockwise                      |
+| DI_DOWN    | BOOL      | –             | TRUE = backward, down, left, counterclockwise             |
+| DT_PROTECT | TIME      | T#50ms        | Protection delay (dead time) before a change of direction |
 
 ### **Data Outputs**
 
-| Name | Data Type | Description |
-| --------- | ---------- | ------------------------------------------------------- |
-| DO_UP | BOOL | TRUE = Output active for direction "Up" |
-| DO_DOWN | BOOL | TRUE = Output active for direction "Down" |
+| Name    | Data Type | Description                               |
+| ------- | --------- | ----------------------------------------- |
+| DO_UP   | BOOL      | TRUE = Output active for direction "Up"   |
+| DO_DOWN | BOOL      | TRUE = Output active for direction "Down" |
 
 ### **Adapter**
 
-| Name | Type | Description |
-|---------|--------------------------------|-----------------------------------------------|
+| Name    | Type                         | Description                                   |
+| ------- | ---------------------------- | --------------------------------------------- |
 | timeOut | `iec61499::events::ATimeOut` | Adapter for implementing the protection delay |
 
 ## Functionality
@@ -52,9 +52,11 @@ The module operates as a finite state machine with five states:
 1. **STOP** – Idle state. Both outputs are FALSE.
 
 - Upon an event with a valid input (`EI_UP[DI_UP]` or `EI_DOWN[DI_DOWN]`), the module switches directly to the corresponding state.
+
 1. **UP** – The "Up" direction is active. `DO_UP = TRUE`, `DO_DOWN = FALSE`.
 
 - A repeat `EI_UP` with an inactive request (`NOT DI_UP`) or a `EI_DOWN` with an active request (`DI_DOWN`) triggers the protection state.
+
 1. **DOWN** – The "Down" direction is active. `DO_UP = FALSE`, `DO_DOWN = TRUE`.
 
 Similarly: `EI_DOWN[NOT DI_DOWN]` or `EI_UP[DI_UP]` initiates the protection state.
@@ -62,6 +64,7 @@ Similarly: `EI_DOWN[NOT DI_DOWN]` or `EI_UP[DI_UP]` initiates the protection sta
 1. **PROTECT** – Protection state. Both outputs are immediately reset (FALSE) and the timer of the adapter `timeOut` is started.
 
 - Only after the configured time (`DT_PROTECT`) has elapsed does the evaluation state begin.
+
 1. **EVAL** – Evaluation after the protection time.
 
 - Based on the current inputs, the following is determined:
@@ -80,13 +83,13 @@ The event outputs are triggered along with the respective executed algorithm. In
 
 ## State Overview
 
-| State | Description | DO_UP | DO_DOWN | Triggered Event Outputs |
-| ---------- | ------------------------------------------------------------------ | ------- | --------- | ----------------------------- |
-| **STOP** | Waiting for a valid request; outputs inactive | FALSE | FALSE | – |
-| **UP** | Up direction active; switching blocked without intermediate step | TRUE | FALSE | EO_UP, EO_DOWN |
-| **DOWN** | Down direction active; switching blocked without intermediate step | FALSE | TRUE | EO_DOWN, EO_UP |
-| **PROTECT** | Protection delay in progress; all outputs disabled | FALSE | FALSE | EO_UP, EO_DOWN, timeOut.START |
-| **EVAL** | After the protection time has elapsed, the inputs are evaluated | – | – | – (state change) |
+| State       | Description                                                        | DO_UP | DO_DOWN | Triggered Event Outputs       |
+| ----------- | ------------------------------------------------------------------ | ----- | ------- | ----------------------------- |
+| **STOP**    | Waiting for a valid request; outputs inactive                      | FALSE | FALSE   | –                             |
+| **UP**      | Up direction active; switching blocked without intermediate step   | TRUE  | FALSE   | EO_UP, EO_DOWN                |
+| **DOWN**    | Down direction active; switching blocked without intermediate step | FALSE | TRUE    | EO_DOWN, EO_UP                |
+| **PROTECT** | Protection delay in progress; all outputs disabled                 | FALSE | FALSE   | EO_UP, EO_DOWN, timeOut.START |
+| **EVAL**    | After the protection time has elapsed, the inputs are evaluated    | –     | –       | – (state change)              |
 
 ## Application Scenarios
 
@@ -96,10 +99,10 @@ The event outputs are triggered along with the respective executed algorithm. In
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Special Feature |
-| ------------------------------ | -------------------------------------------------------- |
-| **SR Latch** | Simple set-reset flip-flop with no delay |
-| **Interlock (simple)** | Switches instantly, no dead time |
+| Function Block           | Special Feature                                                                              |
+| ------------------------ | -------------------------------------------------------------------------------------------- |
+| **SR Latch**             | Simple set-reset flip-flop with no delay                                                     |
+| **Interlock (simple)**   | Switches instantly, no dead time                                                             |
 | **ILOCK_SWITCH_PROTECT** | Configurable protection delay, evaluation after the delay, handling of simultaneous requests |
 
 Compared to simple latches, **ILOCK_SWITCH_PROTECT** offers controlled switching, which is particularly advantageous with inductive loads or mechanically slow systems.

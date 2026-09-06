@@ -46,11 +46,11 @@ Der Baustein besitzt keine direkten klassischen Ereignis- oder Dateneingänge au
 
 ### **Adapter**
 
-| Typ | Name | Adaptertyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
+| Typ                 | Name  | Adaptertyp                             | Beschreibung                                     |
+| :------------------ | :---- | :------------------------------------- | :----------------------------------------------- |
 | **Socket** (Buchse) | `IN1` | `adapter::types::unidirectional::AUDI` | Erster Eingangswert für die Division (Dividend). |
 | **Socket** (Buchse) | `IN2` | `adapter::types::unidirectional::AUDI` | Zweiter Eingangswert für die Division (Divisor). |
-| **Plug** (Stecker) | `OUT` | `adapter::types::unidirectional::AUDI` | Ergebnis der Division (Quotient). |
+| **Plug** (Stecker)  | `OUT` | `adapter::types::unidirectional::AUDI` | Ergebnis der Division (Quotient).                |
 
 ---
 
@@ -120,10 +120,10 @@ Die Ausführung folgt einem einfachen, ereignisgesteuerten Schema:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein-Typ | Schnittstellenart | Verdrahtungsaufwand | Flexibilität |
-| :--- | :--- | :--- | :--- |
-| **Standard-`DIV`** | Einzelne Pins (REQ, IN1, IN2, OUT, CNF) | Hoch (viele Linien) | Gering (feste Datentypen pro Instanz) |
-| **`AUDI_DIV_2_UNGATED`** | Adapter (`IN1`, `IN2`, `OUT`) | Sehr gering | Hoch (generische Anpassung über Adapter) |
+| Baustein-Typ             | Schnittstellenart                       | Verdrahtungsaufwand | Flexibilität                             |
+| :----------------------- | :-------------------------------------- | :------------------ | :--------------------------------------- |
+| **Standard-`DIV`**       | Einzelne Pins (REQ, IN1, IN2, OUT, CNF) | Hoch (viele Linien) | Gering (feste Datentypen pro Instanz)    |
+| **`AUDI_DIV_2_UNGATED`** | Adapter (`IN1`, `IN2`, `OUT`)           | Sehr gering         | Hoch (generische Anpassung über Adapter) |
 
 ---
 

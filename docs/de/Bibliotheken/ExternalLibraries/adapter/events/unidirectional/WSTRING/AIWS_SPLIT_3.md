@@ -28,12 +28,12 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | IN | `adapter::types::unidirectional::AIWS` | Eingangsadapter, der das zu verteilende Signal empfängt. |
-| Plug (Ausgang) | OUT1 | `adapter::types::unidirectional::AIWS` | Erster Ausgangsadapter. |
-| Plug (Ausgang) | OUT2 | `adapter::types::unidirectional::AIWS` | Zweiter Ausgangsadapter. |
-| Plug (Ausgang) | OUT3 | `adapter::types::unidirectional::AIWS` | Dritter Ausgangsadapter. |
+| Richtung         | Name | Typ                                    | Beschreibung                                             |
+| ---------------- | ---- | -------------------------------------- | -------------------------------------------------------- |
+| Socket (Eingang) | IN   | `adapter::types::unidirectional::AIWS` | Eingangsadapter, der das zu verteilende Signal empfängt. |
+| Plug (Ausgang)   | OUT1 | `adapter::types::unidirectional::AIWS` | Erster Ausgangsadapter.                                  |
+| Plug (Ausgang)   | OUT2 | `adapter::types::unidirectional::AIWS` | Zweiter Ausgangsadapter.                                 |
+| Plug (Ausgang)   | OUT3 | `adapter::types::unidirectional::AIWS` | Dritter Ausgangsadapter.                                 |
 
 ## Funktionsweise
 

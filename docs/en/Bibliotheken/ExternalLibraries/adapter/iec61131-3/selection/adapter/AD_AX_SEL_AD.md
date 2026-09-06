@@ -15,7 +15,7 @@ The interfaces of this function block are implemented entirely via adapters, ena
 
 *This component has no direct data outputs on its housing.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -36,7 +36,7 @@ The interfaces of this function block are implemented entirely via adapters, ena
 - **Plugs (Output Adapters):**
 - `OUT` (Type: `adapter::types::unidirectional::AD`): The selected output channel that carries the value of the selected input.
 
-- ## Functionality
+## Functionality
 
 The module encapsulates an internal network of control and conversion modules:
 
@@ -46,6 +46,7 @@ The module encapsulates an internal network of control and conversion modules:
 
 - If the signal `FALSE` is present at selector `G`, the block switches the signal from `IN0` to the output.
 - - If the signal `TRUE` is present at selector `G`, the function block switches the signal from `IN1` to the output.
+
 1. **Output Synchronization:** The selected value is passed via another function block `F_MOVE` to an output flip-flop (`E_D_FF_ANY_OUT`). This flip-flop generates the output event `E1` at output adapter `OUT` and places the selected value at `D1`.
 
 - **Adapter Encapsulation:** The use of unidirectional adapters (`AD` and `AX`) simplifies signal routing and avoids loose data and event lines.
@@ -63,8 +64,6 @@ As a composite function block, this module does not have its own Execution Contr
 - **Multiplexer (MUX):** A classic MUX allows selection from more than two channels using an integer value. `AD_AX_SEL_AD` is optimized for simple binary decisions (either/or) and thus saves processing resources.
 
 The `AD_AX_SEL_AD` is a robust and efficient auxiliary module for event-driven signal switching. Thanks to the consistent use of adapters, it integrates perfectly into modern, service-oriented control architectures within 4diac.
-
-## Functionality
 
 ## Technical Features
 

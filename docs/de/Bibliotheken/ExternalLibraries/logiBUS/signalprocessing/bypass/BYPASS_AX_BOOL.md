@@ -12,34 +12,34 @@ Der Funktionsblock `BYPASS_AX_BOOL` realisiert eine Bypass-Funktionalität für 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ   | Beschreibung               |
+| ---- | ----- | -------------------------- |
 | REQ  | Event | Normaler Ausführungsanstoß |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ   | Beschreibung               |
+| ---- | ----- | -------------------------- |
 | CNF  | Event | Bestätigung der Ausführung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ  | Beschreibung   |
+| ---- | ---- | -------------- |
 | IN   | BOOL | Eingangssignal |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ  | Beschreibung                                       |
+| ---- | ---- | -------------------------------------------------- |
 | OUT  | BOOL | Durchgeschleiftes Eingangssignal (identisch zu IN) |
 
 ### **Adapter**
 
-| Rolle | Name | Typ | Richtung | Beschreibung |
-|-------|------|-----|----------|--------------|
-| Plug  | BY_OUT | `adapter::types::unidirectional::AX` | Ausgang | Gibt den gespeicherten Bypass-Zustand aus |
-| Socket| BY_IN  | `adapter::types::unidirectional::AX` | Eingang | Nimmt das Bypass-Eingangssignal (D1) und Ereignis (E1) entgegen |
+| Rolle  | Name   | Typ                                  | Richtung | Beschreibung                                                    |
+| ------ | ------ | ------------------------------------ | -------- | --------------------------------------------------------------- |
+| Plug   | BY_OUT | `adapter::types::unidirectional::AX` | Ausgang  | Gibt den gespeicherten Bypass-Zustand aus                       |
+| Socket | BY_IN  | `adapter::types::unidirectional::AX` | Eingang  | Nimmt das Bypass-Eingangssignal (D1) und Ereignis (E1) entgegen |
 
 ## Funktionsweise
 

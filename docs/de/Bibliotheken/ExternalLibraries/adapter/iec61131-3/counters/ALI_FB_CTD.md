@@ -37,13 +37,13 @@ Es existieren keine separaten DataOutputs. Die Ausgabedaten werden über die fol
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ | Beschreibung |
-|-------------|----------|-----|--------------|
+| Bezeichnung | Richtung | Typ | Beschreibung                        |
+| ----------- | -------- | --- | ----------------------------------- |
 | CD          | Socket   | AX  | Abwärtszählimpuls (Ereignis + Bool) |
-| LD          | Socket   | AX  | Ladeimpuls (Ereignis + Bool) |
-| PV          | Socket   | ALI | Preset‑Wert (LINT) |
-| Q           | Plug     | AX  | Ausgangssignal bei Zählerstand = 0 |
-| CV          | Plug     | ALI | Aktueller Zählerwert (LINT) |
+| LD          | Socket   | AX  | Ladeimpuls (Ereignis + Bool)        |
+| PV          | Socket   | ALI | Preset‑Wert (LINT)                  |
+| Q           | Plug     | AX  | Ausgangssignal bei Zählerstand = 0  |
+| CV          | Plug     | ALI | Aktueller Zählerwert (LINT)         |
 
 ## Funktionsweise
 
@@ -74,11 +74,11 @@ Der ALI_FB_CTD realisiert einen Abwärtszähler mit Laden. Die interne Logik wir
 
 Der ALI_FB_CTD besitzt **keinen expliziten Zustandsautomaten** im FB‑Netzwerk. Sein Verhalten ist rein ereignisgesteuert und kombinatorisch:
 
-| Eingangsereignis | Aktion |
-| ------------------ | -------- |
-| LD aktiviert | Zählerstand = Preset‑Wert |
-| CD aktiviert | Zählerstand dekrementieren (falls > 0) |
-| PV aktiviert | Keine Zähleränderung, aber Ereignis CNF wird gesendet. Der Datenwert von PV wird nicht unmittelbar übernommen – ein LD ist erforderlich. |
+| Eingangsereignis | Aktion                                                                                                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| LD aktiviert     | Zählerstand = Preset‑Wert                                                                                                                |
+| CD aktiviert     | Zählerstand dekrementieren (falls > 0)                                                                                                   |
+| PV aktiviert     | Keine Zähleränderung, aber Ereignis CNF wird gesendet. Der Datenwert von PV wird nicht unmittelbar übernommen – ein LD ist erforderlich. |
 
 Der aktuelle Zählerstand und der Bool‑Ausgang werden nach jedem Schritt aktualisiert.
 
@@ -90,11 +90,11 @@ Der aktuelle Zählerstand und der Bool‑Ausgang werden nach jedem Schritt aktua
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Besonderheit |
-| ---------- | -------------- |
-| **ALI_FB_CTD** (dieser Baustein) | Verwendet AX‑ und ALI‑Adapter; immer‑auslösend; geeignet für adapterbasierte Architekturen. |
-| **FB_CTD_LINT** (Standard) | Reiner Daten‑/Ereignis‑FB ohne Adapter; Ereignisauslösung direkt über die Schnittstellen. |
-| **CTU** (Aufwärtszähler) | Zählt aufwärts, anstatt abwärts; andere Anwendungslogik. |
+| Baustein                                   | Besonderheit                                                                                       |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| **ALI_FB_CTD** (dieser Baustein)           | Verwendet AX‑ und ALI‑Adapter; immer‑auslösend; geeignet für adapterbasierte Architekturen.        |
+| **FB_CTD_LINT** (Standard)                 | Reiner Daten‑/Ereignis‑FB ohne Adapter; Ereignisauslösung direkt über die Schnittstellen.          |
+| **CTU** (Aufwärtszähler)                   | Zählt aufwärts, anstatt abwärts; andere Anwendungslogik.                                           |
 | **Zählbausteine mit Flankenunterdrückung** | Sie besitzen eigene Filterlogik (z.B. AX_D_FF) und lösen nur bei tatsächlichen Wertänderungen aus. |
 
 Der ALI_FB_CTD eignet sich besonders in Umgebungen, die auf Adaptern basieren und bei denen ein einfaches, zuverlässiges Abwärtszählen ohne zusätzliche Filter gewünscht ist.

@@ -30,10 +30,10 @@ Keine eigenen Daten-Ausgänge vorhanden. Der konvertierte Datenwert wird über d
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| ALI_IN | `adapter::types::unidirectional::ALI` | Socket (Eingang) | Liefert den LINT-Wert (64-Bit signed) und das zugehörige Ereignis. |
-| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | Stellt den konvertierten UDINT-Wert (32-Bit unsigned) und das Bestätigungsereignis bereit. |
+| Adapter  | Typ                                    | Richtung         | Beschreibung                                                                               |
+| -------- | -------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------ |
+| ALI_IN   | `adapter::types::unidirectional::ALI`  | Socket (Eingang) | Liefert den LINT-Wert (64-Bit signed) und das zugehörige Ereignis.                         |
+| AUDI_OUT | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | Stellt den konvertierten UDINT-Wert (32-Bit unsigned) und das Bestätigungsereignis bereit. |
 
 ## Funktionsweise
 

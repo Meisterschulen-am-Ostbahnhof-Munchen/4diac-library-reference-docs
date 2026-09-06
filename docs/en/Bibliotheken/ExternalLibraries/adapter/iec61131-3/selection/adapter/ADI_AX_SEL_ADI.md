@@ -74,6 +74,7 @@ The function block `F_SEL` (corresponding to the classic `SEL` standard function
 
 - If the signal from adapter `G` is equal to `FALSE`, the signal from `IN0` is selected.
 - If the signal from adapter `G` is equal to `TRUE`, the signal from `IN1` is selected.
+
 1. **Output**:
 
 The selected value is passed via `F_MOVE_OUT` to the output flip-flop `E_D_FF_ANY_OUT`. This flip-flop sets the value `D1` on output adapter `OUT` and immediately triggers the corresponding event `OUT.E1` to inform downstream components about the data change.
@@ -92,10 +93,10 @@ The selected value is passed via `F_MOVE_OUT` to the output flip-flop `E_D_FF_AN
 
 Since this is a purely data-flow and event-driven network function block (Composite FB), it does not have an internal state machine (ECC). Its behavior can be described statically as follows:
 
-| State Selector `G` | Event at Input | Behavior at Output `OUT` |
-| :--- | :--- | :--- |
-| `FALSE` | Any Event | `OUT.D1` receives the value of `IN0.D1`; `OUT.E1` is triggered. |
-| `TRUE` | Any Event | `OUT.D1` receives the value from `IN1.D1`; `OUT.E1` is triggered. |
+| State Selector `G` | Event at Input | Behavior at Output `OUT`                                          |
+| :----------------- | :------------- | :---------------------------------------------------------------- |
+| `FALSE`            | Any Event      | `OUT.D1` receives the value of `IN0.D1`; `OUT.E1` is triggered.   |
+| `TRUE`             | Any Event      | `OUT.D1` receives the value from `IN1.D1`; `OUT.E1` is triggered. |
 
 --
 

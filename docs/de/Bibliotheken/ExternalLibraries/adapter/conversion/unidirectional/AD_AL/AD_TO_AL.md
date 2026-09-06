@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Kommentar |
-|-----|----------|------|-----------|
-| Socket (Eingang) | Input | `AD_IN` | DWORD-Adapter-Eingang vom Typ `adapter::types::unidirectional::AD` |
-| Plug (Ausgang) | Output | `AL_OUT` | LWORD-Adapter-Ausgang vom Typ `adapter::types::unidirectional::AL` |
+| Typ              | Richtung | Name     | Kommentar                                                          |
+| ---------------- | -------- | -------- | ------------------------------------------------------------------ |
+| Socket (Eingang) | Input    | `AD_IN`  | DWORD-Adapter-Eingang vom Typ `adapter::types::unidirectional::AD` |
+| Plug (Ausgang)   | Output   | `AL_OUT` | LWORD-Adapter-Ausgang vom Typ `adapter::types::unidirectional::AL` |
 
 ## Funktionsweise
 

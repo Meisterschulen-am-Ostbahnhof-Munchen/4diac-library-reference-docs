@@ -32,10 +32,10 @@ Der Baustein besitzt keine eigenen Ereignis- oder Datenein-/ausgänge, sondern s
 
 ### **Adapter**
 
-| Adaptername | Richtung | Typ | Beschreibung |
-|-------------|----------|-----|--------------|
-| **AS_IN** | Socket (Eingang) | adapter::types::unidirectional::AS | Eingangsadapter für den SINT-Wert (inkl. Ereignis E1) |
-| **AD_OUT** | Plug (Ausgang) | adapter::types::unidirectional::AD | Ausgangsadapter für den konvertierten DWORD-Wert (inkl. Ereignis E1) |
+| Adaptername | Richtung         | Typ                                | Beschreibung                                                         |
+| ----------- | ---------------- | ---------------------------------- | -------------------------------------------------------------------- |
+| **AS_IN**   | Socket (Eingang) | adapter::types::unidirectional::AS | Eingangsadapter für den SINT-Wert (inkl. Ereignis E1)                |
+| **AD_OUT**  | Plug (Ausgang)   | adapter::types::unidirectional::AD | Ausgangsadapter für den konvertierten DWORD-Wert (inkl. Ereignis E1) |
 
 ## Funktionsweise
 

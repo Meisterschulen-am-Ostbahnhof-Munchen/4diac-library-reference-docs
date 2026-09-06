@@ -12,22 +12,22 @@ Der Funktionsblock `AB_FIELDBUS_BYTE_TO_SIGNAL_SCALED` dient dazu, ein eingehend
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| `INIT` | EInit | Initialisierungsanforderung (z. B. zum Setzen von Parametern) |
+| Ereignis | Typ   | Beschreibung                                                  |
+| -------- | ----- | ------------------------------------------------------------- |
+| `INIT`   | EInit | Initialisierungsanforderung (z. B. zum Setzen von Parametern) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| `INITO` | EInit | Bestätigung der erfolgreichen Initialisierung |
+| Ereignis | Typ   | Beschreibung                                  |
+| -------- | ----- | --------------------------------------------- |
+| `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| `SCALE` | REAL | 1.0 | Skalierungsfaktor, der auf den Rohwert angewendet wird |
-| `OFFSET` | DINT | 0 | Ganzzahliger Offset, der nach der Skalierung addiert wird |
+| Name     | Typ  | Initialwert | Beschreibung                                              |
+| -------- | ---- | ----------- | --------------------------------------------------------- |
+| `SCALE`  | REAL | 1.0         | Skalierungsfaktor, der auf den Rohwert angewendet wird    |
+| `OFFSET` | DINT | 0           | Ganzzahliger Offset, der nach der Skalierung addiert wird |
 
 ### **Daten-Ausgänge**
 
@@ -35,11 +35,11 @@ Der Baustein besitzt keine eigenständigen Daten-Eingänge oder -Ausgänge – d
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `IN` | AB (Adapter Typ A→B) | Socket | Empfang des rohen BYTE-Signals |
-| `OUT` | AR (Adapter Typ A→R) | Plug | Ausgabe des skalierten Signals |
-| `VALID` | AX (Adapter Typ A→X) | Plug | Signalisiert, ob der aktuelle Ausgabewert gültig ist (TRUE = gültig) |
+| Adapter | Typ                  | Richtung | Beschreibung                                                         |
+| ------- | -------------------- | -------- | -------------------------------------------------------------------- |
+| `IN`    | AB (Adapter Typ A→B) | Socket   | Empfang des rohen BYTE-Signals                                       |
+| `OUT`   | AR (Adapter Typ A→R) | Plug     | Ausgabe des skalierten Signals                                       |
+| `VALID` | AX (Adapter Typ A→X) | Plug     | Signalisiert, ob der aktuelle Ausgabewert gültig ist (TRUE = gültig) |
 
 ## Funktionsweise
 

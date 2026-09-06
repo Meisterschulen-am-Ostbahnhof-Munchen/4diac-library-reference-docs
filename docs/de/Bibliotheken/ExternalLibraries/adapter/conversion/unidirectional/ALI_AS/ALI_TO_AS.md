@@ -28,10 +28,10 @@ Keine. Das konvertierte SINT‑Signal wird über den AS‑Adapter ausgegeben.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| **ALI_IN** | `adapter::types::unidirectional::ALI` | Socket (Eingang) | Aufnahme eines LINT‑Werts (64‑Bit) über das Ereignis E1 und Datum D1. |
-| **AS_OUT** | `adapter::types::unidirectional::AS` | Plug (Ausgang) | Bereitstellung des konvertierten SINT‑Werts (8‑Bit) über Ereignis E1 und Datum D1. |
+| Name       | Typ                                   | Richtung         | Beschreibung                                                                       |
+| ---------- | ------------------------------------- | ---------------- | ---------------------------------------------------------------------------------- |
+| **ALI_IN** | `adapter::types::unidirectional::ALI` | Socket (Eingang) | Aufnahme eines LINT‑Werts (64‑Bit) über das Ereignis E1 und Datum D1.              |
+| **AS_OUT** | `adapter::types::unidirectional::AS`  | Plug (Ausgang)   | Bereitstellung des konvertierten SINT‑Werts (8‑Bit) über Ereignis E1 und Datum D1. |
 
 ## Funktionsweise
 

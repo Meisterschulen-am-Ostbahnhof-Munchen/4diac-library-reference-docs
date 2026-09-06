@@ -12,37 +12,37 @@ Der Funktionsblock **NVS_AUI** dient dem Laden und Speichern von UINT-Daten in e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar | Mitgeführte Daten |
-|----------|-----------|-------------------|
+| Ereignis | Kommentar               | Mitgeführte Daten                                    |
+| -------- | ----------------------- | ---------------------------------------------------- |
 | `INIT`   | Service‑Initialisierung | `QI` (BOOL), `KEY` (STRING), `DEFAULT_VALUE` (UDINT) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar | Mitgeführte Daten |
-|----------|-----------|-------------------|
+| Ereignis | Kommentar                   | Mitgeführte Daten              |
+| -------- | --------------------------- | ------------------------------ |
 | `INITO`  | Initialisierungsbestätigung | `QO` (BOOL), `STATUS` (STRING) |
 
 ### **Daten-Eingänge**
 
-| Name            | Typ    | Kommentar |
-|-----------------|--------|-----------|
-| `QI`            | BOOL   | Qualifikator für das Eingangsereignis |
-| `KEY`           | STRING | Schlüsselname für den NVS‑Zugriff |
+| Name            | Typ    | Kommentar                                                      |
+| --------------- | ------ | -------------------------------------------------------------- |
+| `QI`            | BOOL   | Qualifikator für das Eingangsereignis                          |
+| `KEY`           | STRING | Schlüsselname für den NVS‑Zugriff                              |
 | `DEFAULT_VALUE` | UDINT  | Wert, der ausgelesen wird, falls im NVS kein Eintrag vorhanden |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ    | Kommentar |
-|----------|--------|-----------|
+| Name     | Typ    | Kommentar                             |
+| -------- | ------ | ------------------------------------- |
 | `QO`     | BOOL   | Qualifikator für das Ausgangsereignis |
-| `STATUS` | STRING | Dienststatus‑Meldung |
+| `STATUS` | STRING | Dienststatus‑Meldung                  |
 
 ### **Adapter**
 
-| Adapter    | Typ / Richtung                         | Kommentar |
-|------------|----------------------------------------|-----------|
-| `AUI_IN`   | **Socket** (Eingang) – Typ: `adapter::types::unidirectional::AUI` | Liefert den zu speichernden Wert (SET) |
-| `AUI_OUT`  | **Plug** (Ausgang) – Typ: `adapter::types::unidirectional::AUI` | Gibt den ausgelesenen Wert aus (GETO) |
+| Adapter   | Typ / Richtung                                                    | Kommentar                              |
+| --------- | ----------------------------------------------------------------- | -------------------------------------- |
+| `AUI_IN`  | **Socket** (Eingang) – Typ: `adapter::types::unidirectional::AUI` | Liefert den zu speichernden Wert (SET) |
+| `AUI_OUT` | **Plug** (Ausgang) – Typ: `adapter::types::unidirectional::AUI`   | Gibt den ausgelesenen Wert aus (GETO)  |
 
 ## Funktionsweise
 

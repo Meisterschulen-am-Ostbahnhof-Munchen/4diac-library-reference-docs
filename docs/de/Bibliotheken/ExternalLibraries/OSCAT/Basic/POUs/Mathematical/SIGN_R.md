@@ -7,23 +7,23 @@ this function return true if the real input is negative
 ### Event Inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | in |
+| :--- | :------ | :--- |
+| REQ  |         | in   |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| in | REAL | |
+| :--- | :--- | :------ |
+| in   | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | BOOL | |
+| :--- | :--- | :------ |
+|      | BOOL |         |

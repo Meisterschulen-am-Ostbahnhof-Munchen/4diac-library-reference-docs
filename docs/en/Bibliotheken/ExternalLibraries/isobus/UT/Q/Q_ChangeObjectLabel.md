@@ -52,11 +52,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 - `INIT` with target object ID
 - `INITO` confirms operational readiness
+
 1. **Label Change**:
 
 - `REQ` with new label parameters
 - Supports text (with font) or graphic symbols
 - `CNF` returns the result and the old values
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -71,18 +73,18 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## Standard Parameters
 
-| Parameter | NULL value | Description |
-| -------------------- | ----------- | ---------------------------- |
-| u16ObIdStringVar | 0xFFFF | No text |
-| u16ObIdGrafic | 0xFFFF | No graphic |
+| Parameter        | NULL value | Description |
+| ---------------- | ---------- | ----------- |
+| u16ObIdStringVar | 0xFFFF     | No text     |
+| u16ObIdGrafic    | 0xFFFF     | No graphic  |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Buffer overflow (text too long) |
-| -128 | VT_E_HANDLE_INVALID | Invalid object ID |
+| Code | Constant            | Meaning                         |
+| ---- | ------------------- | ------------------------------- |
+| 0    | VT_E_NO_ERR         | Success                         |
+| -6   | VT_E_OVERFLOW       | Buffer overflow (text too long) |
+| -128 | VT_E_HANDLE_INVALID | Invalid object ID               |
 
 ## Application Scenarios
 
@@ -93,11 +95,11 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | Q_ChangeObjectLabel | VtDynamicLabel | VtTextManager |
---------------- | --------------------- | ---------------- | --------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Labeling | Text + Graphics | Text Only | Text Only |
-| Font | Controllable | Fixed | Partial |
+| Feature      | Q_ChangeObjectLabel | VtDynamicLabel | VtTextManager |
+| ------------ | ------------------- | -------------- | ------------- |
+| ISO Standard | ✔                   | ✖              | ✖             |
+| Labeling     | Text + Graphics     | Text Only      | Text Only     |
+| Font         | Controllable        | Fixed          | Partial       |
 
 ## Conclusion
 

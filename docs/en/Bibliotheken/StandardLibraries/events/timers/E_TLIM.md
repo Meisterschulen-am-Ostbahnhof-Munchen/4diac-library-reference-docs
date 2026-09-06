@@ -38,11 +38,11 @@
 
 ## State Overview
 
-| State (implicit via `E_SR`/`E_DELAY`) | Meaning |
-| --- | --- |
-| Q = FALSE, timer inactive | Idle, `IN = FALSE` |
-| Q = TRUE, timer running | `IN` is `TRUE`, `PT` not yet elapsed |
-| Q = FALSE (timeout) | `IN` was `TRUE` longer than `PT`, automatically reset |
+| State (implicit via `E_SR`/`E_DELAY`) | Meaning                                               |
+| ------------------------------------- | ----------------------------------------------------- |
+| Q = FALSE, timer inactive             | Idle, `IN = FALSE`                                    |
+| Q = TRUE, timer running               | `IN` is `TRUE`, `PT` not yet elapsed                  |
+| Q = FALSE (timeout)                   | `IN` was `TRUE` longer than `PT`, automatically reset |
 
 ## Application Scenarios
 

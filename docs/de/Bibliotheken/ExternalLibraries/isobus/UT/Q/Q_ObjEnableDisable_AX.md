@@ -12,20 +12,20 @@ Der Funktionsblock **Q_ObjEnableDisable_AX** ist ein Composite-Baustein, der als
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INIT` | EInit | Initialisierung des Bausteins; übergeben wird die Objekt-ID (u16ObjId). |
+| Ereignis | Typ   | Kommentar                                                               |
+| -------- | ----- | ----------------------------------------------------------------------- |
+| `INIT`   | EInit | Initialisierung des Bausteins; übergeben wird die Objekt-ID (u16ObjId). |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INITO` | EInit | Bestätigung der erfolgreichen Initialisierung. |
+| Ereignis | Typ   | Kommentar                                      |
+| -------- | ----- | ---------------------------------------------- |
+| `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name       | Typ  | Kommentar                                       |
+| ---------- | ---- | ----------------------------------------------- |
 | `u16ObjId` | UINT | Objekt-ID, die beim INIT-Ereignis gesetzt wird. |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge; der alte Zustand wird über den Adapter-Plug `qOl
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-|------|-----|----------|-----------|
-| `qAbility` | `adapter::types::unidirectional::AX` | Socket | Empfängt den Enable/Disable-Befehl (0 = disable, 1 = enable, 0xFF = undefined). |
-| `qOldAbility` | `adapter::types::unidirectional::AB` | Plug | Gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung). |
+| Name          | Typ                                  | Richtung | Kommentar                                                                       |
+| ------------- | ------------------------------------ | -------- | ------------------------------------------------------------------------------- |
+| `qAbility`    | `adapter::types::unidirectional::AX` | Socket   | Empfängt den Enable/Disable-Befehl (0 = disable, 1 = enable, 0xFF = undefined). |
+| `qOldAbility` | `adapter::types::unidirectional::AB` | Plug     | Gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung).             |
 
 ## Gültige Objekt-IDs
 
@@ -86,10 +86,10 @@ Der FB `Q_ObjEnableDisable_AX` selbst besitzt keinen eigenen Zustandsautomaten. 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Schnittstelle | Besonderheit |
-|----------|---------------|--------------|
-| **Q_ObjEnableDisable** | Direkte Ereignis-/Dateneingänge | Erfordert separate Bool-Eingänge und Ereignisse. |
-| **Q_ObjEnableDisable_AX** | AX/AB-Adapter | Einfache Integration in Adapter-basierte Architekturen; reduziert Verdrahtungsaufwand. |
+| Baustein                  | Schnittstelle                   | Besonderheit                                                                           |
+| ------------------------- | ------------------------------- | -------------------------------------------------------------------------------------- |
+| **Q_ObjEnableDisable**    | Direkte Ereignis-/Dateneingänge | Erfordert separate Bool-Eingänge und Ereignisse.                                       |
+| **Q_ObjEnableDisable_AX** | AX/AB-Adapter                   | Einfache Integration in Adapter-basierte Architekturen; reduziert Verdrahtungsaufwand. |
 
 Der AX-Wrapper fügt keine neue Funktionalität hinzu, sondern optimiert die Anbindung an bestehende Adapter-Kommunikation.
 

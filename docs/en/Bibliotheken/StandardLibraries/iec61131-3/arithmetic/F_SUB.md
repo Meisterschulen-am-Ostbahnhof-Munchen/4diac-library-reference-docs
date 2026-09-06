@@ -34,6 +34,7 @@ The **F_SUB** is a standards-compliant function block for subtracting numeric va
 
 - `REQ` event with values for IN1 and IN2
 - Both inputs must be of type ANY_MAGNITUDE
+
 1. **Subtraction**:
 
 - Type-preserving calculation (IN1 - IN2)
@@ -42,6 +43,7 @@ The **F_SUB** is a standards-compliant function block for subtracting numeric va
 - Floating-point numbers (REAL, LREAL)
 - Time values (TIME, DATE)
 - Mixed types (automatic conversion)
+
 1. **Result output**:
 
 - `CNF` event with calculated difference
@@ -73,11 +75,11 @@ The **F_SUB** is a standards-compliant function block for subtracting numeric va
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_SUB | F_ADD | F_MUL |
-| --------------- | -------- | -------- | -------- |
-| Operation | Subtraction | Addition | Multiplication |
-| Inputs | 2 | 2 | 2 |
-| Type Support | ANY_MAGNITUDE | ANY_NUM | ANY_NUM |
+| Feature      | F_SUB         | F_ADD    | F_MUL          |
+| ------------ | ------------- | -------- | -------------- |
+| Operation    | Subtraction   | Addition | Multiplication |
+| Inputs       | 2             | 2        | 2              |
+| Type Support | ANY_MAGNITUDE | ANY_NUM  | ANY_NUM        |
 
 ## 🛠️ Related Exercises
 

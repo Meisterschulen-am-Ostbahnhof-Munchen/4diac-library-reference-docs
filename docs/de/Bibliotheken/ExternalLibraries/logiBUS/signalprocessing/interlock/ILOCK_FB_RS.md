@@ -12,35 +12,35 @@ Der Funktionsblock `ILOCK_FB_RS` realisiert ein bistabiles Reset-dominantes RS-L
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `REQ` | Normaler Ausführungsanforderung (mit den Daten S und R1 verknüpft) |
+| Ereignis | Kommentar                                                          |
+| -------- | ------------------------------------------------------------------ |
+| `REQ`    | Normaler Ausführungsanforderung (mit den Daten S und R1 verknüpft) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `CNF` | Bestätigung der Ausführung (mit dem Datenausgang Q1 verknüpft) |
+| Ereignis | Kommentar                                                      |
+| -------- | -------------------------------------------------------------- |
+| `CNF`    | Bestätigung der Ausführung (mit dem Datenausgang Q1 verknüpft) |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Kommentar |
-|----------|--------|-----------|
-| `S`      | BOOL   | Setzen (aktiver High) |
-| `R1`     | BOOL   | Rücksetzen (aktiver High) – Reset-dominant |
+| Variable | Typ  | Kommentar                                  |
+| -------- | ---- | ------------------------------------------ |
+| `S`      | BOOL | Setzen (aktiver High)                      |
+| `R1`     | BOOL | Rücksetzen (aktiver High) – Reset-dominant |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Kommentar |
-|----------|--------|-----------|
-| `Q1`     | BOOL   | Ausgang des Flipflops |
+| Variable | Typ  | Kommentar             |
+| -------- | ---- | --------------------- |
+| `Q1`     | BOOL | Ausgang des Flipflops |
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ                 | Beschreibung |
-|-------------|----------|---------------------|--------------|
-| `ILOCK_IN`  | Socket   | bidirektional::AX2  | Empfängt Signale vom vorherigen Baustein der Kette (Ereignis EO1, Daten DO1) |
-| `ILOCK_OUT` | Plug     | bidirektional::AX2  | Sendet Signale an den nächsten Baustein der Kette (Ereignis EI1, Daten DI1) |
+| Bezeichnung | Richtung | Typ                | Beschreibung                                                                 |
+| ----------- | -------- | ------------------ | ---------------------------------------------------------------------------- |
+| `ILOCK_IN`  | Socket   | bidirektional::AX2 | Empfängt Signale vom vorherigen Baustein der Kette (Ereignis EO1, Daten DO1) |
+| `ILOCK_OUT` | Plug     | bidirektional::AX2 | Sendet Signale an den nächsten Baustein der Kette (Ereignis EI1, Daten DI1)  |
 
 Die Adapter vom Typ `AX2` stellen jeweils zwei logische Kanäle bereit:
 
@@ -69,12 +69,12 @@ Der Baustein besteht intern aus einem RS-Flipflop (`FB_RS`, Reset-dominant), zwe
 
 Das interne RS-Flipflop hat folgende Zustandstabelle (Reset-dominant):
 
-| S | R1_eff | Q1 (neu) | Beschreibung |
-| --- | --- | ---------- | -------------- |
-| 0 | 0 | Q1_alt | Halten |
-| 1 | 0 | 1 | Setzen |
-| 0 | 1 | 0 | Rücksetzen |
-| 1 | 1 | 0 | Reset dominant |
+| S   | R1_eff | Q1 (neu) | Beschreibung   |
+| --- | ------ | -------- | -------------- |
+| 0   | 0      | Q1_alt   | Halten         |
+| 1   | 0      | 1        | Setzen         |
+| 0   | 1      | 0        | Rücksetzen     |
+| 1   | 1      | 0        | Reset dominant |
 
 Dabei ist `R1_eff` das Ergebnis der Oder-Verknüpfung aus `R1`, `ILOCK_IN.DO1` und `ILOCK_OUT.DI1`. Der Ausgang `Q1` wird nur dann gesetzt, wenn keiner dieser drei Reset-Quellen aktiv ist.
 
@@ -86,10 +86,10 @@ Dabei ist `R1_eff` das Ergebnis der Oder-Verknüpfung aus `R1`, `ILOCK_IN.DO1` u
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-|----------|---------------|
-| `FB_RS` (IEC 61131) | Einfaches Reset-dominantes RS-Flipflop ohne Adapter, keine Kaskadierung |
-| `ILOCK_FB_RS` | Gleiche Kernfunktion, aber mit bidirektionalen Adaptern für Kettenschaltung und zusätzlicher Verknüpfung von Reset-Signalen |
+| Baustein            | Eigenschaften                                                                                                               |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `FB_RS` (IEC 61131) | Einfaches Reset-dominantes RS-Flipflop ohne Adapter, keine Kaskadierung                                                     |
+| `ILOCK_FB_RS`       | Gleiche Kernfunktion, aber mit bidirektionalen Adaptern für Kettenschaltung und zusätzlicher Verknüpfung von Reset-Signalen |
 
 Der `ILOCK_FB_RS` fügt also die Möglichkeit hinzu, mehrere solche Flipflops in einer Kette zu betreiben, wobei ein Reset von einem Glied auf die anderen übertragen wird.
 

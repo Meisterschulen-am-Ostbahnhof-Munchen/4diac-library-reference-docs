@@ -29,12 +29,12 @@ The FB_RANDOM function block generates a random REAL number between 0 and 1.
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2012 Profactor GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac Package | eclipse4diac::utils |
+| Attribute     | Value                            |
+| :------------ | :------------------------------- |
+| Copyright     | (c) 2012 Profactor GmbH          |
+| License       | EPL-2.0                          |
+| Version       | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac Package | eclipse4diac::utils              |
 
 ---
 

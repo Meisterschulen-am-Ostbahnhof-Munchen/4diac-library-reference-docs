@@ -30,13 +30,13 @@ Der Baustein verfügt über keine klassischen Datenausgänge. Das Multiplikation
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-| ------ | ------ | ---------- | ----------- |
-| `adapter::types::unidirectional::AUDI` | IN1 | Eingang (Socket) | MUL input 1 |
-| `adapter::types::unidirectional::AUDI` | IN2 | Eingang (Socket) | MUL input 2 |
-| `adapter::types::unidirectional::AUDI` | IN3 | Eingang (Socket) | MUL input 3 |
-| `adapter::types::unidirectional::AUDI` | IN4 | Eingang (Socket) | MUL input 4 |
-| `adapter::types::unidirectional::AUDI` | OUT | Ausgang (Plug) | MUL result |
+| Typ                                    | Name | Richtung         | Kommentar   |
+| -------------------------------------- | ---- | ---------------- | ----------- |
+| `adapter::types::unidirectional::AUDI` | IN1  | Eingang (Socket) | MUL input 1 |
+| `adapter::types::unidirectional::AUDI` | IN2  | Eingang (Socket) | MUL input 2 |
+| `adapter::types::unidirectional::AUDI` | IN3  | Eingang (Socket) | MUL input 3 |
+| `adapter::types::unidirectional::AUDI` | IN4  | Eingang (Socket) | MUL input 4 |
+| `adapter::types::unidirectional::AUDI` | OUT  | Ausgang (Plug)   | MUL result  |
 
 Der Adapter `AUDI` ist als unidirektionaler Datentyp definiert und transportiert die jeweiligen numerischen Werte sowie das Ergebnis.
 

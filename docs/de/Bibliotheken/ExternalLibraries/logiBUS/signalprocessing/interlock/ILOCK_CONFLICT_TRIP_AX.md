@@ -41,18 +41,18 @@ Der FB besitzt keine direkten Datenausgänge. Die Ausgangsdaten werden über die
 
 **Sockets (Eingänge)**
 
-| Adapter | Typ | Beschreibung |
-| --- | --- | --- |
-| `UP_IN` | `adapter::types::unidirectional::AX` | Eingang für Aufwärts-Richtung (Ereignis + Daten) |
-| `DOWN_IN` | `adapter::types::unidirectional::AX` | Eingang für Abwärts-Richtung (Ereignis + Daten) |
+| Adapter   | Typ                                  | Beschreibung                                     |
+| --------- | ------------------------------------ | ------------------------------------------------ |
+| `UP_IN`   | `adapter::types::unidirectional::AX` | Eingang für Aufwärts-Richtung (Ereignis + Daten) |
+| `DOWN_IN` | `adapter::types::unidirectional::AX` | Eingang für Abwärts-Richtung (Ereignis + Daten)  |
 
 **Plugs (Ausgänge)**
 
-| Adapter | Typ | Beschreibung |
-| --- | --- | --- |
-| `UP_OUT` | `adapter::types::unidirectional::AX` | Ausgang für Aufwärts-Richtung |
-| `DOWN_OUT` | `adapter::types::unidirectional::AX` | Ausgang für Abwärts-Richtung |
-| `TRIP_OUT` | `adapter::types::unidirectional::AX` | Trip-Zustandsausgang |
+| Adapter    | Typ                                  | Beschreibung                  |
+| ---------- | ------------------------------------ | ----------------------------- |
+| `UP_OUT`   | `adapter::types::unidirectional::AX` | Ausgang für Aufwärts-Richtung |
+| `DOWN_OUT` | `adapter::types::unidirectional::AX` | Ausgang für Abwärts-Richtung  |
+| `TRIP_OUT` | `adapter::types::unidirectional::AX` | Trip-Zustandsausgang          |
 
 *Hinweis:* Die Schnittstelle `unidirectional::AX` wird hier als Adapter mit einem Ereignis (E1) und einem BOOL-Datenelement (D1) interpretiert, welches den Aktivierungszustand transportiert.
 
@@ -87,12 +87,12 @@ Die Priorisierung erfolgt implizit: Solange kein Konflikt vorliegt, wird die zue
 
 ## Zustandsübersicht
 
-| Zustand | UP_OUT.D1 | DOWN_OUT.D1 | TRIP_OUT.D1 | Beschreibung |
-| --- | --- | --- | --- | --- |
-| `STOP` | FALSE | FALSE | FALSE | Ruheposition, keine Richtung aktiv |
-| `UP` | TRUE | FALSE | FALSE | Aufwärts-Richtung aktiv |
-| `DOWN` | FALSE | TRUE | FALSE | Abwärts-Richtung aktiv |
-| `TRIP` | FALSE | FALSE | TRUE | Konflikt / Trip, erfordert Reset |
+| Zustand | UP_OUT.D1 | DOWN_OUT.D1 | TRIP_OUT.D1 | Beschreibung                       |
+| ------- | --------- | ----------- | ----------- | ---------------------------------- |
+| `STOP`  | FALSE     | FALSE       | FALSE       | Ruheposition, keine Richtung aktiv |
+| `UP`    | TRUE      | FALSE       | FALSE       | Aufwärts-Richtung aktiv            |
+| `DOWN`  | FALSE     | TRUE        | FALSE       | Abwärts-Richtung aktiv             |
+| `TRIP`  | FALSE     | FALSE       | TRUE        | Konflikt / Trip, erfordert Reset   |
 
 **Wichtige Übergänge:**
 

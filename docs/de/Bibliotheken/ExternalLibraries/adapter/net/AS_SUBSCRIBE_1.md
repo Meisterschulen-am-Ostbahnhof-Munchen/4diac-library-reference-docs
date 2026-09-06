@@ -31,8 +31,8 @@ Der Funktionsblock **AS_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                      |
+| ------- | ---------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::AS | Plug (Ausgang) | Gepufferter empfangener SINT-Wert |
 
 ## Funktionsweise

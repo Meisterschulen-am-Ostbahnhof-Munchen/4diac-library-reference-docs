@@ -38,12 +38,12 @@ Der Ausgangsadapter **Q1** gibt über **Q1.D1** den aktuellen Zustand des Latch 
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `SET1` | `adapter::types::unidirectional::AX` | Socket (Eingang) | Setz-Eingang |
-| `RESET` | `adapter::types::unidirectional::AX` | Socket (Eingang) | Rücksetz-Eingang |
-| `CLK` | `adapter::types::unidirectional::AX` | Socket (Eingang) | Takt-Eingang für Toggle |
-| `Q1` | `adapter::types::unidirectional::AX` | Plug (Ausgang) | Ausgang des Latch |
+| Adapter | Typ                                  | Richtung         | Beschreibung            |
+| ------- | ------------------------------------ | ---------------- | ----------------------- |
+| `SET1`  | `adapter::types::unidirectional::AX` | Socket (Eingang) | Setz-Eingang            |
+| `RESET` | `adapter::types::unidirectional::AX` | Socket (Eingang) | Rücksetz-Eingang        |
+| `CLK`   | `adapter::types::unidirectional::AX` | Socket (Eingang) | Takt-Eingang für Toggle |
+| `Q1`    | `adapter::types::unidirectional::AX` | Plug (Ausgang)   | Ausgang des Latch       |
 
 ## Funktionsweise
 

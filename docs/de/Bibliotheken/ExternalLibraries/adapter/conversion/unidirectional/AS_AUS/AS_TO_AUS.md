@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Die Datenausgabe erfolgt ausschließlich über d
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| `AS_IN` | `adapter::types::unidirectional::AS` | Socket (Eingang) | Nimmt einen SINT-Wert sowie ein Ereignis (E1) auf. |
-| `AUS_OUT` | `adapter::types::unidirectional::AUS` | Plug (Ausgang) | Gibt den konvertierten USINT-Wert sowie ein Ereignis (E1) aus. |
+| Adapter   | Typ                                   | Richtung         | Beschreibung                                                   |
+| --------- | ------------------------------------- | ---------------- | -------------------------------------------------------------- |
+| `AS_IN`   | `adapter::types::unidirectional::AS`  | Socket (Eingang) | Nimmt einen SINT-Wert sowie ein Ereignis (E1) auf.             |
+| `AUS_OUT` | `adapter::types::unidirectional::AUS` | Plug (Ausgang)   | Gibt den konvertierten USINT-Wert sowie ein Ereignis (E1) aus. |
 
 ## Funktionsweise
 

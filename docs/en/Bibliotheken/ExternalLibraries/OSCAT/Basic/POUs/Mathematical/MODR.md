@@ -6,25 +6,25 @@ this is a modulo function for real numbers
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | IN, DIVI |
+| Name | Comment | With     |
+| :--- | :------ | :------- |
+| REQ  |         | IN, DIVI |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| IN | REAL | |
-| DIVI | REAL | |
+| :--- | :--- | :------ |
+| IN   | REAL |         |
+| DIVI | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | REAL | |
+| :--- | :--- | :------ |
+|      | REAL |         |

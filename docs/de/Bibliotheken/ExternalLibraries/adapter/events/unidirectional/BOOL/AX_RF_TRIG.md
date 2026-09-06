@@ -16,10 +16,10 @@ Der Baustein besitzt keine direkten Ereignis-Eingänge. Die Auslösung der Flank
 
 ### **Ereignis-Ausgänge**
 
-| Name | Kommentar |
-|------|-----------|
+| Name | Kommentar                                                    |
+| ---- | ------------------------------------------------------------ |
 | ER   | Bestätigung, dass eine steigende Flanke (0→1) erkannt wurde. |
-| EF   | Bestätigung, dass eine fallende Flanke (1→0) erkannt wurde. |
+| EF   | Bestätigung, dass eine fallende Flanke (1→0) erkannt wurde.  |
 
 ### **Daten-Eingänge**
 
@@ -31,8 +31,8 @@ Keine Datenausgänge.
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ                                | Kommentar                                                                                                                                             |
+| ---- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | QI   | adapter::types::unidirectional::AX | Empfängt den booleschen Wert, dessen Flanken überwacht werden sollen. Der Adapter stellt sowohl ein Ereignis (E1) als auch den Datenwert (D1) bereit. |
 
 ## Funktionsweise

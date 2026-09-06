@@ -8,12 +8,12 @@ This device represents a FORTE runtime environment on a standard PC (Windows or 
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2015 fortiss GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac Package | iec61499::system |
+| Attribute     | Value                            |
+| :------------ | :------------------------------- |
+| Copyright     | (c) 2015 fortiss GmbH            |
+| License       | EPL-2.0                          |
+| Version       | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac Package | iec61499::system                 |
 
 --
 

@@ -12,9 +12,9 @@ Der Funktionsblock `AR_CALIBRATE` dient der Offset- und Skalenkalibrierung eines
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit | Beschreibung |
-|----------|-----|-----|--------------|
-| `SET` | `EInit` | `Y_Offset`, `Y_Scale` | Setzt die Referenzwerte für Offset- und Skalenkalibrierung |
+| Ereignis | Typ     | Mit                   | Beschreibung                                               |
+| -------- | ------- | --------------------- | ---------------------------------------------------------- |
+| `SET`    | `EInit` | `Y_Offset`, `Y_Scale` | Setzt die Referenzwerte für Offset- und Skalenkalibrierung |
 
 ### **Ereignis-Ausgänge**
 
@@ -22,8 +22,8 @@ Der Funktionsblock besitzt keine eigenen Ereignis-Ausgänge. Ereignisse werden j
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name       | Typ    | Beschreibung                             |
+| ---------- | ------ | ---------------------------------------- |
 | `Y_Offset` | `REAL` | Referenzwert für die Offset-Kalibrierung |
 | `Y_Scale`  | `REAL` | Referenzwert für die Skalen-Kalibrierung |
 
@@ -35,19 +35,19 @@ Der FB hat keine direkten Daten-Ausgänge. Die berechneten Werte werden über di
 
 **Plugs (bereitstellende Schnittstellen):**
 
-| Adapter | Typ | Beschreibung |
-| --------- | ----- | -------------- |
-| `Y` | `adapter::types::unidirectional::AR` | Kalibrierter Ausgang (Daten + Ereignis) |
-| `OFFSET` | `adapter::types::bidirectional::AR2` | Liefert den berechneten Offsetwert (bidirektional) |
-| `SCALE` | `adapter::types::bidirectional::AR2` | Liefert den berechneten Skalenfaktor (bidirektional) |
+| Adapter  | Typ                                  | Beschreibung                                         |
+| -------- | ------------------------------------ | ---------------------------------------------------- |
+| `Y`      | `adapter::types::unidirectional::AR` | Kalibrierter Ausgang (Daten + Ereignis)              |
+| `OFFSET` | `adapter::types::bidirectional::AR2` | Liefert den berechneten Offsetwert (bidirektional)   |
+| `SCALE`  | `adapter::types::bidirectional::AR2` | Liefert den berechneten Skalenfaktor (bidirektional) |
 
 **Sockets (nutzende Schnittstellen):**
 
-| Adapter | Typ | Beschreibung |
-| --------- | ----- | -------------- |
-| `X` | `adapter::types::unidirectional::AR` | Analoger Eingangswert (unidirektional) |
-| `CO` | `adapter::types::unidirectional::AX` | Trigger für Offset-Kalibrierung (Ereignis + Daten) |
-| `CS` | `adapter::types::unidirectional::AX` | Trigger für Skalen-Kalibrierung (Ereignis + Daten) |
+| Adapter | Typ                                  | Beschreibung                                       |
+| ------- | ------------------------------------ | -------------------------------------------------- |
+| `X`     | `adapter::types::unidirectional::AR` | Analoger Eingangswert (unidirektional)             |
+| `CO`    | `adapter::types::unidirectional::AX` | Trigger für Offset-Kalibrierung (Ereignis + Daten) |
+| `CS`    | `adapter::types::unidirectional::AX` | Trigger für Skalen-Kalibrierung (Ereignis + Daten) |
 
 ## Funktionsweise
 
@@ -89,11 +89,11 @@ Die Übergänge zwischen den Zuständen sind wie folgt definiert:
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Aktion |
-| --------- | -------------- | -------- |
-| **REQ** | Normalbetrieb – Berechnung des kalibrierten Ausgangs | Führt Algorithmus `REQ` aus, sendet Ereignis auf `Y.E1` |
-| **CO** | Offset-Kalibrierung | Führt Algorithmus `CO` aus, sendet Ereignis auf `OFFSET.EO1` |
-| **CS** | Skalen-Kalibrierung | Führt Algorithmus `CS` aus, sendet Ereignis auf `SCALE.EO1` |
+| Zustand | Beschreibung                                         | Aktion                                                       |
+| ------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| **REQ** | Normalbetrieb – Berechnung des kalibrierten Ausgangs | Führt Algorithmus `REQ` aus, sendet Ereignis auf `Y.E1`      |
+| **CO**  | Offset-Kalibrierung                                  | Führt Algorithmus `CO` aus, sendet Ereignis auf `OFFSET.EO1` |
+| **CS**  | Skalen-Kalibrierung                                  | Führt Algorithmus `CS` aus, sendet Ereignis auf `SCALE.EO1`  |
 
 ## Anwendungsszenarien
 

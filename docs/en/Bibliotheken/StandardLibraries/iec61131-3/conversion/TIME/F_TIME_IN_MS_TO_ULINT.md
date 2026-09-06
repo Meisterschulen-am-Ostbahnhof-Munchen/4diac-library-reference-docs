@@ -10,7 +10,7 @@ The function block `F_TIME_IN_MS_TO_ULINT` converts a time value in milliseconds
 - **IN**: This input expects a time value of type `TIME`, specified in milliseconds.
 - **OUT**: Returns the converted value as an unsigned 64-bit integer (`ULINT`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

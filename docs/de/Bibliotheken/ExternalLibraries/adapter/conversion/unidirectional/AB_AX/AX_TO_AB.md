@@ -12,34 +12,34 @@ Der Composite-Funktionsblock `AX_TO_AB` dient zur Umwandlung eines BOOL-Adapters
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name               | Beschreibung                                                                                             |
+| ------------------ | -------------------------------------------------------------------------------------------------------- |
 | `E1` (aus `AX_IN`) | Ereigniseingang, der über den BOOL-Adapter empfangen und unverändert an den Ausgang weitergeleitet wird. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name                | Beschreibung                                                               |
+| ------------------- | -------------------------------------------------------------------------- |
 | `E1` (aus `AB_OUT`) | Ereignisausgang, der das durchgereichte Ereignis vom Eingang bereitstellt. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `D1` (aus `AX_IN`) | `BOOL` | Das zu konvertierende boolesche Signal (TRUE oder FALSE). |
+| Name               | Datentyp | Beschreibung                                              |
+| ------------------ | -------- | --------------------------------------------------------- |
+| `D1` (aus `AX_IN`) | `BOOL`   | Das zu konvertierende boolesche Signal (TRUE oder FALSE). |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `D1` (aus `AB_OUT`) | `BYTE` | Das konvertierte Signal: `TRUE` wird zu `1`, `FALSE` zu `0`. |
+| Name                | Datentyp | Beschreibung                                                 |
+| ------------------- | -------- | ------------------------------------------------------------ |
+| `D1` (aus `AB_OUT`) | `BYTE`   | Das konvertierte Signal: `TRUE` wird zu `1`, `FALSE` zu `0`. |
 
 ### **Adapter**
 
-| Typ | Richtung | Bezeichner | Kommentar |
-|-----|----------|------------|-----------|
-| `adapter::types::unidirectional::AX` | Socket (Eingang) | `AX_IN` | BOOL-Adapter, der die Eingangsdaten und Ereignisse liefert. |
-| `adapter::types::unidirectional::AB` | Plug (Ausgang) | `AB_OUT` | BYTE-Adapter, der die konvertierten Daten und Ereignisse ausgibt. |
+| Typ                                  | Richtung         | Bezeichner | Kommentar                                                         |
+| ------------------------------------ | ---------------- | ---------- | ----------------------------------------------------------------- |
+| `adapter::types::unidirectional::AX` | Socket (Eingang) | `AX_IN`    | BOOL-Adapter, der die Eingangsdaten und Ereignisse liefert.       |
+| `adapter::types::unidirectional::AB` | Plug (Ausgang)   | `AB_OUT`   | BYTE-Adapter, der die konvertierten Daten und Ereignisse ausgibt. |
 
 ## Funktionsweise
 

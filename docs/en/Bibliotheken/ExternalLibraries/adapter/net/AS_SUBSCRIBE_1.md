@@ -31,9 +31,9 @@ The function block **AS_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::AS | Plug (Output) | Buffered received SINT value |
+| Adapter | Type                               | Direction     | Description                  |
+| ------- | ---------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AS | Plug (Output) | Buffered received SINT value |
 
 ## Functionality
 

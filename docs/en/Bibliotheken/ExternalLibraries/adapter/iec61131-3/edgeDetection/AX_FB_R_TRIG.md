@@ -29,10 +29,10 @@ The goal is to generate a `TRUE` signal at the output when the input signal tran
 
 ### **Adapters**
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
+| Name    | Type                                 | Comment                                                                                                           |
+| :------ | :----------------------------------- | :---------------------------------------------------------------------------------------------------------------- |
 | **CLK** | `adapter::types::unidirectional::AX` | **Socket (Input):** The clock input being monitored. Contains the data signal (D1) and the associated event (E1). |
-| **Q** | `adapter::types::unidirectional::AX` | **Plug (Output):** The pulse output. Provides `TRUE` only on a rising edge at input `CLK`. |
+| **Q**   | `adapter::types::unidirectional::AX` | **Plug (Output):** The pulse output. Provides `TRUE` only on a rising edge at input `CLK`.                        |
 
 ## Functionality
 
@@ -43,6 +43,7 @@ The component implements the classic logic of a "Rising Edge Detector":
 3. The algorithm checks the current value of the data input (`CLK.D1`) and compares it to the stored state from the previous cycle (`MEM`).
 
 - **Logic:** `Q.D1 := CLK.D1 AND NOT MEM`
+
 1. If `CLK.D1` is true (`TRUE`) and the stored value `MEM` was false (`FALSE`), the output `Q.D1` is set to `TRUE`. In all other cases, `Q.D1` is `FALSE`.
 2. The internal memory `MEM` is then updated with the current value of `CLK.D1`.
 3. Finally, the event is triggered at the output adapter `Q` (`Q.E1`) to inform subsequent function blocks.

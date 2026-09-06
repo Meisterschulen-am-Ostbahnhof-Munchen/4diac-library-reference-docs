@@ -59,15 +59,15 @@ Keine Adapter vorhanden.
    Positions-Zustandsmaschine, direkt wiederverwendet (kein eigener Zustandsautomat nötig).
    Die acht `ScrollFS`-Events sind 1:1 auf `RampLimitFS`-Events gemappt:
 
-   | `ScrollFS`-Event | `RampLimitFS`-Event | Wirkung auf `OUT` |
-   | --- | --- | --- |
-   | `FIRST` | `ZERO` | `OUT := 0` |
-   | `PAGE_UP` | `DOWN_FAST` | `OUT -= stObj.i32Step` (geklemmt bei 0) |
-   | `LINE_UP` | `DOWN_SLOW` | `OUT -= 1` (geklemmt bei 0) |
-   | `LINE_DOWN` | `UP_SLOW` | `OUT += 1` (geklemmt bei `i32PosMax`) |
-   | `PAGE_DOWN` | `UP_FAST` | `OUT += stObj.i32Step` (geklemmt bei `i32PosMax`) |
-   | `LAST` | `FULL` | `OUT := stObj.i32PosMax` |
-   | `GOTO` | `LOAD` (mit `PV := SET_POS`) | `OUT := SET_POS`, geklemmt auf `0…i32PosMax` |
+| `ScrollFS`-Event | `RampLimitFS`-Event          | Wirkung auf `OUT`                                 |
+| ---------------- | ---------------------------- | ------------------------------------------------- |
+| `FIRST`          | `ZERO`                       | `OUT := 0`                                        |
+| `PAGE_UP`        | `DOWN_FAST`                  | `OUT -= stObj.i32Step` (geklemmt bei 0)           |
+| `LINE_UP`        | `DOWN_SLOW`                  | `OUT -= 1` (geklemmt bei 0)                       |
+| `LINE_DOWN`      | `UP_SLOW`                    | `OUT += 1` (geklemmt bei `i32PosMax`)             |
+| `PAGE_DOWN`      | `UP_FAST`                    | `OUT += stObj.i32Step` (geklemmt bei `i32PosMax`) |
+| `LAST`           | `FULL`                       | `OUT := stObj.i32PosMax`                          |
+| `GOTO`           | `LOAD` (mit `PV := SET_POS`) | `OUT := SET_POS`, geklemmt auf `0…i32PosMax`      |
 
    `VAL_ZERO := 0`, `VAL_FULL := Snap.OUT.i32PosMax`, `SLOW := 1`, `FAST := Snap.OUT.i32Step`.
 3. **`ListY`** (`F_ScrollListY`) und **`BarY`** (`F_ScrollBarY`): rechnen bei jedem

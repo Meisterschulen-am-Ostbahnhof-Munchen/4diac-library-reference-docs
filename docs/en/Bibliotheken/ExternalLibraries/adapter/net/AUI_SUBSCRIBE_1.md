@@ -31,9 +31,9 @@ The function block **AUI_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AUI | Plug (Output) | Buffered received UINT value |
+| Adapter | Type                                | Direction     | Description                  |
+| ------- | ----------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AUI | Plug (Output) | Buffered received UINT value |
 
 ## Functionality
 

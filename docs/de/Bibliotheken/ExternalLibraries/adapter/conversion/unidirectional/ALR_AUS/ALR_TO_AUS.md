@@ -34,10 +34,10 @@ Da es sich um einen Composite-Baustein handelt, werden alle Ein- und Ausg√§nge √
 
 ### **Adapter**
 
-| Name      | Typ                                          | Richtung | Kommentar                       |
-|-----------|----------------------------------------------|----------|---------------------------------|
-| `ALR_IN`  | `adapter::types::unidirectional::ALR`        | Socket   | Unidirektionaler LREAL-Eingang  |
-| `AUS_OUT` | `adapter::types::unidirectional::AUS`        | Plug     | Unidirektionaler USINT-Ausgang  |
+| Name      | Typ                                   | Richtung | Kommentar                      |
+| --------- | ------------------------------------- | -------- | ------------------------------ |
+| `ALR_IN`  | `adapter::types::unidirectional::ALR` | Socket   | Unidirektionaler LREAL-Eingang |
+| `AUS_OUT` | `adapter::types::unidirectional::AUS` | Plug     | Unidirektionaler USINT-Ausgang |
 
 ## Funktionsweise
 

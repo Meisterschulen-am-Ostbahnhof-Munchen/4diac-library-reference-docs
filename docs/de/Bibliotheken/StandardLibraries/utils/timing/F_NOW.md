@@ -21,8 +21,8 @@ Die Funktion dient als Wrapper für die ST-Funktion NOW().
 
 ### **Daten-Ausgänge**
 
-| Parameter | Typ | Beschreibung | Format |
-|-----------|-----|--------------|--------|
+| Parameter  | Typ           | Beschreibung          | Format                 |
+| ---------- | ------------- | --------------------- | ---------------------- |
 | (implizit) | DATE_AND_TIME | Aktueller Zeitstempel | DT#2025-04-14-15:30:45 |
 
 ## Funktionsweise
@@ -51,19 +51,19 @@ Die Funktion dient als Wrapper für die ST-Funktion NOW().
 
 ## Beispielwerte
 
-| Aufrufzeitpunkt | Rückgabewert |
-|-----------------|--------------|
+| Aufrufzeitpunkt     | Rückgabewert           |
+| ------------------- | ---------------------- |
 | 14.04.2025 15:30:45 | DT#2025-04-14-15:30:45 |
 | 31.12.2024 23:59:59 | DT#2024-12-31-23:59:59 |
 
 ## ⚖️ Vergleich mit ähnlichen Funktionen
 
-| Feature | F_NOW | NOW | TIME() |
-| --------- | ------- | ----- | -------- |
-| Rückgabetyp | DATE_AND_TIME | DATE_AND_TIME | TIME |
-| Zeitzone | Lokal | Lokal | System |
-| Genauigkeit | Sekunden | Sekunden | Millisekunden |
-| Sommerzeit | Ja | Ja | Nein |
+| Feature     | F_NOW         | NOW           | TIME()        |
+| ----------- | ------------- | ------------- | ------------- |
+| Rückgabetyp | DATE_AND_TIME | DATE_AND_TIME | TIME          |
+| Zeitzone    | Lokal         | Lokal         | System        |
+| Genauigkeit | Sekunden      | Sekunden      | Millisekunden |
+| Sommerzeit  | Ja            | Ja            | Nein          |
 
 ## Einschränkungen
 

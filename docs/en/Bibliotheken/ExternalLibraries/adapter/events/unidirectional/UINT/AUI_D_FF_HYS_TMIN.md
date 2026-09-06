@@ -12,22 +12,22 @@ The function block **AUI_D_FF_HYS_TMIN** is a data storage device (D flip-flop) 
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|--------|--------------------------------------|
+| Name | Type  | Comment                |
+| ---- | ----- | ---------------------- |
 | INIT | EInit | Initialization Request |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|--------|--------|---------------------------------|
+| Name  | Type  | Comment                        |
+| ----- | ----- | ------------------------------ |
 | INITO | EInit | Initialization Acknowledgement |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-| ------------ | ------- | -------------------------------------------- |
-| HYSTERESIS | UINT | Hysteresis Band |
-| Tmin | TIME | Minimum Intermediate Arrival Time of EI Events |
+| Name       | Type | Comment                                        |
+| ---------- | ---- | ---------------------------------------------- |
+| HYSTERESIS | UINT | Hysteresis Band                                |
+| Tmin       | TIME | Minimum Intermediate Arrival Time of EI Events |
 
 ### **Data Outputs**
 
@@ -35,10 +35,10 @@ No standalone data outputs – the output value is transmitted via the `Q` adapt
 
 ### **Adapter**
 
-| Type | Name | Comment |
-| ------------------------------------------------------- | ------------- | --------------------- |
-| `adapter::types::unidirectional::AUI` (Socket) | I | Value to be stored |
-| `adapter::types::unidirectional::AUI` (Plug) | Q | Stored Value |
+| Type                                           | Name | Comment            |
+| ---------------------------------------------- | ---- | ------------------ |
+| `adapter::types::unidirectional::AUI` (Socket) | I    | Value to be stored |
+| `adapter::types::unidirectional::AUI` (Plug)   | Q    | Stored Value       |
 
 The adapter `AUI` is a unidirectional type that bundles an event and a data value (`E1` and `D1`).
 
@@ -56,6 +56,7 @@ The internal function block `E_D_FF_ANY_HYS_TMIN` operates as a clocked D flip-f
 - The taken value is only passed on as a valid output `Q.D1` if the interval to the last valid event is greater than or equal to `Tmin`.
 - Additionally, the value is smoothed with a hysteresis (band `HYSTERESIS`): Small changes below the hysteresis threshold are suppressed.
 - The output is signaled via the event `Q.E1`.
+
 1. **Result**
 
 The output adapter `Q` returns the last assumed, filtered value.
@@ -83,10 +84,10 @@ The function block does not have an explicit internal state machine. The behavio
 
 ## Comparison with Similar Components
 
-| Component | Property |
-| ---------- | ------------- |
-| `E_D_FF` | Simple D flip-flop without hysteresis or time limit |
-| `E_D_FF_HYS` | D flip-flop with hysteresis, but without `Tmin` |
+| Component                   | Property                                                                                     |
+| --------------------------- | -------------------------------------------------------------------------------------------- |
+| `E_D_FF`                    | Simple D flip-flop without hysteresis or time limit                                          |
+| `E_D_FF_HYS`                | D flip-flop with hysteresis, but without `Tmin`                                              |
 | `E_D_FF_HYS_TMIN` (this FB) | Combines hysteresis *and* minimal time interval → more robust against noise and burst events |
 
 ## Conclusion

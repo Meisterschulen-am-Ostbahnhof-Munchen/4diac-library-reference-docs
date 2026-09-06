@@ -12,20 +12,20 @@ Der Funktionsblock **AX_D_FF_TMIN** realisiert ein data-latch D-Flip-Flop, das z
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                                                             |
+| -------- | ----- | ---------------------------------------------------------------------------------------- |
 | `INIT`   | EInit | Initialisierungsanforderung; legt die minimale Verzögerungszeit fest (Parameter `Tmin`). |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
+| Ereignis | Typ   | Beschreibung                                   |
+| -------- | ----- | ---------------------------------------------- |
 | `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name   | Typ  | Beschreibung                                                                                                                                                     |
+| ------ | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Tmin` | TIME | Minimale Sperrzeit (inter-disposal time) zwischen zwei aufeinanderfolgenden Ereignissen am Ausgang `EO`. Der Wert wird nur bei einem `INIT`-Ereignis übernommen. |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der Baustein besitzt keine direkten Datenausgänge; der latchende Datenwert wird
 
 ### **Adapter**
 
-| Rolle | Name | Typ | Beschreibung |
-|-------|------|-----|--------------|
-| Socket | `I` | adapter::types::unidirectional::AX | Eingangsadapter; liefert das zu latchende Datenwort (`D1`) und das Taktereignis (`E1`). |
-| Plug   | `Q` | adapter::types::unidirectional::AX | Ausgangsadapter; stellt das latchende Datenwort (`D1`) und das Ausgangsereignis (`E1`) zur Verfügung. |
+| Rolle  | Name | Typ                                | Beschreibung                                                                                          |
+| ------ | ---- | ---------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Socket | `I`  | adapter::types::unidirectional::AX | Eingangsadapter; liefert das zu latchende Datenwort (`D1`) und das Taktereignis (`E1`).               |
+| Plug   | `Q`  | adapter::types::unidirectional::AX | Ausgangsadapter; stellt das latchende Datenwort (`D1`) und das Ausgangsereignis (`E1`) zur Verfügung. |
 
 Die Adapter `AX` sind unidirektional ausgelegt: Sie übertragen genau ein Ereignis und einen zugehörigen Datenwert.
 
@@ -78,11 +78,11 @@ Der Baustein besitzt keine explizite Zustandsmaschine. Die innere Logik des eing
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| ---------- | ------------- |
-| `E_D_FF` (Standard‑D‑Flip‑Flop) | Keine zeitliche Begrenzung der Ausgangsimpulse; Ereignisse werden sofort weitergeleitet. |
-| `AX_D_FF_TMIN` (vorliegend) | Fügt die minimale Zwischenzeit `Tmin` zwischen Ausgangsereignissen ein, realisiert über den eingebauten `E_D_FF_TMIN`. |
-| `E_CTD` / `E_CTU` (Zähler) | Zählen Ereignisse; bieten keine Datenübernahme oder Latch‑Funktion. |
+| Baustein                        | Unterschied                                                                                                            |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `E_D_FF` (Standard‑D‑Flip‑Flop) | Keine zeitliche Begrenzung der Ausgangsimpulse; Ereignisse werden sofort weitergeleitet.                               |
+| `AX_D_FF_TMIN` (vorliegend)     | Fügt die minimale Zwischenzeit `Tmin` zwischen Ausgangsereignissen ein, realisiert über den eingebauten `E_D_FF_TMIN`. |
+| `E_CTD` / `E_CTU` (Zähler)      | Zählen Ereignisse; bieten keine Datenübernahme oder Latch‑Funktion.                                                    |
 
 Der `AX_D_FF_TMIN` vereint die latchende Datenübernahme eines Flip‑Flops mit der zeitlichen Filterung eines Monoflops, ist aber als reiner Ereignis‑Daten‑Adapter ausgeführt.
 

@@ -69,15 +69,15 @@ Der FB arbeitet als Basic Function Block (BFB) mit einer definierten Execution C
 
 ## Zustandsübersicht
 
-| Zustandsname | Beschreibung | Aktive Ausgänge | Übergangsbedingung zum nächsten Zustand |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Initialer Idle-Zustand. | Keine | `START_S1` |
-| **sState_01** | Erster aktiver Schritt. | `DO_S1=1`, `STATE_NR=1` | `timeOut.TimeOut` (nach DT_S1_S2) |
-| **sState_02** | Zweiter aktiver Schritt. | `DO_S2=1`, `STATE_NR=2` | `timeOut.TimeOut` (nach DT_S2_S3) |
-| **sState_03** | Dritter aktiver Schritt. | `DO_S3=1`, `STATE_NR=3` | `timeOut.TimeOut` (nach DT_S3_S4) |
-| **sState_04** | Vierter aktiver Schritt. | `DO_S4=1`, `STATE_NR=4` | `timeOut.TimeOut` (nach DT_S4_START) |
-| **sState_00** | Ruhezustand nach Sequenzende. | `STATE_NR=0` | `START_S1` (für neuen Zyklus) |
-| **sRESET** | Zwischenzustand für Reset-Vorgang. | Keine | Immer (`Condition=1`) |
+| Zustandsname  | Beschreibung                       | Aktive Ausgänge         | Übergangsbedingung zum nächsten Zustand |
+| :------------ | :--------------------------------- | :---------------------- | :-------------------------------------- |
+| **xSTART**    | Initialer Idle-Zustand.            | Keine                   | `START_S1`                              |
+| **sState_01** | Erster aktiver Schritt.            | `DO_S1=1`, `STATE_NR=1` | `timeOut.TimeOut` (nach DT_S1_S2)       |
+| **sState_02** | Zweiter aktiver Schritt.           | `DO_S2=1`, `STATE_NR=2` | `timeOut.TimeOut` (nach DT_S2_S3)       |
+| **sState_03** | Dritter aktiver Schritt.           | `DO_S3=1`, `STATE_NR=3` | `timeOut.TimeOut` (nach DT_S3_S4)       |
+| **sState_04** | Vierter aktiver Schritt.           | `DO_S4=1`, `STATE_NR=4` | `timeOut.TimeOut` (nach DT_S4_START)    |
+| **sState_00** | Ruhezustand nach Sequenzende.      | `STATE_NR=0`            | `START_S1` (für neuen Zyklus)           |
+| **sRESET**    | Zwischenzustand für Reset-Vorgang. | Keine                   | Immer (`Condition=1`)                   |
 
 **Globale Übergangsbedingung**: Von den Zuständen sState_01 bis sState_04 führt ein `RESET`-Ereignis immer in den sRESET-Zustand.
 

@@ -11,28 +11,28 @@ outputs is active.
 
 ### Event Inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | in, hyst, val1, val2 |
+| Name | Comment | With                 |
+| :--- | :------ | :------------------- |
+| REQ  |         | in, hyst, val1, val2 |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | Q1, Q2 |
+| Name | Comment | With   |
+| :--- | :------ | :----- |
+| CNF  |         | Q1, Q2 |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| in | REAL | |
-| hyst | REAL | |
-| val1 | REAL | |
-| val2 | REAL | |
+| :--- | :--- | :------ |
+| in   | REAL |         |
+| hyst | REAL |         |
+| val1 | REAL |         |
+| val2 | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| Q1 | BOOL | |
-| Q2 | BOOL | |
+| :--- | :--- | :------ |
+| Q1   | BOOL |         |
+| Q2   | BOOL |         |

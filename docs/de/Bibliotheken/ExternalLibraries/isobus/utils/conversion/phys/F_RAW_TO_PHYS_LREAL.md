@@ -16,31 +16,31 @@ Der Baustein ist für den Einsatz in landwirtschaftlichen Steuerungssystemen (IS
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Mit Variablen |
-|------|------|---------------|
+| Name | Typ   | Mit Variablen |
+| ---- | ----- | ------------- |
 | REQ  | Event | u32Raw, stObj |
 
 Der Baustein wird durch ein Ereignis am Eingang `REQ` gestartet.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Mit Variablen |
-|------|------|---------------|
-| CNF  | Event | (keine) |
+| Name | Typ   | Mit Variablen |
+| ---- | ----- | ------------- |
+| CNF  | Event | (keine)       |
 
 Nach erfolgreicher Berechnung wird das Ergebnis über das Ereignis `CNF` quittiert.
 
 ### **Daten-Eingänge**
 
-| Name | Typ         | Beschreibung |
-|------|-------------|--------------|
-| u32Raw | UDINT      | Rohwert aus dem ISOBUS-Bus (0 … 4.294.967.295) |
-| stObj | NumericObjectPool_S | Struktur mit den Umrechnungsparametern: `i32Offset` (DINT) und `r32Scale` (REAL) |
+| Name   | Typ                 | Beschreibung                                                                     |
+| ------ | ------------------- | -------------------------------------------------------------------------------- |
+| u32Raw | UDINT               | Rohwert aus dem ISOBUS-Bus (0 … 4.294.967.295)                                   |
+| stObj  | NumericObjectPool_S | Struktur mit den Umrechnungsparametern: `i32Offset` (DINT) und `r32Scale` (REAL) |
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ   | Beschreibung |
-|-------|-------|--------------|
+| Name        | Typ   | Beschreibung                                                |
+| ----------- | ----- | ----------------------------------------------------------- |
 | (kein Name) | LREAL | Berechneter physikalischer Wert (ieee-doppelte Genauigkeit) |
 
 Das Ausgangssignal trägt keinen expliziten Namen, stellt aber den direkt berechneten LREAL-Wert dar.
@@ -84,12 +84,12 @@ Der Baustein besitzt keinen internen Zustandsautomaten, da es sich um eine reine
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Datentyp Eingang | Datentyp Ausgang | Besonderheit |
-| ---------- | ------------------ | ------------------ | -------------- |
-| `F_RAW_TO_PHYS_LREAL` | UDINT | LREAL | Doppelte Genauigkeit, LINT‑Zwischenschritt |
-| `F_RAW_TO_PHYS_REAL` | UDINT | REAL | Einfache Genauigkeit, geringere Rechenlast |
-| `F_RAW_TO_PHYS_LINT` | UDINT | LINT | Ausgabe als Integer, ohne Skalierung |
-| `F_RAW_TO_PHYS_INT` | UINT | REAL | Nur positive Rohwerte, geringerer Wertebereich |
+| Baustein              | Datentyp Eingang | Datentyp Ausgang | Besonderheit                                   |
+| --------------------- | ---------------- | ---------------- | ---------------------------------------------- |
+| `F_RAW_TO_PHYS_LREAL` | UDINT            | LREAL            | Doppelte Genauigkeit, LINT‑Zwischenschritt     |
+| `F_RAW_TO_PHYS_REAL`  | UDINT            | REAL             | Einfache Genauigkeit, geringere Rechenlast     |
+| `F_RAW_TO_PHYS_LINT`  | UDINT            | LINT             | Ausgabe als Integer, ohne Skalierung           |
+| `F_RAW_TO_PHYS_INT`   | UINT             | REAL             | Nur positive Rohwerte, geringerer Wertebereich |
 
 Der vorliegende Baustein bietet die höchste Präzision und ist für Anwendungen empfohlen, die große Wertebereiche oder feine Abstufungen erfordern.
 

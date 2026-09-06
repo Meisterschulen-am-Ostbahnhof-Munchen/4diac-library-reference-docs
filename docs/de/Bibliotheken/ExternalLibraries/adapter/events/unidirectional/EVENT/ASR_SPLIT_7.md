@@ -28,16 +28,16 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | **IN** | `adapter::types::unidirectional::ASR` | Quelladapter, dessen Daten auf alle Ausgänge verteilt werden. |
-| Ausgang (Plug) | **OUT1** | `adapter::types::unidirectional::ASR` | Erster Ausgang, erhält die duplizierten Daten von `IN`. |
-| Ausgang (Plug) | **OUT2** | `adapter::types::unidirectional::ASR` | Zweiter Ausgang. |
-| Ausgang (Plug) | **OUT3** | `adapter::types::unidirectional::ASR` | Dritter Ausgang. |
-| Ausgang (Plug) | **OUT4** | `adapter::types::unidirectional::ASR` | Vierter Ausgang. |
-| Ausgang (Plug) | **OUT5** | `adapter::types::unidirectional::ASR` | Fünfter Ausgang. |
-| Ausgang (Plug) | **OUT6** | `adapter::types::unidirectional::ASR` | Sechster Ausgang. |
-| Ausgang (Plug) | **OUT7** | `adapter::types::unidirectional::ASR` | Siebter Ausgang. |
+| Richtung         | Name     | Typ                                   | Beschreibung                                                  |
+| ---------------- | -------- | ------------------------------------- | ------------------------------------------------------------- |
+| Eingang (Socket) | **IN**   | `adapter::types::unidirectional::ASR` | Quelladapter, dessen Daten auf alle Ausgänge verteilt werden. |
+| Ausgang (Plug)   | **OUT1** | `adapter::types::unidirectional::ASR` | Erster Ausgang, erhält die duplizierten Daten von `IN`.       |
+| Ausgang (Plug)   | **OUT2** | `adapter::types::unidirectional::ASR` | Zweiter Ausgang.                                              |
+| Ausgang (Plug)   | **OUT3** | `adapter::types::unidirectional::ASR` | Dritter Ausgang.                                              |
+| Ausgang (Plug)   | **OUT4** | `adapter::types::unidirectional::ASR` | Vierter Ausgang.                                              |
+| Ausgang (Plug)   | **OUT5** | `adapter::types::unidirectional::ASR` | Fünfter Ausgang.                                              |
+| Ausgang (Plug)   | **OUT6** | `adapter::types::unidirectional::ASR` | Sechster Ausgang.                                             |
+| Ausgang (Plug)   | **OUT7** | `adapter::types::unidirectional::ASR` | Siebter Ausgang.                                              |
 
 ## Funktionsweise
 

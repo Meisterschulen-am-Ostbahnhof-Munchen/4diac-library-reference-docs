@@ -31,8 +31,8 @@ Der Funktionsblock **AB_PUBLISH_1** ist ein Composite-Funktionsblock, der den ne
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung                    |
+| ------- | ---------------------------------- | ---------------- | ------------------------------- |
 | IN      | adapter::types::unidirectional::AB | Socket (Eingang) | Zu veröffentlichender BYTE-Wert |
 
 ## Funktionsweise

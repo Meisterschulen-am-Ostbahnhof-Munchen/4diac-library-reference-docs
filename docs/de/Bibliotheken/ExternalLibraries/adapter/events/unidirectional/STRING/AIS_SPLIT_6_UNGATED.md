@@ -30,15 +30,15 @@ Keine Datenausgänge vorhanden (die Datenübertragung erfolgt ausschließlich ü
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AIS` | Eingang (Socket) | IN | Eingehendes AIS-Signal, das auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT1 | Erster Ausgang mit dem gesplitteten AIS-Signal. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT2 | Zweiter Ausgang mit dem gesplitteten AIS-Signal. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT3 | Dritter Ausgang mit dem gesplitteten AIS-Signal. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT4 | Vierter Ausgang mit dem gesplitteten AIS-Signal. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT5 | Fünfter Ausgang mit dem gesplitteten AIS-Signal. |
-| `adapter::types::unidirectional::AIS` | Ausgang (Plug) | OUT6 | Sechster Ausgang mit dem gesplitteten AIS-Signal. |
+| Typ                                   | Richtung         | Name | Beschreibung                                                 |
+| ------------------------------------- | ---------------- | ---- | ------------------------------------------------------------ |
+| `adapter::types::unidirectional::AIS` | Eingang (Socket) | IN   | Eingehendes AIS-Signal, das auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT1 | Erster Ausgang mit dem gesplitteten AIS-Signal.              |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT2 | Zweiter Ausgang mit dem gesplitteten AIS-Signal.             |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT3 | Dritter Ausgang mit dem gesplitteten AIS-Signal.             |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT4 | Vierter Ausgang mit dem gesplitteten AIS-Signal.             |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT5 | Fünfter Ausgang mit dem gesplitteten AIS-Signal.             |
+| `adapter::types::unidirectional::AIS` | Ausgang (Plug)   | OUT6 | Sechster Ausgang mit dem gesplitteten AIS-Signal.            |
 
 ## Funktionsweise
 

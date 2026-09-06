@@ -14,40 +14,40 @@ Der Funktionsblock **AW_TO_AI** ist ein Composite FB, der einen unidirektionalen
 
 Über den angeschlossenen AW-Socket werden folgende Ereignisse empfangen:
 
-| Name | Beschreibung |
-|------|--------------|
+| Name          | Beschreibung                                              |
+| ------------- | --------------------------------------------------------- |
 | E1 (AW_IN.E1) | Trigger für die Konvertierung des anliegenden WORD‑Wertes |
 
 ### **Ereignis-Ausgänge**
 
 Über den AI-Plug werden folgende Ereignisse gesendet:
 
-| Name | Beschreibung |
-|------|--------------|
+| Name           | Beschreibung                                                            |
+| -------------- | ----------------------------------------------------------------------- |
 | E1 (AI_OUT.E1) | Bestätigt die erfolgreiche Konvertierung und stellt den INT‑Wert bereit |
 
 ### **Daten-Eingänge**
 
 Eingang über den AW-Socket:
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| D1 (AW_IN.D1) | WORD | Der zu konvertierende 16‑Bit Wortwert |
+| Name          | Datentyp | Beschreibung                          |
+| ------------- | -------- | ------------------------------------- |
+| D1 (AW_IN.D1) | WORD     | Der zu konvertierende 16‑Bit Wortwert |
 
 ### **Daten-Ausgänge**
 
 Ausgang über den AI-Plug:
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| D1 (AI_OUT.D1) | INT | Der konvertierte Integer‑Wert (16‑Bit vorzeichenbehaftet) |
+| Name           | Datentyp | Beschreibung                                              |
+| -------------- | -------- | --------------------------------------------------------- |
+| D1 (AI_OUT.D1) | INT      | Der konvertierte Integer‑Wert (16‑Bit vorzeichenbehaftet) |
 
 ### **Adapter**
 
-| Richtung | Adapter | Typ | Beschreibung |
-|----------|---------|-----|--------------|
-| Socket (Eingang) | AW_IN | `adapter::types::unidirectional::AW` | Empfängt WORD‑Werte und zugehörige Ereignisse |
-| Plug (Ausgang) | AI_OUT | `adapter::types::unidirectional::AI` | Sendet INT‑Werte und zugehörige Ereignisse |
+| Richtung         | Adapter | Typ                                  | Beschreibung                                  |
+| ---------------- | ------- | ------------------------------------ | --------------------------------------------- |
+| Socket (Eingang) | AW_IN   | `adapter::types::unidirectional::AW` | Empfängt WORD‑Werte und zugehörige Ereignisse |
+| Plug (Ausgang)   | AI_OUT  | `adapter::types::unidirectional::AI` | Sendet INT‑Werte und zugehörige Ereignisse    |
 
 ## Funktionsweise
 

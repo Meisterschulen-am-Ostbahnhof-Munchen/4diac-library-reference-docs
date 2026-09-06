@@ -32,9 +32,11 @@ The block uses a **socket** of type `ATimeOut`. Since this is a socket, the sign
 
 - Upon a `START` event at the socket, the timer starts with the configured `DT` value.
 - Any further `START` event while the timer is running is ignored.
+
 1. **Timeout Termination**:
 
 - A `STOP` event immediately terminates the active timer. No `TimeOut` event is generated.
+
 1. **Timeout Trigger**:
 
 - After `DT` expires, the `TimeOut` event is generated once.
@@ -55,11 +57,11 @@ The block uses a **socket** of type `ATimeOut`. Since this is a socket, the sign
 
 ## ⚖️ Comparison with E_RTimeOut
 
-| Feature | E_TimeOut (this one) | E_RTimeOut |
-| --------------- | ----------- | ----------- |
-| Internal Block | E_DELAY | E_RDELAY |
-| `START` on running timer | Ignored | Restarts timer |
-| Adapter Type | ATimeOut | ARTimeOut |
+| Feature                  | E_TimeOut (this one) | E_RTimeOut     |
+| ------------------------ | -------------------- | -------------- |
+| Internal Block           | E_DELAY              | E_RDELAY       |
+| `START` on running timer | Ignored              | Restarts timer |
+| Adapter Type             | ATimeOut             | ARTimeOut      |
 
 ## 🛠️ Related exercises
 

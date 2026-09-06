@@ -12,14 +12,14 @@ Der Funktionsblock **AX_NOT_INIT** realisiert eine boolesche Negation (NOT-Funkt
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar               |
-|-------|-------|-------------------------|
-| INIT  | EInit | Initialisierungsanforderung |
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
+| INIT | EInit | Initialisierungsanforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                 |
-|-------|-------|---------------------------|
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
@@ -32,10 +32,10 @@ Der Baustein besitzt keine direkten Datenausgänge. Die Ausgangsdaten werden üb
 
 ### **Adapter**
 
-| Name | Typ                                              | Kommentar            | Richtung |
-|------|--------------------------------------------------|----------------------|----------|
-| IN   | adapter::types::unidirectional::AX               | Eingangswert         | Socket   |
-| OUT  | adapter::types::unidirectional::AX               | Ausgangswert (negiert)| Plug     |
+| Name | Typ                                | Kommentar              | Richtung |
+| ---- | ---------------------------------- | ---------------------- | -------- |
+| IN   | adapter::types::unidirectional::AX | Eingangswert           | Socket   |
+| OUT  | adapter::types::unidirectional::AX | Ausgangswert (negiert) | Plug     |
 
 ## Funktionsweise
 

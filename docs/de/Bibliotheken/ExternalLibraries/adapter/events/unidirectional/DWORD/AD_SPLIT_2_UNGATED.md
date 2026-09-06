@@ -30,11 +30,11 @@ Keine
 
 ### **Adapter**
 
-| Name | Typ | Richtung |
-|------|-----|----------|
+| Name | Typ                                | Richtung         |
+| ---- | ---------------------------------- | ---------------- |
 | IN   | adapter::types::unidirectional::AD | Socket (Eingang) |
-| OUT1 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT2 | adapter::types::unidirectional::AD | Plug (Ausgang) |
+| OUT1 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT2 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
 
 ## Funktionsweise
 

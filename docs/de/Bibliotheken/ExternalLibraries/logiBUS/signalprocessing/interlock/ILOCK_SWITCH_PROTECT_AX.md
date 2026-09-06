@@ -12,8 +12,8 @@ Der Funktionsblock `ILOCK_SWITCH_PROTECT_AX` dient zur verriegelten Umschaltung 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                         |
+| -------- | ------------------------------------------------------------------------------------ |
 | `UPDATE` | Parametrierungsereignis; übernimmt den aktuellen Wert von `DT_PROTECT` in den Timer. |
 
 ### **Ereignis-Ausgänge**
@@ -26,9 +26,9 @@ Keine direkten Ereignisausgänge. Die Ausgabe erfolgt implizit über die Adapter
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| `DT_PROTECT` | `TIME` | `T#50ms` | Schutz-Totzeit, die nach einem Zustandswechsel aktiviert wird. |
+| Name         | Typ    | Initialwert | Beschreibung                                                   |
+| ------------ | ------ | ----------- | -------------------------------------------------------------- |
+| `DT_PROTECT` | `TIME` | `T#50ms`    | Schutz-Totzeit, die nach einem Zustandswechsel aktiviert wird. |
 
 ### **Daten-Ausgänge**
 
@@ -39,13 +39,13 @@ Keine direkten Datenausgänge. Die Zustandsausgabe erfolgt über die Adapter:
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket | `UP_IN` | `adapter::types::unidirectional::AX` | Eingang für die Anforderung „Aufwärts/Vorwärts“. Enthält Ereignis `E1` und Bool-Daten `D1`. |
-| Socket | `DOWN_IN` | `adapter::types::unidirectional::AX` | Eingang für die Anforderung „Abwärts/Rückwärts“. |
-| Plug | `UP_OUT` | `adapter::types::unidirectional::AX` | Ausgang für die Richtung Aufwärts. |
-| Plug | `DOWN_OUT` | `adapter::types::unidirectional::AX` | Ausgang für die Richtung Abwärts. |
-| Plug | `timeOut` | `iec61499::events::ATimeOut` | Timer-Adapter zur Realisierung der Totzeit. Steuert das Ereignis `TimeOut` nach Ablauf von `DT_PROTECT`. |
+| Richtung | Name       | Typ                                  | Beschreibung                                                                                             |
+| -------- | ---------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Socket   | `UP_IN`    | `adapter::types::unidirectional::AX` | Eingang für die Anforderung „Aufwärts/Vorwärts“. Enthält Ereignis `E1` und Bool-Daten `D1`.              |
+| Socket   | `DOWN_IN`  | `adapter::types::unidirectional::AX` | Eingang für die Anforderung „Abwärts/Rückwärts“.                                                         |
+| Plug     | `UP_OUT`   | `adapter::types::unidirectional::AX` | Ausgang für die Richtung Aufwärts.                                                                       |
+| Plug     | `DOWN_OUT` | `adapter::types::unidirectional::AX` | Ausgang für die Richtung Abwärts.                                                                        |
+| Plug     | `timeOut`  | `iec61499::events::ATimeOut`         | Timer-Adapter zur Realisierung der Totzeit. Steuert das Ereignis `TimeOut` nach Ablauf von `DT_PROTECT`. |
 
 ## Funktionsweise
 
@@ -65,13 +65,13 @@ Der Baustein realisiert eine **verriegelte Zwei-Kanal-Schaltung mit Totzeit**:
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| `STOP` | Ruhezustand. Keine Ausgabe aktiv. Wartet auf Aktivierung eines Eingangs. |
-| `UP` | Ausgang `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE`. Wird aktiv, wenn `UP_IN.D1` anliegt und `DOWN_IN.D1` inaktiv ist. |
-| `DOWN` | Ausgang `DOWN_OUT.D1 = TRUE`, `UP_OUT.D1 = FALSE`. Wird aktiv, wenn `DOWN_IN.D1` anliegt und `UP_IN.D1` inaktiv ist. |
-| `PROTECT` | Schutzphase. Beide Ausgänge werden sofort auf `FALSE` gesetzt, der Timer wird gestartet. Nach Ablauf von `DT_PROTECT` wird in `EVAL` gewechselt. |
-| `EVAL` | Auswertungszustand. Basierend auf den aktuellen Eingangsdaten wird entschieden, welcher Endzustand (STOP, UP, DOWN) oder erneut PROTECT (bei gleichzeitigen Anforderungen) eingenommen wird. |
+| Zustand   | Beschreibung                                                                                                                                                                                 |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `STOP`    | Ruhezustand. Keine Ausgabe aktiv. Wartet auf Aktivierung eines Eingangs.                                                                                                                     |
+| `UP`      | Ausgang `UP_OUT.D1 = TRUE`, `DOWN_OUT.D1 = FALSE`. Wird aktiv, wenn `UP_IN.D1` anliegt und `DOWN_IN.D1` inaktiv ist.                                                                         |
+| `DOWN`    | Ausgang `DOWN_OUT.D1 = TRUE`, `UP_OUT.D1 = FALSE`. Wird aktiv, wenn `DOWN_IN.D1` anliegt und `UP_IN.D1` inaktiv ist.                                                                         |
+| `PROTECT` | Schutzphase. Beide Ausgänge werden sofort auf `FALSE` gesetzt, der Timer wird gestartet. Nach Ablauf von `DT_PROTECT` wird in `EVAL` gewechselt.                                             |
+| `EVAL`    | Auswertungszustand. Basierend auf den aktuellen Eingangsdaten wird entschieden, welcher Endzustand (STOP, UP, DOWN) oder erneut PROTECT (bei gleichzeitigen Anforderungen) eingenommen wird. |
 
 Die in der ECC definierten Transitionen sind:
 

@@ -1,4 +1,4 @@
-### Q\_NumericValue
+# Q_NumericValue
 
 ![Q_NumericValue function block overview](https://user-images.githubusercontent.com/113907471/204326982-47eea33a-9b9c-4107-8f96-97c85a945fbc.png)
 Normative Reference:

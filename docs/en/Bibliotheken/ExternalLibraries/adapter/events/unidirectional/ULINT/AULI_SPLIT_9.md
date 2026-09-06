@@ -36,10 +36,10 @@ Data output occurs exclusively via the **OUT1** to **OUT9** adapters.
 
 ### Adapters
 
-| Type | Direction | Name | Description |
-| ----- | ---------- | ------ | -------------- |
-| Socket | Input | **IN** | Unidirectional AULI adapter – receives the data set to be distributed. |
-| Plug | Output | **OUT1** … **OUT9** | Nine unidirectional AULI adapters – output the identical input data set. |
+| Type   | Direction | Name                | Description                                                              |
+| ------ | --------- | ------------------- | ------------------------------------------------------------------------ |
+| Socket | Input     | **IN**              | Unidirectional AULI adapter – receives the data set to be distributed.   |
+| Plug   | Output    | **OUT1** … **OUT9** | Nine unidirectional AULI adapters – output the identical input data set. |
 
 ## Functionality
 

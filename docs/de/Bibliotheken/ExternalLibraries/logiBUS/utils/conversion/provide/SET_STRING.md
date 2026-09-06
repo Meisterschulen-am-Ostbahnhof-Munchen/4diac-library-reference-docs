@@ -12,26 +12,26 @@ Der Funktionsblock `SET_STRING` dient dazu, einen über den Dateneingang `IN` be
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                     | Mit Variablen |
-|------|-------|-------------------------------|---------------|
-| REQ  | Event | Normaler Ausführungsauftrag   | IN, OUT       |
+| Name | Typ   | Kommentar                   | Mit Variablen |
+| ---- | ----- | --------------------------- | ------------- |
+| REQ  | Event | Normaler Ausführungsauftrag | IN, OUT       |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                      | Mit Variablen |
-|------|-------|--------------------------------|---------------|
-| CNF  | Event | Bestätigung der Ausführung     | OUT           |
+| Name | Typ   | Kommentar                  | Mit Variablen |
+| ---- | ----- | -------------------------- | ------------- |
+| CNF  | Event | Bestätigung der Ausführung | OUT           |
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Kommentar            |
-|------|--------|----------------------|
+| Name | Typ    | Kommentar               |
+| ---- | ------ | ----------------------- |
 | IN   | STRING | Der zu schreibende Wert |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ    | Kommentar                       |
-|------|--------|---------------------------------|
+| Name | Typ    | Kommentar                                                    |
+| ---- | ------ | ------------------------------------------------------------ |
 | OUT  | STRING | Zielvariable (In‑Out) – nach der Ausführung identisch mit IN |
 
 > **Hinweis:** `OUT` ist als In‑Out‑Variable deklariert. Sie dient gleichzeitig als Eingang (der aktuelle Wert vor der Ausführung) und als Ausgang (der neue Wert nach der Ausführung). Bei `REQ` wird `OUT := IN` gesetzt, so dass der vorherige Wert überschrieben wird.
@@ -59,9 +59,9 @@ Keine Adapter vorhanden.
 
 Der Funktionsblock besitzt genau einen Zustand:
 
-| Zustand | Aktion               | Ausgabeereignis | Beschreibung                                   |
-|---------|----------------------|-----------------|------------------------------------------------|
-| `REQ`   | `OUT := IN`          | `CNF`           | Kopiert den Eingangswert in die In‑Out‑Variable und bestätigt |
+| Zustand | Aktion      | Ausgabeereignis | Beschreibung                                                  |
+| ------- | ----------- | --------------- | ------------------------------------------------------------- |
+| `REQ`   | `OUT := IN` | `CNF`           | Kopiert den Eingangswert in die In‑Out‑Variable und bestätigt |
 
 Ein Startzustand ist nicht explizit definiert; der Baustein erwartet einen externen Ereignisimpuls auf `REQ`.
 

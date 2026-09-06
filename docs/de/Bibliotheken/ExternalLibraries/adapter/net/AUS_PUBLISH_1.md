@@ -31,8 +31,8 @@ Der Funktionsblock **AUS_PUBLISH_1** ist ein Composite-Funktionsblock, der den n
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                 | Richtung         | Beschreibung                     |
+| ------- | ----------------------------------- | ---------------- | -------------------------------- |
 | IN      | adapter::types::unidirectional::AUS | Socket (Eingang) | Zu veröffentlichender USINT-Wert |
 
 ## Funktionsweise

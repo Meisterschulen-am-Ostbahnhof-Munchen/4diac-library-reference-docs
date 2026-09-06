@@ -28,10 +28,10 @@ No separate data outputs are available. Data is output exclusively via the **AR_
 
 ### **Adapters**
 
-| Type | Name | Direction | Comment |
-| --- | --- | --- | --- |
+| Type                                  | Name   | Direction      | Comment                   |
+| ------------------------------------- | ------ | -------------- | ------------------------- |
 | `adapter::types::unidirectional::AUS` | OFF_IN | Socket (Input) | USINT-based adapter input |
-| `adapter::types::unidirectional::AR` | AR_OUT | Plug (Output) | REAL-based adapter output |
+| `adapter::types::unidirectional::AR`  | AR_OUT | Plug (Output)  | REAL-based adapter output |
 
 ## Functionality
 

@@ -12,38 +12,38 @@ Der Funktionsblock **ILOCK_SWITCH_PROTECT** realisiert eine priorisierte Verrieg
 
 ### **Ereignis‑Eingänge**
 
-| Name    | Mit Parametern                 | Beschreibung                                         |
-|---------|--------------------------------|------------------------------------------------------|
-| EI_UP   | `DI_UP`, `DT_PROTECT`          | Ereignis zum Anfordern der Richtung „Auf“            |
-| EI_DOWN | `DI_DOWN`, `DT_PROTECT`        | Ereignis zum Anfordern der Richtung „Ab“             |
+| Name    | Mit Parametern          | Beschreibung                              |
+| ------- | ----------------------- | ----------------------------------------- |
+| EI_UP   | `DI_UP`, `DT_PROTECT`   | Ereignis zum Anfordern der Richtung „Auf“ |
+| EI_DOWN | `DI_DOWN`, `DT_PROTECT` | Ereignis zum Anfordern der Richtung „Ab“  |
 
 ### **Ereignis‑Ausgänge**
 
 | Name    | Mit Parametern | Beschreibung                                         |
-|---------|----------------|------------------------------------------------------|
+| ------- | -------------- | ---------------------------------------------------- |
 | EO_UP   | `DO_UP`        | Bestätigung, dass die Richtung „Auf“ aktiviert wurde |
 | EO_DOWN | `DO_DOWN`      | Bestätigung, dass die Richtung „Ab“ aktiviert wurde  |
 
 ### **Daten‑Eingänge**
 
-| Name       | Datentyp | Initialwert | Beschreibung                                          |
-|------------|----------|-------------|-------------------------------------------------------|
-| DI_UP      | BOOL     | –           | TRUE = vorwärts, auf, rechts, im Uhrzeigersinn        |
-| DI_DOWN    | BOOL     | –           | TRUE = rückwärts, ab, links, gegen Uhrzeigersinn      |
-| DT_PROTECT | TIME     | T#50ms      | Schutzverzögerung (Totzeit) vor einem Richtungswechsel|
+| Name       | Datentyp | Initialwert | Beschreibung                                           |
+| ---------- | -------- | ----------- | ------------------------------------------------------ |
+| DI_UP      | BOOL     | –           | TRUE = vorwärts, auf, rechts, im Uhrzeigersinn         |
+| DI_DOWN    | BOOL     | –           | TRUE = rückwärts, ab, links, gegen Uhrzeigersinn       |
+| DT_PROTECT | TIME     | T#50ms      | Schutzverzögerung (Totzeit) vor einem Richtungswechsel |
 
 ### **Daten‑Ausgänge**
 
-| Name    | Datentyp | Beschreibung                                          |
-|---------|----------|-------------------------------------------------------|
-| DO_UP   | BOOL     | TRUE = Ausgang für Richtung „Auf“ aktiv               |
-| DO_DOWN | BOOL     | TRUE = Ausgang für Richtung „Ab“ aktiv                |
+| Name    | Datentyp | Beschreibung                            |
+| ------- | -------- | --------------------------------------- |
+| DO_UP   | BOOL     | TRUE = Ausgang für Richtung „Auf“ aktiv |
+| DO_DOWN | BOOL     | TRUE = Ausgang für Richtung „Ab“ aktiv  |
 
 ### **Adapter**
 
-| Name    | Typ                            | Beschreibung                                  |
-|---------|--------------------------------|-----------------------------------------------|
-| timeOut | `iec61499::events::ATimeOut`   | Adapter zur Realisierung der Schutzverzögerung |
+| Name    | Typ                          | Beschreibung                                   |
+| ------- | ---------------------------- | ---------------------------------------------- |
+| timeOut | `iec61499::events::ATimeOut` | Adapter zur Realisierung der Schutzverzögerung |
 
 ## Funktionsweise
 
@@ -78,13 +78,13 @@ Die Auslösung der Ereignisausgänge erfolgt zusammen mit dem jeweils ausgeführ
 
 ## Zustandsübersicht
 
-| Zustand  | Beschreibung                                                     | DO_UP | DO_DOWN | Ausgelöste Ereignisausgänge |
-|----------|------------------------------------------------------------------|-------|---------|------------------------------|
-| **STOP** | Warten auf gültige Anforderung; Ausgänge inaktiv                 | FALSE | FALSE   | –                            |
-| **UP**   | Richtung Auf aktiv; Umschalten blockiert ohne Zwischenschritt    | TRUE  | FALSE   | EO_UP, EO_DOWN               |
-| **DOWN** | Richtung Ab aktiv; Umschalten blockiert ohne Zwischenschritt     | FALSE | TRUE    | EO_DOWN, EO_UP               |
-| **PROTECT** | Schutzverzögerung läuft; alle Ausgänge deaktiviert           | FALSE | FALSE   | EO_UP, EO_DOWN, timeOut.START|
-| **EVAL** | Nach Ablauf der Schutzzeit werden die Eingänge ausgewertet       | –     | –       | – (Zustandswechsel)          |
+| Zustand     | Beschreibung                                                  | DO_UP | DO_DOWN | Ausgelöste Ereignisausgänge   |
+| ----------- | ------------------------------------------------------------- | ----- | ------- | ----------------------------- |
+| **STOP**    | Warten auf gültige Anforderung; Ausgänge inaktiv              | FALSE | FALSE   | –                             |
+| **UP**      | Richtung Auf aktiv; Umschalten blockiert ohne Zwischenschritt | TRUE  | FALSE   | EO_UP, EO_DOWN                |
+| **DOWN**    | Richtung Ab aktiv; Umschalten blockiert ohne Zwischenschritt  | FALSE | TRUE    | EO_DOWN, EO_UP                |
+| **PROTECT** | Schutzverzögerung läuft; alle Ausgänge deaktiviert            | FALSE | FALSE   | EO_UP, EO_DOWN, timeOut.START |
+| **EVAL**    | Nach Ablauf der Schutzzeit werden die Eingänge ausgewertet    | –     | –       | – (Zustandswechsel)           |
 
 ## Anwendungsszenarien
 
@@ -94,11 +94,11 @@ Die Auslösung der Ereignisausgänge erfolgt zusammen mit dem jeweils ausgeführ
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                     | Besonderheit                                           |
-|------------------------------|--------------------------------------------------------|
-| **SR‑Latch**                 | Einfaches Set‑Reset‑Flipflop ohne Verzögerung          |
-| **Interlock‑Baustein (einfach)** | Schaltet sofort um, keine Totzeit                    |
-| **ILOCK_SWITCH_PROTECT**     | Konfigurierbare Schutzverzögerung, Auswertung nach der Verzögerung, Behandlung gleichzeitiger Anforderungen |
+| Baustein                         | Besonderheit                                                                                                |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **SR‑Latch**                     | Einfaches Set‑Reset‑Flipflop ohne Verzögerung                                                               |
+| **Interlock‑Baustein (einfach)** | Schaltet sofort um, keine Totzeit                                                                           |
+| **ILOCK_SWITCH_PROTECT**         | Konfigurierbare Schutzverzögerung, Auswertung nach der Verzögerung, Behandlung gleichzeitiger Anforderungen |
 
 Gegenüber einfachen Verriegelungen bietet **ILOCK_SWITCH_PROTECT** eine kontrollierte Umschaltung, die insbesondere bei induktiven Lasten oder mechanisch trägen Systemen Vorteile bringt.
 

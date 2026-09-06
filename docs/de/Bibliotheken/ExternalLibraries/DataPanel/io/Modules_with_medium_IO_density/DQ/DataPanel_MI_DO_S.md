@@ -4,9 +4,9 @@ DataPanel Modules with medium IO density DO Struct
 
 ## Structure
 
-| Name | Type | Initial Value |
-| :--- | :--- | :--- |
-| Pin | USINT | 255 |
+| Name | Type  | Initial Value |
+| :--- | :---- | :------------ |
+| Pin  | USINT | 255           |
 
 ## 🛠️ Zugehörige Übungen
 

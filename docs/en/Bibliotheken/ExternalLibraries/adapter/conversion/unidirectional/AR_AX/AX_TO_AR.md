@@ -49,6 +49,7 @@ The function block operates in an event-driven manner:
 
 - For `G = FALSE` => Output of **IN0** (value `REAL#0.0`).
 - For `G = TRUE` => Output of **IN1** (value `REAL#1.0`).
+
 1. The result is passed via output OUT to data input D1 of the AR_OUT adapter.
 2. The CNF event of F_SEL triggers output event E1 of the AR_OUT adapter, allowing the connected logic to accept the new data.
 

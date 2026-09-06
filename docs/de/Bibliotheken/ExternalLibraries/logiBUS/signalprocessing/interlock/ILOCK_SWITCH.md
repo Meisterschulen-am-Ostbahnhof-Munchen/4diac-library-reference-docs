@@ -12,30 +12,30 @@ Der Funktionsbaustein **ILOCK_SWITCH** dient als prioritätsgesteuerte Weiche mi
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | mit Daten | Beschreibung |
-|----------|-----------|--------------|
-| **EI_UP** | DI_UP | Ereignis zur Anforderung der Aufwärts‑/Vorwärts‑Richtung. |
-| **EI_DOWN** | DI_DOWN | Ereignis zur Anforderung der Abwärts‑/Rückwärts‑Richtung. |
+| Ereignis    | mit Daten | Beschreibung                                              |
+| ----------- | --------- | --------------------------------------------------------- |
+| **EI_UP**   | DI_UP     | Ereignis zur Anforderung der Aufwärts‑/Vorwärts‑Richtung. |
+| **EI_DOWN** | DI_DOWN   | Ereignis zur Anforderung der Abwärts‑/Rückwärts‑Richtung. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | mit Daten | Beschreibung |
-|----------|-----------|--------------|
-| **EO_UP** | DO_UP | Wird bei Aktivierung der Aufwärts‑Richtung oder beim Verlassen des UP‑Zustands getriggert. |
-| **EO_DOWN** | DO_DOWN | Wird bei Aktivierung der Abwärts‑Richtung oder beim Verlassen des DOWN‑Zustands getriggert. |
+| Ereignis    | mit Daten | Beschreibung                                                                                |
+| ----------- | --------- | ------------------------------------------------------------------------------------------- |
+| **EO_UP**   | DO_UP     | Wird bei Aktivierung der Aufwärts‑Richtung oder beim Verlassen des UP‑Zustands getriggert.  |
+| **EO_DOWN** | DO_DOWN   | Wird bei Aktivierung der Abwärts‑Richtung oder beim Verlassen des DOWN‑Zustands getriggert. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| **DI_UP** | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
+| Name        | Typ  | Kommentar                                             |
+| ----------- | ---- | ----------------------------------------------------- |
+| **DI_UP**   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn   |
 | **DI_DOWN** | BOOL | TRUE = rückwärts, abwärts, links, gegen Uhrzeigersinn |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| **DO_UP** | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
+| Name        | Typ  | Kommentar                                             |
+| ----------- | ---- | ----------------------------------------------------- |
+| **DO_UP**   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn   |
 | **DO_DOWN** | BOOL | TRUE = rückwärts, abwärts, links, gegen Uhrzeigersinn |
 
 ### **Adapter**
@@ -71,13 +71,13 @@ Durch diese Logik wird sichergestellt, dass stets nur eine Richtung aktiv ist un
 
 ## Zustandsübersicht
 
-| Zustand | DO_UP | DO_DOWN | Erreicht durch |
-| --------- | ------- | --------- | ---------------- |
-| STOP | FALSE | FALSE | Start / nach UP_STOP und DOWN_STOP |
-| UP | TRUE | FALSE | EI_UP mit DI_UP=TRUE aus STOP oder DOWN |
-| DOWN | FALSE | TRUE | EI_DOWN mit DI_DOWN=TRUE aus STOP oder UP |
-| UP_STOP | FALSE | FALSE | EI_UP mit DI_UP=FALSE und DI_DOWN=FALSE im Zustand UP |
-| DOWN_STOP | FALSE | FALSE | EI_DOWN mit DI_DOWN=FALSE und DI_UP=FALSE im Zustand DOWN |
+| Zustand   | DO_UP | DO_DOWN | Erreicht durch                                            |
+| --------- | ----- | ------- | --------------------------------------------------------- |
+| STOP      | FALSE | FALSE   | Start / nach UP_STOP und DOWN_STOP                        |
+| UP        | TRUE  | FALSE   | EI_UP mit DI_UP=TRUE aus STOP oder DOWN                   |
+| DOWN      | FALSE | TRUE    | EI_DOWN mit DI_DOWN=TRUE aus STOP oder UP                 |
+| UP_STOP   | FALSE | FALSE   | EI_UP mit DI_UP=FALSE und DI_DOWN=FALSE im Zustand UP     |
+| DOWN_STOP | FALSE | FALSE   | EI_DOWN mit DI_DOWN=FALSE und DI_UP=FALSE im Zustand DOWN |
 
 Die Übergänge zwischen den Zuständen erfolgen immer über ein eingehendes Ereignis und die Auswertung der aktuellen Datenwerte.
 

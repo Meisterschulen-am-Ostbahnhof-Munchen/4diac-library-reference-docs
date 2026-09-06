@@ -49,6 +49,7 @@ The function block `AlPgnTxNew8Bcycl_REQ` is used for the cyclic transmission of
 
 - Before each send operation, the block requests the current payload data via the `CB` adapter.
 - After successful transmission, the `CNF` event is triggered.
+
 1. **Error Handling**: If an error occurs (e.g., invalid configuration, communication problem), either `dataERR` or `pgnERR` is triggered and the corresponding error code is set.
 
 ## Technical Features

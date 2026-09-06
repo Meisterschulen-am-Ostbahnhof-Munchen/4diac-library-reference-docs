@@ -51,10 +51,10 @@ Anschließend wird in jedem Fall `Y := (X + OFFSET) * SCALE` berechnet und über
 
 **Beispiel** (4-20-mA-Drucksensor über logiBUS, normiert auf `0.0 .. 1.0`, gewünschter Ausgabebereich `0.0 .. 500.0`):
 
-| Schritt | Aktion | Ergebnis |
-| --- | --- | --- |
-| 1 | 4 mA anlegen (`X=0.0`), `Y_Offset=0.0`, `CO=TRUE` | `OFFSET = 0` |
-| 2 | 20 mA anlegen (`X=1.0`), `Y_Scale=500.0`, `CS=TRUE` | `SCALE = 500` |
+| Schritt | Aktion                                              | Ergebnis      |
+| ------- | --------------------------------------------------- | ------------- |
+| 1       | 4 mA anlegen (`X=0.0`), `Y_Offset=0.0`, `CO=TRUE`   | `OFFSET = 0`  |
+| 2       | 20 mA anlegen (`X=1.0`), `Y_Scale=500.0`, `CS=TRUE` | `SCALE = 500` |
 
 Ergebnis: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 

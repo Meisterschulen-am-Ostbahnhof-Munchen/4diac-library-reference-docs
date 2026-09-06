@@ -28,10 +28,10 @@ The function block **AB_TO_AQ** converts a unidirectional adapter of type **AB (
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Description |
-| --------- | ---------- | ----- | -------------- |
-| **IN** | Socket | `adapter::types::unidirectional::AB` | BYTE input adapter (8 bits) |
-| **OUT** | Plug | `adapter::types::unidirectional::AQ` | Quarter-byte output adapter (2 bits) |
+| Adapter | Direction | Type                                 | Description                          |
+| ------- | --------- | ------------------------------------ | ------------------------------------ |
+| **IN**  | Socket    | `adapter::types::unidirectional::AB` | BYTE input adapter (8 bits)          |
+| **OUT** | Plug      | `adapter::types::unidirectional::AQ` | Quarter-byte output adapter (2 bits) |
 
 ## Functionality
 

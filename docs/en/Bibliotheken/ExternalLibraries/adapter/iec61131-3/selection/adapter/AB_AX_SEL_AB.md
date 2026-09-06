@@ -18,7 +18,7 @@ Since this is an adapter-based function block, the classic event and data inputs
 
 *No direct data outputs are available.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -32,12 +32,12 @@ Since this is an adapter-based function block, the classic event and data inputs
 
 ### **Adapter**
 
-| Name | Direction | Type | Description |
-| :--- | :--- | :--- | :--- |
-| **OUT** | Plug (Consumer) | `adapter::types::unidirectional::AB` | The selected output. Outputs the forwarded signal. |
+| Name    | Direction         | Type                                 | Description                                                              |
+| :------ | :---------------- | :----------------------------------- | :----------------------------------------------------------------------- |
+| **OUT** | Plug (Consumer)   | `adapter::types::unidirectional::AB` | The selected output. Outputs the forwarded signal.                       |
 | **IN0** | Socket (Provider) | `adapter::types::unidirectional::AB` | First selectable input (selected when selector `G` is in state `FALSE`). |
 | **IN1** | Socket (Provider) | `adapter::types::unidirectional::AB` | Second selectable input (selected when selector `G` is in state `TRUE`). |
-| **G** | Socket (Provider) | `adapter::types::unidirectional::AX` | Selector adapter (control signal for selection). |
+| **G**   | Socket (Provider) | `adapter::types::unidirectional::AX` | Selector adapter (control signal for selection).                         |
 
 *Note on adapter types:*
 
@@ -51,14 +51,17 @@ Inside the function block is a network of standard function blocks (IEC 61131-3 
 1. **Event and Data Acquisition:**
 
 - When an event (`IN0`, `IN1`, `G`) arrives at one of the input adapters (`IN0`, `IN1`, `G`), the corresponding value (`D1`) is temporarily stored via an edge-triggered memory element (D flip-flop `E_D_FF` or `E_D_FF_ANY`).
+
 1. **Data Conversion / Buffering:**
 
 - The function blocks `F_MOVE_IN0` and `F_MOVE_IN1` copy the byte values of the inputs to the selection element.
+
 1. **Selection Logic (`F_SEL`):**
 
 - The standard selection function block `F_SEL` (from the IEC 61131-3 Library) performs the actual selection:
 - If the signal from the selector adapter `G` equals `FALSE`, the signal from `IN0` is passed through to the output.
 - If the signal from selector adapter `G` equals `TRUE`, the signal from `IN1` is passed through to the output.
+
 1. **Output:**
 
 - The selected value is transferred via another conversion block (`F_MOVE_OUT` with data type `BYTE`) to an output flip-flop (`E_D_FF_ANY_OUT`).
@@ -68,20 +71,20 @@ Inside the function block is a network of standard function blocks (IEC 61131-3 
 - **Decoupling via memory elements:** The use of `E_D_FF` and `E_D_FF_ANY` ensures that the data is transferred consistently and that no uncontrolled signal changes (race conditions) occur at the output.
 - - **Typing:** The internal processing of the data is fixed to the data type `BYTE` (defined via the attribute `DataType="BYTE"` on the `F_MOVE` blocks).
 
-| State Selector `G` | Event at Input | Behavior at Output `OUT` |
-| :--- | :--- | :--- |
-| `FALSE` | Event at `IN0` | Value from `IN0` is passed to `OUT`; Event `OUT.E1` is triggered. |
-| `FALSE` | Event sent to `IN1` | The value of `IN1` is updated internally, but **not** passed to `OUT`. |
-| `TRUE` | Event sent to `IN0` | The value of `IN0` is updated internally, but **not** passed to `OUT`. |
-| `TRUE` | Event sent to `IN1` | The value of `IN1` is passed to `OUT`; Event `OUT.E1` is triggered. |
-| Switch `FALSE` $\rightarrow$ `TRUE` | Event on `G` | The currently stored value of `IN1` is passed to `OUT`; `OUT.E1` is triggered. |
-| Switch `TRUE` $\rightarrow$ `FALSE` | Event on `G` | The currently stored value of `IN0` is passed to `OUT`; `OUT.E1` is triggered. |
+| State Selector `G`                  | Event at Input      | Behavior at Output `OUT`                                                       |
+| :---------------------------------- | :------------------ | :----------------------------------------------------------------------------- |
+| `FALSE`                             | Event at `IN0`      | Value from `IN0` is passed to `OUT`; Event `OUT.E1` is triggered.              |
+| `FALSE`                             | Event sent to `IN1` | The value of `IN1` is updated internally, but **not** passed to `OUT`.         |
+| `TRUE`                              | Event sent to `IN0` | The value of `IN0` is updated internally, but **not** passed to `OUT`.         |
+| `TRUE`                              | Event sent to `IN1` | The value of `IN1` is passed to `OUT`; Event `OUT.E1` is triggered.            |
+| Switch `FALSE` $\rightarrow$ `TRUE` | Event on `G`        | The currently stored value of `IN1` is passed to `OUT`; `OUT.E1` is triggered. |
+| Switch `TRUE` $\rightarrow$ `FALSE` | Event on `G`        | The currently stored value of `IN0` is passed to `OUT`; `OUT.E1` is triggered. |
 
 - **Signal Switching at the Field Level:** Switching between the signal from an active sensor (`IN1`) and a predefined substitute/error value (`IN0`) in case of a fault.
 - **Manual/Automatic Switching:** Forwarding of control bytes, whereby values from the automatic control are used in automatic mode (`G = TRUE`), while manually specified values are sent to the actuators in manual mode (`G = FALSE`).
 - **Recipe or Mode Selection:** Dynamic path selection for configuration or status data in complex process controls.
 
-- ## Comparison with Similar Function Blocks
+## Comparison with Similar Function Blocks
 
 Compared to the standard function block `F_SEL`, `AB_AX_SEL_AB` operates directly at the adapter level.
 
@@ -95,7 +98,5 @@ The `AB_AX_SEL_AB`is a robust and reusable auxiliary building block for signal r
 ## State Overview
 
 ## Application Scenarios
-
-## Comparison with Similar Function Blocks
 
 ## Conclusion

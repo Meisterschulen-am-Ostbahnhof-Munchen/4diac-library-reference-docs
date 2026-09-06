@@ -12,20 +12,20 @@ Der Funktionsblock **ALR_D_FF_TMIN** realisiert einen taktflankengesteuerten Dat
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                                          |
-|----------|-------|----------------------------------------------------|
+| Ereignis | Typ   | Kommentar                                                 |
+| -------- | ----- | --------------------------------------------------------- |
 | INIT     | EInit | Initialisierungsanforderung; setzt die Mindestzeit `Tmin` |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar                                |
-|----------|-------|------------------------------------------|
+| Ereignis | Typ   | Kommentar                                     |
+| -------- | ----- | --------------------------------------------- |
 | INITO    | EInit | Bestätigung der erfolgreichen Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar                                   |
-|------|------|---------------------------------------------|
+| Name | Typ  | Kommentar                                       |
+| ---- | ---- | ----------------------------------------------- |
 | Tmin | TIME | Minimale Wartezeit zwischen zwei EO-Ereignissen |
 
 ### **Daten-Ausgänge**
@@ -34,9 +34,9 @@ Der Funktionsblock **ALR_D_FF_TMIN** realisiert einen taktflankengesteuerten Dat
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ         | Kommentar                         |
-|---------|----------|-------------|-----------------------------------|
-| I       | Socket   | ALR (unidirektional) | Eingangswert (`D1`) und Takt (`E1`) |
+| Adapter | Richtung | Typ                  | Kommentar                               |
+| ------- | -------- | -------------------- | --------------------------------------- |
+| I       | Socket   | ALR (unidirektional) | Eingangswert (`D1`) und Takt (`E1`)     |
 | Q       | Plug     | ALR (unidirektional) | Ausgangswert (`D1`) und Quittung (`E1`) |
 
 Der Adapter `ALR` (unidirectional) besitzt einen Ereigniseingang `E1` und einen Dateneingang `D1` (Socket-Seite) bzw. einen Ereignisausgang `E1` und Datenausgang `D1` (Plug-Seite). – Die genaue Semantik von `E1` und `D1` ist anwendungsspezifisch; hier dient `E1` als Takt und `D1` als der zu latchende Datenwert.

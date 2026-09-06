@@ -8,12 +8,12 @@ A basic embedded resource for executing function block networks. By default, it 
 
 ## Metadata
 
-| Attribute | Value |
-| :--- | :--- |
-| Copyright | (c) 2017 fortiss GmbH |
-| License | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac package | iec61499::system |
+| Attribute     | Value                            |
+| :------------ | :------------------------------- |
+| Copyright     | (c) 2017 fortiss GmbH            |
+| License       | EPL-2.0                          |
+| Version       | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac package | iec61499::system                 |
 
 ---
 

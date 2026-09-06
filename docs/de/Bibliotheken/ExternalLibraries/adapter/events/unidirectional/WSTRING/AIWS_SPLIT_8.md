@@ -30,17 +30,17 @@ Keine.
 
 ### Adapter
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | IN | adapater::types::unidirectional::AIWS | Eingehendes AIWS-Signal, das aufgeteilt werden soll. |
-| Ausgang (Plug) | OUT1 | adapater::types::unidirectional::AIWS | Erster paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT2 | adapater::types::unidirectional::AIWS | Zweiter paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT3 | adapater::types::unidirectional::AIWS | Dritter paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT4 | adapater::types::unidirectional::AIWS | Vierter paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT5 | adapater::types::unidirectional::AIWS | Fünfter paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT6 | adapater::types::unidirectional::AIWS | Sechster paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT7 | adapater::types::unidirectional::AIWS | Siebter paralleler Ausgang des Signals. |
-| Ausgang (Plug) | OUT8 | adapater::types::unidirectional::AIWS | Achter paralleler Ausgang des Signals. |
+| Richtung         | Name | Typ                                   | Beschreibung                                         |
+| ---------------- | ---- | ------------------------------------- | ---------------------------------------------------- |
+| Eingang (Socket) | IN   | adapater::types::unidirectional::AIWS | Eingehendes AIWS-Signal, das aufgeteilt werden soll. |
+| Ausgang (Plug)   | OUT1 | adapater::types::unidirectional::AIWS | Erster paralleler Ausgang des Signals.               |
+| Ausgang (Plug)   | OUT2 | adapater::types::unidirectional::AIWS | Zweiter paralleler Ausgang des Signals.              |
+| Ausgang (Plug)   | OUT3 | adapater::types::unidirectional::AIWS | Dritter paralleler Ausgang des Signals.              |
+| Ausgang (Plug)   | OUT4 | adapater::types::unidirectional::AIWS | Vierter paralleler Ausgang des Signals.              |
+| Ausgang (Plug)   | OUT5 | adapater::types::unidirectional::AIWS | Fünfter paralleler Ausgang des Signals.              |
+| Ausgang (Plug)   | OUT6 | adapater::types::unidirectional::AIWS | Sechster paralleler Ausgang des Signals.             |
+| Ausgang (Plug)   | OUT7 | adapater::types::unidirectional::AIWS | Siebter paralleler Ausgang des Signals.              |
+| Ausgang (Plug)   | OUT8 | adapater::types::unidirectional::AIWS | Achter paralleler Ausgang des Signals.               |
 
 ## Funktionsweise
 

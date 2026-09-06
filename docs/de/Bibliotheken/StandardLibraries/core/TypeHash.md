@@ -14,11 +14,11 @@ Die Attributdeklaration `TypeHash` definiert einen festen Typ-Hash für Funktion
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Lizenz | EPL-2.0 |
-| Version | 1.0 (2025-06-05, Martin Erich Jobst) |
-| 4diac-Paket | eclipse4diac::core |
+| Attribut    | Wert                                 |
+| :---------- | :----------------------------------- |
+| Lizenz      | EPL-2.0                              |
+| Version     | 1.0 (2025-06-05, Martin Erich Jobst) |
+| 4diac-Paket | eclipse4diac::core                   |
 
 ---
 

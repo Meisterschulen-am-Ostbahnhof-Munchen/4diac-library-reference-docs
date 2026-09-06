@@ -12,20 +12,20 @@ The function block **AULI_D_FF_TMIN** implements a data latch (D flip-flop) with
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|--------|------------------------------------------------|
+| Name | Type  | Comment                                          |
+| ---- | ----- | ------------------------------------------------ |
 | INIT | EInit | Initialization request; synchronized with `Tmin` |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|--------|-----------------------------------------------|
+| Name  | Type  | Comment                     |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialization confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|-------|-------|--------------------------------------------------------|
+| Name | Type | Comment                                                           |
+| ---- | ---- | ----------------------------------------------------------------- |
 | Tmin | TIME | Minimum time between two event outputs (EO) at the output adapter |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ None
 
 ### **Adapters**
 
-| Name | Role | Type | Comment |
-| ------ | ----------- | ---------- | -------------------------------------------- |
-| I | Socket | AULI | Input: value to latch (event E1, data D1) |
-| Q | Plug | AULI | Output: latching value (event E1, data D1) |
+| Name | Role   | Type | Comment                                    |
+| ---- | ------ | ---- | ------------------------------------------ |
+| I    | Socket | AULI | Input: value to latch (event E1, data D1)  |
+| Q    | Plug   | AULI | Output: latching value (event E1, data D1) |
 
 ## Functionality
 
@@ -49,6 +49,7 @@ This function block encapsulates an internal `E_D_FF_ANY_TMIN` function block fr
 - An event at the adapter input `I.E1` (as a clock signal) transfers the current data value `I.D1` to the internal flip-flop.
 - Simultaneously, the minimum time `Tmin` is started.
 - After `Tmin` has elapsed, an event is triggered at the adapter output `Q.E1`, and the transferred data value `Q.D1` is output.
+
 1. **Lockout time** – While `Tmin` is still active, a subsequent input event is ignored or buffered (depending on the internal implementation). Only after the specified time has elapsed can the next value be processed.
 
 ## Technical Features

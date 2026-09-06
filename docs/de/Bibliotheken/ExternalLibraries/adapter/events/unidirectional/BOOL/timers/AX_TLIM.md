@@ -12,9 +12,9 @@ Der Funktionsblock **AX_TLIM** ist ein zeitbegrenzender Timer (Time-Limiting) ge
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Beschreibung                                                 |
-|-------|--------|--------------------------------------------------------------|
-| `EIPT`| Event  | Setzt die Zeitbegrenzung `PT` neu (löst keine Ausführung aus)|
+| Name   | Typ   | Beschreibung                                                  |
+| ------ | ----- | ------------------------------------------------------------- |
+| `EIPT` | Event | Setzt die Zeitbegrenzung `PT` neu (löst keine Ausführung aus) |
 
 ### **Ereignis-Ausgänge**
 
@@ -22,9 +22,9 @@ Der Funktionsblock besitzt keine direkten Ereignis-Ausgänge. Stattdessen werden
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Beschreibung                             |
-|------|--------|------------------------------------------|
-| `PT` | `TIME` | Zeitbegrenzung (Preset Time) für den Timer|
+| Name | Typ    | Beschreibung                               |
+| ---- | ------ | ------------------------------------------ |
+| `PT` | `TIME` | Zeitbegrenzung (Preset Time) für den Timer |
 
 ### **Daten-Ausgänge**
 
@@ -32,10 +32,10 @@ Direkte Daten-Ausgänge sind nicht vorhanden. Der aktuelle Zustand des Timers wi
 
 ### **Adapter**
 
-| Name | Typ       | Richtung | Beschreibung                                                                  |
-|------|-----------|----------|-------------------------------------------------------------------------------|
-| `IN` | `AX`      | Socket   | Eingangsadapter: empfängt (über Ereignis `E1` und Datum `D1`) den zu überwachenden booleschen Wert |
-| `Q`  | `AX`      | Plug     | Ausgangsadapter: sendet (über Ereignis `E1` und Datum `D1`) den Timer-Zustand (`TRUE` = aktiv, `FALSE` = inaktiv oder Timeout) |
+| Name | Typ  | Richtung | Beschreibung                                                                                                                   |
+| ---- | ---- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `IN` | `AX` | Socket   | Eingangsadapter: empfängt (über Ereignis `E1` und Datum `D1`) den zu überwachenden booleschen Wert                             |
+| `Q`  | `AX` | Plug     | Ausgangsadapter: sendet (über Ereignis `E1` und Datum `D1`) den Timer-Zustand (`TRUE` = aktiv, `FALSE` = inaktiv oder Timeout) |
 
 > Anmerkung: Der Adaptertyp `AX` ist ein unidirektionaler Standardadapter, bestehend aus einem Ereignis (`E1`) und einem booleschen Datum (`D1`).
 
@@ -59,12 +59,12 @@ Direkte Daten-Ausgänge sind nicht vorhanden. Der aktuelle Zustand des Timers wi
 
 Der Funktionsblock durchläuft folgende logische Zustände (nicht als explizite Zustandsmaschine im XML abgebildet):
 
-| Zustand         | Bedingung `IN.D1` | Ausgang `Q.D1` | Timer läuft | Beschreibung                                                |
-|-----------------|-------------------|----------------|-------------|-------------------------------------------------------------|
-| **Inaktiv**     | `FALSE`           | `FALSE`        | nein        | Warten auf Aktivierung                                      |
-| **Aktiv**       | `TRUE`            | `TRUE`         | ja          | Timer zählt, Ausgang aktiv                                  |
-| **Timeout**     | `TRUE`            | `FALSE`        | nein        | Zeitüberschreitung, Timer abgelaufen, Ausgang inaktiv       |
-| **Rückkehr**    | `FALSE`           | `FALSE`        | nein        | Eingang geht vor Timeout zurück, Ausgang sofort inaktiv     |
+| Zustand      | Bedingung `IN.D1` | Ausgang `Q.D1` | Timer läuft | Beschreibung                                            |
+| ------------ | ----------------- | -------------- | ----------- | ------------------------------------------------------- |
+| **Inaktiv**  | `FALSE`           | `FALSE`        | nein        | Warten auf Aktivierung                                  |
+| **Aktiv**    | `TRUE`            | `TRUE`         | ja          | Timer zählt, Ausgang aktiv                              |
+| **Timeout**  | `TRUE`            | `FALSE`        | nein        | Zeitüberschreitung, Timer abgelaufen, Ausgang inaktiv   |
+| **Rückkehr** | `FALSE`           | `FALSE`        | nein        | Eingang geht vor Timeout zurück, Ausgang sofort inaktiv |
 
 Ein Wechsel von **Aktiv** nach **Timeout** erfolgt, wenn die verbleibende Timer-Zeit null erreicht. Ein Wechsel von **Aktiv** nach **Rückkehr** erfolgt, wenn `IN.D1` vor Ablauf des Timers auf `FALSE` wechselt.
 
@@ -77,11 +77,11 @@ Ein Wechsel von **Aktiv** nach **Timeout** erfolgt, wenn die verbleibende Timer-
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein  | Beschreibung                                                                 | Unterschied zu AX_TLIM                                             |
-|-----------|-------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| `E_TLIM`  | Standard-Timer (IEC 61499-2), direkte Ereignis- und Datenschnittstellen       | AX_TLIM kapselt `E_TLIM` und bietet eine Adapter-basierte Schnittstelle (`AX`), die in bestimmten Architekturen leichter einzubinden ist. |
-| `E_DELAY` | Verzögerungsbaustein (Ansprechverzögerung, Rückfallverzögerung)               | `E_DELAY` verzögert Signaländerungen, während AX_TLIM eine maximale Aktivierungsdauer erzwingt. |
-| `E_SR`    | Set-Reset-Flipflop                                                            | AX_TLIM setzt den Ausgang nicht zurück, solange der Eingang aktiv ist (außer durch Timeout). `E_SR` reagiert auf separate Set/Reset-Ereignisse. |
+| Baustein  | Beschreibung                                                            | Unterschied zu AX_TLIM                                                                                                                          |
+| --------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `E_TLIM`  | Standard-Timer (IEC 61499-2), direkte Ereignis- und Datenschnittstellen | AX_TLIM kapselt `E_TLIM` und bietet eine Adapter-basierte Schnittstelle (`AX`), die in bestimmten Architekturen leichter einzubinden ist.       |
+| `E_DELAY` | Verzögerungsbaustein (Ansprechverzögerung, Rückfallverzögerung)         | `E_DELAY` verzögert Signaländerungen, während AX_TLIM eine maximale Aktivierungsdauer erzwingt.                                                 |
+| `E_SR`    | Set-Reset-Flipflop                                                      | AX_TLIM setzt den Ausgang nicht zurück, solange der Eingang aktiv ist (außer durch Timeout). `E_SR` reagiert auf separate Set/Reset-Ereignisse. |
 
 ## Fazit
 

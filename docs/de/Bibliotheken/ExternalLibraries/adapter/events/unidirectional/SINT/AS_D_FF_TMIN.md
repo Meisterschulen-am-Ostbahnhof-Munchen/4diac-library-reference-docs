@@ -12,20 +12,20 @@ Der Funktionsblock **AS_D_FF_TMIN** realisiert ein datenverriegelndes D‑Flipfl
 
 ### **Ereignis‑Eingänge**
 
-| Ereignis | Typ   | Kommentar                                 |
-|----------|-------|-------------------------------------------|
+| Ereignis | Typ   | Kommentar                                  |
+| -------- | ----- | ------------------------------------------ |
 | INIT     | EInit | Initialisierungsanforderung (liest `Tmin`) |
 
 ### **Ereignis‑Ausgänge**
 
-| Ereignis | Typ   | Kommentar                           |
-|----------|-------|-------------------------------------|
-| INITO    | EInit | Bestätigung der Initialisierung     |
+| Ereignis | Typ   | Kommentar                       |
+| -------- | ----- | ------------------------------- |
+| INITO    | EInit | Bestätigung der Initialisierung |
 
 ### **Daten‑Eingänge**
 
-| Name | Typ  | Kommentar                                                     |
-|------|------|---------------------------------------------------------------|
+| Name | Typ  | Kommentar                                                        |
+| ---- | ---- | ---------------------------------------------------------------- |
 | Tmin | TIME | Minimale Zeit zwischen zwei aufeinanderfolgenden CLK‑Ereignissen |
 
 ### **Daten‑Ausgänge**
@@ -34,10 +34,10 @@ Der Block besitzt keine expliziten Datenausgänge; die Ausgabe erfolgt ausschlie
 
 ### **Adapter**
 
-| Richtung | Adapter | Typ                                                | Kommentar               |
-|----------|---------|-----------------------------------------------------|-------------------------|
-| Socket   | I       | adapter::types::unidirectional::AS                 | Eingangsdaten (D1) und Takt (E1) |
-| Plug     | Q       | adapter::types::unidirectional::AS                 | Ausgangsdaten (D1) und Ereignis (E1) |
+| Richtung | Adapter | Typ                                | Kommentar                            |
+| -------- | ------- | ---------------------------------- | ------------------------------------ |
+| Socket   | I       | adapter::types::unidirectional::AS | Eingangsdaten (D1) und Takt (E1)     |
+| Plug     | Q       | adapter::types::unidirectional::AS | Ausgangsdaten (D1) und Ereignis (E1) |
 
 Die Adapter vom Typ `AS` bieten je einen Ereignis‑Ein‑/Ausgang (E1) und einen Daten‑Ein‑/Ausgang (D1).
 
@@ -72,11 +72,11 @@ Der Block besitzt keine expliziten Zustandsmaschinen im Sinne eines Statecharts.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein         | Zeitfilterung                     | Zusätzliche Merkmale                      |
-|------------------|-----------------------------------|-------------------------------------------|
-| AS_D_FF          | Nein (sofortige Übernahme)        | Einfaches D‑Flipflop ohne Zeitbeschränkung |
-| AS_D_FF_TMIN (dieser) | Ja, konfigurierbar über `Tmin` | Unterdrückt zu schnelle Taktfolgen        |
-| AS_D_FF_TMAX     | Ja, maximale Zeit zwischen Takten | Erzwingt regelmäßige Übernahmen           |
+| Baustein              | Zeitfilterung                     | Zusätzliche Merkmale                       |
+| --------------------- | --------------------------------- | ------------------------------------------ |
+| AS_D_FF               | Nein (sofortige Übernahme)        | Einfaches D‑Flipflop ohne Zeitbeschränkung |
+| AS_D_FF_TMIN (dieser) | Ja, konfigurierbar über `Tmin`    | Unterdrückt zu schnelle Taktfolgen         |
+| AS_D_FF_TMAX          | Ja, maximale Zeit zwischen Takten | Erzwingt regelmäßige Übernahmen            |
 
 ## Fazit
 

@@ -5,31 +5,31 @@
 * * * * * * * * * *
 The **GET_UDINT** function block reads the current value of a variable of type **UDINT** declared as InOut and provides it as a buffered output. Buffering ensures that the output value remains stable during a cycle, even if the source data changes later.
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| REQ | Event | Normal Execution Request |
+| Name | Type  | Comment                  |
+| ---- | ----- | ------------------------ |
+| REQ  | Event | Normal Execution Request |
 
 *Associated Data:*
 
 - **IN** (InOut variable) is read on REQ.
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| CNF | Event | Execution Confirmation |
+| Name | Type  | Comment                |
+| ---- | ----- | ---------------------- |
+| CNF  | Event | Execution Confirmation |
 
 *Associated Data:*
 
 - **OUT** (Output Value) is provided after a successful read.
 - **IN** (InOut Variable) is also associated, meaning its value can be read at the output after the event.
 
-| Name | Type | Default Value | Comment |
-|------|-----|-------------|-----------|
-| IN | UDINT (InOut) | 0 | Source Variable to be Read |
-| Name | Type | Default Value | Comment |
-|------|-----|-------------|-----------|
-| OUT | UDINT | 0 | Buffered Output Value |
+| Name   | Type          | Default Value | Comment                    |
+| ------ | ------------- | ------------- | -------------------------- |
+| IN     | UDINT (InOut) | 0             | Source Variable to be Read |
+| Name   | Type          | Default Value | Comment                    |
+| ------ | -----         | ------------- | -----------                |
+| OUT    | UDINT         | 0             | Buffered Output Value      |
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -41,7 +41,7 @@ The **GET_UDINT** function block reads the current value of a variable of type *
 
 ## Introduction
 
-#### **Adapter**
+### **Adapter**
 
 None.
 

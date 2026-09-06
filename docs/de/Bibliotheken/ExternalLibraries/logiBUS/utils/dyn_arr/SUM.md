@@ -12,14 +12,14 @@ Der Funktionsblock **SUM** ermöglicht die Berechnung der Summe aller Elemente e
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name | Beschreibung                               |
+| ---- | ------------------------------------------ |
 | REQ  | Startet die Summenberechnung des Arrays A. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name | Beschreibung                                                                  |
+| ---- | ----------------------------------------------------------------------------- |
 | CNF  | Signalisiert den Abschluss der Berechnung und die Gültigkeit des Ergebnisses. |
 
 ### **Daten-Eingänge**
@@ -28,8 +28,8 @@ Es sind keine reinen Dateneingänge vorhanden. Der benötigte Array wird über d
 
 ### **Daten-Ausgänge**
 
-| Name | Typ  | Beschreibung |
-|------|------|--------------|
+| Name   | Typ  | Beschreibung                                         |
+| ------ | ---- | ---------------------------------------------------- |
 | (leer) | DINT | Resultierende Summe aller Array-Elemente (Typ DINT). |
 
 ### **Adapter**

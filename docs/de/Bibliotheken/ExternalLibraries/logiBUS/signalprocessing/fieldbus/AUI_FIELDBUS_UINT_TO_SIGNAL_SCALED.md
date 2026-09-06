@@ -12,22 +12,22 @@ Der Funktionsblock AUI_FIELDBUS_UINT_TO_SIGNAL_SCALED dient der skalieren Übert
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
 | INIT | EInit | Initialisierungsanforderung |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| SCALE | REAL | REAL#1.0 | Skalierungsfaktor |
-| OFFSET | DINT | DINT#0 | Offset nach der Skalierung |
+| Name   | Typ  | Initialwert | Kommentar                  |
+| ------ | ---- | ----------- | -------------------------- |
+| SCALE  | REAL | REAL#1.0    | Skalierungsfaktor          |
+| OFFSET | DINT | DINT#0      | Offset nach der Skalierung |
 
 ### **Daten-Ausgänge**
 
@@ -35,11 +35,11 @@ Der Funktionsblock AUI_FIELDBUS_UINT_TO_SIGNAL_SCALED dient der skalieren Übert
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-| ----- | ------ | ---------- | ----------- |
-| adapter::types::unidirectional::AUI | IN | Socket | UINT-Eingang (Feldbus-Signal) |
-| adapter::types::unidirectional::AR | OUT | Plug | Skalierter REAL-Ausgang |
-| adapter::types::unidirectional::AX | VALID | Plug | Gültigkeitssignal (TRUE = gültig) |
+| Typ                                 | Name  | Richtung | Kommentar                         |
+| ----------------------------------- | ----- | -------- | --------------------------------- |
+| adapter::types::unidirectional::AUI | IN    | Socket   | UINT-Eingang (Feldbus-Signal)     |
+| adapter::types::unidirectional::AR  | OUT   | Plug     | Skalierter REAL-Ausgang           |
+| adapter::types::unidirectional::AX  | VALID | Plug     | Gültigkeitssignal (TRUE = gültig) |
 
 ## Funktionsweise
 

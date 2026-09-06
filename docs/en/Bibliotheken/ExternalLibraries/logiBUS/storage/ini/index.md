@@ -83,11 +83,9 @@ The block does not have an explicit, complex state machine in the user-accessibl
 
 The INI function block is a practical and straightforward tool for persistently storing configuration and parameter data in 4diac FORTE applications. Its strengths lie in its ease of use via sections and keys, the flexibility provided by the `ANY_ELEMENTARY` type, and the human-readability of the stored INI file. It is an excellent choice for applications that require a simple, persistent key-value database.
 
-# Conclusion
+---
 
-The INI function block is a practical and straightforward tool for persistently storing configuration and parameter data in 4diac FORTE applications. ---
-
-### 🌐 Related topic subpages on ms-muc-docs.de
+## 🌐 Related topic subpages on ms-muc-docs.de
 
 - [🌐 E_CTU Event Counter module on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/event-function-blocks/e_ctu/)
 - [🌐 Eclipse 4diac IDE & Color Reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

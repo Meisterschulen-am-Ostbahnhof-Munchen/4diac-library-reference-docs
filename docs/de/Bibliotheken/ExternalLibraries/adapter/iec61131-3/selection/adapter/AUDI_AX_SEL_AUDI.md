@@ -78,10 +78,10 @@ Das interne Verhalten des Bausteins wird durch ein Netzwerk aus Standard-Funktio
 
 Da der Baustein als FB-Netzwerk aufgebaut ist, besitzt er keine klassische Zustandsmaschine (ECC). Das logische Verhalten lässt sich stattdessen über folgende Funktionstabelle beschreiben:
 
-| Zustand Selektor (`G.D1`) | Triggerndes Ereignis | Aktiver Datenpfad | Wert am Ausgang (`OUT.D1`) | Ereignis am Ausgang (`OUT.E1`) |
-| :--- | :--- | :--- | :--- | :--- |
-| `FALSE` | Event an `IN0.E1` oder `G.E1` | `IN0` -> `OUT` | Entspricht `IN0.D1` | Wird ausgelöst |
-| `TRUE` | Event an `IN1.E1` oder `G.E1` | `IN1` -> `OUT` | Entspricht `IN1.D1` | Wird ausgelöst |
+| Zustand Selektor (`G.D1`) | Triggerndes Ereignis          | Aktiver Datenpfad | Wert am Ausgang (`OUT.D1`) | Ereignis am Ausgang (`OUT.E1`) |
+| :------------------------ | :---------------------------- | :---------------- | :------------------------- | :----------------------------- |
+| `FALSE`                   | Event an `IN0.E1` oder `G.E1` | `IN0` -> `OUT`    | Entspricht `IN0.D1`        | Wird ausgelöst                 |
+| `TRUE`                    | Event an `IN1.E1` oder `G.E1` | `IN1` -> `OUT`    | Entspricht `IN1.D1`        | Wird ausgelöst                 |
 
 ---
 

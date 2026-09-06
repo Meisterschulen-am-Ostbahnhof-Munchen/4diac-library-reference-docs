@@ -12,15 +12,15 @@ The **ILOCK_T_FF** is a composite function block (FB) that implements a lockable
 
 ### **Event Inputs**
 
-| Name | Type | Description |
-|------|-----|--------------|
-| CLK | Event | Trigger signal to toggle the output. |
+| Name | Type  | Description                          |
+| ---- | ----- | ------------------------------------ |
+| CLK  | Event | Trigger signal to toggle the output. |
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-|------|-----|-------------|
-| EO | Event | Triggered as soon as the internal set/reset latch changes its state. |
+| Name | Type  | Description                                                          |
+| ---- | ----- | -------------------------------------------------------------------- |
+| EO   | Event | Triggered as soon as the internal set/reset latch changes its state. |
 
 ### **Data Inputs**
 
@@ -28,16 +28,16 @@ No data inputs (control is achieved solely through events and the adapters).
 
 ### **Data Outputs**
 
-| Name | Type | Description |
-|------|-----|-------------|
-| Q | BOOL | Current state of the flip-flop (0 or 1). |
+| Name | Type | Description                              |
+| ---- | ---- | ---------------------------------------- |
+| Q    | BOOL | Current state of the flip-flop (0 or 1). |
 
 ### **Adapter**
 
-| Name | Type | Direction | Description |
-| ------ | ----- | ---------- | ------------- |
-| ILOCK_IN | `adapter::types::bidirectional::AE2` | Socket | Receives and sends lock signals to and from upstream components in the chain. |
-| ILOCK_OUT | `adapter::types::bidirectional::AE2` | Plug | Sends and receives lock signals to and from downstream components. |
+| Name      | Type                                 | Direction | Description                                                                   |
+| --------- | ------------------------------------ | --------- | ----------------------------------------------------------------------------- |
+| ILOCK_IN  | `adapter::types::bidirectional::AE2` | Socket    | Receives and sends lock signals to and from upstream components in the chain. |
+| ILOCK_OUT | `adapter::types::bidirectional::AE2` | Plug      | Sends and receives lock signals to and from downstream components.            |
 
 ## Functionality
 
@@ -50,6 +50,7 @@ Internally, the component consists of an **E_SWITCH** (event branch) and an **E_
 - If **Q = FALSE**, the **E_SWITCH** switches the event to **E_SR.S** (Set) – **Q** becomes **TRUE**.
 - If **Q = TRUE**, the **E_SWITCH** switches the event to **E_SR.R** (Reset) – **Q** becomes **FALSE**.
 - This ensures a clean toggle (edge transition) with every **CLK**.
+
 1. **Lock Mechanism (Interlock)**
 
 - Lock events can be fed into the chain via the adapters **ILOCK_IN** and **ILOCK_OUT**.
@@ -61,6 +62,7 @@ Internally, the component consists of an **E_SWITCH** (event branch) and an **E_
 - **ILOCK_IN.EO1** → **ILOCK_OUT.EO1** (to subsequent devices)
 - **ILOCK_OUT.EI1** → **ILOCK_IN.EI1** (to previous devices)
 - This allows a lock to propagate in both directions (**Multi-Hop Chain Propagation**).
+
 1. **Result**
 
 - As long as no lock is active, the device operates like a normal T flip-flop.
@@ -76,10 +78,10 @@ Internally, the component consists of an **E_SWITCH** (event branch) and an **E_
 
 Since the module does not have its own state diagram, the states are derived from the internal **E_SR**:
 
-| State **Q** | Meaning in normal operation | Meaning when Lock is active |
-| --------------- | ---------------------------- | ----------------------------- |
-| 0 | On the next CLK, it toggles to 1. | Lock has set Q to 0 and holds it there. |
-| 1 | On the next CLK, it toggles to 0. | Lock immediately resets Q to 0. |
+| State **Q** | Meaning in normal operation       | Meaning when Lock is active             |
+| ----------- | --------------------------------- | --------------------------------------- |
+| 0           | On the next CLK, it toggles to 1. | Lock has set Q to 0 and holds it there. |
+| 1           | On the next CLK, it toggles to 0. | Lock immediately resets Q to 0.         |
 
 An active lock is present as soon as one of the adapter events (ILOCK_IN.EO1 or ILOCK_OUT.EI1) is received. The lock is maintained until no further lock events are present (the exact resolution depends on the external signal control).
 
@@ -91,11 +93,11 @@ An active lock is present as soon as one of the adapter events (ILOCK_IN.EO1 or 
 
 ## Comparison with similar function blocks
 
-| Function block | Properties | Difference from ILOCK_T_FF |
-| ---------- | --------------- | ---------------------------- |
-| **T Flip-Flop (e.g., `E_TOGGLE`)** | Pure toggle function without locking logic. | Lacks lock/interlock capability, no adapter interface. |
-| **RS Flip-Flop (e.g., `E_SR`)** | Set/reset with two inputs, no toggle. | Can be extended with external logic to enable toggle functionality, but without integrated lock propagation. |
-| **Simple Interlock Block** | Only lock propagation, no toggle. | The ILOCK_T_FF combines toggle and lock propagation in a single block. |
+| Function block                     | Properties                                  | Difference from ILOCK_T_FF                                                                                   |
+| ---------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **T Flip-Flop (e.g., `E_TOGGLE`)** | Pure toggle function without locking logic. | Lacks lock/interlock capability, no adapter interface.                                                       |
+| **RS Flip-Flop (e.g., `E_SR`)**    | Set/reset with two inputs, no toggle.       | Can be extended with external logic to enable toggle functionality, but without integrated lock propagation. |
+| **Simple Interlock Block**         | Only lock propagation, no toggle.           | The ILOCK_T_FF combines toggle and lock propagation in a single block.                                       |
 
 ## Conclusion
 

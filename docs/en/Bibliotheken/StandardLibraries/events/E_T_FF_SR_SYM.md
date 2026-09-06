@@ -38,11 +38,11 @@ From the initial state `START`, `S`, `R`, **and** `CLK` all lead to a defined fo
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
+| State | Meaning                                                |
+| ----- | ------------------------------------------------------ |
 | START | Initial state, reacts symmetrically to `S`, `R`, `CLK` |
-| SET | `Q = TRUE`; `R`→RESET, `CLK`→RESET |
-| RESET | `Q = FALSE`; `S`→SET, `CLK`→SET |
+| SET   | `Q = TRUE`; `R`→RESET, `CLK`→RESET                     |
+| RESET | `Q = FALSE`; `S`→SET, `CLK`→SET                        |
 
 ## Application Scenarios
 

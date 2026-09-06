@@ -12,38 +12,38 @@ The **INI_AUDI** function block enables reading and saving UDINT data from a `se
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|-------|-----------------------------------|
+| Name | Type  | Comment                |
+| ---- | ----- | ---------------------- |
 | INIT | EInit | Service Initialization |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|-------|----------------------------------|
+| Name  | Type  | Comment                |
+| ----- | ----- | ---------------------- |
 | INITO | EInit | Initialization Confirm |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-| ---------------- | -------- | ----------------------------------------------------- |
-| QI | BOOL | Event Input Qualifier |
-| SECTION | STRING | Section name in settings.ini |
-| KEY | STRING | Key name in settings.ini |
-| DEFAULT_VALUE | UDINT | Fallback value if the key is not found |
+| Name          | Type   | Comment                                |
+| ------------- | ------ | -------------------------------------- |
+| QI            | BOOL   | Event Input Qualifier                  |
+| SECTION       | STRING | Section name in settings.ini           |
+| KEY           | STRING | Key name in settings.ini               |
+| DEFAULT_VALUE | UDINT  | Fallback value if the key is not found |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-| -------- | -------- | ------------------ |
-| QO | BOOL | Output Qualifier |
-| STATUS | STRING | Service Status |
+| Name   | Type   | Comment          |
+| ------ | ------ | ---------------- |
+| QO     | BOOL   | Output Qualifier |
+| STATUS | STRING | Service Status   |
 
 ## **Adapter**
 
-| Name | Type | Direction | Comment |
-| ---------- | ---------- | ---------------- | --------------------------------- |
-| AUDI_OUT | AUDI | Plug (Output) | Output of the read value |
-| AUDI_IN | AUDI | Socket (Input) | Input of the value to be stored |
+| Name     | Type | Direction      | Comment                         |
+| -------- | ---- | -------------- | ------------------------------- |
+| AUDI_OUT | AUDI | Plug (Output)  | Output of the read value        |
+| AUDI_IN  | AUDI | Socket (Input) | Input of the value to be stored |
 
 ## Functionality
 
@@ -53,11 +53,13 @@ This function block works in conjunction with the internal `INI` function block.
 
 - The input data associated with `INIT` (`QI`, `SECTION`, `KEY`, `DEFAULT_VALUE`) is forwarded to the internal `INI` module.
 - `INI` is started and acknowledged with `INITO`.
+
 1. **Reading a Value**
 
 - After INIT confirmation, the `GET` command of the `INI` block is automatically triggered.
 - The read value (or `DEFAULT_VALUE`) is output to the `AUDI_OUT.D1` adapter via `INI.VALUEO`.
 - Simultaneously, the event `AUDI_OUT.E1` is sent to notify the connected block.
+
 1. **Writing a Value**
 
 - If the adapter `AUDI_IN` receives an event `E1` with a data value `D1`, `INI_AUDI` forwards this to the `INI` block as a `SET` command.

@@ -30,10 +30,10 @@ The function block **A2X_SPLIT_7_UNGATED** is used to distribute an incoming A2X
 
 ### **Adapter**
 
-| Type | Name | Description |
-| ----- | ------ | --------------- |
-| A2X (Socket) | **IN** | Input adapter for the A2X signal to be distributed |
-| A2X (Plug) | **OUT1** … **OUT7** | Seven output adapters, each providing an identical copy of the input signal |
+| Type         | Name                | Description                                                                 |
+| ------------ | ------------------- | --------------------------------------------------------------------------- |
+| A2X (Socket) | **IN**              | Input adapter for the A2X signal to be distributed                          |
+| A2X (Plug)   | **OUT1** … **OUT7** | Seven output adapters, each providing an identical copy of the input signal |
 
 ## Functionality
 

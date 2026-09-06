@@ -12,29 +12,29 @@ Der Funktionsblock **SET_ANY** dient dazu, einen beliebigen Wert vom Eingang `IN
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                                             |
+| -------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | REQ      | Event    | Normaler Ausführungsanforderung – löst die Zuweisung aus. Verbunden mit den Variablen `IN` und `OUT`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                    |
+| -------- | -------- | ---------------------------------------------------------------------------- |
 | CNF      | Event    | Bestätigung der erfolgreichen Ausführung. Verbunden mit der Variablen `OUT`. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
-| IN   | ANY      | Wert, der auf die Zielvariable geschrieben wird. |
+| Name | Datentyp | Kommentar                                                                                         |
+| ---- | -------- | ------------------------------------------------------------------------------------------------- |
+| IN   | ANY      | Wert, der auf die Zielvariable geschrieben wird.                                                  |
 | OUT  | ANY      | **InOut-Parameter** – wird gleichzeitig als Eingang und Ausgang verwendet (siehe Daten-Ausgänge). |
 
 > **Hinweis:** `OUT` ist als InOut deklariert. Es fungiert als Daten-Eingang (die ursprüngliche Variable wird gelesen, falls nötig) und als Daten-Ausgang (überschrieben mit dem Wert von `IN`).
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar |
-|------|----------|-----------|
+| Name | Datentyp | Kommentar                                                                                                                                      |
+| ---- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | OUT  | ANY      | **InOut-Parameter** – enthält nach der Ausführung den Wert des Eingangs `IN`. Die Variable kann auch außerhalb des Bausteins verwendet werden. |
 
 ### **Adapter**
@@ -59,8 +59,8 @@ Nach der Zuweisung wird das Ausgangsereignis `CNF` gesendet. Die Ausführung ist
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ     | Wartet auf ein `REQ`-Ereignis. Bei Eintritt wird der Algorithmus ausgeführt, anschließend wird `CNF` gesendet und der Zustand bleibt aktiv. |
 
 Es gibt keine weiteren Zustände, keine Verzweigungen oder Zeitüberwachungen.
@@ -73,11 +73,11 @@ Es gibt keine weiteren Zustände, keine Verzweigungen oder Zeitüberwachungen.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-|----------|-------------|
-| **SET**  | Ist auf einen spezifischen Datentyp festgelegt (z. B. SET_BOOL, SET_INT). `SET_ANY` ist generisch. |
-| **MOVE** | Kopiert ebenfalls einen Wert von einem Eingang auf einen Ausgang, verwendet jedoch normale Ausgänge. `SET_ANY` nutzt einen InOut-Parameter, der eine persistente Variable referenziert. |
-| **SELECT** | Wählt zwischen zwei Eingangswerten aus und benötigt ein Steuersignal. `SET_ANY` arbeitet ohne Bedingung. |
+| Baustein   | Unterschied                                                                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **SET**    | Ist auf einen spezifischen Datentyp festgelegt (z. B. SET_BOOL, SET_INT). `SET_ANY` ist generisch.                                                                                      |
+| **MOVE**   | Kopiert ebenfalls einen Wert von einem Eingang auf einen Ausgang, verwendet jedoch normale Ausgänge. `SET_ANY` nutzt einen InOut-Parameter, der eine persistente Variable referenziert. |
+| **SELECT** | Wählt zwischen zwei Eingangswerten aus und benötigt ein Steuersignal. `SET_ANY` arbeitet ohne Bedingung.                                                                                |
 
 ## Fazit
 

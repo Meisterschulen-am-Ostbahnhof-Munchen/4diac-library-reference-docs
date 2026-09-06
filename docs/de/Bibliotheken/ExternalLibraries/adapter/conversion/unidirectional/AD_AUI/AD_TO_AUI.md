@@ -12,34 +12,34 @@ Der Funktionsblock `AD_TO_AUI` ist ein Composite-Baustein, der einen AD-Adapter 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
-| (keine eigenen) | - | Der FB besitzt keine eigenen Ereignis-Eingänge. Die Ereignissteuerung erfolgt über den Adapter-Socket `AD_IN`. |
+| Name            | Typ | Beschreibung                                                                                                   |
+| --------------- | --- | -------------------------------------------------------------------------------------------------------------- |
+| (keine eigenen) | -   | Der FB besitzt keine eigenen Ereignis-Eingänge. Die Ereignissteuerung erfolgt über den Adapter-Socket `AD_IN`. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
-| (keine eigenen) | - | Der FB besitzt keine eigenen Ereignis-Ausgänge. Die Ereignisweiterleitung erfolgt über den Adapter-Plug `AUI_OUT`. |
+| Name            | Typ | Beschreibung                                                                                                       |
+| --------------- | --- | ------------------------------------------------------------------------------------------------------------------ |
+| (keine eigenen) | -   | Der FB besitzt keine eigenen Ereignis-Ausgänge. Die Ereignisweiterleitung erfolgt über den Adapter-Plug `AUI_OUT`. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| (keine eigenen) | - | Alle Daten werden über den Adapter-Socket `AD_IN` bereitgestellt. |
+| Name            | Datentyp | Beschreibung                                                      |
+| --------------- | -------- | ----------------------------------------------------------------- |
+| (keine eigenen) | -        | Alle Daten werden über den Adapter-Socket `AD_IN` bereitgestellt. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| (keine eigenen) | - | Alle Daten werden über den Adapter-Plug `AUI_OUT` ausgegeben. |
+| Name            | Datentyp | Beschreibung                                                  |
+| --------------- | -------- | ------------------------------------------------------------- |
+| (keine eigenen) | -        | Alle Daten werden über den Adapter-Plug `AUI_OUT` ausgegeben. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AD` | `AD_IN` | Socket (Eingang) | Nimmt DWORD-Werte und zugehörige Ereignisse entgegen. |
-| `adapter::types::unidirectional::AUI` | `AUI_OUT` | Plug (Ausgang) | Gibt konvertierte UINT-Werte und zugehörige Ereignisse aus. |
+| Typ                                   | Name      | Richtung         | Beschreibung                                                |
+| ------------------------------------- | --------- | ---------------- | ----------------------------------------------------------- |
+| `adapter::types::unidirectional::AD`  | `AD_IN`   | Socket (Eingang) | Nimmt DWORD-Werte und zugehörige Ereignisse entgegen.       |
+| `adapter::types::unidirectional::AUI` | `AUI_OUT` | Plug (Ausgang)   | Gibt konvertierte UINT-Werte und zugehörige Ereignisse aus. |
 
 Der Adapter `AD_IN` stellt ein Ereignis `E1` und ein Daten-Element `D1` (Typ DWORD) bereit.
 Der Adapter `AUI_OUT` erwartet ein Ereignis `E1` und ein Daten-Element `D1` (Typ UINT).

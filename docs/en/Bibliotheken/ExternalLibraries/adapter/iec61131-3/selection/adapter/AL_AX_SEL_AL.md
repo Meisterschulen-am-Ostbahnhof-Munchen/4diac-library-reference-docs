@@ -72,6 +72,7 @@ The core of the network evaluates the state of the selector `G`:
 
 - If `G` equals `FALSE`, the signal from `IN0` is passed to the output.
 - If `G` equals `TRUE`, the signal from `IN1` is passed to the output.
+
 1. **Output:**
 
 After a successful selection, the result is transferred via another flip-flop to the plug `OUT` and made available there simultaneously with an event (`OUT.E1`).
@@ -87,10 +88,10 @@ After a successful selection, the result is transferred via another flip-flop to
 
 ## State Overview
 
-| Selector State (`G.D1`) | Output Value (`OUT.D1`) | Trigger Event |
-| :--- | :--- | :--- |
-| `FALSE` (0) | Value of `IN0.D1` | Event on `IN0` or `G` |
-| `TRUE` (1) | Value of `IN1.D1` | Event on `IN1` or `G` |
+| Selector State (`G.D1`) | Output Value (`OUT.D1`) | Trigger Event         |
+| :---------------------- | :---------------------- | :-------------------- |
+| `FALSE` (0)             | Value of `IN0.D1`       | Event on `IN0` or `G` |
+| `TRUE` (1)              | Value of `IN1.D1`       | Event on `IN1` or `G` |
 
 ---
 

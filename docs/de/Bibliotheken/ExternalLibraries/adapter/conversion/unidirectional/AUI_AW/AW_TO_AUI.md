@@ -28,10 +28,10 @@ Der FB besitzt keine eigenständigen Daten-Ausgänge. Das Datum `D1` vom Typ `UI
 
 ### **Adapter**
 
-| Name     | Richtung | Typ                                     | Beschreibung                     |
-|----------|----------|-----------------------------------------|----------------------------------|
-| `AW_IN`  | Eingang  | `adapter::types::unidirectional::AW`   | WORD-Adapter-Eingang (Socket)    |
-| `AUI_OUT`| Ausgang  | `adapter::types::unidirectional::AUI`  | UINT-Adapter-Ausgang (Plug)      |
+| Name      | Richtung | Typ                                   | Beschreibung                  |
+| --------- | -------- | ------------------------------------- | ----------------------------- |
+| `AW_IN`   | Eingang  | `adapter::types::unidirectional::AW`  | WORD-Adapter-Eingang (Socket) |
+| `AUI_OUT` | Ausgang  | `adapter::types::unidirectional::AUI` | UINT-Adapter-Ausgang (Plug)   |
 
 ## Funktionsweise
 

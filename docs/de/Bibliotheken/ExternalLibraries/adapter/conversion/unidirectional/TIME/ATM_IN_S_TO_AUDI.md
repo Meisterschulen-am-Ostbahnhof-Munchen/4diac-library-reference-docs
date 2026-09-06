@@ -28,10 +28,10 @@ Der Funktionsblock **ATM_IN_S_TO_AUDI** ist ein Composite-Baustein, der einen `T
 
 ### **Adapter**
 
-| Adapter | Rolle | Typ | Beschreibung |
-|---------|-------|-----|--------------|
-| IN | Socket | adapter::types::unidirectional::ATM | Unidirektionaler `TIME`-Adapter als Eingangsschnittstelle. |
-| OUT | Plug | adapter::types::unidirectional::AUDI | Unidirektionaler `UDINT`-Adapter als Ausgangsschnittstelle, Wert von `IN` in Sekunden ausgedrückt. |
+| Adapter | Rolle  | Typ                                  | Beschreibung                                                                                       |
+| ------- | ------ | ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| IN      | Socket | adapter::types::unidirectional::ATM  | Unidirektionaler `TIME`-Adapter als Eingangsschnittstelle.                                         |
+| OUT     | Plug   | adapter::types::unidirectional::AUDI | Unidirektionaler `UDINT`-Adapter als Ausgangsschnittstelle, Wert von `IN` in Sekunden ausgedrückt. |
 
 ## Funktionsweise
 
@@ -56,12 +56,12 @@ Der gesamte Vorgang erfolgt synchron und ohne Zwischenspeicherung – jede erfol
 
 Der Baustein besitzt keine eigene Zustandsmaschine. Der Ablauf lässt sich als einfacher Schritt beschreiben:
 
-| Schritt | Aktion |
-| --------- | -------- |
-| 1 | Warten auf Ereignis an **IN.E1** |
-| 2 | Umrechnung des Datenwerts von `TIME` (Sekunden) nach `UDINT` über `F_TIME_IN_S_TO_UDINT` |
-| 3 | Ausgabe des umgerechneten Werts an **OUT.D1** und Ereignis an **OUT.E1** |
-| 4 | Rückkehr zu Schritt 1 |
+| Schritt | Aktion                                                                                   |
+| ------- | ---------------------------------------------------------------------------------------- |
+| 1       | Warten auf Ereignis an **IN.E1**                                                         |
+| 2       | Umrechnung des Datenwerts von `TIME` (Sekunden) nach `UDINT` über `F_TIME_IN_S_TO_UDINT` |
+| 3       | Ausgabe des umgerechneten Werts an **OUT.D1** und Ereignis an **OUT.E1**                 |
+| 4       | Rückkehr zu Schritt 1                                                                    |
 
 ## Anwendungsszenarien
 

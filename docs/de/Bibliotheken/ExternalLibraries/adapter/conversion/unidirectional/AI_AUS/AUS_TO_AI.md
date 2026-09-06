@@ -30,10 +30,10 @@ Keine.
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `AUS_IN` | Socket | `adapter::types::unidirectional::AUS` | USINT-basierter Adaptereingang (Quelle des zu konvertierenden Werts) |
-| `AI_OUT` | Plug | `adapter::types::unidirectional::AI` | INT-basierter Adapterausgang (Ziel des konvertierten Werts) |
+| Adapter  | Richtung | Typ                                   | Beschreibung                                                         |
+| -------- | -------- | ------------------------------------- | -------------------------------------------------------------------- |
+| `AUS_IN` | Socket   | `adapter::types::unidirectional::AUS` | USINT-basierter Adaptereingang (Quelle des zu konvertierenden Werts) |
+| `AI_OUT` | Plug     | `adapter::types::unidirectional::AI`  | INT-basierter Adapterausgang (Ziel des konvertierten Werts)          |
 
 Der Socket `AUS_IN` empfängt ein Ereignissignal und einen USINT-Datenwert. Der Plug `AI_OUT` gibt nach erfolgter Konvertierung ein Ereignissignal und den dazugehörigen INT-Wert aus.
 

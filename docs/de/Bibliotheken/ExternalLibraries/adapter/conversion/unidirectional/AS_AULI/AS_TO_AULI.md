@@ -38,10 +38,10 @@ Der Baustein besitzt **keine direkten Daten-Ausgänge**. Die Datenausgabe erfolg
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| `AS_IN` | `adapter::types::unidirectional::AS` (Socket) | Eingang | Empfängt SINT-Werte und Auslöseereignis `E1`. |
-| `AULI_OUT` | `adapter::types::unidirectional::AULI` (Plug) | Ausgang | Sendet ULINT-Werte und Bestätigungsereignis `E1`. |
+| Adapter    | Typ                                           | Richtung | Beschreibung                                      |
+| ---------- | --------------------------------------------- | -------- | ------------------------------------------------- |
+| `AS_IN`    | `adapter::types::unidirectional::AS` (Socket) | Eingang  | Empfängt SINT-Werte und Auslöseereignis `E1`.     |
+| `AULI_OUT` | `adapter::types::unidirectional::AULI` (Plug) | Ausgang  | Sendet ULINT-Werte und Bestätigungsereignis `E1`. |
 
 ---
 
@@ -90,12 +90,12 @@ Eine Fehlerbehandlung ist nicht explizit modelliert; der innere Baustein gibt be
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Zieltyp | Quelltyp | Besonderheit |
-| ---------- | --------- | ---------- | -------------- |
-| `AS_TO_AULI` | ULINT | SINT | Konvertierung SINT → ULINT |
-| `AS_TO_AUDI` | UDINT | SINT | Konvertierung SINT → UDINT (32 Bit) |
-| `AS_TO_AWORD` | WORD | SINT | Konvertierung SINT → WORD (16 Bit) |
-| `AULI_TO_AS` | SINT | ULINT | Rückkonvertierung ULINT → SINT (mit Überlaufbegrenzung) |
+| Baustein      | Zieltyp | Quelltyp | Besonderheit                                            |
+| ------------- | ------- | -------- | ------------------------------------------------------- |
+| `AS_TO_AULI`  | ULINT   | SINT     | Konvertierung SINT → ULINT                              |
+| `AS_TO_AUDI`  | UDINT   | SINT     | Konvertierung SINT → UDINT (32 Bit)                     |
+| `AS_TO_AWORD` | WORD    | SINT     | Konvertierung SINT → WORD (16 Bit)                      |
+| `AULI_TO_AS`  | SINT    | ULINT    | Rückkonvertierung ULINT → SINT (mit Überlaufbegrenzung) |
 
 Der vorliegende Baustein deckt die Konvertierung von einem 8‑Bit‑Vorzeichen‑Typ auf einen 64‑Bit‑vorzeichenlosen Typ ab und eignet sich besonders für Anwendungen, die einen großen Wertebereich bei der Ausgabe benötigen.
 

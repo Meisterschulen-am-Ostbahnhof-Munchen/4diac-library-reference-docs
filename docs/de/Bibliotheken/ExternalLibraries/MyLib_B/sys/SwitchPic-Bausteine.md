@@ -10,12 +10,12 @@
 
 `SwitchPic[Col]_<Zustände>_<Variante>[_aux]`
 
-| Bestandteil | Bedeutung |
-|---|---|
-| **`Col`** (optional) | Schaltet zusätzlich zum Bild auch eine Hintergrundfarbe (`Q_BackgroundColour`) passend zum Zustand um, nicht nur ein Bild (`Q_NumericValue`). |
-| **Zustände** (`2` oder `5`) | `2` = boolescher Selector `DI1` (`up`/`down`, Typ `s2x1ObjectIDs`/`s2x2ObjectIDs`); `5` = `iSTATE`-Selector (`USINT`, Schieber-Zustandsautomat Unknown/Closed/Opening/Opened/Closing, Typ `SchieberStruct`/`SchieberAuxInStruct`), ausgewertet über `F_MUX_5`. |
-| **Variante** (`1`/`2`/`3`, nur bei `SwitchPic`) | Anzahl/Art der gleichzeitig aktualisierten VT-Objekte: `1`=nur normales VT-Objekt (Softkey/DataMask), `2`=zusätzlich AUX-Objekt, `3`=zusätzlich AUX-Objekt UND ein zweites normales Objekt ("Button"). |
-| **`_aux`** | Nur AUX-Objekt(e) werden geschaltet, kein normales VT-Objekt (Gegenstück zu Variante `1`, aber ausschließlich für Auxiliary-Function-Objekte). |
+| Bestandteil                                     | Bedeutung                                                                                                                                                                                                                                                      |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`Col`** (optional)                            | Schaltet zusätzlich zum Bild auch eine Hintergrundfarbe (`Q_BackgroundColour`) passend zum Zustand um, nicht nur ein Bild (`Q_NumericValue`).                                                                                                                  |
+| **Zustände** (`2` oder `5`)                     | `2` = boolescher Selector `DI1` (`up`/`down`, Typ `s2x1ObjectIDs`/`s2x2ObjectIDs`); `5` = `iSTATE`-Selector (`USINT`, Schieber-Zustandsautomat Unknown/Closed/Opening/Opened/Closing, Typ `SchieberStruct`/`SchieberAuxInStruct`), ausgewertet über `F_MUX_5`. |
+| **Variante** (`1`/`2`/`3`, nur bei `SwitchPic`) | Anzahl/Art der gleichzeitig aktualisierten VT-Objekte: `1`=nur normales VT-Objekt (Softkey/DataMask), `2`=zusätzlich AUX-Objekt, `3`=zusätzlich AUX-Objekt UND ein zweites normales Objekt ("Button").                                                         |
+| **`_aux`**                                      | Nur AUX-Objekt(e) werden geschaltet, kein normales VT-Objekt (Gegenstück zu Variante `1`, aber ausschließlich für Auxiliary-Function-Objekte).                                                                                                                 |
 
 ## Funktionsweise
 

@@ -73,6 +73,7 @@ Inside the function block is a network of standard function blocks that processe
 
 - If the state of selector `G` is equal to `FALSE`, the value of `IN0` is passed through.
 - If the state of selector `G` is equal to `TRUE`, the value of `IN1` is passed through.
+
 1. **Output Triggering:** After successful selection, the result is passed via another `F_MOVE` block to the output flip-flop `E_D_FF_ANY_OUT`. This flip-flop generates the output event `OUT.E1` and places the selected value on `OUT.D1`.
 
 ```
@@ -95,10 +96,10 @@ G ---------+
 
 The following table shows the logical behavior of the function block based on the selection signal `G.D1`:
 
-| State G.D1 | Selected Path | Output Value (OUT.D1) | Output Event (OUT.E1) |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Channel 0 (`IN0`) | Value of `IN0.D1` | Triggered on value change/event |
-| `TRUE` | Channel 1 (`IN1`) | Value of `IN1.D1` | Triggered on value change/event |
+| State G.D1 | Selected Path     | Output Value (OUT.D1) | Output Event (OUT.E1)           |
+| :--------- | :---------------- | :-------------------- | :------------------------------ |
+| `FALSE`    | Channel 0 (`IN0`) | Value of `IN0.D1`     | Triggered on value change/event |
+| `TRUE`     | Channel 1 (`IN1`) | Value of `IN1.D1`     | Triggered on value change/event |
 
 ## Application Scenarios
 

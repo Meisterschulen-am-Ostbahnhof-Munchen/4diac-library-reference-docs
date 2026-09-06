@@ -12,40 +12,40 @@ Der **logiBUS_PI_IDA** ist ein Composite Funktionsblock (FB) zur Verarbeitung vo
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                         |
+| ---- | ----- | ------------------------------------------------- |
 | INIT | EInit | Service Initialization – Parametrierung und Start |
-| REQ  | Event | Service Request – löst eine Verarbeitung aus |
+| REQ  | Event | Service Request – löst eine Verarbeitung aus      |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar                                                       |
+| ----- | ----- | --------------------------------------------------------------- |
 | INITO | EInit | Initialization Confirm – bestätigt erfolgreiche Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-| ------ | ----- | ------------- | ----------- |
-| QI | BOOL | – | Event Input Qualifier (freigeben/sperren) |
-| PARAMS | STRING | – | Service Parameters (z. B. Busadresse, Kanalkonfiguration) |
-| Input | logiBUS::io::PI::logiBUS_PI_S | `Invalid` | Identifiziert den physikalischen Eingang (Input_I1..I8) |
-| ImpulseDelta | DWORD | – | Anzahl der Impulse, nach denen eine Indikation (IND) ausgelöst wird |
-| TimeDelta | DWORD | `250` | Zeit in ms, nach der eine periodische Indikation (IND) ausgelöst wird |
-| TimeRateLimit | DWORD | `100` | Minimaler Abstand in ms zwischen zwei Indikationen (Rate Limiting) |
+| Name          | Typ                           | Initialwert | Kommentar                                                             |
+| ------------- | ----------------------------- | ----------- | --------------------------------------------------------------------- |
+| QI            | BOOL                          | –           | Event Input Qualifier (freigeben/sperren)                             |
+| PARAMS        | STRING                        | –           | Service Parameters (z. B. Busadresse, Kanalkonfiguration)             |
+| Input         | logiBUS::io::PI::logiBUS_PI_S | `Invalid`   | Identifiziert den physikalischen Eingang (Input_I1..I8)               |
+| ImpulseDelta  | DWORD                         | –           | Anzahl der Impulse, nach denen eine Indikation (IND) ausgelöst wird   |
+| TimeDelta     | DWORD                         | `250`       | Zeit in ms, nach der eine periodische Indikation (IND) ausgelöst wird |
+| TimeRateLimit | DWORD                         | `100`       | Minimaler Abstand in ms zwischen zwei Indikationen (Rate Limiting)    |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name   | Typ    | Kommentar                                                |
+| ------ | ------ | -------------------------------------------------------- |
 | QO     | BOOL   | Event Output Qualifier – Status der letzten Verarbeitung |
-| STATUS | STRING | Service Status – Fehler- oder Diagnosemeldung |
+| STATUS | STRING | Service Status – Fehler- oder Diagnosemeldung            |
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| IN | adapter::types::unidirectional::AD | Ausgangsdaten des FB – liefert die verarbeiteten Ereignisse und Werte an die Anwendung |
+| Name | Typ                                | Kommentar                                                                              |
+| ---- | ---------------------------------- | -------------------------------------------------------------------------------------- |
+| IN   | adapter::types::unidirectional::AD | Ausgangsdaten des FB – liefert die verarbeiteten Ereignisse und Werte an die Anwendung |
 
 Der Adapter `IN` wird mit den Ereignissen `IND` (Indikation) und `CNF` (Bestätigung) sowie dem Datenwert `D1` des internen FB `logiBUS_PI_ID` verbunden.
 
@@ -93,10 +93,10 @@ Da der FB ein Composite ist und die Zustandslogik vollständig im internen FB `l
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| ---------- | ------------- |
-| `logiBUS_PI` | Einfacherer Eingangsbaustein ohne Impuls- und Zeit-Delta-Filter; nur rohe Wertänderungen. |
-| `logiBUS_PI_ID` | Vorgänger ohne Composite-Struktur und ohne Adapter-Schnittstelle; direkte Ereignisausgänge. |
+| Baustein                     | Unterschied                                                                                                                               |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `logiBUS_PI`                 | Einfacherer Eingangsbaustein ohne Impuls- und Zeit-Delta-Filter; nur rohe Wertänderungen.                                                 |
+| `logiBUS_PI_ID`              | Vorgänger ohne Composite-Struktur und ohne Adapter-Schnittstelle; direkte Ereignisausgänge.                                               |
 | `logiBUS_PI_IDA` (dieser FB) | Bietet zusätzlich einen **Adapter** für eine flexible Weiterverarbeitung und kombiniert Impuls-, Zeit- und Ratenlogik in einem Composite. |
 
 Der `logiBUS_PI_IDA` stellt eine erweiterte und modularere Variante dar, die sich besonders für komplexe Automatisierungsprojekte mit standardisierten Schnittstellen eignet.

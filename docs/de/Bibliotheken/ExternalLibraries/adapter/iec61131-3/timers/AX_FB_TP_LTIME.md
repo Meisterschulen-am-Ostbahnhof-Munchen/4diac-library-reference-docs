@@ -12,26 +12,26 @@ Der **AX_FB_TP_LTIME** ist ein standardisierter Puls-Timer-Funktionsblock (Timer
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                         |
+| ---- | ----- | ------------------------------------------------- |
 | REQ  | Event | Normaler Ausführungsanforderung (nicht-triggernd) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar              |
+| ---- | ----- | ---------------------- |
 | CNF  | Event | Ausführungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar              |
+| ---- | ----- | ---------------------- |
 | PT   | LTIME | Pulszeit (Impulsdauer) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                        |
+| ---- | ----- | -------------------------------- |
 | ET   | LTIME | Verstrichene Zeit (Elapsed Time) |
 
 ### **Adapter**
@@ -70,11 +70,11 @@ Der Baustein besteht intern aus zwei Komponenten:
 
 Da der Funktionsblock aus zwei Teilen besteht, ergibt sich folgendes Zustandsverhalten für den Gesamtbaustein:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **IDLE** | Kein Impuls aktiv. Der Adapterausgang `Q.D1` ist FALSE. |
-| **TIMING** | Ein Puls läuft – der interne Timer zählt hoch. `ET` steigt, `Q.D1` ist TRUE (sobald das Flipflop beim Start oder nach dem ersten CNF getaktet wurde). |
-| **DONE** | Der Puls ist abgeschlossen. `CNF` wurde ausgegeben, `ET` ist gleich `PT`, `Q.D1` wird mit dem nächsten `CNF` auf FALSE gesetzt. Bei einem neuen `REQ` oder `IN.E1` beginnt der Zyklus von vorn. |
+| Zustand    | Beschreibung                                                                                                                                                                                    |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **IDLE**   | Kein Impuls aktiv. Der Adapterausgang `Q.D1` ist FALSE.                                                                                                                                         |
+| **TIMING** | Ein Puls läuft – der interne Timer zählt hoch. `ET` steigt, `Q.D1` ist TRUE (sobald das Flipflop beim Start oder nach dem ersten CNF getaktet wurde).                                           |
+| **DONE**   | Der Puls ist abgeschlossen. `CNF` wurde ausgegeben, `ET` ist gleich `PT`, `Q.D1` wird mit dem nächsten `CNF` auf FALSE gesetzt. Bei einem neuen `REQ` oder `IN.E1` beginnt der Zyklus von vorn. |
 
 ## Anwendungsszenarien
 
@@ -84,12 +84,12 @@ Da der Funktionsblock aus zwei Teilen besteht, ergibt sich folgendes Zustandsver
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Besonderheit |
-| ---------- | ----- | -------------- |
-| **FB_TP_LTIME** (Standard) | TP‑Timer | Kein Adapter, nur Standard‑Events und Signale. |
+| Baustein                       | Typ                     | Besonderheit                                                                                         |
+| ------------------------------ | ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| **FB_TP_LTIME** (Standard)     | TP‑Timer                | Kein Adapter, nur Standard‑Events und Signale.                                                       |
 | **AX_FB_TP_LTIME** (dieser FB) | TP‑Timer mit AX‑Adapter | Ermöglicht Einbindung in adapterbasierte Architekturen, enthält D‑Flipflop zur Signalstabilisierung. |
-| **FB_TON_LTIME** | Einschaltverzögerung | Verzögert das Einschalten eines Ausgangs. |
-| **FB_TOF_LTIME** | Ausschaltverzögerung | Verzögert das Ausschalten eines Ausgangs. |
+| **FB_TON_LTIME**               | Einschaltverzögerung    | Verzögert das Einschalten eines Ausgangs.                                                            |
+| **FB_TOF_LTIME**               | Ausschaltverzögerung    | Verzögert das Ausschalten eines Ausgangs.                                                            |
 
 Der vorliegende Baustein kombiniert die Timerfunktion eines TP mit der Flexibilität eines Adapters.
 

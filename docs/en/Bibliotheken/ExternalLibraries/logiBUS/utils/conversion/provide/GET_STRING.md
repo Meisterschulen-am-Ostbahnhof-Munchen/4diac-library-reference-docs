@@ -12,27 +12,27 @@ The function block `GET_STRING` is used to read a string value from an InOut var
 
 ### **Event Inputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| REQ | Event | Normal execution request. Triggers the reading of the InOut variable. |
+| Event | Data Type | Comment                                                               |
+| ----- | --------- | --------------------------------------------------------------------- |
+| REQ   | Event     | Normal execution request. Triggers the reading of the InOut variable. |
 
 ### **Event Outputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| CNF | Event | Confirmation of execution. Sent after the value has been read and passed to the output. |
+| Event | Data Type | Comment                                                                                 |
+| ----- | --------- | --------------------------------------------------------------------------------------- |
+| CNF   | Event     | Confirmation of execution. Sent after the value has been read and passed to the output. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| IN | STRING | InOut variable that serves as the source. Its current value is read and buffered on REQ. |
+| Name | Data Type | Comment                                                                                  |
+| ---- | --------- | ---------------------------------------------------------------------------------------- |
+| IN   | STRING    | InOut variable that serves as the source. Its current value is read and buffered on REQ. |
 
 ### **Data Outputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| OUT | STRING | Buffered output value. Contains the string read from IN at the time of the last REQ. |
+| Name | Data Type | Comment                                                                              |
+| ---- | --------- | ------------------------------------------------------------------------------------ |
+| OUT  | STRING    | Buffered output value. Contains the string read from IN at the time of the last REQ. |
 
 ### **Adapter**
 

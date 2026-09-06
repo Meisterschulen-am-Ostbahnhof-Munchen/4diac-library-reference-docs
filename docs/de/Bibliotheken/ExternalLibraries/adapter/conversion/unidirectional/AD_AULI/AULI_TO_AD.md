@@ -14,34 +14,34 @@ Der Baustein besitzt keine eigenen Ereignis- oder Datenein‑/ausgänge, sondern
 
 ### **Ereignis-Eingänge**
 
-| Adapter   | Ereignis | Beschreibung                     |
-|-----------|----------|----------------------------------|
-| `AULI_IN` | `E1`     | Startet die Konvertierung        |
+| Adapter   | Ereignis | Beschreibung              |
+| --------- | -------- | ------------------------- |
+| `AULI_IN` | `E1`     | Startet die Konvertierung |
 
 ### **Ereignis-Ausgänge**
 
-| Adapter   | Ereignis | Beschreibung                     |
-|-----------|----------|----------------------------------|
-| `AD_OUT`  | `E1`     | Signalisiert abgeschlossene Konvertierung |
+| Adapter  | Ereignis | Beschreibung                              |
+| -------- | -------- | ----------------------------------------- |
+| `AD_OUT` | `E1`     | Signalisiert abgeschlossene Konvertierung |
 
 ### **Daten-Eingänge**
 
-| Adapter   | Variable | Datentyp | Beschreibung                     |
-|-----------|----------|----------|----------------------------------|
-| `AULI_IN` | `D1`     | ULINT    | Eingangswert für die Umwandlung  |
+| Adapter   | Variable | Datentyp | Beschreibung                    |
+| --------- | -------- | -------- | ------------------------------- |
+| `AULI_IN` | `D1`     | ULINT    | Eingangswert für die Umwandlung |
 
 ### **Daten-Ausgänge**
 
-| Adapter   | Variable | Datentyp | Beschreibung                     |
-|-----------|----------|----------|----------------------------------|
-| `AD_OUT`  | `D1`     | DWORD    | Konvertierter Ausgangswert       |
+| Adapter  | Variable | Datentyp | Beschreibung               |
+| -------- | -------- | -------- | -------------------------- |
+| `AD_OUT` | `D1`     | DWORD    | Konvertierter Ausgangswert |
 
 ### **Adapter**
 
-| Name       | Richtung | Typ                                       | Beschreibung               |
-|------------|----------|-------------------------------------------|----------------------------|
-| `AULI_IN`  | Socket   | `adapter::types::unidirectional::AULI`    | Eingangsadapter (ULINT)    |
-| `AD_OUT`   | Plug     | `adapter::types::unidirectional::AD`      | Ausgangsadapter (DWORD)    |
+| Name      | Richtung | Typ                                    | Beschreibung            |
+| --------- | -------- | -------------------------------------- | ----------------------- |
+| `AULI_IN` | Socket   | `adapter::types::unidirectional::AULI` | Eingangsadapter (ULINT) |
+| `AD_OUT`  | Plug     | `adapter::types::unidirectional::AD`   | Ausgangsadapter (DWORD) |
 
 ## Funktionsweise
 
@@ -79,10 +79,10 @@ Da es sich um einen Composite‑Baustein ohne eigene Algorithmen handelt, existi
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Beschreibung                                                                 |
-|-----------------|------------------------------------------------------------------------------|
-| `F_ULINT_TO_DWORD` | Einfache Konvertierungsfunktion, jedoch ohne Adapter‑Einbindung.          |
-| `AULI_TO_AD`    | Gleiche Funktionalität, aber als Composite‑Baustein mit Adapter‑Schnittstellen. |
+| Baustein                 | Beschreibung                                                                                         |
+| ------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `F_ULINT_TO_DWORD`       | Einfache Konvertierungsfunktion, jedoch ohne Adapter‑Einbindung.                                     |
+| `AULI_TO_AD`             | Gleiche Funktionalität, aber als Composite‑Baustein mit Adapter‑Schnittstellen.                      |
 | Andere Adapter‑Konverter | Es existieren Bausteine für verwandte Typen (z. B. LINT, DINT), die nach demselben Prinzip arbeiten. |
 
 Der wesentliche Unterschied liegt in der Schnittstellenart: Während die reine Funktion direkte Daten‑ und Ereignispins verwendet, kapselt `AULI_TO_AD` die Konvertierung in eine adapterbasierte Lösung.

@@ -30,10 +30,10 @@ Keine (ausschließlich über Adapter).
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AULI` | `AULI_IN` | Socket / Eingang | Aufnahme eines ULINT‑Werts über Ereignis‑ und Datenkanäle (E1, D1) |
-| `adapter::types::unidirectional::ADI` | `ADI_OUT` | Plug / Ausgang | Bereitstellung des konvertierten DINT‑Werts über Ereignis‑ und Datenkanäle (E1, D1) |
+| Typ                                    | Name      | Richtung         | Beschreibung                                                                        |
+| -------------------------------------- | --------- | ---------------- | ----------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AULI` | `AULI_IN` | Socket / Eingang | Aufnahme eines ULINT‑Werts über Ereignis‑ und Datenkanäle (E1, D1)                  |
+| `adapter::types::unidirectional::ADI`  | `ADI_OUT` | Plug / Ausgang   | Bereitstellung des konvertierten DINT‑Werts über Ereignis‑ und Datenkanäle (E1, D1) |
 
 ## Funktionsweise
 

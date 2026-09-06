@@ -12,18 +12,18 @@ Der Funktionsblock **ASR_SPLIT_4** ist ein generischer Baustein, der einen einge
 
 ### **Adapter-Eingänge (Sockets)**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
-| IN | `adapter::types::unidirectional::ASR` | Eingangs-Adapter, der die zu verteilende ASR-Verbindung bereitstellt. |
+| Name | Typ                                   | Beschreibung                                                          |
+| ---- | ------------------------------------- | --------------------------------------------------------------------- |
+| IN   | `adapter::types::unidirectional::ASR` | Eingangs-Adapter, der die zu verteilende ASR-Verbindung bereitstellt. |
 
 ### **Adapter-Ausgänge (Plugs)**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | ------------- |
+| Name | Typ                                   | Beschreibung                                             |
+| ---- | ------------------------------------- | -------------------------------------------------------- |
 | OUT1 | `adapter::types::unidirectional::ASR` | Erster Ausgangs-Adapter (identische Kopie des Eingangs). |
-| OUT2 | `adapter::types::unidirectional::ASR` | Zweiter Ausgangs-Adapter. |
-| OUT3 | `adapter::types::unidirectional::ASR` | Dritter Ausgangs-Adapter. |
-| OUT4 | `adapter::types::unidirectional::ASR` | Vierter Ausgangs-Adapter. |
+| OUT2 | `adapter::types::unidirectional::ASR` | Zweiter Ausgangs-Adapter.                                |
+| OUT3 | `adapter::types::unidirectional::ASR` | Dritter Ausgangs-Adapter.                                |
+| OUT4 | `adapter::types::unidirectional::ASR` | Vierter Ausgangs-Adapter.                                |
 
 > **Hinweis:** Der konkrete Aufbau des ASR-Adapters (Ereignis-/Daten-Elemente) ist nicht im Baustein selbst definiert, sondern wird durch den zugehörigen Adaptertyp `adapter::types::unidirectional::ASR` festgelegt. Typischerweise umfasst dieser jedoch Steuer- und Rückmeldesignale für Antriebe.
 

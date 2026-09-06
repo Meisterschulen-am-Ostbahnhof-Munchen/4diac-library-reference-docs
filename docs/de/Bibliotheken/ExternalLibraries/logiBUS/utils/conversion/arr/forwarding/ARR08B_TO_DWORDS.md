@@ -14,27 +14,27 @@ Der **ARR08B_TO_DWORDS** ist ein reiner Konvertierungsbaustein, der aus einem ei
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-|----------|--------------|-------------------|
-| **REQ**   | Startet die Konvertierung des Eingangsarrays. | IN (8‑Byte‑Array) |
+| Ereignis | Beschreibung                                  | Mitgeführte Daten |
+| -------- | --------------------------------------------- | ----------------- |
+| **REQ**  | Startet die Konvertierung des Eingangsarrays. | IN (8‑Byte‑Array) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Daten |
-|----------|--------------|-------------------|
-| **CNF**   | Bestätigt die abgeschlossene Konvertierung. | OUT_00, OUT_01 |
+| Ereignis | Beschreibung                                | Mitgeführte Daten |
+| -------- | ------------------------------------------- | ----------------- |
+| **CNF**  | Bestätigt die abgeschlossene Konvertierung. | OUT_00, OUT_01    |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Array-Dimension | Beschreibung |
-|------|----------|-----------------|--------------|
+| Name   | Datentyp | Array-Dimension | Beschreibung                                           |
+| ------ | -------- | --------------- | ------------------------------------------------------ |
 | **IN** | BYTE     | [0..7]          | 8‑Byte‑Eingangsarray, das in zwei DWORDs zerlegt wird. |
 
 ### **Daten-Ausgänge**
 
-| Name    | Datentyp | Beschreibung |
-|---------|----------|--------------|
-| **OUT_00** | DWORD    | Erster DWORD (Bytes 0–3 des Arrays). |
+| Name       | Datentyp | Beschreibung                          |
+| ---------- | -------- | ------------------------------------- |
+| **OUT_00** | DWORD    | Erster DWORD (Bytes 0–3 des Arrays).  |
 | **OUT_01** | DWORD    | Zweiter DWORD (Bytes 4–7 des Arrays). |
 
 ### **Adapter**
@@ -81,10 +81,10 @@ Der Baustein hat keinen internen Zustandsautomaten. Er arbeitet ereignisgesteuer
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschied |
-|----------|----------|-------------|
-| **BYTE_TO_DWORD** | Einzeln konvertiert ein BYTE-Array von 4 Bytes in ein DWORD. | Benötigt separate Aufrufe für jedes 4‑Byte‑Segment. |
-| **ARR08B_TO_DWORDS** | Konvertiert ein 8‑Byte-Array auf einmal in zwei DWORDs. | Integrierte Aufteilung in nur einem Schritt, reduziert Aufrufanzahl und Code. |
+| Baustein             | Funktion                                                     | Unterschied                                                                   |
+| -------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **BYTE_TO_DWORD**    | Einzeln konvertiert ein BYTE-Array von 4 Bytes in ein DWORD. | Benötigt separate Aufrufe für jedes 4‑Byte‑Segment.                           |
+| **ARR08B_TO_DWORDS** | Konvertiert ein 8‑Byte-Array auf einmal in zwei DWORDs.      | Integrierte Aufteilung in nur einem Schritt, reduziert Aufrufanzahl und Code. |
 
 Der vorliegende Baustein bietet somit eine kompaktere Lösung als die Kombination mehrerer elementarer Konvertierungsbausteine.
 

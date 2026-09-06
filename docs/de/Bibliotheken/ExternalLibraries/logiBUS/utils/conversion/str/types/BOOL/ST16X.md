@@ -32,24 +32,24 @@ Nicht zutreffend für einen Datentyp.
 
 Die Struktur des Datentyps ST16X ist wie folgt definiert:
 
-| Name | Typ | Kommentar |
-| :--- | :--- | :--- |
-| X_00 | BOOL | BIT 00 |
-| X_01 | BOOL | BIT 01 |
-| X_02 | BOOL | BIT 02 |
-| X_03 | BOOL | BIT 03 |
-| X_04 | BOOL | BIT 04 |
-| X_05 | BOOL | BIT 05 |
-| X_06 | BOOL | BIT 06 |
-| X_07 | BOOL | BIT 07 |
-| X_08 | BOOL | BIT 08 |
-| X_09 | BOOL | BIT 09 |
-| B_10 | BOOL | BIT 10 |
-| B_11 | BOOL | BIT 11 |
-| B_12 | BOOL | BIT 12 |
-| B_13 | BOOL | BIT 13 |
-| B_14 | BOOL | BIT 14 |
-| B_15 | BOOL | BIT 15 |
+| Name | Typ  | Kommentar |
+| :--- | :--- | :-------- |
+| X_00 | BOOL | BIT 00    |
+| X_01 | BOOL | BIT 01    |
+| X_02 | BOOL | BIT 02    |
+| X_03 | BOOL | BIT 03    |
+| X_04 | BOOL | BIT 04    |
+| X_05 | BOOL | BIT 05    |
+| X_06 | BOOL | BIT 06    |
+| X_07 | BOOL | BIT 07    |
+| X_08 | BOOL | BIT 08    |
+| X_09 | BOOL | BIT 09    |
+| B_10 | BOOL | BIT 10    |
+| B_11 | BOOL | BIT 11    |
+| B_12 | BOOL | BIT 12    |
+| B_13 | BOOL | BIT 13    |
+| B_14 | BOOL | BIT 14    |
+| B_15 | BOOL | BIT 15    |
 
 ## Funktionsweise
 

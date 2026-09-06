@@ -12,28 +12,28 @@ Der Funktionsblock FIELDBUS_WORD_TO_SIGNAL dient der einfachen Signalfilterung i
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| REQ | Event | Normaler Ausführungsauftrag; getriggert durch den Eingang IN. |
+| Name | Typ   | Kommentar                                                     |
+| ---- | ----- | ------------------------------------------------------------- |
+| REQ  | Event | Normaler Ausführungsauftrag; getriggert durch den Eingang IN. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| CNF | Event | Bestätigung der Ausführung; wird nach Abschluss der Verarbeitung ausgegeben. |
+| Name | Typ   | Kommentar                                                                    |
+| ---- | ----- | ---------------------------------------------------------------------------- |
+| CNF  | Event | Bestätigung der Ausführung; wird nach Abschluss der Verarbeitung ausgegeben. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| IN | WORD | NOT_AVAILABLE_WM | Eingangswert, der auf Gültigkeit geprüft wird. |
+| Name | Typ  | Initialwert      | Kommentar                                      |
+| ---- | ---- | ---------------- | ---------------------------------------------- |
+| IN   | WORD | NOT_AVAILABLE_WM | Eingangswert, der auf Gültigkeit geprüft wird. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Initialwert | Kommentar |
-|------|-----|-------------|-----------|
-| OUT | WORD | 16#0000 | Gefilterter Ausgangswert (nur bei gültigem Signal). |
-| VALID | BOOL | FALSE | TRUE, wenn das Eingangssignal als gültig erkannt wurde. |
+| Name  | Typ  | Initialwert | Kommentar                                               |
+| ----- | ---- | ----------- | ------------------------------------------------------- |
+| OUT   | WORD | 16#0000     | Gefilterter Ausgangswert (nur bei gültigem Signal).     |
+| VALID | BOOL | FALSE       | TRUE, wenn das Eingangssignal als gültig erkannt wurde. |
 
 ### **Adapter**
 
@@ -64,8 +64,8 @@ Der Initialwert des Eingangs `IN` ist `NOT_AVAILABLE_WM`, sodass der Baustein im
 
 Der Funktionsblock besitzt genau einen Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                            |
+| ------- | ------------------------------------------------------------------------------------------------------- |
 | **REQ** | Führt den Algorithmus aus, setzt die Ausgänge entsprechend und sendet das Bestätigungsereignis **CNF**. |
 
 Es gibt keine Schleifen oder Verzweigungen in der Zustandsmaschine; jeder Aufruf von REQ wird einmalig durchlaufen.

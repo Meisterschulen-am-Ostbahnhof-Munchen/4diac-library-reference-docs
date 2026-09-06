@@ -13,36 +13,36 @@ Er ermöglicht die Interaktion mit dem Virtuellen Terminal (VT) und übernimmt d
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Parameter | Beschreibung |
-|----------|-------|----------------|--------------|
-| INIT     | EInit | u16ObjId       | Service Initialisierung |
+| Ereignis | Typ   | Mit Parameter | Beschreibung            |
+| -------- | ----- | ------------- | ----------------------- |
+| INIT     | EInit | u16ObjId      | Service Initialisierung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ    | Mit Parameter | Beschreibung |
-|----------|--------|----------------|--------------|
-| INITO    | EInit  | –              | Initialisierung bestätigt |
-| CNF      | Event  | STATUS, s16result | Bestätigung des angeforderten Dienstes |
+| Ereignis | Typ   | Mit Parameter     | Beschreibung                           |
+| -------- | ----- | ----------------- | -------------------------------------- |
+| INITO    | EInit | –                 | Initialisierung bestätigt              |
+| CNF      | Event | STATUS, s16result | Bestätigung des angeforderten Dienstes |
 
 ### **Daten-Eingänge**
 
-| Name      | Typ   | Initialwert | Beschreibung |
-|-----------|-------|-------------|--------------|
-| u16ObjId  | UINT  | ID_NULL     | Objekt-ID des betroffenen Objekts |
+| Name     | Typ  | Initialwert | Beschreibung                      |
+| -------- | ---- | ----------- | --------------------------------- |
+| u16ObjId | UINT | ID_NULL     | Objekt-ID des betroffenen Objekts |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Beschreibung |
-|-----------|--------|--------------|
+| Name      | Typ    | Beschreibung                    |
+| --------- | ------ | ------------------------------- |
 | STATUS    | STRING | Dienststatus (z. B. Fehlertext) |
-| s16result | INT    | Rückgabewert (siehe unten) |
+| s16result | INT    | Rückgabewert (siehe unten)      |
 
 ### **Adapter**
 
-| Richtung | Name        | Typ  | Beschreibung |
-|----------|-------------|------|--------------|
-| Socket   | u8Colour    | AUS  | Neue Hintergrundfarbe (gemäß ISO 11783-6 A.3) |
-| Plug     | u8OldColour | AUS  | Alte Hintergrundfarbe (wird vom VT zurückgemeldet) |
+| Richtung | Name        | Typ | Beschreibung                                       |
+| -------- | ----------- | --- | -------------------------------------------------- |
+| Socket   | u8Colour    | AUS | Neue Hintergrundfarbe (gemäß ISO 11783-6 A.3)      |
+| Plug     | u8OldColour | AUS | Alte Hintergrundfarbe (wird vom VT zurückgemeldet) |
 
 ## Gültige Objekt-IDs
 

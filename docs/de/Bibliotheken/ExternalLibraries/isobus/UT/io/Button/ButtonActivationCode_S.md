@@ -22,10 +22,10 @@ Da es sich um einen Datentyp und nicht um einen Funktionsblock handelt, gibt es 
 
 Die folgenden Felder bilden die interne Struktur des Datentyps `ButtonActivationCode_S`:
 
-| Name     | Datentyp | Initialwert | Kommentar |
-| :------- | :------- | :---------- | :-------- |
-| `code`   | `USINT`  | 255         | Definiert den spezifischen Aktivierungscode für den Taster. |
-| `bCyclic`| `BOOL`   | TRUE        | Steuert das zyklische Verhalten. Wenn auf `FALSE` gesetzt, wird die Aktivierung nicht alle 200 ms wiederholt. |
+| Name      | Datentyp | Initialwert | Kommentar                                                                                                     |
+| :-------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------ |
+| `code`    | `USINT`  | 255         | Definiert den spezifischen Aktivierungscode für den Taster.                                                   |
+| `bCyclic` | `BOOL`   | TRUE        | Steuert das zyklische Verhalten. Wenn auf `FALSE` gesetzt, wird die Aktivierung nicht alle 200 ms wiederholt. |
 
 ## Funktionsweise
 

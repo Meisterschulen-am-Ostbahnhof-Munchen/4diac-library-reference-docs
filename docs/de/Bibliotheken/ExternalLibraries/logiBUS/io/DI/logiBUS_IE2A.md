@@ -12,39 +12,39 @@ Der Funktionsblock `logiBUS_IE2A` ist ein Composite‑Baustein (Composite FB) zu
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar                                 |
-|-------|-------|-------------------------------------------|
-| INIT  | EInit | Service‑Initialisierung                   |
-| REQ   | Event | Service‑Anforderung (Service Request)     |
+| Name | Typ   | Kommentar                             |
+| ---- | ----- | ------------------------------------- |
+| INIT | EInit | Service‑Initialisierung               |
+| REQ  | Event | Service‑Anforderung (Service Request) |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                         |
-|-------|-------|-----------------------------------|
-| INITO | EInit | Initialisierungsbestätigung       |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name       | Typ                              | Kommentar                                                             | Initialwert            |
-|------------|----------------------------------|-----------------------------------------------------------------------|------------------------|
-| QI         | BOOL                             | Ereignis‑Eingangs‑Qualifier                                          | –                      |
-| PARAMS     | STRING                           | Service‑Parameter                                                     | –                      |
-| Input      | `logiBUS::io::DI::logiBUS_DI_S` | Identifikation des Digitaleingangs (z. B. Input_I1..I8)               | `logiBUS_DI::Invalid`  |
-| InputEvent | `logiBUS::io::DI::logiBUS_DI_Events_S` | Identifikation des Ereignisses (Down, Up, Single‑Click, Double‑Click, etc.) | `logiBUS_DI_Events::Invalid` |
-| arg        | UINT                             | Ereignisdaten: Langdruckzeit oder Anzahl Mehrfachklicks (abhängig vom Ereignis) | 65535                  |
+| Name       | Typ                                    | Kommentar                                                                       | Initialwert                  |
+| ---------- | -------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------- |
+| QI         | BOOL                                   | Ereignis‑Eingangs‑Qualifier                                                     | –                            |
+| PARAMS     | STRING                                 | Service‑Parameter                                                               | –                            |
+| Input      | `logiBUS::io::DI::logiBUS_DI_S`        | Identifikation des Digitaleingangs (z. B. Input_I1..I8)                         | `logiBUS_DI::Invalid`        |
+| InputEvent | `logiBUS::io::DI::logiBUS_DI_Events_S` | Identifikation des Ereignisses (Down, Up, Single‑Click, Double‑Click, etc.)     | `logiBUS_DI_Events::Invalid` |
+| arg        | UINT                                   | Ereignisdaten: Langdruckzeit oder Anzahl Mehrfachklicks (abhängig vom Ereignis) | 65535                        |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Kommentar                             |
-|--------|--------|---------------------------------------|
-| QO     | BOOL   | Ereignis‑Ausgangs‑Qualifier           |
-| STATUS | STRING | Servicestatus                         |
+| Name   | Typ    | Kommentar                   |
+| ------ | ------ | --------------------------- |
+| QO     | BOOL   | Ereignis‑Ausgangs‑Qualifier |
+| STATUS | STRING | Servicestatus               |
 
 ### **Adapter**
 
-| Name | Typ                                                 | Beschreibung                                     |
-|------|------------------------------------------------------|--------------------------------------------------|
-| IN   | `adapter::types::unidirectional::AE`                | Unidirektionaler Adapter‑Ausgang für Ereignisse (E1) |
+| Name | Typ                                  | Beschreibung                                         |
+| ---- | ------------------------------------ | ---------------------------------------------------- |
+| IN   | `adapter::types::unidirectional::AE` | Unidirektionaler Adapter‑Ausgang für Ereignisse (E1) |
 
 ## Funktionsweise
 

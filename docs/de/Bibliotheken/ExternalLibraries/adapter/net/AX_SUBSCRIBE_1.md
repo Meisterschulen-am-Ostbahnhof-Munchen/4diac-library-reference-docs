@@ -31,8 +31,8 @@ Der Funktionsblock **AX_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                      |
+| ------- | ---------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::AX | Plug (Ausgang) | Gepufferter empfangener BOOL-Wert |
 
 ## Funktionsweise

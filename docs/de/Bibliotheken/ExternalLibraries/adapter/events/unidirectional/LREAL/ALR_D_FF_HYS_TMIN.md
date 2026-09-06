@@ -12,22 +12,22 @@ Der Funktionsblock **ALR_D_FF_HYS_TMIN** realisiert ein taktgesteuertes D‑Latc
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                        |
-|----------|-------|----------------------------------|
+| Ereignis | Typ   | Kommentar                                              |
+| -------- | ----- | ------------------------------------------------------ |
 | INIT     | EInit | Initialisierungsanforderung (setzt Hysterese und Tmin) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar                         |
-|----------|-------|-----------------------------------|
-| INITO    | EInit | Initialisierungsbestätigung       |
+| Ereignis | Typ   | Kommentar                   |
+| -------- | ----- | --------------------------- |
+| INITO    | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Name       | Typ   | Kommentar                                       |
-|------------|-------|-------------------------------------------------|
-| HYSTERESIS | LREAL | Hysterese-Band für die Datenübernahme           |
-| Tmin       | TIME  | Mindestzeit zwischen zwei Ausgangsereignissen   |
+| Name       | Typ   | Kommentar                                     |
+| ---------- | ----- | --------------------------------------------- |
+| HYSTERESIS | LREAL | Hysterese-Band für die Datenübernahme         |
+| Tmin       | TIME  | Mindestzeit zwischen zwei Ausgangsereignissen |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Der FB besitzt keine eigenen Daten-Ausgänge. Der latched Wert wird über den Ad
 
 ### **Adapter**
 
-| Richtung | Name | Typ (unidirektional) | Kommentar                          |
-|----------|------|----------------------|------------------------------------|
+| Richtung | Name | Typ (unidirektional) | Kommentar                              |
+| -------- | ---- | -------------------- | -------------------------------------- |
 | Socket   | I    | ALR                  | Eingangswert, der gelatcht werden soll |
-| Plug     | Q    | ALR                  | Ausgangswert (latched)             |
+| Plug     | Q    | ALR                  | Ausgangswert (latched)                 |
 
 ## Funktionsweise
 
@@ -77,12 +77,12 @@ Da der FB aus mehreren internen Zuständen besteht (z. B. Warten auf Takt, Hys
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                          | Eigenschaften                                                       | Unterschied zu ALR_D_FF_HYS_TMIN                          |
-|-----------------------------------|---------------------------------------------------------------------|------------------------------------------------------------|
-| Einfaches D‑Flipflop (D_FF)       | Keine Hysterese, keine Zeitsteuerung                                | Fehlende Signalstabilisierung und Frequenzbegrenzung       |
-| Schmitt-Trigger (z. B. S_TRIG)    | Nur Hysterese, keine Zeitsteuerung, oft nur binär                   | Unterscheidet sich bei analogen Werten und erzwungenen Pausen |
-| Flankengesteuertes Latch mit Totzeit | Zeitsteuerung (Totzeit) vorhanden, aber meist ohne Hysterese        | Kombination beider Effekte (Hysterese + Tmin)               |
-| Filterbaustein (z. B. FILTER)     | Rauschunterdrückung z. B. als Tiefpass, keine diskrete Zustandsänderung | Explizites Latch mit Ereignisausgabe und einstellbarer Hysterese |
+| Baustein                             | Eigenschaften                                                           | Unterschied zu ALR_D_FF_HYS_TMIN                                 |
+| ------------------------------------ | ----------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Einfaches D‑Flipflop (D_FF)          | Keine Hysterese, keine Zeitsteuerung                                    | Fehlende Signalstabilisierung und Frequenzbegrenzung             |
+| Schmitt-Trigger (z. B. S_TRIG)       | Nur Hysterese, keine Zeitsteuerung, oft nur binär                       | Unterscheidet sich bei analogen Werten und erzwungenen Pausen    |
+| Flankengesteuertes Latch mit Totzeit | Zeitsteuerung (Totzeit) vorhanden, aber meist ohne Hysterese            | Kombination beider Effekte (Hysterese + Tmin)                    |
+| Filterbaustein (z. B. FILTER)        | Rauschunterdrückung z. B. als Tiefpass, keine diskrete Zustandsänderung | Explizites Latch mit Ereignisausgabe und einstellbarer Hysterese |
 
 Der vorliegende Baustein vereint die Vorteile einer Hysterese mit einer minimalen Ereignisabstandsfunktion und ist damit besonders für raue industrielle Umgebungen geeignet.
 

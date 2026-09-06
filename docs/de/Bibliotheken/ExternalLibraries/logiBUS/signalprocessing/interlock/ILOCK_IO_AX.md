@@ -14,44 +14,44 @@ Der Baustein besitzt keine klassischen Ereignis- oder Datenein-/ausgänge auf FB
 
 ### **Ereignis-Eingänge**
 
-| Signal | Adapter | Beschreibung |
-| -------- | --------- | -------------- |
-| `IN.E1` | IN (AX) | Auslöser für die Verarbeitung des Eingangssignals. |
-| `ILOCK_IN.EO1` | ILOCK_IN (AX2) | Ereignis vom übergeordneten FB in der Kette (z. B. wenn dort ein anderer Ausgang aktiv wird). |
-| `ILOCK_OUT.EI1` | ILOCK_OUT (AX2) | Ereignis vom untergeordneten FB in der Kette (z. B. wenn dieser aktiv wird). |
+| Signal          | Adapter         | Beschreibung                                                                                  |
+| --------------- | --------------- | --------------------------------------------------------------------------------------------- |
+| `IN.E1`         | IN (AX)         | Auslöser für die Verarbeitung des Eingangssignals.                                            |
+| `ILOCK_IN.EO1`  | ILOCK_IN (AX2)  | Ereignis vom übergeordneten FB in der Kette (z. B. wenn dort ein anderer Ausgang aktiv wird). |
+| `ILOCK_OUT.EI1` | ILOCK_OUT (AX2) | Ereignis vom untergeordneten FB in der Kette (z. B. wenn dieser aktiv wird).                  |
 
 ### **Ereignis-Ausgänge**
 
-| Signal | Adapter | Beschreibung |
-| -------- | --------- | -------------- |
-| `OUT.E1` | OUT (AX) | Bestätigung, dass die Verarbeitung abgeschlossen ist. |
-| `ILOCK_IN.EI1` | ILOCK_IN (AX2) | Ereignis an den übergeordneten FB (wird bei jedem Verarbeitungszyklus gesendet). |
+| Signal          | Adapter         | Beschreibung                                                                      |
+| --------------- | --------------- | --------------------------------------------------------------------------------- |
+| `OUT.E1`        | OUT (AX)        | Bestätigung, dass die Verarbeitung abgeschlossen ist.                             |
+| `ILOCK_IN.EI1`  | ILOCK_IN (AX2)  | Ereignis an den übergeordneten FB (wird bei jedem Verarbeitungszyklus gesendet).  |
 | `ILOCK_OUT.EO1` | ILOCK_OUT (AX2) | Ereignis an den untergeordneten FB (wird bei jedem Verarbeitungszyklus gesendet). |
 
 ### **Daten-Eingänge**
 
-| Signal | Adapter | Beschreibung |
-| -------- | --------- | -------------- |
-| `IN.D1` | IN (AX) | Setzeingang (BOOL) – wenn TRUE und kein anderer FB in der Kette aktiv, wird der Ausgang aktiv. |
-| `ILOCK_IN.DO1` | ILOCK_IN (AX2) | Zustand des übergeordneten FBs (TRUE bedeutet, dass dort der Ausgang aktiv ist). |
-| `ILOCK_OUT.DI1` | ILOCK_OUT (AX2) | Zustand des untergeordneten FBs (TRUE bedeutet, dass dort der Ausgang aktiv ist). |
+| Signal          | Adapter         | Beschreibung                                                                                   |
+| --------------- | --------------- | ---------------------------------------------------------------------------------------------- |
+| `IN.D1`         | IN (AX)         | Setzeingang (BOOL) – wenn TRUE und kein anderer FB in der Kette aktiv, wird der Ausgang aktiv. |
+| `ILOCK_IN.DO1`  | ILOCK_IN (AX2)  | Zustand des übergeordneten FBs (TRUE bedeutet, dass dort der Ausgang aktiv ist).               |
+| `ILOCK_OUT.DI1` | ILOCK_OUT (AX2) | Zustand des untergeordneten FBs (TRUE bedeutet, dass dort der Ausgang aktiv ist).              |
 
 ### **Daten-Ausgänge**
 
-| Signal | Adapter | Beschreibung |
-| -------- | --------- | -------------- |
-| `OUT.D1` | OUT (AX) | Ausgangssignal (BOOL) – aktiv, wenn `IN.D1` gesetzt und kein anderer FB in der Kette aktiv ist. |
-| `ILOCK_IN.DI1` | ILOCK_IN (AX2) | Eigenes Ausgangssignal wird an den übergeordneten FB weitergegeben. |
-| `ILOCK_OUT.DO1` | ILOCK_OUT (AX2) | Eigenes Ausgangssignal wird an den untergeordneten FB weitergegeben. |
+| Signal          | Adapter         | Beschreibung                                                                                    |
+| --------------- | --------------- | ----------------------------------------------------------------------------------------------- |
+| `OUT.D1`        | OUT (AX)        | Ausgangssignal (BOOL) – aktiv, wenn `IN.D1` gesetzt und kein anderer FB in der Kette aktiv ist. |
+| `ILOCK_IN.DI1`  | ILOCK_IN (AX2)  | Eigenes Ausgangssignal wird an den übergeordneten FB weitergegeben.                             |
+| `ILOCK_OUT.DO1` | ILOCK_OUT (AX2) | Eigenes Ausgangssignal wird an den untergeordneten FB weitergegeben.                            |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| `IN` | Socket (Eingang) | `adapter::types::unidirectional::AX` | Eingangssignal vom Anwender (Setzeingang und Ereignis). |
-| `OUT` | Plug (Ausgang) | `adapter::types::unidirectional::AX` | Ausgangssignal zum Anwender (Ausgangswert und Bestätigung). |
-| `ILOCK_IN` | Socket (Eingang) | `adapter::types::bidirectional::AX2` | Verbindung zum **übergeordneten** FB in der Kette. |
-| `ILOCK_OUT` | Plug (Ausgang) | `adapter::types::bidirectional::AX2` | Verbindung zum **untergeordneten** FB in der Kette. |
+| Adapter     | Richtung         | Typ                                  | Beschreibung                                                |
+| ----------- | ---------------- | ------------------------------------ | ----------------------------------------------------------- |
+| `IN`        | Socket (Eingang) | `adapter::types::unidirectional::AX` | Eingangssignal vom Anwender (Setzeingang und Ereignis).     |
+| `OUT`       | Plug (Ausgang)   | `adapter::types::unidirectional::AX` | Ausgangssignal zum Anwender (Ausgangswert und Bestätigung). |
+| `ILOCK_IN`  | Socket (Eingang) | `adapter::types::bidirectional::AX2` | Verbindung zum **übergeordneten** FB in der Kette.          |
+| `ILOCK_OUT` | Plug (Ausgang)   | `adapter::types::bidirectional::AX2` | Verbindung zum **untergeordneten** FB in der Kette.         |
 
 ## Funktionsweise
 
@@ -92,11 +92,11 @@ Im Zustand `REQ` werden die Algorithmus `REQ` und die Ereignisausgaben ausgefüh
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied zu ILOCK_IO_AX |
-| ---------- | -------------- | ---------------------------- |
-| **SR-Flipflop** | Setzt Ausgang bei SET, rückgesetzt bei RESET. | Kein Interlock – mehrere FBs können gleichzeitig aktiv sein. |
-| **Einfacher Latch (z. B. LATCH_AX)** | Hält Wert solange, bis erneut getriggert. | Keine Kopplung mit anderen FBs. |
-| **ILOCK_IO_AX** | Exklusive Aktivierung in einer Kette. | Erzwingt, dass nur ein FB aktiv ist – ideal für Liniensteuerungen. |
+| Baustein                             | Beschreibung                                  | Unterschied zu ILOCK_IO_AX                                         |
+| ------------------------------------ | --------------------------------------------- | ------------------------------------------------------------------ |
+| **SR-Flipflop**                      | Setzt Ausgang bei SET, rückgesetzt bei RESET. | Kein Interlock – mehrere FBs können gleichzeitig aktiv sein.       |
+| **Einfacher Latch (z. B. LATCH_AX)** | Hält Wert solange, bis erneut getriggert.     | Keine Kopplung mit anderen FBs.                                    |
+| **ILOCK_IO_AX**                      | Exklusive Aktivierung in einer Kette.         | Erzwingt, dass nur ein FB aktiv ist – ideal für Liniensteuerungen. |
 
 ## Fazit
 

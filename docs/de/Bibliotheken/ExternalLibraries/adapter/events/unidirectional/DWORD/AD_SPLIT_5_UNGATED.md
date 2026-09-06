@@ -30,14 +30,14 @@ Keine vorhanden. Die Ausgaben erfolgen ausschließlich über die Adapter-Plugs.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AD` | `IN` | Socket (Eingang) | Eingehendes Adaptersignal, welches auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AD` | `OUT1` | Plug (Ausgang) | Erster ausgehender Adapter, identisch zum Eingangssignal. |
-| `adapter::types::unidirectional::AD` | `OUT2` | Plug (Ausgang) | Zweiter ausgehender Adapter. |
-| `adapter::types::unidirectional::AD` | `OUT3` | Plug (Ausgang) | Dritter ausgehender Adapter. |
-| `adapter::types::unidirectional::AD` | `OUT4` | Plug (Ausgang) | Vierter ausgehender Adapter. |
-| `adapter::types::unidirectional::AD` | `OUT5` | Plug (Ausgang) | Fünfter ausgehender Adapter. |
+| Typ                                  | Name   | Richtung         | Beschreibung                                                        |
+| ------------------------------------ | ------ | ---------------- | ------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AD` | `IN`   | Socket (Eingang) | Eingehendes Adaptersignal, welches auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AD` | `OUT1` | Plug (Ausgang)   | Erster ausgehender Adapter, identisch zum Eingangssignal.           |
+| `adapter::types::unidirectional::AD` | `OUT2` | Plug (Ausgang)   | Zweiter ausgehender Adapter.                                        |
+| `adapter::types::unidirectional::AD` | `OUT3` | Plug (Ausgang)   | Dritter ausgehender Adapter.                                        |
+| `adapter::types::unidirectional::AD` | `OUT4` | Plug (Ausgang)   | Vierter ausgehender Adapter.                                        |
+| `adapter::types::unidirectional::AD` | `OUT5` | Plug (Ausgang)   | Fünfter ausgehender Adapter.                                        |
 
 ## Funktionsweise
 

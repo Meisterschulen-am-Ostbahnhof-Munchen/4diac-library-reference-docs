@@ -3,6 +3,7 @@
 ![SAFE_SUB](SAFE_SUB.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **SAFE_SUB** is part of the **SafeArithmetic** library (`SafeArithmetic::arithmetic`, EPL-2.0,

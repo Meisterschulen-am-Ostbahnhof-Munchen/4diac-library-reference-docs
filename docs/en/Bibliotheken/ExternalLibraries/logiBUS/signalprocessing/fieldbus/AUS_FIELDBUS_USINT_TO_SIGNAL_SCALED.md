@@ -12,7 +12,7 @@ The function block AUS_FIELDBUS_USINT_TO_SIGNAL_SCALED mirrors an incoming field
 
 No direct data outputs – output is exclusively via the adapters.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -37,6 +37,7 @@ No direct data outputs – output is exclusively via the adapters.
 
 - The output of the scaled value via `OUT.D1` and the event `OUT.E1`.
 - The clock input (`CLK`) of the D flip-flop `E_D_FF`.
+
 1. **Validation Signal**: The validation flag of the sub-FB is set to the data input (`D`) of the flip-flop. With each clock event, the flip-flop updates the current `D` value to its output `Q`. The event `E_D_FF.EO` then triggers the output of the validity signal via `VALID.D1` and `VALID.E1`.
 2. **Interaction**: This ensures that the validity signal is updated only after scaling is complete and in a strictly timed manner with the output scaled value.
 

@@ -1,6 +1,6 @@
-![E_TON](E_TON.svg)
-
 # E_TON
+
+![E_TON](E_TON.svg)
 
 ## 🎧 Podcast
 
@@ -50,6 +50,7 @@ The **E_TON** function block is a standardized function block type (FBType) acco
 
 - **Type**: BOOL
 - **Description**: The input value that starts the timer. When **IN** is set to `TRUE`, the turn-on delay (**PT**) starts. The output **Q** is only set to `TRUE` after the **PT** time has elapsed.
+
 1. **PT**:
 
 - **Type**: TIME
@@ -71,6 +72,7 @@ The **E_TON** function block is a standardized function block type (FBType) acco
 - When **IN** is set to `TRUE`, the on-delay timer (**PT**) starts.
 - After **PT** expires, **Q** is set to `TRUE`.
 - If **IN** is set to `FALSE` during the timer, the timer stops, and **Q** remains at `FALSE`.
+
 1. **Confirmation of Execution (CNF)**:
 
 - The **CNF** event is triggered when the timer expires and **Q** is set to `TRUE`.

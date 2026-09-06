@@ -14,67 +14,67 @@ Der Funktionsblock **IA_Lighting** dient als ISOBUS-Adapter für Beleuchtungsdat
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|-----------------------------|
-| INIT | EInit | Initialisierung des Bausteins. Wird mit `QI` ausgelöst. |
+| Ereignis | Typ   | Beschreibung                                            |
+| -------- | ----- | ------------------------------------------------------- |
+| INIT     | EInit | Initialisierung des Bausteins. Wird mit `QI` ausgelöst. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|-----------------------------|
-| INITO | EInit | Bestätigung der erfolgreichen Initialisierung. Wird zusammen mit `QO` und `STATUS` ausgegeben. |
+| Ereignis | Typ   | Beschreibung                                                                                   |
+| -------- | ----- | ---------------------------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der erfolgreichen Initialisierung. Wird zusammen mit `QO` und `STATUS` ausgegeben. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-----------------------------|
-| QI | BOOL | Qualifizierer für die Initialisierung (Freigabe). |
+| Name | Typ  | Beschreibung                                      |
+| ---- | ---- | ------------------------------------------------- |
+| QI   | BOOL | Qualifizierer für die Initialisierung (Freigabe). |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | ----------------------------- |
-| QO | BOOL | Ausgangsqualifizierer – zeigt an, ob der Baustein betriebsbereit ist. |
-| STATUS | STRING | Statusmeldung (z. B. Fehlertext oder Erfolgsmeldung). |
+| Name   | Typ    | Beschreibung                                                          |
+| ------ | ------ | --------------------------------------------------------------------- |
+| QO     | BOOL   | Ausgangsqualifizierer – zeigt an, ob der Baustein betriebsbereit ist. |
+| STATUS | STRING | Statusmeldung (z. B. Fehlertext oder Erfolgsmeldung).                 |
 
 ### **Adapter**
 
 Der Baustein besitzt **32 unidirektionale Adapter-Plugs** (Typ `adapter::types::unidirectional::AX`). Jeder Adapter repräsentiert eine spezifische Lichtfunktion nach ISO 11783-7 und stellt einen Ereignisausgang (`E1`) sowie einen Datenausgang (`D1`) vom Typ `BOOL` bereit:
 
-| Adapter-Name | Beschreibung |
-| -------------- | -------------- |
-| DAYTIME_RUNNING_LIGHTS | Tagfahrlicht |
-| ALTERNATE_HEADLIGHTS | Alternatives Fernlicht (z. B. Fernlichtassistent) |
-| LOW_BEAM_HEADLIGHTS | Abblendlicht |
-| HIGH_BEAM_HEADLIGHTS | Fernlicht |
-| TRACTOR_FRONT_FOG_LIGHTS | Zugfahrzeug-Frontnebelscheinwerfer |
-| ROTATING_BEACON_LIGHT | Rundumkennleuchte |
-| RIGHT_TURN_SIGNAL_LIGHTS | Rechter Blinker |
-| LEFT_TURN_SIGNAL_LIGHTS | Linker Blinker |
-| BACK_UP_LIGHTS_AND_ALARM_HORN | Rückfahrleuchte und Alarmhorn |
-| CENTER_STOP_LIGHTS | Mittleres Bremslicht |
-| RIGHT_STOP_LIGHTS | Rechtes Bremslicht |
-| LEFT_STOP_LIGHTS | Linkes Bremslicht |
-| IMPLEMENT_CLEARANCE_LIGHTS | Anbaugerät-Begrenzungsleuchten |
-| TRACTOR_CLEARANCE_LIGHTS | Zugfahrzeug-Begrenzungsleuchten |
-| IMPLEMENT_MARKER_LIGHTS | Anbaugerät-Markierungsleuchten |
-| TRACTOR_MARKER_LIGHTS | Zugfahrzeug-Markierungsleuchten |
-| REAR_FOG_LIGHTS | Rücknebel-Schlussleuchten |
-| TRACTOR_UNDERSIDE_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (unten montiert) |
-| TRACTOR_REAR_LOW_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (hinten, niedrig) |
-| TRACTOR_REAR_HIGH_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (hinten, hoch) |
-| TRACTOR_SIDE_LOW_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (seitlich, niedrig) |
-| TRACTOR_SIDE_HIGH_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (seitlich, hoch) |
-| TRACTOR_FRONT_LOW_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (vorn, niedrig) |
-| TRACTOR_FRONT_HIGH_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (vorn, hoch) |
-| IMPLEMENT_OEM_OPTION_2_LIGHT | Anbaugerät-OEM-Option 2 Licht |
-| IMPLEMENT_OEM_OPTION_1_LIGHT | Anbaugerät-OEM-Option 1 Licht |
-| IMPLEMENT_RIGHT_FORWARD_WORK_LIGHTS | Anbaugerät-Arbeitsscheinwerfer (rechts vorne) |
-| IMPLEMENT_LEFT_FORWARD_WORK_LIGHTS | Anbaugerät-Arbeitsscheinwerfer (links vorne) |
-| IMPLEMENT_RIGHT_FACING_WORK_LIGHTS | Anbaugerät-Arbeitsscheinwerfer (rechts seitlich) |
-| IMPLEMENT_LEFT_FACING_WORK_LIGHTS | Anbaugerät-Arbeitsscheinwerfer (links seitlich) |
-| IMPLEMENT_REAR_WORK_LIGHTS | Anbaugerät-Arbeitsscheinwerfer (hinten) |
-| TIMEOUT | Timeout-Status des internen Kerns (Bool-Signal). |
+| Adapter-Name                           | Beschreibung                                        |
+| -------------------------------------- | --------------------------------------------------- |
+| DAYTIME_RUNNING_LIGHTS                 | Tagfahrlicht                                        |
+| ALTERNATE_HEADLIGHTS                   | Alternatives Fernlicht (z. B. Fernlichtassistent)   |
+| LOW_BEAM_HEADLIGHTS                    | Abblendlicht                                        |
+| HIGH_BEAM_HEADLIGHTS                   | Fernlicht                                           |
+| TRACTOR_FRONT_FOG_LIGHTS               | Zugfahrzeug-Frontnebelscheinwerfer                  |
+| ROTATING_BEACON_LIGHT                  | Rundumkennleuchte                                   |
+| RIGHT_TURN_SIGNAL_LIGHTS               | Rechter Blinker                                     |
+| LEFT_TURN_SIGNAL_LIGHTS                | Linker Blinker                                      |
+| BACK_UP_LIGHTS_AND_ALARM_HORN          | Rückfahrleuchte und Alarmhorn                       |
+| CENTER_STOP_LIGHTS                     | Mittleres Bremslicht                                |
+| RIGHT_STOP_LIGHTS                      | Rechtes Bremslicht                                  |
+| LEFT_STOP_LIGHTS                       | Linkes Bremslicht                                   |
+| IMPLEMENT_CLEARANCE_LIGHTS             | Anbaugerät-Begrenzungsleuchten                      |
+| TRACTOR_CLEARANCE_LIGHTS               | Zugfahrzeug-Begrenzungsleuchten                     |
+| IMPLEMENT_MARKER_LIGHTS                | Anbaugerät-Markierungsleuchten                      |
+| TRACTOR_MARKER_LIGHTS                  | Zugfahrzeug-Markierungsleuchten                     |
+| REAR_FOG_LIGHTS                        | Rücknebel-Schlussleuchten                           |
+| TRACTOR_UNDERSIDE_MOUNTED_WORK_LIGHTS  | Zugfahrzeug-Arbeitsscheinwerfer (unten montiert)    |
+| TRACTOR_REAR_LOW_MOUNTED_WORK_LIGHTS   | Zugfahrzeug-Arbeitsscheinwerfer (hinten, niedrig)   |
+| TRACTOR_REAR_HIGH_MOUNTED_WORK_LIGHTS  | Zugfahrzeug-Arbeitsscheinwerfer (hinten, hoch)      |
+| TRACTOR_SIDE_LOW_MOUNTED_WORK_LIGHTS   | Zugfahrzeug-Arbeitsscheinwerfer (seitlich, niedrig) |
+| TRACTOR_SIDE_HIGH_MOUNTED_WORK_LIGHTS  | Zugfahrzeug-Arbeitsscheinwerfer (seitlich, hoch)    |
+| TRACTOR_FRONT_LOW_MOUNTED_WORK_LIGHTS  | Zugfahrzeug-Arbeitsscheinwerfer (vorn, niedrig)     |
+| TRACTOR_FRONT_HIGH_MOUNTED_WORK_LIGHTS | Zugfahrzeug-Arbeitsscheinwerfer (vorn, hoch)        |
+| IMPLEMENT_OEM_OPTION_2_LIGHT           | Anbaugerät-OEM-Option 2 Licht                       |
+| IMPLEMENT_OEM_OPTION_1_LIGHT           | Anbaugerät-OEM-Option 1 Licht                       |
+| IMPLEMENT_RIGHT_FORWARD_WORK_LIGHTS    | Anbaugerät-Arbeitsscheinwerfer (rechts vorne)       |
+| IMPLEMENT_LEFT_FORWARD_WORK_LIGHTS     | Anbaugerät-Arbeitsscheinwerfer (links vorne)        |
+| IMPLEMENT_RIGHT_FACING_WORK_LIGHTS     | Anbaugerät-Arbeitsscheinwerfer (rechts seitlich)    |
+| IMPLEMENT_LEFT_FACING_WORK_LIGHTS      | Anbaugerät-Arbeitsscheinwerfer (links seitlich)     |
+| IMPLEMENT_REAR_WORK_LIGHTS             | Anbaugerät-Arbeitsscheinwerfer (hinten)             |
+| TIMEOUT                                | Timeout-Status des internen Kerns (Bool-Signal).    |
 
 * * * * * * * * * *
 

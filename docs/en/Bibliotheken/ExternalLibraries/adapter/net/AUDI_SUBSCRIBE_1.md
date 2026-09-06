@@ -31,9 +31,9 @@ The function block **AUDI_SUBSCRIBE_1** is a composite function block that encap
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AUDI | Plug (Output) | Buffered received UDINT value |
+| Adapter | Type                                 | Direction     | Description                   |
+| ------- | ------------------------------------ | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::AUDI | Plug (Output) | Buffered received UDINT value |
 
 ## Functionality
 

@@ -13,34 +13,34 @@ The function block **AS_TO_ALR** is a composite function block (FB) that convert
 
 ### **Event Inputs**
 
-| Name | Comment |
-|-------|------------------------------------|
-| E1 | Event from AS adapter (Socket AS_IN) |
+| Name | Comment                              |
+| ---- | ------------------------------------ |
+| E1   | Event from AS adapter (Socket AS_IN) |
 
 ### **Event Outputs**
 
-| Name | Comment |
-|-------|--------------------------------------|
-| E1 | Event for the ALR adapter (Plug ALR_OUT) |
+| Name | Comment                                  |
+| ---- | ---------------------------------------- |
+| E1   | Event for the ALR adapter (Plug ALR_OUT) |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|---------------------------------|
-| D1 | SINT | Data value from the AS adapter (Socket AS_IN) |
+| Name | Data Type | Comment                                       |
+| ---- | --------- | --------------------------------------------- |
+| D1   | SINT      | Data value from the AS adapter (Socket AS_IN) |
 
 ### **Data Outputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------------------------------|
-| D1 | LREAL | Data value for the ALR adapter (Plug ALR_OUT) |
+| Name | Data Type | Comment                                       |
+| ---- | --------- | --------------------------------------------- |
+| D1   | LREAL     | Data value for the ALR adapter (Plug ALR_OUT) |
 
 ### **Adapters**
 
-| Direction | Name | Type | Comment |
-| ---------- | -------- | --------------------------------------- | ---------------------------- |
-| Socket | AS_IN | `adapter::types::unidirectional::AS` | Input Adapter (SINT) |
-| Plug | ALR_OUT | `adapter::types::unidirectional::ALR` | Output Adapter (LREAL) |
+| Direction | Name    | Type                                  | Comment                |
+| --------- | ------- | ------------------------------------- | ---------------------- |
+| Socket    | AS_IN   | `adapter::types::unidirectional::AS`  | Input Adapter (SINT)   |
+| Plug      | ALR_OUT | `adapter::types::unidirectional::ALR` | Output Adapter (LREAL) |
 
 ## Functionality
 

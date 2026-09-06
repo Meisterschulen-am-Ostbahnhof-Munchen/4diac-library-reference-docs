@@ -30,14 +30,14 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** | `IN` | `adapter::types::unidirectional::AUDI` | Eingehendes AUDI‑Signal |
-| **Plug** | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang |
-| **Plug** | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang |
-| **Plug** | `OUT3` | `adapter::types::unidirectional::AUDI` | Dritter Ausgang |
-| **Plug** | `OUT4` | `adapter::types::unidirectional::AUDI` | Vierter Ausgang |
-| **Plug** | `OUT5` | `adapter::types::unidirectional::AUDI` | Fünfter Ausgang |
+| Richtung   | Name   | Typ                                    | Beschreibung            |
+| ---------- | ------ | -------------------------------------- | ----------------------- |
+| **Socket** | `IN`   | `adapter::types::unidirectional::AUDI` | Eingehendes AUDI‑Signal |
+| **Plug**   | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang          |
+| **Plug**   | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang         |
+| **Plug**   | `OUT3` | `adapter::types::unidirectional::AUDI` | Dritter Ausgang         |
+| **Plug**   | `OUT4` | `adapter::types::unidirectional::AUDI` | Vierter Ausgang         |
+| **Plug**   | `OUT5` | `adapter::types::unidirectional::AUDI` | Fünfter Ausgang         |
 
 ## Funktionsweise
 

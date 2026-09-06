@@ -30,10 +30,10 @@ Keine. Die Ausgangsdaten werden über den Plug‑Adapter `AD_OUT` übertragen.
 
 ### **Adapter**
 
-| Richtung | Name    | Typ                                  | Beschreibung                           |
-|----------|---------|--------------------------------------|----------------------------------------|
-| Socket   | ALI_IN  | `adapter::types::unidirectional::ALI` | Eingangsadapter vom Typ LINT           |
-| Plug     | AD_OUT  | `adapter::types::unidirectional::AD`  | Ausgangsadapter vom Typ DWORD          |
+| Richtung | Name   | Typ                                   | Beschreibung                  |
+| -------- | ------ | ------------------------------------- | ----------------------------- |
+| Socket   | ALI_IN | `adapter::types::unidirectional::ALI` | Eingangsadapter vom Typ LINT  |
+| Plug     | AD_OUT | `adapter::types::unidirectional::AD`  | Ausgangsadapter vom Typ DWORD |
 
 ## Funktionsweise
 

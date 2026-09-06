@@ -30,23 +30,23 @@ Keine separaten Datenausgänge. Die Daten werden über die ASR-Adapter **OUT1** 
 
 **Socket (Eingang):**
 
-| Name | Typ | Richtung |
-|------|-----|----------|
-| IN   | `adapter::types::unidirectional::ASR` | Socket |
+| Name | Typ                                   | Richtung |
+| ---- | ------------------------------------- | -------- |
+| IN   | `adapter::types::unidirectional::ASR` | Socket   |
 
 **Plugs (Ausgänge):**
 
-| Name | Typ | Richtung |
-| ------- | ----- | ---------- |
-| OUT1 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT2 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT3 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT4 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT5 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT6 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT7 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT8 | `adapter::types::unidirectional::ASR` | Plug |
-| OUT9 | `adapter::types::unidirectional::ASR` | Plug |
+| Name | Typ                                   | Richtung |
+| ---- | ------------------------------------- | -------- |
+| OUT1 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT2 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT3 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT4 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT5 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT6 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT7 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT8 | `adapter::types::unidirectional::ASR` | Plug     |
+| OUT9 | `adapter::types::unidirectional::ASR` | Plug     |
 
 ## Funktionsweise
 

@@ -73,10 +73,10 @@ Der Baustein ist intern als FB-Netzwerk realisiert und arbeitet nach folgendem A
 
 Da es sich bei `AQ_AX_SEL_AQ` um einen rein daten- und ereignisgesteuerten Kombinationsbaustein ohne eigenen internen Zustandsautomaten (ECC) handelt, lässt sich das Verhalten über folgende logische Tabelle beschreiben:
 
-| Selektor (`G.D1`) | Wert `IN0.D1` | Wert `IN1.D1` | Ausgang (`OUT.D1`) | Verhalten des Ausgangsereignisses (`OUT.E1`) |
-| :---: | :---: | :---: | :---: | :--- |
-| **FALSE** | `Wert_A` | `Wert_B` | **`Wert_A`** | Wird gefeuert, sobald ein Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` auftritt. |
-| **TRUE** | `Wert_A` | `Wert_B` | **`Wert_B`** | Wird gefeuert, sobald ein Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` auftritt. |
+| Selektor (`G.D1`) | Wert `IN0.D1` | Wert `IN1.D1` | Ausgang (`OUT.D1`) | Verhalten des Ausgangsereignisses (`OUT.E1`)                                   |
+| :---------------: | :-----------: | :-----------: | :----------------: | :----------------------------------------------------------------------------- |
+| **FALSE**         | `Wert_A`      | `Wert_B`      | **`Wert_A`**       | Wird gefeuert, sobald ein Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` auftritt. |
+| **TRUE**          | `Wert_A`      | `Wert_B`      | **`Wert_B`**       | Wird gefeuert, sobald ein Ereignis an `IN0.E1`, `IN1.E1` oder `G.E1` auftritt. |
 
 ## Anwendungsszenarien
 

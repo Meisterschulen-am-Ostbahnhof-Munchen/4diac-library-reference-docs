@@ -36,10 +36,10 @@ The FB has no direct data outputs. The output value is provided via the adapter 
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| ------------- | ----- | ---------- | -------------- |
-| **AB_IN** | `adapter::types::unidirectional::AB` | Socket (Input) | BYTE adapter that provides the value to be converted and the start event. |
-| **AI_OUT** | `adapter::types::unidirectional::AI` | Plug (Output) | INT adapter that provides the converted value and the confirmation event. |
+| Name       | Type                                 | Direction      | Description                                                               |
+| ---------- | ------------------------------------ | -------------- | ------------------------------------------------------------------------- |
+| **AB_IN**  | `adapter::types::unidirectional::AB` | Socket (Input) | BYTE adapter that provides the value to be converted and the start event. |
+| **AI_OUT** | `adapter::types::unidirectional::AI` | Plug (Output)  | INT adapter that provides the converted value and the confirmation event. |
 
 ## Functionality
 

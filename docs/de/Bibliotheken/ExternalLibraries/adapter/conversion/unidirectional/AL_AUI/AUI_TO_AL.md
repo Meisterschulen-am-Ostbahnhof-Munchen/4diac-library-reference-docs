@@ -32,9 +32,9 @@ Der Daten-Ausgang wird über den Plug bereitgestellt:
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `AUI` | **AUI_IN** | Eingang (Socket) | Eingangsadapter für den UINT-Wert und das Trigger-Ereignis. |
+| Typ   | Name       | Richtung         | Beschreibung                                                                |
+| ----- | ---------- | ---------------- | --------------------------------------------------------------------------- |
+| `AUI` | **AUI_IN** | Eingang (Socket) | Eingangsadapter für den UINT-Wert und das Trigger-Ereignis.                 |
 | `AL`  | **AL_OUT** | Ausgang (Plug)   | Ausgangsadapter für den konvertierten LWORD-Wert und das Quittungsereignis. |
 
 ## Funktionsweise

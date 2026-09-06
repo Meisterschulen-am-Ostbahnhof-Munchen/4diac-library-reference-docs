@@ -12,14 +12,14 @@ Der **ILOCK_T_FF** ist ein zusammengesetzter Funktionsblock (Composite FB), der 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name | Typ      | Beschreibung                                        |
+| ---- | -------- | --------------------------------------------------- |
 | CLK  | Ereignis | Triggersignal zum Umschalten des Ausgangs (Toggle). |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name | Typ      | Beschreibung                                                                     |
+| ---- | -------- | -------------------------------------------------------------------------------- |
 | EO   | Ereignis | Wird ausgelöst, sobald der interne Set‑/Reset‑Latch seinen Zustand geändert hat. |
 
 ### **Daten-Eingänge**
@@ -28,16 +28,16 @@ Keine Dateneingänge (die Steuerung erfolgt rein über Ereignisse und die Adapte
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name | Typ  | Beschreibung                                |
+| ---- | ---- | ------------------------------------------- |
 | Q    | BOOL | Aktueller Zustand des Flipflops (0 oder 1). |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|-------------|
-| ILOCK_IN | `adapter::types::bidirectional::AE2` | Sockel (Socket) | Empfängt und sendet Lock‑Signale von bzw. an vorgeschaltete Bausteine in der Kette. |
-| ILOCK_OUT| `adapter::types::bidirectional::AE2` | Stecker (Plug)  | Sendet und empfängt Lock‑Signale von bzw. an nachgeschaltete Bausteine. |
+| Name      | Typ                                  | Richtung        | Beschreibung                                                                        |
+| --------- | ------------------------------------ | --------------- | ----------------------------------------------------------------------------------- |
+| ILOCK_IN  | `adapter::types::bidirectional::AE2` | Sockel (Socket) | Empfängt und sendet Lock‑Signale von bzw. an vorgeschaltete Bausteine in der Kette. |
+| ILOCK_OUT | `adapter::types::bidirectional::AE2` | Stecker (Plug)  | Sendet und empfängt Lock‑Signale von bzw. an nachgeschaltete Bausteine.             |
 
 ## Funktionsweise
 
@@ -73,10 +73,10 @@ Der Baustein besteht intern aus einem **E_SWITCH** (Ereignisverzweiger) und eine
 
 Da der Baustein kein eigenes Zustandsdiagramm besitzt, ergeben sich die Zustände aus dem internen **E_SR**:
 
-| Zustand **Q** | Bedeutung im Normalbetrieb | Bedeutung bei aktivem Lock |
-|---------------|----------------------------|-----------------------------|
+| Zustand **Q** | Bedeutung im Normalbetrieb              | Bedeutung bei aktivem Lock                 |
+| ------------- | --------------------------------------- | ------------------------------------------ |
 | 0             | Beim nächsten CLK wird auf 1 getoggelt. | Lock hat Q auf 0 gesetzt und hält es dort. |
-| 1             | Beim nächsten CLK wird auf 0 getoggelt. | Lock setzt Q sofort auf 0 zurück. |
+| 1             | Beim nächsten CLK wird auf 0 getoggelt. | Lock setzt Q sofort auf 0 zurück.          |
 
 Ein aktiver Lock liegt vor, sobald eines der Adapter‑Ereignisse (ILOCK_IN.EO1 oder ILOCK_OUT.EI1) empfangen wurde. Der Lock wird solange gehalten, bis kein Lock‑Ereignis mehr anliegt (die genaue Auflösung hängt von der externen Signalsteuerung ab).
 
@@ -88,11 +88,11 @@ Ein aktiver Lock liegt vor, sobald eines der Adapter‑Ereignisse (ILOCK_IN.EO1 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften | Unterschied zum ILOCK_T_FF |
-| ---------- | --------------- | ---------------------------- |
-| **T‑Flipflop (z.B. `E_TOGGLE`)** | Reine Toggle‑Funktion ohne Sperrlogik. | Fehlende Lock‑/Interlock‑Fähigkeit, kein Adapter‑Interface. |
-| **RS‑Flipflop (z.B. `E_SR`)** | Set‑Reset mit zwei Eingängen, kein Toggle. | Kann mit externer Logik zum Toggle erweitert werden, aber ohne integrierte Lock‑Propagation. |
-| **Einfacher Interlock‑Baustein** | Nur Lock‑Weitergabe, kein Toggle. | Der ILOCK_T_FF kombiniert Toggle und Lock‑Propagation in einem Baustein. |
+| Baustein                         | Eigenschaften                              | Unterschied zum ILOCK_T_FF                                                                   |
+| -------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| **T‑Flipflop (z.B. `E_TOGGLE`)** | Reine Toggle‑Funktion ohne Sperrlogik.     | Fehlende Lock‑/Interlock‑Fähigkeit, kein Adapter‑Interface.                                  |
+| **RS‑Flipflop (z.B. `E_SR`)**    | Set‑Reset mit zwei Eingängen, kein Toggle. | Kann mit externer Logik zum Toggle erweitert werden, aber ohne integrierte Lock‑Propagation. |
+| **Einfacher Interlock‑Baustein** | Nur Lock‑Weitergabe, kein Toggle.          | Der ILOCK_T_FF kombiniert Toggle und Lock‑Propagation in einem Baustein.                     |
 
 ## Fazit
 

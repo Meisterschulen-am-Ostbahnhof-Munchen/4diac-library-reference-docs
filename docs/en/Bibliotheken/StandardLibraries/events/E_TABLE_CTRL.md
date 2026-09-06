@@ -38,11 +38,13 @@ The **E_TABLE_CTRL** is a support function block for E_TABLE according to IEC 61
 
 - On the `INIT` event, the index (CV) is set to 0
 - The first time interval (DTO) is taken from the DT array
+
 1. **Table Control**:
 
 - Each `CLK` event increments CV by 1
 - The next time interval from the DT array is loaded
 - `CLKO` is generated at each step
+
 1. **State Machine** (ECC):
 
 - **START**: Wait state

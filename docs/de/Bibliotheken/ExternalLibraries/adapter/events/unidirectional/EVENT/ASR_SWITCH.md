@@ -12,8 +12,8 @@ Der Funktionsblock **ASR_SWITCH** dient als Demultiplexer für **ASR-Ereignisse*
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datenverbund | Beschreibung |
-|----------|--------------|--------------|
+| Ereignis | Datenverbund | Beschreibung                                                                 |
+| -------- | ------------ | ---------------------------------------------------------------------------- |
 | `EIG`    | `G`          | Setzt den Schaltwert `G` auf den am Eingang `G` anliegenden Booleschen Wert. |
 
 ### **Ereignis-Ausgänge**
@@ -22,9 +22,9 @@ Der Baustein besitzt keine eigenständigen Ereignisausgänge. Die Ausgabe erfolg
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| `G`      | `BOOL`| Schalterposition: `FALSE` → Ereignisse werden an `EO0` weitergeleitet, `TRUE` → an `EO1`. |
+| Variable | Typ    | Beschreibung                                                                              |
+| -------- | ------ | ----------------------------------------------------------------------------------------- |
+| `G`      | `BOOL` | Schalterposition: `FALSE` → Ereignisse werden an `EO0` weitergeleitet, `TRUE` → an `EO1`. |
 
 ### **Daten-Ausgänge**
 
@@ -32,11 +32,11 @@ Keine.
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ                       | Beschreibung |
-|---------|----------|---------------------------|--------------|
+| Adapter | Richtung | Typ                                   | Beschreibung                                            |
+| ------- | -------- | ------------------------------------- | ------------------------------------------------------- |
 | `EI`    | Socket   | `adapter::types::unidirectional::ASR` | Empfang der hereinlaufenden ASR‑Ereignisse (SET/RESET). |
-| `EO0`   | Plug     | `adapter::types::unidirectional::ASR` | Ausgang für den Fall `G = FALSE`. |
-| `EO1`   | Plug     | `adapter::types::unidirectional::ASR` | Ausgang für den Fall `G = TRUE`. |
+| `EO0`   | Plug     | `adapter::types::unidirectional::ASR` | Ausgang für den Fall `G = FALSE`.                       |
+| `EO1`   | Plug     | `adapter::types::unidirectional::ASR` | Ausgang für den Fall `G = TRUE`.                        |
 
 ## Funktionsweise
 
@@ -67,13 +67,13 @@ Der **ASR_SWITCH** wird durch ein eingehendes Ereignis vom Adapter-Socket `EI` o
 
 Die folgende Tabelle fasst die ECC-Zustände und die ausgeführten Aktionen zusammen:
 
-| Zustand       | Beschreibung                                 | Aktion(en)        |
-|---------------|----------------------------------------------|-------------------|
-| `START`       | Warten auf Ereignisse                        | –                 |
-| `G0_SET`      | `EI.SET` bei `G = FALSE`                    | Ausgabe `EO0.SET` |
-| `G1_SET`      | `EI.SET` bei `G = TRUE`                     | Ausgabe `EO1.SET` |
-| `G0_RESET`    | `EI.RESET` bei `G = FALSE`                  | Ausgabe `EO0.RESET` |
-| `G1_RESET`    | `EI.RESET` bei `G = TRUE`                   | Ausgabe `EO1.RESET` |
+| Zustand    | Beschreibung               | Aktion(en)          |
+| ---------- | -------------------------- | ------------------- |
+| `START`    | Warten auf Ereignisse      | –                   |
+| `G0_SET`   | `EI.SET` bei `G = FALSE`   | Ausgabe `EO0.SET`   |
+| `G1_SET`   | `EI.SET` bei `G = TRUE`    | Ausgabe `EO1.SET`   |
+| `G0_RESET` | `EI.RESET` bei `G = FALSE` | Ausgabe `EO0.RESET` |
+| `G1_RESET` | `EI.RESET` bei `G = TRUE`  | Ausgabe `EO1.RESET` |
 
 Alle Zustände (außer `START`) kehren mit einer unbedingten Transition (`1`) zurück zu `START`.
 

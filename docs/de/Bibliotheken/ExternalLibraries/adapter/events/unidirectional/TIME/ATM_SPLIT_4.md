@@ -28,13 +28,13 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::ATM` | IN | Socket | Eingangssignal (ATM) |
-| `adapter::types::unidirectional::ATM` | OUT1 | Plug | Ausgang 1 (identisch zu IN) |
-| `adapter::types::unidirectional::ATM` | OUT2 | Plug | Ausgang 2 (identisch zu IN) |
-| `adapter::types::unidirectional::ATM` | OUT3 | Plug | Ausgang 3 (identisch zu IN) |
-| `adapter::types::unidirectional::ATM` | OUT4 | Plug | Ausgang 4 (identisch zu IN) |
+| Typ                                   | Name | Richtung | Beschreibung                |
+| ------------------------------------- | ---- | -------- | --------------------------- |
+| `adapter::types::unidirectional::ATM` | IN   | Socket   | Eingangssignal (ATM)        |
+| `adapter::types::unidirectional::ATM` | OUT1 | Plug     | Ausgang 1 (identisch zu IN) |
+| `adapter::types::unidirectional::ATM` | OUT2 | Plug     | Ausgang 2 (identisch zu IN) |
+| `adapter::types::unidirectional::ATM` | OUT3 | Plug     | Ausgang 3 (identisch zu IN) |
+| `adapter::types::unidirectional::ATM` | OUT4 | Plug     | Ausgang 4 (identisch zu IN) |
 
 ## Funktionsweise
 

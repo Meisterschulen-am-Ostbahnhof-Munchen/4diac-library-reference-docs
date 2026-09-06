@@ -40,11 +40,11 @@ Dieser Funktionsblock verwendet keine Adapter.
 Bei jedem Eintreffen eines `REQ`-Ereignisses liest der Funktionsblock die aktuellen Werte an den vier booleschen Dateneingängen. Anschließend berechnet er das logische UND dieser vier Werte gemäß der folgenden Wahrheitstabelle:
 
 | IN1 | IN2 | IN3 | IN4 | OUT |
-|:---:|:---:|:---:|:---:|:---:|
-|  0  |  0  |  0  |  0  |  0  |
-|  0  |  0  |  0  |  1  |  0  |
+| :-: | :-: | :-: | :-: | :-: |
+| 0   | 0   | 0   | 0   | 0   |
+| 0   | 0   | 0   | 1   | 0   |
 | ... | ... | ... | ... | ... |
-|  1  |  1  |  1  |  1  |  1  |
+| 1   | 1   | 1   | 1   | 1   |
 
 Das Ergebnis wird am Datenausgang `OUT` gesetzt und gleichzeitig wird das `CNF`-Ereignis ausgelöst, um den Abschluss der Operation zu signalisieren.
 

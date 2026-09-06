@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge vorhanden. Der gelatchte Datenwert wird über den
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
+| Adapter | Richtung         | Typ                                  | Beschreibung                                                       |
+| ------- | ---------------- | ------------------------------------ | ------------------------------------------------------------------ |
 | `I`     | Socket (Eingang) | `adapter::types::unidirectional::AQ` | Liefert den zu latchenden Datenwert sowie das auslösende Ereignis. |
-| `Q`     | Plug (Ausgang) | `adapter::types::unidirectional::AQ` | Gibt den gelatchten Datenwert sowie ein Bestätigungsereignis aus. |
+| `Q`     | Plug (Ausgang)   | `adapter::types::unidirectional::AQ` | Gibt den gelatchten Datenwert sowie ein Bestätigungsereignis aus.  |
 
 Der verwendete Adaptertyp `adapter::types::unidirectional::AQ` stellt eine unidirektionale Verbindung bereit: Vom Socket zum Plug werden jeweils ein Ereignis- und ein Datenkanal übertragen.
 
@@ -54,10 +54,10 @@ Der `AQ_D_FF` arbeitet nach dem Prinzip eines flankengesteuerten D-Latches. Inte
 
 Der `AQ_D_FF` besitzt keinen expliziten Zustandsautomaten. Sein Verhalten lässt sich jedoch durch zwei logische Zustände beschreiben:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| **Warten auf Ereignis** | Der Ausgang `Q` hält den zuletzt gelatchten Wert. Es liegt kein Ereignis an `I` an. |
-| **Übernahme/Ausgabe** | Bei Eintreffen eines Ereignisses an `I` wird der neue Wert von `I` übernommen, an `Q` ausgegeben und ein Ereignis auf `E1` von `Q` generiert. Danach kehrt der Baustein in den Wartezustand zurück. |
+| Zustand                 | Beschreibung                                                                                                                                                                                        |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Warten auf Ereignis** | Der Ausgang `Q` hält den zuletzt gelatchten Wert. Es liegt kein Ereignis an `I` an.                                                                                                                 |
+| **Übernahme/Ausgabe**   | Bei Eintreffen eines Ereignisses an `I` wird der neue Wert von `I` übernommen, an `Q` ausgegeben und ein Ereignis auf `E1` von `Q` generiert. Danach kehrt der Baustein in den Wartezustand zurück. |
 
 ## Anwendungsszenarien
 
@@ -67,11 +67,11 @@ Der `AQ_D_FF` besitzt keinen expliziten Zustandsautomaten. Sein Verhalten lässt
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| `E_D_FF` (direkte IOs) | Gleiche Latch-Funktionalität, aber mit separaten Ereignis- und Dateneingängen/-ausgängen. Keine Adapter. |
-| `E_SR_FF` | Set/Reset-Flipflop mit zwei getrennten Eingangsereignissen. Hier kein Datenwert, sondern binäre Zustände. |
-| `AQ_D_FF` | Ermöglicht die Einbettung der Latch-Funktion in bestehende Adapter-Schnittstellen, ohne zusätzliche Verdrahtung auf FB-Ebene. |
+| Baustein               | Eigenschaften                                                                                                                 |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `E_D_FF` (direkte IOs) | Gleiche Latch-Funktionalität, aber mit separaten Ereignis- und Dateneingängen/-ausgängen. Keine Adapter.                      |
+| `E_SR_FF`              | Set/Reset-Flipflop mit zwei getrennten Eingangsereignissen. Hier kein Datenwert, sondern binäre Zustände.                     |
+| `AQ_D_FF`              | Ermöglicht die Einbettung der Latch-Funktion in bestehende Adapter-Schnittstellen, ohne zusätzliche Verdrahtung auf FB-Ebene. |
 
 ## Fazit
 

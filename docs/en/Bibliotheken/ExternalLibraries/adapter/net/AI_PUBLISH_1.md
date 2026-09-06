@@ -31,9 +31,9 @@ The function block **AI_PUBLISH_1** is a composite function block that encapsula
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AI | Socket (Input) | INT value to be published |
+| Adapter | Type                               | Direction      | Description               |
+| ------- | ---------------------------------- | -------------- | ------------------------- |
+| IN      | adapter::types::unidirectional::AI | Socket (Input) | INT value to be published |
 
 ## Functionality
 

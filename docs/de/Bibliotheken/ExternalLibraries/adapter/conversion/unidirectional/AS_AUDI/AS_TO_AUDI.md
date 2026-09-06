@@ -28,10 +28,10 @@ Nicht vorhanden. Die Datenausgabe erfolgt über den Adapter-Plug **AUDI_OUT**.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| **AS_IN** | `adapter::types::unidirectional::AS` | Socket (Eingang) | SINT-Adapter, der einen Eingangswert (SINT) und ein zugehöriges Ereignis bereitstellt. |
-| **AUDI_OUT** | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | UDINT-Adapter, der den konvertierten Wert (UDINT) und ein Ereignis ausgibt. |
+| Name         | Typ                                    | Richtung         | Beschreibung                                                                           |
+| ------------ | -------------------------------------- | ---------------- | -------------------------------------------------------------------------------------- |
+| **AS_IN**    | `adapter::types::unidirectional::AS`   | Socket (Eingang) | SINT-Adapter, der einen Eingangswert (SINT) und ein zugehöriges Ereignis bereitstellt. |
+| **AUDI_OUT** | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | UDINT-Adapter, der den konvertierten Wert (UDINT) und ein Ereignis ausgibt.            |
 
 Die Adapter enthalten jeweils ein Daten- und ein Ereigniselement:
 

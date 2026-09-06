@@ -40,7 +40,7 @@ Der `XOR_BOOL_2`-Block arbeitet ereignisgesteuert. Bei Eintreffen des Ereignisse
 Die Wahrheitstabelle der Operation ist:
 
 | IN1 | IN2 | OUT |
-|-----|-----|-----|
+| --- | --- | --- |
 | 0   | 0   | 0   |
 | 0   | 1   | 1   |
 | 1   | 0   | 1   |

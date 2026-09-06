@@ -31,8 +31,8 @@ Der Funktionsblock **AQ_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                | Richtung       | Beschreibung                      |
+| ------- | ---------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::AQ | Plug (Ausgang) | Gepufferter empfangener BYTE-Wert |
 
 ## Funktionsweise

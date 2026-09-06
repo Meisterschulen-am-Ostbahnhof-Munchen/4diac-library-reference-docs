@@ -12,36 +12,36 @@ Der Funktionsblock **IA_MSS** stellt einen ISOBUS-Adapter für die maschinensele
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT | EInit | Dienstinitialisierung; wird mit dem Daten-Eingang `QI` ausgelöst. |
+| Ereignis | Typ   | Beschreibung                                                      |
+| -------- | ----- | ----------------------------------------------------------------- |
+| INIT     | EInit | Dienstinitialisierung; wird mit dem Daten-Eingang `QI` ausgelöst. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INITO | EInit | Bestätigung der Initialisierung; liefert die Ausgangsdaten `QO` und `STATUS`. |
+| Ereignis | Typ   | Beschreibung                                                                  |
+| -------- | ----- | ----------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der Initialisierung; liefert die Ausgangsdaten `QO` und `STATUS`. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| QI | BOOL | Qualifizierer für den Initialisierungseingang. |
+| Variable | Typ  | Beschreibung                                   |
+| -------- | ---- | ---------------------------------------------- |
+| QI       | BOOL | Qualifizierer für den Initialisierungseingang. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-|----------|-----|--------------|
-| QO | BOOL | Qualifizierer für den Initialisierungsausgang. |
-| STATUS | STRING | Statusmeldung der Initialisierung. |
+| Variable | Typ    | Beschreibung                                   |
+| -------- | ------ | ---------------------------------------------- |
+| QO       | BOOL   | Qualifizierer für den Initialisierungsausgang. |
+| STATUS   | STRING | Statusmeldung der Initialisierung.             |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-| --------- | ----- | -------------- |
-| SPEED | adapter::types::unidirectional::AUI | Ausgang für die maschinenselektierte Geschwindigkeit (Wert vom Typ `AUI`). |
-| DISTANCE | adapter::types::unidirectional::AUDI | Ausgang für die maschinenselektierte Distanz (Wert vom Typ `AUDI`). |
-| TIMEOUT | adapter::types::unidirectional::AX | Ausgang für den Timeout-Status (Wert vom Typ `AX`). |
+| Adapter  | Typ                                  | Beschreibung                                                               |
+| -------- | ------------------------------------ | -------------------------------------------------------------------------- |
+| SPEED    | adapter::types::unidirectional::AUI  | Ausgang für die maschinenselektierte Geschwindigkeit (Wert vom Typ `AUI`). |
+| DISTANCE | adapter::types::unidirectional::AUDI | Ausgang für die maschinenselektierte Distanz (Wert vom Typ `AUDI`).        |
+| TIMEOUT  | adapter::types::unidirectional::AX   | Ausgang für den Timeout-Status (Wert vom Typ `AX`).                        |
 
 ## Funktionsweise
 
@@ -62,11 +62,11 @@ Der Adapter stellt also eine saubere Trennung zwischen der ISOBUS-Kommunikation 
 
 Da der Baustein keinen eigenen Ausführungszustand (ECC) besitzt, ergibt sich der Zustand aus dem Zusammenspiel von Eingangs- und Ausgangsereignissen:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **Nicht initialisiert** | Nach dem Systemstart oder nach einer fehlgeschlagenen Initialisierung. `INIT` kann ausgelöst werden. |
-| **Initialisiert** | Nach erfolgreichem Durchlauf von `INIT` → `INITO` mit gesetztem `QO`. Die Adapter liefern gültige Werte. |
-| **Fehler/Timeout** | Falls die interne Initialisierung fehlschlägt oder ein Timeout erkannt wird, wird dies über `STATUS` und den `TIMEOUT`-Adapter signalisiert. |
+| Zustand                 | Beschreibung                                                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nicht initialisiert** | Nach dem Systemstart oder nach einer fehlgeschlagenen Initialisierung. `INIT` kann ausgelöst werden.                                         |
+| **Initialisiert**       | Nach erfolgreichem Durchlauf von `INIT` → `INITO` mit gesetztem `QO`. Die Adapter liefern gültige Werte.                                     |
+| **Fehler/Timeout**      | Falls die interne Initialisierung fehlschlägt oder ein Timeout erkannt wird, wird dies über `STATUS` und den `TIMEOUT`-Adapter signalisiert. |
 
 ## Anwendungsszenarien
 

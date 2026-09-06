@@ -12,34 +12,34 @@ Der Funktionsblock **AS_TO_AX** ist ein Composite-Baustein, der einen SINT-Adapt
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name     | Typ   | Beschreibung                                                                          |
+| -------- | ----- | ------------------------------------------------------------------------------------- |
 | AS_IN.E1 | Event | Empfängt das Triggersignal vom angeschlossenen AS-Adapter zur Verarbeitung der Daten. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name      | Typ   | Beschreibung                                                                                            |
+| --------- | ----- | ------------------------------------------------------------------------------------------------------- |
 | AX_OUT.E1 | Event | Wird nach erfolgreicher Konvertierung gesendet; signalisiert, dass der BOOL-Wert am AX-Adapter anliegt. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name     | Typ  | Beschreibung                                                       |
+| -------- | ---- | ------------------------------------------------------------------ |
 | AS_IN.D1 | SINT | Empfängt den SINT-Wert, der auf Ungleichheit zu Null geprüft wird. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|-------------|
+| Name      | Typ  | Beschreibung                                                                                          |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------- |
 | AX_OUT.D1 | BOOL | Gibt das Ergebnis des Vergleichs aus: `TRUE`, wenn der Eingangswert ungleich Null ist, sonst `FALSE`. |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | ------------- |
-| AS_IN | adapter::types::unidirectional::AS | Socket (Input) | SINT-Adapter für den Eingangswert und das zugehörige Ereignis. |
-| AX_OUT | adapter::types::unidirectional::AX | Plug (Output) | BOOL-Adapter für den Ausgabewert und das zugehörige Ereignis. |
+| Name   | Typ                                | Richtung       | Beschreibung                                                   |
+| ------ | ---------------------------------- | -------------- | -------------------------------------------------------------- |
+| AS_IN  | adapter::types::unidirectional::AS | Socket (Input) | SINT-Adapter für den Eingangswert und das zugehörige Ereignis. |
+| AX_OUT | adapter::types::unidirectional::AX | Plug (Output)  | BOOL-Adapter für den Ausgabewert und das zugehörige Ereignis.  |
 
 ## Funktionsweise
 

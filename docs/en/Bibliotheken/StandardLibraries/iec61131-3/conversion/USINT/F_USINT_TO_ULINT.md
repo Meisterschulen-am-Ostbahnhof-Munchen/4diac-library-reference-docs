@@ -10,7 +10,7 @@ The function block `F_USINT_TO_ULINT` converts a `USINT` value (8-bit unsigned i
 - `IN` (USINT): The input value to be converted.
 - `OUT` (ULINT): The converted output value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

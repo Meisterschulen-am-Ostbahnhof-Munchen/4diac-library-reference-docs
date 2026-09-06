@@ -28,10 +28,10 @@ Der **ALI_TO_AUS** ist ein zusammengesetzter (Composite) Funktionsbaustein nach 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| **Socket (Eingang)** | ALI_IN | adapter::types::unidirectional::ALI | Empfängt den LINT-Datenwert und das zugehörige Ereignis |
-| **Plug (Ausgang)**  | AUS_OUT | adapter::types::unidirectional::AUS   | Stellt den konvertierten USINT-Wert und das Bestätigungsereignis bereit |
+| Richtung             | Name    | Typ                                 | Beschreibung                                                            |
+| -------------------- | ------- | ----------------------------------- | ----------------------------------------------------------------------- |
+| **Socket (Eingang)** | ALI_IN  | adapter::types::unidirectional::ALI | Empfängt den LINT-Datenwert und das zugehörige Ereignis                 |
+| **Plug (Ausgang)**   | AUS_OUT | adapter::types::unidirectional::AUS | Stellt den konvertierten USINT-Wert und das Bestätigungsereignis bereit |
 
 ## Funktionsweise
 

@@ -12,22 +12,22 @@ Der Funktionsblock `AD_FIELDBUS_DWORD_TO_SIGNAL_SCALED` dient der Aufbereitung e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT | EInit | Initialisierungsanforderung für den gesamten Baustein (Weiterleitung an internen Kernbaustein) |
+| Ereignis | Typ   | Beschreibung                                                                                   |
+| -------- | ----- | ---------------------------------------------------------------------------------------------- |
+| INIT     | EInit | Initialisierungsanforderung für den gesamten Baustein (Weiterleitung an internen Kernbaustein) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INITO | EInit | Initialisierungsbestätigung nach erfolgreicher Initialisierung |
+| Ereignis | Typ   | Beschreibung                                                   |
+| -------- | ----- | -------------------------------------------------------------- |
+| INITO    | EInit | Initialisierungsbestätigung nach erfolgreicher Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Initialwert | Beschreibung |
-|------|----------|-------------|--------------|
-| SCALE | LREAL | 1.0 | Skalierungsfaktor, mit dem der Eingangswert multipliziert wird |
-| OFFSET | DINT | 0 | Ganzzahliger Offset, der nach der Skalierung addiert wird |
+| Name   | Datentyp | Initialwert | Beschreibung                                                   |
+| ------ | -------- | ----------- | -------------------------------------------------------------- |
+| SCALE  | LREAL    | 1.0         | Skalierungsfaktor, mit dem der Eingangswert multipliziert wird |
+| OFFSET | DINT     | 0           | Ganzzahliger Offset, der nach der Skalierung addiert wird      |
 
 ### **Daten-Ausgänge**
 
@@ -35,11 +35,11 @@ Der Baustein besitzt keine direkten Datenausgänge. Alle Ausgangsdaten werden ü
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| IN | AD (unidirektional) | Socket | Eingangsadapter für den DWORD-Wert (Feldbussignal) |
-| OUT | ALR (unidirektional) | Plug | Ausgangsadapter für den skalierten Analogwert |
-| VALID | AX (unidirektional) | Plug | Ausgangsadapter für die Signalvalidität (TRUE = gültig) |
+| Name  | Typ                  | Richtung | Beschreibung                                            |
+| ----- | -------------------- | -------- | ------------------------------------------------------- |
+| IN    | AD (unidirektional)  | Socket   | Eingangsadapter für den DWORD-Wert (Feldbussignal)      |
+| OUT   | ALR (unidirektional) | Plug     | Ausgangsadapter für den skalierten Analogwert           |
+| VALID | AX (unidirektional)  | Plug     | Ausgangsadapter für die Signalvalidität (TRUE = gültig) |
 
 ## Funktionsweise
 

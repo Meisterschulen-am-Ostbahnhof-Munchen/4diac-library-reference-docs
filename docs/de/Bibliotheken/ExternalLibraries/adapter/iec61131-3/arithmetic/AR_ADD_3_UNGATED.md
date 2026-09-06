@@ -30,12 +30,12 @@ Keine direkten Datenausgänge. Das Ergebnis wird über einen Adapter-Ausgang ber
 
 ### **Adapter**
 
-| Richtung  | Name | Typ                                 | Kommentar       |
-|-----------|------|--------------------------------------|-----------------|
-| Sockets   | IN1  | `adapter::types::unidirectional::AR` | ADD input 1     |
-| Sockets   | IN2  | `adapter::types::unidirectional::AR` | ADD input 2     |
-| Sockets   | IN3  | `adapter::types::unidirectional::AR` | ADD input 3     |
-| Plugs     | OUT  | `adapter::types::unidirectional::AR` | ADD result      |
+| Richtung | Name | Typ                                  | Kommentar   |
+| -------- | ---- | ------------------------------------ | ----------- |
+| Sockets  | IN1  | `adapter::types::unidirectional::AR` | ADD input 1 |
+| Sockets  | IN2  | `adapter::types::unidirectional::AR` | ADD input 2 |
+| Sockets  | IN3  | `adapter::types::unidirectional::AR` | ADD input 3 |
+| Plugs    | OUT  | `adapter::types::unidirectional::AR` | ADD result  |
 
 ## Funktionsweise
 

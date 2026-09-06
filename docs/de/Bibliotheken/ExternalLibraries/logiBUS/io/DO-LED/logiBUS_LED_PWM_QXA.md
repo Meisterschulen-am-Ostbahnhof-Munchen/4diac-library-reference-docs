@@ -12,37 +12,37 @@ Der Funktionsblock `logiBUS_LED_PWM_QXA` ist ein Composite-Baustein zur Steuerun
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit Variablen | Beschreibung |
-|----------|-----|---------------|--------------|
+| Ereignis | Typ   | Mit Variablen                    | Beschreibung                                                           |
+| -------- | ----- | -------------------------------- | ---------------------------------------------------------------------- |
 | `INIT`   | EInit | `QI`, `PARAMS`, `Output`, `FREQ` | Service-Initialisierung; startet den FB mit den angegebenen Parametern |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit Variablen | Beschreibung |
-|----------|-----|---------------|--------------|
-| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der erfolgreichen Initialisierung |
+| Ereignis | Typ   | Mit Variablen  | Beschreibung                                                                            |
+| -------- | ----- | -------------- | --------------------------------------------------------------------------------------- |
+| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der erfolgreichen Initialisierung                                           |
 | `CNF`    | Event | `QO`, `STATUS` | Bestätigung eines angeforderten Dienstes (z. B. nach Datenanforderung über den Adapter) |
 
 ### **Daten-Eingänge**
 
-| Variable   | Typ                                  | Initialwert  | Beschreibung |
-|------------|--------------------------------------|--------------|--------------|
-| `QI`       | BOOL                                 | –            | Qualifikator für den Ereigniseingang (Aktivierung) |
-| `PARAMS`   | STRING                               | –            | Service-Parameter für die Bus-Konfiguration |
-| `Output`   | `logiBUS::io::DQ::logiBUS_DO_S`      | `Invalid`    | Auswahl des physikalischen Ausgangs Q1..Q8 |
-| `FREQ`     | UINT                                 | `LED_OFF`    | Frequenz und Priorität der LED-PWM (z. B. aus Enumeration `LED_FREQ`) |
+| Variable | Typ                             | Initialwert | Beschreibung                                                          |
+| -------- | ------------------------------- | ----------- | --------------------------------------------------------------------- |
+| `QI`     | BOOL                            | –           | Qualifikator für den Ereigniseingang (Aktivierung)                    |
+| `PARAMS` | STRING                          | –           | Service-Parameter für die Bus-Konfiguration                           |
+| `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Auswahl des physikalischen Ausgangs Q1..Q8                            |
+| `FREQ`   | UINT                            | `LED_OFF`   | Frequenz und Priorität der LED-PWM (z. B. aus Enumeration `LED_FREQ`) |
 
 ### **Daten-Ausgänge**
 
-| Variable   | Typ    | Beschreibung |
-|------------|--------|--------------|
-| `QO`       | BOOL   | Qualifikator für den Ereignisausgang (Aktivierungsquittung) |
-| `STATUS`   | STRING | Dienststatus (Fehler-/Erfolgsmeldung) |
+| Variable | Typ    | Beschreibung                                                |
+| -------- | ------ | ----------------------------------------------------------- |
+| `QO`     | BOOL   | Qualifikator für den Ereignisausgang (Aktivierungsquittung) |
+| `STATUS` | STRING | Dienststatus (Fehler-/Erfolgsmeldung)                       |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
+| Adapter | Typ                                  | Beschreibung                                                                                    |
+| ------- | ------------------------------------ | ----------------------------------------------------------------------------------------------- |
 | `OUT`   | `adapter::types::unidirectional::AX` | Ausgangs-Adapter für die Datenübertragung zur logiBUS-Ressource (über Event `E1` und Data `D1`) |
 
 ## Funktionsweise

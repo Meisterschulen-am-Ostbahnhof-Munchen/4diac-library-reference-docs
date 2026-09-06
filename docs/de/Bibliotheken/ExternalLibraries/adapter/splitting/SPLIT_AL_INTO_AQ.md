@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Die 2‑Bit‑Datenwerte werden über die ausgeh
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AL` | LWORD‑Eingang (64 Bit) |
-| Plug (Ausgang) | `QUARTER_BYTE_00` … `QUARTER_BYTE_31` | `adapter::types::unidirectional::AQ` | 32 Ausgänge, jeder liefert einen 2‑Bit‑Wert (Quarter) |
+| Richtung         | Name                                  | Typ                                  | Kommentar                                             |
+| ---------------- | ------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
+| Socket (Eingang) | `IN`                                  | `adapter::types::unidirectional::AL` | LWORD‑Eingang (64 Bit)                                |
+| Plug (Ausgang)   | `QUARTER_BYTE_00` … `QUARTER_BYTE_31` | `adapter::types::unidirectional::AQ` | 32 Ausgänge, jeder liefert einen 2‑Bit‑Wert (Quarter) |
 
 Jeder Adapter verfügt über je einen Ereignis‑ und einen Datenkanal (`E1`, `D1`).  
 
@@ -72,11 +72,11 @@ Jedes Flipflop speichert den letzten geladenen 2‑Bit‑Wert. Ein neues Eingang
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ausgabeformat | Anzahl Ausgänge | Synchronisation |
-| ---------- | --------------- | ---------------- | ----------------- |
-| `SPLIT_AL_INTO_AQ` | 2‑Bit‑AQ‑Adapter | 32 | Gemeinsames Ereignis |
-| `SPLIT_LWORD_INTO_BYTES` (hypothetisch) | 8‑Bit‑Adapter | 8 | Ereignis |
-| `SPLIT_LWORD_INTO_WORDS` (hypothetisch) | 16‑Bit‑Adapter | 4 | Ereignis |
+| Baustein                                | Ausgabeformat    | Anzahl Ausgänge | Synchronisation      |
+| --------------------------------------- | ---------------- | --------------- | -------------------- |
+| `SPLIT_AL_INTO_AQ`                      | 2‑Bit‑AQ‑Adapter | 32              | Gemeinsames Ereignis |
+| `SPLIT_LWORD_INTO_BYTES` (hypothetisch) | 8‑Bit‑Adapter    | 8               | Ereignis             |
+| `SPLIT_LWORD_INTO_WORDS` (hypothetisch) | 16‑Bit‑Adapter   | 4               | Ereignis             |
 
 Der vorliegende Baustein ist speziell für die feine Granularität von 2‑Bit‑Segmenten optimiert und setzt dabei auf die ereignisgetriebene IEC‑61499‑Adaptertechnik. Der Hauptunterschied zu einfacheren Split‑Bausteinen liegt in der Zahl der Ausgänge (32 statt typischen 4 oder 8) sowie der Verwendung von Flipflops zur stabilen Ausgabe.
 

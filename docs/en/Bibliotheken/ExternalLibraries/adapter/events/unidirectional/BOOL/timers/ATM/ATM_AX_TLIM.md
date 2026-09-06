@@ -12,8 +12,8 @@ The function block **ATM_AX_TLIM** is a standardized time monitoring module (tim
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|--------|----------------------------------------|
+| Name | Type  | Comment                          |
+| ---- | ----- | -------------------------------- |
 | EIPT | Event | Set Preset Time (non-triggering) |
 
 ### **Event Outputs**
@@ -30,11 +30,11 @@ Similarly, there are no direct data outputs. The result (Boolean value Q) is out
 
 ### **Adapters**
 
-| Name | Type | Direction | Comment |
-| ------------- | -------- | ----------- | -------------------------------------- |
-| IN | AX | Input | Boolean Input (Adapter) |
-| PT | ATM | Input | Time Limit (Adapter) |
-| Q | AX | Output | Boolean Output (Adapter) |
+| Name | Type | Direction | Comment                  |
+| ---- | ---- | --------- | ------------------------ |
+| IN   | AX   | Input     | Boolean Input (Adapter)  |
+| PT   | ATM  | Input     | Time Limit (Adapter)     |
+| Q    | AX   | Output    | Boolean Output (Adapter) |
 
 ## Functionality
 
@@ -58,10 +58,10 @@ The function block internally uses the standard function block **E_TLIM** and wr
 
 The function block (FB) implicitly cycles through the following states:
 
-| State | Description |
-| ------------ | -------------------------------------------------------------- |
-| **Idle** | IN = FALSE, Q = FALSE, Timer is not running. |
-| **Timing** | IN = TRUE, Q = TRUE, Timer is running. |
+| State       | Description                                                     |
+| ----------- | --------------------------------------------------------------- |
+| **Idle**    | IN = FALSE, Q = FALSE, Timer is not running.                    |
+| **Timing**  | IN = TRUE, Q = TRUE, Timer is running.                          |
 | **Timeout** | IN = TRUE, Timer expires, Q = FALSE (remains until IN = FALSE). |
 
 A switch back to **Idle** occurs as soon as IN becomes FALSE. The **Timeout** state is only reached when the timeout has occurred.

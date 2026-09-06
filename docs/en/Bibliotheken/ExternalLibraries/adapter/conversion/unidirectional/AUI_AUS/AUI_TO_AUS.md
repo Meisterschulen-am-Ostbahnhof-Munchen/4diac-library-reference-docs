@@ -13,7 +13,7 @@ No separate data inputs. Data input is via the connected adapters.
 
 No separate data outputs. Data output is via the connected adapters.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -27,10 +27,10 @@ No separate data outputs. Data output is via the connected adapters.
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ---------- | ------------------------------------- | ---------------------------------- | ------------------------------------------- |
-| Socket | **AUI_IN** | adapter::types::unidirectional::AUI | UINT input adapter (source) |
-| Plug | **AUS_OUT** | adapter::types::unidirectional::AUS | USINT output adapter (destination) |
+| Direction | Name        | Type                                | Description                        |
+| --------- | ----------- | ----------------------------------- | ---------------------------------- |
+| Socket    | **AUI_IN**  | adapter::types::unidirectional::AUI | UINT input adapter (source)        |
+| Plug      | **AUS_OUT** | adapter::types::unidirectional::AUS | USINT output adapter (destination) |
 
 The socket `AUI_IN` accepts the UINT value (16-bit unsigned) and the corresponding event signal. The plug `AUS_OUT` outputs the converted USINT value (8 unsigned bits) along with the corresponding event.
 

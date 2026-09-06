@@ -12,8 +12,8 @@ Der Funktionsblock `SPLIT_AB_INTO_AQ` dient dazu, ein über einen `AB`‑Adapter
 
 ### **Ereignis-Eingänge**
 
-| Name    | Beschreibung |
-|---------|--------------|
+| Name    | Beschreibung                                                         |
+| ------- | -------------------------------------------------------------------- |
 | `IN.E1` | Ereignis am Socket löst die Zerlegung und Ausgabe der Quartette aus. |
 
 ### **Ereignis-Ausgänge**
@@ -22,8 +22,8 @@ Keine direkten Ereignisausgänge; die Ausgabe erfolgt über die Ereignisse der a
 
 ### **Daten-Eingänge**
 
-| Name    | Beschreibung |
-|---------|--------------|
+| Name    | Beschreibung                                                                 |
+| ------- | ---------------------------------------------------------------------------- |
 | `IN.D1` | Das eingehende Datenbyte (Typ: BYTE), das in vier Quartette aufgeteilt wird. |
 
 ### **Daten-Ausgänge**
@@ -32,13 +32,13 @@ Keine direkten Datenausgänge; die Quartette werden über die Daten‑Schnittste
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| -------------------- | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AB` | Socket (Eingang) | Empfängt das zu zerlegende Byte inkl. Ereignis. |
-| `QUARTER_BYTE_00` | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | Gibt das Quartett 0 (niederwertigste 2 Bits) aus. |
-| `QUARTER_BYTE_01` | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | Gibt das Quartett 1 aus. |
-| `QUARTER_BYTE_02` | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | Gibt das Quartett 2 aus. |
-| `QUARTER_BYTE_03` | `adapter::types::unidirectional::AQ` | Plug (Ausgang) | Gibt das Quartett 3 (höchstwertigste 2 Bits) aus. |
+| Name              | Typ                                  | Richtung         | Beschreibung                                      |
+| ----------------- | ------------------------------------ | ---------------- | ------------------------------------------------- |
+| `IN`              | `adapter::types::unidirectional::AB` | Socket (Eingang) | Empfängt das zu zerlegende Byte inkl. Ereignis.   |
+| `QUARTER_BYTE_00` | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | Gibt das Quartett 0 (niederwertigste 2 Bits) aus. |
+| `QUARTER_BYTE_01` | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | Gibt das Quartett 1 aus.                          |
+| `QUARTER_BYTE_02` | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | Gibt das Quartett 2 aus.                          |
+| `QUARTER_BYTE_03` | `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | Gibt das Quartett 3 (höchstwertigste 2 Bits) aus. |
 
 ## Funktionsweise
 

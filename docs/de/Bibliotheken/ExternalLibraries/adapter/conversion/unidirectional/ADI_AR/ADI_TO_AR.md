@@ -28,10 +28,10 @@ Der Funktionsblock **ADI_TO_AR** ist ein Composite-Baustein, der einen DINT-Adap
 
 ### **Adapter**
 
-| Adapter | Rolle | Typ | Beschreibung |
-|---------|-------|-----|--------------|
-| ADI_IN | Socket | adapter::types::unidirectional::ADI | Unidirektionaler DINT-Adapter als Eingangsschnittstelle. |
-| AR_OUT | Plug | adapter::types::unidirectional::AR | Unidirektionaler REAL-Adapter als Ausgangsschnittstelle. |
+| Adapter | Rolle  | Typ                                 | Beschreibung                                             |
+| ------- | ------ | ----------------------------------- | -------------------------------------------------------- |
+| ADI_IN  | Socket | adapter::types::unidirectional::ADI | Unidirektionaler DINT-Adapter als Eingangsschnittstelle. |
+| AR_OUT  | Plug   | adapter::types::unidirectional::AR  | Unidirektionaler REAL-Adapter als Ausgangsschnittstelle. |
 
 ## Funktionsweise
 
@@ -58,12 +58,12 @@ Der gesamte Vorgang erfolgt synchron und ohne Zwischenspeicherung – jede erfol
 
 Der Baustein besitzt keine eigene Zustandsmaschine. Der Ablauf lässt sich als einfacher Schritt beschreiben:
 
-| Schritt | Aktion |
-| --------- | -------- |
-| 1 | Warten auf Ereignis an **ADI_IN.E1** |
-| 2 | Konvertierung des Datenwerts von DINT nach REAL |
-| 3 | Ausgabe des konvertierten Werts an **AR_OUT.D1** und Ereignis an **AR_OUT.E1** |
-| 4 | Rückkehr zu Schritt 1 |
+| Schritt | Aktion                                                                         |
+| ------- | ------------------------------------------------------------------------------ |
+| 1       | Warten auf Ereignis an **ADI_IN.E1**                                           |
+| 2       | Konvertierung des Datenwerts von DINT nach REAL                                |
+| 3       | Ausgabe des konvertierten Werts an **AR_OUT.D1** und Ereignis an **AR_OUT.E1** |
+| 4       | Rückkehr zu Schritt 1                                                          |
 
 ## Anwendungsszenarien
 

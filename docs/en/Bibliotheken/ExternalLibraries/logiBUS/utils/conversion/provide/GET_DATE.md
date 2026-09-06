@@ -12,28 +12,28 @@ The **GET_DATE** function block reads a DATE value from an InOut variable and pr
 
 ### **Event Inputs**
 
-| Name | Type | Comment | With Variables |
-|------|-----|-----------|----------------|
-| REQ | Event | Normal Execution Request | IN |
+| Name | Type  | Comment                  | With Variables |
+| ---- | ----- | ------------------------ | -------------- |
+| REQ  | Event | Normal Execution Request | IN             |
 
 ### **Event Outputs**
 
-| Name | Type | Comment | With Variables |
-|------|-----|-----------|----------------|
-| CNF | Event | Execution Confirmation | OUT, IN |
+| Name | Type  | Comment                | With Variables |
+| ---- | ----- | ---------------------- | -------------- |
+| CNF  | Event | Execution Confirmation | OUT, IN        |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| IN | DATE | Source Variable (InOut) |
+| Name | Type | Comment                 |
+| ---- | ---- | ----------------------- |
+| IN   | DATE | Source Variable (InOut) |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-| ------ | ----- | ----------- |
-| OUT | DATE | Buffered Output Value |
-| IN | DATE | Source Variable (InOut) – also output with CNF |
+| Name | Type | Comment                                        |
+| ---- | ---- | ---------------------------------------------- |
+| OUT  | DATE | Buffered Output Value                          |
+| IN   | DATE | Source Variable (InOut) – also output with CNF |
 
 ### **Adapters**
 

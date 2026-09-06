@@ -12,9 +12,9 @@ Der Funktionsblock **ATM_AX_TLIM** ist ein standardisierter Zeitüberwachungsbau
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                              |
-|-------|--------|----------------------------------------|
-| EIPT  | Event  | Set Preset Time (nicht auslösend)      |
+| Name | Typ   | Kommentar                         |
+| ---- | ----- | --------------------------------- |
+| EIPT | Event | Set Preset Time (nicht auslösend) |
 
 ### **Ereignis-Ausgänge**
 
@@ -30,11 +30,11 @@ Analog dazu gibt es keine direkten Datenausgänge. Das Resultat (boolescher Wert
 
 ### **Adapter**
 
-| Bezeichnung | Typ    | Richtung  | Kommentar                            |
-|-------------|--------|-----------|--------------------------------------|
-| IN          | AX     | Eingang   | Boolescher Eingang (Adapter)         |
-| PT          | ATM    | Eingang   | Zeitgrenze (Adapter)                 |
-| Q           | AX     | Ausgang   | Boolescher Ausgang (Adapter)         |
+| Bezeichnung | Typ | Richtung | Kommentar                    |
+| ----------- | --- | -------- | ---------------------------- |
+| IN          | AX  | Eingang  | Boolescher Eingang (Adapter) |
+| PT          | ATM | Eingang  | Zeitgrenze (Adapter)         |
+| Q           | AX  | Ausgang  | Boolescher Ausgang (Adapter) |
 
 ## Funktionsweise
 
@@ -59,11 +59,11 @@ Der Ausgangsadapter **Q** gibt auf seinem `E1`-Port ein Ereignis aus, sobald sic
 
 Der FB durchläuft implizit folgende Zustände:
 
-| Zustand    | Beschreibung                                                  |
-|------------|--------------------------------------------------------------|
-| **Idle**   | IN = FALSE, Q = FALSE, Timer läuft nicht.                    |
-| **Timing** | IN = TRUE, Q = TRUE, Timer läuft.                            |
-| **Timeout**| IN = TRUE, Timer abgelaufen, Q = FALSE (bleibt bis IN = FALSE). |
+| Zustand     | Beschreibung                                                    |
+| ----------- | --------------------------------------------------------------- |
+| **Idle**    | IN = FALSE, Q = FALSE, Timer läuft nicht.                       |
+| **Timing**  | IN = TRUE, Q = TRUE, Timer läuft.                               |
+| **Timeout** | IN = TRUE, Timer abgelaufen, Q = FALSE (bleibt bis IN = FALSE). |
 
 Ein Wechsel zurück nach **Idle** erfolgt, sobald IN auf FALSE geht. Der Zustand **Timeout** wird nur erreicht, wenn die Zeitüberschreitung eingetreten ist.
 

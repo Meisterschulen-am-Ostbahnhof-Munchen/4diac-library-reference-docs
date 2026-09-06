@@ -32,10 +32,10 @@ Die Schnittstelle des Bausteins besteht ausschließlich aus Adaptern, die sowohl
 
 ### **Adapter**
 
-| Adapter | Name | Richtung | Beschreibung |
-|---------|------|----------|--------------|
-| AR  | AR_IN | Socket (Eingang)  | Unidirektionaler REAL‑Adapter, der das Eingangssignal bereitstellt. |
-| ADI | ADI_OUT | Plug (Ausgang) | Unidirektionaler DINT‑Adapter, der das konvertierte Signal weitergibt. |
+| Adapter | Name    | Richtung         | Beschreibung                                                           |
+| ------- | ------- | ---------------- | ---------------------------------------------------------------------- |
+| AR      | AR_IN   | Socket (Eingang) | Unidirektionaler REAL‑Adapter, der das Eingangssignal bereitstellt.    |
+| ADI     | ADI_OUT | Plug (Ausgang)   | Unidirektionaler DINT‑Adapter, der das konvertierte Signal weitergibt. |
 
 ## Funktionsweise
 

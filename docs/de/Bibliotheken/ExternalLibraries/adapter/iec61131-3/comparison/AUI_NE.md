@@ -14,8 +14,8 @@ Der Funktionsblock `AUI_NE` realisiert einen Ungleich-Vergleich (not equal) für
 
 Der FB besitzt keine direkten Ereignis-Eingänge. Ereignisse werden über die **Socket-Adapter** `IN1` und `IN2` empfangen:
 
-| Adapter | Ereignis | Beschreibung |
-|---------|----------|--------------|
+| Adapter | Ereignis                         | Beschreibung                                               |
+| ------- | -------------------------------- | ---------------------------------------------------------- |
 | `IN1`   | Ereignis über Adapter-Eingang E1 | Startet den Vergleich, wenn der Wert an `IN1` bereitsteht. |
 | `IN2`   | Ereignis über Adapter-Eingang E1 | Startet den Vergleich, wenn der Wert an `IN2` bereitsteht. |
 
@@ -25,17 +25,17 @@ Beide Ereignisse führen zur Aktivierung des internen `F_NE`-Bausteins.
 
 Der FB besitzt keine direkten Ereignis-Ausgänge. Das Ergebnis wird über den **Plug-Adapter** `OUT` ausgegeben:
 
-| Adapter | Ereignis | Beschreibung |
-|---------|----------|--------------|
+| Adapter | Ereignis                         | Beschreibung                                                                    |
+| ------- | -------------------------------- | ------------------------------------------------------------------------------- |
 | `OUT`   | Ereignis über Adapter-Ausgang E1 | Zeigt an, dass der Vergleich abgeschlossen ist und der Ergebniswert gültig ist. |
 
 ### **Daten-Eingänge**
 
 Daten werden ebenfalls über die Socket-Adapter bereitgestellt:
 
-| Adapter | Datenpunkt | Typ | Beschreibung |
-|---------|------------|-----|--------------|
-| `IN1`   | D1         | ANY (über AUI) | Erster Vergleichswert |
+| Adapter | Datenpunkt | Typ            | Beschreibung           |
+| ------- | ---------- | -------------- | ---------------------- |
+| `IN1`   | D1         | ANY (über AUI) | Erster Vergleichswert  |
 | `IN2`   | D2         | ANY (über AUI) | Zweiter Vergleichswert |
 
 Die genauen Datentypen werden durch die verwendete Adapter-Instanz (`adapter::types::unidirectional::AUI`) festgelegt.
@@ -44,17 +44,17 @@ Die genauen Datentypen werden durch die verwendete Adapter-Instanz (`adapter::ty
 
 Der Ergebniswert wird über den Plug-Adapter ausgegeben:
 
-| Adapter | Datenpunkt | Typ | Beschreibung |
-|---------|------------|-----|--------------|
+| Adapter | Datenpunkt | Typ            | Beschreibung                           |
+| ------- | ---------- | -------------- | -------------------------------------- |
 | `OUT`   | D1         | BOOL (über AX) | `TRUE`, wenn IN1 ≠ IN2; `FALSE` sonst. |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `IN1`   | Socket   | `adapter::types::unidirectional::AUI` | Aufnehmender Adapter für den ersten Eingangswert. |
+| Adapter | Richtung | Typ                                   | Beschreibung                                       |
+| ------- | -------- | ------------------------------------- | -------------------------------------------------- |
+| `IN1`   | Socket   | `adapter::types::unidirectional::AUI` | Aufnehmender Adapter für den ersten Eingangswert.  |
 | `IN2`   | Socket   | `adapter::types::unidirectional::AUI` | Aufnehmender Adapter für den zweiten Eingangswert. |
-| `OUT`   | Plug     | `adapter::types::unidirectional::AX`   | Ausgebender Adapter für das Vergleichsergebnis. |
+| `OUT`   | Plug     | `adapter::types::unidirectional::AX`  | Ausgebender Adapter für das Vergleichsergebnis.    |
 
 ## Funktionsweise
 
@@ -82,12 +82,12 @@ Der FB `AUI_NE` selbst besitzt keinen eigenen Zustandsautomaten. Das Verhalten w
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Vergleichsfunktion | Besonderheit |
-| ---------- | --------------------- | -------------- |
-| `AUI_EQ` | Gleichheit (equal) | Ergebnis `TRUE` bei gleichen Werten |
+| Baustein | Vergleichsfunktion       | Besonderheit                                 |
+| -------- | ------------------------ | -------------------------------------------- |
+| `AUI_EQ` | Gleichheit (equal)       | Ergebnis `TRUE` bei gleichen Werten          |
 | `AUI_NE` | Ungleichheit (not equal) | Ergebnis `TRUE` bei unterschiedlichen Werten |
-| `AUI_GT` | Größer (greater than) | Ergebnis `TRUE` wenn IN1 > IN2 |
-| `AUI_LT` | Kleiner (less than) | Ergebnis `TRUE` wenn IN1 < IN2 |
+| `AUI_GT` | Größer (greater than)    | Ergebnis `TRUE` wenn IN1 > IN2               |
+| `AUI_LT` | Kleiner (less than)      | Ergebnis `TRUE` wenn IN1 < IN2               |
 
 Alle genannten Bausteine teilen sich die gleiche Adapter-Schnittstelle und lassen sich daher leicht austauschen oder kombinieren.
 

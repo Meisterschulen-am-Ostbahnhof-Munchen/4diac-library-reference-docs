@@ -32,10 +32,10 @@ Der Funktionsblock **ADI_TO_ALR** ist ein zusammengesetzter Baustein (Composite 
 
 ### **Adapter**
 
-| Name        | Typ                                        | Richtung | Beschreibung                       |
-|-------------|--------------------------------------------|----------|------------------------------------|
-| **ADI_IN**  | `adapter::types::unidirectional::ADI`      | Socket   | Eingang: DINT‑Wert und Ereignis    |
-| **ALR_OUT** | `adapter::types::unidirectional::ALR`      | Plug     | Ausgang: LREAL‑Wert und Ereignis   |
+| Name        | Typ                                   | Richtung | Beschreibung                     |
+| ----------- | ------------------------------------- | -------- | -------------------------------- |
+| **ADI_IN**  | `adapter::types::unidirectional::ADI` | Socket   | Eingang: DINT‑Wert und Ereignis  |
+| **ALR_OUT** | `adapter::types::unidirectional::ALR` | Plug     | Ausgang: LREAL‑Wert und Ereignis |
 
 *Hinweis:* Die Adapter implizieren jeweils ein Ereignis‑ und ein Datensignal (`E1` und `D1`).
 
@@ -69,11 +69,11 @@ Der Baustein besitzt **keine Zustandsmaschine**. Er ist rein kombinatorisch (ere
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein               | Typumwandlung        | Ereignisverhalten                                   |
-|------------------------|----------------------|-----------------------------------------------------|
-| **ADI_TO_ALR**         | DINT → LREAL         | Direkte Durchleitung ohne Verzögerung               |
-| `INT_TO_REAL` (4diac)  | INT → REAL           | Eigenständiger FB mit eigenem Ereignis‑Interface    |
-| individuelle Konverter | beliebig             | oft mit Zustandsmaschinen oder Parametrierung       |
+| Baustein               | Typumwandlung | Ereignisverhalten                                |
+| ---------------------- | ------------- | ------------------------------------------------ |
+| **ADI_TO_ALR**         | DINT → LREAL  | Direkte Durchleitung ohne Verzögerung            |
+| `INT_TO_REAL` (4diac)  | INT → REAL    | Eigenständiger FB mit eigenem Ereignis‑Interface |
+| individuelle Konverter | beliebig      | oft mit Zustandsmaschinen oder Parametrierung    |
 
 Der vorliegende Baustein zeichnet sich durch seine **einfache Adapter‑orientierte Struktur** aus, die eine direkte Kopplung in Adapter‑Netzwerken ermöglicht, ohne separate Daten‑ und Ereignis‑Kanäle definieren zu müssen.
 

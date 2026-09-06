@@ -12,8 +12,8 @@ The function block encapsulates the functionality of an on-delay timer in adapte
 
 ### **Event Inputs**
 
-| Name | Comment |
-| :--- | :--- |
+| Name    | Comment                                           |
+| :------ | :------------------------------------------------ |
 | **REQ** | Used to update the time value at data input `DT`. |
 
 ### **Event Outputs**
@@ -22,9 +22,9 @@ This function block does not have direct event outputs at the main level. All ou
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-| :--- | :--- | :--- |
-| **DT** | TIME | **Delay Time**: The duration by which the input event should be delayed. |
+| Name   | Data Type | Comment                                                                  |
+| :----- | :-------- | :----------------------------------------------------------------------- |
+| **DT** | TIME      | **Delay Time**: The duration by which the input event should be delayed. |
 
 ### **Data Outputs**
 
@@ -32,11 +32,11 @@ This function block does not have any data outputs.
 
 ### **Adapter**
 
-| Name | Type | Kind | Comment |
-| :--- | :--- | :--- | :--- |
-| **START** | adapter::types::unidirectional::AE | Socket (Input) | Starts the time delay (internally triggers `START`). |
-| **STOP** | adapter::types::unidirectional::AE | Socket (Input) | Stops/cancels the time delay (internally triggers `STOP`). |
-| **EO** | adapter::types::unidirectional::AE | Plug (Output) | **Event Output**: Outputs the event after the specified time elapses, `DT`. |
+| Name      | Type                               | Kind           | Comment                                                                     |
+| :-------- | :--------------------------------- | :------------- | :-------------------------------------------------------------------------- |
+| **START** | adapter::types::unidirectional::AE | Socket (Input) | Starts the time delay (internally triggers `START`).                        |
+| **STOP**  | adapter::types::unidirectional::AE | Socket (Input) | Stops/cancels the time delay (internally triggers `STOP`).                  |
+| **EO**    | adapter::types::unidirectional::AE | Plug (Output)  | **Event Output**: Outputs the event after the specified time elapses, `DT`. |
 
 ## Functionality
 
@@ -70,11 +70,11 @@ The function block itself does not have an explicit state machine (ECC) because 
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Function Block | Difference |
-| :--- | :--- |
-| **E_DELAY** | The standard function block with direct event pins (START, STOP, EO). **AE_DELAY** is the wrapper for this.
-| **E_CYCLE** | Generates periodic events, while **AE_DELAY** forwards an event only once with a delay.
-| **AE_SPLIT** | Used to split adapter events, but does not offer time delay. |
+| Function Block | Difference                                                                                                  |
+| :------------- | :---------------------------------------------------------------------------------------------------------- |
+| **E_DELAY**    | The standard function block with direct event pins (START, STOP, EO). **AE_DELAY** is the wrapper for this. |
+| **E_CYCLE**    | Generates periodic events, while **AE_DELAY** forwards an event only once with a delay.                     |
+| **AE_SPLIT**   | Used to split adapter events, but does not offer time delay.                                                |
 
 ## Conclusion
 

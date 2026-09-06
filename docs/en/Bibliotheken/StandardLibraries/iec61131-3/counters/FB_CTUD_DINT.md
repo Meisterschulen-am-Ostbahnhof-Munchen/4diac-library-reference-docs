@@ -45,6 +45,7 @@ The function block performs the following operations when the REQ event occurs:
 
 - If CU is active and the count value has not reached the maximum value (2147483647), the count value is incremented by 1.
 - If CD is active and the count value has not reached the minimum value (-2147483648), the count value is decremented by 1.
+
 1. **Setting Outputs**:
 
 - QU is set to TRUE when the counter value reaches or exceeds the preset value.

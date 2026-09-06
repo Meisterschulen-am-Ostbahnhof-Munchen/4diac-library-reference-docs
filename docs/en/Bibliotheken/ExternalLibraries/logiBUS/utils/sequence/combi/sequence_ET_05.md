@@ -73,10 +73,7 @@ The `RESET` event always leads to the special state `sRESET`, in which all outpu
 
 - **Flexible Transitions:** Each state transition can be configured independently as event-driven or time-driven. Time-driven control is deactivated by setting the corresponding `DT_` input to the constant `NO_TIME`.
 - **Immediate Reset:** The `RESET` input always has priority and immediately interrupts the current sequence.
-
-## Technical Features
-
-- **Flexible Transitions:** * **Clearly Defined Interface:** The status number and active outputs are always available as data outputs and are confirmed by an event at each step.
+- **Clearly Defined Interface:** The status number and active outputs are always available as data outputs and are confirmed by an event at each step.
 - **Adapter-Based Time Control:** The use of a standardized TimeOut adapter makes the internal time management robust and reusable.
 
 ## State Overview

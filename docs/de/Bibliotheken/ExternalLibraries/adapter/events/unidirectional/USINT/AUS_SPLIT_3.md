@@ -28,12 +28,12 @@ Keine – die Daten werden über die Adapter `OUT1`, `OUT2`, `OUT3` ausgegeben.
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AUS` | Socket (eingehend) | Empfängt ein AUS-Signal. |
-| `OUT1` | `adapter::types::unidirectional::AUS` | Plug (ausgehend) | Erste Ausgabe des eingehenden Signals. |
-| `OUT2` | `adapter::types::unidirectional::AUS` | Plug (ausgehend) | Zweite Ausgabe des eingehenden Signals. |
-| `OUT3` | `adapter::types::unidirectional::AUS` | Plug (ausgehend) | Dritte Ausgabe des eingehenden Signals. |
+| Name   | Typ                                   | Richtung           | Beschreibung                            |
+| ------ | ------------------------------------- | ------------------ | --------------------------------------- |
+| `IN`   | `adapter::types::unidirectional::AUS` | Socket (eingehend) | Empfängt ein AUS-Signal.                |
+| `OUT1` | `adapter::types::unidirectional::AUS` | Plug (ausgehend)   | Erste Ausgabe des eingehenden Signals.  |
+| `OUT2` | `adapter::types::unidirectional::AUS` | Plug (ausgehend)   | Zweite Ausgabe des eingehenden Signals. |
+| `OUT3` | `adapter::types::unidirectional::AUS` | Plug (ausgehend)   | Dritte Ausgabe des eingehenden Signals. |
 
 ## Funktionsweise
 

@@ -13,33 +13,33 @@ The function block `E_T_FF_SR_SYM_INIT` implements an event-driven, bistable fli
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-| ------- | -------- | ------------------------------------------ |
+| Name | Type  | Comment                |
+| ---- | ----- | ---------------------- |
 | INIT | EInit | Initialization Request |
-| S | Event | Sets output Q (set) |
-| R | Event | Resets output Q |
-| CLK | Event | Clock for toggling Q |
+| S    | Event | Sets output Q (set)    |
+| R    | Event | Resets output Q        |
+| CLK  | Event | Clock for toggling Q   |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-| ------- | -------- | ------------------------------------------ |
+| Name  | Type  | Comment                        |
+| ----- | ----- | ------------------------------ |
 | INITO | EInit | Initialization Acknowledgement |
-| EO | Event | Signals a change in Q |
+| EO    | Event | Signals a change in Q          |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-| --------- | ------- | ---------------------------------------------- |
-| QI | BOOL | Event qualifier (controls execution) |
-| Q_INIT | BOOL | Value that Q should assume at INIT |
+| Name   | Type | Comment                              |
+| ------ | ---- | ------------------------------------ |
+| QI     | BOOL | Event qualifier (controls execution) |
+| Q_INIT | BOOL | Value that Q should assume at INIT   |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-| ------ | ------- | ------------------------------------------ |
-| QO | BOOL | Output qualifier (mirror of QI) |
-| Q | BOOL | Flip-flop value |
+| Name | Type | Comment                         |
+| ---- | ---- | ------------------------------- |
+| QO   | BOOL | Output qualifier (mirror of QI) |
+| Q    | BOOL | Flip-flop value                 |
 
 ### **Adapters**
 
@@ -83,13 +83,13 @@ If the automaton is in state `SET`, it switches to `RESET` and vice versa. The r
 
 ## State Overview
 
-| State | Description | Action on Occurrence |
-| --------- | ---------------------------------------------- | --------------------------------------------- |
-| START | Waiting for initialization | – |
-| Init | Initializing QO | `QO := QI`; Triggering `INITO` |
-| DeInit | Deinitializing (if QI=false) | `QO := FALSE`; Triggering `INITO` |
-| SET | Q is set (`TRUE`) | `Q := TRUE` (only if QI=true); Triggering `EO` |
-| RESET | Q is reset (`FALSE`) | `Q := FALSE` (only if QI=true); Trigger `EO` |
+| State  | Description                  | Action on Occurrence                           |
+| ------ | ---------------------------- | ---------------------------------------------- |
+| START  | Waiting for initialization   | –                                              |
+| Init   | Initializing QO              | `QO := QI`; Triggering `INITO`                 |
+| DeInit | Deinitializing (if QI=false) | `QO := FALSE`; Triggering `INITO`              |
+| SET    | Q is set (`TRUE`)            | `Q := TRUE` (only if QI=true); Triggering `EO` |
+| RESET  | Q is reset (`FALSE`)         | `Q := FALSE` (only if QI=true); Trigger `EO`   |
 
 Q is reset (`FALSE`) | `Q := FALSE` (only if QI=true);
 

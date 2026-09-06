@@ -35,9 +35,9 @@ Der Funktionsblock **ASR_AX_SERVER_0_CLIENT_1_0** ist ein Composite-Funktionsblo
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| S_R | adapter::types::bidirectional::ASR_AX | Plug – Set/Reset (Eingang), Zustand (Ausgang) | Empfangenes Set/Reset, Zustand nach außen |
+| Adapter | Typ                                   | Richtung                                      | Beschreibung                              |
+| ------- | ------------------------------------- | --------------------------------------------- | ----------------------------------------- |
+| S_R     | adapter::types::bidirectional::ASR_AX | Plug – Set/Reset (Eingang), Zustand (Ausgang) | Empfangenes Set/Reset, Zustand nach außen |
 
 ## Funktionsweise
 

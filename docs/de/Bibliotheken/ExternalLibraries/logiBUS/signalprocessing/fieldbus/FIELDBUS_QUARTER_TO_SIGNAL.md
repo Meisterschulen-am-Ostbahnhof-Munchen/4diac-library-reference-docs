@@ -12,28 +12,28 @@ Der Funktionsblock `FIELDBUS_QUARTER_TO_SIGNAL` dient als Signalvalidierungs- un
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ   | Kommentar                    | Mit Variablen |
-|--------|-------|------------------------------|---------------|
-| `REQ`  | Event | Normaler Ausführungsauftrag  | `IN`          |
+| Name  | Typ   | Kommentar                   | Mit Variablen |
+| ----- | ----- | --------------------------- | ------------- |
+| `REQ` | Event | Normaler Ausführungsauftrag | `IN`          |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                   | Mit Variablen     |
-|-------|-------|-----------------------------|-------------------|
-| `CNF` | Event | Ausführungsbestätigung      | `OUT`, `VALID`    |
+| Name  | Typ   | Kommentar              | Mit Variablen  |
+| ----- | ----- | ---------------------- | -------------- |
+| `CNF` | Event | Ausführungsbestätigung | `OUT`, `VALID` |
 
 ### **Daten-Eingänge**
 
-| Name | Typ    | Kommentar          | Initialwert                    |
-|------|--------|--------------------|--------------------------------|
-| `IN` | `BYTE` | Eingangssignal     | `NOT_AVAILABLE_2bit` (importierte Konstante) |
+| Name | Typ    | Kommentar      | Initialwert                                  |
+| ---- | ------ | -------------- | -------------------------------------------- |
+| `IN` | `BYTE` | Eingangssignal | `NOT_AVAILABLE_2bit` (importierte Konstante) |
 
 ### **Daten-Ausgänge**
 
-| Name    | Typ    | Kommentar                       | Initialwert |
-|---------|--------|---------------------------------|-------------|
-| `OUT`   | `BYTE` | Gefiltertes Ausgangssignal      | `16#00`     |
-| `VALID` | `BOOL` | `TRUE`, wenn das Signal gültig ist | `FALSE` |
+| Name    | Typ    | Kommentar                          | Initialwert |
+| ------- | ------ | ---------------------------------- | ----------- |
+| `OUT`   | `BYTE` | Gefiltertes Ausgangssignal         | `16#00`     |
+| `VALID` | `BOOL` | `TRUE`, wenn das Signal gültig ist | `FALSE`     |
 
 ### **Adapter**
 
@@ -66,8 +66,8 @@ Der Vergleich nutzt dabei die Semantik der importierten Konstanten:
 Es existiert nur ein Zustand:
 
 | Zustand | Beschreibung                                      | Ausgabeereignis | Ausgabeaktionen          |
-|---------|--------------------------------------------------|----------------|--------------------------|
-| `REQ`   | Verarbeitet den Eingang und aktualisiert Ausgänge | `CNF`          | `OUT` und `VALID` setzen |
+| ------- | ------------------------------------------------- | --------------- | ------------------------ |
+| `REQ`   | Verarbeitet den Eingang und aktualisiert Ausgänge | `CNF`           | `OUT` und `VALID` setzen |
 
 ## Anwendungsszenarien
 

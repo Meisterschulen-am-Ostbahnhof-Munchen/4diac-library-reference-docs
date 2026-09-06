@@ -12,17 +12,17 @@ Der Funktionsblock **INIT** dient als direkte Durchleitung von Ereignissen. Er i
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                     |
-|-------|--------|-------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung   |
-| REQ   | Event  | Dienstanforderung             |
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
+| INIT | EInit | Initialisierungsanforderung |
+| REQ  | Event | Dienstanforderung           |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                     |
-|-------|--------|-------------------------------|
-| INITO | EInit  | Initialisierungsbestätigung   |
-| CNF   | Event  | Bestätigung der Anforderung   |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
+| CNF   | Event | Bestätigung der Anforderung |
 
 ### **Daten-Eingänge**
 

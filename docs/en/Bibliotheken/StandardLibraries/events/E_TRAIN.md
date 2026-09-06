@@ -37,6 +37,7 @@ The `E_TRAIN` (Event Train) is a function block according to IEC 61499 that gene
 - After the time specified in `DT` has elapsed, the first `EO` event is triggered. The output of `CV` has the value `0`.
 - Immediately afterward, the timer for the next event is restarted.
 - After another time interval `DT`, the next `EO` event is triggered with `CV=1`.
+
 1. **End of Sequence**: This cycle repeats until `N` events have been generated. After the last event (with `CV = N-1`) is triggered, the function block stops automatically.
 2. **Stop**: A `STOP` event can terminate the sequence prematurely at any time.
 
@@ -54,11 +55,11 @@ The `E_TRAIN` (Event Train) is a function block according to IEC 61499 that gene
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | E_TRAIN | E_CYCLE | E_TABLE |
-| -------------- | ----------- | ---------- | ---------- |
-| Event Interval | Fixed (`DT`) | Fixed (`DT`) | Variable (Array `DT`) |
-| Event Count | Finite (`N`) | Infinite | Finite (`N`) |
-| Counter Output (`CV`) | Yes | No | Yes |
+| Feature               | E_TRAIN      | E_CYCLE      | E_TABLE               |
+| --------------------- | ------------ | ------------ | --------------------- |
+| Event Interval        | Fixed (`DT`) | Fixed (`DT`) | Variable (Array `DT`) |
+| Event Count           | Finite (`N`) | Infinite     | Finite (`N`)          |
+| Counter Output (`CV`) | Yes          | No           | Yes                   |
 
 ## 🛠️ Related Exercises
 

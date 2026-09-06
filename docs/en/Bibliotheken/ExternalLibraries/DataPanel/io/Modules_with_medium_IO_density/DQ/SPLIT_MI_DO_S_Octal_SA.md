@@ -5,27 +5,27 @@
 * * * * * * * * * *
 The function block **SPLIT_MI_DO_S_Octal_SA** is used to split a single data value of type `DataPanel_MI_DO_S_Octal_SA` into eight separate outputs of type `DataPanel_MI_DO_S_Single_SA`. The common portion (`u8SAMember`) is retained unchanged, and the respective port information from the octal input is distributed to the individual outputs.
 
-| Event | Comment |
-| ---------- | ----------- |
-| `REQ` | Service Request; Processing starts as soon as the event occurs. The user must first validate the data input `IN`. |
-| Event | Comment |
-| ---------- | ----------- |
-| `CNF` | Confirmation of completed processing. Indicates that all eight outputs have been updated. |
-| Name | Type | Comment |
-| ------ | ---------------------------------- | ------------------------------------ |
-| `IN` | `DataPanel_MI_DO_S_Octal_SA` | Octal input value (Port 1…8 and common `u8SAMember`) |
-| Name | Type | Comment |
-| ------ | ----------------------------------- | -------------------------- |
-| `OUT1` | `DataPanel_MI_DO_S_Single_SA` | Single Output 1 |
-| `OUT2` | `DataPanel_MI_DO_S_Single_SA` | Single Output 2 |
-| `OUT3` | `DataPanel_MI_DO_S_Single_SA` | Single Output 3 |
-| `OUT4` | `DataPanel_MI_DO_S_Single_SA` | Single Output 4 |
-| `OUT5` | `DataPanel_MI_DO_S_Single_SA` | Single Output 5 |
-| `OUT6` | `DataPanel_MI_DO_S_Single_SA` | Single Output 6 |
-| `OUT7` | `DataPanel_MI_DO_S_Single_SA` | Single Output 7 |
-| `OUT8` | `DataPanel_MI_DO_S_Single_SA` | Single Output 8 |
+| Event      | Comment                                                                                                           |                                                      |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| `REQ`      | Service Request; Processing starts as soon as the event occurs. The user must first validate the data input `IN`. |                                                      |
+| Event      | Comment                                                                                                           |                                                      |
+| ---------- | -----------                                                                                                       |                                                      |
+| `CNF`      | Confirmation of completed processing. Indicates that all eight outputs have been updated.                         |                                                      |
+| Name       | Type                                                                                                              | Comment                                              |
+| ------     | ----------------------------------                                                                                | ------------------------------------                 |
+| `IN`       | `DataPanel_MI_DO_S_Octal_SA`                                                                                      | Octal input value (Port 1…8 and common `u8SAMember`) |
+| Name       | Type                                                                                                              | Comment                                              |
+| ------     | -----------------------------------                                                                               | --------------------------                           |
+| `OUT1`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 1                                      |
+| `OUT2`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 2                                      |
+| `OUT3`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 3                                      |
+| `OUT4`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 4                                      |
+| `OUT5`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 5                                      |
+| `OUT6`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 6                                      |
+| `OUT7`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 7                                      |
+| `OUT8`     | `DataPanel_MI_DO_S_Single_SA`                                                                                     | Single Output 8                                      |
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -57,6 +57,7 @@ This function block implements a simple, event-driven sequence:
 - `OUT2.Port := IN.Port2`
 - …
 - `OUT8.Port := IN.Port8`
+
 1. Upon completion, the event `CNF` is sent, indicating that all eight outputs are valid.
 
 - The function block is implemented as a **SimpleFB** (simple function block) and operates without a state machine with multiple states – processing occurs in a single step.

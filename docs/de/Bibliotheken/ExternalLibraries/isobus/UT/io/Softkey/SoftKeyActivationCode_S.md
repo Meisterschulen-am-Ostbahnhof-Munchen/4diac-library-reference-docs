@@ -20,10 +20,10 @@ Dies ist ein Datentyp und besitzt daher keine Ereignis- oder Adapterschnittstell
 
 ### **Datenfelder (Strukturkomponenten)**
 
-| Name     | Datentyp | Initialwert | Kommentar |
-| :------- | :------- | :---------- | :-------- |
-| `code`   | `USINT`  | 255         | Definiert den numerischen Code, der den spezifischen Softkey identifiziert. |
-| `bCyclic`| `BOOL`   | TRUE        | Steuert das zyklische Senden des Tastencodes. Bei `FALSE` wird die Taste nicht alle 200ms wiederholt gesendet. |
+| Name      | Datentyp | Initialwert | Kommentar                                                                                                      |
+| :-------- | :------- | :---------- | :------------------------------------------------------------------------------------------------------------- |
+| `code`    | `USINT`  | 255         | Definiert den numerischen Code, der den spezifischen Softkey identifiziert.                                    |
+| `bCyclic` | `BOOL`   | TRUE        | Steuert das zyklische Senden des Tastencodes. Bei `FALSE` wird die Taste nicht alle 200ms wiederholt gesendet. |
 
 ## Funktionsweise
 

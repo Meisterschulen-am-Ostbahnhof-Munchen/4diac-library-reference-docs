@@ -31,9 +31,9 @@ The function block **AUS_PUBLISH_1** is a composite function block that encapsul
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::OFF | Socket (Input) | USINT value to be published |
+| Adapter | Type                                | Direction      | Description                 |
+| ------- | ----------------------------------- | -------------- | --------------------------- |
+| IN      | adapter::types::unidirectional::OFF | Socket (Input) | USINT value to be published |
 
 ## Functionality
 

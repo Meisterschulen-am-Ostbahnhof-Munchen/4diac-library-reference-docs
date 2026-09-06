@@ -61,10 +61,10 @@ Der Baustein realisiert eine softwaregesteuerte 1-aus-2-Auswahl auf Basis von Ad
 
 Das Verhalten des Bausteins wird durch den Daten- und Ereignisfluss im internen Netzwerk bestimmt:
 
-| Zustand Selektor `G.D1` | Durchgeschalteter Kanal | Ausgangswert `OUT.D1` | Ausgangsereignis `OUT.E1` |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Kanal 0 (`IN0`) | Wert von `IN0.D1` | Triggert bei Ereignissen auf `IN0.E1` oder Änderung von `G` |
-| `TRUE` | Kanal 1 (`IN1`) | Wert von `IN1.D1` | Triggert bei Ereignissen auf `IN1.E1` oder Änderung von `G` |
+| Zustand Selektor `G.D1` | Durchgeschalteter Kanal | Ausgangswert `OUT.D1` | Ausgangsereignis `OUT.E1`                                   |
+| :---------------------- | :---------------------- | :-------------------- | :---------------------------------------------------------- |
+| `FALSE`                 | Kanal 0 (`IN0`)         | Wert von `IN0.D1`     | Triggert bei Ereignissen auf `IN0.E1` oder Änderung von `G` |
+| `TRUE`                  | Kanal 1 (`IN1`)         | Wert von `IN1.D1`     | Triggert bei Ereignissen auf `IN1.E1` oder Änderung von `G` |
 
 ## Anwendungsszenarien
 

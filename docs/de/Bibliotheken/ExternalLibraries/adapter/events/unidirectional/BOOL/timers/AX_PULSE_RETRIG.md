@@ -12,10 +12,10 @@ Der Funktionsblock **AX_PULSE_RETRIG** ist ein nachtriggerbarer (retriggerbarer)
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name    | Typ   | Beschreibung                                                                  |
+| ------- | ----- | ----------------------------------------------------------------------------- |
 | **REQ** | EVENT | Service-Anforderung zum Starten oder Neustarten des Timers (mit PT verbunden) |
-| **R**   | EVENT | Zurücksetzen des Timers (Impuls sofort beenden) |
+| **R**   | EVENT | Zurücksetzen des Timers (Impuls sofort beenden)                               |
 
 ### **Ereignis-Ausgänge**
 
@@ -23,8 +23,8 @@ Der Baustein besitzt keine direkten Ereignis-Ausgänge. Ausgangssignale werden �
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name   | Typ  | Beschreibung           |
+| ------ | ---- | ---------------------- |
 | **PT** | TIME | Impulsdauer (Pulszeit) |
 
 ### **Daten-Ausgänge**
@@ -33,8 +33,8 @@ Der Baustein besitzt keine direkten Daten-Ausgänge. Ausgangsdaten werden über 
 
 ### **Adapter**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ                                  | Beschreibung                                                                      |
+| ----- | ------------------------------------ | --------------------------------------------------------------------------------- |
 | **Q** | `adapter::types::unidirectional::AX` | Adapter-Schnittstelle, die den Impulsstatus (Ereignis und Daten) nach außen führt |
 
 ## Funktionsweise
@@ -56,9 +56,9 @@ Der Baustein besitzt keine direkten Daten-Ausgänge. Ausgangsdaten werden über 
 
 Der Baustein bildet die Zustände des internen `E_PULSE_RETRIG` ab:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| **IDLE** | Kein Impuls aktiv; Ausgang Q = FALSE |
+| Zustand   | Beschreibung                                                                                              |
+| --------- | --------------------------------------------------------------------------------------------------------- |
+| **IDLE**  | Kein Impuls aktiv; Ausgang Q = FALSE                                                                      |
 | **PULSE** | Impuls läuft; Ausgang Q = TRUE; Timer läuft. Ein REQ-Ereignis führt zurück in PULSE mit neuem Timerstart. |
 
 - Übergang IDLE → PULSE durch REQ.  
@@ -72,11 +72,11 @@ Der Baustein bildet die Zustände des internen `E_PULSE_RETRIG` ab:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| **E_PULSE** | Einfacher Impuls ohne Retrigger – einmaliger Timerstart, kein Neustart bei erneutem REQ. |
-| **AX_PULSE_RETRIG** | Retriggerbare Version mit AX-Adapter (Ereignis + Daten). |
-| **TON / TOF** | Verzögerungsbausteine (Einschaltverzögerung / Ausschaltverzögerung) – kein Impulsformer. |
+| Baustein            | Eigenschaft                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------------- |
+| **E_PULSE**         | Einfacher Impuls ohne Retrigger – einmaliger Timerstart, kein Neustart bei erneutem REQ. |
+| **AX_PULSE_RETRIG** | Retriggerbare Version mit AX-Adapter (Ereignis + Daten).                                 |
+| **TON / TOF**       | Verzögerungsbausteine (Einschaltverzögerung / Ausschaltverzögerung) – kein Impulsformer. |
 
 Der AX_PULSE_RETRIG bietet damit die Flexibilität eines nachtriggerbaren Impulses bei gleichzeitig standardisierter Adapter-Schnittstelle für die einfache Einbindung in größere Funktionsbaustein-Netzwerke.
 

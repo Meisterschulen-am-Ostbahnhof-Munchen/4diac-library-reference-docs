@@ -30,10 +30,12 @@ The **E_RDELAY** (Reloadable Delay) is an extended delay function block accordin
 
 - On the `START` event, the timer starts with the configured `DT` time
 - New `START` resets the timer during an active delay
+
 1. **Delay Termination**:
 
 - `STOP` immediately terminates the active delay
 - No `EO` event is generated
+
 1. **Delay Completion**:
 
 - `EO` is triggered once after exactly `DT`
@@ -44,9 +46,11 @@ The **E_RDELAY** (Reloadable Delay) is an extended delay function block accordin
 1. **event_delay**:
 
 - Normal delay with START → EO
+
 1. **delay_canceled**:
 
 - START followed by STOP (no EO)
+
 1. **reload_delay**:
 
 - Multiple START events reload (reset) the delay; only one EO is triggered
@@ -67,10 +71,10 @@ The **E_RDELAY** (Reloadable Delay) is an extended delay function block accordin
 
 ## ⚖️ Comparison with E_DELAY
 
-| Feature | E_RDELAY | E_DELAY |
-| --------------- | ---------- | --------- |
-| Reset Function | ✔️ (via START) | ❌ |
-| Multiple Triggers | Only 1 EO | Only 1 EO |
+| Feature           | E_RDELAY                                                    | E_DELAY                                                          |
+| ----------------- | ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| Reset Function    | ✔️ (via START)                                              | ❌                                                                |
+| Multiple Triggers | Only 1 EO                                                   | Only 1 EO                                                        |
 | Service Sequences | 3 defined (`event_delay`, `delay_canceled`, `reload_delay`) | 3 defined (`event_delay`, `delay_canceled`, `no_multiple_delay`) |
 
 ## 🛠️ Related Exercises

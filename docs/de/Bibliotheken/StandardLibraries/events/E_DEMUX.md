@@ -54,11 +54,11 @@ Das Eingangsereignis wird somit immer exklusiv an genau einen Ausgang weitergele
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal        | E_DEMUX (dieser) | E_MUX          | E_SWITCH         |
-|----------------|------------------|----------------|------------------|
-| Funktionsprinzip| 1:4 Verteilung   | n:1 Zusammenführung | 1:2 Verteilung   |
-| Steuerung      | Index `K` [0-3]  | Index `K`      | `BOOL`-Bedingung `G` |
-| Ereignisfluss  | Aufteilung       | Zusammenführung| Bedingte Weiche  |
+| Merkmal          | E_DEMUX (dieser) | E_MUX               | E_SWITCH             |
+| ---------------- | ---------------- | ------------------- | -------------------- |
+| Funktionsprinzip | 1:4 Verteilung   | n:1 Zusammenführung | 1:2 Verteilung       |
+| Steuerung        | Index `K` [0-3]  | Index `K`           | `BOOL`-Bedingung `G` |
+| Ereignisfluss    | Aufteilung       | Zusammenführung     | Bedingte Weiche      |
 
 *Hinweis: Es existieren auch andere Varianten wie `E_DEMUX_2` und `E_DEMUX_8` für 2 bzw. 8 Ausgänge.*
 

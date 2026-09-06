@@ -30,13 +30,13 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket | `IN` | `adapter::types::unidirectional::AB` | Eingehende unidirektionale Adapterverbindung |
-| Plug | `OUT1` | `adapter::types::unidirectional::AB` | Erste ausgehende Adapterverbindung |
-| Plug | `OUT2` | `adapter::types::unidirectional::AB` | Zweite ausgehende Adapterverbindung |
-| Plug | `OUT3` | `adapter::types::unidirectional::AB` | Dritte ausgehende Adapterverbindung |
-| Plug | `OUT4` | `adapter::types::unidirectional::AB` | Vierte ausgehende Adapterverbindung |
+| Richtung | Name   | Typ                                  | Beschreibung                                 |
+| -------- | ------ | ------------------------------------ | -------------------------------------------- |
+| Socket   | `IN`   | `adapter::types::unidirectional::AB` | Eingehende unidirektionale Adapterverbindung |
+| Plug     | `OUT1` | `adapter::types::unidirectional::AB` | Erste ausgehende Adapterverbindung           |
+| Plug     | `OUT2` | `adapter::types::unidirectional::AB` | Zweite ausgehende Adapterverbindung          |
+| Plug     | `OUT3` | `adapter::types::unidirectional::AB` | Dritte ausgehende Adapterverbindung          |
+| Plug     | `OUT4` | `adapter::types::unidirectional::AB` | Vierte ausgehende Adapterverbindung          |
 
 ## Funktionsweise
 

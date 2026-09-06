@@ -30,10 +30,10 @@ Der Baustein besitzt keine klassischen Ereignis- oder Dateneingänge/-ausgänge 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Eingang (Socket) | **AB_IN** | `adapter::types::unidirectional::AB` | BYTE-Adapter-Eingang, liefert ein BYTE-Datum und ein Ereignis |
-| Ausgang (Plug)  | **AW_OUT** | `adapter::types::unidirectional::AW` | WORD-Adapter-Ausgang, stellt ein WORD-Datum und ein Ereignis bereit |
+| Richtung         | Name       | Typ                                  | Kommentar                                                           |
+| ---------------- | ---------- | ------------------------------------ | ------------------------------------------------------------------- |
+| Eingang (Socket) | **AB_IN**  | `adapter::types::unidirectional::AB` | BYTE-Adapter-Eingang, liefert ein BYTE-Datum und ein Ereignis       |
+| Ausgang (Plug)   | **AW_OUT** | `adapter::types::unidirectional::AW` | WORD-Adapter-Ausgang, stellt ein WORD-Datum und ein Ereignis bereit |
 
 ## Funktionsweise
 

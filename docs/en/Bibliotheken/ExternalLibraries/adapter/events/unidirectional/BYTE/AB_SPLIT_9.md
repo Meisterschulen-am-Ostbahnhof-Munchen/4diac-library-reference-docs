@@ -29,10 +29,10 @@ None available.
 
 ### **Adapters**
 
-| Interface | Direction | Type | Description |
-| -------------- | ---------- | ----- | -------------- |
-| IN | Socket | `adapter::types::unidirectional::AB` | Incoming adapter (source) |
-| OUT1 – OUT9 | Plug | `adapter::types::unidirectional::AB` | Nine identical outgoing adapters (sinks) |
+| Interface   | Direction | Type                                 | Description                              |
+| ----------- | --------- | ------------------------------------ | ---------------------------------------- |
+| IN          | Socket    | `adapter::types::unidirectional::AB` | Incoming adapter (source)                |
+| OUT1 – OUT9 | Plug      | `adapter::types::unidirectional::AB` | Nine identical outgoing adapters (sinks) |
 
 ## Functionality
 
@@ -58,11 +58,11 @@ The function block has **no** states of its own. Its behavior is purely combinat
 
 ## Comparison with Similar Components
 
-| Component | Outputs | Special Feature |
-| ---------- | ---------- | -------------- |
-| `AB_SPLIT_9` | 9 | Standard split for 1→9, generic |
-| `AB_SPLIT_4` | 4 | Same functionality, fewer outputs |
-| `AB_MERGE` | – | Combines multiple inputs into one output (opposite direction) |
+| Component    | Outputs | Special Feature                                               |
+| ------------ | ------- | ------------------------------------------------------------- |
+| `AB_SPLIT_9` | 9       | Standard split for 1→9, generic                               |
+| `AB_SPLIT_4` | 4       | Same functionality, fewer outputs                             |
+| `AB_MERGE`   | –       | Combines multiple inputs into one output (opposite direction) |
 
 While `AB_SPLIT_9` distributes a single source to multiple sinks, `AB_MERGE` combines several sources into a single output. Therefore, `AB_SPLIT_9` is the ideal choice when a signal needs to be routed to many consumers.
 

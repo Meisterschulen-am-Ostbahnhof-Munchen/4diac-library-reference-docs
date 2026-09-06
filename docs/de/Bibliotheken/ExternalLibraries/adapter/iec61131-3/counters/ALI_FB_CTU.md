@@ -37,13 +37,13 @@ Der Baustein besitzt keine separaten, diskreten Daten‑Ausgänge. Die Ausgangsd
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Sockets** (Eingänge) | CU | AX | Count‑Up: Ereignis + BOOL‑Signal |
-| | R | AX | Reset: Ereignis + BOOL‑Signal |
-| | PV | ALI | Preset‑Wert: Ereignis + LINT‑Wert |
-| **Plugs** (Ausgänge) | Q | AX | Ausgangssignal: Ereignis + BOOL‑Wert |
-| | CV | ALI | Zählerstand: Ereignis + LINT‑Wert |
+| Richtung               | Name | Typ | Beschreibung                         |
+| ---------------------- | ---- | --- | ------------------------------------ |
+| **Sockets** (Eingänge) | CU   | AX  | Count‑Up: Ereignis + BOOL‑Signal     |
+|                        | R    | AX  | Reset: Ereignis + BOOL‑Signal        |
+|                        | PV   | ALI | Preset‑Wert: Ereignis + LINT‑Wert    |
+| **Plugs** (Ausgänge)   | Q    | AX  | Ausgangssignal: Ereignis + BOOL‑Wert |
+|                        | CV   | ALI | Zählerstand: Ereignis + LINT‑Wert    |
 
 ## Funktionsweise
 
@@ -66,8 +66,8 @@ Nach jeder Verarbeitung gibt der interne Baustein einen CNF‑Event aus. Dieser 
 
 Der interne Zustand wird durch den Zählerstand (64‑Bit‑Integer) und den booleschen Ausgang Q gebildet. Eine explizite Zustandsmaschine existiert nicht; der Baustein arbeitet ereignisgesteuert:
 
-| Zustandskomponente | Mögliche Werte | Beschreibung |
-|--------------------|----------------|--------------|
+| Zustandskomponente | Mögliche Werte | Beschreibung       |
+| ------------------ | -------------- | ------------------ |
 | Zählerstand (CV)   | 0 … 2⁶³‑1      | Aktueller Zählwert |
 | Ausgang Q          | FALSE / TRUE   | TRUE, wenn CV ≥ PV |
 

@@ -10,7 +10,7 @@ The function block `F_UINT_TO_USINT` converts an unsigned 16-bit integer value (
 - **IN** (UINT): The unsigned 16-bit integer value to be converted.
 - **OUT** (USINT): The resulting unsigned 8-bit integer value after conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

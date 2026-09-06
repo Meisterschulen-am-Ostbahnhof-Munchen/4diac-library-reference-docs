@@ -28,10 +28,10 @@ Der konvertierte Wert wird über den Adapter `AUS_OUT` als vorzeichenloser 8‑B
 
 ### **Adapter**
 
-| Richtung | Name     | Typ                           | Beschreibung                |
-|----------|----------|-------------------------------|-----------------------------|
-| Socket   | `AX_IN`  | `adapter::types::unidirectional::AX` | Boolescher Eingangsadapter |
-| Plug     | `AUS_OUT`| `adapter::types::unidirectional::AUS` | USINT‑Ausgangsadapter      |
+| Richtung | Name      | Typ                                   | Beschreibung               |
+| -------- | --------- | ------------------------------------- | -------------------------- |
+| Socket   | `AX_IN`   | `adapter::types::unidirectional::AX`  | Boolescher Eingangsadapter |
+| Plug     | `AUS_OUT` | `adapter::types::unidirectional::AUS` | USINT‑Ausgangsadapter      |
 
 ## Funktionsweise
 

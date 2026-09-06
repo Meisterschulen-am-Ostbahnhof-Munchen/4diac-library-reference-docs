@@ -14,37 +14,37 @@ Der Funktionsblock `DataPanel_MI_IW_DutyCycle` ist ein Service-Interface-FB zur 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-|----------|-----|---------------|-----------|
-| `INIT` | EInit | QI, PARAMS, u8SAMember, Input, FreqDelta, TimeDelta | Initialisierung des Dienstes |
-| `REQ` | Event | QI | Dienstanforderung |
+| Ereignis | Typ   | Mit Variablen                                       | Kommentar                    |
+| -------- | ----- | --------------------------------------------------- | ---------------------------- |
+| `INIT`   | EInit | QI, PARAMS, u8SAMember, Input, FreqDelta, TimeDelta | Initialisierung des Dienstes |
+| `REQ`    | Event | QI                                                  | Dienstanforderung            |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Mit Variablen | Kommentar |
-| ---------- | ----- | --------------- | ----------- |
-| `INITO` | EInit | QO, STATUS | Bestätigung der Initialisierung |
-| `CNF` | Event | QO, STATUS, IN | Bestätigung der angeforderten Aktion |
-| `IND` | Event | QO, STATUS, IN | Indikation vom Ressourcen (bei Wertänderung/Timer) |
+| Ereignis | Typ   | Mit Variablen  | Kommentar                                          |
+| -------- | ----- | -------------- | -------------------------------------------------- |
+| `INITO`  | EInit | QO, STATUS     | Bestätigung der Initialisierung                    |
+| `CNF`    | Event | QO, STATUS, IN | Bestätigung der angeforderten Aktion               |
+| `IND`    | Event | QO, STATUS, IN | Indikation vom Ressourcen (bei Wertänderung/Timer) |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ | Kommentar |
-| ---------- | ----- | ----------- |
-| `QI` | BOOL | Ereignis-Eingangsqualifizierer |
-| `PARAMS` | STRING | Dienstparameter (z. B. Konfigurationsstring) |
-| `u8SAMember` | USINT | Knotenadresse (SA 224..239, Standard: MI::MI_00) |
-| `Input` | DataPanel_MI_DI_S | Identifikation des Eingangs (muss 7A oder 8A sein, Initialwert: Invalid) |
-| `FreqDelta` | WORD | Erforderliche Wertänderung in %, um eine IND auszulösen |
-| `TimeDelta` | DWORD | Zeitintervall in ms, nach dem eine IND ausgelöst wird |
+| Variable     | Typ               | Kommentar                                                                |
+| ------------ | ----------------- | ------------------------------------------------------------------------ |
+| `QI`         | BOOL              | Ereignis-Eingangsqualifizierer                                           |
+| `PARAMS`     | STRING            | Dienstparameter (z. B. Konfigurationsstring)                             |
+| `u8SAMember` | USINT             | Knotenadresse (SA 224..239, Standard: MI::MI_00)                         |
+| `Input`      | DataPanel_MI_DI_S | Identifikation des Eingangs (muss 7A oder 8A sein, Initialwert: Invalid) |
+| `FreqDelta`  | WORD              | Erforderliche Wertänderung in %, um eine IND auszulösen                  |
+| `TimeDelta`  | DWORD             | Zeitintervall in ms, nach dem eine IND ausgelöst wird                    |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-| ---------- | ----- | ----------- |
-| `QO` | BOOL | Ereignis-Ausgangsqualifizierer |
-| `STATUS` | STRING | Dienststatus (Fehler-/Erfolgsmeldung) |
-| `IN` | WORD | Gemessenes Tastverhältnis (Duty Cycle) in Prozent (0..100) |
+| Variable | Typ    | Kommentar                                                  |
+| -------- | ------ | ---------------------------------------------------------- |
+| `QO`     | BOOL   | Ereignis-Ausgangsqualifizierer                             |
+| `STATUS` | STRING | Dienststatus (Fehler-/Erfolgsmeldung)                      |
+| `IN`     | WORD   | Gemessenes Tastverhältnis (Duty Cycle) in Prozent (0..100) |
 
 ### **Adapter**
 

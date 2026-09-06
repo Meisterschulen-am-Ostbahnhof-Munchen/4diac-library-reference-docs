@@ -36,10 +36,10 @@ Daten werden ausschließlich über den Adapter **AR_OUT** ausgegeben.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-|-----|------|----------|-----------|
-| `adapter::types::unidirectional::AS` | **AS_IN** | Socket | Eingangsadapter für SINT‑Daten |
-| `adapter::types::unidirectional::AR` | **AR_OUT** | Plug | Ausgangsadapter für REAL‑Daten |
+| Typ                                  | Name       | Richtung | Kommentar                      |
+| ------------------------------------ | ---------- | -------- | ------------------------------ |
+| `adapter::types::unidirectional::AS` | **AS_IN**  | Socket   | Eingangsadapter für SINT‑Daten |
+| `adapter::types::unidirectional::AR` | **AR_OUT** | Plug     | Ausgangsadapter für REAL‑Daten |
 
 ## Funktionsweise
 

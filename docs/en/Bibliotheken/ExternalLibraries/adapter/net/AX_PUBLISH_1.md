@@ -31,9 +31,9 @@ The **AX_PUBLISH_1** function block is a composite function block that encapsula
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AX | Socket (Input) | BOOL value to be published |
+| Adapter | Type                               | Direction      | Description                |
+| ------- | ---------------------------------- | -------------- | -------------------------- |
+| IN      | adapter::types::unidirectional::AX | Socket (Input) | BOOL value to be published |
 
 ## Functionality
 

@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Der gespeicherte Wert wird über den Plug-Adapte
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **I**   | `adapter::types::unidirectional::AIS` | Socket | Eingangsadapter: Taktsignal (Ereignis `E1`) und Dateneingang (Daten `D1`) |
-| **Q**   | `adapter::types::unidirectional::AIS` | Plug   | Ausgangsadapter: Bestätigungsereignis (Ereignis `E1`) und gespeicherter Datenwert (Daten `D1`) |
+| Adapter | Typ                                   | Richtung | Beschreibung                                                                                   |
+| ------- | ------------------------------------- | -------- | ---------------------------------------------------------------------------------------------- |
+| **I**   | `adapter::types::unidirectional::AIS` | Socket   | Eingangsadapter: Taktsignal (Ereignis `E1`) und Dateneingang (Daten `D1`)                      |
+| **Q**   | `adapter::types::unidirectional::AIS` | Plug     | Ausgangsadapter: Bestätigungsereignis (Ereignis `E1`) und gespeicherter Datenwert (Daten `D1`) |
 
 ## Funktionsweise
 
@@ -47,10 +47,10 @@ Der Baustein kapselt den IEC‑61499‑Standardbaustein `E_D_FF_ANY`. Bei einer 
 
 Da der Baustein das Verhalten eines D‑Flipflops implementiert, können zwei Zustände unterschieden werden:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| **Ruhezustand** | Der gespeicherte Wert bleibt konstant. Es wird kein Ausgangsereignis erzeugt. |
-| **Übernahme** | Bei Eintreffen eines Taktereignisses wird der aktuelle Eingangswert übernommen, der Ausgang wird aktualisiert und ein Ausgangsereignis gesendet. |
+| Zustand         | Beschreibung                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ruhezustand** | Der gespeicherte Wert bleibt konstant. Es wird kein Ausgangsereignis erzeugt.                                                                    |
+| **Übernahme**   | Bei Eintreffen eines Taktereignisses wird der aktuelle Eingangswert übernommen, der Ausgang wird aktualisiert und ein Ausgangsereignis gesendet. |
 
 Das Flipflop ist flankengesteuert (steigende Flanke) und nicht pegelgesteuert.
 

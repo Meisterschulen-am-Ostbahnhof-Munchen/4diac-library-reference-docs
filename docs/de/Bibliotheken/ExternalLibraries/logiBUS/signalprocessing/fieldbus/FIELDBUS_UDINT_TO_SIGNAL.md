@@ -12,28 +12,28 @@ Der Funktionsblock **FIELDBUS_UDINT_TO_SIGNAL** dient dazu, einen eingehenden UD
 
 ### **Ereignis-Eingänge**
 
-| Event | Beschreibung |
-|-------|--------------|
+| Event | Beschreibung                                                                |
+| ----- | --------------------------------------------------------------------------- |
 | REQ   | Normaler Ausführungsanforderung; löst die Verarbeitung des Eingangs IN aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Event | Beschreibung |
-|-------|--------------|
+| Event | Beschreibung                                                                    |
+| ----- | ------------------------------------------------------------------------------- |
 | CNF   | Bestätigt die abgeschlossene Verarbeitung. Wird nach dem Algorithmus ausgelöst. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Initialwert                                    | Beschreibung |
-|------|-------|------------------------------------------------|--------------|
-| IN   | UDINT | `DWORD_TO_UDINT(NOT_AVAILABLE_DWM)`            | Der zu prüfende Eingangswert. |
+| Name | Typ   | Initialwert                         | Beschreibung                  |
+| ---- | ----- | ----------------------------------- | ----------------------------- |
+| IN   | UDINT | `DWORD_TO_UDINT(NOT_AVAILABLE_DWM)` | Der zu prüfende Eingangswert. |
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ   | Initialwert | Beschreibung |
-|-------|-------|-------------|--------------|
-| OUT   | UDINT | `16#00000000` | Der gefilterte Ausgangswert. Bei gültigem Signal entspricht er IN, sonst 0. |
-| VALID | BOOL  | FALSE       | TRUE, wenn das Signal gültig ist, d.h. IN innerhalb des gültigen Bereichs liegt. |
+| Name  | Typ   | Initialwert   | Beschreibung                                                                     |
+| ----- | ----- | ------------- | -------------------------------------------------------------------------------- |
+| OUT   | UDINT | `16#00000000` | Der gefilterte Ausgangswert. Bei gültigem Signal entspricht er IN, sonst 0.      |
+| VALID | BOOL  | FALSE         | TRUE, wenn das Signal gültig ist, d.h. IN innerhalb des gültigen Bereichs liegt. |
 
 ### **Adapter**
 
@@ -60,8 +60,8 @@ Der Grenzwert `VALID_SIGNAL_DW` sowie der Initialwert `NOT_AVAILABLE_DWM` sind a
 
 Der Funktionsblock ist als einfacher FB (SimpleFB) realisiert und besitzt nur einen einzigen Zustand:
 
-| Zustand | Aktion      | Ausgangsereignis |
-|---------|-------------|------------------|
+| Zustand | Aktion          | Ausgangsereignis |
+| ------- | --------------- | ---------------- |
 | REQ     | Algorithmus REQ | CNF              |
 
 Es findet keine Zustandsmaschine mit mehreren Schritten oder Verzweigungen statt.

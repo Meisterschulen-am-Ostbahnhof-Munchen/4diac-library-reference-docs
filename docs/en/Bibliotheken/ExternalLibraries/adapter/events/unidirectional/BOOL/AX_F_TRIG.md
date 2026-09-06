@@ -14,7 +14,7 @@ This function block has no direct data inputs. The data is obtained via the adap
 
 This function block has no direct data outputs.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

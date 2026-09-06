@@ -28,10 +28,10 @@ No standalone data outputs. The converted BYTE value is output via the AB_OUT ad
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Input) | `AI_IN` | `adapter::types::unidirectional::AI` | Provides the INT input value (D1) and the triggering event (E1). |
-| Plug (Output) | `AB_OUT` | `adapter::types::unidirectional::AB` | Outputs the converted BYTE value (D1) and the associated event (E1). |
+| Direction      | Name     | Type                                 | Description                                                          |
+| -------------- | -------- | ------------------------------------ | -------------------------------------------------------------------- |
+| Socket (Input) | `AI_IN`  | `adapter::types::unidirectional::AI` | Provides the INT input value (D1) and the triggering event (E1).     |
+| Plug (Output)  | `AB_OUT` | `adapter::types::unidirectional::AB` | Outputs the converted BYTE value (D1) and the associated event (E1). |
 
 ## Functionality
 
@@ -58,7 +58,7 @@ Thus, every incoming INT value is synchronously converted into a BYTE value via 
 
 Since it is a composite function block, `AI_TO_AB` does not have its own state machine. The internal function block `F_INT_TO_BYTE` may have a simple state machine (IDLE, EXECUTING), depending on the implementation, but this is not visible within the scope of this function block. The data and event flows are deterministic and are controlled by the interaction of the connections.
 
-# State Overview ## Application Scenarios
+## Application Scenarios
 
 - **Sensor Connection:** A sensor delivers INT values that must be processed as BYTE by a control unit (e.g., for simple I/O cards).
 - **Data Format Conversion:** in heterogeneous IEC 61499 systems to connect components with different adapter types.

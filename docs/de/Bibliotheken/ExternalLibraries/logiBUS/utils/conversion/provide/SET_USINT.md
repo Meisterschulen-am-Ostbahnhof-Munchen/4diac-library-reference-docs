@@ -12,27 +12,27 @@ Der Funktionsblock **SET_USINT** dient dazu, einen über den Dateneingang **IN**
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------ |
 | **REQ**  | Normaler Ausführungsanforderung – übernimmt den Wert von **IN** nach **OUT** und sendet **CNF**. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                 |
+| -------- | ---------------------------------------------------------------------------- |
 | **CNF**  | Bestätigung der erfolgreichen Ausführung (wird nach der Zuweisung gesendet). |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Initialwert | Beschreibung |
-|------|----------|-------------|--------------|
-| **IN** | USINT   | 0           | Wert, der in die Zielvariable geschrieben werden soll. |
+| Name   | Datentyp | Initialwert | Beschreibung                                           |
+| ------ | -------- | ----------- | ------------------------------------------------------ |
+| **IN** | USINT    | 0           | Wert, der in die Zielvariable geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Initialwert | Beschreibung |
-|------|----------|-------------|--------------|
-| **OUT** | USINT (InOut) | 0 | Zielvariable (als InOut deklariert, d. h. sie kann sowohl gelesen als auch geschrieben werden). Nach der Ausführung enthält **OUT** den Wert von **IN**. |
+| Name    | Datentyp      | Initialwert | Beschreibung                                                                                                                                             |
+| ------- | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **OUT** | USINT (InOut) | 0           | Zielvariable (als InOut deklariert, d. h. sie kann sowohl gelesen als auch geschrieben werden). Nach der Ausführung enthält **OUT** den Wert von **IN**. |
 
 ### **Adapter**
 
@@ -50,9 +50,9 @@ Wird das Ereignis **REQ** empfangen, führt der FB den Algorithmus **REQ** aus. 
 
 ## Zustandsübersicht
 
-| Zustand | Aktion | Ausgangsereignis |
-|---------|--------|------------------|
-| **REQ** | Ausführen des Algorithmus **REQ** (`OUT := IN;`) | **CNF** |
+| Zustand | Aktion                                           | Ausgangsereignis |
+| ------- | ------------------------------------------------ | ---------------- |
+| **REQ** | Ausführen des Algorithmus **REQ** (`OUT := IN;`) | **CNF**          |
 
 Der FB besitzt keinen expliziten Startzustand – er wartet im Zustand **REQ** auf ein Ereignis.
 

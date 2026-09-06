@@ -10,7 +10,7 @@ The function block `F_LREAL_TO_UINT` converts an LREAL value (64-bit floating-po
 - **IN**: The input expects an LREAL number (64-bit floating-point number) to be converted into a UINT value.
 - **OUT**: Outputs the result of the conversion as a UINT value (unsigned 16-bit integer).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_LREAL_TO_UINT` converts an LREAL value (64-bit floating-po
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 This function block has no adapters.
 

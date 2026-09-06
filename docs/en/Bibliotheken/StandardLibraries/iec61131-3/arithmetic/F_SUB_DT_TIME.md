@@ -34,11 +34,13 @@ The **F_SUB_DT_TIME** function block is a standards-compliant function block for
 
 - `REQ` event with DATE_AND_TIME and TIME value
 - Time range: DT#1970-01-01-00:00:00 to DT#2106-02-07-06:28:15
+
 1. **Time Calculation**:
 
 - Conversion to epoch microseconds
 - Subtraction of the time interval
 - Calendar-accurate back-calculation
+
 1. **Result Output**:
 
 - `CNF` event with new timestamp
@@ -69,11 +71,11 @@ The **F_SUB_DT_TIME** function block is a standards-compliant function block for
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_SUB_DT_TIME | F_ADD_DT_TIME | F_SUB_DT_DT |
-| ---------------- | ---------------- | --------------- | -------------- |
-| Operation | Time - Interval | Time + Interval | Time - Time |
-| Result | DATE_AND_TIME | DATE_AND_TIME | TIME |
-| Accuracy | Microseconds | Microseconds | Microseconds |
+| Feature   | F_SUB_DT_TIME   | F_ADD_DT_TIME   | F_SUB_DT_DT  |
+| --------- | --------------- | --------------- | ------------ |
+| Operation | Time - Interval | Time + Interval | Time - Time  |
+| Result    | DATE_AND_TIME   | DATE_AND_TIME   | TIME         |
+| Accuracy  | Microseconds    | Microseconds    | Microseconds |
 
 ## Conclusion
 

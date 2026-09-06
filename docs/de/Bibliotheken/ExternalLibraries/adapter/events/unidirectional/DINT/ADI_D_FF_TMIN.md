@@ -12,20 +12,20 @@ Der Funktionsblock **ADI_D_FF_TMIN** realisiert ein Daten-Latch (D‑Flip‑Flop
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                     |
+| ---- | ----- | --------------------------------------------- |
 | INIT | EInit | Init‑Anforderung; Übergibt den Parameter Tmin |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar        |
+| ----- | ----- | ---------------- |
 | INITO | EInit | Init‑Bestätigung |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ  | Kommentar                                             |
+| ---- | ---- | ----------------------------------------------------- |
 | Tmin | TIME | Mindestzeit zwischen zwei Ereignissen am Eingang I.E1 |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine direkten Datenausgänge – der gelatchte Wert wird über den Adapter‑Au
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Socket (Eingang) | I | adapter::types::unidirectional::ADI | Wert und Ereignis zum Latchen |
-| Plug (Ausgang) | Q | adapter::types::unidirectional::ADI | Gelatchter Wert und zugehöriges Ausgangsereignis |
+| Richtung         | Name | Typ                                 | Kommentar                                        |
+| ---------------- | ---- | ----------------------------------- | ------------------------------------------------ |
+| Socket (Eingang) | I    | adapter::types::unidirectional::ADI | Wert und Ereignis zum Latchen                    |
+| Plug (Ausgang)   | Q    | adapter::types::unidirectional::ADI | Gelatchter Wert und zugehöriges Ausgangsereignis |
 
 ## Funktionsweise
 

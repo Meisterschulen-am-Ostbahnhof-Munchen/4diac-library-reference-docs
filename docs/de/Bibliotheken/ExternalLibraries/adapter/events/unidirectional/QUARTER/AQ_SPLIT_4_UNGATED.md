@@ -30,13 +30,13 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AQ` | Socket (Eingang) | `IN` | Eingehender AQ-Adapter, der auf die vier Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AQ` | Plug (Ausgang) | `OUT1` | Erster ausgehender AQ-Adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Ausgang) | `OUT2` | Zweiter ausgehender AQ-Adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Ausgang) | `OUT3` | Dritter ausgehender AQ-Adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Ausgang) | `OUT4` | Vierter ausgehender AQ-Adapter. |
+| Typ                                  | Richtung         | Name   | Beschreibung                                                     |
+| ------------------------------------ | ---------------- | ------ | ---------------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | Socket (Eingang) | `IN`   | Eingehender AQ-Adapter, der auf die vier Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | `OUT1` | Erster ausgehender AQ-Adapter.                                   |
+| `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | `OUT2` | Zweiter ausgehender AQ-Adapter.                                  |
+| `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | `OUT3` | Dritter ausgehender AQ-Adapter.                                  |
+| `adapter::types::unidirectional::AQ` | Plug (Ausgang)   | `OUT4` | Vierter ausgehender AQ-Adapter.                                  |
 
 ## Funktionsweise
 

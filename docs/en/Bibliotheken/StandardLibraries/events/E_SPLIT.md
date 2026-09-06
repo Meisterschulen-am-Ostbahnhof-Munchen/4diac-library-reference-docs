@@ -27,6 +27,7 @@ The **E_SPLIT** is a standards-compliant function block (IEC 61499-1 Annex A) fo
 1. **Event Receipt**:
 
 - Upon receipt of `EI`, the state machine is activated.
+
 1. **Sequential Processing**:
 
 - **START State**: Waits for input event.
@@ -34,6 +35,7 @@ The **E_SPLIT** is a standards-compliant function block (IEC 61499-1 Annex A) fo
 - Executes action `EO1` (immediately).
 - Executes action `EO2`. (Immediately after)
 - Automatic return to START
+
 1. **Execution Order**:
 
 - Guaranteed sequence: EI → EO1 → EO2
@@ -59,11 +61,11 @@ The **E_SPLIT** is a standards-compliant function block (IEC 61499-1 Annex A) fo
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | E_SPLIT | E_DEMUX | E_MERGE |
-| --------------- | --------- | --------- | --------- |
-| Functional principle | 1:2 sequence | 1:n distribution | n:1 combination |
-| Event sequence | Fixed | Address-dependent | Arbitrary |
-| State model | BasicFB | Variable | None |
+| Feature              | E_SPLIT      | E_DEMUX           | E_MERGE         |
+| -------------------- | ------------ | ----------------- | --------------- |
+| Functional principle | 1:2 sequence | 1:n distribution  | n:1 combination |
+| Event sequence       | Fixed        | Address-dependent | Arbitrary       |
+| State model          | BasicFB      | Variable          | None            |
 
 ## 🛠️ Related Exercises
 

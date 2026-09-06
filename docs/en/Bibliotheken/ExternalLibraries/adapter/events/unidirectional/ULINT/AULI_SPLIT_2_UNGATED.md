@@ -30,11 +30,11 @@ None.
 
 ### **Adapter**
 
-| Direction | Name | Type | Description |
-| ---------- | ------ | ----- | -------------- |
-| **Socket (Input)** | IN | AULI (unidirectional) | Incoming AULI data stream |
-| **Plug (Output)** | OUT1 | AULI (unidirectional) | First output, identical copy of IN |
-| **Plug (Output)** | OUT2 | AULI (unidirectional) | Second output, identical copy of IN |
+| Direction          | Name | Type                  | Description                         |
+| ------------------ | ---- | --------------------- | ----------------------------------- |
+| **Socket (Input)** | IN   | AULI (unidirectional) | Incoming AULI data stream           |
+| **Plug (Output)**  | OUT1 | AULI (unidirectional) | First output, identical copy of IN  |
+| **Plug (Output)**  | OUT2 | AULI (unidirectional) | Second output, identical copy of IN |
 
 ## Functionality
 
@@ -58,11 +58,11 @@ Since the function block contains no internal logic or state machine, there is n
 
 ## Comparison with Similar Components
 
-| Component | Function |
-| ---------- | ---------- |
-| **AULI_SPLIT_2_UNGATED** | Split to two outputs (identical to IN) |
-| **AULI_SPLIT_N** | Generalized variant with a configurable number of outputs |
-| **AULI_MERGE** | Merging multiple inputs into one output |
+| Component                | Function                                                  |
+| ------------------------ | --------------------------------------------------------- |
+| **AULI_SPLIT_2_UNGATED** | Split to two outputs (identical to IN)                    |
+| **AULI_SPLIT_N**         | Generalized variant with a configurable number of outputs |
+| **AULI_MERGE**           | Merging multiple inputs into one output                   |
 
 While **AULI_SPLIT_2_UNGATED** performs a fixed 1:2 split, generic splitters allow for a flexible number of outputs. Mergers like **AULI_MERGE** accomplish the opposite.
 

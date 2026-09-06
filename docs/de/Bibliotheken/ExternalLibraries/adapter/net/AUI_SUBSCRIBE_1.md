@@ -31,8 +31,8 @@ Der Funktionsblock **AUI_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der den
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                 | Richtung       | Beschreibung                      |
+| ------- | ----------------------------------- | -------------- | --------------------------------- |
 | OUT     | adapter::types::unidirectional::AUI | Plug (Ausgang) | Gepufferter empfangener UINT-Wert |
 
 ## Funktionsweise

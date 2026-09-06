@@ -30,13 +30,13 @@ No data outputs available.
 
 ### **Adapters**
 
-| Type | Direction | Name | Description |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AQ` | Socket (Input) | `IN` | Incoming AQ adapter, which is distributed to the four outputs. |
-| `adapter::types::unidirectional::AQ` | Plug (Output) | `OUT1` | First outgoing AQ adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Output) | `OUT2` | Second outgoing AQ adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Output) | `OUT3` | Third outgoing AQ adapter. |
-| `adapter::types::unidirectional::AQ` | Plug (Output) | `OUT4` | Fourth outgoing AQ adapter. |
+| Type                                 | Direction      | Name   | Description                                                    |
+| ------------------------------------ | -------------- | ------ | -------------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | Socket (Input) | `IN`   | Incoming AQ adapter, which is distributed to the four outputs. |
+| `adapter::types::unidirectional::AQ` | Plug (Output)  | `OUT1` | First outgoing AQ adapter.                                     |
+| `adapter::types::unidirectional::AQ` | Plug (Output)  | `OUT2` | Second outgoing AQ adapter.                                    |
+| `adapter::types::unidirectional::AQ` | Plug (Output)  | `OUT3` | Third outgoing AQ adapter.                                     |
+| `adapter::types::unidirectional::AQ` | Plug (Output)  | `OUT4` | Fourth outgoing AQ adapter.                                    |
 
 ## Functionality
 

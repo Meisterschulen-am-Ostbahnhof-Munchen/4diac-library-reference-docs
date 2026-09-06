@@ -30,10 +30,10 @@ Der Baustein besitzt keine separaten Daten-Ausgänge. Die Ausgangsdaten (WORD) w
 
 ### **Adapter**
 
-| Richtung | Bezeichnung | Typ | Kommentar |
-|----------|-------------|-----|-----------|
-| **Socket** | `AX_IN` | `adapter::types::unidirectional::AX` | BOOL-Adapter-Eingang (bestehend aus Ereignis `E1` und Daten `D1:BOOL`) |
-| **Plug** | `AW_OUT` | `adapter::types::unidirectional::AW` | WORD-Adapter-Ausgang (bestehend aus Ereignis `E1` und Daten `D1:WORD`) |
+| Richtung   | Bezeichnung | Typ                                  | Kommentar                                                              |
+| ---------- | ----------- | ------------------------------------ | ---------------------------------------------------------------------- |
+| **Socket** | `AX_IN`     | `adapter::types::unidirectional::AX` | BOOL-Adapter-Eingang (bestehend aus Ereignis `E1` und Daten `D1:BOOL`) |
+| **Plug**   | `AW_OUT`    | `adapter::types::unidirectional::AW` | WORD-Adapter-Ausgang (bestehend aus Ereignis `E1` und Daten `D1:WORD`) |
 
 ## Funktionsweise
 

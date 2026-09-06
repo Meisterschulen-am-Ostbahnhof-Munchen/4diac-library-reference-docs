@@ -12,38 +12,38 @@ Der Funktionsblock **logiBUS_LED_strip_QXA** ist ein Composite-FB zur Ansteuerun
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mit |
-|----------|--------------|-----|
+| Ereignis | Beschreibung            | Mit                              |
+| -------- | ----------------------- | -------------------------------- |
 | INIT     | Service-Initialisierung | QI, PARAMS, Output, Colour, FREQ |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mit |
-|----------|--------------|-----|
-| INITO    | Bestätigung der Initialisierung | QO, STATUS |
+| Ereignis | Beschreibung                               | Mit        |
+| -------- | ------------------------------------------ | ---------- |
+| INITO    | Bestätigung der Initialisierung            | QO, STATUS |
 | CNF      | Bestätigung einer ausgeführten Anforderung | QO, STATUS |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ    | Beschreibung | Initialwert |
-|--------|--------|--------------|-------------|
-| QI     | BOOL   | Freigabe der Verarbeitung (Ereignisqualifizierer) | - |
-| PARAMS | STRING | Service-Parameter (z.B. Buskonfiguration) | - |
-| Output | USINT  | Identifikation des Ausgangs (Strip-Nummer) | `LED_strip::Output_strip` |
-| Colour | UINT   | Farbcode des LEDs | `LED_COLOURS::LED_GREEN` |
-| FREQ   | UINT   | Frequenz/Priorität der LED-Anzeige | `LED_FREQ::LED_OFF` |
+| Name   | Typ    | Beschreibung                                      | Initialwert               |
+| ------ | ------ | ------------------------------------------------- | ------------------------- |
+| QI     | BOOL   | Freigabe der Verarbeitung (Ereignisqualifizierer) | -                         |
+| PARAMS | STRING | Service-Parameter (z.B. Buskonfiguration)         | -                         |
+| Output | USINT  | Identifikation des Ausgangs (Strip-Nummer)        | `LED_strip::Output_strip` |
+| Colour | UINT   | Farbcode des LEDs                                 | `LED_COLOURS::LED_GREEN`  |
+| FREQ   | UINT   | Frequenz/Priorität der LED-Anzeige                | `LED_FREQ::LED_OFF`       |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Beschreibung |
-|--------|--------|--------------|
+| Name   | Typ    | Beschreibung                                    |
+| ------ | ------ | ----------------------------------------------- |
 | QO     | BOOL   | Ausgangsqualifizierer (Status der Verarbeitung) |
-| STATUS | STRING | Statusmeldung (z.B. Fehlercode) |
+| STATUS | STRING | Statusmeldung (z.B. Fehlercode)                 |
 
 ### **Adapter**
 
-| Adapter | Typ | Beschreibung |
-|---------|-----|--------------|
+| Adapter | Typ                                  | Beschreibung                                                                                         |
+| ------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | OUT     | `adapter::types::unidirectional::AX` | Unidirektionale Adapter-Schnittstelle zur Datenübergabe an die Ressource (Ausgangsdaten zum logiBUS) |
 
 ## Funktionsweise

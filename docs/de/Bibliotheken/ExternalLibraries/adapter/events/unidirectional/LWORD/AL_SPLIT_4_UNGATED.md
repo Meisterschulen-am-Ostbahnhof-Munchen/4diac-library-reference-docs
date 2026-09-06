@@ -30,13 +30,13 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AL` | **IN** | Socket (Eingang) | Eingehender Adapter-Datenstrom, der auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AL` | **OUT1** | Plug (Ausgang) | Erster Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
-| `adapter::types::unidirectional::AL` | **OUT2** | Plug (Ausgang) | Zweiter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
-| `adapter::types::unidirectional::AL` | **OUT3** | Plug (Ausgang) | Dritter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
-| `adapter::types::unidirectional::AL` | **OUT4** | Plug (Ausgang) | Vierter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
+| Typ                                  | Name     | Richtung         | Beschreibung                                                            |
+| ------------------------------------ | -------- | ---------------- | ----------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AL` | **IN**   | Socket (Eingang) | Eingehender Adapter-Datenstrom, der auf alle Ausgänge verteilt wird.    |
+| `adapter::types::unidirectional::AL` | **OUT1** | Plug (Ausgang)   | Erster Ausgang – erhält eine identische Kopie des Eingangsdatenstroms.  |
+| `adapter::types::unidirectional::AL` | **OUT2** | Plug (Ausgang)   | Zweiter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
+| `adapter::types::unidirectional::AL` | **OUT3** | Plug (Ausgang)   | Dritter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
+| `adapter::types::unidirectional::AL` | **OUT4** | Plug (Ausgang)   | Vierter Ausgang – erhält eine identische Kopie des Eingangsdatenstroms. |
 
 ## Funktionsweise
 

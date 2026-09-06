@@ -38,11 +38,11 @@ Aus dem Anfangszustand `START` führen `S`, `R` **und** `CLK` zu einem definiert
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Anfangszustand, reagiert symmetrisch auf `S`, `R`, `CLK` |
-| SET | `Q = TRUE`; `R`→RESET, `CLK`→RESET |
-| RESET | `Q = FALSE`; `S`→SET, `CLK`→SET |
+| Zustand | Bedeutung                                                |
+| ------- | -------------------------------------------------------- |
+| START   | Anfangszustand, reagiert symmetrisch auf `S`, `R`, `CLK` |
+| SET     | `Q = TRUE`; `R`→RESET, `CLK`→RESET                       |
+| RESET   | `Q = FALSE`; `S`→SET, `CLK`→SET                          |
 
 ## Anwendungsszenarien
 

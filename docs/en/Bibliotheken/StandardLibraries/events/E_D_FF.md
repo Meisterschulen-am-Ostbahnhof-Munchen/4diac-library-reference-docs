@@ -40,6 +40,7 @@ IEC 61499 is an international standard for modeling distributed industrial contr
 
 - On each rising edge of the `CLK` signal, the value of `D` is transferred to `Q`.
 - When the value changes, the `EO` event is triggered.
+
 1. **Data Retention:**
 
 - Between clock edges, the stored value `Q` remains stable.
@@ -61,12 +62,12 @@ IEC 61499 is an international standard for modeling distributed industrial contr
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | E_D_FF | E_SR | E_R_TRIG |
-| ---------------- | ------- | ------ | ---------- |
-| Memory Type | D Flip-Flop | SR Latch | Edge Detector |
-| Clocking | Required | None | None |
-| Data Retention | Yes | Yes | No |
-| Event Output | On Change | On Set/Reset | On Edge |
+| Feature        | E_D_FF      | E_SR         | E_R_TRIG      |
+| -------------- | ----------- | ------------ | ------------- |
+| Memory Type    | D Flip-Flop | SR Latch     | Edge Detector |
+| Clocking       | Required    | None         | None          |
+| Data Retention | Yes         | Yes          | No            |
+| Event Output   | On Change   | On Set/Reset | On Edge       |
 
 ## 🛠️ Related Exercises
 

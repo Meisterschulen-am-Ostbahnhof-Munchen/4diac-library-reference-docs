@@ -12,38 +12,38 @@ Der Funktionsblock **INI_ALR** dient dem Lesen und Speichern von Gleitkommawerte
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                                    | Mit Variablen                        |
-|----------|-------|----------------------------------------------|--------------------------------------|
-| INIT     | EInit | Initialisiert den Baustein und löst Lesen aus| QI, SECTION, KEY, DEFAULT_VALUE      |
+| Ereignis | Typ   | Kommentar                                     | Mit Variablen                   |
+| -------- | ----- | --------------------------------------------- | ------------------------------- |
+| INIT     | EInit | Initialisiert den Baustein und löst Lesen aus | QI, SECTION, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar                       | Mit Variablen |
-|----------|-------|---------------------------------|---------------|
-| INITO    | EInit | Bestätigt die Initialisierung   | QO, STATUS    |
+| Ereignis | Typ   | Kommentar                     | Mit Variablen |
+| -------- | ----- | ----------------------------- | ------------- |
+| INITO    | EInit | Bestätigt die Initialisierung | QO, STATUS    |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ    | Kommentar                                                 |
-|---------------|--------|-----------------------------------------------------------|
-| QI            | BOOL   | Event‑Eingangs‑Qualifizierer (Freigabe)                   |
-| SECTION       | STRING | Abschnittsname in der INI‑Datei                           |
-| KEY           | STRING | Schlüsselname innerhalb des Abschnitts                    |
-| DEFAULT_VALUE | LREAL  | Rückfallwert, falls der Schlüssel in der INI‑Datei fehlt  |
+| Name          | Typ    | Kommentar                                                |
+| ------------- | ------ | -------------------------------------------------------- |
+| QI            | BOOL   | Event‑Eingangs‑Qualifizierer (Freigabe)                  |
+| SECTION       | STRING | Abschnittsname in der INI‑Datei                          |
+| KEY           | STRING | Schlüsselname innerhalb des Abschnitts                   |
+| DEFAULT_VALUE | LREAL  | Rückfallwert, falls der Schlüssel in der INI‑Datei fehlt |
 
 ### **Daten-Ausgänge**
 
 | Name   | Typ    | Kommentar                        |
-|--------|--------|----------------------------------|
+| ------ | ------ | -------------------------------- |
 | QO     | BOOL   | Event‑Ausgangs‑Qualifizierer     |
 | STATUS | STRING | Statusmeldung (z. B. Fehlertext) |
 
 ### **Adapter**
 
-| Adapter  | Typ                               | Kommentar                                              |
-|----------|-----------------------------------|--------------------------------------------------------|
-| ALR_IN   | adapter::types::unidirectional::ALR| Socket – Wert zum Speichern (SET)                     |
-| ALR_OUT  | adapter::types::unidirectional::ALR| Plug – gelesener Wert (GET)/Bestätigung               |
+| Adapter | Typ                                 | Kommentar                               |
+| ------- | ----------------------------------- | --------------------------------------- |
+| ALR_IN  | adapter::types::unidirectional::ALR | Socket – Wert zum Speichern (SET)       |
+| ALR_OUT | adapter::types::unidirectional::ALR | Plug – gelesener Wert (GET)/Bestätigung |
 
 ## Funktionsweise
 
@@ -82,10 +82,10 @@ Der `INI_ALR` selbst besitzt keine eigenen Zustandsautomaten. Die Zustandsverwal
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein   | Beschreibung                                                       | Vorteil von INI_ALR                            |
-|------------|--------------------------------------------------------------------|-------------------------------------------------|
-| `INI`      | Direkter Zugriff auf INI‑Dateien (ohne ALR)                        | Fehlende Adapter‑Schnittstelle, manuelle Kopplung nötig |
-| `INI_ALR`  | Kapselt `INI` und stellt ALR‑Adapter‑Schnittstelle bereit          | Einfache Integration in ALR‑basierte Architekturen |
+| Baustein  | Beschreibung                                              | Vorteil von INI_ALR                                     |
+| --------- | --------------------------------------------------------- | ------------------------------------------------------- |
+| `INI`     | Direkter Zugriff auf INI‑Dateien (ohne ALR)               | Fehlende Adapter‑Schnittstelle, manuelle Kopplung nötig |
+| `INI_ALR` | Kapselt `INI` und stellt ALR‑Adapter‑Schnittstelle bereit | Einfache Integration in ALR‑basierte Architekturen      |
 
 Der `INI_ALR` kombiniert die bewährte INI‑Datei‑Funktionalität mit einer standardisierten Adapter‑Schnittstelle und reduziert dadurch den Aufwand für die Einbindung in ein diensteorientiertes Steuerungssystem.
 

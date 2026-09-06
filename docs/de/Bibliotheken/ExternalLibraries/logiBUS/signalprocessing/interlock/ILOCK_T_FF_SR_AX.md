@@ -12,10 +12,10 @@ Der Funktionsblock **ILOCK_T_FF_SR_AX** ist ein zusammengesetzter Baustein (Comp
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| S    | Event | Setzt den Ausgang Q (sofern nicht verriegelt) |
-| R    | Event | Setzt den Ausgang Q zurück |
+| Name | Typ   | Kommentar                                         |
+| ---- | ----- | ------------------------------------------------- |
+| S    | Event | Setzt den Ausgang Q (sofern nicht verriegelt)     |
+| R    | Event | Setzt den Ausgang Q zurück                        |
 | CLK  | Event | Takt-Eingang zum Umschalten (Toggle) des Ausgangs |
 
 ### **Ereignis-Ausgänge**
@@ -28,17 +28,17 @@ Es sind keine direkten Dateneingänge vorhanden. Die Verriegelungsinformationen 
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ                         | Kommentar                                |
+| ---- | --------------------------- | ---------------------------------------- |
 | Q    | Adapter AX (unidirektional) | Ausgangssignal des internen SR-Flipflops |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Socket   | ILOCK_IN | AE2 (bidirektional) | Empfängt Verriegelungssignale von externen Bausteinen |
-| Plug     | ILOCK_OUT | AE2 (bidirektional) | Sendet Verriegelungssignale an externe Bausteine |
-| Plug     | Q         | AX  (unidirektional) | Gibt den aktuellen Zustand des Flipflops aus |
+| Richtung | Name      | Typ                  | Kommentar                                             |
+| -------- | --------- | -------------------- | ----------------------------------------------------- |
+| Socket   | ILOCK_IN  | AE2 (bidirektional)  | Empfängt Verriegelungssignale von externen Bausteinen |
+| Plug     | ILOCK_OUT | AE2 (bidirektional)  | Sendet Verriegelungssignale an externe Bausteine      |
+| Plug     | Q         | AX  (unidirektional) | Gibt den aktuellen Zustand des Flipflops aus          |
 
 ## Funktionsweise
 
@@ -64,16 +64,16 @@ Die Verriegelung erfolgt über das bidirektionale AE2-Protokoll: Die Signale von
 
 Der interne Zustand des Flipflops kann die Werte `false` (0) oder `true` (1) annehmen. Die möglichen Übergänge:
 
-| Aktuell | Ereignis | Neuer Zustand | Bedingungen |
-|---------|----------|---------------|-------------|
-| 0       | S        | 1             | Keine Verriegelung durch ILOCK |
-| 0       | R        | 0             | – |
-| 0       | CLK      | 1             | Keine Verriegelung |
-| 0       | ILOCK_IN/ILOCK_OUT | 0 | – |
-| 1       | S        | 1             | – |
-| 1       | R        | 0             | Keine Verriegelung (Vorrang von R) |
-| 1       | CLK      | 0             | Keine Verriegelung |
-| 1       | ILOCK_IN/ILOCK_OUT | 0 | – |
+| Aktuell | Ereignis           | Neuer Zustand | Bedingungen                        |
+| ------- | ------------------ | ------------- | ---------------------------------- |
+| 0       | S                  | 1             | Keine Verriegelung durch ILOCK     |
+| 0       | R                  | 0             | –                                  |
+| 0       | CLK                | 1             | Keine Verriegelung                 |
+| 0       | ILOCK_IN/ILOCK_OUT | 0             | –                                  |
+| 1       | S                  | 1             | –                                  |
+| 1       | R                  | 0             | Keine Verriegelung (Vorrang von R) |
+| 1       | CLK                | 0             | Keine Verriegelung                 |
+| 1       | ILOCK_IN/ILOCK_OUT | 0             | –                                  |
 
 ## Anwendungsszenarien
 

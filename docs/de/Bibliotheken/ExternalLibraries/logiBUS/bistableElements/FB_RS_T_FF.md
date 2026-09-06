@@ -12,29 +12,29 @@ Der Funktionsblock `FB_RS_T_FF` realisiert einen bistabilen, reset-dominanten La
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `REQ` | Normaler Ausführungsanforderung – löst die Verarbeitung der Eingangssignale aus. |
+| Ereignis | Kommentar                                                                        |
+| -------- | -------------------------------------------------------------------------------- |
+| `REQ`    | Normaler Ausführungsanforderung – löst die Verarbeitung der Eingangssignale aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `CNF` | Bestätigt die Ausführung nach erfolgter Berechnung des Ausgangs `Q1`. |
+| Ereignis | Kommentar                                                             |
+| -------- | --------------------------------------------------------------------- |
+| `CNF`    | Bestätigt die Ausführung nach erfolgter Berechnung des Ausgangs `Q1`. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
-| `S`      | BOOL  | Setzen – setzt den Ausgang `Q1` auf `TRUE`, sofern `R1` nicht gleichzeitig aktiv ist. |
-| `R1`     | BOOL  | Reset (dominant) – setzt den Ausgang `Q1` auf `FALSE` und hat Vorrang vor `S` und Toggle. |
-| `CLK`    | BOOL  | Clock – Taktgeber für die Toggle-Funktion; bei steigender Flanke wird `Q1` invertiert, wenn weder Reset noch Set aktiv sind. |
+| Variable | Typ  | Kommentar                                                                                                                    |
+| -------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `S`      | BOOL | Setzen – setzt den Ausgang `Q1` auf `TRUE`, sofern `R1` nicht gleichzeitig aktiv ist.                                        |
+| `R1`     | BOOL | Reset (dominant) – setzt den Ausgang `Q1` auf `FALSE` und hat Vorrang vor `S` und Toggle.                                    |
+| `CLK`    | BOOL | Clock – Taktgeber für die Toggle-Funktion; bei steigender Flanke wird `Q1` invertiert, wenn weder Reset noch Set aktiv sind. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Kommentar |
-|----------|-------|-----------|
-| `Q1`     | BOOL  | Ausgang des Latch – zeigt den aktuellen gespeicherten Zustand an. |
+| Variable | Typ  | Kommentar                                                         |
+| -------- | ---- | ----------------------------------------------------------------- |
+| `Q1`     | BOOL | Ausgang des Latch – zeigt den aktuellen gespeicherten Zustand an. |
 
 ### **Adapter**
 
@@ -73,12 +73,12 @@ EDGE := CLK;
 
 Der Funktionsblock besitzt keinen expliziten Zustandsautomaten; der Zustand wird implizit durch die internen Variablen `Q1` und `EDGE` abgebildet. Eine Zustandstabelle fasst das Verhalten zusammen:
 
-| Aktuelles `Q1` | `R1` | `S` | `CLK` (steigende Flanke) | Neues `Q1` |
-|----------------|------|-----|---------------------------|-------------|
-| x              | TRUE | x   | x                         | FALSE       |
-| x              | FALSE| TRUE| x                         | TRUE        |
-| x              | FALSE| FALSE| TRUE (und vorher FALSE)   | NOT Q1      |
-| x              | FALSE| FALSE| FALSE oder keine Flanke   | unverändert |
+| Aktuelles `Q1` | `R1`  | `S`   | `CLK` (steigende Flanke) | Neues `Q1`  |
+| -------------- | ----- | ----- | ------------------------ | ----------- |
+| x              | TRUE  | x     | x                        | FALSE       |
+| x              | FALSE | TRUE  | x                        | TRUE        |
+| x              | FALSE | FALSE | TRUE (und vorher FALSE)  | NOT Q1      |
+| x              | FALSE | FALSE | FALSE oder keine Flanke  | unverändert |
 
 ## Anwendungsszenarien
 

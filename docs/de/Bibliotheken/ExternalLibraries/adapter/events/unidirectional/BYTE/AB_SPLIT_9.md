@@ -30,10 +30,10 @@ Keine vorhanden.
 
 ### **Adapter**
 
-| Schnittstelle | Richtung | Typ | Beschreibung |
-| -------------- | ---------- | ----- | -------------- |
-| IN | Socket | `adapter::types::unidirectional::AB` | Eingehender Adapter (Quelle) |
-| OUT1 – OUT9 | Plug | `adapter::types::unidirectional::AB` | Neun identische ausgehende Adapter (Senken) |
+| Schnittstelle | Richtung | Typ                                  | Beschreibung                                |
+| ------------- | -------- | ------------------------------------ | ------------------------------------------- |
+| IN            | Socket   | `adapter::types::unidirectional::AB` | Eingehender Adapter (Quelle)                |
+| OUT1 – OUT9   | Plug     | `adapter::types::unidirectional::AB` | Neun identische ausgehende Adapter (Senken) |
 
 ## Funktionsweise
 
@@ -59,11 +59,11 @@ Der Baustein besitzt **keine** eigenen Zustände. Das Verhalten ist rein kombina
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ausgänge | Besonderheit |
-| ---------- | ---------- | -------------- |
-| `AB_SPLIT_9` | 9 | Standard‑Split für 1→9, generisch |
-| `AB_SPLIT_4` | 4 | Gleiche Funktionsweise, geringere Anzahl |
-| `AB_MERGE` | – | Fasst mehrere Eingänge zu einem Ausgang zusammen (entgegengesetzte Richtung) |
+| Baustein     | Ausgänge | Besonderheit                                                                 |
+| ------------ | -------- | ---------------------------------------------------------------------------- |
+| `AB_SPLIT_9` | 9        | Standard‑Split für 1→9, generisch                                            |
+| `AB_SPLIT_4` | 4        | Gleiche Funktionsweise, geringere Anzahl                                     |
+| `AB_MERGE`   | –        | Fasst mehrere Eingänge zu einem Ausgang zusammen (entgegengesetzte Richtung) |
 
 Während `AB_SPLIT_9` eine Quelle auf viele Senken verteilt, realisiert `AB_MERGE` eine Zusammenführung mehrerer Quellen in einen Ausgang. `AB_SPLIT_9` ist daher die ideale Wahl, wenn ein Signal an viele Verbraucher weitergeleitet werden muss.
 

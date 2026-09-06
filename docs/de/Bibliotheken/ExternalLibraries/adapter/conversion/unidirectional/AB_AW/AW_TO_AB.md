@@ -28,10 +28,10 @@ Der Baustein besitzt keine eigenen Daten-Ausgänge. Das konvertierte BYTE-Ergebn
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-| ------ | ---------- | ----- | ------------- |
-| `AW_IN` | Socket (Eingang) | `adapter::types::unidirectional::AW` | WORD-Adapter mit einem Ereignis `E1` und einem Datenwert `D1` (WORD) |
-| `AB_OUT` | Plug (Ausgang) | `adapter::types::unidirectional::AB` | BYTE-Adapter mit einem Ereignis `E1` und einem Datenwert `D1` (BYTE) |
+| Name     | Richtung         | Typ                                  | Beschreibung                                                         |
+| -------- | ---------------- | ------------------------------------ | -------------------------------------------------------------------- |
+| `AW_IN`  | Socket (Eingang) | `adapter::types::unidirectional::AW` | WORD-Adapter mit einem Ereignis `E1` und einem Datenwert `D1` (WORD) |
+| `AB_OUT` | Plug (Ausgang)   | `adapter::types::unidirectional::AB` | BYTE-Adapter mit einem Ereignis `E1` und einem Datenwert `D1` (BYTE) |
 
 ## Funktionsweise
 

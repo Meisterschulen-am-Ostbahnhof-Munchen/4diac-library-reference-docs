@@ -12,22 +12,22 @@ Der Funktionsblock **AI_D_FF_HYS_TMIN** realisiert ein Data-Latch (D-Flipflop) m
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar                                                  |
+| -------- | ----- | ---------------------------------------------------------- |
 | INIT     | EInit | Initialisierungsanforderung (setzt Hystereseband und Tmin) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
+| Ereignis | Typ   | Kommentar                   |
+| -------- | ----- | --------------------------- |
 | INITO    | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Variable     | Typ   | Kommentar |
-|--------------|-------|-----------|
-| HYSTERESIS   | INT   | Hystereseband (Wert in derselben Einheit wie das Eingangssignal) |
-| Tmin         | TIME  | Mindestzeit zwischen zwei Ereignisausgängen (E1 am Q-Adapter) |
+| Variable   | Typ  | Kommentar                                                        |
+| ---------- | ---- | ---------------------------------------------------------------- |
+| HYSTERESIS | INT  | Hystereseband (Wert in derselben Einheit wie das Eingangssignal) |
+| Tmin       | TIME | Mindestzeit zwischen zwei Ereignisausgängen (E1 am Q-Adapter)    |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Der Baustein besitzt keine eigenen Datenausgänge. Der latched Wert wird über d
 
 ### **Adapter**
 
-| Adapter | Typ | Kommentar |
-|---------|-----|-----------|
+| Adapter | Typ                                | Kommentar                                                                            |
+| ------- | ---------------------------------- | ------------------------------------------------------------------------------------ |
 | **I**   | adapter::types::unidirectional::AI | Eingangsadapter: liefert das zu verarbeitende Signal (über Ereignis E1 und Daten D1) |
-| **Q**   | adapter::types::unidirectional::AI | Ausgangsadapter: gibt den latched Wert aus (über Ereignis E1 und Daten D1) |
+| **Q**   | adapter::types::unidirectional::AI | Ausgangsadapter: gibt den latched Wert aus (über Ereignis E1 und Daten D1)           |
 
 ## Funktionsweise
 
@@ -75,12 +75,12 @@ Der Baustein besitzt keine expliziten benannten Zustände. Das interne Flipflop 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Wesentlicher Unterschied |
-| ---------- | -------------------------- |
+| Baustein                          | Wesentlicher Unterschied                                                |
+| --------------------------------- | ----------------------------------------------------------------------- |
 | **E_D_FF** (einfaches D-Flipflop) | Kein Hystereseband, keine Mindestzeit – übernimmt jede Änderung sofort. |
-| **AI_D_FF_HYS** (ohne Tmin) | Enthält Hysterese, jedoch keine zeitliche Begrenzung der Ausgabe. |
-| **AI_D_FF_TMIN** (ohne Hysterese) | Enthält nur die Mindestzeit, aber keine Hysterese. |
-| **AI_D_FF_HYS_TMIN** (dieser) | Kombiniert beide Filter: Hysterese und zeitliche Begrenzung. |
+| **AI_D_FF_HYS** (ohne Tmin)       | Enthält Hysterese, jedoch keine zeitliche Begrenzung der Ausgabe.       |
+| **AI_D_FF_TMIN** (ohne Hysterese) | Enthält nur die Mindestzeit, aber keine Hysterese.                      |
+| **AI_D_FF_HYS_TMIN** (dieser)     | Kombiniert beide Filter: Hysterese und zeitliche Begrenzung.            |
 
 ## Fazit
 

@@ -16,9 +16,9 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| E1 | Event | Indication (or Request) Event from Plug (wird zusammen mit D1 ausgelöst) |
+| Name | Typ   | Kommentar                                                                |
+| ---- | ----- | ------------------------------------------------------------------------ |
+| E1   | Event | Indication (or Request) Event from Plug (wird zusammen mit D1 ausgelöst) |
 
 ### **Daten-Eingänge**
 
@@ -26,9 +26,9 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| D1 | BYTE | Indication (or Request) Data from Plug (2 Bit genutzt) |
+| Name | Typ  | Kommentar                                              |
+| ---- | ---- | ------------------------------------------------------ |
+| D1   | BYTE | Indication (or Request) Data from Plug (2 Bit genutzt) |
 
 ### **Adapter**
 
@@ -57,12 +57,12 @@ Der Adapter selbst besitzt keinen internen Zustand. Der sendende Funktionsbauste
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | AQ (dieser Adapter) | Andere Adapter (z. B. mit mehreren Events) |
-| --------- | --------------------- | -------------------------------------------- |
-| Ereignisse | 1 Ausgang | Oft mehrere Ein-/Ausgänge |
-| Daten | 1 Byte (2 Bit genutzt) | Häufig mehrere Variablen oder komplexe Typen |
-| Ausrichtung | Unidirektional (Plug-Seite) | Bidirektional oder reine Socket-Seite |
-| Komplexität | Sehr gering | Mittel bis hoch |
+| Merkmal     | AQ (dieser Adapter)         | Andere Adapter (z. B. mit mehreren Events)   |
+| ----------- | --------------------------- | -------------------------------------------- |
+| Ereignisse  | 1 Ausgang                   | Oft mehrere Ein-/Ausgänge                    |
+| Daten       | 1 Byte (2 Bit genutzt)      | Häufig mehrere Variablen oder komplexe Typen |
+| Ausrichtung | Unidirektional (Plug-Seite) | Bidirektional oder reine Socket-Seite        |
+| Komplexität | Sehr gering                 | Mittel bis hoch                              |
 
 Der `AQ` ist speziell für den Minimalfall “Ein Ereignis + ein Byte” optimiert.
 

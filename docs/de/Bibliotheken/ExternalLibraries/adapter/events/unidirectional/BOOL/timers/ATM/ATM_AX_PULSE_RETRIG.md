@@ -12,10 +12,10 @@ Der Funktionsbaustein **ATM_AX_PULSE_RETRIG** erzeugt einen Impuls (Puls) defini
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                                  |
-|------|-------|--------------------------------------------|
+| Name | Typ   | Kommentar                                                                |
+| ---- | ----- | ------------------------------------------------------------------------ |
 | REQ  | Event | Startbefehl – löst einen neuen Impuls aus und startet die Timer-Zeit neu |
-| R    | Event | Reset – beendet einen laufenden Impuls sofort |
+| R    | Event | Reset – beendet einen laufenden Impuls sofort                            |
 
 ### **Ereignis-Ausgänge**
 
@@ -31,10 +31,10 @@ Keine. Der Impulsstatus (aktiv/inaktiv) wird über den Adapter **Q** (Plug) ausg
 
 ### **Adapter**
 
-| Rolle | Name | Typ   | Richtung | Beschreibung                                          |
-|-------|------|-------|----------|-------------------------------------------------------|
-| Input | PT   | ATM   | Socket   | Liefert die gewünschte Impulsdauer <small>(D1 → PT)</small> |
-| Output| Q    | AX    | Plug     | Zeigt den Impulszustand an <small>(D1 = HIGH während des Impulses)</small> |
+| Rolle  | Name | Typ | Richtung | Beschreibung                                                               |
+| ------ | ---- | --- | -------- | -------------------------------------------------------------------------- |
+| Input  | PT   | ATM | Socket   | Liefert die gewünschte Impulsdauer <small>(D1 → PT)</small>                |
+| Output | Q    | AX  | Plug     | Zeigt den Impulszustand an <small>(D1 = HIGH während des Impulses)</small> |
 
 ## Funktionsweise
 
@@ -63,11 +63,11 @@ Der Baustein kennt zwei Zustände:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein                | Retriggerbar | Schnittstelle        | Einsatzgebiet                     |
-|-------------------------|--------------|----------------------|-----------------------------------|
-| **ATM_AX_PULSE_RETRIG** | Ja           | Adapter (ATM/AX)     | Modulare Steuerungen mit Adapter-Konzept |
-| ATM_AX_PULSE           | Nein         | Adapter (ATM/AX)     | Einmalige Impulse, keine Neuauslösung |
-| Standard E_PULSE_RETRIG| Ja           | Direkte Ein-/Ausgänge | Flexibler, aber ohne Adapter-Kapselung |
+| Baustein                | Retriggerbar | Schnittstelle         | Einsatzgebiet                            |
+| ----------------------- | ------------ | --------------------- | ---------------------------------------- |
+| **ATM_AX_PULSE_RETRIG** | Ja           | Adapter (ATM/AX)      | Modulare Steuerungen mit Adapter-Konzept |
+| ATM_AX_PULSE            | Nein         | Adapter (ATM/AX)      | Einmalige Impulse, keine Neuauslösung    |
+| Standard E_PULSE_RETRIG | Ja           | Direkte Ein-/Ausgänge | Flexibler, aber ohne Adapter-Kapselung   |
 
 Der vorliegende Baustein hebt sich durch die ausschließliche Verwendung von Adapter-Schnittstellen ab, was die Einbindung in bestehende Adapter-basierte Bibliotheken erleichtert.
 

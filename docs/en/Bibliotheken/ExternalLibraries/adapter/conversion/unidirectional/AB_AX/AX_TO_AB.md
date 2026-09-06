@@ -12,34 +12,34 @@ The composite function block `AX_TO_AB` converts a BOOL adapter signal of type `
 
 ### **Event Inputs**
 
-| Name | Description |
-|------|--------------|
+| Name                | Description                                                                      |
+| ------------------- | -------------------------------------------------------------------------------- |
 | `E1` (from `AX_IN`) | Event input received via the BOOL adapter and passed on unchanged to the output. |
 
 ### **Event Outputs**
 
-| Name | Description |
-|------|--------------|
+| Name                 | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
 | `E1` (from `AB_OUT`) | Event output that provides the event passed through from the input. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Description |
-|------|----------|---------------|
-| `D1` (from `AX_IN`) | `BOOL` | The Boolean signal to be converted (TRUE or FALSE). |
+| Name                | Data Type | Description                                         |
+| ------------------- | --------- | --------------------------------------------------- |
+| `D1` (from `AX_IN`) | `BOOL`    | The Boolean signal to be converted (TRUE or FALSE). |
 
 ### **Data Outputs**
 
-| Name | Data Type | Description |
-|------|----------|---------------|
-| `D1` (from `AB_OUT`) | `BYTE` | The converted signal: `TRUE` becomes `1`, `FALSE` becomes `0`. |
+| Name                 | Data Type | Description                                                    |
+| -------------------- | --------- | -------------------------------------------------------------- |
+| `D1` (from `AB_OUT`) | `BYTE`    | The converted signal: `TRUE` becomes `1`, `FALSE` becomes `0`. |
 
 ### **Adapter**
 
-| Type | Direction | Identifier | Comment |
-| ----- | ---------- | ------------ | ----------- |
-| `adapter::types::unidirectional::AX` | Socket (Input) | `AX_IN` | BOOL adapter that provides the input data and events. |
-| `adapter::types::unidirectional::AB` | Plug (Output) | `AB_OUT` | BYTE adapter that outputs the converted data and events. |
+| Type                                 | Direction      | Identifier | Comment                                                  |
+| ------------------------------------ | -------------- | ---------- | -------------------------------------------------------- |
+| `adapter::types::unidirectional::AX` | Socket (Input) | `AX_IN`    | BOOL adapter that provides the input data and events.    |
+| `adapter::types::unidirectional::AB` | Plug (Output)  | `AB_OUT`   | BYTE adapter that outputs the converted data and events. |
 
 ## Functionality
 

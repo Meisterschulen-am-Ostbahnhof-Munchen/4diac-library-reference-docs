@@ -3,6 +3,7 @@
 ![AD_TO_AR_NUM](./AD_TO_AR_NUM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AD_TO_AR_NUM** ist die numerisch korrekte Alternative zu [`AD_TO_AR`](./AD_TO_AR.md): Er wandelt einen DWORD-Wert aus einem unidirektionalen AD-Adapter (Socket) über einen internen UDINT-Zwischenschritt in einen REAL-Wert um, der über einen AR-Adapter (Plug) ausgegeben wird — eine **echte Wertumwandlung**, keine Bit-Reinterpretation.
@@ -17,10 +18,10 @@ Der Baustein besitzt keine direkten (einzelnen) Ereignis- oder Daten-Ein-/Ausgä
 
 ### **Adapter**
 
-| Name   | Typ                                       | Richtung | Beschreibung                                                                 |
-|--------|--------------------------------------------|----------|-----------------------------------------------------------------------------|
-| AD_IN  | `adapter::types::unidirectional::AD`      | Socket   | Empfängt ein Ereignis (E1) und einen DWORD-Rohwert (D1) zur Konvertierung. |
-| AR_OUT | `adapter::types::unidirectional::AR`      | Plug     | Sendet ein Ereignis (E1) mit dem numerisch umgewandelten REAL-Wert (D1) aus. |
+| Name   | Typ                                  | Richtung | Beschreibung                                                                 |
+| ------ | ------------------------------------ | -------- | ---------------------------------------------------------------------------- |
+| AD_IN  | `adapter::types::unidirectional::AD` | Socket   | Empfängt ein Ereignis (E1) und einen DWORD-Rohwert (D1) zur Konvertierung.   |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug     | Sendet ein Ereignis (E1) mit dem numerisch umgewandelten REAL-Wert (D1) aus. |
 
 ## Funktionsweise
 
@@ -55,10 +56,10 @@ Der Baustein arbeitet zweistufig statt in einem einzigen (gefährlichen) Schritt
 
 ### 📖 Hintergrund
 
-* [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)
+- [Numerisch vs. bitweise: Die Konvertierungs-Falle in FORTE](../Numerisch_vs_Bitweise.md)
 
 ---
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

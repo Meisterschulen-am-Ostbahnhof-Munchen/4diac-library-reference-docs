@@ -30,10 +30,12 @@ The **E_MERGE** is a fundamental function block of the IEC 61499 standard that c
 
 - Each event at `EI1` or `EI2` triggers an output event at `EO`
 - The inputs are logically ORed
+
 1. **Independent Processing:**
 
 - Events at both inputs are Equal treatment
 - No prioritization of specific inputs
+
 1. **Immediate forwarding:**
 
 - No delay between input and output events
@@ -55,11 +57,11 @@ The **E_MERGE** is a fundamental function block of the IEC 61499 standard that c
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | E_MERGE | E_DEMUX | E_SWITCH |
-| --------------- | --------- | --------- | --------- |
+| Feature              | E_MERGE      | E_DEMUX      | E_SWITCH               |
+| -------------------- | ------------ | ------------ | ---------------------- |
 | Functional principle | OR operation | Distribution | Conditional forwarding |
-| Direction | n:1 | 1:n | 1:1 |
-| Event flow | Combination | Splitting | Selection |
+| Direction            | n:1          | 1:n          | 1:1                    |
+| Event flow           | Combination  | Splitting    | Selection              |
 
 ## Similar Building Blocks
 

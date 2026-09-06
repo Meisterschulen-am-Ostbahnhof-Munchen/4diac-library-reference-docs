@@ -19,7 +19,7 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 ### Der Baustein FB_TOF in der IEC 61131-3: Ein Überblick
 
-#### Einleitung
+#### Überblick
 
 Die IEC 61131-3 ist ein internationaler Standard, der die Programmierung von speicherprogrammierbaren Steuerungen (SPS) regelt. Ein zentrales Konzept in diesem Standard ist der Funktionsbaustein (FB), der als wiederverwendbare Komponente für die Steuerungslogik dient. Der Baustein **FB_TOF** (Off-Delay Timer) ist ein Beispiel für einen solchen Funktionsbaustein, der in der IEC 61131-3 verwendet wird, um eine verzögerte Abschaltfunktion zu modellieren. Dieser Aufsatz beschreibt die Struktur, das Verhalten und die Anwendung des FB_TOF-Bausteins anhand des bereitgestellten Quelltextes. Ein wichtiger Aspekt, der besonders hervorgehoben werden soll, ist, dass dieser Baustein nur dann korrekt funktioniert, wenn er **zyklisch aufgerufen** wird.
 
@@ -66,8 +66,6 @@ Der FB_TOF-Baustein kann in verschiedenen industriellen Steuerungsanwendungen ei
 - **Maschinensteuerung**: Der Baustein kann verwendet werden, um sicherzustellen, dass eine Maschine nach dem Ausschalten noch für eine bestimmte Zeit weiterläuft, z.B. um Prozesse abzuschließen oder Sicherheitsvorkehrungen zu treffen.
 - **Beleuchtungssteuerung**: Der Baustein kann in Beleuchtungssystemen eingesetzt werden, um das Licht nach dem Ausschalten des Schalters noch für eine bestimmte Zeit brennen zu lassen.
 - **Ventilsteuerung**: Der Baustein kann verwendet werden, um ein Ventil nach dem Schließen noch für eine bestimmte Zeit offen zu halten, um z.B. Druck abzulassen.
-
-##
 
 ## 🛠️ Zugehörige Übungen
 

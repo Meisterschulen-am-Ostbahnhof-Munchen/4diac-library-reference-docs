@@ -28,10 +28,10 @@ Keine – die Datenausgabe erfolgt ausschließlich über den Plug‑Adapter.
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-| ------------ | ----- | ---------- | -------------- |
-| **I** | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Liefert das Taktereignis (E1) und den zu übernehmenden Datenwert (D1). |
-| **Q** | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | Gibt das Ausgangsereignis (E1) und den gespeicherten Datenwert (D1) aus. |
+| Bezeichnung | Typ                                    | Richtung         | Beschreibung                                                             |
+| ----------- | -------------------------------------- | ---------------- | ------------------------------------------------------------------------ |
+| **I**       | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Liefert das Taktereignis (E1) und den zu übernehmenden Datenwert (D1).   |
+| **Q**       | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | Gibt das Ausgangsereignis (E1) und den gespeicherten Datenwert (D1) aus. |
 
 Beide Adapter sind vom gleichen unidirektionalen Typ **AUDI**, der ein Ereignis und einen Datenwert gemeinschaftlich transportiert. Der Socket **I** dient als Quelle, der Plug **Q** als Senke.
 

@@ -33,9 +33,9 @@ The **ASR_CLIENT_0** function block is a composite function block that triggers 
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------|-----------|--------------|
-| S_R | adapter::types::unidirectional::ASR | Socket (Input) | Set/Reset |
+| Adapter | Type                                | Direction      | Description |
+| ------- | ----------------------------------- | -------------- | ----------- |
+| S_R     | adapter::types::unidirectional::ASR | Socket (Input) | Set/Reset   |
 
 ## Functionality
 

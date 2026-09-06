@@ -31,10 +31,10 @@ Keine direkten Datenausgänge. Das Datensignal (BOOL) wird über den Adapter **A
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Kommentar |
-|------|----------|-----|-----------|
-| AUS\_IN | Socket | adapter::types::unidirectional::AUS | USINT-Eingangswert und Ereignis |
-| AX\_OUT | Plug  | adapter::types::unidirectional::AX | BOOL-Ausgangswert und Ereignis |
+| Name    | Richtung | Typ                                 | Kommentar                       |
+| ------- | -------- | ----------------------------------- | ------------------------------- |
+| AUS\_IN | Socket   | adapter::types::unidirectional::AUS | USINT-Eingangswert und Ereignis |
+| AX\_OUT | Plug     | adapter::types::unidirectional::AX  | BOOL-Ausgangswert und Ereignis  |
 
 ## Funktionsweise
 

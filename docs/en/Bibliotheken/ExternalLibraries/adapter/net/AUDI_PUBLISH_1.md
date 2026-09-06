@@ -31,9 +31,9 @@ The function block **AUDI_PUBLISH_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AUDI | Socket (Input) | UDINT value to be published |
+| Adapter | Type                                 | Direction      | Description                 |
+| ------- | ------------------------------------ | -------------- | --------------------------- |
+| IN      | adapter::types::unidirectional::AUDI | Socket (Input) | UDINT value to be published |
 
 ## Functionality
 

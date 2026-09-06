@@ -12,39 +12,39 @@ Der Funktionsblock **AUDI_LE** realisiert einen Vergleich zweier Werte auf „kl
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `IN1.E1`    | EVENT    | Ereignis-Eingang des Adapters IN1 – löst die Verarbeitung des ersten Wertes aus. |
+| Bezeichnung | Datentyp | Beschreibung                                                                      |
+| ----------- | -------- | --------------------------------------------------------------------------------- |
+| `IN1.E1`    | EVENT    | Ereignis-Eingang des Adapters IN1 – löst die Verarbeitung des ersten Wertes aus.  |
 | `IN2.E1`    | EVENT    | Ereignis-Eingang des Adapters IN2 – löst die Verarbeitung des zweiten Wertes aus. |
 
 *Hinweis: Beide Ereignisse müssen eingehen, damit ein Vergleich stattfindet (logische UND-Verknüpfung im internen Netzwerk).*
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                                                                   |
+| ----------- | -------- | ---------------------------------------------------------------------------------------------- |
 | `OUT.E1`    | EVENT    | Ereignis-Ausgang des Adapters OUT – wird aktiviert, sobald das Vergleichsergebnis bereitsteht. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `IN1.D1`    | ANY      | Erster zu vergleichender Wert (über Adapter IN1). |
+| Bezeichnung | Datentyp | Beschreibung                                       |
+| ----------- | -------- | -------------------------------------------------- |
+| `IN1.D1`    | ANY      | Erster zu vergleichender Wert (über Adapter IN1).  |
 | `IN2.D1`    | ANY      | Zweiter zu vergleichender Wert (über Adapter IN2). |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
+| Bezeichnung | Datentyp | Beschreibung                                                 |
+| ----------- | -------- | ------------------------------------------------------------ |
 | `OUT.D1`    | BOOL     | Vergleichsergebnis: `TRUE`, wenn `IN1 ≤ IN2`; sonst `FALSE`. |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| `IN1` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Aufnahme des ersten Wertes (Ereignis + Daten). |
-| `IN2` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Aufnahme des zweiten Wertes (Ereignis + Daten). |
-| `OUT` | `adapter::types::unidirectional::AX` | Plug (Ausgang) | Ausgabe des Vergleichsergebnisses (Ereignis + Daten). |
+| Name  | Typ                                    | Richtung         | Beschreibung                                          |
+| ----- | -------------------------------------- | ---------------- | ----------------------------------------------------- |
+| `IN1` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Aufnahme des ersten Wertes (Ereignis + Daten).        |
+| `IN2` | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | Aufnahme des zweiten Wertes (Ereignis + Daten).       |
+| `OUT` | `adapter::types::unidirectional::AX`   | Plug (Ausgang)   | Ausgabe des Vergleichsergebnisses (Ereignis + Daten). |
 
 ## Funktionsweise
 
@@ -71,12 +71,12 @@ Der FB besitzt keinen eigenen gerichteten Zustandsautomaten, da er rein kombinat
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| FB | Funktion | Unterschied zu AUDI_LE |
-| ---- | ---------- | ------------------------ |
-| `AUDI_LT` | Kleiner als (`<`) | Nicht inklusive Gleichheit. |
-| `AUDI_EQ` | Gleichheit (`=`) | Prüft nur auf exakte Übereinstimmung. |
-| `AUDI_GE` | Größer oder gleich (`≥`) | Umgekehrte Vergleichsrichtung. |
-| `AUDI_AND` | Logisches UND | Arbeitet mit Booleschen Werten, nicht mit numerischen Vergleichen. |
+| FB         | Funktion                 | Unterschied zu AUDI_LE                                             |
+| ---------- | ------------------------ | ------------------------------------------------------------------ |
+| `AUDI_LT`  | Kleiner als (`<`)        | Nicht inklusive Gleichheit.                                        |
+| `AUDI_EQ`  | Gleichheit (`=`)         | Prüft nur auf exakte Übereinstimmung.                              |
+| `AUDI_GE`  | Größer oder gleich (`≥`) | Umgekehrte Vergleichsrichtung.                                     |
+| `AUDI_AND` | Logisches UND            | Arbeitet mit Booleschen Werten, nicht mit numerischen Vergleichen. |
 
 ## Fazit
 

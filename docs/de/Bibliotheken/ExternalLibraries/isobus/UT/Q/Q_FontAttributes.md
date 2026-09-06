@@ -71,23 +71,23 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Attribut-Eigenschaften
 
-| Feature        | Beschreibung                     |
-|---------------|----------------------------------|
-| Farbpalette   | 8-bit Farbindex (ISO 11783-6 A.3)|
-| Größen        | Standardisierte Schriftgrößen    |
-| Schriftarten  | Vordefinierte Typen              |
-| Stile         | Bitfeld für Fett/Kursiv/Unterstrichen |
+| Feature      | Beschreibung                          |
+| ------------ | ------------------------------------- |
+| Farbpalette  | 8-bit Farbindex (ISO 11783-6 A.3)     |
+| Größen       | Standardisierte Schriftgrößen         |
+| Schriftarten | Vordefinierte Typen                   |
+| Stile        | Bitfeld für Fett/Kursiv/Unterstrichen |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Änderung             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Änderung    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -98,12 +98,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_FontAttributes | VtTextStyle | VtFontManager |
-|---------------|------------------|-------------|---------------|
-| ISO-Standard  | ✔                | ✖           | ✖             |
-| Farbsteuerung | ✔                | ✔           | ✖             |
-| Größensteuerung | ✔              | ✖           | ✔             |
-| Stilsteuerung | ✔                | ✔           | ✔             |
+| Feature         | Q_FontAttributes | VtTextStyle | VtFontManager |
+| --------------- | ---------------- | ----------- | ------------- |
+| ISO-Standard    | ✔                | ✖           | ✖             |
+| Farbsteuerung   | ✔                | ✔           | ✖             |
+| Größensteuerung | ✔                | ✖           | ✔             |
+| Stilsteuerung   | ✔                | ✔           | ✔             |
 
 ## Fazit
 

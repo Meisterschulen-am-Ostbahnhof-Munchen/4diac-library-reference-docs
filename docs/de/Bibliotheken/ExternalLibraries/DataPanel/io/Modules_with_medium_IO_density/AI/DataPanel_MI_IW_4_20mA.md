@@ -14,36 +14,36 @@ Der Funktionsblock **DataPanel_MI_IW_4_20mA** ist ein Service-Interface-Funktion
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung                                    | Mitgeführte Variablen                        |
-|----------|-------|------------------------------------------------|---------------------------------------------|
-| `INIT`   | EInit | Initialisierung des Servicebausteins           | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis |
-| `REQ`    | Event | Anforderung einer Messwertaktualisierung       | QI                                          |
+| Ereignis | Typ   | Beschreibung                             | Mitgeführte Variablen                                 |
+| -------- | ----- | ---------------------------------------- | ----------------------------------------------------- |
+| `INIT`   | EInit | Initialisierung des Servicebausteins     | QI, PARAMS, u8SAMember, Input, AnalogInput_hysteresis |
+| `REQ`    | Event | Anforderung einer Messwertaktualisierung | QI                                                    |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung                                        | Mitgeführte Variablen      |
-|----------|-------|----------------------------------------------------|---------------------------|
-| `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung        | QO, STATUS                 |
-| `CNF`    | Event | Bestätigung einer angeforderten Messung              | QO, STATUS, IN             |
-| `IND`    | Event | Asynchrone Anzeige eines eingehenden Messwerts       | QO, STATUS, IN             |
+| Ereignis | Typ   | Beschreibung                                   | Mitgeführte Variablen |
+| -------- | ----- | ---------------------------------------------- | --------------------- |
+| `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung  | QO, STATUS            |
+| `CNF`    | Event | Bestätigung einer angeforderten Messung        | QO, STATUS, IN        |
+| `IND`    | Event | Asynchrone Anzeige eines eingehenden Messwerts | QO, STATUS, IN        |
 
 ### **Daten-Eingänge**
 
-| Variable               | Typ          | Beschreibung                                               | Initialwert                       |
-|------------------------|--------------|-----------------------------------------------------------|-----------------------------------|
-| `QI`                   | BOOL         | Qualifikator für den Ereigniseingang                      | –                                 |
-| `PARAMS`               | STRING       | Parameter für die Serviceinitialisierung                  | –                                 |
-| `u8SAMember`           | USINT        | Node‑Adresse (224…239) des Slave‑Geräts                   | `MI::MI_00` (224)                 |
-| `Input`                | *DataPanel::io::MI::AI::DataPanel_MI_AI_S* | Identifikation des analogen Eingangskanals (z. B. AnalogInput_1A..8B) | `Invalid`                         |
-| `AnalogInput_hysteresis` | WORD       | Hysteresewert für die Signalglättung                     | –                                 |
+| Variable                 | Typ                                        | Beschreibung                                                          | Initialwert       |
+| ------------------------ | ------------------------------------------ | --------------------------------------------------------------------- | ----------------- |
+| `QI`                     | BOOL                                       | Qualifikator für den Ereigniseingang                                  | –                 |
+| `PARAMS`                 | STRING                                     | Parameter für die Serviceinitialisierung                              | –                 |
+| `u8SAMember`             | USINT                                      | Node‑Adresse (224…239) des Slave‑Geräts                               | `MI::MI_00` (224) |
+| `Input`                  | *DataPanel::io::MI::AI::DataPanel_MI_AI_S* | Identifikation des analogen Eingangskanals (z. B. AnalogInput_1A..8B) | `Invalid`         |
+| `AnalogInput_hysteresis` | WORD                                       | Hysteresewert für die Signalglättung                                  | –                 |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Beschreibung                                    |
-|----------|--------|-------------------------------------------------|
-| `QO`     | BOOL   | Qualifikator für den Ereignisausgang            |
-| `STATUS` | STRING | Statusmeldung (z. B. Fehler, Initialisierung)   |
-| `IN`     | WORD   | Gelesener Rohwert des analogen Eingangs         |
+| Variable | Typ    | Beschreibung                                  |
+| -------- | ------ | --------------------------------------------- |
+| `QO`     | BOOL   | Qualifikator für den Ereignisausgang          |
+| `STATUS` | STRING | Statusmeldung (z. B. Fehler, Initialisierung) |
+| `IN`     | WORD   | Gelesener Rohwert des analogen Eingangs       |
 
 ### **Adapter**
 

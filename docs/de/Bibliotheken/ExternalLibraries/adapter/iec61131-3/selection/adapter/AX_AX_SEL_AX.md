@@ -70,10 +70,10 @@ Intern basiert der `AX_AX_SEL_AX` auf einem ereignisgesteuerten Netzwerk, welche
 
 Da es sich um einen zusammengesetzten Funktionsbaustein (Composite FB) handelt, wird das Verhalten direkt durch den Daten- und Ereignisfluss bestimmt:
 
-| Zustand Selektor `G.D1` | Ausgang `OUT.D1` | Verhalten bei Ereignis an den Eingängen |
-| :--- | :--- | :--- |
-| `FALSE` | Wert von `IN0.D1` | Ereignisse an `IN0.E1` oder `G.E1` triggern eine Aktualisierung von `OUT.E1`. |
-| `TRUE` | Wert von `IN1.D1` | Ereignisse an `IN1.E1` oder `G.E1` triggern eine Aktualisierung von `OUT.E1`. |
+| Zustand Selektor `G.D1` | Ausgang `OUT.D1`  | Verhalten bei Ereignis an den Eingängen                                       |
+| :---------------------- | :---------------- | :---------------------------------------------------------------------------- |
+| `FALSE`                 | Wert von `IN0.D1` | Ereignisse an `IN0.E1` oder `G.E1` triggern eine Aktualisierung von `OUT.E1`. |
+| `TRUE`                  | Wert von `IN1.D1` | Ereignisse an `IN1.E1` oder `G.E1` triggern eine Aktualisierung von `OUT.E1`. |
 
 ---
 

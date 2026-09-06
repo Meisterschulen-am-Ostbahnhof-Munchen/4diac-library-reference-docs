@@ -1,6 +1,6 @@
-![GEN_SIN](GEN_SIN.svg)
-
 # GEN_SIN
+
+![GEN_SIN](GEN_SIN.svg)
 
 this signal generator generates a sine wave output
 this signal generator generates a sine wave output. The sine wave signal is defined by period time (PT),
@@ -14,34 +14,34 @@ in addition to an analog output Out there is a second boolean output Q with the 
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INIT | InitRequest | |
-| REQ | Normal Execution Request | PT, AM, OS, DL |
-| RST | Reset | |
+| Name | Comment                  | With           |
+| :--- | :----------------------- | :------------- |
+| INIT | InitRequest              |                |
+| REQ  | Normal Execution Request | PT, AM, OS, DL |
+| RST  | Reset                    |                |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| INITO | Init Confirmation | |
-| CNF | Execution Confirmation | Q, Out |
+| Name  | Comment                | With   |
+| :---- | :--------------------- | :----- |
+| INITO | Init Confirmation      |        |
+| CNF   | Execution Confirmation | Q, Out |
 
 ### Input Vars
 
-| Name | Type | Initial Value | Comment |
-| :--- | :--- | :--- | :--- |
-| PT | TIME | | Period Time |
-| AM | REAL | 1.0 | Amplitude |
-| OS | REAL | | offset |
-| DL | REAL | | Delay |
+| Name | Type | Initial Value | Comment     |
+| :--- | :--- | :------------ | :---------- |
+| PT   | TIME |               | Period Time |
+| AM   | REAL | 1.0           | Amplitude   |
+| OS   | REAL |               | offset      |
+| DL   | REAL |               | Delay       |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| Q | BOOL | Binary Output |
-| Out | REAL | Analog Output |
+| Name | Type | Comment       |
+| :--- | :--- | :------------ |
+| Q    | BOOL | Binary Output |
+| Out  | REAL | Analog Output |
 
 ## 🛠️ Related exercises
 

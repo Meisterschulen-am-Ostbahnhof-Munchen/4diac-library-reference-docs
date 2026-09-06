@@ -34,11 +34,13 @@ The **F_SUB_DATE_DATE** function block is a standards-compliant function block f
 
 - `REQ` event with two DATE values
 - Both inputs must be of type DATE
+
 1. **Difference Calculation**:
 
 - Conversion of both date values to seconds since January 1, 1970
 - Subtraction of the timestamps (IN1 - IN2)
 - Conversion to the TIME data type
+
 1. **Result Output**:
 
 - `CNF` event with calculated time interval
@@ -70,11 +72,11 @@ The **F_SUB_DATE_DATE** function block is a standards-compliant function block f
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_SUB_DATE_DATE | F_SUB_TIME | F_SUB_DT_DT |
-| --------------- | ----------------- | ------------ | ------------- |
-| Input Types | DATE - DATE | TIME - TIME | DT - DT |
-| Output Type | TIME | TIME | TIME |
-| Accuracy | Day-accurate | Nanosecond | Microsecond |
+| Feature     | F_SUB_DATE_DATE | F_SUB_TIME  | F_SUB_DT_DT |
+| ----------- | --------------- | ----------- | ----------- |
+| Input Types | DATE - DATE     | TIME - TIME | DT - DT     |
+| Output Type | TIME            | TIME        | TIME        |
+| Accuracy    | Day-accurate    | Nanosecond  | Microsecond |
 
 ## Conclusion
 

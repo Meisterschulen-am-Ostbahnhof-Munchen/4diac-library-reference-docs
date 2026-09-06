@@ -57,6 +57,7 @@ The FB operates as a Basic Function Block (BFB) with a defined Execution Control
 - The state number (`STATE_NR`) is updated (Confirmation Algorithm `State_x_C`).
 - The time configured for the next transition (`DT_...`) is passed to the `timeOut` adapter, and the timer is started.
 - The general confirmation event (`CNF`) is triggered.
+
 1. **Time-Controlled Transition**: After the time set in the timer has elapsed, the adapter triggers the `TimeOut` event. This is the condition for transitioning to the next state in the sequence.
 2. **State Exit**: When exiting a state, the corresponding data output (`DO_Sx`) is reset to FALSE by the exit algorithm (`State_x_X`).
 3. **Cycle End and Reset**: After State_04, the function block switches to the state `sState_00` (idle state). From here, the sequence can be restarted by another `START_S1` event. A `RESET` event from any state immediately leads to state `sRESET`, disables all outputs, and then transitions to `sState_00`.
@@ -69,15 +70,15 @@ The FB operates as a Basic Function Block (BFB) with a defined Execution Control
 
 ## State Overview
 
-| State Name | Description | Active Outputs | Transition Condition to Next State |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Initial Idle State. | None | `START_S1` |
-| **sState_01** | First Active Step. | `DO_S1=1`, `STATE_NR=1` | `timeOut.TimeOut` (after DT_S1_S2) |
-| **sState_02** | Second Active Step. | `DO_S2=1`, `STATE_NR=2` | `timeOut.TimeOut` (after DT_S2_S3) |
-| **sState_03** | Third active step. | `DO_S3=1`, `STATE_NR=3` | `timeOut.TimeOut` (after DT_S3_S4) |
-| **sState_04** | Fourth active step. | `DO_S4=1`, `STATE_NR=4` | `timeOut.TimeOut` (after DT_S4_START) |
-| **sState_00** | Idle state after sequence completion. | `STATE_NR=0` | `START_S1` (for new cycle) |
-| **sRESET** | Intermediate state for reset operation. | None | Always (`Condition=1`) |
+| State Name    | Description                             | Active Outputs          | Transition Condition to Next State    |
+| :------------ | :-------------------------------------- | :---------------------- | :------------------------------------ |
+| **xSTART**    | Initial Idle State.                     | None                    | `START_S1`                            |
+| **sState_01** | First Active Step.                      | `DO_S1=1`, `STATE_NR=1` | `timeOut.TimeOut` (after DT_S1_S2)    |
+| **sState_02** | Second Active Step.                     | `DO_S2=1`, `STATE_NR=2` | `timeOut.TimeOut` (after DT_S2_S3)    |
+| **sState_03** | Third active step.                      | `DO_S3=1`, `STATE_NR=3` | `timeOut.TimeOut` (after DT_S3_S4)    |
+| **sState_04** | Fourth active step.                     | `DO_S4=1`, `STATE_NR=4` | `timeOut.TimeOut` (after DT_S4_START) |
+| **sState_00** | Idle state after sequence completion.   | `STATE_NR=0`            | `START_S1` (for new cycle)            |
+| **sRESET**    | Intermediate state for reset operation. | None                    | Always (`Condition=1`)                |
 
 **Global transition condition**: From states sState_01 to sState_04, a `RESET`-Event always returns to the sRESET state.
 

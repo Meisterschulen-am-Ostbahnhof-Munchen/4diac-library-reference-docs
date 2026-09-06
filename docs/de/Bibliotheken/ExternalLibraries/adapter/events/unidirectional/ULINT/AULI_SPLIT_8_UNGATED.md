@@ -30,10 +30,10 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AULI` | Eingehender AULI‑Adapter, der auf die acht Ausgänge verteilt wird. |
-| Plug (Ausgang) | `OUT1` – `OUT8` | `adapter::types::unidirectional::AULI` | Acht parallele Ausgänge, die das identische Signal des Eingangs weiterleiten. |
+| Richtung         | Name            | Typ                                    | Beschreibung                                                                  |
+| ---------------- | --------------- | -------------------------------------- | ----------------------------------------------------------------------------- |
+| Socket (Eingang) | `IN`            | `adapter::types::unidirectional::AULI` | Eingehender AULI‑Adapter, der auf die acht Ausgänge verteilt wird.            |
+| Plug (Ausgang)   | `OUT1` – `OUT8` | `adapter::types::unidirectional::AULI` | Acht parallele Ausgänge, die das identische Signal des Eingangs weiterleiten. |
 
 ## Funktionsweise
 

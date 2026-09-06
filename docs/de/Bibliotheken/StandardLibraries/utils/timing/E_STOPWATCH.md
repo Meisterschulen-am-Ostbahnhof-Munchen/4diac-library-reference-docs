@@ -28,9 +28,9 @@ Der Baustein ermöglicht millisekundengenaue Zeitmessungen zwischen Ereignissen 
 
 ### **Daten-Ausgänge**
 
-| Parameter | Typ | Beschreibung | Genauigkeit |
-|-----------|-----|--------------|-------------|
-| `TD` | TIME | Gemessene Zeitdifferenz | 1 ms |
+| Parameter | Typ  | Beschreibung            | Genauigkeit |
+| --------- | ---- | ----------------------- | ----------- |
+| `TD`      | TIME | Gemessene Zeitdifferenz | 1 ms        |
 
 ## Funktionsweise
 
@@ -80,20 +80,20 @@ stateDiagram-v2
 
 ## Beispielwerte
 
-| Operation | Ergebnis (TD) |
-| ----------- | --------------- |
-| START -> STOP nach 1,5s | T#1s500ms |
+| Operation                                | Ergebnis (TD)                 |
+| ---------------------------------------- | ----------------------------- |
+| START -> STOP nach 1,5s                  | T#1s500ms                     |
 | START -> ET nach 750ms -> STOP nach 1,5s | T#750ms (ETO), T#1s500ms (EO) |
-| RESET während Messung | T#0s |
+| RESET während Messung                    | T#0s                          |
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | E_STOPWATCH | Standard-Timer | High-Res-Timer |
-| --------- | ------------- | ---------------- | ---------------- |
-| Genauigkeit | 1ms | 10ms | 1μs |
-| Trigger während Lauf | Ja | Nein | Ja |
-| Monotone Zeit | Ja | Nein | Ja |
-| Reset-Funktion | Ja | Teilweise | Ja |
+| Feature              | E_STOPWATCH | Standard-Timer | High-Res-Timer |
+| -------------------- | ----------- | -------------- | -------------- |
+| Genauigkeit          | 1ms         | 10ms           | 1μs            |
+| Trigger während Lauf | Ja          | Nein           | Ja             |
+| Monotone Zeit        | Ja          | Nein           | Ja             |
+| Reset-Funktion       | Ja          | Teilweise      | Ja             |
 
 ## 🛠️ Zugehörige Übungen
 

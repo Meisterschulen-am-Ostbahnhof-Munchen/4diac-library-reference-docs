@@ -28,10 +28,10 @@ Keine separaten Daten-Ausgänge vorhanden. Der konvertierte Wert wird über den 
 
 ### Adapter
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket (Eingang) | `AI_IN` | `adapter::types::unidirectional::AI` | INT‑Adapter‑Eingang. Liefert das Ereignis `E1` und den Datenwert `D1` (INT). |
-| Plug (Ausgang) | `AUI_OUT` | `adapter::types::unidirectional::AUI` | UINT‑Adapter‑Ausgang. Stellt das Ereignis `E1` und den Datenwert `D1` (UINT) bereit. |
+| Richtung         | Name      | Typ                                   | Beschreibung                                                                         |
+| ---------------- | --------- | ------------------------------------- | ------------------------------------------------------------------------------------ |
+| Socket (Eingang) | `AI_IN`   | `adapter::types::unidirectional::AI`  | INT‑Adapter‑Eingang. Liefert das Ereignis `E1` und den Datenwert `D1` (INT).         |
+| Plug (Ausgang)   | `AUI_OUT` | `adapter::types::unidirectional::AUI` | UINT‑Adapter‑Ausgang. Stellt das Ereignis `E1` und den Datenwert `D1` (UINT) bereit. |
 
 ## Funktionsweise
 

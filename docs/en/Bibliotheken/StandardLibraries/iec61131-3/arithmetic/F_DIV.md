@@ -34,6 +34,7 @@ The **F_DIV** is a standards-compliant function block for dividing numeric value
 
 - `REQ` event with values for IN1 and IN2
 - Both inputs must be of type ANY_NUM
+
 1. **Division**:
 
 - Type-preserving calculation (IN1 / IN2)
@@ -41,6 +42,7 @@ The **F_DIV** is a standards-compliant function block for dividing numeric value
 - Integers (INT, DINT)
 - Floating-point numbers (REAL, LREAL)
 - Mixed types (automatic conversion)
+
 1. **Result Output**:
 
 - `CNF` event with calculated OUT value
@@ -73,18 +75,18 @@ The **F_DIV** is a standards-compliant function block for dividing numeric value
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_DIV | F_MUL | F_ADD |
-| --------------- | -------- | -------- | -------- |
-| Operation | Division | Multiplication | Addition |
-| Inputs | 2 | 2 | 2 |
-| Type support | ANY_NUM | ANY_NUM | ANY_NUM |
+| Feature      | F_DIV    | F_MUL          | F_ADD    |
+| ------------ | -------- | -------------- | -------- |
+| Operation    | Division | Multiplication | Addition |
+| Inputs       | 2        | 2              | 2        |
+| Type support | ANY_NUM  | ANY_NUM        | ANY_NUM  |
 
 ## Supported Data Types
 
-| Category | Examples |
-| ---------------- | ------------------------- |
-| Integers | INT, DINT, UDINT |
-| Floating Point | REAL, LREAL |
+| Category          | Examples             |
+| ----------------- | -------------------- |
+| Integers          | INT, DINT, UDINT     |
+| Floating Point    | REAL, LREAL          |
 | Type Combinations | INT/REAL, DINT/LREAL |
 
 ## 🛠️ Related Exercises

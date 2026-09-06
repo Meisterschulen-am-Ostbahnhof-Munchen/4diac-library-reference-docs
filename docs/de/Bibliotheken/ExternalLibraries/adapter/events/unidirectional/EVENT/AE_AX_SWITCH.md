@@ -30,12 +30,12 @@ Keine direkten Daten-Ausgänge. Die Ausgabe erfolgt ausschließlich über die Er
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
-| `EI` | `AE` (Ereignis-Adapter) | Socket | Empfängt das zu schaltende Ereignis. |
-| `G`  | `AX` (Daten-Adapter)   | Socket | Liefert den Schaltzustand (boolesch). |
-| `EO0`| `AE` | Plug | Gibt das Ereignis aus, wenn `G=0` war. |
-| `EO1`| `AE` | Plug | Gibt das Ereignis aus, wenn `G=1` war. |
+| Name  | Typ                     | Richtung | Beschreibung                           |
+| ----- | ----------------------- | -------- | -------------------------------------- |
+| `EI`  | `AE` (Ereignis-Adapter) | Socket   | Empfängt das zu schaltende Ereignis.   |
+| `G`   | `AX` (Daten-Adapter)    | Socket   | Liefert den Schaltzustand (boolesch).  |
+| `EO0` | `AE`                    | Plug     | Gibt das Ereignis aus, wenn `G=0` war. |
+| `EO1` | `AE`                    | Plug     | Gibt das Ereignis aus, wenn `G=1` war. |
 
 ## Funktionsweise
 
@@ -54,11 +54,11 @@ Ein zusätzliches Ereignis am Adapter `G` (Signal `G.E1`) führt zu keiner Aktio
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Ausgabeaktion |
-|---------|--------------|--------------|
-| `START` | Wartet auf ein Ereignis an `EI`. | – |
-| `G0`    | Ereignis von `EI` bei `G.D1=0` verarbeitet. | `EO0.E1` |
-| `G1`    | Ereignis von `EI` bei `G.D1=1` verarbeitet. | `EO1.E1` |
+| Zustand | Beschreibung                                | Ausgabeaktion |
+| ------- | ------------------------------------------- | ------------- |
+| `START` | Wartet auf ein Ereignis an `EI`.            | –             |
+| `G0`    | Ereignis von `EI` bei `G.D1=0` verarbeitet. | `EO0.E1`      |
+| `G1`    | Ereignis von `EI` bei `G.D1=1` verarbeitet. | `EO1.E1`      |
 
 Die Zustände `G0` und `G1` werden unmittelbar nach der Ausgabe wieder verlassen (automatische Transition nach `START`).
 

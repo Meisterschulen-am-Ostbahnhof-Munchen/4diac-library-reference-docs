@@ -68,12 +68,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante | Bedeutung |
-| ------ | ----------- | ----------- |
-| 0 | VT_E_NO_ERR | Erfolgreich |
-| -6 | VT_E_OVERFLOW | Pufferüberlauf |
-| -8 | VT_E_NOACT | Ungültiger Zustand |
-| -21 | VT_E_NO_INSTANCE | Keine VT-Instanz |
+| Code | Konstante        | Bedeutung          |
+| ---- | ---------------- | ------------------ |
+| 0    | VT_E_NO_ERR      | Erfolgreich        |
+| -6   | VT_E_OVERFLOW    | Pufferüberlauf     |
+| -8   | VT_E_NOACT       | Ungültiger Zustand |
+| -21  | VT_E_NO_INSTANCE | Keine VT-Instanz   |
 
 ## Anwendungsszenarien
 
@@ -84,11 +84,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_Attribute | VtPropertySet | VtDynamicConfig |
-|---------------|-------------|---------------|-----------------|
-| ISO-Standard  | ✔           | ✖             | ✖               |
-| Wertbereich   | 32-bit      | 16-bit        | 32-bit          |
-| Zustandsverwaltung | Voll | Teilweise    | Erweitert       |
+| Feature            | Q_Attribute | VtPropertySet | VtDynamicConfig |
+| ------------------ | ----------- | ------------- | --------------- |
+| ISO-Standard       | ✔           | ✖             | ✖               |
+| Wertbereich        | 32-bit      | 16-bit        | 32-bit          |
+| Zustandsverwaltung | Voll        | Teilweise     | Erweitert       |
 
 ## Fazit
 

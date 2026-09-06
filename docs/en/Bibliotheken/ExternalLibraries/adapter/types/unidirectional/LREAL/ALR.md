@@ -8,12 +8,12 @@ unidirectional Adapter Interface for 1 Event and 1 Lreal
 
 ### Events
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| E1 | Indication (or Request) | D1 |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| E1   | Indication (or Request) | D1   |
 
 ### Data
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| D1 | LREAL | Indication (or Request) Data from Plug |
+| Name | Type  | Comment                                |
+| :--- | :---- | :------------------------------------- |
+| D1   | LREAL | Indication (or Request) Data from Plug |

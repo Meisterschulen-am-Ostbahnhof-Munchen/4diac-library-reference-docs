@@ -28,15 +28,15 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AD` | IN | Socket | Eingangsadapter, der auf die sechs Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AD` | OUT1 | Plug | Erster Ausgangsadapter (identisch zu IN). |
-| `adapter::types::unidirectional::AD` | OUT2 | Plug | Zweiter Ausgangsadapter. |
-| `adapter::types::unidirectional::AD` | OUT3 | Plug | Dritter Ausgangsadapter. |
-| `adapter::types::unidirectional::AD` | OUT4 | Plug | Vierter Ausgangsadapter. |
-| `adapter::types::unidirectional::AD` | OUT5 | Plug | Fünfter Ausgangsadapter. |
-| `adapter::types::unidirectional::AD` | OUT6 | Plug | Sechster Ausgangsadapter. |
+| Typ                                  | Name | Richtung | Beschreibung                                               |
+| ------------------------------------ | ---- | -------- | ---------------------------------------------------------- |
+| `adapter::types::unidirectional::AD` | IN   | Socket   | Eingangsadapter, der auf die sechs Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AD` | OUT1 | Plug     | Erster Ausgangsadapter (identisch zu IN).                  |
+| `adapter::types::unidirectional::AD` | OUT2 | Plug     | Zweiter Ausgangsadapter.                                   |
+| `adapter::types::unidirectional::AD` | OUT3 | Plug     | Dritter Ausgangsadapter.                                   |
+| `adapter::types::unidirectional::AD` | OUT4 | Plug     | Vierter Ausgangsadapter.                                   |
+| `adapter::types::unidirectional::AD` | OUT5 | Plug     | Fünfter Ausgangsadapter.                                   |
+| `adapter::types::unidirectional::AD` | OUT6 | Plug     | Sechster Ausgangsadapter.                                  |
 
 ## Funktionsweise
 

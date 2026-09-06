@@ -34,17 +34,17 @@ Der FB besitzt ausschließlich **Adapter-Schnittstellen**: Es gibt keine direkte
 
 ### **Adapter**
 
-| Name              | Typ                   | Richtung | Kommentar                   |
-|-------------------|-----------------------|----------|-----------------------------|
-| `OUT`             | adapter::AW           | Plug     | Wort-Ausgang (4 Byte)       |
-| `QUARTER_BYTE_00` | adapter::AQ           | Socket   | Quarter 0 (niederwertigstes)|
-| `QUARTER_BYTE_01` | adapter::AQ           | Socket   | Quarter 1                   |
-| `QUARTER_BYTE_02` | adapter::AQ           | Socket   | Quarter 2                   |
-| `QUARTER_BYTE_03` | adapter::AQ           | Socket   | Quarter 3                   |
-| `QUARTER_BYTE_04` | adapter::AQ           | Socket   | Quarter 4                   |
-| `QUARTER_BYTE_05` | adapter::AQ           | Socket   | Quarter 5                   |
-| `QUARTER_BYTE_06` | adapter::AQ           | Socket   | Quarter 6                   |
-| `QUARTER_BYTE_07` | adapter::AQ           | Socket   | Quarter 7 (höchstwertigstes)|
+| Name              | Typ         | Richtung | Kommentar                    |
+| ----------------- | ----------- | -------- | ---------------------------- |
+| `OUT`             | adapter::AW | Plug     | Wort-Ausgang (4 Byte)        |
+| `QUARTER_BYTE_00` | adapter::AQ | Socket   | Quarter 0 (niederwertigstes) |
+| `QUARTER_BYTE_01` | adapter::AQ | Socket   | Quarter 1                    |
+| `QUARTER_BYTE_02` | adapter::AQ | Socket   | Quarter 2                    |
+| `QUARTER_BYTE_03` | adapter::AQ | Socket   | Quarter 3                    |
+| `QUARTER_BYTE_04` | adapter::AQ | Socket   | Quarter 4                    |
+| `QUARTER_BYTE_05` | adapter::AQ | Socket   | Quarter 5                    |
+| `QUARTER_BYTE_06` | adapter::AQ | Socket   | Quarter 6                    |
+| `QUARTER_BYTE_07` | adapter::AQ | Socket   | Quarter 7 (höchstwertigstes) |
 
 ## Funktionsweise
 

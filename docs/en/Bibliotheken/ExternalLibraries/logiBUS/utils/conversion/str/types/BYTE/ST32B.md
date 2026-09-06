@@ -11,7 +11,7 @@ Not applicable to structured data types. `ST32B` has no data inputs; its element
 
 Not applicable to structured data types. `ST32B` has no data outputs; its elements are directly accessible via the type name.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

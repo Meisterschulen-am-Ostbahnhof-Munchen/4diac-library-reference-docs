@@ -13,32 +13,32 @@ Der Funktionsblock `FIELDBUS_UINT_TO_SIGNAL_COMPOUND_SCALE` dient zur Aufbereitu
 ### **Ereignis-Eingänge**
 
 | Ereignis | Typ   | Beschreibung                                           |
-|----------|-------|--------------------------------------------------------|
+| -------- | ----- | ------------------------------------------------------ |
 | `INIT`   | EInit | Initialisierungsanforderung (Parameterübernahme)       |
 | `REQ`    | Event | Normale Ausführungsanforderung (Verarbeitung von `IN`) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung                               |
-|----------|-------|--------------------------------------------|
-| `INITO`  | EInit | Bestätigung der Initialisierung            |
-| `CNF`    | Event | Bestätigung der Ausführung (nach `REQ`)    |
+| Ereignis | Typ   | Beschreibung                            |
+| -------- | ----- | --------------------------------------- |
+| `INITO`  | EInit | Bestätigung der Initialisierung         |
+| `CNF`    | Event | Bestätigung der Ausführung (nach `REQ`) |
 
 ### **Daten-Eingänge**
 
-| Variable    | Typ    | Initialwert                | Beschreibung                                           |
-|-------------|--------|----------------------------|--------------------------------------------------------|
-| `IN`        | UINT   | `WORD_TO_UINT(NOT_AVAILABLE_WM)` | Rohwert vom Feldbus                                    |
-| `SCALE_HIGH`| REAL   | `0.256`                    | Skalierungsfaktor für das obere Byte                   |
-| `SCALE_LOW` | REAL   | `0.001`                    | Skalierungsfaktor für das untere Byte                  |
-| `OFFSET`    | DINT   | `0`                        | Offset, der nach der Skalierung addiert wird (in REAL) |
+| Variable     | Typ  | Initialwert                      | Beschreibung                                           |
+| ------------ | ---- | -------------------------------- | ------------------------------------------------------ |
+| `IN`         | UINT | `WORD_TO_UINT(NOT_AVAILABLE_WM)` | Rohwert vom Feldbus                                    |
+| `SCALE_HIGH` | REAL | `0.256`                          | Skalierungsfaktor für das obere Byte                   |
+| `SCALE_LOW`  | REAL | `0.001`                          | Skalierungsfaktor für das untere Byte                  |
+| `OFFSET`     | DINT | `0`                              | Offset, der nach der Skalierung addiert wird (in REAL) |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Initialwert | Beschreibung                                      |
-|----------|--------|-------------|---------------------------------------------------|
-| `OUT`    | REAL   | `0.0`       | Skalierter Ausgabewert                            |
-| `VALID`  | BOOL   | `FALSE`     | `TRUE`, wenn das Eingangssignal als gültig erkannt wurde |
+| Variable | Typ  | Initialwert | Beschreibung                                             |
+| -------- | ---- | ----------- | -------------------------------------------------------- |
+| `OUT`    | REAL | `0.0`       | Skalierter Ausgabewert                                   |
+| `VALID`  | BOOL | `FALSE`     | `TRUE`, wenn das Eingangssignal als gültig erkannt wurde |
 
 ### **Adapter**
 
@@ -93,11 +93,11 @@ Der FB ist als SimpleFB implementiert; es gibt keine weiteren Zustände wie IDLE
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied |
-| ---------- | ------------- | ------------- |
-| `SCALE` (z. B. nach IEC 61131) | Linearer Faktor und Offset auf den gesamten Wert | Keine Aufteilung in Bytes, keine Gültigkeitsprüfung |
-| `LINEAR` (Feldbus‑Standard) | Gleitender Mittelwert oder einfache lineare Transformation | Kein Compound‑Ansatz |
-| `UINT_TO_REAL` | Direkte Typumwandlung | Keine Skalierung, keine Fehlererkennung |
+| Baustein                       | Eigenschaft                                                | Unterschied                                         |
+| ------------------------------ | ---------------------------------------------------------- | --------------------------------------------------- |
+| `SCALE` (z. B. nach IEC 61131) | Linearer Faktor und Offset auf den gesamten Wert           | Keine Aufteilung in Bytes, keine Gültigkeitsprüfung |
+| `LINEAR` (Feldbus‑Standard)    | Gleitender Mittelwert oder einfache lineare Transformation | Kein Compound‑Ansatz                                |
+| `UINT_TO_REAL`                 | Direkte Typumwandlung                                      | Keine Skalierung, keine Fehlererkennung             |
 
 Dieser FB kombiniert als einziger die Byte‑trennung mit einer zweifachen Skalierung und einer integrierten Gültigkeitserkennung, was ihn für spezielle Feldbus‑Protokolle mit zusammengesetzten Registern besonders geeignet macht.
 

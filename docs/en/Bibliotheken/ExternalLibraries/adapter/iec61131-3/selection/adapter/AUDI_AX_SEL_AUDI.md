@@ -72,6 +72,7 @@ The function block `F_SEL` (IEC 61131-3 Selection) performs the actual logical s
 
 - If the control signal of the adapter `G` is `0` (`FALSE`), the value of `IN0` is selected.
 - If the control signal of the adapter `G` is `1` (`TRUE`), the value of `IN1` is selected.
+
 1. **Output**:
 
 The selected result is transferred via another transfer block (`F_MOVE_OUT`) to the output flip-flop `E_D_FF_ANY_OUT`. This flip-flop generates the output event `OUT.E1` and makes the selected data value available to `OUT.D1`.
@@ -90,10 +91,10 @@ The selected result is transferred via another transfer block (`F_MOVE_OUT`) to 
 
 Since the function block is structured as a function block network, it does not have a classic state machine (ECC). The logical behavior can instead be described using the following function table:
 
-| State Selector (`G.D1`) | Triggering event | Active data path | Value at output (`OUT.D1`) | Event at output (`OUT.E1`) |
-| :--- | :--- | :--- | :--- | :--- |
-| `FALSE` | Event on `IN0.E1` or `G.E1` | `IN0` -> `OUT` | Equivalent to `IN0.D1` | Triggered |
-| `TRUE` | Event on `IN1.E1` or `G.E1` | `IN1` -> `OUT` | Equivalent to `IN1.D1` | Triggered |
+| State Selector (`G.D1`) | Triggering event            | Active data path | Value at output (`OUT.D1`) | Event at output (`OUT.E1`) |
+| :---------------------- | :-------------------------- | :--------------- | :------------------------- | :------------------------- |
+| `FALSE`                 | Event on `IN0.E1` or `G.E1` | `IN0` -> `OUT`   | Equivalent to `IN0.D1`     | Triggered                  |
+| `TRUE`                  | Event on `IN1.E1` or `G.E1` | `IN1` -> `OUT`   | Equivalent to `IN1.D1`     | Triggered                  |
 
 ---
 

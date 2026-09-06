@@ -39,6 +39,7 @@ According to the XML specification, the block consists of:
 - With each `EI` event, the current `QI` value is compared with the stored state from the previous cycle.
 - A rising edge occurs when `QI` transitions from `FALSE` to `TRUE`.
 - Upon detection of such an edge, the `EO` event should be triggered.
+
 1. **Internal Structure and Faulty Behavior**:
 
 - The function block is internally composed of a `E_D_FF` and a `E_SWITCH`.
@@ -61,11 +62,11 @@ According to the XML specification, the block consists of:
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | E_R_TRIG (this one) | E_F_TRIG | E_D_FF |
-| --------------- | ---------- | ---------- | --------- |
-| Detected Edge | Rising (named), Falling (implemented) | Falling (named), Rising (implemented) | Clock Edge |
-| Event Output | Yes | Yes | Yes |
-| Memory Behavior | Yes | Yes | Yes |
+| Feature         | E_R_TRIG (this one)                   | E_F_TRIG                              | E_D_FF     |
+| --------------- | ------------------------------------- | ------------------------------------- | ---------- |
+| Detected Edge   | Rising (named), Falling (implemented) | Falling (named), Rising (implemented) | Clock Edge |
+| Event Output    | Yes                                   | Yes                                   | Yes        |
+| Memory Behavior | Yes                                   | Yes                                   | Yes        |
 
 ## 🛠️ Related Exercises
 

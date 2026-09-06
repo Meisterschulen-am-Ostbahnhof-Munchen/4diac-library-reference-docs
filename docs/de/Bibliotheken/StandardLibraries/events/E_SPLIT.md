@@ -57,11 +57,11 @@ Der **E_SPLIT** ist ein standardkonformer Funktionsbaustein (IEC 61499-1 Annex A
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | E_SPLIT | E_DEMUX | E_MERGE |
-| --------------- | --------- | --------- | --------- |
-| Funktionsprinzip | 1:2 Sequenz | 1:n Verteilung | n:1 Kombination |
-| Ereignisreihenfolge | Fest | Adressabhängig | Beliebig |
-| Zustandsmodell | BasicFB | Variabel | Keins |
+| Feature             | E_SPLIT     | E_DEMUX        | E_MERGE         |
+| ------------------- | ----------- | -------------- | --------------- |
+| Funktionsprinzip    | 1:2 Sequenz | 1:n Verteilung | n:1 Kombination |
+| Ereignisreihenfolge | Fest        | Adressabhängig | Beliebig        |
+| Zustandsmodell      | BasicFB     | Variabel       | Keins           |
 
 ## 🛠️ Zugehörige Übungen
 

@@ -7,23 +7,23 @@ d_trunc truncates a real to a dint 1.5 will be 1 and -1.5 will be -1
 ### Event inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | X |
+| :--- | :------ | :--- |
+| REQ  |         | X    |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| X | REAL | |
+| :--- | :--- | :------ |
+| X    | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | DINT | |
+| :--- | :--- | :------ |
+|      | DINT |         |

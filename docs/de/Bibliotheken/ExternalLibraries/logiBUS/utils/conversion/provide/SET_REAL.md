@@ -12,22 +12,22 @@ Der Funktionsblock **SET_REAL** dient dazu, einen REAL-Wert von einem Dateneinga
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ   | Beschreibung                                              |
+| ---- | ----- | --------------------------------------------------------- |
 | REQ  | Event | Normale Ausführungsanforderung (mit IN und OUT verbunden) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ   | Beschreibung                                   |
+| ---- | ----- | ---------------------------------------------- |
 | CNF  | Event | Bestätigung der Ausführung (mit OUT verbunden) |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Initialwert | Beschreibung |
-|------|-----|-------------|--------------|
-| IN   | REAL | 0.0 | Wert, der geschrieben werden soll |
-| OUT  | REAL (InOut) | 0.0 | Zielvariable (InOut – lesend und schreibend) |
+| Name | Typ          | Initialwert | Beschreibung                                 |
+| ---- | ------------ | ----------- | -------------------------------------------- |
+| IN   | REAL         | 0.0         | Wert, der geschrieben werden soll            |
+| OUT  | REAL (InOut) | 0.0         | Zielvariable (InOut – lesend und schreibend) |
 
 ### **Daten-Ausgänge**
 
@@ -55,9 +55,9 @@ Der aktuelle Wert von IN wird der InOut-Variable OUT zugewiesen. Anschließend w
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Aktion | Ausgabe |
-|---------|--------------|--------|---------|
-| REQ     | Warte auf Ausführungsanforderung | Führe Algorithmus REQ aus → OUT := IN | CNF |
+| Zustand | Beschreibung                     | Aktion                                | Ausgabe |
+| ------- | -------------------------------- | ------------------------------------- | ------- |
+| REQ     | Warte auf Ausführungsanforderung | Führe Algorithmus REQ aus → OUT := IN | CNF     |
 
 Es existiert kein weiterer Zustand; der FB kehrt nach dem Durchlauf sofort wieder in den wartenden Zustand REQ zurück.
 
@@ -69,12 +69,12 @@ Es existiert kein weiterer Zustand; der FB kehrt nach dem Durchlauf sofort wiede
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| FB | Typ | Unterschied |
-| ---- | ----- | ------------- |
-| **SET_BOOL** | BOOL | Schreibt boolesche Werte, analoge Funktionsweise |
-| **SET_INT** | INT | Schreibt Ganzzahlen, identische Ereignissteuerung |
-| **MOVE** (generisch) | ANY | Kann beliebige Datentypen kopieren, erfordert jedoch Typanpassung und hat oft mehrere Zustände |
-| **SET_REAL** | REAL | Speziell für REAL optimiert, minimale Zustände und klare Semantik |
+| FB                   | Typ  | Unterschied                                                                                    |
+| -------------------- | ---- | ---------------------------------------------------------------------------------------------- |
+| **SET_BOOL**         | BOOL | Schreibt boolesche Werte, analoge Funktionsweise                                               |
+| **SET_INT**          | INT  | Schreibt Ganzzahlen, identische Ereignissteuerung                                              |
+| **MOVE** (generisch) | ANY  | Kann beliebige Datentypen kopieren, erfordert jedoch Typanpassung und hat oft mehrere Zustände |
+| **SET_REAL**         | REAL | Speziell für REAL optimiert, minimale Zustände und klare Semantik                              |
 
 Im Vergleich zu einem generischen MOVE-Baustein bietet SET_REAL eine schlankere Implementierung und ist auf den häufig benötigten REAL-Typ zugeschnitten.
 

@@ -70,10 +70,10 @@ Der **F_SUB_DATE_DATE** ist ein standardkonformer Funktionsbaustein zur Berechnu
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_SUB_DATE_DATE | F_SUB_TIME | F_SUB_DT_DT |
-|---------------|-----------------|------------|-------------|
-| Eingangstypen | DATE - DATE     | TIME - TIME | DT - DT     |
-| Ausgangstyp   | TIME            | TIME       | TIME        |
+| Feature       | F_SUB_DATE_DATE | F_SUB_TIME  | F_SUB_DT_DT  |
+| ------------- | --------------- | ----------- | ------------ |
+| Eingangstypen | DATE - DATE     | TIME - TIME | DT - DT      |
+| Ausgangstyp   | TIME            | TIME        | TIME         |
 | Genauigkeit   | Tagesgenau      | Nanosekunde | Mikrosekunde |
 
 ## Fazit

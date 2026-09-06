@@ -9,7 +9,7 @@ The function block `F_UDINT_TO_BYTE` converts a 32-bit unsigned integer (UDINT) 
 - **IN**: The 32-bit unsigned integer value (UDINT) to be converted.
 - **OUT**: The resulting 8-bit unsigned integer value (BYTE) after the conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -21,7 +21,7 @@ The function block `F_UDINT_TO_BYTE` converts a 32-bit unsigned integer (UDINT) 
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 No adapters are present.
 

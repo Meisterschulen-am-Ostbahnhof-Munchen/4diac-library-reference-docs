@@ -35,12 +35,12 @@ Nach dem `START`-Ereignis wird das `EO`-Ereignis periodisch mit der Zeit `DT` au
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2008 ACIN |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac-Paket | eclipse4diac::rtevents |
+| Attribut    | Wert                             |
+| :---------- | :------------------------------- |
+| Copyright   | (c) 2008 ACIN                    |
+| Lizenz      | EPL-2.0                          |
+| Version     | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac-Paket | eclipse4diac::rtevents           |
 
 ---
 

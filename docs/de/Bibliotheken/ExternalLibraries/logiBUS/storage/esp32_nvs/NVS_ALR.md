@@ -12,37 +12,37 @@ Der Funktionsbaustein **NVS_ALR** dient zum Laden und Speichern von Werten des T
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
-| **INIT**  | Initialisiert den Baustein und führt einen ersten Lesevorgang aus dem NVS durch. | QI, KEY, DEFAULT_VALUE |
+| Ereignis | Beschreibung                                                                     | Mitgeführte Variablen  |
+| -------- | -------------------------------------------------------------------------------- | ---------------------- |
+| **INIT** | Initialisiert den Baustein und führt einen ersten Lesevorgang aus dem NVS durch. | QI, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
-| **INITO** | Bestätigung der Initialisierung und Rückmeldung des Ergebnisses. | QO, STATUS |
+| Ereignis  | Beschreibung                                                     | Mitgeführte Variablen |
+| --------- | ---------------------------------------------------------------- | --------------------- |
+| **INITO** | Bestätigung der Initialisierung und Rückmeldung des Ergebnisses. | QO, STATUS            |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| QI       | BOOL  | Steuerung für die Initialisierung (TRUE = aktiv). |
-| KEY      | STRING| Schlüsselname für den NVS-Zugriff. |
-| DEFAULT_VALUE | LREAL | Wert, der gelesen wird, falls im NVS noch kein Eintrag unter dem angegebenen Schlüssel existiert. |
+| Variable      | Typ    | Beschreibung                                                                                      |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------- |
+| QI            | BOOL   | Steuerung für die Initialisierung (TRUE = aktiv).                                                 |
+| KEY           | STRING | Schlüsselname für den NVS-Zugriff.                                                                |
+| DEFAULT_VALUE | LREAL  | Wert, der gelesen wird, falls im NVS noch kein Eintrag unter dem angegebenen Schlüssel existiert. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ   | Beschreibung |
-|----------|-------|--------------|
-| QO       | BOOL  | Quittung der Initialisierung (TRUE = erfolgreich). |
-| STATUS   | STRING| Statusmeldung (z. B. Fehlertext bei misslungenem Zugriff). |
+| Variable | Typ    | Beschreibung                                               |
+| -------- | ------ | ---------------------------------------------------------- |
+| QO       | BOOL   | Quittung der Initialisierung (TRUE = erfolgreich).         |
+| STATUS   | STRING | Statusmeldung (z. B. Fehlertext bei misslungenem Zugriff). |
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **ALR_IN** | Socket | `adapter::types::unidirectional::ALR` | Empfängt Schreibaufträge (Wert speichern). |
-| **ALR_OUT** | Plug   | `adapter::types::unidirectional::ALR` | Sendet gelesene Werte nach einem Lesevorgang. |
+| Adapter     | Richtung | Typ                                   | Beschreibung                                  |
+| ----------- | -------- | ------------------------------------- | --------------------------------------------- |
+| **ALR_IN**  | Socket   | `adapter::types::unidirectional::ALR` | Empfängt Schreibaufträge (Wert speichern).    |
+| **ALR_OUT** | Plug     | `adapter::types::unidirectional::ALR` | Sendet gelesene Werte nach einem Lesevorgang. |
 
 ## Funktionsweise
 

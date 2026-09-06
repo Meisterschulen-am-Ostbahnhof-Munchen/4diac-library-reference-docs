@@ -28,10 +28,10 @@ Der FB besitzt keine eigenen Daten-Ausgänge. Der konvertierte `SINT`-Wert wird 
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `AI_IN` | Eingang (Socket) | `adapter::types::unidirectional::AI` | INT-basierter Adapter-Eingang; liefert das Ereignis `E1` und den Datenwert `D1` (Typ `INT`). |
-| `AS_OUT` | Ausgang (Plug) | `adapter::types::unidirectional::AS` | SINT-basierter Adapter-Ausgang; empfängt das Ereignis `E1` und gibt den konvertierten Datenwert `D1` (Typ `SINT`) weiter. |
+| Adapter  | Richtung         | Typ                                  | Beschreibung                                                                                                              |
+| -------- | ---------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| `AI_IN`  | Eingang (Socket) | `adapter::types::unidirectional::AI` | INT-basierter Adapter-Eingang; liefert das Ereignis `E1` und den Datenwert `D1` (Typ `INT`).                              |
+| `AS_OUT` | Ausgang (Plug)   | `adapter::types::unidirectional::AS` | SINT-basierter Adapter-Ausgang; empfängt das Ereignis `E1` und gibt den konvertierten Datenwert `D1` (Typ `SINT`) weiter. |
 
 ## Funktionsweise
 
@@ -50,9 +50,9 @@ Sobald am Adapter-Eingang `AI_IN` ein Ereignis `E1` eintrifft, wird der zugehör
 
 Der FB verfügt über keine eigene Zustandsmaschine. Die interne Logik folgt dem einfachen Ablauf des Bausteins `F_INT_TO_SINT`:
 
-| Zustand | Beschreibung |
-|---------|--------------|
-| **Idle** | Warten auf ein Ereignis an `AI_IN.E1`. |
+| Zustand     | Beschreibung                                                                                                                                                                                     |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Idle**    | Warten auf ein Ereignis an `AI_IN.E1`.                                                                                                                                                           |
 | **Convert** | Bei Eintreffen von `E1` wird der Wert von `AI_IN.D1` gelesen, konvertiert und an `AS_OUT.D1` übergeben. Anschließend wird `AS_OUT.E1` ausgelöst. Der FB kehrt sofort in den Idle-Zustand zurück. |
 
 ## Anwendungsszenarien

@@ -52,6 +52,7 @@ The function is activated by the event `REQ`. Resources are not persistently sto
 - Calls the system-level function `NOW_MONOTONIC()`.
 - Assigns the return value to the output variable `TIME`.
 - Triggers the event `CNF`.
+
 1. **Error Handling**:
 
 - No specific error handling, as the function has no external dependencies.
@@ -94,11 +95,11 @@ Reliable timers for critical processes.
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Function | `F_NOW_MONOTONIC` | `NOW()` | `NOW_SYSTEM()` |
-| --------------------- | ----------------------- | ----------------------- | ----------------------- |
-| **Time Source** | Monotonous (Hardware) | System Time | System Time (UTC) |
-| **Influenceable** | No | Yes (NTP, Time Zone) | Yes (NTP) |
-| **Use Case** | Real-time Measurements | General Timestamps | Global Timestamps |
+| Function          | `F_NOW_MONOTONIC`      | `NOW()`              | `NOW_SYSTEM()`    |
+| ----------------- | ---------------------- | -------------------- | ----------------- |
+| **Time Source**   | Monotonous (Hardware)  | System Time          | System Time (UTC) |
+| **Influenceable** | No                     | Yes (NTP, Time Zone) | Yes (NTP)         |
+| **Use Case**      | Real-time Measurements | General Timestamps   | Global Timestamps |
 
 ---
 

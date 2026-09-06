@@ -22,16 +22,16 @@ Nicht vorhanden, da es sich um einen reinen Datentyp handelt.
 
 Die interne Struktur des Typs `CF_INFO_T` besteht aus den folgenden Elementen:
 
-| Name | Typ | Kommentar / Beschreibung | Initialwert |
-| :--- | :--- | :--- | :--- |
-| `s16Handle` | `INT` | Netzwerk-Member-Handle der Control Function (CF) / des Users. Dient als eindeutiger Identifikator innerhalb der Anwendung. | `UNVALID` |
-| `u8SourceAddress` | `BYTE` | Quelladresse (Source Address, SA) der Control Function (CF) / des Users im ISOBUS-Netzwerk. | `NULL_A` |
-| `u8CanIdx` | `BYTE` | CAN-Bus Node / Index der Control Function (CF) / des Users. Identifiziert den physischen Bus-Knoten. | – |
-| `au8Name` | `isobus::pgn::CF_NAME_T` | Der ISOBUS-NAME der Control Function. Dies ist eine 64-bit eindeutige Kennung gemäß ISO 11783-5. | – |
-| `eIsoUserFunct` | `SINT` | Intern verwendeter CF-Funktionstyp (z.B. Arbeitsgerät, Terminal, Task-Controller). | `undefined` |
-| `bExternalCf` | `BOOL` | Kennzeichnet, ob es sich um eine externe CF im CAN-Netzwerk handelt (`TRUE`) oder nicht. | – |
-| `bIsAnnounced` | `BOOL` | `TRUE`, wenn die CF aktiv und vollständig im Netzwerk angekündigt (announced) ist. | – |
-| `bIsActive` | `BOOL` | NIU-spezifisch (Network Interface Unit): `TRUE`, wenn sich die CF nicht in einem Fehlerzustand befindet oder abgemeldet (logged off) ist. | – |
+| Name              | Typ                      | Kommentar / Beschreibung                                                                                                                  | Initialwert |
+| :---------------- | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :---------- |
+| `s16Handle`       | `INT`                    | Netzwerk-Member-Handle der Control Function (CF) / des Users. Dient als eindeutiger Identifikator innerhalb der Anwendung.                | `UNVALID`   |
+| `u8SourceAddress` | `BYTE`                   | Quelladresse (Source Address, SA) der Control Function (CF) / des Users im ISOBUS-Netzwerk.                                               | `NULL_A`    |
+| `u8CanIdx`        | `BYTE`                   | CAN-Bus Node / Index der Control Function (CF) / des Users. Identifiziert den physischen Bus-Knoten.                                      | –           |
+| `au8Name`         | `isobus::pgn::CF_NAME_T` | Der ISOBUS-NAME der Control Function. Dies ist eine 64-bit eindeutige Kennung gemäß ISO 11783-5.                                          | –           |
+| `eIsoUserFunct`   | `SINT`                   | Intern verwendeter CF-Funktionstyp (z.B. Arbeitsgerät, Terminal, Task-Controller).                                                        | `undefined` |
+| `bExternalCf`     | `BOOL`                   | Kennzeichnet, ob es sich um eine externe CF im CAN-Netzwerk handelt (`TRUE`) oder nicht.                                                  | –           |
+| `bIsAnnounced`    | `BOOL`                   | `TRUE`, wenn die CF aktiv und vollständig im Netzwerk angekündigt (announced) ist.                                                        | –           |
+| `bIsActive`       | `BOOL`                   | NIU-spezifisch (Network Interface Unit): `TRUE`, wenn sich die CF nicht in einem Fehlerzustand befindet oder abgemeldet (logged off) ist. | –           |
 
 ## Funktionsweise
 

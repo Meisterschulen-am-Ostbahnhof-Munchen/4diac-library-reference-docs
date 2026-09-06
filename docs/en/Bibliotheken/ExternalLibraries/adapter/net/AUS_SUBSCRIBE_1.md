@@ -31,9 +31,9 @@ The function block **AUS_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::AUS | Plug (Output) | Buffered received USINT value |
+| Adapter | Type                                | Direction     | Description                   |
+| ------- | ----------------------------------- | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::AUS | Plug (Output) | Buffered received USINT value |
 
 ## Functionality
 

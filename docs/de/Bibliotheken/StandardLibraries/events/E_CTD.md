@@ -65,11 +65,11 @@ Der **E_CTD** (Event-Driven Down Counter) ist ein ereignisgesteuerter Abwärtsz�
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature          | E_CTD             | E_CTU (Up Counter) | E_CTUD (Up/Down Counter) |
-|------------------|-------------------|--------------------|--------------------------|
-| Zählrichtung     | Abwärts           | Aufwärts           | Beides                   |
-| Ereignisgesteuert| Ja                | Ja                 | Ja                       |
-| Reset-Funktion   | LD (Neuladen)     | R (Reset)          | R (Reset)                |
+| Feature           | E_CTD         | E_CTU (Up Counter) | E_CTUD (Up/Down Counter) |
+| ----------------- | ------------- | ------------------ | ------------------------ |
+| Zählrichtung      | Abwärts       | Aufwärts           | Beides                   |
+| Ereignisgesteuert | Ja            | Ja                 | Ja                       |
+| Reset-Funktion    | LD (Neuladen) | R (Reset)          | R (Reset)                |
 
 ## 🛠️ Zugehörige Übungen
 

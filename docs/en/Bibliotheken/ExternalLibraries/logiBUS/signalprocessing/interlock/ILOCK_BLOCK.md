@@ -12,17 +12,17 @@ The function block **ILOCK_BLOCK** implements an interlock between two opposing 
 
 ### **Event Inputs**
 
-| Event | With Variable | Description |
-| ---------- | --------------- | -------------- |
-| `EI_UP` | `DI_UP` | Event to Set UP Direction |
-| `EI_DOWN` | `DI_DOWN` | Event to set the DOWN direction |
+| Event     | With Variable | Description                     |
+| --------- | ------------- | ------------------------------- |
+| `EI_UP`   | `DI_UP`       | Event to Set UP Direction       |
+| `EI_DOWN` | `DI_DOWN`     | Event to set the DOWN direction |
 
 ### **Event Outputs**
 
-| Event | With Variable | Description |
-| ----------- | -------------- | -------------- |
-| `EO_UP` | `DO_UP` | Triggered when the UP direction is activated or deactivated |
-| `EO_DOWN` | `DO_DOWN` | Triggered when the DOWN direction is activated or deactivated |
+| Event     | With Variable | Description                                                   |
+| --------- | ------------- | ------------------------------------------------------------- |
+| `EO_UP`   | `DO_UP`       | Triggered when the UP direction is activated or deactivated   |
+| `EO_DOWN` | `DO_DOWN`     | Triggered when the DOWN direction is activated or deactivated |
 
 ### **Data Inputs**
 
@@ -33,9 +33,9 @@ The function block **ILOCK_BLOCK** implements an interlock between two opposing 
 
 ### **Data Outputs**
 
-| Variable | Type | Comment |
-| ------------ | ------ | ----------- |
-| `DO_UP` | BOOL | TRUE = forward, upward, right, clockwise |
+| Variable  | Type | Comment                                           |
+| --------- | ---- | ------------------------------------------------- |
+| `DO_UP`   | BOOL | TRUE = forward, upward, right, clockwise          |
 | `DO_DOWN` | BOOL | TRUE = backward, downward, left, counterclockwise |
 
 ### **Adapter**
@@ -62,13 +62,13 @@ The module has two activation states (UP, DOWN) and two intermediate states (UP_
 
 ## State Overview
 
-| State | Description |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **STOP** | Idle state. Both outputs FALSE. Waiting for activation. |
-| **UP** | UP direction active. DO_UP = TRUE, DO_DOWN = FALSE. Waiting for release by `EI_UP` with `DI_UP = FALSE`. |
-| **DOWN** | DOWN direction active. DO_UP = FALSE, DO_DOWN = TRUE. Waiting for release by `EI_DOWN` with `DI_DOWN = FALSE`. |
-| **UP_STOP** | Intermediate state after release of UP. Immediately executes the STOP algorithm, sends `EO_UP`, and switches back to STOP. |
-| **DOWN_STOP** | Intermediate state after releasing DOWN. Immediately executes the STOP algorithm, sends `EO_DOWN`, and switches back to STOP.
+| State         | Description                                                                                                                   |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **STOP**      | Idle state. Both outputs FALSE. Waiting for activation.                                                                       |
+| **UP**        | UP direction active. DO_UP = TRUE, DO_DOWN = FALSE. Waiting for release by `EI_UP` with `DI_UP = FALSE`.                      |
+| **DOWN**      | DOWN direction active. DO_UP = FALSE, DO_DOWN = TRUE. Waiting for release by `EI_DOWN` with `DI_DOWN = FALSE`.                |
+| **UP_STOP**   | Intermediate state after release of UP. Immediately executes the STOP algorithm, sends `EO_UP`, and switches back to STOP.    |
+| **DOWN_STOP** | Intermediate state after releasing DOWN. Immediately executes the STOP algorithm, sends `EO_DOWN`, and switches back to STOP. |
 
 DOWN_STOP **Transition Matrix (Simplified):**
 

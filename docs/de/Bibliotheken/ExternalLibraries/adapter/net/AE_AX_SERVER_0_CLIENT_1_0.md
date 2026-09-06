@@ -33,8 +33,8 @@ Der Funktionsblock **AE_AX_SERVER_0_CLIENT_1_0** ist ein Composite-Funktionsbloc
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
+| Adapter | Typ                                  | Richtung                                    | Beschreibung                             |
+| ------- | ------------------------------------ | ------------------------------------------- | ---------------------------------------- |
 | TRIGGER | adapter::types::bidirectional::AE_AX | Plug – Trigger (Eingang), Zustand (Ausgang) | Empfangenes Ereignis, Zustand nach außen |
 
 ## Funktionsweise

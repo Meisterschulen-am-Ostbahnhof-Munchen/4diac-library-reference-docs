@@ -28,14 +28,14 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket | `IN` | `adapter::types::unidirectional::AULI` | Eingehender AULI-Adapter (Quelle) |
-| Plug | `OUT1` | `adapter::types::unidirectional::AULI` | Erster ausgehender AULI-Adapter |
-| Plug | `OUT2` | `adapter::types::unidirectional::AULI` | Zweiter ausgehender AULI-Adapter |
-| Plug | `OUT3` | `adapter::types::unidirectional::AULI` | Dritter ausgehender AULI-Adapter |
-| Plug | `OUT4` | `adapter::types::unidirectional::AULI` | Vierter ausgehender AULI-Adapter |
-| Plug | `OUT5` | `adapter::types::unidirectional::AULI` | Fünfter ausgehender AULI-Adapter |
+| Richtung | Name   | Typ                                    | Beschreibung                      |
+| -------- | ------ | -------------------------------------- | --------------------------------- |
+| Socket   | `IN`   | `adapter::types::unidirectional::AULI` | Eingehender AULI-Adapter (Quelle) |
+| Plug     | `OUT1` | `adapter::types::unidirectional::AULI` | Erster ausgehender AULI-Adapter   |
+| Plug     | `OUT2` | `adapter::types::unidirectional::AULI` | Zweiter ausgehender AULI-Adapter  |
+| Plug     | `OUT3` | `adapter::types::unidirectional::AULI` | Dritter ausgehender AULI-Adapter  |
+| Plug     | `OUT4` | `adapter::types::unidirectional::AULI` | Vierter ausgehender AULI-Adapter  |
+| Plug     | `OUT5` | `adapter::types::unidirectional::AULI` | Fünfter ausgehender AULI-Adapter  |
 
 Das Interface besteht ausschließlich aus einem Socket und fünf Plugs desselben Typs. Alle Adapter sind unidirektional ausgelegt.
 
@@ -62,11 +62,11 @@ Der FB besitzt **keinen internen Zustandsautomaten**. Es existieren keine Zustä
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Ausgänge | Besonderheit |
-| ---------- | ----- | ---------- | -------------- |
-| `AULI_SPLIT_5` | generischer Splitter | 5 | spezifisch für AULI-Adapter |
-| `SPLIT_2` (nicht standardisiert) | generischer Splitter | 2 | meist für Datentypen wie INT oder BOOL |
-| `F_SPLIT` (aus IEC 61499-Bibliotheken) | funktionaler Splitter | variabel | basiert auf ECC und Ereignissen |
+| Baustein                               | Typ                   | Ausgänge | Besonderheit                           |
+| -------------------------------------- | --------------------- | -------- | -------------------------------------- |
+| `AULI_SPLIT_5`                         | generischer Splitter  | 5        | spezifisch für AULI-Adapter            |
+| `SPLIT_2` (nicht standardisiert)       | generischer Splitter  | 2        | meist für Datentypen wie INT oder BOOL |
+| `F_SPLIT` (aus IEC 61499-Bibliotheken) | funktionaler Splitter | variabel | basiert auf ECC und Ereignissen        |
 
 Der `AULI_SPLIT_5` ist im Gegensatz zu ereignisbasierten Splittern **ereignislos** und rein adapterbasiert. Er lässt sich daher besonders in Datenflusssystemen ohne Taktsignal einsetzen.
 

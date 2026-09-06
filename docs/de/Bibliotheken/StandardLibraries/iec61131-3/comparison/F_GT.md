@@ -14,7 +14,7 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine internationale Norm, die sich mit der Modellierung von Funktionsbausteinen für industrielle Automatisierungssysteme beschäftigt. Sie bietet ein standardisiertes Framework für die Entwicklung von verteilten Steuerungssystemen, wobei logische und arithmetische Operatoren eine zentrale Rolle spielen. Einer dieser Operatoren ist der **GT-Operator** (Greater Than, „größer als“), der in diesem Aufsatz näher beleuchtet werden soll.
 
-### Was ist der GT-Operator?
+## Was ist der GT-Operator?
 
 Der GT-Operator ist ein Vergleichsoperator, der verwendet wird, um festzustellen, ob ein Wert größer als ein anderer Wert ist. In der IEC 61499 wird dieser Operator häufig in Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen basierend auf numerischen Vergleichen zu treffen. Der GT-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (`TRUE` oder `FALSE`) zurück, je nachdem, ob der erste Wert größer als der zweite Wert ist.
 
@@ -72,8 +72,6 @@ Hierbei sind `Eingang1` und `Eingang2` die beiden Werte, die verglichen werden s
 - **Flexibilität:** Der Operator kann auf verschiedene numerische Datentypen angewendet werden, einschließlich Ganzzahlen und Gleitkommazahlen.
 - **Effizienz:** Durch die direkte Integration in Funktionsbausteine reduziert der GT-Operator den Bedarf an zusätzlicher Programmierung und macht den Code effizienter.
 - **Robustheit:** Der GT-Operator trägt dazu bei, robuste Steuerungsalgorithmen zu entwickeln, die auf präzisen numerischen Vergleichen basieren.
-
-#
 
 ## 🛠️ Zugehörige Übungen
 

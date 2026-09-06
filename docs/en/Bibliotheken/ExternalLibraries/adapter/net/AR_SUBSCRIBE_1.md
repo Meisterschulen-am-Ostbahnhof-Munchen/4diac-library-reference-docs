@@ -31,9 +31,9 @@ The function block **AR_SUBSCRIBE_1** is a composite function block that encapsu
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::AR | Plug (Output) | Buffered received REAL value |
+| Adapter | Type                               | Direction     | Description                  |
+| ------- | ---------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::AR | Plug (Output) | Buffered received REAL value |
 
 ## Functionality
 

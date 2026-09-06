@@ -28,12 +28,12 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Sockel (Eingang) | IN | `adapter::types::unidirectional::AE` | Eingehender Adapter-Datenstrom, der auf die drei Ausgänge verteilt wird. |
-| Stecker (Ausgang) | OUT1 | `adapter::types::unidirectional::AE` | Erster Ausgang – erhält die gleichen Daten wie der Eingang. |
-| Stecker (Ausgang) | OUT2 | `adapter::types::unidirectional::AE` | Zweiter Ausgang – erhält die gleichen Daten wie der Eingang. |
-| Stecker (Ausgang) | OUT3 | `adapter::types::unidirectional::AE` | Dritter Ausgang – erhält die gleichen Daten wie der Eingang. |
+| Richtung          | Name | Typ                                  | Beschreibung                                                             |
+| ----------------- | ---- | ------------------------------------ | ------------------------------------------------------------------------ |
+| Sockel (Eingang)  | IN   | `adapter::types::unidirectional::AE` | Eingehender Adapter-Datenstrom, der auf die drei Ausgänge verteilt wird. |
+| Stecker (Ausgang) | OUT1 | `adapter::types::unidirectional::AE` | Erster Ausgang – erhält die gleichen Daten wie der Eingang.              |
+| Stecker (Ausgang) | OUT2 | `adapter::types::unidirectional::AE` | Zweiter Ausgang – erhält die gleichen Daten wie der Eingang.             |
+| Stecker (Ausgang) | OUT3 | `adapter::types::unidirectional::AE` | Dritter Ausgang – erhält die gleichen Daten wie der Eingang.             |
 
 ## Funktionsweise
 
@@ -60,11 +60,11 @@ Der Funktionsblock besitzt kein internes Zustandsdiagramm (ECC). Er arbeitet **k
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Besonderheit |
-| ---------- | ----------------- | -------------- |
-| `AE_SPLIT_2` | 2 | Verteilt auf zwei Ausgänge. |
-| `AE_SPLIT_3` | 3 | Verteilt auf drei Ausgänge (vorliegender FB). |
-| `AE_SPLIT_N` (hypothetisch) | variabel | Flexible Anzahl über Parameter – erfordert höheren Konfigurationsaufwand. |
+| Baustein                    | Anzahl Ausgänge | Besonderheit                                                              |
+| --------------------------- | --------------- | ------------------------------------------------------------------------- |
+| `AE_SPLIT_2`                | 2               | Verteilt auf zwei Ausgänge.                                               |
+| `AE_SPLIT_3`                | 3               | Verteilt auf drei Ausgänge (vorliegender FB).                             |
+| `AE_SPLIT_N` (hypothetisch) | variabel        | Flexible Anzahl über Parameter – erfordert höheren Konfigurationsaufwand. |
 
 Gemeinsam ist allen Varianten, dass sie lediglich auf Adapterebene arbeiten und keine Datenmanipulation vornehmen.
 

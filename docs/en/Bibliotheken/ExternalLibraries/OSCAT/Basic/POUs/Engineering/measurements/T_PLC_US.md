@@ -7,17 +7,17 @@ T_PLC_US reads the internal PLC timer and returns the time
 ### Event inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | |
+| :--- | :------ | :--- |
+| REQ  |         |      |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| | UDINT | |
+| Name | Type  | Comment |
+| :--- | :---- | :------ |
+|      | UDINT |         |

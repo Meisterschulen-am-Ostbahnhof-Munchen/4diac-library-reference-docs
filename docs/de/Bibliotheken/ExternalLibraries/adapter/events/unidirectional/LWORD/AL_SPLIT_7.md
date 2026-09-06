@@ -30,9 +30,9 @@ Entsprechend gibt es keine direkten Daten-Ausgänge. Die Daten werden über die 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| Socket   | `IN` | `adapter::types::unidirectional::AL` | Adapter-Eingang, der die zu verteilende AL-Verbindung bereitstellt. |
+| Richtung | Name            | Typ                                  | Beschreibung                                                                         |
+| -------- | --------------- | ------------------------------------ | ------------------------------------------------------------------------------------ |
+| Socket   | `IN`            | `adapter::types::unidirectional::AL` | Adapter-Eingang, der die zu verteilende AL-Verbindung bereitstellt.                  |
 | Plug     | `OUT1` … `OUT7` | `adapter::types::unidirectional::AL` | Sieben Adapter-Ausgänge, die die identische Kopie des Eingangsadapter bereitstellen. |
 
 ## Funktionsweise

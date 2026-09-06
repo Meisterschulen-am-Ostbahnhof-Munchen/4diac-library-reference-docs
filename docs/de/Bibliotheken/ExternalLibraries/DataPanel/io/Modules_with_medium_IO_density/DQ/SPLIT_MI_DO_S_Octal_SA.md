@@ -12,34 +12,34 @@ Der Funktionsblock **SPLIT_MI_DO_S_Octal_SA** dient dazu, einen einzelnen Datenw
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                                                                                                          |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQ`    | Service‑Anforderung; die Verarbeitung wird gestartet, sobald das Ereignis eintritt. Der Benutzer muss den Daten‑Eingang `IN` vorher gültig setzen. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                                                                |
+| -------- | -------------------------------------------------------------------------------------------------------- |
 | `CNF`    | Bestätigung der abgeschlossenen Verarbeitung. Signalisiert, dass alle acht Ausgänge aktualisiert wurden. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ                              | Kommentar                          |
-|------|----------------------------------|------------------------------------|
-| `IN` | `DataPanel_MI_DO_S_Octal_SA`     | Oktaler Eingabewert (Port 1…8 und gemeinsamer `u8SAMember`) |
+| Name | Typ                          | Kommentar                                                   |
+| ---- | ---------------------------- | ----------------------------------------------------------- |
+| `IN` | `DataPanel_MI_DO_S_Octal_SA` | Oktaler Eingabewert (Port 1…8 und gemeinsamer `u8SAMember`) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ                               | Kommentar                |
-|------|-----------------------------------|--------------------------|
-| `OUT1` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 1          |
-| `OUT2` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 2          |
-| `OUT3` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 3          |
-| `OUT4` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 4          |
-| `OUT5` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 5          |
-| `OUT6` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 6          |
-| `OUT7` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 7          |
-| `OUT8` | `DataPanel_MI_DO_S_Single_SA`   | Einzelausgang 8          |
+| Name   | Typ                           | Kommentar       |
+| ------ | ----------------------------- | --------------- |
+| `OUT1` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 1 |
+| `OUT2` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 2 |
+| `OUT3` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 3 |
+| `OUT4` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 4 |
+| `OUT5` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 5 |
+| `OUT6` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 6 |
+| `OUT7` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 7 |
+| `OUT8` | `DataPanel_MI_DO_S_Single_SA` | Einzelausgang 8 |
 
 ### **Adapter**
 

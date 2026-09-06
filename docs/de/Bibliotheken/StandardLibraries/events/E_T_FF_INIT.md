@@ -43,13 +43,13 @@ Der `E_T_FF_INIT` (Toggle-Flipflop mit Initialisierung) kombiniert das Umschaltv
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Unkonfigurierter Anfangszustand |
-| Init | Initialisierung läuft, `QO := QI` |
-| DeInit | Deinitialisierung läuft, `QO := FALSE` |
-| SET | `Q = TRUE`, wechselt bei `CLK` nach `RESET` |
-| RESET | `Q = FALSE`, wechselt bei `CLK` nach `SET` |
+| Zustand | Bedeutung                                   |
+| ------- | ------------------------------------------- |
+| START   | Unkonfigurierter Anfangszustand             |
+| Init    | Initialisierung läuft, `QO := QI`           |
+| DeInit  | Deinitialisierung läuft, `QO := FALSE`      |
+| SET     | `Q = TRUE`, wechselt bei `CLK` nach `RESET` |
+| RESET   | `Q = FALSE`, wechselt bei `CLK` nach `SET`  |
 
 ## Anwendungsszenarien
 

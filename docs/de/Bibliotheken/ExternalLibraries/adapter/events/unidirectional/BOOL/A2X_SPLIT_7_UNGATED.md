@@ -30,9 +30,9 @@ Der Funktionsbaustein **A2X_SPLIT_7_UNGATED** dient dazu, ein eingehendes A2X-Ad
 
 ### **Adapter**
 
-| Typ | Name | Beschreibung |
-|-----|------|--------------|
-| A2X (Socket) | **IN** | Eingangsadapter für das zu verteilende A2X-Signal |
+| Typ          | Name                | Beschreibung                                                                                |
+| ------------ | ------------------- | ------------------------------------------------------------------------------------------- |
+| A2X (Socket) | **IN**              | Eingangsadapter für das zu verteilende A2X-Signal                                           |
 | A2X (Plug)   | **OUT1** … **OUT7** | Sieben Ausgangsadapter, die jeweils eine identische Kopie des Eingangssignals bereitstellen |
 
 ## Funktionsweise

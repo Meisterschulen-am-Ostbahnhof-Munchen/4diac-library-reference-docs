@@ -70,11 +70,11 @@ Der **F_SUB_TOD_TIME** ist ein standardkonformer Funktionsbaustein zur Subtrakti
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | F_SUB_TOD_TIME | F_ADD_TOD_TIME | F_SUB_DT_TIME |
-|---------------|----------------|----------------|---------------|
-| Operation     | Tageszeit - Intervall | Tageszeit + Intervall | Zeitstempel - Intervall |
-| Ergebnis      | TIME_OF_DAY    | TIME_OF_DAY    | DATE_AND_TIME |
-| Überlauf      | Zirkulär 24h   | Zirkulär 24h   | Kalenderbasiert |
+| Feature   | F_SUB_TOD_TIME        | F_ADD_TOD_TIME        | F_SUB_DT_TIME           |
+| --------- | --------------------- | --------------------- | ----------------------- |
+| Operation | Tageszeit - Intervall | Tageszeit + Intervall | Zeitstempel - Intervall |
+| Ergebnis  | TIME_OF_DAY           | TIME_OF_DAY           | DATE_AND_TIME           |
+| Überlauf  | Zirkulär 24h          | Zirkulär 24h          | Kalenderbasiert         |
 
 ## Fazit
 

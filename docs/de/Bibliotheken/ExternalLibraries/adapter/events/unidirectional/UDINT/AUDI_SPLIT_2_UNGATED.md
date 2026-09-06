@@ -30,11 +30,11 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** | `IN` | `adapter::types::unidirectional::AUDI` | Eingehender unidirektionaler AUDI-Adapter (Signalquelle). |
-| **Plug** | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang – leitet das Eingangssignal weiter. |
-| **Plug** | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang – leitet das Eingangssignal weiter. |
+| Richtung   | Name   | Typ                                    | Beschreibung                                              |
+| ---------- | ------ | -------------------------------------- | --------------------------------------------------------- |
+| **Socket** | `IN`   | `adapter::types::unidirectional::AUDI` | Eingehender unidirektionaler AUDI-Adapter (Signalquelle). |
+| **Plug**   | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang – leitet das Eingangssignal weiter.        |
+| **Plug**   | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang – leitet das Eingangssignal weiter.       |
 
 ## Funktionsweise
 

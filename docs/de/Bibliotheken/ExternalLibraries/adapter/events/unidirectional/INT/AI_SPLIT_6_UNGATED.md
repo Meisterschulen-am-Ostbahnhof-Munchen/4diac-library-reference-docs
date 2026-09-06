@@ -28,15 +28,15 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Eingang (Socket) | IN | `adapter::types::unidirectional::AI` | Einzige analoge Eingangsadapter (Quelle) |
-| Ausgang (Plug) | OUT1 | `adapter::types::unidirectional::AI` | Erster Ausgang (1:1-Weiterleitung von IN) |
-| Ausgang (Plug) | OUT2 | `adapter::types::unidirectional::AI` | Zweiter Ausgang |
-| Ausgang (Plug) | OUT3 | `adapter::types::unidirectional::AI` | Dritter Ausgang |
-| Ausgang (Plug) | OUT4 | `adapter::types::unidirectional::AI` | Vierter Ausgang |
-| Ausgang (Plug) | OUT5 | `adapter::types::unidirectional::AI` | Fünfter Ausgang |
-| Ausgang (Plug) | OUT6 | `adapter::types::unidirectional::AI` | Sechster Ausgang |
+| Richtung         | Name | Typ                                  | Beschreibung                              |
+| ---------------- | ---- | ------------------------------------ | ----------------------------------------- |
+| Eingang (Socket) | IN   | `adapter::types::unidirectional::AI` | Einzige analoge Eingangsadapter (Quelle)  |
+| Ausgang (Plug)   | OUT1 | `adapter::types::unidirectional::AI` | Erster Ausgang (1:1-Weiterleitung von IN) |
+| Ausgang (Plug)   | OUT2 | `adapter::types::unidirectional::AI` | Zweiter Ausgang                           |
+| Ausgang (Plug)   | OUT3 | `adapter::types::unidirectional::AI` | Dritter Ausgang                           |
+| Ausgang (Plug)   | OUT4 | `adapter::types::unidirectional::AI` | Vierter Ausgang                           |
+| Ausgang (Plug)   | OUT5 | `adapter::types::unidirectional::AI` | Fünfter Ausgang                           |
+| Ausgang (Plug)   | OUT6 | `adapter::types::unidirectional::AI` | Sechster Ausgang                          |
 
 ## Funktionsweise
 

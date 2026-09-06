@@ -31,9 +31,9 @@ The function block **AULI_SUBSCRIBE_1** is a composite function block that encap
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::AULI | Plug (Output) | Buffered received ULINT value |
+| Adapter | Type                                 | Direction     | Description                   |
+| ------- | ------------------------------------ | ------------- | ----------------------------- |
+| OUT     | adapter::types::unidirectional::AULI | Plug (Output) | Buffered received ULINT value |
 
 ## Functionality
 

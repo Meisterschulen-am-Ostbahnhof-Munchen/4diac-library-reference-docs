@@ -43,9 +43,6 @@ OUT := IN1 AND IN2 AND IN3 AND IN4 AND IN5 AND IN6 AND IN7`
 
 Immediately after the result is calculated, the confirmation event `CNF` is output along with the current value of `OUT`.
 
-
-# Operation #
-
 - **Generic Block**: This block is marked as a generic block (`GEN_AND`). This means it can serve as a template for the automatic generation of similar blocks with a different number of inputs.
 - **Event-driven**: The operation is only executed when required by an event, which conserves resources and allows for clear control of the flow.
 - **Fixed Number of Inputs**: This specific block has a fixed number of seven inputs. For a different number of operands, a corresponding block (e.g., `AND_BOOL_2`, `AND_BOOL_4`) must be used, or a generic block must be instantiated.

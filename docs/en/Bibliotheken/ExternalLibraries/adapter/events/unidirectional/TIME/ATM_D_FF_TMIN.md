@@ -12,20 +12,20 @@ The function block `ATM_D_FF_TMIN` implements a clock-controlled D flip-flop (da
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|-------|--------|----------------------------------|
+| Name | Type  | Comment                              |
+| ---- | ----- | ------------------------------------ |
 | INIT | EInit | Initialization Request (with `Tmin`) |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|-------|--------|----------------------------------|
+| Name  | Type  | Comment                     |
+| ----- | ----- | --------------------------- |
 | INITO | EInit | Initialization Confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|-------|--------|------------------------------------------------|
+| Name | Type | Comment                                     |
+| ---- | ---- | ------------------------------------------- |
 | Tmin | TIME | Minimum time interval between two EO events |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ The function block has no direct data outputs. The stored value is provided via 
 
 ### **Adapter**
 
-| Direction | Name | Type | Comment |
-| ---------- | ------ | ------------------------------------------ | ---------------------- |
-| Input (Socket) | I | `adapter::types::unidirectional::ATM` | Value to be adopted |
-| Output (Plug) | Q | `adapter::types::unidirectional::ATM` | Stored value |
+| Direction      | Name | Type                                  | Comment             |
+| -------------- | ---- | ------------------------------------- | ------------------- |
+| Input (Socket) | I    | `adapter::types::unidirectional::ATM` | Value to be adopted |
+| Output (Plug)  | Q    | `adapter::types::unidirectional::ATM` | Stored value        |
 
 The adapter `ATM` provides one event channel and one data channel (`E1`, `D1` for input; `E1`, `D1` for output).
 

@@ -30,11 +30,11 @@ Der Funktionsblock `AL_FIELDBUS_LWORD_TO_SIGNAL` dient der filternden Weitergabe
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| `IN` | Socket | `adapter::types::unidirectional::AL` | Empfängt das Ereignis- und Datensignal von einem vorgeschalteten Baustein. |
-| `OUT` | Plug | `adapter::types::unidirectional::AL` | Sendet das gefilterte Signal und zugehöriges Ereignis an nachfolgende Bausteine. |
-| `VALID` | Plug | `adapter::types::unidirectional::AX` | Sendet den Gültigkeitsstatus als booleschen Wert und ein Bestätigungsereignis. |
+| Adapter | Richtung | Typ                                  | Beschreibung                                                                     |
+| ------- | -------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| `IN`    | Socket   | `adapter::types::unidirectional::AL` | Empfängt das Ereignis- und Datensignal von einem vorgeschalteten Baustein.       |
+| `OUT`   | Plug     | `adapter::types::unidirectional::AL` | Sendet das gefilterte Signal und zugehöriges Ereignis an nachfolgende Bausteine. |
+| `VALID` | Plug     | `adapter::types::unidirectional::AX` | Sendet den Gültigkeitsstatus als booleschen Wert und ein Bestätigungsereignis.   |
 
 ## Funktionsweise
 
@@ -61,10 +61,10 @@ Dadurch wird sichergestellt, dass der Gültigkeitsstatus erst dann an den Valid-
 
 Der Baustein besitzt keinen expliziten ECC, da es sich um einen Composite-FB handelt. Die innere Zustandslogik beschränkt sich auf das Flipflop `E_D_FF`, das zwei Zustände kennt:
 
-| Zustand | Q (VALID.D1) | Bedeutung |
-|---------|--------------|-----------|
-| RESET (Anfang) | FALSE | Signal ist ungültig (initial). |
-| SET | TRUE | Signal ist gültig, nachdem ein gültiger Wert erkannt wurde. |
+| Zustand        | Q (VALID.D1) | Bedeutung                                                   |
+| -------------- | ------------ | ----------------------------------------------------------- |
+| RESET (Anfang) | FALSE        | Signal ist ungültig (initial).                              |
+| SET            | TRUE         | Signal ist gültig, nachdem ein gültiger Wert erkannt wurde. |
 
 Der Zustandswechsel erfolgt bei jedem eingehenden Ereignis an `CLK` (von `CNF`) in Abhängigkeit des `D`-Eingangs (vom internen `VALID`-Signal). Der Zustand bleibt solange erhalten, bis das nächste Ereignis eintrifft.
 

@@ -38,13 +38,13 @@ Der Baustein verfügt über keine klassischen separaten Event- oder Datenports, 
 
 ### Adapter
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `SET1` | unidirectional AX | Socket | Set-Eingang |
-| `RESET` | unidirectional AX | Socket | Reset-Eingang |
-| `ILOCK_IN` | bidirectional AX2 | Socket | Interlock-Eingang (von oben) |
-| `Q1` | unidirectional AX | Plug | Latch-Ausgang |
-| `ILOCK_OUT` | bidirectional AX2 | Plug | Interlock-Ausgang (nach unten) |
+| Adapter     | Typ               | Richtung | Beschreibung                   |
+| ----------- | ----------------- | -------- | ------------------------------ |
+| `SET1`      | unidirectional AX | Socket   | Set-Eingang                    |
+| `RESET`     | unidirectional AX | Socket   | Reset-Eingang                  |
+| `ILOCK_IN`  | bidirectional AX2 | Socket   | Interlock-Eingang (von oben)   |
+| `Q1`        | unidirectional AX | Plug     | Latch-Ausgang                  |
+| `ILOCK_OUT` | bidirectional AX2 | Plug     | Interlock-Ausgang (nach unten) |
 
 ## Funktionsweise
 
@@ -71,16 +71,16 @@ Dadurch entsteht eine Kaskade, in der ein Reset-Signal in beide Richtungen (nach
 
 Der Baustein besitzt in seinem ECC nur einen Zustand `REQ`, der stets aktiv ist. Der innere Latch-Zustand wird durch den booleschen Wert `Q1.D1` repräsentiert. Die Zustandsübersicht beschreibt daher das Verhalten der internen Speicherzelle:
 
-| Aktuelles Q | SET1.D1 | RESET.D1 | Interlock aktiv? | Nächstes Q | Beschreibung |
-|-------------|---------|----------|------------------|------------|--------------|
-| FALSE       | FALSE   | FALSE    | NEIN             | FALSE      | Latch bleibt zurückgesetzt |
-| FALSE       | TRUE    | FALSE    | NEIN             | TRUE       | Latch wird gesetzt |
-| FALSE       | TRUE    | TRUE     | JA/NEIN          | FALSE      | Reset dominiert |
-| TRUE        | FALSE   | FALSE    | NEIN             | TRUE       | Latch bleibt gesetzt (Selbsthaltung) |
-| TRUE        | TRUE    | FALSE    | NEIN             | TRUE       | Latch bleibt gesetzt |
-| TRUE        | FALSE   | TRUE     | JA/NEIN          | FALSE      | Reset dominiert |
-| TRUE        | TRUE    | TRUE     | JA/NEIN          | FALSE      | Reset dominiert |
-| beliebig    | beliebig| beliebig | JA (ILOCK)       | FALSE      | Interlock-Blockade setzt oder hält Latch zurück |
+| Aktuelles Q | SET1.D1  | RESET.D1 | Interlock aktiv? | Nächstes Q | Beschreibung                                    |
+| ----------- | -------- | -------- | ---------------- | ---------- | ----------------------------------------------- |
+| FALSE       | FALSE    | FALSE    | NEIN             | FALSE      | Latch bleibt zurückgesetzt                      |
+| FALSE       | TRUE     | FALSE    | NEIN             | TRUE       | Latch wird gesetzt                              |
+| FALSE       | TRUE     | TRUE     | JA/NEIN          | FALSE      | Reset dominiert                                 |
+| TRUE        | FALSE    | FALSE    | NEIN             | TRUE       | Latch bleibt gesetzt (Selbsthaltung)            |
+| TRUE        | TRUE     | FALSE    | NEIN             | TRUE       | Latch bleibt gesetzt                            |
+| TRUE        | FALSE    | TRUE     | JA/NEIN          | FALSE      | Reset dominiert                                 |
+| TRUE        | TRUE     | TRUE     | JA/NEIN          | FALSE      | Reset dominiert                                 |
+| beliebig    | beliebig | beliebig | JA (ILOCK)       | FALSE      | Interlock-Blockade setzt oder hält Latch zurück |
 
 ## Anwendungsszenarien
 

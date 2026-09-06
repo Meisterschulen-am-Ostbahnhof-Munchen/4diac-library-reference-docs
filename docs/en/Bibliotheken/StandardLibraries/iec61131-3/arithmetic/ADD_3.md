@@ -35,6 +35,7 @@ The **ADD_3** is an enhanced version of the adder for calculating the sum of thr
 
 - The `REQ` event triggers the calculation
 - All three input values are evaluated simultaneously
+
 1. **Calculation**:
 
 - Type-preserving summation
@@ -42,6 +43,7 @@ The **ADD_3** is an enhanced version of the adder for calculating the sum of thr
 - Integers (INT, DINT)
 - Floating-point numbers (REAL, LREAL)
 - Time values (TIME, LTIME)
+
 1. **Result Output**:
 
 - The `CNF` event with the calculated OUT value
@@ -64,10 +66,10 @@ The **ADD_3** is an enhanced version of the adder for calculating the sum of thr
 
 ## ⚖️ Comparison with ADD_2
 
-| Feature | ADD_3 | ADD_2 |
-| --------------- | -------- | -------- |
-| Inputs | 3 | 2 |
-| Calculation | IN1+IN2+IN3 | IN1+IN2 |
+| Feature     | ADD_3                           | ADD_2       |
+| ----------- | ------------------------------- | ----------- |
+| Inputs      | 3                               | 2           |
+| Calculation | IN1+IN2+IN3                     | IN1+IN2     |
 | Performance | Higher efficiency with 3 inputs | Lightweight |
 
 ## Error Handling

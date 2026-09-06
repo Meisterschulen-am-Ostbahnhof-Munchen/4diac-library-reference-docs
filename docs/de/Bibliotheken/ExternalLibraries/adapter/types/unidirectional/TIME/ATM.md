@@ -16,8 +16,8 @@ Der Adapter besitzt keine Ereignis-Eingänge.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                                                   |
+| ---- | ----- | --------------------------------------------------------------------------- |
 | E1   | Event | Indikation (oder Anforderung) – wird zusammen mit dem Datenwert D1 gesendet |
 
 ### **Daten-Eingänge**
@@ -26,8 +26,8 @@ Der Adapter besitzt keine Daten-Eingänge.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ  | Kommentar                               |
+| ---- | ---- | --------------------------------------- |
 | D1   | TIME | Indikations-/Anforderungsdaten vom Plug |
 
 ### **Adapter**
@@ -58,12 +58,12 @@ Da der ATM-Adapter keine interne Zustandsmaschine besitzt (zustandsloser Adapter
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | ATM (dieser Adapter) | Andere unidirektionale Adapter (z. B. mit mehreren Events/Daten) |
-| --------- | ---------------------- | ---------------------------------------------------------------- |
-| Ereignisse | 1 (E1) | meist mehrere (z. B. INIT, REQ, IND, RSP) |
-| Daten | 1 (TIME) | oft mehrere Daten oder verschiedene Typen |
-| Komplexität | gering | mittel bis hoch |
-| Einsatz | einfache Zeitübertragung | komplexe Prozessschriftstellen |
+| Merkmal     | ATM (dieser Adapter)     | Andere unidirektionale Adapter (z. B. mit mehreren Events/Daten) |
+| ----------- | ------------------------ | ---------------------------------------------------------------- |
+| Ereignisse  | 1 (E1)                   | meist mehrere (z. B. INIT, REQ, IND, RSP)                        |
+| Daten       | 1 (TIME)                 | oft mehrere Daten oder verschiedene Typen                        |
+| Komplexität | gering                   | mittel bis hoch                                                  |
+| Einsatz     | einfache Zeitübertragung | komplexe Prozessschriftstellen                                   |
 
 Gegenüber allgemeineren Adaptern beschränkt sich ATM auf das Nötigste – ideal, wenn nur ein Ereignis mit einem einzigen Zeitwert ausgetauscht werden muss.
 

@@ -42,10 +42,10 @@ On every `CLK` event, the ECC compares the new value `D` with the currently stor
 
 ## State Overview
 
-| State | Meaning |
-|---|---|
-| START | Initial state, first `CLK` unconditionally latches `D` |
-| SET | `Q` holds the last latched value; further `CLK` events only trigger `EO` again if `NE(Q, D)` |
+| State | Meaning                                                                                      |
+| ----- | -------------------------------------------------------------------------------------------- |
+| START | Initial state, first `CLK` unconditionally latches `D`                                       |
+| SET   | `Q` holds the last latched value; further `CLK` events only trigger `EO` again if `NE(Q, D)` |
 
 ## Application Scenarios
 

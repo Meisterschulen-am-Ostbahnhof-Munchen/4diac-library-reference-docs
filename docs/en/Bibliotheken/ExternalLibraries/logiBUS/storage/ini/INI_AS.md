@@ -18,18 +18,18 @@ The function block **INI_AS** is used to load and save SINT data from a `setting
 
 ### **Event Outputs**
 
-| Event | Type | With Vars | Description |
-|----------|------|-----------|--------------|
+| Event   | Type  | With Vars  | Description                     |
+| ------- | ----- | ---------- | ------------------------------- |
 | `INITO` | EInit | QO, STATUS | Confirmation of initialization. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Description |
-| --------------- | ---------- | -------------- |
-| `QI` | BOOL | Input qualifier (e.g., enable). |
-| `SECTION` | STRING | Name of the section in the INI file. |
-| `KEY` | STRING | Name of the key within the section. |
-| `DEFAULT_VALUE` | SINT | Value returned if the key is not present in the INI file. |
+| Name            | Data Type | Description                                               |
+| --------------- | --------- | --------------------------------------------------------- |
+| `QI`            | BOOL      | Input qualifier (e.g., enable).                           |
+| `SECTION`       | STRING    | Name of the section in the INI file.                      |
+| `KEY`           | STRING    | Name of the key within the section.                       |
+| `DEFAULT_VALUE` | SINT      | Value returned if the key is not present in the INI file. |
 
 ### **Data Outputs**
 
@@ -40,10 +40,10 @@ The function block **INI_AS** is used to load and save SINT data from a `setting
 
 ### **Adapter**
 
-| Name | Type | Direction | Description |
-| ------------- | --------------------- | ---------- | -------------- |
-| `AS_IN` | `adapter::types::unidirectional::AS` | Input (Socket) | Receives a new value to be stored (SET operation). |
-| `AS_OUT` | `adapter::types::unidirectional::AS` | Output (Plug) | Outputs the currently read or stored value (GET operation). |
+| Name     | Type                                 | Direction      | Description                                                 |
+| -------- | ------------------------------------ | -------------- | ----------------------------------------------------------- |
+| `AS_IN`  | `adapter::types::unidirectional::AS` | Input (Socket) | Receives a new value to be stored (SET operation).          |
+| `AS_OUT` | `adapter::types::unidirectional::AS` | Output (Plug)  | Outputs the currently read or stored value (GET operation). |
 
 ## Functionality
 

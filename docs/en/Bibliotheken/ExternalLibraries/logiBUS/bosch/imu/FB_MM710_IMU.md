@@ -12,27 +12,27 @@ The function block **FB_MM710_IMU** is a service-oriented module (SIFB) for conn
 
 ### **Event Inputs**
 
-| Event | Type | Description |
-| ---------- | ----- | -------------- |
-| INIT | EInit | Initialization of the module. This event sets the CAN parameters (index, source address) and the activation qualifier QI. |
-| REQ | Event | Triggers a new measurement query. After successful initialization, sensor data can be requested cyclically or event-driven. |
+| Event | Type  | Description                                                                                                                 |
+| ----- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
+| INIT  | EInit | Initialization of the module. This event sets the CAN parameters (index, source address) and the activation qualifier QI.   |
+| REQ   | Event | Triggers a new measurement query. After successful initialization, sensor data can be requested cyclically or event-driven. |
 
 ### **Event Outputs**
 
-| Event | Type | Description |
-| ---------- | ----- | -------------- |
-| INITO | EInit | Confirmation of successful initialization (QO = TRUE) or error message. |
-| CNF | Event | Confirmation of a measurement request. Provides the current sensor data and status information. |
-| ERROR | Event | Occurs in case of communication or CRC errors. Contains detailed error information. |
+| Event | Type  | Description                                                                                     |
+| ----- | ----- | ----------------------------------------------------------------------------------------------- |
+| INITO | EInit | Confirmation of successful initialization (QO = TRUE) or error message.                         |
+| CNF   | Event | Confirmation of a measurement request. Provides the current sensor data and status information. |
+| ERROR | Event | Occurs in case of communication or CRC errors. Contains detailed error information.             |
 
 ### **Data Inputs**
 
-| Variable | Type | Description |
-| ---------- | ----- | -------------- |
-| QI | BOOL | Activation Qualifier: Initialization (INIT) is only performed if QI = TRUE. |
-| PARAMS | STRING | Service parameter, e.g., CAN interface configuration (optional). |
-| u8CanIdx | USINT | CAN node index (default initial value: `INVALID`). |
-| SA | BYTE | Source address for J1939 communication (initial value: `16#DA`). |
+| Variable | Type   | Description                                                                 |
+| -------- | ------ | --------------------------------------------------------------------------- |
+| QI       | BOOL   | Activation Qualifier: Initialization (INIT) is only performed if QI = TRUE. |
+| PARAMS   | STRING | Service parameter, e.g., CAN interface configuration (optional).            |
+| u8CanIdx | USINT  | CAN node index (default initial value: `INVALID`).                          |
+| SA       | BYTE   | Source address for J1939 communication (initial value: `16#DA`).            |
 
 ### **Data Outputs**
 

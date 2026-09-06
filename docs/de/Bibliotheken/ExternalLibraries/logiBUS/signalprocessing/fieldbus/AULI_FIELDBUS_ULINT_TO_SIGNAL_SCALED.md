@@ -12,21 +12,21 @@ Der Funktionsblock **AULI_FIELDBUS_ULINT_TO_SIGNAL_SCALED** dient der skalierend
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar            |
-|------|-------|----------------------|
-| INIT | EInit | Init Request         |
+| Name | Typ   | Kommentar    |
+| ---- | ----- | ------------ |
+| INIT | EInit | Init Request |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar             |
-|-------|-------|-----------------------|
-| INITO | EInit | Init Confirmation     |
+| Name  | Typ   | Kommentar         |
+| ----- | ----- | ----------------- |
+| INITO | EInit | Init Confirmation |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ   | Initialwert | Kommentar                       |
-|--------|-------|-------------|-----------------------------------|
-| SCALE  | LREAL | 1.0         | Skalierungsfaktor               |
+| Name   | Typ   | Initialwert | Kommentar                                    |
+| ------ | ----- | ----------- | -------------------------------------------- |
+| SCALE  | LREAL | 1.0         | Skalierungsfaktor                            |
 | OFFSET | DINT  | 0           | Offset, der nach der Skalierung addiert wird |
 
 ### **Daten-Ausgänge**
@@ -37,16 +37,16 @@ Der Funktionsblock **AULI_FIELDBUS_ULINT_TO_SIGNAL_SCALED** dient der skalierend
 
 #### **Socket (Eingang)**
 
-| Name | Typ                                              | Kommentar |
-|------|--------------------------------------------------|-----------|
-| IN   | adapter::types::unidirectional::AULI             | Input     |
+| Name | Typ                                  | Kommentar |
+| ---- | ------------------------------------ | --------- |
+| IN   | adapter::types::unidirectional::AULI | Input     |
 
 #### **Plug (Ausgang)**
 
-| Name  | Typ                                              | Kommentar           |
-|-------|--------------------------------------------------|---------------------|
-| OUT   | adapter::types::unidirectional::ALR              | Output Filtered     |
-| VALID | adapter::types::unidirectional::AX               | TRUE if Signal is VALID |
+| Name  | Typ                                 | Kommentar               |
+| ----- | ----------------------------------- | ----------------------- |
+| OUT   | adapter::types::unidirectional::ALR | Output Filtered         |
+| VALID | adapter::types::unidirectional::AX  | TRUE if Signal is VALID |
 
 ## Funktionsweise
 

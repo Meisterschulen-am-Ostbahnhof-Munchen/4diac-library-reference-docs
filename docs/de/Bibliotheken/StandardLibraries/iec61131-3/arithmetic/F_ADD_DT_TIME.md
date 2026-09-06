@@ -72,11 +72,11 @@ Der **F_ADD_DT_TIME** ist ein spezialisierter Funktionsbaustein zur Addition von
 
 ## ⚖️ Vergleich mit Standard-F_ADD
 
-| Merkmal        | F_ADD_DT_TIME | F_ADD       |
-|----------------|---------------|-------------|
-| Eingangstyp 1  | DATE_AND_TIME | ANY_MAGNITUDE |
-| Eingangstyp 2  | TIME          | ANY_MAGNITUDE |
-| Operation      | Spezialisierte Zeitaddition | Generische Addition |
+| Merkmal       | F_ADD_DT_TIME               | F_ADD               |
+| ------------- | --------------------------- | ------------------- |
+| Eingangstyp 1 | DATE_AND_TIME               | ANY_MAGNITUDE       |
+| Eingangstyp 2 | TIME                        | ANY_MAGNITUDE       |
+| Operation     | Spezialisierte Zeitaddition | Generische Addition |
 
 ## Fazit
 

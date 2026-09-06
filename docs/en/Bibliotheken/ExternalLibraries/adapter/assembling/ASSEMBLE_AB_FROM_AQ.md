@@ -37,10 +37,10 @@ Data is read in via the **adapter sockets** in the form of 4-bit values (nibbles
 
 ### **Adapter**
 
-| Type | Direction | Name | Description |
-| ----- | ---------- | ------ | -------------- |
+| Type                                 | Direction      | Name                                   | Description                                                  |
+| ------------------------------------ | -------------- | -------------------------------------- | ------------------------------------------------------------ |
 | `adapter::types::unidirectional::AQ` | Socket (Input) | `QUARTER_BYTE_00` .. `QUARTER_BYTE_03` | Four quarter adapters, each providing a nibble and an event. |
-| `adapter::types::unidirectional::AB` | Plug (Output) | `OUT` | Byte adapter providing the assembled byte and an event. |
+| `adapter::types::unidirectional::AB` | Plug (Output)  | `OUT`                                  | Byte adapter providing the assembled byte and an event.      |
 
 ## Functionality
 

@@ -3,6 +3,7 @@
 ![AD_TO_AR_NUM](./AD_TO_AR_NUM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block **AD_TO_AR_NUM** is the numerically correct alternative to [`AD_TO_AR`](./AD_TO_AR.md): it converts a DWORD value from a unidirectional AD adapter (socket) into a REAL value output via an AR adapter (plug), via an internal UDINT step — an **actual value conversion**, not a bit-reinterpretation.
@@ -17,10 +18,10 @@ The function block has no direct (individual) event or data inputs/outputs. All 
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-|--------|--------------------------------------------|----------|----------------------------------------------------------------------------|
-| AD_IN | `adapter::types::unidirectional::AD` | Socket | Receives an event (E1) and a DWORD raw value (D1) for conversion. |
-| AR_OUT | `adapter::types::unidirectional::AR` | Plug | Sends an event (E1) with the numerically converted REAL value (D1). |
+| Name   | Type                                 | Direction | Description                                                         |
+| ------ | ------------------------------------ | --------- | ------------------------------------------------------------------- |
+| AD_IN  | `adapter::types::unidirectional::AD` | Socket    | Receives an event (E1) and a DWORD raw value (D1) for conversion.   |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug      | Sends an event (E1) with the numerically converted REAL value (D1). |
 
 ## Functionality
 
@@ -55,10 +56,10 @@ The function block works in two stages instead of a single (dangerous) one:
 
 ### 📖 Background
 
-* [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)
+- [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)
 
 ---
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

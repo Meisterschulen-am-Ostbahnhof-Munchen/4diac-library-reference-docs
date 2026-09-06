@@ -46,7 +46,7 @@ Die Funktionsweise ist ereignisgesteuert und folgt einem einfachen Anforderungs-
 Die Wahrheitstabelle der Operation lautet:
 
 | IN1 | IN2 | OUT (IN1 OR IN2) |
-|:---:|:---:|:----------------:|
+| :-: | :-: | :--------------: |
 | 0   | 0   | 0                |
 | 0   | 1   | 1                |
 | 1   | 0   | 1                |

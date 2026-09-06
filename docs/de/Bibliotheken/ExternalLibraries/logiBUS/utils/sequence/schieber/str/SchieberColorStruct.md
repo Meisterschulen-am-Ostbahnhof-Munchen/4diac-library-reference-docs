@@ -20,13 +20,13 @@ Diese Struktur besitzt keine Ereignis-Ausgänge. Die Mitgliedsvariablen stellen 
 
 ### **Daten-Elemente (Struktur-Mitglieder)**
 
-| Name     | Datentyp | Kommentar                          | Initialwert       |
-| :------- | :------- | :--------------------------------- | :---------------- |
-| `Unknown`| `USINT`  | u8Colour for Unknown State         | `COLOR_WHITE`     |
-| `Closed` | `USINT`  | u8Colour for Closed State          | `COLOR_WHITE`     |
-| `Opening`| `USINT`  | u8Colour for Opening State         | `COLOR_WHITE`     |
-| `Opened` | `USINT`  | u8Colour for Opened State          | `COLOR_WHITE`     |
-| `Closing`| `USINT`  | u8Colour for Closing State         | `COLOR_WHITE`     |
+| Name      | Datentyp | Kommentar                  | Initialwert   |
+| :-------- | :------- | :------------------------- | :------------ |
+| `Unknown` | `USINT`  | u8Colour for Unknown State | `COLOR_WHITE` |
+| `Closed`  | `USINT`  | u8Colour for Closed State  | `COLOR_WHITE` |
+| `Opening` | `USINT`  | u8Colour for Opening State | `COLOR_WHITE` |
+| `Opened`  | `USINT`  | u8Colour for Opened State  | `COLOR_WHITE` |
+| `Closing` | `USINT`  | u8Colour for Closing State | `COLOR_WHITE` |
 
 ### **Adapter**
 

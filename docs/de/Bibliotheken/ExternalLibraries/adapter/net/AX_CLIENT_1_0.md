@@ -33,8 +33,8 @@ Im Unterschied zu **AX_PUBLISH_1** (lokales Publish/Subscribe) schreibt `CLIENT_
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung          |
-|---------|------------------------------|----------|------------------------|
+| Adapter | Typ                                | Richtung         | Beschreibung           |
+| ------- | ---------------------------------- | ---------------- | ---------------------- |
 | IN      | adapter::types::unidirectional::AX | Socket (Eingang) | Zu sendender BOOL-Wert |
 
 ## Funktionsweise

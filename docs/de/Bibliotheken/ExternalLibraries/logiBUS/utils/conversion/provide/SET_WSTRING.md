@@ -12,21 +12,21 @@ Der Funktionsbaustein **SET_WSTRING** dient dazu, einen Wert vom Datentyp `WSTRI
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                      |
+| -------- | ------------------------------------------------------------------------------------------------- |
 | `REQ`    | Normaler Ausführungsauftruf: Die Zuweisung des Eingabewerts an die InOut-Variable wird ausgelöst. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                            |
+| -------- | ----------------------------------------------------------------------- |
 | `CNF`    | Bestätigung der Ausführung. Wird nach erfolgreicher Zuweisung gesendet. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| `IN`  | `WSTRING`| Quellwert, der in die Zielvariable geschrieben werden soll. |
+| Name | Datentyp  | Beschreibung                                                |
+| ---- | --------- | ----------------------------------------------------------- |
+| `IN` | `WSTRING` | Quellwert, der in die Zielvariable geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
 
@@ -56,8 +56,8 @@ Der am Eingang `IN` anliegende `WSTRING`-Wert wird unverändert in die InOut-Var
 
 Der Baustein enthält genau einen Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                                           |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQ`   | Wird nach dem Eintreffen des Ereignisses `REQ` aktiv. Führt die Zuweisung `OUT := IN` aus und sendet `CNF`. Danach kehrt der Baustein in den initialen Zustand zurück. |
 
 ## Anwendungsszenarien

@@ -12,22 +12,22 @@ The function block **ALR_D_FF_HYS_TMIN** implements a clock-controlled D-latch (
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|----------|-------|----------------------------------|
-| INIT | EInit | Initialization Request (sets hysteresis and Tmin) |
+| Event | Type  | Comment                                           |
+| ----- | ----- | ------------------------------------------------- |
+| INIT  | EInit | Initialization Request (sets hysteresis and Tmin) |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|----------|-------|-----------------------------------|
+| Event | Type  | Comment                        |
+| ----- | ----- | ------------------------------ |
 | INITO | EInit | Initialization Acknowledgement |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-| ------------ | ------- | ------------------------------------------------- |
-| HYSTERESIS | LREAL | Hysteresis band for data transfer |
-| Tmin | TIME | Minimum time between two output events |
+| Name       | Type  | Comment                                |
+| ---------- | ----- | -------------------------------------- |
+| HYSTERESIS | LREAL | Hysteresis band for data transfer      |
+| Tmin       | TIME  | Minimum time between two output events |
 
 ### **Data Outputs**
 
@@ -35,10 +35,10 @@ The FB does not have its own data outputs. The latched value is provided via the
 
 ### **Adapter**
 
-| Direction | Name | Type (unidirectional) | Comment |
-| ---------- | ------ | ---------------------- | ------------------------------------ |
-| Socket | I | ALR | Input value to be latched |
-| Plug | Q | ALR | Output value (latched) |
+| Direction | Name | Type (unidirectional) | Comment                   |
+| --------- | ---- | --------------------- | ------------------------- |
+| Socket    | I    | ALR                   | Input value to be latched |
+| Plug      | Q    | ALR                   | Output value (latched)    |
 
 ## Functionality
 
@@ -67,6 +67,7 @@ Since the function block consists of several internal states (e.g., waiting for 
 
 - If the hysteresis limit is exceeded: the new value is adopted, and the process transitions to **Waiting for Minimum Time**
 - Otherwise: returns to **Ready** without output
+
 1. **Waiting for Minimum Time** – after the minimum time has elapsed, the output event `Q.E1` is generated, and the latched value is displayed at `Q.D1`Output; then return to **Ready**
 
 ## Application Scenarios
@@ -78,12 +79,12 @@ Since the function block consists of several internal states (e.g., waiting for 
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Properties | Difference to ALR_D_FF_HYS_TMIN |
------------------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Simple D flip-flop (D_FF) | No hysteresis, no timing | No signal stabilization or frequency limiting |
-| Schmitt trigger (e.g., S_TRIG) | Hysteresis only, no timing, often only binary | Differs with analog values and forced pauses |
-| Edge-triggered latch with dead time | Timing (dead time) present, but usually without hysteresis | Combination of both effects (hysteresis + Tmin) |
-| Filter block (e.g., FILTER) | Noise reduction, e.g., as a low-pass filter, no discrete state change | Explicit latch with event output and adjustable hysteresis |
+| Function Block                      | Properties                                                            | Difference to ALR_D_FF_HYS_TMIN                            |
+| ----------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------- |
+| Simple D flip-flop (D_FF)           | No hysteresis, no timing                                              | No signal stabilization or frequency limiting              |
+| Schmitt trigger (e.g., S_TRIG)      | Hysteresis only, no timing, often only binary                         | Differs with analog values and forced pauses               |
+| Edge-triggered latch with dead time | Timing (dead time) present, but usually without hysteresis            | Combination of both effects (hysteresis + Tmin)            |
+| Filter block (e.g., FILTER)         | Noise reduction, e.g., as a low-pass filter, no discrete state change | Explicit latch with event output and adjustable hysteresis |
 
 This block combines the advantages of hysteresis with a minimal event spacing function, making it particularly suitable for harsh industrial environments.
 

@@ -12,20 +12,20 @@ Der Funktionsblock `Q_ObjEnableDisable_AB` dient als Wrapper, der die Steuerung 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|-------------|
+| Ereignis | Typ   | Beschreibung                                                                       |
+| -------- | ----- | ---------------------------------------------------------------------------------- |
 | `INIT`   | EInit | Service-Initialisierung: startet den internen Baustein und übergibt die Objekt-ID. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|-------------|
+| Ereignis | Typ   | Beschreibung                                   |
+| -------- | ----- | ---------------------------------------------- |
 | `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name       | Typ  | Beschreibung                  |
-|------------|------|-------------------------------|
+| Name       | Typ  | Beschreibung                                         |
+| ---------- | ---- | ---------------------------------------------------- |
 | `u16ObjId` | UINT | Eindeutige Identifikation des zu steuernden Objekts. |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine eigenen Datenausgänge – die Ausgangsdaten werden über den Adapter-Plug
 
 ### **Adapter**
 
-| Adaptertyp                           | Richtung    | Beschreibung |
-|--------------------------------------|-------------|-------------|
-| **Socket** `qAbility`               | Eingang     | Unidirektionaler AB-Adapter: empfängt den Befehl (BYTE). `0` = deaktivieren, `1` = aktivieren, `0xFF` = undefiniert. |
-| **Plug** `qOldAbility`              | Ausgang     | Unidirektionaler AB-Adapter: gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung). |
+| Adaptertyp             | Richtung | Beschreibung                                                                                                         |
+| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Socket** `qAbility`  | Eingang  | Unidirektionaler AB-Adapter: empfängt den Befehl (BYTE). `0` = deaktivieren, `1` = aktivieren, `0xFF` = undefiniert. |
+| **Plug** `qOldAbility` | Ausgang  | Unidirektionaler AB-Adapter: gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung).                     |
 
 ## Gültige Objekt-IDs
 
@@ -81,11 +81,11 @@ Der FB dient als Brücke zwischen einem AB-Adapter (BYTE) und dem internen Baust
 
 Der FB besitzt keinen eigenen expliziten Zustandsautomaten – die Zustandslogik liegt vollständig im internen FB `Q_ObjEnableDisable`. Dennoch lassen sich folgende Betriebszustände ableiten:
 
-| Zustand         | Beschreibung |
-|-----------------|-------------|
-| **Idle**        | Nach erfolgreicher Initialisierung (INITO gesendet) wartet der FB auf ein Ereignis am Socket `qAbility`. |
-| **Processing**  | Ein eingehendes Ereignis auf `qAbility.E1` wird verarbeitet; der interne FB führt die Umschaltung aus. |
-| **Completed**   | Verarbeitung abgeschlossen – der neue (bzw. alte) Zustand liegt am Plug an, Ereignis `qOldAbility.E1` wird ausgegeben. |
+| Zustand        | Beschreibung                                                                                                           |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Idle**       | Nach erfolgreicher Initialisierung (INITO gesendet) wartet der FB auf ein Ereignis am Socket `qAbility`.               |
+| **Processing** | Ein eingehendes Ereignis auf `qAbility.E1` wird verarbeitet; der interne FB führt die Umschaltung aus.                 |
+| **Completed**  | Verarbeitung abgeschlossen – der neue (bzw. alte) Zustand liegt am Plug an, Ereignis `qOldAbility.E1` wird ausgegeben. |
 
 Fehlerzustände (z. B. ungültige Objekt-ID, fehlerhafte INIT-Sequenz) werden durch den internen FB behandelt und können über Rückgabewerte oder spezielle BYTE-Codes (`0xFF`) signalisiert werden.
 
@@ -102,11 +102,11 @@ Fehlerzustände (z. B. ungültige Objekt-ID, fehlerhafte INIT-Sequenz) werden 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| ---------- | ------------ |
-| `Q_ObjEnableDisable` (direkt) | Erfordert native Ereignis- und Datenschnittstellen ohne Adapter. `Q_ObjEnableDisable_AB` fügt die Adapter-Kompatibilität hinzu. |
-| `Q_ObjEnableDisable_BB` (hypothetisch) | Würde einen bidirektionalen BB-Adapter verwenden. Der vorliegende FB verwendet den einfacheren unidirektionalen AB-Adapter. |
-| Generischer „CommandOnOff“ | Ist typischerweise nicht auf ein spezifisches Objekt (ID) ausgerichtet und besitzt keine Zustandsrückmeldung über Adapter. |
+| Baustein                               | Unterschied                                                                                                                     |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `Q_ObjEnableDisable` (direkt)          | Erfordert native Ereignis- und Datenschnittstellen ohne Adapter. `Q_ObjEnableDisable_AB` fügt die Adapter-Kompatibilität hinzu. |
+| `Q_ObjEnableDisable_BB` (hypothetisch) | Würde einen bidirektionalen BB-Adapter verwenden. Der vorliegende FB verwendet den einfacheren unidirektionalen AB-Adapter.     |
+| Generischer „CommandOnOff“             | Ist typischerweise nicht auf ein spezifisches Objekt (ID) ausgerichtet und besitzt keine Zustandsrückmeldung über Adapter.      |
 
 ## Fazit
 

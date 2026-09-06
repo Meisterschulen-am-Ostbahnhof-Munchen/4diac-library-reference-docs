@@ -31,10 +31,10 @@ Der FB besitzt keine direkten Ereignis- oder Datenein-/ausgänge, sondern kommun
 
 ### **Adapter**
 
-| Name   | Richtung | Typ                                              | Beschreibung                  |
-|--------|----------|--------------------------------------------------|-------------------------------|
-| AULI_IN | Socket   | `adapter::types::unidirectional::AULI` (ULINT) | Eingangswert                 |
-| AR_OUT  | Plug     | `adapter::types::unidirectional::AR`    (REAL)  | Ausgangswert (konvertiert)  |
+| Name    | Richtung | Typ                                            | Beschreibung               |
+| ------- | -------- | ---------------------------------------------- | -------------------------- |
+| AULI_IN | Socket   | `adapter::types::unidirectional::AULI` (ULINT) | Eingangswert               |
+| AR_OUT  | Plug     | `adapter::types::unidirectional::AR`    (REAL) | Ausgangswert (konvertiert) |
 
 ## Funktionsweise
 

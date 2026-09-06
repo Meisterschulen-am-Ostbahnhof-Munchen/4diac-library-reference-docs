@@ -9,7 +9,7 @@ The function block `F_DINT_TO_USINT` converts a 32-bit integer value (DINT) to a
 - **IN**: The input value of type `DINT` (32-bit integer) to be converted.
 - **OUT**: The output value of type `USINT` (8-bit unsigned integer) containing the result of the conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

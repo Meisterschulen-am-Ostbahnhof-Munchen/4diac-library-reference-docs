@@ -12,26 +12,26 @@ Der Funktionsblock **SET_ULINT** dient dazu, einen unsignierten 64-Bit-Ganzzahlw
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                                                                       |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ      | Normaler Ausführungsauftrag. Der Wert von `IN` wird auf die InOut-Variable `OUT` übertragen und nach Abschluss der Ereignisausgang `CNF` gesendet. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                    |
+| -------- | ----------------------------------------------------------------------------------------------- |
 | CNF      | Bestätigung der Ausführung. Wird ausgelöst, sobald die Zuweisung von `IN` an `OUT` erfolgt ist. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
+| Name | Datentyp | Beschreibung                                  |
+| ---- | -------- | --------------------------------------------- |
 | IN   | ULINT    | Der zu schreibende Wert. Voreinstellung: `0`. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
+| Name | Datentyp | Beschreibung                                                                                                                               |
+| ---- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | OUT  | ULINT    | InOut-Variable – Ziel der Zuweisung. Sie kann sowohl gelesen als auch beschrieben werden und steht nach der Ausführung auf dem neuen Wert. |
 
 ### **Adapter**
@@ -59,9 +59,9 @@ Anschließend wird der Ereignisausgang `CNF` gesendet. Der übergebene Wert `IN`
 
 Der FB besitzt genau einen EC-Zustand:
 
-| Zustand | Aktion | Ausgabe |
-|---------|--------|---------|
-| REQ     | `REQ` (OUT := IN) | CNF |
+| Zustand | Aktion            | Ausgabe |
+| ------- | ----------------- | ------- |
+| REQ     | `REQ` (OUT := IN) | CNF     |
 
 Nach dem Start oder Reset befindet sich der FB im Zustand `REQ`. Jeder `REQ`-Ereignisimpuls löst die Aktion aus und erzeugt danach `CNF`.
 

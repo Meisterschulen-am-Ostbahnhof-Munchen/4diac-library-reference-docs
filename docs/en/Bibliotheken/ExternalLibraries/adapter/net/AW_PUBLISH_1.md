@@ -31,9 +31,9 @@ The **AW_PUBLISH_1** function block is a composite function block that encapsula
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AW | Socket (Input) | WORD value to be published |
+| Adapter | Type                               | Direction      | Description                |
+| ------- | ---------------------------------- | -------------- | -------------------------- |
+| IN      | adapter::types::unidirectional::AW | Socket (Input) | WORD value to be published |
 
 ## Functionality
 

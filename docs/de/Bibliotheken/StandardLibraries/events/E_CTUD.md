@@ -74,13 +74,13 @@ Nach jeder dieser Aktionen werden die Status-Flags `QU` und `QD` basierend auf d
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal      | E_CTUD (Up/Down) | E_CTU (Up)      | E_CTD (Down)     |
-|--------------|------------------|-----------------|------------------|
-| Zählrichtung | Auf & Ab         | Nur Auf         | Nur Ab           |
-| Reset (auf 0)| Ja (`R`)         | Ja (`R`)        | Nein             |
-| Laden (auf PV)| Ja (`LD`)        | Nein            | Ja (`LD`)        |
-| Status Oben  | `QU` (`CV >= PV`)| `Q` (`CV >= PV`)| Nein             |
-| Status Unten | `QD` (`CV = 0`)  | Nein            | `Q` (`CV = 0`)   |
+| Merkmal        | E_CTUD (Up/Down)  | E_CTU (Up)       | E_CTD (Down)   |
+| -------------- | ----------------- | ---------------- | -------------- |
+| Zählrichtung   | Auf & Ab          | Nur Auf          | Nur Ab         |
+| Reset (auf 0)  | Ja (`R`)          | Ja (`R`)         | Nein           |
+| Laden (auf PV) | Ja (`LD`)         | Nein             | Ja (`LD`)      |
+| Status Oben    | `QU` (`CV >= PV`) | `Q` (`CV >= PV`) | Nein           |
+| Status Unten   | `QD` (`CV = 0`)   | Nein             | `Q` (`CV = 0`) |
 
 ## 🛠️ Zugehörige Übungen
 

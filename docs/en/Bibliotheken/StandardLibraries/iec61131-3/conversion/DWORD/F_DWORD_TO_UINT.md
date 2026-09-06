@@ -10,7 +10,7 @@ The function block `F_DWORD_TO_UINT` converts a `DWORD` value to a `UINT` value.
 - **IN** (`DWORD`): The input value to be converted from `DWORD` to `UINT`.
 - **OUT** (`UINT`): The output value after conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

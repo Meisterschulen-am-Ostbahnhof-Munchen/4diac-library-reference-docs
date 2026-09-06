@@ -28,11 +28,11 @@ Der Funktionsblock **AL_SPLIT_2** dient dazu, ein eingehendes unidirektionales A
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-| ----- | ---------- | ------ | -------------- |
-| `adapter::types::unidirectional::AL` | **Socket** (Eingang) | `IN` | Eingangssignal, das auf beide Ausgänge verteilt wird |
-| `adapter::types::unidirectional::AL` | **Plug** (Ausgang) | `OUT1` | Erster Ausgang mit demselben Adapter-Signal wie `IN` |
-| `adapter::types::unidirectional::AL` | **Plug** (Ausgang) | `OUT2` | Zweiter Ausgang mit demselben Adapter-Signal wie `IN` |
+| Typ                                  | Richtung             | Name   | Beschreibung                                          |
+| ------------------------------------ | -------------------- | ------ | ----------------------------------------------------- |
+| `adapter::types::unidirectional::AL` | **Socket** (Eingang) | `IN`   | Eingangssignal, das auf beide Ausgänge verteilt wird  |
+| `adapter::types::unidirectional::AL` | **Plug** (Ausgang)   | `OUT1` | Erster Ausgang mit demselben Adapter-Signal wie `IN`  |
+| `adapter::types::unidirectional::AL` | **Plug** (Ausgang)   | `OUT2` | Zweiter Ausgang mit demselben Adapter-Signal wie `IN` |
 
 ## Funktionsweise
 
@@ -58,12 +58,12 @@ Der Baustein führt keine eigene Zustandsverwaltung. Er kann als **kombinatorisc
 
 Es existieren in der 4diac-IDE verschiedene Splitter-Bausteine für unterschiedliche Signalarten:
 
-| Baustein | Signalart | Ausgänge | Besonderheit |
-| ---------- | ----------- | ---------- | -------------- |
-| `AL_SPLIT_2` | Adapter (unidirektional) | 2 | Generisch, keine Daten-/Ereignisse |
-| `SPLIT` | Ereignisse | 2 | Verteilt Ereignisse ohne Daten |
-| `E_SPLIT` | Ereignisse (mit Daten) | 2 | Verteilt Ereignisse samt begleitender Daten |
-| `F_SPLIT` | Daten (beliebiger Typ) | n | Verteilt einen Datenwert auf mehrere Ausgänge |
+| Baustein     | Signalart                | Ausgänge | Besonderheit                                  |
+| ------------ | ------------------------ | -------- | --------------------------------------------- |
+| `AL_SPLIT_2` | Adapter (unidirektional) | 2        | Generisch, keine Daten-/Ereignisse            |
+| `SPLIT`      | Ereignisse               | 2        | Verteilt Ereignisse ohne Daten                |
+| `E_SPLIT`    | Ereignisse (mit Daten)   | 2        | Verteilt Ereignisse samt begleitender Daten   |
+| `F_SPLIT`    | Daten (beliebiger Typ)   | n        | Verteilt einen Datenwert auf mehrere Ausgänge |
 
 Der `AL_SPLIT_2` ist speziell für Adapter-Schnittstellen optimiert und bietet damit eine saubere Möglichkeit, komplexe, adapterbasierte Verbindungen aufzutrennen, ohne in die Daten- oder Ereignisebene einzugreifen.
 

@@ -12,35 +12,35 @@ Der Funktionsbaustein **Q_StringValue_AIS** realisiert den Dienst "Command Chang
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar                                       |
-|----------|-------|-------------------------------------------------|
-| INIT     | EInit | Service-Initialisierung, setzt die Objekt-ID    |
+| Ereignis | Typ   | Kommentar                                    |
+| -------- | ----- | -------------------------------------------- |
+| INIT     | EInit | Service-Initialisierung, setzt die Objekt-ID |
 
 ### **Ereignis-Ausgänge**
 
 | Ereignis | Typ   | Kommentar                                         |
-|----------|-------|---------------------------------------------------|
-| INITO    | EInit | Bestätigung der erfolgreichen Initialisierung      |
+| -------- | ----- | ------------------------------------------------- |
+| INITO    | EInit | Bestätigung der erfolgreichen Initialisierung     |
 | CNF      | Event | Bestätigung des angeforderten Dienstes (Ergebnis) |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ  | Initialwert | Kommentar                     |
-|----------|------|-------------|-------------------------------|
+| Name     | Typ  | Initialwert | Kommentar                        |
+| -------- | ---- | ----------- | -------------------------------- |
 | u16ObjId | UINT | ID_NULL     | Objekt-ID des zu ändernden Werts |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ   | Kommentar                                          |
-|-----------|-------|----------------------------------------------------|
-| STATUS    | STRING| Dienst-Status (z. B. "IDLE", "BUSY", "ERROR")      |
-| s16result | INT   | Rückgabewert (siehe Beschreibung des Dienstes)      |
+| Name      | Typ    | Kommentar                                      |
+| --------- | ------ | ---------------------------------------------- |
+| STATUS    | STRING | Dienst-Status (z. B. "IDLE", "BUSY", "ERROR")  |
+| s16result | INT    | Rückgabewert (siehe Beschreibung des Dienstes) |
 
 ### **Adapter**
 
-| Name       | Typ                                | Kommentar                        |
-|------------|------------------------------------|----------------------------------|
-| pau8String | adapter::types::unidirectional::AIS | Liefert den neuen String-Wert  |
+| Name       | Typ                                 | Kommentar                     |
+| ---------- | ----------------------------------- | ----------------------------- |
+| pau8String | adapter::types::unidirectional::AIS | Liefert den neuen String-Wert |
 
 ## Gültige Objekt-IDs
 

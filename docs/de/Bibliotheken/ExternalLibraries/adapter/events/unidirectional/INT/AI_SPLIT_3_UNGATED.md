@@ -32,10 +32,10 @@ Keine direkten Daten‑Ausgänge – die drei identischen AI‑Signale werden ü
 
 ### Adapter
 
-| Richtung | Bezeichnung | Typ          | Beschreibung                                 |
-|----------|-------------|--------------|----------------------------------------------|
-| Socket   | `IN`        | `ADAPTER_AI` | Eingehendes analoges Signal (Quelle)         |
-| Plug     | `OUT1`      | `ADAPTER_AI` | Erster Ausgang – identisch zum Eingangssignal |
+| Richtung | Bezeichnung | Typ          | Beschreibung                                   |
+| -------- | ----------- | ------------ | ---------------------------------------------- |
+| Socket   | `IN`        | `ADAPTER_AI` | Eingehendes analoges Signal (Quelle)           |
+| Plug     | `OUT1`      | `ADAPTER_AI` | Erster Ausgang – identisch zum Eingangssignal  |
 | Plug     | `OUT2`      | `ADAPTER_AI` | Zweiter Ausgang – identisch zum Eingangssignal |
 | Plug     | `OUT3`      | `ADAPTER_AI` | Dritter Ausgang – identisch zum Eingangssignal |
 

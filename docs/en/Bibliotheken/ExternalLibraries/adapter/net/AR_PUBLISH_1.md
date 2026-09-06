@@ -18,7 +18,7 @@ The **AR_PUBLISH_1** function block is a composite function block that encapsula
 - **QO** (BOOL): Qualifier output, block execution status
 - **STATUS** (WSTRING): Status information as a Unicode string
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -32,9 +32,9 @@ The **AR_PUBLISH_1** function block is a composite function block that encapsula
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::AR | Socket (Input) | REAL value to be published |
+| Adapter | Type                               | Direction      | Description                |
+| ------- | ---------------------------------- | -------------- | -------------------------- |
+| IN      | adapter::types::unidirectional::AR | Socket (Input) | REAL value to be published |
 
 ## Functionality
 

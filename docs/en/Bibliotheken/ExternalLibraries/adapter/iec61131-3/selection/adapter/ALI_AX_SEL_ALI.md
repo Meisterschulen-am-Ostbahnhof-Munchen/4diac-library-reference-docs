@@ -54,6 +54,7 @@ The function block operates as a multiplexer for the adapter signals:
 
 - If `G.D1` is set to `FALSE`, the value of `IN0` is selected.
 - If `G.D1` is set to `TRUE`, the value of `IN1` is selected.
+
 1. **Output**: The selected value is passed to the flip-flop `E_D_FF_ANY_OUT`. This updates the output data point `OUT.D1` and simultaneously triggers the output event `OUT.E1`.
 
 ---
@@ -69,10 +70,10 @@ The function block operates as a multiplexer for the adapter signals:
 
 The function block does not have its own state hierarchy (no ECC) because it is implemented as a composite network function block (FB). Its behavior is purely data- and event-flow-driven:
 
-| State Selector (`G.D1`) | Trigger Event | Action / Result |
-| :--- | :--- | :--- |
-| `FALSE` | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN0.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
-| `TRUE` | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN1.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
+| State Selector (`G.D1`) | Trigger Event                          | Action / Result                                                     |
+| :---------------------- | :------------------------------------- | :------------------------------------------------------------------ |
+| `FALSE`                 | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN0.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
+| `TRUE`                  | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN1.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
 
 ` | | ... ---
 

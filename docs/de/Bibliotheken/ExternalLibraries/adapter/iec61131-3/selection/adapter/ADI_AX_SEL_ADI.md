@@ -80,10 +80,10 @@ Die interne Struktur von `ADI_AX_SEL_ADI` arbeitet rein ereignisgesteuert:
 
 Da es sich um einen rein datenfluss- und ereignisgesteuerten Netzwerk-Baustein (Composite FB) handelt, besitzt er keine interne Zustandsmaschine (ECC). Das Verhalten lässt sich statisch wie folgt beschreiben:
 
-| Zustand Selector `G` | Ereignis an Eingang | Verhalten am Ausgang `OUT` |
-| :--- | :--- | :--- |
-| `FALSE` | Beliebiges Ereignis | `OUT.D1` erhält den Wert von `IN0.D1`; `OUT.E1` wird ausgelöst. |
-| `TRUE` | Beliebiges Ereignis | `OUT.D1` erhält den Wert von `IN1.D1`; `OUT.E1` wird ausgelöst. |
+| Zustand Selector `G` | Ereignis an Eingang | Verhalten am Ausgang `OUT`                                      |
+| :------------------- | :------------------ | :-------------------------------------------------------------- |
+| `FALSE`              | Beliebiges Ereignis | `OUT.D1` erhält den Wert von `IN0.D1`; `OUT.E1` wird ausgelöst. |
+| `TRUE`               | Beliebiges Ereignis | `OUT.D1` erhält den Wert von `IN1.D1`; `OUT.E1` wird ausgelöst. |
 
 ---
 

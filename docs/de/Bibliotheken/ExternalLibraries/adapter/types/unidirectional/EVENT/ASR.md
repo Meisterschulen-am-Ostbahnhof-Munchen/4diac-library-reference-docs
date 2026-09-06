@@ -8,7 +8,7 @@ unidirectional Adapter Interface for 2 Events
 
 ### Events
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| SET | Set / Switch on | |
-| RESET | Reset / Switch off | |
+| Name  | Comment            | With |
+| :---- | :----------------- | :--- |
+| SET   | Set / Switch on    |      |
+| RESET | Reset / Switch off |      |

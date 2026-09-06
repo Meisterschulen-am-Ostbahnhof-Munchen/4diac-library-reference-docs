@@ -80,10 +80,10 @@ Im Inneren des Funktionsbausteins `AR_AX_SEL_AR` befindet sich ein Netzwerk aus 
 
 Das Verhalten lässt sich über folgende einfache Logiktabelle beschreiben:
 
-| Zustand Selektor (`G.D1`) | Wert am Ausgang (`OUT.D1`) | Triggerndes Ereignis |
-| :--- | :--- | :--- |
-| `FALSE` | Wert von `IN0.D1` | Ereignis an `IN0.E1` oder Änderung an `G.E1` |
-| `TRUE` | Wert von `IN1.D1` | Ereignis an `IN1.E1` oder Änderung an `G.E1` |
+| Zustand Selektor (`G.D1`) | Wert am Ausgang (`OUT.D1`) | Triggerndes Ereignis                         |
+| :------------------------ | :------------------------- | :------------------------------------------- |
+| `FALSE`                   | Wert von `IN0.D1`          | Ereignis an `IN0.E1` oder Änderung an `G.E1` |
+| `TRUE`                    | Wert von `IN1.D1`          | Ereignis an `IN1.E1` oder Änderung an `G.E1` |
 
 ---
 

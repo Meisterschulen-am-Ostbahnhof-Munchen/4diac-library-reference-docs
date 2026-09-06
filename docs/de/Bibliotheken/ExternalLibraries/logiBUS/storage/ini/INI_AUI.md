@@ -12,38 +12,38 @@ Der Funktionsblock `INI_AUI` dient zum Lesen und Speichern von **UINT-Daten** (g
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kurzbeschreibung                                               |
-|----------|-------|---------------------------------------------------------------|
+| Ereignis | Typ   | Kurzbeschreibung                                                         |
+| -------- | ----- | ------------------------------------------------------------------------ |
 | INIT     | EInit | Service-Initialisierung: Löst das Laden des Wertes aus der INI-Datei aus |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kurzbeschreibung                                               |
-|----------|-------|---------------------------------------------------------------|
+| Ereignis | Typ   | Kurzbeschreibung                                                                            |
+| -------- | ----- | ------------------------------------------------------------------------------------------- |
 | INITO    | EInit | Bestätigung der Initialisierung (wird nach Abschluss von Lese-/Schreiboperationen gesendet) |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ    | Kurzbeschreibung                                               |
-|---------------|--------|---------------------------------------------------------------|
+| Name          | Typ    | Kurzbeschreibung                                                   |
+| ------------- | ------ | ------------------------------------------------------------------ |
 | QI            | BOOL   | Qualifizierer für den Ereigniseingang (aktiviert die Verarbeitung) |
-| SECTION       | STRING | Name des Abschnitts in der `settings.ini` (z. B. `[MySection]`) |
-| KEY           | STRING | Schlüsselname innerhalb des Abschnitts                         |
-| DEFAULT_VALUE | UDINT  | Wert, der zurückgegeben wird, wenn kein Eintrag existiert      |
+| SECTION       | STRING | Name des Abschnitts in der `settings.ini` (z. B. `[MySection]`)    |
+| KEY           | STRING | Schlüsselname innerhalb des Abschnitts                             |
+| DEFAULT_VALUE | UDINT  | Wert, der zurückgegeben wird, wenn kein Eintrag existiert          |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Kurzbeschreibung                                               |
-|--------|--------|---------------------------------------------------------------|
+| Name   | Typ    | Kurzbeschreibung                                                         |
+| ------ | ------ | ------------------------------------------------------------------------ |
 | QO     | BOOL   | Qualifizierer für den Ereignisausgang (zeigt erfolgreiche Ausführung an) |
-| STATUS | STRING | Statusmeldung (z. B. Fehler oder Erfolg)                       |
+| STATUS | STRING | Statusmeldung (z. B. Fehler oder Erfolg)                                 |
 
 ### **Adapter**
 
-| Richtung  | Adaptertyp                          | Kurzbeschreibung                                                                 |
-|-----------|-------------------------------------|---------------------------------------------------------------------------------|
-| Plug      | `adapter::types::unidirectional::AUI` | **Ausgang (OUT):** Stellt den gelesenen/geschriebenen Wert über den Adapter bereit |
-| Socket    | `adapter::types::unidirectional::AUI` | **Eingang (IN):** Nimmt den zu speichernden Wert über den Adapter entgegen       |
+| Richtung | Adaptertyp                            | Kurzbeschreibung                                                                   |
+| -------- | ------------------------------------- | ---------------------------------------------------------------------------------- |
+| Plug     | `adapter::types::unidirectional::AUI` | **Ausgang (OUT):** Stellt den gelesenen/geschriebenen Wert über den Adapter bereit |
+| Socket   | `adapter::types::unidirectional::AUI` | **Eingang (IN):** Nimmt den zu speichernden Wert über den Adapter entgegen         |
 
 ## Funktionsweise
 

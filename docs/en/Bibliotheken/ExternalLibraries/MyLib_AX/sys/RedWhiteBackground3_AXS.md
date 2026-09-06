@@ -8,11 +8,11 @@
 
 `RedWhiteBackground3_AXS` switches the VT background color of 3 objects based on a boolean selector signal: `TRUE` → **Rot**, `FALSE` → **Weiß**. The selector signal arrives via an `AX` adapter socket (`DI1`). The object ID is passed via the structured type `s1ObjectID` (`u16ObjIds`).
 
-| Position | Object ID source | Block |
-|---|---|---|
-| 1 | `F_MOVE.OUT.u16ObjId` | `Q_BackgroundColour` (regular object) |
-| 2 | `F_MOVE.OUT.u16ObjIdA` | `Q_BackgroundColour` (regular object) |
-| 3 | `F_MOVE.OUT.u16ObjIdA` | `Q_BackgroundColourAux` (auxiliary function object) |
+| Position | Object ID source       | Block                                               |
+| -------- | ---------------------- | --------------------------------------------------- |
+| 1        | `F_MOVE.OUT.u16ObjId`  | `Q_BackgroundColour` (regular object)               |
+| 2        | `F_MOVE.OUT.u16ObjIdA` | `Q_BackgroundColour` (regular object)               |
+| 3        | `F_MOVE.OUT.u16ObjIdA` | `Q_BackgroundColourAux` (auxiliary function object) |
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 

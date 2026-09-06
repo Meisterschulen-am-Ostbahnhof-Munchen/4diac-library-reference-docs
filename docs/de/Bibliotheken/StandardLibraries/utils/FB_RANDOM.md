@@ -30,12 +30,12 @@ Der Funktionsblock FB_RANDOM generiert eine zufällige REAL-Zahl zwischen 0 und 
 
 ## Metadaten
 
-| Attribut | Wert |
-| :--- | :--- |
-| Copyright | (c) 2012 Profactor GmbH |
-| Lizenz | EPL-2.0 |
-| Version | 3.0 (2025-04-14, Patrick Aigner) |
-| 4diac-Paket | eclipse4diac::utils |
+| Attribut    | Wert                             |
+| :---------- | :------------------------------- |
+| Copyright   | (c) 2012 Profactor GmbH          |
+| Lizenz      | EPL-2.0                          |
+| Version     | 3.0 (2025-04-14, Patrick Aigner) |
+| 4diac-Paket | eclipse4diac::utils              |
 
 ---
 

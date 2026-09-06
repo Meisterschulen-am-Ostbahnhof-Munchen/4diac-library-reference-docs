@@ -30,17 +30,17 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name  | Typ                           | Beschreibung                                                      |
-|----------|-------|-------------------------------|-------------------------------------------------------------------|
-| Socket   | IN    | `adapter::types::unidirectional::ASR` | Eingehendes ASR-Signal, das auf alle Ausgänge verteilt wird. |
-| Plug     | OUT1  | `adapter::types::unidirectional::ASR` | Erster Ausgang mit dem Signal von IN.                             |
-| Plug     | OUT2  | `adapter::types::unidirectional::ASR` | Zweiter Ausgang mit dem Signal von IN.                            |
-| Plug     | OUT3  | `adapter::types::unidirectional::ASR` | Dritter Ausgang mit dem Signal von IN.                            |
-| Plug     | OUT4  | `adapter::types::unidirectional::ASR` | Vierter Ausgang mit dem Signal von IN.                            |
-| Plug     | OUT5  | `adapter::types::unidirectional::ASR` | Fünfter Ausgang mit dem Signal von IN.                            |
-| Plug     | OUT6  | `adapter::types::unidirectional::ASR` | Sechster Ausgang mit dem Signal von IN.                           |
-| Plug     | OUT7  | `adapter::types::unidirectional::ASR` | Siebter Ausgang mit dem Signal von IN.                            |
-| Plug     | OUT8  | `adapter::types::unidirectional::ASR` | Achter Ausgang mit dem Signal von IN.                             |
+| Richtung | Name | Typ                                   | Beschreibung                                                 |
+| -------- | ---- | ------------------------------------- | ------------------------------------------------------------ |
+| Socket   | IN   | `adapter::types::unidirectional::ASR` | Eingehendes ASR-Signal, das auf alle Ausgänge verteilt wird. |
+| Plug     | OUT1 | `adapter::types::unidirectional::ASR` | Erster Ausgang mit dem Signal von IN.                        |
+| Plug     | OUT2 | `adapter::types::unidirectional::ASR` | Zweiter Ausgang mit dem Signal von IN.                       |
+| Plug     | OUT3 | `adapter::types::unidirectional::ASR` | Dritter Ausgang mit dem Signal von IN.                       |
+| Plug     | OUT4 | `adapter::types::unidirectional::ASR` | Vierter Ausgang mit dem Signal von IN.                       |
+| Plug     | OUT5 | `adapter::types::unidirectional::ASR` | Fünfter Ausgang mit dem Signal von IN.                       |
+| Plug     | OUT6 | `adapter::types::unidirectional::ASR` | Sechster Ausgang mit dem Signal von IN.                      |
+| Plug     | OUT7 | `adapter::types::unidirectional::ASR` | Siebter Ausgang mit dem Signal von IN.                       |
+| Plug     | OUT8 | `adapter::types::unidirectional::ASR` | Achter Ausgang mit dem Signal von IN.                        |
 
 ## Funktionsweise
 
@@ -66,11 +66,11 @@ Der `ASR_SPLIT_8` besitzt **keine internen Zustände**. Die Ausgabe ist zu jedem
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein               | Ausgänge | Besonderheit                                   |
-|------------------------|----------|------------------------------------------------|
-| `ASR_SPLIT_8`          | 8        | Bietet die maximal mögliche Anzahl an ASR-Kopien in einem Block. |
-| `ASR_SPLIT_4`          | 4        | Kompaktere Alternative für kleinere Verteilungen. |
-| `ASR_SPLIT_2`          | 2        | Minimaler Splitter für Punkt-zu-Punkt-Weitergabe. |
+| Baustein      | Ausgänge | Besonderheit                                                     |
+| ------------- | -------- | ---------------------------------------------------------------- |
+| `ASR_SPLIT_8` | 8        | Bietet die maximal mögliche Anzahl an ASR-Kopien in einem Block. |
+| `ASR_SPLIT_4` | 4        | Kompaktere Alternative für kleinere Verteilungen.                |
+| `ASR_SPLIT_2` | 2        | Minimaler Splitter für Punkt-zu-Punkt-Weitergabe.                |
 
 Die **8er-Version** ist die umfangreichste und erlaubt den Anschluss vieler Verbraucher ohne zusätzliche Kaskadierung. Gegenüber einer Kaskade mehrerer 2er- oder 4er-Splitter reduziert `ASR_SPLIT_8` die Anzahl der benötigten Blöcke und vereinfacht das Engineering.
 

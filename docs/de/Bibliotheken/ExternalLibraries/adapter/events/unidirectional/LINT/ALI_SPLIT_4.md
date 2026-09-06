@@ -28,13 +28,13 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                              | Beschreibung                                       |
-|----------|--------|----------------------------------|----------------------------------------------------|
-| Socket   | IN     | adapter::types::unidirectional::ALI | Einheitlicher ALI-Eingang (Quelle)                |
-| Plug     | OUT1   | adapter::types::unidirectional::ALI | Erster ALI-Ausgang (Ziel)                         |
-| Plug     | OUT2   | adapter::types::unidirectional::ALI | Zweiter ALI-Ausgang (Ziel)                        |
-| Plug     | OUT3   | adapter::types::unidirectional::ALI | Dritter ALI-Ausgang (Ziel)                        |
-| Plug     | OUT4   | adapter::types::unidirectional::ALI | Vierter ALI-Ausgang (Ziel)                        |
+| Richtung | Name | Typ                                 | Beschreibung                       |
+| -------- | ---- | ----------------------------------- | ---------------------------------- |
+| Socket   | IN   | adapter::types::unidirectional::ALI | Einheitlicher ALI-Eingang (Quelle) |
+| Plug     | OUT1 | adapter::types::unidirectional::ALI | Erster ALI-Ausgang (Ziel)          |
+| Plug     | OUT2 | adapter::types::unidirectional::ALI | Zweiter ALI-Ausgang (Ziel)         |
+| Plug     | OUT3 | adapter::types::unidirectional::ALI | Dritter ALI-Ausgang (Ziel)         |
+| Plug     | OUT4 | adapter::types::unidirectional::ALI | Vierter ALI-Ausgang (Ziel)         |
 
 ## Funktionsweise
 

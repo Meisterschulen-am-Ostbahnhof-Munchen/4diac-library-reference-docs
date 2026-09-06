@@ -28,12 +28,12 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::A2X` | **IN** | Socket (Eingang) | Quell-Adapter, dessen Datenstrom aufgeteilt wird. |
-| `adapter::types::unidirectional::A2X` | **OUT1** | Plug (Ausgang) | Erster identischer Ausgang. |
-| `adapter::types::unidirectional::A2X` | **OUT2** | Plug (Ausgang) | Zweiter identischer Ausgang. |
-| `adapter::types::unidirectional::A2X` | **OUT3** | Plug (Ausgang) | Dritter identischer Ausgang. |
+| Typ                                   | Name     | Richtung         | Beschreibung                                      |
+| ------------------------------------- | -------- | ---------------- | ------------------------------------------------- |
+| `adapter::types::unidirectional::A2X` | **IN**   | Socket (Eingang) | Quell-Adapter, dessen Datenstrom aufgeteilt wird. |
+| `adapter::types::unidirectional::A2X` | **OUT1** | Plug (Ausgang)   | Erster identischer Ausgang.                       |
+| `adapter::types::unidirectional::A2X` | **OUT2** | Plug (Ausgang)   | Zweiter identischer Ausgang.                      |
+| `adapter::types::unidirectional::A2X` | **OUT3** | Plug (Ausgang)   | Dritter identischer Ausgang.                      |
 
 Die Adapter sind alle vom Typ **A2X** (unidirectional) und übertragen Daten in einer Richtung. Der Baustein ist passiv, d.h. er benötigt keine Ereignissteuerung für die Datenweitergabe.
 

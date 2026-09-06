@@ -4,12 +4,12 @@ Der Funktionsbaustein **TOF** (Timer Off-Delay) implementiert eine Ausschaltverz
 
 ## Schnittstelle
 
-| Typ | Name | Datentyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **Eingang** | IN | BOOL | Startsignal |
-| **Eingang** | PT | TIME | Preset Time (Verzögerungszeit) |
-| **Ausgang** | Q | BOOL | Ausgangssignal |
-| **Ausgang** | ET | TIME | Elapsed Time (verstrichene Zeit seit fallender Flanke) |
+| Typ         | Name | Datentyp | Beschreibung                                           |
+| :---------- | :--- | :------- | :----------------------------------------------------- |
+| **Eingang** | IN   | BOOL     | Startsignal                                            |
+| **Eingang** | PT   | TIME     | Preset Time (Verzögerungszeit)                         |
+| **Ausgang** | Q    | BOOL     | Ausgangssignal                                         |
+| **Ausgang** | ET   | TIME     | Elapsed Time (verstrichene Zeit seit fallender Flanke) |
 
 ## Funktion
 

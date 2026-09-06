@@ -73,10 +73,10 @@ Das interne Netzwerk des Funktionsbausteins realisiert die Signalweiterleitung u
 
 Die logische Zuordnung des Ausgangs verhält sich in Abhängigkeit vom Selektor `G` wie folgt:
 
-| Zustand von `G` (Selektor) | Aktiver Pfad | Datenwert an `OUT.D1` | Ereignis an `OUT.E1` |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | `IN0` | Wert von `IN0.D1` | Wird bei Ereignissen an `IN0.E1` oder `G.E1` ausgelöst |
-| `TRUE` | `IN1` | Wert von `IN1.D1` | Wird bei Ereignissen an `IN1.E1` oder `G.E1` ausgelöst |
+| Zustand von `G` (Selektor) | Aktiver Pfad | Datenwert an `OUT.D1` | Ereignis an `OUT.E1`                                   |
+| :------------------------- | :----------- | :-------------------- | :----------------------------------------------------- |
+| `FALSE`                    | `IN0`        | Wert von `IN0.D1`     | Wird bei Ereignissen an `IN0.E1` oder `G.E1` ausgelöst |
+| `TRUE`                     | `IN1`        | Wert von `IN1.D1`     | Wird bei Ereignissen an `IN1.E1` oder `G.E1` ausgelöst |
 
 ## Anwendungsszenarien
 

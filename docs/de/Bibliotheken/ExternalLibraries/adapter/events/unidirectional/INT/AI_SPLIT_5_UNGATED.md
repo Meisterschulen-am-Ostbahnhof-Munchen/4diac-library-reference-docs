@@ -30,14 +30,14 @@ Keine direkten Daten-Ausgänge vorhanden. Die Signalübertragung erfolgt ausschl
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                          | Beschreibung                                        |
-|----------|--------|------------------------------|-----------------------------------------------------|
-| Socket   | IN     | `adapter::types::unidirectional::AI` | Empfängt das eingehende analoge Signal.             |
-| Plug     | OUT1   | `adapter::types::unidirectional::AI` | Erster Ausgang, stellt das gleiche Signal wie IN bereit. |
-| Plug     | OUT2   | `adapter::types::unidirectional::AI` | Zweiter Ausgang, stellt das gleiche Signal wie IN bereit. |
-| Plug     | OUT3   | `adapter::types::unidirectional::AI` | Dritter Ausgang, stellt das gleiche Signal wie IN bereit. |
-| Plug     | OUT4   | `adapter::types::unidirectional::AI` | Vierter Ausgang, stellt das gleiche Signal wie IN bereit. |
-| Plug     | OUT5   | `adapter::types::unidirectional::AI` | Fünfter Ausgang, stellt das gleiche Signal wie IN bereit. |
+| Richtung | Name | Typ                                  | Beschreibung                                              |
+| -------- | ---- | ------------------------------------ | --------------------------------------------------------- |
+| Socket   | IN   | `adapter::types::unidirectional::AI` | Empfängt das eingehende analoge Signal.                   |
+| Plug     | OUT1 | `adapter::types::unidirectional::AI` | Erster Ausgang, stellt das gleiche Signal wie IN bereit.  |
+| Plug     | OUT2 | `adapter::types::unidirectional::AI` | Zweiter Ausgang, stellt das gleiche Signal wie IN bereit. |
+| Plug     | OUT3 | `adapter::types::unidirectional::AI` | Dritter Ausgang, stellt das gleiche Signal wie IN bereit. |
+| Plug     | OUT4 | `adapter::types::unidirectional::AI` | Vierter Ausgang, stellt das gleiche Signal wie IN bereit. |
+| Plug     | OUT5 | `adapter::types::unidirectional::AI` | Fünfter Ausgang, stellt das gleiche Signal wie IN bereit. |
 
 ## Funktionsweise
 

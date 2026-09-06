@@ -45,13 +45,13 @@ Der `E_T_FF_SR_SYM_INIT` erweitert [E_T_FF_SR_SYM](E_T_FF_SR_SYM.md) um eine exp
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Unkonfigurierter Anfangszustand |
-| Init | Initialisierung läuft, `QO := QI` |
-| DeInit | Deinitialisierung läuft, `QO := FALSE` |
-| SET | `Q = TRUE`; `R`/`CLK`→RESET |
-| RESET | `Q = FALSE`; `S`/`CLK`→SET |
+| Zustand | Bedeutung                              |
+| ------- | -------------------------------------- |
+| START   | Unkonfigurierter Anfangszustand        |
+| Init    | Initialisierung läuft, `QO := QI`      |
+| DeInit  | Deinitialisierung läuft, `QO := FALSE` |
+| SET     | `Q = TRUE`; `R`/`CLK`→RESET            |
+| RESET   | `Q = FALSE`; `S`/`CLK`→SET             |
 
 ## Anwendungsszenarien
 

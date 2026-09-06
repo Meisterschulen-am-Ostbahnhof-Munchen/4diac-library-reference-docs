@@ -28,14 +28,14 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Typ      | Richtung | Name | Beschreibung                       |
-|----------|----------|------|------------------------------------|
-| Socket   | Eingang  | IN   | Unidirektionaler `AL`-Adapter-Eingang |
-| Plug     | Ausgang  | OUT1 | Erster Ausgang (unidirektionaler `AL`) |
-| Plug     | Ausgang  | OUT2 | Zweiter Ausgang (unidirektionaler `AL`) |
-| Plug     | Ausgang  | OUT3 | Dritter Ausgang (unidirektionaler `AL`) |
-| Plug     | Ausgang  | OUT4 | Vierter Ausgang (unidirektionaler `AL`) |
-| Plug     | Ausgang  | OUT5 | Fünfter Ausgang (unidirektionaler `AL`) |
+| Typ    | Richtung | Name | Beschreibung                            |
+| ------ | -------- | ---- | --------------------------------------- |
+| Socket | Eingang  | IN   | Unidirektionaler `AL`-Adapter-Eingang   |
+| Plug   | Ausgang  | OUT1 | Erster Ausgang (unidirektionaler `AL`)  |
+| Plug   | Ausgang  | OUT2 | Zweiter Ausgang (unidirektionaler `AL`) |
+| Plug   | Ausgang  | OUT3 | Dritter Ausgang (unidirektionaler `AL`) |
+| Plug   | Ausgang  | OUT4 | Vierter Ausgang (unidirektionaler `AL`) |
+| Plug   | Ausgang  | OUT5 | Fünfter Ausgang (unidirektionaler `AL`) |
 
 ## Funktionsweise
 

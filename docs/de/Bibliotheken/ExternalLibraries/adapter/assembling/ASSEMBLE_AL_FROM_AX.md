@@ -16,40 +16,40 @@ Der Funktionsblock **ASSEMBLE_AL_FROM_AX** dient dazu, bis zu 64 boolesche Signa
 
 Der FB besitzt keine klassischen Ereignis-Eingänge (EVENT). Die Ereignissteuerung erfolgt indirekt über die **AX-Adapter (Sockets)**. Jeder Socket `BIT_00` … `BIT_63` kann ein auslösendes Ereignis (E1) empfangen.
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name                | Typ        | Beschreibung                                                                        |
+| ------------------- | ---------- | ----------------------------------------------------------------------------------- |
 | `BIT_00` … `BIT_63` | AX-Adapter | Ereignis von einem externen Bool-Quelle, das die Zusammenstellung des LWORD auslöst |
 
 ### **Ereignis-Ausgänge**
 
 Keine klassischen Ereignis-Ausgänge. Die Ausgabe des zusammengesetzten LWORD erfolgt ereignisgesteuert über den **AL-Adapter (Plug)** `OUT`.
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ        | Beschreibung                                                                        |
+| ----- | ---------- | ----------------------------------------------------------------------------------- |
 | `OUT` | AL-Adapter | Stellt das zusammengesetzte LWORD bereit, wenn das interne Flip-Flop getaktet wurde |
 
 ### **Daten-Eingänge**
 
 Jeder AX-Adapter führt einen booleschen Datenwert (D1). Diese werden als Eingangsbits für das LWORD verwendet.
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name                      | Typ                 | Beschreibung                         |
+| ------------------------- | ------------------- | ------------------------------------ |
 | `BIT_00.D1` … `BIT_63.D1` | BOOL (über Adapter) | Boolesches Signal für Bit 0 … Bit 63 |
 
 ### **Daten-Ausgänge**
 
 Das zusammengesetzte Ergebnis wird als 64‑Bit‑Wort über den AL-Adapter ausgegeben.
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name     | Typ                  | Beschreibung                                       |
+| -------- | -------------------- | -------------------------------------------------- |
 | `OUT.D1` | LWORD (über Adapter) | Kombiniertes LWORD aus den 64 booleschen Eingängen |
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
+| Typ                                  | Richtung         | Name                | Beschreibung              |
+| ------------------------------------ | ---------------- | ------------------- | ------------------------- |
 | `adapter::types::unidirectional::AX` | Socket (Eingang) | `BIT_00` … `BIT_63` | Boolesche Eingangsadapter |
-| `adapter::types::unidirectional::AL` | Plug (Ausgang) | `OUT` | LWORD-Ausgangsadapter |
+| `adapter::types::unidirectional::AL` | Plug (Ausgang)   | `OUT`               | LWORD-Ausgangsadapter     |
 
 ## Funktionsweise
 
@@ -89,12 +89,12 @@ Ein ereignisgesteuertes Verhalten:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Eingänge | Ausgangstyp | Besonderheit |
-| ---------- | ---------------- | ------------- | -------------- |
-| **ASSEMBLE_AL_FROM_AX** | 64 BOOL (AX) | LWORD (AL) | Adapter‑basiert mit Flip‑Flop‑Pufferung |
-| `ASSEMBLE_DWORD_FROM_BOOLS` | 32 BOOL | DWORD | Klassische Daten‑Ein‑/Ausgänge, ohne Adapter |
-| `ASSEMBLE_WORD_FROM_BOOLS` | 16 BOOL | WORD | Wie oben, für 16‑Bit‑Wort |
-| `DISASSEMBLE_AL_TO_AX` | 1 LWORD (AL) | 64 AX | Gegenstück: Zerlegt ein LWORD in einzelne BOOL‑Adapter |
+| Baustein                    | Anzahl Eingänge | Ausgangstyp | Besonderheit                                           |
+| --------------------------- | --------------- | ----------- | ------------------------------------------------------ |
+| **ASSEMBLE_AL_FROM_AX**     | 64 BOOL (AX)    | LWORD (AL)  | Adapter‑basiert mit Flip‑Flop‑Pufferung                |
+| `ASSEMBLE_DWORD_FROM_BOOLS` | 32 BOOL         | DWORD       | Klassische Daten‑Ein‑/Ausgänge, ohne Adapter           |
+| `ASSEMBLE_WORD_FROM_BOOLS`  | 16 BOOL         | WORD        | Wie oben, für 16‑Bit‑Wort                              |
+| `DISASSEMBLE_AL_TO_AX`      | 1 LWORD (AL)    | 64 AX       | Gegenstück: Zerlegt ein LWORD in einzelne BOOL‑Adapter |
 
 Der wesentliche Unterschied liegt in der **Adapter‑Schnittstelle** und der **Zwischenspeicherung** durch das Flip‑Flop, was für robustes Verhalten in ereignisgesteuerten Umgebungen sorgt.
 

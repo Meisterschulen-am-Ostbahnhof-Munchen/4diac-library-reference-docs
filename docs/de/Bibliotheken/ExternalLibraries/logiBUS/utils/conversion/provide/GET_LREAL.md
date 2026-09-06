@@ -12,14 +12,14 @@ Der Funktionsbaustein `GET_LREAL` dient dem lesenden Zugriff auf eine `LREAL`-Va
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                           |
+| -------- | -------- | --------------------------------------------------- |
 | REQ      | Event    | Normaler Ausführungsanstoß; liest den Wert von `IN` |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                |
+| -------- | -------- | -------------------------------------------------------- |
 | CNF      | Event    | Bestätigung der Ausführung; wird nach dem Lesen gesendet |
 
 ### **Daten-Eingänge**
@@ -28,9 +28,9 @@ Der Baustein besitzt keine eigenständigen Dateneingänge. Die Quelldaten werden
 
 ### **Daten-Ausgänge**
 
-| Ausgang | Datentyp | Initialwert | Kommentar                  |
-|---------|----------|-------------|----------------------------|
-| OUT     | LREAL    | 0.0         | Gepufferter Ausgabewert    |
+| Ausgang | Datentyp | Initialwert | Kommentar               |
+| ------- | -------- | ----------- | ----------------------- |
+| OUT     | LREAL    | 0.0         | Gepufferter Ausgabewert |
 
 ### **Adapter**
 
@@ -52,9 +52,9 @@ Keine Adapter vorhanden.
 
 Da es sich um einen einfachen Funktionsbaustein (SimpleFB) handelt, ist nur ein einziger ECC‑Zustand vorhanden:
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ     | `OUT := IN;` | CNF |
+| Zustand | Aktion       | Ausgabeereignis |
+| ------- | ------------ | --------------- |
+| REQ     | `OUT := IN;` | CNF             |
 
 ## Anwendungsszenarien
 

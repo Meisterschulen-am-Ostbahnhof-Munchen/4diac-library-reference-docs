@@ -12,32 +12,32 @@ Der Funktionsblock `FIELDBUS_UDINT_TO_SIGNAL_SCALED` dient der Aufbereitung eine
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Parametern | Beschreibung                            |
-|----------|-------|----------------|-----------------------------------------|
-| `INIT`   | EInit | `SCALE`, `OFFSET` | Initialisierung – setzt Skalierungsfaktor und Offset. |
-| `REQ`    | Event | `IN`           | Normales Ausführungsereignis – verarbeitet den aktuellen Eingangswert. |
+| Ereignis | Typ   | Mit Parametern    | Beschreibung                                                           |
+| -------- | ----- | ----------------- | ---------------------------------------------------------------------- |
+| `INIT`   | EInit | `SCALE`, `OFFSET` | Initialisierung – setzt Skalierungsfaktor und Offset.                  |
+| `REQ`    | Event | `IN`              | Normales Ausführungsereignis – verarbeitet den aktuellen Eingangswert. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Parametern | Beschreibung                            |
-|----------|-------|----------------|-----------------------------------------|
-| `INITO`  | EInit | –              | Bestätigung der erfolgreichen Initialisierung. |
+| Ereignis | Typ   | Mit Parametern | Beschreibung                                                                          |
+| -------- | ----- | -------------- | ------------------------------------------------------------------------------------- |
+| `INITO`  | EInit | –              | Bestätigung der erfolgreichen Initialisierung.                                        |
 | `CNF`    | Event | `OUT`, `VALID` | Bestätigung der Verarbeitung – liefert den skalierten Wert und das Gültigkeitssignal. |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ    | Initialwert                              | Beschreibung                          |
-|----------|--------|------------------------------------------|---------------------------------------|
-| `IN`     | UDINT  | `DWORD_TO_UDINT(NOT_AVAILABLE_DWM)`      | Rohwert aus dem Feldbus.              |
-| `SCALE`  | LREAL  | `LREAL#1.0`                              | Multiplikativer Skalierungsfaktor.     |
-| `OFFSET` | DINT   | `DINT#0`                                 | Additiver Offset (nach Skalierung).    |
+| Name     | Typ   | Initialwert                         | Beschreibung                        |
+| -------- | ----- | ----------------------------------- | ----------------------------------- |
+| `IN`     | UDINT | `DWORD_TO_UDINT(NOT_AVAILABLE_DWM)` | Rohwert aus dem Feldbus.            |
+| `SCALE`  | LREAL | `LREAL#1.0`                         | Multiplikativer Skalierungsfaktor.  |
+| `OFFSET` | DINT  | `DINT#0`                            | Additiver Offset (nach Skalierung). |
 
 ### **Daten-Ausgänge**
 
-| Name    | Typ    | Initialwert | Beschreibung                                  |
-|---------|--------|-------------|-----------------------------------------------|
-| `OUT`   | LREAL  | `LREAL#0.0` | Skalierter Ausgabewert.                       |
-| `VALID` | BOOL   | `FALSE`     | `TRUE`, wenn der Eingangswert als gültig erkannt wurde. |
+| Name    | Typ   | Initialwert | Beschreibung                                            |
+| ------- | ----- | ----------- | ------------------------------------------------------- |
+| `OUT`   | LREAL | `LREAL#0.0` | Skalierter Ausgabewert.                                 |
+| `VALID` | BOOL  | `FALSE`     | `TRUE`, wenn der Eingangswert als gültig erkannt wurde. |
 
 ### **Adapter**
 

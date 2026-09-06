@@ -12,34 +12,34 @@ Der Funktionsbaustein `AULI_TO_AL` ist ein Composite‑FB zur Umwandlung eines A
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung   | Beschreibung                                         |
-|---------------|------------------------------------------------------|
-| AULI_IN.E1    | Ereignisseingang über den Socket AULI_IN. Startet die Konvertierung. |
+| Bezeichnung | Beschreibung                                                         |
+| ----------- | -------------------------------------------------------------------- |
+| AULI_IN.E1  | Ereignisseingang über den Socket AULI_IN. Startet die Konvertierung. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung   | Beschreibung                                         |
-|---------------|------------------------------------------------------|
-| AL_OUT.E1     | Ereignisausgang über den Plug AL_OUT. Signalisiert den Abschluss der Konvertierung. |
+| Bezeichnung | Beschreibung                                                                        |
+| ----------- | ----------------------------------------------------------------------------------- |
+| AL_OUT.E1   | Ereignisausgang über den Plug AL_OUT. Signalisiert den Abschluss der Konvertierung. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung   | Datentyp | Beschreibung                                        |
-|---------------|----------|-----------------------------------------------------|
-| AULI_IN.D1    | ULINT    | Eingangswert, der in LWORD konvertiert werden soll. |
+| Bezeichnung | Datentyp | Beschreibung                                        |
+| ----------- | -------- | --------------------------------------------------- |
+| AULI_IN.D1  | ULINT    | Eingangswert, der in LWORD konvertiert werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung   | Datentyp | Beschreibung                                        |
-|---------------|----------|-----------------------------------------------------|
-| AL_OUT.D1     | LWORD    | Konvertierter Ausgangswert.                         |
+| Bezeichnung | Datentyp | Beschreibung                |
+| ----------- | -------- | --------------------------- |
+| AL_OUT.D1   | LWORD    | Konvertierter Ausgangswert. |
 
 ### **Adapter**
 
-| Bezeichnung | Typ       | Richtung | Beschreibung                              |
-|-------------|-----------|----------|-------------------------------------------|
-| AULI_IN     | AULI (ULINT) | Socket   | Unidirektionaler Eingangsadapter.         |
-| AL_OUT      | AL (LWORD)   | Plug     | Unidirektionaler Ausgangsadapter.         |
+| Bezeichnung | Typ          | Richtung | Beschreibung                      |
+| ----------- | ------------ | -------- | --------------------------------- |
+| AULI_IN     | AULI (ULINT) | Socket   | Unidirektionaler Eingangsadapter. |
+| AL_OUT      | AL (LWORD)   | Plug     | Unidirektionaler Ausgangsadapter. |
 
 ## Funktionsweise
 

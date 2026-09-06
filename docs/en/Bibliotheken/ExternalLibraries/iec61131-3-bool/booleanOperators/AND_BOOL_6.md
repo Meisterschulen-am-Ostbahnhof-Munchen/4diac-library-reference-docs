@@ -15,7 +15,7 @@ The function block `AND_BOOL_6` is a standard function block for calculating the
 - **IN6** (BOOL): AND input 6.
 - **OUT** (BOOL): Result of the AND operation. The output is only `TRUE` if **all** six inputs (`IN1` to `IN6`) have the value `TRUE`. In all other cases, the output is `FALSE`.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

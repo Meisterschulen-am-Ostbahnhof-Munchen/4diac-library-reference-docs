@@ -28,12 +28,12 @@ Keine.
 
 ### **Adapter**
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| IN | AULI (unidirectional) | Eingangsadapter – empfängt das zu verteilende Signal. |
-| OUT1 | AULI (unidirectional) | Erster Ausgangsadapter. |
-| OUT2 | AULI (unidirectional) | Zweiter Ausgangsadapter. |
-| OUT3 | AULI (unidirectional) | Dritter Ausgangsadapter. |
+| Name | Typ                   | Beschreibung                                          |
+| ---- | --------------------- | ----------------------------------------------------- |
+| IN   | AULI (unidirectional) | Eingangsadapter – empfängt das zu verteilende Signal. |
+| OUT1 | AULI (unidirectional) | Erster Ausgangsadapter.                               |
+| OUT2 | AULI (unidirectional) | Zweiter Ausgangsadapter.                              |
+| OUT3 | AULI (unidirectional) | Dritter Ausgangsadapter.                              |
 
 ## Funktionsweise
 

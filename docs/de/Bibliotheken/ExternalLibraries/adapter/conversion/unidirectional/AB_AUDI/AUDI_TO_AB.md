@@ -12,34 +12,34 @@ Der **AUDI_TO_AB** Funktionsblock ist ein zusammengesetzter Baustein (Composite 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name         | Typ                     | Beschreibung                                                                                                                       |
+| ------------ | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | `AUDI_IN.E1` | Ereignis (über Adapter) | Trigger für die Datenkonvertierung – ein eingehendes Ereignis startet die Umwandlung des aktuellen UDINT‑Werts in einen BYTE‑Wert. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name        | Typ                     | Beschreibung                                                                                                                                                  |
+| ----------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `AB_OUT.E1` | Ereignis (über Adapter) | Bestätigung der Konvertierung – nach erfolgreicher Umwandlung wird ein Ereignis ausgegeben, das dem nachgeschalteten System den neuen BYTE‑Wert signalisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name         | Typ            | Beschreibung                                                                                   |
+| ------------ | -------------- | ---------------------------------------------------------------------------------------------- |
 | `AUDI_IN.D1` | UDINT (32‑Bit) | Der umzuwandelnde 32‑Bit unsigned Integer‑Wert, der über den AUDI‑Adapter bereitgestellt wird. |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name        | Typ          | Beschreibung                                                          |
+| ----------- | ------------ | --------------------------------------------------------------------- |
 | `AB_OUT.D1` | BYTE (8‑Bit) | Der konvertierte 8‑Bit Wert, der über den AB‑Adapter ausgegeben wird. |
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-|------|-----|----------|--------------|
+| Name      | Typ                                  | Richtung         | Beschreibung                                                                   |
+| --------- | ------------------------------------ | ---------------- | ------------------------------------------------------------------------------ |
 | `AUDI_IN` | adapter::types::unidirectional::AUDI | Socket (Eingang) | Unidirektionaler Adapter, der Ereignisse und Daten vom Typ UDINT bereitstellt. |
-| `AB_OUT` | adapter::types::unidirectional::AB | Plug (Ausgang) | Unidirektionaler Adapter, der Ereignisse und Daten vom Typ BYTE ausgibt. |
+| `AB_OUT`  | adapter::types::unidirectional::AB   | Plug (Ausgang)   | Unidirektionaler Adapter, der Ereignisse und Daten vom Typ BYTE ausgibt.       |
 
 ## Funktionsweise
 
@@ -73,9 +73,9 @@ Der Baustein besitzt keinen expliziten Zustandsautomaten. Er arbeitet ereignisge
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied zu AUDI_TO_AB |
-| ---------- | -------------- | ---------------------------- |
-| `F_UDINT_TO_BYTE` | Direkte Konvertierungsfunktion ohne Adapter | Erwartet Standard‑Ereignis‑ und Daten‑Schnittstellen; AUDI_TO_AB kapselt die Konvertierung in Adapter‑Signaturen. |
+| Baustein                                       | Beschreibung                                       | Unterschied zu AUDI_TO_AB                                                                                                                   |
+| ---------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `F_UDINT_TO_BYTE`                              | Direkte Konvertierungsfunktion ohne Adapter        | Erwartet Standard‑Ereignis‑ und Daten‑Schnittstellen; AUDI_TO_AB kapselt die Konvertierung in Adapter‑Signaturen.                           |
 | `UDINT_TO_BYTE` (Composite mit Standard‑Ports) | Ähnliche Logik, aber mit SOCKET/PLUG‑Schnittstelle | Verwendet möglicherweise andere Adapter‑Typen oder bidirektionale Schnittstellen; AUDI_TO_AB ist auf unidirektionale Adapter spezialisiert. |
 
 ## Fazit

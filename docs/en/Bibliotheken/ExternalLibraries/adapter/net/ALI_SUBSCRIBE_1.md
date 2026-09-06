@@ -31,9 +31,9 @@ The function block **ALI_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|-----------------------------------------|
-| OUT | adapter::types::unidirectional::ALI | Plug (Output) | Buffered received LINT value |
+| Adapter | Type                                | Direction     | Description                  |
+| ------- | ----------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::ALI | Plug (Output) | Buffered received LINT value |
 
 ## Functionality
 

@@ -17,7 +17,7 @@ The function block `XOR_BOOL_8` is a generic block for calculating the logical e
 - **IN8** (BOOL): XOR input 8.
 - **OUT** (BOOL): The result of the XOR operation of all active inputs.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

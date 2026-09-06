@@ -12,22 +12,22 @@ Der Funktionsblock **AUS_D_FF_TMIN** realisiert ein taktgesteuertes D‑Latch (D
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar | Mit Variable |
-|------|-----|-----------|--------------|
-| INIT | EInit | Init Request | Tmin |
+| Name | Typ   | Kommentar    | Mit Variable |
+| ---- | ----- | ------------ | ------------ |
+| INIT | EInit | Init Request | Tmin         |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name  | Typ   | Kommentar         |
+| ----- | ----- | ----------------- |
 | INITO | EInit | Init Confirmation |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name       | Typ     | Kommentar                                                     |
+| ---------- | ------- | ------------------------------------------------------------- |
 | HYSTERESIS | ANY_NUM | Hysterese‑Band (derzeit nicht im internen Netzwerk verbunden) |
-| Tmin | TIME | Minimale Zeitspanne zwischen zwei EO‑Ereignissen |
+| Tmin       | TIME    | Minimale Zeitspanne zwischen zwei EO‑Ereignissen              |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Keine direkten Daten‑Ausgänge – die Ausgabedaten werden ausschließlich üb
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
-| Socket | I | adapter::types::unidirectional::AUS | Wert, der übernommen werden soll (enthält Ereignis E1 und Daten D1) |
-| Plug | Q | adapter::types::unidirectional::AUS | Gelatchter Ausgabewert (enthält Ereignis E1 und Daten D1) |
+| Richtung | Name | Typ                                 | Kommentar                                                           |
+| -------- | ---- | ----------------------------------- | ------------------------------------------------------------------- |
+| Socket   | I    | adapter::types::unidirectional::AUS | Wert, der übernommen werden soll (enthält Ereignis E1 und Daten D1) |
+| Plug     | Q    | adapter::types::unidirectional::AUS | Gelatchter Ausgabewert (enthält Ereignis E1 und Daten D1)           |
 
 ## Funktionsweise
 
@@ -67,11 +67,11 @@ Der interne FB **E_D_FF_ANY_TMIN** besitzt einen Speicher für den zuletzt über
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| ---------- | --------------- |
-| **E_D_FF** (einfaches D‑Flip‑Flop) | Übernimmt Wert sofort bei jedem Takt, keine Zeitsteuerung. |
-| **AUS_D_FF_TMIN** | Wie **E_D_FF**, aber mit zusätzlicher Mindestzeit zwischen den Ausgabeereignissen. |
-| **R_TRIG / F_TRIG** | Erkennen Flanken, speichern aber keinen Datenwert. |
+| Baustein                           | Eigenschaften                                                                      |
+| ---------------------------------- | ---------------------------------------------------------------------------------- |
+| **E_D_FF** (einfaches D‑Flip‑Flop) | Übernimmt Wert sofort bei jedem Takt, keine Zeitsteuerung.                         |
+| **AUS_D_FF_TMIN**                  | Wie **E_D_FF**, aber mit zusätzlicher Mindestzeit zwischen den Ausgabeereignissen. |
+| **R_TRIG / F_TRIG**                | Erkennen Flanken, speichern aber keinen Datenwert.                                 |
 
 Der **AUS_D_FF_TMIN** eignet sich daher speziell für zeitkritische Anwendungen, bei denen eine minimale Abtast‑ oder Aktualisierungsrate eingehalten werden muss.
 

@@ -28,10 +28,10 @@ Der FB besitzt keine expliziten Daten-Ausgänge auf oberster Ebene. Die Datenüb
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AQ` | IN | Eingang (Socket) | AQ-Adapter als Eingangsschnittstelle für Quarter-Byte-Daten |
-| `adapter::types::unidirectional::AB` | OUT | Ausgang (Plug) | AB-Adapter als Ausgangsschnittstelle für BYTE-Daten |
+| Typ                                  | Name | Richtung         | Beschreibung                                                |
+| ------------------------------------ | ---- | ---------------- | ----------------------------------------------------------- |
+| `adapter::types::unidirectional::AQ` | IN   | Eingang (Socket) | AQ-Adapter als Eingangsschnittstelle für Quarter-Byte-Daten |
+| `adapter::types::unidirectional::AB` | OUT  | Ausgang (Plug)   | AB-Adapter als Ausgangsschnittstelle für BYTE-Daten         |
 
 ## Funktionsweise
 

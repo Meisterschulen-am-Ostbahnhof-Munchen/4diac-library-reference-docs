@@ -12,49 +12,49 @@ Der Funktionsblock **FB_MM710_IMU** ist ein serviceorientierter Baustein (SIFB) 
 
 ### **Ereignis‑Eingänge**
 
-| Ereignis | Typ | Beschreibung |
-|----------|-----|--------------|
-| INIT | EInit | Initialisierung des Bausteins. Mit diesem Ereignis werden die CAN‑Parameter (Index, Source‑Address) sowie der Aktivierungs‑Qualifier QI gesetzt. |
-| REQ | Event | Auslösen einer erneuten Messwertabfrage. Nach erfolgreicher Initialisierung können die Sensordaten zyklisch oder ereignisgesteuert angefordert werden. |
+| Ereignis | Typ   | Beschreibung                                                                                                                                           |
+| -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| INIT     | EInit | Initialisierung des Bausteins. Mit diesem Ereignis werden die CAN‑Parameter (Index, Source‑Address) sowie der Aktivierungs‑Qualifier QI gesetzt.       |
+| REQ      | Event | Auslösen einer erneuten Messwertabfrage. Nach erfolgreicher Initialisierung können die Sensordaten zyklisch oder ereignisgesteuert angefordert werden. |
 
 ### **Ereignis‑Ausgänge**
 
-| Ereignis | Typ | Beschreibung |
-| ---------- | ----- | -------------- |
-| INITO | EInit | Bestätigung der erfolgreichen Initialisierung (QO = TRUE) oder Fehlermeldung. |
-| CNF | Event | Bestätigung einer Messwertanforderung. Liefert die aktuellen Sensordaten und Statusinformationen. |
-| ERROR | Event | Tritt bei Kommunikations‑ oder CRC‑Fehlern auf. Enthält detaillierte Fehlerinformationen. |
+| Ereignis | Typ   | Beschreibung                                                                                      |
+| -------- | ----- | ------------------------------------------------------------------------------------------------- |
+| INITO    | EInit | Bestätigung der erfolgreichen Initialisierung (QO = TRUE) oder Fehlermeldung.                     |
+| CNF      | Event | Bestätigung einer Messwertanforderung. Liefert die aktuellen Sensordaten und Statusinformationen. |
+| ERROR    | Event | Tritt bei Kommunikations‑ oder CRC‑Fehlern auf. Enthält detaillierte Fehlerinformationen.         |
 
 ### **Daten‑Eingänge**
 
-| Variable | Typ | Beschreibung |
-| ---------- | ----- | -------------- |
-| QI | BOOL | Aktivierungs‑Qualifier: Nur bei QI = TRUE wird die Initialisierung (INIT) ausgeführt. |
-| PARAMS | STRING | Service‑Parameter, z. B. CAN‑Interface‑Konfiguration (optional). |
-| u8CanIdx | USINT | CAN‑Node‑Index (Standard‑Initialwert: `INVALID`). |
-| SA | BYTE | Source‑Address für J1939‑Kommunikation (Initialwert: `16#DA`). |
+| Variable | Typ    | Beschreibung                                                                          |
+| -------- | ------ | ------------------------------------------------------------------------------------- |
+| QI       | BOOL   | Aktivierungs‑Qualifier: Nur bei QI = TRUE wird die Initialisierung (INIT) ausgeführt. |
+| PARAMS   | STRING | Service‑Parameter, z. B. CAN‑Interface‑Konfiguration (optional).                      |
+| u8CanIdx | USINT  | CAN‑Node‑Index (Standard‑Initialwert: `INVALID`).                                     |
+| SA       | BYTE   | Source‑Address für J1939‑Kommunikation (Initialwert: `16#DA`).                        |
 
 ### **Daten‑Ausgänge**
 
-| Variable | Typ | Beschreibung |
-| ---------- | ----- | -------------- |
-| QO | BOOL | Quittierung der Initialisierung (TRUE = erfolgreich). |
-| STATUS | STRING | Statusmeldung (z. B. „Initialized“, „Error“). |
-| rAccX, rAccY, rAccZ | REAL | Beschleunigungswerte in X‑, Y‑ und Z‑Richtung [m/s²]. |
-| rRateX, rRateY, rRateZ | REAL | Drehraten um die jeweilige Achse [deg/s]. |
-| rRoll, rPitch, rYaw | REAL | Neigungswinkel (Roll, Pitch, Yaw) [deg]. |
-| rTempRateZ | REAL | Sensortemperatur [°C]. |
-| uiHW_Index | UINT | Hardware‑Index (0 = MM5.10, 1 = MM7.10). |
-| eStatusAccX … eStatusAccZ | BYTE | Signalqualität der Beschleunigung (0 = bereit, 1 .. 7 = Fehler). |
-| eStatusRateX … eStatusRateZ | BYTE | Signalqualität der Drehraten (0 = bereit, 1 .. 7 = Fehler). |
-| bAllSignalsReady | BOOL | TRUE, wenn alle Signal‑Status 0 sind. |
-| uiSysStatus | BYTE | Systemstatus aus TX‑Nachricht 1. |
-| uiSysStatus5 | BYTE | Systemstatus aus TX‑Nachricht 2. |
-| uiSysDiag | BYTE | Systemdiagnosecode (aus TX2). |
-| uiMessageCounter | UINT | Nachrichtenzähler (0..15) zur Timeout‑Überwachung. |
-| bCommError | BOOL | TRUE bei CAN‑Timeout. |
-| bCRCError | BOOL | TRUE bei fehlerhafter CRC‑Prüfung. |
-| sErrorMsg | STRING | Fehlertext (z. B. „CAN timeout“). |
+| Variable                    | Typ    | Beschreibung                                                     |
+| --------------------------- | ------ | ---------------------------------------------------------------- |
+| QO                          | BOOL   | Quittierung der Initialisierung (TRUE = erfolgreich).            |
+| STATUS                      | STRING | Statusmeldung (z. B. „Initialized“, „Error“).                    |
+| rAccX, rAccY, rAccZ         | REAL   | Beschleunigungswerte in X‑, Y‑ und Z‑Richtung [m/s²].            |
+| rRateX, rRateY, rRateZ      | REAL   | Drehraten um die jeweilige Achse [deg/s].                        |
+| rRoll, rPitch, rYaw         | REAL   | Neigungswinkel (Roll, Pitch, Yaw) [deg].                         |
+| rTempRateZ                  | REAL   | Sensortemperatur [°C].                                           |
+| uiHW_Index                  | UINT   | Hardware‑Index (0 = MM5.10, 1 = MM7.10).                         |
+| eStatusAccX … eStatusAccZ   | BYTE   | Signalqualität der Beschleunigung (0 = bereit, 1 .. 7 = Fehler). |
+| eStatusRateX … eStatusRateZ | BYTE   | Signalqualität der Drehraten (0 = bereit, 1 .. 7 = Fehler).      |
+| bAllSignalsReady            | BOOL   | TRUE, wenn alle Signal‑Status 0 sind.                            |
+| uiSysStatus                 | BYTE   | Systemstatus aus TX‑Nachricht 1.                                 |
+| uiSysStatus5                | BYTE   | Systemstatus aus TX‑Nachricht 2.                                 |
+| uiSysDiag                   | BYTE   | Systemdiagnosecode (aus TX2).                                    |
+| uiMessageCounter            | UINT   | Nachrichtenzähler (0..15) zur Timeout‑Überwachung.               |
+| bCommError                  | BOOL   | TRUE bei CAN‑Timeout.                                            |
+| bCRCError                   | BOOL   | TRUE bei fehlerhafter CRC‑Prüfung.                               |
+| sErrorMsg                   | STRING | Fehlertext (z. B. „CAN timeout“).                                |
 
 ### **Adapter**
 

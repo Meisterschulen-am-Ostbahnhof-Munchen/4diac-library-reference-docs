@@ -32,10 +32,10 @@ Der konvertierte DINT-Wert wird über den Plug-Adapter `ADI_OUT` ausgegeben.
 
 ### **Adapter**
 
-| Name    | Typ                         | Richtung | Beschreibung |
-|---------|-----------------------------|----------|--------------|
-| `AW_IN`  | `adapter::types::unidirectional::AW`   | Socket (Eingang)  | WORD-Adapter als Eingang. Liefert das Auslöseereignis (E1) und den WORD-Datenwert (D1). |
-| `ADI_OUT`| `adapter::types::unidirectional::ADI`  | Plug (Ausgang)    | DINT-Adapter als Ausgang. Gibt das Bestätigungsereignis (E1) und den konvertierten DINT-Wert (D1) weiter. |
+| Name      | Typ                                   | Richtung         | Beschreibung                                                                                              |
+| --------- | ------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------- |
+| `AW_IN`   | `adapter::types::unidirectional::AW`  | Socket (Eingang) | WORD-Adapter als Eingang. Liefert das Auslöseereignis (E1) und den WORD-Datenwert (D1).                   |
+| `ADI_OUT` | `adapter::types::unidirectional::ADI` | Plug (Ausgang)   | DINT-Adapter als Ausgang. Gibt das Bestätigungsereignis (E1) und den konvertierten DINT-Wert (D1) weiter. |
 
 ## Funktionsweise
 

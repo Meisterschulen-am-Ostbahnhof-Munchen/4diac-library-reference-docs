@@ -12,34 +12,34 @@ Der Funktionsblock **AUDI_TO_ALI** ist ein Composite-Baustein, der eine Brücke 
 
 ### **Ereignis-Eingänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name                              | Beschreibung                                                       |
+| --------------------------------- | ------------------------------------------------------------------ |
 | *keine eigenen Ereignis-Eingänge* | Die Ereignissteuerung erfolgt über den internen Socket AUDI_IN.E1. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
+| Name                              | Beschreibung                                                      |
+| --------------------------------- | ----------------------------------------------------------------- |
 | *keine eigenen Ereignis-Ausgänge* | Die Ereignisweitergabe erfolgt über den internen Plug ALI_OUT.E1. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| *keine eigenen Daten-Eingänge* | – | Der Datenwert wird vom Socket AUDI_IN.D1 geliefert. |
+| Name                           | Datentyp | Beschreibung                                        |
+| ------------------------------ | -------- | --------------------------------------------------- |
+| *keine eigenen Daten-Eingänge* | –        | Der Datenwert wird vom Socket AUDI_IN.D1 geliefert. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
-| *keine eigenen Daten-Ausgänge* | – | Der konvertierte Wert wird über den Plug ALI_OUT.D1 bereitgestellt. |
+| Name                           | Datentyp | Beschreibung                                                        |
+| ------------------------------ | -------- | ------------------------------------------------------------------- |
+| *keine eigenen Daten-Ausgänge* | –        | Der konvertierte Wert wird über den Plug ALI_OUT.D1 bereitgestellt. |
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| **AUDI** (unidirektional) | `AUDI_IN` | Socket (Eingang) | UDINT-Datenadapter, der einen Wert über das Ereignis E1 und das Datum D1 bereitstellt. |
-| **ALI** (unidirektional) | `ALI_OUT` | Plug (Ausgang) | LINT-Datenadapter, der den konvertierten Wert über das Ereignis E1 und das Datum D1 ausgibt. |
+| Typ                       | Name      | Richtung         | Beschreibung                                                                                 |
+| ------------------------- | --------- | ---------------- | -------------------------------------------------------------------------------------------- |
+| **AUDI** (unidirektional) | `AUDI_IN` | Socket (Eingang) | UDINT-Datenadapter, der einen Wert über das Ereignis E1 und das Datum D1 bereitstellt.       |
+| **ALI** (unidirektional)  | `ALI_OUT` | Plug (Ausgang)   | LINT-Datenadapter, der den konvertierten Wert über das Ereignis E1 und das Datum D1 ausgibt. |
 
 ## Funktionsweise
 
@@ -74,11 +74,11 @@ Als Composite-Baustein besitzt `AUDI_TO_ALI` keine eigenen Zustände. Die Zustan
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Besonderheit |
-| ---------- | ----- | -------------- |
-| `F_UDINT_TO_LINT` | reiner Konverter | keine Adapter, direkte Daten-E/A; kein Ereignis-Handling über Adapter, erfordert eigene Ansteuerung. |
-| `AUDI_TO_ALI` (dieser) | Adapter-Konverter | kapselt die Konvertierung in einer adapterbasierten Schnittstelle; Ereignisse und Daten werden automatisch über die Adapter weitergeleitet. |
-| `ALI_TO_AUDI` (hypothetisch) | Adapter-Konverter | würde LINT rückwärts nach UDINT wandeln (potenziell verlustbehaftet). |
+| Baustein                     | Typ               | Besonderheit                                                                                                                                |
+| ---------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `F_UDINT_TO_LINT`            | reiner Konverter  | keine Adapter, direkte Daten-E/A; kein Ereignis-Handling über Adapter, erfordert eigene Ansteuerung.                                        |
+| `AUDI_TO_ALI` (dieser)       | Adapter-Konverter | kapselt die Konvertierung in einer adapterbasierten Schnittstelle; Ereignisse und Daten werden automatisch über die Adapter weitergeleitet. |
+| `ALI_TO_AUDI` (hypothetisch) | Adapter-Konverter | würde LINT rückwärts nach UDINT wandeln (potenziell verlustbehaftet).                                                                       |
 
 Der **Hauptunterschied** zu einer direkten Verwendung von `F_UDINT_TO_LINT` ist die nahtlose Einbindung in Adapter-Netzwerke und die Vermeidung zusätzlicher Leitungen für Ereignis- und Datenverbindungen.
 

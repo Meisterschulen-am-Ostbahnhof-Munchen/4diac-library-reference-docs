@@ -34,12 +34,12 @@ None of its own. All data is carried through the adapter plugs.
 
 ### **Adapters**
 
-| Direction | Name | Type | Description |
-| ----------- | ------ | ------ | -------------- |
-| Socket (input) | `IN` | `adapter::types::unidirectional::AX` | Start signal |
-| Socket (input) | `PT` | `adapter::types::unidirectional::ATM` | Preset time |
-| Plug (output) | `Q` | `adapter::types::unidirectional::AX` | Output, stays TRUE for `PT` after `IN` falls |
-| Plug (output) | `ET` | `adapter::types::unidirectional::ATM` | Elapsed time, event only on value change |
+| Direction      | Name | Type                                  | Description                                  |
+| -------------- | ---- | ------------------------------------- | -------------------------------------------- |
+| Socket (input) | `IN` | `adapter::types::unidirectional::AX`  | Start signal                                 |
+| Socket (input) | `PT` | `adapter::types::unidirectional::ATM` | Preset time                                  |
+| Plug (output)  | `Q`  | `adapter::types::unidirectional::AX`  | Output, stays TRUE for `PT` after `IN` falls |
+| Plug (output)  | `ET` | `adapter::types::unidirectional::ATM` | Elapsed time, event only on value change     |
 
 ## Functionality
 

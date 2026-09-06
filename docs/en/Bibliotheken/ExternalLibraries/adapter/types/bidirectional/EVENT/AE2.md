@@ -8,12 +8,12 @@ bidirectional adapter interface for 1 event
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| EI1 | Request (or Indication) | |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| EI1  | Request (or Indication) |      |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| EO1 | Indication (or Request) | |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| EO1  | Indication (or Request) |      |

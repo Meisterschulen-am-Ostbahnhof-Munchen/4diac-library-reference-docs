@@ -12,30 +12,30 @@ The function block **FIELDBUS_LWORD_TO_SIGNAL** converts an LWORD value from a f
 
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|-----|------------|
-| REQ | Event | Normal execution request (with data input `IN`) |
+| Name | Type  | Comment                                         |
+| ---- | ----- | ----------------------------------------------- |
+| REQ  | Event | Normal execution request (with data input `IN`) |
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|-----|-----------|
-| CNF | Event | Execution Confirmation (with data outputs `OUT` and `VALID`) |
+| Name | Type  | Comment                                                      |
+| ---- | ----- | ------------------------------------------------------------ |
+| CNF  | Event | Execution Confirmation (with data outputs `OUT` and `VALID`) |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Comment |
-|------|-----|--------------|-----------|
-| IN | LWORD | `NOT_AVAILABLE_LWM` | Input value from the fieldbus |
+| Name | Type  | Initial Value       | Comment                       |
+| ---- | ----- | ------------------- | ----------------------------- |
+| IN   | LWORD | `NOT_AVAILABLE_LWM` | Input value from the fieldbus |
 
 *Note:* `NOT_AVAILABLE_LWM` is a constant defined in the project (e.g., `LWORD#16#FFFFFFFFFFFFFFFF`) that represents an invalid or unavailable value.
 
 ### **Data Outputs**
 
-| Name | Type | Initial Value | Comment |
-| ------- | -------- | ---------------------------------- | ----------- |
-| OUT | LWORD | `LWORD#16#0000000000000000` | Filtered output value (0 for invalid signal) |
-| VALID | BOOL | `FALSE` | Validation flag (`TRUE` if signal is valid) |
+| Name  | Type  | Initial Value               | Comment                                      |
+| ----- | ----- | --------------------------- | -------------------------------------------- |
+| OUT   | LWORD | `LWORD#16#0000000000000000` | Filtered output value (0 for invalid signal) |
+| VALID | BOOL  | `FALSE`                     | Validation flag (`TRUE` if signal is valid)  |
 
 ### **Adapters**
 
@@ -54,6 +54,7 @@ The function block is activated by an event at the input `REQ`. The current valu
 - Otherwise (value greater than threshold), the signal is considered invalid:
 - `OUT` is set to zero (`LWORD#16#0000000000000000`).
 - `VALID` is set to `FALSE`.
+
 1. After processing is complete, the event `CNF` is output to confirm completion.
 
 The constant `VALID_SIGNAL_LW` defines the upper limit of the valid value range. Common values are, for example, `LWORD#16#0000FFFFFFFFFFFF` or similar ranges specified by the fieldbus protocol.
@@ -66,9 +67,9 @@ The constant `VALID_SIGNAL_LW` defines the upper limit of the valid value range.
 
 ## State Overview
 
-| State | Description | Action |
-|---------|--------------|--------|
-| REQ | Waits for an event at input `REQ`. | Executes the algorithm `REQ` (checking and, if necessary, filtering) and then sends the event `CNF`. |
+| State | Description                        | Action                                                                                               |
+| ----- | ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| REQ   | Waits for an event at input `REQ`. | Executes the algorithm `REQ` (checking and, if necessary, filtering) and then sends the event `CNF`. |
 
 After each execution, the function block returns to the state `REQ`, so it is immediately ready for a new task after each processing cycle.
 

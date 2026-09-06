@@ -33,11 +33,11 @@ Da es sich um einen rein adapterbasierten Funktionsbaustein handelt, verfügt `A
 
 ### **Adapter**
 
-| Typ | Name | Adaptertyp | Beschreibung |
-| :--- | :--- | :--- | :--- |
+| Typ                  | Name  | Adaptertyp                           | Beschreibung                                     |
+| :------------------- | :---- | :----------------------------------- | :----------------------------------------------- |
 | **Socket** (Eingang) | `IN1` | `adapter::types::unidirectional::AR` | Erster Eingangswert (Dividend) für die Division. |
 | **Socket** (Eingang) | `IN2` | `adapter::types::unidirectional::AR` | Zweiter Eingangswert (Divisor) für die Division. |
-| **Plug** (Ausgang) | `OUT` | `adapter::types::unidirectional::AR` | Das Ergebnis der Division (Quotient). |
+| **Plug** (Ausgang)   | `OUT` | `adapter::types::unidirectional::AR` | Das Ergebnis der Division (Quotient).            |
 
 ## Funktionsweise
 

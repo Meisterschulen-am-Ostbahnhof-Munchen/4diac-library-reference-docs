@@ -62,11 +62,8 @@ Internally, the module is based on a network of standard function blocks from IE
 
 - If the value of `G` is equal to `FALSE`, the value of `IN0` is selected.
 - If the value of `G` is equal to `TRUE`, the value of `IN1` is selected.
+
 1. **Output:** After successful selection, the result is sent via a further conversion block (`F_MOVE_OUT`) to the output flip-flop (`E_D_FF_ANY_OUT`). This triggers the output event `OUT.E1` and assigns the selected value to `OUT.D1`.
-
-## Technical Features
-
-- **Data Type Specificity:** Internally, the selection operates on the data type `ULINT` (Unsigned Long Integer / 64-bit). This makes the function block particularly suitable for processing high-resolution counter values, timestamps, or large ID numbers.
 
 ## Technical Features
 
@@ -78,10 +75,10 @@ Internally, the module is based on a network of standard function blocks from IE
 
 The function block does not have its own explicit state chain (Execution Control Chart, ECC) because it is implemented as a pure network (FBNetwork). Its behavior is purely data- and event-flow-driven:
 
-| Trigger Event | State Selector (`G.D1`) | Resulting Behavior | Output Event |
-| :--- | :--- | :--- | :--- |
-| Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `FALSE` | Value of `IN0.D1` is copied to `OUT.D1` | `OUT.E1` |
-| Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `TRUE` | Value of `IN1.D1` is copied to `OUT.D1` | `OUT.E1` |
+| Trigger Event                          | State Selector (`G.D1`) | Resulting Behavior                      | Output Event |
+| :------------------------------------- | :---------------------- | :-------------------------------------- | :----------- |
+| Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `FALSE`                 | Value of `IN0.D1` is copied to `OUT.D1` | `OUT.E1`     |
+| Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `TRUE`                  | Value of `IN1.D1` is copied to `OUT.D1` | `OUT.E1`     |
 
 `| ] | ... ## Application Scenarios
 

@@ -12,22 +12,22 @@ The function block `AW_FIELDBUS_WORD_TO_SIGNAL_SCALED` is used to convert an inc
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|----------|-------|-----------|
-| INIT | EInit | Initialization request (e.g., reset of internal logic) |
+| Event | Type  | Comment                                                |
+| ----- | ----- | ------------------------------------------------------ |
+| INIT  | EInit | Initialization request (e.g., reset of internal logic) |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|----------|-------|-----------|
+| Event | Type  | Comment                                   |
+| ----- | ----- | ----------------------------------------- |
 | INITO | EInit | Confirmation of successful initialization |
 
 ### **Data Inputs**
 
-| Name | Type | Default | Comment |
-| -------- | ------ | ----------------- | ------------------------------- |
-| SCALE | REAL | REAL#1.0 | Scaling Factor |
-| OFFSET | DINT | DINT#0 | Integer Offset (after scaling) |
+| Name   | Type | Default  | Comment                        |
+| ------ | ---- | -------- | ------------------------------ |
+| SCALE  | REAL | REAL#1.0 | Scaling Factor                 |
+| OFFSET | DINT | DINT#0   | Integer Offset (after scaling) |
 
 ### **Data Outputs**
 
@@ -35,11 +35,11 @@ This function block does not have separate data outputs. The output values are p
 
 ### **Adapters**
 
-| Adapter | Direction | Type (unidirectional) | Comment |
-| --------- | ---------- | ---------------------- | ----------- |
-| IN | Socket | AW | Input signal (fieldbus word) |
-| OUT | Plug | AR | Processed and scaled output signal |
-| VALID | Plug | AX | Boolean value: TRUE if the signal is valid |
+| Adapter | Direction | Type (unidirectional) | Comment                                    |
+| ------- | --------- | --------------------- | ------------------------------------------ |
+| IN      | Socket    | AW                    | Input signal (fieldbus word)               |
+| OUT     | Plug      | AR                    | Processed and scaled output signal         |
+| VALID   | Plug      | AX                    | Boolean value: TRUE if the signal is valid |
 
 ## Functionality
 

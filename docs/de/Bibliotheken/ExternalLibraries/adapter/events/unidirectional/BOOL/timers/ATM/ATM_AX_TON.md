@@ -12,8 +12,8 @@ Der **ATM_AX_TON** ist ein Funktionsblock zur Verzögerung beim Einschalten (On-
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                               |
+| ---- | ----- | --------------------------------------- |
 | EIPT | Event | Setzt die Vorlaufzeit (nicht auslösend) |
 
 ### **Ereignis-Ausgänge**
@@ -30,11 +30,11 @@ Der FB hat keine expliziten Daten-Ausgänge. Ausgabedaten werden über den Adapt
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-| ---------- | ------ | ----- | ----------- |
-| Socket | IN | adapter::types::unidirectional::AX | Timer-Eingang (AX-Adapter) – liefert das boolsche Eingangssignal und den Startimpuls |
-| Socket | PT | adapter::types::unidirectional::ATM | Vorlaufzeit (AT-Adapter) – stellt die Verzögerungszeit bereit |
-| Plug | Q | adapter::types::unidirectional::AX | Timer-Ausgang (AX-Adapter) – gibt den Timer-Zustand und die Bestätigung aus |
+| Richtung | Name | Typ                                 | Kommentar                                                                            |
+| -------- | ---- | ----------------------------------- | ------------------------------------------------------------------------------------ |
+| Socket   | IN   | adapter::types::unidirectional::AX  | Timer-Eingang (AX-Adapter) – liefert das boolsche Eingangssignal und den Startimpuls |
+| Socket   | PT   | adapter::types::unidirectional::ATM | Vorlaufzeit (AT-Adapter) – stellt die Verzögerungszeit bereit                        |
+| Plug     | Q    | adapter::types::unidirectional::AX  | Timer-Ausgang (AX-Adapter) – gibt den Timer-Zustand und die Bestätigung aus          |
 
 ## Funktionsweise
 
@@ -66,13 +66,13 @@ Der **ATM_AX_TON** kapselt einen standardmäßigen On-Delay-Timer (E_TON) aus de
 
 Der FB selbst verwaltet keinen eigenen Zustandsautomaten – die Zustandslogik liegt im integrierten **E_TON**. Dennoch lässt sich das Verhalten wie folgt beschreiben:
 
-| Zustand des Eingangs IN | Verhalten | Ausgang Q.D1 |
-| ------------------------- | ----------- | -------------- |
+| Zustand des Eingangs IN         | Verhalten                                     | Ausgang Q.D1                     |
+| ------------------------------- | --------------------------------------------- | -------------------------------- |
 | FALSE → TRUE (steigende Flanke) | Timer startet; nach Ablauf von PT wird Q TRUE | FALSE (bis PT abgelaufen) → TRUE |
-| TRUE (während Timer läuft) | Timer läuft weiter | FALSE |
-| TRUE → FALSE (fallende Flanke) | Timer wird sofort zurückgesetzt | TRUE → FALSE |
-| TRUE (nach Timerablauf) | Ausgang bleibt TRUE, solange IN TRUE | TRUE |
-| FALSE (beliebig) | Ausgang bleibt FALSE | FALSE |
+| TRUE (während Timer läuft)      | Timer läuft weiter                            | FALSE                            |
+| TRUE → FALSE (fallende Flanke)  | Timer wird sofort zurückgesetzt               | TRUE → FALSE                     |
+| TRUE (nach Timerablauf)         | Ausgang bleibt TRUE, solange IN TRUE          | TRUE                             |
+| FALSE (beliebig)                | Ausgang bleibt FALSE                          | FALSE                            |
 
 ## Anwendungsszenarien
 
@@ -83,12 +83,12 @@ Der FB selbst verwaltet keinen eigenen Zustandsautomaten – die Zustandslogik l
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Besonderheit |
-| ---------- | ----- | -------------- |
-| **E_TON** (IEC 61499) | Standard On-Delay | Klassische Ein-/Ausgangsschnittstelle; direkte Ereignis- und Datenports |
-| **ATM_AX_TON** | Adapter-basiert | Kapselt E_TON und bietet AX/AT-Adapter; zusätzlicher EIPT-Eingang (nicht verbunden) |
-| **E_TOF** | Off-Delay | Verzögerung beim Ausschalten (entgegengesetztes Verhalten) |
-| **E_CTU** | Aufwärtszähler | Zählt Ereignisse, kein Timer |
+| Baustein              | Typ               | Besonderheit                                                                        |
+| --------------------- | ----------------- | ----------------------------------------------------------------------------------- |
+| **E_TON** (IEC 61499) | Standard On-Delay | Klassische Ein-/Ausgangsschnittstelle; direkte Ereignis- und Datenports             |
+| **ATM_AX_TON**        | Adapter-basiert   | Kapselt E_TON und bietet AX/AT-Adapter; zusätzlicher EIPT-Eingang (nicht verbunden) |
+| **E_TOF**             | Off-Delay         | Verzögerung beim Ausschalten (entgegengesetztes Verhalten)                          |
+| **E_CTU**             | Aufwärtszähler    | Zählt Ereignisse, kein Timer                                                        |
 
 Der **ATM_AX_TON** unterscheidet sich durch seine reine Adapterschnittstelle und die fehlende direkte Datenkopplung. Er eignet sich besonders für modulare, hierarchisch aufgebaute Steuerungen.
 

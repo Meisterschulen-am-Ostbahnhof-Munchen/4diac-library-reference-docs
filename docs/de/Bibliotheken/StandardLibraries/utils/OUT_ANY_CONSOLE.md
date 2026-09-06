@@ -23,17 +23,17 @@ Der Baustein unterstützt die Ausgabe beliebiger Datentypen für Entwicklungs- u
 
 ### **Daten-Eingänge**
 
-| Parameter | Typ | Beschreibung |
-| ----------- | ----- | -------------- |
-| `QI` | BOOL | Aktiviert die Ausgabe bei TRUE |
-| `LABEL` | STRING | Optionaler Beschreibungstext |
-| `IN` | ANY | Beliebiger auszugebender Wert |
+| Parameter | Typ    | Beschreibung                   |
+| --------- | ------ | ------------------------------ |
+| `QI`      | BOOL   | Aktiviert die Ausgabe bei TRUE |
+| `LABEL`   | STRING | Optionaler Beschreibungstext   |
+| `IN`      | ANY    | Beliebiger auszugebender Wert  |
 
 ### **Daten-Ausgänge**
 
-| Parameter | Typ | Beschreibung |
-|-----------|-----|--------------|
-| `QO` | BOOL | Bestätigt erfolgreiche Ausgabe |
+| Parameter | Typ  | Beschreibung                   |
+| --------- | ---- | ------------------------------ |
+| `QO`      | BOOL | Bestätigt erfolgreiche Ausgabe |
 
 ## Funktionsweise
 
@@ -65,20 +65,20 @@ Der Baustein unterstützt die Ausgabe beliebiger Datentypen für Entwicklungs- u
 
 ## Beispielausgaben
 
-| LABEL | IN (Wert) | Konsolenausgabe |
-| ------- | ---------- | ----------------- |
-| "Temperatur" | 23.5 | "Temperatur: 23.5" |
-| "Status" | TRUE | "Status: TRUE" |
-| "" | 42 | "42" |
+| LABEL        | IN (Wert) | Konsolenausgabe    |
+| ------------ | --------- | ------------------ |
+| "Temperatur" | 23.5      | "Temperatur: 23.5" |
+| "Status"     | TRUE      | "Status: TRUE"     |
+| ""           | 42        | "42"               |
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | OUT_ANY_CONSOLE | Standard-Debug | Erweitertes Logging |
-| --------- | ----------------- | ---------------- | --------------------- |
-| Datentypen | Beliebig (ANY) | Begrenzt | Begrenzt |
-| Beschriftung | Optional | Nein | Ja |
-| Integration | 4diac-spezifisch | Systemabhängig | Framework-abhängig |
-| Echtzeitfähig | Ja | Teilweise | Nein |
+| Feature       | OUT_ANY_CONSOLE  | Standard-Debug | Erweitertes Logging |
+| ------------- | ---------------- | -------------- | ------------------- |
+| Datentypen    | Beliebig (ANY)   | Begrenzt       | Begrenzt            |
+| Beschriftung  | Optional         | Nein           | Ja                  |
+| Integration   | 4diac-spezifisch | Systemabhängig | Framework-abhängig  |
+| Echtzeitfähig | Ja               | Teilweise      | Nein                |
 
 ## Fazit
 

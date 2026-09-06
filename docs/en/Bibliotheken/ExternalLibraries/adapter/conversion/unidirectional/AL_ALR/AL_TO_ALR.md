@@ -9,6 +9,7 @@
 The function block **AL_TO_ALR** is a composite function block (FB) that maps a unidirectional AL adapter (LWORD) onto a unidirectional ALR adapter (LREAL). Internally, it uses the block `F_LWORD_TO_LREAL`.
 
 > **⚠️ Warning — not a numeric value conversion:** `LWORD` is a bit-string type (not a signed integer), and `F_LWORD_TO_LREAL` in the FORTE core merely reinterprets the 64-bit pattern as an IEEE754 `LREAL` (a bit copy) — the same trap as [`AD_TO_AR`](../AD_AR/AD_TO_AR.md) (DWORD→REAL), just with the 64-bit counterparts. A raw counter or analog value will therefore **not** become the corresponding LREAL number, but a meaningless value. For an actual numeric conversion: chain `AL_TO_AULI` (bit-reinterpretation LWORD→ULINT, valid here since both share the same 64-bit unsigned-integer representation) followed by `AULI_TO_ALR` (a real numeric cast) — the same pattern as [`AD_TO_AR_NUM`](../AD_AR/AD_TO_AR_NUM.md) for the 32-bit case.
+>
 ## Interface Structure
 
 ### **Event Inputs**
@@ -29,10 +30,10 @@ The function block has no direct data outputs. The converted LREAL value is outp
 
 ### **Adapters**
 
-| Adapter | Direction | Type | Description |
-| --------- | ---------- | ----- | -------------- |
-| **AL_IN** | Socket (Input) | `adapter::types::unidirectional::AL` | LWORD adapter that provides the input signal (LWORD) and a trigger event. |
-| **ALR_OUT** | Plug (Output) | `adapter::types::unidirectional::ALR` | LREAL adapter that outputs the converted signal (LREAL) and an acknowledgment event. |
+| Adapter     | Direction      | Type                                  | Description                                                                          |
+| ----------- | -------------- | ------------------------------------- | ------------------------------------------------------------------------------------ |
+| **AL_IN**   | Socket (Input) | `adapter::types::unidirectional::AL`  | LWORD adapter that provides the input signal (LWORD) and a trigger event.            |
+| **ALR_OUT** | Plug (Output)  | `adapter::types::unidirectional::ALR` | LREAL adapter that outputs the converted signal (LREAL) and an acknowledgment event. |
 
 ## Functionality
 
@@ -83,4 +84,4 @@ Since the internal function block operates in a single execution step, the state
 
 ### 📖 Background
 
-* [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)
+- [Numeric vs. bitwise: the FORTE conversion trap](../Numeric_vs_Bitwise.md)

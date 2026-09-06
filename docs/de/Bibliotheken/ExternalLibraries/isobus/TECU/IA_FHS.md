@@ -12,37 +12,37 @@ Der Funktionsblock **IA_FHS** dient als ISOBUS-Adapter für den Front Hitch Stat
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ    | mit Variablen | Beschreibung                    |
-|----------|--------|---------------|---------------------------------|
-| `INIT`   | EInit  | `QI`          | Service-Initialisierung         |
+| Ereignis | Typ   | mit Variablen | Beschreibung            |
+| -------- | ----- | ------------- | ----------------------- |
+| `INIT`   | EInit | `QI`          | Service-Initialisierung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ    | mit Variablen      | Beschreibung                      |
-|----------|--------|--------------------|-----------------------------------|
-| `INITO`  | EInit  | `QO`, `STATUS`     | Initialisierungsbestätigung       |
+| Ereignis | Typ   | mit Variablen  | Beschreibung                |
+| -------- | ----- | -------------- | --------------------------- |
+| `INITO`  | EInit | `QO`, `STATUS` | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Beschreibung                  |
-|----------|--------|-------------------------------|
-| `QI`     | BOOL   | Ereignis-Eingangs-Qualifier   |
+| Variable | Typ  | Beschreibung                |
+| -------- | ---- | --------------------------- |
+| `QI`     | BOOL | Ereignis-Eingangs-Qualifier |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Beschreibung                |
-|----------|--------|-----------------------------|
-| `QO`     | BOOL   | Ausgangs-Qualifier          |
-| `STATUS` | STRING | Statusmeldung (z. B. „OK“)  |
+| Variable | Typ    | Beschreibung               |
+| -------- | ------ | -------------------------- |
+| `QO`     | BOOL   | Ausgangs-Qualifier         |
+| `STATUS` | STRING | Statusmeldung (z. B. „OK“) |
 
 ### **Adapter**
 
-| Adapter   | Typ                         | Beschreibung                                 |
-|-----------|-----------------------------|----------------------------------------------|
-| `POSITION`| `adapter::types::unidirectional::AUS` | Front-Hitch-Position (analog, unsigniert)   |
-| `FORCE`   | `adapter::types::unidirectional::AUS` | Front-Nominal-Lower-Link-Force (analog)     |
-| `DRAFT`   | `adapter::types::unidirectional::AUI` | Front-Draft (analog, ganzzahlig unsigniert) |
-| `TIMEOUT` | `adapter::types::unidirectional::AX`  | Timeout-Status des ISOBUS-Empfangs          |
+| Adapter    | Typ                                   | Beschreibung                                |
+| ---------- | ------------------------------------- | ------------------------------------------- |
+| `POSITION` | `adapter::types::unidirectional::AUS` | Front-Hitch-Position (analog, unsigniert)   |
+| `FORCE`    | `adapter::types::unidirectional::AUS` | Front-Nominal-Lower-Link-Force (analog)     |
+| `DRAFT`    | `adapter::types::unidirectional::AUI` | Front-Draft (analog, ganzzahlig unsigniert) |
+| `TIMEOUT`  | `adapter::types::unidirectional::AX`  | Timeout-Status des ISOBUS-Empfangs          |
 
 ## Funktionsweise
 

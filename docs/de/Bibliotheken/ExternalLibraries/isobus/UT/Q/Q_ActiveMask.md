@@ -70,12 +70,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel für die neue aktive Maske. Jede
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante | Bedeutung |
-| ------ | ----------- | ----------- |
-| 0 | VT_E_NO_ERR | Erfolgreich |
-| -6 | VT_E_OVERFLOW | Pufferüberlauf |
-| -8 | VT_E_NOACT | Ungültiger Zustand |
-| -21 | VT_E_NO_INSTANCE | Keine VT-Instanz |
+| Code | Konstante        | Bedeutung          |
+| ---- | ---------------- | ------------------ |
+| 0    | VT_E_NO_ERR      | Erfolgreich        |
+| -6   | VT_E_OVERFLOW    | Pufferüberlauf     |
+| -8   | VT_E_NOACT       | Ungültiger Zustand |
+| -21  | VT_E_NO_INSTANCE | Keine VT-Instanz   |
 
 ## Anwendungsszenarien
 
@@ -86,11 +86,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel für die neue aktive Maske. Jede
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ActiveMask | VtMaskManager | VtDynamicDisplay |
-|---------------|--------------|---------------|------------------|
-| ISO-Standard  | ✔            | ✖             | ✖                |
-| Fehlercodes   | Standard     | Hersteller    | Teilweise        |
-| Zustandsverwaltung | Voll | Basis       | Erweitert        |
+| Feature            | Q_ActiveMask | VtMaskManager | VtDynamicDisplay |
+| ------------------ | ------------ | ------------- | ---------------- |
+| ISO-Standard       | ✔            | ✖             | ✖                |
+| Fehlercodes        | Standard     | Hersteller    | Teilweise        |
+| Zustandsverwaltung | Voll         | Basis         | Erweitert        |
 
 ## 🛠️ Zugehörige Übungen
 

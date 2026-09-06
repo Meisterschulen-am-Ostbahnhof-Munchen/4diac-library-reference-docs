@@ -28,10 +28,10 @@ Der Adapter-Ausgang **AUS_OUT** stellt den konvertierten USINT-Wert (8‑Bit) ü
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **AD_IN** | `adapter::types::unidirectional::AD` | Eingang (Socket) | Nimmt DWORD‑Daten und Steuerereignisse auf. |
-| **AUS_OUT** | `adapter::types::unidirectional::AUS` | Ausgang (Plug) | Gibt USINT‑Daten und Bestätigungsereignisse aus. |
+| Adapter     | Typ                                   | Richtung         | Beschreibung                                     |
+| ----------- | ------------------------------------- | ---------------- | ------------------------------------------------ |
+| **AD_IN**   | `adapter::types::unidirectional::AD`  | Eingang (Socket) | Nimmt DWORD‑Daten und Steuerereignisse auf.      |
+| **AUS_OUT** | `adapter::types::unidirectional::AUS` | Ausgang (Plug)   | Gibt USINT‑Daten und Bestätigungsereignisse aus. |
 
 ## Funktionsweise
 

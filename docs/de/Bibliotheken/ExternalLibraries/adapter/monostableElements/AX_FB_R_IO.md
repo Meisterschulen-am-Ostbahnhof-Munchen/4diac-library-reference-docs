@@ -28,11 +28,11 @@ Keine.
 
 ### **Adapter**
 
-| Bezeichnung | Typ                  | Richtung | Kommentar              |
-|-------------|----------------------|----------|------------------------|
-| IN          | unidirectional::AX   | Socket   | Eingangssignal         |
-| RESET1      | unidirectional::AX   | Socket   | Rücksetzsignal (priorisiert) |
-| OUT         | unidirectional::AX   | Plug     | Ausgangssignal         |
+| Bezeichnung | Typ                | Richtung | Kommentar                    |
+| ----------- | ------------------ | -------- | ---------------------------- |
+| IN          | unidirectional::AX | Socket   | Eingangssignal               |
+| RESET1      | unidirectional::AX | Socket   | Rücksetzsignal (priorisiert) |
+| OUT         | unidirectional::AX | Plug     | Ausgangssignal               |
 
 Die Adapter vom Typ `adapter::types::unidirectional::AX` verfügen jeweils über einen Ereignisausgang `E1` und einen Datenausgang `D1` (vom Typ BOOL). Der Datenwert des Adapters wird über `D1` bereitgestellt, die Verarbeitung wird durch das Ereignis `E1` ausgelöst.
 
@@ -56,8 +56,8 @@ Das Ereignis am Ausgangsadapter (`OUT.E1`) wird bei jeder Ausführung des Algori
 
 Der Funktionsblock besitzt genau einen Zustand:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand | Beschreibung                                                                                                                                                              |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ     | Start- und Endzustand. Wartet auf ein Ereignis von `IN` oder `RESET1`. Nach Ausführung des Algorithmus kehrt der Zustand immer zu `REQ` zurück (keine weiteren Zustände). |
 
 Es gibt zwei Transitionen:

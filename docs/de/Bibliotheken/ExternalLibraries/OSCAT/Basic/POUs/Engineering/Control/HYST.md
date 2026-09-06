@@ -8,27 +8,27 @@
 
 ### Event Inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | IN, ONN, OFF |
+| Name | Comment | With         |
+| :--- | :------ | :----------- |
+| REQ  |         | IN, ONN, OFF |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | Q, WIN |
+| Name | Comment | With   |
+| :--- | :------ | :----- |
+| CNF  |         | Q, WIN |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| IN | REAL | |
-| ONN | REAL | |
-| OFF | REAL | |
+| :--- | :--- | :------ |
+| IN   | REAL |         |
+| ONN  | REAL |         |
+| OFF  | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| Q | BOOL | |
-| WIN | BOOL | |
+| :--- | :--- | :------ |
+| Q    | BOOL |         |
+| WIN  | BOOL |         |

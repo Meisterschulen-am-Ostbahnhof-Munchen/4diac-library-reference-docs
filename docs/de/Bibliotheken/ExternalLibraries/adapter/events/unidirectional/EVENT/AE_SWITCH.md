@@ -20,9 +20,9 @@ Der Funktionsblock **AE_SWITCH** dient als Demultiplexer für Ereignisse. Er lei
 
 ### **Daten-Eingänge**
 
-| Name | Typ   | Kommentar                                      |
-|------|-------|------------------------------------------------|
-| `G`  | BOOL  | Schalter: 0 → Ausgabe über `EO0`, 1 → Ausgabe über `EO1` |
+| Name | Typ  | Kommentar                                                |
+| ---- | ---- | -------------------------------------------------------- |
+| `G`  | BOOL | Schalter: 0 → Ausgabe über `EO0`, 1 → Ausgabe über `EO1` |
 
 ### **Daten-Ausgänge**
 
@@ -30,11 +30,11 @@ Der Funktionsblock **AE_SWITCH** dient als Demultiplexer für Ereignisse. Er lei
 
 ### **Adapter**
 
-| Richtung  | Name  | Typ (unidirektional)                        | Kommentar                                      |
-|-----------|-------|---------------------------------------------|------------------------------------------------|
-| **Socket** (Eingang) | `EI`  | `adapter::types::unidirectional::AE`        | Ereignis-Eingang, der umgeschaltet wird.       |
-| **Plug** (Ausgang)   | `EO0` | `adapter::types::unidirectional::AE`        | Ereignis-Ausgang, aktiv bei `G = 0`            |
-| **Plug** (Ausgang)   | `EO1` | `adapter::types::unidirectional::AE`        | Ereignis-Ausgang, aktiv bei `G = 1`            |
+| Richtung             | Name  | Typ (unidirektional)                 | Kommentar                                |
+| -------------------- | ----- | ------------------------------------ | ---------------------------------------- |
+| **Socket** (Eingang) | `EI`  | `adapter::types::unidirectional::AE` | Ereignis-Eingang, der umgeschaltet wird. |
+| **Plug** (Ausgang)   | `EO0` | `adapter::types::unidirectional::AE` | Ereignis-Ausgang, aktiv bei `G = 0`      |
+| **Plug** (Ausgang)   | `EO1` | `adapter::types::unidirectional::AE` | Ereignis-Ausgang, aktiv bei `G = 1`      |
 
 ## Funktionsweise
 
@@ -54,11 +54,11 @@ Der Baustein befindet sich initial im Zustand **START**.
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung                                                | Aktion bei Eintritt |
-|---------|-------------------------------------------------------------|---------------------|
-| START   | Warten auf ein Ereignis an `EI` oder `EIG`                  | –                   |
-| G0      | Ereignis an `EI` mit `G = 0` – leite an `EO0` weiter       | `EO0.E1`            |
-| G1      | Ereignis an `EI` mit `G = 1` – leite an `EO1` weiter       | `EO1.E1`            |
+| Zustand | Beschreibung                                         | Aktion bei Eintritt |
+| ------- | ---------------------------------------------------- | ------------------- |
+| START   | Warten auf ein Ereignis an `EI` oder `EIG`           | –                   |
+| G0      | Ereignis an `EI` mit `G = 0` – leite an `EO0` weiter | `EO0.E1`            |
+| G1      | Ereignis an `EI` mit `G = 1` – leite an `EO1` weiter | `EO1.E1`            |
 
 **Transitionen:**
 

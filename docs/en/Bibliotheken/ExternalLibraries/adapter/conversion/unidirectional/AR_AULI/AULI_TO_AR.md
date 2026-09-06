@@ -31,10 +31,10 @@ The function block has no direct event or data inputs/outputs, but communicates 
 
 ### **Adapter**
 
-| Name | Direction | Type | Description |
-| -------- | ---------- | -------------------------------------------------- | ------------------------------- |
-| AULI_IN | Socket | `adapter::types::unidirectional::AULI` (ULINT) | Input Value |
-| AR_OUT | Plug | `adapter::types::unidirectional::AR` (REAL) | Output Value (Converted) |
+| Name    | Direction | Type                                           | Description              |
+| ------- | --------- | ---------------------------------------------- | ------------------------ |
+| AULI_IN | Socket    | `adapter::types::unidirectional::AULI` (ULINT) | Input Value              |
+| AR_OUT  | Plug      | `adapter::types::unidirectional::AR` (REAL)    | Output Value (Converted) |
 
 ## Functionality
 

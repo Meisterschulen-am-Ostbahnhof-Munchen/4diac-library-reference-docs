@@ -12,28 +12,28 @@ Der Funktionsbaustein **SPLIT_MI_DO_S_Dual_SA** dient dazu, einen einzelnen Date
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                         |
+| -------- | ------------------------------------------------------------------------------------ |
 | REQ      | Dienstanforderung: Der Baustein verarbeitet den aktuellen Wert des Dateneingangs IN. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------ |
 | CNF      | Bestätigung der durchgeführten Verarbeitung. Wird nach der Ausführung des Algo–rithmus gesendet. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ                                                | Beschreibung                                                                              |
+| ---- | -------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | IN   | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S_Dual_SA` | Dualer Eingang, der sowohl Vorwärts- (UP) als auch Rückwärts- (DOWN) Informationen trägt. |
 
 ### **Daten-Ausgänge**
 
-| Name  | Typ | Beschreibung |
-|-------|-----|--------------|
-| UP    | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S_Single_SA` | Ausgang für die Vorwärts-, Aufwärts-, Rechts- oder Rechtsdrehrichtung. |
-| DOWN  | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S_Single_SA` | Ausgang für die Rückwärts-, Abwärts-, Links- oder Linksdrehrichtung. |
+| Name | Typ                                                  | Beschreibung                                                           |
+| ---- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
+| UP   | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S_Single_SA` | Ausgang für die Vorwärts-, Aufwärts-, Rechts- oder Rechtsdrehrichtung. |
+| DOWN | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S_Single_SA` | Ausgang für die Rückwärts-, Abwärts-, Links- oder Linksdrehrichtung.   |
 
 ### **Adapter**
 

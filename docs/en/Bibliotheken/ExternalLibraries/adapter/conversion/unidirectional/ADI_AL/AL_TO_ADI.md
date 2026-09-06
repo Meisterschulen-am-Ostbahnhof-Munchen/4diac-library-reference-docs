@@ -15,7 +15,7 @@ No dedicated data inputs. The LWORD value to be converted is provided via socket
 
 No dedicated data outputs. The converted DINT value is output via plug `ADI_OUT` (specifically, via the date `D1`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

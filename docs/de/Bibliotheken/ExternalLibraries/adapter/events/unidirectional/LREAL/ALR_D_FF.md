@@ -30,10 +30,10 @@ Der FB besitzt keine direkten Ereignis‑ oder Dateneingänge/-ausgänge. Die ge
 
 ### **Adapter**
 
-| Adapter  | Typ                      | Richtung | Beschreibung                     |
-|----------|--------------------------|----------|----------------------------------|
-| `I`      | adapter::types::unidirectional::ALR | Socket (Eingang) | Liefert das Taktereignis und den Datenwert. |
-| `Q`      | adapter::types::unidirectional::ALR | Plug (Ausgang)   | Gibt das Ausgangsereignis und den latched Wert aus. |
+| Adapter | Typ                                 | Richtung         | Beschreibung                                        |
+| ------- | ----------------------------------- | ---------------- | --------------------------------------------------- |
+| `I`     | adapter::types::unidirectional::ALR | Socket (Eingang) | Liefert das Taktereignis und den Datenwert.         |
+| `Q`     | adapter::types::unidirectional::ALR | Plug (Ausgang)   | Gibt das Ausgangsereignis und den latched Wert aus. |
 
 ## Funktionsweise
 

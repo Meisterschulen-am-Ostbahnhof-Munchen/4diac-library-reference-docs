@@ -10,9 +10,9 @@
 
 Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und noch nicht korrekturgelesen (HF)
 
-### Der Baustein E_PULSE in der IEC 61499: Ein Überblick
+## Der Baustein E_PULSE in der IEC 61499: Ein Überblick
 
-#### Einleitung
+### Einleitung
 
 Die IEC 61499 ist ein internationaler Standard, der die Modellierung von verteilten industriellen Steuerungssystemen ermöglicht. Ein zentrales Konzept in diesem Standard ist der Funktionsbaustein (FB), der als grundlegende Komponente für die Steuerungslogik dient. Der Baustein **E_PULSE** (Event-driven Pulse) ist ein Beispiel für einen solchen Funktionsbaustein, der in der IEC 61499 verwendet wird, um einen Impuls mit einer bestimmten Dauer zu erzeugen. Dieser Aufsatz beschreibt die Struktur, das Verhalten und die Anwendung des E_PULSE-Bausteins anhand des bereitgestellten Quelltextes. Ein besonderer Aspekt, der hervorgehoben werden soll, ist, dass dieser Baustein **auch dann funktioniert, wenn er nicht zyklisch aufgerufen wird**, da er intern auf dem **E_DELAY**-Baustein aus der IEC 61499 basiert.
 

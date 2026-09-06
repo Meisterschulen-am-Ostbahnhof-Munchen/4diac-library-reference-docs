@@ -12,20 +12,20 @@ Der Funktionsblock SET_DATE_AND_TIME dient dazu, einen eingehenden DATE_AND_TIME
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                                                                    |
+| -------- | ----------------------------------------------------------------------------------------------- |
 | REQ      | Normaler Ausführungsanforderung; startet das Schreiben des Eingangswerts in die InOut-Variable. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|----------|--------------|
+| Ereignis | Beschreibung                                |
+| -------- | ------------------------------------------- |
 | CNF      | Bestätigung der abgeschlossenen Ausführung. |
 
 ### **Daten-Eingänge**
 
-| Name | Typ           | Beschreibung |
-|------|---------------|--------------|
+| Name | Typ           | Beschreibung                                               |
+| ---- | ------------- | ---------------------------------------------------------- |
 | IN   | DATE_AND_TIME | Der Wert, der in die Zielvariable geschrieben werden soll. |
 
 ### **Daten-Ausgänge**
@@ -50,9 +50,9 @@ Sobald ein Ereignis am Eingang `REQ` anliegt, wird die ST-Anweisung `OUT := IN` 
 
 Der Baustein besitzt einen einzigen Zustand:
 
-| Zustand | Aktion                           | Ausgabeereignis |
-|---------|----------------------------------|-----------------|
-| REQ     | `OUT := IN`                      | CNF             |
+| Zustand | Aktion      | Ausgabeereignis |
+| ------- | ----------- | --------------- |
+| REQ     | `OUT := IN` | CNF             |
 
 Der Zustandsautomat startet bei Erhalt von `REQ` in diesem Zustand, führt die Aktion aus und sendet sofort `CNF`.
 

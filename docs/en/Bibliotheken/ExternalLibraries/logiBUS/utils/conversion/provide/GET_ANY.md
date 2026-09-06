@@ -12,15 +12,15 @@ The **GET_ANY** function block reads an arbitrary value (type `ANY`) from an InO
 
 ### **Event Inputs**
 
-| Name | Type | With Variables | Description |
-|------|-----|----------------|--------------|
-| REQ | Event | IN | Normal execution request; reads the current value of IN. |
+| Name | Type  | With Variables | Description                                              |
+| ---- | ----- | -------------- | -------------------------------------------------------- |
+| REQ  | Event | IN             | Normal execution request; reads the current value of IN. |
 
 ### **Event Outputs**
 
-| Name | Type | With Variables | Description |
-|------|-----|---------------|--------------|
-| CNF | Event | IN, OUT | Confirmation after successful execution; the values of IN and OUT are then valid. |
+| Name | Type  | With Variables | Description                                                                       |
+| ---- | ----- | -------------- | --------------------------------------------------------------------------------- |
+| CNF  | Event | IN, OUT        | Confirmation after successful execution; the values of IN and OUT are then valid. |
 
 ### **Data Inputs**
 
@@ -28,9 +28,9 @@ The function block has no separate data inputs. The source data is provided via 
 
 ### **Data Outputs**
 
-| Name | Type | Description |
-|------|-----|---------------|
-| OUT | ANY | Buffered output value. Contains the value read from IN at the time of the last REQ execution. |
+| Name | Type | Description                                                                                   |
+| ---- | ---- | --------------------------------------------------------------------------------------------- |
+| OUT  | ANY  | Buffered output value. Contains the value read from IN at the time of the last REQ execution. |
 
 ### **Adapter**
 
@@ -43,6 +43,7 @@ None.
 
 - **IN** is an InOut variable that can be both read and written – here it is used only as a source.
 - **OUT** receives the current value of **IN** and stores it temporarily.
+
 1. After the assignment is complete, the **CNF** event is sent. At this point, both **IN** (unchanged) and **OUT** are valid.
 
 ## Technical Features
@@ -57,9 +58,9 @@ None.
 
 The function block is implemented as a **SimpleFB** with exactly one state:
 
-| State | Description |
-|---------|--------------|
-| REQ | Executes the algorithm `REQ` and sends CNF. After the action, the function block returns to this state (default). |
+| State | Description                                                                                                       |
+| ----- | ----------------------------------------------------------------------------------------------------------------- |
+| REQ   | Executes the algorithm `REQ` and sends CNF. After the action, the function block returns to this state (default). |
 
 No other states (e.g., Wait, Error) are defined.
 

@@ -34,11 +34,13 @@ The **F_MULTIME** function block is a standards-compliant function block for mul
 
 - `REQ` event with time value (IN1) and factor (IN2)
 - IN1 must be of type TIME, IN2 must be of type ANY_NUM
+
 1. **Multiplication**:
 
 - Time value is converted to nanoseconds
 - Multiplication by a numeric factor
 - Conversion back to TIME data type
+
 1. **Result Output**:
 
 - `CNF` event with scaled time value
@@ -72,11 +74,11 @@ The **F_MULTIME** function block is a standards-compliant function block for mul
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | F_MULTIME | F_MUL | F_DIVTIME |
-| ---------------- | ----------- | --------- | ---------- |
-| Operation | Time Multiplication | Numeric Multiplication | Time Division |
-| Inputs | TIME × ANY_NUM | ANY_NUM × ANY_NUM | TIME ÷ ANY_NUM |
-| Output Type | TIME | ANY_NUM | TIME |
+| Feature     | F_MULTIME           | F_MUL                  | F_DIVTIME      |
+| ----------- | ------------------- | ---------------------- | -------------- |
+| Operation   | Time Multiplication | Numeric Multiplication | Time Division  |
+| Inputs      | TIME × ANY_NUM      | ANY_NUM × ANY_NUM      | TIME ÷ ANY_NUM |
+| Output Type | TIME                | ANY_NUM                | TIME           |
 
 ## 🛠️ Related Exercises
 

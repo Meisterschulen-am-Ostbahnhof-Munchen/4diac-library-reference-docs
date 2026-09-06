@@ -41,11 +41,13 @@ The **Q_SoftKeyMask** is a standards-compliant function block for managing softk
 
 - `INIT` without parameters
 - `INITO` confirms operational readiness
+
 1. **Screen change**:
 
 - `REQ` with screen type, data mask ID, and new softkey screen
 - Linkes softkeys to the active screen
 - `CNF` provides operating status and previous configuration
+
 1. **Mask Types**:
 
 - `1`: Data Mask Link
@@ -59,8 +61,8 @@ The function block addresses **two distinct Object IDs**, each with its own vali
 
 The Change Soft Key Mask command (Annex F.36) associates a Soft Key Mask with a Data Mask or an Alarm Mask. `u16DataMaskId` is valid if it falls within one of the following ISO 11783-6 ID ranges:
 
-| Object type | ID range |
-|-------------|----------|
+| Object type | ID range    |
+| ----------- | ----------- |
 | DataMask    | 1000 – 1999 |
 | AlarmMask   | 2000 – 2999 |
 
@@ -68,8 +70,8 @@ The Change Soft Key Mask command (Annex F.36) associates a Soft Key Mask with a 
 
 `u16SoftKeyMaskId` is valid if it falls within the ISO 11783-6 ID range of a Soft Key Mask:
 
-| Object type | ID range |
-|-------------|----------|
+| Object type | ID range    |
+| ----------- | ----------- |
 | SoftKeyMask | 4000 – 4999 |
 
 **Note:** ID_NULL (65535) is not a command target but can be used in INIT to deactivate the FB. Any data/alarm mask ID outside the ranges above, or any soft key mask ID that is not a SoftKeyMask, is invalid for commanding — independent of each other.
@@ -83,21 +85,21 @@ The Change Soft Key Mask command (Annex F.36) associates a Soft Key Mask with a 
 
 ## Mask Type Reference
 
-| Value | Type | Description |
-| ------ | ----------- | ---------------------------- |
-| 1 | Data | Normal Data Mask |
-| 2 | Alarm | Alarm Mask Link |
+| Value | Type  | Description      |
+| ----- | ----- | ---------------- |
+| 1     | Data  | Normal Data Mask |
+| 2     | Alarm | Alarm Mask Link  |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful switch |
-| -6 | VT_E_OVERFLOW | Buffer overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful switch      |
+| -6   | VT_E_OVERFLOW             | Buffer overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -108,12 +110,12 @@ The Change Soft Key Mask command (Annex F.36) associates a Soft Key Mask with a 
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | Q_SoftKeyMask | VtKeyMapping | VtMaskLinker |
-| --------------- | --------------- | --------------- | -------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Mask Types | 2 (Data/Alarm) | 1 (Universal) | 1 (Data) |
-| Feedback | ✔ | ✖ | ✔ |
-| Real-Time Switching | ✔ | ✔ | ✖ |
+| Feature             | Q_SoftKeyMask  | VtKeyMapping  | VtMaskLinker |
+| ------------------- | -------------- | ------------- | ------------ |
+| ISO Standard        | ✔              | ✖             | ✖            |
+| Mask Types          | 2 (Data/Alarm) | 1 (Universal) | 1 (Data)     |
+| Feedback            | ✔              | ✖             | ✔            |
+| Real-Time Switching | ✔              | ✔             | ✖            |
 
 ## Conclusion
 

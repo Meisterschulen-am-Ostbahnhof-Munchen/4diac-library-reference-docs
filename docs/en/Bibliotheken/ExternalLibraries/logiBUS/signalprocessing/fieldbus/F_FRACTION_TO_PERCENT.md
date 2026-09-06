@@ -12,27 +12,27 @@ The function block **F_FRACTION_TO_PERCENT** is the counterpart to [`F_PERCENT_T
 
 ### **Event Inputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| REQ | Event | Request conversion; processes the current value of `rFraction`. |
+| Event | Data Type | Comment                                                         |
+| ----- | --------- | --------------------------------------------------------------- |
+| REQ   | Event     | Request conversion; processes the current value of `rFraction`. |
 
 ### **Event Outputs**
 
-| Event | Data Type | Comment |
-|----------|----------|-----------|
-| CNF | Event | Conversion complete; `rPercent` has been updated. |
+| Event | Data Type | Comment                                           |
+| ----- | --------- | ------------------------------------------------- |
+| CNF   | Event     | Conversion complete; `rPercent` has been updated. |
 
 ### **Data Inputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| rFraction | REAL | Fraction 0.0-1.0. |
+| Name      | Data Type | Comment           |
+| --------- | --------- | ----------------- |
+| rFraction | REAL      | Fraction 0.0-1.0. |
 
 ### **Data Outputs**
 
-| Name | Data Type | Comment |
-|------|----------|-----------|
-| rPercent | REAL | Percent value 0.0-100.0. |
+| Name     | Data Type | Comment                  |
+| -------- | --------- | ------------------------ |
+| rPercent | REAL      | Percent value 0.0-100.0. |
 
 ### **Adapter**
 
@@ -57,9 +57,9 @@ The `CNF` event is then emitted.
 
 ## State Overview
 
-| State | Action | Output Event |
-|---------|--------|-----------------|
-| REQ | Executes the **REQ** algorithm (multiplication by 100) | CNF |
+| State | Action                                                 | Output Event |
+| ----- | ------------------------------------------------------ | ------------ |
+| REQ   | Executes the **REQ** algorithm (multiplication by 100) | CNF          |
 
 There are no further waiting or initialization states.
 

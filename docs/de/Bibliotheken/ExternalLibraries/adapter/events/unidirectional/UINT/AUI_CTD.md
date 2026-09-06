@@ -12,16 +12,16 @@ Der **AUI_CTD** ist ein ereignisgesteuerter Abwärtszähler (Down Counter) mit A
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung                                  |
-|----------|----------------------------------------------|
-| **CD**   | Count Down – reduziert den Zählerwert um 1.  |
+| Ereignis | Beschreibung                                                  |
+| -------- | ------------------------------------------------------------- |
+| **CD**   | Count Down – reduziert den Zählerwert um 1.                   |
 | **LD**   | Load – lädt den Zählerwert **CV** mit dem Preset-Wert **PV**. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung                                              |
-|----------|----------------------------------------------------------|
-| **CDO**  | Count Down Output – wird nach jedem CD-Schritt ausgegeben. |
+| Ereignis | Beschreibung                                                  |
+| -------- | ------------------------------------------------------------- |
+| **CDO**  | Count Down Output – wird nach jedem CD-Schritt ausgegeben.    |
 | **LDO**  | Load Output – wird nach einem erfolgreichen Laden ausgegeben. |
 
 ### **Daten-Eingänge**
@@ -34,11 +34,11 @@ Der FB besitzt keine direkten Daten-Ausgänge. Die aktuellen Werte von **CV** un
 
 ### **Adapter**
 
-| Port  | Typ                                            | Richtung | Beschreibung                                         |
-|-------|------------------------------------------------|----------|------------------------------------------------------|
-| **Q** | `adapter::types::unidirectional::AX` (BOOL)   | Plug     | Statusausgang: `TRUE`, wenn **CV ≤ 0**.            |
-| **CV**| `adapter::types::unidirectional::AUI` (INT)   | Plug     | Aktueller Zählerwert.                                |
-| **PV**| `adapter::types::unidirectional::AUI` (INT)   | Socket   | Preset-Wert, der beim LD-Ereignis in **CV** geladen wird. |
+| Port   | Typ                                         | Richtung | Beschreibung                                              |
+| ------ | ------------------------------------------- | -------- | --------------------------------------------------------- |
+| **Q**  | `adapter::types::unidirectional::AX` (BOOL) | Plug     | Statusausgang: `TRUE`, wenn **CV ≤ 0**.                   |
+| **CV** | `adapter::types::unidirectional::AUI` (INT) | Plug     | Aktueller Zählerwert.                                     |
+| **PV** | `adapter::types::unidirectional::AUI` (INT) | Socket   | Preset-Wert, der beim LD-Ereignis in **CV** geladen wird. |
 
 ## Funktionsweise
 
@@ -64,13 +64,13 @@ Der FB besitzt keine direkten Daten-Ausgänge. Die aktuellen Werte von **CV** un
 
 Der Ablauf wird durch folgende ECC-Zustände gesteuert:
 
-| Zustand       | Beschreibung                                                  | Aktionen                         |
-|---------------|--------------------------------------------------------------|----------------------------------|
-| **START**     | Wartet auf eingehende Ereignisse (CD, LD, PV.E1).            | –                                |
-| **CD**        | Führt den Count-Down-Algorithmus aus.                        | `CD (CV--, Q aktualisieren)`, `CV.E1`, `CDO` |
-| **LD**        | Lädt **PV** in **CV**.                                       | `LOAD (CV:=PV; Q aktualisieren)`, `CV.E1`, `LDO` |
-| **UPDATE_PV** | Neuberechnung von **Q** bei Änderung von **PV**.              | `UPDATE (Q aus CV berechnen)`    |
-| **EMIT_Q**    | Speichert den aktuellen **Q**-Wert und löst **Q.E1** aus.    | `SAVE_Q (Q_OLD:=Q)`, `Q.E1`      |
+| Zustand       | Beschreibung                                              | Aktionen                                         |
+| ------------- | --------------------------------------------------------- | ------------------------------------------------ |
+| **START**     | Wartet auf eingehende Ereignisse (CD, LD, PV.E1).         | –                                                |
+| **CD**        | Führt den Count-Down-Algorithmus aus.                     | `CD (CV--, Q aktualisieren)`, `CV.E1`, `CDO`     |
+| **LD**        | Lädt **PV** in **CV**.                                    | `LOAD (CV:=PV; Q aktualisieren)`, `CV.E1`, `LDO` |
+| **UPDATE_PV** | Neuberechnung von **Q** bei Änderung von **PV**.          | `UPDATE (Q aus CV berechnen)`                    |
+| **EMIT_Q**    | Speichert den aktuellen **Q**-Wert und löst **Q.E1** aus. | `SAVE_Q (Q_OLD:=Q)`, `Q.E1`                      |
 
 **Transitionen**:
 
@@ -86,11 +86,11 @@ Der Ablauf wird durch folgende ECC-Zustände gesteuert:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Besonderheit                     | Unterschied zu AUI_CTD                             |
-|----------|----------------------------------|-----------------------------------------------------|
-| **E_CTD**| Standard-Abwärtszähler ohne Adapter | Verwendet direkte Daten-Ein-/Ausgänge und keine Adapter. Kein On-Change-Triggering. |
-| **E_CTUD** | Aufwärts-/Abwärtszähler          | Bietet beide Zählrichtungen, jedoch ohne Adapter und ohne On-Change. |
-| **AUI_CTU**| Aufwärtszähler mit Adapter       | Zählt aufwärts, analoge Adapter-Struktur, ebenfalls On-Change. |
+| Baustein    | Besonderheit                        | Unterschied zu AUI_CTD                                                              |
+| ----------- | ----------------------------------- | ----------------------------------------------------------------------------------- |
+| **E_CTD**   | Standard-Abwärtszähler ohne Adapter | Verwendet direkte Daten-Ein-/Ausgänge und keine Adapter. Kein On-Change-Triggering. |
+| **E_CTUD**  | Aufwärts-/Abwärtszähler             | Bietet beide Zählrichtungen, jedoch ohne Adapter und ohne On-Change.                |
+| **AUI_CTU** | Aufwärtszähler mit Adapter          | Zählt aufwärts, analoge Adapter-Struktur, ebenfalls On-Change.                      |
 
 Der **AUI_CTD** füllt die Lücke eines spezialisierten Abwärtszählers mit moderneren Adapter-Konzepten und reduziertem Ereignisaufkommen.
 

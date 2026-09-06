@@ -9,7 +9,7 @@ The function block `F_TIME_IN_NS_TO_DINT` converts a TIME value in nanoseconds t
 - **IN** (TIME): The input for the time value in nanoseconds to be converted.
 - **OUT** (DINT): The output for the converted numeric value.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

@@ -6,26 +6,26 @@ calculate the process error DIFF
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | SET_POINT, ACTUAL, NOISE |
+| Name | Comment | With                     |
+| :--- | :------ | :----------------------- |
+| REQ  |         | SET_POINT, ACTUAL, NOISE |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| SET_POINT | REAL | |
-| ACTUAL | REAL | |
-| NOISE | REAL | |
+| Name      | Type | Comment |
+| :-------- | :--- | :------ |
+| SET_POINT | REAL |         |
+| ACTUAL    | REAL |         |
+| NOISE     | REAL |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | REAL | |
+| :--- | :--- | :------ |
+|      | REAL |         |

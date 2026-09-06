@@ -53,10 +53,12 @@ ID_NULL (65535) is not a valid command target for the new active mask. Any ID ou
 
 - `INIT` event starts the function block
 - `INITO` confirms successful setup
+
 1. **Mask Change**:
 
 - Trigger `REQ` with new mask parameters
 - Return `CNF` result and previous mask ID
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -72,12 +74,12 @@ ID_NULL (65535) is not a valid command target for the new active mask. Any ID ou
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ----------- | ----------- |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | Invalid State |
-| -21 | VT_E_NO_INSTANCE | No VT Instance |
+| Code | Constant         | Meaning         |
+| ---- | ---------------- | --------------- |
+| 0    | VT_E_NO_ERR      | Success         |
+| -6   | VT_E_OVERFLOW    | Buffer Overflow |
+| -8   | VT_E_NOACT       | Invalid State   |
+| -21  | VT_E_NO_INSTANCE | No VT Instance  |
 
 ## Application Scenarios
 
@@ -88,11 +90,11 @@ ID_NULL (65535) is not a valid command target for the new active mask. Any ID ou
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature | Q_ActiveMask | VtMaskManager | VtDynamicDisplay |
---------------- | --------------- | --------------- | ------------------ |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Error Codes | Standard | Manufacturer | Partial |
-| Condition Management | Full | Basic | Advanced |
+| Feature              | Q_ActiveMask | VtMaskManager | VtDynamicDisplay |
+| -------------------- | ------------ | ------------- | ---------------- |
+| ISO Standard         | ✔            | ✖             | ✖                |
+| Error Codes          | Standard     | Manufacturer  | Partial          |
+| Condition Management | Full         | Basic         | Advanced         |
 
 ## 🛠️ Related Exercises
 

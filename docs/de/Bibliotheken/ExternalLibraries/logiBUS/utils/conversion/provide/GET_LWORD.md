@@ -12,15 +12,15 @@ Der Funktionsblock **GET_LWORD** dient dem konsistenten Auslesen eines LWORD-Wer
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung |
-|---|---|
-| `REQ` | Startet die Auslese-Operation. Der aktuelle Wert von `IN` wird in `OUT` übernommen. |
+| Ereignis | Beschreibung                                                                        |
+| -------- | ----------------------------------------------------------------------------------- |
+| `REQ`    | Startet die Auslese-Operation. Der aktuelle Wert von `IN` wird in `OUT` übernommen. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung |
-|---|---|
-| `CNF` | Bestätigt die erfolgreiche Durchführung der Operation. Wird nach dem Kopiervorgang ausgelöst. |
+| Ereignis | Beschreibung                                                                                  |
+| -------- | --------------------------------------------------------------------------------------------- |
+| `CNF`    | Bestätigt die erfolgreiche Durchführung der Operation. Wird nach dem Kopiervorgang ausgelöst. |
 
 ### **Daten-Eingänge**
 
@@ -28,9 +28,9 @@ Der Baustein besitzt keine klassischen Dateneingänge, sondern verwendet einen *
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Beschreibung |
-|---|---|---|
-| `OUT` | `LWORD` | Gepufferter Ausgabewert. Enthält die Kopie des Werts von `IN` zum Zeitpunkt des letzten `REQ`. Initialwert = `0`. |
+| Variable | Typ     | Beschreibung                                                                                                      |
+| -------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
+| `OUT`    | `LWORD` | Gepufferter Ausgabewert. Enthält die Kopie des Werts von `IN` zum Zeitpunkt des letzten `REQ`. Initialwert = `0`. |
 
 ### **Adapter**
 
@@ -54,9 +54,9 @@ Die Pufferung stellt sicher, dass der Wert von `OUT` während eines Ablaufzyklus
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung |
-|---|---|
-| `REQ` | Initialer und einziger Zustand. Nach Eingang von `REQ` wird der Algorithmus ausgeführt und `CNF` gesendet. Der Zustand bleibt erhalten, sodass bei erneutem `REQ` der Vorgang wiederholt wird. |
+| Zustand | Beschreibung                                                                                                                                                                                   |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `REQ`   | Initialer und einziger Zustand. Nach Eingang von `REQ` wird der Algorithmus ausgeführt und `CNF` gesendet. Der Zustand bleibt erhalten, sodass bei erneutem `REQ` der Vorgang wiederholt wird. |
 
 ## Anwendungsszenarien
 

@@ -30,10 +30,10 @@ Der FB besitzt **keine direkten** Ereignis- oder Datenein-/ausgänge. Die gesamt
 
 ### Adapter
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **QI**  | `adapter::types::unidirectional::AX` | Socket | Eingangsadapter – liefert den zu überwachenden Booleschen Wert (über Kanal `D1`) sowie ein Ereignis (`E1`) zur Verarbeitung. |
-| **Q**   | `adapter::types::unidirectional::ASR` | Plug   | Ausgangsadapter – signalisiert über die Ereignisse `SET` (steigende Flanke) und `RESET` (fallende Flanke) den erkannten Flankenzustand. |
+| Adapter | Typ                                   | Richtung | Beschreibung                                                                                                                            |
+| ------- | ------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **QI**  | `adapter::types::unidirectional::AX`  | Socket   | Eingangsadapter – liefert den zu überwachenden Booleschen Wert (über Kanal `D1`) sowie ein Ereignis (`E1`) zur Verarbeitung.            |
+| **Q**   | `adapter::types::unidirectional::ASR` | Plug     | Ausgangsadapter – signalisiert über die Ereignisse `SET` (steigende Flanke) und `RESET` (fallende Flanke) den erkannten Flankenzustand. |
 
 ## Funktionsweise
 
@@ -54,11 +54,11 @@ Somit wird das Eingangssignal in ein Setz‑/Rücksetz‑Signal umgesetzt, ohne 
 
 Der FB besitzt **keine eigene explizite Zustandsmaschine**. Der interne `E_RF_TRIG` arbeitet nach folgender impliziter Zustandslogik:
 
-| letzter Wert | aktueller Wert | ausgelöstes Ereignis |
-|--------------|----------------|----------------------|
-| FALSE        | TRUE           | steigende Flanke (SET) |
+| letzter Wert | aktueller Wert | ausgelöstes Ereignis    |
+| ------------ | -------------- | ----------------------- |
+| FALSE        | TRUE           | steigende Flanke (SET)  |
 | TRUE         | FALSE          | fallende Flanke (RESET) |
-| sonst        | –              | kein Ereignis        |
+| sonst        | –              | kein Ereignis           |
 
 Die Zustandsspeicherung erfolgt ausschließlich innerhalb des internen FB.
 
@@ -70,12 +70,12 @@ Die Zustandsspeicherung erfolgt ausschließlich innerhalb des internen FB.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Flankenerkennung | Ausgangssignal | Schnittstelle |
-| ---------- | ------------------ | ---------------- | --------------- |
-| `E_RF_TRIG` | steigend + fallend | separate Ereignisausgänge | direkte Events |
-| `E_TRIG` | nur steigend | ein Ereignis | direkte Events |
-| `E_F_TRIG` | nur fallend | ein Ereignis | direkte Events |
-| **AX_ASR_RF_TRIG** | steigend + fallend | Setz‑/Rücksetz‑Ereignisse über Adapter | reine Adapter |
+| Baustein           | Flankenerkennung   | Ausgangssignal                         | Schnittstelle  |
+| ------------------ | ------------------ | -------------------------------------- | -------------- |
+| `E_RF_TRIG`        | steigend + fallend | separate Ereignisausgänge              | direkte Events |
+| `E_TRIG`           | nur steigend       | ein Ereignis                           | direkte Events |
+| `E_F_TRIG`         | nur fallend        | ein Ereignis                           | direkte Events |
+| **AX_ASR_RF_TRIG** | steigend + fallend | Setz‑/Rücksetz‑Ereignisse über Adapter | reine Adapter  |
 
 Der vorliegende FB bietet im Gegensatz zu den reinen Event‑Bausteinen eine Adapter‑Schnittstelle, die eine einfachere Verbindung in hierarchischen oder typisierten Adapternetzen ermöglicht.
 

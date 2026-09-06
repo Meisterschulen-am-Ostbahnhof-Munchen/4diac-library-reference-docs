@@ -33,11 +33,11 @@ Es sind keine direkten Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Name | Typ | Schnittstellen-Typ | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **IN1** | `adapter::types::unidirectional::AI` | Socket (Buchse) | Erster Eingangswert (Dividend) |
-| **IN2** | `adapter::types::unidirectional::AI` | Socket (Buchse) | Zweiter Eingangswert (Divisor) |
-| **OUT** | `adapter::types::unidirectional::AI` | Plug (Stecker) | Ergebniswert der Division (Quotient) |
+| Name    | Typ                                  | Schnittstellen-Typ | Beschreibung                         |
+| :------ | :----------------------------------- | :----------------- | :----------------------------------- |
+| **IN1** | `adapter::types::unidirectional::AI` | Socket (Buchse)    | Erster Eingangswert (Dividend)       |
+| **IN2** | `adapter::types::unidirectional::AI` | Socket (Buchse)    | Zweiter Eingangswert (Divisor)       |
+| **OUT** | `adapter::types::unidirectional::AI` | Plug (Stecker)     | Ergebniswert der Division (Quotient) |
 
 ---
 

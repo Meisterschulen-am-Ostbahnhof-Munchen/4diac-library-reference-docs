@@ -12,22 +12,22 @@ Der Funktionsblock **AR_D_FF_HYS_TMIN** realisiert ein Data-Latch (D-Flip-Flop) 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                                                                                  |
+| -------- | ----- | --------------------------------------------------------------------------------------------- |
 | INIT     | EInit | Initialisierungsanforderung; übergibt die Parameter HYSTERESIS und Tmin an die interne Logik. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Beschreibung |
-|----------|-------|--------------|
+| Ereignis | Typ   | Beschreibung                               |
+| -------- | ----- | ------------------------------------------ |
 | INITO    | EInit | Bestätigung der erfolgten Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Variable    | Typ  | Beschreibung |
-|-------------|------|--------------|
-| HYSTERESIS  | REAL | Hysterese-Band: Eine Änderung des Eingangswerts muss diesen Betrag überschreiten, damit ein neuer Wert gelatcht wird. |
-| Tmin        | TIME | Mindestzeit zwischen zwei Ausgabeereignissen (inter-disposal time). Verhindert zu schnelles Weiterschalten. |
+| Variable   | Typ  | Beschreibung                                                                                                          |
+| ---------- | ---- | --------------------------------------------------------------------------------------------------------------------- |
+| HYSTERESIS | REAL | Hysterese-Band: Eine Änderung des Eingangswerts muss diesen Betrag überschreiten, damit ein neuer Wert gelatcht wird. |
+| Tmin       | TIME | Mindestzeit zwischen zwei Ausgabeereignissen (inter-disposal time). Verhindert zu schnelles Weiterschalten.           |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Der FB besitzt keine eigenständigen Datenausgänge; die Ausgabedaten werden üb
 
 ### **Adapter**
 
-| Bezeichnung | Typ                                             | Richtung | Beschreibung |
-|-------------|-------------------------------------------------|----------|--------------|
-| **I**       | adapter::types::unidirectional::AR (Socket)     | Eingang  | Liefert den zu latchnden Wert über **I.D1** und das Taktsignal über **I.E1**. |
-| **Q**       | adapter::types::unidirectional::AR (Plug)       | Ausgang  | Stellt den gelatchten Wert über **Q.D1** bereit und signalisiert eine Aktualisierung über **Q.E1**. |
+| Bezeichnung | Typ                                         | Richtung | Beschreibung                                                                                        |
+| ----------- | ------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| **I**       | adapter::types::unidirectional::AR (Socket) | Eingang  | Liefert den zu latchnden Wert über **I.D1** und das Taktsignal über **I.E1**.                       |
+| **Q**       | adapter::types::unidirectional::AR (Plug)   | Ausgang  | Stellt den gelatchten Wert über **Q.D1** bereit und signalisiert eine Aktualisierung über **Q.E1**. |
 
 ## Funktionsweise
 

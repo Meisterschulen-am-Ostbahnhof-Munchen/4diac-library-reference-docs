@@ -34,10 +34,10 @@ The data is output as a real value via the **AR_OUT** adapter.
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| -------- | ---------------------------------------------- | ---------- | ------------------------ |
-| AI_IN | `adapter::types::unidirectional::AI` | Socket | Integer Adapter (Input) |
-| AR_OUT | `adapter::types::unidirectional::AR` | Plug | Real Adapter (Output) |
+| Name   | Type                                 | Direction | Description             |
+| ------ | ------------------------------------ | --------- | ----------------------- |
+| AI_IN  | `adapter::types::unidirectional::AI` | Socket    | Integer Adapter (Input) |
+| AR_OUT | `adapter::types::unidirectional::AR` | Plug      | Real Adapter (Output)   |
 
 ## Functionality
 
@@ -68,11 +68,11 @@ The component does not have a state machine. Processing occurs directly without 
 
 ## Comparison with Similar Components
 
-| Component | Function | Special Feature |
-| ----------- | ------------------------------------------------- | --------------------------------------- |
-| AI_TO_AR | Pass-through from INT to REAL via adapter | No dedicated logic, pure adapter switching |
-| REAL_TO_INT | Conversion from REAL to INT (usually with rounding) | Often includes its own algorithm |
-| ADAPTER_COUPLER | General adapter coupling without type conversion | Requires identical data types |
+| Component       | Function                                            | Special Feature                            |
+| --------------- | --------------------------------------------------- | ------------------------------------------ |
+| AI_TO_AR        | Pass-through from INT to REAL via adapter           | No dedicated logic, pure adapter switching |
+| REAL_TO_INT     | Conversion from REAL to INT (usually with rounding) | Often includes its own algorithm           |
+| ADAPTER_COUPLER | General adapter coupling without type conversion    | Requires identical data types              |
 
 Unlike dedicated converters, **AI_TO_AR** does not perform active value conversion but relies on the compatibility of the connected adapters.
 

@@ -12,32 +12,32 @@ Der Funktionsbaustein **GET_LINT** dient dem Auslesen eines Wertes vom Typ **LIN
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ    | Kommentar                  |
-|------|--------|----------------------------|
-| REQ  | Event  | Normaler Ausführungsauftrag |
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
+| REQ  | Event | Normaler Ausführungsauftrag |
 
 Der Ereigniseingang REQ löst die Ausführung des Bausteins aus. Dabei wird der aktuelle Wert der InOut-Variablen **IN** gelesen und im Ausgang **OUT** zwischengespeichert.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ    | Kommentar                  |
-|------|--------|----------------------------|
-| CNF  | Event  | Bestätigung der Ausführung |
+| Name | Typ   | Kommentar                  |
+| ---- | ----- | -------------------------- |
+| CNF  | Event | Bestätigung der Ausführung |
 
 Das Ereignis CNF wird nach erfolgreicher Verarbeitung des REQ-Ereignisses gesendet. Es signalisiert, dass der Ausgang OUT den aktuellen Wert der InOut-Variablen IN enthält.
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar                          |
-|------|------|-------------------------------------|
+| Name | Typ  | Kommentar                              |
+| ---- | ---- | -------------------------------------- |
 | IN   | LINT | Quellvariable (InOut) – Initialwert: 0 |
 
 **IN** ist als InOut-Variable deklariert. Sie kann sowohl gelesen als auch beschrieben werden, wird in diesem Baustein jedoch ausschließlich gelesen. Der übergebene Wert wird bei jedem REQ-Ereignis in den Ausgang OUT kopiert.
 
 ### **Daten-Ausgänge**
 
-| Name | Typ  | Kommentar                          |
-|------|------|-------------------------------------|
+| Name | Typ  | Kommentar                                |
+| ---- | ---- | ---------------------------------------- |
 | OUT  | LINT | Gepufferter Ausgabewert – Initialwert: 0 |
 
 Der Ausgang **OUT** hält den zuletzt von der InOut-Variablen **IN** gelesenen Wert. Er wird bei jedem REQ-Ereignis aktualisiert.
@@ -65,9 +65,9 @@ Anschließend wird das Bestätigungsereignis **CNF** gesendet. Der Ausgang **OUT
 
 ## Zustandsübersicht
 
-| Zustand | Aktion                       | Ausgabe    |
-|---------|------------------------------|------------|
-| REQ     | Kopieren von IN nach OUT     | CNF        |
+| Zustand | Aktion                   | Ausgabe |
+| ------- | ------------------------ | ------- |
+| REQ     | Kopieren von IN nach OUT | CNF     |
 
 Der Baustein startet im Zustand **REQ** und kehrt nach Ausführung der Aktion und Senden von CNF in denselben Zustand zurück (Endlosschleife bei jedem Ereignis).
 

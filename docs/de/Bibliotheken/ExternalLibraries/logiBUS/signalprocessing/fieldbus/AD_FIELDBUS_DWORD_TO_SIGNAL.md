@@ -12,37 +12,37 @@ Der Funktionsblock `AD_FIELDBUS_DWORD_TO_SIGNAL` dient dazu, ein eingehendes Dat
 
 Der FB besitzt ausschließlich Adapter-Schnittstellen, keine separaten Ereignis- oder Datenports auf oberster Ebene. Die folgenden Adapter definieren die Ein- und Ausgänge:
 
-| Adapter | Typ | Richtung | Beschreibung |
-| --------- | ----- | ---------- | -------------- |
-| `IN` | `adapter::types::unidirectional::AD` | Socket (Eingang) | Eingangsdatenwort und zugehöriges Ereignis |
-| `OUT` | `adapter::types::unidirectional::AD` | Plug (Ausgang) | Gefiltertes Ausgangsdatenwort (DWORD) |
-| `VALID` | `adapter::types::unidirectional::AX` | Plug (Ausgang) | Gültigkeitssignal (BOOL) des aktuellen Datenworts |
+| Adapter | Typ                                  | Richtung         | Beschreibung                                      |
+| ------- | ------------------------------------ | ---------------- | ------------------------------------------------- |
+| `IN`    | `adapter::types::unidirectional::AD` | Socket (Eingang) | Eingangsdatenwort und zugehöriges Ereignis        |
+| `OUT`   | `adapter::types::unidirectional::AD` | Plug (Ausgang)   | Gefiltertes Ausgangsdatenwort (DWORD)             |
+| `VALID` | `adapter::types::unidirectional::AX` | Plug (Ausgang)   | Gültigkeitssignal (BOOL) des aktuellen Datenworts |
 
 ### **Ereignis-Eingänge** (über Adapter `IN`)
 
-| Port | Beschreibung |
-|------|--------------|
+| Port | Beschreibung                                               |
+| ---- | ---------------------------------------------------------- |
 | `E1` | Ereignis zum Start der Verarbeitung eines neuen Datenworts |
 
 ### **Ereignis-Ausgänge** (über Adapter `OUT` und `VALID`)
 
-| Adapter | Port | Beschreibung |
-|---------|------|--------------|
-| `OUT` | `E1` | Signalisiert, dass das gefilterte Datenwort am Ausgang anliegt |
+| Adapter | Port | Beschreibung                                                             |
+| ------- | ---- | ------------------------------------------------------------------------ |
+| `OUT`   | `E1` | Signalisiert, dass das gefilterte Datenwort am Ausgang anliegt           |
 | `VALID` | `E1` | Signalisiert, dass der Gültigkeitsstatus (TRUE/FALSE) aktualisiert wurde |
 
 ### **Daten-Eingänge** (über Adapter `IN`)
 
-| Port | Typ (angenommen) | Beschreibung |
-|------|------------------|--------------|
-| `D1` | `DWORD` | Das zu verarbeitende Datenwort |
+| Port | Typ (angenommen) | Beschreibung                   |
+| ---- | ---------------- | ------------------------------ |
+| `D1` | `DWORD`          | Das zu verarbeitende Datenwort |
 
 ### **Daten-Ausgänge** (über Adapter `OUT` und `VALID`)
 
-| Adapter | Port | Typ (angenommen) | Beschreibung |
-|---------|------|------------------|--------------|
-| `OUT` | `D1` | `DWORD` | Das gefilterte – ggf. identische – Datenwort |
-| `VALID` | `D1` | `BOOL` | `TRUE`, wenn das anliegende Datenwort als gültig bewertet wird, sonst `FALSE` |
+| Adapter | Port | Typ (angenommen) | Beschreibung                                                                  |
+| ------- | ---- | ---------------- | ----------------------------------------------------------------------------- |
+| `OUT`   | `D1` | `DWORD`          | Das gefilterte – ggf. identische – Datenwort                                  |
+| `VALID` | `D1` | `BOOL`           | `TRUE`, wenn das anliegende Datenwort als gültig bewertet wird, sonst `FALSE` |
 
 ### **Adapter**
 
@@ -79,10 +79,10 @@ Im Klartext: Der Baustein *spiegelt* das Eingangs-DWORD an den Ausgang, sofern d
 
 Der FB besitzt keine explizite Zustandsmaschine, sondern arbeitet rein datenflusgesteuert. Der innere Flip-Flop `E_D_FF` kennt zwei interne Zustände:
 
-| Zustand | Beschreibung |
-|---------|--------------|
+| Zustand     | Beschreibung                                                                                 |
+| ----------- | -------------------------------------------------------------------------------------------- |
 | `Q = FALSE` | Das aktuell ausgesendete `VALID`-Signal ist `FALSE` (Datenwort wird als ungültig betrachtet) |
-| `Q = TRUE`  | Das aktuell ausgesendete `VALID`-Signal ist `TRUE` (Datenwort gilt als gültig) |
+| `Q = TRUE`  | Das aktuell ausgesendete `VALID`-Signal ist `TRUE` (Datenwort gilt als gültig)               |
 
 Der Zustand wechselt nur bei einer steigenden Flanke an `CLK` (entspricht dem `CNF`-Ereignis des internen Feldbus-Bausteins).
 

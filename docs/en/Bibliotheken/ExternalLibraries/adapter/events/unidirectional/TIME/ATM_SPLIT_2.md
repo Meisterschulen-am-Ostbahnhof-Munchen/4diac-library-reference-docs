@@ -28,11 +28,11 @@ No data outputs available.
 
 ### **Adapter**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::ATM` | IN | Socket | Input signal (ATM) |
-| `adapter::types::unidirectional::ATM` | OUT1 | Plug | Output 1 (identical to IN) |
-| `adapter::types::unidirectional::ATM` | OUT2 | Plug | Output 2 (identical to IN) |
+| Type                                  | Name | Direction | Description                |
+| ------------------------------------- | ---- | --------- | -------------------------- |
+| `adapter::types::unidirectional::ATM` | IN   | Socket    | Input signal (ATM)         |
+| `adapter::types::unidirectional::ATM` | OUT1 | Plug      | Output 1 (identical to IN) |
+| `adapter::types::unidirectional::ATM` | OUT2 | Plug      | Output 2 (identical to IN) |
 
 ## Functionality
 

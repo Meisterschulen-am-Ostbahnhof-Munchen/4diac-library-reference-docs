@@ -13,34 +13,34 @@ Er kapselt die Umwandlung eines vorzeichenlosen 8‑Bit‑Wertes (USINT) in eine
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ                            | Beschreibung                                                                                                      |
+| ---- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
 | `E1` | Ereignis (vom Socket `AUS_IN`) | Startet die Konvertierung des anliegenden USINT‑Wertes. Der Eingang wird über den Socket `AUS_IN` bereitgestellt. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name | Typ                          | Beschreibung                                                                                                                                       |
+| ---- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `E1` | Ereignis (zum Plug `AD_OUT`) | Signalisiert die erfolgreiche Konvertierung und das Vorliegen des DWORD‑Wertes am Ausgang. Der Ausgang wird über den Plug `AD_OUT` bereitgestellt. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
+| Name | Datentyp                    | Beschreibung                                       |
+| ---- | --------------------------- | -------------------------------------------------- |
 | `D1` | USINT (vom Socket `AUS_IN`) | Der zu konvertierende 8‑Bit‑Wert im Bereich 0…255. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Beschreibung |
-|------|----------|--------------|
+| Name | Datentyp                  | Beschreibung                                                            |
+| ---- | ------------------------- | ----------------------------------------------------------------------- |
 | `D1` | DWORD (zum Plug `AD_OUT`) | Der konvertierte 32‑Bit‑Wert (direkte Typumsetzung des USINT in DWORD). |
 
 ### **Adapter**
 
-| Rolle | Name | Typ | Richtung | Beschreibung |
-|-------|------|-----|----------|--------------|
-| Socket | `AUS_IN` | `adapter::types::unidirectional::AUS` | Eingang | Nimmt den USINT‑Wert sowie das zugehörige Ereignis entgegen. |
-| Plug   | `AD_OUT` | `adapter::types::unidirectional::AD`   | Ausgang | Stellt den DWORD‑Wert sowie das Bestätigungsereignis bereit. |
+| Rolle  | Name     | Typ                                   | Richtung | Beschreibung                                                 |
+| ------ | -------- | ------------------------------------- | -------- | ------------------------------------------------------------ |
+| Socket | `AUS_IN` | `adapter::types::unidirectional::AUS` | Eingang  | Nimmt den USINT‑Wert sowie das zugehörige Ereignis entgegen. |
+| Plug   | `AD_OUT` | `adapter::types::unidirectional::AD`  | Ausgang  | Stellt den DWORD‑Wert sowie das Bestätigungsereignis bereit. |
 
 ## Funktionsweise
 

@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Der latched Wert wird über den **Datenkanal des
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `I` (Socket) | Eingang | `adapter::types::unidirectional::AD` | Liefert das Taktsignal (E1) und den zu speichernden Datenwert (D1). |
-| `Q` (Plug) | Ausgang | `adapter::types::unidirectional::AD` | Gibt nach dem Taktereignis den gespeicherten Datenwert aus (E1 als Bestätigung, D1 als Daten). |
+| Adapter      | Richtung | Typ                                  | Beschreibung                                                                                   |
+| ------------ | -------- | ------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| `I` (Socket) | Eingang  | `adapter::types::unidirectional::AD` | Liefert das Taktsignal (E1) und den zu speichernden Datenwert (D1).                            |
+| `Q` (Plug)   | Ausgang  | `adapter::types::unidirectional::AD` | Gibt nach dem Taktereignis den gespeicherten Datenwert aus (E1 als Bestätigung, D1 als Daten). |
 
 Die Adapter vom Typ `unidirectional::AD` definieren je einen Ereigniskanal (`E1`) und einen Datenkanal (`D1`). Die genauen Datentypen sind durch die Adapterdefinition festgelegt (üblicherweise `ANY`).
 

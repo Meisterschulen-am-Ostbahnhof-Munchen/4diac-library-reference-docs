@@ -32,13 +32,18 @@ The **F_TRUNC** function block is a standards-compliant function block for round
 ## Functional Principle
 
 1. **Calculation Trigger**:
+
 * `REQ` event with an ANY_REAL value
 * Supported types: REAL, LREAL
+
 1. **Truncation Operation**:
+
 * Removes decimal places without Rounding
 * Example: 3.9 → 3, -2.7 → -2
 * No mathematical rounding (≠ F_ROUND)
+
 1. **Result Output**:
+
 * `CNF` event with integer result
 * Automatic type conversion (INT, DINT, etc.)
 
@@ -71,11 +76,11 @@ The **F_TRUNC** function block is a standards-compliant function block for round
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_TRUNC | F_ROUND | F_FLOOR |
-| --------------- | ---------- | ---------- | ---------- |
+| Feature   | F_TRUNC        | F_ROUND      | F_FLOOR    |
+| --------- | -------------- | ------------ | ---------- |
 | Operation | Direction Zero | Mathematical | Round Down |
-| Example | 3.9 → 3 | 3.9 → 4 | 3.9 → 3 |
-| Example | -2.7 → -2 | -2.7 → -3 | -2.7 → -3 |
+| Example   | 3.9 → 3        | 3.9 → 4      | 3.9 → 3    |
+| Example   | -2.7 → -2      | -2.7 → -3    | -2.7 → -3  |
 
 ## Conclusion
 

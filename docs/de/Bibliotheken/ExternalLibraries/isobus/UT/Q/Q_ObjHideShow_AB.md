@@ -12,20 +12,20 @@ Der Funktionsblock **Q_ObjHideShow_AB** dient als Wrapper für den Baustein `Q_O
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | mit Variablen | Kommentar |
-|---|---|---|
-| `INIT` | `u16ObjId` | Service Initialization; Objekt-ID wird übergeben |
+| Ereignis | mit Variablen | Kommentar                                        |
+| -------- | ------------- | ------------------------------------------------ |
+| `INIT`   | `u16ObjId`    | Service Initialization; Objekt-ID wird übergeben |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|---|---|
-| `INITO` | Initialisierung bestätigt |
+| Ereignis | Kommentar                 |
+| -------- | ------------------------- |
+| `INITO`  | Initialisierung bestätigt |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|---|---|---|
+| Name       | Typ  | Kommentar             |
+| ---------- | ---- | --------------------- |
 | `u16ObjId` | UINT | Objekt-ID (Object ID) |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Keine expliziten Datenausgänge auf FB-Ebene. Die Ausgangsdaten werden über den
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-| --- | --- | --- | --- |
-| Socket (Eingang) | `qVisible` | `adapter::types::unidirectional::AB` | Sollwert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt |
-| Plug (Ausgang) | `qOldVisible` | `adapter::types::unidirectional::AB` | Alter Wert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt, 0xFF = undefiniert |
+| Richtung         | Name          | Typ                                  | Kommentar                                                                     |
+| ---------------- | ------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
+| Socket (Eingang) | `qVisible`    | `adapter::types::unidirectional::AB` | Sollwert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt                       |
+| Plug (Ausgang)   | `qOldVisible` | `adapter::types::unidirectional::AB` | Alter Wert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt, 0xFF = undefiniert |
 
 ## Gültige Objekt-IDs
 
@@ -81,11 +81,11 @@ Der FB selbst besitzt keinen eigenen Zustandsautomaten. Sein Verhalten wird voll
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaften |
-| --- | --- |
-| `Q_ObjHideShow` (direkt) | Ereignis-/Daten-Schnittstelle ohne Adapter; direkte Verschaltung erforderlich |
-| `Q_ObjHideShow_AB` (dieser FB) | Nutzt AB-Adapter für lose Kopplung; einfachere Integration in adapterbasierte Netzwerke |
-| Andere AB-basierte Wrapper | Ähnliches Konzept für andere Befehle (z. B. `Q_ObjMove_AB`), jedoch spezifisch auf Sichtbarkeit ausgelegt |
+| Baustein                       | Eigenschaften                                                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `Q_ObjHideShow` (direkt)       | Ereignis-/Daten-Schnittstelle ohne Adapter; direkte Verschaltung erforderlich                             |
+| `Q_ObjHideShow_AB` (dieser FB) | Nutzt AB-Adapter für lose Kopplung; einfachere Integration in adapterbasierte Netzwerke                   |
+| Andere AB-basierte Wrapper     | Ähnliches Konzept für andere Befehle (z. B. `Q_ObjMove_AB`), jedoch spezifisch auf Sichtbarkeit ausgelegt |
 
 Der wesentliche Vorteil des Wrappers liegt in der Anpassung an die AB-Adapter‑Schnittstelle, ohne die eigentliche Funktionalität zu verändern.
 

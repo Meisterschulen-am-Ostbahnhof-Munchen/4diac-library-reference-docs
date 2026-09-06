@@ -12,21 +12,21 @@ Der Funktionsblock **ALI_D_FF_HYS_TMIN** realisiert ein datengesteuertes D-Flip-
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar |
-|-------|-------|-----------|
-| INIT  | EInit | Initialisierungsanforderung – setzt die Hysteresebreite und die Mindestzeit fest. |
+| Name | Typ   | Kommentar                                                                         |
+| ---- | ----- | --------------------------------------------------------------------------------- |
+| INIT | EInit | Initialisierungsanforderung – setzt die Hysteresebreite und die Mindestzeit fest. |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar |
-|-------|-------|-----------|
+| Name  | Typ   | Kommentar                                      |
+| ----- | ----- | ---------------------------------------------- |
 | INITO | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Name       | Typ  | Kommentar |
-|------------|------|-----------|
-| HYSTERESIS | LINT | Hystereseband als ganzzahliger Wert (LINT). |
+| Name       | Typ  | Kommentar                                                              |
+| ---------- | ---- | ---------------------------------------------------------------------- |
+| HYSTERESIS | LINT | Hystereseband als ganzzahliger Wert (LINT).                            |
 | Tmin       | TIME | Minimale Zeit zwischen zwei Ausgangsereignissen (Inter‑Disposal Time). |
 
 ### **Daten-Ausgänge**
@@ -36,10 +36,10 @@ Der Baustein gibt seinen Zustand über den Adapter **Q** aus (siehe Adapter).
 
 ### **Adapter**
 
-| Typ    | Name | Richtung | Kommentar |
-|--------|------|----------|-----------|
+| Typ                                   | Name | Richtung | Kommentar                                                                      |
+| ------------------------------------- | ---- | -------- | ------------------------------------------------------------------------------ |
 | `adapter::types::unidirectional::ALI` | I    | Socket   | Eingangsadapter – liefert das zu übernehmende Signal (Ereignis und Datenwert). |
-| `adapter::types::unidirectional::ALI` | Q    | Plug     | Ausgangsadapter – gibt den zuletzt gültigen Datenwert sowie ein Ereignis aus. |
+| `adapter::types::unidirectional::ALI` | Q    | Plug     | Ausgangsadapter – gibt den zuletzt gültigen Datenwert sowie ein Ereignis aus.  |
 
 Der Adaptertyp `ALI` umfasst ein Ereignis (E1) und einen Datenwert (D1) und dient der unidirektionalen Kommunikation zwischen Funktionsblöcken.
 
@@ -84,11 +84,11 @@ Eine formale Zustandsmaschine ist nicht über die XML‑Schnittstelle sichtbar, 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Hysterese | Mindestzeit | Adapterschnittstelle |
-| ---------- | ----------- | ------------- | ---------------------- |
-| `E_D_FF` (einfach) | Nein | Nein | Nein (direkte I/O) |
-| `E_D_FF_HYS` | Ja | Nein | Nein |
-| `ALI_D_FF_HYS_TMIN` | Ja | Ja | Ja (Adapternutzung) |
+| Baustein            | Hysterese | Mindestzeit | Adapterschnittstelle |
+| ------------------- | --------- | ----------- | -------------------- |
+| `E_D_FF` (einfach)  | Nein      | Nein        | Nein (direkte I/O)   |
+| `E_D_FF_HYS`        | Ja        | Nein        | Nein                 |
+| `ALI_D_FF_HYS_TMIN` | Ja        | Ja          | Ja (Adapternutzung)  |
 
 Der hier beschriebene Baustein vereint die Vorteile von Hysterese und zeitlichem Mindestabstand und ist durch seine Adapter‑Schnittstelle besonders gut für eine modulare, ereignisgesteuerte Architektur nach IEC 61499 geeignet.
 

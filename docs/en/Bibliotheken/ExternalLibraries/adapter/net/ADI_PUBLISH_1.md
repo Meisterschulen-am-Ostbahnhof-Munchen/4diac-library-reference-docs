@@ -31,9 +31,9 @@ The **ADI_PUBLISH_1** function block is a composite function block that encapsul
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|---------------------------------|
-| IN | adapter::types::unidirectional::ADI | Socket (Input) | DINT value to be published |
+| Adapter | Type                                | Direction      | Description                |
+| ------- | ----------------------------------- | -------------- | -------------------------- |
+| IN      | adapter::types::unidirectional::ADI | Socket (Input) | DINT value to be published |
 
 ## Functionality
 

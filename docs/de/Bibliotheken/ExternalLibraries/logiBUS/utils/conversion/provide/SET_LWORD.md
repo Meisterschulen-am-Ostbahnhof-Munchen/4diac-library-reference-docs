@@ -12,26 +12,26 @@ Der Funktionsbaustein **SET_LWORD** dient dazu, einen LWORD-Wert (64-Bit-Integer
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                  |
+| -------- | -------- | -------------------------- |
 | REQ      | Event    | Normaler Ausführungsanstoß |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                  |
+| -------- | -------- | -------------------------- |
 | CNF      | Event    | Bestätigung der Ausführung |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Initialwert | Kommentar              |
-|------|----------|-------------|------------------------|
+| Name | Datentyp | Initialwert | Kommentar                  |
+| ---- | -------- | ----------- | -------------------------- |
 | IN   | LWORD    | 0           | Wert, der geschrieben wird |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Initialwert | Kommentar                          |
-|------|----------|-------------|------------------------------------|
+| Name | Datentyp | Initialwert | Kommentar                           |
+| ---- | -------- | ----------- | ----------------------------------- |
 | OUT  | LWORD    | 0           | Zielvariable (als InOut deklariert) |
 
 > **Hinweis:** OUT wird in der XML als `<InOutVars>` deklariert. Es handelt sich um eine kombinierte Ein-/Ausgangsvariable, die sowohl als Quelle der Wertzuweisung (lesend) als auch als Ziel (schreibend) dient.

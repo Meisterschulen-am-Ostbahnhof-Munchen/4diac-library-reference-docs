@@ -28,10 +28,10 @@ Der FB besitzt keine separaten Daten–Ausgänge. Die Datenausgabe erfolgt über
 
 ### **Adapter**
 
-| Typ | Bezeichnung | Richtung | Beschreibung |
-|-----|-------------|----------|--------------|
-| `adapter::types::unidirectional::ADI` | `I` | Eingang (Socket) | Liefert das Taktsignal (`E1`) und den zu latchnden Datenwert (`D1`). |
-| `adapter::types::unidirectional::ADI` | `Q` | Ausgang (Plug)  | Gibt den gespeicherten Datenwert (`D1`) und ein Bestätigungsereignis (`E1`) aus. |
+| Typ                                   | Bezeichnung | Richtung         | Beschreibung                                                                     |
+| ------------------------------------- | ----------- | ---------------- | -------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::ADI` | `I`         | Eingang (Socket) | Liefert das Taktsignal (`E1`) und den zu latchnden Datenwert (`D1`).             |
+| `adapter::types::unidirectional::ADI` | `Q`         | Ausgang (Plug)   | Gibt den gespeicherten Datenwert (`D1`) und ein Bestätigungsereignis (`E1`) aus. |
 
 ## Funktionsweise
 
@@ -61,11 +61,11 @@ Der FB besitzt keine expliziten Zustände im Sinne einer Zustandsmaschine. Das V
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Unterschiede |
-| ---------- | ---------- | -------------- |
-| `ADI_SR_FF` | Set‑Reset‑Flipflop | Speichert aufgrund von Setzen/Rücksetzen, nicht taktgesteuert. |
-| `ADI_T_FF` | T‑Flipflop | Schaltet den Zustand bei jedem Takt um (Toggle). |
-| `ADI_D_FF` | D‑Flipflop | Speichert den anliegenden Datenwert bei Taktflanke (wie hier beschrieben). |
+| Baustein    | Funktion           | Unterschiede                                                               |
+| ----------- | ------------------ | -------------------------------------------------------------------------- |
+| `ADI_SR_FF` | Set‑Reset‑Flipflop | Speichert aufgrund von Setzen/Rücksetzen, nicht taktgesteuert.             |
+| `ADI_T_FF`  | T‑Flipflop         | Schaltet den Zustand bei jedem Takt um (Toggle).                           |
+| `ADI_D_FF`  | D‑Flipflop         | Speichert den anliegenden Datenwert bei Taktflanke (wie hier beschrieben). |
 
 ## Fazit
 

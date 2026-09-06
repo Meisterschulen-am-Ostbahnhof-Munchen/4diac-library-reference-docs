@@ -30,10 +30,10 @@ Der Baustein besitzt keine eigenen Ereignis- oder Datenschnittstellen, sondern l
 
 ### **Adapter**
 
-| Adaptertyp | Richtung | Name | Kommentar |
-|------------|----------|------|-----------|
-| `adapter::types::unidirectional::ALI` | Socket (Eingang) | `ALI_IN` | LINT‑Adapter‑Eingang (liefert Ereignis und einen LINT‑Wert) |
-| `adapter::types::unidirectional::AULI` | Plug (Ausgang) | `AULI_OUT` | ULINT‑Adapter‑Ausgang (gibt Ereignis und einen ULINT‑Wert weiter) |
+| Adaptertyp                             | Richtung         | Name       | Kommentar                                                         |
+| -------------------------------------- | ---------------- | ---------- | ----------------------------------------------------------------- |
+| `adapter::types::unidirectional::ALI`  | Socket (Eingang) | `ALI_IN`   | LINT‑Adapter‑Eingang (liefert Ereignis und einen LINT‑Wert)       |
+| `adapter::types::unidirectional::AULI` | Plug (Ausgang)   | `AULI_OUT` | ULINT‑Adapter‑Ausgang (gibt Ereignis und einen ULINT‑Wert weiter) |
 
 ## Funktionsweise
 

@@ -12,41 +12,41 @@ Der Funktionsblock `logiBUS_AI_IDA` ist ein zusammengesetzter Baustein (Composit
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ    | Mit   | Beschreibung |
-|----------|--------|-------|--------------|
-| INIT     | EInit  | QI, PARAMS, Input, AnalogInput_hysteresis, TimeDelta, TimeRateLimit | Service-Initialisierung: Konfiguration des analogen Eingangs und Start der Datenbereitstellung. |
-| REQ      | Event  | QI    | Service-Anforderung: Auslösen einer sofortigen Verarbeitung oder eines Status-Updates. |
+| Ereignis | Typ   | Mit                                                                 | Beschreibung                                                                                    |
+| -------- | ----- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| INIT     | EInit | QI, PARAMS, Input, AnalogInput_hysteresis, TimeDelta, TimeRateLimit | Service-Initialisierung: Konfiguration des analogen Eingangs und Start der Datenbereitstellung. |
+| REQ      | Event | QI                                                                  | Service-Anforderung: Auslösen einer sofortigen Verarbeitung oder eines Status-Updates.          |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ    | Mit   | Beschreibung |
-|----------|--------|-------|--------------|
-| INITO    | EInit  | QO, STATUS | Bestätigung der Initialisierung mit Qualitäts- und Statusinformationen. |
+| Ereignis | Typ   | Mit        | Beschreibung                                                            |
+| -------- | ----- | ---------- | ----------------------------------------------------------------------- |
+| INITO    | EInit | QO, STATUS | Bestätigung der Initialisierung mit Qualitäts- und Statusinformationen. |
 
 ### **Daten-Eingänge**
 
-| Name                  | Typ    | Initialwert | Beschreibung |
-|-----------------------|--------|-------------|--------------|
-| QI                    | BOOL   | –           | Qualifier für Ereignisse (z. B. Freigabe der Verarbeitung). |
-| PARAMS                | STRING | –           | Dienstparameter (z. B. Konfigurationsstrings). |
-| Input                 | logiBUS::io::AI::logiBUS_AI_S | Invalid   | Auswahl des analogen Eingangs (z. B. Input_I1…I8). |
-| AnalogInput_hysteresis| DWORD  | –           | Hysterese für die Änderungserkennung. Bei Wert 0 muss TimeDelta ungleich 0 sein. |
-| TimeDelta             | DWORD  | 250         | Zykluszeit in ms für zyklische Verarbeitung (16#FFFFFFFF = nur auf Änderung). |
-| TimeRateLimit         | DWORD  | 100         | Mindestabstand in ms zwischen zwei Ereignissen (IND) (< TimeDelta). |
+| Name                   | Typ                           | Initialwert | Beschreibung                                                                     |
+| ---------------------- | ----------------------------- | ----------- | -------------------------------------------------------------------------------- |
+| QI                     | BOOL                          | –           | Qualifier für Ereignisse (z. B. Freigabe der Verarbeitung).                      |
+| PARAMS                 | STRING                        | –           | Dienstparameter (z. B. Konfigurationsstrings).                                   |
+| Input                  | logiBUS::io::AI::logiBUS_AI_S | Invalid     | Auswahl des analogen Eingangs (z. B. Input_I1…I8).                               |
+| AnalogInput_hysteresis | DWORD                         | –           | Hysterese für die Änderungserkennung. Bei Wert 0 muss TimeDelta ungleich 0 sein. |
+| TimeDelta              | DWORD                         | 250         | Zykluszeit in ms für zyklische Verarbeitung (16#FFFFFFFF = nur auf Änderung).    |
+| TimeRateLimit          | DWORD                         | 100         | Mindestabstand in ms zwischen zwei Ereignissen (IND) (< TimeDelta).              |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Beschreibung |
-|--------|--------|--------------|
+| Name   | Typ    | Beschreibung                                          |
+| ------ | ------ | ----------------------------------------------------- |
 | QO     | BOOL   | Ausgangsqualifier (z. B. gültiger Zustand nach INIT). |
 | STATUS | STRING | Statusmeldung (z. B. Initialisierungsfehler oder OK). |
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
+| Richtung | Name | Typ                                | Beschreibung                                                                                                                                               |
+| -------- | ---- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Plug     | IN   | adapter::types::unidirectional::AD | Empfängt die analogen Eingangsdaten von der Ressource — Rohwert 0-4095 (12 bit), auf dem ESP32-P4 fix (kein Auswahlspielraum im Continuous/DMA-ADC-Modus). |
-| Socket   | SREQ | adapter::types::unidirectional::AX | Ermöglicht die externe Anforderung eines Dienstes (Service-Request). |
+| Socket   | SREQ | adapter::types::unidirectional::AX | Ermöglicht die externe Anforderung eines Dienstes (Service-Request).                                                                                       |
 
 ## Funktionsweise
 

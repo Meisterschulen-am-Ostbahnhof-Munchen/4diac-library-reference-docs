@@ -36,10 +36,10 @@ Keine expliziten Daten-Ausgänge. Das zusammengesetzte DWORD wird über den Date
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
+| Typ                                  | Name                | Richtung         | Beschreibung                                                             |
+| ------------------------------------ | ------------------- | ---------------- | ------------------------------------------------------------------------ |
 | `adapter::types::unidirectional::AX` | `BIT_00` … `BIT_31` | Socket (Eingang) | 32 boolesche Einzelsignale, jeweils mit eigenem Ereignis (Datenänderung) |
-| `adapter::types::unidirectional::AD` | `OUT` | Plug (Ausgang) | Ausgabe des zusammengesetzten Doppelworts mit Aktualisierungsereignis |
+| `adapter::types::unidirectional::AD` | `OUT`               | Plug (Ausgang)   | Ausgabe des zusammengesetzten Doppelworts mit Aktualisierungsereignis    |
 
 ## Funktionsweise
 

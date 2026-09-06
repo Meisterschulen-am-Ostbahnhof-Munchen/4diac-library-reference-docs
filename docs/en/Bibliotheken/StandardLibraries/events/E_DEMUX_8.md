@@ -38,6 +38,7 @@ The `E_DEMUX_8` (Event Demultiplexer) is a function block according to IEC 61499
 
 - If `K` = 0, the event is forwarded to `EO1`.
 - If `K` = 7, the event is forwarded to `EO8`.
+
 1. **Invalid Index**: If the value of `K` is outside the valid range [0, 7], no output event is triggered.
 
 ## Technical Features

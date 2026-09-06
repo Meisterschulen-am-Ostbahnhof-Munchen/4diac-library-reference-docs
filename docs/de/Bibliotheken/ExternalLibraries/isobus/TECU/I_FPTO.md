@@ -35,18 +35,18 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65092) für die
 
 ## FPTO-Parameter
 
-| Parameter | Typ | Beschreibung | SPN | Bit-Länge | Skalierung |
-| ----------- | ------ | -------------- | ----- | ----------- | ------------ |
-| `FRONT_PTO_OUTP_SHAFT_SPEED` | UINT | Aktuelle Drehzahl der FPTO-Welle | 1882 | 16 | 0.125 1/min/bit |
-| `FRONT_PTO_OUTP_SH_SPEED_SET` | UINT | Soll-Drehzahl der FPTO-Welle | 1884 | 16 | 0.125 1/min/bit |
-| `FRONT_PTO_ENGAGEMENT` | BYTE | Zustand der FPTO-Kupplung | 1888 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_MODE` | BYTE | Betriebsmodus der FPTO | 1889 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_ECONOMY_MODE` | BYTE | Economy-Modus der FPTO | 1891 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_ENGAGEMENT_REQ` | BYTE | Kupplungsanforderungsstatus | 5152 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_MODE_REQ_STATUS` | BYTE | Modusanforderungsstatus | 5153 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_ECONOMY_MODE_REQ_STAT` | BYTE | Economy-Modus-Anforderungsstatus | 5154 | 2 | 4 Zustände/2 bit |
-| `FRONT_PTO_SH_SPEED_LIMIT_STAT` | BYTE | Drehzahlbegrenzungsstatus | 5155 | 3 | 8 Zustände/3 bit |
-| `FRONT_PTO_EXIT_REASON_CODE` | BYTE | Grundcode für FPTO-Ausfall | 5817 | 6 | 64 Zustände/6 bit |
+| Parameter                         | Typ  | Beschreibung                     | SPN  | Bit-Länge | Skalierung        |
+| --------------------------------- | ---- | -------------------------------- | ---- | --------- | ----------------- |
+| `FRONT_PTO_OUTP_SHAFT_SPEED`      | UINT | Aktuelle Drehzahl der FPTO-Welle | 1882 | 16        | 0.125 1/min/bit   |
+| `FRONT_PTO_OUTP_SH_SPEED_SET`     | UINT | Soll-Drehzahl der FPTO-Welle     | 1884 | 16        | 0.125 1/min/bit   |
+| `FRONT_PTO_ENGAGEMENT`            | BYTE | Zustand der FPTO-Kupplung        | 1888 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_MODE`                  | BYTE | Betriebsmodus der FPTO           | 1889 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_ECONOMY_MODE`          | BYTE | Economy-Modus der FPTO           | 1891 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_ENGAGEMENT_REQ`        | BYTE | Kupplungsanforderungsstatus      | 5152 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_MODE_REQ_STATUS`       | BYTE | Modusanforderungsstatus          | 5153 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_ECONOMY_MODE_REQ_STAT` | BYTE | Economy-Modus-Anforderungsstatus | 5154 | 2         | 4 Zustände/2 bit  |
+| `FRONT_PTO_SH_SPEED_LIMIT_STAT`   | BYTE | Drehzahlbegrenzungsstatus        | 5155 | 3         | 8 Zustände/3 bit  |
+| `FRONT_PTO_EXIT_REASON_CODE`      | BYTE | Grundcode für FPTO-Ausfall       | 5817 | 6         | 64 Zustände/6 bit |
 
 ## Funktionsweise
 
@@ -78,12 +78,12 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65092) für die
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature | I_FPTO | Standard_PTO | Advanced_PTO |
-| --------------- | -------- | -------------- | -------------- |
-| ISO-Standard | ✔ (ISO 11783-7) | ✔ | ✖ |
-| Front-PTO | ✔ | ✖ | ✔ |
-| Economy-Modus | ✔ | ✖ | ✔ |
-| Diagnosecodes | ✔ | ✖ | ✔ |
+| Feature       | I_FPTO          | Standard_PTO | Advanced_PTO |
+| ------------- | --------------- | ------------ | ------------ |
+| ISO-Standard  | ✔ (ISO 11783-7) | ✔            | ✖            |
+| Front-PTO     | ✔               | ✖            | ✔            |
+| Economy-Modus | ✔               | ✖            | ✔            |
+| Diagnosecodes | ✔               | ✖            | ✔            |
 
 ## 🛠️ Zugehörige Übungen
 

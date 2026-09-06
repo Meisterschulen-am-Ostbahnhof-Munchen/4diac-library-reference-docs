@@ -28,13 +28,13 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** | `IN` | `adapter::types::unidirectional::AUDI` | Eingangsadapter, der das zu verteilende Signal bereitstellt. |
-| **Plug** | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang, identisch zum Eingangssignal. |
-| **Plug** | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang, identisch zum Eingangssignal. |
-| **Plug** | `OUT3` | `adapter::types::unidirectional::AUDI` | Dritter Ausgang, identisch zum Eingangssignal. |
-| **Plug** | `OUT4` | `adapter::types::unidirectional::AUDI` | Vierter Ausgang, identisch zum Eingangssignal. |
+| Richtung   | Name   | Typ                                    | Beschreibung                                                 |
+| ---------- | ------ | -------------------------------------- | ------------------------------------------------------------ |
+| **Socket** | `IN`   | `adapter::types::unidirectional::AUDI` | Eingangsadapter, der das zu verteilende Signal bereitstellt. |
+| **Plug**   | `OUT1` | `adapter::types::unidirectional::AUDI` | Erster Ausgang, identisch zum Eingangssignal.                |
+| **Plug**   | `OUT2` | `adapter::types::unidirectional::AUDI` | Zweiter Ausgang, identisch zum Eingangssignal.               |
+| **Plug**   | `OUT3` | `adapter::types::unidirectional::AUDI` | Dritter Ausgang, identisch zum Eingangssignal.               |
+| **Plug**   | `OUT4` | `adapter::types::unidirectional::AUDI` | Vierter Ausgang, identisch zum Eingangssignal.               |
 
 ## Funktionsweise
 
@@ -60,11 +60,11 @@ Der Baustein verfügt über **keine Zustandsmaschine (ECC)**, da er keine Ereign
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktion | Besonderheit |
-| ---------- | ---------- | -------------- |
-| `AUDI_SPLIT_2` | Verteilt ein AUDI‑Signal auf zwei Ausgänge. | Entspricht dem Prinzip, jedoch mit 2 Ausgängen. |
-| `AUDI_SPLIT_4` | Verteilt ein AUDI‑Signal auf vier Ausgänge. | Vorliegender Baustein, einfacher 1:4‑Splitter. |
-| `AUDI_MERGE` | Fasst mehrere AUDI‑Eingänge zu einem Ausgang zusammen. | Umkehrung des Splitters (1:1‑Mapping, aber invers). |
+| Baustein            | Funktion                                                        | Besonderheit                                             |
+| ------------------- | --------------------------------------------------------------- | -------------------------------------------------------- |
+| `AUDI_SPLIT_2`      | Verteilt ein AUDI‑Signal auf zwei Ausgänge.                     | Entspricht dem Prinzip, jedoch mit 2 Ausgängen.          |
+| `AUDI_SPLIT_4`      | Verteilt ein AUDI‑Signal auf vier Ausgänge.                     | Vorliegender Baustein, einfacher 1:4‑Splitter.           |
+| `AUDI_MERGE`        | Fasst mehrere AUDI‑Eingänge zu einem Ausgang zusammen.          | Umkehrung des Splitters (1:1‑Mapping, aber invers).      |
 | Generische Splitter | Können über Typ-Parameter auf andere Adapter angewendet werden. | Bieten mehr Flexibilität als fest verdrahtete Varianten. |
 
 - **[`AUDI_SPLIT_4_UNGATED`](AUDI_SPLIT_4_UNGATED.md)**: Ungegatete Variante – aktualisiert den Ausgang bei jedem Durchlauf, auch ohne Wertänderung.

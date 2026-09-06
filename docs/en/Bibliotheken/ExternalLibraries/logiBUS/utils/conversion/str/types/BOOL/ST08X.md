@@ -18,7 +18,7 @@ Not applicable to a data type. The data type consists of the following internal 
 
 Not applicable for a data type.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

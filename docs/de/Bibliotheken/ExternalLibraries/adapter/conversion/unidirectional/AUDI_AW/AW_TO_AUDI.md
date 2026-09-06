@@ -76,11 +76,11 @@ Der Gesamt‑FB spiegelt dieses Verhalten nach außen wider.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingangsadapter | Ausgangsadapter | Konvertierung | Bemerkung |
-| ---------- | ----------------- | ----------------- | --------------- | ----------- |
-| `AW_TO_AUDI` | `AW` (WORD) | `AUDI` (UDINT) | WORD → UDINT | Composite, kapselt `F_WORD_TO_UDINT` |
-| Direkte Nutzung von `F_WORD_TO_UDINT` | Keine Adapter | Kein Adapter | WORD → UDINT | Standard‑Funktionsbaustein ohne Adapter‑Schnittstellen |
-| `AW_TO_ADINT` (hypothetisch) | `AW` (WORD) | `ADINT` (DINT) | WORD → DINT | analoge Konvertierung mit Vorzeichen |
+| Baustein                              | Eingangsadapter | Ausgangsadapter | Konvertierung | Bemerkung                                              |
+| ------------------------------------- | --------------- | --------------- | ------------- | ------------------------------------------------------ |
+| `AW_TO_AUDI`                          | `AW` (WORD)     | `AUDI` (UDINT)  | WORD → UDINT  | Composite, kapselt `F_WORD_TO_UDINT`                   |
+| Direkte Nutzung von `F_WORD_TO_UDINT` | Keine Adapter   | Kein Adapter    | WORD → UDINT  | Standard‑Funktionsbaustein ohne Adapter‑Schnittstellen |
+| `AW_TO_ADINT` (hypothetisch)          | `AW` (WORD)     | `ADINT` (DINT)  | WORD → DINT   | analoge Konvertierung mit Vorzeichen                   |
 
 Der `AW_TO_AUDI` unterscheidet sich von der direkten Nutzung der Konvertierungsfunktion durch die Integration von Adaptern, was ihn für adapterbasierte Systeme sofort einsetzbar macht.
 

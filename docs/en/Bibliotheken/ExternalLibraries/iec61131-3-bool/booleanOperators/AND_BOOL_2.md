@@ -11,7 +11,7 @@ The interface of the `AND_BOOL_2` function block is simple and clearly structure
 - **IN1 (AND input 1):** First Boolean operand (Type: `BOOL`).
 - **OUT (AND result):** Result of the logical AND operation of `IN1` and `IN2` (Type: `BOOL`). The output value is `TRUE` (1) if both `IN1` and `IN2` have the value `TRUE`. In all other cases, the output is `FALSE` (0).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -38,11 +38,11 @@ The `AND_BOOL_2` block functions deterministically and follows classic Boolean l
 The operation can be described by the following truth table:
 
 | IN1 | IN2 | OUT (IN1 AND IN2) |
-| :---: | :---: | :-----------------: |
-| 0 | 0 | 0 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
+| :-: | :-: | :---------------: |
+| 0   | 0   | 0                 |
+| 0   | 1   | 0                 |
+| 1   | 0   | 0                 |
+| 1   | 1   | 1                 |
 
 - **Generic Block:** The block is implemented as an instance of a generic AND block (`GEN_AND`), which can be specialized for different data types. In this specific instance, it is defined for the data type `BOOL`.
 

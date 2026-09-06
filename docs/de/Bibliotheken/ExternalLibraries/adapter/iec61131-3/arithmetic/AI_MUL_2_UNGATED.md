@@ -37,11 +37,11 @@ Die Schnittstelle dieses Funktionsbausteins basiert vollständig auf Adaptern. E
 
 ### **Adapter**
 
-| Name | Typ | Richtung (Modus) | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **IN1** | `adapter::types::unidirectional::AI` | Socket (Eingang) | Erster Eingangswert (Multiplikand) für die arithmetische Operation. |
+| Name    | Typ                                  | Richtung (Modus) | Beschreibung                                                          |
+| :------ | :----------------------------------- | :--------------- | :-------------------------------------------------------------------- |
+| **IN1** | `adapter::types::unidirectional::AI` | Socket (Eingang) | Erster Eingangswert (Multiplikand) für die arithmetische Operation.   |
 | **IN2** | `adapter::types::unidirectional::AI` | Socket (Eingang) | Zweiter Eingangswert (Multiplikator) für die arithmetische Operation. |
-| **OUT** | `adapter::types::unidirectional::AI` | Plug (Ausgang) | Ausgang für das berechnete Produkt der beiden Eingangswerte. |
+| **OUT** | `adapter::types::unidirectional::AI` | Plug (Ausgang)   | Ausgang für das berechnete Produkt der beiden Eingangswerte.          |
 
 ## Funktionsweise
 

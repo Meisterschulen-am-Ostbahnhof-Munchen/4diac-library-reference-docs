@@ -19,12 +19,12 @@
 
 ### Events
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| E1 | Indication (or Request) | D1 |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| E1   | Indication (or Request) | D1   |
 
 ### Data
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| D1 | INT | Indication (or Request) Data from Plug |
+| Name | Type | Comment                                |
+| :--- | :--- | :------------------------------------- |
+| D1   | INT  | Indication (or Request) Data from Plug |

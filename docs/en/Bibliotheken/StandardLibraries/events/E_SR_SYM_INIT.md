@@ -43,13 +43,13 @@ See [E_RS_SYM_INIT](E_RS_SYM_INIT.md) — identical behaviour, only the `S`/`R` 
 
 ## State Overview
 
-| State | Meaning |
-| --- | --- |
-| START | Unconfigured initial state |
-| Init | Initialization in progress, `QO := QI` |
+| State  | Meaning                                     |
+| ------ | ------------------------------------------- |
+| START  | Unconfigured initial state                  |
+| Init   | Initialization in progress, `QO := QI`      |
 | DeInit | Deinitialization in progress, `QO := FALSE` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| SET    | `Q = TRUE`                                  |
+| RESET  | `Q = FALSE`                                 |
 
 ## Application Scenarios
 

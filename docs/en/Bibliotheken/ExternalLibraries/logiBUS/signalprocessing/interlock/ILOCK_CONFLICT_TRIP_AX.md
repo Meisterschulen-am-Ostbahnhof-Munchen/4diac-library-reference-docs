@@ -40,18 +40,18 @@ The FB has no direct data outputs. The output data is provided via the adapter p
 
 **Sockets (Inputs)**
 
-| Adapter | Type | Description |
-| --- | --- | --- |
-| `UP_IN` | `adapter::types::unidirectional::AX` | Input for up-direction (event + data) |
+| Adapter   | Type                                 | Description                             |
+| --------- | ------------------------------------ | --------------------------------------- |
+| `UP_IN`   | `adapter::types::unidirectional::AX` | Input for up-direction (event + data)   |
 | `DOWN_IN` | `adapter::types::unidirectional::AX` | Input for down-direction (event + data) |
 
 **Plugs (Outputs)**
 
-| Adapter | Type | Description |
-| --- | --- | --- |
-| `UP_OUT` | `adapter::types::unidirectional::AX` | Output for Upward Direction |
+| Adapter    | Type                                 | Description                   |
+| ---------- | ------------------------------------ | ----------------------------- |
+| `UP_OUT`   | `adapter::types::unidirectional::AX` | Output for Upward Direction   |
 | `DOWN_OUT` | `adapter::types::unidirectional::AX` | Output for Downward Direction |
-| `TRIP_OUT` | `adapter::types::unidirectional::AX` | Trip State Output |
+| `TRIP_OUT` | `adapter::types::unidirectional::AX` | Trip State Output             |
 
 *Note:* The interface `unidirectional::AX` is interpreted here as an adapter with one event (E1) and one BOOL data element (D1), which carries the activation state.
 
@@ -64,14 +64,17 @@ The function block operates as a finite state machine with four states:
 - On event `UP_IN.E1` with the condition `UP_IN.D1 AND NOT DOWN_IN.D1` → transition to **UP**.
 - On event `DOWN_IN.E1` with condition `DOWN_IN.D1 AND NOT UP_IN.D1` → transition to **DOWN**.
 - On event at either input with condition `UP_IN.D1 AND DOWN_IN.D1` → transition to **TRIP**.
+
 1. **UP** – Upward direction active. `UP_OUT.D1 = TRUE`, all others FALSE.
 
 - On event `UP_IN.E1` with `NOT UP_IN.D1` → return to **STOP**.
 - On event `DOWN_IN.E1` with `DOWN_IN.D1` → **TRIP** (conflict).
+
 1. **DOWN** – Downward direction active. `DOWN_OUT.D1 = TRUE`, all others FALSE.
 
 - On event `DOWN_IN.E1` with `NOT DOWN_IN.D1` → return to **STOP**.
 - On event `UP_IN.E1` with `UP_IN.D1` → **TRIP** (conflict).
+
 1. **TRIP** – Error/conflict state. `TRIP_OUT.D1 = TRUE`, all others FALSE.
 
 - Only output: Event `EI_RESET`, if `NOT UP_IN.D1 AND NOT DOWN_IN.D1` → return to **STOP**.
@@ -87,12 +90,12 @@ Prioritization is implicit: As long as there is no conflict, the first detected 
 
 ## State overview
 
-| State | UP_OUT.D1 | DOWN_OUT.D1 | TRIP_OUT.D1 | Description |
-| --- | --- | --- | --- | --- |
-| `STOP` | FALSE | FALSE | FALSE | Resting position, no direction active |
-| `UP` | TRUE | FALSE | FALSE | Upward direction active |
-| `DOWN` | FALSE | TRUE | FALSE | Downward direction active |
-| `TRIP` | FALSE | FALSE | TRUE | Conflict / Trip, requires reset |
+| State  | UP_OUT.D1 | DOWN_OUT.D1 | TRIP_OUT.D1 | Description                           |
+| ------ | --------- | ----------- | ----------- | ------------------------------------- |
+| `STOP` | FALSE     | FALSE       | FALSE       | Resting position, no direction active |
+| `UP`   | TRUE      | FALSE       | FALSE       | Upward direction active               |
+| `DOWN` | FALSE     | TRUE        | FALSE       | Downward direction active             |
+| `TRIP` | FALSE     | FALSE       | TRUE        | Conflict / Trip, requires reset       |
 
 **Important Transitions:**
 

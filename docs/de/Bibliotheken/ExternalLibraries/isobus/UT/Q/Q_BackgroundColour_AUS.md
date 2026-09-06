@@ -13,29 +13,29 @@ Der Baustein wird über einen Socket mit der neuen Farbe versorgt und gibt über
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ   | Kommentar                          | Mit Variablen       |
-|--------|-------|------------------------------------|---------------------|
-| `INIT` | EInit | Service Initialisierung            | `u16ObjId`          |
+| Name   | Typ   | Kommentar               | Mit Variablen |
+| ------ | ----- | ----------------------- | ------------- |
+| `INIT` | EInit | Service Initialisierung | `u16ObjId`    |
 
 ### **Ereignis-Ausgänge**
 
-| Name    | Typ   | Kommentar                              | Mit Variablen               |
-|---------|-------|----------------------------------------|-----------------------------|
-| `INITO` | EInit | Initialisierungsbestätigung            | –                           |
-| `CNF`   | Event | Bestätigung des angeforderten Dienstes | `STATUS`, `s16result`       |
+| Name    | Typ   | Kommentar                              | Mit Variablen         |
+| ------- | ----- | -------------------------------------- | --------------------- |
+| `INITO` | EInit | Initialisierungsbestätigung            | –                     |
+| `CNF`   | Event | Bestätigung des angeforderten Dienstes | `STATUS`, `s16result` |
 
 ### **Daten-Eingänge**
 
-| Name        | Datentyp | Initialwert     | Kommentar                          |
-|-------------|----------|-----------------|------------------------------------|
-| `u16ObjId`  | UINT     | `ID_NULL`       | Objekt-ID des zu ändernden Objekts |
+| Name       | Datentyp | Initialwert | Kommentar                          |
+| ---------- | -------- | ----------- | ---------------------------------- |
+| `u16ObjId` | UINT     | `ID_NULL`   | Objekt-ID des zu ändernden Objekts |
 
 ### **Daten-Ausgänge**
 
-| Name        | Datentyp | Kommentar                                              |
-|-------------|----------|--------------------------------------------------------|
-| `STATUS`    | STRING   | Dienststatus (z. B. Fehlertext oder „OK“)              |
-| `s16result` | INT      | Rückgabewert (siehe Beschreibung – Fehlercodes)        |
+| Name        | Datentyp | Kommentar                                       |
+| ----------- | -------- | ----------------------------------------------- |
+| `STATUS`    | STRING   | Dienststatus (z. B. Fehlertext oder „OK“)       |
+| `s16result` | INT      | Rückgabewert (siehe Beschreibung – Fehlercodes) |
 
 ### **Adapter**
 

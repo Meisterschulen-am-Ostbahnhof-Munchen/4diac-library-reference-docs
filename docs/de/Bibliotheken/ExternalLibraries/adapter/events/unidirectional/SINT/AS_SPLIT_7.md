@@ -28,16 +28,16 @@ Keine
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| IN | `adapter::types::unidirectional::AS` | Socket | Empfängt das zu verteilende AS‑Signal. |
-| OUT1 | `adapter::types::unidirectional::AS` | Plug | Erster Ausgang – gleiches Signal wie am Eingang. |
-| OUT2 | `adapter::types::unidirectional::AS` | Plug | Zweiter Ausgang – gleiches Signal wie am Eingang. |
-| OUT3 | `adapter::types::unidirectional::AS` | Plug | Dritter Ausgang – gleiches Signal wie am Eingang. |
-| OUT4 | `adapter::types::unidirectional::AS` | Plug | Vierter Ausgang – gleiches Signal wie am Eingang. |
-| OUT5 | `adapter::types::unidirectional::AS` | Plug | Fünfter Ausgang – gleiches Signal wie am Eingang. |
-| OUT6 | `adapter::types::unidirectional::AS` | Plug | Sechster Ausgang – gleiches Signal wie am Eingang. |
-| OUT7 | `adapter::types::unidirectional::AS` | Plug | Siebter Ausgang – gleiches Signal wie am Eingang. |
+| Name | Typ                                  | Richtung | Beschreibung                                       |
+| ---- | ------------------------------------ | -------- | -------------------------------------------------- |
+| IN   | `adapter::types::unidirectional::AS` | Socket   | Empfängt das zu verteilende AS‑Signal.             |
+| OUT1 | `adapter::types::unidirectional::AS` | Plug     | Erster Ausgang – gleiches Signal wie am Eingang.   |
+| OUT2 | `adapter::types::unidirectional::AS` | Plug     | Zweiter Ausgang – gleiches Signal wie am Eingang.  |
+| OUT3 | `adapter::types::unidirectional::AS` | Plug     | Dritter Ausgang – gleiches Signal wie am Eingang.  |
+| OUT4 | `adapter::types::unidirectional::AS` | Plug     | Vierter Ausgang – gleiches Signal wie am Eingang.  |
+| OUT5 | `adapter::types::unidirectional::AS` | Plug     | Fünfter Ausgang – gleiches Signal wie am Eingang.  |
+| OUT6 | `adapter::types::unidirectional::AS` | Plug     | Sechster Ausgang – gleiches Signal wie am Eingang. |
+| OUT7 | `adapter::types::unidirectional::AS` | Plug     | Siebter Ausgang – gleiches Signal wie am Eingang.  |
 
 ## Funktionsweise
 

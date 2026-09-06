@@ -19,7 +19,7 @@ Because it is an adapter-based function block, the block itself does not have di
 
 *No direct data outputs available.*
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -80,16 +80,16 @@ The selected signal is passed via another `F_MOVE` block and an output flip-flop
 
 The logical mapping of the output, depending on the selector `G`, is as follows:
 
-| State of `G` (selector) | Active path | Data value to `OUT.D1` | Event to `OUT.E1` |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | `IN0` | Value of `IN0.D1` | Triggered by events at `IN0.E1` or `G.E1` |
-| `TRUE` | `IN1` | Value of `IN1.D1` | Triggered by events at `IN1.E1` or `G.E1` |
+| State of `G` (selector) | Active path | Data value to `OUT.D1` | Event to `OUT.E1`                         |
+| :---------------------- | :---------- | :--------------------- | :---------------------------------------- |
+| `FALSE`                 | `IN0`       | Value of `IN0.D1`      | Triggered by events at `IN0.E1` or `G.E1` |
+| `TRUE`                  | `IN1`       | Value of `IN1.D1`      | Triggered by events at `IN1.E1` or `G.E1` |
 
 - **Switching Analog Values with Status (formatted as WSTRING):** Redundant sensor systems where, in case of a fault, the system should switch from sensor 1 (`IN0`) to a backup sensor 2 (`IN1`).
 - **Dynamic Text or Recipe Selection:** Switching configuration strings, log messages, or setpoints that are routed to an HMI or control unit via adapter structures.
 - **Signal Routing:** Flexible routing in modular industrial plants where data streams need to be redirected depending on the operating mode (e.g., automatic vs. manual operation).
 
-- ## Comparison with Similar Function Blocks
+## Comparison with Similar Function Blocks
 
 - **Standard `SEL` (IEC 61131-3):** The classic `SEL` function block operates on elementary data types (e.g., `INT`, `REAL`, `STRING`) and does not have native event control or adapter support. `AIWS_AX_SEL_AIWS` extends this principle for IEC 61499 by providing direct switching for complex adapter types.
 - **Multiplexer (`MUX`):** A classic multiplexer allows selection from more than two channels via an integer index. The `AIWS_AX_SEL_AIWS` is optimized for fast and resource-efficient binary selection (2 channels).
@@ -101,7 +101,5 @@ The `AIWS_AX_SEL_AIWS` is a highly specialized auxiliary module for IEC 61499 sy
 ## State Overview
 
 ## Application Scenarios
-
-## Comparison with Similar Function Blocks
 
 ## Conclusion

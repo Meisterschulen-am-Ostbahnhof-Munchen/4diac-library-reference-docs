@@ -28,12 +28,12 @@ Keine.
 
 ### **Adapter**
 
-| Typ         | Richtung | Name | Beschreibung                         |
-|-------------|----------|------|--------------------------------------|
-| Socket      | Eingang  | IN   | Eingehender ASR-Signaladapter.       |
-| Plug        | Ausgang  | OUT1 | Erster ausgehender ASR-Signaladapter.|
-| Plug        | Ausgang  | OUT2 | Zweiter ausgehender ASR-Signaladapter.|
-| Plug        | Ausgang  | OUT3 | Dritter ausgehender ASR-Signaladapter.|
+| Typ    | Richtung | Name | Beschreibung                           |
+| ------ | -------- | ---- | -------------------------------------- |
+| Socket | Eingang  | IN   | Eingehender ASR-Signaladapter.         |
+| Plug   | Ausgang  | OUT1 | Erster ausgehender ASR-Signaladapter.  |
+| Plug   | Ausgang  | OUT2 | Zweiter ausgehender ASR-Signaladapter. |
+| Plug   | Ausgang  | OUT3 | Dritter ausgehender ASR-Signaladapter. |
 
 Alle Adapter sind vom Typ `adapter::types::unidirectional::ASR`.
 

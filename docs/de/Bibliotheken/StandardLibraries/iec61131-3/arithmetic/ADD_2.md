@@ -51,12 +51,12 @@ Der **ADD_2** ist ein generischer Funktionsbaustein zur Addition zweier Werte, e
 
 ## Unterstützte Datentypen
 
-| Typ      | Beispiel           |
-|----------|--------------------|
-| INT      | 123 + 456 = 579    |
-| REAL     | 1.23 + 4.56 = 5.79 |
-| TIME     | T#1s + T#2s = T#3s |
-| LREAL    | 1.23e10 + 4.56e10  |
+| Typ   | Beispiel           |
+| ----- | ------------------ |
+| INT   | 123 + 456 = 579    |
+| REAL  | 1.23 + 4.56 = 5.79 |
+| TIME  | T#1s + T#2s = T#3s |
+| LREAL | 1.23e10 + 4.56e10  |
 
 ## Anwendungsszenarien
 
@@ -67,11 +67,11 @@ Der **ADD_2** ist ein generischer Funktionsbaustein zur Addition zweier Werte, e
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | ADD_2  | ADD_4  | MUL_2  |
-|---------------|--------|--------|--------|
-| Operation     | Addition | Addition | Multiplikation |
-| Eingänge      | 2      | 4      | 2      |
-| Typunterstützung | ANY_MAG | ANY_MAG | ANY_MAG |
+| Feature          | ADD_2    | ADD_4    | MUL_2          |
+| ---------------- | -------- | -------- | -------------- |
+| Operation        | Addition | Addition | Multiplikation |
+| Eingänge         | 2        | 4        | 2              |
+| Typunterstützung | ANY_MAG  | ANY_MAG  | ANY_MAG        |
 
 ## Fehlerbehandlung
 

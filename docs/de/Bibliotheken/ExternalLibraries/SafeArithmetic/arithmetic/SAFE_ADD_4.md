@@ -3,6 +3,7 @@
 ![SAFE_ADD_4](SAFE_ADD_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 **SAFE_ADD_4** ist Teil der **SafeArithmetic**-Bibliothek (`SafeArithmetic::arithmetic`, EPL-2.0,

@@ -28,13 +28,13 @@ Der Funktionsblock **AI_SPLIT_4** ist ein generischer Baustein, der einen unidir
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket (Eingang)** | `IN` | `adapter::types::unidirectional::AI` | Eingang des zu verteilenden analogen Signals |
-| **Plug (Ausgang)** | `OUT1` | `adapter::types::unidirectional::AI` | Erster Ausgang (Kopie des Eingangssignals) |
-| **Plug (Ausgang)** | `OUT2` | `adapter::types::unidirectional::AI` | Zweiter Ausgang (Kopie des Eingangssignals) |
-| **Plug (Ausgang)** | `OUT3` | `adapter::types::unidirectional::AI` | Dritter Ausgang (Kopie des Eingangssignals) |
-| **Plug (Ausgang)** | `OUT4` | `adapter::types::unidirectional::AI` | Vierter Ausgang (Kopie des Eingangssignals) |
+| Richtung             | Name   | Typ                                  | Beschreibung                                 |
+| -------------------- | ------ | ------------------------------------ | -------------------------------------------- |
+| **Socket (Eingang)** | `IN`   | `adapter::types::unidirectional::AI` | Eingang des zu verteilenden analogen Signals |
+| **Plug (Ausgang)**   | `OUT1` | `adapter::types::unidirectional::AI` | Erster Ausgang (Kopie des Eingangssignals)   |
+| **Plug (Ausgang)**   | `OUT2` | `adapter::types::unidirectional::AI` | Zweiter Ausgang (Kopie des Eingangssignals)  |
+| **Plug (Ausgang)**   | `OUT3` | `adapter::types::unidirectional::AI` | Dritter Ausgang (Kopie des Eingangssignals)  |
+| **Plug (Ausgang)**   | `OUT4` | `adapter::types::unidirectional::AI` | Vierter Ausgang (Kopie des Eingangssignals)  |
 
 ## Funktionsweise
 

@@ -55,10 +55,10 @@
 
 **Beispiel** (4-20-mA-Drucksensor über logiBUS, normiert auf `0.0..1.0`, gewünschter Ausgabebereich `0.0..500.0`):
 
-| Schritt | Aktion | Ergebnis |
-| --- | --- | --- |
-| 1 | 4 mA anlegen (`X=0.0`), `Y_Offset=0.0`, `EICO` feuern | `OFFSET = 0/1 - 0 = 0` |
-| 2 | 20 mA anlegen (`X=1.0`), `Y_Scale=500.0`, `EICS` feuern | `SCALE = 500/(1+0) = 500` |
+| Schritt | Aktion                                                  | Ergebnis                  |
+| ------- | ------------------------------------------------------- | ------------------------- |
+| 1       | 4 mA anlegen (`X=0.0`), `Y_Offset=0.0`, `EICO` feuern   | `OFFSET = 0/1 - 0 = 0`    |
+| 2       | 20 mA anlegen (`X=1.0`), `Y_Scale=500.0`, `EICS` feuern | `SCALE = 500/(1+0) = 500` |
 
 Ergebnis: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
@@ -87,12 +87,12 @@ WAIT_CS --EICS----> CS       --1--> START     (Skalierung kalibriert, fertig)
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Merkmal | [CALIBRATE](CALIBRATE.md) | [E_CALIBRATE](E_CALIBRATE.md) | `E_CALIBRATE_SQ` |
-| --- | --- | --- | --- |
-| CO-Formel | `OFFSET := Y_Offset - X` | `OFFSET := Y_Offset - X` | `OFFSET := Y_Offset / SCALE - X` |
-| Y nach CO | korrekt nur bei `SCALE = 1` | korrekt nur bei `SCALE = 1` | immer korrekt |
-| Reihenfolge erzwungen | Nein (`SimpleFB`) | Nein (ECC, beide aus `REQ`) | Ja (ECC: `EICS` nur aus `WAIT_CS`) |
-| Auslösung | BOOL-Eingänge (`CO`, `CS`) | Ereignisse | Ereignisse |
+| Merkmal               | [CALIBRATE](CALIBRATE.md)   | [E_CALIBRATE](E_CALIBRATE.md) | `E_CALIBRATE_SQ`                   |
+| --------------------- | --------------------------- | ----------------------------- | ---------------------------------- |
+| CO-Formel             | `OFFSET := Y_Offset - X`    | `OFFSET := Y_Offset - X`      | `OFFSET := Y_Offset / SCALE - X`   |
+| Y nach CO             | korrekt nur bei `SCALE = 1` | korrekt nur bei `SCALE = 1`   | immer korrekt                      |
+| Reihenfolge erzwungen | Nein (`SimpleFB`)           | Nein (ECC, beide aus `REQ`)   | Ja (ECC: `EICS` nur aus `WAIT_CS`) |
+| Auslösung             | BOOL-Eingänge (`CO`, `CS`)  | Ereignisse                    | Ereignisse                         |
 
 ## Fazit
 

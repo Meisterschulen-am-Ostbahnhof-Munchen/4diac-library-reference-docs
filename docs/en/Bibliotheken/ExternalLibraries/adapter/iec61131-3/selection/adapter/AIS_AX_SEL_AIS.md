@@ -86,10 +86,10 @@ The selection result is transferred via the function block `F_MOVE_OUT` to the o
 
 ## State Overview
 
-| Selector State (`G`) | Last Event on... | Active Output (`OUT.D1`) | Description |
-| :--- | :--- | :--- | :--- |
-| **`FALSE`** | `IN0.E1` or `G.E1` | Value of `IN0.D1` | Input 0 is active. Changes to `IN1` have no effect on the output. |
-| **`TRUE`** | `IN1.E1` or `G.E1` | Value of `IN1.D1` | Input 1 is active. Changes to `IN0` have no effect on the output. |
+| Selector State (`G`) | Last Event on...   | Active Output (`OUT.D1`) | Description                                                       |
+| :------------------- | :----------------- | :----------------------- | :---------------------------------------------------------------- |
+| **`FALSE`**          | `IN0.E1` or `G.E1` | Value of `IN0.D1`        | Input 0 is active. Changes to `IN1` have no effect on the output. |
+| **`TRUE`**           | `IN1.E1` or `G.E1` | Value of `IN1.D1`        | Input 1 is active. Changes to `IN0` have no effect on the output. |
 
 ---
 

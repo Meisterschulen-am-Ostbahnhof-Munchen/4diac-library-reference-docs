@@ -12,7 +12,7 @@ The function block `FB_CTU_UDINT` is an up counter for the data type `UDINT` (un
 - **Q** (`BOOL`): Signal generated when the counter reading (`CV`) reaches or exceeds the preset value (`PV`).
 - **CV** (`UDINT`): Current counter reading.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

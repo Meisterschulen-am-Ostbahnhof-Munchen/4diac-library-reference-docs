@@ -43,11 +43,13 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with target object ID
 - `INITO` confirms operational readiness
+
 1. **Value Update**:
 
 - `REQ` with new 32-bit value
 - Updates the numeric VT object
 - `CNF` returns operational status and previous value
+
 1. **Value Range**:
 
 - 0 to 4,294,967,295 (32-bit unsigned)
@@ -64,21 +66,21 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## Value range
 
-| Parameter | Type | Value range |
-|-------------|-----------|------------------------|
+| Parameter   | Type  | Value range        |
+| ----------- | ----- | ------------------ |
 | u32NewValue | UDINT | 0 to 4,294,967,295 |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful change |
-| -6 | VT_E_OVERFLOW | Buffer overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -128 | VT_E_HANDLE_INVALID | Invalid object ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful change      |
+| -6   | VT_E_OVERFLOW             | Buffer overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -128 | VT_E_HANDLE_INVALID       | Invalid object ID      |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -89,12 +91,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with similar modules
 
-| Feature | Q_NumericValueAux | VtNumericUpdate | VtValueManager |
-| --------------- | -------------------- | ----------------- | ---------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Value Range | 32-bit | 16-bit | 32-bit |
-| Feedback | ✔ | ✖ | ✔ |
-| Object Type | Numeric Objects | All | All |
+| Feature      | Q_NumericValueAux | VtNumericUpdate | VtValueManager |
+| ------------ | ----------------- | --------------- | -------------- |
+| ISO Standard | ✔                 | ✖               | ✖              |
+| Value Range  | 32-bit            | 16-bit          | 32-bit         |
+| Feedback     | ✔                 | ✖               | ✔              |
+| Object Type  | Numeric Objects   | All             | All            |
 
 ## Conclusion
 

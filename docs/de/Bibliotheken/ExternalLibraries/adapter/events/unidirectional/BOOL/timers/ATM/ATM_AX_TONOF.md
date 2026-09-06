@@ -12,9 +12,9 @@ Der Funktionsblock **ATM_AX_TONOF** realisiert einen kombinierten Ein-/Ausschalt
 
 ### Ereignis-Eingänge
 
-| Name | Typ    | Beschreibung                                                 |
-|------|--------|--------------------------------------------------------------|
-| R    | Event  | Setzt den Timer zurück. Beide laufenden Verzögerungen werden abgebrochen und der Ausgang Q wird sofort auf FALSE gesetzt. |
+| Name | Typ   | Beschreibung                                                                                                              |
+| ---- | ----- | ------------------------------------------------------------------------------------------------------------------------- |
+| R    | Event | Setzt den Timer zurück. Beide laufenden Verzögerungen werden abgebrochen und der Ausgang Q wird sofort auf FALSE gesetzt. |
 
 ### Ereignis-Ausgänge
 
@@ -30,12 +30,12 @@ Auch für Datenausgänge existieren keine eigenen Anschlüsse. Der aktuelle Ausg
 
 ### Adapter
 
-| Name   | Richtung | Typ              | Beschreibung                                                                                         |
-|--------|----------|------------------|------------------------------------------------------------------------------------------------------|
-| IN     | Socket   | AX (unidirektional) | Eingangsadapter, der über sein Ereignis E1 die Ausführung anstößt und über sein Datum D1 den booleschen Eingangswert liefert. |
-| PT_ON  | Socket   | ATM (unidirektional) | Adapter für die Einschaltverzögerungszeit (TIME). Der Wert wird über D1 bereitgestellt.          |
-| PT_OFF | Socket   | ATM (unidirektional) | Adapter für die Ausschaltverzögerungszeit (TIME). Der Wert wird über D1 bereitgestellt.          |
-| Q      | Plug     | AX (unidirektional) | Ausgangsadapter. Das Ereignis E1 signalisiert die Aktualisierung des Ausgangswertes, das Datum D1 enthält den booleschen Zustand von Q (TRUE oder FALSE). |
+| Name   | Richtung | Typ                  | Beschreibung                                                                                                                                              |
+| ------ | -------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IN     | Socket   | AX (unidirektional)  | Eingangsadapter, der über sein Ereignis E1 die Ausführung anstößt und über sein Datum D1 den booleschen Eingangswert liefert.                             |
+| PT_ON  | Socket   | ATM (unidirektional) | Adapter für die Einschaltverzögerungszeit (TIME). Der Wert wird über D1 bereitgestellt.                                                                   |
+| PT_OFF | Socket   | ATM (unidirektional) | Adapter für die Ausschaltverzögerungszeit (TIME). Der Wert wird über D1 bereitgestellt.                                                                   |
+| Q      | Plug     | AX (unidirektional)  | Ausgangsadapter. Das Ereignis E1 signalisiert die Aktualisierung des Ausgangswertes, das Datum D1 enthält den booleschen Zustand von Q (TRUE oder FALSE). |
 
 ## Funktionsweise
 

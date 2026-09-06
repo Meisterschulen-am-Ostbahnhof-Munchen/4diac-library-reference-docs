@@ -30,10 +30,10 @@ Der Baustein besitzt keine direkten Ereignis- oder Daten-Ein-/Ausgänge auf FB-E
 
 ### **Adapter**
 
-| Bezeichnung | Typ        | Richtung | Beschreibung                     |
-|-------------|------------|----------|----------------------------------|
-| AULI_IN     | AULI       | Socket   | Eingangsadapter für ULINT-Daten  |
-| AUS_OUT     | AUS        | Plug     | Ausgangsadapter für USINT-Daten  |
+| Bezeichnung | Typ  | Richtung | Beschreibung                    |
+| ----------- | ---- | -------- | ------------------------------- |
+| AULI_IN     | AULI | Socket   | Eingangsadapter für ULINT-Daten |
+| AUS_OUT     | AUS  | Plug     | Ausgangsadapter für USINT-Daten |
 
 ## Funktionsweise
 

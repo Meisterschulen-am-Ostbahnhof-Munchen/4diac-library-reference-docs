@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge. Der gespeicherte Wert wird über den Adapter‑A
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| **I** | Socket | `adapter::types::unidirectional::AUS` | Liefert das zu latchende Signal (Ereignis E1 und Daten D1). |
-| **Q** | Plug | `adapter::types::unidirectional::AUS` | Gibt den gelatchten Wert aus (Ereignis E1 und Daten D1). |
+| Adapter | Richtung | Typ                                   | Beschreibung                                                |
+| ------- | -------- | ------------------------------------- | ----------------------------------------------------------- |
+| **I**   | Socket   | `adapter::types::unidirectional::AUS` | Liefert das zu latchende Signal (Ereignis E1 und Daten D1). |
+| **Q**   | Plug     | `adapter::types::unidirectional::AUS` | Gibt den gelatchten Wert aus (Ereignis E1 und Daten D1).    |
 
 Der intern verwendete Baustein `E_D_FF_ANY` erwartet an seinem **CLK**‑Eingang ein Ereignis (übernommen von **I.E1**) und an **D** den Datenwert (von **I.D1**). Das ausgegebene Ereignis **EO** wird an **Q.E1** weitergeleitet, der gespeicherte Datenwert **Q** an **Q.D1**.
 

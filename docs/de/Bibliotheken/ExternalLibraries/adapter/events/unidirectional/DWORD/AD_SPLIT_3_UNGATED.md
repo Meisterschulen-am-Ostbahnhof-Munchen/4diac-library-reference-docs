@@ -30,12 +30,12 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Bezeichnung | Beschreibung |
-| ------ | ---------- | ------------- | -------------- |
-| Socket (Eingang) | Input | IN | Unidirektionaler Adapter-Eingang, der auf die drei Ausgänge verteilt wird. |
-| Plug (Ausgang) | Output | OUT1 | Erster Ausgang mit dupliziertem Adapter-Signal. |
-| Plug (Ausgang) | Output | OUT2 | Zweiter Ausgang mit dupliziertem Adapter-Signal. |
-| Plug (Ausgang) | Output | OUT3 | Dritter Ausgang mit dupliziertem Adapter-Signal. |
+| Typ              | Richtung | Bezeichnung | Beschreibung                                                               |
+| ---------------- | -------- | ----------- | -------------------------------------------------------------------------- |
+| Socket (Eingang) | Input    | IN          | Unidirektionaler Adapter-Eingang, der auf die drei Ausgänge verteilt wird. |
+| Plug (Ausgang)   | Output   | OUT1        | Erster Ausgang mit dupliziertem Adapter-Signal.                            |
+| Plug (Ausgang)   | Output   | OUT2        | Zweiter Ausgang mit dupliziertem Adapter-Signal.                           |
+| Plug (Ausgang)   | Output   | OUT3        | Dritter Ausgang mit dupliziertem Adapter-Signal.                           |
 
 Alle Adapter sind vom Typ `adapter::types::unidirectional::AD`.
 

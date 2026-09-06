@@ -12,20 +12,20 @@ Der Funktionsbaustein `SET_TIME_OF_DAY` dient dazu, einen über den Dateneingang
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                                    |
+| ---- | ----- | ------------------------------------------------------------ |
 | REQ  | Event | Normaler Ausführungsanforderung (gebunden an `IN` und `OUT`) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ   | Kommentar                                      |
+| ---- | ----- | ---------------------------------------------- |
 | CNF  | Event | Bestätigung der Ausführung (gebunden an `OUT`) |
 
 ### **Daten-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
+| Name | Typ         | Kommentar                        |
+| ---- | ----------- | -------------------------------- |
 | IN   | TIME_OF_DAY | Der zu schreibende Tageszeitwert |
 
 ### **Daten-Ausgänge**
@@ -55,9 +55,9 @@ Der Baustein besitzt einen einzigen Zustand:
 
 - **REQ**: Wird beim Event `REQ` aktiviert. Nach Ausführung des Algorithmus wird `CNF` gesendet und der Zustand bleibt aktiv (kein Zustandswechsel).
 
-| Zustand | Aktion | Ausgangsereignis |
-|---------|--------|------------------|
-| REQ     | Algorithmus `REQ` | CNF |
+| Zustand | Aktion            | Ausgangsereignis |
+| ------- | ----------------- | ---------------- |
+| REQ     | Algorithmus `REQ` | CNF              |
 
 ## Anwendungsspezifische Szenarien
 

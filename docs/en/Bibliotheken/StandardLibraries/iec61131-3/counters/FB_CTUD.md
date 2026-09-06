@@ -46,6 +46,7 @@ The function block FB_CTUD performs the following operations:
 - When CU is enabled and the counter value (CV) is less than 32767, CV is incremented by 1.
 - When CD is enabled and the counter value (CV) is greater than -32768, CV is decremented by 1.
 - CU and CD cannot be enabled simultaneously.
+
 1. **Outputs (QU/QD)**:
 
 - QU is enabled when CV is greater than or equal to PV.

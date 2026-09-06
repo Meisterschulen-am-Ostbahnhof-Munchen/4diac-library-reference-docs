@@ -30,10 +30,10 @@ Keine separaten Datenausgänge – die Ausgangsdaten werden über die neun ausge
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AL` | Ein eingehender Adapter, der das zu verteilende Signal oder die Daten liefert. |
-| **Plug** (Ausgang) | `OUT1` … `OUT9` | `adapter::types::unidirectional::AL` | Neun ausgehende Adapter, die jeweils eine Kopie des Eingangssignals ausgeben. |
+| Richtung             | Name            | Typ                                  | Beschreibung                                                                   |
+| -------------------- | --------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
+| **Socket** (Eingang) | `IN`            | `adapter::types::unidirectional::AL` | Ein eingehender Adapter, der das zu verteilende Signal oder die Daten liefert. |
+| **Plug** (Ausgang)   | `OUT1` … `OUT9` | `adapter::types::unidirectional::AL` | Neun ausgehende Adapter, die jeweils eine Kopie des Eingangssignals ausgeben.  |
 
 ## Funktionsweise
 

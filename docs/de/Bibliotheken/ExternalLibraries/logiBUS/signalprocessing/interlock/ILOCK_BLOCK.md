@@ -12,31 +12,31 @@ Der Funktionsblock **ILOCK_BLOCK** realisiert eine Verriegelung (Interlock) zwis
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Mit Variable | Beschreibung |
-|----------|--------------|--------------|
-| `EI_UP`  | `DI_UP`      | Ereignis zum Setzen der UP-Richtung |
-| `EI_DOWN`| `DI_DOWN`    | Ereignis zum Setzen der DOWN-Richtung |
+| Ereignis  | Mit Variable | Beschreibung                          |
+| --------- | ------------ | ------------------------------------- |
+| `EI_UP`   | `DI_UP`      | Ereignis zum Setzen der UP-Richtung   |
+| `EI_DOWN` | `DI_DOWN`    | Ereignis zum Setzen der DOWN-Richtung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis  | Mit Variable | Beschreibung |
-|-----------|--------------|--------------|
-| `EO_UP`   | `DO_UP`      | Wird ausgelöst, wenn die UP-Richtung aktiv geschaltet wird oder wenn sie deaktiviert wird |
+| Ereignis  | Mit Variable | Beschreibung                                                                                |
+| --------- | ------------ | ------------------------------------------------------------------------------------------- |
+| `EO_UP`   | `DO_UP`      | Wird ausgelöst, wenn die UP-Richtung aktiv geschaltet wird oder wenn sie deaktiviert wird   |
 | `EO_DOWN` | `DO_DOWN`    | Wird ausgelöst, wenn die DOWN-Richtung aktiv geschaltet wird oder wenn sie deaktiviert wird |
 
 ### **Daten-Eingänge**
 
-| Variable   | Typ  | Kommentar |
-|------------|------|-----------|
-| `DI_UP`    | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
-| `DI_DOWN`  | BOOL | TRUE = rückwärts, abwärts, links, gegen den Uhrzeigersinn |
+| Variable  | Typ  | Kommentar                                                 |
+| --------- | ---- | --------------------------------------------------------- |
+| `DI_UP`   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn       |
+| `DI_DOWN` | BOOL | TRUE = rückwärts, abwärts, links, gegen den Uhrzeigersinn |
 
 ### **Daten-Ausgänge**
 
-| Variable   | Typ  | Kommentar |
-|------------|------|-----------|
-| `DO_UP`    | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn |
-| `DO_DOWN`  | BOOL | TRUE = rückwärts, abwärts, links, gegen den Uhrzeigersinn |
+| Variable  | Typ  | Kommentar                                                 |
+| --------- | ---- | --------------------------------------------------------- |
+| `DO_UP`   | BOOL | TRUE = vorwärts, aufwärts, rechts, im Uhrzeigersinn       |
+| `DO_DOWN` | BOOL | TRUE = rückwärts, abwärts, links, gegen den Uhrzeigersinn |
 
 ### **Adapter**
 
@@ -62,13 +62,13 @@ Der Baustein besitzt zwei Aktivierungszustände (UP, DOWN) und zwei Zwischenzust
 
 ## Zustandsübersicht
 
-| Zustand      | Beschreibung                                                                                                                                 |
-|--------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| **STOP**     | Ruhezustand. Beide Ausgänge FALSE. Warte auf Aktivierung.                                                                                     |
-| **UP**       | UP-Richtung aktiv. DO_UP = TRUE, DO_DOWN = FALSE. Warte auf Freigabe durch `EI_UP` mit `DI_UP = FALSE`.                                       |
-| **DOWN**     | DOWN-Richtung aktiv. DO_UP = FALSE, DO_DOWN = TRUE. Warte auf Freigabe durch `EI_DOWN` mit `DI_DOWN = FALSE`.                                 |
-| **UP_STOP**  | Zwischenzustand nach Freigabe von UP. Führt sofort den STOP-Algorithmus aus, sendet `EO_UP` und wechselt zurück zu STOP.                      |
-| **DOWN_STOP**| Zwischenzustand nach Freigabe von DOWN. Führt sofort den STOP-Algorithmus aus, sendet `EO_DOWN` und wechselt zurück zu STOP.                  |
+| Zustand       | Beschreibung                                                                                                                 |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **STOP**      | Ruhezustand. Beide Ausgänge FALSE. Warte auf Aktivierung.                                                                    |
+| **UP**        | UP-Richtung aktiv. DO_UP = TRUE, DO_DOWN = FALSE. Warte auf Freigabe durch `EI_UP` mit `DI_UP = FALSE`.                      |
+| **DOWN**      | DOWN-Richtung aktiv. DO_UP = FALSE, DO_DOWN = TRUE. Warte auf Freigabe durch `EI_DOWN` mit `DI_DOWN = FALSE`.                |
+| **UP_STOP**   | Zwischenzustand nach Freigabe von UP. Führt sofort den STOP-Algorithmus aus, sendet `EO_UP` und wechselt zurück zu STOP.     |
+| **DOWN_STOP** | Zwischenzustand nach Freigabe von DOWN. Führt sofort den STOP-Algorithmus aus, sendet `EO_DOWN` und wechselt zurück zu STOP. |
 
 **Übergangsmatrix (vereinfacht):**
 

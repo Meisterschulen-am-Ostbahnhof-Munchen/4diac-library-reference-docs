@@ -30,13 +30,13 @@ No data outputs available.
 
 ### **Adapter**
 
-| Type | Name | Direction | Description |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::ATM` | IN | Socket | Input signal (ATM) |
-| `adapter::types::unidirectional::ATM` | OUT1 | Plug | Output 1 (identical to IN) |
-| `adapter::types::unidirectional::ATM` | OUT2 | Plug | Output 2 (identical to IN) |
-| `adapter::types::unidirectional::ATM` | OUT3 | Plug | Output 3 (identical to IN) |
-| `adapter::types::unidirectional::ATM` | OUT4 | Plug | Output 4 (identical to IN) |
+| Type                                  | Name | Direction | Description                |
+| ------------------------------------- | ---- | --------- | -------------------------- |
+| `adapter::types::unidirectional::ATM` | IN   | Socket    | Input signal (ATM)         |
+| `adapter::types::unidirectional::ATM` | OUT1 | Plug      | Output 1 (identical to IN) |
+| `adapter::types::unidirectional::ATM` | OUT2 | Plug      | Output 2 (identical to IN) |
+| `adapter::types::unidirectional::ATM` | OUT3 | Plug      | Output 3 (identical to IN) |
+| `adapter::types::unidirectional::ATM` | OUT4 | Plug      | Output 4 (identical to IN) |
 
 ## Functionality
 

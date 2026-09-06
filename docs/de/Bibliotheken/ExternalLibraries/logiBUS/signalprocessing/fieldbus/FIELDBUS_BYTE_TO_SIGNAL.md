@@ -12,28 +12,28 @@ Der Funktionsblock **FIELDBUS_BYTE_TO_SIGNAL** dient der einfachen Validierung e
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| REQ | Event | Normaler Ausführungsanstoß; verarbeitet den aktuellen Wert am Eingang IN. |
+| Ereignis | Datentyp | Kommentar                                                                 |
+| -------- | -------- | ------------------------------------------------------------------------- |
+| REQ      | Event    | Normaler Ausführungsanstoß; verarbeitet den aktuellen Wert am Eingang IN. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| CNF | Event | Bestätigung der Ausführung; die Ausgänge OUT und VALID wurden aktualisiert. |
+| Ereignis | Datentyp | Kommentar                                                                   |
+| -------- | -------- | --------------------------------------------------------------------------- |
+| CNF      | Event    | Bestätigung der Ausführung; die Ausgänge OUT und VALID wurden aktualisiert. |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Initialwert | Kommentar |
-|------|----------|-------------|-----------|
-| IN | BYTE | NOT_AVAILABLE_B | Eingangssignal als Byte-Wert. |
+| Name | Datentyp | Initialwert     | Kommentar                     |
+| ---- | -------- | --------------- | ----------------------------- |
+| IN   | BYTE     | NOT_AVAILABLE_B | Eingangssignal als Byte-Wert. |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Initialwert | Kommentar |
-|------|----------|-------------|-----------|
-| OUT | BYTE | 16#00 | Gefilterter Ausgangswert; 0 wenn Signal ungültig. |
-| VALID | BOOL | FALSE | TRUE, wenn das Eingangssignal als gültig erkannt wurde. |
+| Name  | Datentyp | Initialwert | Kommentar                                               |
+| ----- | -------- | ----------- | ------------------------------------------------------- |
+| OUT   | BYTE     | 16#00       | Gefilterter Ausgangswert; 0 wenn Signal ungültig.       |
+| VALID | BOOL     | FALSE       | TRUE, wenn das Eingangssignal als gültig erkannt wurde. |
 
 ### **Adapter**
 
@@ -72,9 +72,9 @@ Nach der Berechnung wird das Ereignis **CNF** ausgegeben. Der Initialwert von **
 
 Der Funktionsblock besitzt genau einen Ausführungszustand:
 
-| Zustand | Aktion | Ausgabeereignis |
-|---------|--------|-----------------|
-| REQ | Führt den Algorithmus **REQ** aus (Filterlogik) | CNF |
+| Zustand | Aktion                                          | Ausgabeereignis |
+| ------- | ----------------------------------------------- | --------------- |
+| REQ     | Führt den Algorithmus **REQ** aus (Filterlogik) | CNF             |
 
 Es gibt keine weiteren Warte- oder Initialisierungszustände.
 

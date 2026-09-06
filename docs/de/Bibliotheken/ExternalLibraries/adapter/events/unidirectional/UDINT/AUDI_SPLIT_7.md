@@ -28,8 +28,8 @@ Keine
 
 ### **Adapter**
 
-| Name   | Typ                            | Richtung |
-|--------|--------------------------------|----------|
+| Name   | Typ                                    | Richtung         |
+| ------ | -------------------------------------- | ---------------- |
 | `IN`   | `adapter::types::unidirectional::AUDI` | Socket (Eingang) |
 | `OUT1` | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   |
 | `OUT2` | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   |
@@ -63,11 +63,11 @@ Der Baustein enthält keine Zustandsmaschine (ECC). Das Verhalten ist vollständ
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein         | Verteilung               | Adaptertyp             |
-|------------------|--------------------------|------------------------|
-| `AUDI_SPLIT_7`   | 1 Eingang → 7 Ausgänge   | Unidirektional `AUDI` |
-| `SPLIT_1_TO_2`  (analog) | 1 → 2       | Beliebig (generisch)   |
-| `AUDI_MERGE`     | Mehrere Eingänge → 1      | Unidirektional `AUDI` |
+| Baustein                 | Verteilung             | Adaptertyp            |
+| ------------------------ | ---------------------- | --------------------- |
+| `AUDI_SPLIT_7`           | 1 Eingang → 7 Ausgänge | Unidirektional `AUDI` |
+| `SPLIT_1_TO_2`  (analog) | 1 → 2                  | Beliebig (generisch)  |
+| `AUDI_MERGE`             | Mehrere Eingänge → 1   | Unidirektional `AUDI` |
 
 Während `AUDI_SPLIT_7` auf den spezifischen AUDI-Adaptertyp ausgelegt ist, existieren generische Split-Bausteine für andere Datenformate. Die Beschränkung auf eine feste Anzahl von sieben Ausgängen unterscheidet ihn von flexiblen Splittern mit parametrierbarer Ausgangsanzahl.
 

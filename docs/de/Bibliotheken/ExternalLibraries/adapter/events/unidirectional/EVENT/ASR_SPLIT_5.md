@@ -30,8 +30,8 @@ Keine
 
 ### **Adapter**
 
-| Bezeichnung | Typ                        | Richtung |
-|-------------|----------------------------|----------|
+| Bezeichnung | Typ                                   | Richtung         |
+| ----------- | ------------------------------------- | ---------------- |
 | `IN`        | `adapter::types::unidirectional::ASR` | Socket (Eingang) |
 | `OUT1`      | `adapter::types::unidirectional::ASR` | Plug (Ausgang)   |
 | `OUT2`      | `adapter::types::unidirectional::ASR` | Plug (Ausgang)   |

@@ -12,21 +12,21 @@ Der Funktionsblock **AULI_D_FF_TMIN** realisiert ein Daten-Latch (D-Flipflop) mi
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                                      |
-|-------|--------|-----------------------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung; wird mit `Tmin` synchronisiert |
+| Name | Typ   | Kommentar                                                   |
+| ---- | ----- | ----------------------------------------------------------- |
+| INIT | EInit | Initialisierungsanforderung; wird mit `Tmin` synchronisiert |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ    | Kommentar                                      |
-|-------|--------|-----------------------------------------------|
-| INITO | EInit  | Bestätigung der Initialisierung               |
+| Name  | Typ   | Kommentar                       |
+| ----- | ----- | ------------------------------- |
+| INITO | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name  | Typ   | Kommentar                                              |
-|-------|-------|--------------------------------------------------------|
-| Tmin  | TIME  | Mindestzeit zwischen zwei Ereignisausgaben (EO) am Ausgangsadapter |
+| Name | Typ  | Kommentar                                                          |
+| ---- | ---- | ------------------------------------------------------------------ |
+| Tmin | TIME | Mindestzeit zwischen zwei Ereignisausgaben (EO) am Ausgangsadapter |
 
 ### **Daten-Ausgänge**
 
@@ -34,10 +34,10 @@ Keine
 
 ### **Adapter**
 
-| Name | Rolle     | Typ      | Kommentar                                  |
-|------|-----------|----------|--------------------------------------------|
-| I    | Socket    | AULI     | Eingang: zu latchierender Wert (Ereignis E1, Daten D1) |
-| Q    | Plug      | AULI     | Ausgang: latchender Wert (Ereignis E1, Daten D1) |
+| Name | Rolle  | Typ  | Kommentar                                              |
+| ---- | ------ | ---- | ------------------------------------------------------ |
+| I    | Socket | AULI | Eingang: zu latchierender Wert (Ereignis E1, Daten D1) |
+| Q    | Plug   | AULI | Ausgang: latchender Wert (Ereignis E1, Daten D1)       |
 
 ## Funktionsweise
 

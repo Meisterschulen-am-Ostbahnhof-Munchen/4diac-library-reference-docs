@@ -28,10 +28,10 @@ No data outputs available.
 
 ### **Adapter**
 
-| Direction | Adapter | Type | Description |
-| ---------- | --------- | ----- | -------------- |
-| **Socket** (Input) | `IN` | `adapter::types::unidirectional::AR` | Incoming AR signal that is distributed. |
-| **Plug** (Output) | `OUT1` … `OUT9` | `adapter::types::unidirectional::AR` | Nine identical outputs that forward the incoming AR signal. |
+| Direction          | Adapter         | Type                                 | Description                                                 |
+| ------------------ | --------------- | ------------------------------------ | ----------------------------------------------------------- |
+| **Socket** (Input) | `IN`            | `adapter::types::unidirectional::AR` | Incoming AR signal that is distributed.                     |
+| **Plug** (Output)  | `OUT1` … `OUT9` | `adapter::types::unidirectional::AR` | Nine identical outputs that forward the incoming AR signal. |
 
 ## Functionality
 
@@ -55,11 +55,11 @@ The function block has no internal state (no state machine). The output signal c
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Number of Outputs | Remarks |
-| ---------- | ------------------ | ----------- |
-| `AR_SPLIT_4` | 4 | Same functionality, but only four outputs. |
-| `AR_SPLIT_9` | 9 | Presented function block (nine outputs). |
-| `AR_SPLIT_2` | 2 | Minimal splitter for two paths. |
+| Function Block | Number of Outputs | Remarks                                    |
+| -------------- | ----------------- | ------------------------------------------ |
+| `AR_SPLIT_4`   | 4                 | Same functionality, but only four outputs. |
+| `AR_SPLIT_9`   | 9                 | Presented function block (nine outputs).   |
+| `AR_SPLIT_2`   | 2                 | Minimal splitter for two paths.            |
 
 The function blocks differ only in the number of outputs; the functionality and generic properties are identical.
 

@@ -32,10 +32,10 @@ Daten werden über den Adapter `OUT` weitergegeben.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Kommentar |
-|-----|------|----------|-----------|
-| `adapter::types::unidirectional::AX` | IN | Socket (Eingang) | Empfängt Ereignisse und Daten |
-| `adapter::types::unidirectional::AX` | OUT | Plug (Ausgang) | Gibt Ereignisse und Daten unverändert weiter |
+| Typ                                  | Name | Richtung         | Kommentar                                    |
+| ------------------------------------ | ---- | ---------------- | -------------------------------------------- |
+| `adapter::types::unidirectional::AX` | IN   | Socket (Eingang) | Empfängt Ereignisse und Daten                |
+| `adapter::types::unidirectional::AX` | OUT  | Plug (Ausgang)   | Gibt Ereignisse und Daten unverändert weiter |
 
 ## Funktionsweise
 
@@ -66,12 +66,12 @@ Der Baustein besitzt keine eigene Zustandsmaschine. Sein Verhalten ist statisch 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied |
-| ---------- | -------------- | ------------- |
-| `E_NOP` | Ereignis-NOP mit direkten Ereignis-/Daten-Ein-/Ausgängen | Verwendet Standard-I/O statt Adapter |
-| `MUX` | Auswahl zwischen mehreren Datenquellen | Bietet Auswahl, kein reiner Durchgriff |
-| `BYE` | Explizite End-of-Service-Markierung | Besitzt spezielle Semantik, kein Durchgriff |
-| **AX_NOOP** | Reine Adapter-Durchleitung | Speziell für den Adaptertyp `AX` ausgelegt |
+| Baustein    | Beschreibung                                             | Unterschied                                 |
+| ----------- | -------------------------------------------------------- | ------------------------------------------- |
+| `E_NOP`     | Ereignis-NOP mit direkten Ereignis-/Daten-Ein-/Ausgängen | Verwendet Standard-I/O statt Adapter        |
+| `MUX`       | Auswahl zwischen mehreren Datenquellen                   | Bietet Auswahl, kein reiner Durchgriff      |
+| `BYE`       | Explizite End-of-Service-Markierung                      | Besitzt spezielle Semantik, kein Durchgriff |
+| **AX_NOOP** | Reine Adapter-Durchleitung                               | Speziell für den Adaptertyp `AX` ausgelegt  |
 
 ## Fazit
 

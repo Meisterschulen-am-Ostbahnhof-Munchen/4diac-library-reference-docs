@@ -41,10 +41,12 @@ The block integrates navigation data for modern agricultural machinery and comme
 
 - `INIT` with `QI`=TRUE starts the GPS/navigation system
 - `INITO` confirms operational readiness with `QO` and `STATUS`
+
 1. **Data Update**:
 
 - `IND` provides continuously updated navigation data
 - Standard update rate: 100ms for real-time applications
+
 1. **Error Handling**:
 
 - `TIMEOUT` in case of signal loss or communication errors
@@ -69,21 +71,21 @@ The block integrates navigation data for modern agricultural machinery and comme
 
 ## Data formats
 
-| Parameter | Example value | Meaning |
-| ----------- | -------------- | ------------ |
-| `CompassBearing` | 16384 | 128° (16384 × 1/128) |
-| `NavigationBasedVehicleSpeed` | 12800 | 50 km/h (12800 × 1/256) |
-| `Pitch` | 0xFFFF | Not used |
-| `Altitude` | 0xFFFF | Not used |
+| Parameter                     | Example value | Meaning                 |
+| ----------------------------- | ------------- | ----------------------- |
+| `CompassBearing`              | 16384         | 128° (16384 × 1/128)    |
+| `NavigationBasedVehicleSpeed` | 12800         | 50 km/h (12800 × 1/256) |
+| `Pitch`                       | 0xFFFF        | Not used                |
+| `Altitude`                    | 0xFFFF        | Not used                |
 
 ## ⚖️ Comparison with similar systems
 
-| Feature | I_VDS | Standard GPS | Premium Navigation |
-| --------- | ------- | ------------- | -------------- |
-| Accuracy | ±0.1° Direction | ±5° | ±0.05° |
-| Speed | ±0.1% | ±2% | ±0.05% |
-| Update Rate | 10 Hz | 1 Hz | 20 Hz |
-| ISO Compliance | Full | Partial | Full |
+| Feature        | I_VDS           | Standard GPS | Premium Navigation |
+| -------------- | --------------- | ------------ | ------------------ |
+| Accuracy       | ±0.1° Direction | ±5°          | ±0.05°             |
+| Speed          | ±0.1%           | ±2%          | ±0.05%             |
+| Update Rate    | 10 Hz           | 1 Hz         | 20 Hz              |
+| ISO Compliance | Full            | Partial      | Full               |
 
 ## 🛠️ Related Exercises
 

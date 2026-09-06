@@ -30,10 +30,10 @@ Analog gibt es keine separaten Daten-Ausgänge. Der konvertierte LREAL-Wert wird
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| **Socket** | `ALI_IN` | Eingang | Adapter vom Typ `adapter::types::unidirectional::ALI` (LINT) |
-| **Plug**  | `ALR_OUT` | Ausgang | Adapter vom Typ `adapter::types::unidirectional::ALR` (LREAL) |
+| Typ        | Name      | Richtung | Beschreibung                                                  |
+| ---------- | --------- | -------- | ------------------------------------------------------------- |
+| **Socket** | `ALI_IN`  | Eingang  | Adapter vom Typ `adapter::types::unidirectional::ALI` (LINT)  |
+| **Plug**   | `ALR_OUT` | Ausgang  | Adapter vom Typ `adapter::types::unidirectional::ALR` (LREAL) |
 
 ## Funktionsweise
 

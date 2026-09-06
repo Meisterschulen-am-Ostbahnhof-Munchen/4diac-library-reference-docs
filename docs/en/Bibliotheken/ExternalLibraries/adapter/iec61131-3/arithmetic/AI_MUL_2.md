@@ -34,11 +34,11 @@ The interface of this function block is entirely adapter-based. There are no dir
 
 ### **Adapters**
 
-| Name | Type | Direction (Mode) | Description |
-| :--- | :--- | :--- | :--- |
-| **IN1** | `adapter::types::unidirectional::AI` | Socket (Input) | First input value (multiplicand) for the arithmetic operation. |
-| **IN2** | `adapter::types::unidirectional::AI` | Socket (Input) | Second input value (multiplier) for the arithmetic operation. |
-| **OUT** | `adapter::types::unidirectional::AI` | Plug (Output) | Output for the calculated product of the two input values. |
+| Name    | Type                                 | Direction (Mode) | Description                                                    |
+| :------ | :----------------------------------- | :--------------- | :------------------------------------------------------------- |
+| **IN1** | `adapter::types::unidirectional::AI` | Socket (Input)   | First input value (multiplicand) for the arithmetic operation. |
+| **IN2** | `adapter::types::unidirectional::AI` | Socket (Input)   | Second input value (multiplier) for the arithmetic operation.  |
+| **OUT** | `adapter::types::unidirectional::AI` | Plug (Output)    | Output for the calculated product of the two input values.     |
 
 ## Functionality
 

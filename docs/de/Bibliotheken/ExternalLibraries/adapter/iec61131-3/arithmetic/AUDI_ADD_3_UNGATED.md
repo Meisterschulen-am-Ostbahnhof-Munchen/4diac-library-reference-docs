@@ -30,12 +30,12 @@ Keine direkten Daten-Ausgänge vorhanden. Das Ergebnis wird über den Adapter-Au
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Kommentar |
-| ------ | ----- | ---------- | ----------- |
-| IN1 | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 1 |
-| IN2 | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 2 |
-| IN3 | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 3 |
-| OUT | `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | ADD result |
+| Name | Typ                                    | Richtung         | Kommentar   |
+| ---- | -------------------------------------- | ---------------- | ----------- |
+| IN1  | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 1 |
+| IN2  | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 2 |
+| IN3  | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | ADD input 3 |
+| OUT  | `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | ADD result  |
 
 ## Funktionsweise
 

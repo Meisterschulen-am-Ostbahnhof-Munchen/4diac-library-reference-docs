@@ -28,12 +28,12 @@ Der Funktionsblock **ALI_SPLIT_3** dient dazu, einen eingehenden unidirektionale
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::ALI` | Empfängt das eingehende ALI-Signal. |
-| Plug (Ausgang) | `OUT1` | `adapter::types::unidirectional::ALI` | Erste Ausgangskopie des Signals. |
-| Plug (Ausgang) | `OUT2` | `adapter::types::unidirectional::ALI` | Zweite Ausgangskopie des Signals. |
-| Plug (Ausgang) | `OUT3` | `adapter::types::unidirectional::ALI` | Dritte Ausgangskopie des Signals. |
+| Richtung         | Name   | Typ                                   | Beschreibung                        |
+| ---------------- | ------ | ------------------------------------- | ----------------------------------- |
+| Socket (Eingang) | `IN`   | `adapter::types::unidirectional::ALI` | Empfängt das eingehende ALI-Signal. |
+| Plug (Ausgang)   | `OUT1` | `adapter::types::unidirectional::ALI` | Erste Ausgangskopie des Signals.    |
+| Plug (Ausgang)   | `OUT2` | `adapter::types::unidirectional::ALI` | Zweite Ausgangskopie des Signals.   |
+| Plug (Ausgang)   | `OUT3` | `adapter::types::unidirectional::ALI` | Dritte Ausgangskopie des Signals.   |
 
 **Hinweis:** Der Adaptertyp `ALI` ist ein unidirektionaler Interface-Adapter, der in der Regel Daten- und Ereignisfluss in einer Richtung kapselt. Die exakte interne Struktur ist anwendungsspezifisch definiert.
 

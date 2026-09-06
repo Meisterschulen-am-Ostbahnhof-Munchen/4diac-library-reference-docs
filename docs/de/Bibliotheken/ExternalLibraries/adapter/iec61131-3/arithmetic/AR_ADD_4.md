@@ -30,13 +30,13 @@ Der Funktionsblock **AR_ADD_4** ist ein generischer Baustein zur arithmetischen 
 
 ### **Adapter**
 
-| Name | Typ | Richtung | Beschreibung |
-| ------ | ----- | ---------- | -------------- |
-| **IN1** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Erster Summand der Addition |
-| **IN2** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Zweiter Summand |
-| **IN3** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Dritter Summand |
-| **IN4** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Vierter Summand |
-| **OUT** | `adapter::types::unidirectional::AR` | Plug (Ausgang) | Ergebnis der Addition (Summe der Eingänge) |
+| Name    | Typ                                  | Richtung         | Beschreibung                               |
+| ------- | ------------------------------------ | ---------------- | ------------------------------------------ |
+| **IN1** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Erster Summand der Addition                |
+| **IN2** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Zweiter Summand                            |
+| **IN3** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Dritter Summand                            |
+| **IN4** | `adapter::types::unidirectional::AR` | Socket (Eingang) | Vierter Summand                            |
+| **OUT** | `adapter::types::unidirectional::AR` | Plug (Ausgang)   | Ergebnis der Addition (Summe der Eingänge) |
 
 Die Adapter sind vom Typ `unidirectional::AR`, was darauf hindeutet, dass sie einen arithmetischen Wert (z. B. einen Zahlenwert) als gerichtete Verbindung bereitstellen oder verarbeiten.
 
@@ -70,12 +70,12 @@ Aufgrund der rein datengetriebenen und ereignislosen Arbeitsweise besitzt der Ba
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Eingänge | Besonderheit |
-| ---------- | ---------------- | -------------- |
-| **AR_ADD_4** | 4 | Adapterbasiert, generisch, keine Ereignisse |
-| **AR_ADD_2** (hypothetisch) | 2 | Reduzierte Eingänge, gleiche Konzeption |
-| **F_ADD** (aus IEC 61131) | 2 | Standard-Datentypen, ereignisgesteuert (via ENABLE/ENO) |
-| **AR_SUM** (hypothetisch) | variabel | Flexiblere Anzahl, aber aufwändiger |
+| Baustein                    | Anzahl Eingänge | Besonderheit                                            |
+| --------------------------- | --------------- | ------------------------------------------------------- |
+| **AR_ADD_4**                | 4               | Adapterbasiert, generisch, keine Ereignisse             |
+| **AR_ADD_2** (hypothetisch) | 2               | Reduzierte Eingänge, gleiche Konzeption                 |
+| **F_ADD** (aus IEC 61131)   | 2               | Standard-Datentypen, ereignisgesteuert (via ENABLE/ENO) |
+| **AR_SUM** (hypothetisch)   | variabel        | Flexiblere Anzahl, aber aufwändiger                     |
 
 Der Baustein **AR_ADD_4** hebt sich durch die reine Adapter-Kommunikation und die generische Auslegung von klassischen IEC 61499-Arithmetikbausteinen ab. Er eignet sich besonders für Systeme, die bereits auf Adapter-Technologie setzen und keine explizite Ereignissteuerung benötigen.
 

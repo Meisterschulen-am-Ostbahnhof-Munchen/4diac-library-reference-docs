@@ -12,38 +12,38 @@ Der Funktionsblock **INI_AUDI** ermöglicht das Lesen und Speichern von UDINT-Da
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar                         |
-|-------|-------|-----------------------------------|
-| INIT  | EInit | Service Initialization            |
+| Name | Typ   | Kommentar              |
+| ---- | ----- | ---------------------- |
+| INIT | EInit | Service Initialization |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                        |
-|-------|-------|----------------------------------|
-| INITO | EInit | Initialization Confirm           |
+| Name  | Typ   | Kommentar              |
+| ----- | ----- | ---------------------- |
+| INITO | EInit | Initialization Confirm |
 
 ### **Daten-Eingänge**
 
-| Name           | Typ    | Kommentar                                           |
-|----------------|--------|-----------------------------------------------------|
-| QI             | BOOL   | Event Input Qualifier                               |
-| SECTION        | STRING | Section name in der settings.ini                    |
-| KEY            | STRING | Key name in der settings.ini                        |
-| DEFAULT_VALUE  | UDINT  | Rückfallwert, falls der Schlüssel nicht gefunden wird |
+| Name          | Typ    | Kommentar                                             |
+| ------------- | ------ | ----------------------------------------------------- |
+| QI            | BOOL   | Event Input Qualifier                                 |
+| SECTION       | STRING | Section name in der settings.ini                      |
+| KEY           | STRING | Key name in der settings.ini                          |
+| DEFAULT_VALUE | UDINT  | Rückfallwert, falls der Schlüssel nicht gefunden wird |
 
 ### **Daten-Ausgänge**
 
 | Name   | Typ    | Kommentar        |
-|--------|--------|------------------|
+| ------ | ------ | ---------------- |
 | QO     | BOOL   | Output Qualifier |
 | STATUS | STRING | Service Status   |
 
 ### **Adapter**
 
-| Name     | Typ      | Richtung       | Kommentar                       |
-|----------|----------|----------------|---------------------------------|
-| AUDI_OUT | AUDI     | Plug (Ausgang) | Ausgabe des gelesenen Werts     |
-| AUDI_IN  | AUDI     | Socket (Eingang)| Eingang des zu speichernden Werts |
+| Name     | Typ  | Richtung         | Kommentar                         |
+| -------- | ---- | ---------------- | --------------------------------- |
+| AUDI_OUT | AUDI | Plug (Ausgang)   | Ausgabe des gelesenen Werts       |
+| AUDI_IN  | AUDI | Socket (Eingang) | Eingang des zu speichernden Werts |
 
 ## Funktionsweise
 

@@ -31,8 +31,8 @@ Der Funktionsblock **AUDI_SUBSCRIBE_1** ist ein Composite-Funktionsblock, der de
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                         |
-|---------|------------------------------|----------|--------------------------------------|
+| Adapter | Typ                                  | Richtung       | Beschreibung                       |
+| ------- | ------------------------------------ | -------------- | ---------------------------------- |
 | OUT     | adapter::types::unidirectional::AUDI | Plug (Ausgang) | Gepufferter empfangener UDINT-Wert |
 
 ## Funktionsweise

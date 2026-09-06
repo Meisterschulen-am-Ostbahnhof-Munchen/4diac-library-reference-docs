@@ -30,14 +30,14 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| **Socket** (Eingang) | `IN` | `adapter::types::unidirectional::AB` | Unidirektionaler AB-Adapter, der das Eingangssignal bereitstellt. |
-| **Plug** (Ausgang) | `OUT1` | `adapter::types::unidirectional::AB` | Erster unidirektionaler AB-Adapter-Ausgang. |
-| **Plug** (Ausgang) | `OUT2` | `adapter::types::unidirectional::AB` | Zweiter unidirektionaler AB-Adapter-Ausgang. |
-| **Plug** (Ausgang) | `OUT3` | `adapter::types::unidirectional::AB` | Dritter unidirektionaler AB-Adapter-Ausgang. |
-| **Plug** (Ausgang) | `OUT4` | `adapter::types::unidirectional::AB` | Vierter unidirektionaler AB-Adapter-Ausgang. |
-| **Plug** (Ausgang) | `OUT5` | `adapter::types::unidirectional::AB` | Fünfter unidirektionaler AB-Adapter-Ausgang. |
+| Richtung             | Name   | Typ                                  | Beschreibung                                                      |
+| -------------------- | ------ | ------------------------------------ | ----------------------------------------------------------------- |
+| **Socket** (Eingang) | `IN`   | `adapter::types::unidirectional::AB` | Unidirektionaler AB-Adapter, der das Eingangssignal bereitstellt. |
+| **Plug** (Ausgang)   | `OUT1` | `adapter::types::unidirectional::AB` | Erster unidirektionaler AB-Adapter-Ausgang.                       |
+| **Plug** (Ausgang)   | `OUT2` | `adapter::types::unidirectional::AB` | Zweiter unidirektionaler AB-Adapter-Ausgang.                      |
+| **Plug** (Ausgang)   | `OUT3` | `adapter::types::unidirectional::AB` | Dritter unidirektionaler AB-Adapter-Ausgang.                      |
+| **Plug** (Ausgang)   | `OUT4` | `adapter::types::unidirectional::AB` | Vierter unidirektionaler AB-Adapter-Ausgang.                      |
+| **Plug** (Ausgang)   | `OUT5` | `adapter::types::unidirectional::AB` | Fünfter unidirektionaler AB-Adapter-Ausgang.                      |
 
 ## Funktionsweise
 
@@ -63,12 +63,12 @@ Es existiert kein Zustandsautomat. Der Baustein arbeitet kontinuierlich und gibt
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Anzahl Ausgänge | Besonderheit |
-| ---------- | ----------------- | -------------- |
-| `AB_SPLIT_2` | 2 | Einfache 1:2-Verteilung |
-| `AB_SPLIT_3` | 3 | 1:3-Verteilung |
-| `AB_SPLIT_5_UNGATED` | 5 | 1:5-Verteilung (dieser Baustein) |
-| `AB_SPLIT_N` (generisch) | parametrierbar | Individuelle Anzahl über GenericClassName |
+| Baustein                 | Anzahl Ausgänge | Besonderheit                              |
+| ------------------------ | --------------- | ----------------------------------------- |
+| `AB_SPLIT_2`             | 2               | Einfache 1:2-Verteilung                   |
+| `AB_SPLIT_3`             | 3               | 1:3-Verteilung                            |
+| `AB_SPLIT_5_UNGATED`     | 5               | 1:5-Verteilung (dieser Baustein)          |
+| `AB_SPLIT_N` (generisch) | parametrierbar  | Individuelle Anzahl über GenericClassName |
 
 Gegenüber einem parametrierbaren Split-Baustein bietet `AB_SPLIT_5_UNGATED` eine feste, aber einfache und typsichere Lösung ohne zusätzliche Konfigurationsaufwände.
 

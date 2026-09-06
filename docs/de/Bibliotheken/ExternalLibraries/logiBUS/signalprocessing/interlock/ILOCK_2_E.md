@@ -12,18 +12,18 @@ Der Funktionsblock **ILOCK_2_E** ist ein ereignisgesteuerter bistabiler und Togg
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `SET1`   | Setzt OUT1 auf TRUE und OUT2 auf FALSE. |
+| Ereignis | Kommentar                                                                                 |
+| -------- | ----------------------------------------------------------------------------------------- |
+| `SET1`   | Setzt OUT1 auf TRUE und OUT2 auf FALSE.                                                   |
 | `CLK1`   | Toggelt OUT1 (bei erstmaliger Aktivierung nach einem Set/Reset) und setzt OUT2 auf FALSE. |
-| `SET2`   | Setzt OUT2 auf TRUE und OUT1 auf FALSE. |
-| `CLK2`   | Toggelt OUT2 und setzt OUT1 auf FALSE. |
-| `R`      | Rücksetzen (Reset) beider Ausgänge auf FALSE. |
+| `SET2`   | Setzt OUT2 auf TRUE und OUT1 auf FALSE.                                                   |
+| `CLK2`   | Toggelt OUT2 und setzt OUT1 auf FALSE.                                                    |
+| `R`      | Rücksetzen (Reset) beider Ausgänge auf FALSE.                                             |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                                                                         |
+| -------- | ----------------------------------------------------------------------------------------------------------------- |
 | `EO`     | Wird nach jeder Ausgangsänderung (SET, TOGGLE oder RESET) ausgelöst. Trägt die aktuellen Werte von OUT1 und OUT2. |
 
 ### **Daten-Eingänge**
@@ -32,10 +32,10 @@ Keine (der Baustein ist rein ereignisgesteuert).
 
 ### **Daten-Ausgänge**
 
-| Ausgang | Typ   | Kommentar |
-|---------|-------|-----------|
-| `OUT1`  | BOOL  | Erster Ausgang (bistabiler Wert). |
-| `OUT2`  | BOOL  | Zweiter Ausgang (bistabiler Wert). |
+| Ausgang | Typ  | Kommentar                          |
+| ------- | ---- | ---------------------------------- |
+| `OUT1`  | BOOL | Erster Ausgang (bistabiler Wert).  |
+| `OUT2`  | BOOL | Zweiter Ausgang (bistabiler Wert). |
 
 ### **Adapter**
 
@@ -58,14 +58,14 @@ Die **Toggle-Funktion** ist flankengesteuert: Die internen Variablen `EDGE1` und
 
 ## Zustandsübersicht
 
-| Zustand     | Beschreibung                | Auslöser | Algorithmus-Effekt (vereinfacht)                        | Ausgang |
-|-------------|-----------------------------|----------|---------------------------------------------------------|---------|
-| `STOP`      | Initial, wartet auf Ereignis | -        | –                                                       | –       |
-| `SET1`      | Setze Ausgang 1             | `SET1`   | OUT1=TRUE, OUT2=FALSE, EDGE1=FALSE, EDGE2=FALSE        | `EO`    |
-| `SET2`      | Setze Ausgang 2             | `SET2`   | OUT1=FALSE, OUT2=TRUE, EDGE1=FALSE, EDGE2=FALSE        | `EO`    |
-| `TOGGLE1`   | Toggle Ausgang 1            | `CLK1`   | Wenn EDGE1=FALSE: OUT1 = NOT OUT1; OUT2=FALSE; EDGE1=TRUE; EDGE2=FALSE | `EO` |
-| `TOGGLE2`   | Toggle Ausgang 2            | `CLK2`   | OUT1=FALSE; wenn EDGE2=FALSE: OUT2 = NOT OUT2; EDGE1=FALSE; EDGE2=TRUE | `EO` |
-| `RESET`     | Reset aller Ausgänge        | `R`      | OUT1=FALSE, OUT2=FALSE, EDGE1=FALSE, EDGE2=FALSE       | `EO`    |
+| Zustand   | Beschreibung                 | Auslöser | Algorithmus-Effekt (vereinfacht)                                       | Ausgang |
+| --------- | ---------------------------- | -------- | ---------------------------------------------------------------------- | ------- |
+| `STOP`    | Initial, wartet auf Ereignis | -        | –                                                                      | –       |
+| `SET1`    | Setze Ausgang 1              | `SET1`   | OUT1=TRUE, OUT2=FALSE, EDGE1=FALSE, EDGE2=FALSE                        | `EO`    |
+| `SET2`    | Setze Ausgang 2              | `SET2`   | OUT1=FALSE, OUT2=TRUE, EDGE1=FALSE, EDGE2=FALSE                        | `EO`    |
+| `TOGGLE1` | Toggle Ausgang 1             | `CLK1`   | Wenn EDGE1=FALSE: OUT1 = NOT OUT1; OUT2=FALSE; EDGE1=TRUE; EDGE2=FALSE | `EO`    |
+| `TOGGLE2` | Toggle Ausgang 2             | `CLK2`   | OUT1=FALSE; wenn EDGE2=FALSE: OUT2 = NOT OUT2; EDGE1=FALSE; EDGE2=TRUE | `EO`    |
+| `RESET`   | Reset aller Ausgänge         | `R`      | OUT1=FALSE, OUT2=FALSE, EDGE1=FALSE, EDGE2=FALSE                       | `EO`    |
 
 Alle Aktionszustände wechseln nach Ausführung des Algorithmus sofort zurück zu `STOP`.
 
@@ -78,11 +78,11 @@ Alle Aktionszustände wechseln nach Ausführung des Algorithmus sofort zurück z
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein      | Eigenschaften                                                                 |
-|---------------|-------------------------------------------------------------------------------|
-| `E_SR`        | Einfacher Set‑/Reset‑Flipflop, kein Toggle, keine duale Verriegelung.         |
-| `SR-Flipflop` (zwei Ausgänge) | Oft nur kombinatorisch oder ohne Kantenerkennung.                               |
-| `ILOCK_2_E`   | Bietet beides: **Setzen** (exklusiv) und **flankengesteuertes Toggle** mit automatischer Verriegelung. Ideal für erweiterte Anforderungen. |
+| Baustein                      | Eigenschaften                                                                                                                              |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `E_SR`                        | Einfacher Set‑/Reset‑Flipflop, kein Toggle, keine duale Verriegelung.                                                                      |
+| `SR-Flipflop` (zwei Ausgänge) | Oft nur kombinatorisch oder ohne Kantenerkennung.                                                                                          |
+| `ILOCK_2_E`                   | Bietet beides: **Setzen** (exklusiv) und **flankengesteuertes Toggle** mit automatischer Verriegelung. Ideal für erweiterte Anforderungen. |
 
 ## Fazit
 

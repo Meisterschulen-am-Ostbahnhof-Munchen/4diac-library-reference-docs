@@ -12,21 +12,21 @@ The SET_UINT function block is used to write a UINT value, which is present at a
 
 ### **Event Inputs**
 
-| Name | Type | Description |
-|------|-------|----------------------------|
-| REQ | Event | Normal Execution Command |
+| Name | Type  | Description              |
+| ---- | ----- | ------------------------ |
+| REQ  | Event | Normal Execution Command |
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-|------|-------|--------------------------------|
-| CNF | Event | Execution Confirmation |
+| Name | Type  | Description            |
+| ---- | ----- | ---------------------- |
+| CNF  | Event | Execution Confirmation |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Description |
-|------|------|--------------|-----------------------------|
-| IN | UINT | 0 | Value to be written |
+| Name | Type | Initial Value | Description         |
+| ---- | ---- | ------------- | ------------------- |
+| IN   | UINT | 0             | Value to be written |
 
 ### **Data Outputs**
 
@@ -54,9 +54,9 @@ The InOut variable `OUT` is interpreted as a referenced variable – the functio
 
 ## State overview
 
-| State | Action | Output |
-|---------|--------|---------|
-| REQ | `OUT := IN` | CNF |
+| State | Action      | Output |
+| ----- | ----------- | ------ |
+| REQ   | `OUT := IN` | CNF    |
 
 After execution, the FB remains in an implicit end state; it is ready for each new request `REQ`.
 

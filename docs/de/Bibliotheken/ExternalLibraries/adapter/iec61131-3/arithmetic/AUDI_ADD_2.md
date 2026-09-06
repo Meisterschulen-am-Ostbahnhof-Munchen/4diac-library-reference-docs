@@ -28,11 +28,11 @@ Keine.
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Kommentar |
-| ----- | ---------- | ------ | ----------- |
+| Typ                                    | Richtung         | Name    | Kommentar   |
+| -------------------------------------- | ---------------- | ------- | ----------- |
 | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | **IN1** | ADD input 1 |
 | `adapter::types::unidirectional::AUDI` | Socket (Eingang) | **IN2** | ADD input 2 |
-| `adapter::types::unidirectional::AUDI` | Plug (Ausgang) | **OUT** | ADD result |
+| `adapter::types::unidirectional::AUDI` | Plug (Ausgang)   | **OUT** | ADD result  |
 
 Die drei Adapter sind alle vom gleichen Typ `AUDI`. Dieser Adaptertyp kapselt den eigentlichen Datenwert (z. B. einen numerischen Wert) und ermöglicht die unidirektionale Übertragung vom Socket zum Plug. Die Addition erfolgt zwischen den Werten von `IN1` und `IN2`; das Ergebnis wird an `OUT` bereitgestellt.
 

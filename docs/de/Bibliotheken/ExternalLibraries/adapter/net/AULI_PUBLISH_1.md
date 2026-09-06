@@ -31,8 +31,8 @@ Der Funktionsblock **AULI_PUBLISH_1** ist ein Composite-Funktionsblock, der den 
 
 ### **Adapter**
 
-| Adapter | Typ                          | Richtung | Beschreibung                    |
-|---------|------------------------------|----------|---------------------------------|
+| Adapter | Typ                                  | Richtung         | Beschreibung                     |
+| ------- | ------------------------------------ | ---------------- | -------------------------------- |
 | IN      | adapter::types::unidirectional::AULI | Socket (Eingang) | Zu veröffentlichender ULINT-Wert |
 
 ## Funktionsweise

@@ -18,30 +18,30 @@ Der Baustein eignet sich für Applikationen, die physikalische Größen in das I
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
+| Ereignis | Beschreibung           | Mitgeführte Variablen |
+| -------- | ---------------------- | --------------------- |
 | `REQ`    | Startet die Umrechnung | `lrPhys`, `stObj`     |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Beschreibung | Mitgeführte Variablen |
-|----------|--------------|-----------------------|
+| Ereignis | Beschreibung                            | Mitgeführte Variablen |
+| -------- | --------------------------------------- | --------------------- |
 | `CNF`    | Bestätigt die abgeschlossene Umrechnung | `xOver`, `xUnder`     |
 
 ### **Daten-Eingänge**
 
-| Name    | Typ                                                      | Initialwert | Beschreibung                                      |
-|---------|----------------------------------------------------------|-------------|---------------------------------------------------|
-| `lrPhys`| `LREAL`                                                  | –           | Physikalischer Eingangswert (z. B. Temperatur, Druck) |
-| `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S`  | `(u16ObjId := 65535, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)` | Datenstruktur mit Skalier- und Offsetparametern   |
+| Name     | Typ                                                     | Initialwert                                                             | Beschreibung                                          |
+| -------- | ------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------- |
+| `lrPhys` | `LREAL`                                                 | –                                                                       | Physikalischer Eingangswert (z. B. Temperatur, Druck) |
+| `stObj`  | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | `(u16ObjId := 65535, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)` | Datenstruktur mit Skalier- und Offsetparametern       |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ    | Beschreibung                                 |
-|----------|--------|----------------------------------------------|
-| *(kein Name)*  | `UDINT` | Berechneter ISOBUS‑Rohwert (0 … 4294967295) |
-| `xOver`  | `BOOL` | `TRUE`, wenn der Eingang die obere Grenze überschreitet (Überlauf) |
-| `xUnder` | `BOOL` | `TRUE`, wenn der Eingang die untere Grenze unterschreitet (Unterlauf) |
+| Name          | Typ     | Beschreibung                                                          |
+| ------------- | ------- | --------------------------------------------------------------------- |
+| *(kein Name)* | `UDINT` | Berechneter ISOBUS‑Rohwert (0 … 4294967295)                           |
+| `xOver`       | `BOOL`  | `TRUE`, wenn der Eingang die obere Grenze überschreitet (Überlauf)    |
+| `xUnder`      | `BOOL`  | `TRUE`, wenn der Eingang die untere Grenze unterschreitet (Unterlauf) |
 
 ### **Adapter**
 

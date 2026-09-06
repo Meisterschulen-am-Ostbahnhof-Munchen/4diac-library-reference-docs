@@ -12,29 +12,29 @@ Der Funktionsblock `GET_USINT` dient dem Auslesen eines `USINT`-Wertes aus einer
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| REQ | Event | Normaler Ausführungsauftrag. Auslöser, um den aktuellen Wert von `IN` zu lesen und an `OUT` weiterzugeben. |
+| Ereignis | Datentyp | Kommentar                                                                                                  |
+| -------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| REQ      | Event    | Normaler Ausführungsauftrag. Auslöser, um den aktuellen Wert von `IN` zu lesen und an `OUT` weiterzugeben. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
-| CNF | Event | Bestätigung der erfolgreichen Ausführung. Wird nach dem Lesen und Puffern gesendet. |
+| Ereignis | Datentyp | Kommentar                                                                           |
+| -------- | -------- | ----------------------------------------------------------------------------------- |
+| CNF      | Event    | Bestätigung der erfolgreichen Ausführung. Wird nach dem Lesen und Puffern gesendet. |
 
 ### **Daten-Eingänge**
 
 Der Baustein besitzt keine klassischen reinen Daten-Eingänge. Stattdessen wird der zu lesende Wert über die InOut-Variable `IN` bereitgestellt.
 
-| Variable | Datentyp | Kommentar |
-|----------|----------|-----------|
-| IN | USINT | Quellvariable (InOut). Der aktuelle Wert dieser Variablen wird bei einem `REQ`-Ereignis gelesen und zwischengespeichert. Die Variable kann sowohl von außen beschrieben als auch ausgelesen werden; innerhalb des Bausteins erfolgt ausschließlich ein lesender Zugriff. |
+| Variable | Datentyp | Kommentar                                                                                                                                                                                                                                                                |
+| -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| IN       | USINT    | Quellvariable (InOut). Der aktuelle Wert dieser Variablen wird bei einem `REQ`-Ereignis gelesen und zwischengespeichert. Die Variable kann sowohl von außen beschrieben als auch ausgelesen werden; innerhalb des Bausteins erfolgt ausschließlich ein lesender Zugriff. |
 
 ### **Daten-Ausgänge**
 
-| Variable | Datentyp | Kommentar |
-|----------|----------|-----------|
-| OUT | USINT | Gepufferter Ausgangswert. Enthält den bei der letzten Ausführung von `IN` gelesenen Wert. Initialwert: 0. |
+| Variable | Datentyp | Kommentar                                                                                                 |
+| -------- | -------- | --------------------------------------------------------------------------------------------------------- |
+| OUT      | USINT    | Gepufferter Ausgangswert. Enthält den bei der letzten Ausführung von `IN` gelesenen Wert. Initialwert: 0. |
 
 ### **Adapter**
 
@@ -59,9 +59,9 @@ Da es sich um einen einfachen Funktionsblock handelt, gibt es keine Verzweigunge
 
 Der Baustein besitzt genau einen Zustand:
 
-| Zustand | Aktion | Ausgangsereignis |
-|---------|--------|------------------|
-| REQ | Führe Algorithmus `REQ` aus (`OUT := IN;`) | CNF |
+| Zustand | Aktion                                     | Ausgangsereignis |
+| ------- | ------------------------------------------ | ---------------- |
+| REQ     | Führe Algorithmus `REQ` aus (`OUT := IN;`) | CNF              |
 
 Ein Startzustand ist nicht explizit definiert; nach dem Initialisieren wird der Baustein durch das erste `REQ` aktiv.
 
@@ -73,11 +73,11 @@ Ein Startzustand ist nicht explizit definiert; nach dem Initialisieren wird der 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Typ | Besonderheit |
-| ---------- | ----- | -------------- |
-| `GET_USINT` | Eigener FB | Liest eine InOut-Variable und puffert den Wert. Ausgang bleibt stabil bis zum nächsten REQ. |
-| `USINT_TO_*` (z. B. Konvertierer) | Konvertierungs-FB | Wandelt einen USINT in einen anderen Typ um, liest aber nicht zwingend aus einem InOut. |
-| Direkter Datenzugriff | Kein FB | Ein Wert kann über Datenverbindungen ohne Puffer gelesen werden, jedoch ohne Entkopplung und ohne Ereignissteuerung. |
+| Baustein                          | Typ               | Besonderheit                                                                                                         |
+| --------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `GET_USINT`                       | Eigener FB        | Liest eine InOut-Variable und puffert den Wert. Ausgang bleibt stabil bis zum nächsten REQ.                          |
+| `USINT_TO_*` (z. B. Konvertierer) | Konvertierungs-FB | Wandelt einen USINT in einen anderen Typ um, liest aber nicht zwingend aus einem InOut.                              |
+| Direkter Datenzugriff             | Kein FB           | Ein Wert kann über Datenverbindungen ohne Puffer gelesen werden, jedoch ohne Entkopplung und ohne Ereignissteuerung. |
 
 `GET_USINT` ist spezialisiert auf den lesenden Zugriff auf InOut-Variablen mit expliziter Pufferung und Ereignissteuerung – eine Aufgabe, die mit Standard-Konvertern oder direkten Verbindungen so nicht abgebildet werden kann.
 

@@ -38,12 +38,12 @@ Der FB besitzt keine dedizierten Daten-Ausgänge. Der ausgewählte Datenwert wir
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Kommentar |
-| --------- | ---------- | ----- | ----------- |
-| **IN0** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Erster auswählbarer Eingang |
-| **IN1** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Zweiter auswählbarer Eingang |
-| **G** | Socket (Eingang) | `adapter::types::unidirectional::AX` | Selektor (Ereignis + Daten) |
-| **OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AUDI` | Ausgangsfeld mit Ereignis und Daten |
+| Adapter | Richtung         | Typ                                    | Kommentar                           |
+| ------- | ---------------- | -------------------------------------- | ----------------------------------- |
+| **IN0** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Erster auswählbarer Eingang         |
+| **IN1** | Socket (Eingang) | `adapter::types::unidirectional::AUDI` | Zweiter auswählbarer Eingang        |
+| **G**   | Socket (Eingang) | `adapter::types::unidirectional::AX`   | Selektor (Ereignis + Daten)         |
+| **OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AUDI` | Ausgangsfeld mit Ereignis und Daten |
 
 ## Funktionsweise
 
@@ -85,13 +85,13 @@ Die Verwendung benutzerdefinierter Adaptertypen (`AUDI`, `AX`) erlaubt eine einf
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Kriterium | **AUDI_AX_SEL_AUDI** | Einfacher Bool-MUX (z. B. `F_SEL`) |
-| ----------- | ------------------------ | --------------------------------------- |
-| **Schnittstelle** | Reine Adapter (Ereignis+Daten gekapselt) | Getrennte Ein-/Ausgangspins |
-| **Datentyp** | Benutzerdefinierte Typen (`AUDI`, `AX`) | Beliebig (parametrierbar) |
-| **Selektor** | Ereignisgesteuert (über Adapter) | Datenbasiert, ohne extra Ereignis |
-| **Wiederverwendbarkeit** | Höher durch Typensicherheit und Kapselung | Flexibler, aber lose Kopplung |
-| **Komplexität** | Mittel (Adapter erfordern Vorwissen) | Niedrig (direkte Pins) |
+| Kriterium                | **AUDI_AX_SEL_AUDI**                      | Einfacher Bool-MUX (z. B. `F_SEL`) |
+| ------------------------ | ----------------------------------------- | ---------------------------------- |
+| **Schnittstelle**        | Reine Adapter (Ereignis+Daten gekapselt)  | Getrennte Ein-/Ausgangspins        |
+| **Datentyp**             | Benutzerdefinierte Typen (`AUDI`, `AX`)   | Beliebig (parametrierbar)          |
+| **Selektor**             | Ereignisgesteuert (über Adapter)          | Datenbasiert, ohne extra Ereignis  |
+| **Wiederverwendbarkeit** | Höher durch Typensicherheit und Kapselung | Flexibler, aber lose Kopplung      |
+| **Komplexität**          | Mittel (Adapter erfordern Vorwissen)      | Niedrig (direkte Pins)             |
 
 Der **AUDI_AX_SEL_AUDI** bietet eine höhere Integration in adapterbasierte Architekturen und eignet sich besonders für modulare, typengebundene Systeme, während ein reiner `F_SEL` universeller ist.
 

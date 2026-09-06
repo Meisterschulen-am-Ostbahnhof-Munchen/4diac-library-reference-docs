@@ -3,6 +3,7 @@
 ![SAFE_MUL_2](SAFE_MUL_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **SAFE_MUL_2** is part of the **SafeArithmetic** library (`SafeArithmetic::arithmetic`, EPL-2.0,

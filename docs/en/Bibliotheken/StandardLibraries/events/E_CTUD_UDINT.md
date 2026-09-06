@@ -25,7 +25,7 @@ The `E_CTUD_UDINT` is a variant of the `E_CTUD` counter that uses the `UDINT` da
 - **QU (Status Up)**: Output flag that is set when `TRUE` (Data type: `CV >= PV`) (Data type: `BOOL`) is reached.
 - **CV (Counter Value)**: The current counter value (data type: `UDINT`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

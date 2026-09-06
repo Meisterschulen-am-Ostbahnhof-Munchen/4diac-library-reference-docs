@@ -14,7 +14,7 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine internationale Norm, die sich mit der Modellierung von Funktionsbausteinen für industrielle Automatisierungssysteme beschäftigt. Sie bietet ein standardisiertes Framework für die Entwicklung von verteilten Steuerungssystemen, wobei logische und arithmetische Operatoren eine zentrale Rolle spielen. Einer dieser Operatoren ist der **LT-Operator** (Less Than, „kleiner als“), der in diesem Aufsatz näher beleuchtet werden soll.
 
-### Was ist der LT-Operator?
+## Was ist der LT-Operator?
 
 Der LT-Operator ist ein Vergleichsoperator, der verwendet wird, um festzustellen, ob ein Wert kleiner als ein anderer Wert ist. In der IEC 61499 wird dieser Operator häufig in Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen basierend auf numerischen Vergleichen zu treffen. Der LT-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (`TRUE` oder `FALSE`) zurück, je nachdem, ob der erste Wert kleiner als der zweite Wert ist.
 

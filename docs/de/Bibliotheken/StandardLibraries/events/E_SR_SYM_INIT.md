@@ -43,13 +43,13 @@ Siehe [E_RS_SYM_INIT](E_RS_SYM_INIT.md) — identisches Verhalten, lediglich `S`
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Unkonfigurierter Anfangszustand |
-| Init | Initialisierung läuft, `QO := QI` |
-| DeInit | Deinitialisierung läuft, `QO := FALSE` |
-| SET | `Q = TRUE` |
-| RESET | `Q = FALSE` |
+| Zustand | Bedeutung                              |
+| ------- | -------------------------------------- |
+| START   | Unkonfigurierter Anfangszustand        |
+| Init    | Initialisierung läuft, `QO := QI`      |
+| DeInit  | Deinitialisierung läuft, `QO := FALSE` |
+| SET     | `Q = TRUE`                             |
+| RESET   | `Q = FALSE`                            |
 
 ## Anwendungsszenarien
 

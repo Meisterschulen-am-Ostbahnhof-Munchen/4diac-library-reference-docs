@@ -7,23 +7,23 @@ this function returns true if the integer input is negative
 ### Event inputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | | IN |
+| :--- | :------ | :--- |
+| REQ  |         | IN   |
 
 ### Event Outputs
 
 | Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | | |
+| :--- | :------ | :--- |
+| CNF  |         |      |
 
 ### Input Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| IN | DINT | |
+| :--- | :--- | :------ |
+| IN   | DINT |         |
 
 ### Output Vars
 
 | Name | Type | Comment |
-| :--- | :--- | :--- |
-| | BOOL | |
+| :--- | :--- | :------ |
+|      | BOOL |         |

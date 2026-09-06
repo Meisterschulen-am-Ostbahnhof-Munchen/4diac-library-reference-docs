@@ -28,10 +28,10 @@ Es existieren keine direkten Daten-Ausgänge. Die konvertierten Daten (USINT) we
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| Socket | **AB_IN** | Eingang | Unidirektionaler Adapter vom Typ `adapter::types::unidirectional::AB`. Liefert ein BYTE (`D1`) sowie ein Ereignis (`E1`). |
-| Plug | **AUS_OUT** | Ausgang | Unidirektionaler Adapter vom Typ `adapter::types::unidirectional::AUS`. Stellt ein USINT (`D1`) sowie ein Ereignis (`E1`) zur Verfügung. |
+| Typ    | Name        | Richtung | Beschreibung                                                                                                                             |
+| ------ | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Socket | **AB_IN**   | Eingang  | Unidirektionaler Adapter vom Typ `adapter::types::unidirectional::AB`. Liefert ein BYTE (`D1`) sowie ein Ereignis (`E1`).                |
+| Plug   | **AUS_OUT** | Ausgang  | Unidirektionaler Adapter vom Typ `adapter::types::unidirectional::AUS`. Stellt ein USINT (`D1`) sowie ein Ereignis (`E1`) zur Verfügung. |
 
 ## Funktionsweise
 
@@ -64,11 +64,11 @@ Der **AB_TO_AUS**-Baustein besitzt keinen eigenen Zustandsautomaten. Die Funktio
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung |
-| ---------- | -------------- |
-| **F_BYTE_TO_USINT** | Einfacher IEC-Konverter ohne Adapteranbindung. Muss manuell mit Ereignis- und Datenverbindungen verdrahtet werden. |
-| **AB_TO_AUS** | Composite-FB, der die gesamte Adapterkonvertierung inklusive Ereignisweitergabe kapselt und dadurch eine saubere, abstrahierte Schnittstelle bietet. |
-| **AUS_TO_AB** (hypothetisch) | Reverse-Conversion von USINT zu BYTE – spiegelbildliche Funktionalität für die Gegenrichtung. |
+| Baustein                     | Beschreibung                                                                                                                                         |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **F_BYTE_TO_USINT**          | Einfacher IEC-Konverter ohne Adapteranbindung. Muss manuell mit Ereignis- und Datenverbindungen verdrahtet werden.                                   |
+| **AB_TO_AUS**                | Composite-FB, der die gesamte Adapterkonvertierung inklusive Ereignisweitergabe kapselt und dadurch eine saubere, abstrahierte Schnittstelle bietet. |
+| **AUS_TO_AB** (hypothetisch) | Reverse-Conversion von USINT zu BYTE – spiegelbildliche Funktionalität für die Gegenrichtung.                                                        |
 
 Der **AB_TO_AUS** hebt sich durch seine einfache Handhabung und die direkte Adapterkompatibilität hervor.
 

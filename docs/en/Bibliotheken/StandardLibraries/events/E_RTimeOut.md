@@ -32,13 +32,16 @@ The block uses a **socket** of type `ARTimeOut`. Since it is a socket, the signa
 
 - The timer starts when the `START` event occurs on the socket.
 - Uses the configured `DT` value.
+
 1. **Timeout Reset**:
 
 - A new `START` event resets the running timer.
 - Uses the new `DT` value.
+
 1. **Timeout Termination**:
 
 - The `STOP` event terminates the active timer.
+
 1. **Timeout Triggering**:
 
 - After `DT` expires, the `TimeOut` event is generated
@@ -63,11 +66,11 @@ The block uses a **socket** of type `ARTimeOut`. Since it is a socket, the signa
 
 ## ⚖️ Comparison with Similar Components
 
-| Feature | E_RTimeOut | E_DELAY | E_TABLE |
-| -------------- | ------------ | --------- | --------- |
-| Reset Function | ✔️ | ❌ | ❌ |
-| Interface | Adapter | Direct | Direct |
-| Standard | 61499-2 | 61499-1 | 61499-1 |
+| Feature        | E_RTimeOut | E_DELAY | E_TABLE |
+| -------------- | ---------- | ------- | ------- |
+| Reset Function | ✔️         | ❌       | ❌       |
+| Interface      | Adapter    | Direct  | Direct  |
+| Standard       | 61499-2    | 61499-1 | 61499-1 |
 
 ## 🛠️ Related Exercises
 

@@ -30,10 +30,10 @@ Der Baustein besitzt keine direkten Ereignis‑ oder Datenports. Die gesamte Kom
 
 ### **Adapter**
 
-| Richtung | Name   | Typ                                      | Beschreibung                     |
-|----------|--------|------------------------------------------|----------------------------------|
-| Socket   | ALI_IN | `adapter::types::unidirectional::ALI`    | LINT‑Eingabeadapter (64‑Bit Integer) |
-| Plug     | AR_OUT | `adapter::types::unidirectional::AR`     | REAL‑Ausgabeadapter (Gleitkomma) |
+| Richtung | Name   | Typ                                   | Beschreibung                         |
+| -------- | ------ | ------------------------------------- | ------------------------------------ |
+| Socket   | ALI_IN | `adapter::types::unidirectional::ALI` | LINT‑Eingabeadapter (64‑Bit Integer) |
+| Plug     | AR_OUT | `adapter::types::unidirectional::AR`  | REAL‑Ausgabeadapter (Gleitkomma)     |
 
 Die Adapter enthalten jeweils einen Ereigniskanal (E1) und einen Datenkanal (D1), die über die interne Vernetzung des Bausteins verbunden sind.
 

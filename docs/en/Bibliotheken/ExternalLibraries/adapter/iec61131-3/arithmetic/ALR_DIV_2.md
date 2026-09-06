@@ -32,11 +32,11 @@ Unlike classic arithmetic function blocks that work with direct data and event i
 
 ### **Adapters**
 
-| Type | Name | Adapter Type | Description |
-| :--- | :--- | :--- | :--- |
-| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::ALR` | First Operand of Division (Dividend) |
+| Type               | Name  | Adapter Type                          | Description                              |
+| :----------------- | :---- | :------------------------------------ | :--------------------------------------- |
+| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::ALR` | First Operand of Division (Dividend)     |
 | **Socket (Input)** | `IN2` | `adapter::types::unidirectional::ALR` | Second operand of the division (divisor) |
-| **Plug (output)** | `OUT` | `adapter::types::unidirectional::ALR` | Result of the division (quotient) |
+| **Plug (output)**  | `OUT` | `adapter::types::unidirectional::ALR` | Result of the division (quotient)        |
 
 ## Functionality
 

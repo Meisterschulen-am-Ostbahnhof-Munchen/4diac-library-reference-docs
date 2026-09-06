@@ -12,28 +12,28 @@ Der Funktionsblock `FIELDBUS_DWORD_TO_SIGNAL` dient der Spiegelung und Validieru
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                            |
+| -------- | -------------------------------------------------------------------- |
 | REQ      | Normaler Ausführungsanstoß; verarbeitet den aktuellen Wert von `IN`. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                      |
+| -------- | -------------------------------------------------------------- |
 | CNF      | Bestätigung der Ausführung; wird nach der Berechnung gesendet. |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ    | Initialwert         | Kommentar        |
-|----------|--------|---------------------|------------------|
-| IN       | DWORD  | `NOT_AVAILABLE_DWM` | Eingangssignal   |
+| Variable | Typ   | Initialwert         | Kommentar      |
+| -------- | ----- | ------------------- | -------------- |
+| IN       | DWORD | `NOT_AVAILABLE_DWM` | Eingangssignal |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ    | Initialwert   | Kommentar                          |
-|----------|--------|---------------|------------------------------------|
-| OUT      | DWORD  | `16#00000000` | Gefilterter Ausgangswert           |
-| VALID    | BOOL   | `FALSE`       | `TRUE`, wenn das Signal gültig ist |
+| Variable | Typ   | Initialwert   | Kommentar                          |
+| -------- | ----- | ------------- | ---------------------------------- |
+| OUT      | DWORD | `16#00000000` | Gefilterter Ausgangswert           |
+| VALID    | BOOL  | `FALSE`       | `TRUE`, wenn das Signal gültig ist |
 
 ### **Adapter**
 
@@ -61,9 +61,9 @@ Nach Abschluss der Berechnung wird das Ausgangsereignis `CNF` gesendet.
 
 ## Zustandsübersicht
 
-| Zustand | Aktion               | Ausgangsereignis |
-|---------|----------------------|------------------|
-| REQ     | Ausführen `REQ`-Algorithmus | CNF |
+| Zustand | Aktion                      | Ausgangsereignis |
+| ------- | --------------------------- | ---------------- |
+| REQ     | Ausführen `REQ`-Algorithmus | CNF              |
 
 Es gibt nur einen Zustand; nach dessen Abarbeitung kehrt der Baustein in den IDLE-Zustand zurück (implizit).
 

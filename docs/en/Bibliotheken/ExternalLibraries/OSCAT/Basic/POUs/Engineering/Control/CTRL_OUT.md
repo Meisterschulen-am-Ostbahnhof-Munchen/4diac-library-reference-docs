@@ -1,6 +1,6 @@
-![CTRL_OUT](CTRL_OUT.svg)
-
 # CTRL_OUT
+
+![CTRL_OUT](CTRL_OUT.svg)
 
 Control Output with Limit and Manual Override
 CTRL_OUT adds to the CI input the value of OFFSET and returns the result
@@ -13,30 +13,30 @@ TRUE. CTRL_OUT can be used to build your own rule modules.
 
 ### Event inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| REQ | Normal Execution Request | CI, OFFSET, MAN_IN, LIM_L, LIM_H, MANUAL |
+| Name | Comment                  | With                                     |
+| :--- | :----------------------- | :--------------------------------------- |
+| REQ  | Normal Execution Request | CI, OFFSET, MAN_IN, LIM_L, LIM_H, MANUAL |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| CNF | Execution Confirmation | Y, LIM |
+| Name | Comment                | With   |
+| :--- | :--------------------- | :----- |
+| CNF  | Execution Confirmation | Y, LIM |
 
 ### Input Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| CI | REAL | Control Input |
-| OFFSET | REAL | offset |
+| Name   | Type | Comment            |
+| :----- | :--- | :----------------- |
+| CI     | REAL | Control Input      |
+| OFFSET | REAL | offset             |
 | MAN_IN | REAL | Manual Input Value |
-| LIM_L | REAL | Low Limit |
-| LIM_H | REAL | High Limit |
+| LIM_L  | REAL | Low Limit          |
+| LIM_H  | REAL | High Limit         |
 | MANUAL | BOOL | Manual Mode Active |
 
 ### Output Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| Y | REAL | Control Output |
-| LIM | BOOL | Limit Reached Flag |
+| Name | Type | Comment            |
+| :--- | :--- | :----------------- |
+| Y    | REAL | Control Output     |
+| LIM  | BOOL | Limit Reached Flag |

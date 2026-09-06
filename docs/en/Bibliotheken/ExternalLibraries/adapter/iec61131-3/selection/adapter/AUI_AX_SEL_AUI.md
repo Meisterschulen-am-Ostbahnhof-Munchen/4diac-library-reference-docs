@@ -62,6 +62,7 @@ The standard selection block `F_SEL` (according to IEC 61131-3) performs the act
 
 - If the value at selector `G` equals `FALSE`, the signal from `IN0` is selected.
 - If the value at selector `G` equals `TRUE`, the signal from `IN1` is selected.
+
 1. **Output:**
 
 The selection result is transferred to the output plug `OUT` via a further buffer containing `F_MOVE` and `E_D_FF_ANY`. Simultaneously, the output event at the plug is triggered to inform subsequent function blocks of the new value.
@@ -82,10 +83,10 @@ The selection result is transferred to the output plug `OUT` via a further buffe
 
 Since this is a composite function block, it does not have its own state machine (ECC). Its behavior is purely data- and event-driven:
 
-| State Selector `G` (value of D1) | Output `OUT` (value of D1) | Triggering of `OUT.E1` |
-| :--- | :--- | :--- |
-| `FALSE` (0) | Corresponds to the value of `IN0` | Yes, on change/event to `IN0` or `G` |
-| `TRUE` (1) | Corresponds to the value of `IN1` | Yes, on change/event to `IN1` or `G` |
+| State Selector `G` (value of D1) | Output `OUT` (value of D1)        | Triggering of `OUT.E1`               |
+| :------------------------------- | :-------------------------------- | :----------------------------------- |
+| `FALSE` (0)                      | Corresponds to the value of `IN0` | Yes, on change/event to `IN0` or `G` |
+| `TRUE` (1)                       | Corresponds to the value of `IN1` | Yes, on change/event to `IN1` or `G` |
 
 ---
 

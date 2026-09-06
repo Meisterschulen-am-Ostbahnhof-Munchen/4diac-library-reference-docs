@@ -14,26 +14,26 @@ Der Funktionsblock **AULI_FB_CTD** realisiert einen **Abwärtszähler (Down Coun
 
 Der Baustein besitzt **keine direkten Ereignis-Eingänge**. Die Triggerung erfolgt ausschließlich über die **Event-Kanäle der Socket-Adapter**:
 
-| Adapter   | Event-Port | Beschreibung                        |
-|-----------|------------|-------------------------------------|
-| **CD**    | CD.E1      | Zählimpuls (Count Down)             |
-| **LD**    | LD.E1      | Ladeimpuls (Load des Preset-Werts)  |
-| **PV**    | PV.E1      | Aktualisierung des Preset-Werts     |
+| Adapter | Event-Port | Beschreibung                       |
+| ------- | ---------- | ---------------------------------- |
+| **CD**  | CD.E1      | Zählimpuls (Count Down)            |
+| **LD**  | LD.E1      | Ladeimpuls (Load des Preset-Werts) |
+| **PV**  | PV.E1      | Aktualisierung des Preset-Werts    |
 
 > **Hinweis:** Jedes dieser Ereignisse löst eine Verarbeitung des internen Zählers aus. Der Zähler wird dabei immer neu berechnet – unabhängig davon, ob sich der Wert tatsächlich ändert.
 
 ### **Ereignis-Ausgänge**
 
 | Name | Beschreibung                                       |
-|------|----------------------------------------------------|
+| ---- | -------------------------------------------------- |
 | CNF  | Bestätigung (Confirmation) nach jeder Verarbeitung |
 
 Zusätzlich werden über die Plug-Adapter **zwei Ereignis-Ausgänge** bereitgestellt:
 
-| Adapter | Event-Port | Beschreibung                                     |
-|---------|------------|--------------------------------------------------|
-| **Q**   | Q.E1       | Wird bei jeder Verarbeitung ausgegeben           |
-| **CV**  | CV.E1      | Wird bei jeder Verarbeitung ausgegeben           |
+| Adapter | Event-Port | Beschreibung                           |
+| ------- | ---------- | -------------------------------------- |
+| **Q**   | Q.E1       | Wird bei jeder Verarbeitung ausgegeben |
+| **CV**  | CV.E1      | Wird bei jeder Verarbeitung ausgegeben |
 
 > **Anmerkung:** Da die Ereignisse bei jedem Update (CD, LD, PV) feuern, wird empfohlen, bei Bedarf eine Änderungsflanke mit einem `AX_D_FF` zu filtern (siehe Technische Besonderheiten).
 
@@ -41,30 +41,30 @@ Zusätzlich werden über die Plug-Adapter **zwei Ereignis-Ausgänge** bereitgest
 
 Daten werden ebenfalls über die **Socket-Adapter** bereitgestellt:
 
-| Adapter | Daten-Port | Datentyp | Beschreibung                              |
-|---------|------------|----------|-------------------------------------------|
-| **CD**  | CD.D1      | `BOOL`   | Zählimpuls (steigende Flanke)             |
-| **LD**  | LD.D1      | `BOOL`   | Ladebefehl (steigende Flanke)             |
+| Adapter | Daten-Port | Datentyp | Beschreibung                                |
+| ------- | ---------- | -------- | ------------------------------------------- |
+| **CD**  | CD.D1      | `BOOL`   | Zählimpuls (steigende Flanke)               |
+| **LD**  | LD.D1      | `BOOL`   | Ladebefehl (steigende Flanke)               |
 | **PV**  | PV.D1      | `ULINT`  | Preset-Wert (bei LD oder PV-Update geladen) |
 
 ### **Daten-Ausgänge**
 
 Daten werden über die **Plug-Adapter** ausgegeben:
 
-| Adapter | Daten-Port | Datentyp | Beschreibung                              |
-|---------|------------|----------|-------------------------------------------|
-| **Q**   | Q.D1       | `BOOL`   | Zählerstand = 0 (Ausgangssignal)          |
-| **CV**  | CV.D1      | `ULINT`  | Aktueller Zählerstand                     |
+| Adapter | Daten-Port | Datentyp | Beschreibung                     |
+| ------- | ---------- | -------- | -------------------------------- |
+| **Q**   | Q.D1       | `BOOL`   | Zählerstand = 0 (Ausgangssignal) |
+| **CV**  | CV.D1      | `ULINT`  | Aktueller Zählerstand            |
 
 ### **Adapter**
 
-| Richtung | Adapter-Typ           | Kurzbeschreibung                     |
-|----------|-----------------------|--------------------------------------|
-| Socket   | `AX` (bidirektional)  | Count-Down-Steuerung (Event + BOOL)  |
-| Socket   | `AX` (bidirektional)  | Load-Steuerung (Event + BOOL)        |
-| Socket   | `AULI` (bidirektional)| Preset-Wert (Event + ULINT)          |
-| Plug     | `AX` (bidirektional)  | Ausgang Q (Event + BOOL)             |
-| Plug     | `AULI` (bidirektional)| Ausgang Zählerstand (Event + ULINT)  |
+| Richtung | Adapter-Typ            | Kurzbeschreibung                    |
+| -------- | ---------------------- | ----------------------------------- |
+| Socket   | `AX` (bidirektional)   | Count-Down-Steuerung (Event + BOOL) |
+| Socket   | `AX` (bidirektional)   | Load-Steuerung (Event + BOOL)       |
+| Socket   | `AULI` (bidirektional) | Preset-Wert (Event + ULINT)         |
+| Plug     | `AX` (bidirektional)   | Ausgang Q (Event + BOOL)            |
+| Plug     | `AULI` (bidirektional) | Ausgang Zählerstand (Event + ULINT) |
 
 ## Funktionsweise
 
@@ -100,11 +100,11 @@ Nach jeder Verarbeitung wird das Bestätigungsereignis `CNF` sowie die Ereigniss
 
 Der Baustein verwaltet intern lediglich den **Zählerstand** (CV) und den **aktuellen Preset-Wert** (PV). Eine explizite Zustandsmaschine liegt nicht vor. Die möglichen Aktionen sind:
 
-| Zustand / Aktion | Auslöser                  | Ergebnis                                                |
-|------------------|---------------------------|---------------------------------------------------------|
-| Count Down       | CD-Ereignis & CD.D1=TRUE  | CV := CV - 1 (falls CV>0)                               |
-| Load             | LD-Ereignis & LD.D1=TRUE  | CV := PV (aktueller Preset)                             |
-| Preset Update    | PV-Ereignis               | PV wird überschrieben (CV bleibt unverändert)           |
+| Zustand / Aktion | Auslöser                 | Ergebnis                                      |
+| ---------------- | ------------------------ | --------------------------------------------- |
+| Count Down       | CD-Ereignis & CD.D1=TRUE | CV := CV - 1 (falls CV>0)                     |
+| Load             | LD-Ereignis & LD.D1=TRUE | CV := PV (aktueller Preset)                   |
+| Preset Update    | PV-Ereignis              | PV wird überschrieben (CV bleibt unverändert) |
 
 Der Ausgang `Q` wird auf `TRUE` gesetzt, sobald `CV = 0` ist; andernfalls ist er `FALSE`.
 
@@ -124,11 +124,11 @@ Der Ausgang `Q` wird auf `TRUE` gesetzt, sobald `CV = 0` ist; andernfalls ist er
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein             | Datentyp | Schnittstelle         | Besonderheit                                   |
-|----------------------|----------|-----------------------|------------------------------------------------|
-| `FB_CTD_ULINT`       | ULINT    | Standard-EA           | Basis-Abwärtszähler ohne Adapter               |
-| **AULI_FB_CTD**      | ULINT    | Adapter (AX, AULI)    | Adapter-gekapselt, alle Events führen zu Update|
-| `FB_CTD` (Standard)  | INT/UINT | Standard-EA           | Meist 16‑Bit oder 32‑Bit, feste Ereignislogik  |
+| Baustein            | Datentyp | Schnittstelle      | Besonderheit                                    |
+| ------------------- | -------- | ------------------ | ----------------------------------------------- |
+| `FB_CTD_ULINT`      | ULINT    | Standard-EA        | Basis-Abwärtszähler ohne Adapter                |
+| **AULI_FB_CTD**     | ULINT    | Adapter (AX, AULI) | Adapter-gekapselt, alle Events führen zu Update |
+| `FB_CTD` (Standard) | INT/UINT | Standard-EA        | Meist 16‑Bit oder 32‑Bit, feste Ereignislogik   |
 
 Der **AULI_FB_CTD** bietet durch die Adapter-Kopplung eine flexiblere Einbindung in komplexe Netzwerke, hat aber den „NebenEffekt", dass Ausgangsereignisse auch bei unveränderten Werten gesendet werden. Für Anwendungen, die nur bei Wertänderung feuern sollen, ist der Basisbaustein `FB_CTD_ULINT` oder eine Kombination mit einem Flankendetektor (`AX_D_FF`) zu bevorzugen.
 

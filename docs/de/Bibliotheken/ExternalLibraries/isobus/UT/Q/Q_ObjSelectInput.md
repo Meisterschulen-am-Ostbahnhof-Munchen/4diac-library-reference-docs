@@ -64,21 +64,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Optionsreferenz
 
-| u8Option | Beschreibung               | VT-Version |
-|----------|----------------------------|------------|
-| 0xFF     | Standardauswahl           | 3+         |
-| 0x00     | Erweiterte Auswahl        | 4+         |
+| u8Option | Beschreibung       | VT-Version |
+| -------- | ------------------ | ---------- |
+| 0xFF     | Standardauswahl    | 3+         |
+| 0x00     | Erweiterte Auswahl | 4+         |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Ausführung           |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Ausführung  |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -89,12 +89,12 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ObjSelectInput | VtFocusControl | VtInputSelector |
-|---------------|------------------|----------------|-----------------|
-| ISO-Standard  | ✔                | ✖              | ✖               |
-| VT-Version 4+ | ✔                | ✖              | ✔               |
-| Optionssteuerung | ✔            | ✖              | ✖               |
-| Rückmeldung   | ✔                | ✖              | ✔               |
+| Feature          | Q_ObjSelectInput | VtFocusControl | VtInputSelector |
+| ---------------- | ---------------- | -------------- | --------------- |
+| ISO-Standard     | ✔                | ✖              | ✖               |
+| VT-Version 4+    | ✔                | ✖              | ✔               |
+| Optionssteuerung | ✔                | ✖              | ✖               |
+| Rückmeldung      | ✔                | ✖              | ✔               |
 
 ## Fazit
 

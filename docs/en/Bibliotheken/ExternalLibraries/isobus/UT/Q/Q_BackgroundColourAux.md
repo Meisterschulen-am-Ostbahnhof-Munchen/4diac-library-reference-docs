@@ -43,10 +43,12 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 - `INIT` with object ID for auxiliary element
 - `INITO` confirms operational readiness
+
 1. **Color Change**:
 
 - `REQ` triggers with new auxiliary color code (0-255)
 - `CNF` returns result and previous color value
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -64,19 +66,19 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## Standard auxiliary colors (excerpt)
 
-| Code | Scope | Typical color |
-| ------ | ------------------------ | ----------------- |
-| 16 | Status bar | Blue |
-| 32 | Secondary areas | Gray |
-| 48 | Guidelines | Light blue |
+| Code | Scope           | Typical color |
+| ---- | --------------- | ------------- |
+| 16   | Status bar      | Blue          |
+| 32   | Secondary areas | Gray          |
+| 48   | Guidelines      | Light blue    |
 
 ## Return codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -128 | VT_E_HANDLE_INVALID | Invalid object ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid instance |
+| Code | Constant                  | Meaning           |
+| ---- | ------------------------- | ----------------- |
+| 0    | VT_E_NO_ERR               | Success           |
+| -128 | VT_E_HANDLE_INVALID       | Invalid object ID |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid instance  |
 
 ## Application Scenarios
 
@@ -87,11 +89,11 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | Q_BackgroundColourAux | Q_BackgroundColour | VtAuxColour |
-| --------------- | ----------------------- | -------------------- | ------------- |
-| ISO Standard | ✔ | ✔ | ✖ |
-| Color range | Auxiliary elements | Primary elements | All |
-| Usage | Secondary | Primary | Universal |
+| Feature      | Q_BackgroundColourAux | Q_BackgroundColour | VtAuxColour |
+| ------------ | --------------------- | ------------------ | ----------- |
+| ISO Standard | ✔                     | ✔                  | ✖           |
+| Color range  | Auxiliary elements    | Primary elements   | All         |
+| Usage        | Secondary             | Primary            | Universal   |
 
 ## Conclusion
 

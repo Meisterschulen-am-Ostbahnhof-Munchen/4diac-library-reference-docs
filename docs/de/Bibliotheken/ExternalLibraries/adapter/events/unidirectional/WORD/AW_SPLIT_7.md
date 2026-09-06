@@ -28,10 +28,10 @@ Der Funktionsblock `AW_SPLIT_7` dient dazu, einen einzelnen eingehenden AW-Adapt
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
-| `adapter::types::unidirectional::AW` | IN | Socket (Eingang) | Eingehender AW-Adapter, der auf die Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AW` | OUT1 … OUT7 | Plug (Ausgang) | Sieben ausgehende Adapter, die jeweils die gleichen Daten wie der Eingang bereitstellen. |
+| Typ                                  | Name        | Richtung         | Beschreibung                                                                             |
+| ------------------------------------ | ----------- | ---------------- | ---------------------------------------------------------------------------------------- |
+| `adapter::types::unidirectional::AW` | IN          | Socket (Eingang) | Eingehender AW-Adapter, der auf die Ausgänge verteilt wird.                              |
+| `adapter::types::unidirectional::AW` | OUT1 … OUT7 | Plug (Ausgang)   | Sieben ausgehende Adapter, die jeweils die gleichen Daten wie der Eingang bereitstellen. |
 
 ## Funktionsweise
 

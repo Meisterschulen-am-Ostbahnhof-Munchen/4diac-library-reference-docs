@@ -18,12 +18,12 @@ Der FB besitzt keine klassischen Ereignis-Eingänge über *EventInputs* – die 
 
 Die Ereignis-Ausgänge werden über die **Plug-Adapter `EO0`** und **`EO1`** (beide Typ `ASR`) bereitgestellt. Jeder dieser Adapter verfügt über die Ausgänge `SET` und `RESET`:
 
-| Adapter | Ereignis | Beschreibung |
-| --------- | ---------- | -------------- |
-| `EO0.SET` | SET | Wird ausgelöst, wenn ein `EI.SET`-Ereignis eintrifft und `G.D1 == 0` |
-| `EO0.RESET` | RESET | Wird ausgelöst, wenn ein `EI.RESET`-Ereignis eintrifft und `G.D1 == 0` |
-| `EO1.SET` | SET | Wird ausgelöst, wenn ein `EI.SET`-Ereignis eintrifft und `G.D1 == 1` |
-| `EO1.RESET` | RESET | Wird ausgelöst, wenn ein `EI.RESET`-Ereignis eintrifft und `G.D1 == 1` |
+| Adapter     | Ereignis | Beschreibung                                                           |
+| ----------- | -------- | ---------------------------------------------------------------------- |
+| `EO0.SET`   | SET      | Wird ausgelöst, wenn ein `EI.SET`-Ereignis eintrifft und `G.D1 == 0`   |
+| `EO0.RESET` | RESET    | Wird ausgelöst, wenn ein `EI.RESET`-Ereignis eintrifft und `G.D1 == 0` |
+| `EO1.SET`   | SET      | Wird ausgelöst, wenn ein `EI.SET`-Ereignis eintrifft und `G.D1 == 1`   |
+| `EO1.RESET` | RESET    | Wird ausgelöst, wenn ein `EI.RESET`-Ereignis eintrifft und `G.D1 == 1` |
 
 ### **Daten-Eingänge**
 
@@ -35,12 +35,12 @@ Es sind keine expliziten Daten-Ausgänge vorhanden. Steuerinformationen werden a
 
 ### **Adapter**
 
-| Name | Richtung | Typ | Beschreibung |
-| ------ | ---------- | ----- | -------------- |
-| `EI` | Socket (Eingang) | `adapter::types::unidirectional::ASR` | Empfängt die zu verteilenden SET-/RESET-Ereignisse |
-| `G` | Socket (Eingang) | `adapter::types::unidirectional::AX` | Liefert das binäre Umschaltsignal über `D1` (0 → Kanal 0, 1 → Kanal 1) |
-| `EO0` | Plug (Ausgang) | `adapter::types::unidirectional::ASR` | Ausgang für Kanal 0 (bei `G.D1 = 0`) |
-| `EO1` | Plug (Ausgang) | `adapter::types::unidirectional::ASR` | Ausgang für Kanal 1 (bei `G.D1 = 1`) |
+| Name  | Richtung         | Typ                                   | Beschreibung                                                           |
+| ----- | ---------------- | ------------------------------------- | ---------------------------------------------------------------------- |
+| `EI`  | Socket (Eingang) | `adapter::types::unidirectional::ASR` | Empfängt die zu verteilenden SET-/RESET-Ereignisse                     |
+| `G`   | Socket (Eingang) | `adapter::types::unidirectional::AX`  | Liefert das binäre Umschaltsignal über `D1` (0 → Kanal 0, 1 → Kanal 1) |
+| `EO0` | Plug (Ausgang)   | `adapter::types::unidirectional::ASR` | Ausgang für Kanal 0 (bei `G.D1 = 0`)                                   |
+| `EO1` | Plug (Ausgang)   | `adapter::types::unidirectional::ASR` | Ausgang für Kanal 1 (bei `G.D1 = 1`)                                   |
 
 ## Funktionsweise
 
@@ -66,13 +66,13 @@ Die Verarbeitung erfolgt deterministisch ohne Zwischenspeicherung der Ereignisse
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Aktion |
-| --------- | -------------- | -------- |
-| **START** | Warte auf eingehendes SET/RESET-Ereignis | – |
-| **G0_SET** | `EI.SET` bei `G.D1=0` empfangen | `EO0.SET` ausgeben |
-| **G1_SET** | `EI.SET` bei `G.D1=1` empfangen | `EO1.SET` ausgeben |
-| **G0_RESET** | `EI.RESET` bei `G.D1=0` empfangen | `EO0.RESET` ausgeben |
-| **G1_RESET** | `EI.RESET` bei `G.D1=1` empfangen | `EO1.RESET` ausgeben |
+| Zustand      | Beschreibung                             | Aktion               |
+| ------------ | ---------------------------------------- | -------------------- |
+| **START**    | Warte auf eingehendes SET/RESET-Ereignis | –                    |
+| **G0_SET**   | `EI.SET` bei `G.D1=0` empfangen          | `EO0.SET` ausgeben   |
+| **G1_SET**   | `EI.SET` bei `G.D1=1` empfangen          | `EO1.SET` ausgeben   |
+| **G0_RESET** | `EI.RESET` bei `G.D1=0` empfangen        | `EO0.RESET` ausgeben |
+| **G1_RESET** | `EI.RESET` bei `G.D1=1` empfangen        | `EO1.RESET` ausgeben |
 
 Die Zustandsübergänge erfolgen nach dem ECC-Schema: Bedingung führt von START in den Aktionszustand, von dort ohne weitere Bedingung sofort zurück zu START.
 
@@ -85,13 +85,13 @@ Die Zustandsübergänge erfolgen nach dem ECC-Schema: Bedingung führt von START
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Eigenschaft | ASR_AX_SWITCH | Einfacher Event-Multiplexer (z.B. SELECT) |
-| ------------- | --------------- | -------------------------------------------- |
-| Ereignistyp | SET/RESET (ASR-Adapter) | Beliebige Einzelereignisse |
-| Steuerung | Binär über AX-Adapter (mit `D1`) | Boolescher Dateneingang |
-| Ausgangstyp | Zwei ASR-Adapter | Je nach Typ Einzelereignis oder mehrere |
-| Zustandsbehaftet | Nein (keine Speicherung) | Meist zustandslos |
-| Adapter-Schnittstelle | Ja | Oft direkt über Event-/Data-Ports |
+| Eigenschaft           | ASR_AX_SWITCH                    | Einfacher Event-Multiplexer (z.B. SELECT) |
+| --------------------- | -------------------------------- | ----------------------------------------- |
+| Ereignistyp           | SET/RESET (ASR-Adapter)          | Beliebige Einzelereignisse                |
+| Steuerung             | Binär über AX-Adapter (mit `D1`) | Boolescher Dateneingang                   |
+| Ausgangstyp           | Zwei ASR-Adapter                 | Je nach Typ Einzelereignis oder mehrere   |
+| Zustandsbehaftet      | Nein (keine Speicherung)         | Meist zustandslos                         |
+| Adapter-Schnittstelle | Ja                               | Oft direkt über Event-/Data-Ports         |
 
 Der ASR_AX_SWITCH ist speziell für asynchrone Set/Reset-Signale optimiert und integriert sich nahtlos in die ASR-Adapter-Welt der 4diac-Bibliothek. Gegenüber generischen Multiplexern entfällt die Notwendigkeit, die Adapter-Ereignisse manuell zu extrahieren.
 

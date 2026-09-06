@@ -34,10 +34,10 @@ Der AR_D_FF besitzt keine direkten Ereignis- oder Datenein-/ausgänge; die gesam
 
 ### **Adapter**
 
-| Adapter | Richtung / Typ | Beschreibung | Enthaltene Elemente |
-|---------|----------------|--------------|---------------------|
-| **I**   | Socket (`adapter::types::unidirectional::AR`) | Wert, der gelatcht werden soll. | **E1** (Ereigniseingang) – Taktsignal (CLK)<br>**D1** (Dateneingang) – Datenwert |
-| **Q**  | Plug (`adapter::types::unidirectional::AR`) | Gelatchter Wert. | **E1** (Ereignisausgang) – Bestätigung nach erfolgreichem Latch<br>**D1** (Datenausgang) – gelatchter Datenwert |
+| Adapter | Richtung / Typ                                | Beschreibung                    | Enthaltene Elemente                                                                                             |
+| ------- | --------------------------------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **I**   | Socket (`adapter::types::unidirectional::AR`) | Wert, der gelatcht werden soll. | **E1** (Ereigniseingang) – Taktsignal (CLK)<br>**D1** (Dateneingang) – Datenwert                                |
+| **Q**   | Plug (`adapter::types::unidirectional::AR`)   | Gelatchter Wert.                | **E1** (Ereignisausgang) – Bestätigung nach erfolgreichem Latch<br>**D1** (Datenausgang) – gelatchter Datenwert |
 
 ## Funktionsweise
 
@@ -60,8 +60,8 @@ Der interne Zustand bleibt zwischen zwei Taktflanken unverändert (Speicherverha
 
 Der Baustein besitzt einen einzigen internen Speicher (den gelatchten Datenwert). Zustandsübergänge erfolgen ausschließlich bei einer positiven Flanke am Takteingang **I.E1**:
 
-| Alter Zustand | Eingang D1 (aktuell) | Neuer Zustand | Ausgang D1 | Ereignis Q.E1 |
-|---------------|----------------------|---------------|------------|---------------|
+| Alter Zustand | Eingang D1 (aktuell) | Neuer Zustand | Ausgang D1  | Ereignis Q.E1  |
+| ------------- | -------------------- | ------------- | ----------- | -------------- |
 | *beliebig*    | *beliebig*           | Wert von D1   | Wert von D1 | wird ausgelöst |
 
 Es gibt keine weiteren internen Zustände oder Verzweigungen.
@@ -74,11 +74,11 @@ Es gibt keine weiteren internen Zustände oder Verzweigungen.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied zu AR_D_FF |
-| ---------- | ------------- | ------------------------ |
-| **AR_SR_FF** | Set‑Reset‑Flipflop | Latcht keinen Datenwert, sondern wird über Set/Reset gesetzt/rückgesetzt. Besitzt zwei Ereigniseingänge. |
-| **E_D_FF_ANY** | Standard‑D‑Flipflop ohne Adapter | Gleiche Kernlogik, aber direkte Ereignis‑/Datenanschlüsse; keine Adapter‑Kapselung. |
-| **AR_T_FF** | Toggle‑Flipflop | Schaltet bei jedem Taktimpuls den Ausgang um; kein Dateneingang. |
+| Baustein       | Eigenschaft                      | Unterschied zu AR_D_FF                                                                                   |
+| -------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **AR_SR_FF**   | Set‑Reset‑Flipflop               | Latcht keinen Datenwert, sondern wird über Set/Reset gesetzt/rückgesetzt. Besitzt zwei Ereigniseingänge. |
+| **E_D_FF_ANY** | Standard‑D‑Flipflop ohne Adapter | Gleiche Kernlogik, aber direkte Ereignis‑/Datenanschlüsse; keine Adapter‑Kapselung.                      |
+| **AR_T_FF**    | Toggle‑Flipflop                  | Schaltet bei jedem Taktimpuls den Ausgang um; kein Dateneingang.                                         |
 
 ## Fazit
 

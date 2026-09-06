@@ -28,15 +28,15 @@ Keine direkten Daten-Ausgänge – das Ergebnis wird über den OUT-Adapter ausge
 
 ### **Adapter**
 
-| Name | Typ | Kommentar |
-| ------ | ----- | ----------- |
-| **Sockets** | | |
-| `WORD_00` | `adapter::types::unidirectional::AW` | Word 0 (niederwertigstes 16‑Bit‑Wort) |
-| `WORD_01` | `adapter::types::unidirectional::AW` | Word 1 |
-| `WORD_02` | `adapter::types::unidirectional::AW` | Word 2 |
-| `WORD_03` | `adapter::types::unidirectional::AW` | Word 3 (höchstwertiges 16‑Bit‑Wort) |
-| **Plugs** | | |
-| `OUT` | `adapter::types::unidirectional::AL` | LWORD‑Ausgang (64‑Bit) |
+| Name        | Typ                                  | Kommentar                             |
+| ----------- | ------------------------------------ | ------------------------------------- |
+| **Sockets** |                                      |                                       |
+| `WORD_00`   | `adapter::types::unidirectional::AW` | Word 0 (niederwertigstes 16‑Bit‑Wort) |
+| `WORD_01`   | `adapter::types::unidirectional::AW` | Word 1                                |
+| `WORD_02`   | `adapter::types::unidirectional::AW` | Word 2                                |
+| `WORD_03`   | `adapter::types::unidirectional::AW` | Word 3 (höchstwertiges 16‑Bit‑Wort)   |
+| **Plugs**   |                                      |                                       |
+| `OUT`       | `adapter::types::unidirectional::AL` | LWORD‑Ausgang (64‑Bit)                |
 
 ## Funktionsweise
 
@@ -65,11 +65,11 @@ Der Baustein besitzt kein eigenes ECC (Execution Control Chart), sondern besteht
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung |
-| ---------- | ------------- |
-| `ASSEMBLE_AL_FROM_BYTES` | Setzt mehrere 8‑Bit‑Werte zu einem LWORD zusammen |
-| `ASSEMBLE_AL_FROM_DWORDS` | Kombiniert zwei 32‑Bit‑Doppelwörter zu einem 64‑Bit‑Wort |
-| `ASSEMBLE_AL_FROM_AW` (dieser) | Kombiniert vier 16‑Bit‑Wörter zu einem LWORD |
+| Baustein                       | Beschreibung                                             |
+| ------------------------------ | -------------------------------------------------------- |
+| `ASSEMBLE_AL_FROM_BYTES`       | Setzt mehrere 8‑Bit‑Werte zu einem LWORD zusammen        |
+| `ASSEMBLE_AL_FROM_DWORDS`      | Kombiniert zwei 32‑Bit‑Doppelwörter zu einem 64‑Bit‑Wort |
+| `ASSEMBLE_AL_FROM_AW` (dieser) | Kombiniert vier 16‑Bit‑Wörter zu einem LWORD             |
 
 Alle diese Bausteine folgen dem gleichen Prinzip, unterscheiden sich jedoch in der Wortbreite der Eingangsdaten und der Anzahl der benötigten Sockets.
 

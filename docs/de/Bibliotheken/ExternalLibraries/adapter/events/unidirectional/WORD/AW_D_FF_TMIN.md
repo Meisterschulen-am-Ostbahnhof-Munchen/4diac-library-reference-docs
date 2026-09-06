@@ -14,20 +14,20 @@ Der **AW_D_FF_TMIN** ist ein komponierter IEC 61499‑Funktionsblock (Typ eines 
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar |
-|----------|-------|-----------|
+| Ereignis | Typ   | Kommentar                                                                    |
+| -------- | ----- | ---------------------------------------------------------------------------- |
 | `INIT`   | EInit | Initialisierungsanforderung; legt die minimale Inter‑Event‑Zeit `Tmin` fest. |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar |
-|----------|-------|-----------|
+| Ereignis | Typ   | Kommentar                                      |
+| -------- | ----- | ---------------------------------------------- |
 | `INITO`  | EInit | Bestätigung der erfolgreichen Initialisierung. |
 
 ### **Daten-Eingänge**
 
-| Daten | Typ   | Kommentar |
-|-------|-------|-----------|
+| Daten  | Typ  | Kommentar                                                                                                                     |
+| ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `Tmin` | TIME | Minimale Zeit (z. B. `T#100ms`), die zwischen zwei aufeinanderfolgenden Ausgabeereignissen (`Q.E1`) mindestens vergehen muss. |
 
 ### **Daten-Ausgänge**
@@ -36,10 +36,10 @@ Der FB besitzt keine direkten Datenausgänge; der latchende Wert wird über den 
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Kommentar |
-|----------|------|-----|-----------|
+| Richtung | Name | Typ                                  | Kommentar                                                                                                          |
+| -------- | ---- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | `Socket` | `I`  | `adapter::types::unidirectional::AW` | Wert, der gelatcht werden soll (Eingangsadapter). Enthält die Ereignis‑ und Datenschnittstellen `I.E1` und `I.D1`. |
-| `Plug`   | `Q`  | `adapter::types::unidirectional::AW` | Latched Wert (Ausgangsadapter). Enthält die Ereignis‑ und Datenschnittstellen `Q.E1` und `Q.D1`. |
+| `Plug`   | `Q`  | `adapter::types::unidirectional::AW` | Latched Wert (Ausgangsadapter). Enthält die Ereignis‑ und Datenschnittstellen `Q.E1` und `Q.D1`.                   |
 
 ## Funktionsweise
 
@@ -80,10 +80,10 @@ Der interne FB `E_D_FF_ANY_TMIN` besitzt einen impliziten Zustandsautomaten:
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft | Unterschied |
-| ---------- | ------------- | ------------- |
-| `E_D_FF` | Einfaches D‑Flipflop ohne Zeitbegrenzung | Fehlende Kontrolle über die maximale Ausgabefrequenz. |
-| `SR_FF` | Set‑Reset‑Flipflop | Keine flankengesteuerte Datenübernahme. |
+| Baustein                   | Eigenschaft                                      | Unterschied                                                                                                                   |
+| -------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `E_D_FF`                   | Einfaches D‑Flipflop ohne Zeitbegrenzung         | Fehlende Kontrolle über die maximale Ausgabefrequenz.                                                                         |
+| `SR_FF`                    | Set‑Reset‑Flipflop                               | Keine flankengesteuerte Datenübernahme.                                                                                       |
 | `E_D_FF_ANY_TMIN` (direkt) | Wie AW_D_FF_TMIN, aber reiner Ereignis‑/Daten‑FB | Besitzt kein Adapter‑Interface; die Variante mit Adapter erhöht die Austauschbarkeit und Kapselung in steckbaren Komponenten. |
 
 ## Fazit

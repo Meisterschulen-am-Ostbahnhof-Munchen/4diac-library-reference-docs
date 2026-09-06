@@ -11,7 +11,7 @@ The function block `F_MID` is used to extract a substring from a given string. A
 - **P**: The starting position from which the extraction should begin (Type: `ANY_INT`).
 - **OUT**: The extracted substring (Type: `ANY_STRING`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

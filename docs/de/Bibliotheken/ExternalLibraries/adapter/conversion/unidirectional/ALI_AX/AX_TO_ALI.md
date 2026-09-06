@@ -30,10 +30,10 @@ Keine separaten Daten-Ausgänge. Daten werden indirekt über den ALI‑Adapter-P
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `AX_IN` | Socket | `adapter::types::unidirectional::AX` | BOOL-Adapter-Eingang: Empfängt ein BOOL-Signal über den unidirektionalen AX‑Adapter. |
-| `ALI_OUT` | Plug | `adapter::types::unidirectional::ALI` | LINT-Adapter-Ausgang: Gibt den konvertierten LINT-Wert über den unidirektionalen ALI‑Adapter aus. |
+| Adapter   | Richtung | Typ                                   | Beschreibung                                                                                      |
+| --------- | -------- | ------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `AX_IN`   | Socket   | `adapter::types::unidirectional::AX`  | BOOL-Adapter-Eingang: Empfängt ein BOOL-Signal über den unidirektionalen AX‑Adapter.              |
+| `ALI_OUT` | Plug     | `adapter::types::unidirectional::ALI` | LINT-Adapter-Ausgang: Gibt den konvertierten LINT-Wert über den unidirektionalen ALI‑Adapter aus. |
 
 ## Funktionsweise
 

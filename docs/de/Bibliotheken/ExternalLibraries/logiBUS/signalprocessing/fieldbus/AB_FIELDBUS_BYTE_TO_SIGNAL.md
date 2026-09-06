@@ -12,11 +12,11 @@ Der Funktionsblock **AB_FIELDBUS_BYTE_TO_SIGNAL** dient dazu, ein eingehendes By
 
 Der FB besitzt **keine** direkten Ereignis- oder Daten-Ein-/Ausgänge auf der obersten Ebene. Die gesamte Kommunikation erfolgt über drei **Adapter-Schnittstellen**:
 
-| Adapter | Richtung | Typ | Beschreibung |
-| --------- | ---------- | ----- | -------------- |
-| `IN` | Socket | `adapter::types::unidirectional::AB` | Eingangsadapter für das Byte-Signal und das zugehörige Ereignis. |
-| `OUT` | Plug | `adapter::types::unidirectional::AB` | Ausgangsadapter für das gespiegelte Byte-Signal. |
-| `VALID` | Plug | `adapter::types::unidirectional::AX` | Ausgangsadapter, der den Gültigkeitszustand des Signals anzeigt. |
+| Adapter | Richtung | Typ                                  | Beschreibung                                                     |
+| ------- | -------- | ------------------------------------ | ---------------------------------------------------------------- |
+| `IN`    | Socket   | `adapter::types::unidirectional::AB` | Eingangsadapter für das Byte-Signal und das zugehörige Ereignis. |
+| `OUT`   | Plug     | `adapter::types::unidirectional::AB` | Ausgangsadapter für das gespiegelte Byte-Signal.                 |
+| `VALID` | Plug     | `adapter::types::unidirectional::AX` | Ausgangsadapter, der den Gültigkeitszustand des Signals anzeigt. |
 
 Die Adapter sind vom Typ **unidirectional**, d.h. sie übertragen Daten und Ereignisse in eine Richtung. Die Typen `AB` und `AX` enthalten jeweils einen Ereignis-Eingang/-Ausgang (E1) und einen Daten-Eingang/-Ausgang (D1, vom Typ `ANY` bzw. `BOOL`).
 
@@ -74,11 +74,11 @@ Somit wird das Byte immer dann an `OUT` weitergegeben, wenn es gültig ist. Der 
 
 Der Baustein besitzt keinen expliziten Zustandsautomaten auf der obersten Ebene; die Zustände ergeben sich aus dem Zusammenwirken der internen Komponenten:
 
-| Zustand | Beschreibung |
-| --------- | -------------- |
-| **Idle** | Warten auf ein Ereignis an `IN.E1`. |
-| **Processing** | Interner `FIELDBUS_BYTE_TO_SIGNAL` verarbeitet das Byte; `OUT` und `VALID` werden aktualisiert. |
-| **Valid stable** | Nachdem das Flipflop getaktet wurde, bleibt `VALID.D1` bis zum nächsten Ereignis stabil. |
+| Zustand          | Beschreibung                                                                                    |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **Idle**         | Warten auf ein Ereignis an `IN.E1`.                                                             |
+| **Processing**   | Interner `FIELDBUS_BYTE_TO_SIGNAL` verarbeitet das Byte; `OUT` und `VALID` werden aktualisiert. |
+| **Valid stable** | Nachdem das Flipflop getaktet wurde, bleibt `VALID.D1` bis zum nächsten Ereignis stabil.        |
 
 In jedem Zyklus wird der Zustand durchlaufen.
 

@@ -28,10 +28,10 @@ Keine eigenständigen Daten-Ausgänge. Der Plug **AUI_OUT** stellt über seinen 
 
 ### **Adapter**
 
-| Typ | Richtung | Name | Beschreibung |
-|-----|----------|------|--------------|
-| Socket | Eingang | **AL_IN** | Adapter vom Typ `adapter::types::unidirectional::AL` – liefert ein LWORD-Datum und ein Ereignis zur Auslösung der Konvertierung. |
-| Plug | Ausgang | **AUI_OUT** | Adapter vom Typ `adapter::types::unidirectional::AUI` – empfängt das konvertierte UINT-Datum und gibt das Bestätigungsereignis weiter. |
+| Typ    | Richtung | Name        | Beschreibung                                                                                                                           |
+| ------ | -------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Socket | Eingang  | **AL_IN**   | Adapter vom Typ `adapter::types::unidirectional::AL` – liefert ein LWORD-Datum und ein Ereignis zur Auslösung der Konvertierung.       |
+| Plug   | Ausgang  | **AUI_OUT** | Adapter vom Typ `adapter::types::unidirectional::AUI` – empfängt das konvertierte UINT-Datum und gibt das Bestätigungsereignis weiter. |
 
 ## Funktionsweise
 
@@ -71,11 +71,11 @@ Eine detaillierte Zustandsbeschreibung des Konvertierungsbausteins ist der IEC-6
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ausgangstyp | Besonderheit |
-| ---------- | ------------- | -------------- |
-| `AL_TO_AUI` | UINT | Direkter Adapter-Konverter, unidirektional, Composite |
-| `AL_TO_AUD` | DINT | Konvertiert LWORD in DINT (32-Bit) |
-| `AUI_TO_AL` | LWORD | Rückwärtskonvertierung von UINT nach LWORD (nicht vorhanden, müsste separat implementiert werden) |
+| Baustein    | Ausgangstyp | Besonderheit                                                                                      |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| `AL_TO_AUI` | UINT        | Direkter Adapter-Konverter, unidirektional, Composite                                             |
+| `AL_TO_AUD` | DINT        | Konvertiert LWORD in DINT (32-Bit)                                                                |
+| `AUI_TO_AL` | LWORD       | Rückwärtskonvertierung von UINT nach LWORD (nicht vorhanden, müsste separat implementiert werden) |
 
 Im Vergleich zu einer direkten Verwendung von `F_LWORD_TO_UINT` bietet `AL_TO_AUI` den Vorteil der einfachen Integration in Adapter-Schnittstellen, ohne dass manuell Ereignis- und Datenverbindungen hergestellt werden müssen.
 

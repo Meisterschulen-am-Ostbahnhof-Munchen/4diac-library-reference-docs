@@ -76,10 +76,10 @@ Die interne Logik des Bausteins steuert den Daten- und Ereignisfluss wie folgt:
 
 Der Baustein verhält sich rein ereignis- und datenflussgesteuert. Es gibt keine komplexen internen Zustände (keine Zustandsmaschine / ECC im klassischen Sinne), sondern eine direkte Abhängigkeit des Ausgangs von den Eingängen:
 
-| Selektor-Eingang (`G.D1`) | Aktiver Pfad | Ausgangswert (`OUT.D1`) | Ausgangsereignis (`OUT.E1`) |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | `IN0` | Wert von `IN0.D1` | Wird bei jedem Trigger ausgelöst |
-| `TRUE` | `IN1` | Wert von `IN1.D1` | Wird bei jedem Trigger ausgelöst |
+| Selektor-Eingang (`G.D1`) | Aktiver Pfad | Ausgangswert (`OUT.D1`) | Ausgangsereignis (`OUT.E1`)      |
+| :------------------------ | :----------- | :---------------------- | :------------------------------- |
+| `FALSE`                   | `IN0`        | Wert von `IN0.D1`       | Wird bei jedem Trigger ausgelöst |
+| `TRUE`                    | `IN1`        | Wert von `IN1.D1`       | Wird bei jedem Trigger ausgelöst |
 
 ---
 

@@ -136,21 +136,21 @@ made of two linear chains:
 
 ## State Overview
 
-| State | Description | Active motors | Transition condition to the next state |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Initial idle state. | — | `1` (immediately to `sAUS`) |
-| **sAUS** | Ring base state, bottom. | none | `EIN[NOT (STOERUNG_M1..M6)]` → `sVOR1` |
-| **sVOR1** | Start-up step 1. | M6 | `timeOut.TimeOut` → `sVOR2`; `AUS` → `sNACH5`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sVOR2** | Start-up step 2. | M5, M6 | `timeOut.TimeOut` → `sVOR3`; `AUS` → `sNACH4`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sVOR3** | Start-up step 3. | M4, M5, M6 | `timeOut.TimeOut` → `sVOR4`; `AUS` → `sNACH3`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sVOR4** | Start-up step 4. | M3, M4, M5, M6 | `timeOut.TimeOut` → `sVOR5`; `AUS` → `sNACH2`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sVOR5** | Start-up step 5. | M2, M3, M4, M5, M6 | `timeOut.TimeOut` → `sLAEUFT`; `AUS` → `sNACH1`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sLAEUFT** | Ring pole, top — continuous operation. | M1..M6 (all) | `AUS` → `sNACH1`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sNACH1** | Shutdown step 1 (M1 stopped). | M2..M6 | `timeOut.TimeOut` → `sNACH2`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sNACH2** | Shutdown step 2 (M1, M2 stopped). | M3..M6 | `timeOut.TimeOut` → `sNACH3`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sNACH3** | Shutdown step 3 (M1..M3 stopped). | M4, M5, M6 | `timeOut.TimeOut` → `sNACH4`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sNACH4** | Shutdown step 4 (M1..M4 stopped). | M5, M6 | `timeOut.TimeOut` → `sNACH5`; `EI_Mx` → matching `sNACHx`/`sAUS` |
-| **sNACH5** | Shutdown step 5 (M1..M5 stopped). | M6 | `timeOut.TimeOut` → `sAUS`; `EI_M6` → `sAUS` |
+| State       | Description                            | Active motors      | Transition condition to the next state                                              |
+| :---------- | :------------------------------------- | :----------------- | :---------------------------------------------------------------------------------- |
+| **xSTART**  | Initial idle state.                    | —                  | `1` (immediately to `sAUS`)                                                         |
+| **sAUS**    | Ring base state, bottom.               | none               | `EIN[NOT (STOERUNG_M1..M6)]` → `sVOR1`                                              |
+| **sVOR1**   | Start-up step 1.                       | M6                 | `timeOut.TimeOut` → `sVOR2`; `AUS` → `sNACH5`; `EI_Mx` → matching `sNACHx`/`sAUS`   |
+| **sVOR2**   | Start-up step 2.                       | M5, M6             | `timeOut.TimeOut` → `sVOR3`; `AUS` → `sNACH4`; `EI_Mx` → matching `sNACHx`/`sAUS`   |
+| **sVOR3**   | Start-up step 3.                       | M4, M5, M6         | `timeOut.TimeOut` → `sVOR4`; `AUS` → `sNACH3`; `EI_Mx` → matching `sNACHx`/`sAUS`   |
+| **sVOR4**   | Start-up step 4.                       | M3, M4, M5, M6     | `timeOut.TimeOut` → `sVOR5`; `AUS` → `sNACH2`; `EI_Mx` → matching `sNACHx`/`sAUS`   |
+| **sVOR5**   | Start-up step 5.                       | M2, M3, M4, M5, M6 | `timeOut.TimeOut` → `sLAEUFT`; `AUS` → `sNACH1`; `EI_Mx` → matching `sNACHx`/`sAUS` |
+| **sLAEUFT** | Ring pole, top — continuous operation. | M1..M6 (all)       | `AUS` → `sNACH1`; `EI_Mx` → matching `sNACHx`/`sAUS`                                |
+| **sNACH1**  | Shutdown step 1 (M1 stopped).          | M2..M6             | `timeOut.TimeOut` → `sNACH2`; `EI_Mx` → matching `sNACHx`/`sAUS`                    |
+| **sNACH2**  | Shutdown step 2 (M1, M2 stopped).      | M3..M6             | `timeOut.TimeOut` → `sNACH3`; `EI_Mx` → matching `sNACHx`/`sAUS`                    |
+| **sNACH3**  | Shutdown step 3 (M1..M3 stopped).      | M4, M5, M6         | `timeOut.TimeOut` → `sNACH4`; `EI_Mx` → matching `sNACHx`/`sAUS`                    |
+| **sNACH4**  | Shutdown step 4 (M1..M4 stopped).      | M5, M6             | `timeOut.TimeOut` → `sNACH5`; `EI_Mx` → matching `sNACHx`/`sAUS`                    |
+| **sNACH5**  | Shutdown step 5 (M1..M5 stopped).      | M6                 | `timeOut.TimeOut` → `sAUS`; `EI_M6` → `sAUS`                                        |
 
 **Global fault cascade**: from every state preceding an `sNACH_x`, `EI_Mx[STOERUNG_Mx]` leads
 directly, with no detour, straight into that state (or to `sAUS` for `x=6`) — 51 such direct

@@ -12,20 +12,20 @@ Der Funktionsblock **Q_ObjHideShow_AX** dient als Adapter-Wrapper für den beste
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ    | Kommentar                     | Mit Variable   |
-|-------|--------|-------------------------------|----------------|
-| `INIT` | EInit | Service Initialization         | `u16ObjId`     |
+| Name   | Typ   | Kommentar              | Mit Variable |
+| ------ | ----- | ---------------------- | ------------ |
+| `INIT` | EInit | Service Initialization | `u16ObjId`   |
 
 ### **Ereignis-Ausgänge**
 
-| Name   | Typ    | Kommentar                   |
-|--------|--------|-----------------------------|
+| Name    | Typ   | Kommentar                       |
+| ------- | ----- | ------------------------------- |
 | `INITO` | EInit | Bestätigung der Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name      | Typ  | Kommentar         |
-|-----------|------|-------------------|
+| Name       | Typ  | Kommentar             |
+| ---------- | ---- | --------------------- |
 | `u16ObjId` | UINT | Objekt‑Identifikation |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der Baustein besitzt keine eigenen Datenausgänge. Der alte Sichtbarkeitswert wi
 
 ### **Adapter**
 
-| Richtung | Name          | Typ                             | Kommentar                                                  |
-|----------|---------------|---------------------------------|------------------------------------------------------------|
-| Socket   | `qVisible`    | `unidirectional::AX`            | Eingabe des neuen Sichtbarkeitswerts (0 = hidden, 1 = shown) |
-| Plug     | `qOldVisible` | `unidirectional::AB`            | Ausgabe des bisherigen Sichtbarkeitswerts (0/1/0xFF)       |
+| Richtung | Name          | Typ                  | Kommentar                                                    |
+| -------- | ------------- | -------------------- | ------------------------------------------------------------ |
+| Socket   | `qVisible`    | `unidirectional::AX` | Eingabe des neuen Sichtbarkeitswerts (0 = hidden, 1 = shown) |
+| Plug     | `qOldVisible` | `unidirectional::AB` | Ausgabe des bisherigen Sichtbarkeitswerts (0/1/0xFF)         |
 
 ## Gültige Objekt-IDs
 

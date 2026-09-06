@@ -6,6 +6,6 @@
 
 ### Events
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| E1 | Indication (or Request) | |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| E1   | Indication (or Request) |      |

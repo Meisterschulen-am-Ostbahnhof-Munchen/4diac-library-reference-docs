@@ -30,9 +30,9 @@ Keine direkten Datenausgänge vorhanden. Der Datentransport erfolgt ausschließl
 
 ### **Adapter**
 
-| Name | Typ | Richtung / Rolle |
-| ------ | ----- | ------------------ |
-| `IN` | `adapter::types::unidirectional::AUI` | Socket (Eingang) |
+| Name   | Typ                                   | Richtung / Rolle |
+| ------ | ------------------------------------- | ---------------- |
+| `IN`   | `adapter::types::unidirectional::AUI` | Socket (Eingang) |
 | `OUT1` | `adapter::types::unidirectional::AUI` | Plug (Ausgang 1) |
 | `OUT2` | `adapter::types::unidirectional::AUI` | Plug (Ausgang 2) |
 

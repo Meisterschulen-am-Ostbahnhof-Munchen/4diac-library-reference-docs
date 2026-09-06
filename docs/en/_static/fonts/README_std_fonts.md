@@ -8,10 +8,10 @@ This makes the fonts usable in contexts where a proper `#` is required (e.g. pro
 
 ## Fonts
 
-| File | Style | Based on |
-|---|---|---|
-| `TGL 0-16_std.ttf` | Italic (75° slant) | TGL 0-16 |
-| `TGL 0-17_std.ttf` | Upright | TGL 0-17 |
+| File                   | Style               | Based on     |
+| ---------------------- | ------------------- | ------------ |
+| `TGL 0-16_std.ttf`     | Italic (75° slant)  | TGL 0-16     |
+| `TGL 0-17_std.ttf`     | Upright             | TGL 0-17     |
 | `TGL 0-17 alt_std.ttf` | Upright (alternate) | TGL 0-17 Alt |
 
 ## Changes

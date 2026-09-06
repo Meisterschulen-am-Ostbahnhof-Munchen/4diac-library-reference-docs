@@ -12,33 +12,33 @@ Der Funktionsblock `AR2_REAL_TO_R` ist ein zusammengesetzter Baustein (Composite
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                                               |
+| -------- | ----------------------------------------------------------------------- |
 | `REQ`    | Anforderung zur Verarbeitung über den Adapter (löst Adapterausgang aus) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
+| Ereignis | Kommentar                                          |
+| -------- | -------------------------------------------------- |
 | `CNF`    | Bestätigung nach Abschluss der Adapterverarbeitung |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ  | Kommentar |
-|----------|------|-----------|
+| Variable | Typ  | Kommentar                                                                                           |
+| -------- | ---- | --------------------------------------------------------------------------------------------------- |
 | `OUT`    | REAL | Ausgangsdaten, die an den Adapter gesendet werden (tatsächlich: Eingangswert für die Konvertierung) |
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ  | Kommentar                                    |
-|----------|------|----------------------------------------------|
+| Variable | Typ  | Kommentar                                                                  |
+| -------- | ---- | -------------------------------------------------------------------------- |
 | `IN`     | REAL | Vom Adapter zurückgegebene Eingangsdaten (tatsächlich: konvertierter Wert) |
 
 ### **Adapter**
 
-| Adapter | Typ                                     | Kommentar             |
-|---------|-----------------------------------------|-----------------------|
-| `AR2_OUT` | `adapter::types::bidirectional::AR2`     | Bidirektionaler Schnittstellenadapter für AR2-Konvertierung |
+| Adapter   | Typ                                  | Kommentar                                                   |
+| --------- | ------------------------------------ | ----------------------------------------------------------- |
+| `AR2_OUT` | `adapter::types::bidirectional::AR2` | Bidirektionaler Schnittstellenadapter für AR2-Konvertierung |
 
 ## Funktionsweise
 

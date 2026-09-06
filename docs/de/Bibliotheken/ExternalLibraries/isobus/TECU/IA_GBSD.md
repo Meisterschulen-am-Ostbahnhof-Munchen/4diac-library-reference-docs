@@ -12,35 +12,35 @@ Der Funktionsblock **IA_GBSD** dient als Adapter-Wrapper für den ISOBUS-kompati
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                       |
-|------|-------|---------------------------------|
-| INIT | EInit | Service Initialization          |
+| Name | Typ   | Kommentar              |
+| ---- | ----- | ---------------------- |
+| INIT | EInit | Service Initialization |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                     |
-|-------|-------|-------------------------------|
-| INITO | EInit | Initialization Confirm        |
+| Name  | Typ   | Kommentar              |
+| ----- | ----- | ---------------------- |
+| INITO | EInit | Initialization Confirm |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar                  |
-|------|------|----------------------------|
-| QI   | BOOL | Event Input Qualifier      |
+| Name | Typ  | Kommentar             |
+| ---- | ---- | --------------------- |
+| QI   | BOOL | Event Input Qualifier |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Kommentar                     |
-|--------|--------|-------------------------------|
-| QO     | BOOL   | Event Output Qualifier        |
-| STATUS | STRING | Statusinformation             |
+| Name   | Typ    | Kommentar              |
+| ------ | ------ | ---------------------- |
+| QO     | BOOL   | Event Output Qualifier |
+| STATUS | STRING | Statusinformation      |
 
 ### **Adapter**
 
-| Name     | Typ                           | Kommentar                              |
-|----------|-------------------------------|----------------------------------------|
+| Name     | Typ                                  | Kommentar                              |
+| -------- | ------------------------------------ | -------------------------------------- |
 | SPEED    | adapter::types::unidirectional::AUI  | Bodenbasierte Maschinengeschwindigkeit |
-| DISTANCE | adapter::types::unidirectional::AUDI  | Bodenbasierte Maschinendistanz         |
+| DISTANCE | adapter::types::unidirectional::AUDI | Bodenbasierte Maschinendistanz         |
 | TIMEOUT  | adapter::types::unidirectional::AX   | Timeout-Status                         |
 
 ## Funktionsweise

@@ -28,13 +28,13 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-| ---------- | ------ | ----- | -------------- |
-| Socket (Eingang) | **IN** | `adapter::types::unidirectional::AE` | Empfängt ein unidirektionales Adapter-Ereignis (Ereignis + zugehörige Daten). |
-| Plug (Ausgang) | **OUT1** | `adapter::types::unidirectional::AE` | Erster Ausgang – erhält das gleiche Ereignis und dieselben Daten wie am Eingang. |
-| Plug (Ausgang) | **OUT2** | `adapter::types::unidirectional::AE` | Zweiter Ausgang. |
-| Plug (Ausgang) | **OUT3** | `adapter::types::unidirectional::AE` | Dritter Ausgang. |
-| Plug (Ausgang) | **OUT4** | `adapter::types::unidirectional::AE` | Vierter Ausgang. |
+| Richtung         | Name     | Typ                                  | Beschreibung                                                                     |
+| ---------------- | -------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| Socket (Eingang) | **IN**   | `adapter::types::unidirectional::AE` | Empfängt ein unidirektionales Adapter-Ereignis (Ereignis + zugehörige Daten).    |
+| Plug (Ausgang)   | **OUT1** | `adapter::types::unidirectional::AE` | Erster Ausgang – erhält das gleiche Ereignis und dieselben Daten wie am Eingang. |
+| Plug (Ausgang)   | **OUT2** | `adapter::types::unidirectional::AE` | Zweiter Ausgang.                                                                 |
+| Plug (Ausgang)   | **OUT3** | `adapter::types::unidirectional::AE` | Dritter Ausgang.                                                                 |
+| Plug (Ausgang)   | **OUT4** | `adapter::types::unidirectional::AE` | Vierter Ausgang.                                                                 |
 
 ## Funktionsweise
 

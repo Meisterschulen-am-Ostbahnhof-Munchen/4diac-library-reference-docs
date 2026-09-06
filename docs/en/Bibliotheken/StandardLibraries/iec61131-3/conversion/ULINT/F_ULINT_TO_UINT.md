@@ -10,7 +10,7 @@ The function block `F_ULINT_TO_UINT` converts a 64-bit unsigned integer value (U
 - **IN**: ULINT (64-bit unsigned integer) - The input value to be converted.
 - **OUT**: UINT (16-bit unsigned integer) - The result of the conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_ULINT_TO_UINT` converts a 64-bit unsigned integer value (U
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 No adapters are present.
 

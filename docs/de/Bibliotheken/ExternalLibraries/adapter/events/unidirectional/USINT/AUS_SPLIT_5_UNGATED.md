@@ -30,14 +30,14 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ |
-| ---------- | ------ | ----- |
-| Socket (Eingang) | `IN` | `adapter::types::unidirectional::AUS` |
-| Plug (Ausgang) | `OUT1` | `adapter::types::unidirectional::AUS` |
-| Plug (Ausgang) | `OUT2` | `adapter::types::unidirectional::AUS` |
-| Plug (Ausgang) | `OUT3` | `adapter::types::unidirectional::AUS` |
-| Plug (Ausgang) | `OUT4` | `adapter::types::unidirectional::AUS` |
-| Plug (Ausgang) | `OUT5` | `adapter::types::unidirectional::AUS` |
+| Richtung         | Name   | Typ                                   |
+| ---------------- | ------ | ------------------------------------- |
+| Socket (Eingang) | `IN`   | `adapter::types::unidirectional::AUS` |
+| Plug (Ausgang)   | `OUT1` | `adapter::types::unidirectional::AUS` |
+| Plug (Ausgang)   | `OUT2` | `adapter::types::unidirectional::AUS` |
+| Plug (Ausgang)   | `OUT3` | `adapter::types::unidirectional::AUS` |
+| Plug (Ausgang)   | `OUT4` | `adapter::types::unidirectional::AUS` |
+| Plug (Ausgang)   | `OUT5` | `adapter::types::unidirectional::AUS` |
 
 ## Funktionsweise
 

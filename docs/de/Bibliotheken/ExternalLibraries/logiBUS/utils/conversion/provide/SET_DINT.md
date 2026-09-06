@@ -12,20 +12,20 @@ Der Funktionsbaustein `SET_DINT` dient dazu, einen DINT-Wert von einem Dateneing
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                     | Mit Variablen |
-|------|-------|-------------------------------|---------------|
-| REQ  | Event | Normaler Ausführungsanstoß    | IN, OUT       |
+| Name | Typ   | Kommentar                  | Mit Variablen |
+| ---- | ----- | -------------------------- | ------------- |
+| REQ  | Event | Normaler Ausführungsanstoß | IN, OUT       |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                    | Mit Variablen |
-|------|-------|------------------------------|---------------|
-| CNF  | Event | Bestätigung der Ausführung   | OUT           |
+| Name | Typ   | Kommentar                  | Mit Variablen |
+| ---- | ----- | -------------------------- | ------------- |
+| CNF  | Event | Bestätigung der Ausführung | OUT           |
 
 ### **Daten-Eingänge**
 
-| Name | Typ  | Kommentar            | Initialwert |
-|------|------|----------------------|-------------|
+| Name | Typ  | Kommentar                         | Initialwert |
+| ---- | ---- | --------------------------------- | ----------- |
 | IN   | DINT | Wert, der geschrieben werden soll | 0           |
 
 ### **Daten-Ausgänge**
@@ -56,9 +56,9 @@ Die Ausführung ist atomar: Der Wert wird sofort und ohne Verzögerung übernomm
 
 ## Zustandsübersicht
 
-| Zustand | Aktion             | Ausgabeereignis |
-|---------|--------------------|-----------------|
-| REQ     | OUT := IN          | CNF             |
+| Zustand | Aktion    | Ausgabeereignis |
+| ------- | --------- | --------------- |
+| REQ     | OUT := IN | CNF             |
 
 Der Baustein besitzt keine weiteren Zustände (keine Warteschleifen, keine Verzweigungen). Nach der Aktion wechselt er sofort wieder in den Bereitschaftszustand für den nächsten `REQ`.
 

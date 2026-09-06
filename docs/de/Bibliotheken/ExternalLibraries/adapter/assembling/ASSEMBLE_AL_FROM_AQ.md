@@ -33,10 +33,10 @@ Das zusammengesetzte LWORD wird über den AL‑Plug‑Adapater (D1) ausgegeben.
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-|-----|------|----------|--------------|
+| Typ                                  | Name                                  | Richtung         | Beschreibung                                                                                                                                                       |
+| ------------------------------------ | ------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `adapter::types::unidirectional::AQ` | `QUARTER_BYTE_00` … `QUARTER_BYTE_31` | Socket (Eingang) | 32 gleichartige Adapter, die jeweils einen 2‑Bit‑Wert („Quarter“) bereitstellen. Jeder Socket verfügt über einen Ereignisausgang (E1) und einen Datenausgang (D1). |
-| `adapter::types::unidirectional::AL` | `OUT` | Plug (Ausgang) | Ausgangsadapter, der ein 64‑Bit‑LWORD (D1) sowie ein zugehöriges Ereignis (E1) weitergibt. |
+| `adapter::types::unidirectional::AL` | `OUT`                                 | Plug (Ausgang)   | Ausgangsadapter, der ein 64‑Bit‑LWORD (D1) sowie ein zugehöriges Ereignis (E1) weitergibt.                                                                         |
 
 ## Funktionsweise
 
@@ -65,11 +65,11 @@ Die Zustandslogik wird durch die internen Blöcke `ASSEMBLE_LWORD_FROM_QUARTERS`
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Funktionsprinzip | Anzahl Eingänge | Ausgangstyp | Besonderheit |
-| ---------- | ------------------ | ---------------- | ------------- | -------------- |
-| `ASSEMBLE_AL_FROM_AQ` | Adapter‑basierte Zusammenstellung | 32 × 2‑Bit (AQ) | 1 × LWORD (AL) | Flankengesteuerte Ausgabe, reine Komposition |
-| `ASSEMBLE_LWORD_FROM_QUARTERS` (intern) | Daten‑orientierte Kombination | 32 × 2‑Bit (direkt) | LWORD (Daten) | Keine Adapter, kein Flip‑Flop |
-| Klassischer Multiplexer (z. B. MUX) | Auswahl eines Eingangs über Steuerleitung | n Eingänge, 1 Auswahl | Einfacher Datentyp | Erfordert dezidierte Adresssignale |
+| Baustein                                | Funktionsprinzip                          | Anzahl Eingänge       | Ausgangstyp        | Besonderheit                                 |
+| --------------------------------------- | ----------------------------------------- | --------------------- | ------------------ | -------------------------------------------- |
+| `ASSEMBLE_AL_FROM_AQ`                   | Adapter‑basierte Zusammenstellung         | 32 × 2‑Bit (AQ)       | 1 × LWORD (AL)     | Flankengesteuerte Ausgabe, reine Komposition |
+| `ASSEMBLE_LWORD_FROM_QUARTERS` (intern) | Daten‑orientierte Kombination             | 32 × 2‑Bit (direkt)   | LWORD (Daten)      | Keine Adapter, kein Flip‑Flop                |
+| Klassischer Multiplexer (z. B. MUX)     | Auswahl eines Eingangs über Steuerleitung | n Eingänge, 1 Auswahl | Einfacher Datentyp | Erfordert dezidierte Adresssignale           |
 
 `ASSEMBLE_AL_FROM_AQ` bietet im Vergleich zu einem Multiplexer den Vorteil, dass *alle* Quarter‑Werte parallel und ohne Selektionslogik zu einem vollständigen Wort kombiniert werden. Der zusätzliche Flip‑Flop sorgt für eine saubere, ereignisgesteuerte Ausgabe.
 

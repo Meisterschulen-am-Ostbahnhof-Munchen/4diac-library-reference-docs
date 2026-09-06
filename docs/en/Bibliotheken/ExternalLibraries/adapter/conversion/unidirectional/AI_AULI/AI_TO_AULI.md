@@ -7,6 +7,7 @@
 ## Introduction
 
 The function block **AI_TO_AULI** serves as a composite block for converting a unidirectional adapter of type `AI` (based on the data type `INT`) into a unidirectional adapter of type `AULI` (based on `ULINT`). It enables the seamless integration of components that use different integer data types without requiring the user to implement the conversion logic
+
 ---
 
 ## Interface Structure
@@ -17,33 +18,33 @@ The block does not have traditional event or data inputs/outputs, but only adapt
 
 The event input is provided via the socket adapter `AI_IN`.
 
-| Name | Adapter | Comment |
-|--------|---------|-------------------------------------|
+| Name | Adapter | Comment                            |
+| ---- | ------- | ---------------------------------- |
 | `E1` | `AI_IN` | Event that triggers the conversion |
 
 ### **Event Outputs**
 
 The event output is provided via the plug adapter `AULI_OUT`.
 
-| Name | Adapter | Comment |
-|--------|-----------|----------------------------------------|
+| Name | Adapter    | Comment                           |
+| ---- | ---------- | --------------------------------- |
 | `E1` | `AULI_OUT` | Event after successful conversion |
 
 ### **Data Inputs**
 
 Data input is provided via the socket adapter `AI_IN`.
 
-| Name | Adapter | Type | Comment |
-|--------|---------|------|------------------------|
+| Name | Adapter | Type  | Comment                     |
+| ---- | ------- | ----- | --------------------------- |
 | `D1` | `AI_IN` | `INT` | Input data (16-bit integer) |
 
 ### **Data Outputs**
 
 Data output is provided via the plug adapter `AULI_OUT`.
 
-| Name | Adapter | Type | Comment |
-|--------|-----------|--------|--------------------------|
-| `D1` | `AULI_OUT`| `ULINT`| Output data (64-bit unsigned integer) |
+| Name | Adapter    | Type    | Comment                               |
+| ---- | ---------- | ------- | ------------------------------------- |
+| `D1` | `AULI_OUT` | `ULINT` | Output data (64-bit unsigned integer) |
 
 ### **Adapter**
 
@@ -93,11 +94,11 @@ Since the component is implemented as a pure composite without its own stateful 
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Source Type | Target Type | Adapter-Based | Custom States |
-| ------------------- | ---------- | --------- | ---------------- | ----------------- |
-| `F_INT_TO_ULINT` | `INT` | `ULINT` | No (pure function block) | No |
-| `AI_TO_AULI` | `AI` | `AULI` | Yes (adapter) | No |
-| `ANY_TO_ANY` | variable | variable | possible | depending on implementation |
+| Function Block   | Source Type | Target Type | Adapter-Based            | Custom States               |
+| ---------------- | ----------- | ----------- | ------------------------ | --------------------------- |
+| `F_INT_TO_ULINT` | `INT`       | `ULINT`     | No (pure function block) | No                          |
+| `AI_TO_AULI`     | `AI`        | `AULI`      | Yes (adapter)            | No                          |
+| `ANY_TO_ANY`     | variable    | variable    | possible                 | depending on implementation |
 
 While the basic function block `F_INT_TO_ULINT` only performs data conversion, `AI_TO_AULI` encapsulates this along with event control in an adapter-compatible interface. This increases reusability in adapter-based systems.
 

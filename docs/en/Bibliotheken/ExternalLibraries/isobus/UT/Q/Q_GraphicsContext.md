@@ -42,11 +42,13 @@ The **Q_GraphicsContext** is a standards-compliant function block for controllin
 
 - `INIT` with graphics context object ID
 - `INITO` confirms operational readiness
+
 1. **Configuration**:
 
 - `REQ` with sub-command ID and parameter list
 - Configures graphics context properties
 - `CNF` returns result status and previous configuration
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -63,28 +65,28 @@ The **Q_GraphicsContext** is a standards-compliant function block for controllin
 
 The sub-command IDs correspond to Table F.1 of ISO 11783-6 (not to be confused with earlier/derived numbering):
 
-| ID | Command                       | Parameter Description                    |
-|-----|-------------------------------|------------------------------------------|
-| 0   | Set Graphics Cursor           | Bytes 5-6 X, 7-8 Y (signed)              |
-| 1   | Move Graphics Cursor          | Bytes 5-6 X offset, 7-8 Y offset (signed)|
-| 2   | Set Foreground Colour         | Byte 5 colour index                      |
-| 3   | Set Background Colour         | Byte 5 colour index                      |
-| 4   | Set Line Attributes Object ID | Bytes 5-6 object ID (65535 = no line)    |
-| 5   | Set Fill Attributes Object ID | Bytes 5-6 object ID (65535 = no fill)    |
-| 6   | Set Font Attributes Object ID | Bytes 5-6 object ID (65535 = no font)    |
+| ID  | Command                       | Parameter Description                     |
+| --- | ----------------------------- | ----------------------------------------- |
+| 0   | Set Graphics Cursor           | Bytes 5-6 X, 7-8 Y (signed)               |
+| 1   | Move Graphics Cursor          | Bytes 5-6 X offset, 7-8 Y offset (signed) |
+| 2   | Set Foreground Colour         | Byte 5 colour index                       |
+| 3   | Set Background Colour         | Byte 5 colour index                       |
+| 4   | Set Line Attributes Object ID | Bytes 5-6 object ID (65535 = no line)     |
+| 5   | Set Fill Attributes Object ID | Bytes 5-6 object ID (65535 = no fill)     |
+| 6   | Set Font Attributes Object ID | Bytes 5-6 object ID (65535 = no font)     |
 
 ⚠ **Variable data length / Transport Protocol:** The F.56 command has a **variable data length**. Messages **larger than 8 bytes** are transmitted via the **Transport Protocol (TP)**; smaller commands are padded to 8 bytes with FF16. With this FB's 5-byte parameter list (`u8ParaList`, ArraySize 5) the message becomes 9 bytes (→ TP). Sub-commands requiring more than 5 parameter bytes (e.g. Draw Polygon with several points, Pan & Zoom Viewport) cannot be fully expressed through this FB.
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful Execution |
-| -6 | VT_E_OVERFLOW | Parameter Buffer Too Small |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                    |
+| ---- | ------------------------- | -------------------------- |
+| 0    | VT_E_NO_ERR               | Successful Execution       |
+| -6   | VT_E_OVERFLOW             | Parameter Buffer Too Small |
+| -8   | VT_E_NOACT                | VT not ready               |
+| -21  | VT_E_NO_INSTANCE          | No VT client available     |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance        |
+| -130 | VT_E_NOT_ALIVE            | VT not active              |
 
 ## Application Scenarios
 

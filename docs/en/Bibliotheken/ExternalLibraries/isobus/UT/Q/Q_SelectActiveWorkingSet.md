@@ -37,11 +37,13 @@ The **Q_SelectActiveWorkingSet** is a standards-compliant function block for con
 
 - `INIT` without parameters
 - `INITO` confirms operational readiness
+
 1. **Workspace change**:
 
 - `REQ` with 8-byte ISO NAME of the target workspace
 - Performs context change
 - `CNF` returns operational status and previous workspace
+
 1. **ISO NAME format**:
 
 - 8-byte array according to ISO 11783-5 specification
@@ -55,23 +57,23 @@ The **Q_SelectActiveWorkingSet** is a standards-compliant function block for con
 
 ## ISO NAME Structure
 
-| Byte | Content |
-| ------ | ------------------------- |
-| 0-1 | Vendor ID |
-| 2-3 | Device ID |
-| 4-5 | Device Instance |
-| 6-7 | Workspace ID |
+| Byte | Content         |
+| ---- | --------------- |
+| 0-1  | Vendor ID       |
+| 2-3  | Device ID       |
+| 4-5  | Device Instance |
+| 6-7  | Workspace ID    |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful Switch |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful Switch      |
+| -6   | VT_E_OVERFLOW             | Buffer Overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -82,12 +84,12 @@ The **Q_SelectActiveWorkingSet** is a standards-compliant function block for con
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | Q_SelectActiveWorkingSet | VtContextSwitch | VtWorkspaceManager |
---------------- | -------------------------- | ----------------- | -------------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| VT Version | 6+ | All | All |
-| ISO NAME | ✔ | ✖ | ✖ |
-| Feedback | ✔ | ✖ | ✔ |
+| Feature      | Q_SelectActiveWorkingSet | VtContextSwitch | VtWorkspaceManager |
+| ------------ | ------------------------ | --------------- | ------------------ |
+| ISO Standard | ✔                        | ✖               | ✖                  |
+| VT Version   | 6+                       | All             | All                |
+| ISO NAME     | ✔                        | ✖               | ✖                  |
+| Feedback     | ✔                        | ✖               | ✔                  |
 
 ## Conclusion
 

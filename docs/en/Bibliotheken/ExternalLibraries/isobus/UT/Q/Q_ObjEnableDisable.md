@@ -45,11 +45,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with target object ID
 - `INITO` confirms operational readiness
+
 1. **Status Change**:
 
 - `REQ` with desired activation state
 - Changes the object's interaction capability
 - `CNF` returns operational status and previous state
+
 1. **Special Cases**:
 
 - VT_E_HANDLE_INVALID is returned for invalid object IDs
@@ -63,22 +65,22 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Status Reference
 
-| qAbility | Object State |
-|----------|----------------------|
-| FALSE (0)| Disabled (gray) |
-| TRUE (1) | Enabled (normal) |
+| qAbility  | Object State     |
+| --------- | ---------------- |
+| FALSE (0) | Disabled (gray)  |
+| TRUE (1)  | Enabled (normal) |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful Execution |
-| -6 | VT_E_OVERFLOW | Buffer Overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -128 | VT_E_HANDLE_INVALID | Invalid object ID |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful Execution   |
+| -6   | VT_E_OVERFLOW             | Buffer Overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -128 | VT_E_HANDLE_INVALID       | Invalid object ID      |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -89,12 +91,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with similar building blocks
 
-| Feature | Q_ObjEnableDisable | VtInputControl | VtObjectState |
-| --------------- | -------------------- | ---------------- | --------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Binary Control | ✔ | ✔ | ✖ |
-| Feedback | ✔ | ✖ | ✔ |
-| Object Type | Input Objects | All | All |
+| Feature        | Q_ObjEnableDisable | VtInputControl | VtObjectState |
+| -------------- | ------------------ | -------------- | ------------- |
+| ISO Standard   | ✔                  | ✖              | ✖             |
+| Binary Control | ✔                  | ✔              | ✖             |
+| Feedback       | ✔                  | ✖              | ✔             |
+| Object Type    | Input Objects      | All            | All           |
 
 ## Conclusion
 

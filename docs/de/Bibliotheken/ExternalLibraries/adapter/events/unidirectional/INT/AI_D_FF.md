@@ -28,10 +28,10 @@ Keine direkten Daten-Ausgänge.
 
 ### **Adapter**
 
-| Bezeichnung | Richtung | Typ | Beschreibung |
-|-------------|----------|-----|--------------|
-| **I** | Socket | `adapter::types::unidirectional::AI` | Liefert das Eingangsereignis (E1) und den zu latchenden Datenwert (D1). |
-| **Q** | Plug | `adapter::types::unidirectional::AI` | Gibt nach der Übernahme das Ergebnisereignis (E1) und den gespeicherten Datenwert (D1) aus. |
+| Bezeichnung | Richtung | Typ                                  | Beschreibung                                                                                |
+| ----------- | -------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **I**       | Socket   | `adapter::types::unidirectional::AI` | Liefert das Eingangsereignis (E1) und den zu latchenden Datenwert (D1).                     |
+| **Q**       | Plug     | `adapter::types::unidirectional::AI` | Gibt nach der Übernahme das Ergebnisereignis (E1) und den gespeicherten Datenwert (D1) aus. |
 
 Der Adapter `AI` ist unidirektional, d.h. die Daten- und Ereignisflüsse verlaufen nur in eine Richtung. Socket **I** dient als Eingang, Plug **Q** als Ausgang.
 
@@ -57,11 +57,11 @@ Ein Ereignis an `I.E1` löst eine steigende Flanke am Takteingang des internen F
 
 Der interne Zustand des Flipflops wird durch den gespeicherten Wert `Q` bestimmt. Es existieren zwei stabile Zustände:
 
-| Takt (CLK) | D (Eingang) | Q (Ausgang) vorher | Q (Ausgang) nachher |
-| ------------ | ------------- | --------------------- | ---------------------- |
-| Kein Ereignis | - | Q_alt | Q_alt |
-| Ereignis (steigende Flanke) | 0 | X | 0 |
-| Ereignis (steigende Flanke) | 1 | X | 1 |
+| Takt (CLK)                  | D (Eingang) | Q (Ausgang) vorher | Q (Ausgang) nachher |
+| --------------------------- | ----------- | ------------------ | ------------------- |
+| Kein Ereignis               | -           | Q_alt              | Q_alt               |
+| Ereignis (steigende Flanke) | 0           | X                  | 0                   |
+| Ereignis (steigende Flanke) | 1           | X                  | 1                   |
 
 Bei jedem Ereignis an `I.E1` wird der aktuelle D-Wert unabhängig vom vorherigen Q-Wert übernommen.
 

@@ -12,37 +12,37 @@ Der **DataPanel_MI_IW_CNT** ist ein Service-Interface-Funktionsblock aus der Dat
 
 ### **Ereignis-Eingänge**
 
-| Event  | Typ   | Beschreibung                                      |
-|--------|-------|---------------------------------------------------|
-| INIT   | EInit | Initialisiert den Kanal (setzt Hardware-Parameter) |
-| REQ    | Event | Fordert einen aktuellen Zählerwert an             |
+| Event | Typ   | Beschreibung                                       |
+| ----- | ----- | -------------------------------------------------- |
+| INIT  | EInit | Initialisiert den Kanal (setzt Hardware-Parameter) |
+| REQ   | Event | Fordert einen aktuellen Zählerwert an              |
 
 ### **Ereignis-Ausgänge**
 
-| Event | Typ   | Beschreibung                                              |
-|-------|-------|-----------------------------------------------------------|
-| INITO | EInit | Quittierung der erfolgreichen Initialisierung             |
-| CNF   | Event | Bestätigung einer angeforderten REQ‑Operation             |
+| Event | Typ   | Beschreibung                                                       |
+| ----- | ----- | ------------------------------------------------------------------ |
+| INITO | EInit | Quittierung der erfolgreichen Initialisierung                      |
+| CNF   | Event | Bestätigung einer angeforderten REQ‑Operation                      |
 | IND   | Event | Asynchrone Indikation (ausgelöst durch Impuls- oder Zeitintervall) |
 
 ### **Daten-Eingänge**
 
-| Name          | Typ      | Beschreibung                                                                 |
-|---------------|----------|-----------------------------------------------------------------------------|
-| QI            | BOOL     | Qualifiziert das INIT- / REQ-Ereignis                                       |
-| PARAMS        | STRING   | Service-Parameter (herstellerabhängige Konfiguration)                       |
-| u8SAMember    | USINT    | Knoten‑SA (224..239); Default = `MI::MI_00`                                 |
-| Input         | DataPanel_MI_DI_S | Identifikation des Eingangs (muss „7A“ oder „8A“ sein); Default = `Invalid` |
-| ImpulseDelta  | WORD     | Impulsschwelle für asynchrone IND‑Auslösung (Anzahl Impulse)                |
-| TimeDelta     | DWORD    | Zeitschwelle für asynchrone IND‑Auslösung (in ms)                           |
+| Name         | Typ               | Beschreibung                                                                |
+| ------------ | ----------------- | --------------------------------------------------------------------------- |
+| QI           | BOOL              | Qualifiziert das INIT- / REQ-Ereignis                                       |
+| PARAMS       | STRING            | Service-Parameter (herstellerabhängige Konfiguration)                       |
+| u8SAMember   | USINT             | Knoten‑SA (224..239); Default = `MI::MI_00`                                 |
+| Input        | DataPanel_MI_DI_S | Identifikation des Eingangs (muss „7A“ oder „8A“ sein); Default = `Invalid` |
+| ImpulseDelta | WORD              | Impulsschwelle für asynchrone IND‑Auslösung (Anzahl Impulse)                |
+| TimeDelta    | DWORD             | Zeitschwelle für asynchrone IND‑Auslösung (in ms)                           |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ    | Beschreibung                                  |
-|--------|--------|-----------------------------------------------|
-| QO     | BOOL   | Qualifiziert die Ereignisausgänge              |
-| STATUS | STRING | Statusmeldung (z. B. „OK“ oder Fehlercode)    |
-| IN     | WORD   | Aktueller 16‑Bit‑Zählerwert (Impulszähler)    |
+| Name   | Typ    | Beschreibung                               |
+| ------ | ------ | ------------------------------------------ |
+| QO     | BOOL   | Qualifiziert die Ereignisausgänge          |
+| STATUS | STRING | Statusmeldung (z. B. „OK“ oder Fehlercode) |
+| IN     | WORD   | Aktueller 16‑Bit‑Zählerwert (Impulszähler) |
 
 ### **Adapter**
 
@@ -70,14 +70,14 @@ Die Fehlerbehandlung erfolgt über den `STATUS`‑Ausgang und das `QO`‑Flag. T
 
 Der FB durchläuft klassische Service-Interface-Zustände:
 
-| Zustand     | Beschreibung                                                    |
-|-------------|-----------------------------------------------------------------|
-| **IDLE**    | Warten auf INIT oder REQ. Hardware ist noch nicht belegt.      |
-| **INIT**    | INIT empfangen – Parametrierung und Hardware‑Reservierung laufen. |
-| **ACTIVE**  | Initialisierung erfolgreich – Kanal betriebsbereit.            |
-| **REQUEST** | REQ empfangen – Abfrage des aktuellen Zählerstands.            |
-| **INDICATE**| Asynchrone Bedingung erfüllt – Senden eines IND‑Ereignisses.   |
-| **ERROR**   | Fehler aufgetreten (z. B. falscher Parameter, Hardware-Fehler). |
+| Zustand      | Beschreibung                                                      |
+| ------------ | ----------------------------------------------------------------- |
+| **IDLE**     | Warten auf INIT oder REQ. Hardware ist noch nicht belegt.         |
+| **INIT**     | INIT empfangen – Parametrierung und Hardware‑Reservierung laufen. |
+| **ACTIVE**   | Initialisierung erfolgreich – Kanal betriebsbereit.               |
+| **REQUEST**  | REQ empfangen – Abfrage des aktuellen Zählerstands.               |
+| **INDICATE** | Asynchrone Bedingung erfüllt – Senden eines IND‑Ereignisses.      |
+| **ERROR**    | Fehler aufgetreten (z. B. falscher Parameter, Hardware-Fehler).   |
 
 Nach einem Fehler kann nur ein erneutes INIT den FB zurück in den IDLE‑Zustand versetzen.
 

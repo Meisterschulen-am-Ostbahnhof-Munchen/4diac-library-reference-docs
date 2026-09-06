@@ -8,20 +8,20 @@ bidirectional Adapter Interface for 3 Events (forward, Set/Reset/Toggle) and 1 B
 
 ### Event Inputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| EI1 | Indication (or Request) | DI1 |
+| Name | Comment                 | With |
+| :--- | :---------------------- | :--- |
+| EI1  | Indication (or Request) | DI1  |
 
 ### Event Outputs
 
-| Name | Comment | With |
-| :--- | :--- | :--- |
-| SET | Set / Switch on | |
-| RESET | Reset / Switch off | |
-| TOGGLE | Toggle / Switch output | |
+| Name   | Comment                | With |
+| :----- | :--------------------- | :--- |
+| SET    | Set / Switch on        |      |
+| RESET  | Reset / Switch off     |      |
+| TOGGLE | Toggle / Switch output |      |
 
 ### Input Vars
 
-| Name | Type | Comment |
-| :--- | :--- | :--- |
-| DI1 | BOOL | Indication (or Request) Data to Plug |
+| Name | Type | Comment                              |
+| :--- | :--- | :----------------------------------- |
+| DI1  | BOOL | Indication (or Request) Data to Plug |

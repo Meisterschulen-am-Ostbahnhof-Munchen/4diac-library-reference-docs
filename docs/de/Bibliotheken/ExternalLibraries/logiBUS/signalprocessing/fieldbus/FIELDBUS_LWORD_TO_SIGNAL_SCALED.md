@@ -12,32 +12,32 @@ Der Funktionsblock **FIELDBUS_LWORD_TO_SIGNAL_SCALED** dient der Umwandlung eine
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Beschreibung | Mitgeführte Daten |
-|----------|-----|--------------|-------------------|
-| INIT | EInit | Initialisierungsanforderung: Skalierungsfaktor (SCALE) und Offset (OFFSET) setzen | SCALE, OFFSET |
-| REQ | Event | Normale Ausführungsanforderung: Verarbeitung des Eingangssignals (IN) | IN |
+| Ereignis | Typ   | Beschreibung                                                                      | Mitgeführte Daten |
+| -------- | ----- | --------------------------------------------------------------------------------- | ----------------- |
+| INIT     | EInit | Initialisierungsanforderung: Skalierungsfaktor (SCALE) und Offset (OFFSET) setzen | SCALE, OFFSET     |
+| REQ      | Event | Normale Ausführungsanforderung: Verarbeitung des Eingangssignals (IN)             | IN                |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Beschreibung | Mitgeführte Daten |
-|----------|-----|--------------|-------------------|
-| INITO | EInit | Bestätigung der Initialisierung | – |
-| CNF | Event | Bestätigung der Ausführung | OUT, VALID |
+| Ereignis | Typ   | Beschreibung                    | Mitgeführte Daten |
+| -------- | ----- | ------------------------------- | ----------------- |
+| INITO    | EInit | Bestätigung der Initialisierung | –                 |
+| CNF      | Event | Bestätigung der Ausführung      | OUT, VALID        |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ    | Initialwert           | Beschreibung                                  |
-|----------|--------|-----------------------|-----------------------------------------------|
-| IN       | LWORD  | NOT_AVAILABLE_LWM     | Feldbus-Rohsignal (LWORD)                     |
-| SCALE    | LREAL  | LREAL#1.0             | Skalierungsfaktor (Multiplikation)            |
-| OFFSET   | DINT   | DINT#0                | Offset, der nach der Skalierung addiert wird |
+| Name   | Typ   | Initialwert       | Beschreibung                                 |
+| ------ | ----- | ----------------- | -------------------------------------------- |
+| IN     | LWORD | NOT_AVAILABLE_LWM | Feldbus-Rohsignal (LWORD)                    |
+| SCALE  | LREAL | LREAL#1.0         | Skalierungsfaktor (Multiplikation)           |
+| OFFSET | DINT  | DINT#0            | Offset, der nach der Skalierung addiert wird |
 
 ### **Daten-Ausgänge**
 
-| Name   | Typ   | Initialwert | Beschreibung                                                  |
-|--------|-------|-------------|---------------------------------------------------------------|
-| OUT    | LREAL | LREAL#0.0   | Skalierter Ausgangswert (LREAL)                               |
-| VALID  | BOOL  | FALSE       | Gibt an, ob das Eingangssignal gültig ist (TRUE = gültig)   |
+| Name  | Typ   | Initialwert | Beschreibung                                              |
+| ----- | ----- | ----------- | --------------------------------------------------------- |
+| OUT   | LREAL | LREAL#0.0   | Skalierter Ausgangswert (LREAL)                           |
+| VALID | BOOL  | FALSE       | Gibt an, ob das Eingangssignal gültig ist (TRUE = gültig) |
 
 ### **Adapter**
 
@@ -74,10 +74,10 @@ Die Skalierung erfolgt also linear: `OUT = IN_als_LREAL * SCALE + OFFSET`. Der S
 
 ## Zustandsübersicht
 
-| Zustand | Ausgelöst durch | Ausgabealgorithmus | Ereignisausgang | Beschreibung |
-|---------|----------------|--------------------|-----------------|--------------|
-| INIT    | Ereignis INIT  | INIT               | INITO           | Initialisierung: Skalierungsparameter übernehmen |
-| REQ     | Ereignis REQ   | REQ                | CNF             | Signalverarbeitung: Skalierung und Gültigkeitsprüfung |
+| Zustand | Ausgelöst durch | Ausgabealgorithmus | Ereignisausgang | Beschreibung                                          |
+| ------- | --------------- | ------------------ | --------------- | ----------------------------------------------------- |
+| INIT    | Ereignis INIT   | INIT               | INITO           | Initialisierung: Skalierungsparameter übernehmen      |
+| REQ     | Ereignis REQ    | REQ                | CNF             | Signalverarbeitung: Skalierung und Gültigkeitsprüfung |
 
 Der Baustein wechselt zwischen diesen beiden Zuständen nur durch die entsprechenden Ereignisse. Es gibt keinen expliziten Übergang nach der Initialisierung in einen Wartezustand; der Baustein bleibt so lange im letzten Zustand, bis ein neues Ereignis eintrifft.
 

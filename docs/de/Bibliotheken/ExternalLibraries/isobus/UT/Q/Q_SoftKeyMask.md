@@ -59,17 +59,17 @@ Der Baustein adressiert **zwei verschiedene Objekt-IDs** mit jeweils eigenen Gü
 
 Der Change Soft Key Mask-Befehl (Annex F.36) ordnet einer Daten- oder Alarmmaske eine Softkey-Maske zu. Gültig ist `u16DataMaskId`, wenn er in einen der folgenden ISO 11783-6-ID-Bereiche fällt:
 
-| Objekttyp   | ID-Bereich |
-|-------------|------------|
-| DataMask    | 1000 – 1999 |
-| AlarmMask   | 2000 – 2999 |
+| Objekttyp | ID-Bereich  |
+| --------- | ----------- |
+| DataMask  | 1000 – 1999 |
+| AlarmMask | 2000 – 2999 |
 
 ### Gültige Werte für u16SoftKeyMaskId (Softkey-Maske)
 
 Gültig ist `u16SoftKeyMaskId`, wenn er in den ISO 11783-6-ID-Bereich einer Softkey-Maske fällt:
 
-| Objekttyp   | ID-Bereich |
-|-------------|------------|
+| Objekttyp   | ID-Bereich  |
+| ----------- | ----------- |
 | SoftKeyMask | 4000 – 4999 |
 
 **Hinweis:** ID_NULL (65535) ist kein Befehlsziel, kann aber in INIT zur Deaktivierung des Bausteins verwendet werden. Jede Daten-/Alarmmasken-ID außerhalb der genannten Bereiche oder jede Softkey-Masken-ID, die keine SoftKeyMask ist, ist unabhängig voneinander ungültig.
@@ -83,21 +83,21 @@ Gültig ist `u16SoftKeyMaskId`, wenn er in den ISO 11783-6-ID-Bereich einer Soft
 
 ## Maskentyp-Referenz
 
-| Wert | Typ       | Beschreibung               |
-|------|-----------|----------------------------|
-| 1    | Data      | Normale Datenmaske         |
-| 2    | Alarm     | Alarmmasken-Verknüpfung    |
+| Wert | Typ   | Beschreibung            |
+| ---- | ----- | ----------------------- |
+| 1    | Data  | Normale Datenmaske      |
+| 2    | Alarm | Alarmmasken-Verknüpfung |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreicher Wechsel             |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreicher Wechsel    |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -108,12 +108,12 @@ Gültig ist `u16SoftKeyMaskId`, wenn er in den ISO 11783-6-ID-Bereich einer Soft
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_SoftKeyMask | VtKeyMapping | VtMaskLinker |
-|---------------|---------------|--------------|--------------|
-| ISO-Standard  | ✔             | ✖            | ✖            |
-| Maskentypen   | 2 (Data/Alarm)| 1 (Universal)| 1 (Data)     |
-| Rückmeldung   | ✔             | ✖            | ✔            |
-| Echtzeitwechsel | ✔          | ✔            | ✖            |
+| Feature         | Q_SoftKeyMask  | VtKeyMapping  | VtMaskLinker |
+| --------------- | -------------- | ------------- | ------------ |
+| ISO-Standard    | ✔              | ✖             | ✖            |
+| Maskentypen     | 2 (Data/Alarm) | 1 (Universal) | 1 (Data)     |
+| Rückmeldung     | ✔              | ✖             | ✔            |
+| Echtzeitwechsel | ✔              | ✔             | ✖            |
 
 ## Fazit
 

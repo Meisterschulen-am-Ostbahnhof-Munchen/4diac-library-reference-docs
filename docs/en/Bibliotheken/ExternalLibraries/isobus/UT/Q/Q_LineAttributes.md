@@ -50,11 +50,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with object ID
 - `INITO` confirms operational readiness
+
 1. **Attribute Change**:
 
 - `REQ` with new line attributes
 - Changes Object Line Properties
 - `CNF` provides result status and previous values
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -71,22 +73,22 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Attribute Reference
 
-| Attribute | Value range | Description |
-| -------------- | ----------------------- | ---------------------------------- |
-| Color | 0-255 (8-bit) | Color index according to ISO 11783-6 A.3 |
-| Width | 1-255 pixels | Line thickness in pixels |
-| Style | 16-bit Bitmask | Line type according to B.14.3 |
+| Attribute | Value range    | Description                              |
+| --------- | -------------- | ---------------------------------------- |
+| Color     | 0-255 (8-bit)  | Color index according to ISO 11783-6 A.3 |
+| Width     | 1-255 pixels   | Line thickness in pixels                 |
+| Style     | 16-bit Bitmask | Line type according to B.14.3            |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Successful change |
-| -6 | VT_E_OVERFLOW | Buffer overflow |
-| -8 | VT_E_NOACT | VT not ready |
-| -21 | VT_E_NO_INSTANCE | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance |
-| -130 | VT_E_NOT_ALIVE | VT not active |
+| Code | Constant                  | Meaning                |
+| ---- | ------------------------- | ---------------------- |
+| 0    | VT_E_NO_ERR               | Successful change      |
+| -6   | VT_E_OVERFLOW             | Buffer overflow        |
+| -8   | VT_E_NOACT                | VT not ready           |
+| -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
+| -130 | VT_E_NOT_ALIVE            | VT not active          |
 
 ## Application Scenarios
 
@@ -97,12 +99,12 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Feature | Q_LineAttributes | VtLineStyle | VtGraphicAttributes |
-| --------------- | ------------------ | ------------- | --------------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Color Control | ✔ | ✔ | ✔ |
-| Width Control | ✔ | ✔ | ✖ |
-| Style Control | ✔ | ✔ | ✔ |
+| Feature       | Q_LineAttributes | VtLineStyle | VtGraphicAttributes |
+| ------------- | ---------------- | ----------- | ------------------- |
+| ISO Standard  | ✔                | ✖           | ✖                   |
+| Color Control | ✔                | ✔           | ✔                   |
+| Width Control | ✔                | ✔           | ✖                   |
+| Style Control | ✔                | ✔           | ✔                   |
 
 ## Conclusion
 

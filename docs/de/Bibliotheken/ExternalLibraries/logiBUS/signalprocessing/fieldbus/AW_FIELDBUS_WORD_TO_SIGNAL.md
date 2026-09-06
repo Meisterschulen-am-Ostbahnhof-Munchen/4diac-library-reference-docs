@@ -32,11 +32,11 @@ Die Datenausgabe erfolgt über die angeschlossenen Adapter.
 
 ### **Adapter**  
 
-| Name | Typ | Beschreibung |
-| ------ | ----- | -------------- |
-| **IN** | `adapter::types::unidirectional::AW` (Socket) | Eingang des zu filternden Wortes. |
-| **OUT** | `adapter::types::unidirectional::AW` (Plug) | Ausgang des gefilterten Wortes (nur bei gültigem Signal). |
-| **VALID** | `adapter::types::unidirectional::AX` (Plug) | Gibt den Gültigkeitsstatus des Ausgangssignals aus (`TRUE` = gültig). |
+| Name      | Typ                                           | Beschreibung                                                          |
+| --------- | --------------------------------------------- | --------------------------------------------------------------------- |
+| **IN**    | `adapter::types::unidirectional::AW` (Socket) | Eingang des zu filternden Wortes.                                     |
+| **OUT**   | `adapter::types::unidirectional::AW` (Plug)   | Ausgang des gefilterten Wortes (nur bei gültigem Signal).             |
+| **VALID** | `adapter::types::unidirectional::AX` (Plug)   | Gibt den Gültigkeitsstatus des Ausgangssignals aus (`TRUE` = gültig). |
 
 ## Funktionsweise  
 
@@ -61,9 +61,9 @@ Somit wird nur dann ein gültiges Wort ausgegeben, wenn die interne Prüfung des
 
 Der Baustein selbst besitzt keinen expliziten Zustandsautomaten. Der innere Zustand wird durch das D‑Flip‑Flop repräsentiert:
 
-| Zustand | Bedeutung |
-|---------|-----------|
-| `VALID = FALSE` | Der Ausgangswert ist ungültig (alte Daten oder Initialzustand). |
+| Zustand         | Bedeutung                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| `VALID = FALSE` | Der Ausgangswert ist ungültig (alte Daten oder Initialzustand).                            |
 | `VALID = TRUE`  | Der Ausgangswert ist gültig und wurde beim letzten Verarbeitungszyklus als valide erkannt. |
 
 ## Anwendungsszenarien  

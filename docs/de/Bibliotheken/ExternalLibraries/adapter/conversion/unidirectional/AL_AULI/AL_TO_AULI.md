@@ -21,22 +21,22 @@ Er dient als Brücke zwischen Komponenten, die mit unterschiedlichen Datentypen 
 
 ### **Daten-Eingänge**
 
-| Name   | Adapter-Port | Datentyp | Beschreibung                     |
-|--------|--------------|----------|----------------------------------|
-| AL_IN  | D1           | LWORD    | Eingangswert im LWORD-Format     |
+| Name  | Adapter-Port | Datentyp | Beschreibung                 |
+| ----- | ------------ | -------- | ---------------------------- |
+| AL_IN | D1           | LWORD    | Eingangswert im LWORD-Format |
 
 ### **Daten-Ausgänge**
 
-| Name    | Adapter-Port | Datentyp | Beschreibung                      |
-|---------|--------------|----------|-----------------------------------|
-| AULI_OUT| D1           | ULINT    | Konvertierter Wert im ULINT-Format|
+| Name     | Adapter-Port | Datentyp | Beschreibung                       |
+| -------- | ------------ | -------- | ---------------------------------- |
+| AULI_OUT | D1           | ULINT    | Konvertierter Wert im ULINT-Format |
 
 ### **Adapter**
 
-| Typ         | Richtung | Name      | Beschreibung                         |
-|-------------|----------|-----------|--------------------------------------|
-| `AL`        | Socket   | AL_IN     | Eingangsadapter mit LWORD-Daten      |
-| `AULI`      | Plug     | AULI_OUT  | Ausgangsadapter mit ULINT-Daten      |
+| Typ    | Richtung | Name     | Beschreibung                    |
+| ------ | -------- | -------- | ------------------------------- |
+| `AL`   | Socket   | AL_IN    | Eingangsadapter mit LWORD-Daten |
+| `AULI` | Plug     | AULI_OUT | Ausgangsadapter mit ULINT-Daten |
 
 ## Funktionsweise
 

@@ -12,13 +12,13 @@ Der Funktionsblock **ILOCK_2_E_AX** stellt zwei bistabile Ausgänge mit gegensei
 
 ### **Ereignis-Eingänge**
 
-| Name   | Beschreibung                                   |
-|--------|-----------------------------------------------|
-| `SET1` | Setzt Ausgang `OUT1` auf TRUE und `OUT2` auf FALSE |
+| Name   | Beschreibung                                                   |
+| ------ | -------------------------------------------------------------- |
+| `SET1` | Setzt Ausgang `OUT1` auf TRUE und `OUT2` auf FALSE             |
 | `CLK1` | Toggelt den Zustand von `OUT1`, sofern nicht bereits getoggelt |
-| `SET2` | Setzt Ausgang `OUT2` auf TRUE und `OUT1` auf FALSE |
+| `SET2` | Setzt Ausgang `OUT2` auf TRUE und `OUT1` auf FALSE             |
 | `CLK2` | Toggelt den Zustand von `OUT2`, sofern nicht bereits getoggelt |
-| `R`    | Setzt beide Ausgänge auf FALSE (Reset)        |
+| `R`    | Setzt beide Ausgänge auf FALSE (Reset)                         |
 
 ### **Ereignis-Ausgänge**
 
@@ -34,9 +34,9 @@ Keine direkten Daten-Ausgänge. Die aktuellen Zustände der Flip-Flops sind übe
 
 ### **Adapter**
 
-| Name   | Typ  | Beschreibung                                      |
-|--------|------|--------------------------------------------------|
-| `OUT1` | `AX` | Stellt den Zustand des ersten Flip-Flops bereit (Datenausgang `D1`) und quittiert Änderungen über Ereignisausgang `E1` |
+| Name   | Typ  | Beschreibung                                                                                                            |
+| ------ | ---- | ----------------------------------------------------------------------------------------------------------------------- |
+| `OUT1` | `AX` | Stellt den Zustand des ersten Flip-Flops bereit (Datenausgang `D1`) und quittiert Änderungen über Ereignisausgang `E1`  |
 | `OUT2` | `AX` | Stellt den Zustand des zweiten Flip-Flops bereit (Datenausgang `D1`) und quittiert Änderungen über Ereignisausgang `E1` |
 
 ## Funktionsweise

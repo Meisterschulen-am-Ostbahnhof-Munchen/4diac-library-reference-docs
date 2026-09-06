@@ -35,9 +35,9 @@ The **ASRT_CLIENT_0** function block is a composite function block that triggers
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------|-----------|--------------|
-| S_R_T | adapter::types::unidirectional::ASRT | Socket (Input) | Set/Reset/Toggle |
+| Adapter | Type                                 | Direction      | Description      |
+| ------- | ------------------------------------ | -------------- | ---------------- |
+| S_R_T   | adapter::types::unidirectional::ASRT | Socket (Input) | Set/Reset/Toggle |
 
 ## Functionality
 

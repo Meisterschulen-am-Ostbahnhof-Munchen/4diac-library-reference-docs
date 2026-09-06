@@ -28,10 +28,10 @@ Der Baustein besitzt keine direkt sichtbaren Daten-Ausgänge. Die Ausgabe des BY
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Beschreibung |
-|---------|-----|----------|--------------|
-| **AD_IN** | `adapter::types::unidirectional::AD` | Socket (Eingang) | Nimmt ein DWORD (32‑Bit) sowie ein zugehöriges Ereignis (hier `E1`) entgegen. |
-| **AB_OUT** | `adapter::types::unidirectional::AB` | Plug (Ausgang) | Gibt ein konvertiertes BYTE (8‑Bit) sowie ein quittierendes Ereignis (hier `E1`) aus. |
+| Adapter    | Typ                                  | Richtung         | Beschreibung                                                                          |
+| ---------- | ------------------------------------ | ---------------- | ------------------------------------------------------------------------------------- |
+| **AD_IN**  | `adapter::types::unidirectional::AD` | Socket (Eingang) | Nimmt ein DWORD (32‑Bit) sowie ein zugehöriges Ereignis (hier `E1`) entgegen.         |
+| **AB_OUT** | `adapter::types::unidirectional::AB` | Plug (Ausgang)   | Gibt ein konvertiertes BYTE (8‑Bit) sowie ein quittierendes Ereignis (hier `E1`) aus. |
 
 Beide Adapter sind unidirektional ausgelegt. Die genaue Signatur der Adapter (Anzahl der Ereignis‑ und Datenkanäle) entspricht den in der 4diac‑Bibliothek definierten Typen.
 
@@ -66,11 +66,11 @@ Da es sich um einen reinen Composite‑Baustein ohne eigene Zustandsmaschine han
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Konvertierung | Richtung | Adapter-Typ |
-|----------|---------------|----------|-------------|
-| AD_TO_AB | DWORD → BYTE  | unidirektional | AD ↔ AB |
-| AD_TO_AW | DWORD → WORD  | unidirektional | AD ↔ AW |
-| AW_TO_AB | WORD → BYTE   | unidirektional | AW ↔ AB |
+| Baustein | Konvertierung | Richtung       | Adapter-Typ |
+| -------- | ------------- | -------------- | ----------- |
+| AD_TO_AB | DWORD → BYTE  | unidirektional | AD ↔ AB     |
+| AD_TO_AW | DWORD → WORD  | unidirektional | AD ↔ AW     |
+| AW_TO_AB | WORD → BYTE   | unidirektional | AW ↔ AB     |
 
 Der **AD_TO_AB** unterscheidet sich durch die spezifische Ziel‑Datenbreite und die Verwendung der entsprechenden Adapter. Er ist speziell für Systeme ausgelegt, die mit den unidirektionalen Standardadaptern arbeiten.
 

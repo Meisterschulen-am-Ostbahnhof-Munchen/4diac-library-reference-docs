@@ -12,20 +12,20 @@ The function block **AX_D_FF_TMIN** implements a data-latch D flip-flop that add
 
 ### **Event Inputs**
 
-| Event | Type | Description |
-|----------|-----|--------------|
+| Event  | Type  | Description                                                             |
+| ------ | ----- | ----------------------------------------------------------------------- |
 | `INIT` | EInit | Initialization request; sets the minimum delay time (parameter `Tmin`). |
 
 ### **Event Outputs**
 
-| Event | Type | Description |
-|----------|-----|--------------|
+| Event   | Type  | Description                                |
+| ------- | ----- | ------------------------------------------ |
 | `INITO` | EInit | Confirmation of successful initialization. |
 
 ### **Data Inputs**
 
-| Name | Type | Description |
-|------|-----|--------------|
+| Name   | Type | Description                                                                                                               |
+| ------ | ---- | ------------------------------------------------------------------------------------------------------------------------- |
 | `Tmin` | TIME | Minimum inter-disposal time between two consecutive events at output `EO`. The value is only adopted upon a `INIT` event. |
 
 ### **Data Outputs**
@@ -34,10 +34,10 @@ This function block has no direct data outputs; the latching data value is provi
 
 ### **Adapters**
 
-| Role | Name | Type | Description |
-| ------- | ------ | ----- | -------------- |
-| Socket | `I` | adapter::types::unidirectional::AX | Input adapter; Provides the data word to be latched (`D1`) and the clock event (`E1`). |
-| Plug | `Q` | adapter::types::unidirectional::AX | Output adapter; provides the latching data word (`D1`) and the output event (`E1`). |
+| Role   | Name | Type                               | Description                                                                            |
+| ------ | ---- | ---------------------------------- | -------------------------------------------------------------------------------------- |
+| Socket | `I`  | adapter::types::unidirectional::AX | Input adapter; Provides the data word to be latched (`D1`) and the clock event (`E1`). |
+| Plug   | `Q`  | adapter::types::unidirectional::AX | Output adapter; provides the latching data word (`D1`) and the output event (`E1`).    |
 
 The adapters `AX` are unidirectional: They transmit exactly one event and one associated data value.
 
@@ -52,6 +52,7 @@ The function block encapsulates the internal function block `E_D_FF_TMIN`, which
 - Simultaneously, the data value `I.D1` is adopted as the new input value `D`.
 - On each rising edge of the clock (here: each `E1` event), the current data value `D` is acquired and made available at output `Q`.
 - After acquisition, an output event `EO` is generated at plug `Q.E1` – but only after the minimum lock time since the last `EO` has elapsed. This ensures that output pulses do not follow each other faster than specified by `Tmin`.
+
 1. **Output**: The latching data value appears at plug `Q.D1`, and the corresponding event at plug `Q.E1`.
 
 ## Technical Features
@@ -77,11 +78,11 @@ The function block does not have an explicit state machine. The internal logic o
 
 ## Comparison with Similar Components
 
-| Component | Difference |
-| ---------- | ------------- |
-| `E_D_FF` (Standard D Flip-Flop) | No time limit on output pulses; events are forwarded immediately. |
-| `AX_D_FF_TMIN` (present) | Inserts the minimum interval `Tmin` between output events, implemented via the built-in `E_D_FF_TMIN`. |
-| `E_CTD` / `E_CTU` (counter) | Count events; do not offer data transfer or latching functionality. |
+| Component                       | Difference                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `E_D_FF` (Standard D Flip-Flop) | No time limit on output pulses; events are forwarded immediately.                                      |
+| `AX_D_FF_TMIN` (present)        | Inserts the minimum interval `Tmin` between output events, implemented via the built-in `E_D_FF_TMIN`. |
+| `E_CTD` / `E_CTU` (counter)     | Count events; do not offer data transfer or latching functionality.                                    |
 
 The `AX_D_FF_TMIN` combines the latching data transfer of a flip-flop with the time-based filtering of a monostable multivibrator, but is implemented as a pure event-to-data adapter.
 

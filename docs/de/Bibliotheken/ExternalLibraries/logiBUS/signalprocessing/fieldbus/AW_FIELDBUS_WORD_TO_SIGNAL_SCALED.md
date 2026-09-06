@@ -12,22 +12,22 @@ Der Funktionsblock `AW_FIELDBUS_WORD_TO_SIGNAL_SCALED` dient dazu, ein eingehend
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Kommentar |
-|----------|-------|-----------|
+| Ereignis | Typ   | Kommentar                                                    |
+| -------- | ----- | ------------------------------------------------------------ |
 | INIT     | EInit | Initialisierungsanforderung (z. B. Reset der internen Logik) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Kommentar |
-|----------|-------|-----------|
+| Ereignis | Typ   | Kommentar                                     |
+| -------- | ----- | --------------------------------------------- |
 | INITO    | EInit | Bestätigung der erfolgreichen Initialisierung |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ  | Default         | Kommentar                     |
-|--------|------|-----------------|-------------------------------|
-| SCALE  | REAL | REAL#1.0        | Skalierungsfaktor             |
-| OFFSET | DINT | DINT#0          | Ganzzahliger Offset (nach Skalierung) |
+| Name   | Typ  | Default  | Kommentar                             |
+| ------ | ---- | -------- | ------------------------------------- |
+| SCALE  | REAL | REAL#1.0 | Skalierungsfaktor                     |
+| OFFSET | DINT | DINT#0   | Ganzzahliger Offset (nach Skalierung) |
 
 ### **Daten-Ausgänge**
 
@@ -35,10 +35,10 @@ Der Baustein besitzt keine separaten Datenausgänge. Die Ausgangswerte werden ü
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ (unidirektional) | Kommentar |
-|---------|----------|----------------------|-----------|
-| IN      | Socket   | AW                   | Eingangssignal (Feldbus-Wort) |
-| OUT     | Plug     | AR                   | Verarbeitetes und skaliertes Ausgangssignal |
+| Adapter | Richtung | Typ (unidirektional) | Kommentar                                         |
+| ------- | -------- | -------------------- | ------------------------------------------------- |
+| IN      | Socket   | AW                   | Eingangssignal (Feldbus-Wort)                     |
+| OUT     | Plug     | AR                   | Verarbeitetes und skaliertes Ausgangssignal       |
 | VALID   | Plug     | AX                   | Boolescher Wert: TRUE, wenn das Signal gültig ist |
 
 ## Funktionsweise

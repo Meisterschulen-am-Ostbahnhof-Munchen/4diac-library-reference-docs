@@ -10,7 +10,7 @@ The function block `F_DWORD_AS_STRING` is used to convert a DWORD value into a S
 - **IN**: The DWORD value to be converted to a STRING.
 - **OUT**: The resulting STRING after the DWORD value has been converted.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 
@@ -22,7 +22,7 @@ The function block `F_DWORD_AS_STRING` is used to convert a DWORD value into a S
 
 ## Introduction
 
-#### **Adapters**
+### **Adapters**
 
 - No adapters are present.
 

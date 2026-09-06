@@ -12,31 +12,31 @@ Der Service Interface Block `PoolDeleteVersion` löscht eine gespeicherte Objekt
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| INIT | EInit | Service-Initialisierung |
+| Name | Typ   | Kommentar                                  |
+| ---- | ----- | ------------------------------------------ |
+| INIT | EInit | Service-Initialisierung                    |
 | REQ  | Event | Service-Anforderung – Pool-Version löschen |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ  | Kommentar |
-|-------|------|-----------|
-| INITO | EInit | Initialisierungsbestätigung |
+| Name  | Typ   | Kommentar                                |
+| ----- | ----- | ---------------------------------------- |
+| INITO | EInit | Initialisierungsbestätigung              |
 | CNF   | Event | Bestätigung – Löschvorgang abgeschlossen |
 
 ### **Daten-Eingänge**
 
-| Name            | Typ    | Kommentar                                         | Initialwert          |
-|-----------------|--------|---------------------------------------------------|----------------------|
-| QI              | BOOL   | Qualitätseingang – TRUE aktiviert den Dienst      |                      |
-| versionString   | STRING | Zu löschende Versionsbezeichnung (Leerzeichen für letzte gespeicherte Version) | `'       '` |
+| Name          | Typ    | Kommentar                                                                      | Initialwert |
+| ------------- | ------ | ------------------------------------------------------------------------------ | ----------- |
+| QI            | BOOL   | Qualitätseingang – TRUE aktiviert den Dienst                                   |             |
+| versionString | STRING | Zu löschende Versionsbezeichnung (Leerzeichen für letzte gespeicherte Version) | `'       '` |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Kommentar                                             |
-|-----------|--------|-------------------------------------------------------|
-| QO        | BOOL   | Qualitätsausgang – TRUE bei erfolgreichem Löschvorgang |
-| STATUS    | STRING | Dienststatus                                          |
+| Name      | Typ    | Kommentar                                                 |
+| --------- | ------ | --------------------------------------------------------- |
+| QO        | BOOL   | Qualitätsausgang – TRUE bei erfolgreichem Löschvorgang    |
+| STATUS    | STRING | Dienststatus                                              |
 | s16Result | INT    | Rückgabewert: 0 = E_NO_ERR (Erfolg), negativ = Fehlercode |
 
 ### **Adapter**

@@ -12,14 +12,14 @@ Der Baustein **AX_E_PERMIT** realisiert eine bedingte Ereignisweitergabe (permis
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar      |
-|------|-------|----------------|
+| Name | Typ   | Kommentar       |
+| ---- | ----- | --------------- |
 | EI   | Event | Ereigniseingang |
 
 ### **Ereignis-Ausgänge**
 
 | Name | Typ   | Kommentar       |
-|------|-------|-----------------|
+| ---- | ----- | --------------- |
 | EO   | Event | Ereignisausgang |
 
 ### **Daten-Eingänge**
@@ -32,9 +32,9 @@ Der Baustein besitzt keine Datenausgänge.
 
 ### **Adapter**
 
-| Rolle   | Name   | Typ                                    | Kommentar                     |
-|---------|--------|----------------------------------------|-------------------------------|
-| Socket  | PERMIT | `adapter::types::unidirectional::AX`   | Liefert das Freigabesignal (D1) |
+| Rolle  | Name   | Typ                                  | Kommentar                       |
+| ------ | ------ | ------------------------------------ | ------------------------------- |
+| Socket | PERMIT | `adapter::types::unidirectional::AX` | Liefert das Freigabesignal (D1) |
 
 Der Adapter ist unidirektional ausgelegt und stellt einen booleschen Wert (`D1`) zur Verfügung, der das Verhalten des Ereignisgates steuert.
 
@@ -73,12 +73,12 @@ Eine explizite Zustandsmaschine ist nicht vorhanden; der Baustein arbeitet rein 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein          | Besonderheit                                                                 |
-|-------------------|------------------------------------------------------------------------------|
-| **E_PERMIT**      | Standardblock mit direktem booleschem Eingang. Kein Adapter.                 |
-| **AX_E_PERMIT**   | Gleiche Logik, aber das Freigabesignal wird über einen unidirektionalen Adapter bereitgestellt, was die Kopplung über Subsysteme erleichtert. |
-| **E_SR** (Set-Reset) | Ereignisbasierte Zustandsspeicherung; nicht direkt als Gate geeignet.        |
-| **E_MUX**         | Ereignisweiche, die abhängig von einem Dateneingang zwischen zwei Ausgängen umschaltet – keine reine Sperrfunktion. |
+| Baustein             | Besonderheit                                                                                                                                  |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **E_PERMIT**         | Standardblock mit direktem booleschem Eingang. Kein Adapter.                                                                                  |
+| **AX_E_PERMIT**      | Gleiche Logik, aber das Freigabesignal wird über einen unidirektionalen Adapter bereitgestellt, was die Kopplung über Subsysteme erleichtert. |
+| **E_SR** (Set-Reset) | Ereignisbasierte Zustandsspeicherung; nicht direkt als Gate geeignet.                                                                         |
+| **E_MUX**            | Ereignisweiche, die abhängig von einem Dateneingang zwischen zwei Ausgängen umschaltet – keine reine Sperrfunktion.                           |
 
 Der Vorteil von `AX_E_PERMIT` liegt in der sauberen Trennung der Freigabelogik durch einen Adapter, was die Wiederverwendung von Steuerungsmodulen fördert.
 

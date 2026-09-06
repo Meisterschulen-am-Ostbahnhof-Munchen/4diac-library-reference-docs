@@ -12,11 +12,11 @@ Der Funktionsblock `AX_T_FF_SR_SYM_STORE` realisiert ein ereignisgesteuertes, bi
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar                                   |
-|------|-------|---------------------------------------------|
-| S    | Event | Setzt den Ausgang `Q` auf TRUE              |
-| R    | Event | Setzt den Ausgang `Q` auf FALSE             |
-| CLK  | Event | Toggelt den Ausgang `Q` (TRUE ↔ FALSE)      |
+| Name | Typ   | Kommentar                              |
+| ---- | ----- | -------------------------------------- |
+| S    | Event | Setzt den Ausgang `Q` auf TRUE         |
+| R    | Event | Setzt den Ausgang `Q` auf FALSE        |
+| CLK  | Event | Toggelt den Ausgang `Q` (TRUE ↔ FALSE) |
 
 ### **Ereignis-Ausgänge**
 
@@ -32,10 +32,10 @@ Keine direkten Daten-Ausgänge. Der aktuelle Zustand wird über die Adapter verf
 
 ### **Adapter**
 
-| Name    | Typ                              | Kommentar                                   |
-|---------|----------------------------------|---------------------------------------------|
-| Q       | adapter::types::unidirectional::AX | Liefert den aktuellen Zustand des Flipflops (einadriger boolescher Wert) |
-| Q_INIT  | adapter::types::bidirectional::AX2 | Bidirektionale Schnittstelle für den Startwert von `Q` bei INIT (beinhaltet drei Ein-/Ausgänge: z.B. DI1/DO1, EI1/EO1) |
+| Name   | Typ                                | Kommentar                                                                                                              |
+| ------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Q      | adapter::types::unidirectional::AX | Liefert den aktuellen Zustand des Flipflops (einadriger boolescher Wert)                                               |
+| Q_INIT | adapter::types::bidirectional::AX2 | Bidirektionale Schnittstelle für den Startwert von `Q` bei INIT (beinhaltet drei Ein-/Ausgänge: z.B. DI1/DO1, EI1/EO1) |
 
 ## Funktionsweise
 
@@ -72,12 +72,12 @@ Der Baustein arbeitet als ein SR-Flipflop (Set-Reset) mit zusätzlicher Toggle-F
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung                             | Ausgabe bei Ereignis                          |
-|---------|------------------------------------------|-----------------------------------------------|
-| START   | Initialer Wartezustand                   | Wartet auf Initialisierungsereignis über Q_INIT.EI1 |
-| Init    | Initialisierung                          | Liest Q_INIT.DI1, setzt Q und Q_INIT.DO1 entsprechend |
-| SET     | Ausgang Q = TRUE                         | Verarbeitet S, R, CLK (siehe Übergänge)       |
-| RESET   | Ausgang Q = FALSE                        | Verarbeitet S, R, CLK (siehe Übergänge)       |
+| Zustand | Beschreibung           | Ausgabe bei Ereignis                                  |
+| ------- | ---------------------- | ----------------------------------------------------- |
+| START   | Initialer Wartezustand | Wartet auf Initialisierungsereignis über Q_INIT.EI1   |
+| Init    | Initialisierung        | Liest Q_INIT.DI1, setzt Q und Q_INIT.DO1 entsprechend |
+| SET     | Ausgang Q = TRUE       | Verarbeitet S, R, CLK (siehe Übergänge)               |
+| RESET   | Ausgang Q = FALSE      | Verarbeitet S, R, CLK (siehe Übergänge)               |
 
 **Zustandsübergänge (vereinfacht)**
 

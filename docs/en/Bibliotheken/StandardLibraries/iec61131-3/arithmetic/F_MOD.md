@@ -34,11 +34,13 @@ The **F_MOD** is an arithmetic function block for calculating the remainder of a
 
 - Triggered by the `REQ` event
 - Processes two integer values
+
 1. **Modulo Operation**:
 
 - Calculates IN1 modulo IN2
 - Formula: OUT = IN1 - (IN1 / IN2) * IN2
 - Supported types: INT, DINT, UINT, UDINT
+
 1. **Result Output**:
 
 - `CNF` event with residual value
@@ -79,11 +81,11 @@ The **F_MOD** is an arithmetic function block for calculating the remainder of a
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | F_MOD | F_DIV | F_REM |
-| ---------------- | -------- | --------- | --------- |
-| Operation | Modulo | Division | Remainder |
-| Input types | ANY_INT | ANY_NUM | ANY_NUM |
-| Output type | ANY_NUM | ANY_NUM | ANY_NUM |
+| Feature     | F_MOD   | F_DIV    | F_REM     |
+| ----------- | ------- | -------- | --------- |
+| Operation   | Modulo  | Division | Remainder |
+| Input types | ANY_INT | ANY_NUM  | ANY_NUM   |
+| Output type | ANY_NUM | ANY_NUM  | ANY_NUM   |
 
 ## Conclusion
 

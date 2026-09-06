@@ -12,16 +12,16 @@ Der Funktionsblock **GET_SINT** dient dazu, einen Wert des Datentyps `SINT` (sig
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                  |
+| -------- | -------- | -------------------------------------------------------------------------- |
 | `REQ`    | Event    | Normale Ausführungsanforderung. Löst das Auslesen des InOut-Variablen aus. |
 
 - **With-Verknüpfung**: Der Ereigniseingang `REQ` ist mit der Daten-Variable `IN` verknüpft.
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Datentyp | Kommentar |
-|----------|----------|-----------|
+| Ereignis | Datentyp | Kommentar                                                                   |
+| -------- | -------- | --------------------------------------------------------------------------- |
 | `CNF`    | Event    | Bestätigung der Ausführung. Wird nach erfolgreichem Kopiervorgang gesendet. |
 
 - **With-Verknüpfung**: Der Ereignisausgang `CNF` ist mit den Daten-Variablen `OUT` und `IN` verknüpft.
@@ -32,8 +32,8 @@ Der Baustein besitzt keine klassischen Daten-Eingänge. Stattdessen wird eine `I
 
 ### **Daten-Ausgänge**
 
-| Variable | Datentyp | Initialwert | Kommentar |
-|----------|----------|-------------|-----------|
+| Variable | Datentyp | Initialwert | Kommentar                                                                                      |
+| -------- | -------- | ----------- | ---------------------------------------------------------------------------------------------- |
 | `OUT`    | SINT     | 0           | Gepufferter Ausgabewert. Enthält die Kopie von `IN` nach einer erfolgreichen `REQ`-Ausführung. |
 
 ### **Adapter**
@@ -61,9 +61,9 @@ Die InOut-Variable `IN` erlaubt den direkten Zugriff auf eine externe Variable o
 
 Der Baustein verwendet einen einfachen ECA-Zustandsautomaten mit genau einem Zustand:
 
-| Zustand | Aktion | Ausgehendes Ereignis |
-|---------|--------|----------------------|
-| `REQ`   | `REQ`-Algorithmus (OUT := IN) | `CNF` |
+| Zustand | Aktion                        | Ausgehendes Ereignis |
+| ------- | ----------------------------- | -------------------- |
+| `REQ`   | `REQ`-Algorithmus (OUT := IN) | `CNF`                |
 
 - Jedes eintreffende `REQ`-Ereignis führt sofort zur Aktion und sendet `CNF`. Es gibt keine Verzweigungen, Fehlerzustände oder Zeitverhalten.
 
@@ -75,11 +75,11 @@ Der Baustein verwendet einen einfachen ECA-Zustandsautomaten mit genau einem Zus
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Datentyp | Besonderheit |
-|----------|----------|--------------|
-| `GET_BOOL` | BOOL   | Gleiche Funktionsweise, aber für boolesche Werte. |
-| `GET_INT`  | INT    | Entspricht `GET_SINT`, jedoch mit 16-Bit-Ganzzahl (Integer). |
-| `GET_REAL` | REAL   | Für Gleitkommazahlen. |
+| Baustein         | Datentyp | Besonderheit                                                                                                                                                                                                       |
+| ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `GET_BOOL`       | BOOL     | Gleiche Funktionsweise, aber für boolesche Werte.                                                                                                                                                                  |
+| `GET_INT`        | INT      | Entspricht `GET_SINT`, jedoch mit 16-Bit-Ganzzahl (Integer).                                                                                                                                                       |
+| `GET_REAL`       | REAL     | Für Gleitkommazahlen.                                                                                                                                                                                              |
 | `MOVE` (generic) | Beliebig | Ein generischer MOVE-Baustein kann ebenfalls Werte kopieren, benötigt aber separate Ein- und Ausgänge. `GET_SINT` nutzt dagegen InOut-Variablen, was bei der Kopplung an periphere Adressen praktischer sein kann. |
 
 Allen `GET_*`-Bausteinen ist gemeinsam, dass sie einen Wert aus einer InOut-Quelle lesen und als gepufferten Ausgang bereitstellen. Im Gegensatz dazu überschreibt `SET_*` den Wert der Quelle.

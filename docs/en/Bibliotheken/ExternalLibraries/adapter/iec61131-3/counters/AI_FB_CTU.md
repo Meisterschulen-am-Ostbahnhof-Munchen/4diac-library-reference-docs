@@ -31,11 +31,11 @@ The output adapters **Q** and **CV** are also served with the same event:
 
 All data inputs are provided via the adapter sockets:
 
-| Adapter | Data Input | Type | Description |
-| --------- | --------------- | ----- | -------------- |
-| CU.D1 | CU | INT | Count Up – Count pulse (increments with each event) |
-| R.D1 | R | INT | Reset – Value to which the counter is reset (typically 0) |
-| PV.D1 | PV | INT | Preset Value – Threshold at which output Q becomes active |
+| Adapter | Data Input | Type | Description                                               |
+| ------- | ---------- | ---- | --------------------------------------------------------- |
+| CU.D1   | CU         | INT  | Count Up – Count pulse (increments with each event)       |
+| R.D1    | R          | INT  | Reset – Value to which the counter is reset (typically 0) |
+| PV.D1   | PV         | INT  | Preset Value – Threshold at which output Q becomes active |
 
 ### **Data Outputs**
 
@@ -44,13 +44,13 @@ All data inputs are provided via the adapter sockets:
 
 ### **Adapters**
 
-| Name | Type | Direction | Description |
-| ------ | ----- | ---------- | -------------- |
-| CU | adapter::types::unidirectional::AX | Socket (Input) | Event and data adapter for the counter pulse |
-| R | adapter::types::unidirectional::AX | Socket (Input) | Event and data adapter for the reset |
-| PV | adapter::types::unidirectional::AI | Socket (Input) | Data adapter (value only, no event) for the preset value |
-| Q | adapter::types::unidirectional::AX | Plug (Output) | Event and data adapter for the counter output |
-| CV | adapter::types::unidirectional::AI | Plug (Output) | Data adapter (value only) for the current counter reading |
+| Name | Type                               | Direction      | Description                                               |
+| ---- | ---------------------------------- | -------------- | --------------------------------------------------------- |
+| CU   | adapter::types::unidirectional::AX | Socket (Input) | Event and data adapter for the counter pulse              |
+| R    | adapter::types::unidirectional::AX | Socket (Input) | Event and data adapter for the reset                      |
+| PV   | adapter::types::unidirectional::AI | Socket (Input) | Data adapter (value only, no event) for the preset value  |
+| Q    | adapter::types::unidirectional::AX | Plug (Output)  | Event and data adapter for the counter output             |
+| CV   | adapter::types::unidirectional::AI | Plug (Output)  | Data adapter (value only) for the current counter reading |
 
 ## Functionality
 
@@ -85,12 +85,12 @@ The function block has no sequential states beyond these data dependencies.
 
 ## Comparison with Similar Function Blocks
 
-| Function Block | Properties |
-| ---------- | --------------- |
-| **AI_FB_CTU** | Adapter-based, uses IEC 61131-3 CTU, triggers on every input |
+| Function Block               | Properties                                                                    |
+| ---------------------------- | ----------------------------------------------------------------------------- |
+| **AI_FB_CTU**                | Adapter-based, uses IEC 61131-3 CTU, triggers on every input                  |
 | **Standard CTU (IEC 61131)** | Inputs as events + data, no adapter concept, often directly bound to hardware |
-| **CTUD (Up/Down Counter)** | Offers additional down counting, has a more complex interface |
-| **AX_CTU** (hypothetical) | Could offer optimized event triggering (only on change) |
+| **CTUD (Up/Down Counter)**   | Offers additional down counting, has a more complex interface                 |
+| **AX_CTU** (hypothetical)    | Could offer optimized event triggering (only on change)                       |
 
 The **AI_FB_CTU** impresses with its simple adapter connection, but may require an external filter to avoid unnecessary calls.
 

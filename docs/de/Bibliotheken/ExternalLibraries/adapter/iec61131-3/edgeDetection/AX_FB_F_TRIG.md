@@ -32,10 +32,10 @@ Der Baustein verzichtet auf klassische separate Ereignis- und Daten-Pins und nut
 
 ### **Adapter**
 
-| Name | Typ | Komment | Beschreibung |
-| :--- | :--- | :--- | :--- |
-| **CLK** | `adapter::types::unidirectional::AX` | Clock | **Socket (Eingang):** Der Eingangsadapter, der das zu überwachende Signal liefert. Enthält typischerweise ein Ereignis (`E1`) und einen Booleschen Datenwert (`D1`). |
-| **Q** | `adapter::types::unidirectional::AX` | Output | **Plug (Ausgang):** Der Ausgangsadapter, der das Ergebnis der Flankenerkennung sendet. |
+| Name    | Typ                                  | Komment | Beschreibung                                                                                                                                                         |
+| :------ | :----------------------------------- | :------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CLK** | `adapter::types::unidirectional::AX` | Clock   | **Socket (Eingang):** Der Eingangsadapter, der das zu überwachende Signal liefert. Enthält typischerweise ein Ereignis (`E1`) und einen Booleschen Datenwert (`D1`). |
+| **Q**   | `adapter::types::unidirectional::AX` | Output  | **Plug (Ausgang):** Der Ausgangsadapter, der das Ergebnis der Flankenerkennung sendet.                                                                               |
 
 ## Funktionsweise
 
@@ -77,11 +77,11 @@ Der **AX_FB_F_TRIG** eignet sich für diverse Steuerungsaufgaben, bei denen das 
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Unterschied |
-| :--- | :--- |
+| Baustein              | Unterschied                                                                                                                             |
+| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
 | **F_TRIG** (Standard) | Nutzt separate `CLK` (BOOL) und `Q` (BOOL) Pins sowie separate `REQ`/`CNF` Ereignisse. Funktional identisch, aber andere Schnittstelle. |
-| **AX_FB_R_TRIG** | Das Gegenstück zu diesem Baustein. Es erkennt die **steigende** Flanke (Rising Edge, 0 auf 1). |
-| **E_F_TRIG** | Ereignisbasierter Trigger in IEC 61499, arbeitet oft rein auf Ereignisebene ohne gekapselte Datenadapter. |
+| **AX_FB_R_TRIG**      | Das Gegenstück zu diesem Baustein. Es erkennt die **steigende** Flanke (Rising Edge, 0 auf 1).                                          |
+| **E_F_TRIG**          | Ereignisbasierter Trigger in IEC 61499, arbeitet oft rein auf Ereignisebene ohne gekapselte Datenadapter.                               |
 
 ## Fazit
 

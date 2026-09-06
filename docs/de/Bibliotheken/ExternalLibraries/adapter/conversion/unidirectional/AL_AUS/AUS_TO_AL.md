@@ -30,10 +30,10 @@ Da es sich um einen Composite FB handelt, werden alle E/A-Signale über die beid
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-|-------------|-----|----------|--------------|
-| **AUS_IN** | `adapter::types::unidirectional::AUS` | Socket (Eingang) | Empfängt den USINT-Wert sowie das zugehörige Ereignis. Der Adapter stellt intern einen Ereignis-Eingang `E1` und einen Daten-Eingang `D1` (USINT) bereit. |
-| **AL_OUT** | `adapter::types::unidirectional::AL` | Plug (Ausgang) | Gibt den konvertierten LWORD-Wert aus. Der Adapter stellt intern einen Ereignis-Ausgang `E1` und einen Daten-Ausgang `D1` (LWORD) bereit. |
+| Bezeichnung | Typ                                   | Richtung         | Beschreibung                                                                                                                                              |
+| ----------- | ------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AUS_IN**  | `adapter::types::unidirectional::AUS` | Socket (Eingang) | Empfängt den USINT-Wert sowie das zugehörige Ereignis. Der Adapter stellt intern einen Ereignis-Eingang `E1` und einen Daten-Eingang `D1` (USINT) bereit. |
+| **AL_OUT**  | `adapter::types::unidirectional::AL`  | Plug (Ausgang)   | Gibt den konvertierten LWORD-Wert aus. Der Adapter stellt intern einen Ereignis-Ausgang `E1` und einen Daten-Ausgang `D1` (LWORD) bereit.                 |
 
 ## Funktionsweise
 

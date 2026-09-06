@@ -35,6 +35,7 @@ The `E_DEMUX` (Event Demultiplexer) is a function block according to IEC 61499 t
 - If `K` = 1, the event is forwarded to `EO1`.
 - If `K` = 2, the event is forwarded to `EO2`.
 - If `K` = 3, the event is forwarded to `EO3`.
+
 1. **Invalid Index**: If the value of `K` is outside the valid range [0, 3], no output event is triggered, and the `EI` event is discarded.
 
 The input event is therefore always forwarded exclusively to exactly one output, provided the index `K` is valid.
@@ -54,11 +55,11 @@ The input event is therefore always forwarded exclusively to exactly one output,
 
 ## ⚖️ Comparison with similar function blocks
 
-| Feature | E_DEMUX (this) | E_MUX | E_SWITCH |
----------------- | ------------------ | ---------------- | ------------------ |
-| Operating principle | 1:4 distribution | n:1 merging | 1:2 distribution |
-| Control | Index `K` [0-3] | Index `K` | `BOOL` condition `G` |
-| Event flow | Splitting | Merging | Conditional switch |
+| Feature             | E_DEMUX (this)   | E_MUX       | E_SWITCH             |
+| ------------------- | ---------------- | ----------- | -------------------- |
+| Operating principle | 1:4 distribution | n:1 merging | 1:2 distribution     |
+| Control             | Index `K` [0-3]  | Index `K`   | `BOOL` condition `G` |
+| Event flow          | Splitting        | Merging     | Conditional switch   |
 
 *Note: Other variants exist, such as `E_DEMUX_2` and `E_DEMUX_8` for 2 and 8 outputs, respectively.*
 

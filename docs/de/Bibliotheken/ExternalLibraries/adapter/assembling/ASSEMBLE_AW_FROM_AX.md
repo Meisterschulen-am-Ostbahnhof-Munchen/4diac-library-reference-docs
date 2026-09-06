@@ -28,25 +28,25 @@ Keine direkten Daten-Ausgänge. Das resultierende 16‑Bit‑Wort (WORD) wird ü
 
 ### **Adapter**
 
-| Typ | Name | Beschreibung |
-| ------ | ------ | -------------- |
-| **Socket (Eingang)** | `BIT_00` | AX-Adapter, Bool Bit 0 |
-| **Socket (Eingang)** | `BIT_01` | AX-Adapter, Bool Bit 1 |
-| **Socket (Eingang)** | `BIT_02` | AX-Adapter, Bool Bit 2 |
-| **Socket (Eingang)** | `BIT_03` | AX-Adapter, Bool Bit 3 |
-| **Socket (Eingang)** | `BIT_04` | AX-Adapter, Bool Bit 4 |
-| **Socket (Eingang)** | `BIT_05` | AX-Adapter, Bool Bit 5 |
-| **Socket (Eingang)** | `BIT_06` | AX-Adapter, Bool Bit 6 |
-| **Socket (Eingang)** | `BIT_07` | AX-Adapter, Bool Bit 7 |
-| **Socket (Eingang)** | `BIT_08` | AX-Adapter, Bool Bit 8 |
-| **Socket (Eingang)** | `BIT_09` | AX-Adapter, Bool Bit 9 |
+| Typ                  | Name     | Beschreibung            |
+| -------------------- | -------- | ----------------------- |
+| **Socket (Eingang)** | `BIT_00` | AX-Adapter, Bool Bit 0  |
+| **Socket (Eingang)** | `BIT_01` | AX-Adapter, Bool Bit 1  |
+| **Socket (Eingang)** | `BIT_02` | AX-Adapter, Bool Bit 2  |
+| **Socket (Eingang)** | `BIT_03` | AX-Adapter, Bool Bit 3  |
+| **Socket (Eingang)** | `BIT_04` | AX-Adapter, Bool Bit 4  |
+| **Socket (Eingang)** | `BIT_05` | AX-Adapter, Bool Bit 5  |
+| **Socket (Eingang)** | `BIT_06` | AX-Adapter, Bool Bit 6  |
+| **Socket (Eingang)** | `BIT_07` | AX-Adapter, Bool Bit 7  |
+| **Socket (Eingang)** | `BIT_08` | AX-Adapter, Bool Bit 8  |
+| **Socket (Eingang)** | `BIT_09` | AX-Adapter, Bool Bit 9  |
 | **Socket (Eingang)** | `BIT_10` | AX-Adapter, Bool Bit 10 |
 | **Socket (Eingang)** | `BIT_11` | AX-Adapter, Bool Bit 11 |
 | **Socket (Eingang)** | `BIT_12` | AX-Adapter, Bool Bit 12 |
 | **Socket (Eingang)** | `BIT_13` | AX-Adapter, Bool Bit 13 |
 | **Socket (Eingang)** | `BIT_14` | AX-Adapter, Bool Bit 14 |
 | **Socket (Eingang)** | `BIT_15` | AX-Adapter, Bool Bit 15 |
-| **Plug (Ausgang)** | `OUT` | AW-Adapter, WORD Output |
+| **Plug (Ausgang)**   | `OUT`    | AW-Adapter, WORD Output |
 
 ## Funktionsweise
 

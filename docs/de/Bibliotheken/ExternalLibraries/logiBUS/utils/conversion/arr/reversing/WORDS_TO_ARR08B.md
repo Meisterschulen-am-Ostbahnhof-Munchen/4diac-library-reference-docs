@@ -12,29 +12,29 @@ Der Funktionsblock **WORDS_TO_ARR08B** dient dazu, vier 16‑Bit‑Wörter (Typ 
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ   | Beschreibung                                                                                        |
+| ----- | ----- | --------------------------------------------------------------------------------------------------- |
 | `REQ` | Event | Auslösen der Konvertierung; alle Eingangsvariablen werden dabei gelesen und das Ergebnis berechnet. |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
+| Name  | Typ   | Beschreibung                                                                                             |
+| ----- | ----- | -------------------------------------------------------------------------------------------------------- |
 | `CNF` | Event | Wird nach erfolgreicher Berechnung gesendet, signalisiert, dass am Ausgang `OUT` gültige Daten anliegen. |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ  | Beschreibung                     |
-|--------|------|----------------------------------|
-| `IN_00` | WORD | Erstes Wort (Byte 0 und 1)      |
-| `IN_01` | WORD | Zweites Wort (Byte 2 und 3)     |
-| `IN_02` | WORD | Drittes Wort (Byte 4 und 5)     |
-| `IN_03` | WORD | Viertes Wort (Byte 6 und 7)     |
+| Name    | Typ  | Beschreibung                |
+| ------- | ---- | --------------------------- |
+| `IN_00` | WORD | Erstes Wort (Byte 0 und 1)  |
+| `IN_01` | WORD | Zweites Wort (Byte 2 und 3) |
+| `IN_02` | WORD | Drittes Wort (Byte 4 und 5) |
+| `IN_03` | WORD | Viertes Wort (Byte 6 und 7) |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ                | Beschreibung                                      |
-|------|--------------------|---------------------------------------------------|
+| Name  | Typ                 | Beschreibung                                                      |
+| ----- | ------------------- | ----------------------------------------------------------------- |
 | `OUT` | ARRAY[0..7] OF BYTE | Ergebnis-Array, enthält die 8 Bytes in Little‑Endian‑Reihenfolge. |
 
 ### **Adapter**
@@ -45,16 +45,16 @@ Keine Adapter definiert.
 
 Der FB führt bei einer steigenden Flanke am Ereigniseingang `REQ` die folgende Abbildung durch (beschrieben in der Strukturierten Text‑Implementierung):
 
-| Index `OUT` | Quelle          | Bedeutung                           |
-|-------------|-----------------|-------------------------------------|
-| `OUT[0]`    | `IN_00.%B0`     | Niederwertiges Byte von Wort 0      |
-| `OUT[1]`    | `IN_00.%B1`     | Höherwertiges Byte von Wort 0       |
-| `OUT[2]`    | `IN_01.%B0`     | Niederwertiges Byte von Wort 1      |
-| `OUT[3]`    | `IN_01.%B1`     | Höherwertiges Byte von Wort 1       |
-| `OUT[4]`    | `IN_02.%B0`     | Niederwertiges Byte von Wort 2      |
-| `OUT[5]`    | `IN_02.%B1`     | Höherwertiges Byte von Wort 2       |
-| `OUT[6]    | `IN_03.%B0`     | Niederwertiges Byte von Wort 3      |
-| `OUT[7]`    | `IN_03.%B1`     | Höherwertiges Byte von Wort 3       |
+| Index `OUT` | Quelle      | Bedeutung                      |
+| ----------- | ----------- | ------------------------------ |
+| `OUT[0]`    | `IN_00.%B0` | Niederwertiges Byte von Wort 0 |
+| `OUT[1]`    | `IN_00.%B1` | Höherwertiges Byte von Wort 0  |
+| `OUT[2]`    | `IN_01.%B0` | Niederwertiges Byte von Wort 1 |
+| `OUT[3]`    | `IN_01.%B1` | Höherwertiges Byte von Wort 1  |
+| `OUT[4]`    | `IN_02.%B0` | Niederwertiges Byte von Wort 2 |
+| `OUT[5]`    | `IN_02.%B1` | Höherwertiges Byte von Wort 2  |
+| `OUT[6]     | `IN_03.%B0` | Niederwertiges Byte von Wort 3 |
+| `OUT[7]`    | `IN_03.%B1` | Höherwertiges Byte von Wort 3  |
 
 Nach Abschluss der Zuweisungen wird der Ausgangsimpuls `CNF` erzeugt.
 

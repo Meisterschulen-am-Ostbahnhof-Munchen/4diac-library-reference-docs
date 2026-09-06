@@ -36,9 +36,9 @@ Der FB besitzt keine eigenen Daten-Ausgänge. Die Daten werden über den ausgehe
 
 ### **Adapter**
 
-| Name    | Richtung | Typ                         | Beschreibung                         |
-|---------|----------|-----------------------------|--------------------------------------|
-| AI_IN   | Socket   | adapter::types::unidirectional::AI | Eingangsadapter für Integer-Werte (INT) |
+| Name    | Richtung | Typ                                 | Beschreibung                                    |
+| ------- | -------- | ----------------------------------- | ----------------------------------------------- |
+| AI_IN   | Socket   | adapter::types::unidirectional::AI  | Eingangsadapter für Integer-Werte (INT)         |
 | ADI_OUT | Plug     | adapter::types::unidirectional::ADI | Ausgangsadapter für Double-Integer-Werte (DINT) |
 
 ## Funktionsweise
@@ -66,11 +66,11 @@ Der AI_TO_ADI besitzt keinen internen Zustandsautomaten (ECC). Er verhält sich 
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein        | Typkonvertierung | Schnittstelle                       | Anwendungsfall                     |
-|-----------------|------------------|-------------------------------------|------------------------------------|
-| AI_TO_ADI       | INT -> DINT      | Adapter (Socket/Plug)               | Brücke zwischen adapterbasierten Komponenten |
-| INT_TO_DINT     | INT -> DINT      | Direkte Eingänge/Ausgänge (z.B. DI1, DO1) | Einfache Datenkonvertierung ohne Adapter |
-| CONV_ANY_TO_ANY | Generisch        | Flexible Ein-/Ausgänge              | Universelle Konvertierung (oft aufwändiger) |
+| Baustein        | Typkonvertierung | Schnittstelle                             | Anwendungsfall                               |
+| --------------- | ---------------- | ----------------------------------------- | -------------------------------------------- |
+| AI_TO_ADI       | INT -> DINT      | Adapter (Socket/Plug)                     | Brücke zwischen adapterbasierten Komponenten |
+| INT_TO_DINT     | INT -> DINT      | Direkte Eingänge/Ausgänge (z.B. DI1, DO1) | Einfache Datenkonvertierung ohne Adapter     |
+| CONV_ANY_TO_ANY | Generisch        | Flexible Ein-/Ausgänge                    | Universelle Konvertierung (oft aufwändiger)  |
 
 Während Bausteine wie `INT_TO_DINT` eine direkte Datenkonvertierung mit eigenen Ein- und Ausgängen bieten, integriert der AI_TO_ADI die Konvertierung nahtlos in eine Adapter-basierte Architektur und erleichtert so die Wiederverwendung vorhandener Adapterdefinitionen.
 

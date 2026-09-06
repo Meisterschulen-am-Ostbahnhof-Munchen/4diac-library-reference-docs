@@ -12,29 +12,29 @@ Der Funktionsblock **SPLIT_AD_INTO_AW** dient dazu, einen 32‑Bit‑DWORD‑Wer
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Adapter | Ereignis | Beschreibung |
-|-------------|---------|----------|--------------|
-| IN          | AD (Socket) | E1 | Startet die Aufteilung des anliegenden DWORD‑Wertes. |
+| Bezeichnung | Adapter     | Ereignis | Beschreibung                                         |
+| ----------- | ----------- | -------- | ---------------------------------------------------- |
+| IN          | AD (Socket) | E1       | Startet die Aufteilung des anliegenden DWORD‑Wertes. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Adapter | Ereignis | Beschreibung |
-|-------------|---------|----------|--------------|
-| WORD_00     | AW (Plug) | E1 | Signalisiert, dass das niederwertige WORD (Low‑Word) gültig ist. |
-| WORD_01     | AW (Plug) | E1 | Signalisiert, dass das höherwertige WORD (High‑Word) gültig ist. |
+| Bezeichnung | Adapter   | Ereignis | Beschreibung                                                     |
+| ----------- | --------- | -------- | ---------------------------------------------------------------- |
+| WORD_00     | AW (Plug) | E1       | Signalisiert, dass das niederwertige WORD (Low‑Word) gültig ist. |
+| WORD_01     | AW (Plug) | E1       | Signalisiert, dass das höherwertige WORD (High‑Word) gültig ist. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Adapter | Datentyp | Beschreibung |
-|-------------|---------|----------|--------------|
+| Bezeichnung | Adapter     | Datentyp   | Beschreibung                              |
+| ----------- | ----------- | ---------- | ----------------------------------------- |
 | IN          | AD (Socket) | D1 (DWORD) | 32‑Bit‑Eingangswert, der aufgeteilt wird. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Adapter | Datentyp | Beschreibung |
-|-------------|---------|----------|--------------|
+| Bezeichnung | Adapter   | Datentyp  | Beschreibung                                   |
+| ----------- | --------- | --------- | ---------------------------------------------- |
 | WORD_00     | AW (Plug) | D1 (WORD) | Niederwertiges 16‑Bit‑Wort des Eingangs‑DWORD. |
-| WORD_01     | AW (Plug) | D1 (WORD) | Höherwertiges 16‑Bit‑Wort des Eingangs‑DWORD. |
+| WORD_01     | AW (Plug) | D1 (WORD) | Höherwertiges 16‑Bit‑Wort des Eingangs‑DWORD.  |
 
 ### **Adapter**
 
@@ -73,10 +73,10 @@ Der Baustein besitzt keinen expliziten Zustandsautomaten. Das Verhalten ist rein
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Beschreibung | Unterschied |
-|----------|--------------|-------------|
+| Baustein                   | Beschreibung                                             | Unterschied                                                              |
+| -------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
 | **SPLIT_DWORD_INTO_WORDS** | Reine Datenaufteilung ohne Ereignisausgabe oder Adapter. | Liefert nur Datenausgänge, keine Ereignisse und keine Adapter‑Anbindung. |
-| **SPLIT_AD_INTO_AW** | Adapter‑basierte Variante mit stabilisierten Ausgängen. | Integriert Flip‑Flops und Ereignisausgabe, speziell für AD‑/AW‑Adapter. |
+| **SPLIT_AD_INTO_AW**       | Adapter‑basierte Variante mit stabilisierten Ausgängen.  | Integriert Flip‑Flops und Ereignisausgabe, speziell für AD‑/AW‑Adapter.  |
 
 ## Fazit
 

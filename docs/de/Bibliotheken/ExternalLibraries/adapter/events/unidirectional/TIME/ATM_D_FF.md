@@ -28,10 +28,10 @@ Der FB besitzt keine direkten Daten-Ausgänge. Über den Plug‑Adapter **Q** wi
 
 ### **Adapter**
 
-| Adapter | Typ | Richtung | Kommentar |
-|---------|-----|----------|-----------|
-| I | `adapter::types::unidirectional::ATM` | Socket (eingehend) | Wert zum Übernehmen (latch) |
-| Q | `adapter::types::unidirectional::ATM` | Plug (ausgehend) | Gespeicherter Wert |
+| Adapter | Typ                                   | Richtung           | Kommentar                   |
+| ------- | ------------------------------------- | ------------------ | --------------------------- |
+| I       | `adapter::types::unidirectional::ATM` | Socket (eingehend) | Wert zum Übernehmen (latch) |
+| Q       | `adapter::types::unidirectional::ATM` | Plug (ausgehend)   | Gespeicherter Wert          |
 
 ## Funktionsweise
 

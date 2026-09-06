@@ -30,15 +30,15 @@ Der Funktionsbaustein **AUS_SPLIT_6_UNGATED** ist ein generischer Baustein, der 
 
 ### **Adapter**
 
-| Typ | Name | Richtung | Beschreibung |
-| ----- | ------ | ---------- | -------------- |
-| `adapter::types::unidirectional::AUS` | **IN** | Socket | Eingehendes AUS-Signal, das auf alle Ausgänge verteilt wird. |
-| `adapter::types::unidirectional::AUS` | **OUT1** | Plug | Erster Ausgang – identisch zu **IN**. |
-| `adapter::types::unidirectional::AUS` | **OUT2** | Plug | Zweiter Ausgang – identisch zu **IN**. |
-| `adapter::types::unidirectional::AUS` | **OUT3** | Plug | Dritter Ausgang – identisch zu **IN**. |
-| `adapter::types::unidirectional::AUS` | **OUT4** | Plug | Vierter Ausgang – identisch zu **IN**. |
-| `adapter::types::unidirectional::AUS** | **OUT5** | Plug | Fünfter Ausgang – identisch zu **IN**. |
-| `adapter::types::unidirectional::AUS` | **OUT6** | Plug | Sechster Ausgang – identisch zu **IN**. |
+| Typ                                    | Name     | Richtung | Beschreibung                                                 |
+| -------------------------------------- | -------- | -------- | ------------------------------------------------------------ |
+| `adapter::types::unidirectional::AUS`  | **IN**   | Socket   | Eingehendes AUS-Signal, das auf alle Ausgänge verteilt wird. |
+| `adapter::types::unidirectional::AUS`  | **OUT1** | Plug     | Erster Ausgang – identisch zu **IN**.                        |
+| `adapter::types::unidirectional::AUS`  | **OUT2** | Plug     | Zweiter Ausgang – identisch zu **IN**.                       |
+| `adapter::types::unidirectional::AUS`  | **OUT3** | Plug     | Dritter Ausgang – identisch zu **IN**.                       |
+| `adapter::types::unidirectional::AUS`  | **OUT4** | Plug     | Vierter Ausgang – identisch zu **IN**.                       |
+| `adapter::types::unidirectional::AUS** | **OUT5** | Plug     | Fünfter Ausgang – identisch zu **IN**.                       |
+| `adapter::types::unidirectional::AUS`  | **OUT6** | Plug     | Sechster Ausgang – identisch zu **IN**.                      |
 
 *Hinweis: Der Adapter‑Typ „AUS“ ist ein unidirektionaler Adapter, der ein Signal (Ereignis + ggf. Daten) in einer Richtung weitergibt.*
 

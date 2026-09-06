@@ -30,12 +30,12 @@ Keine.
 
 ### **Adapter**
 
-| Richtung | Name | Typ | Beschreibung |
-|----------|------|-----|--------------|
+| Richtung | Name   | Typ                                  | Beschreibung                                          |
+| -------- | ------ | ------------------------------------ | ----------------------------------------------------- |
 | Socket   | `IN`   | `adapter::types::unidirectional::AW` | Eingangsadapter – Quelle des zu verteilenden Signals. |
-| Plug     | `OUT1` | `adapter::types::unidirectional::AW` | Erster Ausgang – identisches Signal wie `IN`. |
-| Plug     | `OUT2` | `adapter::types::unidirectional::AW` | Zweiter Ausgang – identisches Signal wie `IN`. |
-| Plug     | `OUT3` | `adapter::types::unidirectional::AW` | Dritter Ausgang – identisches Signal wie `IN`. |
+| Plug     | `OUT1` | `adapter::types::unidirectional::AW` | Erster Ausgang – identisches Signal wie `IN`.         |
+| Plug     | `OUT2` | `adapter::types::unidirectional::AW` | Zweiter Ausgang – identisches Signal wie `IN`.        |
+| Plug     | `OUT3` | `adapter::types::unidirectional::AW` | Dritter Ausgang – identisches Signal wie `IN`.        |
 
 ## Funktionsweise
 

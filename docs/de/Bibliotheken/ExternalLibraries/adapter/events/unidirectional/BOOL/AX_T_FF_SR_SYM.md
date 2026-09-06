@@ -56,11 +56,11 @@ Die Toggle-Funktion wird durch die `CLK`-Transitionen realisiert: unabhängig vo
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung | Ausgang Q.D1 | Ereignis nach Algorithmus |
-|---------|--------------|--------------|---------------------------|
-| START   | Initialzustand, kein definierter Wert | undefiniert | - |
-| SET     | Ausgang wird auf TRUE gesetzt | TRUE | Q.E1 |
-| RESET   | Ausgang wird auf FALSE gesetzt | FALSE | Q.E1 |
+| Zustand | Beschreibung                          | Ausgang Q.D1 | Ereignis nach Algorithmus |
+| ------- | ------------------------------------- | ------------ | ------------------------- |
+| START   | Initialzustand, kein definierter Wert | undefiniert  | -                         |
+| SET     | Ausgang wird auf TRUE gesetzt         | TRUE         | Q.E1                      |
+| RESET   | Ausgang wird auf FALSE gesetzt        | FALSE        | Q.E1                      |
 
 Übergänge (Ereignis → Zielzustand):
 

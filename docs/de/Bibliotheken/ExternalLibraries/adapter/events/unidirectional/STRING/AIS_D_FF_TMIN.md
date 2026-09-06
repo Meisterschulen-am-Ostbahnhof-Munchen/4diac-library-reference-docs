@@ -12,20 +12,20 @@ Der Funktionsbaustein **AIS_D_FF_TMIN** realisiert ein datenabhängiges Flip-Flo
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ  | Kommentar |
-|----------|------|-----------|
+| Ereignis | Typ   | Kommentar                                |
+| -------- | ----- | ---------------------------------------- |
 | `INIT`   | EInit | Initialisierungsanforderung (mit `Tmin`) |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ  | Kommentar |
-|----------|------|-----------|
+| Ereignis | Typ   | Kommentar                   |
+| -------- | ----- | --------------------------- |
 | `INITO`  | EInit | Initialisierungsbestätigung |
 
 ### **Daten-Eingänge**
 
-| Variable | Typ  | Kommentar |
-|----------|------|-----------|
+| Variable | Typ  | Kommentar                                       |
+| -------- | ---- | ----------------------------------------------- |
 | `Tmin`   | TIME | Mindestzeitabstand zwischen zwei EO‑Ereignissen |
 
 ### **Daten-Ausgänge**
@@ -34,10 +34,10 @@ Der FB besitzt keine eigenen Datenausgänge. Die Ausgabe erfolgt ausschließlich
 
 ### **Adapter**
 
-| Richtung | Bezeichnung | Adaptertyp | Kommentar |
-|----------|-------------|------------|-----------|
-| **Plug** (Ausgang) | `Q` | `adapter::types::unidirectional::AIS` | Gelatchter Ausgabewert |
-| **Socket** (Eingang) | `I` | `adapter::types::unidirectional::AIS` | Zu latchnder Eingabewert |
+| Richtung             | Bezeichnung | Adaptertyp                            | Kommentar                |
+| -------------------- | ----------- | ------------------------------------- | ------------------------ |
+| **Plug** (Ausgang)   | `Q`         | `adapter::types::unidirectional::AIS` | Gelatchter Ausgabewert   |
+| **Socket** (Eingang) | `I`         | `adapter::types::unidirectional::AIS` | Zu latchnder Eingabewert |
 
 Der Adapter `AIS` ist unidirektional und liefert über die Ereignis‑/Datenschnittstellen `E1`/`D1` die eigentlichen Signale.
 

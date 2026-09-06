@@ -33,6 +33,7 @@ The ARTimeOut adapter offers two service sequences:
 
 - The PLUG sends a **START** event with a duration of **DT** to start the timeout.
 - When the timeout expires, the SOCKET sends a **TimeOut** event back to the PLUG.
+
 1. **NormalOperation**:
 
 - The PLUG sends a **START** event with a duration of **DT** to start the timeout.
@@ -45,9 +46,11 @@ The ARTimeOut adapter enables the control of a timeout mechanism with the follow
 1. **Start/Reset Timeout**:
 
 - The **START** event starts or resets the timeout with the specified duration **DT**.
+
 1. **Stop Timeout**:
 
 - The **STOP** event terminates the timeout prematurely.
+
 1. **Timeout Expiration**:
 
 - When the timeout expires, the **TimeOut** event is triggered to notify the PLUG.

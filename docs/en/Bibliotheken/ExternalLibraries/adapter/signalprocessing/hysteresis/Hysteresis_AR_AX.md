@@ -45,7 +45,7 @@ The hysteresis is defined symmetrically around the threshold value (`THRESHOLD`)
 
 To avoid misconfigurations, the absolute value of the hysteresis width (`ABS(HYSTERESIS.D1)`) is always used internally.
 
-# 1. **Switch-on Condition:**
+1. **Switch-on Condition:**
 
 The output switches on (`OUTPUT.D1 := TRUE`) when the input value reaches or exceeds the upper limit of the hysteresis band:
 

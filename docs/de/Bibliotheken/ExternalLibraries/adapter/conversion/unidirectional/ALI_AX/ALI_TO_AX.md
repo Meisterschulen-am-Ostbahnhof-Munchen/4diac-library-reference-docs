@@ -34,10 +34,10 @@ Der Baustein dient als bidirektionale Brücke zwischen Adaptern, die auf untersc
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
+| Adapter    | Richtung         | Typ                                   | Beschreibung                         |
+| ---------- | ---------------- | ------------------------------------- | ------------------------------------ |
 | **ALI_IN** | Socket (Eingang) | `adapter::types::unidirectional::ALI` | Eingangsadapter mit einem LINT-Wert. |
-| **AX_OUT** | Plug (Ausgang) | `adapter::types::unidirectional::AX` | Ausgangsadapter mit einem BOOL-Wert. |
+| **AX_OUT** | Plug (Ausgang)   | `adapter::types::unidirectional::AX`  | Ausgangsadapter mit einem BOOL-Wert. |
 
 ## Funktionsweise
 

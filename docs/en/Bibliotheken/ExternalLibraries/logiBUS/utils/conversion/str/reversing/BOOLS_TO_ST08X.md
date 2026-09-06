@@ -18,7 +18,7 @@ This function block (FB) is used to combine eight individual BOOL values into a 
 - **IN_07** (BOOL): The value for bit 7 of the output structure.
 - **OUT** (logiBUS::utils::conversion::types::ST08X): The resulting structure containing the values of the eight binary inputs in their respective fields (`X_00` to `X_07`).
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

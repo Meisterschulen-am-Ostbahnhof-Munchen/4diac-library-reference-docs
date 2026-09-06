@@ -30,17 +30,17 @@ Keine
 
 ### **Adapter**
 
-| Bezeichnung | Typ | Richtung | Beschreibung |
-| ------------- | ----- | ---------- | -------------- |
-| **IN** | `adapter::types::unidirectional::ALR` | Socket | Eingangssignal, das auf alle Ausgänge weitergeleitet wird |
-| **OUT1** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 1 – dupliziertes Signal |
-| **OUT2** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 2 – dupliziertes Signal |
-| **OUT3** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 3 – dupliziertes Signal |
-| **OUT4** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 4 – dupliziertes Signal |
-| **OUT5** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 5 – dupliziertes Signal |
-| **OUT6** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 6 – dupliziertes Signal |
-| **OUT7** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 7 – dupliziertes Signal |
-| **OUT8** | `adapter::types::unidirectional::ALR` | Plug | Ausgang 8 – dupliziertes Signal |
+| Bezeichnung | Typ                                   | Richtung | Beschreibung                                              |
+| ----------- | ------------------------------------- | -------- | --------------------------------------------------------- |
+| **IN**      | `adapter::types::unidirectional::ALR` | Socket   | Eingangssignal, das auf alle Ausgänge weitergeleitet wird |
+| **OUT1**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 1 – dupliziertes Signal                           |
+| **OUT2**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 2 – dupliziertes Signal                           |
+| **OUT3**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 3 – dupliziertes Signal                           |
+| **OUT4**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 4 – dupliziertes Signal                           |
+| **OUT5**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 5 – dupliziertes Signal                           |
+| **OUT6**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 6 – dupliziertes Signal                           |
+| **OUT7**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 7 – dupliziertes Signal                           |
+| **OUT8**    | `adapter::types::unidirectional::ALR` | Plug     | Ausgang 8 – dupliziertes Signal                           |
 
 ## Funktionsweise
 

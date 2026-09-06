@@ -46,13 +46,13 @@ Auch die Daten werden **über die Adapter‑Sockets** bereitgestellt:
 
 ### **Adapter**
 
-| Adapter-Typ | Richtung | Name | Kurzbeschreibung |
-| ------------- | ---------- | ------ | ------------------ |
-| `AX` (unidirectional) | Socket (Eingang) | CU | Liefert das Zählimpuls‑Ereignis und einen flankenbewerteten Datenwert. |
-| `AX` (unidirectional) | Socket (Eingang) | R | Liefert das Reset‑Ereignis und den Resetschalter. |
-| `AUDI` (unidirectional) | Socket (Eingang) | PV | Liefert das Preset‑Ereignis und den Preset‑Zahlenwert. |
-| `AX` (unidirectional) | Plug (Ausgang) | Q | Stellt das Ausgangsbinary (Q) als Ereignis und Datenwert bereit. |
-| `AUDI` (unidirectional) | Plug (Ausgang) | CV | Stellt den aktuellen Zählerstand als Ereignis und Datenwert bereit. |
+| Adapter-Typ             | Richtung         | Name | Kurzbeschreibung                                                       |
+| ----------------------- | ---------------- | ---- | ---------------------------------------------------------------------- |
+| `AX` (unidirectional)   | Socket (Eingang) | CU   | Liefert das Zählimpuls‑Ereignis und einen flankenbewerteten Datenwert. |
+| `AX` (unidirectional)   | Socket (Eingang) | R    | Liefert das Reset‑Ereignis und den Resetschalter.                      |
+| `AUDI` (unidirectional) | Socket (Eingang) | PV   | Liefert das Preset‑Ereignis und den Preset‑Zahlenwert.                 |
+| `AX` (unidirectional)   | Plug (Ausgang)   | Q    | Stellt das Ausgangsbinary (Q) als Ereignis und Datenwert bereit.       |
+| `AUDI` (unidirectional) | Plug (Ausgang)   | CV   | Stellt den aktuellen Zählerstand als Ereignis und Datenwert bereit.    |
 
 ## Funktionsweise
 

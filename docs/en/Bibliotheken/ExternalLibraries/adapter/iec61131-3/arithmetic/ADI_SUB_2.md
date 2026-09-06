@@ -35,11 +35,11 @@ No direct data outputs are defined. The result is provided via the output adapte
 
 ### **Adapters**
 
-| Type | Name | Adapter Type | Description |
-| :--- | :--- | :--- | :--- |
-| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::ADI` | First input value (minuend) for subtraction. |
-| **Socket (Input)** | `IN2` | `adapter::types::unidirectional::ADI` | Second input value (subtrahend) for subtraction. |
-| **Plug (Output)** | `OUT` | `adapter::types::unidirectional::ADI` | Result (difference) of the subtraction ($OUT = IN1 - IN2$). |
+| Type               | Name  | Adapter Type                          | Description                                                 |
+| :----------------- | :---- | :------------------------------------ | :---------------------------------------------------------- |
+| **Socket (Input)** | `IN1` | `adapter::types::unidirectional::ADI` | First input value (minuend) for subtraction.                |
+| **Socket (Input)** | `IN2` | `adapter::types::unidirectional::ADI` | Second input value (subtrahend) for subtraction.            |
+| **Plug (Output)**  | `OUT` | `adapter::types::unidirectional::ADI` | Result (difference) of the subtraction ($OUT = IN1 - IN2$). |
 
 ## Functionality
 

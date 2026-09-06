@@ -30,18 +30,18 @@ Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
 
-| Name | Typ | Richtung |
-| ------ | ----- | ---------- |
-| IN | adapter::types::unidirectional::AD | Socket (Eingang) |
-| OUT1 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT2 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT3 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT4 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT5 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT6 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT7 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT8 | adapter::types::unidirectional::AD | Plug (Ausgang) |
-| OUT9 | adapter::types::unidirectional::AD | Plug (Ausgang) |
+| Name | Typ                                | Richtung         |
+| ---- | ---------------------------------- | ---------------- |
+| IN   | adapter::types::unidirectional::AD | Socket (Eingang) |
+| OUT1 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT2 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT3 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT4 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT5 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT6 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT7 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT8 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
+| OUT9 | adapter::types::unidirectional::AD | Plug (Ausgang)   |
 
 ## Funktionsweise
 

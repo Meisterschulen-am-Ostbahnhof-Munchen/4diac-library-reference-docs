@@ -88,10 +88,10 @@ G ---------+
 
 Die folgende Tabelle zeigt das logische Verhalten des Bausteins basierend auf dem Selektionssignal `G.D1`:
 
-| Zustand G.D1 | Ausgewählter Pfad | Ausgangswert (OUT.D1) | Ausgangsereignis (OUT.E1) |
-| :--- | :--- | :--- | :--- |
-| `FALSE` | Kanal 0 (`IN0`) | Wert von `IN0.D1` | Wird bei Wertänderung/Ereignis getriggert |
-| `TRUE` | Kanal 1 (`IN1`) | Wert von `IN1.D1` | Wird bei Wertänderung/Ereignis getriggert |
+| Zustand G.D1 | Ausgewählter Pfad | Ausgangswert (OUT.D1) | Ausgangsereignis (OUT.E1)                 |
+| :----------- | :---------------- | :-------------------- | :---------------------------------------- |
+| `FALSE`      | Kanal 0 (`IN0`)   | Wert von `IN0.D1`     | Wird bei Wertänderung/Ereignis getriggert |
+| `TRUE`       | Kanal 1 (`IN1`)   | Wert von `IN1.D1`     | Wird bei Wertänderung/Ereignis getriggert |
 
 ## Anwendungsszenarien
 

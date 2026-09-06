@@ -12,22 +12,22 @@ Der Baustein **AUI_D_FF_HYS_TMIN** ist ein Datenspeicher (D‑Flip‑Flop) mit e
 
 ### **Ereignis‑Eingänge**
 
-| Name  | Typ    | Kommentar                            |
-|-------|--------|--------------------------------------|
-| INIT  | EInit  | Initialisierungsanforderung          |
+| Name | Typ   | Kommentar                   |
+| ---- | ----- | --------------------------- |
+| INIT | EInit | Initialisierungsanforderung |
 
 ### **Ereignis‑Ausgänge**
 
-| Name   | Typ    | Kommentar                      |
-|--------|--------|---------------------------------|
-| INITO  | EInit  | Initialisierungsbestätigung     |
+| Name  | Typ   | Kommentar                   |
+| ----- | ----- | --------------------------- |
+| INITO | EInit | Initialisierungsbestätigung |
 
 ### **Daten‑Eingänge**
 
-| Name       | Typ   | Kommentar                                  |
-|------------|-------|--------------------------------------------|
-| HYSTERESIS | UINT  | Hysterese‑Band                             |
-| Tmin       | TIME  | Minimale Zwischenankunftszeit der EI‑Ereignisse |
+| Name       | Typ  | Kommentar                                       |
+| ---------- | ---- | ----------------------------------------------- |
+| HYSTERESIS | UINT | Hysterese‑Band                                  |
+| Tmin       | TIME | Minimale Zwischenankunftszeit der EI‑Ereignisse |
 
 ### **Daten‑Ausgänge**
 
@@ -35,10 +35,10 @@ Keine eigenständigen Datenausgänge – der ausgegebene Wert wird über den Ada
 
 ### **Adapter**
 
-| Typ                                                   | Bezeichnung | Kommentar           |
-|-------------------------------------------------------|-------------|---------------------|
-| `adapter::types::unidirectional::AUI` (Socket)         | I           | Zu speichernder Wert |
-| `adapter::types::unidirectional::AUI` (Plug)          | Q           | Gespeicherter Wert   |
+| Typ                                            | Bezeichnung | Kommentar            |
+| ---------------------------------------------- | ----------- | -------------------- |
+| `adapter::types::unidirectional::AUI` (Socket) | I           | Zu speichernder Wert |
+| `adapter::types::unidirectional::AUI` (Plug)   | Q           | Gespeicherter Wert   |
 
 Der Adapter `AUI` ist ein unidirektionaler Typ, der ein Ereignis und einen Datenwert bündelt (`E1` und `D1`).
 
@@ -81,10 +81,10 @@ Der Baustein besitzt keinen expliziten internen Zustandsautomaten. Das Verhalten
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eigenschaft |
-| ---------- | ------------- |
-| `E_D_FF` | Einfaches D‑Flip‑Flop ohne Hysterese oder Zeitbegrenzung |
-| `E_D_FF_HYS` | D‑Flip‑Flop mit Hysterese, aber ohne `Tmin` |
+| Baustein                      | Eigenschaft                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------------- |
+| `E_D_FF`                      | Einfaches D‑Flip‑Flop ohne Hysterese oder Zeitbegrenzung                                        |
+| `E_D_FF_HYS`                  | D‑Flip‑Flop mit Hysterese, aber ohne `Tmin`                                                     |
 | `E_D_FF_HYS_TMIN` (dieser FB) | Kombiniert Hysterese *und* minimale Zwischenzeit → robuster gegen Rauschen und Burst‑Ereignisse |
 
 ## Fazit

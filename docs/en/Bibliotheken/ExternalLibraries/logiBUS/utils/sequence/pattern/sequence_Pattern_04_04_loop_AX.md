@@ -62,10 +62,12 @@ The function block implements a state machine (ECC) that cycles through four act
 - The current state number (`STATE_NR`) is updated and sent (`CNF`).
 - The outputs (`Q1` to `Q4`) are set based on the corresponding input byte (`P_Sx`). The mapping is bitwise (bit 0 -> Q1, bit 1 -> Q2, etc.).
 - The outputs (`Q1` to `Q4`) are set based on the corresponding input byte (`P_Sx`). * Events are fired at the adapters `Qx` (`Qx.E1`) to signal the data change.
+
 1. **Transitions**: A transition to the next step occurs either:
 
 - **Automatic**: When the configured time (`DT_...`) has expired (`timeOut.TimeOut`).
 - **Manual**: When the explicit transition event (e.g., `S1_S2`) arrives.
+
 1. **Loop**: After `sState_04`, the transition back to `sState_01` (loop) occurs, unless a reset is triggered.
 2. **Reset**: The `RESET` event causes all outputs to be set to `FALSE`, `STATE_NR` to be reset to 0, and the function block to wait for a new start command in the `xSTART` state.
 
@@ -78,14 +80,14 @@ The function block implements a state machine (ECC) that cycles through four act
 
 ## State Overview
 
-| State | Description | Exit Logic (Q1-Q4) | Next State (Auto/Manual) |
-| :--- | :--- | :--- | :--- |
-| **xSTART** | Idle State | Inactive | sState_01 (via `START_S1`) |
-| **sState_01** | Step 1 | P_S1 | sState_02 |
-| **sState_02** | Step 2 | P_S2 | sState_03 |
-| **sState_03** | Step 3 | P_S3 | sState_04 |
-| **sState_04** | Step 4 | P_S4 | sState_01 (Loop) |
-| **sRESET** | Reset Logic | All FALSE | xSTART |
+| State         | Description | Exit Logic (Q1-Q4) | Next State (Auto/Manual)   |
+| :------------ | :---------- | :----------------- | :------------------------- |
+| **xSTART**    | Idle State  | Inactive           | sState_01 (via `START_S1`) |
+| **sState_01** | Step 1      | P_S1               | sState_02                  |
+| **sState_02** | Step 2      | P_S2               | sState_03                  |
+| **sState_03** | Step 3      | P_S3               | sState_04                  |
+| **sState_04** | Step 4      | P_S4               | sState_01 (Loop)           |
+| **sRESET**    | Reset Logic | All FALSE          | xSTART                     |
 
 ## Application Scenarios
 

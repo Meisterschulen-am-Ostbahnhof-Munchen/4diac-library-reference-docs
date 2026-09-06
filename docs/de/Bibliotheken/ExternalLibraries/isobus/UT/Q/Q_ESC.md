@@ -51,20 +51,20 @@ Der **Q_ESC** ist ein standardkonformer Funktionsbaustein zur Abbruchsteuerung i
 
 ## Typische Anwendungsfälle
 
-| Szenario               | Wirkung                     |
-|------------------------|-----------------------------|
-| Dialogabbruch          | Beendet aktuelle Eingabe    |
-| Menüverlassen          | Zurück zur Hauptebene       |
-| Alarmquittierung       | Stoppt akustische Signale   |
+| Szenario         | Wirkung                   |
+| ---------------- | ------------------------- |
+| Dialogabbruch    | Beendet aktuelle Eingabe  |
+| Menüverlassen    | Zurück zur Hauptebene     |
+| Alarmquittierung | Stoppt akustische Signale |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreich abgebrochen           |
-| -8   | VT_E_NOACT              | Keine aktive Eingabe zum Abbrechen|
-| -21  | VT_E_NO_INSTANCE        | Keine VT-Instanz verfügbar        |
-| -130 | VT_E_NOT_ALIVE          | VT nicht erreichbar               |
+| Code | Konstante        | Bedeutung                          |
+| ---- | ---------------- | ---------------------------------- |
+| 0    | VT_E_NO_ERR      | Erfolgreich abgebrochen            |
+| -8   | VT_E_NOACT       | Keine aktive Eingabe zum Abbrechen |
+| -21  | VT_E_NO_INSTANCE | Keine VT-Instanz verfügbar         |
+| -130 | VT_E_NOT_ALIVE   | VT nicht erreichbar                |
 
 ## Anwendungsszenarien
 
@@ -75,11 +75,11 @@ Der **Q_ESC** ist ein standardkonformer Funktionsbaustein zur Abbruchsteuerung i
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_ESC       | VtAbortCmd  | VtCancelOp  |
-|---------------|-------------|-------------|-------------|
-| ISO-Standard  | ✔           | ✖           | ✖           |
-| Wirkung       | Global      | Lokal       | Objektspezifisch |
-| Parameter     | Keine       | Konfigurierbar | Konfigurierbar |
+| Feature      | Q_ESC  | VtAbortCmd     | VtCancelOp       |
+| ------------ | ------ | -------------- | ---------------- |
+| ISO-Standard | ✔      | ✖              | ✖                |
+| Wirkung      | Global | Lokal          | Objektspezifisch |
+| Parameter    | Keine  | Konfigurierbar | Konfigurierbar   |
 
 ## Fazit
 

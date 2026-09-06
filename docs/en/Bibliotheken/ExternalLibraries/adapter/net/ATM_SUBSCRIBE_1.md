@@ -31,9 +31,9 @@ The function block **ATM_SUBSCRIBE_1** is a composite function block that encaps
 
 ### **Adapter**
 
-| Adapter | Type | Direction | Description |
-|---------|------------------------------|-----------|----------------------------------------|
-| OUT | adapter::types::unidirectional::ATM | Plug (Output) | Buffered received TIME value |
+| Adapter | Type                                | Direction     | Description                  |
+| ------- | ----------------------------------- | ------------- | ---------------------------- |
+| OUT     | adapter::types::unidirectional::ATM | Plug (Output) | Buffered received TIME value |
 
 ## Functionality
 

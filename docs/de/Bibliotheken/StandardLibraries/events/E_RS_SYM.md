@@ -37,11 +37,11 @@ Die ECC besitzt drei Zustände: `START`, `SET` und `RESET`. Aus `START` führt s
 
 ## Zustandsübersicht
 
-| Zustand | Bedeutung |
-| --- | --- |
-| START | Anfangszustand, wartet symmetrisch auf `S` oder `R` |
-| SET | `Q = TRUE`, erreichbar aus `START` (via `S`) oder `RESET` (via `S`) |
-| RESET | `Q = FALSE`, erreichbar aus `START` (via `R`) oder `SET` (via `R`) |
+| Zustand | Bedeutung                                                           |
+| ------- | ------------------------------------------------------------------- |
+| START   | Anfangszustand, wartet symmetrisch auf `S` oder `R`                 |
+| SET     | `Q = TRUE`, erreichbar aus `START` (via `S`) oder `RESET` (via `S`) |
+| RESET   | `Q = FALSE`, erreichbar aus `START` (via `R`) oder `SET` (via `R`)  |
 
 ## Anwendungsszenarien
 

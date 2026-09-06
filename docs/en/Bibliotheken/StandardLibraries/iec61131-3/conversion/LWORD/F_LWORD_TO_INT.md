@@ -10,7 +10,7 @@ The function block `F_LWORD_TO_INT` converts a `LWORD` value (64-bit unsigned in
 - **IN**: The input value of type `LWORD` (64-bit unsigned integer) to be converted.
 - **OUT**: The output value of type `INT` (16-bit signed integer) containing the result of the conversion.
 
-### Data Outputs
+## Data Outputs
 
 ### Data Inputs
 

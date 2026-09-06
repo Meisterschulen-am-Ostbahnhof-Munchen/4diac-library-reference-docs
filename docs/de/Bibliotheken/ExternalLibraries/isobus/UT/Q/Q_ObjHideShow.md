@@ -63,22 +63,22 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Statusreferenz
 
-| qVisible | Containerzustand     |
-|----------|----------------------|
-| FALSE (0)| Unsichtbar           |
-| TRUE (1) | Sichtbar             |
+| qVisible  | Containerzustand |
+| --------- | ---------------- |
+| FALSE (0) | Unsichtbar       |
+| TRUE (1)  | Sichtbar         |
 
 ## Rückgabecodes (s16result)
 
-| Code | Konstante               | Bedeutung                          |
-|------|-------------------------|------------------------------------|
-| 0    | VT_E_NO_ERR             | Erfolgreiche Ausführung           |
-| -6   | VT_E_OVERFLOW           | Pufferüberlauf                   |
-| -8   | VT_E_NOACT              | VT nicht bereit                   |
-| -21  | VT_E_NO_INSTANCE        | Kein VT-Client verfügbar          |
-| -128 | VT_E_HANDLE_INVALID     | Ungültige Container-ID            |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz             |
-| -130 | VT_E_NOT_ALIVE          | VT nicht aktiv                    |
+| Code | Konstante                 | Bedeutung                |
+| ---- | ------------------------- | ------------------------ |
+| 0    | VT_E_NO_ERR               | Erfolgreiche Ausführung  |
+| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
+| -8   | VT_E_NOACT                | VT nicht bereit          |
+| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
+| -128 | VT_E_HANDLE_INVALID       | Ungültige Container-ID   |
+| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
+| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
 
 ## Anwendungsszenarien
 
@@ -90,11 +90,11 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
 | Feature        | Q_ObjHideShow | VtContainerControl | VtVisibilityManager |
-|---------------|---------------|--------------------|---------------------|
-| ISO-Standard  | ✔             | ✖                  | ✖                   |
-| Containerfokus| ✔             | ✔                  | ✖                   |
-| Kaskadierend  | ✔             | ✖                  | ✔                   |
-| Rückmeldung   | ✔             | ✖                  | ✔                   |
+| -------------- | ------------- | ------------------ | ------------------- |
+| ISO-Standard   | ✔             | ✖                  | ✖                   |
+| Containerfokus | ✔             | ✔                  | ✖                   |
+| Kaskadierend   | ✔             | ✖                  | ✔                   |
+| Rückmeldung    | ✔             | ✖                  | ✔                   |
 
 ## 🛠️ Zugehörige Übungen
 

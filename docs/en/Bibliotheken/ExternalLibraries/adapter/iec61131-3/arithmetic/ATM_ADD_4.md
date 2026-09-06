@@ -28,13 +28,13 @@ None
 
 ### **Adapters**
 
-| Name | Direction | Type | Comment |
-| ------------- | ---------- | ----- | ----------- |
-| `IN1` | Socket | `adapter::types::unidirectional::ATM` | ADD input 1 |
-| `IN2` | Socket | `adapter::types::unidirectional::ATM` | ADD input 2 |
-| `IN3` | Socket | `adapter::types::unidirectional::ATM` | ADD input 3 |
-| `IN4` | Socket | `adapter::types::unidirectional::ATM` | ADD input 4 |
-| `OUT` | Plug | `adapter::types::unidirectional::ATM` | ADD result |
+| Name  | Direction | Type                                  | Comment     |
+| ----- | --------- | ------------------------------------- | ----------- |
+| `IN1` | Socket    | `adapter::types::unidirectional::ATM` | ADD input 1 |
+| `IN2` | Socket    | `adapter::types::unidirectional::ATM` | ADD input 2 |
+| `IN3` | Socket    | `adapter::types::unidirectional::ATM` | ADD input 3 |
+| `IN4` | Socket    | `adapter::types::unidirectional::ATM` | ADD input 4 |
+| `OUT` | Plug      | `adapter::types::unidirectional::ATM` | ADD result  |
 
 The adapters are of type `unidirectional::ATM` and enable type-safe connections with other function blocks that support the same adapter type.
 

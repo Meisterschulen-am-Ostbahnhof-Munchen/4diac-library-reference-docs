@@ -12,34 +12,34 @@ Der Funktionsblock **AX_TO_ALR** dient zur Umwandlung eines BOOL‑Adapter-Signa
 
 ### **Ereignis-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `AX_IN.E1` | EVENT | Ereignis vom angeschlossenen AX‑Adapter; löst die Verarbeitung aus. |
+| Bezeichnung | Datentyp | Beschreibung                                                        |
+| ----------- | -------- | ------------------------------------------------------------------- |
+| `AX_IN.E1`  | EVENT    | Ereignis vom angeschlossenen AX‑Adapter; löst die Verarbeitung aus. |
 
 ### **Ereignis-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `ALR_OUT.E1` | EVENT | Bestätigungsereignis, nachdem der konvertierte Wert am ALR‑Adapter ausgegeben wurde. |
+| Bezeichnung  | Datentyp | Beschreibung                                                                         |
+| ------------ | -------- | ------------------------------------------------------------------------------------ |
+| `ALR_OUT.E1` | EVENT    | Bestätigungsereignis, nachdem der konvertierte Wert am ALR‑Adapter ausgegeben wurde. |
 
 ### **Daten-Eingänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `AX_IN.D1` | BOOL | Boolescher Wert, der in einen LREAL‑Wert umgesetzt werden soll. |
+| Bezeichnung | Datentyp | Beschreibung                                                    |
+| ----------- | -------- | --------------------------------------------------------------- |
+| `AX_IN.D1`  | BOOL     | Boolescher Wert, der in einen LREAL‑Wert umgesetzt werden soll. |
 
 ### **Daten-Ausgänge**
 
-| Bezeichnung | Datentyp | Beschreibung |
-|-------------|----------|--------------|
-| `ALR_OUT.D1` | LREAL | Ergebnis der Konvertierung: 0.0 bei `FALSE`, 1.0 bei `TRUE`. |
+| Bezeichnung  | Datentyp | Beschreibung                                                 |
+| ------------ | -------- | ------------------------------------------------------------ |
+| `ALR_OUT.D1` | LREAL    | Ergebnis der Konvertierung: 0.0 bei `FALSE`, 1.0 bei `TRUE`. |
 
 ### **Adapter**
 
-| Richtung | Bezeichnung | Typ | Beschreibung |
-|----------|-------------|-----|--------------|
-| Socket (Eingang) | `AX_IN` | `adapter::types::unidirectional::AX` | Nimmt ein BOOL‑Signal über den unidirektionalen AX‑Adapter entgegen. |
-| Plug (Ausgang) | `ALR_OUT` | `adapter::types::unidirectional::ALR` | Stellt das konvertierte LREAL‑Signal über den unidirektionalen ALR‑Adapter bereit. |
+| Richtung         | Bezeichnung | Typ                                   | Beschreibung                                                                       |
+| ---------------- | ----------- | ------------------------------------- | ---------------------------------------------------------------------------------- |
+| Socket (Eingang) | `AX_IN`     | `adapter::types::unidirectional::AX`  | Nimmt ein BOOL‑Signal über den unidirektionalen AX‑Adapter entgegen.               |
+| Plug (Ausgang)   | `ALR_OUT`   | `adapter::types::unidirectional::ALR` | Stellt das konvertierte LREAL‑Signal über den unidirektionalen ALR‑Adapter bereit. |
 
 ## Funktionsweise
 
@@ -79,11 +79,11 @@ Da es sich um einen Composite FB ohne eigenen Ablaufzustand handelt, ergibt sich
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Eingangstyp | Ausgangstyp | Besonderheit |
-| ---------- | ------------- | ------------- | -------------- |
-| `AX_TO_ALR` | BOOL (Adapter) | LREAL (Adapter) | Adapter‑basiert, feste Werte 0.0 / 1.0 |
-| `BOOL_TO_REAL` | BOOL (direkt) | REAL (direkt) | Konventioneller IEC‑Baustein, Werte frei konfigurierbar |
-| `SEL` / `F_SEL` | BOOL + 2x ANY | ANY | Allgemeine Auswahl ohne Adapter, Werte parameterisierbar |
+| Baustein        | Eingangstyp    | Ausgangstyp     | Besonderheit                                             |
+| --------------- | -------------- | --------------- | -------------------------------------------------------- |
+| `AX_TO_ALR`     | BOOL (Adapter) | LREAL (Adapter) | Adapter‑basiert, feste Werte 0.0 / 1.0                   |
+| `BOOL_TO_REAL`  | BOOL (direkt)  | REAL (direkt)   | Konventioneller IEC‑Baustein, Werte frei konfigurierbar  |
+| `SEL` / `F_SEL` | BOOL + 2x ANY  | ANY             | Allgemeine Auswahl ohne Adapter, Werte parameterisierbar |
 
 Gegenüber direkten Funktionsbausteinen bietet `AX_TO_ALR` den Vorteil der sauberen Adapter‑Kapselung und der einfachen Wiederverwendung in adapterorientierten Projekten.
 

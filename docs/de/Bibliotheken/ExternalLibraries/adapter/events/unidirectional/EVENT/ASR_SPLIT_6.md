@@ -28,10 +28,10 @@ Keine.
 
 ### **Adapter**
 
-| Adapter | Richtung | Typ | Beschreibung |
-|---------|----------|-----|--------------|
-| `IN` | Socket | `adapter::types::unidirectional::ASR` | Eingangsadapter – das zu verteilende ASR-Signal |
-| `OUT1` – `OUT6` | Plug | `adapter::types::unidirectional::ASR` | Sechs Ausgangsadapter – identische Kopien des Eingangssignals |
+| Adapter         | Richtung | Typ                                   | Beschreibung                                                  |
+| --------------- | -------- | ------------------------------------- | ------------------------------------------------------------- |
+| `IN`            | Socket   | `adapter::types::unidirectional::ASR` | Eingangsadapter – das zu verteilende ASR-Signal               |
+| `OUT1` – `OUT6` | Plug     | `adapter::types::unidirectional::ASR` | Sechs Ausgangsadapter – identische Kopien des Eingangssignals |
 
 ## Funktionsweise
 
@@ -56,11 +56,11 @@ Es existiert kein Zustandsdiagramm (ECC), da der Baustein keine sequentielle Log
 
 ## Vergleich mit ähnlichen Bausteinen
 
-| Baustein | Ausgänge | Besonderheit |
-| ---------- | ---------- | -------------- |
-| `ASR_SPLIT_2` | 2 | Zweifach-Split |
-| `ASR_SPLIT_4` | 4 | Vierfach-Split |
-| **`ASR_SPLIT_6`** | **6** | **Sechsfach-Split (dieser Baustein)** |
+| Baustein                                | Ausgänge | Besonderheit                            |
+| --------------------------------------- | -------- | --------------------------------------- |
+| `ASR_SPLIT_2`                           | 2        | Zweifach-Split                          |
+| `ASR_SPLIT_4`                           | 4        | Vierfach-Split                          |
+| **`ASR_SPLIT_6`**                       | **6**    | **Sechsfach-Split (dieser Baustein)**   |
 | Generischer Split (z. B. über Template) | variabel | Erfordert individuelle Parametrisierung |
 
 Der `ASR_SPLIT_6` bietet eine feste Anzahl von sechs Ausgängen und ist damit speziell für Anwendungen ausgelegt, die genau diese Anzahl benötigen.

@@ -12,20 +12,20 @@ The function block **ALR_D_FF_TMIN** implements a clock-edge-triggered data latc
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|----------|-------|----------------------------------------------------|
-| INIT | EInit | Initialization Request; Sets the minimum time `Tmin` |
+| Event | Type  | Comment                                              |
+| ----- | ----- | ---------------------------------------------------- |
+| INIT  | EInit | Initialization Request; Sets the minimum time `Tmin` |
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|----------|-------|------------------------------------------|
+| Event | Type  | Comment                                   |
+| ----- | ----- | ----------------------------------------- |
 | INITO | EInit | Confirmation of successful initialization |
 
 ### **Data Inputs**
 
-| Name | Type | Comment |
-|------|------|---------------------------------------------|
+| Name | Type | Comment                                 |
+| ---- | ---- | --------------------------------------- |
 | Tmin | TIME | Minimum wait time between two EO events |
 
 ### **Data Outputs**

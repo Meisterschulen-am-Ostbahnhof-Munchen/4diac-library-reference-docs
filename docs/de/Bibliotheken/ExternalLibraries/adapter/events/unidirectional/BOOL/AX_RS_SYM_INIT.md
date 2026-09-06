@@ -12,35 +12,35 @@ Der Funktionsblock **AX_RS_SYM_INIT** realisiert einen ereignisgesteuerten, bist
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar                                   |
-|-------|-------|---------------------------------------------|
-| INIT  | EInit | Initialisierungsanforderung (mit QI, Q_INIT) |
-| R     | Event | Reset-Signal (setzt Q zurück)               |
-| S     | Event | Set-Signal (setzt Q)                        |
+| Name | Typ   | Kommentar                                    |
+| ---- | ----- | -------------------------------------------- |
+| INIT | EInit | Initialisierungsanforderung (mit QI, Q_INIT) |
+| R    | Event | Reset-Signal (setzt Q zurück)                |
+| S    | Event | Set-Signal (setzt Q)                         |
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                                   |
-|-------|-------|---------------------------------------------|
-| INITO | EInit | Initialisierungsbestätigung (mit QO)        |
+| Name  | Typ   | Kommentar                            |
+| ----- | ----- | ------------------------------------ |
+| INITO | EInit | Initialisierungsbestätigung (mit QO) |
 
 ### **Daten-Eingänge**
 
-| Name   | Typ  | Kommentar                                     |
-|--------|------|-----------------------------------------------|
-| QI     | BOOL | Ereignis-Qualifier – steuert die Ausführung   |
+| Name   | Typ  | Kommentar                                      |
+| ------ | ---- | ---------------------------------------------- |
+| QI     | BOOL | Ereignis-Qualifier – steuert die Ausführung    |
 | Q_INIT | BOOL | Gewünschter Wert von Q bei der Initialisierung |
 
 ### **Daten-Ausgänge**
 
-| Name | Typ  | Kommentar                                |
-|------|------|------------------------------------------|
+| Name | Typ  | Kommentar                                                 |
+| ---- | ---- | --------------------------------------------------------- |
 | QO   | BOOL | Ereignis-Qualifier – gibt QI an INITO oder bei S/R weiter |
 
 ### **Adapter**
 
 | Name | Typ                                | Kommentar                                |
-|------|------------------------------------|------------------------------------------|
+| ---- | ---------------------------------- | ---------------------------------------- |
 | Q    | adapter::types::unidirectional::AX | Adapter für den Wert des Flip-Flops (D1) |
 
 ## Funktionsweise
@@ -72,13 +72,13 @@ Die `QI`-Variable fungiert als Qualifier: Nur wenn `QI = TRUE`, werden die Opera
 
 ## Zustandsübersicht
 
-| Zustand | Beschreibung                                      |
-|---------|---------------------------------------------------|
-| START   | Warten auf INIT-Ereignis                          |
-| Init    | Initialisierung: Setzt QO und wählt Zielzustand   |
-| DeInit  | Deinitialisierung: Setzt QO = FALSE               |
-| SET     | Aktiver Set-Zustand (Q.D1 = TRUE)                 |
-| RESET   | Aktiver Reset-Zustand (Q.D1 = FALSE)              |
+| Zustand | Beschreibung                                    |
+| ------- | ----------------------------------------------- |
+| START   | Warten auf INIT-Ereignis                        |
+| Init    | Initialisierung: Setzt QO und wählt Zielzustand |
+| DeInit  | Deinitialisierung: Setzt QO = FALSE             |
+| SET     | Aktiver Set-Zustand (Q.D1 = TRUE)               |
+| RESET   | Aktiver Reset-Zustand (Q.D1 = FALSE)            |
 
 **Wichtige Transitionen:**
 

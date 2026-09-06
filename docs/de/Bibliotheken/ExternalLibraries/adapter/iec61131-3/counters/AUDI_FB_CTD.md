@@ -16,46 +16,46 @@ Dieser Baustein feuert bei jeder Aktualisierung – unabhängig davon, ob der Ei
 
 Der Baustein besitzt keine direkten Ereignis-Eingänge. Alle Ereignisse werden über die angeschlossenen **Sockets** (Adapter-Eingänge) zugeführt.
 
-| Socket (Adapter) | Typ   | Beschreibung                              |
-|------------------|-------|-------------------------------------------|
-| `CD`             | `AX`  | Count-Down-Ereignis (Abwärtszählen)       |
-| `LD`             | `AX`  | Load-Ereignis (Laden des Preset-Wertes)   |
-| `PV`             | `AUDI`| Preset-Wert-Ereignis (Vorgabewert setzen) |
+| Socket (Adapter) | Typ    | Beschreibung                              |
+| ---------------- | ------ | ----------------------------------------- |
+| `CD`             | `AX`   | Count-Down-Ereignis (Abwärtszählen)       |
+| `LD`             | `AX`   | Load-Ereignis (Laden des Preset-Wertes)   |
+| `PV`             | `AUDI` | Preset-Wert-Ereignis (Vorgabewert setzen) |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ    | Beschreibung                                      |
-|------|--------|---------------------------------------------------|
-| `CNF`| Event  | Bestätigungsereignis nach jeder Verarbeitung      |
+| Name  | Typ   | Beschreibung                                 |
+| ----- | ----- | -------------------------------------------- |
+| `CNF` | Event | Bestätigungsereignis nach jeder Verarbeitung |
 
 ### **Daten-Eingänge**
 
 Die Daten werden über die Sockets als Teil des Adapter-Protokolls übertragen.
 
-| Socket (Adapter) | Daten-Typ | Bedeutung                               |
-|------------------|-----------|-----------------------------------------|
-| `CD.D1`          | BOOL      | Befehl zum Herunterzählen (TRUE = zählen)|
-| `LD.D1`          | BOOL      | Befehl zum Laden des Preset-Wertes      |
-| `PV.D1`          | UDINT     | Vorgabewert für den Zähler (Preset)     |
+| Socket (Adapter) | Daten-Typ | Bedeutung                                 |
+| ---------------- | --------- | ----------------------------------------- |
+| `CD.D1`          | BOOL      | Befehl zum Herunterzählen (TRUE = zählen) |
+| `LD.D1`          | BOOL      | Befehl zum Laden des Preset-Wertes        |
+| `PV.D1`          | UDINT     | Vorgabewert für den Zähler (Preset)       |
 
 ### **Daten-Ausgänge**
 
 Die Ausgangsdaten werden über die Plugs ausgegeben.
 
-| Plug (Adapter) | Daten-Typ | Bedeutung                           |
-|----------------|-----------|-------------------------------------|
-| `Q.D1`         | BOOL      | Zählerstand = 0 (TRUE wenn erreicht)|
-| `CV.D1`        | UDINT     | Aktueller Zählerwert                |
+| Plug (Adapter) | Daten-Typ | Bedeutung                            |
+| -------------- | --------- | ------------------------------------ |
+| `Q.D1`         | BOOL      | Zählerstand = 0 (TRUE wenn erreicht) |
+| `CV.D1`        | UDINT     | Aktueller Zählerwert                 |
 
 ### **Adapter**
 
-| Richtung | Name | Typ   | Beschreibung                             |
-|----------|------|-------|------------------------------------------|
-| Socket   | `CD` | `AX`  | Ereignisgesteuerter Zählimpuls (abwärts) |
-| Socket   | `LD` | `AX`  | Ereignisgesteuertes Laden des Presets    |
-| Socket   | `PV` | `AUDI`| Ereignisgesteuerte Vorgabe des Presets   |
-| Plug     | `Q`  | `AX`  | Ausgangssignal: Zählerstand = 0          |
-| Plug     | `CV` | `AUDI`| Ausgangssignal: aktueller Zählerwert     |
+| Richtung | Name | Typ    | Beschreibung                             |
+| -------- | ---- | ------ | ---------------------------------------- |
+| Socket   | `CD` | `AX`   | Ereignisgesteuerter Zählimpuls (abwärts) |
+| Socket   | `LD` | `AX`   | Ereignisgesteuertes Laden des Presets    |
+| Socket   | `PV` | `AUDI` | Ereignisgesteuerte Vorgabe des Presets   |
+| Plug     | `Q`  | `AX`   | Ausgangssignal: Zählerstand = 0          |
+| Plug     | `CV` | `AUDI` | Ausgangssignal: aktueller Zählerwert     |
 
 ## Funktionsweise
 

@@ -55,11 +55,13 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 - `INIT` with child and parent object IDs
 - `INITO` confirms operational readiness
+
 1. **Position Change**:
 
 - `REQ` with relative coordinate changes
 - Values are interpreted as signed 8-bit
 - `CNF` returns the result and previous values
+
 1. **Error Handling**:
 
 - ISO-standardized error codes
@@ -74,18 +76,18 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## Position Change Range
 
-| Parameter | Range | Description |
-|-----------|------------|----------------------------|
-| X Change| -128 - +127| Horizontal Displacement |
-| Y-Change | -128 - +127 | Vertical Shift |
+| Parameter | Range       | Description             |
+| --------- | ----------- | ----------------------- |
+| X Change  | -128 - +127 | Horizontal Displacement |
+| Y-Change  | -128 - +127 | Vertical Shift          |
 
 ## Return Codes (s16result)
 
-| Code | Constant | Meaning |
-| ------ | ------------------------- | ------------------------------------ |
-| 0 | VT_E_NO_ERR | Success |
-| -6 | VT_E_OVERFLOW | Invalid Position Values |
-| -128 | VT_E_HANDLE_INVALID | Invalid Object ID |
+| Code | Constant            | Meaning                 |
+| ---- | ------------------- | ----------------------- |
+| 0    | VT_E_NO_ERR         | Success                 |
+| -6   | VT_E_OVERFLOW       | Invalid Position Values |
+| -128 | VT_E_HANDLE_INVALID | Invalid Object ID       |
 
 ## Application Scenarios
 
@@ -96,11 +98,11 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## ⚖️ Comparison with Similar Building Blocks
 
-| Feature | Q_ChildLocation | VtAbsolutePosition | VtGroupMove |
-| --------------- | ----------------- | -------------------- | ------------- |
-| ISO Standard | ✔ | ✖ | ✖ |
-| Movement | Relative | Absolute | Groups |
-| Value Range | ±127 pixels | 0-65535 pixels | ±127 pixels |
+| Feature      | Q_ChildLocation | VtAbsolutePosition | VtGroupMove |
+| ------------ | --------------- | ------------------ | ----------- |
+| ISO Standard | ✔               | ✖                  | ✖           |
+| Movement     | Relative        | Absolute           | Groups      |
+| Value Range  | ±127 pixels     | 0-65535 pixels     | ±127 pixels |
 
 ## Conclusion
 

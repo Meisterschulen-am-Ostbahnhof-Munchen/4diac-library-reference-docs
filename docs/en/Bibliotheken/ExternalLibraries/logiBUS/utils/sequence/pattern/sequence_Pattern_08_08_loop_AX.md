@@ -54,11 +54,13 @@ The component operates as a finite state machine with a cyclic structure:
 - If bit 1 of `P_S1` is set, `Q2.D1` is set to TRUE, and so on.
 
 - Simultaneously, the event `E1` is triggered on all adapters `Q1` through `Q8` to signal the change.
+
 1. **Transitions**: The transition to the next state occurs when:
 
 - The explicit event is received (e.g., `S1_S2`).
 - OR the configured time (`DT_S1_S2`) has expired (via the `timeOut` adapter).
 - 1. **Cycle**: After **State_08**, the process transitions back to **State_01** (`S8_S1` or timeout), creating an infinite loop.
+
 1. **Reset**: The event `RESET` immediately interrupts the process, sets all outputs (`Q1` to `Q8`) to `FALSE`, and sets the state number to 0.
 
 ## Technical Features
@@ -69,18 +71,18 @@ The component operates as a finite state machine with a cyclic structure:
 
 ## State Overview
 
-| State ID | Name | Description | Output Logic | Transition to |
-| :--- | :--- | :--- | :--- | :--- |
-| **0** | xSTART | Waiting State / Reset | None | State_01 (at START_S1) |
-| **1** | sState_01 | Step 1 | Q1-Q8 according to P_S1 | State_02 |
-| **2** | sState_02 | Step 2 | Q1-Q8 according to P_S2 | State_03 |
-| **3** | sState_03 | Step 3 | Q1-Q8 according to P_S3 | State_04 |
-| **4** | sState_04 | Step 4 | Q1-Q8 according to P_S4 | State_05 |
-| **5** | sState_05 | Step 5 | Q1-Q8 according to P_S5 | State_06 |
-| **6** | sState_06 | Step 6 | Q1-Q8 according to P_S6 | State_07 |
-| **7** | sState_07 | Step 7 | Q1-Q8 according to P_S7 | State_08 |
-| **8** | sState_08 | Step 8 | Q1-Q8 according to P_S8 | State_01 (Loop) |
-| **-** | sRESET | Reset State | Q1-Q8 = FALSE | xSTART |
+| State ID | Name      | Description           | Output Logic            | Transition to          |
+| :------- | :-------- | :-------------------- | :---------------------- | :--------------------- |
+| **0**    | xSTART    | Waiting State / Reset | None                    | State_01 (at START_S1) |
+| **1**    | sState_01 | Step 1                | Q1-Q8 according to P_S1 | State_02               |
+| **2**    | sState_02 | Step 2                | Q1-Q8 according to P_S2 | State_03               |
+| **3**    | sState_03 | Step 3                | Q1-Q8 according to P_S3 | State_04               |
+| **4**    | sState_04 | Step 4                | Q1-Q8 according to P_S4 | State_05               |
+| **5**    | sState_05 | Step 5                | Q1-Q8 according to P_S5 | State_06               |
+| **6**    | sState_06 | Step 6                | Q1-Q8 according to P_S6 | State_07               |
+| **7**    | sState_07 | Step 7                | Q1-Q8 according to P_S7 | State_08               |
+| **8**    | sState_08 | Step 8                | Q1-Q8 according to P_S8 | State_01 (Loop)        |
+| **-**    | sRESET    | Reset State           | Q1-Q8 = FALSE           | xSTART                 |
 
 ## Application Scenarios
 

@@ -32,11 +32,11 @@ Since it is a purely adapter-based function block, `AR_DIV_2_UNGATED` has no dir
 
 ### **Adapters**
 
-| Type | Name | Adapter Type | Description |
-| :--- | :--- | :--- | :--- |
+| Type               | Name  | Adapter Type                         | Description                                    |
+| :----------------- | :---- | :----------------------------------- | :--------------------------------------------- |
 | **Socket** (Input) | `IN1` | `adapter::types::unidirectional::AR` | First input value (dividend) for the division. |
 | **Socket** (Input) | `IN2` | `adapter::types::unidirectional::AR` | Second input value (divisor) for the division. |
-| **Plug** (Output) | `OUT` | `adapter::types::unidirectional::AR` | The result of the division (quotient). |
+| **Plug** (Output)  | `OUT` | `adapter::types::unidirectional::AR` | The result of the division (quotient).         |
 
 ## Functionality
 
