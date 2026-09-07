@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` ist die Klick-Toggle-Variante (SR-Latch) von [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md): Ein Klick auf den VT-Button oder ein OPC-UA-Remote-Kommando schaltet den Ausgang EIN, ein zweiter Klick schaltet ihn wieder AUS — unabhängig davon, wie lange gedrückt wird. Der Baustein ist aufbewahrt für den Fall, dass dieses Klick-Toggle-Verhalten wieder gebraucht wird; seit 2026-09-07 verwendet `Button_IXA_TO_logiBUS_QXA_BG_OPC` selbst stattdessen ein einfaches, tastendes `AX_OR_2`. Beide Bausteine teilen dasselbe Interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) und sind 1:1 austauschbar.
+`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` ersetzt bei [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) die einfache ODER-Verknüpfung (`AX_OR_2`) durch eine Flankenerkennungs-/Merge-/Latch-Kette (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). Das ist **kein** echtes Klick-Toggle: `AX_ASR_RF_TRIG` bildet die steigende Flanke (Drücken) auf `SET` und die fallende Flanke (Loslassen) auf `RESET` ab, `ASR_AX_SR` setzt/rücksetzt entsprechend — bei nur einer aktiven Quelle verhält sich der Baustein also tastend, genau wie die `AX_OR_2`-Variante (EIN nur solange gedrückt). Der Unterschied zeigt sich erst, wenn sich VT-Taste und OPC-UA-Kommando zeitlich überlappen: Anders als bei einer echten ODER-Verknüpfung (die EIN bleibt, solange irgendeine Quelle aktiv ist) gewinnt hier immer die zuletzt eingetroffene Flanke, unabhängig davon, von welcher Quelle sie stammt — löst z. B. die OPC-UA-Seite ein Loslassen aus, während die VT-Taste noch gehalten wird, schaltet der Ausgang trotzdem sofort AUS. Der Baustein ist aufbewahrt für Anwendungsfälle, in denen genau dieses Last-Wins-Verhalten zwischen zwei Quellen gebraucht wird. Beide Bausteine teilen dasselbe Interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) und sind schnittstellenkompatibel — ihr Schaltverhalten unterscheidet sich jedoch in genau diesem Überlappungsfall.
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -35,21 +35,21 @@
 
 ## Technische Besonderheiten
 
-- **Klick-Toggle über ASR-Latch**: Im Unterschied zur tastenden (momentary) `AX_OR_2`-Variante wandelt dieser Baustein jede Betätigung in ein Set/Reset-Ereignis um, das in `ASR_AX_SR` gelatcht wird — der Ausgang bleibt nach Loslassen im zuletzt gesetzten Zustand.
-- **Zwei unabhängige Toggle-Quellen**: VT-Button und OPC-UA-Kommando lösen je eigenständig ein Toggle aus; `ASR_MERGE_2` führt beide zu einem gemeinsamen Latch-Eingang zusammen.
-- **Identisches Außeninterface**: Trotz komplett anderer interner Logik ist die Schnittstelle identisch zu `Button_IXA_TO_logiBUS_QXA_BG_OPC`, sodass beide Varianten austauschbar instanziiert werden können.
+- **Last-Wins über ASR-Latch, kein echtes Toggle**: Jede Betätigung erzeugt je Quelle ein Set- (Drücken) bzw. Reset-Ereignis (Loslassen); `ASR_AX_SR` latcht daraus den gemeinsamen Zustand. Bei nur einer aktiven Quelle ist das Verhalten rein tastend (EIN nur solange gedrückt) — identisch zur `AX_OR_2`-Variante. Erst wenn sich beide Quellen überlappen, zeigt sich der Unterschied: die zuletzt eingetroffene Flanke (Set oder Reset, unabhängig von welcher Quelle) bestimmt den Zustand, nicht eine kontinuierliche ODER-Verknüpfung.
+- **Zwei unabhängige Last-Wins-Quellen**: VT-Button und OPC-UA-Kommando liefern je eigenständig Set-/Reset-Ereignisse; `ASR_MERGE_2` führt beide zu einem gemeinsamen Latch-Eingang zusammen, ohne eine Quelle zu priorisieren.
+- **Schnittstellenkompatibles Außeninterface**: Die Schnittstelle ist identisch zu `Button_IXA_TO_logiBUS_QXA_BG_OPC`, sodass beide Varianten austauschbar instanziiert werden können. Das Schaltverhalten ist aber nur bei einer einzelnen aktiven Quelle gleich — bei überlappender Nutzung beider Quellen unterscheidet es sich (Last-Wins vs. echte ODER-Verknüpfung).
 
 ## Anwendungsszenarien
 
-- Ausgänge, die per einzelnem Klick ein-/ausgeschaltet werden sollen (Toggle-Verhalten), statt nur solange aktiv zu sein, wie die Taste gehalten wird.
+- Ausgänge mit zwei unabhängigen Schaltquellen (z. B. lokale VT-Taste UND Remote-OPC-UA-Kommando), bei denen die jeweils zuletzt eingetroffene Aktion (Drücken oder Loslassen, von welcher Quelle auch immer) gewinnen soll, statt dass eine dauerhaft aktive Quelle die andere blockiert — genau das würde eine echte ODER-Verknüpfung tun.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-Gegenüber [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) (aktuell: tastendes `AX_OR_2`) ersetzt dieser Baustein die einfache ODER-Verknüpfung durch eine vollständige Flankenerkennungs-/Merge-/Latch-Kette (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`) für Klick-Toggle-Verhalten.
+Gegenüber [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) (aktuell: tastendes `AX_OR_2`) ersetzt dieser Baustein die einfache ODER-Verknüpfung durch eine Flankenerkennungs-/Merge-/Latch-Kette (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). Bei nur einer aktiven Quelle ist das Verhalten identisch (tastend); der Unterschied zeigt sich nur, wenn sich beide Quellen überlappen (Last-Wins statt ODER).
 
 ## Zusammenfassung
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` bietet dieselbe Grundfunktion wie `Button_IXA_TO_logiBUS_QXA_BG_OPC`, jedoch mit Klick-Toggle statt tastendem Verhalten — bei identischem Außeninterface direkt austauschbar.
+`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` bietet bei nur einer aktiven Quelle dieselbe tastende Grundfunktion wie `Button_IXA_TO_logiBUS_QXA_BG_OPC` — der Unterschied liegt im Last-Wins-Verhalten bei zeitlich überlappenden VT-/OPC-UA-Kommandos, nicht in einem Klick-Toggle. Beide Bausteine sind schnittstellenkompatibel, aber nicht in jedem Szenario verhaltensgleich.
 
 ---
 

@@ -41,7 +41,7 @@
 
 - **No local physical output**: The actuator is located on a separate module; this block only maps operation and status feedback to the operator module.
 
-- **Separate nodes for command and status**: `ID_WRITE_REMOTE`/`ID_SUBSCRIBE` (or the nodes derived from them) must be different OPC UA nodes to avoid a feedback loop—the same principle as with `MERGE_SWITCH_1_QXA_OPC` and the other bidirectional blocks in this system.
+- **Separate local nodes for web override and web status**: `ID_WRITE_REMOTE` (write) and `ID_SUBSCRIBE` (read) both point at the remote target module and may legitimately reference the same remote node there — write and subscribe are different OPC UA operations, so this poses no feedback risk on this module. The actual feedback-loop risk lies with the two *local* nodes on this module: `ID_WEB_READ` (read by `Command` via `AX_SUBSCRIBE_1` and merged into the command OR) and `ID_STATUS_WEB` (written by `Status` via `AX_PUBLISH_1` with the state echoed back from the target module) must be different local OPC UA nodes — otherwise `Command` would read the state republished by `Status` as if it were a manual web override and write it straight back to the target module as a new command.
 
 
 ## Application Scenarios

@@ -53,8 +53,7 @@ Compared to [`INI_OPC_PARAM`](./INI_OPC_PARAM.md)], the only difference is the a
 
 `INI_OPC_PARAM_AR` is `INI_OPC_PARAM` with an additional `AR` output for local reuse of the persistently stored parameter.
 
-
-[`INI_OPC_PARAM_AR`] ---
+---
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 

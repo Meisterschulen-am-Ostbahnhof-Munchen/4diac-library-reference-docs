@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` is the SoftKey counterpart to [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md): A VT SoftKey and an OPC UA remote command are each converted into set/reset events via edge detection, combined in a common latch, and control a single digital logiBUS output—including VT status display and OPC UA echo. One click on the SoftKey or a remote command turns the output ON, a second click turns it OFF (click-toggle behavior).
+`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` is the SoftKey counterpart to [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md): A VT SoftKey and an OPC UA remote command are each converted into set/reset events via edge detection and combined in a common latch. This is **not** a true click-toggle: pressing triggers `SET`, releasing triggers `RESET` — with only one source active, that's purely momentary behavior. The difference from a simple OR gate only shows up once the SoftKey and the OPC UA command overlap in time: whichever edge arrives last always wins, regardless of source (last-wins), instead of the output staying ON as long as either source is active.
 
 
 
@@ -49,26 +49,23 @@
 
 ## Technical Features
 
-- **Click toggle via ASR latch**: As with `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`, the output remains in its last set state after release—unlike a momentary OR gate.
+- **Last-wins via ASR latch, not a real toggle**: As with `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`, the behavior is purely momentary with only one source active (ON only while held). The difference from a momentary OR gate only shows up once both sources overlap: whichever edge (set or reset, from either source) arrives last determines the state.
 
-- **Two independent toggle sources**: A soft key and an OPC UA command each trigger a toggle independently; `ASR_MERGE_2` combines both into a common latch input.
+- **Two independent last-wins sources**: A soft key and an OPC UA command each independently deliver set/reset events; `ASR_MERGE_2` combines both into a common latch input without prioritizing either source.
 
 ## Application Scenarios
 
-- Digital outputs that are to be switched on/off via a soft key or remote command (toggle behavior), with VT status display and OPC UA feedback.
-
+- Digital outputs with two independent switching sources (soft key AND remote OPC UA command) where whichever action arrives last should win, instead of one permanently active source blocking the other, with VT status display and OPC UA feedback.
 
 ## Comparison with Similar Modules
 
-Structurally identical to [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md), except that `Softkey_IXA` is used instead of `Button_IXA` as the local control source. Compared to the simpler [`Softkey_IXA_TO_logiBUS_QXA_BG`](./Softkey_IXA_TO_logiBUS_QXA_BG.md) (only local softkey, no OPC UA connection, no latch logic), this module includes the complete edge detection/merge/latch chain as well as OPC UA subscribe/publish functionality.
+Structurally identical to [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md), except that `Softkey_IXA` is used instead of `Button_IXA` as the local control source — including the same last-wins characteristic (not click-toggle). Compared to the simpler [`Softkey_IXA_TO_logiBUS_QXA_BG`](./Softkey_IXA_TO_logiBUS_QXA_BG.md) (only local softkey, no OPC UA connection, no latch logic), this module includes the complete edge detection/merge/latch chain as well as OPC UA subscribe/publish functionality.
 
 ## Summary
 
-`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` switches a digital logiBUS output via softkey OR remote OPC UA command using a click-toggle method, including VT status color and OPC UA echo.
+`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` switches a digital logiBUS output via a soft key and/or a remote OPC UA command, including VT status color and OPC UA echo. With only one source active the behavior is purely momentary; when both sources overlap, last-wins applies instead of a true OR gate.
 
-
-
-[`Softkey_IXA_TO_logiBUS_QXA_BG_OPC`] ---
+---
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 

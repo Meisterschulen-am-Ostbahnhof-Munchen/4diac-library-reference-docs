@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsblock `ILOCK_CONFLICT_TRIP_PROTECT_AX` ist die Adapter-Version von `ILOCK_CONFLICT_TRIP_PROTECT`: Er kombiniert die Trip-bei-Konflikt-Logik von `ILOCK_CONFLICT_TRIP_AX` mit der Schutz-Totzeit von `ILOCK_BLOCK_PROTECT_AX`. Der zuerst aktive Eingang wird priorisiert; eine gleichzeitige Aktivierung beider Richtungen löst sofort einen Trip aus, der nur über `EI_RESET` zurückgesetzt werden kann. Nach Freigabe des aktiven Eingangs wartet der Baustein zusätzlich die konfigurierbare Zeit `DT_PROTECT` ab, bevor er die Eingänge neu bewertet. Die gesamte Kommunikation läuft über Adapter vom Typ `unidirectional::AX`.
+Der Funktionsblock `ILOCK_CONFLICT_TRIP_PROTECT_AX` ist die Adapter-Version von `ILOCK_CONFLICT_TRIP_PROTECT`: Er kombiniert die Trip-bei-Konflikt-Logik von `ILOCK_CONFLICT_TRIP_AX` mit der Schutz-Totzeit von `ILOCK_BLOCK_PROTECT_AX`. Der zuerst aktive Eingang wird priorisiert; eine gleichzeitige Aktivierung beider Richtungen löst sofort einen Trip aus, der nur über `EI_RESET` zurückgesetzt werden kann. Nach Freigabe des aktiven Eingangs wartet der Baustein zusätzlich die konfigurierbare Zeit `DT_PROTECT` ab, bevor er die Eingänge neu bewertet. Die Prozessdaten (`UP_IN`/`DOWN_IN`/`UP_OUT`/`DOWN_OUT`/`TRIP_OUT`) laufen über Adapter vom Typ `unidirectional::AX`; der Schutzzeit-Timer verwendet zusätzlich den Adapter `iec61499::events::ATimeOut` (`timeOut`).
 
 ## Schnittstellenstruktur
 
@@ -72,7 +72,7 @@ Zusätzlich existiert in den Zuständen `STOP`, `UP` und `DOWN` je eine Selbstsc
 
 ## Technische Besonderheiten
 
-- **Reine Adapter-Schnittstelle:** Alle Prozessdaten werden über `unidirectional::AX`-Adapter geführt, es gibt keine klassischen Event-/Datenports außer `EI_RESET`, `UPDATE` und `DT_PROTECT`.
+- **Reine Adapter-Schnittstelle:** Alle Prozessdaten werden über `unidirectional::AX`-Adapter geführt (der Schutzzeit-Timer zusätzlich über einen `iec61499::events::ATimeOut`-Adapter), es gibt keine klassischen Event-/Datenports außer `EI_RESET`, `UPDATE` und `DT_PROTECT`.
 - **Dynamische Totzeit:** Das Ereignis `UPDATE` erlaubt das Ändern von `DT_PROTECT` zur Laufzeit, ohne den Automaten zu verlassen – wirksam wird der neue Wert beim nächsten Eintritt in `UP_STOP`/`DOWN_STOP`.
 - **Sofortiger Trip bei Konflikt:** Wie bei der Nicht-Adapter-Variante wird ein gleichzeitiger Befehl in beide Richtungen ohne Verzögerung erkannt.
 - **Reset-Bedingung:** `EI_RESET` wirkt nur, wenn beide Eingangsadapter `D1 = FALSE` melden.
@@ -101,4 +101,4 @@ Gegenüber `ILOCK_CONFLICT_TRIP_AX` ergänzt dieser Baustein die Zustände `UP_S
 
 ## Fazit
 
-`ILOCK_CONFLICT_TRIP_PROTECT_AX` vereint die Adapter-basierte Konflikterkennung mit Quittierpflicht und eine konfigurierbare Schutz-Totzeit in einem Baustein. Er eignet sich für modulare Automatisierungslösungen, die eine strikte gegenseitige Ausschließlichkeit zweier Richtungen mit Nachlaufzeit und Laufzeit-Parametrierbarkeit kombinieren müssen.
+`ILOCK_CONFLICT_TRIP_PROTECT_AX` vereint die Adapter-basierte Konflikterkennung mit Quittierpflicht und einer konfigurierbaren Schutz-Totzeit in einem Baustein. Er eignet sich für modulare Automatisierungslösungen, die eine strikte gegenseitige Ausschließlichkeit zweier Richtungen mit Nachlaufzeit und Laufzeit-Parametrierbarkeit kombinieren müssen.

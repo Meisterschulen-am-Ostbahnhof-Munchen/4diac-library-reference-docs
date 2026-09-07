@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The function block `ILOCK_CONFLICT_TRIP_PROTECT_AX` is the adapter version of `ILOCK_CONFLICT_TRIP_PROTECT`: It combines the trip-on-conflict logic of `ILOCK_CONFLICT_TRIP_AX` with the protection dead time of `ILOCK_BLOCK_PROTECT_AX`. The first active input is prioritized; simultaneous activation of both directions immediately triggers a trip, which can only be reset via `EI_RESET`. After the active input is enabled, the block additionally waits for the configurable time `DT_PROTECT` before re-evaluating the inputs. All communication takes place via adapters of type `unidirectional::AX`.
+The function block `ILOCK_CONFLICT_TRIP_PROTECT_AX` is the adapter version of `ILOCK_CONFLICT_TRIP_PROTECT`: It combines the trip-on-conflict logic of `ILOCK_CONFLICT_TRIP_AX` with the protection dead time of `ILOCK_BLOCK_PROTECT_AX`. The first active input is prioritized; simultaneous activation of both directions immediately triggers a trip, which can only be reset via `EI_RESET`. After the active input is enabled, the block additionally waits for the configurable time `DT_PROTECT` before re-evaluating the inputs. The process data (`UP_IN`/`DOWN_IN`/`UP_OUT`/`DOWN_OUT`/`TRIP_OUT`) is routed via adapters of type `unidirectional::AX`; the protection-time timer additionally uses the adapter `iec61499::events::ATimeOut` (`timeOut`).
 
 ## Interface Structure
 
@@ -84,7 +84,7 @@ Additionally, in states `STOP`, `UP`, and `DOWN`, there is a self-loop transitio
 
 ## Technical Features
 
-- **Pure Adapter Interface:** All process data is routed via the `unidirectional::AX` adapter. There are no traditional event/data ports except for `EI_RESET`, `UPDATE`, and `DT_PROTECT`.
+- **Pure Adapter Interface:** All process data is routed via `unidirectional::AX` adapters (the protection-time timer additionally via an `iec61499::events::ATimeOut` adapter). There are no traditional event/data ports except for `EI_RESET`, `UPDATE`, and `DT_PROTECT`.
 
 - **Dynamic Dead Time:** The `UPDATE` event allows `DT_PROTECT` to be modified at runtime without exiting the automaton. The new value takes effect upon the next entry into `UP_STOP`/`DOWN_STOP`.
 
@@ -117,12 +117,8 @@ Additionally, in states `STOP`, `UP`, and `DOWN`, there is a self-loop transitio
 
 ## Comparison with similar building blocks
 
-Compared to `ILOCK_CONFLICT_TRIP_AX`, this building block adds the states `UP_STOP`, `DOWN_STOP`, `EVAL`, as well as the `timeOut` adapter and the `UPDATE` event.The `ILOCK_BLOCK_PROTECT_AX` interface differs in that a simultaneous command in both directions is not silently ignored, but rather treated as an explicit `TRIP` state, which requires a `EI_RESET` response. Compared to the non-adapter variant `ILOCK_CONFLICT_TRIP_PROTECT`, the interface is fully adapter-based, which facilitates integration into modular, adapter-oriented systems.
+Compared to `ILOCK_CONFLICT_TRIP_AX`, this building block adds the states `UP_STOP`, `DOWN_STOP`, `EVAL`, as well as the `timeOut` adapter and the `UPDATE` event. Compared to `ILOCK_BLOCK_PROTECT_AX`, it differs in that a simultaneous command in both directions is not silently ignored, but rather treated as an explicit `TRIP` state, which requires an `EI_RESET` response. Compared to the non-adapter variant `ILOCK_CONFLICT_TRIP_PROTECT`, the interface is fully adapter-based, which facilitates integration into modular, adapter-oriented systems.
 
-
-The `ILOCK_BLOCK_PROTECT_AX` interface differs in that a simultaneous command in both directions is not silently ignored, but rather treated as an explicit `TRIP` state, requiring a `EI_RESET` response. In contrast to the non-adapter variant `ILOCK_CONFLICT_TRIP_PROTECT`, the interface is fully adapter-based, which facilitates integration into modular, adapter-oriented systems.
-
-
-``ILOCK_BLOCK_PROTECT_AX``## Conclusion
+## Conclusion
 
 `ILOCK_CONFLICT_TRIP_PROTECT_AX` combines adapter-based conflict detection with mandatory acknowledgment and a configurable protection dead time in a single module. It is suitable for modular automation solutions that require strict mutual exclusivity of two directions combined with overrun time and runtime parameterization.

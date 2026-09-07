@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` is the click-toggle variant (SR latch) of [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md): A click on the VT button or an OPC UA remote command switches the output ON, a second click switches it OFF again — regardless of how long the button is pressed. The block is retained in case this click-toggle behavior is needed again; since 2026-09-07, `Button_IXA_TO_logiBUS_QXA_BG_OPC` itself uses a simple momentary latch `AX_OR_2` instead. Both function blocks share the same interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) and are interchangeable.
+`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` replaces the simple OR gate (`AX_OR_2`) of [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) with an edge-detection/merge/latch chain (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). This is **not** a true click-toggle: `AX_ASR_RF_TRIG` maps the rising edge (press) to `SET` and the falling edge (release) to `RESET`, so with only one source active the block behaves exactly like the momentary `AX_OR_2` variant (ON only while held). The difference only shows up once the VT button and the OPC UA command overlap in time: unlike a true OR gate (which stays ON as long as either source is active), the last edge to arrive always wins here, regardless of which source it came from — e.g. if the OPC UA side sends a release while the VT button is still held, the output switches OFF immediately anyway. The block is retained for use cases that need exactly this last-wins behavior between two sources. Both function blocks share the same interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) and are interface-compatible — their switching behavior differs only in this overlap case.
 
 ## Function Blocks (FBs) Used
 
@@ -50,24 +50,24 @@
 
 ## Technical Features
 
-- **Click toggle via ASR latch**: Unlike the momentary `AX_OR_2` variant, this block converts each actuation into a set/reset event, which is latched in `ASR_AX_SR` — the output remains in the last set state after release.
+- **Last-wins via ASR latch, not a real toggle**: Each actuation produces a set (press) or reset (release) event per source; `ASR_AX_SR` latches the combined result. With only one source active, the behavior is purely momentary (ON only while held) — identical to the `AX_OR_2` variant. The difference only shows up once both sources overlap: whichever edge (set or reset, from either source) arrives last determines the state, rather than a continuous OR.
 
-- **Two independent toggle sources**: The VT button and the OPC UA command each trigger a toggle independently; `ASR_MERGE_2` combines both into a common latch input.
+- **Two independent last-wins sources**: The VT button and the OPC UA command each independently deliver set/reset events; `ASR_MERGE_2` combines both into a common latch input without prioritizing either source.
 
-- **Identical external interface**: Despite completely different internal logic, the interface is identical to `Button_IXA_TO_logiBUS_QXA_BG_OPC`, so both variants can be instantiated interchangeably.
+- **Interface-compatible external interface**: The interface is identical to `Button_IXA_TO_logiBUS_QXA_BG_OPC`, so both variants can be instantiated interchangeably. The switching behavior is only identical with a single active source — with overlapping use of both sources it differs (last-wins vs. a true OR gate).
 
 ## Application Scenarios
 
-- Outputs that should be switched on/off with a single click (toggle behavior), instead of only being active while the button is held.
+- Outputs with two independent switching sources (e.g. a local VT button AND a remote OPC UA command) where whichever action arrives last (press or release, from either source) should win, instead of one permanently active source blocking the other — which is exactly what a true OR gate would do.
 
 
 ## Comparison with Similar Modules
 
-Compared to [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) (currently: tactile `AX_OR_2`), this module replaces the simple OR operation with a complete edge detection/merge/latch chain (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`) for click-toggle behavior.
+Compared to [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) (currently: tactile `AX_OR_2`), this module replaces the simple OR operation with an edge-detection/merge/latch chain (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). With only one source active the behavior is identical (momentary); the difference only shows up once both sources overlap (last-wins instead of OR).
 
 ## Summary
 
-`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` offers the same basic functionality as `Button_IXA_TO_logiBUS_QXA_BG_OPC`, but with click-toggle behavior instead of tactile behavior—directly interchangeable with an identical external interface.
+With only one source active, `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` offers the same momentary basic functionality as `Button_IXA_TO_logiBUS_QXA_BG_OPC` — the difference is last-wins behavior for overlapping VT/OPC UA commands, not a click-toggle. Both blocks are interface-compatible, but not behaviorally identical in every scenario.
 
 
 ---

@@ -31,7 +31,7 @@ Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenstän
 
 - **Reiner Wrapper seit Version 1.2**: Die Zerlegung in `Command`/`Status` ändert nichts am Verhalten, erlaubt aber die unabhängige Wiederverwendung beider Hälften (z. B. `AX_SUBSCRIBE_BG3_WEB_OPC` allein für reine Statusanzeigen).
 - **Kein lokaler physischer Ausgang**: Der Aktor sitzt auf einem anderen Modul; dieser Baustein bildet nur Bedienung und Statusrückmeldung auf dem Bedienmodul ab.
-- **Getrennte Knoten für Kommando und Status**: `ID_WRITE_REMOTE`/`ID_SUBSCRIBE` (bzw. die davon abgeleiteten Knoten) müssen unterschiedliche OPC-UA-Knoten sein, um einen Feedback-Loop zu vermeiden — dasselbe Prinzip wie bei `MERGE_SWITCH_1_QXA_OPC` und den anderen bidirektionalen Bausteinen dieses Systems.
+- **Getrennte lokale Knoten für Web-Override und Web-Status**: `ID_WRITE_REMOTE` (Schreiben) und `ID_SUBSCRIBE` (Lesen) zeigen beide auf das entfernte Zielmodul und dürfen dort durchaus denselben Remote-Knoten referenzieren — Write und Subscribe sind unterschiedliche OPC-UA-Operationen, kein Rückkopplungsrisiko auf diesem Modul. Die tatsächliche Feedback-Loop-Gefahr liegt bei den beiden *lokalen* Knoten dieses Moduls: `ID_WEB_READ` (von `Command`, per `AX_SUBSCRIBE_1` gelesen und ins Kommando-ODER gemischt) und `ID_STATUS_WEB` (von `Status`, per `AX_PUBLISH_1` mit dem vom Zielmodul zurückgemeldeten Zustand beschrieben) müssen unterschiedliche lokale OPC-UA-Knoten sein — sonst liest `Command` den von `Status` republizierten Echo-Zustand als vermeintlichen Web-Override und schreibt ihn als neues Kommando zurück ans Zielmodul.
 
 ## Anwendungsszenarien
 

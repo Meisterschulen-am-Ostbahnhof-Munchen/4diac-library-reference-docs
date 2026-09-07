@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` ist das SoftKey-Pendant zu [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md): Ein VT-SoftKey und ein OPC-UA-Remote-Kommando werden je über eine Flankenerkennung in Set/Reset-Ereignisse gewandelt, in einem gemeinsamen Latch zusammengeführt und schalten einen einzelnen digitalen logiBUS-Ausgang — inklusive VT-Statusanzeige und OPC-UA-Echo. Ein Klick auf den SoftKey oder ein Remote-Kommando schaltet den Ausgang EIN, ein zweiter AUS (Klick-Toggle-Verhalten).
+`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` ist das SoftKey-Pendant zu [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md): Ein VT-SoftKey und ein OPC-UA-Remote-Kommando werden je über eine Flankenerkennung in Set/Reset-Ereignisse gewandelt und in einem gemeinsamen Latch zusammengeführt. Das ist **kein** echtes Klick-Toggle: Drücken löst `SET` aus, Loslassen `RESET` — bei nur einer aktiven Quelle also rein tastendes Verhalten. Der Unterschied zu einer einfachen ODER-Verknüpfung zeigt sich erst, wenn sich SoftKey und OPC-UA-Kommando zeitlich überlappen: Es gewinnt immer die zuletzt eingetroffene Flanke, unabhängig von der Quelle (Last-Wins), statt dass der Ausgang so lange EIN bleibt, wie irgendeine der beiden Quellen aktiv ist.
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -35,20 +35,20 @@
 
 ## Technische Besonderheiten
 
-- **Klick-Toggle über ASR-Latch**: Wie bei `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` bleibt der Ausgang nach Loslassen im zuletzt gesetzten Zustand — im Unterschied zu einer tastenden ODER-Verschaltung.
-- **Zwei unabhängige Toggle-Quellen**: SoftKey und OPC-UA-Kommando lösen je eigenständig ein Toggle aus; `ASR_MERGE_2` führt beide zu einem gemeinsamen Latch-Eingang zusammen.
+- **Last-Wins über ASR-Latch, kein echtes Toggle**: Wie bei `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` ist das Verhalten bei nur einer aktiven Quelle rein tastend (EIN nur solange gedrückt). Der Unterschied zu einer tastenden ODER-Verschaltung zeigt sich erst, wenn sich beide Quellen überlappen: die zuletzt eingetroffene Flanke (Set oder Reset, unabhängig von der Quelle) bestimmt den Zustand.
+- **Zwei unabhängige Last-Wins-Quellen**: SoftKey und OPC-UA-Kommando liefern je eigenständig Set-/Reset-Ereignisse; `ASR_MERGE_2` führt beide zu einem gemeinsamen Latch-Eingang zusammen, ohne eine Quelle zu priorisieren.
 
 ## Anwendungsszenarien
 
-- Digitale Ausgänge, die per SoftKey oder Remote-Kommando ein-/ausgeschaltet werden sollen (Toggle-Verhalten), mit VT-Statusanzeige und OPC-UA-Rückmeldung.
+- Digitale Ausgänge mit zwei unabhängigen Schaltquellen (SoftKey UND Remote-OPC-UA-Kommando), bei denen die zuletzt eingetroffene Aktion gewinnen soll, statt dass eine dauerhaft aktive Quelle die andere blockiert — mit VT-Statusanzeige und OPC-UA-Rückmeldung.
 
 ## Vergleich mit ähnlichen Bausteinen
 
-Strukturell identisch zu [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md), nur mit `Softkey_IXA` statt `Button_IXA` als lokale Bedienquelle. Gegenüber dem einfacheren [`Softkey_IXA_TO_logiBUS_QXA_BG`](./Softkey_IXA_TO_logiBUS_QXA_BG.md) (nur lokaler SoftKey, keine OPC-UA-Anbindung, keine Latch-Logik) kommen hier die komplette Flankenerkennungs-/Merge-/Latch-Kette sowie OPC-UA-Subscribe/Publish hinzu.
+Strukturell identisch zu [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md), nur mit `Softkey_IXA` statt `Button_IXA` als lokale Bedienquelle — inklusive derselben Last-Wins-Charakteristik (nicht Klick-Toggle). Gegenüber dem einfacheren [`Softkey_IXA_TO_logiBUS_QXA_BG`](./Softkey_IXA_TO_logiBUS_QXA_BG.md) (nur lokaler SoftKey, keine OPC-UA-Anbindung, keine Latch-Logik) kommen hier die komplette Flankenerkennungs-/Merge-/Latch-Kette sowie OPC-UA-Subscribe/Publish hinzu.
 
 ## Zusammenfassung
 
-`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` schaltet einen digitalen logiBUS-Ausgang per SoftKey ODER Remote-OPC-UA-Kommando im Klick-Toggle-Verfahren, inklusive VT-Statusfarbe und OPC-UA-Echo.
+`Softkey_IXA_TO_logiBUS_QXA_BG_OPC` schaltet einen digitalen logiBUS-Ausgang per SoftKey und/oder Remote-OPC-UA-Kommando, inklusive VT-Statusfarbe und OPC-UA-Echo. Bei nur einer aktiven Quelle ist das Verhalten rein tastend; überlappen sich beide Quellen, gewinnt Last-Wins statt einer echten ODER-Verknüpfung.
 
 ---
 
