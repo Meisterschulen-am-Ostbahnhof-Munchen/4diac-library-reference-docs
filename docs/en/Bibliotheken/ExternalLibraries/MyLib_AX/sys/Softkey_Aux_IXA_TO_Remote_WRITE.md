@@ -42,7 +42,7 @@
 
 - **Three Equal Command Sources**: SoftKey, AUX Assignment, and Local Web Override function equally via the OR operator—any of the three sources can trigger the command.
 
-- **No Status Feedback**: Unlike `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, this block does not contain any feedback/background color; For this purpose, `AX_SUBSCRIBE_BG3_WEB_OPC` should be placed alongside it with the same values as `u16ObjId`/`u16ObjIdA`.
+- **No Status Feedback**: Unlike `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, this block does not contain any feedback/background color; For this purpose, `AX_SUBSCRIBE_BG3_WEB_OPC` should be placed alongside it with the same values as `u16ObjId`/`u16ObjIdA`. Important for this manual pairing: `ID_WEB_READ` (here) and `ID_STATUS_WEB` (in `AX_SUBSCRIBE_BG3_WEB_OPC`) must be different local OPC UA nodes, otherwise the same feedback-loop risk arises as described for `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`. `ID_WRITE_REMOTE` (here) and `ID_SUBSCRIBE` (there), by contrast, both target the remote module and may reference the same remote node.
 
 ## Application Scenarios
 

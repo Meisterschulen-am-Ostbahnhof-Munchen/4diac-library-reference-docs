@@ -30,7 +30,7 @@
 ## Technische Besonderheiten
 
 - **Drei gleichberechtigte Kommandoquellen**: SoftKey, AUX-Zuweisung und lokaler Web-Override wirken über das ODER gleichwertig — jede der drei Quellen kann das Kommando auslösen.
-- **Kein Status-Feedback**: Im Gegensatz zu `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` enthält dieser Baustein keine Rückmeldung/Hintergrundfarbe; dafür ist `AX_SUBSCRIBE_BG3_WEB_OPC` mit denselben `u16ObjId`/`u16ObjIdA`-Werten danebenzustellen.
+- **Kein Status-Feedback**: Im Gegensatz zu `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` enthält dieser Baustein keine Rückmeldung/Hintergrundfarbe; dafür ist `AX_SUBSCRIBE_BG3_WEB_OPC` mit denselben `u16ObjId`/`u16ObjIdA`-Werten danebenzustellen. Wichtig bei dieser manuellen Kombination: `ID_WEB_READ` (hier) und `ID_STATUS_WEB` (in `AX_SUBSCRIBE_BG3_WEB_OPC`) müssen unterschiedliche lokale OPC-UA-Knoten sein, sonst entsteht dieselbe Feedback-Loop-Gefahr wie in `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` beschrieben. `ID_WRITE_REMOTE` (hier) und `ID_SUBSCRIBE` (dort) zeigen dagegen beide auf das entfernte Zielmodul und dürfen denselben Remote-Knoten referenzieren.
 
 ## Anwendungsszenarien
 

@@ -36,7 +36,7 @@
 ## Technical Features
 
 - **Extension of `AX_SUBSCRIBE_BG_OPC`**: Compared to the simpler version (only Subscribe + background color), two things are added: `GreenWhiteBackground3_AX` instead of `GreenWhiteBackground1_AX` (colors SoftKey and Aux together) and local Web Republish via `AX_SPLIT_2`/`STATUS_WEB_PUBLISH`.
-... - **Decoupling from the target module**: A web client connected only to this module does not need to establish its own connection to the target module to see the same status as the actual VT.
+- **Decoupling from the target module**: A web client connected only to this module does not need to establish its own connection to the target module to see the same status as the actual VT.
 
 ## Application Scenarios
 

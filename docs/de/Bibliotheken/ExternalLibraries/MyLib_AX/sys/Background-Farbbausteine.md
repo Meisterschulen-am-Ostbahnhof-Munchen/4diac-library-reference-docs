@@ -24,12 +24,12 @@ Beispiele: `GreenWhiteBackground1_AX` (Basis, 1 Objekt, Adapter), `GreenWhiteBac
 ## Funktionsweise (Basisvariante, N=1)
 
 1. Das Selector-Signal (`DI1`-Adapter bei `_AX`, sonst `DI1`-Datenwert) geht an `AX_SEL`/`F_SEL` (Binärauswahl), parametriert mit den beiden Farbkonstanten (`IN0`=zweite Farbe, `IN1`=erste Farbe, z. B. `IN0=COLOR_WHITE`, `IN1=COLOR_GREEN`).
-2. `AX_SEL.CNF` löst `Q_BackgroundColour.REQ` (bzw. `Q_BackgroundColourAux.REQ` bei `_aux`) aus.
+2. `AX_SEL.CNF`/`F_SEL.CNF` löst `Q_BackgroundColour.REQ` (bzw. `Q_BackgroundColourAux.REQ` bei `_aux`) aus.
 3. `Q_BackgroundColour` setzt die Hintergrundfarbe des per `u16ObjId` identifizierten VT-Objekts und meldet `CNF` mit `STATUS`, `u8OldColour` (vorherige Farbe) und `s16result` (Fehlercode) zurück.
 
 ## Funktionsweise (N≥2)
 
-Bei mehreren Objekten (`GreenRedBackground4_AX` u. ä.) gibt es weiterhin **nur einen** Selector (`DI1`/`AX_SEL`), dessen Ausgang parallel an mehrere `Q_BackgroundColour_n`-Instanzen (nummeriert `_1`.._N`) verteilt wird — jede mit eigenem `u16ObjId`/`u16ObjIdA`/`u16ObjIdB` (unterschiedliche Objekt-IDs, teils für unterschiedliche Objektrollen wie Softkey/AUX/Button) und eigenen `STATUS_n`/`u8OldColour_n`/`result_n`/`CNF_n`-Ausgängen. **Welche Position `Q_BackgroundColourAux` statt `Q_BackgroundColour` nutzt, ist pro Baustein individuell** (nicht immer dieselbe Position) — die Einzelseite jedes Bausteins nennt die konkrete Zuordnung.
+Bei mehreren Objekten (`GreenRedBackground4_AX` u. ä.) gibt es weiterhin **nur einen** Selector (`DI1`/`AX_SEL`/`F_SEL`), dessen Ausgang parallel an mehrere `Q_BackgroundColour_n`-Instanzen (nummeriert `_1`.._N`) verteilt wird — jede mit eigenem `u16ObjId`/`u16ObjIdA`/`u16ObjIdB` (unterschiedliche Objekt-IDs, teils für unterschiedliche Objektrollen wie Softkey/AUX/Button) und eigenen `STATUS_n`/`u8OldColour_n`/`result_n`/`CNF_n`-Ausgängen. **Welche Position `Q_BackgroundColourAux` statt `Q_BackgroundColour` nutzt, ist pro Baustein individuell** (nicht immer dieselbe Position) — die Einzelseite jedes Bausteins nennt die konkrete Zuordnung.
 
 ## Technische Besonderheiten
 

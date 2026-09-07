@@ -24,7 +24,7 @@ The function block `ILOCK_CONFLICT_TRIP_PROTECT` extends `ILOCK_CONFLICT_TRIP` w
 | ---------- | ------------------ | ------------------------------------------ |
 | `EO_UP` | `DO_UP` | Triggered when the UP direction is enabled or disabled. |
 | `EO_DOWN` | `DO_DOWN` | Triggered when the DOWN direction is enabled or disabled. |
-| `EO_TRIP` | `DO_TRIP` | Sent in STOP and TRIP states, indicates the trip status. |
+| `EO_TRIP` | `DO_TRIP` | Sent in the TRIP state, it indicates the trip status. |
 
 ### **Data Inputs**
 

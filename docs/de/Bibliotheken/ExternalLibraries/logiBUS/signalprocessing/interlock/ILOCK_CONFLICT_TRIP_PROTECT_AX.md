@@ -25,11 +25,11 @@ Keine direkten Ereignis-Ausgänge. Zustandsänderungen werden über die Ereignis
 
 ### **Daten-Eingänge**
 
-Keine direkten Dateneingänge. Werden über die Socket-Adapter bereitgestellt:
+`UP_IN`/`DOWN_IN` sind keine direkten Dateneingänge, sondern werden über die Socket-Adapter bereitgestellt; `DT_PROTECT` dagegen ist ein direkter Dateneingang, mitgeführt vom Ereignis `UPDATE`:
 
-- `UP_IN.D1` (BOOL) – Aktivierung der Aufwärts-Richtung.
-- `DOWN_IN.D1` (BOOL) – Aktivierung der Abwärts-Richtung.
-- `DT_PROTECT` (TIME, Initialwert `T#50ms`) – Schutz-Totzeit nach Freigabe des aktiven Eingangs.
+- `UP_IN.D1` (BOOL) – Aktivierung der Aufwärts-Richtung (Socket-Adapter).
+- `DOWN_IN.D1` (BOOL) – Aktivierung der Abwärts-Richtung (Socket-Adapter).
+- `DT_PROTECT` (TIME, Initialwert `T#50ms`) – Schutz-Totzeit nach Freigabe des aktiven Eingangs (direkter Dateneingang, mitgeführt von `UPDATE`).
 
 ### **Daten-Ausgänge**
 

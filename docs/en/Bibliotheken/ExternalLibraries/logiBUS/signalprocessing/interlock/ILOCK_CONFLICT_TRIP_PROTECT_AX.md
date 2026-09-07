@@ -26,13 +26,13 @@ No direct event outputs. State changes are signaled via the events of the output
 
 ### **Data Inputs**
 
-No direct data inputs. Provided via the socket adapters:
+`UP_IN`/`DOWN_IN` are not direct data inputs - they are provided via the socket adapters; `DT_PROTECT`, in contrast, is a direct data input carried by the `UPDATE` event:
 
-- `UP_IN.D1` (BOOL) – Upward direction activation.
+- `UP_IN.D1` (BOOL) – Upward direction activation (socket adapter).
 
-- `DOWN_IN.D1` (BOOL) – Downward direction activation.
+- `DOWN_IN.D1` (BOOL) – Downward direction activation (socket adapter).
 
-- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time after releasing the active input.
+- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time after releasing the active input (direct data input, carried by `UPDATE`).
 
 
 ### **Data Outputs**

@@ -24,7 +24,7 @@ Der Funktionsblock `ILOCK_CONFLICT_TRIP_PROTECT` erweitert `ILOCK_CONFLICT_TRIP`
 | ---------- | ------------------ | ------------------------------------------ |
 | `EO_UP`    | `DO_UP`            | Wird ausgelöst, wenn die UP-Richtung aktiv oder deaktiviert wird. |
 | `EO_DOWN`  | `DO_DOWN`          | Wird ausgelöst, wenn die DOWN-Richtung aktiv oder deaktiviert wird. |
-| `EO_TRIP`  | `DO_TRIP`          | Wird im STOP- und TRIP-Zustand mitgesendet, signalisiert den Trip-Status. |
+| `EO_TRIP`  | `DO_TRIP`          | Wird im TRIP-Zustand mitgesendet und signalisiert den Trip-Status. |
 
 ### **Daten-Eingänge**
 

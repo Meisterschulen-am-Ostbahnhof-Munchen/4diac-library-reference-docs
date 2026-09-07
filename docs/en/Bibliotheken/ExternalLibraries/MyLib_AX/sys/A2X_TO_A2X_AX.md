@@ -14,15 +14,10 @@
 
 - **Type**: SubAppType
 - **Internal FBs Used**:
-
-- **UNBUNDLE**: `adapter::conversion::unidirectional::A2X_2X_TO_2AX` — splits the incoming `A2X_IN` into two separate `AX` signals (UP, DOWN).
-
-- **AX_SPLIT_UP** / **AX_SPLIT_DOWN**: each `adapter::events::unidirectional::AX_SPLIT_2` — each branch into a return path (back to the bundled output signal) and a branch for OR operation.
-
-- **BUNDLE**: `adapter::conversion::unidirectional::A2X_2AX_TO_2X` — re-bundles UP/DOWN into a single `A2X_OUT`.
-
-- **AX_OR_2**: `adapter::booleanOperators::AX_OR_2` — returns on `OR_OUT` whether the actuator is currently moving in either direction.
-
+    - **UNBUNDLE**: `adapter::conversion::unidirectional::A2X_2X_TO_2AX` — splits the incoming `A2X_IN` into two separate `AX` signals (UP, DOWN).
+    - **AX_SPLIT_UP** / **AX_SPLIT_DOWN**: each `adapter::events::unidirectional::AX_SPLIT_2` — each branch into a return path (back to the bundled output signal) and a branch for OR operation.
+    - **BUNDLE**: `adapter::conversion::unidirectional::A2X_2AX_TO_2X` — re-bundles UP/DOWN into a single `A2X_OUT`.
+    - **AX_OR_2**: `adapter::booleanOperators::AX_OR_2` — returns on `OR_OUT` whether the actuator is currently moving in either direction.
 - **Functionality**: `A2X_IN` is unbundled, each direction is split (once back into the bundle, once into the OR operation), UP/DOWN are bundled again (`A2X_OUT`), and the OR operation of both directions is additionally located on `OR_OUT`.
 
 

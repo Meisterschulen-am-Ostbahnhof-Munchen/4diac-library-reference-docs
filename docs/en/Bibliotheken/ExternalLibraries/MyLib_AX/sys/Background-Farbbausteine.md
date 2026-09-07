@@ -28,14 +28,14 @@ In both training systems (`test_AX` and `test_B`), `MyLib::sys` contains a large
 
 1. The selector signal (`DI1` adapter for `_AX`, otherwise `DI1` data value) goes to `AX_SEL`/`F_SEL` (binary selection), parameterized with the two color constants (`IN0` = second color, `IN1` = first color, e.g., `IN0=COLOR_WHITE`, `IN1=COLOR_GREEN`).
 
-2. `AX_SEL.CNF` triggers `Q_BackgroundColour.REQ` (or `Q_BackgroundColourAux.REQ` for `_aux`).
+2. `AX_SEL.CNF`/`F_SEL.CNF` triggers `Q_BackgroundColour.REQ` (or `Q_BackgroundColourAux.REQ` for `_aux`).
 
 3. `Q_BackgroundColour` sets the background color of the VT object identified by `u16ObjId` and returns `CNF` with `STATUS`, `u8OldColour` (previous color), and `s16result` (error code).
 
 
 ## Functionality (N≥2)
 
-For multiple objects (`GreenRedBackground4_AX` etc.), there is still only **one** selector (`DI1`/`AX_SEL`), whose output is distributed in parallel to multiple `Q_BackgroundColour_n` instances (numbered `_1`..`_N`) — each with its own `u16ObjId`/`u16ObjIdA`/`u16ObjIdB` (different object IDs, sometimes for different object roles such as softkey/AUX/button) and its own `STATUS_n`/`u8OldColour_n`/`result_n`/`CNF_n` outputs. **Which position uses `Q_BackgroundColourAux` instead of `Q_BackgroundColour` varies per block** (not always the same position) — the individual page for each block specifies the exact assignment.
+For multiple objects (`GreenRedBackground4_AX` etc.), there is still only **one** selector (`DI1`/`AX_SEL`/`F_SEL`), whose output is distributed in parallel to multiple `Q_BackgroundColour_n` instances (numbered `_1`..`_N`) — each with its own `u16ObjId`/`u16ObjIdA`/`u16ObjIdB` (different object IDs, sometimes for different object roles such as softkey/AUX/button) and its own `STATUS_n`/`u8OldColour_n`/`result_n`/`CNF_n` outputs. **Which position uses `Q_BackgroundColourAux` instead of `Q_BackgroundColour` varies per block** (not always the same position) — the individual page for each block specifies the exact assignment.
 
 ## Technical Features
 

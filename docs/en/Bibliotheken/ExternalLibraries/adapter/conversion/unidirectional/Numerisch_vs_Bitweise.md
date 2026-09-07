@@ -24,14 +24,16 @@ The adapter prefixes in this folder correspond to: `AB`=BYTE, `AW`=WORD, `AD`=DW
 
 Verified in the FORTE core (`core/include/forte/datatypes/forte_any.h`, `CIEC_ANY::cast<U,T>`, as well as `forte_real.cpp`/`forte_lreal.cpp`, `CIEC_REAL::castRealData`) — the same logic behind every `F_X_TO_Y` block and every adapter wrapper in this folder:
 
-| Source < Destination | → ANY_BIT | → ANY_INT | → ANY_REAL |
-| ------------------------ | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **ANY_BIT** (except BOOL) | Bit copy (structural, no numeric value) | Bit reinterpretation — a **wider** target preserves the numeric value (zero extension); a **same-width** target keeps the bit pattern but a signed target can change the numeric value (e.g. `0xFF` as `BYTE` becomes `-1` as `SINT`, not `255`); a **narrower** target truncates the high bits | ⚠️ **Bit reinterpretation — NO numeric value!** IEEE 754 misinterpretation |
-| **BOOL** | Parity/LSB test | numeric (0/1) | numeric (0.0/1.0) — special case, see below |
-| **ANY_INT** | stores the bit pattern (expected behavior for a bit string target) | numeric (sign expansion/zero expansion safe, narrowing can truncate) | **numeric** (correct cast) |
-| **ANY_REAL** | Bit extraction (intentional, e.g., serialization via `F_REAL_TO_DWORD`) | numeric (rounding, `llrint`) | numeric (rounding up/down precision) |
+| Source < Destination | → BOOL | → ANY_BIT (except BOOL) | → ANY_INT | → ANY_REAL |
+| ------------------------ | -------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **ANY_BIT** (except BOOL) | LSB test | Bit-pattern transfer (structural, no numeric value) | Bit reinterpretation — a **wider** target preserves the numeric value (zero extension); a **same-width** target keeps the bit pattern but a signed target can change the numeric value (e.g. `0xFF` as `BYTE` becomes `-1` as `SINT`, not `255`); a **narrower** target truncates the high bits | ⚠️ **Bit reinterpretation — NO numeric value!** IEEE 754 misinterpretation |
+| **BOOL** | Identity | Numeric `0`/`1` | numeric (0/1) | numeric (0.0/1.0) — special case, see below |
+| **ANY_INT** | Boolean conversion (`!= 0`) | Bit-pattern transfer (expected behavior for a bit string target) | numeric (sign expansion/zero expansion safe, narrowing can truncate) | **numeric** (correct cast) |
+| **ANY_REAL** | Boolean conversion (`!= 0.0`) | Bit extraction (intentional, e.g., serialization via `F_REAL_TO_DWORD`) | numeric (rounding, `llrint`) | numeric (rounding up/down precision) |
 
-**The only real pitfall** is therefore the cell **ANY_BIT (except BOOL) → ANY_REAL** (highlighted in red): `BYTE`/`WORD`/`DWORD`/`LWORD` as the source of a conversion to `REAL`/`LREAL`. In this library, this specifically affects two building blocks:
+**The most conspicuous pitfall** is the cell **ANY_BIT (except BOOL) → ANY_REAL** (highlighted in red): `BYTE`/`WORD`/`DWORD`/`LWORD` as the source of a conversion to `REAL`/`LREAL`. In this library, this specifically affects two building blocks:
+
+A further pitfall, already noted in the matrix above, affects `ANY_BIT` (except BOOL) → `ANY_INT` at the same bit width: the bit pattern is preserved, but a signed target can change the numeric value (e.g. `0xFF` as `BYTE` becomes `-1` as `SINT`). Unlike `ANY_BIT`→`ANY_REAL`, the resulting value stays within a plausible numeric range instead of being turned into nonsense by an IEEE 754 misinterpretation, so the error is usually caught faster while debugging.
 
 - [`AD_TO_AR`](./AD_AR/AD_TO_AR.md) (DWORD→REAL) — safe replacement: [`AD_TO_AR_NUM`](./AD_AR/AD_TO_AR_NUM.md)
 

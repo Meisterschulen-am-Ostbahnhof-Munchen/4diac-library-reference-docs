@@ -18,7 +18,7 @@
 
 - **System_Tick** (SubApp, `MyLib::sys`): Returns the counter reading as a `ADI` adapter (DINT).
 
-- **ADI_SPLIT_2**: `adapter::events::unidirectional::ADI_SPLIT_2` — Distributes this single signal to two destinations, as an adapter socket can only accept one source.
+- **ADI_SPLIT_2**: `adapter::events::unidirectional::ADI_SPLIT_2` — Fans `System_Tick.ADI_OUT` out to two destinations, as an adapter socket can only accept one source: one output feeds the VT display (via `ADI_TO_AUDI`), the other feeds `ADI_PUBLISH_1` for OPC UA publishing.
 
 - **ADI_TO_AUDI**: `adapter::conversion::unidirectional::ADI_TO_AUDI` — Converts DINT to UDINT for VT display.
 
