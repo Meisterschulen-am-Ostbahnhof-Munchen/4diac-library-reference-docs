@@ -51,7 +51,7 @@ In this way, the event flow is merged while preserving information about the eve
 
 ## 🛠️ Related Exercises
 
-- [Exercise_087a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
+- [Exercise_087a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_087a2/)
 
 ## Conclusion
 

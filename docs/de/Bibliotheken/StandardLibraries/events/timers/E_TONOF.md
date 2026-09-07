@@ -95,4 +95,4 @@ Der **E_TONOF**-Baustein ist ein leistungsstarkes Werkzeug in der IEC 61499, um 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020g](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)
+- [Uebung_020g](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)

@@ -94,7 +94,7 @@ In contrast to aIn contrast to the `E_CYCLE` or `E_DELAY` function blocks, which
 
 This function block is preconfigured and therefore easier and faster to use for standard sequences with up to eight steps.## 🛠️ Related Exercises
 
-- [Exercise_038](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_038/)
+- [Exercise_038](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_038/)
 
 ## Conclusion
 

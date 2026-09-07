@@ -72,7 +72,7 @@ Im Vergleich zu ereignisbasierten Timern wie [AX_TOF](../../events/unidirectiona
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
+- [Uebung_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
 
 ## Fazit
 

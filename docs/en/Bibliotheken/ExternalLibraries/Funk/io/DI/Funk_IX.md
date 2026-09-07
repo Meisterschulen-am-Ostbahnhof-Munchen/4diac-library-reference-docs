@@ -74,7 +74,7 @@ Compared to Funk_IX offers simple digital input blocks with enhanced service fun
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
+- [Exercise_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
 
 ## Conclusion
 

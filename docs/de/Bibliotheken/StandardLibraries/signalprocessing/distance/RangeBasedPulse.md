@@ -61,8 +61,8 @@ Im Gegensatz zu einfachen Zeitgebern arbeitet dieser FB mit Distanzwerten statt 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
-- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
+- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
+- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
 
 ## Fazit
 

@@ -70,7 +70,7 @@ Im Vergleich zum [AX_TON](../../events/unidirectional/BOOL/timers/AX_TON.md) bie
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Uebung_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Fazit
 

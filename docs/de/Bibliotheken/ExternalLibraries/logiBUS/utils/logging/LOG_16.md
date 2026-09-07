@@ -67,8 +67,8 @@ Der Baustein besitzt keinen persistenten internen Zustand im Sinne einer Zustand
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_122](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122/)
-- [Uebung_122b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122b/)
+- [Uebung_122](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122/)
+- [Uebung_122b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_122b/)
 
 ## Fazit
 

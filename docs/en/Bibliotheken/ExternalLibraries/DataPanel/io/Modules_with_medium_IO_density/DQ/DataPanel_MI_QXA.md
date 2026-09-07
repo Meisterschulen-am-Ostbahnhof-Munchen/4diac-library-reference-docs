@@ -71,9 +71,9 @@ Compared to simple digital output function blocks, DataPanel_MI_QXA offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Exercise_003b3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
-- [Exercise_010a4_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a4_AX/)
+- [Exercise_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
+- [Exercise_003b3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Exercise_010a4_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a4_AX/)
 
 ## Conclusion
 

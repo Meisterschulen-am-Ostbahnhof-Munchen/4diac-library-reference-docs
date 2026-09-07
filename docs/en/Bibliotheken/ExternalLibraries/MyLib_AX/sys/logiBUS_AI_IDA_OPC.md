@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`logiBUS_AI_IDA_OPC` connects a physical analog input (`logiBUS_AI_IDA`, raw value 0-4095, see [logiBUS_AI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs-en/en/latest/hw/logiBUS/) hardware documentation) simultaneously to a VT numeric field (raw value), a second VT numeric field/bargraph (percent), and OPC-UA: the raw value (DWORD) and a linearly converted percent value (REAL) are both published separately via OPC-UA. The percent conversion is done via [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
+`logiBUS_AI_IDA_OPC` connects a physical analog input (`logiBUS_AI_IDA`, raw value 0-4095, see [logiBUS_AI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/) hardware documentation) simultaneously to a VT numeric field (raw value), a second VT numeric field/bargraph (percent), and OPC-UA: the raw value (DWORD) and a linearly converted percent value (REAL) are both published separately via OPC-UA. The percent conversion is done via [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
 
 ## Function Blocks Used
 

@@ -63,7 +63,7 @@ Vergleich mit [F_NOT](../../../StandardLibraries/iec61131-3/bitwiseOperators/F_N
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006a3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006a3_sub_AX/)
+- [Uebung_006a3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_006a3_sub_AX/)
 
 ## Fazit
 

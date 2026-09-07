@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`SystemTickSender` liefert ein zyklisch hochzählendes "Lebenszeichen" für VT und Web-Client — eine einfache, sofort sichtbare Bestätigung, dass die Steuerung läuft und Ereignisse verarbeitet. Der Baustein wird in mehreren Trainingsbeispielen dieses Systems eingesetzt, u. a. in [`InputOutputTesterButton_DIDO_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) und [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/).
+`SystemTickSender` liefert ein zyklisch hochzählendes "Lebenszeichen" für VT und Web-Client — eine einfache, sofort sichtbare Bestätigung, dass die Steuerung läuft und Ereignisse verarbeitet. Der Baustein wird in mehreren Trainingsbeispielen dieses Systems eingesetzt, u. a. in [`InputOutputTesterButton_DIDO_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) und [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/).
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -43,8 +43,8 @@
 
 ## 🛠️ Zugehörige Übungen
 
-- [InputOutputTesterButton_DIDO_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
-- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
+- [InputOutputTesterButton_DIDO_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/)
+- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
 
 ---
 

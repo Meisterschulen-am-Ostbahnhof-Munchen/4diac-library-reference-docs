@@ -50,7 +50,7 @@ Angenommen, mehrere Funktionsbausteine in einer Ressource haben einen unverbunde
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_176](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
+- [Uebung_176](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_176/)
 
 ## Fazit
 

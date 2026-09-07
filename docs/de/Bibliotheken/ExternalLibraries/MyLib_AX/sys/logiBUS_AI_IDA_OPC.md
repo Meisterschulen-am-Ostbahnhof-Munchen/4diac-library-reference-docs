@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`logiBUS_AI_IDA_OPC` bindet einen physischen Analogeingang (`logiBUS_AI_IDA`, Rohwert 0-4095, siehe [logiBUS_AI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs-en/en/latest/hw/logiBUS/) Hardware-Dokumentation) gleichzeitig an ein VT-Zahlenfeld (Rohwert), ein zweites VT-Zahlenfeld/Bargraph (Prozent) und an OPC-UA an: Rohwert (DWORD) und linear umgerechneter Prozentwert (REAL) werden beide separat per OPC-UA publiziert. Die Prozent-Umrechnung erfolgt über [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
+`logiBUS_AI_IDA_OPC` bindet einen physischen Analogeingang (`logiBUS_AI_IDA`, Rohwert 0-4095, siehe [logiBUS_AI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/) Hardware-Dokumentation) gleichzeitig an ein VT-Zahlenfeld (Rohwert), ein zweites VT-Zahlenfeld/Bargraph (Prozent) und an OPC-UA an: Rohwert (DWORD) und linear umgerechneter Prozentwert (REAL) werden beide separat per OPC-UA publiziert. Die Prozent-Umrechnung erfolgt über [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
 
 ## Verwendete Funktionsbausteine (FBs)
 

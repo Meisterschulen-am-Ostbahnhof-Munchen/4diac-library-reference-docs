@@ -74,7 +74,7 @@ Compared to simpler output blocks, QD offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Exercise_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Conclusion
 

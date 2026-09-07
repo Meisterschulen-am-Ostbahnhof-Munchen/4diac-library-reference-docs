@@ -82,7 +82,7 @@ Entwickelt unter EPL-2.0 Lizenz,ermöglicht er die Überwachung und Steuerung vo
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

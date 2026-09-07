@@ -75,7 +75,7 @@ Compared to standard digital input blocks, logiBUS_ID:
 
 ## 🛠️ Related exercises
 
-- [Exercise_011a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
+- [Exercise_011a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011a2/)
 
 ## Conclusion
 

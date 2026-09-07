@@ -76,7 +76,7 @@ The **E_CTD** (Event-Driven Down Counter) is an event-driven down counter accord
 
 ## 🛠️ Related Exercises
 
-- [Exercise_081](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_081/)
+- [Exercise_081](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_081/)
 
 ## Conclusion
 

@@ -60,7 +60,7 @@ Compared to simple Boolean output blocks, Aux_QX offers extended service functio
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003c_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
+- [Exercise_003c_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
 
 ## Conclusion
 

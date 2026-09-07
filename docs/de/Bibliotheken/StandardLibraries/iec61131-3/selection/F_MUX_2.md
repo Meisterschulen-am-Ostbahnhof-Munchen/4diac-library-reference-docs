@@ -74,7 +74,7 @@ Im Vergleich zu anderen Multiplexern bietet F_MUX_2:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_090a1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
+- [Uebung_090a1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
 
 ## Fazit
 

@@ -79,7 +79,7 @@ Dieser Baustein kapselt also die reine Zustandslogik (welcher Schritt ist der n�
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_175](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
+- [Uebung_175](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_175/)
 
 ## Fazit
 

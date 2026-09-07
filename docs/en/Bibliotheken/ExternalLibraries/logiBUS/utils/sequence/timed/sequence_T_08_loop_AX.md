@@ -55,7 +55,7 @@ For time-controlled, cyclic 8-step sequences with adapter connectivity.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_038_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_038_AX/)
+- [Exercise_038_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_038_AX/)
 
 ## Conclusion
 

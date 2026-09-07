@@ -73,8 +73,8 @@ Im Vergleich zu einfachen digitalen Ausgabeblöcken bietet logiBUS_LED_strip_QX 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_032](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_032/)
-- [Uebung_033_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_033_sub/)
+- [Uebung_032](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_032/)
+- [Uebung_033_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_033_sub/)
 
 ## Fazit
 

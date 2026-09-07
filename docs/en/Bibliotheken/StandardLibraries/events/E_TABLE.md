@@ -73,7 +73,7 @@ The `E_TABLE` (Event Table) is a function block according to IEC 61499 that gene
 
 ## 🛠️ Related Exercises
 
-- [Exercise_093](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093/)
+- [Exercise_093](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093/)
 
 ## Conclusion
 

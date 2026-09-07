@@ -78,7 +78,7 @@ Compared to a simple `SR` or `RS` flip-flop, `LinksRechts` offers a higher level
 
 ## 🛠️ Related Exercises
 
-- [Exercise_006a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
+- [Exercise_006a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
 
 ## Conclusion
 

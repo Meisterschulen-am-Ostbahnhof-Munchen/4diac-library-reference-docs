@@ -96,8 +96,8 @@ Die Version 1.0 implementiert die ISO 11783-7 Spezifikation (PGN 65091) für die
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_074](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_074](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_074/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

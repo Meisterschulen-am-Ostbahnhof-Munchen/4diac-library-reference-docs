@@ -67,7 +67,7 @@ Compared to [AX_TON](../../events/unidirectional/BOOL/timers/AX_TON.md), AX_FB_T
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Exercise_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Conclusion
 

@@ -13,7 +13,7 @@ seltener neu gebautes Projekt bleibt die Bauzeit beherrschbar.
 ## Dokumentation
 
 - [📖 Dokumentation (ReadTheDocs, Deutsch)](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs-de/de/latest/)
-- [📖 Documentation (ReadTheDocs, English)](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs-en/en/latest/)
+- [📖 Documentation (ReadTheDocs, English)](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs-de/en/latest/)
 - [📄 PDF-Handbuch (Deutsch)](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/de/pdf/4diac-library-reference-docs-de.pdf)
 - [📄 PDF handbook (English)](https://meisterschulen-am-ostbahnhof-munchen.github.io/4diac-library-reference-docs/en/pdf/4diac-library-reference-docs-en.pdf)
 - [GitHub Repository](https://github.com/Meisterschulen-am-Ostbahnhof-Munchen/4diac-library-reference-docs)

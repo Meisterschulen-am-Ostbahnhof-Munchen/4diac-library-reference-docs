@@ -57,7 +57,7 @@ Die interne Logik des Bausteins (Stand: `events-3.0.0`) ist fehlerhaft und imple
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_088](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
+- [Uebung_088](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
 
 ## Fazit
 

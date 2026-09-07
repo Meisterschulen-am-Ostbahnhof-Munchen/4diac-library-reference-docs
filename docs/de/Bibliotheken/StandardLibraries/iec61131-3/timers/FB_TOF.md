@@ -69,8 +69,8 @@ Der FB_TOF-Baustein kann in verschiedenen industriellen Steuerungsanwendungen ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e2/)
-- [Uebung_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
+- [Uebung_020e2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e2/)
+- [Uebung_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
 
 ## Fazit
 

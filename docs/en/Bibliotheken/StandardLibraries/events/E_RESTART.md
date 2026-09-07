@@ -77,7 +77,7 @@ The **E_RESTART** is a special service interface function block according to IEC
 
 ## 🛠️ Related Exercises
 
-- [Exercise_174](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_174/)
+- [Exercise_174](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_174/)
 
 ## Conclusion
 

@@ -81,7 +81,7 @@ Since this is a composite function block, its status is primarily determined by 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Exercise_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
 
 ## Conclusion
 

@@ -99,7 +99,7 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when used w
 
 ## 🛠️ Related Exercises
 
-- [Exercise_014](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_014/)
+- [Exercise_014](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_014/)
 
 ## Conclusion
 

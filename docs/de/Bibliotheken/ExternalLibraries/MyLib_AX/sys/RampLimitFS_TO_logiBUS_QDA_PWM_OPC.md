@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`RampLimitFS_TO_logiBUS_QDA_PWM_OPC` ist der wiederverwendbare Baustein für **einen einzelnen PWM-Ausgangskanal (0–100 % Duty)** mit VT-Zahlenfeld, Balkengrafik, 6 Ramp-Tasten, Kanal-Ein/Aus-Schalter, 3-Farben-Statusanzeige und bidirektionaler OPC-UA-Anbindung. Er wird 12× parametrisiert in [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/) instanziiert und ist das PWM-Pendant zum einfacheren, rein digitalen `RampLimitFS_TO_logiBUS_QDA_OPC`.
+`RampLimitFS_TO_logiBUS_QDA_PWM_OPC` ist der wiederverwendbare Baustein für **einen einzelnen PWM-Ausgangskanal (0–100 % Duty)** mit VT-Zahlenfeld, Balkengrafik, 6 Ramp-Tasten, Kanal-Ein/Aus-Schalter, 3-Farben-Statusanzeige und bidirektionaler OPC-UA-Anbindung. Er wird 12× parametrisiert in [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/) instanziiert und ist das PWM-Pendant zum einfacheren, rein digitalen `RampLimitFS_TO_logiBUS_QDA_OPC`.
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -65,7 +65,7 @@ Gegenüber dem einfacheren, rein digitalen Pendant `RampLimitFS_TO_logiBUS_QDA_O
 
 ## 🛠️ Zugehörige Übungen
 
-- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
+- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
 
 ---
 

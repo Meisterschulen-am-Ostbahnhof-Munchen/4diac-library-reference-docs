@@ -78,7 +78,7 @@ Im Vergleich zu einem einfachen `SR`- oder `RS`-Flipflop bietet `LinksRechts` ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_006a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
+- [Uebung_006a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_006a4/)
 
 ## Fazit
 

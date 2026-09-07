@@ -40,4 +40,4 @@ The block receives a combined event and Boolean signal via a `AX` adapter (refer
 
 ## 🛠️ Related Exercises
 
-- [Exercise_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
+- [Exercise_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)

@@ -69,9 +69,9 @@ well-defined meaning the way extensible ADD/MUL do.
 - [F_SUB](../../../StandardLibraries/iec61131-3/arithmetic/F_SUB.md) — the plain, non-saturating
   standard-library equivalent (silent wraparound/`INF` on overflow instead of clamping and
   reporting).
-- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
+- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
   that motivated this library.
-- [Uebung_011b5](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b5/) — the same `1 - 12`
+- [Uebung_011b5](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b5/) — the same `1 - 12`
   scenario re-run with `SAFE_SUB`, with `LIMIT_HIT` wired to a second output so the clamping is
   visible on hardware.
 

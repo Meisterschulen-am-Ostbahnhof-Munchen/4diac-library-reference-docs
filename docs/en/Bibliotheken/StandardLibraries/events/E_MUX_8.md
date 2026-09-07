@@ -49,7 +49,7 @@ In this way, the event streams are merged while preserving information about the
 
 ## 🛠️ Related Exercises
 
-- [Exercise_173](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_173/)
+- [Exercise_173](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_173/)
 
 ## Conclusion
 

@@ -34,4 +34,4 @@ Sobald am `AD_IN` ein Ereignis (`E1`) zusammen mit Daten (`D1`) eintrifft, wird 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Uebung_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)

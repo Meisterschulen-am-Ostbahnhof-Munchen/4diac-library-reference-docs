@@ -70,7 +70,7 @@ According to the XML specification, the block consists of:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_089](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
+- [Exercise_089](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
 
 ## Conclusion
 

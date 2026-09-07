@@ -99,7 +99,7 @@ Im Gegensatz zu einfachen Timer-Blöcken oder Flip-Flops orchestriert dieser FB 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_037](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_037/)
+- [Uebung_037](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_037/)
 
 ## Fazit
 

@@ -57,7 +57,7 @@ Für zyklische ereignisgesteuerte 8-stufige Sequenzen mit Adapteranbindung.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_040_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_040_AX/)
+- [Uebung_040_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_040_AX/)
 
 ## Fazit
 

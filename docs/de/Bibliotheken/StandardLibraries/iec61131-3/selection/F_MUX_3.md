@@ -62,7 +62,7 @@ Der Funktionsblock hat keine internen Zustände. Die Auswahl und Weiterleitung e
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_090a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
+- [Uebung_090a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a2/)
 
 ## Fazit
 

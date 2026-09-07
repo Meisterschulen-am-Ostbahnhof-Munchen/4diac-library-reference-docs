@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`RampLimitFS_TO_logiBUS_QDA_PWM_OPC` is the reusable block for **a single PWM output channel (0–100 % duty cycle)** with a VT number field, bar graph, 6 ramp buttons, channel enable/disable switch, 3-color status indicator, and bidirectional OPC-UA connectivity. It is instantiated 12× with different parameters in [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/) and is the PWM counterpart of the simpler, purely digital `RampLimitFS_TO_logiBUS_QDA_OPC`.
+`RampLimitFS_TO_logiBUS_QDA_PWM_OPC` is the reusable block for **a single PWM output channel (0–100 % duty cycle)** with a VT number field, bar graph, 6 ramp buttons, channel enable/disable switch, 3-color status indicator, and bidirectional OPC-UA connectivity. It is instantiated 12× with different parameters in [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/) and is the PWM counterpart of the simpler, purely digital `RampLimitFS_TO_logiBUS_QDA_OPC`.
 
 ## Function Blocks (FBs) Used
 
@@ -65,7 +65,7 @@ Compared to the simpler, purely digital counterpart `RampLimitFS_TO_logiBUS_QDA_
 
 ## 🛠️ Related Exercises
 
-- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
+- [InputOutputTesterButton_PWM_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/)
 
 ---
 

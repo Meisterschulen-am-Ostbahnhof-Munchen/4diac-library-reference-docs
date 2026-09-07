@@ -68,8 +68,8 @@ Vergleich mit [E_TON](../../../../../../StandardLibraries/events/timers/E_TON.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
-- [Uebung_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
+- [Uebung_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
+- [Uebung_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
 
 ## Fazit
 

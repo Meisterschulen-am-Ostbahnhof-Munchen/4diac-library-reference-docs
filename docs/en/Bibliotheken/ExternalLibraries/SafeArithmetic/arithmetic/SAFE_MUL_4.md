@@ -92,7 +92,7 @@ overflow regardless of signedness — the ambiguity only exists for arity ≥ 3.
 - [F_MUL](../../../StandardLibraries/iec61131-3/arithmetic/F_MUL.md) — the fixed 2-input,
   non-saturating standard-library block this pattern extends (silent wraparound/`INF` on
   overflow instead of clamping and reporting; no 4-input standard equivalent exists).
-- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
+- [Uebung_011b3](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_011b3/) — the hardware finding
   that motivated this library.
 
 ## Conclusion

@@ -72,7 +72,7 @@ Im Vergleich zum [AX_PULSE](../../events/unidirectional/BOOL/timers/AX_PULSE.md)
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020f2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f2_AX/)
+- [Uebung_020f2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f2_AX/)
 
 ## Fazit
 

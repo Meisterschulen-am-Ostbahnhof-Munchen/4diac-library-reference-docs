@@ -69,7 +69,7 @@ In Compared to simple digital input blocks, Aux_IX offers enhanced service funct
 
 ## 🛠️ Related Exercises
 
-- [Exercise_010b1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010b1/)
+- [Exercise_010b1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010b1/)
 
 ## Conclusion
 

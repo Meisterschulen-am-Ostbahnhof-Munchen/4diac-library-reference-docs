@@ -44,7 +44,7 @@ Die Eingänge werden logisch ODER-verknüpft und ohne Priorisierung oder Verzög
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_004a2_2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2_2/)
+- [Uebung_004a2_2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_004a2_2/)
 
 ## Fazit
 

@@ -68,8 +68,8 @@ Der Baustein verwendet einen **Socket** (Buchse) vom Typ `ARTimeOut`. Da es sich
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_035b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
-- [Uebung_170](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
+- [Uebung_035b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
+- [Uebung_170](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
 
 ## Fazit
 

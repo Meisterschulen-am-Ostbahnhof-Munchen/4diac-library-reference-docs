@@ -106,7 +106,7 @@ ID_NULL (65535) is not a command target but deactivates the FB when used with `I
 
 ## 🛠️ Related Exercises
 
-- [Exercise_012c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012c/)
+- [Exercise_012c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012c/)
 
 ## Conclusion
 

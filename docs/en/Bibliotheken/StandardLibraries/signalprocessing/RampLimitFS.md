@@ -94,7 +94,7 @@ The function block has no internal state. Each event immediately triggers its co
 
 ## 🛠️ Related Exercises
 
-- [Exercise_009a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
+- [Exercise_009a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_009a/)
 
 ## Conclusion
 

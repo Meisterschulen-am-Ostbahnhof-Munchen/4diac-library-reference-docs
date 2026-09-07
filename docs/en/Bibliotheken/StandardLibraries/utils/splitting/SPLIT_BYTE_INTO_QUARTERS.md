@@ -69,7 +69,7 @@ Other blocks, such as `EXTRACT_BITS` or `BIT_SLICE`, are more general but requir
 
 ## 🛠️ Related Exercises
 
-- [Exercise_056](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
+- [Exercise_056](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_056/)
 
 ## Conclusion
 

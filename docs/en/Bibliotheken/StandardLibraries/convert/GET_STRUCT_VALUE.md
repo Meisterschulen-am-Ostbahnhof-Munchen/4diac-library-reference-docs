@@ -75,7 +75,7 @@ There are no directly comparable function blocks in the 4diac standard library t
 
 ## 🛠️ Related Exercises
 
-- [Exercise_052](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
+- [Exercise_052](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
 
 ## Conclusion
 

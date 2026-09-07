@@ -106,7 +106,7 @@ Version 1.0 implements the ISO 11783-7 specification (PGN 65093) for the precise
 
 ## 🛠️ Related Exercises
 
-- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 
