@@ -80,7 +80,7 @@ The function block does not have its own explicit state chain (Execution Control
 | Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `FALSE`                 | Value of `IN0.D1` is copied to `OUT.D1` | `OUT.E1`     |
 | Event on `G.E1`, `IN0.E1`, or `IN1.E1` | `TRUE`                  | Value of `IN1.D1` is copied to `OUT.D1` | `OUT.E1`     |
 
-`| ] | ... ## Application Scenarios
+## Application Scenarios
 
 - **Sensor Redundancy:** Switching between a primary sensor (`IN0`) and a backup sensor (`IN1`) based on a status signal (`G`).
 - **Setpoint Switching:** Switching between an automatic setpoint (e.g., from a recipe control system) and a manually set user-defined setpoint.
