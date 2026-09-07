@@ -80,7 +80,7 @@ Der **F_MUL** ist ein standardkonformer Funktionsbaustein zur Multiplikation num
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_034b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034b/)
+- [Uebung_034b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034b/)
 
 ## Fazit
 

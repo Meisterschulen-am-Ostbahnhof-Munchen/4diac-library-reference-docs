@@ -70,7 +70,7 @@ Comparison with [XOR_3](../../../StandardLibraries/iec61131-3/bitwiseOperators/X
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a7_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
+- [Exercise_002a7_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a7_AX/)
 
 ## Change Detection
 

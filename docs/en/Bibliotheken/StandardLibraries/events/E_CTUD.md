@@ -69,7 +69,7 @@ After each of these actions, the status flags `QU` and `QD` are updated based on
 | Top Status         | `QU` (`CV >= PV`) | `Q` (`CV >= PV`) | No             |
 | Bottom Status      | `QD` (`CV = 0`)   | No               | `Q` (`CV = 0`) |
 
-- [Exercise_082](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_082/)
+- [Exercise_082](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_082/)
 
 The `E_CTUD` is a universal counter module that combines and extends the functionality of a simple up and down counter. With its four control events (`CU`, `CD`, `R`, `LD`) and two status outputs (`QU`, `QD`), it offers maximum flexibility for complex counting and monitoring tasks in industrial automation.
 

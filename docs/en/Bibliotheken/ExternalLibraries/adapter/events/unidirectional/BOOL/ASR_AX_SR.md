@@ -75,7 +75,7 @@ RESET → SET:    bei S_R.SET Ereignis
 
 ## 🛠️ Related Exercises
 
-- [Exercise_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
+- [Exercise_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
 
 ## Conclusion
 

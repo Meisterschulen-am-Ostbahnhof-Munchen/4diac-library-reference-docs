@@ -74,7 +74,7 @@ Compared to other multiplexers, F_MUX_2 offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_090a1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
+- [Exercise_090a1](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_090a1/)
 
 ## Conclusion
 

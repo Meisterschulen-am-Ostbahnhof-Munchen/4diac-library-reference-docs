@@ -65,7 +65,7 @@ Der Block kehrt danach direkt wieder in den Wartezustand (1) zurück.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_121](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
+- [Uebung_121](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_121/)
 
 ## Fazit
 

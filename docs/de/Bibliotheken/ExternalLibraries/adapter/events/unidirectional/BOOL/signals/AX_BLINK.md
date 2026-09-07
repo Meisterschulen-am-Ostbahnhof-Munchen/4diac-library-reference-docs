@@ -42,7 +42,7 @@ Blinkende Anzeigen.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020f3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
+- [Uebung_020f3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
 
 ## Fazit
 

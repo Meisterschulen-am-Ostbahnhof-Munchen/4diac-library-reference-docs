@@ -81,7 +81,7 @@ Compared to generic CAN receive blocks, `AlPgnRxNew8B_REQ` is specifically tailo
 
 ## 🛠️ Related Exercises
 
-- [Exercise_132](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_132/)
+- [Exercise_132](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_132/)
 
 ## Conclusion
 

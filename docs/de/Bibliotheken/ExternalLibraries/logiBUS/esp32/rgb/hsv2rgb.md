@@ -66,7 +66,7 @@ Im Gegensatz zu universellen Rechenbausteinen (wie `MUL`, `ADD`) oder Skalierern
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_031](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
+- [Uebung_031](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
 
 ## Fazit
 

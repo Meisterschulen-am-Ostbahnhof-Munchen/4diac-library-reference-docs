@@ -70,7 +70,7 @@ Compared to simple digital output modules, logiBUS_LED_PWM_QX offers advanced PW
 
 ## 🛠️ Related Exercises
 
-- [Exercise_030](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_030/)
+- [Exercise_030](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_030/)
 
 ## Conclusion
 

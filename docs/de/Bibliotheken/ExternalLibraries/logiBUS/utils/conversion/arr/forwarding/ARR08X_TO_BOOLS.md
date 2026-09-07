@@ -83,7 +83,7 @@ Der Funktionsblock besitzt keinen internen Zustand (zustandslos). Sein Verhalten
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_054](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_054/)
+- [Uebung_054](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_054/)
 
 ## Fazit
 

@@ -65,7 +65,7 @@ Compared to Compared to standard two-input AND gates, AND_3 offers the ability t
 
 ## 🛠️ Related Exercises
 
-- [Exercise_002a6_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
+- [Exercise_002a6_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_002a6_AX/)
 
 ## Conclusion
 

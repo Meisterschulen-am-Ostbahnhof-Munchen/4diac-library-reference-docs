@@ -87,7 +87,7 @@ Der Baustein besitzt intern implizite Zustände, die durch die Verfügbarkeit ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_128b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
+- [Uebung_128b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_128b/)
 
 ## Fazit
 

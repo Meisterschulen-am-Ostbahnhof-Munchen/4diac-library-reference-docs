@@ -71,7 +71,7 @@ Compared to components that transfer entire color patterns or images to an LED m
 
 ## 🛠️ Related Exercises
 
-- [Exercise_031](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
+- [Exercise_031](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_031/)
 
 ## Conclusion
 

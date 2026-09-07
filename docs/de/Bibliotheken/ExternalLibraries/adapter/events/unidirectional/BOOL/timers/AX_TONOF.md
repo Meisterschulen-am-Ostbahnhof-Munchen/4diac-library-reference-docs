@@ -71,7 +71,7 @@ Vergleich mit [E_TONOF](../../../../../../StandardLibraries/events/timers/E_TONO
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020g_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020g_AX/)
+- [Uebung_020g_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020g_AX/)
 
 ## Fazit
 

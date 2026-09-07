@@ -68,7 +68,7 @@ Der Funktionsblock hat keine internen Zustände. Die Operation wird bei jedem RE
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_042](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
+- [Uebung_042](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_042/)
 
 ## Fazit
 

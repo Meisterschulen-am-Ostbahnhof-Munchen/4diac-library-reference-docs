@@ -65,7 +65,7 @@ The block then continuously monitors the system resource. As soon as the uptime 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_140](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_140/)
+- [Exercise_140](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_140/)
 
 ## Conclusion
 

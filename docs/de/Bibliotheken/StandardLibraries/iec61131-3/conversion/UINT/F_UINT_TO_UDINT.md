@@ -58,8 +58,8 @@ Der Funktionsblock besitzt keine internen Zustände. Die Operation wird bei jede
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_015](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
-- [Uebung_015a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-en/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
+- [Uebung_015](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015/)
+- [Uebung_015a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_015a/)
 
 ## Fazit
 
