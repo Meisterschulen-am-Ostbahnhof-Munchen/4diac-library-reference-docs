@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`AX_ASRT_RF_TRIG` detects rising and falling edges of a `AX` signal and combines them as a `ASRT` adapter (Set/Reset, Toggle remains unused). Instead of a new low-level `FBType`, the function block is constructed as a composite of the existing `AX_ASR_RF_TRIG` (which returns a `ASR` from an edge) and `ASRT_SR_AE_TO_SRT` (which combines a `ASR` with an optional AE toggle event to create a `ASRT`).
+`AX_ASRT_RF_TRIG` detects rising and falling edges of an `AX` signal and combines them as an `ASRT` adapter (Set/Reset, Toggle remains unused). Instead of a new low-level `FBType`, the function block is constructed as a composite of the existing `AX_ASR_RF_TRIG` (which returns an `ASR` from an edge) and `ASRT_SR_AE_TO_SRT` (which combines an `ASR` with an optional AE toggle event to create an `ASRT`).
 
 
 

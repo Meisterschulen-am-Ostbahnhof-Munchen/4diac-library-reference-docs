@@ -40,7 +40,7 @@
 
 ## Comparison with Similar Modules
 
-For additional remote distribution, use `SystemTickSender_ISO_OPC` or ](./SystemTickSender_ISO_OPC.md). For a module without its own VT connection (OPC UA only) [`SystemTickSender_OPC`](./SystemTickSender_OPC.md)]. Compared to [`SystemTickSender`](./SystemTickSender.md) (VT + OPC UA, older example with `ADI_SPLIT_2`), this module is the pure VT-only variant without split/publish functionality.
+For additional remote distribution, use [`SystemTickSender_ISO_OPC`](./SystemTickSender_ISO_OPC.md); for a module without its own VT connection (OPC UA only), use [`SystemTickSender_OPC`](./SystemTickSender_OPC.md). Compared to [`SystemTickSender`](./SystemTickSender.md) (VT + OPC UA, older example with `ADI_SPLIT_2`), this module is the pure VT-only variant without split/publish functionality.
 
 ## Summary
 

@@ -26,7 +26,7 @@ Verified in the FORTE core (`core/include/forte/datatypes/forte_any.h`, `CIEC_AN
 
 | Source < Destination | → ANY_BIT | → ANY_INT | → ANY_REAL |
 | ------------------------ | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **ANY_BIT** (except BOOL) | Bit copy (structural, no numeric value) | Bit reinterpretation — **value-preserving** if target is the same width or wider; otherwise truncates | ⚠️ **Bit reinterpretation — NO numeric value!** IEEE 754 misinterpretation |
+| **ANY_BIT** (except BOOL) | Bit copy (structural, no numeric value) | Bit reinterpretation — a **wider** target preserves the numeric value (zero extension); a **same-width** target keeps the bit pattern but a signed target can change the numeric value (e.g. `0xFF` as `BYTE` becomes `-1` as `SINT`, not `255`); a **narrower** target truncates the high bits | ⚠️ **Bit reinterpretation — NO numeric value!** IEEE 754 misinterpretation |
 | **BOOL** | Parity/LSB test | numeric (0/1) | numeric (0.0/1.0) — special case, see below |
 | **ANY_INT** | stores the bit pattern (expected behavior for a bit string target) | numeric (sign expansion/zero expansion safe, narrowing can truncate) | **numeric** (correct cast) |
 | **ANY_REAL** | Bit extraction (intentional, e.g., serialization via `F_REAL_TO_DWORD`) | numeric (rounding, `llrint`) | numeric (rounding up/down precision) |

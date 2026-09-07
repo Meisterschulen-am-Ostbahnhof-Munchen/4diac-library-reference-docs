@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The function block `ILOCK_CONFLICT_TRIP_PROTECT` extends `ILOCK_CONFLICT_TRIP` with a configurable protection dead time (`DT_PROTECT`), analogous to how `ILOCK_BLOCK_PROTECT` extends the behavior of `ILOCK_BLOCK`. It still prioritizes the first active input, triggers a trip state when both directions are activated simultaneously, and requires an explicit `EI_RESET` thereafter. What's new is that after the active input is enabled, the dead time `DT_PROTECT` must elapse before the function block re-evaluates the current input signals – only then is the next direction (or, if applicable, a trip) taken.
+The function block `ILOCK_CONFLICT_TRIP_PROTECT` extends `ILOCK_CONFLICT_TRIP` with a configurable protection dead time (`DT_PROTECT`), analogous to how `ILOCK_BLOCK_PROTECT` extends the behavior of `ILOCK_BLOCK`. It still prioritizes the first active input, triggers a trip state when both directions are activated simultaneously, and requires an explicit `EI_RESET` thereafter. What's new is that after the active input is released, the dead time `DT_PROTECT` must elapse before the function block re-evaluates the current input signals – only then is the next direction (or, if applicable, a trip) taken.
 
 ## Interface Structure
 
@@ -32,7 +32,7 @@ The function block `ILOCK_CONFLICT_TRIP_PROTECT` extends `ILOCK_CONFLICT_TRIP` w
 
 - `DI_DOWN` (BOOL) – TRUE = backward/downward/left/counterclockwise.
 
-- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time that must elapse after the active input is enabled before it can be re-evaluated.
+- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time that must elapse after the active input is released before it can be re-evaluated.
 
 
 ### **Data Outputs**
@@ -59,7 +59,7 @@ The function block operates as a finite state machine (ECC) with seven states:
 
 3. **DOWN** – `DO_DOWN = TRUE`. At `EI_DOWN[NOT DI_DOWN]` → **DOWN_STOP**; at `EI_UP[DI_UP]` (conflict during active DOWN) → immediate **TRIP**.
 
-4. **UP_STOP** / **DOWN_STOP** – Transition states after the active input is enabled. The algorithm `STOP` sets all outputs to FALSE, transfers `DT_PROTECT` to `timeOut.DT`, and starts the timer (`timeOut.START`). Upon expiration (`timeOut.TimeOut`) → **EVAL**.
+4. **UP_STOP** / **DOWN_STOP** – Transition states after the active input is released. The algorithm `STOP` sets all outputs to FALSE, transfers `DT_PROTECT` to `timeOut.DT`, and starts the timer (`timeOut.START`). Upon expiration (`timeOut.TimeOut`) → **EVAL**.
 
 5. **EVAL** – No separate algorithm. The current values of `DI_UP`/`DI_DOWN` are re-evaluated: only `DI_UP` TRUE → **UP**; only `DI_DOWN` TRUE → **DOWN**; both FALSE → **STOP**; both TRUE → **TRIP**.
 

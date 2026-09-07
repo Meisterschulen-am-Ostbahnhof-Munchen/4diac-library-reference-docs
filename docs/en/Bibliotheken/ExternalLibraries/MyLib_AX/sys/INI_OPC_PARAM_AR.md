@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`INI_OPC_PARAM_AR` extends [`INI_OPC_PARAM`](./INI_OPC_PARAM.md)] with an additional `AR` adapter output (`OUT`), which provides the currently stored/loaded value directly for further use in the calling network—e.g., for a locally adjustable rotational speed that should be editable via OPC UA and also used directly in the same application.
+`INI_OPC_PARAM_AR` extends [`INI_OPC_PARAM`](./INI_OPC_PARAM.md) with an additional `AR` adapter output (`OUT`), which provides the currently stored/loaded value directly for further use in the calling network—e.g., for a locally adjustable rotational speed that should be editable via OPC UA and also used directly in the same application.
 
 
 
@@ -38,7 +38,7 @@
 
 - **One output, two destinations**: `INI_AR.AR_OUT` simultaneously feeds the OPC UA publish adapter and the external `OUT` plug—both receive the same value without any additional splitting, as these are two separate adapter connections from the same source.
 
-- Otherwise identical to `INI_OPC_PARAM`](./INI_OPC_PARAM.md) (see there for details on `SETM`/initialization sequence).
+- Otherwise identical to [`INI_OPC_PARAM`](./INI_OPC_PARAM.md) (see there for details on `SETM`/initialization sequence).
 
 ## Application Scenarios
 
@@ -47,7 +47,7 @@
 
 ## Comparison with Similar Building Blocks
 
-Compared to [`INI_OPC_PARAM`](./INI_OPC_PARAM.md)], the only difference is the additional `AR` plugin, `OUT`. [`INI_OPC_PARAM_ATM`](./INI_OPC_PARAM_ATM.md) additionally converts the value to `TIME`, and [`INI_OPC_PARAM_AX`](./INI_OPC_PARAM_AX.md) is the BOOL variant.
+Compared to [`INI_OPC_PARAM`](./INI_OPC_PARAM.md), the only difference is the additional `AR` plugin, `OUT`. [`INI_OPC_PARAM_ATM`](./INI_OPC_PARAM_ATM.md) additionally converts the value to `TIME`, and [`INI_OPC_PARAM_AX`](./INI_OPC_PARAM_AX.md) is the BOOL variant.
 
 ## Summary
 

@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`SystemTickSender_ISO_OPC` combines [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (display on a local VT number field) with [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (remote publishing via OPC UA)] so that the same status indicator is visible both on the local screen and can be monitored by other modules via remote subscribe.
+`SystemTickSender_ISO_OPC` combines [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (display on a local VT number field) with [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (remote publishing via OPC UA) so that the same status indicator is visible both on the local screen and can be monitored by other modules via remote subscribe.
 
 
 ## Function Blocks (FBs) Used
@@ -50,7 +50,7 @@
 
 ## Comparison with similar function blocks
 
-If only one of the two outputs is needed, the simpler [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (VT only) or [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (OPC UA only) should be used. This pattern (Split → VT Display + OPC UA Publish) is structurally equivalent to the older [`SystemTickSender`](./SystemTickSender.md)].
+If only one of the two outputs is needed, the simpler [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (VT only) or [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (OPC UA only) should be used. This pattern (Split → VT Display + OPC UA Publish) is structurally equivalent to the older [`SystemTickSender`](./SystemTickSender.md).
 
 ## Summary
 

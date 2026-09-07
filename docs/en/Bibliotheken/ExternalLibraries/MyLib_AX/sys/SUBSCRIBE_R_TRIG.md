@@ -16,7 +16,7 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **SUBSCRIBE**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — subscribes to the removed BOOL value (`ID`, e.g., `Anlage_EIN_READ`).
+- **SUBSCRIBE**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — subscribes to the remote BOOL value (`ID`, e.g., `Anlage_EIN_READ`).
 
 - **AX_R_TRIG**: `adapter::events::unidirectional::AX_R_TRIG` — detects the rising edge of the subscribed value and fires `EO`.
 

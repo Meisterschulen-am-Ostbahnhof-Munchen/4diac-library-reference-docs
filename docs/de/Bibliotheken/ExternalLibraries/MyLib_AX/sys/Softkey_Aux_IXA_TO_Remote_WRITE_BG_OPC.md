@@ -25,7 +25,7 @@ Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenstän
 1. `u16ObjId` → `Command.u16ObjId` und `Status.u16ObjId`; `u16ObjIdA` → `Command.u16ObjIdA` und `Status.u16ObjIdA` (Datenverbindungen, ausgeblendet).
 2. `ID_WRITE_REMOTE` → `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` → `Command.ID_WEB_READ`.
 3. `ID_SUBSCRIBE` → `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` → `Status.ID_STATUS_WEB`.
-4. Es gibt keine direkte Verbindung zwischen `Command` und `Status` — beide SubApps sind vollständig eigenständig und kommunizieren nur indirekt über das Zielmodul (Command schreibt dorthin, Status abonniert von dort).
+4. Es gibt keine direkte SubApp-Verbindung zwischen `Command` und `Status` — beide SubApps sind vollständig eigenständig und kommunizieren nur indirekt über das Zielmodul (Command schreibt dorthin, Status abonniert von dort). Lokal können ihre Pfade dennoch verknüpft sein, wenn `ID_WEB_READ` und `ID_STATUS_WEB` versehentlich auf denselben OPC-UA-Knoten konfiguriert werden (siehe Feedback-Loop-Hinweis unten).
 
 ## Technische Besonderheiten
 

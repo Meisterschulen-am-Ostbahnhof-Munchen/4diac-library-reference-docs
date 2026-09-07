@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In both training systems (`MyLib::sys` and `test_B`), `MyLib::sys` contains a large family of nearly identical blocks that **toggle the VT background color of one or more objects based on a single Boolean signal** — e.g., `GreenWhiteBackground1_AX`, `GreenRedBackground4_AXS`, `RedWhiteBackground2_AXC`. This page explains the common pattern in full; the individual block pages refer back to this page and only mention the specific differences (color pair, number of objects, variant).
+In both training systems (`test_AX` and `test_B`), `MyLib::sys` contains a large family of nearly identical blocks that **toggle the VT background color of one or more objects based on a single Boolean signal** — e.g., `GreenWhiteBackground1_AX`, `GreenRedBackground4_AXS`, `RedWhiteBackground2_AXC`. This page explains the common pattern in full; the individual block pages refer back to this page and only mention the specific differences (color pair, number of objects, variant).
 
 ## Naming Scheme
 

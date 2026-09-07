@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The function block `ILOCK_CONFLICT_TRIP_PROTECT_AX` is the adapter version of `ILOCK_CONFLICT_TRIP_PROTECT`: It combines the trip-on-conflict logic of `ILOCK_CONFLICT_TRIP_AX` with the protection dead time of `ILOCK_BLOCK_PROTECT_AX`. The first active input is prioritized; simultaneous activation of both directions immediately triggers a trip, which can only be reset via `EI_RESET`. After the active input is enabled, the block additionally waits for the configurable time `DT_PROTECT` before re-evaluating the inputs. The process data (`UP_IN`/`DOWN_IN`/`UP_OUT`/`DOWN_OUT`/`TRIP_OUT`) is routed via adapters of type `unidirectional::AX`; the protection-time timer additionally uses the adapter `iec61499::events::ATimeOut` (`timeOut`).
+The function block `ILOCK_CONFLICT_TRIP_PROTECT_AX` is the adapter version of `ILOCK_CONFLICT_TRIP_PROTECT`: It combines the trip-on-conflict logic of `ILOCK_CONFLICT_TRIP_AX` with the protection dead time of `ILOCK_BLOCK_PROTECT_AX`. The first active input is prioritized; simultaneous activation of both directions immediately triggers a trip, which can only be reset via `EI_RESET`. After the active input is released, the block additionally waits for the configurable time `DT_PROTECT` before re-evaluating the inputs. The process data (`UP_IN`/`DOWN_IN`/`UP_OUT`/`DOWN_OUT`/`TRIP_OUT`) is routed via adapters of type `unidirectional::AX`; the protection-time timer additionally uses the adapter `iec61499::events::ATimeOut` (`timeOut`).
 
 ## Interface Structure
 
@@ -32,7 +32,7 @@ No direct data inputs. Provided via the socket adapters:
 
 - `DOWN_IN.D1` (BOOL) – Downward direction activation.
 
-- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time after enabling the active input.
+- `DT_PROTECT` (TIME, initial value `T#50ms`) – Protection dead time after releasing the active input.
 
 
 ### **Data Outputs**
@@ -91,7 +91,7 @@ Additionally, in states `STOP`, `UP`, and `DOWN`, there is a self-loop transitio
 - **Immediate Trip in Case of Conflict:** As with the non-adapter variant, a simultaneous command in both directions is detected without delay.
 
 
-- - **Reset Condition:** `EI_RESET` only takes effect if both input adapters report `D1 = FALSE`.
+- **Reset Condition:** `EI_RESET` only takes effect if both input adapters report `D1 = FALSE`.
 
 ## State Overview
 

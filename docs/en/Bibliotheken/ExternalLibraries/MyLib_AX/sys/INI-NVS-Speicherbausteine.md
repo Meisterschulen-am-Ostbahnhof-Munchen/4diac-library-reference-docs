@@ -4,7 +4,7 @@
 
 ## Introduction
 
-`MyLib::sys` contains a family of function blocks that **persistently store** a value entered via VT and automatically reload it during deployment—either in an INI file (`INI_IN_AND_STORE_*`) or in ESP32 flash memory (NVS, `NVS_IN_AND_STORE_*`). This page explains the common pattern.
+`MyLib::sys` contains a family of function blocks that **persistently store** a value entered via VT and automatically reload it during initialization (`INIT`)—either in an INI file (`INI_IN_AND_STORE_*`) or in ESP32 flash memory (NVS, `NVS_IN_AND_STORE_*`). This page explains the common pattern.
 
 
 

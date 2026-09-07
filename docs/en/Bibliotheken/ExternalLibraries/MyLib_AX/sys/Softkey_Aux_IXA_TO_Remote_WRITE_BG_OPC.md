@@ -32,7 +32,7 @@
 
 3. `ID_SUBSCRIBE` → `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` → `Status.ID_STATUS_WEB`.
 
-4. There is no direct connection between `Command` and `Status`—both sub-apps are completely independent and communicate only indirectly via the target module (commands write to it, status updates are subscribed to from it).
+4. There is no direct SubApp connection between `Command` and `Status`—both sub-apps are completely independent and communicate only indirectly via the target module (commands write to it, status updates are subscribed to from it). Locally, their paths can still become connected if `ID_WEB_READ` and `ID_STATUS_WEB` are accidentally configured to alias the same OPC UA node (see the feedback-loop note below).
 
 
 ## Technical Features

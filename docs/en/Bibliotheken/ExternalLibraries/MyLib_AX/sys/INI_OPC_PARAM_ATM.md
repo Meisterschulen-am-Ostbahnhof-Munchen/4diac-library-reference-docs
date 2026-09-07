@@ -43,7 +43,7 @@
 
 - **OPC UA Publish Remains REAL**: `ID_WRITE` continues to publish the original REAL value (seconds) — only the additional `OUT` plug delivers `TIME`.
 
-- Otherwise identical to `INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md).
+- Otherwise identical to [`INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md).
 
 
 
@@ -53,7 +53,7 @@
 
 ## Comparison with Similar Function Blocks
 
-Compared to [`INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md)], only the additional `Sec_To_Time` conversion (`AR_MULTIME`) is added; The `OUT` plugin is of type `ATM` instead of `AR`. `INI_OPC_PARAM_AX` and ](./INI_OPC_PARAM_AX.md) are the BOOL variants.
+Compared to [`INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md), only the additional `Sec_To_Time` conversion (`AR_MULTIME`) is added; the `OUT` plug is of type `ATM` instead of `AR`. [`INI_OPC_PARAM_AX`](./INI_OPC_PARAM_AX.md) is the BOOL variant.
 
 ## Summary
 
