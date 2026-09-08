@@ -75,7 +75,7 @@ The function block does not have its own state hierarchy (no ECC) because it is 
 | `FALSE`                 | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN0.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
 | `TRUE`                  | Event on `IN0.E1`, `IN1.E1`, or `G.E1` | The value of `IN1.D1` is passed to `OUT.D1`; `OUT.E1` is triggered. |
 
-` | | ... ---
+---
 
 ## Application Scenarios
 
