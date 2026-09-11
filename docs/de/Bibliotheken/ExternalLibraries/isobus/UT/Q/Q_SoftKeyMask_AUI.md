@@ -27,7 +27,7 @@ Der **Q_SoftKeyMask_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein **Q_
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `u8MaskType` | `USINT` | Maskentyp (0: DataMask, 1: AlarmMask) |
+| `u8MaskType` | `USINT` | Maskentyp (1: DataMask, 2: AlarmMask) |
 | `u16DataMaskId` | `UINT` | Object-ID der zugehörigen Data/AlarmMask |
 
 ### **Daten-Ausgänge**

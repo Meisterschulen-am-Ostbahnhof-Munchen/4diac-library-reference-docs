@@ -38,18 +38,24 @@ Keine direkten Dateneingänge vorhanden – die Farbpaletten-IDs werden über di
 
 | Typ | Name | Richtung | Kommentar |
 |---|---|---|---|
-| `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Eingang) | Neue Farbpaletten‑Object‑ID |
-| `adapter::types::unidirectional::AUI` | `u16OldObjIdColourMap` | Plug (Ausgang) | Bisherige Farbpaletten‑Object‑ID |
+| `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Eingang) | Neue Farbpaletten-Object-ID (39000–39999 für ColourMap, 45000–45999 für ColourPalette, ID_NULL / 0xFFFF für Standard-Farbtabelle) |
+| `adapter::types::unidirectional::AUI` | `u16OldObjIdColourMap` | Plug (Ausgang) | Bisherige Farbpaletten-Object-ID |
 
 ## Funktionsweise
 
 Der Baustein kapselt den inneren FB `Q_SelectColourMap` (*isobus::UT::Q::Q_SelectColourMap*).
-Bei einem Ereignis an `u16ObjIdColourMap.E1` wird das `REQ`‑Ereignis des internen FBs mit der neuen ID aus `u16ObjIdColourMap.D1` aufgerufen. Nach erfolgreicher Umschaltung wird über `u16OldObjIdColourMap.E1` und `CNF` die alte ID (`u16OldObjIdColourMap.D1`) ausgegeben.
+Bei einem Ereignis an `u16ObjIdColourMap.E1` wird das `REQ`-Ereignis des internen FBs mit der neuen ID aus `u16ObjIdColourMap.D1` aufgerufen. Nach erfolgreicher Umschaltung wird über `u16OldObjIdColourMap.E1` und `CNF` die alte ID (`u16OldObjIdColourMap.D1`) ausgegeben.
 
 ## Technische Besonderheiten
 
-- **AUI-Adapter-Kopplung:** Vollständig adapterbasierte Umschaltung von Farbpaletten.
-- **ISOBUS-Konformität:** Basiert auf ISO 11783-6 F.60.
+- **AUI-Adapter-Kopplung:** Adapterbasierte Umschaltung von Farbpaletten über den Socket `u16ObjIdColourMap`.
+- **Wertebereiche gemäß ISO 11783-6 F.60:**
+  - `ColourMap`: 39000–39999 (ab VT Version 4)
+  - `ColourPalette`: 45000–45999 (ab VT Version 6)
+  - `ID_NULL` (`0xFFFF` / 65535): Wiederherstellen der Standard-Farbtabelle.
+- **Implementierungseinschränkungen (VTClientHelper):**
+  - `VTClientHelper::iso_is_colour_map_id` akzeptiert aktuell nur den Bereich 39000–39999 (Farbpaletten-IDs 45000–45999 werden abgelehnt).
+  - `cmd_select_colour_map_or_palette` verschluckt `ID_NULL` (`0xFFFF`), gibt `VT_E_NO_ERR` (0) zurück und sendet keinen Befehl an den VT, weshalb das Wiederherstellen der Standard-Farbtabelle derzeit nicht funktioniert.
 
 ## Zustandsübersicht
 

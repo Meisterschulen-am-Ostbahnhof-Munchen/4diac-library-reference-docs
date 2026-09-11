@@ -27,7 +27,7 @@ The **Q_SoftKeyMask_AUI** function block is an AUI adapter wrapper for **Q_SoftK
 
 | Name | Type | Comment |
 |---|---|---|
-| `u8MaskType` | `USINT` | Mask Type (0: DataMask, 1: AlarmMask) |
+| `u8MaskType` | `USINT` | Mask Type (1: DataMask, 2: AlarmMask) |
 | `u16DataMaskId` | `UINT` | Object ID of target Data/AlarmMask |
 
 ### **Data Outputs**

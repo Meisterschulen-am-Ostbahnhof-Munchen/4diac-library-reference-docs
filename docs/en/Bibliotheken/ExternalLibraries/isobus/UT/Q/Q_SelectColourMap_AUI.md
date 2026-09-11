@@ -38,7 +38,7 @@ No direct data inputs — Colour Map IDs are handled via AUI adapters.
 
 | Type | Name | Direction | Comment |
 |---|---|---|---|
-| `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Input) | New Colour Map Object ID |
+| `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Input) | New Colour Map Object ID (39000–39999 for ColourMap, 45000–45999 for ColourPalette, ID_NULL / 0xFFFF for default table) |
 | `adapter::types::unidirectional::AUI` | `u16OldObjIdColourMap` | Plug (Output) | Previous Colour Map Object ID |
 
 ## Functionality
@@ -48,8 +48,14 @@ An event on `u16ObjIdColourMap.E1` triggers `REQ` on the inner FB with the ID fr
 
 ## Technical Features
 
-- **AUI Adapter Integration:** Full adapter-driven selection of Colour Maps.
-- **ISOBUS Standard Compliance:** Complies with ISO 11783-6 F.60.
+- **AUI Adapter Integration:** Adapter-driven selection of Colour Maps via `u16ObjIdColourMap` socket.
+- **ID Ranges per ISO 11783-6 F.60:**
+  - `ColourMap`: 39000–39999 (VT version 4 and later)
+  - `ColourPalette`: 45000–45999 (VT version 6 and later)
+  - `ID_NULL` (`0xFFFF` / 65535): Restores the default colour table.
+- **Implementation Limitations (VTClientHelper):**
+  - `VTClientHelper::iso_is_colour_map_id` currently only accepts the range 39000–39999 (`ColourPalette` IDs 45000–45999 are rejected).
+  - `cmd_select_colour_map_or_palette` consumes `ID_NULL` (`0xFFFF`), returns `VT_E_NO_ERR` (0), and sends no VT command. Restoring the default colour table is therefore currently not supported.
 
 ## State Overview
 
