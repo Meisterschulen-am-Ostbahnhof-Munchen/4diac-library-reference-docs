@@ -8,84 +8,101 @@
 * * * * * * * * * *
 ## Introduction
 
-AE2_ILOCK_T_FF_TO_BOOL_EVENT is a reusable IEC 61499 subapplication that represents one chain link of a mutually interlocked toggle flip-flop chain. It combines a local toggle state with an AE2 bidirectional adapter chain, allowing many participants to be connected in series. Each instance exchanges interlock information through its AE2 SOCKET/PLUG pair, while the local state is provided as a BOOL output `Q` and a confirmation event `EO`.
+`AE2_ILOCK_T_FF_TO_BOOL_EVENT` is a reusable IEC 61499 subapplication that implements one link of a mutually interlocked toggle flip-flop chain. It uses an AE2 bidirectional adapter interface with a `SOCKET`/`PLUG` chain topology and provides the current state as a Boolean output `Q` together with a confirmation event `EO`.
 
-The subapplication is designed as a generic chain element: the PLUG of one instance is connected to the SOCKET of the next instance. This makes the interlock chain scalable to any number of participants. The block is the BOOL/event-output variant of the sister block `AE2_ILOCK_T_FF_TO_AX`, which provides an adapter output instead.
+The block is designed as a chain element: several instances can be connected by linking the `PLUG` of one element to the `SOCKET` of the next element. This makes the interlock logic scalable for an arbitrary number of participants.
 
+* * * * * * * * * *
 ## Interface Structure
+
+The subapplication has one event input, one event output, one Boolean data output, and two bidirectional adapter interfaces.
 
 ### **Event Inputs**
 
-| Name | Type | Description |
-|------|------|-------------|
-| `IND` | `Event` | Input event that triggers the toggle operation and starts the mutual interlock handshake. |
+| Name  | Type    | Description                                              |
+|-------|---------|----------------------------------------------------------|
+| `IND` | `Event` | Trigger input used to toggle the local flip-flop state. |
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-|------|------|-------------|
-| `EO` | `Event` | Output event emitted after the internal toggle/interlock operation has been processed. |
+| Name | Type    | Description                                                            |
+|------|---------|------------------------------------------------------------------------|
+| `EO` | `Event` | Emitted when the local `E_SR` flip-flop has been updated and `Q` has changed. |
 
 ### **Data Inputs**
 
-There are no data inputs.
+None.
 
 ### **Data Outputs**
 
-| Name | Type | Description |
-|------|------|-------------|
-| `Q` | `BOOL` | Current Boolean state of the toggle chain link. |
+| Name | Type   | Description                                     |
+|------|--------|-------------------------------------------------|
+| `Q`  | `BOOL` | Current state of the local toggle flip-flop.    |
 
 ### **Adapters**
 
-| Name | Type | Role |
-|------|------|------|
-| `SOCKET` | `adapter::types::bidirectional::AE2` | Adapter socket that receives interlock/event information from the previous chain element. |
-| `PLUG` | `adapter::types::bidirectional::AE2` | Adapter plug that sends interlock/event information to the next chain element. |
+| Name     | Type                               | Description                                                                 |
+|----------|------------------------------------|-----------------------------------------------------------------------------|
+| `SOCKET` | `adapter::types::bidirectional::AE2` | Bidirectional adapter connection to the previous element in the chain.      |
+| `PLUG`   | `adapter::types::bidirectional::AE2` | Bidirectional adapter connection to the next element in the chain.          |
 
+* * * * * * * * * *
 ## Functionality
 
-The subapplication implements one link of a chain of mutually interlocked toggle flip-flops. The core element is an `E_SR` set/reset flip-flop, whose output `Q` is directly exposed as the subapplication output. An `E_SWITCH` uses this value to route the incoming `IND` event to the appropriate logical path.
+The subapplication behaves as one interlock-capable toggle flip-flop inside a chain of identical elements.
 
-When the internal state `Q` is `FALSE`, the `IND` event is directed to the set path. The internal flip-flop is set, the state changes to `TRUE`, and the AE2 conversion FBs are triggered to propagate the interlock information to the adjacent chain elements through the adapter chain.
+When an event arrives at `IND`, the event is routed by the internal `E_SWITCH` according to the current value of `Q`:
 
-When the internal state `Q` is `TRUE`, the `IND` event is directed to the reset path. The internal flip-flop is reset, the state changes to `FALSE`, and the chain element releases the interlock.
+- If `Q = FALSE`, the event is routed to the set branch of the internal `E_SR`. The internal state is set, so `Q` becomes `TRUE`.
+- If `Q = TRUE`, the event is routed to the reset branch of the internal `E_SR`. The internal state is reset, so `Q` becomes `FALSE`.
 
-The two AE2 conversion FBs, `AE2_EVENT_TO_E` and `AE2_E_TO_EVENT`, connect the local event logic to the bidirectional adapter chain. They handle the outgoing and incoming adapter event paths and support the mutual exclusion mechanism between neighbouring chain links.
+In both cases, the internal `E_SR` issues its output event, which is propagated to the subapplication output `EO`.
 
+The AE2 adapter part is responsible for the mutual interlock. The internal conversion FBs `AE2_EVENT_TO_E` and `AE2_E_TO_EVENT` exchange interlock events through `SOCKET` and `PLUG`. When a participant becomes active, the interlock event is sent into the chain. The event can be forwarded through neighboring elements, preventing conflicting active states in other participants.
+
+The overall result is a decentralized, chainable interlocked toggle flip-flop that can be extended simply by adding more subapplication instances and connecting `PLUG` to `SOCKET`.
+
+* * * * * * * * * *
 ## Technical Features
 
-- Implements a toggle flip-flop (`T-FF`) with mutual interlock logic.
-- Provides the state as a Boolean output `Q` and an event output `EO`.
-- Uses the bidirectional AE2 adapter type for chain communication.
-- Can be connected in a chain of arbitrary length by connecting `PLUG` to the next element's `SOCKET`.
-- Uses standard IEC 61499 function blocks: `E_SR` and `E_SWITCH`.
-- Encapsulates the complete interlock logic in a single reusable subapplication.
-- Suitable for applications where a Boolean output is required instead of an adapter-based output.
+- Standard-compliant IEC 61499 subapplication type.
+- Uses standard event FBs `E_SR` and `E_SWITCH` for state storage and event routing.
+- Bidirectional AE2 adapter interface supports chain-based communication.
+- No explicit data inputs are required; the only external data output is the Boolean state `Q`.
+- The application logic is isolated from the adapter protocol by the conversion FBs `AE2_EVENT_TO_E` and `AE2_E_TO_EVENT`.
+- The `SOCKET`/`PLUG` topology allows an arbitrary number of chain participants.
+- A sister block `AE2_ILOCK_T_FF_TO_AX` exists with an AX adapter output instead of `BOOL` + `Event`.
 
+* * * * * * * * * *
 ## State Overview
 
-- `Q = FALSE`: The chain link is inactive. A new `IND` event selects the set path, changes the state to `TRUE`, and starts the interlock handshake.
-- `Q = TRUE`: The chain link is active. A new `IND` event selects the reset path, changes the state to `FALSE`, and releases the interlock.
-- During the interlock handshake, the AE2 adapter chain communicates with neighbouring links to prevent conflicting states in the chain.
+The internal behavior can be described by the two states of the stored flip-flop:
 
+| State    | Meaning                      | Behavior on `IND`                                                        |
+|----------|------------------------------|--------------------------------------------------------------------------|
+| `Q = FALSE` | Participant is inactive/reset. | The set branch is activated, `Q` becomes `TRUE`, and the interlock event is sent through the adapter chain. |
+| `Q = TRUE`  | Participant is active/set.   | The reset branch is activated, `Q` becomes `FALSE`, and the confirmation event `EO` is emitted. |
+
+Additionally, interlock signals arriving from neighboring chain elements through the adapter interfaces can reset the local flip-flop, implementing the mutual exclusion between participants.
+
+* * * * * * * * * *
 ## Application Scenarios
 
-- Cascaded mutual exclusion systems where only one participant may be active at a time.
-- Toggle-based mode selection in multi-station automation systems.
-- Daisy-chained interlock stations that pass control or state information from one element to the next.
-- Applications requiring a Boolean output for direct use in visualization, PLC logic, or HMI integration.
-- Multi-participant systems where new elements can be added simply by extending the PLUG-to-SOCKET chain.
+- Decentralized toggle systems in modular machines where only one station may be active at a time.
+- Interlocked control chains built from identical reusable subapplication instances.
+- Event-driven applications that need a Boolean state output combined with an event confirmation.
+- Educational or experimental IEC 61499 systems demonstrating adapter-based chain communication.
+- Architectures where a centralized interlock unit would require too much wiring or configuration.
 
+* * * * * * * * * *
 ## Comparison with Similar Blocks
 
-| Block | Output Type | Main Difference |
-|-------|-------------|-----------------|
-| `AE2_ILOCK_T_FF_TO_BOOL_EVENT` | `BOOL Q` + `EO` event | Provides the state directly as a Boolean value and a confirmation event. |
-| `AE2_ILOCK_T_FF_TO_AX` | Adapter output | Uses an AX adapter output instead of a Boolean/event output. |
-| Plain Toggle Flip-Flop | `BOOL Q` | Toggles its output, but does not include mutual interlock logic or chain communication. |
-| Standard `E_SR` / `E_RS` | `BOOL Q` | Provides set/reset behavior but no toggle chain or interlock coordination. |
+- `AE2_ILOCK_T_FF_TO_BOOL_EVENT` provides a Boolean output `Q` and a confirmation event `EO`, making it convenient for connection to classic IEC 61499 Boolean and event logic.
+- The sister block `AE2_ILOCK_T_FF_TO_AX` provides the same interlocked toggle behavior but outputs an AX adapter instead of a Boolean/event interface. It is intended for systems where the next participant also expects an adapter-based interface.
+- Compared with a simple `E_SR` or toggle flip-flop, this block adds a distributed interlock mechanism through the AE2 adapter chain. A standalone flip-flop cannot coordinate with other participants.
+- Compared with a central interlock function block, this subapplication uses a neighbor-to-neighbor chain topology. This reduces central wiring and allows the interlock logic to scale more flexibly.
 
+* * * * * * * * * *
 ## Conclusion
 
-`AE2_ILOCK_T_FF_TO_BOOL_EVENT` is a compact and reusable subapplication for building mutually interlocked toggle chains. It combines standard IEC 61499 event logic with a bidirectional AE2 adapter interface. The Boolean output `Q` and event output `EO` make it easy to integrate into control logic, while the SOCKET/PLUG chain design allows scalable use in systems with many participants.
+`AE2_ILOCK_T_FF_TO_BOOL_EVENT` is a compact and reusable IEC 61499 subapplication for building mutually interlocked toggle chains. It combines the simplicity of a Boolean output and event confirmation with the flexibility of a bidirectional AE2 adapter interface. Its `SOCKET`/`PLUG` design makes it particularly suitable for decentralized, scalable interlock applications.

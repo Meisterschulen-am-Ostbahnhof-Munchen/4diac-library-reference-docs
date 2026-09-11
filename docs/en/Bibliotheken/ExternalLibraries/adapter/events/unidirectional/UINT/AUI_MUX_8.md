@@ -3,95 +3,86 @@
 ![AUI_MUX_8](./AUI_MUX_8.svg)
 
 * * * * * * * * * *
-
 ## Introduction
 
-AUI_MUX_8 is an event multiplexer function block that selects one of eight event inputs and forwards the event through an AUI adapter connection. Instead of exposing a plain event output and a separate selection/data pin, this block uses an AUI adapter named `K` to carry the multiplexed event together with the associated event index.
-
-The block is designed as a generic event multiplexer and is particularly useful when the surrounding application already uses AUI-based unidirectional adapter connections.
+AUI_MUX_8 is an event multiplexer function block with a unidirectional AUI adapter output. It concentrates up to eight incoming event inputs on a single AUI adapter connection. Instead of forwarding the selected event through a plain event output and a separate index value, the block emits the event and the associated event index through the adapter `K`. It is a concrete specialization of the generic event multiplexer `GEN_E_MUX` and is intended for use in event-driven 4diac applications.
 
 ## Interface Structure
 
+The FB has eight event inputs and one AUI adapter Plug. There are no conventional event outputs, data inputs, or data outputs. All outgoing event and index information is transported through the `K` adapter.
+
 ### **Event Inputs**
 
-| Name | Type | Comment |
-|------|------|---------|
-| EI1 | Event | Event to multiplex, K=0 |
-| EI2 | Event | Event to multiplex, K=1 |
-| EI3 | Event | Event to multiplex, K=2 |
-| EI4 | Event | Event to multiplex, K=3 |
-| EI5 | Event | Event to multiplex, K=4 |
-| EI6 | Event | Event to multiplex, K=5 |
-| EI7 | Event | Event to multiplex, K=6 |
-| EI8 | Event | Event to multiplex, K=7 |
+| Input | Description |
+|-------|-------------|
+| EI1 | Event to multiplex, K = 0 |
+| EI2 | Event to multiplex, K = 1 |
+| EI3 | Event to multiplex, K = 2 |
+| EI4 | Event to multiplex, K = 3 |
+| EI5 | Event to multiplex, K = 4 |
+| EI6 | Event to multiplex, K = 5 |
+| EI7 | Event to multiplex, K = 6 |
+| EI8 | Event to multiplex, K = 7 |
 
 ### **Event Outputs**
 
-No event outputs are declared on the function block itself. The multiplexed event is provided through the AUI adapter `K`.
+None. The multiplexed event is sent through the AUI adapter `K`.
 
 ### **Data Inputs**
 
-No data inputs are declared.
+None.
 
 ### **Data Outputs**
 
-No data outputs are declared.
+None.
 
 ### **Adapters**
 
-| Name | Type | Direction | Comment |
-|------|------|-----------|---------|
-| K | `adapter::types::unidirectional::AUI` | Plug | Event index |
-
-The adapter `K` replaces the conventional `EO + K` interface of a standard event multiplexer. It combines the event routing result and the event index information in a single AUI connection.
+| Adapter | Type | Direction | Description |
+|---------|------|-----------|-------------|
+| K | `adapter::types::unidirectional::AUI` | Plug | Output adapter carrying the multiplexed event and the index of the active event input (0–7). |
 
 ## Functionality
 
-AUI_MUX_8 multiplexes eight incoming events into one AUI adapter output. When an event occurs on one of the inputs `EI1` to `EI8`, the block forwards the event through the adapter `K` and provides the corresponding index value:
+When an event occurs at one of the event inputs, the FB produces an event on the `K` adapter. The index value attached to this adapter output corresponds to the triggered input:
 
-| Event Input | Adapter Index |
-|-------------|---------------|
-| EI1 | 0 |
-| EI2 | 1 |
-| EI3 | 2 |
-| EI4 | 3 |
-| EI5 | 4 |
-| EI6 | 5 |
-| EI7 | 6 |
-| EI8 | 7 |
+- EI1 → K = 0  
+- EI2 → K = 1  
+- EI3 → K = 2  
+- EI4 → K = 3  
+- EI5 → K = 4  
+- EI6 → K = 5  
+- EI7 → K = 6  
+- EI8 → K = 7  
 
-The receiving function block or subapplication connected to the AUI socket can evaluate the index to determine which event source triggered the multiplexed event.
+The receiving FB on the other side of the AUI adapter can use the event to trigger processing and the index to identify the source. Because the index is determined by the event input and not by an external selector, the block can be used as a compact event-source encoder.
 
 ## Technical Features
 
-- Eight event input channels with fixed index mapping from 0 to 7.
-- AUI adapter plug `K` instead of separate event output and data pins.
-- Unidirectional adapter type, suitable for event-oriented connections.
-- Generic FB handling via the Eclipse 4diac generic class name `GEN_E_MUX`.
-- No explicit data inputs or data outputs on the FB itself.
-- Stateless operation: every incoming event is handled individually and forwarded through the adapter.
+- Supports up to eight event inputs with a fixed 0-based index mapping.
+- Provides an AUI plug `K` using adapter type `adapter::types::unidirectional::AUI`.
+- No separate event outputs or data pins; the AUI adapter encapsulates the output interface.
+- Declared as a generic FB specialization with `GenericClassName = 'GEN_E_MUX'`.
+- Stateless operation with no internal data persistence.
+- Simplifies wiring by replacing explicit EO + K connections with an adapter-based connection.
 
 ## State Overview
 
-This function block does not define an explicit state machine or internal state chart. It behaves as a stateless event multiplexer. Each event input is processed independently, and the resulting event is immediately forwarded through the AUI adapter `K`.
+The type description does not define an explicit ECC state machine. AUI_MUX_8 is a stateless, event-activated block. At runtime, it remains in its ready state until an event input occurs; then it immediately emits the event and index through `K` and returns to the ready state. No state information is stored between invocations.
 
 ## Application Scenarios
 
-AUI_MUX_8 is suitable for applications where:
-
-- Multiple event sources must be combined into one event path.
-- The downstream components are already connected using AUI adapters.
-- A compact adapter-based interface is preferred over separate event output and index data pins.
-- Event-driven communication between different parts of an automation solution must be unified.
-
-Typical examples include sensor event aggregation, selection of several command sources, and routing of event signals inside modular 4diac applications.
+- Consolidating multiple event sources such as buttons, sensors, diagnostic flags, or mode triggers into one AUI-based connection to a central event handler.
+- Supplying an event index to a processing block so the receiver can distinguish which source triggered the event.
+- Reducing wiring complexity in 4diac applications by using AUI adapters instead of separate event output and index data connections.
+- Serving as an eight-input specialization of a generic event multiplexer in modular automation logic.
 
 ## Comparison with Similar Blocks
 
-Compared to a standard `E_MUX`, `AUI_MUX_8` uses an AUI adapter output instead of a plain event output `EO` and a separate selection/index input `K`. This reduces the number of separate interface elements on the FB and integrates the event index into the adapter connection.
-
-Compared to demultiplexer blocks such as `E_DEMUX`, the direction of operation is reversed: `AUI_MUX_8` combines several event inputs into one adapter output, while a demultiplexer distributes one event input to several outputs.
+- **Standard E_MUX:** Uses a plain event output and an external selector input. AUI_MUX_8 replaces this interface with an AUI adapter and derives the index directly from the triggering event input.
+- **E_DEMUX:** Performs the inverse operation, routing one incoming event to one of several outputs according to a selector. AUI_MUX_8 merges several inputs into one adapter output.
+- **Other AUI_MUX variants:** AUI_MUX_2, AUI_MUX_4, AUI_MUX_16, etc. follow the same principle with a different number of inputs and index range; AUI_MUX_8 is the eight-channel version.
 
 ## Conclusion
 
-AUI_MUX_8 is a compact, adapter-based event multiplexer for eight input events. By integrating the event index into an AUI unidirectional adapter, it provides a clean and reusable interface for event-driven 4diac applications. Its stateless behavior, clear channel mapping, and generic FB support make it a practical building block for structured event handling.
+AUI_MUX_8 is a practical event multiplexing block for applications that use AUI adapter connections. It combines event concentration and source identification in one interface, allowing up to eight event inputs to be forwarded as a single adapter-based event with a clear index. Its stateless behavior and generic design make it suitable for modular, event-driven control systems based on 4diac.

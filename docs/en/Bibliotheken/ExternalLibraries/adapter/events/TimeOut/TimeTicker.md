@@ -5,98 +5,112 @@
 * * * * * * * * * *
 ## Introduction
 
-TimeTicker is a composite function block that wraps an `E_CYCLE` block and combines it with an `ATimeTick` adapter. It generates periodic time-tick events and exposes them through an adapter interface together with status and timing information. The block is intended for applications that need a configurable, event-driven time tick source with process time, elapsed time, and output state.
+`TimeTicker` is a composite function block that encapsulates an `iec61499::events::E_CYCLE` function block and exposes an adapter-based interface for periodic tick generation. It provides a configurable cycle time, start/stop handling, and event-based reporting of output values such as process time and elapsed time.
+
+The block is intended to be used as a reusable time-tick service inside IEC 61499 systems where adapter-based communication is preferred over direct event/data wiring.
 
 ## Interface Structure
 
 ### **Event Inputs**
 
-| Name | Type | Associated Data | Comment |
-|------|------|-----------------|---------|
-| INIT | EInit | TC | Initialization Request |
+| Event   | Type   | With | Description                       |
+|---------|--------|------|-----------------------------------|
+| `INIT`  | `EInit`| `TC` | Initialization request, carries the cycle time. |
 
 ### **Event Outputs**
 
-| Name | Type | Associated Data | Comment |
-|------|------|-----------------|---------|
-| INITO | EInit | - | Initialization Confirm |
-| CNF | Event | Q, ET | Reports the current Q/ET on every tick |
-| STARTO | Event | PT | Start signal passed through from the adapter |
-| STOPO | Event | - | Stop signal passed through from the adapter |
+| Event   | Type    | With      | Description                                         |
+|---------|---------|-----------|-----------------------------------------------------|
+| `INITO` | `EInit` | -         | Initialization confirmation.                         |
+| `CNF`   | `Event` | `Q`, `ET` | Reports the current `Q` and `ET` on every tick.      |
+| `STARTO`| `Event` | `PT`      | Indicates that the ticker has been started.          |
+| `STOPO` | `Event` | -         | Indicates that the ticker has been stopped.          |
 
 ### **Data Inputs**
 
-| Name | Type | Initial Value | Comment |
-|------|------|---------------|---------|
-| TC | TIME | T#200ms | cycleTime |
+| Data | Type | Initial Value | Description           |
+|------|------|---------------|-----------------------|
+| `TC` | `TIME` | `T#200ms` | Cycle time of the ticker. |
 
 ### **Data Outputs**
 
-| Name | Type | Comment |
-|------|------|---------|
-| Q | BOOL | Output |
-| PT | TIME | Process time |
-| ET | TIME | Elapsed time |
+| Data | Type   | Description                                        |
+|------|--------|----------------------------------------------------|
+| `Q`  | `BOOL` | Current output state supplied through the adapter. |
+| `PT` | `TIME` | Process time, associated with the start event.     |
+| `ET` | `TIME` | Elapsed time, reported with each confirmation.     |
 
 ### **Adapters**
 
-| Name | Type | Kind | Role |
-|------|------|------|------|
-| TimeTickSocket | adapter::events::TimeOut::ATimeTick | Plug | Carries the periodic tick dialog, including REQ/CNF events, start/stop signals, and Q/PT/ET data. |
+| Adapter         | Type                                  | Direction | Description                                        |
+|-----------------|---------------------------------------|-----------|----------------------------------------------------|
+| `TimeTickSocket`| `adapter::events::TimeOut::ATimeTick` | Plug      | Adapter connection used for tick requests, confirmations, start/stop commands, and time data exchange. |
+
+Internally, the adapter is used with the following logical endpoints:
+
+| Adapter Endpoint  | Role in the Internal Network                        |
+|-------------------|-----------------------------------------------------|
+| `REQ`             | Receives the periodic event from `E_CYCLE.EO`.      |
+| `CNF`             | Triggers the external `CNF` event output.            |
+| `STARTO_IN`       | Starts the internal `E_CYCLE` and triggers `STARTO`. |
+| `STOPO_IN`        | Stops the internal `E_CYCLE` and triggers `STOPO`.   |
+| `Q`, `PT`, `ET`   | Provide the data values connected to the outputs.    |
 
 ## Functionality
 
-TimeTicker uses an internal `E_CYCLE` function block to generate periodic events. The cycle time is provided through the `TC` input and is connected directly to the `DT` input of the internal `E_CYCLE`.
+The `TimeTicker` composite FB contains a single internal `E_CYCLE` block. The cycle time `TC` is connected to the `DT` input of `E_CYCLE`, so the period of the generated ticks is determined by `TC`.
 
-The block does not expose direct `START` and `STOP` event inputs. Instead, start and stop requests are received through the `ATimeTick` adapter via its `STARTO_IN` and `STOPO_IN` events. These events are forwarded to the `STARTO` and `STOPO` outputs and also control the internal `E_CYCLE`.
+When a start command arrives through the adapter (`STARTO_IN`), the composite FB:
 
-When the internal cycle is running, each generated `EO` event is sent to the adapter as `REQ`. The adapter or connected peer can then respond with `CNF`, which is forwarded to the external `CNF` event output together with the current `Q` and `ET` values. The `PT` value is associated with the `STARTO` event.
+- raises the `STARTO` event output together with `PT`,
+- sends a start event to the internal `E_CYCLE`.
 
-`INIT` is directly connected to `INITO`, so initialization is confirmed immediately. The `TC` value is associated with the `INIT` event, meaning the cycle time should be supplied when the block is initialized.
+While the internal cycle block is running, it generates `EO` events periodically with the configured interval. Each `EO` event is forwarded to the adapter as `REQ`, producing a tick on the adapter interface.
+
+When the adapter returns a confirmation `CNF`, the composite FB raises its own `CNF` event output and publishes the associated data values `Q` and `ET`.
+
+A stop command arriving through the adapter (`STOPO_IN`) is forwarded to the stop input of the internal `E_CYCLE` and also triggers the `STOPO` output.
+
+An `INIT` event is passed directly through to `INITO`, providing an immediate initialization confirmation.
 
 ## Technical Features
 
-- Composite function block wrapping an `E_CYCLE` timer block.
-- Adapter-based interface using `adapter::events::TimeOut::ATimeTick`.
-- Configurable cycle time through the `TC` data input, default `T#200ms`.
-- No internal state machine; the behavior is determined by the internal `E_CYCLE` and the connected adapter.
-- Event/data associations:
-  - `CNF` carries `Q` and `ET`.
-  - `STARTO` carries `PT`.
-- Start and stop behavior is controlled entirely through the adapter.
-- `Q`, `PT`, and `ET` are supplied by the connected adapter/peer and forwarded to the block outputs.
+- Composite FB implementation using an internal `iec61499::events::E_CYCLE`.
+- Configurable cycle time through the `TC` data input, defaulting to `200 ms`.
+- Adapter-based tick interface using `adapter::events::TimeOut::ATimeTick`.
+- Standard event/data association:
+  - `INIT` is associated with `TC`.
+  - `CNF` is associated with `Q` and `ET`.
+  - `STARTO` is associated with `PT`.
+- No internal algorithms or state-machines are required; the behavior is entirely defined by the function block network.
 
 ## State Overview
 
-TimeTicker does not contain an explicit ECC state machine. Observable behavior depends on the internal `E_CYCLE` and the adapter connection.
+The `TimeTicker` does not contain an explicit ECC state machine, but it can be described in terms of logical operational states:
 
-| State | Trigger | Behavior |
-|-------|---------|----------|
-| Initializing | INIT | Initializes the block and emits INITO. |
-| Idle | After INIT, before start | Internal E_CYCLE is stopped; no tick requests are generated. |
-| Running | STARTO_IN from adapter | STARTO is emitted and E_CYCLE is started. Periodic EO events generate REQ/CNF cycles. |
-| Stopped | STOPO_IN from adapter | STOPO is emitted and E_CYCLE is stopped. Further tick generation is suppressed. |
+| State     | Description                                                                 |
+|-----------|-----------------------------------------------------------------------------|
+| Initialized | After `INIT`, the FB confirms initialization via `INITO`. No ticks are generated yet. |
+| Stopped   | The internal `E_CYCLE` is not running. No periodic `REQ` events are generated. |
+| Running   | After `STARTO_IN`, the internal `E_CYCLE` is started. Ticks are emitted periodically on the adapter. |
+| Confirming | After each tick, the adapter returns `CNF`, causing the `CNF` output to fire with `Q` and `ET`. |
 
 ## Application Scenarios
 
-- Periodic time-tick generation for timeout-monitoring adapters.
-- Watchdog or heartbeat signaling with status output `Q` and elapsed time `ET`.
-- Synchronous periodic request/confirm dialogs through an `ATimeTick` adapter.
-- Integration into IEC 61499 applications that require a configurable, event-driven tick source.
-- Measurement and forwarding of process time `PT` in cyclic control or supervision tasks.
+- Periodic data polling in automation systems.
+- Generation of cyclic time-tick events for adapter-based communication.
+- Start/stop controlled time supervision with process time and elapsed time reporting.
+- Integration into larger IEC 61499 applications that rely on adapters instead of direct wiring.
+- Reusable timing component for service interfaces that require a periodic request/confirmation pattern.
 
 ## Comparison with Similar Blocks
 
-| Feature | E_CYCLE | TimeTicker |
-|---------|---------|------------|
-| Cycle time input | DT | TC |
-| Start/stop control | Direct START/STOP events | Via ATimeTick adapter events |
-| Periodic event output | EO | CNF, generated after REQ/CNF dialog |
-| Additional data outputs | None | Q, PT, ET |
-| Adapter interface | No | Yes, via ATimeTick plug |
-
-Compared to a raw `E_CYCLE`, TimeTicker provides a cleaner adapter-based interface and adds status, process time, and elapsed time outputs. It still relies on `E_CYCLE` for the actual cycle generation.
+| Block        | Comparison                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| `E_CYCLE`    | A low-level periodic event generator. `TimeTicker` wraps `E_CYCLE` and adds an adapter interface, start/stop events, and confirmation data. |
+| `TON` / `TOF`| Classic timer blocks generate boolean timing outputs. `TimeTicker` generates periodic events and reports time values through an adapter. |
+| Plain service FB | Many service FBs require manual event handling. `TimeTicker` encapsulates cycle control and adapter communication in one composite block. |
 
 ## Conclusion
 
-TimeTicker is a compact composite block that adapts the standard `E_CYCLE` behavior into an adapter-driven tick source. It is especially useful when periodic time events need to be combined with status information, process time, and elapsed time, and when the surrounding application is built around IEC 61499 adapters.
+The `TimeTicker` FB is a practical composite function block for producing periodic tick events in an adapter-based IEC 61499 environment. By combining an internal `E_CYCLE` with an `ATimeTick` adapter, it provides a clean and reusable interface for start/stop control, cyclic requests, confirmations, and time-related data exchange. Its configurable cycle time and straightforward internal network make it suitable for many event-driven automation and monitoring scenarios.

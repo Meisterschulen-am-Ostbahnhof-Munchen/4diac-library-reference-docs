@@ -3,118 +3,154 @@
 ![E_FB_TimeOut](./E_FB_TimeOut.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
-The `E_FB_TimeOut` function block is a composite implementation of a timeout service. It provides a simple, reusable delay/timeout mechanism that can be controlled and observed through adapter sockets. The block is designed to behave in a way similar to an `FB_TON` but with a cyclic interface for querying the timeout status and elapsed time.
+E_FB_TimeOut is a composite IEC 61499 function block that provides a simple timeout service. It wraps an internal timer instance and exposes its functionality through two adapter sockets:
 
-The functionality is implemented by an internally embedded `E_FB_DELAY` block. The external interface consists exclusively of two adapter sockets: one for controlling the timeout operation and one for cyclic time-tick queries.
+- `TimeOutSocket` for starting, stopping, and receiving timeout events.
+- `TimeTickSocket` for cyclic querying and monitoring of the timer state.
+
+The block is designed to offer an `FB_TON`-like behavior with an event-driven cyclic interface. It is suitable for applications where a timeout must be armed, cancelled, and periodically observed.
 
 ## Interface Structure
 
-`E_FB_TimeOut` does not expose direct event or data inputs/outputs. All communication with the outside world happens through its two adapter sockets. This makes the block well suited for adapter-based, decoupled system architectures.
+The function block has no direct event or data pins. All communication with the outside world is performed through adapter sockets.
+
+| Adapter Socket | Adapter Type | Purpose |
+|---|---|---|
+| `TimeOutSocket` | `iec61499::events::ATimeOut` | Standard timeout control and timeout notification. |
+| `TimeTickSocket` | `adapter::events::TimeOut::ATimeTick` | Cyclic query and status observation of the timer. |
 
 ### **Event Inputs**
 
-The following event inputs are available through the adapter sockets:
+There are no direct event inputs on the FB. The following incoming events are provided through the adapter sockets:
 
-| Event | Via Adapter | Connected to | Description |
-|---|---|---|---|
-| `START` | `TimeOutSocket` (`ATimeOut`) | `DLY.START` | Starts the timeout delay. |
-| `STOP` | `TimeOutSocket` (`ATimeOut`) | `DLY.STOP` | Stops or cancels the running timeout. |
-| `REQ` | `TimeTickSocket` (`ATimeTick`) | `DLY.REQ` | Requests the current timeout status and time values. |
+| Event | Adapter Socket | Description |
+|---|---|---|
+| `START` | `TimeOutSocket` | Starts the timeout evaluation. |
+| `STOP` | `TimeOutSocket` | Stops or cancels the currently active timeout. |
+| `REQ` | `TimeTickSocket` | Requests the current timer state; answered with `CNF`. |
 
 ### **Event Outputs**
 
-The following event outputs are available through the adapter sockets:
+There are no direct event outputs on the FB. The following outgoing events are provided through the adapter sockets:
 
-| Event | Via Adapter | Connected from | Description |
-|---|---|---|---|
-| `TimeOut` | `TimeOutSocket` (`ATimeOut`) | `DLY.EO` | Emitted when the configured timeout duration has elapsed. |
-| `CNF` | `TimeTickSocket` (`ATimeTick`) | `DLY.CNF` | Confirms a `REQ` query and provides updated status data. |
-| `STARTO_IN` | `TimeTickSocket` (`ATimeTick`) | `DLY.STARTO` | Indicates that the timeout has been started. |
-| `STOPO_IN` | `TimeTickSocket` (`ATimeTick`) | `DLY.STOPO` | Indicates that the timeout has been stopped. |
+| Event | Adapter Socket | Description |
+|---|---|---|
+| `TimeOut` | `TimeOutSocket` | Emitted when the configured timeout duration has elapsed. |
+| `CNF` | `TimeTickSocket` | Confirmation for a `REQ` query. |
+| `STARTO_IN` | `TimeTickSocket` | Notifies that the internal timer has started. |
+| `STOPO_IN` | `TimeTickSocket` | Notifies that the internal timer has stopped. |
 
 ### **Data Inputs**
 
-The following data input is available through the adapter sockets:
+There are no direct data inputs on the FB. The following incoming data is provided through the adapter sockets:
 
-| Data | Via Adapter | Connected to | Description |
-|---|---|---|---|
-| `DT` | `TimeOutSocket` (`ATimeOut`) | `DLY.DT` | Defines the delay time, i.e. the timeout duration. |
+| Data | Adapter Socket | Description |
+|---|---|---|
+| `DT` | `TimeOutSocket` | Timeout duration value forwarded to the internal timer. |
 
 ### **Data Outputs**
 
-The following data outputs are available through the adapter sockets:
+There are no direct data outputs on the FB. The following outgoing data is provided through the adapter sockets:
 
-| Data | Via Adapter | Connected from | Description |
-|---|---|---|---|
-| `ET` | `TimeTickSocket` (`ATimeTick`) | `DLY.ET` | Elapsed time since the timeout was started. |
-| `Q` | `TimeTickSocket` (`ATimeTick`) | `DLY.Q` | Status output indicating the delay/timeout state. |
-| `PT` | `TimeTickSocket` (`ATimeTick`) | `DLY.PT` | Preset time value, typically the configured timeout duration. |
+| Data | Adapter Socket | Description |
+|---|---|---|
+| `ET` | `TimeTickSocket` | Elapsed time of the internal timer. |
+| `Q` | `TimeTickSocket` | Timer state output of the internal timer. |
+| `PT` | `TimeTickSocket` | Configured or current timer time value. |
+
+The data outputs are meaningful after an associated event such as `CNF`, `STARTO_IN`, `STOPO_IN`, or `TimeOut` has been issued.
 
 ### **Adapters**
 
-| Adapter | Type | Direction | Description |
-|---|---|---|---|
-| `TimeOutSocket` | `iec61499::events::ATimeOut` | Socket | Provides the standard event-based timeout interface: `START`, `STOP`, `TimeOut`, and `DT`. |
-| `TimeTickSocket` | `adapter::events::TimeOut::ATimeTick` | Socket | Provides a cyclic time-tick interface for querying `ET`, `Q`, and `PT` and for observing start/stop events. |
+The FB uses two adapter sockets as its complete external interface:
+
+- `TimeOutSocket` provides the standard timeout operations:
+  - `START` and `STOP` as incoming events.
+  - `TimeOut` as outgoing event.
+  - `DT` as incoming data.
+
+- `TimeTickSocket` provides a cyclic observation interface:
+  - `REQ` as incoming query event.
+  - `CNF`, `STARTO_IN`, and `STOPO_IN` as outgoing notification events.
+  - `ET`, `Q`, and `PT` as outgoing data values.
 
 ## Functionality
 
-The `E_FB_TimeOut` block implements a timeout service using an internal `E_FB_DELAY` instance. The internal delay block is responsible for all timing behavior. The outer block only maps events and data between the external adapters and the internal delay block.
+The behavior of E_FB_TimeOut is implemented by an internal instance of the event-based delay function block `adapter::events::TimeOut::E_FB_DELAY`.
 
-When a `START` event is received on the `TimeOutSocket`, the internal delay is started with the duration specified by `DT`. If no `STOP` event is received before the delay expires, the internal delay produces its output event, which is forwarded as the `TimeOut` event on `TimeOutSocket`.
+The block works as follows:
 
-When a `STOP` event is received, the internal delay is stopped and the timeout is cancelled. No `TimeOut` event is emitted in that case.
+1. When `TimeOutSocket.START` is received, the event is forwarded to the internal timer. The data value `TimeOutSocket.DT` is supplied as the delay/timeout duration.
+2. The internal timer starts and counts the configured time.
+3. If no `STOP` event arrives, the internal timer eventually generates an expiration event. This event is forwarded to `TimeOutSocket.TimeOut`.
+4. When `TimeOutSocket.STOP` is received, it is forwarded to the internal timer and cancels the active timeout.
+5. A cyclic query can be made through `TimeTickSocket.REQ`. The internal timer responds with `CNF` and provides the current values of `Q`, `ET`, and `PT` through `TimeTickSocket`.
+6. Start and stop transitions of the internal timer are reported through `TimeTickSocket.STARTO_IN` and `TimeTickSocket.STOPO_IN`.
 
-The `TimeTickSocket` provides a cyclic, query-oriented access path to the same internal delay. A `REQ` event triggers the internal delay to produce a confirmation event `CNF`. At the same time, the current values of `ET`, `Q`, and `PT` are made available on the `TimeTickSocket`. Additionally, `STARTO_IN` and `STOPO_IN` provide event-based notifications when the timeout has been started or stopped.
+The internal wiring is summarized in the following table:
 
-Because the timeout logic is contained in the internal `E_FB_DELAY`, the external behavior remains predictable and can be reused in different adapter-based applications.
+| E_FB_TimeOut Interface | Internal E_FB_DELAY Connection |
+|---|---|
+| `TimeOutSocket.START` | `DLY.START` |
+| `TimeOutSocket.STOP` | `DLY.STOP` |
+| `TimeOutSocket.DT` | `DLY.DT` |
+| `DLY.EO` | `TimeOutSocket.TimeOut` |
+| `TimeTickSocket.REQ` | `DLY.REQ` |
+| `DLY.CNF` | `TimeTickSocket.CNF` |
+| `DLY.STARTO` | `TimeTickSocket.STARTO_IN` |
+| `DLY.STOPO` | `TimeTickSocket.STOPO_IN` |
+| `DLY.ET` | `TimeTickSocket.ET` |
+| `DLY.Q` | `TimeTickSocket.Q` |
+| `DLY.PT` | `TimeTickSocket.PT` |
 
 ## Technical Features
 
-- Composite function block; no internal ECC or algorithms are required.
-- Uses an internal `E_FB_DELAY` block for the actual timing logic.
-- No direct event inputs, event outputs, data inputs, or data outputs outside the adapter interface.
-- Provides two adapter sockets:
-  - Standard `iec61499::events::ATimeOut` adapter.
-  - Custom `adapter::events::TimeOut::ATimeTick` adapter.
-- Supports both event-driven timeout handling and cyclic polling/querying of status data.
-- Designed as an FB_TON-like interface with cyclic behavior.
-- Decoupled architecture: the timeout service can be connected to other FBs using matching plug adapters.
+- Composite function block implementation.
+- Contains a single internal function block instance: `adapter::events::TimeOut::E_FB_DELAY`.
+- No plain event or data pins; the entire interface is adapter-based.
+- Supports both event-driven timeout signaling and cyclic state polling.
+- Uses standard IEC 61499 event and data connections for internal wiring.
+- Provides `Q`, `ET`, and `PT` values for monitoring and diagnosis.
+- Can be embedded in larger IEC 61499 applications where reusable timeout services are required.
 
 ## State Overview
 
-Since `E_FB_TimeOut` is a composite block, it does not contain an explicit state machine. The state behavior is delegated to the internal `E_FB_DELAY`. Conceptually, the block can be considered in the following states:
+Although the block is a composite FB and does not define its own ECC state machine, the following observable states can be derived from the timer behavior:
 
-- **Idle:** No timeout is active. The internal delay has not been started.
-- **Timing:** A `START` event has been received and the internal delay is counting down. `STOP` can cancel the timing operation.
-- **Timeout Expired:** The configured delay time has elapsed, and the `TimeOut` event has been emitted.
-- **Stopped:** A `STOP` event has cancelled the timeout before expiration.
+| State | Description |
+|---|---|
+| Idle | No timeout is active. The timer has not been started or has been stopped. |
+| Running | A `START` event has been accepted and the timer is counting. `STARTO_IN` is emitted when this state is entered. |
+| Expired | The configured timeout duration has elapsed. `TimeOut` is emitted and the timer state output `Q` reflects the timeout condition. |
+| Stopped | A `STOP` event has cancelled the active timeout. `STOPO_IN` is emitted when this state is entered. |
 
-The `Q`, `ET`, and `PT` outputs made available through the `TimeTickSocket` allow an external cyclic caller to observe the current state and timing information.
+During all states, the current timer values can be queried through `TimeTickSocket.REQ` and `TimeTickSocket.CNF`.
 
 ## Application Scenarios
 
-`E_FB_TimeOut` is suitable for applications where a timeout service must be controlled and observed through adapters. Typical scenarios include:
+E_FB_TimeOut is suitable for the following use cases:
 
-- Communication protocol timeout supervision.
-- Cyclic monitoring of process or machine states.
-- Integration in adapter-based IEC 61499 applications where the timeout service should be reusable and interchangeable.
-- Event-driven timeout control with additional periodic status polling.
-- Replacing direct `FB_TON`-like behavior in a distributed or modular control system.
+- Watchdog supervision of external operations.
+- Timeout handling in communication protocols.
+- Event-driven state machines requiring a start/stop timeout service.
+- Cyclic control applications where the timeout state must be checked every PLC or IEC 61499 execution cycle.
+- Reusable service blocks in distributed IEC 61499 systems.
+
+The combination of `ATimeOut` and `ATimeTick` allows both a simple event-based usage and a more detailed cyclic monitoring of timing values.
 
 ## Comparison with Similar Blocks
 
-Compared to a standard `E_DELAY` or a direct `FB_TON`-style block, `E_FB_TimeOut` has a different interface style:
+| Block / Approach | Interface | Timeout Notification | Cyclic Query |
+|---|---|---|---|
+| `FB_TON` | Boolean input/output and data pins | `Q` changes, no timeout event | Usually not available |
+| `E_DELAY` | Discrete event/data pins | Expiration event | Often not supported |
+| `E_FB_TimeOut` | Adapter sockets `ATimeOut` and `ATimeTick` | `TimeOut` event | `REQ` / `CNF` with `Q`, `ET`, `PT` |
 
-- It does not expose plain event/data inputs and outputs; instead, it uses adapter sockets.
-- It separates the timeout control interface (`ATimeOut`) from the cyclic query interface (`ATimeTick`).
-- It provides both an event-driven timeout notification and a cyclic query mechanism.
-- It is more modular and can be connected to other adapter-compatible FBs without hard-wired event connections.
-
-Compared to a direct `FB_TON`, the behavior is similar in terms of delay/timeout handling, but the interface is designed around events and adapters rather than Boolean trigger inputs and continuous time monitoring.
+Compared with a simple TON function block, E_FB_TimeOut provides an event-oriented timeout service and additionally exposes a cyclic query interface through `TimeTickSocket`.
 
 ## Conclusion
 
-The `E_FB_TimeOut` function block provides a clean, adapter-based timeout service. By combining an internal delay FB with two adapter sockets, it offers both event-driven timeout signaling and cyclic status querying. Its FB_TON-like behavior and modular structure make it useful in a wide range of IEC 61499 applications where timeouts must be controlled, observed, and reused in a decoupled way.
+E_FB_TimeOut is a compact, adapter-based timeout function block for IEC 61499 applications. It separates timeout control from cyclic status observation, which makes it flexible and reusable. Because it is a composite FB, its behavior is fully determined by the internal `E_FB_DELAY` instance and the adapter connections. This design provides a clean interface for event-driven timeout handling as well as periodic monitoring in automation and control systems.
