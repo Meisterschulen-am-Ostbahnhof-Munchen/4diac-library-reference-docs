@@ -3,6 +3,7 @@
 ![A2X_AUI_MUX_4](./A2X_AUI_MUX_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 A2X_AUI_MUX_4 is a generic, adapter-based 4-to-1 multiplexer for Eclipse 4diac. It connects four unidirectional A2X adapter inputs (`IN1` ... `IN4`) to one A2X adapter output (`OUT`). The active input is selected by the value received on the AUI adapter `K`. The output is not simply forwarded from the selected input; it is updated only when the selected value actually changes. The `CNF` event is emitted only in this case, avoiding unnecessary downstream events.
