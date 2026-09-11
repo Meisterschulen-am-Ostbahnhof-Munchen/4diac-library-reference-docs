@@ -3,6 +3,7 @@
 ![BargraphSplitFS](./BargraphSplitFS.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **BargraphSplitFS** visualisiert einen vorzeichenbehafteten REAL-Wert als zwei nebeneinanderliegende lineare Balkendiagramme (Linear Bar Graphs). Die beiden Balken treffen sich an einem gemeinsamen Nullpunkt, wobei positive Werte auf der rechten Seite und negative Werte auf der linken Seite dargestellt werden. Der Baustein kapselt zwei Instanzen des ISO 11783-6 Bausteins `Q_NumericValue_PHYS` und übernimmt die Aufbereitung des Eingangswertes sowie die Begrenzung auf den zulässigen Magnitudenbereich.

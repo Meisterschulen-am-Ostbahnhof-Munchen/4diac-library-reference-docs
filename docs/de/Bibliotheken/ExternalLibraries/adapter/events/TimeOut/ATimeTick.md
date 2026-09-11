@@ -3,6 +3,7 @@
 ![ATimeTick](./ATimeTick.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter `ATimeTick` stellt eine standardisierte Schnittstelle für einen Zeitüberwachungsdienst (Timeout-Service) bereit, der sich an den Grunddefinitionen der ROOM-Methodik orientiert. Er ermöglicht die lose Kopplung zwischen einer steuernden Komponente und einer Zeitgeber- oder Überwachungsinstanz. Die Interaktion erfolgt über Ereignisse und Zeitparameter, wobei der Adapter sowohl als Plug- als auch als Socket-Typ eingesetzt werden kann.

@@ -13,18 +13,23 @@
 As a **global constants** group, `AID_OLA` does not expose any event or data interface. It is not a function block, adapter, or subapplication. Instead, it provides a set of constant values that can be referenced throughout the application.
 
 ### Event Inputs
+
 *Not applicable.*
 
 ### Event Outputs
+
 *Not applicable.*
 
 ### Data Inputs
+
 *Not applicable.*
 
 ### Data Outputs
+
 *Not applicable.*
 
 ### Adapters
+
 *Not applicable.*
 
 ## Functionality

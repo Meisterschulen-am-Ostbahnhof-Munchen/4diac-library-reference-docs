@@ -3,6 +3,7 @@
 ![AX_E_PERMIT_1](./AX_E_PERMIT_1.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AX_E_PERMIT_1 is a compact event gating function block that propagates a single event channel only when a permit condition is satisfied. Instead of using a direct Boolean data input, the permit condition is provided through a unidirectional adapter socket named `PERMIT`. This makes the block suitable for modular automation solutions in which permission logic is separated from the event consumer.

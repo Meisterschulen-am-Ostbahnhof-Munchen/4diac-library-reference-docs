@@ -14,22 +14,27 @@ Der Funktionsblock **ILOCK_BLOCK_A2X** realisiert eine Richtungsverriegelung fü
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - Es sind keine direkten Ereignis-Eingänge vorhanden.  
 - Ereignisse werden ausschließlich über die Adapter-Ereignisse `IN.E_UP` und `IN.E_DOWN` vom angeschlossenen A2X-Adapter empfangen.
 
 ### **Ereignis-Ausgänge**
+
 - Es gibt keine expliziten Ereignis-Ausgänge.  
 - Die Ausgabe von Ereignissen erfolgt über die Adapter-Ausgänge `OUT.E_UP` und `OUT.E_DOWN` sowie die zugehörigen Datenwerte (`OUT.UP`, `OUT.DOWN`).
 
 ### **Daten-Eingänge**
+
 - Es sind keine direkten Dateneingänge definiert.  
 - Die Eingangsdaten (`UP`, `DOWN`) werden über den A2X-Adapter `IN` bereitgestellt.
 
 ### **Daten-Ausgänge**
+
 - Es sind keine direkten Datenausgänge definiert.  
 - Die Ausgangsdaten (`UP`, `DOWN`) werden über den A2X-Adapter `OUT` bereitgestellt.
 
 ### **Adapter**
+
 Der FB besitzt zwei Adapter-Schnittstellen vom Typ `adapter::types::unidirectional::A2X`:
 
 - **IN** (Socket) – Eingang für die Richtungsbefehle.  

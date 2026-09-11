@@ -6,11 +6,13 @@
 ![AUI_AUI_MUX_2_VAL](./AUI_AUI_MUX_2_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_2_VAL** subapplication implements a 2-way multiplexer for AUI adapter values. It accepts two `UINT` input values and two event inputs. Depending on which event is triggered, one of the two input values is converted into an AUI value and provided at the `OUT` adapter plug.
 
 The internal structure combines:
+
 - two `initval_AUI` instances to convert `UINT` values into AUI adapter outputs,
 - an `AUI_MUX_2` block for event handling,
 - an `AUI_AUI_MUX_2` block for selecting between two AUI input values.
@@ -18,6 +20,7 @@ The internal structure combines:
 This makes the subapplication a convenient, encapsulated solution for selecting between two AUI values based on events.
 
 * * * * * * * * * *
+
 ## Interface Structure
 
 ### **Event Inputs**
@@ -49,6 +52,7 @@ None.
 | `OUT` | `adapter::types::unidirectional::AUI` | Selected AUI adapter output |
 
 * * * * * * * * * *
+
 ## Functionality
 
 The subapplication acts as a 2-input multiplexer for AUI adapter values:
@@ -59,10 +63,12 @@ The subapplication acts as a 2-input multiplexer for AUI adapter values:
 4. The selected AUI value is routed to the external `OUT` adapter plug.
 
 In practice:
+
 - Triggering `EI1` routes `val1` to `OUT`.
 - Triggering `EI2` routes `val2` to `OUT`.
 
 * * * * * * * * * *
+
 ## Technical Features
 
 - Implements a 2-way multiplexer for AUI adapter values.
@@ -74,6 +80,7 @@ In practice:
 - Encapsulates the complete multiplexing logic inside a reusable subapplication.
 
 * * * * * * * * * *
+
 ## State Overview
 
 The subapplication does not expose an explicit state machine, but its behavior can be described as a two-state selector:
@@ -87,6 +94,7 @@ The subapplication does not expose an explicit state machine, but its behavior c
 After one event has been processed, the selected AUI value remains available at `OUT` until the other event is triggered.
 
 * * * * * * * * * *
+
 ## Application Scenarios
 
 The `AUI_AUI_MUX_2_VAL` subapplication is useful in IEC 61499 applications where:
@@ -100,6 +108,7 @@ The `AUI_AUI_MUX_2_VAL` subapplication is useful in IEC 61499 applications where
   - two operating modes with different parameters.
 
 * * * * * * * * * *
+
 ## Comparison with Similar Blocks
 
 | Block / Subapplication | Data Type | Selection Mechanism | Additional Features |
@@ -112,6 +121,7 @@ The `AUI_AUI_MUX_2_VAL` subapplication is useful in IEC 61499 applications where
 Compared to a direct AUI multiplexer, this subapplication adds the convenience of using plain `UINT` values while keeping the AUI adapter interface at the output.
 
 * * * * * * * * * *
+
 ## Conclusion
 
 `AUI_AUI_MUX_2_VAL` is a compact and reusable subapplication for event-driven selection between two AUI values. It hides the internal AUI initialization and selection logic behind a simple interface consisting of two events, two `UINT` inputs, and one AUI adapter output. It is particularly suitable for applications that require fast switching between two predefined values within an AUI-based IEC 61499 environment.

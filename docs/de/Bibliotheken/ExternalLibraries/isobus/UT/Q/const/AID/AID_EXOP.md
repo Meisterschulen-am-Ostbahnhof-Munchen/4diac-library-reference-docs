@@ -3,6 +3,7 @@
 ![AID_EXOP](./AID_EXOP.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der globale Konstantenblock `AID_EXOP` definiert Attribut-IDs für das ISOBUS‑Objektmodell zur Identifikation von Attributen des „External Object Pointer“. Diese IDs werden verwendet, um auf externe Objektverweise, deren Namen und Standarddarstellungen zuzugreifen. Der Block ist Teil des Pakets `isobus::UT::Q::const::AID` und stellt einheitliche Konstanten für die Kommunikation in landwirtschaftlichen Maschinen gemäß ISO 11783 dar.
@@ -12,18 +13,23 @@ Der globale Konstantenblock `AID_EXOP` definiert Attribut-IDs für das ISOBUS‑
 Dieser Block besitzt weder Ereignis‑ noch Datenein‑ oder -ausgänge, da er ausschließlich als **globale Konstantenquelle** dient. Alle Werte sind zur Laufzeit unveränderlich.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 **Bereitgestellte Konstanten** (wertvoll für die Verwendung in jeglicher Logik):

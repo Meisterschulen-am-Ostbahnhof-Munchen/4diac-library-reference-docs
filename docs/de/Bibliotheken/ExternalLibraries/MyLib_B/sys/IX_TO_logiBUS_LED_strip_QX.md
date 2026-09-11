@@ -6,6 +6,7 @@
 ![IX_TO_logiBUS_LED_strip_QX](./IX_TO_logiBUS_LED_strip_QX.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die Subapp **IX_TO_logiBUS_LED_strip_QX** verbindet einen Taster-Eingang vom Typ `logiBUS_IX` mit einem LED-Streifen-Baustein vom Typ `logiBUS_LED_strip_QX`. Sie wird eingesetzt, um einen LED-Streifen über einen Taster blinkend zu schalten. Dabei können die Farbe, der verwendete Taster-Eingang und die Nummer des LED-Streifens über die Dateneingänge der Subapp vorgegeben werden.

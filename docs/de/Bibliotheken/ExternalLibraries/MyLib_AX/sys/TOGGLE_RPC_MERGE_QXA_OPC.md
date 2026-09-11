@@ -14,9 +14,11 @@ Der Funktionsblock **TOGGLE_RPC_MERGE_QXA_OPC** realisiert einen „Klick-Toggle
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
@@ -30,9 +32,11 @@ Keine.
 | `ID_STATE_WRITE` | `WSTRING` | Lokale Publish-Adresse (ACTION=WRITE) für den tatsächlichen Toggle-Zustand (remote abonniert, z. B. für GreenWhiteBackground) |
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise

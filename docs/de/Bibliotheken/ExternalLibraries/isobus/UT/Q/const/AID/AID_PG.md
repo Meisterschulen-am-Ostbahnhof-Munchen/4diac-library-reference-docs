@@ -3,6 +3,7 @@
 ![AID_PG](./AID_PG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_PG` ist ein **GlobalConstants**-Element der 4diac-IDE, das die Attribut-IDs (Attribute IDs) für ein **Picture Graphic Objekt** im ISOBUS-Kontext definiert. Diese Konstanten werden verwendet, um auf spezifische Attribute eines Bildgrafikelements in der Steuerungskommunikation zu referenzieren (z. B. Breite, Höhe, Format). Der Baustein stellt keine typischen Ein-/Ausgänge eines Funktionsblocks bereit, sondern dient als zentrale Konstante, die global in der Applikation verfügbar ist.

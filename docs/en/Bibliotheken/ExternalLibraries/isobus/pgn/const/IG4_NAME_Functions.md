@@ -5,21 +5,27 @@
 * * * * * * * * * *
 
 ## Introduction
+
 This global constant list defines the Industry Group 4 (IG4) specific function codes used in ISO 11783 (ISOBUS) networks. It provides a standardized mapping between numeric function identifiers and their meanings within various system categories, such as propulsion, navigation, communications, instrumentation, and more. The constants enable consistent identification of ECU functions across the network.
 
 ## Interface Structure
+
 Since this is a global constant list rather than a function block, it does not possess a traditional interface with events or adapters. The constants are globally accessible and can be referenced in any function block, subapplication, or script within the project.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 None.
 
 ### **Data Outputs**
+
 The constants defined in this list serve as global data outputs. They are all of type `BYTE` and carry predefined values that represent specific functions. The constants are grouped by system category, as summarized in the table below:
 
 | Constant Name | Value | System | Function Description |
@@ -77,27 +83,34 @@ The constants defined in this list serve as global data outputs. They are all of
 | F_DECK_CARGO_FISHING_NOT_AVAILABLE | 255 | Deck, cargo, and fishing equipment systems | Not Available |
 
 ### **Adapters**
+
 None.
 
 ## Functionality
+
 This global constant list provides a centralized set of function identifiers for Industry Group 4 (IG4) as defined in the ISO 11783 / ISOBUS standard. Each constant assigns a unique numeric value (BYTE) to a specific function within a system category. These constants are used in parameter group numbers (PGNs) to identify the source or purpose of a message, enabling correct routing and interpretation of data across the network.
 
 ## Technical Features
+
 - All constants are of type `BYTE` and defined as global constants.
 - Values range from 128 to 255, with `255` commonly used for "Not Available".
 - The constants are grouped logically by system (e.g., Propulsion systems, Navigation systems, etc.).
 - The list is intended to be used as a reference for mapping function codes in ISOBUS networks.
 
 ## State Overview
+
 Not applicable. This is a constant definition, not a stateful block.
 
 ## Application Scenarios
+
 - Referencing function codes when constructing or parsing ISOBUS messages.
 - Assigning a function ID to an ECU in a network configuration.
 - Ensuring consistent naming and values across multiple function blocks and applications.
 
 ## Comparison with Similar Blocks
+
 This is not a typical function block but a global constant list. Similar lists exist for other industry groups (e.g., IG1, IG2, IG3, IG5) that define their own specific functions. The structure and usage are analogous, but the actual function codes and system categories differ per industry group.
 
 ## Conclusion
+
 The IG4_NAME_Functions global constant list is an essential resource for developers working with ISOBUS networks in the marine and heavy-duty vehicle domain. It standardizes function identification, improving interoperability and maintainability of industrial control applications.

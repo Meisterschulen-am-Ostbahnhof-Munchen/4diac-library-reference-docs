@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_1](./AX_E_PERMIT_INVERT_1.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AX_E_PERMIT_INVERT_1` realisiert eine invertierte Event-Freigabe auf Basis von Adapter-Signalen. Er kombiniert die Funktionalität eines invertierenden Adapter-Operators (`AX_NOT_INIT`) mit einem ereignisbasierten Freigabe-Gate (`AX_E_PERMIT_1`). Dadurch wird ein Ereignis nur dann vom Eingang `EI` zum Ausgang `EO` durchgereicht, wenn das über den Adapter anliegende Freigabesignal `PERMIT` den logischen Zustand `FALSE` besitzt. Der Baustein ist als Subapplikation (SubApp) in der Bibliothek `MyLib::sys` verfügbar.

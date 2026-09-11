@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_2_VAL](./AUI_AUI_MUX_2_VAL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `AUI_AUI_MUX_2_VAL` ist eine Subapplikation (SubApp), die einen 2-Wege-Multiplexer für AUI/UINT-Werte realisiert. Er nimmt zwei UINT-Eingangswerte entgegen und stellt je nach ausgelöstem Event den entsprechenden Wert über einen AUI-Adapterausgang bereit. Die Umschaltung erfolgt über die Ereigniseingänge `EI1` und `EI2`.

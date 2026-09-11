@@ -6,6 +6,7 @@
 ![ILOCK_CONFLICT_TRIP_A2X](./ILOCK_CONFLICT_TRIP_A2X.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **ILOCK_CONFLICT_TRIP_A2X** realisiert eine sicherheitsrelevante Interlock-Logik für bidirektionale Antriebe oder Bewegungsachsen. Er nimmt über einen A2X-Adapter (unidirektional) die Signale **UP** und **DOWN** entgegen und gibt diese über einen weiteren A2X-Adapter an die nachgelagerte Steuerung weiter. Das Besondere ist die Konfliktüberwachung: Werden beide Eingänge gleichzeitig aktiv, wird ein **Trip-Zustand** ausgelöst, der als Alarm über einen separaten AX-Adapter ausgegeben wird. Erst nach einem expliziten **Reset** und dem Deaktivieren beider Eingänge kehrt der Baustein in den Normalbetrieb zurück.
@@ -15,6 +16,7 @@ Der Baustein eignet sich für Anwendungen, bei denen eine wechselseitige Verrieg
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
 | `EI_RESET` | Event | Setzt den Baustein nach einem Trip zurück, sofern keine der Eingangsgrößen `IN.UP` oder `IN.DOWN` mehr aktiv sind. |
@@ -23,17 +25,22 @@ Der Baustein eignet sich für Anwendungen, bei denen eine wechselseitige Verrieg
 Es sind keine direkten Ereignis-Ausgänge vorhanden. Die Ausgabe erfolgt ausschließlich über die Adapter `OUT` und `TRIP_OUT`, die jeweils Ereignissignale wie `OUT.E_UP`, `OUT.E_DOWN` und `TRIP_OUT.E1` auslösen.
 
 ### **Daten-Eingänge**
+
 Direkte Dateneingänge existieren nicht. Alle Eingabedaten werden über den **Adapter `IN`** empfangen:
+
 - `IN.UP` (BOOL): Signal „Aufwärts/Vorwärts“  
 - `IN.DOWN` (BOOL): Signal „Abwärts/Rückwärts“
 
 ### **Daten-Ausgänge**
+
 Die Ausgabedaten werden über die Adapter `OUT` und `TRIP_OUT` bereitgestellt:
+
 - `OUT.UP` (BOOL): Weiterleitung des Zustands „Aufwärts/Vorwärts“  
 - `OUT.DOWN` (BOOL): Weiterleitung des Zustands „Abwärts/Rückwärts“  
 - `TRIP_OUT.D1` (BOOL): Signalisiert den Trip-Zustand (TRUE = Fehler/Konflikt erkannt)
 
 ### **Adapter**
+
 | Name | Typ | Richtung | Beschreibung |
 |------|-----|----------|--------------|
 | `IN` | `adapter::types::unidirectional::A2X` | Socket | Empfängt die Eingangssignale `UP` und `DOWN` sowie die zugehörigen Ereignisse `E_UP` und `E_DOWN`. |

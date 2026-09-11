@@ -3,6 +3,7 @@
 ![AUI_MUX_6](./AUI_MUX_6.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **AUI_MUX_6** ist ein Ereignis-Multiplexer, der sechs unabhängige Ereignis-Eingänge besitzt und über einen **AUI-Adapter** (unidirektional) das empfangene Ereignis zusammen mit dem zugehörigen Index (0–5) als Ausgabe bereitstellt. Er stellt eine generische Variante des klassischen E_MUX_6 dar, bei dem der konventionelle Ereignis-Ausgang und der Datenausgang für den Index durch einen einzigen Adapter ersetzt werden. Dadurch wird die Schnittstelle vereinheitlicht und die Weiterverarbeitung in IEC-61499-Systemen erleichtert.
@@ -58,6 +59,7 @@ Da es sich um einen reinen Ereignis-Multiplexer ohne Zustandsspeicher handelt, e
 ## Vergleich mit ähnlichen Bausteinen
 
 Klassische Vertreter wie der **E_MUX_6** besitzen einen Ereignis-Ausgang (EO) und einen Datenausgang (K) für den Index. Der **AUI_MUX_6** ersetzt diese beiden Ausgänge durch einen einzigen AUI-Adapter, der beide Informationen zusammenführt. Vorteile:
+
 - Reduzierung der Verbindungsleitungen,
 - einheitliche Schnittstellenbeschreibung, 
 - bessere Kompatibilität mit adapterbasierten Kommunikationsmustern in IEC 61499.

@@ -3,6 +3,7 @@
 ![PositionMarkerFSA](./PositionMarkerFSA.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 PositionMarkerFSA is an adapter wrapper around the `PositionMarkerFS` function block. It accepts a physical REAL value (Sollwert) via an AR (incoming) adapter socket and forwards it as the setpoint to an internally instantiated `PositionMarkerFS`. This design follows the same pattern as `Q_NumericValue_PHYSA` around `Q_NumericValue_PHYS`, re‑exposing the over‑ and under‑limit indications through AX (outgoing) adapter plugs instead of distinct event/data ports.

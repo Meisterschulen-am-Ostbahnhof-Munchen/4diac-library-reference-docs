@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_6](./AUDI_AUI_MUX_6.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_AUI_MUX_6** function block is a generic 6‑to‑1 multiplexer specifically designed for use with unidirectional AUDI/AUI adapter types. It selects one of six input adapters (IN1…IN6) based on an index value provided via the K adapter, and forwards the selected data to a single output adapter (OUT). The block optimises communication by emitting an output event (CNF) only when the value on the selected input actually changes, thus reducing unnecessary network traffic and processing overhead.

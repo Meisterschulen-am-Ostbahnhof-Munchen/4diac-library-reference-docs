@@ -6,6 +6,7 @@
 ![NumericValue_ID_TO_INI](./NumericValue_ID_TO_INI.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **NumericValue_ID_TO_INI** subapplication is a generic, reusable component that reads a numeric value from a Virtual Terminal (VT) using an ID-based variant and stores it persistently in an INI file. It combines the ISOBUS UT (Universal Terminal) NumericValue interface with IEC 61131 conversion functions and the Eclipse 4diac INI storage service. The subapplication is designed for scenarios where a numeric VT value, identified by a unique object ID, needs to be captured and saved to a configuration or data file, while also being queryable for further processing.

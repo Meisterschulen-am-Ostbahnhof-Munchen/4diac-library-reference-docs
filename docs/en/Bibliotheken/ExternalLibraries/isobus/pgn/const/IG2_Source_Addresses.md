@@ -3,6 +3,7 @@
 ![IG2_Source_Addresses](./IG2_Source_Addresses.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `IG2_Source_Addresses` global constant definition provides a standardized set of source addresses for devices operating in Industry Group 2 (IG2) on an ISO 11783 (ISOBUS) network. These addresses are reserved for specific control functions and are used to uniquely identify devices or services within the network. The constants are defined as `BYTE` values and are intended to be used as preferred or fixed source addresses according to the ISO 11783 standard.

@@ -3,6 +3,7 @@
 ![IG1_Source_Addresses](./IG1_Source_Addresses.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **IG1_Source_Addresses** ist kein klassischer Funktionbaustein (FB) im Sinne eines prozessverarbeitenden Elements, sondern eine Sammlung **globaler Konstanten** (GlobalConstants) für die ISOBUS-Kommunikation (ISO 11783). Er definiert feste Quelladressen (Source Addresses, SA) für Geräte der **Industry Group 1** (landwirtschaftliche und mobile Maschinen). Diese Konstanten werden typischerweise in FBs verwendet, die auf dem ISOBUS kommunizieren, um eindeutige Adressen für Sender (z. B. Steuergeräte, Sensoren) innerhalb des Netzwerks bereitzustellen.

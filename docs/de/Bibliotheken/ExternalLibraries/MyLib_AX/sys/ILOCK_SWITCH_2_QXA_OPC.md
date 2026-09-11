@@ -6,11 +6,13 @@
 ![ILOCK_SWITCH_2_QXA_OPC](./ILOCK_SWITCH_2_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **ILOCK_SWITCH_2_QXA_OPC** ist eine generische Subapplikation zur Ansteuerung eines digitalen Doppelwirkungs-Ausgangs (z. B. für Ventile oder Schaltanlagen) mit integriertem Schutz-Interlock und Rückmeldung über OPC. Er kombiniert zwei unabhängige Steuerkanäle (Richtung „UP“ und „DOWN“), die über logiBUS-Module physisch geschaltet werden.
 
 Der Baustein vereint drei Hauptaufgaben:
+
 - **Zusammenführung von Funktions- und Testkommandos** für jede Richtung,
 - **Verriegelung gegen gleichzeitiges Schalten** beider Richtungen mit einstellbarer Schutzzeit,
 - **Rückmeldung** des tatsächlichen Ausgangszustands über OPC-Publizierung, sowohl für die Funktionssteuerung als auch für das IO-Test-System.
@@ -22,12 +24,15 @@ Er ist speziell für Anlagen konzipiert, bei denen die Bedienung über ein zentr
 Die Subapplikation besitzt keine Ereignis-Eingänge oder -Ausgänge, keine Adapter an der Subapplikationsgrenze, sondern ausschließlich **Daten-Eingänge** (InputVars). Die interne Steuerung erfolgt rein über diese Datenwerte und asynchrone Kommunikation (über die intern eingebetteten Subscribe/Publish-Bausteine).
 
 ### **Ereignis-Eingänge**
+
 Keine (nicht vorhanden).
 
 ### **Ereignis-Ausgänge**
+
 Keine (nicht vorhanden).
 
 ### **Daten-Eingänge**
+
 | Name | Datentyp | Kommentar |
 |------|----------|-----------|
 | `Output_UP` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang Richtung UP/Links. Initialwert: `logiBUS_DO::Invalid` |
@@ -43,9 +48,11 @@ Keine (nicht vorhanden).
 | `ID_WRITE_DOWN` | `WSTRING` | Echte Funktions-Rückmeldung DOWN (Publish) |
 
 ### **Daten-Ausgänge**
+
 Keine (nicht vorhanden).
 
 ### **Adapter**
+
 Keine (nicht vorhanden).
 
 ## Funktionsweise
@@ -55,6 +62,7 @@ Die Subapplikation verarbeitet pro Richtung (UP/DOWN) zwei Signale: ein **Funkti
 Das effektive Kommando wird an den zentralen Interlock-Baustein (`ILOCK_SWITCH_PROTECT_AX`) übergeben. Dieser Baustein verhindert, dass beide Richtungen gleichzeitig aktiv werden. Zusätzlich implementiert er eine Schutzzeit (`DT_PROTECT`), die vor einem Richtungswechsel eingehalten werden muss. Nach Ablauf der Schutzzeit wird das Kommando freigegeben.
 
 Der Ausgang des Interlocks wird über einen Splitter (`AX_SPLIT_3`) an drei Stellen verteilt:
+
 1. An den physischen logiBUS-Kanal (`logiBUS_QXA`), der den tatsächlichen Ausgang steuert.
 2. An einen Publish-Baustein für die **IO-Test-Rückmeldung** (`PUBLISH_TEST_UP` bzw. `PUBLISH_TEST_DOWN`), damit das IO-Test-System den realen Zustand erhält.
 3. An einen Publish-Baustein für die **Funktions-Rückmeldung** (`PUBLISH_STATE_UP` bzw. `PUBLISH_STATE_DOWN`), z. B. für die Anzeige „GreenWhiteBackground“ am SoftKey.

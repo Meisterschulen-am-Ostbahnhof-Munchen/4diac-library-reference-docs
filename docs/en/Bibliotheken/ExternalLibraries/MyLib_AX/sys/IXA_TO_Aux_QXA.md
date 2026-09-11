@@ -6,6 +6,7 @@
 ![IXA_TO_Aux_QXA](./IXA_TO_Aux_QXA.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **IXA_TO_Aux_QXA** subapplication serves as a generic, adapter-based bridge between a logiBUS digital input channel and an ISOBUS auxiliary output (Aux_QXA). It is designed for reuse in scenarios where a physical input from a logiBUS I/O system must be mapped to a specific auxiliary output position on an ISOBUS network, commonly found in tractor-implement control systems.
@@ -15,9 +16,11 @@ By encapsulating the internal conversion logic (from the logiBUS domain to the I
 ## Interface Structure
 
 ### **Event Inputs**
+
 The subapp has no event inputs. All data flow is purely continuous (non-event-triggered).
 
 ### **Event Outputs**
+
 The subapp has no event outputs.
 
 ### **Data Inputs**
@@ -28,9 +31,11 @@ The subapp has no event outputs.
 | `iInpNr`  | `USINT`                           | `0`           | Number of the auxiliary array entry; corresponds to the position in the pool. The first aux input in the pool is `iInpNr = 0`, the second is `1`, etc. |
 
 ### **Data Outputs**
+
 The subapp has no data outputs. Results are propagated internally via adapter connections.
 
 ### **Adapters**
+
 The subapp does not expose adapters at its interface. Internally, an adapter connection links the logiBUS input block to the ISOBUS auxiliary output block.
 
 ## Functionality

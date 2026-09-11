@@ -3,28 +3,37 @@
 ![IG5_NAME_Functions](./IG5_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Introduction
+
 This document describes the **IG5_NAME_Functions** global constant set, which defines Industry Group 5 (IG5) specific function codes for ISOBUS (ISO 11783) implementation. These constants are used to identify the function of devices and components within the "Industrial-Process Control - Stationary (Gen-Sets)" system category, as well as a general "Not Available" placeholder. The constant set provides a standardized naming convention for referencing these function codes in control logic and data mapping.
 
 ## Interface Structure
+
 Since **IG5_NAME_Functions** is a global constant definition, it does not contain event inputs, event outputs, data inputs, data outputs, or adapters. It exposes a set of named `BYTE` constants that can be referenced in IEC 61499 applications or 4diac-IDE projects.
 
 ### **Event Inputs**
+
 Not applicable – this global constant set does not process events.
 
 ### **Event Outputs**
+
 Not applicable – this global constant set does not generate events.
 
 ### **Data Inputs**
+
 Not applicable – this global constant set does not have data inputs.
 
 ### **Data Outputs**
+
 Not applicable – this global constant set does not have data outputs.
 
 ### **Adapters**
+
 Not applicable – this global constant set does not include adapters.
 
 ## Functionality
+
 The purpose of this global constant set is to provide symbolic names for function codes defined by the ISOBUS Industry Group 5 specification. These codes are used to describe the role or operation of a device connected to an ISOBUS network. By using the constants, applications can avoid hard-coded numeric values and improve readability and maintainability.
 
 The constants defined in this set are:
@@ -42,6 +51,7 @@ The constants defined in this set are:
 These constants are used to populate the `Function` field in ISOBUS parameter groups (PGNs) that transmit device information or operational status.
 
 ## Technical Features
+
 - **Data Type**: All constants are of type `BYTE` (8-bit unsigned integer).
 - **Compatibility**: The values correspond to the ISO 11783-6 standard for function codes in the industrial/process control domain.
 - **Naming Convention**: Each constant follows the pattern `F_<SYSTEM>_<FUNCTION>` to clearly indicate its intended application area.
@@ -49,10 +59,13 @@ These constants are used to populate the `Function` field in ISOBUS parameter gr
 - **Documentation**: Each constant carries an inline comment that describes its system and function context.
 
 ## State Overview
+
 This global constant set does not have a state machine; it defines static values that remain unchanged during runtime. No state transitions, initialization sequences, or internal states are applicable.
 
 ## Application Scenarios
+
 The `IG5_NAME_Functions` global constants are typically used in automation projects that involve:
+
 - **Generator Set Control**: Applications monitoring and controlling stationary diesel/gas generator sets used for emergency power or continuous operation.
 - **ISOBUS Communication**: Systems that implement ISOBUS PGNs to exchange device function information, such as the "Name" object or function-specific parameters.
 - **Oil & Gas Drilling**: Integration of well stimulation pumps that communicate their operational parameters over an ISOBUS network.
@@ -61,7 +74,9 @@ The `IG5_NAME_Functions` global constants are typically used in automation proje
 In 4diac-IDE, these constants can be imported into a project and used alongside function blocks that require a `BYTE` input for function selection or reporting.
 
 ## Comparison with Similar Blocks
+
 Since this is a global constant definition rather than a function block, there is no direct comparison to FB types. However, similar constant sets exist for other Industry Groups (e.g., IG1–IG4, IG6) in the ISOBUS standard. The key difference is the set of specific functions defined for gen-set and oil/gas applications in IG5. If an application requires a different industry group, a corresponding global constant set must be used. This set provides the necessary values for typical IG5 equipment but does not include function codes for other domains.
 
 ## Conclusion
+
 The `IG5_NAME_Functions` global constants offer a clean and standardized way to reference ISOBUS function codes for industrial gen-sets and related equipment. By using these constants, developers can ensure compatibility with the ISO 11783 standard, reduce the risk of data misinterpretation, and make their control logic more readable and maintainable. The set covers the most common functions in this domain and provides a universal "Not Available" fallback, making it a practical resource for ISOBUS-based automation projects.

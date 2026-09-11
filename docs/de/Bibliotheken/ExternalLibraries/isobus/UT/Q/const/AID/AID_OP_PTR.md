@@ -3,6 +3,7 @@
 ![AID_OP_PTR](./AID_OP_PTR.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der globale Konstantenbaustein `AID_OP_PTR` definiert einen Konstantenwert für die Objektattribut-ID (Object Pointer Object Attribute ID) im Kontext des ISOBUS-Protokolls (ISO 11783). Er gehört zum Paket `isobus::UT::Q::const::AID` und stellt einen numerischen Identifikator bereit, der in der UT-Anwendung (Universal Terminal) verwendet wird, um auf den „aktuellen Wert“ eines Objektzeigers zu verweisen. Der Baustein ist als `GLOBALCONSTANTS` deklariert, d.h. der enthaltene Wert ist während der gesamten Laufzeit unveränderlich.

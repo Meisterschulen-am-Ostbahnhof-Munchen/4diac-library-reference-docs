@@ -3,6 +3,7 @@
 ![A2X_CLIENT_2_0](./A2X_CLIENT_2_0.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **A2X_CLIENT_2_0** dient dazu, zwei binäre Signale eines A2X-Adapters (UP und DOWN) als OPC-UA-Write über einen CLIENT_2_0-Baustein an ein entferntes System zu übertragen. Die Signale werden dabei jeweils über einen E_D_FF-Flipflop zwischengespeichert, sodass auch bei kurzen Ereignissen ein zuverlässiges Senden gewährleistet ist. Der Baustein kapselt die komplette Kommunikationslogik und bietet eine einfache Schnittstelle für die Anbindung von binären Prozessdaten an ein OPC-UA-Netzwerk.

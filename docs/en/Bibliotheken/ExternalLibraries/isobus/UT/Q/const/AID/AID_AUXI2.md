@@ -3,6 +3,7 @@
 ![AID_AUXI2](./AID_AUXI2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AID_AUXI2 is a global constant definition within the `isobus::UT::Q::const::AID` package of the 4diac-ide environment. It encapsulates a set of attribute identifiers (AIDs) specifically related to the ISO 11783 (ISOBUS) Auxiliary Input Type 2 object. These constants are used to reference individual attributes of an Auxiliary Input Type 2 object when interacting with ISOBUS virtual terminal data structures. The definition provides stable, human-readable symbolic names for the underlying attribute ID values, improving code clarity and maintainability in ISOBUS application implementations.
@@ -17,18 +18,23 @@ Since AID_AUXI2 is a global constant definition rather than a function block, ad
 | `FUNC` | `USINT` | `2` | Attribute ID 2: Bitmask encoding the auxiliary function type (bits 0–4), critical control flag (bit 5), reserved bit (bit 6, set to 0), and single-assignment flag (bit 7). |
 
 ### **Event Inputs**
+
 - None (not applicable for a global constant definition).
 
 ### **Event Outputs**
+
 - None (not applicable for a global constant definition).
 
 ### **Data Inputs**
+
 - None (not applicable for a global constant definition).
 
 ### **Data Outputs**
+
 - None (not applicable for a global constant definition).
 
 ### **Adapters**
+
 - None (not applicable for a global constant definition).
 
 ## Functionality

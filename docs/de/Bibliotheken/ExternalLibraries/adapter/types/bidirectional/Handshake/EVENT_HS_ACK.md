@@ -3,6 +3,7 @@
 ![EVENT_HS_ACK](./EVENT_HS_ACK.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter `EVENT_HS_ACK` ist eine reduzierte Variante des Handshake-Adapters `EVENT_HS` aus dem IEC-61499-Entwurfsmuster. Er implementiert ausschließlich die Request-Confirm-Hälfte (REQ/CNF) der vollständigen Handshake-Vokabulars (REQ/CNF/IND/RSP). Damit wird eine zuverlässige Auftragsbestätigung ohne Datenübertragung realisiert – der Socket (Responder) kann auf eine Request (REQ) nur mit einer Confirmation (CNF) antworten, besitzt aber keine Möglichkeit, unaufgefordert Indikationen an den Plug (Requester) zu senden. Dies macht den Adapter ideal für einfache Steuerungs- und Synchronisationsaufgaben, bei denen lediglich eine positive Quittung auf eine Anforderung benötigt wird.

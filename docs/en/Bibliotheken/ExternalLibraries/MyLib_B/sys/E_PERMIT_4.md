@@ -6,6 +6,7 @@
 ![E_PERMIT_4](./E_PERMIT_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **E_PERMIT_4** is a composite subapplication that bundles four independent event-permission gates (based on the standard IEC 61499 `E_PERMIT` function block) into a single reusable component. It provides four event channels, each of which can selectively pass or block an incoming event depending on a common Boolean permit condition. This design simplifies the integration of multi-channel event gating logic in distributed control applications.

@@ -6,6 +6,7 @@
 ![page](./page.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `page` subapplication is a compact IEC 61499 composite type that encapsulates an ISOBUS status monitoring block together with an event-triggered D flip-flop. It exposes a single event output `CNF` and provides no external data interface. Internally, the subapplication uses the `CbVtStatus` block from the ISOBUS UT status library to detect a status indication and the standard `E_D_FF` block to sample a boolean value at exactly the moment the indication occurs.

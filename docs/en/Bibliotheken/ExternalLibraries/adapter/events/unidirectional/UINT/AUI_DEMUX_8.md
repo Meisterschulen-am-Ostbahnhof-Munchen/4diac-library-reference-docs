@@ -3,6 +3,7 @@
 ![AUI_DEMUX_8](./AUI_DEMUX_8.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_DEMUX_8** is an event demultiplexer function block that routes an incoming event to one of eight possible output channels. Unlike a conventional E_DEMUX block, which requires a separate event input and a data input for the selection index, this block receives both the event trigger and the index value through a single unidirectional AUI adapter socket. This design simplifies wiring in distributed control applications by consolidating the event and its routing information into one adapter connection.

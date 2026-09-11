@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_32](./AUDI_AUI_MUX_32.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `AUDI_AUI_MUX_32` ist ein generischer Multiplexer, der es ermöglicht, aus 32 unidirektionalen Eingangssignalen (`IN1` bis `IN32`) genau eines auszuwählen und auf einen unidirektionalen Ausgang (`OUT`) zu übertragen. Die Auswahl wird über einen separaten Indexadapter `K` gesteuert, der den Wert des gewünschten Kanals (0 bis 31) liefert. Ein besonderes Merkmal ist, dass das ausgegebene Signal nur dann aktualisiert wird, wenn sich der Wert des ausgewählten Eingangs tatsächlich ändert. Das Ereignis `CNF` bestätigt eine solche Aktualisierung. Der Baustein ist als generischer Typ (`GEN_AUDI_AUI_MUX`) implementiert und kann dadurch mit unterschiedlichen Datentypen verwendet werden, solange die verwendeten Adapter vom entsprechenden Typ sind.

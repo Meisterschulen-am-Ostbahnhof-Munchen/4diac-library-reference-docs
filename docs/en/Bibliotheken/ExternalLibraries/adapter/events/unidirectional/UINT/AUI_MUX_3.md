@@ -3,6 +3,7 @@
 ![AUI_MUX_3](./AUI_MUX_3.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AUI_MUX_3 is an event multiplexer function block designed for selecting and forwarding one of three incoming event signals based on an index provided through an AUI (Adapter Unit Interface) adapter. Unlike conventional multiplexers that use separate event output and index data inputs, this block integrates the selector and output channel into a single unidirectional AUI adapter. This design reduces the number of interface elements and simplifies the connection to downstream components that expect a standardized adapter-based event interface.
@@ -40,6 +41,7 @@ There are no data outputs in this block.
 | K    | adapter::types::unidirectional::AUI | Output (Plug) | Event index and output channel |
 
 The adapter `K` is a **plug** (output adapter) of type `adapter::types::unidirectional::AUI` (Adapter Unit Interface). It provides two functions:
+
 - **Output for the selected event**: The multiplexed event is sent through this adapter to a connected socket.
 - **Selector input**: The index value (0, 1, or 2) is supplied from the connected socket, indicating which of the three event inputs should be forwarded.
 

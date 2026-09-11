@@ -3,6 +3,7 @@
 ![AUI_MUX_8](./AUI_MUX_8.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUI_MUX_8 is an event multiplexer function block with a unidirectional AUI adapter output. It concentrates up to eight incoming event inputs on a single AUI adapter connection. Instead of forwarding the selected event through a plain event output and a separate index value, the block emits the event and the associated event index through the adapter `K`. It is a concrete specialization of the generic event multiplexer `GEN_E_MUX` and is intended for use in event-driven 4diac applications.

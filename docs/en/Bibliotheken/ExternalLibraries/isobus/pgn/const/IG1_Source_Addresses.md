@@ -3,6 +3,7 @@
 ![IG1_Source_Addresses](./IG1_Source_Addresses.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **IG1_Source_Addresses** GlobalConstants package defines a set of named constant values representing the ISO 11783 (ISOBUS) **Industry Group 1 specific source addresses** for the J1939-style network. These constants map human‑readable device identifiers (e.g., `SA_AUTOMATED_DRIVING_CONTROLLER_1`) to their assigned byte values in the range 128–247, a range reserved for Industry Group 1 (non‑standard, agriculture/forestry oriented) ECU source addresses.
@@ -119,6 +120,7 @@ Not applicable.
 The primary functionality of `IG1_Source_Addresses` is to provide a **centralized, named mapping** of ISOBUS source addresses for devices belonging to Industry Group 1. In an ISOBUS network, every electronic control unit must use a unique source address (0–253) to identify itself in transmitted messages. Industry Group 1 covers agricultural and forestry equipment, and the SAE J1939‑based address allocation assigns specific addresses to device classes within this group.
 
 By referencing the constants defined here, an application can:
+
 - Assign a source address to a local ECU during network initialization.
 - Filter incoming messages based on the source address of the transmitting device.
 - Configure diagnostic or monitoring functions that need to distinguish between different controllers.

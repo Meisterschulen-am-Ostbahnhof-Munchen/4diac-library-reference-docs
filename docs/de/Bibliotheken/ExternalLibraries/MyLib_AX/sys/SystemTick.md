@@ -14,18 +14,23 @@ Der Funktionsblock `SystemTick` ist eine Subapplikation, die einen freilaufenden
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - Keine
 
 ### **Ereignis-Ausgänge**
+
 - Keine
 
 ### **Daten-Eingänge**
+
 - Keine
 
 ### **Daten-Ausgänge**
+
 - Keine
 
 ### **Adapter**
+
 - **`ADI_OUT`** (Plug, Typ: `adapter::types::unidirectional::ADI`)  
   Liefert den aktuellen Tick-Zählerstand als DINT-Wert (0…99). Der Adapter enthält typischerweise ein Ereignis und einen Datenwert.
 

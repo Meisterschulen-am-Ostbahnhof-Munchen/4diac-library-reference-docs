@@ -3,6 +3,7 @@
 ![AID_EXRN](./AID_EXRN.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Bei `AID_EXRN` handelt es sich nicht um einen klassischen Funktionsblock, sondern um eine globale Konstantendefinition (`GlobalConstants`). Sie stellt Attribut-IDs für **External Reference Name**-Objekte im ISOBUS Universal Terminal bereit. Ziel ist es, die numerischen Kennungen für Optionen und Namen von `EXRN`-Objekten an zentraler Stelle als symbolische Konstanten verfügbar zu machen.

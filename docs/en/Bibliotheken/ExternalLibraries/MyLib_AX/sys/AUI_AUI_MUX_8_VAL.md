@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_8_VAL](./AUI_AUI_MUX_8_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_8_VAL** is a composite subapplication that provides an 8‑way multiplexer for **UINT** values, which are presented on an **AUI** adapter interface. It selects one of eight input values based on an incoming event and forwards the selected value as an AUI output. This block is especially useful when a control system needs to switch between different parameter sets or configuration values in a structured, event‑driven manner.

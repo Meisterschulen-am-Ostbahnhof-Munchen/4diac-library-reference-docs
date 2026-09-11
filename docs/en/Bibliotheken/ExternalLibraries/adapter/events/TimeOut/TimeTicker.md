@@ -3,6 +3,7 @@
 ![TimeTicker](./TimeTicker.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `TimeTicker` is a composite function block that encapsulates an `iec61499::events::E_CYCLE` function block and exposes an adapter-based interface for periodic tick generation. It provides a configurable cycle time, start/stop handling, and event-based reporting of output values such as process time and elapsed time.

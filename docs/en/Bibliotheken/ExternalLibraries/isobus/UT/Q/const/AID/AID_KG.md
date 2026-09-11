@@ -3,6 +3,7 @@
 ![AID_KG](./AID_KG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_KG` global constant set defines standardized attribute identifiers for ISO‑bus key group objects. It is part of the `isobus::UT::Q::const` package and provides fixed numeric values that unambiguously reference specific object attributes, such as availability options and naming information. These constants simplify integration with ISO‑bus communication stacks and ensure consistent code across applications.
@@ -10,18 +11,23 @@ The `AID_KG` global constant set defines standardized attribute identifiers for 
 ## Interface Structure
 
 ### **Event Inputs**
+
 None – this is a global constant definition, not a function block with event inputs.
 
 ### **Event Outputs**
+
 None – no event outputs are provided.
 
 ### **Data Inputs**
+
 None – the block does not accept any variable inputs; all values are instantiated as compile‑time constants.
 
 ### **Data Outputs**
+
 None – the constants are accessible globally by their symbolic names (e.g., `OPTIONS`, `NAME`) and are not exchanged via formal output connections.
 
 ### **Adapters**
+
 None – no adapter interfaces are defined.
 
 ## Functionality

@@ -6,6 +6,7 @@
 ![AE2_ILOCK_T_FF_TO_BOOL_EVENT](./AE2_ILOCK_T_FF_TO_BOOL_EVENT.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AE2_ILOCK_T_FF_TO_BOOL_EVENT` is a reusable IEC 61499 subapplication that implements one link of a mutually interlocked toggle flip-flop chain. It uses an AE2 bidirectional adapter interface with a `SOCKET`/`PLUG` chain topology and provides the current state as a Boolean output `Q` together with a confirmation event `EO`.
@@ -13,6 +14,7 @@
 The block is designed as a chain element: several instances can be connected by linking the `PLUG` of one element to the `SOCKET` of the next element. This makes the interlock logic scalable for an arbitrary number of participants.
 
 * * * * * * * * * *
+
 ## Interface Structure
 
 The subapplication has one event input, one event output, one Boolean data output, and two bidirectional adapter interfaces.
@@ -47,6 +49,7 @@ None.
 | `PLUG`   | `adapter::types::bidirectional::AE2` | Bidirectional adapter connection to the next element in the chain.          |
 
 * * * * * * * * * *
+
 ## Functionality
 
 The subapplication behaves as one interlock-capable toggle flip-flop inside a chain of identical elements.
@@ -63,6 +66,7 @@ The AE2 adapter part is responsible for the mutual interlock. The internal conve
 The overall result is a decentralized, chainable interlocked toggle flip-flop that can be extended simply by adding more subapplication instances and connecting `PLUG` to `SOCKET`.
 
 * * * * * * * * * *
+
 ## Technical Features
 
 - Standard-compliant IEC 61499 subapplication type.
@@ -74,6 +78,7 @@ The overall result is a decentralized, chainable interlocked toggle flip-flop th
 - A sister block `AE2_ILOCK_T_FF_TO_AX` exists with an AX adapter output instead of `BOOL` + `Event`.
 
 * * * * * * * * * *
+
 ## State Overview
 
 The internal behavior can be described by the two states of the stored flip-flop:
@@ -86,6 +91,7 @@ The internal behavior can be described by the two states of the stored flip-flop
 Additionally, interlock signals arriving from neighboring chain elements through the adapter interfaces can reset the local flip-flop, implementing the mutual exclusion between participants.
 
 * * * * * * * * * *
+
 ## Application Scenarios
 
 - Decentralized toggle systems in modular machines where only one station may be active at a time.
@@ -95,6 +101,7 @@ Additionally, interlock signals arriving from neighboring chain elements through
 - Architectures where a centralized interlock unit would require too much wiring or configuration.
 
 * * * * * * * * * *
+
 ## Comparison with Similar Blocks
 
 - `AE2_ILOCK_T_FF_TO_BOOL_EVENT` provides a Boolean output `Q` and a confirmation event `EO`, making it convenient for connection to classic IEC 61499 Boolean and event logic.
@@ -103,6 +110,7 @@ Additionally, interlock signals arriving from neighboring chain elements through
 - Compared with a central interlock function block, this subapplication uses a neighbor-to-neighbor chain topology. This reduces central wiring and allows the interlock logic to scale more flexibly.
 
 * * * * * * * * * *
+
 ## Conclusion
 
 `AE2_ILOCK_T_FF_TO_BOOL_EVENT` is a compact and reusable IEC 61499 subapplication for building mutually interlocked toggle chains. It combines the simplicity of a Boolean output and event confirmation with the flexibility of a bidirectional AE2 adapter interface. Its `SOCKET`/`PLUG` design makes it particularly suitable for decentralized, scalable interlock applications.

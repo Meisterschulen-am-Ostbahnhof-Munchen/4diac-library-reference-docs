@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_7](./AUDI_AUI_MUX_7.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_AUI_MUX_7** is a generic multiplexer function block designed for unidirectional adapter-based selection of analog data values. It accepts up to **seven input adapters** (IN1 through IN7) and routes one of them to a single output adapter (OUT) based on an index value provided via the K adapter. The block is implemented as a generic FB with the class name `GEN_AUDI_AUI_MUX`, allowing flexible reuse in various IEC 61499 applications.

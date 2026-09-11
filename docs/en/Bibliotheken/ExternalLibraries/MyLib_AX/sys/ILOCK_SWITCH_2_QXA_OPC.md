@@ -6,6 +6,7 @@
 ![ILOCK_SWITCH_2_QXA_OPC](./ILOCK_SWITCH_2_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ILOCK_SWITCH_2_QXA_OPC subapplication implements a 2-direction double-acting digital output with a "last-wins" interlock and configurable protection time. For each direction, the real function command (remote subscribe) is merged with the existing IO-test command (remote subscribe) using an AX_OR_2 block before entering the interlock logic. This keeps the IO-test fully usable while preventing both directions from being permanently switched simultaneously. The interlocked output drives the physical logiBUS channel and reports its actual state both to the existing IO-test monitoring and to the real function feedback (e.g., GreenWhiteBackground on a SoftKey). It is generic for any "digital DW" actuator operated from a module without its own visualization terminal.
@@ -13,12 +14,15 @@ The ILOCK_SWITCH_2_QXA_OPC subapplication implements a 2-direction double-acting
 ## Interface Structure
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 - **Output_UP** (logiBUS::io::DQ::logiBUS_DO_S): Physical output channel for the UP/Left direction. Initial value: `logiBUS_DO::Invalid`.
 - **Output_DOWN** (logiBUS::io::DQ::logiBUS_DO_S): Physical output channel for the DOWN/Right direction. Initial value: `logiBUS_DO::Invalid`.
 - **DT_PROTECT** (TIME): Protection dead time before a direction change is allowed. Default: `T#300ms`.
@@ -32,20 +36,24 @@ None.
 - **ID_WRITE_DOWN** (WSTRING): Real function feedback publish address for the DOWN direction.
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality
 
 For each direction (UP and DOWN), the subapplication subscribes to two independent remote command sources via `AX_SUBSCRIBE_1` blocks:
+
 1. The existing IO-test command (`ID_TEST_READ_*`).
 2. The real function command (`ID_READ_*`).
 
 Both signals are combined using an `AX_OR_2` block, so that either the IO-test command or the real function command can request the activation of that direction. The combined requests are then passed to an `ILOCK_SWITCH_PROTECT_AX` interlock block, which enforces a "last-wins" policy and a configurable protection time (`DT_PROTECT`). This ensures that both directions can never be active simultaneously and that a minimum dead time elapses before switching directions.
 
 The interlocked output for each direction is distributed via an `AX_SPLIT_3` block into three paths:
+
 - **Physical output**: Drives the logiBUS digital output channel (`DigitalOutput_UP` / `DigitalOutput_DOWN`).
 - **IO-test feedback**: Publishes the actual state to the existing IO-test publish address (`ID_TEST_WRITE_*`).
 - **Function feedback**: Publishes the actual state to the real function feedback address (`ID_WRITE_*`, e.g., for SoftKey background indication).

@@ -3,6 +3,7 @@
 ![A2X_PUBLISH_2](./A2X_PUBLISH_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **A2X_PUBLISH_2** function block is a network publishing component that takes the two Boolean values (`UP` and `DOWN`) from an A2X adapter socket and publishes them via a standard `PUBLISH_2` block to one or more `SUBSCRIBE_2` counterparts. Each published value is buffered internally with an edge-triggered `E_D_FF` flip-flop, ensuring that only state changes trigger a network transmission, reducing unnecessary network traffic. The block is designed for scenarios where a single publisher must distribute a pair of Boolean signals (e.g., up/down commands) to multiple subscribers over Ethernet.

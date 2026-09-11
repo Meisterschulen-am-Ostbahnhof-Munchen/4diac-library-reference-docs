@@ -12,18 +12,22 @@
 Der Funktionsbaustein (SubApp) **Softkey_Aux_Switch_TO_Remote_WRITE_BG_OPC** ist eine 4‑Quellen‑Variante des Bausteins `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`. Er kombiniert die Zustände von vier verschiedenen Quellen – SoftKey, AUX‑Joystick, lokalem Web‑Override und einem zusätzlichen physischen Taster auf einem dritten Modul – und überträgt diese als OPC‑UA‑Write‑Befehl an ein Zielmodul. Gleichzeitig wird der vom Zielmodul rückgemeldete Status über einen Remote‑Subscribe‑Kanal empfangen und als Hintergrundfarbe für die Visualisierung (SoftKey und AUX) verwendet sowie lokal für Web‑Clients veröffentlicht.
 
 Die SubApp besteht aus zwei internen Bausteinen:
+
 - **Command** (`Softkey_Aux_Switch_TO_Remote_WRITE`): verarbeitet die vier Quellen und erzeugt den Remote‑Write‑Befehl.
 - **Status** (`AX_SUBSCRIBE_BG3_WEB_OPC`): abonniert den Remote‑Status und setzt die Hintergrundfarben sowie den lokalen Web‑Republish um.
 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `u16ObjId` | UINT | Object ID SoftKey/Hintergrund (VT) |
@@ -35,9 +39,11 @@ Keine.
 | `ID_STATUS_WEB` | WSTRING | Lokale Publish‑Adresse (auf diesem Modul) für den vom Zielmodul zurückgemeldeten Zustand – damit ein Web‑Client (z. B. vt‑ui‑mirror) dieselbe Hintergrundfarbe wie das echte VT zeigen kann |
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise

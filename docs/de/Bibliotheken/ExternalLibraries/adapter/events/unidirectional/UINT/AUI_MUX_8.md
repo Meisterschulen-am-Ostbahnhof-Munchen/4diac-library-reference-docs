@@ -44,6 +44,7 @@ Keine.
 | `K`     | `adapter::types::unidirectional::AUI` | Ereignis-Index (Auswahl des Eingangsereignisses) |
 
 Der Adapter `K` übernimmt eine Doppelfunktion:
+
 - Er empfängt den Auswahlindex (0–7) vom verbundenen Kommunikationspartner.
 - Über ihn wird das ausgewählte Eingangsereignis als Adapter-Ereignis an den Partner weitergeleitet.
 
@@ -52,6 +53,7 @@ Der Adapter `K` übernimmt eine Doppelfunktion:
 Der **AUI_MUX_8** wartet auf eines der acht Ereignis-Eingänge `EI1`–`EI8`. Gleichzeitig muss über den Adapter `K` ein gültiger Index (0–7) bereitgestellt werden. Sobald ein Ereignis an einem der Eingänge auftritt, prüft der Funktionsblock den aktuellen Indexwert und leitet das entsprechende Ereignis über den Adapter `K` an den angeschlossenen Baustein weiter.
 
 Die Zuordnung ist:
+
 - `EI1` → Index 0
 - `EI2` → Index 1
 - ...

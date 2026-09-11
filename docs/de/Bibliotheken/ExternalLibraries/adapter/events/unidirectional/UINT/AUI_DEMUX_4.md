@@ -3,6 +3,7 @@
 ![AUI_DEMUX_4](./AUI_DEMUX_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **AUI_DEMUX_4** ist ein Ereignis-Demultiplexer mit vier Ausgängen. Er empfängt ein Ereignis über einen AUI-Adapter (Application Interconnection Unit) und leitet es – abhängig von einem über denselben Adapter übermittelten Index – an einen der vier Ereignis-Ausgänge weiter. Im Gegensatz zum klassischen `E_DEMUX`, bei dem Ereignis (`EI`) und Index (`K`) als getrennte Schnittstellen vorliegen, werden hier beide Informationen über einen unidirektionalen Adapter gebündelt. Dadurch vereinfacht sich die Verdrahtung in komplexen Systemen und die Schnittstelle wird kompakter.

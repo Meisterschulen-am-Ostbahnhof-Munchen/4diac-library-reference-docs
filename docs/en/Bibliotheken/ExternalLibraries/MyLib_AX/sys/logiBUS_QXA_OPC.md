@@ -38,6 +38,7 @@ None.
 ### **Adapters**
 
 None at the subapp level. Internally, the following adapter instances are utilised:
+
 - `AX_SUBSCRIBE_1` – subscribes to an OPC UA data source.
 - `AX_PUBLISH_1` – publishes data to an OPC UA target.
 - `AX_SPLIT_2` – splits the incoming event stream for parallel processing.
@@ -51,6 +52,7 @@ The subapp acts as a bridge between an OPC UA client and a physical logiBUS digi
 - `ID_WRITE` defines the OPC UA publish key – outgoing events are sent to this topic.
 
 Internally, the OPC UA subscribe adapter receives events. These events are then split into two paths:
+
 1. The first path goes directly to the `logiBUS_QXA` FB, which interprets the event as a control command and sets the selected output accordingly.
 2. The second path is forwarded to the OPC UA publish adapter, allowing the same event to be echoed back or used for acknowledgment/status purposes.
 

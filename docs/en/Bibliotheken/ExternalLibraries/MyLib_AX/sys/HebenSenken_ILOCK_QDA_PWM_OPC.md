@@ -6,6 +6,7 @@
 ![HebenSenken_ILOCK_QDA_PWM_OPC](./HebenSenken_ILOCK_QDA_PWM_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **HebenSenken_ILOCK_QDA_PWM_OPC** subapplication combines two remote commands – **Raise** (Heben) and **Lower** (Senken) – with existing IO-test signals and generates a single ratiometric PWM output signal. The subapp is designed for Danfoss PVEA actuators with a three-stage PWM channel, where:

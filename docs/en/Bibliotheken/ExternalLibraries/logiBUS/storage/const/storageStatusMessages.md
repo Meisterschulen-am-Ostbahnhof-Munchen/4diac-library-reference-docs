@@ -3,6 +3,7 @@
 ![storageStatusMessages](./storageStatusMessages.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `storageStatusMessages` is a **GlobalConstants** element from the `logiBUS::storage::const` package. It is not an executable function block, adapter, or subapplication. Instead, it provides a centralized collection of `STRING` constants used by storage-related function blocks to report status and error information.

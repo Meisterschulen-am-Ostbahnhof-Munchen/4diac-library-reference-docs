@@ -6,6 +6,7 @@
 ![E_PERMIT_2](./E_PERMIT_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **E_PERMIT_2** is a composite subapplication that provides a two-channel event permission gate. It encapsulates two independent instances of the standard IEC 61499 `E_PERMIT` function block, allowing two separate event streams to be selectively forwarded or blocked using a single common permission signal. This block is particularly useful in safety-oriented or access-controlled automation scenarios where multiple event paths must be gated simultaneously.

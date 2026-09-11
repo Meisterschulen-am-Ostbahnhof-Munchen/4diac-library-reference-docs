@@ -3,6 +3,7 @@
 ![IG5_NAME_Functions](./IG5_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 `IG5_NAME_Functions` ist eine Sammlung globaler Konstanten für die ISO 11783 (ISOBUS) Kommunikation, speziell für die **Industry Group 5** (Industrieprozesssteuerung, insbesondere stationäre Generatoren (Gen-Sets) und Bohrlochstimulationspumpen). Die Konstanten definieren Funktionscodes, die in bestimmten PGNs (Parameter Group Numbers) verwendet werden, um den Zweck eines angeschlossenen Geräts innerhalb des ISOBUS-Netzwerks zu identifizieren. Die Definitionen folgen dem Standard IEC 61499-1, jedoch handelt es sich nicht um einen Funktionsblock mit ausführbarer Logik, sondern um eine verteilbare Konstantenressource für die 4diac-IDE.

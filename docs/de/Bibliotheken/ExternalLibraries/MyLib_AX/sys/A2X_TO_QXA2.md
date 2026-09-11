@@ -6,6 +6,7 @@
 ![A2X_TO_QXA2](./A2X_TO_QXA2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **A2X_TO_QXA2** ist eine Subapplikation (Composite) zur Entbündelung eines unidirektionalen A2X-Signals (UP/DOWN) und zur direkten Ansteuerung zweier physischer logiBUS-Digitalausgänge. Die Aufteilung des gebündelten Signals in zwei einzelne AX-Signale erfolgt unmittelbar vor den beiden logiBUS_QXA-Ausgangsbausteinen. Dadurch wird die Entbündelung in die Composite-Struktur verlagert, nicht in die Resource des Geräts.

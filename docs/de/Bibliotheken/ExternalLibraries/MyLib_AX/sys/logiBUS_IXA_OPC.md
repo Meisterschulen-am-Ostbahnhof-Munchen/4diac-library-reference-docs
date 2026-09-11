@@ -6,6 +6,7 @@
 ![logiBUS_IXA_OPC](./logiBUS_IXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die SubApp `logiBUS_IXA_OPC` realisiert die OPC-UA-Veröffentlichung eines einzelnen logiBUS-Digital-Eingangskanals (DI) ohne Visualisierungshintergrund (VT) und eignet sich für Module ohne ISOBUS/VT-Anbindung. Sie kombiniert den Baustein `logiBUS_IXA` (Kanalverarbeitung) mit dem Adapter `AX_PUBLISH_1` (OPC-UA-Publishing) zu einer durchgängigen, generischen Ein-Kanal-Lösung.
@@ -13,19 +14,24 @@ Die SubApp `logiBUS_IXA_OPC` realisiert die OPC-UA-Veröffentlichung eines einze
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 - **`Input`** – Typ: `logiBUS::io::DI::logiBUS_DI_S` – Identifiziert den Eingangskanal (Input_I1..I8). Initialwert: `logiBUS_DI::Invalid`.
 - **`ID_WRITE`** – Typ: `WSTRING` – OPC-UA-Publish-Key (lesbar).
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine an der Schnittstelle. Intern wird der Adapterausgang `IN` von `logiBUS_IXA` mit dem Adaptereingang `IN` von `AX_PUBLISH_1` verbunden.
 
 ## Funktionsweise

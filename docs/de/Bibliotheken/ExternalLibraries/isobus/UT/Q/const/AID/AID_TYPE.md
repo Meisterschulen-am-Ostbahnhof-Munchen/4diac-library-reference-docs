@@ -3,6 +3,7 @@
 ![AID_TYPE](./AID_TYPE.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **AID_TYPE** ist ein **GlobalConstants**-Typ im Rahmen der 4diac-IDE. Er definiert eine globale Konstante, die als Attribut-Identifikator für Objekttypen im ISOBUS-Kontext (Universal Terminal, UT) dient. Die Konstante gehört zur Paketstruktur `isobus::UT::Q::const::AID` und stellt eine numerische Kennung für die Abfrage des Objekttyp-Attributs bereit.
@@ -12,18 +13,23 @@ Der Baustein **AID_TYPE** ist ein **GlobalConstants**-Typ im Rahmen der 4diac-ID
 Da es sich um einen globalen Konstanten-Baustein handelt, besitzt er keine klassischen Ein-/Ausgangsschnittstellen wie Funktionsblöcke (FB) oder Adapter. Die Konstante wird über den globalen Symbolnamen `AID_TYPE.OBJ_TYPE` referenziert und ist in jedem Baustein des Projekts sichtbar, sobald der Konstanten-Baustein eingebunden ist.
 
 ### **Ereignis-Eingänge**
+
 Keine
 
 ### **Ereignis-Ausgänge**
+
 Keine
 
 ### **Daten-Eingänge**
+
 Keine
 
 ### **Daten-Ausgänge**
+
 Keine (die Konstante wird direkt über den Namen angesprochen, nicht als Ausgang)
 
 ### **Adapter**
+
 Keine
 
 ## Funktionsweise

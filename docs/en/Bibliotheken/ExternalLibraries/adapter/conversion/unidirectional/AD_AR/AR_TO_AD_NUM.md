@@ -3,6 +3,7 @@
 ![AR_TO_AD_NUM](./AR_TO_AD_NUM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AR_TO_AD_NUM` is a composite function block that converts a REAL adapter input into a DWORD adapter output using a numerically correct conversion path. Instead of reinterpreting the REAL value as its IEEE 754 bit pattern, it first converts REAL to UDINT and then moves the resulting unsigned 32-bit integer into a DWORD. This makes it suitable for applications where a numeric setpoint such as `REAL#50.0` should become `DWORD#50` rather than the raw floating-point bit pattern of 50.0.

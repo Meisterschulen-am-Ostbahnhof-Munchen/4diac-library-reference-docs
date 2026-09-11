@@ -3,6 +3,7 @@
 ![AID_OP_PTR](./AID_OP_PTR.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AID_OP_PTR** global constant container defines the object pointer attribute identifiers used in the ISOBUS (ISO 11783) protocol stack. It centralizes the enumeration of object pointer attributes, ensuring consistent and unambiguous references across the system. This resource is part of the `isobus::UT::Q::const::AID` package and provides a single constant, `VALUE`, representing the current value attribute.

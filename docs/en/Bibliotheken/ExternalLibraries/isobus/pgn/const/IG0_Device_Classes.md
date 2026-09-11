@@ -3,6 +3,7 @@
 ![IG0_Device_Classes](./IG0_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 This global constants block defines industry group 0 specific device classes for vehicle systems, according to ISO 11783 (ISOBUS) PGN constants. It provides two standard constants to identify device classes for non‑specific systems and unavailable systems.

@@ -3,6 +3,7 @@
 ![EVENT_HS_ACK_WSTRING](./EVENT_HS_ACK_WSTRING.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `EVENT_HS_ACK_WSTRING` is a data-carrying adapter type belonging to the Handshake (`EVENT_HS`) family defined in the IEC 61499 primer course (Module 6, Valeriy Vyatkin). It implements the request/confirm half of the full REQ/CNF/IND/RSP handshake vocabulary, augmented with `WSTRING` payloads on both events.

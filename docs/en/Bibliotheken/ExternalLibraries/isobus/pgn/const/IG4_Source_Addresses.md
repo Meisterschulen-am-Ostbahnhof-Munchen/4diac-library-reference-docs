@@ -3,6 +3,7 @@
 ![IG4_Source_Addresses](./IG4_Source_Addresses.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **IG4_Source_Addresses** is a global constant definition block within the **isobus::pgn::const** package, providing standardized ISOBUS (ISO 11783) source address constants for **Industry Group 4** (Marine applications). It defines 22 named constants covering reserved address ranges and assigned device addresses for marine engine systems, displays, transmissions, and propulsion sensor gateways. These constants are used as symbolic references instead of raw numeric values, improving code readability and maintainability in ISOBUS-based applications targeting marine powertrain and monitoring equipment.

@@ -13,18 +13,23 @@ Der Baustein `AID_NV` ist eine globale Konstantendefinition im Bereich der ISOBU
 Da `AID_NV` ein `GlobalConstants`‑Baustein ist, besitzt er keine klassischen Ein‑/Ausgangs‑Schnittstellen.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Keine (es werden keine Werte exportiert, sondern symbolische Konstanten zur Verfügung gestellt).
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise

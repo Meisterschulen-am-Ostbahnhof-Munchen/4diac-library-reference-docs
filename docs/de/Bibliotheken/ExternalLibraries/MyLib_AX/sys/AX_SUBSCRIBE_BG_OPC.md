@@ -6,6 +6,7 @@
 ![AX_SUBSCRIBE_BG_OPC](./AX_SUBSCRIBE_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AX_SUBSCRIBE_BG_OPC** ist eine Subapplikation, die eine OPC-UA-Remote-Subscription mit einer Hintergrundfarbsteuerung für Visualisierungselemente (VT) verbindet. Er dient dazu, über eine OPC-UA-Verbindung einen Datenwert zu empfangen und daraus die Hintergrundfarbe eines benannten Rechtecks in einer Visualisierung dynamisch anzupassen. Die Subapp ist generisch aufgebaut und unterstützt einen Kanal.

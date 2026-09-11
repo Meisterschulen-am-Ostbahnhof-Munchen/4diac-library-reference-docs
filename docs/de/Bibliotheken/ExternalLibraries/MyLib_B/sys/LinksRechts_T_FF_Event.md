@@ -6,6 +6,7 @@
 ![LinksRechts_T_FF_Event](./LinksRechts_T_FF_Event.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **LinksRechts_T_FF_Event** ist eine Subapplikation (SubApp) zur einfachen Links/Rechts-Umschaltung auf Basis eines Toggle-Flip-Flops. Er verwendet ausschließlich Event- und BOOL-basierte Signale und benötigt keine Adapter. Die SubApp ist als Wiederverwendungsbaustein konzipiert und stellt eine ereignisgesteuerte Alternative zu adapterbasierten Schwesterbausteinen dar.

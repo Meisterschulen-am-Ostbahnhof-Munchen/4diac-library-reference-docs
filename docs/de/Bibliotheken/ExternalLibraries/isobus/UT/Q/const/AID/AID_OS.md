@@ -62,6 +62,7 @@ Da es sich um reine Konstanten handelt, existiert kein Verhalten oder Zustandsau
 Ein typisches Anwendungsbeispiel ist die Erstellung eines Output‑String‑Objekts in einem ISOBUS‑Terminal. Hierbei müssen die Attribute des Objekts (Breite, Höhe, Hintergrundfarbe, Schriftart usw.) über deren AID‑Werte gesetzt werden. Durch die Verwendung von `AID_OS.WIDTH`, `AID_OS.HEIGHT` usw. wird der Code selbstdokumentierend und leicht an Änderungen im Standard anpassbar.
 
 Beispiel (ST‑Syntax):
+
 ```
 myOutputString.Width := AID_OS.WIDTH;
 myOutputString.Options := AID_OS.OPTIONS; // transparent, auto-wrap

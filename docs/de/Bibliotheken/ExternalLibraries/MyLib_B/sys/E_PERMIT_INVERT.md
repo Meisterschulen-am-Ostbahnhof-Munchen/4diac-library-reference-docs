@@ -6,6 +6,7 @@
 ![E_PERMIT_INVERT](./E_PERMIT_INVERT.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **E_PERMIT_INVERT** ist eine Subapplikation nach IEC 61499-2. Er kombiniert einen booleschen Negationsbaustein mit einem Ereignis-Freigabe-Baustein und realisiert so ein **invertiertes Event-Freigabe-Gate**. Ein ankommendes Ereignis an `EI` wird nur dann an `EO` weitergegeben, wenn der Eingang `PERMIT` den Wert `FALSE` besitzt.

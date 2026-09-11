@@ -6,6 +6,7 @@
 ![AuxIXA_TO_logiBUS_QXA_BG](./AuxIXA_TO_logiBUS_QXA_BG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AuxIXA_TO_logiBUS_QXA_BG` subapplication is a generic, reusable composite function block that connects an AUX (auxiliary) input event from the ISOBUS UT system to a digital output on a logiBUS QXA module. It also incorporates a green/white background color control for visual indication. The subapp is designed to be instantiated wherever an AUX input needs to drive a digital output with color feedback, following the same pattern as the `Button_IXA_TO_logiBUS_QXA_BG` but using an AUX function block instead of a button.

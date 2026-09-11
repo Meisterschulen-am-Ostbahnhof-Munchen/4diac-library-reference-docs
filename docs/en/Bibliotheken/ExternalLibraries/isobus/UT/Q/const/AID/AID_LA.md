@@ -3,11 +3,13 @@
 ![AID_LA](./AID_LA.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AID_LA is a set of global constants that define the attribute identifiers for the ISO 11783 (ISOBUS) **Line Attributes Object**. These constants are used to address specific properties of a line object within a Virtual Terminal (VT) – primarily the line colour, line width, and line art. The constants are defined as `USINT` (Unsigned Short Integer) values and are intended to be used as object attribute IDs when reading or writing line properties via the ISOBUS protocol.
 
 The values correspond to the standard attribute IDs as specified in the ISOBUS VT standard:
+
 - `1` – Line Colour
 - `2` – Line Width
 - `3` – Line Art (bit pattern for line style)
@@ -72,11 +74,13 @@ Typical usage scenarios include:
 ## Comparison with Similar Blocks
 
 In the ISOBUS context, there are other attribute ID constant sets, for example:
+
 - **AID_OO** – Object identifiers for object attributes.
 - **AID_PO** – Point attributes.
 - **AID_AO** – Auxiliary Object attributes.
 
 AID_LA is specifically focused on line attributes. Compared to equivalent numeric literals, the constant set offers the advantage of:
+
 - **Readability**: `AID_LA.LINE_COLOUR` is self‑documenting.
 - **Maintainability**: If the underlying ID ever changes (unlikely), the definition can be updated in a single place.
 - **Type Safety**: Using `USINT` ensures the value fits the expected range for attribute IDs.

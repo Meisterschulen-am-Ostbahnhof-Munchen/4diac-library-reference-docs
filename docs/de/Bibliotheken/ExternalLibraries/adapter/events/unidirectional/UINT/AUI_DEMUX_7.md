@@ -3,6 +3,7 @@
 ![AUI_DEMUX_7](./AUI_DEMUX_7.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der AUI_DEMUX_7 ist ein generischer Event-Demultiplexer mit sieben Ausgängen. Er leitet ein eingehendes Ereignis (EI) abhängig von einem über einen AUI-Adapter bereitgestellten Index (K) an einen der sieben Ereignisausgänge weiter. Dieser Baustein stellt eine Alternative zum klassischen E_DEMUX_7 dar, bei dem der Index über einen einfachen Dateneingang übergeben wird, während hier eine adapterbasierte Verbindung verwendet wird.
@@ -10,9 +11,11 @@ Der AUI_DEMUX_7 ist ein generischer Event-Demultiplexer mit sieben Ausgängen. E
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Es ist kein Ereignis-Eingang in der XML-Schnittstelle explizit deklariert. Als generischer Funktionsbaustein (GenericClassName: `GEN_E_DEMUX`) besitzt der Baustein jedoch einen impliziten Ereigniseingang `EI`, der bei der Instanziierung ergänzt wird. Dieser Eingang nimmt das zu multiplexende Ereignis entgegen.
 
 ### **Ereignis-Ausgänge**
+
 - **EO1** – Ausgang für Index 0
 - **EO2** – Ausgang für Index 1
 - **EO3** – Ausgang für Index 2
@@ -24,12 +27,15 @@ Es ist kein Ereignis-Eingang in der XML-Schnittstelle explizit deklariert. Als g
 Die Kommentare in der XML geben an, dass jeder Ausgang das demultiplexte Signal von EI abhängig vom Wert von K liefert.
 
 ### **Daten-Eingänge**
+
 Keine Daten-Eingänge vorhanden. Die Auswahl des Zielausgangs erfolgt ausschließlich über den Adapter.
 
 ### **Daten-Ausgänge**
+
 Keine Daten-Ausgänge vorhanden.
 
 ### **Adapter**
+
 - **K** (Socket) – Typ: `adapter::types::unidirectional::AUI`  
   Dient zur Übergabe des Indexwertes (0–6), der bestimmt, welcher Ereignisausgang aktiviert wird.
 

@@ -3,6 +3,7 @@
 ![AUI_AUI_MUX_7](./AUI_AUI_MUX_7.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_7** is a generic, adapter-based multiplexer function block designed to select one of seven input channels and forward its value to a single output. The selection is performed via a dedicated index adapter (`K`). The block is part of the unidirectional adapter type system and is characterized by an event-driven output update mechanism: the output adapter is only refreshed when the selected value actually changes, thereby suppressing redundant events and data transmissions.

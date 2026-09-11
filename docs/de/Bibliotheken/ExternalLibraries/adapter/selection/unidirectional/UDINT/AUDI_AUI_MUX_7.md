@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_7](./AUDI_AUI_MUX_7.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **AUDI_AUI_MUX_7** realisiert einen generischen Multiplexer, der über einen Index (K) einen von sieben Eingängen (IN1 bis IN7) auf einen Ausgang (OUT) durchschaltet. Der Baustein ist speziell für die Verwendung mit den Adaptertypen `adapter::types::unidirectional::AUDI` und `adapter::types::unidirectional::AUI` ausgelegt und arbeitet rein ereignisgesteuert. Der Ausgang wird dabei nur dann aktualisiert, wenn sich der tatsächliche Wert am ausgewählten Eingang ändert. Dies wird durch das Ereignis `CNF` bestätigt.

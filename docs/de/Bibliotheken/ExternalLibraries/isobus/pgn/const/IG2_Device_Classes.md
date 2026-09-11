@@ -3,28 +3,37 @@
 ![IG2_Device_Classes](./IG2_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
+
 Der GlobalConstants-Baustein **IG2_Device_Classes** definiert eine Sammlung von Konstanten für Geräteklassen (Device Classes) gemäß dem ISOBUS‑Standard (ISO 11783). Diese Konstanten sind für die Industriegruppe 2 (Industry Group 2) spezifisch und kennzeichnen die Art eines Fahrzeugsystems (z. B. Traktor, Erntemaschine, Anhänger). Sie werden typischerweise in der Kommunikation zwischen Traktor und Anbaugeräten verwendet, um die Typklassifizierung des angeschlossenen Geräts zu übermitteln.
 
 ## Schnittstellenstruktur
+
 Da es sich um einen GlobalConstants-Baustein handelt, existieren keine Ein‑/Ausgänge, Ereignisse oder Adapter. Der Baustein stellt ausschließlich Konstanten bereit, die als globale Variablen in der IEC 61499-Umgebung genutzt werden können.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 ## Funktionsweise
+
 Der Baustein definiert eine Reihe von benannten Konstanten vom Typ **BYTE**, die jeweils einen bestimmten numerischen Wert und eine dazugehörige Bezeichnung besitzen. Die Werte entsprechen den offiziellen Geräteklassen‑Codierungen des ISOBUS-Standards. Sie werden typischerweise in Kommunikationsprotokollen verwendet, um die Art eines Fahrzeugs oder Anbaugeräts zu identifizieren. Beispielsweise steht der Wert `1` für **Tractor**, `7` für **Harvesters** und `127` für **Not Available**.
 
 Die folgende Tabelle zeigt die definierten Konstanten:
@@ -63,6 +72,7 @@ Die folgende Tabelle zeigt die definierten Konstanten:
 | `DC_NOT_AVAILABLE` | 127 | Nicht verfügbar |
 
 ## Technische Besonderheiten
+
 - Die Konstanten sind als **BYTE** deklariert und besitzen feste Werte im Bereich von 0 bis 127.
 - Der Wert `127` ist als `DC_NOT_AVAILABLE` reserviert und signalisiert, dass keine gültige Geräteklasse vorliegt.
 - Einige Werte (z. B. 18, 30–126) sind im Standard nicht belegt und daher nicht definiert. Dies bietet Raum für zukünftige Erweiterungen.
@@ -70,16 +80,20 @@ Die folgende Tabelle zeigt die definierten Konstanten:
 - Die Konstanten sind Teil der ISOBUS‑Datenkommunikation (PGN‑Konstanten) und erleichtern eine standardkonforme Implementierung.
 
 ## Zustandsübersicht
+
 Für einen GlobalConstants-Baustein existiert keine Zustandsautomaten‑ oder Zustandslogik. Die Konstanten sind statische Werte und ändern sich während der Laufzeit nicht.
 
 ## Anwendungsszenarien
+
 - **ISOBUS‑Kommunikation:** In einer ISOBUS‑Umgebung kann ein Steuergerät (ECU) die Geräteklasse seines Anbaugeräts mithilfe dieser Konstanten in den dafür vorgesehenen PGNs (Parameter Group Numbers) kodieren.
 - **Typidentifikation:** Ein Traktor kann anhand dieser Konstanten automatisch erkennen, ob es sich bei einem angeschlossenen Gerät um einen Pflug, eine Sämaschine oder eine Erntemaschine handelt.
 - **Diagnose und Konfiguration:** Bei der Inbetriebnahme oder Fehleranalyse kann die Geräteklasse zur schnellen Identifikation des Gerätetyps herangezogen werden.
 - **Entwicklung von ISOBUS‑Anwendungen:** Bei der Erstellung von 4diac‑Applikationen können diese Konstanten direkt als symbolische Namen verwendet werden, anstatt magische Zahlenwerte zu verwenden.
 
 ## Vergleich mit ähnlichen Bausteinen
+
 Es existieren weitere GlobalConstants‑Bausteine für andere Industriegruppen (z. B. `IG1_Device_Classes` für Industriegruppe 1), die ähnliche Konstanten für andere Anwendungsbereiche definieren. Der Unterschied liegt in den zugeordneten Werten und den spezifischen Geräteklassen. Während IG1 eher allgemeine industrielle Anwendungen abdeckt, fokussiert IG2 auf Fahrzeug‑ und Agrarsysteme.
 
 ## Fazit
+
 Der GlobalConstants-Baustein **IG2_Device_Classes** stellt eine standardkonforme und wartungsfreundliche Möglichkeit dar, die Geräteklassen im ISOBUS‑Kontext zu verwenden. Durch die Bereitstellung symbolischer Namen wird die Lesbarkeit und Fehleranfälligkeit von Applikationen reduziert. Die fest definierten Werte gewährleisten Kompatibilität mit der ISOBUS‑Norm und ermöglichen eine klare Kommunikation zwischen verschiedenen Geräten.

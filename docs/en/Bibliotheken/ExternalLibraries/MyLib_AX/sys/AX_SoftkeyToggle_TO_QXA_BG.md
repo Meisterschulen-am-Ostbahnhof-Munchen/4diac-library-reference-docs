@@ -6,6 +6,7 @@
 ![AX_SoftkeyToggle_TO_QXA_BG](./AX_SoftkeyToggle_TO_QXA_BG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AX_SoftkeyToggle_TO_QXA_BG` is a composite 4diac subapplication that implements a softkey release toggle for a QXA output and synchronizes an HMI background with the toggled state. It is generic: the softkey object ID and the QXA output channel are supplied as data inputs.

@@ -3,6 +3,7 @@
 ![AID_IB](./AID_IB.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_IB` type is a global constant definition that provides the standardized attribute identifiers for **Input Boolean objects** within the ISOBUS (ISO 11783) Universal Terminal (UT) protocol. These constants serve as semantic keys for accessing and manipulating the various attributes of an input boolean UI element. By centralizing these identifiers, the type ensures consistent and maintainable code when constructing or modifying ISOBUS object pools.

@@ -3,11 +3,13 @@
 ![PositionMarkerFS](./PositionMarkerFS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **PositionMarkerFS** is a function block designed to move a Virtual Terminal (VT) marker object so that it reflects an arbitrary incoming REAL value. It wraps a single **Q_ChildPosition** instance (ISO 11783-6, Annex F.16) and provides a clean, high-level interface for positioning a marker (e.g., a triangle or other graphical element) within its parent container on an ISOBUS VT display.
 
 The block accepts a structured configuration object (`PositionMarker_S`) containing the marker's object pool identifiers, travel bounds, and center offset. It snapshots this structure once at initialization, then on each request:
+
 1. Offsets the incoming value by the configured center offset.
 2. Clamps the result to the marker's minimum/maximum travel range.
 3. Converts the clamped value to an integer and forwards it as the marker's X position.

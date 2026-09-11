@@ -6,6 +6,7 @@
 ![SRT_RPC_FROM_Remote_QXA_OPC](./SRT_RPC_FROM_Remote_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 SRT_RPC_FROM_Remote_QXA_OPC is a composite subapplication designed for device B (Station 12, IP 192.168.1.12) that receives Set, Reset, and Toggle commands via three independent OPC-UA server method calls. Unlike approaches that rely on value-change tricks or bridging, this subapp uses pure RPC triggers — each command is delivered through its own `SERVER_0` method invocation initiated by device A.

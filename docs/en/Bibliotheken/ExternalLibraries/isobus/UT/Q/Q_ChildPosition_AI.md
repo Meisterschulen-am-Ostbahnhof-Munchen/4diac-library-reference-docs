@@ -3,6 +3,7 @@
 ![Q_ChildPosition_AI](./Q_ChildPosition_AI.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **Q_ChildPosition_AI** function block implements a command to change the position of a child object (Part 6, F.16) within an ISO 11783-6 compliant automation system. It acts as a wrapper around the `Q_ChildPosition` function block, replacing the conventional REQ/data input interface with two unidirectional AI adapter sockets. This allows the X and Y position values to be delivered through adapter connections, decoupling the position source from the command logic. A scaling option (xScale) enables the position values to be adjusted by the display-master/slave (DM/SKM) factor of the parent object.

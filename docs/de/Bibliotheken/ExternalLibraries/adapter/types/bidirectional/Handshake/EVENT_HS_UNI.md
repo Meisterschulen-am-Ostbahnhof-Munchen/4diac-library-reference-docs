@@ -3,6 +3,7 @@
 ![EVENT_HS_UNI](./EVENT_HS_UNI.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter **EVENT_HS_UNI** gehört zur Familie der Handshake-Adapter nach dem Entwurfsmuster aus IEC 61499 (Modul 6, Valeriy Vyatkin). Er stellt eine stark reduzierte, unidirektionale Variante dar, die ausschließlich ein einzelnes Ereignis **REQ** vom Plug zum Socket überträgt. Es gibt keinerlei Bestätigungs- oder Antwortereignisse (CNF, IND, RSP) – der Adapter implementiert bewusst kein echter Handshake, sondern eine reine „Fire-and-Forget“-Benachrichtigung ohne Rückkanal. Dies macht ihn für Anwendungen geeignet, bei denen eine Bestätigung nicht erforderlich oder nicht gewünscht ist, und wo eine bestmögliche Zustellung ausreicht.
@@ -12,20 +13,25 @@ Der Adapter **EVENT_HS_UNI** gehört zur Familie der Handshake-Adapter nach dem 
 Der Adapter besitzt nur eine einzige Ereignis-Schnittstelle. Es gibt weder Daten-Ein- noch Daten-Ausgänge, keine Adapter weiter innerhalb des Bausteins und auch keinen zusätzlichen Ereignis-Eingang oder -Ausgang außer dem einen REQ-Ausgang.
 
 ### **Ereignis-Eingänge**
+
 Keine
 
 ### **Ereignis-Ausgänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `REQ` | Event | Anforderung/Benachrichtigung vom Plug zum Socket, keine Antwort erwartet |
 
 ### **Daten-Eingänge**
+
 Keine
 
 ### **Daten-Ausgänge**
+
 Keine
 
 ### **Adapter**
+
 Der Adapter selbst ist ein Plug/Socket-Adapter. Auf der Plug-Seite (linke Schnittstelle) wird das Ereignis `REQ` gesendet, auf der Socket-Seite (rechte Schnittstelle) wird es empfangen. Die Service-Definition dokumentiert diesen Ablauf als Sequenz „notify“.
 
 ## Funktionsweise
@@ -33,6 +39,7 @@ Der Adapter selbst ist ein Plug/Socket-Adapter. Auf der Plug-Seite (linke Schnit
 Der Adapter überträgt ein einzelnes Ereignis `REQ` unidirektional vom Plug zum Socket. Die Übertragung erfolgt ohne Daten und ohne Bestätigung. Der Plug (Absender) löst das Ereignis aus, der Socket (Empfänger) reagiert darauf. Es gibt keine Möglichkeit für den Socket, den Empfang zu quittieren oder die Verarbeitung zu beeinflussen. Der Plug kann nicht feststellen, ob die Benachrichtigung den Socket erreicht hat oder ob sie dort erfolgreich verarbeitet wurde – es handelt sich um eine reine Einweg-Signalisation mit Best-Effort-Charakter.
 
 Der Service-Sequenz-Diagramm zeigt die Transaktion:
+
 - **Plug** sendet `REQ` an **Socket** (event). Es gibt keine Rücktransaktion.
 
 ## Technische Besonderheiten

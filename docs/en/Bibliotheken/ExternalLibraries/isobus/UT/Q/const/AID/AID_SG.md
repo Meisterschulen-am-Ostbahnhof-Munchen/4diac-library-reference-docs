@@ -3,6 +3,7 @@
 ![AID_SG](./AID_SG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_SG` global constant set defines attribute identifiers for scaled graphic objects in the ISOBUS Universal Terminal (UT) protocol. These constants are used to reference specific properties of scaled graphical elements, such as width, height, scaling behavior, options, and value, within a 4diac‑based control application. They are part of the `isobus::UT::Q::const::AID` package and are intended to improve code readability and maintainability by providing symbolic names for numeric attribute IDs.
@@ -12,12 +13,15 @@ The `AID_SG` global constant set defines attribute identifiers for scaled graphi
 As a set of global constants, `AID_SG` does not possess an event or adapter interface. The following sections describe the available data constants.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 The following constants are defined globally and can be used directly within function blocks or programs:
 
 | Name        | Type   | Value   | Description                                                                                 |
@@ -29,9 +33,11 @@ The following constants are defined globally and can be used directly within fun
 | `VALUE`     | `USINT`| `USINT#5` | `AID_SG_VALUE` – Current value of the scaled graphic object.                                |
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality

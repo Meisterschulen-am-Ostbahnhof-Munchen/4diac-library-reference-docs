@@ -3,6 +3,7 @@
 ![BargraphSplitFS_AR](./BargraphSplitFS_AR.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `BargraphSplitFS_AR` is an adapter‑based wrapper around the function block `BargraphSplitFS`. Instead of requiring an explicit `REQ` event and a plain `rValue` data input, this block accepts the value through a unidirectional `AR` (adapter‑request) socket. This design simplifies integration in systems where the value is already provided via an adapter interface, such as those defined for ISO 11783‑6 (ISOBUS) applications. The wrapper internally maps the adapter’s event and data to the inner block’s `REQ` and `rValue` pins, and passes through the results (status codes and numerical values) to the external interface. Over‑range conditions on the left and right sides are re‑exposed as `AX` adapter plugs, following the same pattern as `PositionMarkerFSA`.

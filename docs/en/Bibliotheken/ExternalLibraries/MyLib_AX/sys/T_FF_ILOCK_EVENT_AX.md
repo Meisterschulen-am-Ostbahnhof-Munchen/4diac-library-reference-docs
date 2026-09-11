@@ -6,6 +6,7 @@
 ![T_FF_ILOCK_EVENT_AX](./T_FF_ILOCK_EVENT_AX.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 **T_FF_ILOCK_EVENT_AX** is a subapplication-based function block that implements a **Toggle Flip-Flop with Interlock** functionality. It provides a clock/toggle input (`IND`), an unconditional reset input (`RESET`), a state output via an AX adapter (`Q`), and a dedicated `SET` event output that is used to coordinate interlocking with a partner block.

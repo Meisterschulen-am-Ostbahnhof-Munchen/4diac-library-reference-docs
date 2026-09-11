@@ -3,6 +3,7 @@
 ![AID_OABG](./AID_OABG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_OABG` ist ein GlobalConstants-Baustein, der Konstanten für Attribut-IDs eines „Output arched bar graph object“ (bogenförmiges Balkendiagramm-Objekt) im ISOBUS-Kontext definiert. Diese Konstanten werden verwendet, um auf die verschiedenen Attribute eines solchen Objekts zuzugreifen, z. B. Breite, Höhe, Farbe, Optionen, Winkel usw. Der Baustein ist Teil des Pakets `isobus::UT::Q::const::AID`.
@@ -12,12 +13,15 @@ Der Baustein `AID_OABG` ist ein GlobalConstants-Baustein, der Konstanten für At
 Da es sich um einen GlobalConstants-Baustein handelt, besitzt er keine Ereignis-Eingänge oder -Ausgänge und auch keine Adapter. Die Schnittstelle besteht ausschließlich aus globalen Konstanten, die als Datenwerte zur Verfügung stehen. Im Folgenden sind die Konstanten als „Daten-Ausgänge“ aufgeführt, da sie von anderen Bausteinen gelesen werden können.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
@@ -40,6 +44,7 @@ Nicht vorhanden.
 | `VALUE` | USINT | 14 | AID_OABG_VALUE – aktueller Wert |
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 ## Funktionsweise

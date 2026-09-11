@@ -50,6 +50,7 @@ Keine vorhanden.
 Die SubApp enthält vier Instanzen des Standard‑Funktionsbausteins `E_PERMIT` (`iec61499::events::E_PERMIT`), die parallel geschaltet sind. Der Daten‑Eingang `PERMIT` wird auf alle vier Instanzen verteilt. Jeder der vier Ereignis‑Eingänge (`EI1`–`EI4`) ist direkt mit dem Eingang `EI` der jeweiligen `E_PERMIT`‑Instanz verbunden; die jeweiligen Ausgänge `EO` sind mit den entsprechenden Ereignis‑Ausgängen (`EO1`–`EO4`) der SubApp verbunden.
 
 Das Verhalten eines einzelnen `E_PERMIT`‑Bausteins ist definiert als:  
+
 - Wenn `PERMIT = TRUE` und ein Ereignis am Eingang eintrifft, wird dieses Ereignis unmittelbar am Ausgang `EO` weitergegeben.  
 - Wenn `PERMIT = FALSE`, wird das eintreffende Ereignis nicht weitergeleitet und verworfen.
 

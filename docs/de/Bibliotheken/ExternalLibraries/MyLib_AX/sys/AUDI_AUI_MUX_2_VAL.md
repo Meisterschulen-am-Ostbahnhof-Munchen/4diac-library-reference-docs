@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_2_VAL](./AUDI_AUI_MUX_2_VAL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AUDI_AUI_MUX_2_VAL** ist ein 2-Wege-Multiplexer für AUDI-Werte. Er wählt in Abhängigkeit von den beiden Ereigniseingängen `EI1` und `EI2` zwischen zwei unterschiedlichen Werten (`val1`, `val2`) aus und stellt den ausgewählten Wert über einen AUDI-Adapter (`OUT`) bereit. Die Umschaltung erfolgt ereignisgesteuert, wobei die beiden passenden Eingangswerte zuvor intern über spezielle Initialisierungsbausteine in AUDI-Adapter umgewandelt werden.

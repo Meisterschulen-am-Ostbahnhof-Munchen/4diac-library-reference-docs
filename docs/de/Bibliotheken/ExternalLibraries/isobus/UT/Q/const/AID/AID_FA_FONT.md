@@ -3,6 +3,7 @@
 ![AID_FA_FONT](./AID_FA_FONT.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der `AID_FA_FONT`-GlobalConstants-Block definiert die Attribut-IDs (Adressen) für das **Font-Attribut-Objekt** im ISOBUS‑Protokoll. Diese Konstanten werden verwendet, um Eigenschaften wie Farbe, Größe, Schrifttyp und Stil eines Textes in der virtuellen Benutzeroberfläche (VT) zu spezifizieren. Der Block stellt eine referenzierbare, zentrale Sammlung dieser IDs bereit und erleichtert so die Konsistenz in der Applikationsentwicklung.
@@ -19,18 +20,23 @@ Der `AID_FA_FONT`-Baustein besitzt **keine** Ereignis‑ oder Dateneingänge/-au
 | `STYLE`        | `USINT` | `4` | Attribut‑ID für den Textstil (Bitmaske). |
 
 ### **Ereignis-Eingänge**
+
 Keine vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Keine vorhanden.
 
 ### **Daten-Eingänge**
+
 Keine vorhanden.
 
 ### **Daten-Ausgänge**
+
 Keine vorhanden.
 
 ### **Adapter**
+
 Keine vorhanden.
 
 ## Funktionsweise

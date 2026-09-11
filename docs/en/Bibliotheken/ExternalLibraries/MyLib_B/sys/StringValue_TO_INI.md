@@ -54,6 +54,7 @@ The StringValue_TO_INI subapplication combines three functional building blocks 
 3. **Retrieve and Queue**: On initialization, the subapplication automatically performs a GET operation to read the stored value. This value is then output via VALUEO and also forwarded to the internal Q_StringValue queue for further processing.
 
 The event flow is as follows:
+
 - When the INI storage initializes, a GET operation is automatically triggered.
 - Upon completion of a GET operation, the retrieved value appears at VALUEO and is queued via Q_StringValue, and the IND event is emitted.
 - When a VT string value is read (StringValue_IS.IND), it is written to the INI storage via a SET operation, and the IND event is emitted upon completion.

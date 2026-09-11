@@ -3,6 +3,7 @@
 ![IG3_Device_Classes](./IG3_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `IG3_Device_Classes` ist eine globale Konstantendefinition (Global Constants) gemäß IEC 61499. Er stellt eine Sammlung von Konstanten bereit, die die spezifischen Geräteklassen (Vehicle Systems) der Industry Group 3 (IG3) im ISOBUS-Protokoll (ISO 11783) definieren. Diese Konstanten werden üblicherweise verwendet, um den Fahrzeugtyp oder die Geräteklasse in Kommunikationsprotokollen (z.B. über PGNs) zu identifizieren. Der Baustein ist als Parameterliste oder Konstantenquelle für Applikationen gedacht, die mit land- oder forstwirtschaftlichen Maschinen arbeiten.

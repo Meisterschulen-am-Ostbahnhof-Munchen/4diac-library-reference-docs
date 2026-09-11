@@ -6,6 +6,7 @@
 ![SystemTick](./SystemTick.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **SystemTick** subapplication is a free-running tick counter designed to serve as a heartbeat indicator for industrial control systems. It independently increments a counter value every 200 milliseconds, cycling back to zero after reaching 100 (i.e., a full cycle lasts 20 seconds). The current counter value is provided via an adapter output, making it easy to monitor the health of the system that hosts this subapplication. As long as the output value keeps changing, the system is alive — regardless of whether the value is displayed locally or distributed via OPC-UA to other modules.

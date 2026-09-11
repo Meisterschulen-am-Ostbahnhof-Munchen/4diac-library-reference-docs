@@ -16,18 +16,23 @@ Die Subapp verwendet intern zwei Standard-Funktionsblöcke: einen `initval_AR`-B
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 - **FACTOR** (`REAL`): Der feste Multiplikationsfaktor. Er wird als Parameter bei der Instanziierung gesetzt und intern als Initialisierungswert für den `initval_AR`-Baustein verwendet. Standardwert: `REAL#1.0`.
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 - **IN1** (`adapter::types::unidirectional::AR`, Socket): Der zu skalierende analoge Rohwert.
 - **OUT** (`adapter::types::unidirectional::AR`, Plug): Das Ergebnis der Multiplikation (`IN1 * FACTOR`).
 

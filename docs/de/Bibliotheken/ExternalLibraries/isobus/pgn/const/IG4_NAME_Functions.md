@@ -3,6 +3,7 @@
 ![IG4_NAME_Functions](./IG4_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `IG4_NAME_Functions` stellt eine Sammlung globaler Konstanten für die **Industry Group 4** des ISOBUS-Standards (ISO 11783) bereit. Diese Konstanten definieren die **Funktionscodes** einzelner elektronischer Steuergeräte (ECUs) in einem ISOBUS-Netzwerk. Die Werte sind als `BYTE`-Konstanten ausgeführt und ermöglichen eine eindeutige Identifizierung der Funktion eines Geräts innerhalb der Industriegruppe 4 (Schiffs- und Bootsanwendungen). Der Baustein dient als zentrale Definitionsquelle für die Entwicklung von Anwendungen, die auf die ISOBUS-Kommunikation zugreifen.
@@ -12,15 +13,19 @@ Der Baustein `IG4_NAME_Functions` stellt eine Sammlung globaler Konstanten für 
 Der Baustein besitzt **keine** Ereignis- oder Dateneingänge und auch keine klassischen Datenausgänge. Stattdessen stellt er eine Reihe von globalen Konstanten bereit, die direkt über ihren symbolischen Namen referenziert werden können. Diese Konstanten werden im Folgenden als **globale Konstanten** aufgeführt und können als Werte für die Konfiguration oder Kommunikation in anderen Funktionsbausteinen verwendet werden.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Die folgenden globalen Konstanten werden als Datenwerte bereitgestellt (Typ: `BYTE`). Sie sind inhaltlich nach den ISOBUS-Systemen gruppiert.
 
 | Konstantenname | Wert | Beschreibung |

@@ -3,6 +3,7 @@
 ![AID_AM](./AID_AM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_AM` ist eine globale Konstantenliste, die die Attribut-IDs für ein **Alarm Mask**-Objekt im ISOBUS-Kontext definiert. Diese Konstanten werden verwendet, um eindeutige Kennungen für verschiedene Eigenschaften einer Alarmmaske (z. B. Hintergrundfarbe, Softkey-Maske, Alarmpriorität, akustisches Signal) zu referenzieren. Der Baustein ist als Teil des Pakets `isobus::UT::Q::const::AID` verfügbar und dient als wiederverwendbare Definitionssammlung für die Erstellung und Verwaltung von ISOBUS-basierten Alarmmasken in Steuerungssystemen.

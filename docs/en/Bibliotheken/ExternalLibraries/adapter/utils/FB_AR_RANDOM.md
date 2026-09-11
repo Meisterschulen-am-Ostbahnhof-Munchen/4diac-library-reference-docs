@@ -3,6 +3,7 @@
 ![FB_AR_RANDOM](./FB_AR_RANDOM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 FB_AR_RANDOM is a composite function block wrapper around `eclipse4diac::utils::FB_RANDOM`. It exposes a random value through a unidirectional AR adapter output, while keeping the external interface minimal. The block provides an initialization handshake via `INIT`/`INITO` and uses the `REQ` event to trigger the underlying random number generator.

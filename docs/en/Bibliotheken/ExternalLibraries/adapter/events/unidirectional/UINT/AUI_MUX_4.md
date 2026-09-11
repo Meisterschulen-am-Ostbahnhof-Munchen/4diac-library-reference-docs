@@ -3,6 +3,7 @@
 ![AUI_MUX_4](./AUI_MUX_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_MUX_4** is an event multiplexer function block that selects one of four event inputs and forwards the received event through an **AUI adapter** interface. This is an adapter-based variant of the standard `E_MUX_4` block, replacing the plain event output plus data selector with a unidirectional AUI adapter plug. The block is configured as a generic function block (`GEN_E_MUX`), allowing the number of inputs to be adapted as needed.

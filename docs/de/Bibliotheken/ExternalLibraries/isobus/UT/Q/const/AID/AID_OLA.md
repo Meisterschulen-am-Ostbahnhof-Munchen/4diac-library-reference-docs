@@ -3,6 +3,7 @@
 ![AID_OLA](./AID_OLA.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der GlobalConstants-Baustein **AID_OLA** definiert die Attribut-IDs (Attribute Identifiers) für ein Output List Object (OLA) im ISOBUS-Protokoll. Diese Konstanten sind integraler Bestandteil der Kommunikation zwischen landwirtschaftlichen Maschinen und Geräten, wobei sie die spezifischen Attribute eines Ausgabelisten-Objekts identifizieren. Jede Konstante repräsentiert eine feste numerische ID, die im Rahmen der ISOBUS-Datenübertragung verwendet wird, um auf das jeweilige Attribut des Objekts zu referenzieren.
@@ -12,18 +13,23 @@ Der GlobalConstants-Baustein **AID_OLA** definiert die Attribut-IDs (Attribute I
 Da es sich bei **AID_OLA** um eine GlobalConstants-Definition handelt, besitzt der Baustein keine klassische Schnittstelle mit Ereignis- oder Datenein-/ausgängen. Stattdessen werden vier Konstanten bereitgestellt, die als eindeutige Identifikatoren für die Attribute des Output List Objects dienen. Diese Konstanten stehen global zur Verfügung und können in anderen Bausteinen direkt referenziert werden.
 
 ### **Ereignis-Eingänge**
+
 - Keine
 
 ### **Ereignis-Ausgänge**
+
 - Keine
 
 ### **Daten-Eingänge**
+
 - Keine (Die Konstanten sind implizit als globale Definitionen verfügbar.)
 
 ### **Daten-Ausgänge**
+
 - Keine (Die Konstanten sind als feste Werte in den Baustein integriert und werden nicht über eine Schnittstelle ausgegeben.)
 
 ### **Adapter**
+
 - Keine
 
 **Hinweis:** Die vier definierten Konstanten sind:

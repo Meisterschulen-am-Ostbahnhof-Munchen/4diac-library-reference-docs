@@ -3,6 +3,7 @@
 ![AID_EXOP](./AID_EXOP.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AID_EXOP` is a global constant definition used in the IEC 61499 (4diac-ide) environment. It defines attribute identifiers for the **External Object Pointer** object type within the ISOBUS (ISO 11783) protocol stack. These constants are used to reference specific attributes of external object pointers in a standardized, human-readable way, replacing raw numeric IDs in application code.

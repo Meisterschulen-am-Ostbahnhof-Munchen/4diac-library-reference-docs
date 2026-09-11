@@ -6,6 +6,7 @@
 ![E_PERMIT_2](./E_PERMIT_2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **E_PERMIT_2** ist eine Subapplikation (SubApp), die zwei unabhängige Event-Freigabe-Kanäle realisiert. Er basiert auf zwei Instanzen des Standard-Funktionsblocks `E_PERMIT` aus der IEC 61499-1-Bibliothek. Die SubApp bietet eine kompakte und wiederverwendbare Lösung zur Steuerung von Ereignisdurchgriffen über ein gemeinsames Freigabesignal.
@@ -47,6 +48,7 @@ Keine Adapter vorhanden.
 Die SubApp enthält intern zwei `E_PERMIT`-Funktionsblöcke (benannt `E_PERMIT_1` und `E_PERMIT_2`). Das Eingangssignal `PERMIT` wird parallel an beide internen Bausteine weitergeleitet. Ereignisse, die an `EI1` bzw. `EI2` ankommen, werden an den jeweiligen `EI`-Eingang der internen Instanz geführt. Die `EO`-Ausgänge der internen Bausteine sind mit den SubApp-Ausgängen `EO1` und `EO2` verbunden.
 
 Die Funktion eines einzelnen `E_PERMIT`-Bausteins ist wie folgt definiert:
+
 - Ist `PERMIT = TRUE`, werden eingehende Ereignisse (an `EI`) unverändert an `EO` weitergegeben.
 - Ist `PERMIT = FALSE`, werden eingehende Ereignisse ignoriert und es wird kein Ereignis am Ausgang erzeugt.
 

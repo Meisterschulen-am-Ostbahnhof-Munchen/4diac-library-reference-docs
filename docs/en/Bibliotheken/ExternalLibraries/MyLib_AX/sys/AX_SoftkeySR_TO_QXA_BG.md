@@ -6,6 +6,7 @@
 ![AX_SoftkeySR_TO_QXA_BG](./AX_SoftkeySR_TO_QXA_BG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AX_SoftkeySR_TO_QXA_BG` is a reusable 4diac subapplication that combines three softkeys with a SET/RESET/TOGGLE flip-flop function and a digital QXA output. It also integrates a green/white background indication that follows the same state, making it suitable for HMI or machine control applications where visual feedback is required.

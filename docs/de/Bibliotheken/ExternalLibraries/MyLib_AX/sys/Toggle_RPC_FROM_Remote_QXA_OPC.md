@@ -14,20 +14,25 @@ Der Baustein `Toggle_RPC_FROM_Remote_QXA_OPC` ist eine Subapplikation, die auf e
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 - `Output` (Typ: `logiBUS::io::DQ::logiBUS_DO_S`): Identifiziert den digitalen Ausgang (Q1–Q8) des angeschlossenen logiBUS-Moduls. Initialwert: `logiBUS_DO::Invalid`.
 - `ID_TRIGGER_METHOD` (Typ: `WSTRING`): Lokale Methodenadresse (ACTION=CREATE_METHOD) für den argumentlosen Trigger-Aufruf, der von Gerät A per `CALL_METHOD` ausgeführt wird.
 - `ID_STATE_WRITE` (Typ: `WSTRING`): Remote-Zieladresse (BOOL, ACTION=WRITE) für das Zurückschreiben des Flip-Flop-Zustands an Gerät A.
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine (die Subapplikation besitzt keine externen Adapter; die interne Kommunikation erfolgt über die oben genannten Daten-Eingänge und die internen Funktionsblöcke).
 
 ## Funktionsweise
@@ -41,6 +46,7 @@ Die Subapplikation implementiert eine gesteuerte Toggle-Funktion für einen Digi
 5. **Rückmeldung**: Über den zweiten Ausgang (`OUT2`) wird das Signal an den OPC-UA-Client (`STATE_CLIENT`, Typ `adapter::net::AX_CLIENT_1_0`) gesendet. Dieser Client schreibt den aktuellen Zustand (als BOOL) an die Adresse `ID_STATE_WRITE` auf Gerät A.
 
 Die Daten-Eingänge der Subapplikation werden direkt an die entsprechenden Funktionsblöcke verdrahtet:  
+
 - `Output` → `DigitalOutput_Q1.Output`  
 - `ID_TRIGGER_METHOD` → `TRIGGER_SERVER.ID`  
 - `ID_STATE_WRITE` → `STATE_CLIENT.ID`

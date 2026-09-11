@@ -3,6 +3,7 @@
 ![AUI_MUX_2](./AUI_MUX_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUI_MUX_2 is an event multiplexer function block that forwards one of two incoming events (EI1 or EI2) based on an index value supplied through an AUI (Adapter User Interface) adapter. It is a specialized variant of the standard E_MUX_2 block, replacing the conventional combination of a data input `K` and a plain event output `EO` with a unidirectional AUI adapter connection. This design integrates the event-index selection and the multiplexed event delivery into a single adapter-based interface, making it suitable for architectures where adapter-based communication is preferred over direct event/data ports.

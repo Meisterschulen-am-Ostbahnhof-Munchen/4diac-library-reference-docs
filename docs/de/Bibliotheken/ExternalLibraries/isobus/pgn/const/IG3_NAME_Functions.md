@@ -3,6 +3,7 @@
 ![IG3_NAME_Functions](./IG3_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **IG3_NAME_Functions** ist ein GlobalConstants-Baustein, der eine Sammlung von globalen Konstanten für die ISO‑11783‑Kommunikation (ISOBUS) bereitstellt. Er definiert Funktionscodes (Function Values) für Geräte in der **Industriegruppe 3** – Baumaschinen und Anbaugeräte. Die Konstanten werden typischerweise verwendet, um Steuergeräte (ECUs) oder Sensoren eindeutig einer bestimmten Funktion innerhalb eines Maschinensystems zuzuordnen.
@@ -14,18 +15,23 @@ Die Werte sind als BYTE‑Konstanten definiert und decken verschiedene Maschinen
 Da es sich um einen GlobalConstants‑Baustein handelt, besitzt er **keine** Ein‑ oder Ausgänge im Sinne eines Funktionsbausteins. Die bereitgestellten Werte sind globale Konstanten, die direkt im System verwendet werden können.
 
 ### **Ereignis-Eingänge**
+
 Keine
 
 ### **Ereignis-Ausgänge**
+
 Keine
 
 ### **Daten-Eingänge**
+
 Keine
 
 ### **Daten-Ausgänge**
+
 Keine
 
 ### **Adapter**
+
 Keine
 
 ### **Globale Konstanten**

@@ -3,6 +3,7 @@
 ![FB_AR_RANDOM](./FB_AR_RANDOM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **FB_AR_RANDOM** ist ein Wrapper um den Baustein `FB_RANDOM` aus der Bibliothek `eclipse4diac::utils`. Er erweitert dessen Funktionalität um eine unidirektionale AR‑Adapter‑Schnittstelle (`OUT`), sodass Zufallswerte direkt über einen Adapter an andere Applikationsteile weitergegeben werden können. Dadurch wird eine einfache Integration in adapterbasierte Kommunikationsstrukturen ermöglicht.
@@ -10,19 +11,24 @@ Der Funktionsblock **FB_AR_RANDOM** ist ein Wrapper um den Baustein `FB_RANDOM` 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - **INIT** (EInit): Initialisierungsanforderung – lädt den Start‑Seed für den Zufallsgenerator.
 - **REQ** (Event): Normaler Ausführungsauftrag – löst die Erzeugung eines neuen Zufallswerts aus.
 
 ### **Ereignis-Ausgänge**
+
 - **INITO** (EInit): Initialisierungsbestätigung – wird nach erfolgreicher Initialisierung gesendet.
 
 ### **Daten-Eingänge**
+
 - **SEED** (UINT, Initialwert `0`): Startwert für den Zufallsgenerator.
 
 ### **Daten-Ausgänge**
+
 - (Keine direkten Datenausgänge; der erzeugte Wert wird ausschließlich über den Adapter bereitgestellt.)
 
 ### **Adapter**
+
 - **OUT** (Typ `adapter::types::unidirectional::AR`): Ausgangs‑Adapter, der das Ereignis `E1` und die Daten‑Variable `D1` bereitstellt. Über diesen Adapter wird der erzeugte Zufallswert (als `D1`) und ein zugehöriges Ereignis (`E1`) an verbundene Bausteine übertragen.
 
 ## Funktionsweise

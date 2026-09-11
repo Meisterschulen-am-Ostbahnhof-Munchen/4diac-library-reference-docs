@@ -6,6 +6,7 @@
 ![DO_TOGGLE_RPC_QXA_OPC](./DO_TOGGLE_RPC_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **DO_TOGGLE_RPC_QXA_OPC** subapplication implements a digital enable output as a click-toggle (flip-flop) that can be triggered by multiple, independent, equal-right callers via an OPC UA RPC method. Typical callers are a local soft-key relay (STG1) and a remote OPC UA dashboard. Every trigger event toggles the internal state; the current state is the single source of truth for both the physical digital output and the remotely published status value. The design deliberately omits any OR-merge logic after the flip-flop, so that the flip-flop output alone determines the physical channel and the published state. This makes the block generic and reusable for any digital toggle output in emergency-operation or street-mode scenarios that require multi-access control.

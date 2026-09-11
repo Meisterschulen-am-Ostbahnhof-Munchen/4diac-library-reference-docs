@@ -3,22 +3,29 @@
 ![Global_NAME_Functions](./Global_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
+
 Dieser Baustein (GlobalConstants) definiert eine umfassende Sammlung globaler Konstanten für die Funktionseinstufung von Steuergeräten (ECUs) im ISOBUS-Protokoll (ISO 11783). Die Konstanten repräsentieren die **NAME Function**-Werte, die in der ISOBUS-Nomenklatur zur Identifizierung der primären Funktion eines Geräts im Fahrzeug‐ oder Maschinennetzwerk verwendet werden. Sie sind als numerische BYTE-Werte definiert und decken alle standardisierten Funktionen von 0 bis 94 sowie den Platzhalter 255 für „nicht verfügbar“ ab.
 
 ## Schnittstellenstruktur
+
 Der Baustein stellt keine Ereignis- oder Dateneingänge bereit. Er definiert ausschließlich globale Konstanten, die als **Daten-Ausgänge** interpretiert werden können, da sie von anderen Bausteinen referenziert und abgefragt werden können.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Die folgenden globalen Konstanten (Typ `BYTE`) werden bereitgestellt:
 
 | Konstante | Wert | Beschreibung |
@@ -121,28 +128,35 @@ Die folgenden globalen Konstanten (Typ `BYTE`) werden bereitgestellt:
 | F_NOT_AVAILABLE | 255 | Nicht verfügbar – Platzhalter für unbekannte Funktion |
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise
+
 Die Konstanten werden in der ISOBUS-Kommunikation verwendet, um die Funktion eines Steuergeräts gemäß dem **NAME**-Parameter zu klassifizieren. Jeder numerische Wert entspricht einem standardisierten Funktionscode, der in den entsprechenden Nachrichten (z.B. BAM, RTS/CTS oder TP.DT) gesendet wird. Durch die Verwendung dieser Konstanten wird sichergestellt, dass alle Netzwerkteilnehmer (z.B. Traktor, Anbaugerät, virtuelles Terminal) dieselbe Bedeutung für einen Funktionscode verwenden. Der Baustein selbst enthält keine ausführbare Logik, sondern dient als zentrale Definitionsquelle für die 4diac-IDE-Anwendungen.
 
 ## Technische Besonderheiten
+
 - **Typ:** Alle Konstanten sind als `BYTE` definiert.
 - **Geltungsbereich:** Die Werte entsprechen den Definitionen der ISO 11783 (Teil 7) und sind branchenübergreifend anerkannt.
 - **Erweiterbarkeit:** Die Liste kann bei neuen Fahrzeugfunktionen erweitert werden; der Platzhalter `F_NOT_AVAILABLE` (255) deckt unbekannte Funktionen ab.
 - **Compiler-Einbindung:** Die Konstanten werden im Package `isobus::pgn::const` definiert und können in 4diac-Projekten über den GlobalConstants-Baustein referenziert werden.
 
 ## Zustandsübersicht
+
 Entfällt – da der Baustein keine Zustandsautomaten oder prozessabhängige Logik besitzt, sondern ausschließlich passive Konstanten bereitstellt.
 
 ## Anwendungsszenarien
+
 - **ISOBUS-Anwendungen:** Verwendung als Referenzwerte zur Identifizierung von Steuergerätefunktionen in der Netzwerkkommunikation.
 - **Diagnose:** Analyse von Nachrichten und Zuordnung von Funktionscodes zu Geräten.
 - **Visualisierung:** Anzeige von Geräteinformationen in virtuellen Terminals oder Diagnose-Tools.
 - **Schnittstellendefinition:** Einheitliche Kennzeichnung von Funktionen in Softwareprojekten, die ISOBUS-basierte Steuergeräte implementieren.
 
 ## Vergleich mit ähnlichen Bausteinen
+
 Da es sich um eine globale Konstantensammlung handelt, gibt es keine direkten funktionalen Bausteine zum Vergleich. Andere GlobalConstants-Elemente könnten ähnliche Listen für andere Protokolle oder Zwecke bereitstellen, aber `Global_NAME_Functions` ist speziell auf ISOBUS-Funktionscodes zugeschnitten und bietet eine vollständige, normkonforme Auflistung.
 
 ## Fazit
+
 Der Baustein `Global_NAME_Functions` stellt eine wichtige, standardisierte Ressource für die Entwicklung von ISOBUS-Anwendungen in der 4diac-IDE dar. Er erleichtert die Implementierung, indem er alle gängigen Funktionscodes als symbolische Konstanten bereitstellt. Dadurch wird die Lesbarkeit des Codes verbessert, die Wartung vereinfacht und die Konformität mit ISO 11783 sichergestellt. Obwohl er keine aktive Steuerungslogik enthält, ist er ein unverzichtbares Werkzeug für die einheitliche Kommunikation in landwirtschaftlichen und mobilen Maschinennetzwerken.

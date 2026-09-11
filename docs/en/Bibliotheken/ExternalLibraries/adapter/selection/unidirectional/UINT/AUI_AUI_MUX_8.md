@@ -3,6 +3,7 @@
 ![AUI_AUI_MUX_8](./AUI_AUI_MUX_8.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_8** is a generic unidirectional multiplexer function block designed for selecting one of eight input adapters and forwarding its value to a single output adapter. It is part of the AUI (Agrartechnik Universal Interface) adapter family and provides a compact, event-driven solution for dynamic signal routing in automation applications.

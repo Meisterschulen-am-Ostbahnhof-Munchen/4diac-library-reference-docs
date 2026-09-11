@@ -6,6 +6,7 @@
 ![Heben_Senken_TO_QDA_PWM_OPC](./Heben_Senken_TO_QDA_PWM_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 Heben_Senken_TO_QDA_PWM_OPC is a composite subapplication that integrates two independent subapplications to provide a complete control solution for a PVEA actuator with two physical channels. It combines a PWM generation module (HebenSenken_ILOCK_QDA_PWM_OPC) for lifting/lowering commands with a digital output toggle module (DO_TOGGLE_RPC_QXA_OPC) for an enable signal. The subapplication is designed for systems where the module itself has no local visualization terminal, allowing full operation via remote commands, I/O tests, and an RPC‑triggered enable toggle.

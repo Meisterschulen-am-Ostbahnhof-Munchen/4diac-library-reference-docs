@@ -3,6 +3,7 @@
 ![Manufacturer_IDs](./Manufacturer_IDs.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Dieser GlobalConstants-Baustein definiert eine umfangreiche Liste von Hersteller-Identifikationsnummern (Manufacturer IDs) für den ISOBUS-Standard. Jede Konstante repräsentiert einen eindeutigen numerischen Wert, der einem bestimmten Hersteller zugeordnet ist. Diese IDs werden verwendet, um Geräte in landwirtschaftlichen und nutzfahrzeugbezogenen Netzwerken eindeutig zu identifizieren.
@@ -12,16 +13,21 @@ Dieser GlobalConstants-Baustein definiert eine umfangreiche Liste von Hersteller
 Da es sich um einen GlobalConstants-Baustein handelt, besitzt er keine klassischen Ein- oder Ausgänge. Alle Werte sind als konstante Daten verfügbar.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Die folgenden Konstanten sind als Daten-Ausgänge im Sinne von globalen Variablen verfügbar (Auszug):
+
 - `M_FOR_EXPERIMENTAL_OR_DEVELOPMENTAL_USE_ONLY` (UINT, Wert 0)
 - `M_BENDIX_COMMERCIAL_VEHICLE_SYSTEMS` (UINT, Wert 1)
 - `M_ALLISON_TRANSMISSION` (UINT, Wert 2)
@@ -30,6 +36,7 @@ Die folgenden Konstanten sind als Daten-Ausgänge im Sinne von globalen Variable
 Eine vollständige Liste befindet sich in der XML-Definition.
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise

@@ -3,6 +3,7 @@
 ![AUI_AUI_MUX_7](./AUI_AUI_MUX_7.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **AUI_AUI_MUX_7** ist ein Multiplexer, der es ermöglicht, einen von sieben Eingangsadaptern (IN1 bis IN7) auf einen Ausgangsadapter (OUT) zu schalten. Die Auswahl des aktiven Eingangs erfolgt über den Indexadapter **K**. Der Baustein ist als generischer Typ definiert und wird für die Auswahl von AUI-Datenströmen verwendet. Der Adapter-Ausgang wird nur bei einer tatsächlichen Wertänderung aktualisiert, wobei das Ereignis **CNF** nur bei einer Änderung des Index oder des ausgewählten Eingangs ausgelöst wird.
@@ -64,11 +65,11 @@ Wenn **K** außerhalb des gültigen Bereichs liegt (größer als 6), wird kein E
 
 ## Technische Besonderheiten
 
-- Der Baustein ist als **generischer Typ** (**GenericClassName** = `GEN_AUI_AUI_MUX`) implementiert, wodurch er für andere Anzahlen von Eingängen erweiterbar ist.
-- Der Baustein verwendet ausschließlich Adapter für die Ein-/Ausgabe (unidirektionaler AUI-Typ). Dadurch werden die datenflussorientierten Verbindungen vereinfacht.
-- Die Erkennung von Wertänderungen basiert auf einem Vergleich der aktuellen und vorherigen Werte; nur bei Änderung werden **OUT** und **CNF** aktualisiert.
-- Es gibt keine ereignisgesteuerten Eingänge; die gesamte Logik wird durch Datenänderungen an den Adaptern getriggert.
-- Der Baustein wurde für den Einsatz in der Agrartechnik entwickelt und unter der Eclipse Public License 2.0 veröffentlicht.
+* Der Baustein ist als **generischer Typ** (**GenericClassName** = `GEN_AUI_AUI_MUX`) implementiert, wodurch er für andere Anzahlen von Eingängen erweiterbar ist.
+* Der Baustein verwendet ausschließlich Adapter für die Ein-/Ausgabe (unidirektionaler AUI-Typ). Dadurch werden die datenflussorientierten Verbindungen vereinfacht.
+* Die Erkennung von Wertänderungen basiert auf einem Vergleich der aktuellen und vorherigen Werte; nur bei Änderung werden **OUT** und **CNF** aktualisiert.
+* Es gibt keine ereignisgesteuerten Eingänge; die gesamte Logik wird durch Datenänderungen an den Adaptern getriggert.
+* Der Baustein wurde für den Einsatz in der Agrartechnik entwickelt und unter der Eclipse Public License 2.0 veröffentlicht.
 
 ## Zustandsübersicht
 
@@ -76,9 +77,9 @@ Der Baustein besitzt keinen expliziten Zustandsautomaten. Die Funktionsweise ist
 
 ## Anwendungsszenarien
 
-- **Datenquellenumschaltung**: Der Baustein kann verwendet werden, um zwischen mehreren Sensoren oder Datenquellen umzuschalten, die über AUI-Schnittstellen angebunden sind.
-- **Redundanzsteuerung**: In Systemen mit redundanten Pfaden kann der Multiplexer den aktiven Pfad basierend auf einem Steuersignal wählen.
-- **Flexible Konfiguration**: Durch die Adapterstruktur lassen sich verschiedene AUI-basierte Komponenten dynamisch auswählen.
+* **Datenquellenumschaltung**: Der Baustein kann verwendet werden, um zwischen mehreren Sensoren oder Datenquellen umzuschalten, die über AUI-Schnittstellen angebunden sind.
+* **Redundanzsteuerung**: In Systemen mit redundanten Pfaden kann der Multiplexer den aktiven Pfad basierend auf einem Steuersignal wählen.
+* **Flexible Konfiguration**: Durch die Adapterstruktur lassen sich verschiedene AUI-basierte Komponenten dynamisch auswählen.
 
 ## Vergleich mit ähnlichen Bausteinen
 

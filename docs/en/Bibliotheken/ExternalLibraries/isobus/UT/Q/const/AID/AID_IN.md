@@ -3,6 +3,7 @@
 ![AID_IN](./AID_IN.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AID_IN is a global constants container used in 4diac-ide for ISO 11783 / ISOBUS applications. It defines the numeric attribute IDs for an Input Number object on a Virtual Terminal. The provided XML declares named constants of type `USINT` with values from `1` to `15`, allowing the attribute IDs to be referenced by meaningful names instead of magic numbers.

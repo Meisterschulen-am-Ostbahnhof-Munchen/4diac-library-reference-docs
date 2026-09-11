@@ -3,6 +3,7 @@
 ![BargraphSplitFS](./BargraphSplitFS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **BargraphSplitFS** function block visualizes a signed REAL value on a pair of adjacent Linear Bar Graphs that meet at a shared zero point. The left bar graph renders the magnitude of negative values, while the right bar graph renders the magnitude of positive values. This arrangement provides an intuitive "split" display where the user sees a single continuous bar that extends from the center to either side, depending on the sign of the input value.
@@ -52,6 +53,7 @@ None.
 The block operates in two phases: initialization and value display.
 
 **Initialization (INIT):**
+
 1. The `stObj` structure is snapshotted into an internal copy using an `F_MOVE` block (`Snap`).
 2. From the snapshot, the right-side configuration (`stRight`) is forwarded to the internal right `Q_NumericValue_PHYS`, and the left-side configuration (`stLeft`) is forwarded to the internal left `Q_NumericValue_PHYS`.
 3. Both internal instances are initialized sequentially. The `INITO` event confirms completion.

@@ -3,6 +3,7 @@
 ![AID_BO](./AID_BO.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_BO` global constants type defines symbolic names for the attribute identifiers used to describe a button object in the ISOBUS (ISO 11783) standard. These identifiers are used when reading or writing button properties via the ISO‑11783 protocol, providing a clear and maintainable way to refer to numeric attribute codes in application code.

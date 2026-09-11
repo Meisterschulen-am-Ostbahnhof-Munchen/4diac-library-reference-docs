@@ -3,6 +3,7 @@
 ![AX_E_PERMIT_3](./AX_E_PERMIT_3.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AX_E_PERMIT_3** is a generic function block (FB) designed for permissive propagation of three independent event channels. It acts as a gate that forwards each incoming event to its corresponding output only when a global enable condition is satisfied. The enable condition is provided via an adapter interface, making the block highly reusable in various control scenarios where event flow must be conditionally allowed.

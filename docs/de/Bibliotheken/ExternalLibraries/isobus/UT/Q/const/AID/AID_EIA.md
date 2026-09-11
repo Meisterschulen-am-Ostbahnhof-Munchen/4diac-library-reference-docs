@@ -3,6 +3,7 @@
 ![AID_EIA](./AID_EIA.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_EIA` (Extended Input Attributes Object Attribute IDs) definiert globale Konstanten zur Identifizierung von Attribut-IDs im Kontext erweiterter Eingabeattribute. Er dient als zentrale Referenz für eindeutige Werte, die in ISOBUS-Anwendungen verwendet werden, um Validierungsarten oder ähnliche Attributkennungen festzulegen. Durch die Kapselung dieser Konstanten wird eine konsistente und wiederverwendbare Basis für weitere Bausteine geschaffen.
@@ -12,18 +13,23 @@ Der Baustein `AID_EIA` (Extended Input Attributes Object Attribute IDs) definier
 Da `AID_EIA` ein **GlobalConstants**-Baustein ist, besitzt er **keine** Ereignis-, Daten- oder Adapteranschlüsse. Stattdessen stellt er ausschließlich globale Konstanten bereit, die von anderen Bausteinen über ihre Namen referenziert werden können.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine.
 
 ## Funktionsweise

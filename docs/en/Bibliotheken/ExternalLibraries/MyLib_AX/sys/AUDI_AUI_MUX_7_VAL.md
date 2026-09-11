@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_7_VAL](./AUDI_AUI_MUX_7_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_AUI_MUX_7_VAL** is a 7‑way multiplexer subapplication designed to select one of seven AUDI values based on an event input. It extends the concept of a 3‑channel variant to support seven independent input channels. The block integrates event‑based selection with adapter‑based data transfer, making it suitable for scenarios where a single AUDI output must be dynamically switched among multiple pre‑configured values.

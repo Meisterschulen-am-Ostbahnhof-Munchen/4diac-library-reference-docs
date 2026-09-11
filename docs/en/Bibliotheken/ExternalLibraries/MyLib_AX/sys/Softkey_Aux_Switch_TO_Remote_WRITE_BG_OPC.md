@@ -6,6 +6,7 @@
 ![Softkey_Aux_Switch_TO_Remote_WRITE_BG_OPC](./Softkey_Aux_Switch_TO_Remote_WRITE_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **Softkey_Aux_Switch_TO_Remote_WRITE_BG_OPC** subapplication is a thin wrapper that combines two existing subapplications into a complete OPC UA remote control and status visualization solution. It reads up to four independent input sources — a VT softkey, an AUX joystick assignment, a local web override, and a physical remote button located on a third module — OR-combines them, and writes the resulting command to a target module via OPC UA. Simultaneously, it subscribes to the target module's status and updates the background color of both the softkey and AUX elements, while republishing the status locally for web clients.

@@ -6,6 +6,7 @@
 ![AX_TON_MERGE_QXA_OPC](./AX_TON_MERGE_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AX_TON_MERGE_QXA_OPC` function block (subapplication) implements a single channel of a switched group (e.g., a spotlight bank). It receives the toggle state from a common master via an adapter, delays the switch‑on by a configurable time, and merges the result with the existing IO‑test command for that channel. The combined signal drives the physical output and optionally publishes the state back for diagnostics. This design distributes capacitive inrush currents over time when multiple channels are switched together.

@@ -3,6 +3,7 @@
 ![AUI_DEMUX_7](./AUI_DEMUX_7.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUI_DEMUX_7 is an event demultiplexer function block that routes a single incoming event to exactly one of seven mutually exclusive event outputs. It is an adapter-based variant of the standard `E_DEMUX_7` block: instead of exposing a separate event input (EI) and a data input (K), both the triggering event and the selector value are transported together through a unidirectional AUI adapter socket. This design reduces wiring complexity in modular IEC 61499 applications and enables clean encapsulation of event-triggered selection logic.

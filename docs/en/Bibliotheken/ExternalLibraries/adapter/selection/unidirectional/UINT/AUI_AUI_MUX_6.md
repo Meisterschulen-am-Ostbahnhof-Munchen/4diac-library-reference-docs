@@ -3,6 +3,7 @@
 ![AUI_AUI_MUX_6](./AUI_AUI_MUX_6.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUI_AUI_MUX_6 is an adapter-based multiplexer function block. It selects one of six unidirectional AUI adapter inputs, `IN1` through `IN6`, based on the index value received through the `K` adapter. The selected value is forwarded to the `OUT` adapter plug. The output is updated only when the actual value changes, and the `CNF` event is issued only after such a real change has occurred.

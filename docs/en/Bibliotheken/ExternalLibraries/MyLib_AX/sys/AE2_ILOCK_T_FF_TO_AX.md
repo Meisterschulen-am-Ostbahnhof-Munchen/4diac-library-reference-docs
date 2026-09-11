@@ -80,6 +80,7 @@ The subapp has two distinct states:
 | Active | `true` | The link is the only active one in the chain. An incoming `IND` event toggles it back to inactive. |
 
 **Transitions:**
+
 - **Inactive → Active:** Triggered by `IND` when `Q = false`.
 - **Active → Inactive:** Triggered by `IND` when `Q = true`, or by a reset signal received from the chain (via `SOCKET`).
 

@@ -14,18 +14,23 @@ Der Funktionsblock **T_FF_EVENT** ist ein Subapplikationstyp, der ein einfaches 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - **IND** : Eingangsereignis, das den Toggle-Vorgang auslöst. Jeder Impuls an `IND` verändert den Zustand von `Q`.
 
 ### **Ereignis-Ausgänge**
+
 - **EO** : Ausgangsereignis, das nach erfolgreicher Zustandsänderung (nach jeder Toggle-Aktion) gesendet wird. Es signalisiert die Verarbeitung des `IND`-Ereignisses.
 
 ### **Daten-Eingänge**
+
 - Keine Daten-Eingänge vorhanden.
 
 ### **Daten-Ausgänge**
+
 - **Q** (BOOL) : Aktueller Zustand des Flip-Flops. Er wird bei jedem `IND`-Ereignis invertiert (von „false“ auf „true“ oder umgekehrt).
 
 ### **Adapter**
+
 - Keine Adapter vorhanden.
 
 ## Funktionsweise

@@ -6,6 +6,7 @@
 ![ILOCK_BLOCK_A2X](./ILOCK_BLOCK_A2X.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **ILOCK_BLOCK_A2X** is a basic function block (FB) that implements an interlock mechanism for directional commands (UP/DOWN) over a unidirectional A2X adapter. It prioritizes the *first* active input event and latches that direction until the corresponding input signal is withdrawn, ensuring that only one output direction can be active at a time. This makes it suitable for safety-related control of actuators such as hoists, sliding gates, or lifting platforms.

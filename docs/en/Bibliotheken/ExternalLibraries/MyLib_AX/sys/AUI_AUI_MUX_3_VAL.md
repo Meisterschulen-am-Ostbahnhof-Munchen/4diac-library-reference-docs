@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_3_VAL](./AUI_AUI_MUX_3_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_3_VAL** is a composite subapplication that implements a 3‑way multiplexer for AUI (Asynchronous Unified Interface) values. It allows selecting one of three AUI input channels via event triggers, while also providing the ability to set initial output values using standard UINT data inputs. The subapplication encapsulates the logic of a dedicated AUI multiplexer and three initial‑value adapters, simplifying the integration of AUI‑based selection logic into larger systems.

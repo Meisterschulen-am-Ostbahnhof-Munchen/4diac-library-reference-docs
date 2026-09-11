@@ -6,6 +6,7 @@
 ![T_FF_ILOCK_EVENT_AX](./T_FF_ILOCK_EVENT_AX.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `T_FF_ILOCK_EVENT_AX` ist eine Subapplikation gemäß IEC 61499 und realisiert ein Toggle-Flip-Flop (T-FF) mit zusätzlicher Interlock-Funktionalität und explizitem Reset-Eingang. Er besitzt einen ereignisgesteuerten Eingang `IND` (Takt), einen Reset-Eingang `RESET` und einen Ereignis-Ausgang `SET`. Der aktuelle Zustand wird über einen unidirektionalen Adapterausgang `Q` (Typ `AX`) ausgegeben. Der Baustein dient typischerweise zur Verriegelung zweier gegenläufiger Aktoren, z. B. Ventile oder Motoren, wobei ein Set-Ereignis verwendet wird, um den Gegenpart zu deaktivieren.
@@ -13,19 +14,24 @@ Der Funktionsblock `T_FF_ILOCK_EVENT_AX` ist eine Subapplikation gemäß IEC 614
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - **IND** (`Event`): Takt-/Click-Eingang. Bei jedem ansteigenden Ereignis wechselt der Ausgangszustand (Toggle).
 - **RESET** (`Event`): Externer Reset-Eingang. Setzt den Ausgang zurück (Zustand „Aus").
 
 ### **Ereignis-Ausgänge**
+
 - **SET** (`Event`): Wird ausgelöst, wenn der Ausgang auf „Ein“ geschaltet wird (Toggle von Aus auf Ein). Dieses Ereignis kann verwendet werden, um verriegelte Partnerfunktionsblöcke zurückzusetzen.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 - **Q** (Ausgang, Typ `adapter::types::unidirectional::AX`): Adapter zur Ausgabe des aktuellen Binärzustands („Ein/Aus“) als unidirektionales Signal.
 
 ## Funktionsweise

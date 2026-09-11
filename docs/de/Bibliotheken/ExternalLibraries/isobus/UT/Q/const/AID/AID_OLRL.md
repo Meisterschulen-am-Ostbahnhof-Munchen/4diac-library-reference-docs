@@ -3,6 +3,7 @@
 ![AID_OLRL](./AID_OLRL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_OLRL` (Object Label Reference List Object Attribute IDs) ist eine globale Konstantendeklaration aus dem Paket `isobus::UT::Q::const::AID`. Er definiert eine Konstante, die die Anzahl der beschrifteten Objekte in einer ISO‑bus‑basierten Objektreferenzliste angibt. Diese Konstante wird im Rahmen des ISOBUS‑Protokolls verwendet, um die Struktur von Nachrichten zur Verwaltung von Objektattributen zu beschreiben.

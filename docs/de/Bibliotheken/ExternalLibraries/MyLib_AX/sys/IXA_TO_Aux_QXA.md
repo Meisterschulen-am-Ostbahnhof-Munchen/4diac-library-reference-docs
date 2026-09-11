@@ -6,6 +6,7 @@
 ![IXA_TO_Aux_QXA](./IXA_TO_Aux_QXA.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die SubApp **IXA_TO_Aux_QXA** dient als generischer, adapterbasierter Konverter zwischen einem logiBUS‑Eingangsbaustein (`logiBUS_IXA`) und einem isobus‑Ausgangsbaustein (`isobus::UT::io::Auxiliary::OUT::Aux_QXA`). Sie ermöglicht die Übertragung digitaler Eingangssignale des logiBUS‑Systems auf einen Auxiliary‑Kanal des isobus‑Netzwerks. Die SubApp wurde aus einer bestehenden Übung ausgelagert, um sie als wiederverwendbaren Baustein in verschiedenen Projekten einzusetzen. Alle Verbindungen erfolgen über standardisierte Adapter, wodurch eine flexible und schnelle Integration in 4diac‑Applikationen möglich ist.

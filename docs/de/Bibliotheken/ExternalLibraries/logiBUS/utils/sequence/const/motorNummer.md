@@ -3,6 +3,7 @@
 ![motorNummer](./motorNummer.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `motorNummer` ist eine globale Konstanten-Definition (GlobalConstants) im 4diac-IDE-Umfeld. Er stellt symbolische Namen für die Identifikation verschiedener Motoren in einer Anlagensteuerung bereit. Die Werte sind vom Typ `SINT` (signed short integer) und decken den Bereich von 0 bis 6 ab, wobei 0 für „kein Motor“ steht und 1 bis 6 den Motoren M1 bis M6 zugeordnet sind. Diese Konstanten werden typischerweise in Sequenzsteuerungen oder anderen Anwendungen verwendet, um Motor-IDs lesbar und wartbar zu definieren.
@@ -14,18 +15,23 @@ Die Definition ist unter dem Paket `logiBUS::utils::sequence::const` abgelegt un
 Da es sich um eine reine Konstantendefinition handelt, besitzt der Baustein **keine** Ein-/Ausgangsschnittstellen im Sinne von Ereignissen, Daten oder Adaptern. Die Schnittstellenstruktur entfällt vollständig.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 ## Funktionsweise

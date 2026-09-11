@@ -3,6 +3,7 @@
 ![EVENT_HS_WSTRING](./EVENT_HS_WSTRING.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter `EVENT_HS_WSTRING` ist eine datentragende Variante des bekannten **Handshake-Entwurfsmusters** für IEC 61499-Applikationen. Er ergänzt das klassische `EVENT_HS`-Adapter-Interface um eine `WSTRING`-Nutzlast pro Ereignis, sodass bei jedem Handshake-Schritt zusätzliche Informationen übertragen werden können. Das Muster ermöglicht eine zuverlässige, sequenzielle Kommunikation zwischen einem Client (Plug) und einem Server (Socket) und eignet sich besonders für Service-orientierte Architekturen und Prozessdaten-Schnittstellen.
@@ -12,31 +13,37 @@ Der Adapter basiert auf dem IEC 61499-Standard und ist für die Verwendung in de
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Ereignis | Datentyp | Kommentar |
 |----------|----------|-----------|
 | `CNF`    | Event    | Bestätigung vom Socket zum Plug; beantwortet eine `REQ`-Anfrage. |
 | `IND`    | Event    | Unaufgeforderte Anzeige vom Socket zum Plug. |
 
 ### **Ereignis-Ausgänge**
+
 | Ereignis | Datentyp | Kommentar |
 |----------|----------|-----------|
 | `REQ`    | Event    | Anforderung vom Plug zum Socket. |
 | `RSP`    | Event    | Antwort vom Plug zum Socket; beantwortet eine `IND`. |
 
 ### **Daten-Eingänge**
+
 | Variable | Datentyp | Kommentar |
 |----------|----------|-----------|
 | `CNFD`   | `WSTRING`| Nutzlast, die mit dem `CNF`-Ereignis übertragen wird. |
 | `INDD`   | `WSTRING`| Nutzlast, die mit dem `IND`-Ereignis übertragen wird. |
 
 ### **Daten-Ausgänge**
+
 | Variable | Datentyp | Kommentar |
 |----------|----------|-----------|
 | `REQD`   | `WSTRING`| Nutzlast, die mit dem `REQ`-Ereignis übertragen wird. |
 | `RSPD`   | `WSTRING`| Nutzlast, die mit dem `RSP`-Ereignis übertragen wird. |
 
 ### **Adapter**
+
 Der Adapter besitzt zwei Schnittstellen:
+
 - **Plug** (links): Dies ist der Client/Requester. Er sendet `REQ` und `RSP` und empfängt `CNF` und `IND`.
 - **Socket** (rechts): Dies ist der Server/Responder. Er empfängt `REQ` und `RSP` und sendet `CNF` und `IND`.
 

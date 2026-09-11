@@ -3,6 +3,7 @@
 ![F_ClampReal](./F_ClampReal.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `F_ClampReal` function block (FB) restricts a REAL input value `rIn` to a defined range `[rMin, rMax]`. If `rIn` exceeds `rMax`, the output is set to `rMax` and the over-range flag is activated. If `rIn` is below `rMin`, the output is set to `rMin` and the under-range flag is set. Otherwise, the input passes through unchanged. This FB is useful for safe value limiting in control systems, signal conditioning, and boundary checking.

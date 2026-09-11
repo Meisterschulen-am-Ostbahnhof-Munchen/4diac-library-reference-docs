@@ -3,6 +3,7 @@
 ![TokenRing](./TokenRing.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **TokenRing** adapter type implements the **TokenRing / Mutual Exclusion design pattern** (IEC 61499 primer course, Module 6, V. Vyatkin, slide 15). It provides a dataless, event-based interface used to pass a mutual-exclusion "token" around a ring of controllers that share a common resource. Only the controller currently holding the token may enter its critical section; when its work is complete, it passes the token to its downstream neighbour.

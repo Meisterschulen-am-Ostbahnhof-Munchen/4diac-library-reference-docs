@@ -3,6 +3,7 @@
 ![AUI_MUX_4](./AUI_MUX_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AUI_MUX_4` ist ein Ereignis-Multiplexer, der aus vier Ereignis-Eingängen ein einzelnes Ereignis auswählt und über einen AUI-Adapter als Ausgang weiterleitet. Im Gegensatz zum klassischen `E_MUX_4`, der separate Ereignis-Ausgänge und einen Dateneingang für den Index verwendet, fasst `AUI_MUX_4` das ausgewählte Ereignis und den zugehörigen Index in einem einzigen AUI-Adapterkanal zusammen. Dadurch wird die Schnittstellenanzahl reduziert und eine kompakte, generische Ereignisverteilung ermöglicht.

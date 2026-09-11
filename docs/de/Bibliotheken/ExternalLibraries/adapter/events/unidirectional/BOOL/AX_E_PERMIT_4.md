@@ -3,6 +3,7 @@
 ![AX_E_PERMIT_4](./AX_E_PERMIT_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AX_E_PERMIT_4** dient zur bedingten Weitergabe von vier unabhängigen Ereigniskanälen. Er besitzt jeweils vier Ereignis-Eingänge (EI1–EI4) und vier Ereignis-Ausgänge (EO1–EO4). Die Durchschaltung der Ereignisse wird über einen einzigen Adapter-Eingang (PERMIT) gesteuert. Dieser Adapter liefert ein Freigabesignal (permit), das als Bedingung für die Weiterleitung aller Ereignisse wirkt. Der Baustein ist als generischer FB (Generic FB) ausgelegt und kann in der 4diac-IDE mittels des generischen Typs `GEN_AX_E_PERMIT` instanziiert werden.
@@ -10,6 +11,7 @@ Der Funktionsblock **AX_E_PERMIT_4** dient zur bedingten Weitergabe von vier una
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Name | Beschreibung |
 |------|--------------|
 | EI1  | Ereignis-Eingangskanal 1   |
@@ -18,6 +20,7 @@ Der Funktionsblock **AX_E_PERMIT_4** dient zur bedingten Weitergabe von vier una
 | EI4  | Ereignis-Eingangskanal 4   |
 
 ### **Ereignis-Ausgänge**
+
 | Name | Beschreibung |
 |------|--------------|
 | EO1  | Ereignis-Ausgangskanal 1   |
@@ -26,12 +29,15 @@ Der Funktionsblock **AX_E_PERMIT_4** dient zur bedingten Weitergabe von vier una
 | EO4  | Ereignis-Ausgangskanal 4   |
 
 ### **Daten-Eingänge**
+
 Der Baustein besitzt keine Daten-Eingänge.
 
 ### **Daten-Ausgänge**
+
 Der Baustein besitzt keine Daten-Ausgänge.
 
 ### **Adapter**
+
 | Name   | Typ                                   | Richtung | Beschreibung                                   |
 |--------|---------------------------------------|----------|------------------------------------------------|
 | PERMIT | adapter::types::unidirectional::AX    | Socket (Eingang) | Freigabebedingung für die Ereignisweiterleitung. |
@@ -56,6 +62,7 @@ Da der Baustein keine explizite Zustandsmaschine besitzt, kann er als ereignisge
 ## Anwendungsszenarien
 
 Typische Einsatzbereiche sind:
+
 - **Steuerungssysteme**: Durchschaltung von Alarm- oder Statusereignissen nur bei erfolgreicher Freigabe (z.B. durch übergeordnete Sicherheitslogik).
 - **Sicherheitsgerichtete Kommunikation**: Puffern oder Blockieren von Ereignisketten in Abhängigkeit von Betriebszuständen (z.B. Stillstand, Not-Aus).
 - **Test- und Simulationsumgebungen**: Gezieltes Ein-/Ausschalten von Ereignispfaden zu Testzwecken.

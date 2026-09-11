@@ -6,6 +6,7 @@
 ![SRT_RPC_FROM_Remote_QXA_OPC_Adapter](./SRT_RPC_FROM_Remote_QXA_OPC_Adapter.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **SRT_RPC_FROM_Remote_QXA_OPC_Adapter** is a subapplication (SUB-style) that provides remote control of a digital output (QXA) via a single bidirectional adapter connection. It is intended for Device B (Station 12, 192.168.1.12) and is structurally an optimized variant of the SRT_RPC_FROM_Remote_QXA_OPC subapplication: instead of exposing multiple server/client instances separately, all protocol handling is bundled behind one `ASRT_AX_SERVER_0_CLIENT_1_0` block, and the incoming adapter stream is split to drive both the digital output and a Set/Reset/Toggle flip-flop logic. The communication protocol itself is embedded in the MyLib::sys composite type, not in the device resource.
@@ -13,9 +14,11 @@ The **SRT_RPC_FROM_Remote_QXA_OPC_Adapter** is a subapplication (SUB-style) that
 ## Interface Structure
 
 ### **Event Inputs**
+
 None. The subapplication does not expose any event inputs; all triggering is handled internally via the adapter stream and method calls.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
@@ -29,9 +32,11 @@ None.
 | `ID_STATE_WRITE` | `WSTRING` | – | Remote target address (BOOL, ACTION=WRITE) for writing back the flip-flop state to Device A. |
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 The subapplication exposes no interface-level adapter ports. All adapter communication is performed internally through the `TRIGGER` block, which bundles the server/client functionality. No external adapter is visible at the subapplication boundary.
 
 ## Functionality

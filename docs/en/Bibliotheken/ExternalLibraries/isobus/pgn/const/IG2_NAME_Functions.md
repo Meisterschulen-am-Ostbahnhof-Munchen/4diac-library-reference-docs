@@ -3,22 +3,29 @@
 ![IG2_NAME_Functions](./IG2_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Introduction
+
 The `IG2_NAME_Functions` global constant set defines Industry Group 2 (Agricultural Equipment) specific function codes used in ISO 11783 (ISOBUS) networks. These constants represent the `function` part of the NAME (Name field) of a control function, as specified in ISO 11783-7. The values are used to identify the role of a device or software component on the bus, such as "Spray Rate Control", "Tillage Depth Control", or "Product Flow". This constant set covers a wide range of agricultural applications, from tractors and tillage implements to harvesters, sensor systems, and specialised devices.
 
 The constants are grouped by device class (e.g., Tractor, Tillage, Sprayers, Harvesters) and provide a consistent, human‑readable naming scheme for developers working with ISOBUS protocols. Each constant is of type `BYTE` and has a predefined default value that is unique within its device‑class context.
 
 ## Interface Structure
+
 ### **Event Inputs**
+
 None – This is a global constant set and does not contain any event inputs.
 
 ### **Event Outputs**
+
 None – This is a global constant set and does not contain any event outputs.
 
 ### **Data Inputs**
+
 None – This is a global constant set and does not contain any data inputs.
 
 ### **Data Outputs**
+
 The set provides a total of **85** constants, each representing a specific function code. They are listed in the following table (grouped by device class, as in the XML).
 
 | Constant Name | Value | Short Description (excerpt) |
@@ -188,14 +195,17 @@ The set provides a total of **85** constants, each representing a specific funct
 | `F_PRODUCT_MATERIAL_HANDLING_PRODUCT_MATERIAL_HANDLING_PRODUCT_LEVEL` | 134 | Product level in bin |
 
 ### **Adapters**
+
 None – The constant set does not contain any adapters.
 
 ## Functionality
+
 The `IG2_NAME_Functions` constant set provides a standardised vocabulary for identifying the function of ISOBUS control functions. Each constant corresponds to a byte value that is used in the `function` field of the NAME message (per ISO 11783-7). This allows devices on an agricultural bus to advertise their capabilities, enabling proper configuration and interoperability. The constants are organised by device class (e.g., Tractor, Harvesters, Sprayers) to simplify lookup and ensure that function codes are unique within a given class.
 
 For a given device class, a device may implement one or more of these functions (e.g., a sprayer might have function codes for boom height control, product flow, and section on/off). The availability of `F_*_NOT_AVAILABLE` (value 255) indicates that no explicit function has been assigned yet, serving as a placeholder during development.
 
 ## Technical Features
+
 - **Type:** All constants are of type `BYTE` (unsigned 8‑bit integer).
 - **Values:** Assigned values range from 128 to 142 (non‑specific system) and 128 to 137 (specific device classes), with 255 universally used as “not available”.
 - **Grouping:** Constants are grouped into device classes as defined in the ISO 11783 standard (e.g., `DC_TRACTOR = 1`, `DC_TILLAGE = 2`, …). This grouping is reflected in the naming convention: `F_<DEVICE_CLASS>_<FUNCTION_NAME>`.
@@ -203,16 +213,20 @@ For a given device class, a device may implement one or more of these functions 
 - **Purpose:** The constants are intended for use in the `NAME` field of an ISOBUS device, particularly within the `function` byte of the “NAME” attribute.
 
 ## State Overview
+
 This constant set does not represent a state machine; it is a static list of predefined values. However, the presence of a `NOT_AVAILABLE` (255) constant can be considered a fallback state for devices that have not yet been assigned a specific function. Once a device is configured, its actual function value is set from one of the listed constants. The constants are not subject to runtime changes – they are global immutable values.
 
 ## Application Scenarios
+
 - **ISOBUS Device Development:** Implementers can include these constants in their code to set the NAME field when initialising a control function on an ISO 11783 bus.
 - **Configuration Tools:** Software that configures agricultural equipment can use the constants to allow users to select the correct function from a dropdown or list.
 - **Diagnostics and Monitoring:** Tools that analyse bus messages can interpret the function byte using these constants to display meaningful device roles.
 - **System Simulation:** Simulation models of agricultural networks can use these constants to model various implement types.
 
 ## Comparison with Similar Blocks
+
 There is no direct comparison to function blocks, as this is a global constant definition. However, in the context of ISOBUS, comparable constant sets may exist for other industry groups (e.g., Industry Group 1 – forestry, Industry Group 3 – municipal). The structure differs in that those groups would have their own device classes and function codes. This set is specifically tailored for agricultural equipment (Industry Group 2). Unlike a function block, which encapsulates logic and has inputs/outputs, this constant set is purely declarative and serves as a data dictionary.
 
 ## Conclusion
+
 The `IG2_NAME_Functions` global constant set is an essential resource for developers working with ISO 11783 (ISOBUS) agricultural networks. It provides a comprehensive, standardised list of function codes covering a wide range of agricultural machinery and sensor systems. By using these constants, developers can ensure consistency and interoperability across different implementations, facilitating seamless communication between tractors, implements, and other devices on the bus.

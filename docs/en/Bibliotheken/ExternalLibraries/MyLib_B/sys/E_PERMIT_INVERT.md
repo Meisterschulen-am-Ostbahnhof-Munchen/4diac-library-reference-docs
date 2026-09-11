@@ -6,6 +6,7 @@
 ![E_PERMIT_INVERT](./E_PERMIT_INVERT.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 E_PERMIT_INVERT is an event-gating subapplication that implements an inverted event permission gate. It combines an inversion function and an event-permit block so that an incoming event is only forwarded when the Boolean input `PERMIT` is `FALSE`. This is useful in control logic where a `TRUE` signal should suppress or inhibit an event, rather than enable it.

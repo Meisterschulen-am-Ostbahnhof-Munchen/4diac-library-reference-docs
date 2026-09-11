@@ -6,6 +6,7 @@
 ![SIN_TO_PCAN_Callback_DWord](./SIN_TO_PCAN_Callback_DWord.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **SIN_TO_PCAN_Callback_DWord** ist eine Subapplication, die ein intern erzeugtes Sinussignal als CAN-Botschaft über einen sogenannten **Callback-Adapter** an ein externes System (z. B. PCAN Explorer) sendet. Er dient als Diagnose- und Debug-Hilfe, um Signalverläufe direkt im CAN-Tool zu plotten. Der Sinuswert wird dabei mit voller **32-Bit-DWORD-Genauigkeit** in eine CAN-Nachricht verpackt und über standardisierte ISO-bus-PGN-Strukturen übertragen.
@@ -15,18 +16,23 @@ Die Subapplikation besitzt keine direkten Ein‑ oder Ausgänge; die gesamte Kom
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**  
+
 Keine direkten Ereignis-Eingänge vorhanden. Der Baustein wird ausschließlich über den angeschlossenen Adapter durch externe Ereignisse (z. B. Trigger des Callback-Dienstes) aktiviert.
 
 ### **Ereignis-Ausgänge**  
+
 Keine direkten Ereignis-Ausgänge. Die interne Verarbeitung und das Senden der Botschaft erfolgt über den Adapter; ein explizites Quittierungssignal wird nicht nach außen geführt.
 
 ### **Daten-Eingänge**  
+
 Keine direkten Daten-Eingänge. Alle Parameter (Amplitude, Offset, Periodendauer) sind fest im Netzwerk voreingestellt und nicht von außen veränderbar.
 
 ### **Daten-Ausgänge**  
+
 Keine direkten Daten-Ausgänge. Die erzeugte CAN-Botschaft wird über den Adapter gesendet und nicht als separates Datenwort bereitgestellt.
 
 ### **Adapter**  
+
 - **PLUG1** – Typ: `isobus::pgn::tx::Callback`  
   Dieser Adapter (Stecker) stellt die Schnittstelle zum Senden von CAN-Botschaften bereit. Er wird mit einer externen Instanz verbunden, die den Callback-Mechanismus des ISO-bus‑PGN‑Protokolls implementiert (z. B. ein PCAN‑Empfänger).
 

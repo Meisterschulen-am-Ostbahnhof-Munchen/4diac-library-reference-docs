@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_4](./AX_E_PERMIT_INVERT_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock (SubApp) **AX_E_PERMIT_INVERT_4** realisiert ein 4‑Kanal‑Event‑Freigabe‑Gate mit invertierter Freigabelogik. Er kombiniert die Bausteine `AX_NOT_INIT` und `AX_E_PERMIT_4` zu einer kompakten Einheit, die über einen Adapter gesteuert wird. Die vier Event‑Eingänge werden nur dann auf die jeweiligen Ausgänge durchgeschaltet, wenn das Freigabesignal **inaktiv** (FALSE) ist – eine logische Invertierung des üblichen Freigabe‑Verhaltens.

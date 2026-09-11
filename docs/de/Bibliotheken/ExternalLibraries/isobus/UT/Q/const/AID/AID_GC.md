@@ -3,6 +3,7 @@
 ![AID_GC](./AID_GC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der globale Konstantenblock **AID_GC** definiert die Attribut-Identifikatoren für ein Grafikkontextobjekt im ISOBUS-Protokoll. Er stellt numerische Konstanten bereit, mit denen auf die verschiedenen Eigenschaften eines grafischen Kontexts (z. B. Viewport, Farben, Schriften) zugegriffen werden kann. Diese Konstanten werden im Bereich der Virtual Terminal (VT) Anwendungen verwendet, um Objektattribute eindeutig zu referenzieren.
@@ -12,18 +13,23 @@ Der globale Konstantenblock **AID_GC** definiert die Attribut-Identifikatoren f�
 Da es sich um einen GlobalConstants-Block handelt, besitzt dieser keine ereignis- oder datenbasierten Ein-/Ausgänge im herkömmlichen Sinne. Stattdessen stellt er eine Sammlung globaler Konstanten bereit, die von anderen Bausteinen direkt referenziert werden können.
 
 ### **Ereignis-Eingänge**
+
 Keine vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Keine vorhanden.
 
 ### **Daten-Eingänge**
+
 Keine vorhanden.
 
 ### **Daten-Ausgänge**
+
 Keine vorhanden.
 
 ### **Adapter**
+
 Keine vorhanden.
 
 ## Funktionsweise

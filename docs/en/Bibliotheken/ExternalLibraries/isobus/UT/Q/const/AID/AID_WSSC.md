@@ -3,6 +3,7 @@
 ![AID_WSSC](./AID_WSSC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_WSSC` global constants definition provides a set of predefined attribute identifiers for **Working Set Special Controls** objects in the ISO 11783 (ISOBUS) environment. These constants are used to reference specific attributes when interacting with such objects in a tractor-implement control system. The definition is part of the `isobus::UT::Q::const::AID` package, enabling consistent and readable addressing of these attributes across different parts of an industrial automation application.
@@ -42,6 +43,7 @@ None.
 The `AID_WSSC` constants define the attribute identifiers used for the **Working Set Special Controls** object as specified by the ISO 11783 standard. In practice, these constants are used when constructing or interpreting ISOBUS messages that deal with working set special controls, such as setting or retrieving colour map or palette information. By using these named constants, the code becomes self-documenting and avoids magic numbers.
 
 The values are fixed at:
+
 - `NUMOFBYTES` = 1 (the attribute that indicates the number of bytes following in the object)
 - `COLOUR_MAP` = 2 (the attribute that stores the object identifier of a colour map, or NULL)
 - `COLOUR_PALETTE` = 3 (the attribute that stores the object identifier of a colour palette, or NULL)
@@ -66,6 +68,7 @@ This block contains no state variables and does not maintain any runtime state. 
 ## Comparison with Similar Blocks
 
 Similar global constant definitions exist for other ISOBUS object types, such as:
+
 - `AID_WSC` (Working Set Controls)
 - `AID_VC` (Virtual Terminal Controls)
 - `AID_IS` (Input/Output Objects)

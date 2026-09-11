@@ -6,6 +6,7 @@
 ![E_FB_DELAY](./E_FB_DELAY.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleitung. Ein eingehendes Ereignis (z. B. ein Startsignal) wird nach Ablauf einer konfigurierbaren Zeitverzögerung als Ausgangsereignis ausgegeben. Der Block ähnelt funktional einem Einschaltverzögerer (TON) aus der IEC‑61131‑Welt, ist jedoch für die ereignisgesteuerte Verarbeitung in 4diac‑Anwendungen optimiert. Neben der Verzögerungsfunktion bietet er einen zyklischen Abfrage‑Mechanismus, um die abgelaufene Zeit aktuell zu halten.
@@ -13,6 +14,7 @@ Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleit
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Ereignis | Typ | Kommentar |
 |----------|-----|-----------|
 | `REQ` | Event | Normaler Ausführungsaufruf; aktualisiert `ET`, solange der Timer aktiv ist. |
@@ -20,6 +22,7 @@ Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleit
 | `STOP` | Event | Stoppt die Verzögerung und setzt den Timer zurück. |
 
 ### **Ereignis-Ausgänge**
+
 | Ereignis | Typ | Kommentar |
 |----------|-----|-----------|
 | `CNF` | Event | Bestätigung für den `REQ`‑Aufruf. |
@@ -28,11 +31,13 @@ Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleit
 | `EO` | Event | Verzögertes Ereignis; wird ausgelöst, wenn die Verzögerungszeit abgelaufen ist. |
 
 ### **Daten-Eingänge**
+
 | Variable | Typ | Kommentar |
 |----------|-----|-----------|
 | `DT` | TIME | Verzögerungszeit, muss größer als 0 sein. |
 
 ### **Daten-Ausgänge**
+
 | Variable | Typ | Kommentar |
 |----------|-----|-----------|
 | `Q` | BOOL | Zeigt an, ob der Timer aktiv ist (`TRUE` = gestartet). |

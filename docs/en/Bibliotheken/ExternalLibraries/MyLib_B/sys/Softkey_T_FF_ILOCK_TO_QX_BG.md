@@ -6,6 +6,7 @@
 ![Softkey_T_FF_ILOCK_TO_QX_BG](./Softkey_T_FF_ILOCK_TO_QX_BG.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 Softkey_T_FF_ILOCK_TO_QX_BG is a generic subapplication that implements a digital output driven by a softkey (button) toggle flip-flop. Each released key press toggles the state of a logiBUS_QX digital output. In addition, external SET and RESET event inputs allow overriding or locking the flip-flop independently of the key. The internal background visualization reflects the current output state (green/white), providing an immediate visual feedback in the HMI.

@@ -3,6 +3,7 @@
 ![AID_OM](./AID_OM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die Globalkonstanten **AID_OM** definieren die Attribut-IDs (Attribute IDs) für das Objekt „Output Meter“ im Rahmen des ISOBUS‑Protokolls (ISO 11783). Sie dienen als einheitliche Referenzwerte für die Adressierung von Eigenschaften eines Anzeige‑Instruments (z. B. Rundinstrument) in der Benutzerschnittstelle eines Terminals. Die Werte sind als USINT (Unsigned Short Integer) im Bereich 1…12 festgelegt und werden typischerweise beim Zugriff auf Objektattribute über den ISOBUS‑Kommunikationsstack verwendet.

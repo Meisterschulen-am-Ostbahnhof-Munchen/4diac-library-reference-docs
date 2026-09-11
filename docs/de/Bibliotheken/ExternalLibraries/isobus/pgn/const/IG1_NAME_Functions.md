@@ -3,6 +3,7 @@
 ![IG1_NAME_Functions](./IG1_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die GlobalConstants-Definition **IG1_NAME_Functions** stellt Konstanten für die Identifikation von Funktionen in Fahrzeugsystemen nach ISO 11783-6 (ISOBUS) bereit. Sie ist Teil der 4diac-IDE und wird als Baustein zur Bereitstellung dieser Konstanten verwendet. Die Werte sind als **BYTE**-Typ definiert und decken verschiedene Funktionsbereiche für unterschiedliche Fahrzeugsysteme (allgemeine Systeme, Traktor, Anhänger) ab.
@@ -10,15 +11,19 @@ Die GlobalConstants-Definition **IG1_NAME_Functions** stellt Konstanten für die
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Keine vorhanden.
 
 ### **Daten-Eingänge**
+
 Keine vorhanden.
 
 ### **Daten-Ausgänge**
+
 Die Konstanten werden als Daten-Ausgänge betrachtet, da sie einen festen, unveränderlichen Wert bereitstellen. Die folgende Tabelle listet alle definierten Konstanten auf:
 
 | Name | Typ | Wert (dezimal) | Kommentar |
@@ -47,6 +52,7 @@ Die Konstanten werden als Daten-Ausgänge betrachtet, da sie einen festen, unver
 | `F_TRAILER_NOT_AVAILABLE` | BYTE | 255 | Anhänger, Funktion: Nicht verfügbar (bis eine Zuordnung erfolgt) |
 
 ### **Adapter**
+
 Keine vorhanden.
 
 ## Funktionsweise

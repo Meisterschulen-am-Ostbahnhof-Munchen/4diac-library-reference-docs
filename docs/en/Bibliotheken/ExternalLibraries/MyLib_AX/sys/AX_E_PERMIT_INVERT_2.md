@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_2](./AX_E_PERMIT_INVERT_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AX_E_PERMIT_INVERT_2** is a composite subapplication that provides a two-channel inverted event gating mechanism. It combines a boolean NOT operator (`AX_NOT_INIT`) with a two-channel event permit gate (`AX_E_PERMIT_2`) to create an event pass-through logic where events are only forwarded when the externally supplied permit signal is **inactive** (i.e., `FALSE`). This is particularly useful in safety-oriented control systems where events must be suppressed unless an explicit release condition is met.
@@ -51,10 +52,12 @@ The subapplication implements a two-stage processing pipeline:
 2. **Event Gating Stage**: The inverted boolean result is forwarded to the `PERMIT` input of the `AX_E_PERMIT_2` function block. This block acts as an event gate that conditionally forwards incoming events based on the state of its permit input.
 
 The event flow is straightforward:
+
 - `EI1` → `AX_E_PERMIT_2.EI1` → `EO1`
 - `EI2` → `AX_E_PERMIT_2.EI2` → `EO2`
 
 **Gating Behavior**:
+
 - When the external `PERMIT` signal is `FALSE`, the inverted signal becomes `TRUE`. The events arriving at `EI1`/`EI2` are passed through to `EO1`/`EO2`.
 - When the external `PERMIT` signal is `TRUE`, the inverted signal becomes `FALSE`. The events arriving at `EI1`/`EI2` are **blocked** and not propagated to the outputs.
 

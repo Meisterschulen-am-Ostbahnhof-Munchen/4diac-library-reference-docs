@@ -6,6 +6,7 @@
 ![AX_TON_MERGE_QXA_OPC](./AX_TON_MERGE_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AX_TON_MERGE_QXA_OPC` realisiert einen Kanal einer geschalteten Gruppe (z. B. eine Scheinwerfer‑Gruppe). Er nimmt den Toggle‑Zustand eines gemeinsamen Masters über den `MASTER`‑Socket entgegen, verzögert das Einschalten um eine einstellbare Zeit (`PT`) und schaltet den physischen Ausgang sofort aus. Das bestehende IO‑Test‑Kommando des Kanals wird über eine ODER‑Verknüpfung mit eingebunden. Dadurch lassen sich mehrere Kanäle mit unterschiedlichen Einschaltverzögerungen zu einer Gruppe zusammenfassen, um kapazitive Einschaltstrom‑Spitzen zu vermeiden.
@@ -13,9 +14,11 @@ Der Baustein `AX_TON_MERGE_QXA_OPC` realisiert einen Kanal einer geschalteten Gr
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine Ereignis‑Eingänge vorhanden. Der Baustein wird rein daten‑ und adaptergesteuert betrieben.
 
 ### **Ereignis-Ausgänge**
+
 Keine Ereignis‑Ausgänge vorhanden.
 
 ### **Daten-Eingänge**
@@ -28,6 +31,7 @@ Keine Ereignis‑Ausgänge vorhanden.
 | `ID_TEST_WRITE` | `WSTRING` | Adresse für die bestehende IO‑Test‑Publish (z. B. `STG5_Q0x_WRITE`) – **eigener Knoten**, nicht derselbe wie `ID_TEST_READ`, um Selbstrückkopplung/Latch zu vermeiden |
 
 ### **Daten-Ausgänge**
+
 Keine Daten‑Ausgänge vorhanden.
 
 ### **Adapter**

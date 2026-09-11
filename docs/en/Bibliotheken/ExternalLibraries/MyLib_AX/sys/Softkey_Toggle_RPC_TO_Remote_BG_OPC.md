@@ -6,6 +6,7 @@
 ![Softkey_Toggle_RPC_TO_Remote_BG_OPC](./Softkey_Toggle_RPC_TO_Remote_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 Softkey_Toggle_RPC_TO_Remote_BG_OPC is a composite subapplication used on device A, e.g. Station 11 at IP address 192.168.1.11. It combines a softkey input, an OPC UA client request, and a state-monitoring adapter to provide a remote toggle control with visual feedback.

@@ -3,6 +3,7 @@
 ![AID_OS](./AID_OS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AID_OS** global constant set defines the attribute identifiers (IDs) for the **Output String (OS) object** within the ISO 11783 (ISOBUS) protocol, specifically for the Working Set (WS) and Virtual Terminal (VT) layers. These IDs are used to reference specific attributes of an output string object when interacting with the object pool via the ISOBUS service primitives. The set is part of a larger collection of constant definitions that simplify and standardize the handling of object attributes in 4diac-based ISOBUS applications.

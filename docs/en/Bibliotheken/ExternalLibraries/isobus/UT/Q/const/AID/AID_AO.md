@@ -3,6 +3,7 @@
 ![AID_AO](./AID_AO.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AID_AO is a global constant definition block used in the 4diac IDE for the ISO 11783 (ISOBUS) Virtual Terminal protocol. It defines the attribute identifiers (AID) for animation objects (AO) within an ISOBUS Universal Terminal (UT) object pool. The block provides symbolic constant names that map to numerical attribute IDs, making configuration code more readable and maintainable when working with animation objects.

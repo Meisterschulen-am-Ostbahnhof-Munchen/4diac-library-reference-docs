@@ -6,6 +6,7 @@
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter](./Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter** is a composite subapplication designed for distributed automation scenarios, specifically for Device A (Station 11, IP 192.168.1.11). It realizes a remote control architecture where three SoftKeys (Set, Reset, Toggle) and a GreenWhiteBackground indicator are operated via an HMI on Device A, while the actual flip‑flop logic is executed on a remote Device B.

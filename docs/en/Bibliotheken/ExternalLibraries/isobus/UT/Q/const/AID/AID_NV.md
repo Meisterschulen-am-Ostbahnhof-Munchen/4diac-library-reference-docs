@@ -13,18 +13,23 @@ This global constant definition provides a symbolic name for the attribute ID of
 As a global constants type, this element does not contain any event inputs, event outputs, data inputs, data outputs, or adapters. The following sections are therefore not applicable and are listed for completeness.
 
 ### **Event Inputs**
+
 None (not applicable for global constants).
 
 ### **Event Outputs**
+
 None (not applicable for global constants).
 
 ### **Data Inputs**
+
 None (not applicable for global constants).
 
 ### **Data Outputs**
+
 None (not applicable for global constants).
 
 ### **Adapters**
+
 None (not applicable for global constants).
 
 ## Functionality

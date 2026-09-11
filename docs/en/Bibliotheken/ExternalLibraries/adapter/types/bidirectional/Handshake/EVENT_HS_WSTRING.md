@@ -3,11 +3,13 @@
 ![EVENT_HS_WSTRING](./EVENT_HS_WSTRING.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **EVENT_HS_WSTRING** adapter is a data-carrying variant of the classic **Handshake design pattern** (IEC 61499 primer course, Module 6 – Design methods and patterns). It maintains the same REQ/CNF/IND/RSP event vocabulary as the dataless `EVENT_HS` adapter, but each event is accompanied by a `WSTRING` payload. This matches Vyatkin's generic *service* adapter (slide 48) used in service-oriented architectures, where messages such as `"push,100"` are exchanged.
 
 The adapter implements a **plug/socket** role split:
+
 - **Plug** (client/requester side) fires REQ and RSP events and reacts to CNF and IND events.
 - **Socket** (server/responder side) fires CNF and IND events and reacts to REQ and RSP events.
 

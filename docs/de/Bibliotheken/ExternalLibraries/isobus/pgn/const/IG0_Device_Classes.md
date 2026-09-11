@@ -3,6 +3,7 @@
 ![IG0_Device_Classes](./IG0_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **IG0_Device_Classes** ist eine globale Konstantendefinition im 4diac-IDE, die spezifische Geräteklassen (Device Classes) für die Fahrzeugsysteme der ISOBUS-Industriegruppe 0 (Industry Group 0) bereitstellt. Diese Konstanten werden verwendet, um Fahrzeugsysteme eindeutig zu identifizieren und zu klassifizieren, insbesondere in Anwendungen, die auf dem ISOBUS-Protokoll basieren. Die Definition umfasst zwei Konstanten, die den Zustand „Nicht-spezifisches System“ und „Nicht verfügbar“ repräsentieren.
@@ -12,18 +13,23 @@ Der Baustein **IG0_Device_Classes** ist eine globale Konstantendefinition im 4di
 Da es sich um eine globale Konstantendeklaration handelt, besitzt der Baustein keine Ereignis- oder Datenschnittstellen im Sinne eines Funktionsblocks. Die Struktur ist rein deklarativ und stellt Werte für die Verwendung in anderen Bausteinen bereit.
 
 ### **Ereignis-Eingänge**
+
 - Keine
 
 ### **Ereignis-Ausgänge**
+
 - Keine
 
 ### **Daten-Eingänge**
+
 - Keine (globale Konstanten, nicht als Eingänge gebunden)
 
 ### **Daten-Ausgänge**
+
 - Keine (die Werte werden direkt über den Namen referenziert)
 
 ### **Adapter**
+
 - Keine
 
 ## Funktionsweise

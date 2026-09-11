@@ -3,6 +3,7 @@
 ![TimeTicker](./TimeTicker.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **TimeTicker** ist ein zusammengesetzter Baustein (Composite FB), der einen zyklischen Zeitgeber realisiert. Er basiert auf dem Standardbaustein `E_CYCLE` und erweitert dessen Funktionalität durch eine Adapter-Schnittstelle zur Kommunikation mit anderen Bausteinen. Der TimeTicker erzeugt periodische Ereignisse (Ticks) und stellt dabei Informationen über die aktuelle Zykluszeit, die vergangene Zeit und den Prozesszustand bereit. Er eignet sich für Anwendungen, in denen eine zeitgesteuerte Ablaufsteuerung mit Rückmeldung über den aktuellen Zustand benötigt wird, beispielsweise in der Prozessautomatisierung oder bei zeitbasierten Steuerungsaufgaben.

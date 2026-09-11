@@ -3,6 +3,7 @@
 ![IG4_Device_Classes](./IG4_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `IG4_Device_Classes` is a global constant container for Industry Group 4 specific device classes, also referred to as vehicle systems. It defines a set of named `BYTE` constants that represent standardized vehicle system categories. These constants are intended for use in ISOBUS/J1939-related applications and PGN processing.
@@ -10,26 +11,33 @@
 The constant names use the prefix `DC_`, meaning Device Class, and provide readable symbols for numeric codes used to identify vehicle systems.
 
 * * * * * * * * * *
+
 ## Interface Structure
 
 `IG4_Device_Classes` is not an executable function block, adapter, or subapplication. It does not have an IEC 61499 event/data interface. The following interface categories are therefore not applicable.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 None.
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 * * * * * * * * * *
+
 ## Functionality
 
 The main function of `IG4_Device_Classes` is to provide a single source of truth for device class codes related to Industry Group 4 vehicle systems. Instead of using magic numbers in function blocks or ST/CFC applications, a developer can reference the named constants directly.
@@ -37,6 +45,7 @@ The main function of `IG4_Device_Classes` is to provide a single source of truth
 These constants can be used when constructing or decoding ISOBUS/J1939 device names, vehicle system identifiers, or any protocol data field that uses a `BYTE` value to represent a device class.
 
 * * * * * * * * * *
+
 ## Technical Features
 
 - All constants are defined as `BYTE` values.
@@ -62,11 +71,13 @@ These constants can be used when constructing or decoding ISOBUS/J1939 device na
 | `DC_NOT_AVAILABLE` | 127 | Not Available |
 
 * * * * * * * * * *
+
 ## State Overview
 
 Not applicable. `IG4_Device_Classes` is a global constant container and does not define an execution state machine. No states, transitions, or event-driven behavior are associated with this element.
 
 * * * * * * * * * *
+
 ## Application Scenarios
 
 Typical application areas include:
@@ -78,6 +89,7 @@ Typical application areas include:
 - Replacement of numeric constants with readable symbolic names in ST and CFC code.
 
 * * * * * * * * * *
+
 ## Comparison with Similar Blocks
 
 `IG4_Device_Classes` is not a function block and therefore does not perform calculations or process data flows. In this respect, it is similar to a global variable list or a constant table.
@@ -92,6 +104,7 @@ Compared with executable function blocks, it offers the following benefits:
 It can be compared with other industry-group-specific constant sets, where the same naming convention is used but the assigned values and device class definitions may differ.
 
 * * * * * * * * * *
+
 ## Conclusion
 
 `IG4_Device_Classes` provides a clear and maintainable set of `BYTE` constants for Industry Group 4 vehicle device classes. It removes ambiguity from numeric values and supports ISOBUS/J1939 application development by offering meaningful symbolic names. The element is simple, static, and suitable for use wherever device class information must be referenced consistently.

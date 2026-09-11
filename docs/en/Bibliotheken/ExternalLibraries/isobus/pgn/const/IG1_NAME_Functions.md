@@ -3,6 +3,7 @@
 ![IG1_NAME_Functions](./IG1_NAME_Functions.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `IG1_NAME_Functions` global constant definition belongs to the ISO 11783 (ISOBUS) protocol stack and provides a standardized set of byte-valued constants for identifying **Industry Group 1 (IG1)** specific function types within a vehicle's electronic control unit (ECU) network. This constant set is used to populate the Function field of the ISO 11783 NAME parameter, enabling unambiguous identification of the role each ECU plays on the bus.

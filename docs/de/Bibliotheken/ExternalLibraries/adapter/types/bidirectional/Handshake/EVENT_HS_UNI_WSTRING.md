@@ -3,6 +3,7 @@
 ![EVENT_HS_UNI_WSTRING](./EVENT_HS_UNI_WSTRING.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter `EVENT_HS_UNI_WSTRING` gehört zur `EVENT_HS`-Familie (Handshake-Designmuster nach IEC 61499) und stellt eine reduzierte, unidirektionale Variante dar. Er dient der Übertragung einer „Fire-and-Forget“-Nachricht (ohne Antwort) mit einem WSTRING-Payload vom Plug zum Socket. Der Name „UNI“ weist darauf hin, dass nur eine Richtung (ein Ereignis) existiert – es gibt weder Bestätigungen noch Rückkanäle. Diese Variante erweitert `EVENT_HS_UNI` um ein Datenfeld `REQD`, das zusammen mit dem Ereignis `REQ` gesendet wird.

@@ -3,6 +3,7 @@
 ![AID_SKM](./AID_SKM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AID_SKM is a global constants block that defines attribute identifiers for the soft key mask object within the ISOBUS virtual terminal. It serves as a central repository for constant values, ensuring consistent referencing and maintainability across the automation system.

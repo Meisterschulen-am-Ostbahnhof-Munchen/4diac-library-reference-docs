@@ -3,6 +3,7 @@
 ![AID_OM](./AID_OM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AID_OM` is a global constant definition set used in the context of ISOBUS virtual terminal (VT) applications. It defines attribute identifiers (IDs) for the **Output Meter** object, which is a graphical element used to display a value on a scale, typically with a needle and tick marks. The constants provide a standardized, human-readable way to reference the attributes of an output meter when constructing or modifying VT object data.

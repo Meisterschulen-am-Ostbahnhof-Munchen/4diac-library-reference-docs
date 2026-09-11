@@ -6,6 +6,7 @@
 ![E_PERMIT_3](./E_PERMIT_3.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **E_PERMIT_3** ist eine Subapplikation (SubApp), die drei unabhängige Ereignis-Freigabe-Gates (E_PERMIT) in einer kompakten Einheit bündelt. Sie dient dazu, drei parallele Ereigniskanäle wahlweise durchzuschalten oder zu blockieren – gesteuert durch ein gemeinsames Freigabesignal. Die SubApp ist geeignet für Anwendungen, in denen mehrere Ereignisse synchron freigegeben oder gesperrt werden müssen, ohne dass einzelne Instanzen separat konfiguriert werden müssen.

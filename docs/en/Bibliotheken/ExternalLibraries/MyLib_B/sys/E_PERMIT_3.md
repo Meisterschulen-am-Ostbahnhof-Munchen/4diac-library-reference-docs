@@ -6,6 +6,7 @@
 ![E_PERMIT_3](./E_PERMIT_3.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 E_PERMIT_3 is a composite subapplication that implements a three-channel event gating mechanism. It combines three independent instances of the standard IEC 61499 E_PERMIT function block into a single reusable component. Each channel permits or blocks an incoming event stream based on a common Boolean permission signal. This subapp simplifies the design of systems requiring multiple synchronized event gates without duplicating logic.
@@ -13,22 +14,27 @@ E_PERMIT_3 is a composite subapplication that implements a three-channel event g
 ## Interface Structure
 
 ### **Event Inputs**
+
 - **EI1**: Event input for channel 1. When triggered, the event is forwarded to output **EO1** if the permission condition is TRUE.
 - **EI2**: Event input for channel 2. When triggered, the event is forwarded to output **EO2** if the permission condition is TRUE.
 - **EI3**: Event input for channel 3. When triggered, the event is forwarded to output **EO3** if the permission condition is TRUE.
 
 ### **Event Outputs**
+
 - **EO1**: Event output for channel 1. Corresponds to the gated event from **EI1**.
 - **EO2**: Event output for channel 2. Corresponds to the gated event from **EI2**.
 - **EO3**: Event output for channel 3. Corresponds to the gated event from **EI3**.
 
 ### **Data Inputs**
+
 - **PERMIT**: Boolean data input (type `BOOL`) that serves as the global gate condition for all three channels. If `PERMIT = TRUE`, incoming events are propagated to the respective outputs; if `FALSE`, events are discarded.
 
 ### **Data Outputs**
+
 No data outputs are provided by this subapplication.
 
 ### **Adapters**
+
 No adapters are used in this subapplication.
 
 ## Functionality

@@ -3,6 +3,7 @@
 ![IG2_Device_Classes](./IG2_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `IG2_Device_Classes` type defines a set of global constants for **Industry Group 2** (vehicle systems) as specified by the ISOBUS standard (ISO 11783). These constants provide standardized BYTE values that identify the device class of agricultural equipment, such as tractors, harvesters, and sprayers. They are intended for use in 4diac applications that communicate via ISOBUS and need to assign or decode device class information in PGN (Parameter Group Number) messages.

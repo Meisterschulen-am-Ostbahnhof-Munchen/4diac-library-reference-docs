@@ -3,6 +3,7 @@
 ![A2X2_CLIENT_2_0_SUBSCRIBE_2_PLUG](./A2X2_CLIENT_2_0_SUBSCRIBE_2_PLUG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2_PLUG` dient als bidirektionale Schnittstelle zwischen einem A2X2‑Adapter (Plug) und einem OPC‑UA‑Server. Er schreibt die beiden BOOL‑Signale UP und DOWN des Adapters über einen `CLIENT_2_0` als Remote‑Write an eine definierte OPC‑UA‑Adresse und liest gleichzeitig die gleichen Signale über einen `SUBSCRIBE_2` zurück. Der FB puffert jeden BOOL‑Wert mit einem eigenen `E_D_FF`‑Baustein, um einen sauberen Signalwechsel zu gewährleisten. Er ist das Pendant zum FB `A2X2_CLIENT_2_0_SUBSCRIBE_2`, der einen Socket verwendet – hier wird die Kommunikation über einen Adapter‑Plug realisiert.
@@ -97,6 +98,7 @@ Eine detaillierte Zustandsmaschine ist im FB selbst nicht sichtbar, die internen
 Der direkte Verwandte ist `A2X2_CLIENT_2_0_SUBSCRIBE_2`, der statt eines Plugs einen Socket verwendet. Der vorliegende FB (`_PLUG`) bietet die gleiche Funktionalität, setzt aber auf die Adapter‑Mechanik von 4diac. Dadurch ist er flexibler in der Topologie, da er an beliebigen Stellen eines FB‑Netzwerks über einen Socket eingebunden werden kann.
 
 Weitere Alternativen könnten sein:
+
 - Verwendung von zwei getrennten FBs für Schreiben und Lesen, was jedoch eine manuelle Synchronisation erfordert.
 - Einsatz von `E_SR`‑Bausteinen zur Pufferung, die jedoch weniger Flanken‑orientiert arbeiten.
 

@@ -3,6 +3,7 @@
 ![AX_E_PERMIT_4](./AX_E_PERMIT_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AX_E_PERMIT_4 is a generic function block designed for conditional propagation of four independent event channels. It acts as a permissive gate: each incoming event at one of its four event inputs is forwarded to the corresponding event output only if the attached permit condition via the unidirectional adapter socket `PERMIT` allows it. This block is particularly useful in safety-oriented or mode-dependent control applications where event flow must be gated by an external authorization signal.

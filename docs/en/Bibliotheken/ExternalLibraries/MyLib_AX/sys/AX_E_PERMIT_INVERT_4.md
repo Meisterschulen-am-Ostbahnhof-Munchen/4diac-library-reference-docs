@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_4](./AX_E_PERMIT_INVERT_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AX_E_PERMIT_INVERT_4** is a 4-channel inverted event permit gate implemented as a subapplication type. It combines the adapter logic block **AX_NOT_INIT** with the 4-channel event gate **AX_E_PERMIT_4**.  

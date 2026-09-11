@@ -11,18 +11,23 @@ Der GlobalConstants-Baustein `AID_IN` definiert die Attribut-IDs eines **Eingabe
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine. Der Baustein besitzt keine Ereignis-Eingänge, da er ausschließlich konstante Werte bereitstellt.
 
 ### **Ereignis-Ausgänge**
+
 Keine. Es existieren keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
+
 Keine. Der Baustein besitzt keine Daten-Eingänge, da die Werte als globale Konstanten fest definiert sind.
 
 ### **Daten-Ausgänge**
+
 Keine. Es werden keine Datenwerte über Schnittstellen ausgegeben.
 
 ### **Adapter**
+
 Keine. Es sind keine Adapter-Schnittstellen vorhanden.
 
 ## Funktionsweise

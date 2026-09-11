@@ -48,12 +48,14 @@ A2X_CLIENT_2_0 is a composite function block that takes two Boolean values (UP a
 The block is initialized via the INIT event. On INIT, the QI and ID input values are forwarded to the internal CLIENT_2_0, and the client establishes the connection to the configured OPC-UA server. The INITO event confirms successful completion and reports the resulting QO and STATUS.
 
 At runtime, the adapter socket IN delivers the two Boolean values UP and DOWN. Each value is connected to the data input D of its own edge-triggered D flip-flop:
+
 - IN.UP → E_D_FF_UP.D
 - IN.DOWN → E_D_FF_DOWN.D
 
 The corresponding adapter events (IN.E_UP and IN.E_DOWN) act as clock signals (CLK) for the respective flip-flops. When either event occurs, the current value on its data input is latched into the flip-flop output (Q). At the same time, the flip-flop's event output (EO) triggers a REQ event on the embedded CLIENT_2_0.
 
 The latched values are connected to the client's data inputs:
+
 - E_D_FF_UP.Q → CLIENT_2_0.SD_1
 - E_D_FF_DOWN.Q → CLIENT_2_0.SD_2
 

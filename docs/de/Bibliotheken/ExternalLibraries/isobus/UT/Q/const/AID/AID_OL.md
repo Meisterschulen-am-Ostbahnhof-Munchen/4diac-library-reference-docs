@@ -3,6 +3,7 @@
 ![AID_OL](./AID_OL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der globale Konstantenblock **AID_OL** definiert die Attribut-IDs (Object Attribute IDs) für das **Output Line Object** (Ausgabe-Linienobjekt) im ISOBUS-Kontext. Diese Konstanten dienen als eindeutige Referenzen für die Identifikation spezifischer Attribute eines Linienobjekts, das in der isobus-Klasse `isobus::UT::Q` verwendet wird. Durch die Bereitstellung symbolischer Namen wird der Code lesbarer und weniger fehleranfällig, da numerische IDs nicht mehr direkt verwendet werden müssen.
@@ -12,18 +13,23 @@ Der globale Konstantenblock **AID_OL** definiert die Attribut-IDs (Object Attrib
 Da **AID_OL** ein globaler Konstantenblock und kein Funktionsblock, Adapter oder Subapp ist, besitzt er keine klassischen Schnittstellenelemente wie Ereignis- oder Datenports. Die bereitgestellten Konstanten sind als **globale Variablen** verfügbar und können vom gesamten Projekt referenziert werden.
 
 ### **Ereignis-Eingänge**
+
 Keine (nicht vorhanden – reine Konstantendefinition).
 
 ### **Ereignis-Ausgänge**
+
 Keine (nicht vorhanden – reine Konstantendefinition).
 
 ### **Daten-Eingänge**
+
 Keine (nicht vorhanden – reine Konstantendefinition).
 
 ### **Daten-Ausgänge**
+
 Keine (nicht vorhanden – reine Konstantendefinition).
 
 ### **Adapter**
+
 Keine (nicht vorhanden – reine Konstantendefinition).
 
 ## Funktionsweise

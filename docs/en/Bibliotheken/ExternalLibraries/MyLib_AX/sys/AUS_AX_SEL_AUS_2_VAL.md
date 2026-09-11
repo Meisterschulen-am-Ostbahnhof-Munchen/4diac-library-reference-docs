@@ -6,6 +6,7 @@
 ![AUS_AX_SEL_AUS_2_VAL](./AUS_AX_SEL_AUS_2_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUS_AX_SEL_AUS_2_VAL** is a subapplication that implements a binary selection of two `AUS` (output) adapter values based on a select signal carried by an `AX` adapter. It encapsulates two internal `initval_AUS` blocks that convert raw `USINT` values into valid `AUS` adapter data, and a central `AUS_AX_SEL_AUS` selection block. Depending on the state of the select input `G`, the subapp forwards one of the two configured values (`val0` or `val1`) to its output adapter `OUT`.

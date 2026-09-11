@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_7_VAL](./AUI_AUI_MUX_7_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_7_VAL** is a composite subapplication that implements a 7‑way multiplexer for AUI (Adapter Unified Interface) values derived from UINT inputs. It selects one of seven UINT values (`val1` … `val7`) based on a corresponding event input (`EI1` … `EI7`) and provides the selected value as a unidirectional AUI adapter output (`OUT`). Internally, the subapplication uses pre‑built function blocks to convert the UINT data to AUI format and to perform the actual selection, offering a ready‑to‑use, reusable component for scenarios requiring event‑driven data selection in IEC 61499‑based systems.

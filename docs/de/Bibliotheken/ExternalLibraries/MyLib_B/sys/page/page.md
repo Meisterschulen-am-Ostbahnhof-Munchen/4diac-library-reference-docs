@@ -6,6 +6,7 @@
 ![page](./page.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die Subapplication `page` ist ein gekapselter Baustein, der eine einfache Ereignis-Daten-Verarbeitung realisiert. Sie basiert auf zwei internen Funktionsblöcken: einem Status-überwachenden FB (CbVtStatus) und einem flankengetriggerten Flipflop (E_D_FF). Durch die Kombination dieser Bausteine wird ein spezifisches Verhalten erzeugt, das nach außen hin nur über einen Ereignis-Ausgang sichtbar ist.

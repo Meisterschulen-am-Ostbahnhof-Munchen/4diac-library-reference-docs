@@ -3,6 +3,7 @@
 ![AUI_AUI_MUX_6](./AUI_AUI_MUX_6.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `AUI_AUI_MUX_6` ist ein generischer Multiplexer, der über sechs unidirektionale AUI-Adapter (Application User Interface) Eingangswerte entgegennimmt und einen davon – basierend auf einem über einen weiteren AUI-Adapter bereitgestellten Index – an seinen Ausgang weiterleitet. Der Baustein ist speziell für die Auswahl eines von sechs Kanälen konzipiert und arbeitet ereignisgesteuert: Das Ausgangsereignis wird nur dann ausgelöst, wenn sich der am Ausgang anliegende Wert tatsächlich ändert. Dadurch werden unnötige Übertragungen und Prozesslast vermieden. Der FB ist als generischer Baustein mit dem Klassennamen `GEN_AUI_AUI_MUX` definiert und wird über Plug & Socket-Verbindungen in 4diac‑IDE integriert.

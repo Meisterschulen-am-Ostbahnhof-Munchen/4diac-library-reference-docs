@@ -6,6 +6,7 @@
 ![E_PERMIT_INVERT_4](./E_PERMIT_INVERT_4.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `E_PERMIT_INVERT_4` ist eine Subapplikation mit vier Ereigniskanälen. Sie realisiert ein invertiertes Event-Freigabe-Gate: Ein Ereignis wird nur dann vom Eingang zum Ausgang durchgeschaltet, wenn das Eingangssignal `PERMIT` den Wert `FALSE` besitzt. Dazu wird `PERMIT` intern durch den Funktionsbaustein `F_NOT_BOOL_INIT` invertiert und das invertierte Signal an einen `E_PERMIT_4`-Baustein übergeben.

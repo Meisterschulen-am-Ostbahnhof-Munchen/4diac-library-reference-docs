@@ -6,6 +6,7 @@
 ![SR_TO_QX_TRIG_EO](./SR_TO_QX_TRIG_EO.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **SR_TO_QX_TRIG_EO** subapplication combines a set/reset latch (E_SR) with a digital output (logiBUS_QX) and a rising-edge trigger (E_R_TRIG). It provides a reusable, event-controlled digital output stage that emits an echo event (EO1) whenever the latched output state transitions from false to true. The block is designed as a generic solution: the target physical output (Q1…Q8) is selected via a dedicated data input.

@@ -14,9 +14,11 @@ Die SubApp `Heben_Senken_TO_QDA_PWM_OPC` ist ein generischer Baustein zur Steuer
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine Ereignis-Eingänge vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Keine Ereignis-Ausgänge vorhanden.
 
 ### **Daten-Eingänge**
@@ -38,9 +40,11 @@ Keine Ereignis-Ausgänge vorhanden.
 | `ID_DO_STATE_WRITE` | `WSTRING` | – | Lokale Publish-Adresse (ACTION=WRITE) für den tatsächlichen Freigabe-Zustand (AX_T_FF_INIT.Q) – wird von VT und Dashboard remote abonniert |
 
 ### **Daten-Ausgänge**
+
 Keine externen Daten-Ausgänge vorhanden.
 
 ### **Adapter**
+
 Keine Adapter vorhanden.
 
 ## Funktionsweise

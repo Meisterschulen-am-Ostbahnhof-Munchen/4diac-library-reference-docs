@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_5_VAL](./AUI_AUI_MUX_5_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_AUI_MUX_5_VAL** is a composite subapplication (SubAppType) that implements a 5-way multiplexer for AUI (Application Interconnection Unit) adapter values with UINT-based initial configuration. It allows the selection of one out of five incoming AUI data streams based on a corresponding event trigger. Internally, the subapp combines three functional building blocks: an event-driven multiplexer (`AUI_MUX_5`), a data-path selection adapter (`AUI_AUI_MUX_5`), and five initialization adapters (`initval_AUI`) that convert UINT values into AUI adapter outputs. This structure provides a clean and reusable way to route AUI data in IEC 61499-based automation systems, especially in scenarios where a single output adapter must be switched between multiple sources.

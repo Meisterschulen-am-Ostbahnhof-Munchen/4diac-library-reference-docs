@@ -6,6 +6,7 @@
 ![NumericValue_PHYS_TO_NVS](./NumericValue_PHYS_TO_NVS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **NumericValue_PHYS_TO_NVS** subapplication is a generic, reusable component that integrates a physical numeric value sensor (scaled variant) with non‑volatile storage (NVS). It reads a physical value using the `NumericValue_PHYS` function block, stores the result into an NVS key, and provides the stored value as an output. The subapp is designed for embedded systems where calibration data or process values need to be persisted across power cycles.

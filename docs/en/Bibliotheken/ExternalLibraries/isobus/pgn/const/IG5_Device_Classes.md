@@ -3,6 +3,7 @@
 ![IG5_Device_Classes](./IG5_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **IG5_Device_Classes** global constants type defines device class identifiers for the Industry Group 5 (IG5) within the ISOBUS protocol. These constants are used to specify the type of vehicle system or equipment in a J1939 network, particularly for industrial-process control stationary applications (e.g., generator sets). The type is part of the `isobus.pgn.const` package and provides named values for the raw BYTE codes that appear in PGNs.
@@ -12,18 +13,23 @@ The **IG5_Device_Classes** global constants type defines device class identifier
 This type does not represent a typical function block with event or data inputs/outputs. Instead, it declares global constants that can be referenced throughout a 4diac application. The following subsections list the standard interface elements.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 None.
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality

@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_6_VAL](./AUDI_AUI_MUX_6_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AUDI_AUI_MUX_6_VAL is a 6-way multiplexer subapplication designed for selecting AUDI values. It combines six internal initval_AUDI blocks with an AUI_MUX_6 event multiplexer and an AUDI_AUI_MUX_6 selection adapter. The subapp switches between six UDINT input values (val1 to val6) based on event inputs EI1 to EI6, providing the selected value as an AUDI adapter output.

@@ -6,6 +6,7 @@
 ![StringValue_TO_NVS](./StringValue_TO_NVS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **StringValue_TO_NVS** subapplication provides a generic solution for reading a String-VT value and persisting it into the non-volatile storage (NVS) of an ESP32. It combines the `isobus::UT::io::StringValue::StringValue_IS` function block for input acquisition with the `logiBUS::storage::esp32_nvs::NVS` function block for durable storage. The subapplication also exposes the stored value on its output interface. It was extracted from a larger exercise project to be reused as a standalone, generic component.

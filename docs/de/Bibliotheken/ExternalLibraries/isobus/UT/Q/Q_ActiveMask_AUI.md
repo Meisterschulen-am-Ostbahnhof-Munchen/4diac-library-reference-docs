@@ -3,6 +3,7 @@
 ![Q_ActiveMask_AUI](./Q_ActiveMask_AUI.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **Q_ActiveMask_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein **Q_ActiveMask**. Er ermöglicht das Umschalten der aktiven Maske (Active Mask) in einem ISOBUS‑System (ISO 11783‑6) über eine unidirektionale AUI‑Schnittstelle. Der Baustein kapselt die Kommunikation mit dem internen `Q_ActiveMask`‑Kern und bietet eine einfache, adapterbasierte Anbindung für Ereignis‑ und Datenaustausch.

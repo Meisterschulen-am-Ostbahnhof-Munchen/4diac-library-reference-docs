@@ -6,6 +6,7 @@
 ![E_PERMIT_INVERT_3](./E_PERMIT_INVERT_3.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **E_PERMIT_INVERT_3** ist eine Subapplikation (SubApp) für die 4diac-IDE. Er stellt ein 3-Kanal-Ereignis-Freigabe-Gate mit invertierter Freigabelogik dar. Die SubApp kombiniert die Funktionsbausteine `F_NOT_BOOL_INIT` (boolesche Negation) und `E_PERMIT_3` (3-Kanal-Event-Freigabe) zu einer kompakten, wiederverwendbaren Einheit.

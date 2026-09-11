@@ -6,6 +6,7 @@
 ![ILOCK_SWITCH_PROTECT_A2X](./ILOCK_SWITCH_PROTECT_A2X.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **ILOCK_SWITCH_PROTECT_A2X** function block is an adapter-based implementation of a protective interlock switch. It takes forward/up and backward/down commands via a single `A2X` input adapter, prioritizes the most recent active command, and applies a configurable dead-time (`DT_PROTECT`) before actually switching the output direction. This prevents rapid or accidental direction changes that could damage mechanical systems.

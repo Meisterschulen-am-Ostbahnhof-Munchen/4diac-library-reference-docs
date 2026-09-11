@@ -3,6 +3,7 @@
 ![AID_WS](./AID_WS.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_WS` stellt eine Sammlung von globalen Konstanten dar, die die Attribut-IDs (Attribute IDs) für ein Working Set im ISOBUS-Kontext (ISO 11783) definieren. Diese Konstanten werden verwendet, um auf spezifische Attribute eines Working Sets zuzugreifen, wie z.B. Hintergrundfarbe, Auswählbarkeit und die aktive Maske. Der Baustein ist als `GlobalConstants`-Typ in 4diac umgesetzt und dient als zentrale Referenz für diese Attribut-IDs.

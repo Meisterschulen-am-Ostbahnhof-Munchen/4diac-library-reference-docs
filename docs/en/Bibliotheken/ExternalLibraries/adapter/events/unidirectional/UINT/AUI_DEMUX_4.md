@@ -3,6 +3,7 @@
 ![AUI_DEMUX_4](./AUI_DEMUX_4.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_DEMUX_4** function block is an event demultiplexer that routes incoming event triggers to one of four distinct output events based on an index value. Unlike the conventional E_DEMUX_4 block, which uses a separate plain event input and a data input for the selector index, this variant receives both the event trigger and the selector value through a single AUI adapter socket. This design reduces wiring complexity and improves interface encapsulation in distributed IEC 61499 applications. The block is implemented as a generic FB (GEN_E_DEMUX) and is part of the `adapter::events::unidirectional` package.

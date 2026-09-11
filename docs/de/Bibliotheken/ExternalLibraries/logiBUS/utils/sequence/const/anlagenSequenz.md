@@ -3,6 +3,7 @@
 ![anlagenSequenz](./anlagenSequenz.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Dieses Element der 4diac-IDE definiert eine Sammlung globaler Konstanten für die Steuerung einer Anlagen-Sequenz („AnlagenSequenz_06“). Die Konstanten beschreiben den aktuellen Betriebs- und Störungsstatus sowie die Art von Übergängen (Vorlauf/Nachlauf) für eine Anlage mit sechs Motoren. Sie werden im Paket `logiBUS::utils::sequence::const` bereitgestellt und können von verschiedenen Funktionsbausteinen der Anlagensequenz referenziert werden, um eine einheitliche und lesbare Codierung zu gewährleisten.
@@ -46,6 +47,7 @@ Keine (es werden keine Adapter verwendet).
 Die globalen Konstanten dienen als zentrale Definitionsquelle für Zustandswerte in der Anlagensteuerung. Sie werden in der 4diac-IDE als `GlobalConstants` definiert und können in allen FB-Typen der Anwendung über ihren symbolischen Namen verwendet werden. Dadurch wird die Verwendung von „magic numbers“ vermieden und die Wartbarkeit des Steuerungscodes erhöht.
 
 Die Konstanten sind in zwei Gruppen aufgeteilt:
+
 - **Betriebszustände** (`STATUS_BETRIEB_*`): beschreiben die Phasen der Anlage (aus, hochfahren, laufen, herunterfahren).
 - **Störungszustände** (`STATUS_STOERUNG_*`): geben an, ob eine Störung vorliegt.
 - **Transitionsarten** (`TRANSIT_ART_*`): kennzeichnen die Art eines Motor-Übergangs (kein Übergang, Vorlauf, Nachlauf).

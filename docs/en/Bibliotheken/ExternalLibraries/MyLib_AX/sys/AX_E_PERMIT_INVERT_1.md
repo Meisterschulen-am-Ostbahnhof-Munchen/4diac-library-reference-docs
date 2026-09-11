@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_1](./AX_E_PERMIT_INVERT_1.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AX_E_PERMIT_INVERT_1 is a composite subapplication that implements an inverted event-permission gate. It combines the adapter-based blocks `AX_NOT_INIT` and `AX_E_PERMIT_1` to allow an event to pass from the event input `EI` to the event output `EO` only when the adapter signal `PERMIT` is **FALSE**.

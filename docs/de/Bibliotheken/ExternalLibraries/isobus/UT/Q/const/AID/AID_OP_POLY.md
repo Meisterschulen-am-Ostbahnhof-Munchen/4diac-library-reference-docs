@@ -3,6 +3,7 @@
 ![AID_OP_POLY](./AID_OP_POLY.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_OP_POLY` ist eine globale Konstantendefinition, die die Attribut-IDs für ein Ausgabe-Polygonobjekt im ISOBUS-Datenmodell festlegt. Er wird verwendet, um auf standardisierte Attribute wie Breite, Höhe, Linienattribute, Füllattribute und Polygontyp zuzugreifen. Diese Konstanten erleichtern die eindeutige Identifizierung und den Zugriff auf die entsprechenden Attribute in Kommunikationsprotokollen und Anwendungen der Agrartechnik.

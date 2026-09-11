@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_5_VAL](./AUDI_AUI_MUX_5_VAL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AUDI_AUI_MUX_5_VAL** ist ein 5‑Wege‑Multiplexer für AUDI‑Werte. Er wählt über fünf Ereignis‑Eingänge (EI1…EI5) einen von fünf Datenwerten (val1…val5) aus und stellt diesen am Adapter‑Ausgang OUT bereit. Die SubApp kapselt die notwendige Konvertierung der numerischen Eingänge in den AUDI‑Datentyp sowie die eigentliche Multiplex‑Logik.

@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_4_VAL](./AUDI_AUI_MUX_4_VAL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **AUDI_AUI_MUX_4_VAL** ist eine Subapp und realisiert einen 4-Wege-Multiplexer für AUDI-Werte. Über die Ereignis-Eingänge `EI1` bis `EI4` wird gesteuert, welcher der vier Werte `val1` bis `val4` an den AUDI-Adapter-Ausgang `OUT` durchgeschaltet wird. Die eigentliche Auswahl übernehmen interne Funktionsbausteine vom Typ `AUI_MUX_4`, `AUDI_AUI_MUX_4` und vier `initval_AUDI`-Instanzen.

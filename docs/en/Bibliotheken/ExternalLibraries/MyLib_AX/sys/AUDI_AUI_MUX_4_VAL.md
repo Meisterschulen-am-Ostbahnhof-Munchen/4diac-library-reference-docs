@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_4_VAL](./AUDI_AUI_MUX_4_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUDI_AUI_MUX_4_VAL is a composite subapplication that implements a 4-way multiplexer for AUDI adapter values. It selects between four internal AUDI values using the event inputs EI1 to EI4. Each data input val1 to val4 provides the initial value for one internal AUDI channel. The selected value is made available through a single AUDI adapter output plug.

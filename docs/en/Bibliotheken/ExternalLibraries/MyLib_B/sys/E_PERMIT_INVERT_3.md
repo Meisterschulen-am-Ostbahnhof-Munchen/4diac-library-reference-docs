@@ -6,6 +6,7 @@
 ![E_PERMIT_INVERT_3](./E_PERMIT_INVERT_3.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 E_PERMIT_INVERT_3 is a composite subapplication that combines the IEC 61131 boolean inverter F_NOT_BOOL_INIT with the IEC 61499 event gate E_PERMIT_3. It provides three independent event channels that are only enabled when the external PERMIT signal is FALSE. The subapp therefore behaves as a 3-channel inverted event-enable gate: incoming events are forwarded to the outputs as long as the enable condition is de-asserted.

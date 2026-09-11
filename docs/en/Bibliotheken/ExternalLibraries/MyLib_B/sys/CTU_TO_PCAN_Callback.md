@@ -6,6 +6,7 @@
 ![CTU_TO_PCAN_Callback](./CTU_TO_PCAN_Callback.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 CTU_TO_PCAN_Callback is a diagnostic/debug subapplication designed to monitor PCAN callback triggers by incrementing a counter and transmitting the current counter value as a CAN message over the PCAN bus. Each time the connected callback adapter fires, the internal counter is incremented, its value is converted and packed into a CAN message structure, and the message is sent back through the callback interface. This block is intended for visualization and debugging purposes on tools like the PCAN Explorer.

@@ -3,6 +3,7 @@
 ![AID_TYPE](./AID_TYPE.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `AID_TYPE` is a global constant definition used in isobus-based applications. It defines a single constant named `OBJ_TYPE` of type `USINT` with an initial value of `0`. This constant represents the Object Type attribute identifier for an AID (Application Identification) message, as specified in the ISO 11783 (ISOBUS) standard.

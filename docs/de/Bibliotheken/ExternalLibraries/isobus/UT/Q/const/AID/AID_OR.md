@@ -3,6 +3,7 @@
 ![AID_OR](./AID_OR.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **AID_OR** ist ein globaler Konstantencontainer, der die Attribut-IDs für ein **Output Rectangle**-Objekt im ISOBUS-Objektmodell definiert. Diese IDs werden verwendet, um auf die verschiedenen Eigenschaften eines rechteckigen Objekts (z. B. Linienattribute, Breite, Höhe) zuzugreifen. Der Baustein dient als zentrale Referenz für die Verwendung dieser Konstanten in anderen Funktionsbausteinen oder Adaptern.
@@ -12,21 +13,27 @@ Der Baustein **AID_OR** ist ein globaler Konstantencontainer, der die Attribut-I
 Da es sich um einen **GlobalConstants**-Container handelt, besitzt er keine herkömmlichen ereignis- oder datenbasierten Schnittstellen. Stattdessen werden die definierten Konstanten global bereitgestellt und können innerhalb des Projekts direkt verwendet werden.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 ### **Globale Konstanten**
+
 | Konstantenname  | Datentyp | Initialwert | Beschreibung |
 |-----------------|----------|-------------|--------------|
 | LINE_ATT        | USINT    | USINT#1     | Objekt-ID eines Linienattribut-Objekts (AID_OR_LINE_ATT). |

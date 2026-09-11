@@ -6,6 +6,7 @@
 ![AuxIXA_TO_logiBUS_QXA_BG](./AuxIXA_TO_logiBUS_QXA_BG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Subapplikationsbaustein **AuxIXA_TO_logiBUS_QXA_BG** realisiert eine AUX-Funktion (Aux_IXA) auf einem digitalen Ausgang (QXA) mit Green-White-Hintergrunddarstellung. Er ist generisch aufgebaut und analog zu dem Baustein `Button_IXA_TO_logiBUS_QXA_BG` implementiert, wobei hier statt eines Buttons eine AUX-Eingangsfunktion verwendet wird. Der Baustein wurde aus einer Übungseinheit ausgelagert, um eine Wiederverwendung in verschiedenen Projekten zu ermöglichen. Er kombiniert eine ISO-bus-konforme AUX-Schnittstelle mit einem logiBUS-Digitalausgang und einer visuellen Statusanzeige.

@@ -3,6 +3,7 @@
 ![AID_WM](./AID_WM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die globale Konstantensammlung `AID_WM` definiert Attribut-IDs (Attribute Identifiers) für das **Window Mask**-Objekt im ISOBUS-Protokoll. Sie ist Teil des Pakets `isobus::UT::Q::const::AID` und stellt die numerischen Kennungen bereit, die verwendet werden, um Attribute eines Fenstermasken-Objekts (z. B. Hintergrundfarbe, Optionen, Name) in der ISO-Bus-Kommunikation anzusprechen. Die Konstanten sind als `USINT`-Werte festgelegt und dienen als Referenzwerte für die Parametrierung von Fenstermasken in Bedienterminals.

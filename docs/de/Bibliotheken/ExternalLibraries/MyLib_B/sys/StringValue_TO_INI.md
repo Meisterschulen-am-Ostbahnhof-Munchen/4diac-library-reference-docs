@@ -6,6 +6,7 @@
 ![StringValue_TO_INI](./StringValue_TO_INI.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **StringValue_TO_INI** ist eine generische Subapplikation, die einen String‑Wert von einem ISOBUS‑Gerät einliest und in einer INI‑Datei persistent speichert. Die Konfiguration erfolgt über die Angabe von Sektion, Key und der ISOBUS‑Objekt‑ID. Zusätzlich wird beim Start der gespeicherte Wert aus der INI‑Datei gelesen und über den Ausgang `VALUEO` bereitgestellt. Der Baustein ist als Wiederverwendungsmodul ausgelegt und kapselt die Kommunikation mit dem ISOBUS sowie den Zugriff auf das INI‑Dateisystem.
@@ -13,20 +14,25 @@ Der Funktionsblock **StringValue_TO_INI** ist eine generische Subapplikation, di
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine Ereignis-Eingänge vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 - **IND** – Signalisiert, dass entweder ein Wert in die INI‑Datei geschrieben oder der gespeicherte Wert gelesen und ausgegeben wurde.
 
 ### **Daten-Eingänge**
+
 - **KEY** (`STRING`) – Bezeichner des Schlüssels innerhalb der Sektion, unter dem der Wert gespeichert wird.
 - **SECTION** (`STRING`) – Name der Sektion in der INI‑Datei.
 - **u16ObjId** (`UINT`, Initialwert `ID_NULL`) – ISOBUS‑Objekt‑ID, unter der der String‑Wert vom Bus gelesen wird.
 
 ### **Daten-Ausgänge**
+
 - **VALUEO** (`STRING`) – Ausgang, der den zuletzt gelesenen Wert aus der INI‑Datei bzw. den gerade verarbeiteten Wert bereitstellt.
 
 ### **Adapter**
+
 Keine Adapter vorhanden.
 
 ## Funktionsweise

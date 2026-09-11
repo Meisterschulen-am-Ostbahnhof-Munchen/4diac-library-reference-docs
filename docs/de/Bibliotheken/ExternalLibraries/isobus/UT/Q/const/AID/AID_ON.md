@@ -3,6 +3,7 @@
 ![AID_ON](./AID_ON.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_ON` ist ein **GlobalConstants**-Baustein, der die numerischen Kennungen (Attribute IDs) für die Attribute eines **Output Number Objects** im ISOBUS definiert. Diese Konstanten werden verwendet, um auf einzelne Attribute eines solchen Objekts im Rahmen der ISO 11783-6 bzw. ISO 11783-10 (ISOBUS) zuzugreifen. Der Baustein stellt eine zentrale, wiederverwendbare Sammlung von Konstanten bereit, die in verschiedenen Funktionsbausteinen und Applikationen genutzt werden können, um die Lesbarkeit und Wartbarkeit des Codes zu verbessern.
@@ -73,6 +74,7 @@ Da es sich um einen reinen Konstanten-Baustein handelt, existiert **kein Zustand
 ## Vergleich mit ähnlichen Bausteinen
 
 Innerhalb des Pakets `isobus::UT::Q::const` existieren vermutlich ähnliche GlobalConstants-Bausteine für andere Objekttypen wie z.B.:
+
 - `AID_STRING` für Output String Objects
 - `AID_LIST` für Output List Objects
 - `AID_ANALOG` für Analoganzeigen

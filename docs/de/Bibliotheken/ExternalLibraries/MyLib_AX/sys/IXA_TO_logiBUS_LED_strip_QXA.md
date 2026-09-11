@@ -6,6 +6,7 @@
 ![IXA_TO_logiBUS_LED_strip_QXA](./IXA_TO_logiBUS_LED_strip_QXA.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `IXA_TO_logiBUS_LED_strip_QXA` ist eine generische, adapterbasierte Subapp aus `MyLib::sys`. Sie verbindet einen Taster-Baustein `logiBUS_IXA` mit einem LED-Strip-Baustein `logiBUS_LED_strip_QXA`. Über die Daten-Eingänge lassen sich der Tastereingang, die Farbe und die Strip-Nummer parametrieren. Der Baustein ist die adapterbasierte Schwester-Variante des eventbasierten Bausteins `MyLib::sys::IX_TO_logiBUS_LED_strip_QX`.

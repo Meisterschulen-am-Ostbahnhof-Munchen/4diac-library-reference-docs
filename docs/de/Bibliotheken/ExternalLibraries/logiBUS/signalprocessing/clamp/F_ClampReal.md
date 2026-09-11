@@ -3,6 +3,7 @@
 ![F_ClampReal](./F_ClampReal.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **F_ClampReal** begrenzt einen eingehenden reellen Wert (`rIn`) auf einen zulässigen Bereich zwischen einem unteren Grenzwert (`rMin`) und einem oberen Grenzwert (`rMax`). Zusätzlich werden zwei boolesche Ausgangssignale ausgegeben, die anzeigen, ob der Eingangswert über- oder unterhalb des Bereichs lag. Der Baustein wird typischerweise in Signalverarbeitungsketten oder Regelungslogik eingesetzt, um unzulässige Werte zu „clampen“ und gleichzeitig eine Über- oder Unterschreitung zu signalisieren.

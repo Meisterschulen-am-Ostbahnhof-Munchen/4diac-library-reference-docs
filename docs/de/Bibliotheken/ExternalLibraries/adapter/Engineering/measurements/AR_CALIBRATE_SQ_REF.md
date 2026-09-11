@@ -6,6 +6,7 @@
 ![AR_CALIBRATE_SQ_REF](./AR_CALIBRATE_SQ_REF.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AR_CALIBRATE_SQ_REF** realisiert eine zweipunktige Sequenzkalibrierung (Offset, dann Scale) für einen linearen Messkanal. Er basiert auf Adaptern und erzwingt über die ECC (Execution Control Chart) eine strikte Reihenfolge: Zuerst muss der Offset kalibriert werden (`CO`), danach die Skalierung (`CS`). Die Zielwerte für die Kalibrierung (`Y_Offset`, `Y_Scale`) werden nicht als einfache Daten-Eingänge, sondern als bidirektionale AR2-Sockets live von einer Visualisierung (VT) oder einem Web-Interface bereitgestellt und über zusätzliche AR2-Plugs (`ZERO`, `SPAN`) persistent gespeichert. Das Modul berechnet den kalibrierten Ausgabewert nach der Formel `Y = (X + OFFSET) * SCALE`.

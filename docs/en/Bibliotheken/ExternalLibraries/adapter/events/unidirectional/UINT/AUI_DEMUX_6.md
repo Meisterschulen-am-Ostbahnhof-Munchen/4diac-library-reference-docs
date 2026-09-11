@@ -3,6 +3,7 @@
 ![AUI_DEMUX_6](./AUI_DEMUX_6.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_DEMUX_6** is an event demultiplexer function block that routes an incoming event to one of six possible output channels based on a selector index. Unlike the conventional `E_DEMUX_6` block, which requires separate Event Input (`EI`) and control data input (`K`) pins, this variant encapsulates both the event trigger and the selector index within a single **AUI adapter socket**. The adapter delivers the activation event and the selector value together, making the block highly suitable for adapter-based composition patterns and hierarchical application design.

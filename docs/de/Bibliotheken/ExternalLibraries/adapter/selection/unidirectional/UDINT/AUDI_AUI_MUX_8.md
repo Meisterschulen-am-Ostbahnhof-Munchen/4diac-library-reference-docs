@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_8](./AUDI_AUI_MUX_8.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `AUDI_AUI_MUX_8` ist ein generischer Multiplexer, der über einen Adapter-Index `K` einen von acht Eingangswerten (`IN1` bis `IN8`) auswählt und diesen über den Adapter-Ausgang `OUT` bereitstellt. Der Baustein wurde speziell für die effiziente Weitergabe von Datenströmen entworfen und aktualisiert den Ausgang nur bei einer tatsächlichen Wertänderung. Dadurch werden unnötige Ereignisse vermieden und die Netzwerklast reduziert.
@@ -10,12 +11,15 @@ Der Funktionsblock `AUDI_AUI_MUX_8` ist ein generischer Multiplexer, der über e
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - Keine vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 - **CNF** (Confirmation): Wird ausgelöst, wenn sich der ausgewählte Wert (also der aktuelle Wert am Ausgang) tatsächlich ändert. Dies kann durch eine Änderung des Index `K` oder durch eine neue Wertänderung des aktuell ausgewählten Eingangs verursacht werden.
 
 ### **Daten-Eingänge**
+
 - **K** (Socket, Typ `AUI`): Index zur Auswahl des aktiven Eingangs. Gültige Werte sind 0 bis 7.
 - **IN1** (Socket, Typ `AUDI`): Eingangswert 1, aktiv bei `K = 0`.
 - **IN2** (Socket, Typ `AUDI`): Eingangswert 2, aktiv bei `K = 1`.
@@ -27,9 +31,11 @@ Der Funktionsblock `AUDI_AUI_MUX_8` ist ein generischer Multiplexer, der über e
 - **IN8** (Socket, Typ `AUDI`): Eingangswert 8, aktiv bei `K = 7`.
 
 ### **Daten-Ausgänge**
+
 - **OUT** (Plug, Typ `AUDI`): Gibt den Wert des aktuell ausgewählten Eingangs weiter.
 
 ### **Adapter**
+
 - **Ausgangsadapter (Plug):** `OUT`
 - **Eingangsadapter (Sockets):** `K`, `IN1` – `IN8`
 

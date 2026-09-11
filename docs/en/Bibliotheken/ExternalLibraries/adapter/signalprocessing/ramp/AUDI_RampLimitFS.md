@@ -3,6 +3,7 @@
 ![AUDI_RampLimitFS](./AUDI_RampLimitFS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_RampLimitFS** function block is a composite wrapper designed to integrate the ramp functionality of the `RampLimitFS` FB with an AUDI adapter interface. It provides a seamless connection between unidirectional AUDI sockets/plugs and the internal ramp generator, while also exposing latched status flags (`qAtZero` and `qAtFull`) through AX adapters. The FB accepts a setpoint via a `LOAD` socket, applies ramp-up/down or jump commands, and outputs the ramped value via the `OUT` plug. The two status plugs indicate whether the current output has reached the defined minimum or maximum value, with the latched behavior ensuring the flags persist until the next corresponding event.

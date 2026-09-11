@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_2](./AX_E_PERMIT_INVERT_2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AX_E_PERMIT_INVERT_2** ist eine Subapplikation, die zwei Ereignis-Eingänge über ein invertiertes Freigabesignal auf zwei Ereignis-Ausgänge durchschaltet. Er kombiniert dabei einen Inverter (AX_NOT_INIT) mit einem 2‑kanaligen Ereignis-Freigabe-Gate (AX_E_PERMIT_2). Die Subapplikation erlaubt es, Ereignisse nur dann weiterzuleiten, wenn das über den Adapter `PERMIT` anliegende Freigabesignal **inaktiv** ist. Dadurch eignet sie sich für Logiken, bei denen eine fehlende Freigabe (z. B. bei Sicherheitsfunktionen) die Ereignisweiterleitung blockiert.

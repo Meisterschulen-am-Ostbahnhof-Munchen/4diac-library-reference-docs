@@ -3,6 +3,7 @@
 ![AID_WM](./AID_WM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_WM` global constant group defines attribute identifiers for window mask objects within the ISOBUS (ISO 11783) Universal Terminal protocol. These constants are used as keys to reference specific attributes when reading or writing window mask object properties through the ISOBUS communication interface. They belong to the `isobus::UT::Q::const::AID` package and are defined in the namespace of the 4diac-ide development environment.

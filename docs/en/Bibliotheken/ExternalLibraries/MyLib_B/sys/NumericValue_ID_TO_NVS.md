@@ -6,6 +6,7 @@
 ![NumericValue_ID_TO_NVS](./NumericValue_ID_TO_NVS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 NumericValue_ID_TO_NVS is a generic IEC 61499 subapplication that reads a numeric value identified by an object ID and stores or retrieves that value in the non-volatile storage (NVS) of an ESP32. It combines an ISOBUS-compatible numeric value input block, a data type conversion function block, and an NVS storage block into a reusable component. The subapplication exposes a simple interface with one event output, two data inputs, and one data output.

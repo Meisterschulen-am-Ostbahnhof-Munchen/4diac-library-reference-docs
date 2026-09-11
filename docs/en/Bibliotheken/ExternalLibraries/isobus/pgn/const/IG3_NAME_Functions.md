@@ -13,18 +13,23 @@ The **IG3_NAME_Functions** global constant block defines the standardized functi
 This block is a **Global Constants** definition and does not contain any event inputs, event outputs, data inputs, data outputs, or adapter interfaces. It purely defines named constants that can be referenced across the 4diac development environment.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 None.
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality

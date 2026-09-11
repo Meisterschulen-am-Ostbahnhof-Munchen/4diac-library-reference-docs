@@ -58,6 +58,7 @@ The adapter plug provides two input Booleans, `DI_UP` and `DI_DOWN`. When the pl
 The `SUBSCRIBE_2` FB continuously listens to the remote node given by `ID_READ`. When new data arrives (event `IND`), the two received Booleans (`RD_1` and `RD_2`) are latched into the corresponding `E_D_FF` flip‑flops. The outputs of these flip‑flops (`Q`) are placed on `DO_UP` and `DO_DOWN`, and the respective output events (`EO_UP`, `EO_DOWN`) are triggered on the adapter plug, notifying the consumer that new values are available.
 
 **Initialization and Monitoring:**  
+
 - The `INIT` event starts the `READ_SUBSCRIBE` first; after its `INITO`, the `WRITE_CLIENT` is initialized. The overall `INITO` is emitted when both are ready.
 - The `AND_QO` logic combines the `QO` outputs of both network blocks. `QO` is `TRUE` only when both the client and the subscriber report operational health. The `CNF` event is triggered by the `AND_QO` block whenever any of the two blocks updates its status. This allows external logic to monitor the combined service status.
 

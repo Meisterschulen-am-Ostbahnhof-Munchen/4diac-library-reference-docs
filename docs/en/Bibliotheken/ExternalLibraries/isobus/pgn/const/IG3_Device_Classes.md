@@ -3,6 +3,7 @@
 ![IG3_Device_Classes](./IG3_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `IG3_Device_Classes` global constant definition provides a standardized set of byte‑encoded identifiers for Industry Group 3 (IG3) vehicle systems, specifically those used in construction, agricultural, and mobile machinery applications. These constants align with the SAE J1939 / ISOBUS 11783 protocol family and are intended to be used within PGN (Parameter Group Number) communications to clearly identify the type of system or device class being addressed. By using these symbolic names instead of raw numeric values, source code becomes more readable, maintainable, and less error‑prone.

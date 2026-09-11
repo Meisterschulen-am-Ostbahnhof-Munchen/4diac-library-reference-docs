@@ -6,6 +6,7 @@
 ![T_FF_EVENT](./T_FF_EVENT.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 T_FF_EVENT is a generic toggle flip-flop subapplication implemented by combining an `E_SWITCH` and an `E_SR` function block. It provides a simple, event-driven mechanism where every activation of the `IND` event input toggles the boolean output `Q`. A corresponding `EO` event is emitted whenever the state changes, making the block suitable for edge detection and state-based control logic. The subapplication is fully generic and does not depend on any specific hardware platform.

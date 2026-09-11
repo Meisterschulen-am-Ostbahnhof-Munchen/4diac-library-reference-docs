@@ -6,6 +6,7 @@
 ![NumericValue_PHYS_TO_INI](./NumericValue_PHYS_TO_INI.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die SubApp **NumericValue_PHYS_TO_INI** dient zum Einlesen eines numerischen Werts aus einer physikalischen Größe (z. B. einem Messwert mit Skalierung und Offset) und zum Speichern dieses Werts in eine INI-Datei. Sie kombiniert dabei die Funktionen eines physikalischen Wertaufnehmers (`NumericValue_PHYS`) mit einem INI-Speicher (`INI`) und einer Qualitätsüberwachung (`Q_NumericValue_PHYS`). Die SubApp ist generisch aufgebaut und ermöglicht die Wiederverwendung in verschiedenen Anwendungen, bei denen ein physikalischer Wert persistiert werden soll.

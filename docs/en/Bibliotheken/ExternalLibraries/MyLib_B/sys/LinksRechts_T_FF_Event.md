@@ -6,6 +6,7 @@
 ![LinksRechts_T_FF_Event](./LinksRechts_T_FF_Event.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `LinksRechts_T_FF_Event` is a reusable IEC 61499 subapplication that implements a left/right toggle switch using an event-triggered T flip-flop. It provides two complementary boolean outputs, `Rechts` and `Links`, and can be used wherever a single event should alternately switch between two states.

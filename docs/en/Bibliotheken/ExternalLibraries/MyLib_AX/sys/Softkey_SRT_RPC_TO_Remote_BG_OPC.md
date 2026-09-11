@@ -6,6 +6,7 @@
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC](./Softkey_SRT_RPC_TO_Remote_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **Softkey_SRT_RPC_TO_Remote_BG_OPC** subapplication is a composite type designed for a two‑device OPC‑UA automation scenario. It runs on **Device A** (Station 11, 192.168.1.11) and controls three softkeys – **Set**, **Reset**, and **Toggle** – each of which triggers its own argument‑free, return‑value‑free OPC‑UA method call on a remote **Device B**. Instead of passing a string parameter to a single generic method, this design (Option A) uses three distinct remote method addresses, providing clearer semantics and easier maintenance. Additionally, a **GreenWhiteBackground** indication on the Toggle softkey reflects a flip‑flop state that is locally monitored on Device B and made available to Device A via an OPC‑UA variable subscription. The entire protocol logic is encapsulated inside the `MyLib::sys` composite, keeping the device resource simple and reusable.
@@ -15,9 +16,11 @@ The **Softkey_SRT_RPC_TO_Remote_BG_OPC** subapplication is a composite type desi
 The subapplication exposes only data inputs at its interface. All event handling and adapter logic are internal to the composite.
 
 ### **Event Inputs**
+
 _None._ The subapplication does not expose any event inputs. Activation is performed internally by the softkey function blocks, which react to hardware events.
 
 ### **Event Outputs**
+
 _None._ No events are propagated to the outside world.
 
 ### **Data Inputs**
@@ -33,9 +36,11 @@ _None._ No events are propagated to the outside world.
 | `ID_STATE_READ`  | `WSTRING` | Locally monitored OPC‑UA address (`BOOL`, `ACTION=READ`) for the flip‑flop state that is remotely written by Device B. |
 
 ### **Data Outputs**
+
 _None._ No data is returned to the caller.
 
 ### **Adapters**
+
 _None at the interface level._ Internally, an `AX_SUBSCRIBE_1` adapter is used to establish the subscription for the state variable.
 
 ## Functionality
@@ -64,8 +69,8 @@ The subapplication implements the following end‑to‑end behavior:
 
 The subapplication itself does not contain an explicit state machine. However, its constituent elements exhibit the following state‑oriented behavior:
 
-- **Softkey FBs** – Each `Softkey_IE` is in an *idle* state until a hardware‑level key‑release event occurs. Upon detection, the FB generates an `IND` event and returns to the idle state.
-- **Client FBs** – Each `CLIENT_0` transitions through *request sent* → *response received* → *idle* for every triggered call. With `QI = TRUE`, the clients remain operationally ready.
+- **Softkey FBs** – Each `Softkey_IE` is in an _idle_ state until a hardware‑level key‑release event occurs. Upon detection, the FB generates an `IND` event and returns to the idle state.
+- **Client FBs** – Each `CLIENT_0` transitions through _request sent_ → _response received_ → _idle_ for every triggered call. With `QI = TRUE`, the clients remain operationally ready.
 - **State variable (remote)** – The flip‑flop state on Device B is a single BOOL (binary) value. It transitions between `0` (white background) and `1` (green background) each time the Toggle method is invoked. The `STATE_SUBSCRIBE` adapter continuously tracks changes and forwards them to the background rendering component.
 
 The overall system thus implements a classic **set / reset / toggle** control paradigm with visual feedback, where the state source of truth resides on Device B.

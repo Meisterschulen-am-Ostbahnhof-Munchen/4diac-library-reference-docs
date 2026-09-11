@@ -3,6 +3,7 @@
 ![BargraphSplitFS_AR](./BargraphSplitFS_AR.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **BargraphSplitFS_AR** ist ein Adapter-Wrapper um den Baustein **BargraphSplitFS**. Er erweitert dessen Funktionalität, indem er die Eingabe eines vorzeichenbehafteten physikalischen Werts nicht über ein herkömmliches `REQ`/`rValue`-Paar, sondern über einen AR-Adapter-Socket (unidirektional) entgegennimmt. Dadurch lässt sich der Baustein nahtlos in eine adapterbasierte Kommunikationsstruktur einbinden, wie sie beispielsweise in ISO-11783-Netzwerken (ISOBUS) üblich ist. Die Ausgänge für Status und Ergebnisse sowie die Überlauf-Meldungen werden unverändert durchgereicht.

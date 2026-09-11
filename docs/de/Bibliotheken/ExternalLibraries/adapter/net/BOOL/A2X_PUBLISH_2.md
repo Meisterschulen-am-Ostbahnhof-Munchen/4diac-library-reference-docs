@@ -3,6 +3,7 @@
 ![A2X_PUBLISH_2](./A2X_PUBLISH_2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `A2X_PUBLISH_2` ist ein zusammengesetzter Baustein (Composite FB), der dazu dient, zwei boolesche Werte eines A2X-Adapters über ein Netzwerk zu publizieren. Er basiert auf dem Standard-Funktionsblock `PUBLISH_2` und ergänzt diesen um eine Adapter-Schnittstelle vom Typ `adapter::types::unidirectional::A2X`. Durch die Verwendung von flankengetriggerten Speichern (`E_D_FF`) werden Daten nur dann gesendet, wenn sich einer der beiden Werte ändert, wodurch unnötige Netzwerklast vermieden wird.

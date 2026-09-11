@@ -3,6 +3,7 @@
 ![AUI_DEMUX_8](./AUI_DEMUX_8.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AUI_DEMUX_8** ist ein Ereignis-Demultiplexer mit 8 Ausgängen. Er empfängt über einen AUI-Adapter (Latching-Adapter) sowohl das auslösende Ereignis als auch den Auswahlindex. Abhängig vom übergebenen Index wird das eingehende Ereignis an genau einen der acht Ereignis-Ausgänge weitergeleitet. Der Baustein ist als generischer FB (GenericClassName `GEN_E_DEMUX`) implementiert und stellt eine moderne, adapterbasierte Alternative zum klassischen `E_DEMUX` dar.

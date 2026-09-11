@@ -13,12 +13,15 @@ The AID_AUXC2 global constants provide the attribute identifiers for the Auxilia
 AID_AUXC2 is a global constant container and does not expose a runtime interface. Consequently, it has no event or data inputs/outputs or adapters.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
+
 None. The following global constants are provided instead:
 
 | Constant | Data Type | Initial Value | Description |
@@ -27,9 +30,11 @@ None. The following global constants are provided instead:
 | `OBJ_ID`   | USINT | `USINT#2` | Attribute ID 2 (`AID_AUXC2_OBJ_ID`) – Object ID. Contains the object ID of a referenced Auxiliary Function or Auxiliary Input object, or NULL. |
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality

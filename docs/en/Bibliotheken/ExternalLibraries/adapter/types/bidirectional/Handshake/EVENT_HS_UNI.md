@@ -3,6 +3,7 @@
 ![EVENT_HS_UNI](./EVENT_HS_UNI.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `EVENT_HS_UNI` is a unidirectional, dataless member of the `EVENT_HS` handshake family (IEC 61499 design pattern). It declares only a single **REQ** event that travels from the Plug side to the Socket side. In contrast to the full `EVENT_HS` adapter, it omits **CNF**, **IND**, and **RSP** entirely, reducing the interaction to a pure fire-and-forget notification.
@@ -34,6 +35,7 @@ None. No data is returned from the Socket side.
 ### **Adapters**
 
 The adapter provides the standard two connector roles:
+
 - **PLUG** (left interface): initiates the interaction by emitting **REQ**.
 - **SOCKET** (right interface): receives and reacts to **REQ**.
 
@@ -44,6 +46,7 @@ The service sequence `notify` describes a single transaction: an input primitive
 `EVENT_HS_UNI` implements a one-way, dataless notification channel. When the connected function block on the Plug side raises the **REQ** event, it is forwarded directly to the Socket side, where the corresponding function block reacts to it.
 
 Because no acknowledgment path exists, the semantics are purely best-effort:
+
 - The Plug side cannot know whether the Socket side received the event.
 - The Socket side cannot confirm processing or reject the request.
 - No retry, timeout, or handshake state tracking is possible at the adapter level.

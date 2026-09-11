@@ -6,6 +6,7 @@
 ![A2X2_ILOCK_SWITCH_PROTECT](./A2X2_ILOCK_SWITCH_PROTECT.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **A2X2_ILOCK_SWITCH_PROTECT** subapplication bundles a bidirectional A2X2 network round-trip with a last-wins arbitration mechanism including a protective dead time. It combines three logical functions in a single composite component: a bidirectional-to-unidirectional adapter bridge, an interlock switch protector operating on the paired adapter channels, and a splitter that duplicates the interlocked state both to the write-back return path and to an external plug for physical output driving.

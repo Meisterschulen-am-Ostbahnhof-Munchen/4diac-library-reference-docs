@@ -6,6 +6,7 @@
 ![Button_IXA_TO_Remote_WRITE_BG_OPC](./Button_IXA_TO_Remote_WRITE_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die Subapp `Button_IXA_TO_Remote_WRITE_BG_OPC` dient zum Lesen eines VT-Buttons und zum Senden eines Remote-OPC-UA-Write-Befehls an ein Zielmodul. Zusätzlich wird die VT-Hintergrundfarbe des Buttons über einen Remote-Subscribe (OPC-UA) aktualisiert. Die Subapp ist generisch ausgelegt und unterstützt einen Kanal; sie eignet sich für Ausgänge auf Modulen, die keine eigene VT-Anbindung besitzen.

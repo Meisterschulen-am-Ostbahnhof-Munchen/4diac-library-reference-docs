@@ -3,6 +3,7 @@
 ![AID_SKM](./AID_SKM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein **AID_SKM** ist ein globaler Konstanten-Container, der Attribut-Identifikatoren für Softkey-Masken-Objekte (Soft Key Mask Object Attribute IDs) im ISOBUS-Kontext definiert. Er wird im Paket `isobus::UT::Q::const::AID` bereitgestellt und dient als zentrale Referenz für einheitliche Werte, die in Steuerungsanwendungen zur Darstellung von Benutzeroberflächen verwendet werden.
@@ -12,18 +13,23 @@ Der Baustein **AID_SKM** ist ein globaler Konstanten-Container, der Attribut-Ide
 Da es sich um eine reine Konstantendeklaration handelt, besitzt der Baustein keine ein- oder ausgehenden Ereignisse, keine Daten-Ein-/Ausgänge und keine Adapter.
 
 ### **Ereignis-Eingänge**
+
 Keine vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Keine vorhanden.
 
 ### **Daten-Eingänge**
+
 Keine vorhanden.
 
 ### **Daten-Ausgänge**
+
 Keine vorhanden.
 
 ### **Adapter**
+
 Keine vorhanden.
 
 ## Funktionsweise

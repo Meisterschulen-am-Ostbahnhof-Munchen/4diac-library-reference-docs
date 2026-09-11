@@ -16,9 +16,11 @@ Dieser Baustein realisiert eine Fernbedienungs‑Funktion für einen SoftKey, de
 Die SubApp besitzt ausschließlich Dateneingänge. Es gibt keine Ereignisse, Datenausgänge oder Adapter als externe Schnittstellen.
 
 ### **Ereignis-Eingänge**  
+
 Keine.
 
 ### **Ereignis-Ausgänge**  
+
 Keine.
 
 ### **Daten-Eingänge**
@@ -31,9 +33,11 @@ Keine.
 | `ID_WEB_READ` | WSTRING  | Lokale Subscribe‑Adresse für einen Web‑Client (z. B. vt‑ui‑mirror) auf demselben Modul, ODER‑verknüpft mit dem echten SoftKey |
 
 ### **Daten-Ausgänge**  
+
 Keine.
 
 ### **Adapter**  
+
 Keine.
 
 ## Funktionsweise

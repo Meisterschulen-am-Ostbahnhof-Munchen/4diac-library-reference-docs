@@ -3,6 +3,7 @@
 ![IG4_Device_Classes](./IG4_Device_Classes.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `IG4_Device_Classes` ist ein GlobalConstants-Baustein in 4diac. Er definiert Konstanten für Geräteklassen (Device Classes) von Fahrzeugsystemen gemäß ISOBUS / Industry Group 4. Diese Konstanten sind im Compiler-Paket `isobus::pgn::const` verfügbar und können in IEC 61499-Anwendungen als globale, unveränderliche Werte referenziert werden.

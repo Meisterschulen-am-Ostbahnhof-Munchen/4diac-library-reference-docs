@@ -3,6 +3,7 @@
 ![Q_ActiveMask_AUI](./Q_ActiveMask_AUI.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **Q_ActiveMask_AUI** function block is an AUI (Adapter User Interface) wrapper for the core block **Q_ActiveMask**. It provides a convenient, unidirectional adapter–based interface to change the active mask on an ISO 11783‑6 (ISOBUS) Virtual Terminal. The block encapsulates the functionality of the underlying service, translating adapter signals into the internal request/confirm protocol of the wrapped block.
@@ -12,26 +13,31 @@ This wrapper is designed for applications that already use the unidirectional AU
 ## Interface Structure
 
 ### **Event Inputs**
+
 | Event   | Type  | Comment                    |
 |---------|-------|----------------------------|
 | `INIT`  | EInit | Service Initialization     |
 
 ### **Event Outputs**
+
 | Event | Type   | With Variables         | Comment                        |
 |-------|--------|------------------------|--------------------------------|
 | `INITO` | EInit | –                      | Initialization Confirm        |
 | `CNF`  | Event  | `STATUS`, `s16result`  | Confirmation of Requested Service |
 
 ### **Data Inputs
+
 *None – all data is exchanged via the adapters.*
 
 ### **Data Outputs**
+
 | Data Name  | Type   | Comment |
 |------------|--------|---------|
 | `STATUS`   | STRING | Service Status |
 | `s16result`| INT    | Retval – see description in the core block |
 
 ### **Adapters**
+
 | Direction | Name          | Type                                | Comment              |
 |-----------|---------------|-------------------------------------|----------------------|
 | Socket    | `u16NewMaskId`| `adapter::types::unidirectional::AUI` | New active mask ID   |

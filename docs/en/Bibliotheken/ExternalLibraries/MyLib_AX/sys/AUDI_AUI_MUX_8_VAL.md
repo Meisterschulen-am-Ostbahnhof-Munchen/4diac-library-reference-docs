@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_8_VAL](./AUDI_AUI_MUX_8_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUDI_AUI_MUX_8_VAL is a composite subapplication that implements an 8‑channel multiplexer for values of type `UDINT`. It provides eight event inputs (`EI1` … `EI8`) and eight corresponding data inputs (`val1` … `val8`). When an event is triggered, the associated data value is routed through an internal adapter network and made available at the single AUDI adapter output. The subapplication combines an event multiplexer (`AUI_MUX_8`), an adapter selection block (`AUDI_AUI_MUX_8`), and eight initializer blocks (`initval_AUDI_1` … `initval_AUDI_8`) to achieve a clean, event‑driven selection of up to eight `UDINT` values.

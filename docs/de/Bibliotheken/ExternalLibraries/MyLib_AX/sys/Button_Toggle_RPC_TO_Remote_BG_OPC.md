@@ -6,6 +6,7 @@
 ![Button_Toggle_RPC_TO_Remote_BG_OPC](./Button_Toggle_RPC_TO_Remote_BG_OPC.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `Button_Toggle_RPC_TO_Remote_BG_OPC` ist eine Subapplikation (SubApp) zur Realisierung eines Taster-basierten Remote-Prozeduraufrufs (RPC) über OPC-UA. Er dient als Analogie zum vorhandenen Softkey-Baustein `Softkey_Toggle_RPC_TO_Remote_BG_OPC`, ist jedoch für den Einsatz mit IO-Diagnose-Tastern (z. B. CButton) konzipiert. Der Baustein reagiert auf das Ereignis „Loslassen“ (BT_RELEASED_UNLATCHED) eines Tasters und löst daraufhin einen argument- und rückgabewertlosen OPC-UA-Methodenaufruf auf einem entfernten Zielmodul aus. Zusätzlich überwacht er den Zustand eines Flipflops auf dem Zielmodul und visualisiert diesen über eine Hintergrundfarb-Darstellung (GreenWhiteBackground). Das Protokoll ist identisch zum Softkey-Pendant, verwendet jedoch eine Taster-Eingangsschnittstelle (Button_IE) statt einer Softkey-Schnittstelle.
@@ -61,6 +62,7 @@ Die Verbindung zwischen `u16ObjId` und den internen Bausteinen stellt sicher, da
 ## Zustandsübersicht
 
 Der Baustein selbst besitzt keinen expliziten Zustandsautomaten. Der überwachte Flipflop-Zustand (Bool) kann zwei Werte annehmen:
+
 - **TRUE**: Taster gedrückt/aktiviert → Hintergrund grün
 - **FALSE**: Taster losgelassen/deaktiviert → Hintergrund weiß
 

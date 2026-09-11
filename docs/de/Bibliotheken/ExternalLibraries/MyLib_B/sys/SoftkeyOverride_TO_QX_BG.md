@@ -6,6 +6,7 @@
 ![SoftkeyOverride_TO_QX_BG](./SoftkeyOverride_TO_QX_BG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **SoftkeyOverride_TO_QX_BG** realisiert einen digitalen Ausgang mit manueller Bedienmöglichkeit über eine Softkey-Taste. Das Programm-Signal `OUT` wird dabei per ODER-Verknüpfung mit dem Zustand der Softkey-Taste kombiniert und auf den physikalischen Ausgang `QX` ausgegeben. Ein Hintergrundobjekt (GreenWhiteBackground) spiegelt den aktuellen Zustand des Ausgangs wider. Der Baustein ist generisch einsetzbar und wurde zur Wiederverwendung aus einer bestehenden Übungsstruktur ausgelagert.
@@ -13,20 +14,25 @@ Der Funktionsblock **SoftkeyOverride_TO_QX_BG** realisiert einen digitalen Ausga
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 - `REQ` (Event) – Service Request: Triggert die Verarbeitung der Eingangsdaten und die Aktualisierung des Ausgangs.
 
 ### **Ereignis-Ausgänge**
+
 - Keine (Es sind keine Ereignis-Ausgänge definiert; der Abschluss der Verarbeitung wird intern über `QX.CNF` an den Hintergrundbaustein weitergeleitet.)
 
 ### **Daten-Eingänge**
+
 - `OUT` (BOOL) – Programmsignal für den Ausgang.
 - `u16ObjId` (UINT) – Objekt-ID der Softkey-Taste (Initialwert `ID_NULL`).
 - `Output` (logiBUS::io::DQ::logiBUS_DO_S) – Konfigurationsparameter für den logiBUS-Ausgang (Initialwert `logiBUS_DO::Invalid`).
 
 ### **Daten-Ausgänge**
+
 - Keine (Der Ausgang erfolgt über den eingebetteten `QX`-Funktionsblock auf den physischen Kanal.)
 
 ### **Adapter**
+
 - Keine (Es sind keine Adapter-Schnittstellen vorhanden.)
 
 ## Funktionsweise
@@ -38,6 +44,7 @@ Der Baustein kombiniert das Programm-Signal `OUT` mit dem Zustand einer Softkey-
 - Parallel wird dasselbe Signal an den Hintergrundbaustein `GreenWhiteBackground` gesendet, um den optischen Zustand (z. B. Farbe) zu aktualisieren.
 
 Die Ereignissteuerung:
+
 - Das Eingangsereignis `REQ` und das Ereignis `IX.IND` (Softkey-Interrupt) triggern beide die `OR_2`-Verarbeitung.
 - Nach Abschluss der QX-Aktualisierung signalisiert `QX.CNF` dem Hintergrundbaustein, dass eine Zustandsänderung vorliegt und der Hintergrund neu gezeichnet werden soll.
 

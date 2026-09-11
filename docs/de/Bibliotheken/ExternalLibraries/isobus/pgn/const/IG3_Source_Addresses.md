@@ -3,6 +3,7 @@
 ![IG3_Source_Addresses](./IG3_Source_Addresses.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Das globale Konstantenobjekt **IG3_Source_Addresses** definiert feste Quelladressen (Source Addresses) für Geräte des ISOBUS‑Netzwerks (ISO 11783) speziell für die Industriegruppe 3. Diese Adressen werden zur eindeutigen Identifizierung von Steuergeräten, Sensoren und Anzeigeeinheiten innerhalb eines landwirtschaftlichen oder bautechnischen Fahrzeugs verwendet. Der Baustein stellt keinen aktiven Funktionsblock dar, sondern liefert einen Satz von Konstanten, die in anderen Applikationen als globale Variablen referenziert werden können.

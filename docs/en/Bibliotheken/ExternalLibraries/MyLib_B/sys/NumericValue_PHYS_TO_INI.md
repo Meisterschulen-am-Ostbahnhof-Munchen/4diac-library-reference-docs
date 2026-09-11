@@ -6,6 +6,7 @@
 ![NumericValue_PHYS_TO_INI](./NumericValue_PHYS_TO_INI.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `NumericValue_PHYS_TO_INI` subapplication provides a generic, reusable mechanism for reading a scaled numeric process or device value (the PHYS variant) and persistently storing it in an INI storage. It combines a physical-value acquisition block, an INI storage block, and a query-conversion block to deliver a complete read-and-persist chain. The entity is designed to be parameterized via a key, a section name, and a numeric object-pool descriptor that carries scaling, offset, and decimal-place information.

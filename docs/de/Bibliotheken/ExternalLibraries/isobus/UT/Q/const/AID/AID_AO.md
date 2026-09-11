@@ -13,18 +13,23 @@ Der Baustein **AID_AO** ist ein globaler Konstanten-Baustein der 4diac-IDE, der 
 Da es sich um einen GlobalConstants-Baustein handelt, besitzt er keine klassischen Ein-/Ausgänge oder Ereignisse. Die **Schnittstellenstruktur** besteht ausschließlich aus den globalen Konstanten, die als Datenwerte für andere Bausteine verfügbar sind.
 
 ### **Ereignis-Eingänge**
+
 Keine.
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 Keine.
 
 ### **Daten-Ausgänge**
+
 Keine – die Konstanten werden nicht als Ausgänge geführt, sondern global im Projekt bereitgestellt. Sie können über den Namen (z.B. `AID_AO.WIDTH`) direkt in Ausdrücken verwendet werden.
 
 ### **Adapter**
+
 Keine.
 
 | Konstante | Wert | Beschreibung |
@@ -44,6 +49,7 @@ Keine.
 Dieser Baustein definiert Konstanten, die die numerischen Kennungen der Attribute eines Animationsobjekts im ISOBUS-Objektmodell festlegen. Diese IDs werden typischerweise verwendet, um über den ISOBUS-Dienst „Get/Set Attribute“ gezielt Eigenschaften eines Animationsobjekts auszulesen oder zu verändern. Die Konstanten sind als `USINT` (Unsigned Short Integer) deklariert und fest mit den Werten 1 bis 9 belegt.
 
 Die Bedeutung der `OBJECTS`-Konstante wird in den Kommentaren näher erläutert:  
+
 - **Bit 0**: Bestimmt die Animationssequenz (0 = Einzelschuss, 1 = Schleife)  
 - **Bits 1-2**: Legen das Verhalten bei deaktivierter Animation fest:  
   - 0 = Pause  

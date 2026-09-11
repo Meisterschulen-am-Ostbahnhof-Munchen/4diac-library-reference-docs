@@ -6,6 +6,7 @@
 ![Toggle_RPC_FROM_Remote_QXA_OPC](./Toggle_RPC_FROM_Remote_QXA_OPC.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 `Toggle_RPC_FROM_Remote_QXA_OPC` is a composite SubApplication designed for a distributed OPC UA control scenario. It runs on Device B and waits for a pure RPC trigger method call coming from Device A. Each received trigger toggles a real flip-flop logic block, updates a local digital output, and actively writes the new state back to Device A. The communication protocol is encapsulated in the composite itself, so the device resource does not need any protocol-specific wiring.

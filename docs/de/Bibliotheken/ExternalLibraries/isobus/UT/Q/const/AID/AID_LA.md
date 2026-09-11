@@ -3,6 +3,7 @@
 ![AID_LA](./AID_LA.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_LA` ist ein Satz globaler Konstanten, der die Attribut-IDs für Linienobjekte (Line Attributes) im ISOBUS-Protokoll definiert. Diese Konstanten werden verwendet, um auf spezifische Eigenschaften von Linienobjekten zuzugreifen, beispielsweise Farbe, Breite und Art der Linie. Sie dienen als gemeinsame Referenz für andere Bausteine und Anwendungen, die mit Linien in der virtuellen Benutzeroberfläche arbeiten.

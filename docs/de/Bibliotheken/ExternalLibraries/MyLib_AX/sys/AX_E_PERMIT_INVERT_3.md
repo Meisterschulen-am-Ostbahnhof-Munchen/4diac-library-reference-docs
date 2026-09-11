@@ -6,6 +6,7 @@
 ![AX_E_PERMIT_INVERT_3](./AX_E_PERMIT_INVERT_3.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsbaustein **AX_E_PERMIT_INVERT_3** ist eine Subapplikation (SubApp) zur Realisierung eines **3‑Kanal invertierten Event‑Freigabe‑Gates**. Er kombiniert die Bausteine `AX_NOT_INIT` (logische Negation eines Adaptersignals) und `AX_E_PERMIT_3` (3‑Kanal Event‑Freigabe) zu einer gekapselten, wiederverwendbaren Einheit.

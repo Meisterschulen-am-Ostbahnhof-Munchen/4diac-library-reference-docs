@@ -3,6 +3,7 @@
 ![AID_GD](./AID_GD.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Baustein `AID_GD` (Attribute ID für Grafikdaten) ist ein globaler Konstantendefinitions-Baustein gemäß IEC 61499. Er stellt konstante Werte bereit, die als Attribut-IDs für die Kommunikation mit ISO-bus-fähigen Geräten dienen. Insbesondere wird hier die Konstante `FORMAT` definiert, die das Grafikformat für PNG-basierte Bilddaten festlegt. Solche Konstanten werden in der Regel in übergeordneten Systemen verwendet, um einheitliche und eindeutige Kennungen für den Austausch von Grafikinformationen zu gewährleisten.
@@ -12,21 +13,27 @@ Da es sich um einen `GlobalConstants`-Baustein handelt, werden keine ausführbar
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Es sind keine Ereignis-Eingänge vorhanden. Der Baustein besitzt keine ereignisgesteuerten Schnittstellen.
 
 ### **Ereignis-Ausgänge**
+
 Es sind keine Ereignis-Ausgänge vorhanden.
 
 ### **Daten-Eingänge**
+
 Es sind keine Daten-Eingänge vorhanden.
 
 ### **Daten-Ausgänge**
+
 Es sind keine Daten-Ausgänge vorhanden. Die definierten Konstanten werden nicht über Ausgänge bereitgestellt, sondern stehen global im Kontext des Bausteins zur Verfügung.
 
 ### **Adapter**
+
 Es sind keine Adapter vorhanden.
 
 ### Globale Konstanten (Definitionen)
+
 | Name | Typ | Initialwert | Kommentar |
 |------|-----|-------------|-----------|
 | `FORMAT` | `USINT` | `USINT#1` | 1: AID_GD_FORMAT – Grafiktyp: 0 = PNG, beschränkt auf 32-Bit-RGBA Maximum. |

@@ -6,7 +6,9 @@
 ![AR_CALIBRATE_SQ_REF](./AR_CALIBRATE_SQ_REF.svg)
 
 * * * * * * * * * *
+
 ## Introduction
+
 The `AR_CALIBRATE_SQ_REF` function block implements a sequential two‑point calibration routine (offset first, then scale) for analog measurement signals. It is designed as an adapter‑based component that works with live reference values (`Y_Offset`, `Y_Scale`) provided via bidirectional AR2 sockets, which are persisted through additional AR2 plugs (`ZERO`, `SPAN`). The block enforces the correct calibration order using an ECC state machine, ensuring that the scale step can only be performed after a valid offset calibration.
 
 The overall formula is:
@@ -18,9 +20,11 @@ Y = (X + OFFSET) * SCALE
 The block provides a continuously calculated, calibrated output `Y` from raw input `X`, while storing the calibration parameters (`OFFSET`, `SCALE`) and the reference target values in a persistent way (via dedicated adapter plugs).
 
 ## Interface Structure
+
 The block uses only adapter interfaces – no direct event or data inputs/outputs are exposed. All communication is done through the plugs and sockets listed below. The event and data items available on each adapter are grouped accordingly.
 
 ### **Event Inputs**
+
 | Event | Description |
 |-------|-------------|
 | `X.E1` | Raw input sample ready. Triggers the calculation of the calibrated output. |
@@ -34,6 +38,7 @@ The block uses only adapter interfaces – no direct event or data inputs/output
 | `Y_Scale.EO1` | Input event from the live `Y_Scale` socket – arrives when a new scale target is written from the external side. |
 
 ### **Event Outputs**
+
 | Event | Description |
 |-------|-------------|
 | `Y.E1` | Output event indicating that a new calibrated output value is available on `Y.D1`. |
@@ -45,6 +50,7 @@ The block uses only adapter interfaces – no direct event or data inputs/output
 | `Y_Scale.EI1` | Output event back through the `Y_Scale` socket, echoing the persisted/restored scale target for display purposes. |
 
 ### **Data Inputs**
+
 | Data | Description |
 |------|-------------|
 | `X.D1` | Raw input value (REAL) from the unidirectional adapter `X`. |
@@ -58,6 +64,7 @@ The block uses only adapter interfaces – no direct event or data inputs/output
 | `CS.D1` | Guard value for the scale calibration transition – must be `TRUE` to allow the transition. |
 
 ### **Data Outputs**
+
 | Data | Description |
 |------|-------------|
 | `Y.D1` | Calibrated output value (REAL) calculated as `(X.D1 + OFFSET.DI1) * SCALE.DI1`. |
@@ -69,6 +76,7 @@ The block uses only adapter interfaces – no direct event or data inputs/output
 | `Y_Scale.DI1` | Echo of the persisted/restored scale target value sent back through the `Y_Scale` socket. |
 
 ### **Adapters**
+
 | Name | Type | Direction | Comment |
 |------|------|-----------|---------|
 | `Y` | `adapter::types::unidirectional::AR` | Plug | Calibrated Output – provides the calculation result. |
@@ -83,6 +91,7 @@ The block uses only adapter interfaces – no direct event or data inputs/output
 | `Y_Scale` | `adapter::types::bidirectional::AR2` | Socket | Live target output Y at high calibration point – written externally, echoed back for display. |
 
 ## Functionality
+
 The block performs a **sequential two‑point calibration**:
 
 1. **Offset Calibration (CO step):**
@@ -108,11 +117,13 @@ Y.D1 = (X.D1 + OFFSET.DI1) * SCALE.DI1
 ```
 
 **Reference target handling:**
+
 - `Y_Offset` and `Y_Scale` are live sockets. The external side (e.g. a VT/web reader) sends a new target value via `EO1`/`DO1`. The block reacts by immediately writing that value to the `ZERO` or `SPAN` plug (which can be connected to a persistence adapter such as `INI_AR2` or `NVS_AR2`).
 - Whenever a persisted value arrives (via `ZERO.EI1` or `SPAN.EI1`), the block echoes it back through `Y_Offset.EI1`/`Y_Scale.EI1` so that the external display can show the current (possibly boot‑restored) targets.
 - The calibration algorithms (`CO`, `CS`) always use the round‑tripped values `ZERO.DI1` / `SPAN.DI1` instead of the raw incoming values, ensuring consistency with what is actually persisted.
 
 ## Technical Features
+
 - **Adapter‑based interface** – no direct I/O; all communication through the listed plugs and sockets.
 - **ECC‑enforced execution order** – the state machine ensures that the scale step can only be performed after the offset step (state `WAIT_CS`). Offset calibration can be repeated at any time.
 - **Bidirectional persistence** – `OFFSET`, `SCALE`, `ZERO`, and `SPAN` are plugs of type `AR2` and can be connected to external storage.
@@ -121,6 +132,7 @@ Y.D1 = (X.D1 + OFFSET.DI1) * SCALE.DI1
 - **Algorithm / state structure** – all logic is implemented in structured text (ST) inside the ECC.
 
 ## State Overview
+
 The ECC contains the following states:
 
 | State | Activity | Transitions |
@@ -139,13 +151,16 @@ The ECC contains the following states:
 The state diagram enforces that after `CO` the block is in `WAIT_CS` – the only state from which `CS` can be reached. Normal output calculation (`REQ` / `REQ_WAIT`) can occur in all states, giving continuous calibrated values.
 
 ## Application Scenarios
+
 - **Measurement systems with two‑point calibration** – e.g., pressure, temperature, or load sensors where a low and a high reference must be set sequentially.
 - **Industrial control panels** – where calibration parameters need to be stored in non‑volatile memory and displayed on a human‑machine interface.
 - **Automated calibration routines** – the ECC‑enforced order prevents incorrect calibration sequences.
 - **Remote calibration with live updates** – the `Y_Offset`/`Y_Scale` sockets allow an external tool to provide new targets on the fly, which are then persisted and echoed back for confirmation.
 
 ## Comparison with Similar Blocks
+
 A closely related block is `AR_CALIBRATE_SQ` (without `_REF`). The main difference is that in `AR_CALIBRATE_SQ_REF` the reference target values (`Y_Offset`, `Y_Scale`) are **not** static inputs but **live bidirectional sockets**. This enables:
+
 - Direct writing of targets from external sources (e.g., web interfaces).
 - Automatic persistence of those targets via the `ZERO`/`SPAN` plugs.
 - Echo of the persisted values back to the display, allowing boot‑restored defaults to be shown.
@@ -153,4 +168,5 @@ A closely related block is `AR_CALIBRATE_SQ` (without `_REF`). The main differen
 The core calibration algorithm itself is identical to `AR_CALIBRATE_SQ`, but the interface and the way reference values are managed differ, making this block suitable for more interactive or remote‑operated applications.
 
 ## Conclusion
+
 `AR_CALIBRATE_SQ_REF` is a robust, adapter‑based function block for sequential two‑point calibration with a strong focus on persistence and live update of reference values. Its ECC‑enforced state machine guarantees a safe calibration order, and the bidirectional adapter interfaces provide a clean separation between the calibration logic and the external storage/display components. The block is especially useful in modern industrial environments where calibration values need to be modified and displayed through web or visualization tools without sacrificing data integrity.

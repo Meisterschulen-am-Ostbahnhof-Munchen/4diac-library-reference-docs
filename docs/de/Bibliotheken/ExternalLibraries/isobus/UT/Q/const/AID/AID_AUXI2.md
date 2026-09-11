@@ -3,6 +3,7 @@
 ![AID_AUXI2](./AID_AUXI2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 AID_AUXI2 ist ein GlobalConstants-Datentyp im Rahmen der 4diac-IDE, der konstante Attribut-IDs für das Auxiliary Input Type 2 (AUXI2) Objekt im ISOBUS-Protokoll (ISO 11783) definiert. Die Konstanten werden zentral verwaltet und ermöglichen eine standardisierte Referenzierung der Objektattribute in anderen Bausteinen.
@@ -14,18 +15,23 @@ Das Modul wurde von HR Agrartechnik GmbH entwickelt, Version 1.0, erstellt von F
 Da es sich um eine GlobalConstants-Definition handelt, existieren keine typischen Funktionsblock-Schnittstellen wie Ereignis- oder Datenein-/ausgänge. Stattdessen werden zwei globale Konstanten bereitgestellt, die in beliebigen Bausteinen referenziert werden können.
 
 ### **Ereignis-Eingänge**
+
 Nicht vorhanden.
 
 ### **Ereignis-Ausgänge**
+
 Nicht vorhanden.
 
 ### **Daten-Eingänge**
+
 Nicht vorhanden.
 
 ### **Daten-Ausgänge**
+
 Nicht vorhanden (die Konstanten sind global und können überall gelesen werden).
 
 ### **Adapter**
+
 Nicht vorhanden.
 
 **Global Konstanten:**

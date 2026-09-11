@@ -3,6 +3,7 @@
 ![EVENT_HS_ACK_WSTRING](./EVENT_HS_ACK_WSTRING.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Adapter `EVENT_HS_ACK_WSTRING` gehört zur Familie der Handshake-Adapter (nach dem IEC 61499-Muster). Er realisiert eine reduzierte Variante des klassischen `EVENT_HS`-Adapters, bei der nur die **Request-/Confirm-Kante** (REQ/CNF) verwendet wird. Beide Ereignisse transportieren jeweils einen Datenparameter vom Typ `WSTRING`. Dadurch eignet sich dieser Adapter für Anwendungen, in denen eine Anfrage und eine Bestätigung mit einer textuellen Nutzlast (z. B. im Format `"name,value"`) ausgetauscht werden müssen.

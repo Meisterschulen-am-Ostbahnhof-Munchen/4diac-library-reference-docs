@@ -14,9 +14,11 @@ Der Funktionsbaustein **DO_TOGGLE_RPC_QXA_OPC** realisiert einen digitalen Freig
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 Keine (extern). Die auslösenden Ereignisse werden intern über den RPC-Server generiert.
 
 ### **Ereignis-Ausgänge**
+
 Keine (extern).
 
 ### **Daten-Eingänge**
@@ -28,9 +30,11 @@ Keine (extern).
 | `ID_DO_STATE_WRITE` | `WSTRING` | Lokale Publish-Adresse (ACTION=WRITE) für den aktuellen Freigabe-Zustand (Flipflop-Q); wird remote abonniert. |
 
 ### **Daten-Ausgänge**
+
 Keine.
 
 ### **Adapter**
+
 Keine externen Adapter. Intern werden Adapter (AX_T_FF_INIT, AX_SPLIT_2, AX_PUBLISH_1) verwendet, um den Zustand zu verarbeiten und zu verteilen.
 
 ## Funktionsweise

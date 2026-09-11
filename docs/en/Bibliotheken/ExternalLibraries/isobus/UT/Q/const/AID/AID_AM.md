@@ -3,6 +3,7 @@
 ![AID_AM](./AID_AM.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AID_AM** global constant block defines attribute identifiers used within the ISO 11783 (ISOBUS) application layer for **Alarm Mask objects**. These constants provide standardized numeric IDs that allow applications to read or set specific attributes of an alarm mask, such as background colour, associated soft key mask, alarm priority, and acoustic signal configuration. The block is part of a package named `isobus::UT::Q::const::AID` and is intended to be used in 4diac‑IDE projects that interact with ISOBUS terminals or implement virtual terminals.

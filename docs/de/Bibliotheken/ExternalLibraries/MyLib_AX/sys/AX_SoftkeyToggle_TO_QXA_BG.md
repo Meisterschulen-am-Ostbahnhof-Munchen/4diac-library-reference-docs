@@ -6,6 +6,7 @@
 ![AX_SoftkeyToggle_TO_QXA_BG](./AX_SoftkeyToggle_TO_QXA_BG.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Die SubApp **AX_SoftkeyToggle_TO_QXA_BG** realisiert eine Softkey-basierte Toggle-Funktion mit visueller Zustandsrückmeldung. Ein Tastendruck beziehungsweise ein definiertes Softkey-Release-Ereignis kippt ein internes Toggle-Flip-Flop und schaltet darüber einen logiBUS-Ausgang (QXA). Parallel wird der Hintergrund eines verbundenen Anzeige-Bausteins an den aktuellen Schaltzustand angepasst. Die SubApp ist generisch aufgebaut und kann über zwei Eingangsparameter flexibel an unterschiedliche Softkeys und Ausgänge angepasst werden.

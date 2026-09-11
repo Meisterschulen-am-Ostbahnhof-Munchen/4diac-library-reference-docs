@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_3_VAL](./AUDI_AUI_MUX_3_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_AUI_MUX_3_VAL** is a subapplication that implements a 3-way multiplexer for AUDI adapter values. It combines three internal `initval_AUDI` function blocks, an `AUI_MUX_3` event selection block, and an `AUDI_AUI_MUX_3` adapter multiplexer. Depending on which event input (`EI1`, `EI2`, or `EI3`) is triggered, one of the three UDINT input values (`val1`, `val2`, `val3`) is selected and made available as an AUDI adapter output. The subapp enables direct wiring of raw numeric values into the AUDI adapter domain without requiring pre-initialized adapter instances externally.

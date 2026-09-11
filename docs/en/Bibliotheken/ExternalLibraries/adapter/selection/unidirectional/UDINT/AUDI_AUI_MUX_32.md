@@ -3,6 +3,7 @@
 ![AUDI_AUI_MUX_32](./AUDI_AUI_MUX_32.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 AUDI_AUI_MUX_32 is a generic function block that implements a 32-channel adapter multiplexer. It selects one of 32 unidirectional AUDI adapter inputs (IN1 to IN32) based on an index value received via a dedicated AUI adapter input (K) and forwards the selected data to the unidirectional AUDI adapter output (OUT). The output is only updated when the value actually changes, meaning the confirmation event is emitted solely upon a real value change, avoiding unnecessary retransmissions.

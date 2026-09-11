@@ -6,6 +6,7 @@
 ![Funk_IX_TO_DataPanel_MI_QX](./Funk_IX_TO_DataPanel_MI_QX.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `Funk_IX_TO_DataPanel_MI_QX` is a generic, event‑based subapplication that bridges a wireless input module (Funk IX) to a DataPanel output module (MI QX). It is designed to be reused in various contexts where a single digital input event (e.g., a key press) must be forwarded to a corresponding digital output on a DataPanel. The subapp encapsulates the wiring and synchronisation between these two function blocks, providing a clean and configurable interface.
@@ -15,9 +16,11 @@ The `Funk_IX_TO_DataPanel_MI_QX` is a generic, event‑based subapplication that
 The subapplication exposes three data inputs, no event inputs or outputs, and no adapters. All communication with the outside world is performed via these data ports.
 
 ### **Event Inputs**
+
 None.
 
 ### **Event Outputs**
+
 None.
 
 ### **Data Inputs**
@@ -29,9 +32,11 @@ None.
 | `Output` | `DataPanel::io::MI::DQ::DataPanel_MI_DO_S` | `Invalid` | Identifies the output channel on the DataPanel (e.g., `DigitalOutput_1A..8B` or `Input_Power_Port_5..8`). |
 
 ### **Data Outputs**
+
 None.
 
 ### **Adapters**
+
 None.
 
 ## Functionality
@@ -42,6 +47,7 @@ The subapplication connects an instance of the function block `Funk::io::DI::Fun
 - **Data connection**: The data output `IN` of the Funk block is connected to the data input `OUT` of the DataPanel block. This transfers the actual value (e.g., a button state) from the wireless module to the output stage.
 
 The three external data inputs of the subapplication are passed directly to the corresponding parameters of the internal blocks:
+
 - `Input` is forwarded to `IX.Input`
 - `u8SAMember` is forwarded to `QX.u8SAMember`
 - `Output` is forwarded to `QX.Output`

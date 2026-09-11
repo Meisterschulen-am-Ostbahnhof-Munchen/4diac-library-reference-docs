@@ -3,6 +3,7 @@
 ![AUI_DEMUX_5](./AUI_DEMUX_5.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUI_DEMUX_5** function block is an event demultiplexer with a five-channel output structure. Instead of using a plain event input (EI) combined with a data selector (K), this block accepts its input through an **AUI adapter** (unidirectional application user interface). The block routes an incoming event to exactly one of five event outputs, based on the indexing value carried by the adapter. It is the adapter-based variant of the standard `E_DEMUX_5` block and is implemented as a generic FB (generic class name `GEN_E_DEMUX`).

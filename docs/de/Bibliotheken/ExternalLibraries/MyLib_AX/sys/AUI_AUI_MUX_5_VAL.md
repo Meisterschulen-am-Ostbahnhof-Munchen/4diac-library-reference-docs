@@ -6,6 +6,7 @@
 ![AUI_AUI_MUX_5_VAL](./AUI_AUI_MUX_5_VAL.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock **AUI_AUI_MUX_5_VAL** ist ein 5-Wege-Multiplexer für AUI/UINT-Werte. Er wählt abhängig von einem eingehenden Ereignis (EI1 bis EI5) einen von fünf konfigurierbaren Ausgabewerten (val1 bis val5) aus und stellt diesen über einen AUI-Adapter (OUT) bereit. Intern werden die Eingangswerte mithilfe von `initval_AUI`-Bausteinen in AUI-Adapter konvertiert und über einen Adapter-Multiplexer an den Ausgang geschaltet.
@@ -13,6 +14,7 @@ Der Funktionsblock **AUI_AUI_MUX_5_VAL** ist ein 5-Wege-Multiplexer für AUI/UIN
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | EI1  | Event | Event zur Auswahl von val1 |
@@ -22,9 +24,11 @@ Der Funktionsblock **AUI_AUI_MUX_5_VAL** ist ein 5-Wege-Multiplexer für AUI/UIN
 | EI5  | Event | Event zur Auswahl von val5 |
 
 ### **Ereignis-Ausgänge**
+
 Keine.
 
 ### **Daten-Eingänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | val1 | UINT | Initialer Ausgabewert bei EI1 |
@@ -34,9 +38,11 @@ Keine.
 | val5 | UINT | Initialer Ausgabewert bei EI5 |
 
 ### **Daten-Ausgänge**
+
 Keine – die Ausgabe erfolgt ausschließlich über den Adapterausgang.
 
 ### **Adapter**
+
 | Name | Richtung | Typ | Kommentar |
 |------|----------|-----|-----------|
 | OUT  | Ausgang  | adapter::types::unidirectional::AUI | Ausgewählter AUI-Adapter-Output |

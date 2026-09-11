@@ -56,6 +56,7 @@ Liegt keine Freigabe vor, werden alle Ereignisse verworfen und es erfolgt keiner
 ## Zustandsübersicht
 
 Da der Baustein rein ereignisgesteuert ist, besitzt er keine klassischen internen Zustände im Sinne eines Moore- oder Mealy-Automaten. Das Verhalten wird direkt durch den Pegel am Adapter `PERMIT` bestimmt:  
+
 - **Freigabe aktiv** (z.B. TRUE): Ereignisse werden transparent durchgeschaltet.  
 - **Freigabe inaktiv** (z.B. FALSE): Ereignisse werden blockiert und verworfen.
 

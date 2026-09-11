@@ -3,6 +3,7 @@
 ![A2X2_CLIENT_2_0_SUBSCRIBE_2](./A2X2_CLIENT_2_0_SUBSCRIBE_2.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2` realisiert eine bidirektionale Datenübertragung über OPC-UA zwischen einem A2X2-Adapter und zwei externen OPC-UA-Knoten. Er kombiniert einen OPC-UA-Client (`CLIENT_2_0`) zum Schreiben von zwei Bool-Werten mit einem OPC-UA-Subscriber (`SUBSCRIBE_2`) zum Lesen von zwei Bool-Werten. Die Werte werden über `E_D_FF`-Flipflops gepuffert, um eine entkoppelte und zuverlässige Kommunikation zu gewährleisten. Der Baustein eignet sich insbesondere für Anwendungen, bei denen ein Steuerungssystem mit einer OPC-UA-basierten Leitebene kommunizieren muss und dabei sowohl Schreib- als auch Leseoperationen auf einfache Weise gebündelt werden sollen.
@@ -10,17 +11,20 @@ Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2` realisiert eine bidirektionale 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `INIT` | EInit | Initialisierungsereignis; startet die Initialisierung des Subscribers und anschließend des Clients. |
 
 ### **Ereignis-Ausgänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `INITO` | EInit | Bestätigung der erfolgreichen Initialisierung beider internen Bausteine. |
 | `CNF` | Event | Wird ausgelöst, wenn sowohl der Write-Client als auch der Read-Subscriber eine Bestätigung liefern (QO = TRUE). |
 
 ### **Daten-Eingänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `QI` | BOOL | Aktiviert die Kommunikation (TRUE = aktiv). Wird an beide internen Bausteine weitergegeben. |
@@ -28,6 +32,7 @@ Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2` realisiert eine bidirektionale 
 | `ID_READ` | WSTRING | Lokal überwachter Zustandsknoten (ACTION=READ) für das Lesen der beiden BOOL-Werte. |
 
 ### **Daten-Ausgänge**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `QO` | BOOL | TRUE nur wenn sowohl der Write-Client als auch der Read-Subscriber aktuell `QO = TRUE` melden. |
@@ -35,6 +40,7 @@ Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2` realisiert eine bidirektionale 
 | `STATUS_READ` | WSTRING | Statusmeldung des internen `SUBSCRIBE_2`-Bausteins. |
 
 ### **Adapter**
+
 | Name | Typ | Kommentar |
 |------|-----|-----------|
 | `IO` | `adapter::types::bidirectional::A2X2` (Socket) | Bidirektionaler A2X2-Adapter: vier Datenleitungen (`DO_UP`, `DO_DOWN`, `DI_UP`, `DI_DOWN`) und vier Ereignisleitungen (`EI_UP`, `EI_DOWN`, `EO_UP`, `EO_DOWN`) für den Austausch von Bool-Werten. |
@@ -44,21 +50,25 @@ Der Funktionsblock `A2X2_CLIENT_2_0_SUBSCRIBE_2` realisiert eine bidirektionale 
 Der Funktionsblock verbindet einen OPC-UA-Client und einen OPC-UA-Subscriber mit einem A2X2-Adapter. Die internen Abläufe lassen sich in zwei getrennte Datenpfade unterteilen:
 
 **Schreibpfad (TX):**  
+
 - Die über den Adapter eingehenden Datenwerte `IO.DO_UP` und `IO.DO_DOWN` werden durch die Ereignisse `IO.EO_UP` und `IO.EO_DOWN` in die jeweiligen `E_D_FF_TX_*`-Flipflops übernommen.  
 - Die Ausgänge dieser Flipflops (`Q`) werden an die Daten-Eingänge `SD_1` und `SD_2` des Clients (`WRITE_CLIENT`) gelegt.  
 - Jedes eingehende Ereignis am Adapter triggert den Client-Baustein (`REQ`), der die aktuellen Werte an die konfigurierte OPC-UA-Adresse (`ID_WRITE`) sendet.
 
 **Lesepfad (RX):**  
+
 - Der Subscriber (`READ_SUBSCRIBE`) empfängt kontinuierlich die beiden Bool-Werte von der OPC-UA-Adresse (`ID_READ`) über seine Daten-Ausgänge `RD_1` und `RD_2`.  
 - Diese Werte werden bei jedem empfangenen Ereignis (`IND`) in die `E_D_FF_RX_*`-Flipflops übernommen.  
 - Die Ausgänge dieser Flipflops speisen die Adapter-Datenausgänge `IO.DI_UP` und `IO.DI_DOWN` und werden über die Ereignisse `IO.EI_UP` und `IO.EI_DOWN` an den Adapter signalisiert.
 
 **Initialisierung:**  
+
 - Der `INIT`-Eingang initialisiert zuerst den Subscriber (`READ_SUBSCRIBE.INIT`).  
 - Nach erfolgreicher Initialisierung des Subscribers (Ereignis `INITO`) wird der Client initialisiert (`WRITE_CLIENT.INIT`).  
 - Der Client bestätigt die Initialisierung mit `INITO`, woraufhin der Baustein das Ereignis `INITO` nach außen abgibt.
 
 **Fehler- und Statusüberwachung:**  
+
 - Die Ereignisse `WRITE_CLIENT.CNF` und `READ_SUBSCRIBE.IND` werden gemeinsam auf den Eingang `REQ` des UND-Glieds `AND_QO` geführt.  
 - Das UND-Glied setzt `QO` nur dann auf TRUE, wenn sowohl der Client als auch der Subscriber ihren Betriebszustand als aktiv melden (beide `QO = TRUE`).  
 - Der Ausgang des UND-Glieds erzeugt das Ereignis `CNF`, um den Aufrufer über den aktuellen Zustand zu informieren.  

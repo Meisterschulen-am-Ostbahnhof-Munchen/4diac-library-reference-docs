@@ -3,6 +3,7 @@
 ![A2X_SUBSCRIBE_2](./A2X_SUBSCRIBE_2.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **A2X_SUBSCRIBE_2** function block is a composite network subscriber designed to receive two Boolean values from a remote **PUBLISH_2** block via an Ethernet-based publish/subscribe mechanism. It internally buffers the two received BOOL values using dedicated D flip-flops (E_D_FF) and delivers them — together with corresponding event signals — through a unidirectional A2X adapter plug for further processing in the application logic.

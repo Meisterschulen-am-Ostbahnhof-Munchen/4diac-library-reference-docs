@@ -3,6 +3,7 @@
 ![Industry_Groups](./Industry_Groups.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Dieses Dokument beschreibt die globalen Konstanten für ISOBUS Industry Groups. Die Konstanten definieren die verschiedenen Industriegruppen (Industry Groups) im ISOBUS-Protokoll zur Klassifizierung von Geräten und Anwendungen.

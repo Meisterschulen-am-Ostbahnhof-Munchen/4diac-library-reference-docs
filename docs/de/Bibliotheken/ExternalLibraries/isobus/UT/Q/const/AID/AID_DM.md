@@ -3,6 +3,7 @@
 ![AID_DM](./AID_DM.svg)
 
 * * * * * * * * * *
+
 ## Einleitung
 
 Der GlobalConstants-Baustein `AID_DM` definiert die Objektattribut-IDs für das ISOBUS-Objekt „Data Mask“ (Datenmaske). Diese Konstanten ermöglichen eine einheitliche und lesbare Referenzierung der Attribute in der Applikationslogik, insbesondere für die Hintergrundfarbe und die zugeordnete Soft-Key-Maske. Sie sind Teil eines umfassenden ISOBUS-Implementierungsrahmens und dienen als zentrale Definitionsquelle für Attributkennungen.

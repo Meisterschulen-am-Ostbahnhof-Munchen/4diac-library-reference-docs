@@ -6,6 +6,7 @@
 ![AUDI_AUI_MUX_2_VAL](./AUDI_AUI_MUX_2_VAL.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The **AUDI_AUI_MUX_2_VAL** is a composite application block (SubApp) that implements a two‑channel multiplexer for AUDI data values. It selects between two initialization values (`val1` and `val2`) based on incoming event triggers (`EI1` and `EI2`). The selected value is provided as an AUDI adapter output. Internally, the block combines an event‑driven selector (AUI_MUX_2) with a dedicated adapter multiplexer (AUDI_AUI_MUX_2) and two initial‑value generators (initval_AUDI). This design allows clean orchestration of event‑controlled value switching while maintaining the structure of AUDI adapters.

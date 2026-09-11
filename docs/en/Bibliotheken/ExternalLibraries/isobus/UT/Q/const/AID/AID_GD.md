@@ -3,6 +3,7 @@
 ![AID_GD](./AID_GD.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AID_GD` global constants library defines attribute identifiers for graphic data (PNG) objects. It is used within the ISO‑bus (ISOBUS) ecosystem to identify and manage graphic data attributes, specifically for PNG image encoding. The constants are defined as global constant variables, providing a single, standardized reference for graphic data attributes in accordance with ISO 11783‑14 (ISOBUS) conventions.

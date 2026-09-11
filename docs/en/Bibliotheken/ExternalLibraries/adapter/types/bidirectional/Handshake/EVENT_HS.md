@@ -3,6 +3,7 @@
 ![EVENT_HS](./EVENT_HS.svg)
 
 * * * * * * * * * *
+
 ## Introduction
 
 The EVENT_HS adapter interface implements the **Handshake design pattern** from the IEC 61499 primer course (Module 6 – Design methods and patterns, category *Behavioural*). It bundles the four classical service primitives of a request/confirm/indication/response interaction into a single adapter connection, eliminating the need for four separate event connections between communication partners. This is the minimal, dataless variant of the pattern – no payload variables are declared.
@@ -63,11 +64,13 @@ These two sequences can occur independently and asynchronously. The adapter itse
 The EVENT_HS adapter does not maintain internal state. Its behaviour is defined entirely by the two independent service sequences. Each sequence moves through the following phases:
 
 **request_confirm sequence:**
+
 1. Idle – awaiting a `REQ` from the Plug.
 2. Request sent – `REQ` has been forwarded to the Socket; awaiting `CNF`.
 3. Confirmation received – `CNF` has been forwarded back to the Plug; sequence returns to Idle.
 
 **indication_response sequence:**
+
 1. Idle – awaiting an `IND` from the Socket.
 2. Indication sent – `IND` has been forwarded to the Plug; awaiting `RSP`.
 3. Response received – `RSP` has been forwarded back to the Socket; sequence returns to Idle.
