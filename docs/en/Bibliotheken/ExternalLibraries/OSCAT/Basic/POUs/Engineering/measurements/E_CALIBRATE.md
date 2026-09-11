@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`E_CALIBRATE` is the event-driven counterpart to [CALIBRATE](CALIBRATE.md): the two-point calibration (`Y = (X + OFFSET) * SCALE`) is triggered not by Boolean data values but by its own events `EICO`/`EICS`, each with its own confirmation event. Ordering (offset before scale) is still not enforced here -- for that, see [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+`E_CALIBRATE` is the event-driven counterpart to [CALIBRATE](CALIBRATE.md): the two-point calibration (`Y = (X + OFFSET) * SCALE`) is triggered not by Boolean data values but by its own events `EICO`/`EICS`, each with its own confirmation event. For details on the calibration procedure, see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Interface Structure
 
@@ -60,8 +60,8 @@ Result: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## Technical Details
 
-- **Y after CO only correct when SCALE = 1**: as with `CALIBRATE`, `OFFSET := Y_Offset - X` only yields exactly `Y = Y_Offset` after offset calibration if `SCALE` is still `1.0`. `E_CALIBRATE_SQ` resolves this using `OFFSET := Y_Offset / SCALE - X`.
-- **No order enforcement**: `EICO` and `EICS` are both directly reachable from `REQ` -- the ECC does not track whether calibration has already happened. For enforced ordering, see [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+- **Y after CO only correct when SCALE = 1**: as with `CALIBRATE`, `OFFSET := Y_Offset - X` only yields exactly `Y = Y_Offset` after offset calibration if `SCALE` is still `1.0`.
+- **No order enforcement**: `EICO` and `EICS` are both directly reachable from `REQ` -- the ECC does not track whether calibration has already happened.
 - **REQ stays available at all times**: normal operation (`REQ`) is possible regardless of calibration status, even between `EICO` and `EICS`.
 
 ## State Overview
@@ -82,7 +82,7 @@ All three states are pass-through states: the block returns to `REQ` immediately
 
 ## ⚖️ Comparison with Similar Blocks
 
-Compare with [CALIBRATE](CALIBRATE.md), which applies the same formula Boolean-triggered rather than event-driven, and with [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), which uses the same event interface but enforces offset-before-scale ordering via its ECC and always computes `Y` correctly after offset calibration regardless of `SCALE`.
+Compare with [CALIBRATE](CALIBRATE.md), which applies the same formula Boolean-triggered rather than event-driven. For background on the calibration theory, see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Conclusion
 

@@ -79,6 +79,8 @@ Ergebnis: `Y` wird zwischen `MIN_REF=-100`, `MID_REF=0` und `MAX_REF=100` interp
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
+Details zum Dreipunkt-Kalibrierverfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
+
 Vergleich mit [CALIBRATE](CALIBRATE.md), das dieselbe boolean-gesteuerte Auslösung nutzt, jedoch nur eine lineare Zwei-Punkt-Kalibrierung ohne Mittelstellung bietet, sowie mit [E_CALIBRATE_3P](E_CALIBRATE_3P.md), das dieselbe Drei-Punkt-Logik ereignisgesteuert (`EI_MIN`/`EI_MID`/`EI_MAX`) mit eigenen Bestätigungsereignissen pro Punkt bereitstellt.
 
 ## Fazit

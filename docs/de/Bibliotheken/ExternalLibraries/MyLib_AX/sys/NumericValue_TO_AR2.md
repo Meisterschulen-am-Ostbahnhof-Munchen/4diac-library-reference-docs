@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`NumericValue_TO_AR2` liest ein VT-Eingabefeld (`NumericValue_PHYSA`) und reicht den Wert bidirektional als AR2-Adapter (`VALUEO`) an einen Consumer weiter - im Gegensatz zu [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md) speichert dieser Baustein selbst **nichts**: die Persistierung obliegt dem Consumer (z. B. `AR_CALIBRATE_SQ_REF.Y_Offset`/`.Y_Scale`, oder direkt ein `INI_AR2`). Was der Consumer ueber denselben AR2-Plug zurueckechot, wird auf das VT-Feld zurueckgeschrieben - auch beim Boot, sodass Eingabefeld und tatsaechlich aktiver Wert synchron bleiben.
+`NumericValue_TO_AR2` liest ein VT-Eingabefeld (`NumericValue_PHYSA`) und reicht den Wert bidirektional als AR2-Adapter (`VALUEO`) an einen Consumer weiter - im Gegensatz zu [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md) speichert dieser Baustein selbst **nichts**: die Persistierung obliegt dem Consumer (z. B. `AR_CALIBRATE.Y_Offset`/`.Y_Scale`, oder direkt ein `INI_AR2`). Was der Consumer ueber denselben AR2-Plug zurueckechot, wird auf das VT-Feld zurueckgeschrieben - auch beim Boot, sodass Eingabefeld und tatsaechlich aktiver Wert synchron bleiben.
 
 ## Technische Besonderheiten
 

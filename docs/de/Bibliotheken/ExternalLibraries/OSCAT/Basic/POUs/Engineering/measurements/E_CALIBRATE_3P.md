@@ -64,7 +64,7 @@ Ergebnis: `Y` wird zwischen `MIN_REF=-100`, `MID_REF=0` und `MAX_REF=100` interp
 
 ## Technische Besonderheiten
 
-- **Vier gleichberechtigte Aktionen aus einem gemeinsamen Startzustand**: Anders als bei [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md) gibt es keine Abhängigkeit zwischen den Kalibrierschritten -- jeder Punkt kann unabhängig und in beliebiger Reihenfolge neu gesetzt werden.
+- **Vier gleichberechtigte Aktionen aus einem gemeinsamen Startzustand**: Es gibt keine Abhängigkeit zwischen den Kalibrierschritten -- jeder Punkt kann unabhängig und in beliebiger Reihenfolge neu gesetzt werden.
 - **Ausgabe stets begrenzt**: `Y` wird nach der Interpolation auf `MIN_REF..MAX_REF` geklippt.
 - **Degenerierte Kalibrierpunkte**: Wie bei `CALIBRATE_3P` liefert eine Interpolation mit `X_MID <= X_MIN` bzw. `X_MAX <= X_MID` konstant `MIN_REF` bzw. `MID_REF` statt einer Division durch Null.
 
@@ -87,7 +87,7 @@ Alle vier Kalibrierereignisse sind unabhängig voneinander aus `START` erreichba
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-Vergleich mit [CALIBRATE_3P](CALIBRATE_3P.md), das dieselbe Drei-Punkt-Logik booleangesteuert statt ereignisgesteuert anwendet, sowie mit [E_CALIBRATE](E_CALIBRATE.md)/[E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), die eine lineare Zwei-Punkt- statt Drei-Punkt-Kalibrierung durchführen.
+Vergleich mit [CALIBRATE_3P](CALIBRATE_3P.md), das dieselbe Drei-Punkt-Logik booleangesteuert statt ereignisgesteuert anwendet, sowie mit [E_CALIBRATE](E_CALIBRATE.md), das eine lineare Zwei-Punkt- statt Drei-Punkt-Kalibrierung durchführt. Details siehe [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Fazit
 

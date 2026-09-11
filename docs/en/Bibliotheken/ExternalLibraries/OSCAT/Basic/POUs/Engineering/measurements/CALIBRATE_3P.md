@@ -79,6 +79,8 @@ Result: `Y` is interpolated and clipped between `MIN_REF=-100`, `MID_REF=0` and 
 
 ## ⚖️ Comparison with Similar Blocks
 
+For details on the three-point calibration procedure, see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
+
 Compare with [CALIBRATE](CALIBRATE.md), which uses the same Boolean-triggered approach but only offers a linear two-point calibration without a center position, and with [E_CALIBRATE_3P](E_CALIBRATE_3P.md), which provides the same three-point logic event-driven (`EI_MIN`/`EI_MID`/`EI_MAX`) with its own confirmation event per point.
 
 ## Conclusion

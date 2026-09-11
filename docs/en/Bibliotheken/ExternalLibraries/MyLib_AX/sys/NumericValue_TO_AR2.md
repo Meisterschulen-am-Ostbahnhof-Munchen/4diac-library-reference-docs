@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`NumericValue_TO_AR2` reads a VT input field (`NumericValue_PHYSA`) and forwards the value bidirectionally as an AR2 adapter (`VALUEO`) to a consumer - unlike [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md), this block itself stores **nothing**: persistence is the consumer's responsibility (e.g. `AR_CALIBRATE_SQ_REF.Y_Offset`/`.Y_Scale`, or directly an `INI_AR2`). Whatever the consumer echoes back over the same AR2 plug is written back to the VT field - even at boot, so the input field and the actually active value stay in sync.
+`NumericValue_TO_AR2` reads a VT input field (`NumericValue_PHYSA`) and forwards the value bidirectionally as an AR2 adapter (`VALUEO`) to a consumer - unlike [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md), this block itself stores **nothing**: persistence is the consumer's responsibility (e.g. `AR_CALIBRATE.Y_Offset`/`.Y_Scale`, or directly an `INI_AR2`). Whatever the consumer echoes back over the same AR2 plug is written back to the VT field - even at boot, so the input field and the actually active value stay in sync.
 
 ## Technical notes
 

@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`CALIBRATE` führt eine Zwei-Punkt-Kalibrierung (Offset & Skalierung) eines analogen Eingangssignals durch: `Y = (X + OFFSET) * SCALE`. Die Kalibrierung wird nicht über eigene Ereignisse, sondern über die booleschen Eingänge `CO`/`CS` ausgelöst, die bei jedem `REQ` mitgeprüft werden. Für eine ereignisgesteuerte Variante siehe [E_CALIBRATE](E_CALIBRATE.md), für eine Variante mit erzwungener Reihenfolge [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+`CALIBRATE` führt eine Zwei-Punkt-Kalibrierung (Offset & Skalierung) eines analogen Eingangssignals durch: `Y = (X + OFFSET) * SCALE`. Die Kalibrierung wird nicht über eigene Ereignisse, sondern über die booleschen Eingänge `CO`/`CS` ausgelöst, die bei jedem `REQ` mitgeprüft werden. Für eine ereignisgesteuerte Variante siehe [E_CALIBRATE](E_CALIBRATE.md), Details zum Verfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Schnittstellenstruktur
 
@@ -60,8 +60,8 @@ Ergebnis: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## Technische Besonderheiten
 
-- **Reihenfolge nicht erzwungen**: `CO` muss vor `CS` ausgeführt werden, da `CS` den bereits ermittelten `OFFSET` verwendet. Als `SimpleFB` mit nur einem `ECState` kann `CALIBRATE` diese Reihenfolge nicht selbst durchsetzen -- das liegt in der Verantwortung des Aufrufers. Für eine ECC-erzwungene Variante siehe [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
-- **Y nach CO nur korrekt bei SCALE = 1**: Die Formel `OFFSET := Y_Offset - X` liefert nach der Offset-Kalibrierung nur dann exakt `Y = Y_Offset`, wenn `SCALE` noch seinen Ausgangswert `1.0` hat. `E_CALIBRATE_SQ` verwendet stattdessen `OFFSET := Y_Offset / SCALE - X`, was unabhängig von `SCALE` korrekt ist.
+- **Reihenfolge nicht erzwungen**: `CO` muss vor `CS` ausgeführt werden, da `CS` den bereits ermittelten `OFFSET` verwendet. Als `SimpleFB` mit nur einem `ECState` liegt die korrekte Reihenfolge in der Verantwortung des Aufrufers.
+- **Y nach CO nur korrekt bei SCALE = 1**: Die Formel `OFFSET := Y_Offset - X` liefert nach der Offset-Kalibrierung nur dann exakt `Y = Y_Offset`, wenn `SCALE` noch seinen Ausgangswert `1.0` hat.
 - **Auslösung über BOOL statt Event**: Anders als bei den `E_CALIBRATE*`-Varianten läuft die Kalibrierung hier über die Dateneingänge `CO`/`CS`, die bei jedem `REQ` neu ausgewertet werden -- kein eigenes Kalibrierungsereignis nötig, aber auch kein separates Bestätigungsereignis pro Kalibrierschritt.
 
 ## Zustandsübersicht
@@ -76,7 +76,7 @@ Ergebnis: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-Vergleich mit [E_CALIBRATE](E_CALIBRATE.md), das dieselbe Zwei-Punkt-Kalibrierung ereignisgesteuert (`EICO`/`EICS` statt `CO`/`CS`) durchführt, sowie mit [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), das zusätzlich die Reihenfolge Offset-vor-Skalierung per ECC erzwingt und `Y` nach der Offset-Kalibrierung unabhängig von `SCALE` korrekt liefert. Für eine Drei-Punkt-Kalibrierung (z. B. Joysticks mit Mittelstellung) siehe [CALIBRATE_3P](CALIBRATE_3P.md).
+Vergleich mit [E_CALIBRATE](E_CALIBRATE.md), das dieselbe Zwei-Punkt-Kalibrierung ereignisgesteuert (`EICO`/`EICS` statt `CO`/`CS`) durchführt, Weiterführende Informationen zu den Kalibrierverfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/). Für eine Drei-Punkt-Kalibrierung (z. B. Joysticks mit Mittelstellung) siehe [CALIBRATE_3P](CALIBRATE_3P.md).
 
 ## Fazit
 

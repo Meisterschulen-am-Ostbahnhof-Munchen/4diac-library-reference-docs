@@ -8,7 +8,7 @@
 
 ## Einleitung
 
-`E_CALIBRATE` ist die ereignisgesteuerte Variante von [CALIBRATE](CALIBRATE.md): Die Zwei-Punkt-Kalibrierung (`Y = (X + OFFSET) * SCALE`) wird nicht über boolesche Datenwerte, sondern über die eigenen Ereignisse `EICO`/`EICS` ausgelöst, mit jeweils eigenem Bestätigungsereignis. Reihenfolge (Offset vor Skalierung) wird auch hier nicht erzwungen -- dafür siehe [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+`E_CALIBRATE` ist die ereignisgesteuerte Variante von [CALIBRATE](CALIBRATE.md): Die Zwei-Punkt-Kalibrierung (`Y = (X + OFFSET) * SCALE`) wird nicht über boolesche Datenwerte, sondern über die eigenen Ereignisse `EICO`/`EICS` ausgelöst, mit jeweils eigenem Bestätigungsereignis. Details zum Kalibrierverfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Schnittstellenstruktur
 
@@ -60,8 +60,8 @@ Ergebnis: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## Technische Besonderheiten
 
-- **Y nach CO nur korrekt bei SCALE = 1**: Wie bei `CALIBRATE` liefert `OFFSET := Y_Offset - X` nach der Offset-Kalibrierung nur dann exakt `Y = Y_Offset`, wenn `SCALE` noch `1.0` ist. `E_CALIBRATE_SQ` löst dies mit `OFFSET := Y_Offset / SCALE - X`.
-- **Keine Reihenfolge-Erzwingung**: `EICO` und `EICS` sind beide direkt aus `REQ` erreichbar -- die ECC unterscheidet nicht, ob bereits kalibriert wurde. Für eine erzwungene Reihenfolge siehe [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+- **Y nach CO nur korrekt bei SCALE = 1**: Wie bei `CALIBRATE` liefert `OFFSET := Y_Offset - X` nach der Offset-Kalibrierung nur dann exakt `Y = Y_Offset`, wenn `SCALE` noch `1.0` ist.
+- **Keine Reihenfolge-Erzwingung**: `EICO` und `EICS` sind beide direkt aus `REQ` erreichbar -- die ECC unterscheidet nicht, ob bereits kalibriert wurde.
 - **REQ bleibt jederzeit verfügbar**: Normalbetrieb (`REQ`) ist unabhängig vom Kalibrierstatus jederzeit möglich, auch zwischen `EICO` und `EICS`.
 
 ## Zustandsübersicht
@@ -82,7 +82,7 @@ Alle drei Zustände sind Durchgangszustände: Der Baustein kehrt nach jeder Akti
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-Vergleich mit [CALIBRATE](CALIBRATE.md), das dieselbe Formel booleangesteuert statt ereignisgesteuert anwendet, sowie mit [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), das dieselbe Ereignisschnittstelle nutzt, aber die Reihenfolge Offset-vor-Skalierung per ECC erzwingt und `Y` nach der Offset-Kalibrierung unabhängig von `SCALE` korrekt liefert.
+Vergleich mit [CALIBRATE](CALIBRATE.md), das dieselbe Formel booleangesteuert statt ereignisgesteuert anwendet, Weitere Details zum Verfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Fazit
 

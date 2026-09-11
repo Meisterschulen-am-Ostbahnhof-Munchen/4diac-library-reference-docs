@@ -103,6 +103,8 @@ Die Übergänge zwischen den Zuständen sind wie folgt definiert:
 
 ## Vergleich mit ähnlichen Bausteinen
 
+Details zum Kalibrierverfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
+
 Einfache Skalierungsbausteine (z. B. `SCALE`) bieten nur eine feste Multiplikation und Addition, ohne automatische Kalibrierung. Der `AR_CALIBRATE` hingegen integriert die gesamte Kalibrierlogik – inklusive Referenzvorgabe und ereignisgesteuerter Aktivierung – und eignet sich daher für dynamische Umgebungen, in denen Parameter während des Betriebs angepasst werden müssen.
 
 ## Fazit

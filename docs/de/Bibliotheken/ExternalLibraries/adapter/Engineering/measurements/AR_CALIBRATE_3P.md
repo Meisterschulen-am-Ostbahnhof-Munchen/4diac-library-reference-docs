@@ -102,6 +102,8 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 
 ## Vergleich mit ähnlichen Bausteinen
 
+Details zum Kalibrierverfahren finden Sie unter [Kalibrierverfahren Zwei- und Dreipunkt](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
+
 | Baustein                              | Eigenschaft                                                                                          |
 | ------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | **AR_SCALE**                          | Einfache lineare Skalierung (2‑Punkt) – ohne Korrektur von Nichtlinearitäten in der Mitte.           |

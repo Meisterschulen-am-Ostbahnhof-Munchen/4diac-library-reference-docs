@@ -64,7 +64,7 @@ Result: `Y` is interpolated and clipped between `MIN_REF=-100`, `MID_REF=0` and 
 
 ## Technical Details
 
-- **Four equal actions from a shared start state**: unlike [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), there is no dependency between the calibration steps -- each point can be re-set independently and in any order.
+- **Four equal actions from a shared start state**: there is no dependency between the calibration steps -- each point can be re-set independently and in any order.
 - **Output always clipped**: `Y` is clipped to `MIN_REF..MAX_REF` after interpolation.
 - **Degenerate calibration points**: as with `CALIBRATE_3P`, an interpolation with `X_MID <= X_MIN` or `X_MAX <= X_MID` returns a constant `MIN_REF` or `MID_REF` instead of dividing by zero.
 
@@ -87,7 +87,7 @@ All four calibration events are independently reachable from `START` -- no enfor
 
 ## ⚖️ Comparison with Similar Blocks
 
-Compare with [CALIBRATE_3P](CALIBRATE_3P.md), which applies the same three-point logic Boolean-triggered rather than event-driven, and with [E_CALIBRATE](E_CALIBRATE.md)/[E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), which perform a linear two-point rather than three-point calibration.
+Compare with [CALIBRATE_3P](CALIBRATE_3P.md), which applies the same three-point logic Boolean-triggered rather than event-driven, and with [E_CALIBRATE](E_CALIBRATE.md), which performs a linear two-point rather than three-point calibration. For details see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Conclusion
 

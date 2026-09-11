@@ -6,7 +6,7 @@
 
 ## Introduction
 
-`CALIBRATE` performs a two-point calibration (offset & scale) of an analog input signal: `Y = (X + OFFSET) * SCALE`. Calibration is not triggered by dedicated events but by the Boolean inputs `CO`/`CS`, which are checked on every `REQ`. For an event-driven variant see [E_CALIBRATE](E_CALIBRATE.md); for a variant with enforced ordering see [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
+`CALIBRATE` performs a two-point calibration (offset & scale) of an analog input signal: `Y = (X + OFFSET) * SCALE`. Calibration is not triggered by dedicated events but by the Boolean inputs `CO`/`CS`, which are checked on every `REQ`. For an event-driven variant see [E_CALIBRATE](E_CALIBRATE.md). For details on the calibration procedure, see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 ## Interface Structure
 
@@ -60,8 +60,8 @@ Result: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## Technical Details
 
-- **Order not enforced**: `CO` must run before `CS`, since `CS` uses the `OFFSET` already determined. As a `SimpleFB` with a single `ECState`, `CALIBRATE` cannot enforce this order itself -- that is the caller's responsibility. For an ECC-enforced variant see [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md).
-- **Y after CO only correct when SCALE = 1**: the formula `OFFSET := Y_Offset - X` only yields exactly `Y = Y_Offset` after offset calibration if `SCALE` still has its initial value `1.0`. `E_CALIBRATE_SQ` instead uses `OFFSET := Y_Offset / SCALE - X`, which is correct regardless of `SCALE`.
+- **Order not enforced**: `CO` must run before `CS`, since `CS` uses the `OFFSET` already determined. As a `SimpleFB` with a single `ECState`, ensuring the correct order is the caller's responsibility.
+- **Y after CO only correct when SCALE = 1**: the formula `OFFSET := Y_Offset - X` only yields exactly `Y = Y_Offset` after offset calibration if `SCALE` still has its initial value `1.0`.
 - **Triggered via BOOL, not events**: unlike the `E_CALIBRATE*` variants, calibration here runs through the data inputs `CO`/`CS`, re-evaluated on every `REQ` -- no dedicated calibration event needed, but also no separate confirmation event per calibration step.
 
 ## State Overview
@@ -76,7 +76,7 @@ Result: `Y = (X + 0) * 500 = X * 500 = 0..500`.
 
 ## ⚖️ Comparison with Similar Blocks
 
-Compare with [E_CALIBRATE](E_CALIBRATE.md), which performs the same two-point calibration but event-driven (`EICO`/`EICS` instead of `CO`/`CS`), and with [E_CALIBRATE_SQ](E_CALIBRATE_SQ.md), which additionally enforces offset-before-scale ordering via its ECC and always computes `Y` correctly after offset calibration regardless of `SCALE`. For a three-point calibration (e.g. joysticks with a center position) see [CALIBRATE_3P](CALIBRATE_3P.md).
+Compare with [E_CALIBRATE](E_CALIBRATE.md), which performs the same two-point calibration but event-driven (`EICO`/`EICS` instead of `CO`/`CS`). For background on the calibration theory, see [Two- and Three-Point Calibration Procedures](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/). For a three-point calibration (e.g. joysticks with a center position) see [CALIBRATE_3P](CALIBRATE_3P.md).
 
 ## Conclusion
 
