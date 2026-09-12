@@ -19,7 +19,7 @@ The block encapsulates calculation FB **SPLIT_SIGNED_INT** and two **E_D_FF_ANY*
 
 | Name | Type | Comment |
 |---|---|---|
-| `Y` | `adapter::types::unidirectional::AI` | Signed input value (adapter socket) |
+| `Y` | `adapter::types::unidirectional::AI` | Signed input value (AI adapter socket) |
 
 ### **Adapter Plugs (Output)**
 
@@ -37,10 +37,10 @@ Internally, the composite network consists of three components:
 3. **DEDUP_POS (E_D_FF_ANY)**: A second D-Flip-Flop of the same type that similarly emits event `POS_MAG.E1` only when the positive magnitude value changes.
 
 ```
-Y (Adapter Socket)
+Y (AI Adapter Socket)
  ├──> SPLIT (SPLIT_SIGNED_INT)
-       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY D-Flip-Flop) ──> NEG_MAG (Adapter Plug)
-       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY D-Flip-Flop) ──> POS_MAG (Adapter Plug)
+       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY D-Flip-Flop) ──> NEG_MAG (AI Adapter Plug)
+       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY D-Flip-Flop) ──> POS_MAG (AI Adapter Plug)
 ```
 
 ## Technical Features

@@ -19,7 +19,7 @@ Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_LREAL** sowie zwei D-Flip
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `adapter::types::unidirectional::ALR` | Vorzeichenbehafteter Eingangswert (Adapter-Socket) |
+| `Y` | `adapter::types::unidirectional::ALR` | Vorzeichenbehafteter Eingangswert (ALR-Adapter-Socket) |
 
 ### **Adapter-Plugs (Ausgang)**
 
@@ -37,10 +37,10 @@ Intern besteht das Composite-Netzwerk aus drei Bausteinen:
 3. **DEDUP_POS (E_D_FF_ANY)**: Ein zweites D-Flip-Flop derselben Bauart, das das Ereignis `POS_MAG.E1` ebenfalls nur bei einer echten Datenänderung (`POS_MAG.D1 <> POS_MAG.Q`) ausgibt.
 
 ```
-Y (Adapter-Socket)
+Y (ALR-Adapter-Socket)
  ├──> SPLIT (SPLIT_SIGNED_LREAL)
-       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY D-Flip-Flop) ──> NEG_MAG (Adapter-Plug)
-       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY D-Flip-Flop) ──> POS_MAG (Adapter-Plug)
+       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY D-Flip-Flop) ──> NEG_MAG (ALR-Adapter-Plug)
+       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY D-Flip-Flop) ──> POS_MAG (ALR-Adapter-Plug)
 ```
 
 ## Technische Besonderheiten
