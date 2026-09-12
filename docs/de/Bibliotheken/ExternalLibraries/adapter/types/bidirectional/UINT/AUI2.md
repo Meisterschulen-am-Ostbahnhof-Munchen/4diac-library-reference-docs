@@ -51,7 +51,7 @@ Die Kommentare 'Request (or Indication)' und 'Indication (or Request)' verdeutli
 
 - **Typisierte Datenübertragung:** Es wird ausschließlich der Datentyp **UINT** (vorzeichenlose 16-Bit-Ganzzahl) unterstützt.
 - **Bidirektionalität:** Ein einziger Adapter realisiert den Datenaustausch in beide Richtungen.
-- **Compiler-Information:** Das Paket ist unter dapter::types::bidirectional abgelegt.
+- **Compiler-Information:** Das Paket ist unter `adapter::types::bidirectional` abgelegt.
 
 ## Fazit
 
