@@ -27,6 +27,7 @@ The INI_AS2 function block is used to read and write SINT data from a settings.i
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | QI | BOOL | Input qualifier for controlling processing. |
+| SETM | BOOL | Enables mirroring/confirmation of the write value after a successful write. |
 | SECTION | STRING | Name of the section in the settings.ini file. |
 | KEY | STRING | Name of the key within the section. |
 | DEFAULT_VALUE | SINT | Default value read if the key is not present in the file. Default: 0. |
@@ -42,14 +43,14 @@ The INI_AS2 function block is used to read and write SINT data from a settings.i
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| VAL | adapter::types::bidirectional::AS2 | Bidirectional adapter for exchanging values. This adapter provides the read value as an output (DO1) and receives a write value as an input (DI1). |
+| VAL | adapter::types::bidirectional::AS2 | Bidirectional adapter for exchanging values. This adapter provides the read value as an output (DI1) and receives a write value as an input (DO1). |
 
 ## Functionality
 
 The INI_AS2 function block contains an internal INI function block (eclipse4diac::storage::INI) that performs the actual file operation. The network connections implement the following processes:
 
 - Upon arrival of INIT, QI, SECTION, KEY, and DEFAULT_VALUE are forwarded to the INI function block.
-- The INI function block performs a read operation and passes the result (via VALUE) to the adapter output (VAL.DI1).
+- The INI function block performs a read operation and passes the result (via VALUEO) to the adapter output (VAL.DI1).
 - Simultaneously, after a successful read, the GET event is triggered, which activates the adapter input (VAL.EI1) to transmit the value.
 - A write operation is initiated as soon as the adapter sends an EO1 event. This event triggers the SET event on the INI function block, setting the value received via VAL.DO1 as the new VALUE.
 - The INI block confirms the write operation with SETO and sends this back to the adapter (VAL.EI1).

@@ -232,7 +232,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Key name. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">The value to read if there is nothing in the NVS – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">The value to read if there is nothing in the NVS – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
 
     <text x="219.818359375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Event Output Qualifier</text>
