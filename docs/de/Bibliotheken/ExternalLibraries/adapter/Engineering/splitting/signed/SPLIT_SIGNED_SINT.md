@@ -31,7 +31,7 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `SINT` | Vorzeichenbehafteter Eingangsmewert |
+| `Y` | `SINT` | Vorzeichenbehafteter Eingangsmesswert |
 
 ### **Daten-Ausgänge**
 
@@ -45,15 +45,15 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 Beim Eintreffen des Ereignisses `REQ` führt der Baustein folgende Aufteilungslogik aus:
 
 ```pascal
-POS_MAG := MAX(SINT#0, Y);
 IF Y = SINT#-128 THEN
     NEG_MAG := SINT#127;
 ELSE
     NEG_MAG := MAX(SINT#0, -Y);
 END_IF;
+POS_MAG := MAX(SINT#0, Y);
 ```
 
-Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Deduplizierung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **AS_SPLIT_SIGNED** über `E_D_FF_ANY` realisiert).
+Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Filterung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **AS_SPLIT_SIGNED** über **E_D_FF_ANY** D-Flip-Flops realisiert).
 
 ## Überlaufbehandlung & Sättigung
 
@@ -73,7 +73,7 @@ Der **SPLIT_SIGNED_SINT** fängt diesen Sonderfall explizit ab:
 ## Vergleich mit ähnlichen Bausteinen
 
 - **SPLIT_SIGNED_SINT**: Reine Value/Event-Berechnung für `SINT` (Basic FB).
-- **AS_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::AS`) und automatischer Ereignis-Deduplizierung je Ausgangsseite.
+- **AS_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::AS`) und automatischer Ereignis-Filterung per D-Flip-Flop (`E_D_FF_ANY`) je Ausgangsseite.
 
 ## Fazit
 

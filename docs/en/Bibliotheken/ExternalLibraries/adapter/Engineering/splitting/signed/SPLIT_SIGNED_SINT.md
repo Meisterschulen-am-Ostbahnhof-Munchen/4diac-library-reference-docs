@@ -45,15 +45,15 @@ It serves as the core calculation block for directional indicators (e.g. separat
 Upon receiving event `REQ`, the block executes the following splitting logic:
 
 ```pascal
-POS_MAG := MAX(SINT#0, Y);
 IF Y = SINT#-128 THEN
     NEG_MAG := SINT#127;
 ELSE
     NEG_MAG := MAX(SINT#0, -Y);
 END_IF;
+POS_MAG := MAX(SINT#0, Y);
 ```
 
-The block emits confirmation event `CNF` on every `REQ`. Event deduplication for unchanged values is handled at the adapter wrapper level (**AS_SPLIT_SIGNED**) using `E_D_FF_ANY`.
+The block emits confirmation event `CNF` on every `REQ`. Event filtering for unchanged values is handled at the adapter wrapper level (**AS_SPLIT_SIGNED**) using **E_D_FF_ANY** D-Flip-Flop instances.
 
 ## Overflow Handling & Saturation
 
@@ -73,7 +73,7 @@ For two's complement integer types, the magnitude of the negative minimum (`-128
 ## Comparison with Similar Blocks
 
 - **SPLIT_SIGNED_SINT**: Pure value/event calculation block for `SINT` (Basic FB).
-- **AS_SPLIT_SIGNED**: Composite FB wrapper featuring adapter interfaces (`adapter::types::unidirectional::AS`) and automatic per-side event deduplication.
+- **AS_SPLIT_SIGNED**: Composite FB wrapper featuring adapter interfaces (`adapter::types::unidirectional::AS`) and automatic per-side D-Flip-Flop event filtering (`E_D_FF_ANY`).
 
 ## Conclusion
 

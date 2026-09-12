@@ -11,7 +11,7 @@ Diese Bibliothek enthält Bausteine zum Aufteilen vorzeichenbehafteter Signale (
 - [SPLIT_SIGNED_REAL](./SPLIT_SIGNED_REAL.md) – Aufteilung für `REAL`
 - [SPLIT_SIGNED_LREAL](./SPLIT_SIGNED_LREAL.md) – Aufteilung für `LREAL`
 
-## Adapter-Wrapper Composite FBs (Mit Entprellung)
+## Adapter-Wrapper Composite FBs (Mit D-Flip-Flop Event-Filterung)
 
 - [AS_SPLIT_SIGNED](./AS_SPLIT_SIGNED.md) – Adapter-Wrapper für `SINT` (`AS`)
 - [AI_SPLIT_SIGNED](./AI_SPLIT_SIGNED.md) – Adapter-Wrapper für `INT` (`AI`)

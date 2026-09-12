@@ -31,7 +31,7 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `LINT` | Vorzeichenbehafteter Eingangsmewert |
+| `Y` | `LINT` | Vorzeichenbehafteter Eingangsmesswert |
 
 ### **Daten-Ausgänge**
 
@@ -45,15 +45,15 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 Beim Eintreffen des Ereignisses `REQ` führt der Baustein folgende Aufteilungslogik aus:
 
 ```pascal
-POS_MAG := MAX(LINT#0, Y);
 IF Y = LINT#-9223372036854775808 THEN
     NEG_MAG := LINT#9223372036854775807;
 ELSE
     NEG_MAG := MAX(LINT#0, -Y);
 END_IF;
+POS_MAG := MAX(LINT#0, Y);
 ```
 
-Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Deduplizierung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **ALI_SPLIT_SIGNED** über `E_D_FF_ANY` realisiert).
+Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Filterung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **ALI_SPLIT_SIGNED** über **E_D_FF_ANY** D-Flip-Flops realisiert).
 
 ## Überlaufbehandlung & Sättigung
 
@@ -73,7 +73,7 @@ Der **SPLIT_SIGNED_LINT** fängt diesen Sonderfall explizit ab:
 ## Vergleich mit ähnlichen Bausteinen
 
 - **SPLIT_SIGNED_LINT**: Reine Value/Event-Berechnung für `LINT` (Basic FB).
-- **ALI_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::ALI`) und automatischer Ereignis-Deduplizierung je Ausgangsseite.
+- **ALI_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::ALI`) und automatischer Ereignis-Filterung per D-Flip-Flop (`E_D_FF_ANY`) je Ausgangsseite.
 
 ## Fazit
 

@@ -11,7 +11,7 @@ Der **AI_SPLIT_SIGNED** ist ein Adapter-Wrapper-Funktionsbaustein (Composite FB)
 - `NEG_MAG`: Betrag der negativen Auslenkung (`MAX(0, -Y)`)
 - `POS_MAG`: Betrag der positiven Auslenkung (`MAX(0, Y)`)
 
-Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_INT** sowie zwei Entprell-Bausteine vom Typ **E_D_FF_ANY**, um Ereignisse auf den Plugs `NEG_MAG` und `POS_MAG` **nur bei tatsächlicher Wertänderung** der jeweiligen Seite auszulösen.
+Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_INT** sowie zwei D-Flip-Flop-Bausteine vom Typ **E_D_FF_ANY**, um Ereignisse auf den Plugs `NEG_MAG` und `POS_MAG` **nur dann auszulösen, wenn sich der neue Eingangswert vom bisherigen Ausgangswert unterscheidet** (`D <> Q`).
 
 ## Schnittstellenstruktur
 
@@ -19,34 +19,34 @@ Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_INT** sowie zwei Entprell
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `adapter::types::unidirectional::AI` | Vorzeichenbehafteter Eingangswert (AR/AX-Adapter) |
+| `Y` | `adapter::types::unidirectional::AI` | Vorzeichenbehafteter Eingangswert (Adapter-Socket) |
 
 ### **Adapter-Plugs (Ausgang)**
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `NEG_MAG` | `adapter::types::unidirectional::AI` | Betrag der negativen Auslenkung (`MAX(0, -Y)`), Event nur bei Änderung |
-| `POS_MAG` | `adapter::types::unidirectional::AI` | Betrag der positiven Auslenkung (`MAX(0, Y)`), Event nur bei Änderung |
+| `NEG_MAG` | `adapter::types::unidirectional::AI` | Betrag der negativen Auslenkung (`MAX(0, -Y)`), Ereignis nur bei Wertänderung |
+| `POS_MAG` | `adapter::types::unidirectional::AI` | Betrag der positiven Auslenkung (`MAX(0, Y)`), Ereignis nur bei Wertänderung |
 
 ## Funktionsweise
 
 Intern besteht das Composite-Netzwerk aus drei Bausteinen:
 
 1. **SPLIT (SPLIT_SIGNED_INT)**: Berechnet `NEG_MAG` und `POS_MAG` aus `Y.D1` bei jedem `Y.E1`-Ereignis.
-2. **DEDUP_NEG (E_D_FF_ANY)**: Vergleicht das neue `NEG_MAG` mit dem bisherigen Wert. Nur wenn sich der Wert geändert hat, wird ein Ereignis an `NEG_MAG.E1` ausgegeben.
-3. **DEDUP_POS (E_D_FF_ANY)**: Vergleicht das neue `POS_MAG` mit dem bisherigen Wert. Nur wenn sich der Wert geändert hat, wird ein Ereignis an `POS_MAG.E1` ausgegeben.
+2. **DEDUP_NEG (E_D_FF_ANY)**: Ein ereignisgesteuertes D-Flip-Flop, das das Eingangsereignis `CLK` nur dann an den Ereignisausgang `EO` weiterleitet und `Q := D` aktualisiert, wenn der neue Wert `D` ungleich dem bisherigen Ausgangswert `Q` ist (`D <> Q`).
+3. **DEDUP_POS (E_D_FF_ANY)**: Ein zweites D-Flip-Flop derselben Bauart, das das Ereignis `POS_MAG.E1` ebenfalls nur bei einer echten Datenänderung (`POS_MAG.D1 <> POS_MAG.Q`) ausgibt.
 
 ```
 Y (Adapter-Socket)
  ├──> SPLIT (SPLIT_SIGNED_INT)
-       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY) ──> NEG_MAG (Adapter-Plug)
-       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY) ──> POS_MAG (Adapter-Plug)
+       ├──> NEG_MAG ──> DEDUP_NEG (E_D_FF_ANY D-Flip-Flop) ──> NEG_MAG (Adapter-Plug)
+       └──> POS_MAG ──> DEDUP_POS (E_D_FF_ANY D-Flip-Flop) ──> POS_MAG (Adapter-Plug)
 ```
 
 ## Technische Besonderheiten
 
 - **Adapterbasierte Architektur:** Vollständig kompatibel mit der unidirektionalen Adapterfamilie `adapter::types::unidirectional::AI`.
-- **Ereigniseffizienz:** Vermeidet unnötige Event-Kaskaden, da `NEG_MAG.E1` und `POS_MAG.E1` unabhängig voneinander nur bei einer echten Datenänderung gefeuert werden.
+- **Ereignis-Filterung per D-Flip-Flop:** Durch die `E_D_FF_ANY` Bausteine wird sichergestellt, dass an `NEG_MAG.E1` bzw. `POS_MAG.E1` per Definition nur dann ein Ausgangsereignis erzeugt wird, wenn sich der neue Wert `D` vom bisherigen Zustand `Q` unterscheidet.
 - **Überlaufsicherheit:** Vererbt die Sättigungslogik von `SPLIT_SIGNED_INT` für Zweierkomplement-Ganzzahlgrenzen.
 
 ## Anwendungsszenarien
@@ -56,9 +56,9 @@ Y (Adapter-Socket)
 
 ## Vergleich mit ähnlichen Bausteinen
 
-- **AI_SPLIT_SIGNED**: Composite FB mit Adapter-Schnittstellen und automatischer Event-Deduplizierung.
+- **AI_SPLIT_SIGNED**: Composite FB mit Adapter-Schnittstellen und D-Flip-Flop Event-Filterung.
 - **SPLIT_SIGNED_INT**: Unterlagerter Basic FB für reine Signalberechnung ohne Adapter.
 
 ## Fazit
 
-**AI_SPLIT_SIGNED** bietet eine elegante, adapterbasierte und ereigniseffiziente Lösung zur Vorzeichen-Signalaufteilung in IEC 61499 Anwendungen.
+**AI_SPLIT_SIGNED** bietet eine elegante, adapterbasierte und durch D-Flip-Flops ereigniseffiziente Lösung zur Vorzeichen-Signalaufteilung in IEC 61499 Anwendungen.

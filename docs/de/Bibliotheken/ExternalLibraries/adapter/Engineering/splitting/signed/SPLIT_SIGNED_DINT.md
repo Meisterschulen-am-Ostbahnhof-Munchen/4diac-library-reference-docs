@@ -31,7 +31,7 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `DINT` | Vorzeichenbehafteter Eingangsmewert |
+| `Y` | `DINT` | Vorzeichenbehafteter Eingangsmesswert |
 
 ### **Daten-Ausgänge**
 
@@ -45,15 +45,15 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 Beim Eintreffen des Ereignisses `REQ` führt der Baustein folgende Aufteilungslogik aus:
 
 ```pascal
-POS_MAG := MAX(DINT#0, Y);
 IF Y = DINT#-2147483648 THEN
     NEG_MAG := DINT#2147483647;
 ELSE
     NEG_MAG := MAX(DINT#0, -Y);
 END_IF;
+POS_MAG := MAX(DINT#0, Y);
 ```
 
-Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Deduplizierung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **ADI_SPLIT_SIGNED** über `E_D_FF_ANY` realisiert).
+Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Filterung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **ADI_SPLIT_SIGNED** über **E_D_FF_ANY** D-Flip-Flops realisiert).
 
 ## Überlaufbehandlung & Sättigung
 
@@ -73,7 +73,7 @@ Der **SPLIT_SIGNED_DINT** fängt diesen Sonderfall explizit ab:
 ## Vergleich mit ähnlichen Bausteinen
 
 - **SPLIT_SIGNED_DINT**: Reine Value/Event-Berechnung für `DINT` (Basic FB).
-- **ADI_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::ADI`) und automatischer Ereignis-Deduplizierung je Ausgangsseite.
+- **ADI_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::ADI`) und automatischer Ereignis-Filterung per D-Flip-Flop (`E_D_FF_ANY`) je Ausgangsseite.
 
 ## Fazit
 

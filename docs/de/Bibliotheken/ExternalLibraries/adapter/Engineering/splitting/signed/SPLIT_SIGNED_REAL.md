@@ -31,7 +31,7 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `Y` | `REAL` | Vorzeichenbehafteter Eingangsmewert |
+| `Y` | `REAL` | Vorzeichenbehafteter Eingangsmesswert |
 
 ### **Daten-Ausgänge**
 
@@ -45,15 +45,11 @@ Er dient als primärer Berechnungsbaustein für gerichtete Anzeigen (z. B. get
 Beim Eintreffen des Ereignisses `REQ` führt der Baustein folgende Aufteilungslogik aus:
 
 ```pascal
-POS_MAG := MAX(REAL#0, Y);
-IF Y = ... THEN
-    NEG_MAG := ...;
-ELSE
-    NEG_MAG := MAX(REAL#0, -Y);
-END_IF;
+NEG_MAG := MAX(REAL#0.0, -Y);
+POS_MAG := MAX(REAL#0.0, Y);
 ```
 
-Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Deduplizierung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **AR_SPLIT_SIGNED** über `E_D_FF_ANY` realisiert).
+Der Baustein feuert bei jedem `REQ`-Ereignis die Bestätigung `CNF`. Eine Ereignis-Filterung bei gleichbleibenden Werten findet auf dieser Basisebene nicht statt (diese wird im Adapter-Wrapper **AR_SPLIT_SIGNED** über **E_D_FF_ANY** D-Flip-Flops realisiert).
 
 ## Gleitkomma-Verhalten
 
@@ -68,7 +64,7 @@ Da `REAL` ein Gleitkommatyp ist, tritt das Asymmetrie-Problem von Zweierkompleme
 ## Vergleich mit ähnlichen Bausteinen
 
 - **SPLIT_SIGNED_REAL**: Reine Value/Event-Berechnung für `REAL` (Basic FB).
-- **AR_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::AR`) und automatischer Ereignis-Deduplizierung je Ausgangsseite.
+- **AR_SPLIT_SIGNED**: Composite-FB Wrapper mit Adapter-Schnittstellen (`adapter::types::unidirectional::AR`) und automatischer Ereignis-Filterung per D-Flip-Flop (`E_D_FF_ANY`) je Ausgangsseite.
 
 ## Fazit
 

@@ -11,7 +11,7 @@ This library contains function blocks for splitting signed signals (`SINT`, `INT
 - [SPLIT_SIGNED_REAL](./SPLIT_SIGNED_REAL.md) – Splitting for `REAL`
 - [SPLIT_SIGNED_LREAL](./SPLIT_SIGNED_LREAL.md) – Splitting for `LREAL`
 
-## Adapter Wrapper Composite FBs (With Deduplication)
+## Adapter Wrapper Composite FBs (With D-Flip-Flop Event Filtering)
 
 - [AS_SPLIT_SIGNED](./AS_SPLIT_SIGNED.md) – Adapter wrapper for `SINT` (`AS`)
 - [AI_SPLIT_SIGNED](./AI_SPLIT_SIGNED.md) – Adapter wrapper for `INT` (`AI`)
