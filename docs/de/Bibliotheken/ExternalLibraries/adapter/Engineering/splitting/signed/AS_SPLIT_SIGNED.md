@@ -11,7 +11,7 @@ Der **AS_SPLIT_SIGNED** ist ein Adapter-Wrapper-Funktionsbaustein (Composite FB)
 - `NEG_MAG`: Betrag der negativen Auslenkung (`MAX(0, -Y)`)
 - `POS_MAG`: Betrag der positiven Auslenkung (`MAX(0, Y)`)
 
-Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_SINT** sowie zwei D-Flip-Flop-Bausteine vom Typ **E_D_FF_ANY**, um Ereignisse auf den Plugs `NEG_MAG` und `POS_MAG` **nur dann auszulösen, wenn sich der neue Eingangswert vom bisherigen Ausgangswert unterscheidet** (`D <> Q`).
+Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_SINT** sowie zwei D-Flip-Flop-Bausteine vom Typ **E_D_FF_ANY**, um das initiale Ereignis beim ersten `CLK` und danach Ereignisse auf den Plugs `NEG_MAG` und `POS_MAG` **nur bei tatsächlicher Wertänderung** der jeweiligen Seite auszulösen.
 
 ## Schnittstellenstruktur
 
@@ -25,16 +25,16 @@ Der Baustein kapselt den Berechnungs-FB **SPLIT_SIGNED_SINT** sowie zwei D-Flip-
 
 | Name | Typ | Kommentar |
 |---|---|---|
-| `NEG_MAG` | `adapter::types::unidirectional::AS` | Betrag der negativen Auslenkung (`MAX(0, -Y)`), Ereignis nur bei Wertänderung |
-| `POS_MAG` | `adapter::types::unidirectional::AS` | Betrag der positiven Auslenkung (`MAX(0, Y)`), Ereignis nur bei Wertänderung |
+| `NEG_MAG` | `adapter::types::unidirectional::AS` | Betrag der negativen Auslenkung (`MAX(0, -Y)`), initiales Ereignis beim 1. Aufruf, danach nur bei Wertänderung |
+| `POS_MAG` | `adapter::types::unidirectional::AS` | Betrag der positiven Auslenkung (`MAX(0, Y)`), initiales Ereignis beim 1. Aufruf, danach nur bei Wertänderung |
 
 ## Funktionsweise
 
 Intern besteht das Composite-Netzwerk aus drei Bausteinen:
 
 1. **SPLIT (SPLIT_SIGNED_SINT)**: Berechnet `NEG_MAG` und `POS_MAG` aus `Y.D1` bei jedem `Y.E1`-Ereignis.
-2. **DEDUP_NEG (E_D_FF_ANY)**: Ein ereignisgesteuertes D-Flip-Flop, das das Eingangsereignis `CLK` nur dann an den Ereignisausgang `EO` weiterleitet und `Q := D` aktualisiert, wenn der neue Wert `D` ungleich dem bisherigen Ausgangswert `Q` ist (`D <> Q`).
-3. **DEDUP_POS (E_D_FF_ANY)**: Ein zweites D-Flip-Flop derselben Bauart, das das Ereignis `POS_MAG.E1` ebenfalls nur bei einer echten Datenänderung (`POS_MAG.D1 <> POS_MAG.Q`) ausgibt.
+2. **DEDUP_NEG (E_D_FF_ANY)**: Ein ereignisgesteuertes D-Flip-Flop, das beim ersten `CLK`-Ereignis das initiale Ausgangsereignis auslöst und danach `CLK` nur dann an `EO` weiterleitet und `Q := D` aktualisiert, wenn der neue Wert `D` ungleich dem bisherigen Ausgangswert `Q` ist (`D <> Q`).
+3. **DEDUP_POS (E_D_FF_ANY)**: Ein zweites D-Flip-Flop derselben Bauart, das das initiale Ereignis beim 1. Aufruf ausgibt und spätere Ereignisse auf `POS_MAG.E1` ebenfalls nur bei einer echten Datenänderung (`POS_MAG.D1 <> POS_MAG.Q`) sendet.
 
 ```
 Y (AS-Adapter-Socket)
@@ -46,7 +46,7 @@ Y (AS-Adapter-Socket)
 ## Technische Besonderheiten
 
 - **Adapterbasierte Architektur:** Vollständig kompatibel mit der unidirektionalen Adapterfamilie `adapter::types::unidirectional::AS`.
-- **Ereignis-Filterung per D-Flip-Flop:** Durch die `E_D_FF_ANY` Bausteine wird sichergestellt, dass an `NEG_MAG.E1` bzw. `POS_MAG.E1` per Definition nur dann ein Ausgangsereignis erzeugt wird, wenn sich der neue Wert `D` vom bisherigen Zustand `Q` unterscheidet.
+- **Ereignis-Filterung per D-Flip-Flop:** Durch die `E_D_FF_ANY` Bausteine wird sichergestellt, dass an `NEG_MAG.E1` bzw. `POS_MAG.E1` das initiale Ausgangsereignis beim ersten `CLK` gesendet wird und spätere Ereignisse per Definition nur dann erzeugt werden, wenn sich der neue Wert `D` vom bisherigen Zustand `Q` unterscheidet.
 - **Überlaufsicherheit:** Vererbt die Sättigungslogik von `SPLIT_SIGNED_SINT` für Zweierkomplement-Ganzzahlgrenzen.
 
 ## Anwendungsszenarien

@@ -11,7 +11,7 @@ The **ADI_SPLIT_SIGNED** function block is an adapter wrapper (Composite FB) tha
 - `NEG_MAG`: Magnitude of negative deflection (`MAX(0, -Y)`)
 - `POS_MAG`: Magnitude of positive deflection (`MAX(0, Y)`)
 
-The block encapsulates calculation FB **SPLIT_SIGNED_DINT** and two **E_D_FF_ANY** D-Flip-Flop blocks to emit events on plugs `NEG_MAG` and `POS_MAG` **only when the new input value differs from the stored output state** (`D <> Q`).
+The block encapsulates calculation FB **SPLIT_SIGNED_DINT** and two **E_D_FF_ANY** D-Flip-Flop blocks to emit the initial event on the first `CLK` and thereafter emit events on plugs `NEG_MAG` and `POS_MAG` **only when the new input value differs from the stored output state** (`D <> Q`).
 
 ## Interface Structure
 
@@ -25,16 +25,16 @@ The block encapsulates calculation FB **SPLIT_SIGNED_DINT** and two **E_D_FF_ANY
 
 | Name | Type | Comment |
 |---|---|---|
-| `NEG_MAG` | `adapter::types::unidirectional::ADI` | Negative magnitude (`MAX(0, -Y)`), event on change only |
-| `POS_MAG` | `adapter::types::unidirectional::ADI` | Positive magnitude (`MAX(0, Y)`), event on change only |
+| `NEG_MAG` | `adapter::types::unidirectional::ADI` | Negative magnitude (`MAX(0, -Y)`), initial event on 1st call, thereafter on change only |
+| `POS_MAG` | `adapter::types::unidirectional::ADI` | Positive magnitude (`MAX(0, Y)`), initial event on 1st call, thereafter on change only |
 
 ## Functionality
 
 Internally, the composite network consists of three components:
 
 1. **SPLIT (SPLIT_SIGNED_DINT)**: Computes `NEG_MAG` and `POS_MAG` from `Y.D1` upon every `Y.E1` event.
-2. **DEDUP_NEG (E_D_FF_ANY)**: An event-driven D-Flip-Flop that forwards the input event `CLK` to output event `EO` and updates `Q := D` only when the new data value `D` differs from the current output state `Q` (`D <> Q`).
-3. **DEDUP_POS (E_D_FF_ANY)**: A second D-Flip-Flop of the same type that similarly emits event `POS_MAG.E1` only when the positive magnitude value changes.
+2. **DEDUP_NEG (E_D_FF_ANY)**: An event-driven D-Flip-Flop that emits the initial output event upon the first `CLK` event, and thereafter forwards `CLK` to `EO` and updates `Q := D` only when the new data value `D` differs from the current output state `Q` (`D <> Q`).
+3. **DEDUP_POS (E_D_FF_ANY)**: A second D-Flip-Flop of the same type that similarly emits the initial output event on the first call and subsequently emits event `POS_MAG.E1` only when the positive magnitude value changes.
 
 ```
 Y (ADI Adapter Socket)
@@ -46,7 +46,7 @@ Y (ADI Adapter Socket)
 ## Technical Features
 
 - **Adapter-Driven Architecture:** Fully compatible with unidirectional adapter family `adapter::types::unidirectional::ADI`.
-- **D-Flip-Flop Event Filtering:** The `E_D_FF_ANY` blocks guarantee by definition that an output event `EO` is generated only when the new input `D` differs from the stored output `Q`.
+- **D-Flip-Flop Event Filtering:** The `E_D_FF_ANY` blocks guarantee by definition that the initial output event is emitted on the first `CLK`, and subsequent output events `EO` are generated only when the new input `D` differs from the stored output `Q`.
 - **Overflow Safety:** Inherits saturation logic from `SPLIT_SIGNED_DINT` for two's complement integer limits.
 
 ## Application Scenarios
