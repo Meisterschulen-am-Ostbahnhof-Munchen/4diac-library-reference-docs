@@ -42,14 +42,14 @@ Der Funktionsblock INI_AX2 dient dem Lesen und Speichern von REAL-Daten aus eine
 
 | Name | Typ                                | Beschreibung                                                                                                                                                                              |
 | ---- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| VAL  | adapter::types::bidirectional::AX2 | Bidirektionaler Adapter für den Austausch von Werten. Über diesen Adapter wird der gelesene Wert als Ausgang (DO1) bereitgestellt und ein Schreibwert als Eingang (DI1) entgegengenommen. |
+| VAL  | adapter::types::bidirectional::AX2 | Bidirektionaler Adapter für den Austausch von Werten. Über diesen Adapter wird der gelesene Wert als Ausgang (DI1) bereitgestellt und ein Schreibwert als Eingang (DO1) entgegengenommen. |
 
 ## Funktionsweise
 
 Der Baustein INI_AX2 beinhaltet einen internen INI-Funktionsblock (eclipse4diac::storage::INI), der die eigentliche Dateioperation durchführt. Die Verbindungen im Netzwerk realisieren folgende Abläufe:
 
 - Beim Eintreffen von INIT werden QI, SECTION, KEY und DEFAULT_VALUE an den INI-Baustein weitergeleitet.
-- Der INI-Baustein führt einen Lesevorgang aus und gibt das Ergebnis (über VALUE) an den Adapter-Ausgang (VAL.DI1) weiter.
+- Der INI-Baustein führt einen Lesevorgang aus und gibt das Ergebnis (über VALUEO) an den Adapter-Ausgang (VAL.DI1) weiter.
 - Gleichzeitig wird nach erfolgreichem Lesen das Ereignis GET ausgelöst, das den Adapter-Eingang (VAL.EI1) aktiviert, um den Wert zu übermitteln.
 - Ein Schreibvorgang wird initiiert, sobald der Adapter ein Ereignis EO1 sendet. Dieses Ereignis triggert das SET-Ereignis am INI-Baustein, wobei der über VAL.DO1 empfangene Wert als neuer VALUE gesetzt wird.
 - Der INI-Baustein bestätigt den Schreibvorgang mit SETO und leitet dies an den Adapter zurück (VAL.EI1).
