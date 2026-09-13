@@ -27,7 +27,7 @@ Der Funktionsblock INI_ALR2 dient dem Lesen und Speichern von LREAL-Daten aus ei
 | Name | Typ | Beschreibung |
 | ---- | --- | ------------ |
 | QI | BOOL | Eingangsqualifikator zur Steuerung der Verarbeitung. |
-| SETM | BOOL | Aktiviert die Bestätigung/Spiegelung des Schreibwerts nach erfolgreichem Schreiben. |
+| SETM | BOOL | Steuert die Bestätigung/Spiegelung nach erfolgreichem Schreiben. Unabhängig von SETM löst VAL.EO1 stets das Schreiben (INI.SET) aus; die Rückmeldung SETO wird jedoch nur bei SETM=TRUE an den Adapter (VAL.EI1) weitergeleitet (bei SETM=FALSE unterdrückt). |
 | SECTION | STRING | Name des Abschnitts in der settings.ini-Datei. |
 | KEY | STRING | Name des Schlüssels innerhalb des Abschnitts. |
 | DEFAULT_VALUE | LREAL | Standardwert, der gelesen wird, falls der Schlüssel in der Datei nicht vorhanden ist. Voreinstellung: 0.0. |
@@ -53,7 +53,7 @@ Der Baustein INI_ALR2 beinhaltet einen internen INI-Funktionsblock (eclipse4diac
 - Der INI-Baustein führt einen Lesevorgang aus und gibt das Ergebnis (über VALUEO) an den Adapter-Ausgang (VAL.DI1) weiter.
 - Gleichzeitig wird nach erfolgreichem Lesen das Ereignis GET ausgelöst, das den Adapter-Eingang (VAL.EI1) aktiviert, um den Wert zu übermitteln.
 - Ein Schreibvorgang wird initiiert, sobald der Adapter ein Ereignis EO1 sendet. Dieses Ereignis triggert das SET-Ereignis am INI-Baustein, wobei der über VAL.DO1 empfangene Wert als neuer VALUE gesetzt wird.
-- Der INI-Baustein bestätigt den Schreibvorgang mit SETO und leitet dies an den Adapter zurück (VAL.EI1).
+- Der INI-Baustein bestätigt den Schreibvorgang mit SETO. Wenn SETM=TRUE gesetzt ist, wird diese Bestätigung an den Adapter zurückgeleitet (VAL.EI1), während SETM=FALSE diese Spiegelung unterdrückt.
 - Die Ausgänge QO und STATUS werden direkt vom INI-Baustein übernommen.
 
 Somit können über den ALR2-Adapter Lese- und Schreibzugriffe auf die settings.ini-Datei gesteuert werden.

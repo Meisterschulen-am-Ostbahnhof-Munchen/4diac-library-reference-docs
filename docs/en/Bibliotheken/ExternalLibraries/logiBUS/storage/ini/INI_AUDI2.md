@@ -27,7 +27,7 @@ The INI_AUDI2 function block is used to read and write UDINT data from a setting
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | QI | BOOL | Input qualifier for controlling processing. |
-| SETM | BOOL | Enables mirroring/confirmation of the write value after a successful write. |
+| SETM | BOOL | Controls confirmation/mirroring after a successful write. Regardless of SETM, VAL.EO1 always triggers INI.SET; however, the SETO confirmation reaches VAL.EI1 only when SETM=TRUE (suppressed when SETM=FALSE). |
 | SECTION | STRING | Name of the section in the settings.ini file. |
 | KEY | STRING | Name of the key within the section. |
 | DEFAULT_VALUE | UDINT | Default value read if the key is not present in the file. Default: 0. |
@@ -53,7 +53,7 @@ The INI_AUDI2 function block contains an internal INI function block (eclipse4di
 - The INI function block performs a read operation and passes the result (via VALUEO) to the adapter output (VAL.DI1).
 - Simultaneously, after a successful read, the GET event is triggered, which activates the adapter input (VAL.EI1) to transmit the value.
 - A write operation is initiated as soon as the adapter sends an EO1 event. This event triggers the SET event on the INI function block, setting the value received via VAL.DO1 as the new VALUE.
-- The INI block confirms the write operation with SETO and sends this back to the adapter (VAL.EI1).
+- The INI block confirms the write operation with SETO. If SETM=TRUE, this confirmation is routed back to the adapter (VAL.EI1), whereas SETM=FALSE suppresses this mirror.
 - The QO and STATUS outputs are directly taken from the INI block.
 
 Thus, read and write access to the settings.ini file can be controlled via the AUDI2 adapter.
