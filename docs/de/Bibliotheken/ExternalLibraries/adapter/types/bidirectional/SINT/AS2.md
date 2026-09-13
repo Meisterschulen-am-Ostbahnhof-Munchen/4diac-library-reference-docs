@@ -12,27 +12,27 @@ Der Adapter-Typ **AS2** stellt eine bidirektionale Schnittstelle zwischen zwei F
 
 ### **Ereignis-Eingänge**
 
-| Name | Typ   | Kommentar               | mit Daten |
-| ---- | ----- | ----------------------- | --------- |
-| EI1  | Event | Request (or Indication) | DI1       |
+| Name | Typ   | Kommentar                     | mit Daten |
+| ---- | ----- | ----------------------------- | --------- |
+| EI1  | Event | Anforderung (oder Indikation) | DI1       |
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar               | mit Daten |
-| ---- | ----- | ----------------------- | --------- |
-| EO1  | Event | Indication (or Request) | DO1       |
+| Name | Typ   | Kommentar                     | mit Daten |
+| ---- | ----- | ----------------------------- | --------- |
+| EO1  | Event | Indikation (oder Anforderung) | DO1       |
 
 ### **Daten-Eingänge**
 
-| Name | Datentyp | Kommentar                         |
-| ---- | -------- | --------------------------------- |
-| DI1  | SINT    | Request (or Indication) to Socket |
+| Name | Datentyp | Kommentar                               |
+| ---- | -------- | --------------------------------------- |
+| DI1  | SINT     | Anforderung (oder Indikation) an Socket |
 
 ### **Daten-Ausgänge**
 
-| Name | Datentyp | Kommentar                              |
-| ---- | -------- | -------------------------------------- |
-| DO1  | SINT    | Indication (or Request) Data from Plug |
+| Name | Datentyp | Kommentar                                    |
+| ---- | -------- | -------------------------------------------- |
+| DO1  | SINT     | Indikation (oder Anforderung) Daten vom Plug |
 
 ### **Adapter**
 
@@ -45,7 +45,7 @@ Der AS2-Adapter arbeitet ereignisgesteuert und bidirektional:
 - Wird der Ereigniseingang **EI1** ausgelöst, so wird der aktuell an **DI1** anliegende SINT-Wert zum gegenüberliegenden Adapterende übertragen. Dort erscheint das Ereignis **EO1** zusammen mit dem Wert auf **DO1**.
 - In der Gegenrichtung gilt das Gleiche: Triggert der verbundene Gegenadapter sein Ereignis, so empfängt dieser AS2 das Ereignis an **EI1** und stellt den empfangenen Wert an **DI1** bereit.
 
-Die Kommentare 'Request (or Indication)' und 'Indication (or Request)' verdeutlichen, dass der Adapter je nach Einbausituation (Plug oder Socket) die Rolle eines anfordernden oder eines anzeigenden Kanals einnehmen kann.
+Die Kommentare „Anforderung (oder Indikation)“ und „Indikation (oder Anforderung)“ verdeutlichen, dass der Adapter je nach Einbausituation (Plug oder Socket) die Rolle eines anfordernden oder eines anzeigenden Kanals einnehmen kann.
 
 ## Technische Besonderheiten
 
