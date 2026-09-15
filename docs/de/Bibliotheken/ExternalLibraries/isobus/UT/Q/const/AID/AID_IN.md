@@ -35,7 +35,7 @@ Gemäß ISO 11783-6 Tabelle B.18 kennzeichnen eckige Klammern `[ ]` um eine Attr
 | `HEIGHT` | `USINT` | `2` | Höhe in Pixeln (beschreibbar via *Change Attribute* F.38). |
 | `BACKGROUND_COLOUR` | `USINT` | `3` | Index der Hintergrundfarbe (beschreibbar via *Change Attribute* F.38). |
 | `FONT_ATT` | `USINT` | `4` | Objekt-ID eines Font Attributes Objekts (beschreibbar via *Change Attribute* F.38). |
-| `OPTIONS` | `USINT` | `5` | Options-Bitmaske (beschreibbar via *Change Attribute* F.38). |
+| `OPTIONS` | `USINT` | `5` | Bitmaske: Bit 0 = Transparent, Bit 1 = Führende Nullen anzeigen, Bit 2 = Null als Leerfeld anzeigen, Bit 3 = Nachkommastellen abschneiden (0 = runden) (beschreibbar via *Change Attribute* F.38). |
 | `VARIABLE_REF` | `USINT` | `6` | Objekt-ID eines Variable Objekts (beschreibbar via *Change Attribute* F.38). |
 | `MIN_VALUE` | `USINT` | `7` | Minimalwert (beschreibbar via *Change Attribute* F.38). |
 | `MAX_VALUE` | `USINT` | `8` | Maximalwert (beschreibbar via *Change Attribute* F.38). |
