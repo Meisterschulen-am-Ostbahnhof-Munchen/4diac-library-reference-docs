@@ -35,7 +35,7 @@ Keine.
 | `HEIGHT` | `USINT` | `2` | `AID_IL_HEIGHT` – Höhe der Eingabeliste in Pixeln (beschreibbar via *Change Attribute* F.38). |
 | `VARIABLE_REF` | `USINT` | `3` | `AID_IL_VARIABLE_REF` – Objekt-ID eines Number Variable Objekts (beschreibbar via *Change Attribute* F.38). |
 | `VALUE` | `USINT` | `[4]` | `AID_IL_VALUE` – **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Ausgewählter Listenindex (0–254, 255=kein Element). Abfragbar via *Get Attribute Value* (F.58); Änderung zur Laufzeit via *Change Numeric Value* (F.22). |
-| `OPTIONS` | `USINT` | `[5]` | `AID_IL_OPTIONS` – **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Bitmaske für Optionen (Bit 0 = Enabled, Bit 1 = Real time editing). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Select Input Object* (F.6). |
+| `OPTIONS` | `USINT` | `[5]` | `AID_IL_OPTIONS` – **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Bitmaske für Optionen (Bit 0 = Enabled, Bit 1 = Real time editing). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Enable/Disable Object* (F.4) oder *Select Input Object* (F.6). |
 
 ## Anwendungsszenarien
 

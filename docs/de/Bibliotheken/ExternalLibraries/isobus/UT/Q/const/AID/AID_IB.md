@@ -41,7 +41,7 @@ Gemäß ISO 11783-6 kennzeichnen eckige Klammern `[ ]` um eine Attribut-ID (wie 
 | `FG_COLOUR` | `USINT` | `3` | Objekt‑ID eines Font‑Attributes‑Objekts zur Bestimmung der Schriftfarbe (beschreibbar via *Change Attribute* F.38). |
 | `VARIABLE_REF` | `USINT` | `4` | Objekt‑ID eines Number‑Variable‑Objekts; wenn `NULL`, wird der Wert direkt gespeichert (beschreibbar via *Change Attribute* F.38). |
 | `VALUE` | `USINT` | `[5]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Aktueller Wert des Eingabefelds (`0` = FALSE, `>0` = TRUE). Abfragbar via *Get Attribute Value* (F.58); Änderung zur Laufzeit via speziellem *Change Numeric Value* Kommando (F.22). |
-| `ENABLED` | `USINT` | `[6]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Aktivierungsstatus (`0` = deaktiviert, `1` = aktiviert). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Select Input Object* (F.6). |
+| `ENABLED` | `USINT` | `[6]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Aktivierungsstatus (`0` = deaktiviert, `1` = aktiviert). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Enable/Disable Object* (F.4) oder *Select Input Object* (F.6). |
 
 ## Funktionsweise
 

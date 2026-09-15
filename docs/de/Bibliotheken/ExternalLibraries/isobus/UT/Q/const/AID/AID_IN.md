@@ -45,7 +45,7 @@ Gemäß ISO 11783-6 Tabelle B.18 kennzeichnen eckige Klammern `[ ]` um eine Attr
 | `FORMAT` | `USINT` | `12` | Anzeigeformat (beschreibbar via *Change Attribute* F.38). |
 | `JUSTIFICATION` | `USINT` | `13` | Ausrichtung (beschreibbar via *Change Attribute* F.38). |
 | `VALUE` | `USINT` | `[14]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Unskalierter Rohwert. Abfragbar via *Get Attribute Value* (F.58); Änderung zur Laufzeit via *Change Numeric Value* (F.22). |
-| `OPTIONS_2` | `USINT` | `[15]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Bitmaske (Bit 0 = Enabled, Bit 1 = Real time editing). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Select Input Object* (F.6). |
+| `OPTIONS_2` | `USINT` | `[15]` | **Nur-Lesen (Read-only)** für *Change Attribute* (ISO 11783-6). Bitmaske (Bit 0 = Enabled, Bit 1 = Real time editing). Abfragbar via *Get Attribute Value* (F.58); Steuerung via *Enable/Disable Object* (F.4) oder *Select Input Object* (F.6). |
 
 ## Anwendungsszenarien
 

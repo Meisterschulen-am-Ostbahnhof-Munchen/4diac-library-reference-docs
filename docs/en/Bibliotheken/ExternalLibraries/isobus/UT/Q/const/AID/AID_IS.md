@@ -31,10 +31,10 @@ The following constants are provided. In accordance with ISO 11783-6 Table B.17,
 | `BACKGROUND_COLOUR` | USINT | 3 | Background colour index. (Writable via *Change Attribute* F.38) |
 | `FONT_ATT` | USINT | 4 | Object ID of a Font Attributes object. (Writable via *Change Attribute* F.38) |
 | `INP_ATT` | USINT | 5 | Object ID of an Input Attributes / Extended Input Attributes object. (Writable via *Change Attribute* F.38) |
-| `OPTIONS` | USINT | 6 | Options bitmask. (Writable via *Change Attribute* F.38) |
+| `OPTIONS` | USINT | 6 | Options bitmask: Bit 0 = Character set (0=ISO-8859-1, 1=UTF-16), Bit 1 = Transparent background, Bit 2 = Suppress border. (Writable via *Change Attribute* F.38) |
 | `VARIABLE_REF` | USINT | 7 | Object ID of a String Variable object. (Writable via *Change Attribute* F.38) |
 | `JUSTIFICATION` | USINT | 8 | Justification: Bits 0-1 (Horizontal: 0=Left, 1=Middle, 2=Right), Bits 2-3 (Vertical: 0=Top, 1=Middle, 2=Bottom). (Writable via *Change Attribute* F.38) |
-| `ENABLED` | USINT | [9] | **Read-only** for *Change Attribute* (ISO 11783-6). 0 = Disabled, 1 = Enabled. Queryable via *Get Attribute Value* (F.58); managed via *Select Input Object* (F.6) or state commands. |
+| `ENABLED` | USINT | [9] | **Read-only** for *Change Attribute* (ISO 11783-6). Options 2 bitmask: Bit 0 = Enabled, Bit 1 = Selected (Focus). Queryable via *Get Attribute Value* (F.58); managed via *Enable/Disable Object* (F.4) or *Select Input Object* (F.6). |
 
 ### **Data Outputs**
 

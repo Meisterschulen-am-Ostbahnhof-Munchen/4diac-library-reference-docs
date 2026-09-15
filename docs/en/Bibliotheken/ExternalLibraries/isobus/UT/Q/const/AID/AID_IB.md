@@ -45,7 +45,7 @@ The `AID_IB` constant set enumerates the six standard attribute identifiers defi
 | `FG_COLOUR` | 3 | Object ID of a Font Attributes object used to determine the font colour for the displayed text or symbol. (Writable via *Change Attribute* F.38) |
 | `VARIABLE_REF` | 4 | Object ID of a Number Variable object to which the input value is bound. If NULL, the value is stored directly in the object. (Writable via *Change Attribute* F.38) |
 | `VALUE` | [5] | **Read-only** for *Change Attribute* (ISO 11783-6). Value of the input field: `0` represents FALSE, any value greater than zero represents TRUE. Queryable via *Get Attribute Value* (F.58); updated at runtime using the specialized *Change Numeric Value* command (F.22). |
-| `ENABLED` | [6] | **Read-only** for *Change Attribute* (ISO 11783-6). Operational state of the object: `0` = disabled, `1` = enabled. Queryable via *Get Attribute Value* (F.58); managed via *Select Input Object* (F.6) or state commands. |
+| `ENABLED` | [6] | **Read-only** for *Change Attribute* (ISO 11783-6). Operational state of the object: `0` = disabled, `1` = enabled. Queryable via *Get Attribute Value* (F.58); managed via *Enable/Disable Object* (F.4) or *Select Input Object* (F.6). |
 
 Use of these constants avoids hard-coded magic numbers in application code, improves readability, and ensures that attribute references remain aligned with the ISOBUS specification.
 
