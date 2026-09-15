@@ -59,7 +59,7 @@ The following table lists all defined constants:
 | `FONT_ATT`             | USINT | `USINT#12`     | Object ID reference for a Font Attributes object                                             |
 | `LINE_ATT`             | USINT | `USINT#13`     | Object ID reference for a Line Attributes object                                             |
 | `FILL_ATT`             | USINT | `USINT#14`     | Object ID reference for a Fill Attributes object                                             |
-| `FORMAT`               | USINT | `USINT#15`     | Canvas type: 0 = Monochrome, 1 = 4-bit colour, 2 = 8-bit colour                              |
+| `FORMAT`               | USINT | `USINT#15`     | `AID_GC_FORMAT` – **Read-only** for *Change Attribute* (ISO 11783-6). Queryable via *Get Attribute Value* (F.58). Canvas type: 0 = Monochrome, 1 = 4-bit colour, 2 = 8-bit colour |
 | `OPTIONS`              | USINT | `USINT#16`     | Bitmask: Bit 0 = Transparency (0 = opaque, 1 = transparent), Bit 1 = Colour mode             |
 | `TRANS_COLOUR`         | USINT | `USINT#17`     | Transparency colour attribute ID                                                             |
 

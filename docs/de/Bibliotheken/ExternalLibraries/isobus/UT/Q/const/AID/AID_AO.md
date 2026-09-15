@@ -42,7 +42,7 @@ Keine.
 | `FICHILDINDEX` | 6 | AID_AO_FICHILDINDEX – Index des ersten Kindes |
 | `LACHILDINDEX` | 7 | AID_AO_LACHILDINDEX – Index des letzten Kindes |
 | `DEFCHILDINDEX`| 8 | AID_AO_DEFCHILDINDEX – Index des Standard-Kindes |
-| `OBJECTS`      | 9 | AID_AO_OBJECTS – Optionsbits (siehe unten) |
+| `OBJECTS`      | 9 | AID_AO_OBJECTS – Options-Bitmaske (in ISO 11783-6 *Options* genannt): Bit 0 = Animationssequenz (0 = Single Shot, 1 = Loop); Bits 1–2 = Deaktiviertes Verhalten (0 = Pause, 1 = Reset, 2 = Default Object, 3 = Blank) |
 
 ## Funktionsweise
 

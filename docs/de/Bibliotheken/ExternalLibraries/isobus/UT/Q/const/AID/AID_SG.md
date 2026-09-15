@@ -46,7 +46,7 @@ Die einzelnen Konstanten sind wie folgt definiert:
 | `HEIGHT`  | 2    | AID_SG_HEIGHT – Höhe in Pixeln |
 | `SCALE_TYPE` | 3 | AID_SG_SCALE_TYPE – Bits 0‑2: Skalierungswert (0 = keine Skalierung, 1 = auf Breite skalieren, 2 = auf Höhe skalieren, 3 = auf Breite und Höhe, 4 = auf passende Größe). Bits 3‑4: Horizontale Ausrichtung (0 = links, 1 = mittig, 2 = rechts). Bits 5‑6: Vertikale Ausrichtung (0 = oben, 1 = mittig, 2 = unten) |
 | `OPTIONS` | 4    | AID_SG_OPTIONS – Bitmaske: Bit 0 = Blinken |
-| `VALUE`   | 5    | AID_SG_VALUE – Aktueller Wert |
+| `VALUE`   | [5]  | AID_SG_VALUE – **Read-only** für *Change Attribute* (ISO 11783-6). Objekt-ID des referenzierten Grafikobjekts; zur Laufzeit anpassbar via *Change Numeric Value* (F.22) oder abfragbar via *Get Attribute Value* (F.58). |
 
 Diese Konstanten sind vom Typ `USINT` (Unsigned Short Integer) und tragen feste Werte, die der ISOBUS‑Spezifikation entsprechen.
 

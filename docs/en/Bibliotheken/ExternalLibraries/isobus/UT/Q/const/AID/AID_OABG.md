@@ -50,8 +50,8 @@ Each constant in `AID_OABG` corresponds to a specific attribute of an OABG objec
 | `MAX_VALUE`             | 10    | Maximum scaled value  |
 | `VARIABLE_REF`          | 11    | Object ID of a Variable object |
 | `TARGET_VAL_VAR_REF`    | 12    | Object ID of a Variable object for target value |
-| `TARGET_VALUE`          | 13    | Target value          |
-| `VALUE`                 | 14    | Current value         |
+| `TARGET_VALUE`          | [13]  | **Read-only** for *Change Attribute* (ISO 11783-6). Queryable via *Get Attribute Value* (F.58); updated at runtime via *Change Numeric Value* (F.22). Target value |
+| `VALUE`                 | [14]  | **Read-only** for *Change Attribute* (ISO 11783-6). Queryable via *Get Attribute Value* (F.58); updated at runtime via *Change Numeric Value* (F.22). Current value |
 
 These constants are all of type `USINT` and are initialized with their numeric attribute ID values. They are intended to be used in conjunction with VT commands such as those that set attribute values (e.g., `SetAttribute`).
 

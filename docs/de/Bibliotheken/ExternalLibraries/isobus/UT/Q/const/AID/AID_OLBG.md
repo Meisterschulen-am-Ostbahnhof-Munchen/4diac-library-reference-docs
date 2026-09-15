@@ -24,8 +24,8 @@ Da es sich um eine reine Konstantendefinition handelt, besitzt dieser Baustein k
 | `MAX_VALUE` | 8          | Maximalwert des darzustellenden Bereichs. |
 | `VARIABLE_REF` | 9       | Objekt-ID einer Variablenreferenz, die den aktuellen Wert liefert. |
 | `TARGET_VAL_VAR_REF` | 10 | Objekt-ID einer Variablenreferenz für den Zielwert. |
-| `TARGET_VALUE` | 11     | Der gewünschte Zielwert (statisch). |
-| `VALUE`      | 12         | Der aktuelle Wert des Balkendiagramms. |
+| `TARGET_VALUE` | [11]    | Der gewünschte Zielwert. **Read-only** für *Change Attribute* (ISO 11783-6); zur Laufzeit anpassbar via *Change Numeric Value* (F.22) oder abfragbar via *Get Attribute Value* (F.58). |
+| `VALUE`      | [12]        | Der aktuelle Wert des Balkendiagramms. **Read-only** für *Change Attribute* (ISO 11783-6); zur Laufzeit anpassbar via *Change Numeric Value* (F.22) oder abfragbar via *Get Attribute Value* (F.58). |
 
 ### **Ereignis-Eingänge**
 

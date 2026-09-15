@@ -34,7 +34,7 @@ The following constants are defined as global, read-only values:
 | FICHILDINDEX | USINT | 6 | AID_AO_FICHILDINDEX – First child index. |
 | LACHILDINDEX | USINT | 7 | AID_AO_LACHILDINDEX – Last child index. |
 | DEFCHILDINDEX | USINT | 8 | AID_AO_DEFCHILDINDEX – Default child index. |
-| OBJECTS | USINT | 9 | AID_AO_OBJECTS – Options: Bit 0 = Animation Sequence (0 = Single Shot, 1 = Loop); Bits 1–2 = Disabled Behaviour (0 = Pause, 1 = Reset to First, 2 = Default Object, 3 = Blank). |
+| OBJECTS | USINT | 9 | `AID_AO_OBJECTS` – Options bitmask (named *Options* in ISO 11783-6 specification): Bit 0 = Animation Sequence (0 = Single Shot, 1 = Loop); Bits 1–2 = Disabled Behaviour (0 = Pause, 1 = Reset to First, 2 = Default Object, 3 = Blank). |
 
 ### **Data Outputs**
 
