@@ -4,7 +4,7 @@
 
 ## Einleitung
 
-Der **Attribute_IDA** ist ein Composite-Adapter-Wrapper-Funktionsbaustein um `Attribute_ID`. Er stellt die empfangenen Objektattribut-Daten über einen unidirektionalen `AUDI`-Adapter-Plug (`IN`) für adapter-native Netzwerke bereit.
+Der **Attribute_IDA** ist ein Composite-Adapter-Wrapper-Funktionsbaustein um `Attribute_ID`. Er stellt die empfangenen Objektattribut-Daten über einen unidirektionalen `AD`-Adapter-Plug (`IN`) für adapter-native Netzwerke bereit.
 
 ![Attribute_IDA](Attribute_IDA.svg)
 
@@ -33,14 +33,14 @@ Der **Attribute_IDA** ist ein Composite-Adapter-Wrapper-Funktionsbaustein um `At
 
 ### **Adapter**
 
-- `IN` (AUDI Plug): Unidirektionaler UDINT-Adapter-Plug zur Bereitstellung der Attributdaten
+- `IN` (AD Plug): Unidirektionaler DWORD-Adapter-Plug zur Bereitstellung der Attributdaten
 
 ## Funktionsweise
 
-`Attribute_IDA` kapselt den `Attribute_ID`-Baustein intern. Bei eintreffenden `IND`- oder `CNF`-Events leitet er die Ereignisse und den 32-Bit-Attributwert automatisch auf die Schnittstelle des `AUDI`-Adapters (`IN.E1` und `IN.D1`) weiter.
+`Attribute_IDA` kapselt den `Attribute_ID`-Baustein intern. Bei eintreffenden `IND`- oder `CNF`-Events leitet er die Ereignisse und die 32-Bit-Attributdaten automatisch auf die Schnittstelle des `AD`-Adapters (`IN.E1` und `IN.D1`) weiter.
 
 ## Technische Besonderheiten
 
-✔ **Adapter-native Schnittstelle** (`AUDI` Plug)
+✔ **Adapter-native Schnittstelle** (`AD` Plug)
 ✔ **Asynchrones Event-Routing** (`IND`/`CNF` -> `IN.E1`)
 ✔ **Einfache Einbindung in Adapternetzwerke**

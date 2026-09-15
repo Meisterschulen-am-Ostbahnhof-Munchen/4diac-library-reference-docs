@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 771.4912109375 212.0"
-     width="771.4912109375" height="212.0">
+     viewBox="0 0 608.611328125 212.0"
+     width="608.611328125" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -260,6 +260,6 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
 
     <text x="167.345703125" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUDI</tspan> – Input attribute data from resource (AUDI adapter)</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AD</tspan> – Input data from resource</text>
   </g>
 </svg>

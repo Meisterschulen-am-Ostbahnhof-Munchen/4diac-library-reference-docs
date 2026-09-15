@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The **Attribute_IDA** is a composite adapter wrapper function block around `Attribute_ID`. It provides received object attribute data via a unidirectional `AUDI` adapter plug (`IN`) for adapter-native networks.
+The **Attribute_IDA** is a composite adapter wrapper function block around `Attribute_ID`. It provides received object attribute data via a unidirectional `AD` adapter plug (`IN`) for adapter-native networks.
 
 ![Attribute_IDA](Attribute_IDA.svg)
 
@@ -33,14 +33,14 @@ The **Attribute_IDA** is a composite adapter wrapper function block around `Attr
 
 ### **Adapters**
 
-- `IN` (AUDI Plug): Unidirectional UDINT adapter plug providing attribute data
+- `IN` (AD Plug): Unidirectional DWORD adapter plug providing attribute data
 
 ## Functionality
 
-`Attribute_IDA` encapsulates `Attribute_ID` internally. Upon incoming `IND` or `CNF` events, it automatically routes the events and 32-bit attribute value to the `AUDI` adapter interface (`IN.E1` and `IN.D1`).
+`Attribute_IDA` encapsulates `Attribute_ID` internally. Upon incoming `IND` or `CNF` events, it automatically routes the events and 32-bit attribute data to the `AD` adapter interface (`IN.E1` and `IN.D1`).
 
 ## Technical Features
 
-✔ **Adapter-native interface** (`AUDI` plug)
+✔ **Adapter-native interface** (`AD` plug)
 ✔ **Asynchronous event routing** (`IND`/`CNF` -> `IN.E1`)
 ✔ **Seamless integration into adapter networks**
