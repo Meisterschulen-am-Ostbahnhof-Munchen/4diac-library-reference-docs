@@ -34,18 +34,18 @@ Keine.
 
 ## Funktionsweise
 
-Der Baustein definiert drei globale Konstanten vom Typ `USINT` (Unsigned Short Integer), die jeweils eine spezifische Attribut-ID für ein Working Set repräsentieren:
+Der Baustein definiert drei globale Konstanten vom Typ `USINT` (Unsigned Short Integer), die jeweils eine spezifische Attribut-ID für ein Working Set repräsentieren (ISO 11783-6 Tabelle B.1):
 
-- `BACKGROUND_COLOUR` (Wert 1): Diese Konstante identifiziert das Attribut „Background colour index" eines Working Sets. Der Wert entspricht der Attribut-ID `AID_WS_BACKGROUND_COLOUR`.
-- `SELECTABLE` (Wert 2): Diese Konstante kennzeichnet das Attribut „Selectable", das angibt, ob ein Working Set vom Bediener ausgewählt werden kann (0 = FALSE, 1 = TRUE). Die zugehörige Attribut-ID ist `AID_WS_SELECTABLE`.
-- `ACTIVE_MASK` (Wert 3): Diese Konstante verweist auf das Attribut „Active Mask", das die Objekt-ID der Daten- oder Alarmmaske angibt, die angezeigt werden soll, solange das Working Set aktiv ist. Die Attribut-ID lautet `AID_WS_ACTIVE_MASK`.
+- `BACKGROUND_COLOUR` (Wert `[1]`): **Read-only** für *Change Attribute* (ISO 11783-6). Hintergrundfarb-Index. Bei Objektpool-Erstellung angegeben, zur Laufzeit abfragbar via *Get Attribute Value* (F.58).
+- `SELECTABLE` (Wert `[2]`): **Read-only** für *Change Attribute* (ISO 11783-6). Auswählbarkeit durch Bediener (0 = FALSE, 1 = TRUE). Bei Objektpool-Erstellung angegeben, zur Laufzeit abfragbar via *Get Attribute Value* (F.58).
+- `ACTIVE_MASK` (Wert `[3]`): **Read-only** für *Change Attribute* (ISO 11783-6). Objekt-ID der aktiven Daten- oder Alarmmaske. Abfragbar via *Get Attribute Value* (F.58); zur Laufzeit anpassbar über den speziellen Befehl *Change Active Mask* (F.34).
 
-Diese Konstanten werden typischerweise in ISOBUS-Kommunikationsmodulen verwendet, um Attribute eines Working Sets über den entsprechenden Dienst (z.B. Get/Set Attribute) zu adressieren. Sie sind als `VAR_GLOBAL CONSTANT` deklariert und stehen daher im gesamten Projekt zur Verfügung.
+Diese Konstanten werden typischerweise in ISOBUS-Kommunikationsmodulen verwendet, um Attribute eines Working Sets über den entsprechenden Dienst (z.B. Get Attribute Value) zu adressieren. Sie sind als `VAR_GLOBAL CONSTANT` deklariert und stehen daher im gesamten Projekt zur Verfügung.
 
 ## Technische Besonderheiten
 
 - **Typ**: `USINT` – 8-Bit vorzeichenloser Integer, passend zu ISOBUS-Datenformaten.
-- **Initialwerte**: Die Werte 1, 2 und 3 entsprechen den offiziellen Attribut-IDs gemäß ISO 11783-6.
+- **Initialwerte**: Die Werte 1, 2 und 3 entsprechen den offiziellen Attribut-IDs gemäß ISO 11783-6. Alle drei Attribute sind für *Change Attribute* (F.38) schreibgeschützt.
 - **Paketname**: Der Baustein ist in das Paket `isobus::UT::Q::const::AID` eingebettet, was auf eine strukturierte Bibliothek für UT (Universal Terminal) Konstanten hinweist.
 - **Lizenz**: Die enthaltenen Informationen und die Deklaration unterliegen der Eclipse Public License 2.0.
 
@@ -57,8 +57,9 @@ Als reiner Konstanten-Baustein besitzt `AID_WS` keinen internen Zustand oder Zus
 
 Typische Anwendungsfälle sind:
 
-- Implementierung von ISOBOBUS-UT-Funktionen, bei denen auf Working-Set-Attribute zugegriffen wird.
-- Erstellung von Dienstfunktionen zur Abfrage oder Änderung von Working-Set-Eigenschaften (z.B. Hintergrundfarbe ändern, Auswählbarkeit setzen).
+- Implementierung von ISOBUS-UT-Funktionen, bei denen auf Working-Set-Attribute zugegriffen wird.
+- Erstellung von Dienstfunktionen zur Abfrage von Working-Set-Eigenschaften via *Get Attribute Value* (F.58).
+- Umschalten der aktiven Maske eines Working Sets zur Laufzeit mittels *Change Active Mask* (F.34).
 - Einbindung in größere 4diac-Anwendungen zur Steuerung von Terminals in landwirtschaftlichen Maschinen.
 
 ## Vergleich mit ähnlichen Bausteinen

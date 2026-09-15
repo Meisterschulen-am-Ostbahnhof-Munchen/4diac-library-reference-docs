@@ -32,9 +32,9 @@ The following constant values are defined by AID_WS and are accessible globally:
 
 | Constant Name | Type   | Value | Description |
 |---------------|--------|-------|-------------|
-| `BACKGROUND_COLOUR` | `USINT` | `1` | Attribute ID for the background colour index of a working set. |
-| `SELECTABLE`        | `USINT` | `2` | Attribute ID indicating whether the working set can be selected by the operator (0 = FALSE, 1 = TRUE). |
-| `ACTIVE_MASK`       | `USINT` | `3` | Attribute ID for the object ID of the data or alarm mask to be displayed when the working set is active. |
+| `BACKGROUND_COLOUR` | `USINT` | `[1]` | Attribute ID for background colour index. **Read-only** for *Change Attribute* (ISO 11783-6 Table B.1). Supplied during object pool creation; queryable via *Get Attribute Value* (F.58). |
+| `SELECTABLE`        | `USINT` | `[2]` | Attribute ID for selectable status (0 = FALSE, 1 = TRUE). **Read-only** for *Change Attribute* (ISO 11783-6 Table B.1). Supplied during object pool creation; queryable via *Get Attribute Value* (F.58). |
+| `ACTIVE_MASK`       | `USINT` | `[3]` | Attribute ID for active data or alarm mask object ID. **Read-only** for *Change Attribute* (ISO 11783-6 Table B.1). Queryable via *Get Attribute Value* (F.58); updated at runtime via *Change Active Mask* (F.34). |
 
 ### **Adapters**
 
@@ -42,16 +42,17 @@ None.
 
 ## Functionality
 
-The AID_WS constants are used to access and manipulate attributes of working set objects in an ISOBUS environment. Each constant corresponds to a specific attribute ID defined in the ISOBUS standard (Part 1 – Part 8, especially Part 6 for Virtual Terminal). By using these constants in conjunction with service functions or protocol requests, an application can query or set the background colour, selectable flag, or active mask of a working set.
+The AID_WS constants provide numeric attribute identifiers for working set objects in an ISOBUS environment (ISO 11783-6 Table B.1).
 
-The values are defined as `USINT` (unsigned short integer) and follow the AID numbering scheme from the ISOBUS standard. For example, the background colour attribute is assigned ID 1, the selectable attribute ID 2, and the active mask attribute ID 3. This mapping is consistent across all ISOBUS-compliant implementations.
+All three attributes (`BACKGROUND_COLOUR`, `SELECTABLE`, and `ACTIVE_MASK`) are **read-only** for the *Change Attribute* command (F.38). At runtime, these attribute IDs are queried via *Get Attribute Value* (F.58). To change the active mask at runtime, applications must use the specialized *Change Active Mask* command (F.34) rather than *Change Attribute*.
+
+The values are defined as `USINT` (unsigned short integer) and follow the AID numbering scheme from ISO 11783-6 Table B.1.
 
 ## Technical Features
 
 - **Global Availability**: The constants are defined as `VAR_GLOBAL CONSTANT`, meaning they are accessible from any function block or resource within the same application without explicit declaration.
-- **Type Safety**: All constants are of type `USINT`, which matches the attribute ID data type used in ISOBUS protocol messages.
-- **Documentation**: Each constant is accompanied by a comment explaining its meaning, derived from the ISOBUS standard.
-- **Compatibility**: The constants align with the ISOBUS attribute IDs, ensuring interoperability with other ISOBUS-compliant devices.
+- **Type Safety**: All constants are of type `USINT`, matching the attribute ID data type used in ISOBUS protocol messages.
+- **Standards Compliance**: All three Working Set attributes are read-only for *Change Attribute* (F.38) per ISO 11783-6 Table B.1.
 - **No Dynamic Behavior**: As a global constants type, AID_WS does not contain any logic or state; it is purely a definition.
 
 ## State Overview
@@ -62,9 +63,9 @@ Since AID_WS is a constant definition, it has no runtime state. The values are f
 
 AID_WS is typically used in ISOBUS Virtual Terminal (VT) implementations, particularly in function blocks that handle working set objects. Common use cases include:
 
-- Creating or configuring a working set on a VT by assigning the background colour index.
-- Determining whether a working set is selectable and acting accordingly.
-- Setting the active mask (data or alarm) that should be displayed when the working set becomes active.
+- Defining working set attributes (background colour, selectable flag, initial active mask) during object pool construction.
+- Querying working set attributes at runtime via *Get Attribute Value* (F.58).
+- Switching the active data or alarm mask at runtime using the specialized *Change Active Mask* command (F.34).
 
 For example, a function block might use `AID_WS::BACKGROUND_COLOUR` in a request to set the background of a working set, or it might parse a response and use `AID_WS::SELECTABLE` to check the selectable status.
 
