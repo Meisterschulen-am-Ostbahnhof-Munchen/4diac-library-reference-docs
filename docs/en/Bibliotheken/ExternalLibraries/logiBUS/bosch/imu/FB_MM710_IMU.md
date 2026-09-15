@@ -15,14 +15,13 @@ The function block **FB_MM710_IMU** is a service-oriented module (SIFB) for conn
 | Event | Type  | Description                                                                                                                 |
 | ----- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
 | INIT  | EInit | Initialization of the module. This event sets the CAN parameters (index, source address) and the activation qualifier QI.   |
-| REQ   | Event | Triggers a new measurement query. After successful initialization, sensor data can be requested cyclically or event-driven. |
 
 ### **Event Outputs**
 
 | Event | Type  | Description                                                                                     |
 | ----- | ----- | ----------------------------------------------------------------------------------------------- |
 | INITO | EInit | Confirmation of successful initialization (QO = TRUE) or error message.                         |
-| CNF   | Event | Confirmation of a measurement request. Provides the current sensor data and status information. |
+| IND   | Event | Indication upon receiving new CAN/J1939 measurement data from the sensor. Provides the current sensor data and status information. |
 | ERROR | Event | Occurs in case of communication or CRC errors. Contains detailed error information.             |
 
 ### **Data Inputs**
@@ -53,8 +52,8 @@ The function block **FB_MM710_IMU** is a service-oriented module (SIFB) for conn
 | uiSysDiag | BYTE | System diagnostic code (from TX2). |
 | uiMessageCounter | UINT | Message counter (0..15) for timeout monitoring. |
 | bCommError | BOOL | TRUE on CAN timeout. |
-bCRCError | BOOL | TRUE on failed CRC check. |
-sErrorMsg | STRING | Error text (e.g., "CAN timeout"). |
+| bCRCError | BOOL | TRUE on failed CRC check. |
+| sErrorMsg | STRING | Error text (e.g., "CAN timeout"). |
 
 ### **Adapter**
 
@@ -62,13 +61,14 @@ No adapters defined.
 
 ## Functionality
 
-Upon receiving **INIT** with QI = TRUE, the FB_MM710_IMU initializes the CAN communication and the internal receive buffer. After successful initialization, **INITO** is set with QO = TRUE. Each **REQ pulse** triggers a measurement query – the function block then waits for the CAN response from the sensor. If valid data is received, **CNF** is output and all data outputs are updated. If a communication or CRC error occurs, or if the message counter exceeds a timeout, **ERROR** is set instead. The module can be triggered cyclically multiple times in succession using REQ.
+Upon receiving **INIT** with QI = TRUE, the FB_MM710_IMU initializes the CAN communication and internal receive buffer. After successful initialization, **INITO** is set with QO = TRUE. The function block operates as an autonomous CAN resource interface (SIFB): Whenever new CAN/J1939 frames arrive from the Bosch MM7.10 sensor on the bus, the function block updates its data outputs and emits an **IND** (Indication) event to the application. Manual triggering via REQ is not required. If a communication or CRC error occurs, or if the message counter exceeds a timeout, **ERROR** is set instead.
 
 The signal statuses (eStatus*) enable individual fault analysis for each axis. The hardware index distinguishes between older MM5.10 and current MM7.10 sensors.
 
 ## Technical Features
 
 - **CAN/J1939 Protocol** – Uses a fixed source address (default: `16#DA`).
+- **Autonomous Indications** – Emits **IND** upon receiving each CAN sensor data frame.
 - **Timeout Monitoring** – The `uiMessageCounter` (0-15) is incremented with each valid message; if it fails to increment, a communication error is reported after 16 missing messages.
 - **Signal Status Bits** – Provide more granular information than simple "ready/error" flags.
 - **CRC Check** – Faulty CAN frames are detected and reported via `bCRCError` and **ERROR**.
@@ -76,14 +76,13 @@ The signal statuses (eStatus*) enable individual fault analysis for each axis. T
 
 ## State Overview
 
-The module goes through the following states (not explicitly as ECC, but inferable from its behavior):
+The module goes through the following states (inferable from its behavior):
 
 1. **Inactive** – After startup, waiting for INIT.
 2. **Initializing** – After an INIT event; establishing CAN communication.
-3. **Ready** – After successful INITO; waiting for REQ.
-4. **Request Sent** – After REQ; waiting for a response (CAN message).
-5. **Data Received** – After a successful CAN response; CNF is sent.
-6. **Error** – In case of timeout or CRC error; ERROR is sent (fallback to Ready after error handling).
+3. **Ready / Listening** – After successful INITO; listening on CAN bus.
+4. **Indication Sent** – Upon receiving valid CAN sensor frames; IND is emitted.
+5. **Error** – In case of timeout or CRC error; ERROR is sent.
 
 ## Application Scenarios
 
