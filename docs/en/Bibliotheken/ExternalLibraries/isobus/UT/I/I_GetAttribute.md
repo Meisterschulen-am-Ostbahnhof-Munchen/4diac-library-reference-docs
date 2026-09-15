@@ -1,13 +1,13 @@
-# Q_GetAttribute
+# I_GetAttribute
 
-![Q_GetAttribute](https://user-images.githubusercontent.com/116869307/214147879-2749e8c2-364e-4335-9c0e-0445694831e4.png)
+![I_GetAttribute](https://user-images.githubusercontent.com/116869307/214147879-2749e8c2-364e-4335-9c0e-0445694831e4.png)
 
 * * * * * * * * * *
 
 ## Introduction
 
-The **Q_GetAttribute** is a standards-compliant function module for querying object attributes in virtual terminals, developed under the EPL-2.0 license. Version 1.0 implements the ISO 11783-6 (Part 6 - F.58) specification for VT systems from version 4 onwards.
-![Q_GetAttribute](Q_GetAttribute.svg)
+The **I_GetAttribute** is a standards-compliant function module for querying object attributes in virtual terminals, developed under the EPL-2.0 license. Version 1.0 implements the ISO 11783-6 (Part 6 - F.58) specification for VT systems from version 4 onwards.
+![I_GetAttribute](I_GetAttribute.svg)
 
 ## Interface Structure
 
@@ -29,7 +29,7 @@ The **Q_GetAttribute** is a standards-compliant function module for querying obj
 ### **Data Outputs**
 
 - `STATUS` (STRING): Operational status message
-- `u8OldAID` (USINT): Current attribute value
+- `u32ValueAttribute` (UDINT): Current attribute value (32-bit)
 - `s16result` (INT): ISO-compliant result code
 
 ## Valid Object IDs
@@ -92,7 +92,7 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## ⚖️ Comparison with Similar Function Blocks
 
-| Feature         | Q_GetAttribute | VtReadValue | VtObjectQuery |
+| Feature         | I_GetAttribute | VtReadValue | VtObjectQuery |
 | --------------- | -------------- | ----------- | ------------- |
 | ISO Standard    | ✔              | ✖           | ✖             |
 | VT Version      | 4+             | All         | All           |
@@ -100,7 +100,7 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 ## Conclusion
 
-The Q_GetAttribute function block offers the standard implementation for attribute queries:
+The I_GetAttribute function block offers the standard implementation for attribute queries:
 
 - **Efficient**: Minimal latency
 - **Reliable**: Robust error detection

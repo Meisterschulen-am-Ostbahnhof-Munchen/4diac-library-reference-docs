@@ -1,14 +1,14 @@
-# Q_GetAttribute
+# I_GetAttribute
 
-![Q_GetAttribute](https://user-images.githubusercontent.com/116869307/214147879-2749e8c2-364e-4335-9c0e-0445694831e4.png)
+![I_GetAttribute](https://user-images.githubusercontent.com/116869307/214147879-2749e8c2-364e-4335-9c0e-0445694831e4.png)
 
 * * * * * * * * * *
 
 ## Einleitung
 
-Der **Q_GetAttribute** ist ein standardkonformer Funktionsbaustein zum Abfragen von Objektattributen in Virtual Terminals, entwickelt unter EPL-2.0 Lizenz. Die Version 1.0 implementiert die ISO 11783-6 (Teil 6 - F.58) Spezifikation für VT-Systeme ab Version 4.
+Der **I_GetAttribute** ist ein standardkonformer Funktionsbaustein zum Abfragen von Objektattributen in Virtual Terminals, entwickelt unter EPL-2.0 Lizenz. Die Version 1.0 implementiert die ISO 11783-6 (Teil 6 - F.58) Spezifikation für VT-Systeme ab Version 4.
 
-![Q_GetAttribute](Q_GetAttribute.svg)
+![I_GetAttribute](I_GetAttribute.svg)
 
 ## Schnittstellenstruktur
 
@@ -30,7 +30,7 @@ Der **Q_GetAttribute** ist ein standardkonformer Funktionsbaustein zum Abfragen 
 ### **Daten-Ausgänge**
 
 - `STATUS` (STRING): Betriebsstatusmeldung
-- `u8OldAID` (USINT): Aktueller Attributwert
+- `u32ValueAttribute` (UDINT): Aktueller Attributwert (32-bit)
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Gültige Objekt-IDs
@@ -90,7 +90,7 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-| Feature        | Q_GetAttribute | VtReadValue | VtObjectQuery  |
+| Feature        | I_GetAttribute | VtReadValue | VtObjectQuery  |
 | -------------- | -------------- | ----------- | -------------- |
 | ISO-Standard   | ✔              | ✖           | ✖              |
 | VT-Version     | 4+             | Alle        | Alle           |
@@ -98,7 +98,7 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 
 ## Fazit
 
-Der Q_GetAttribute-Baustein bietet die Standardimplementierung für Attributabfragen:
+Der I_GetAttribute-Baustein bietet die Standardimplementierung für Attributabfragen:
 
 - **Effizient**: Minimale Latenzzeiten
 - **Zuverlässig**: Robuste Fehlererkennung
