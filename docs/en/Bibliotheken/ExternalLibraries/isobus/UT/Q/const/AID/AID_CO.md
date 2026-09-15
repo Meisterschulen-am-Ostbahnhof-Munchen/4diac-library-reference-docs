@@ -42,10 +42,12 @@ Not applicable – no adapters are defined.
 
 ## Functionality
 
-The AID_CO global constants provide numeric identifiers for the standard attributes of ISOBUS container objects. These constants are used when constructing attribute lists in object pool building or when setting/reading object attributes at runtime via the ISOBUS protocol. Using named constants instead of raw numeric values improves code readability and maintains compliance with the ISO 11783-6 specification.
+The AID_CO global constants provide numeric identifiers for the standard attributes of ISOBUS container objects (ISO 11783-6 Table B.8). These constants are supplied during object-pool construction to define a container's initial attributes.
 
-- `WIDTH` (1) and `HEIGHT` (2) define the clipping boundary of the container's drawing area.
-- `HIDDEN` (3) controls the visibility of the container and its child objects.
+At runtime, all three attributes (`WIDTH`, `HEIGHT`, and `HIDDEN`) are **read-only** for the *Change Attribute* command (F.38). Attempting to modify container dimensions at runtime using *Change Attribute* is unsupported by ISO 11783-6. Runtime use of `WIDTH` and `HEIGHT` attribute IDs is limited to querying container dimensions via *Get Attribute Value* (F.58).
+
+- `WIDTH` (1) and `HEIGHT` (2) define the maximum dimensions / clipping boundary of the container's area in pixels. They may be supplied during object-pool creation and queried at runtime via *Get Attribute Value* (F.58), but cannot be altered via *Change Attribute*.
+- `HIDDEN` (3) controls the visibility of the container and its child objects. It is read-only for *Change Attribute* (F.38) and queryable via *Get Attribute Value* (F.58); dynamic visibility changes must be performed using the specialized *Hide/Show Object* command (F.2).
 
 ## Technical Features
 
@@ -62,9 +64,9 @@ This component has no internal state machine or runtime states. It is a purely d
 
 ## Application Scenarios
 
-- **ISOBUS Object Pool Generation:** Use `AID_CO.WIDTH`, `AID_CO.HEIGHT`, and `AID_CO.HIDDEN` when creating container object attributes in an object pool for a Virtual Terminal.
-- **VT Runtime Communication:** Refer to these constants when setting or requesting container object attributes over the ISOBUS network.
-- **Clipping and Visibility Control:** Apply the `HIDDEN` attribute (value 3) to show or hide containers dynamically, and `WIDTH`/`HEIGHT` to define the container's clipping rectangle.
+- **ISOBUS Object Pool Construction:** Use `AID_CO.WIDTH`, `AID_CO.HEIGHT`, and `AID_CO.HIDDEN` when defining initial container object properties in an object pool for a Virtual Terminal.
+- **Runtime Attribute Querying:** Refer to `AID_CO.WIDTH`, `AID_CO.HEIGHT`, or `AID_CO.HIDDEN` when requesting container object attribute values from the VT via *Get Attribute Value* (F.58). Note that *Change Attribute* (F.38) writes to these attributes are unsupported.
+- **Visibility Management:** Manage container visibility at runtime using the specialized *Hide/Show Object* command (F.2) rather than *Change Attribute*.
 
 ## Comparison with Similar Blocks
 

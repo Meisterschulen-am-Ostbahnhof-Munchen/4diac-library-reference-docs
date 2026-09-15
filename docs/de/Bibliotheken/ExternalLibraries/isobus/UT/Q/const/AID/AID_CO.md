@@ -32,13 +32,15 @@ Es sind keine Adapter vorhanden.
 
 ## Funktionsweise
 
-Der Baustein stellt drei globale Konstanten bereit, die die Attribut-IDs für Container-Objekte im ISOBUS-System repräsentieren. Diese Konstanten sind direkt in allen anderen Anwendungen des Projekts zugreifbar und können beispielsweise in Daten-Kommunikationsbausteinen oder Verarbeitungslogiken verwendet werden, um eine einheitliche und verständliche Referenz auf die jeweilige Eigenschaft eines Containers zu ermöglichen.
+Der Baustein stellt drei globale Konstanten bereit, die die Attribut-IDs für Container-Objekte im ISOBUS-System repräsentieren (ISO 11783-6 Tabelle B.8). Diese Konstanten werden bei der Erstellung des Objekt-Pools (Object Pool Construction) verwendet, um die initialen Attribute eines Containers zu definieren.
+
+Zur Laufzeit sind alle drei Attribute (`WIDTH`, `HEIGHT` und `HIDDEN`) für den Befehl *Change Attribute* (F.38) **schreibgeschützt (read-only)**. Ein Versuch, die Abmessungen eines Containers zur Laufzeit über *Change Attribute* zu verändern, ist nach ISO 11783-6 nicht zulässig. Die Verwendung von `WIDTH` und `HEIGHT` zur Laufzeit beschränkt sich auf das Abfragen der Containerdimensionen mittels *Get Attribute Value* (F.58).
 
 Die definierten Konstanten:
 
-- `WIDTH` mit dem Wert `[1]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Breite des Containerbereichs in Pixeln.
-- `HEIGHT` mit dem Wert `[2]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Höhe des Containerbereichs in Pixeln.
-- `HIDDEN` mit dem Wert `[3]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Abfragbar via *Get Attribute Value* F.58, steuerbar via *Hide/Show Object* F.2 (0 = sichtbar, 1 = verborgen).
+- `WIDTH` mit dem Wert `[1]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Breite des Containerbereichs in Pixeln. Kann bei der Objektpool-Erstellung angegeben und zur Laufzeit via *Get Attribute Value* (F.58) abgefragt werden.
+- `HEIGHT` mit dem Wert `[2]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Höhe des Containerbereichs in Pixeln. Kann bei der Objektpool-Erstellung angegeben und zur Laufzeit via *Get Attribute Value* (F.58) abgefragt werden.
+- `HIDDEN` mit dem Wert `[3]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Abfragbar via *Get Attribute Value* (F.58); dynamische Sichtbarkeitsänderungen erfolgen ausschließlich über den speziellen Befehl *Hide/Show Object* (F.2) (0 = sichtbar, 1 = verborgen).
 
 ## Technische Besonderheiten
 
@@ -53,9 +55,9 @@ Da es sich um einen Konstantencontainer handelt, existiert kein Zustandsmodell. 
 
 ## Anwendungsszenarien
 
-- **ISOBUS-Datenkommunikation**: Wenn ein ISOBUS-Netzwerk (z. B. ein Terminal) Daten über Container-Objekte austauscht, können diese Konstanten verwendet werden, um die entsprechenden Attribut-IDs in Nachrichten zu referenzieren.
-- **Bildschirmdarstellung**: Bei der Darstellung eines Containers auf einem virtuellen Terminal können die Konstanten `WIDTH` und `HEIGHT` zur Berechnung der Anzeigegröße herangezogen werden.
-- **Sichtbarkeitssteuerung**: Die Konstante `HIDDEN` kann verwendet werden, um über einen Logikbaustein die Sichtbarkeit eines Containers dynamisch zu steuern.
+- **ISOBUS-Objektpool-Erstellung**: Verwendung von `AID_CO.WIDTH`, `AID_CO.HEIGHT` und `AID_CO.HIDDEN` bei der Definition von Container-Objektattributen im Objekt-Pool für ein Virtuelles Terminal.
+- **Laufzeit-Attributabfrage**: Verwendung von `AID_CO.WIDTH`, `AID_CO.HEIGHT` und `AID_CO.HIDDEN` beim Abfragen von Container-Eigenschaften über den Befehl *Get Attribute Value* (F.58). Schreibzugriffe via *Change Attribute* (F.38) sind für diese Attribute nicht unterstützt.
+- **Sichtbarkeitssteuerung**: Dynamisches Ein- und Ausblenden von Containern zur Laufzeit erfolgt über den Befehl *Hide/Show Object* (F.2) statt über *Change Attribute*.
 
 ## Vergleich mit ähnlichen Bausteinen
 
