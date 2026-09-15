@@ -31,11 +31,13 @@ The **I_GetAttribute** is a standards-compliant function module for querying obj
 - `STATUS` (STRING): Operational status message
 - `s16result` (INT): ISO-compliant result code (0 = OK, negative values = error)
 
-## Valid Object IDs
+## Valid Object IDs & Validation
 
-The F.58 command is a fixed 8-byte message (Object ID in bytes 2,3, Attribute ID in byte 4; no Transport Protocol) and places **no restriction on the object type** — any object in the object pool can be queried. The VT validates the Object ID and the Attribute ID and returns an error response if either is invalid.
+The Get Attribute Value command (F.58) is a fixed 8-byte message (Object ID in bytes 2,3, Attribute ID in Byte 4; no Transport Protocol). `INIT` validates both the object type (`iso_has_readable_attribute_id` – does this object type have any readable AID at all, read-only or writable?) and the specific Attribute ID against that type's attribute table (`iso_is_readable_attribute`), before the command is ever sent — unlike *Change Attribute*, both read-only and writable AIDs are accepted here.
 
-ID_NULL (65535) is not a valid command target but deactivates the FB when sent via `INIT`.
+The underlying C implementation (`cmd_get_attribute_value`) performs no type check of its own (only `ID_NULL` handling). The VT additionally validates the Object ID and the Attribute ID on its side and returns an error response if either is invalid.
+
+`ID_NULL` (65535) is not a command target but deactivates the FB when sent via `INIT` (`VT_E_DEACTIVATED`).
 
 ## Functionality
 
@@ -45,7 +47,7 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 
 2. **Attribute Query (Asynchronous Event)**:
    - `REQ` triggers the query for the specified attribute ID (`u8AID`).
-   - Since object attribute queries on the ISOBUS VT are **asynchronous events**, the response from the VT resource arrives asynchronously via an indication event (`IND` / `Attribute_ID`) or `CNF` with the current 32-bit attribute value `u32ValueAttribute`.
+   - Since object attribute queries on the ISOBUS VT are **asynchronous events**, the response from the VT resource arrives asynchronously via an indication event (`IND` / `Attribute_ID`) or `CNF`.
 
 3. **Error Handling**:
    - ISO-standardized error codes in `s16result`
@@ -56,7 +58,7 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 ✔ **ISO 11783-6 compliant** (F.58)
 ✔ **Asynchronous Event Handling** (Response indication via `IND` / `Attribute_ID`)
 ✔ **Exclusive to VT Version 4+**
-✔ **Universally applicable** (All object types)
+✔ **Universally applicable** (All object types with readable AIDs)
 ✔ **Real-time capable** (Fast query cycles)
 
 ## Attribute Types
@@ -73,11 +75,16 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 | Code | Constant                  | Meaning                |
 | ---- | ------------------------- | ---------------------- |
 | 0    | VT_E_NO_ERR               | Query successful       |
+| -40  | VT_E_DEACTIVATED          | FB deactivated via ID_NULL on INIT |
+| -132 | VT_E_INVALID_OBJECT_ID    | Object ID's type has no readable AID at all (`iso_has_readable_attribute_id`) |
+| -133 | VT_E_INVALID_ATTRIBUTE_ID | Attribute ID is not a valid/readable AID for this object type (`iso_is_readable_attribute`) |
+| -131 | VT_E_NOT_READY            | Buffered: INIT not yet completed / VT not yet ready |
 | -6   | VT_E_OVERFLOW             | Buffer overflow        |
-| -8   | VT_E_NOACT                | VT not ready           |
+| -8   | VT_E_NOACT                | Command not possible in current state |
 | -21  | VT_E_NO_INSTANCE          | No VT client available |
+| -128 | VT_E_HANDLE_INVALID       | Error cause: Invalid handle |
 | -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
-| -130 | VT_E_NOT_ALIVE            | VT not active          |
+| -130 | VT_E_NOT_ALIVE            | VT instance valid, but VT dead |
 
 ## Application Scenarios
 
