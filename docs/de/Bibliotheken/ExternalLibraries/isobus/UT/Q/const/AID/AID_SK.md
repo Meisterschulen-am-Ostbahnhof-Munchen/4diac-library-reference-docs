@@ -37,7 +37,7 @@ Nicht vorhanden.
 Der Baustein stellt zwei globale Konstanten vom Typ `USINT` (Unsigned Short Integer) bereit:
 
 - `BACKGROUND_COLOUR` mit dem Wert `1` – entspricht dem Attribut `AID_SK_BACKGROUND_COLOUR` (Hintergrundfarbindex, schreibbar via *Change Attribute* F.38).
-- `KEY_CODE` mit dem Wert `[2]` – **Read-only** für *Change Attribute* (F.38) gemäß ISO 11783-6. Entspricht dem Attribut `AID_SK_KEY_CODE` (Tastencode, den das VT in der Soft-Key-Aktivierungsnachricht meldet, abfragbar via *Get Attribute Value* F.58).
+- `KEY_CODE` mit dem Wert `2` – Schreibbar via *Change Attribute* (F.38) gemäß ISO 11783-6 Tabelle B.12 (ungeklammertes AID `2`). Wird vom VT in der **Soft Key Activation** Nachricht gemeldet und ist via *Get Attribute Value* (F.58) abfragbar.
 
 Diese Konstanten können in anderen Bausteinen oder Programmen verwendet werden, um auf die entsprechenden Attribut-IDs zuzugreifen, ohne magische Zahlen im Code zu verwenden.
 

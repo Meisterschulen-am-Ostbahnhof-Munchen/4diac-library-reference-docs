@@ -39,7 +39,7 @@ None.
 The purpose of AID_SK is to provide two constant values that correspond to the attribute IDs used in ISOBUS VT soft key objects:
 
 - `BACKGROUND_COLOUR` (value = 1): This ID refers to the background colour index of a soft key. (Writable via *Change Attribute* F.38)
-- `KEY_CODE` (value = [2]): **Read-only** for *Change Attribute* (F.38) per ISO 11783-6. This ID is used by the VT to report the code in a **Soft Key Activation** message. Queryable via *Get Attribute Value* (F.58).
+- `KEY_CODE` (value = 2): Writable via *Change Attribute* (F.38) per ISO 11783-6 Table B.12 (unbracketed AID `2`). Reported by the VT in **Soft Key Activation** messages and queryable via *Get Attribute Value* (F.58).
 
 By defining these values as global constants, all parts of an application can reference them by name rather than by numeric literals, improving code readability and maintainability.
 

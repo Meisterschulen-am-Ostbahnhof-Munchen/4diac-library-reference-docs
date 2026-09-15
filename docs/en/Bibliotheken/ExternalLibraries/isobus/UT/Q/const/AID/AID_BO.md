@@ -35,7 +35,7 @@ The following global constants are available within the `isobus::UT::Q::const::A
 | `BACKGROUND_COLOUR` | USINT | 3       | `AID_BO_BACKGROUND_COLOUR` – Background colour index. |
 | `BORDER_COLOUR`     | USINT | 4       | `AID_BO_BORDER_COLOUR` – Border colour index. |
 | `KEY_CODE`          | USINT | 5       | `AID_BO_KEY_CODE` – Key code associated with the button. |
-| `OPTIONS`           | USINT | [6]           | `AID_BO_OPTIONS` – **Read-only** for *Change Attribute* (ISO 11783-6). Queryable via *Get Attribute Value* (F.58); updated at runtime via *Enable/Disable Object* (F.4) or *Select Input Object* (F.6). Bitmask containing several options:<br/>‑ Bit 0: latchable<br/>‑ Bit 1: state (0 = released, 1 = latched)<br/>‑ Bit 2: suppress border<br/>‑ Bit 3: transparent background<br/>‑ Bit 4: disabled<br/>‑ Bit 5: no border |
+| `OPTIONS`           | USINT | 6             | `AID_BO_OPTIONS` – Writable via *Change Attribute* (F.38) per ISO 11783-6 Table B.14 (unbracketed AID `6`). Bitmask options:<br/>‑ Bit 0: latchable (read-only capability parameter; ignored by VT in Change Attribute F.38)<br/>‑ Bit 1: state (0 = released, 1 = latched; also updated via Select Input Object F.6)<br/>‑ Bit 2: suppress border<br/>‑ Bit 3: transparent background<br/>‑ Bit 4: disabled (also updated via Enable/Disable Object F.4)<br/>‑ Bit 5: no border |
 
 ### **Adapters**
 

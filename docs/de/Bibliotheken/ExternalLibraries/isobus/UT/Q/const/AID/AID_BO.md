@@ -41,7 +41,7 @@ Der Baustein enthält sechs Konstanten vom Typ `USINT`, die jeweils eine eindeut
 | `BACKGROUND_COLOUR` | 3    | Index der Hintergrundfarbe                                                   |
 | `BORDER_COLOUR`     | 4    | Index der Rahmenfarbe                                                        |
 | `KEY_CODE`          | 5    | Tastencode                                                                   |
-| `OPTIONS`           | [6]  | **Read-only** für *Change Attribute* (ISO 11783-6). Abfragbar via *Get Attribute Value* (F.58); zur Laufzeit steuerbar via *Enable/Disable Object* (F.4) oder *Select Input Object* (F.6). Bitmaske für Optionen (Latch, Zustand, Unterdrückung, Transparenz, etc.) |
+| `OPTIONS`           | 6    | Schreibbar via *Change Attribute* (F.38) gemäß ISO 11783-6 Tabelle B.14 (ungeklammertes AID `6`). Bitmaske für Optionen:<br/>‑ Bit 0: latchable (schreibgeschützte Eigenschaft; wird bei F.38 vom VT ignoriert)<br/>‑ Bit 1: Zustand (0 = losgelassen, 1 = eingerastet; auch steuerbar via *Select Input Object* F.6)<br/>‑ Bit 2: Rahmen unterdrücken<br/>‑ Bit 3: transparenter Hintergrund<br/>‑ Bit 4: deaktiviert (auch steuerbar via *Enable/Disable Object* F.4)<br/>‑ Bit 5: kein Rahmen |
 
 ## Technische Besonderheiten  
 
