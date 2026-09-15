@@ -32,9 +32,9 @@ Not applicable – this global constants container does not provide dynamic data
 
 | Constant | Type   | Value | Attribute ID | Description |
 |----------|--------|-------|--------------|-------------|
-| `WIDTH`  | USINT  | 1     | AID_CO_WIDTH | Maximum width of the container's area in pixels. Objects or portions outside this area are clipped. |
-| `HEIGHT` | USINT  | 2     | AID_CO_HEIGHT | Maximum height of the container's area in pixels. Objects or portions outside this area are clipped. |
-| `HIDDEN` | USINT  | 3     | AID_CO_HIDDEN | 0 = FALSE, 1 = TRUE. Indicates whether this container and its child objects are hidden. |
+| `WIDTH`  | USINT  | 1     | AID_CO_WIDTH | Maximum width of the container's area in pixels (writable via Change Attribute F.38 or Change Size F.18). |
+| `HEIGHT` | USINT  | 2     | AID_CO_HEIGHT | Maximum height of the container's area in pixels (writable via Change Attribute F.38 or Change Size F.18). |
+| `HIDDEN` | USINT  | [3]   | AID_CO_HIDDEN | **Read-only** for Change Attribute (ISO 11783-6 Table B.8). Queryable via Get Attribute Value (F.58); updated at runtime via Hide/Show Object (F.2). 0 = FALSE (visible), 1 = TRUE (hidden). |
 
 ### **Adapters**
 
