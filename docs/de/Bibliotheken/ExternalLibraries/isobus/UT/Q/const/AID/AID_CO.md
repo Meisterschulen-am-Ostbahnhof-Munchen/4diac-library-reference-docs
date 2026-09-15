@@ -36,9 +36,9 @@ Der Baustein stellt drei globale Konstanten bereit, die die Attribut-IDs für Co
 
 Die definierten Konstanten:
 
-- `WIDTH` mit dem Wert `1` – entspricht `AID_CO_WIDTH` (maximale Breite des Containerbereichs in Pixeln, schreibbar via *Change Attribute* F.38 oder *Change Size* F.18).
-- `HEIGHT` mit dem Wert `2` – entspricht `AID_CO_HEIGHT` (maximale Höhe des Containerbereichs in Pixeln, schreibbar via *Change Attribute* F.38 oder *Change Size* F.18).
-- `HIDDEN` mit dem Wert `[3]` – **Read-only** für *Change Attribute* (F.38) gemäß ISO 11783-6 Tabelle B.8 (abfragbar via *Get Attribute Value* F.58, steuerbar via *Hide/Show Object* F.2; 0 = sichtbar, 1 = verborgen).
+- `WIDTH` mit dem Wert `[1]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Breite des Containerbereichs in Pixeln.
+- `HEIGHT` mit dem Wert `[2]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Maximale Höhe des Containerbereichs in Pixeln.
+- `HIDDEN` mit dem Wert `[3]` – **Read-only** für *Change Attribute* (ISO 11783-6 Tabelle B.8). Abfragbar via *Get Attribute Value* F.58, steuerbar via *Hide/Show Object* F.2 (0 = sichtbar, 1 = verborgen).
 
 ## Technische Besonderheiten
 
