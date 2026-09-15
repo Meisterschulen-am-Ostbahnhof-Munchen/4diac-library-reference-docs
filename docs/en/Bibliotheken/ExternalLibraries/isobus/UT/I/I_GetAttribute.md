@@ -19,7 +19,7 @@ The **I_GetAttribute** is a standards-compliant function module for querying obj
 ### **Event Outputs**
 
 - `INITO`: Initialization acknowledgment
-- `CNF`: Query acknowledgment (with status and attribute value)
+- `CNF`: Query acknowledgment (with `STATUS` and `s16result`)
 
 ### **Data Inputs**
 
@@ -29,8 +29,7 @@ The **I_GetAttribute** is a standards-compliant function module for querying obj
 ### **Data Outputs**
 
 - `STATUS` (STRING): Operational status message
-- `u32ValueAttribute` (UDINT): Current attribute value (32-bit)
-- `s16result` (INT): ISO-compliant result code
+- `s16result` (INT): ISO-compliant result code (0 = OK, negative values = error)
 
 ## Valid Object IDs
 

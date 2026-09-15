@@ -20,7 +20,7 @@ Der **I_GetAttribute** ist ein standardkonformer Funktionsbaustein zum Abfragen 
 ### **Ereignis-Ausgänge**
 
 - `INITO`: Initialisierungsbestätigung
-- `CNF`: Abfragebestätigung (mit Status und Attributwert)
+- `CNF`: Bestätigung der Anforderung (mit `STATUS` und `s16result`)
 
 ### **Daten-Eingänge**
 
@@ -30,8 +30,7 @@ Der **I_GetAttribute** ist ein standardkonformer Funktionsbaustein zum Abfragen 
 ### **Daten-Ausgänge**
 
 - `STATUS` (STRING): Betriebsstatusmeldung
-- `u32ValueAttribute` (UDINT): Aktueller Attributwert (32-bit)
-- `s16result` (INT): ISO-konformer Ergebniscode
+- `s16result` (INT): ISO-konformer Ergebniscode (0 = OK, negative Werte = Fehler)
 
 ## Gültige Objekt-IDs
 
