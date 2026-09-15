@@ -39,7 +39,7 @@ Der Block definiert 17 ganzzahlige Konstanten (Typ `USINT`) mit festen Werten vo
 ## Technische Besonderheiten
 
 - Alle Konstanten sind vom Typ `USINT` (8-Bit unsigned integer) und werden mit expliziten Initialwerten (`USINT#1` etc.) definiert.
-- Die Kommentare zu den Konstanten enthalten zusätzliche Erläuterungen, z. B. für `FORMAT` `[15]` (**Read-only** für *Change Attribute* ISO 11783-6; abfragbar via *Get Attribute Value* F.58, Bedeutung: 0 = Monochrom, 1 = 4-Bit Farbe, 2 = 8-Bit Farbe) und für `OPTIONS` die Bitmaske zur Steuerung von Transparenz und Farbmodus.
+- Die Kommentare zu den Konstanten enthalten zusätzliche Erläuterungen, z. B. für `FORMAT` `15` (Bedeutung: 0 = Monochrom, 1 = 4-Bit Farbe, 2 = 8-Bit Farbe) und für `OPTIONS` die Bitmaske zur Steuerung von Transparenz und Farbmodus.
 - Der Block ist als `GlobalConstants` gekennzeichnet und kann in 4diac IDE direkt eingebunden werden, um die Konstanten projektweit verfügbar zu machen.
 
 ## Zustandsübersicht

@@ -34,7 +34,7 @@ Keine.
 
 ## Funktionsweise
 
-Der Baustein stellt die globale Konstante `OPTIONS` vom Typ `USINT` mit dem Initialwert `USINT#1` bereit. Diese repräsentiert die Attribut-ID `AID_CP_OPTIONS` für das Farbpaletten-Objekt. Der Kommentar weist darauf hin, dass der Wert normalerweise 0 sein sollte – hier wird jedoch 1 verwendet, was vermutlich eine spezifische Konfiguration oder einen Platzhalter darstellt.
+Der Baustein stellt die globale Konstante `OPTIONS` vom Typ `USINT` mit dem Initialwert `USINT#1` bereit. Diese repräsentiert die Attribut-ID `AID_CP_OPTIONS` für das Farbpaletten-Objekt (Bitmaske, in ISO 11783-6 Tabelle B.73 als reserviert 0 definiert).
 
 ## Technische Besonderheiten
 

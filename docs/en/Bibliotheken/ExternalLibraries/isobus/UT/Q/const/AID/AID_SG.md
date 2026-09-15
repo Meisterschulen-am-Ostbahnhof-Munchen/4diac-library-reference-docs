@@ -30,7 +30,7 @@ The following constants are defined globally and can be used directly within fun
 | `HEIGHT`    | `USINT`| `USINT#2` | `AID_SG_HEIGHT` – Height in pixels.                                                        |
 | `SCALE_TYPE`| `USINT`| `USINT#3` | `AID_SG_SCALE_TYPE` – Scaling and justification encoding (see bit field description below).|
 | `OPTIONS`   | `USINT`| `USINT#4` | `AID_SG_OPTIONS` – Bitmask; Bit 0 = Flashing.                                              |
-| `VALUE`     | `USINT`| `USINT#5` | `AID_SG_VALUE` – **Read-only** for *Change Attribute* (ISO 11783-6). Object ID of referenced graphic object; updated at runtime via *Change Numeric Value* (F.22) or queryable via *Get Attribute Value* (F.58). |
+| `VALUE`     | `USINT`| `USINT#5` | `AID_SG_VALUE` – Object ID of referenced graphic object. |
 
 ### **Data Outputs**
 

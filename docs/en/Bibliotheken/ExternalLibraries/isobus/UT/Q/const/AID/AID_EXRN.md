@@ -39,8 +39,8 @@ The following constants are declared:
 | Constant | Value | Meaning |
 |---|---|---|
 | `OPTIONS` | `USINT#1` | Attribute ID `1`: `AID_EXRN_OPTIONS`; bitmask with bit 0 = Enabled, allowing external reference by NAME WS. |
-| `NAME_0` | `USINT#2` | Attribute ID `2`: `AID_EXRN_NAME_0`. |
-| `NAME_1` | `USINT#3` | Attribute ID `3`: `AID_EXRN_NAME_1`. |
+| `NAME_0` | `USINT#2` | Attribute ID `2`: `AID_EXRN_NAME_0` (NAME bytes 1–4, ISO 11783-6 Table B.68). |
+| `NAME_1` | `USINT#3` | Attribute ID `3`: `AID_EXRN_NAME_1` (NAME bytes 5–8, ISO 11783-6 Table B.68). |
 
 These values are fixed at global constant declaration time and can be referenced from other IEC 61499 elements such as algorithms and expressions.
 

@@ -26,7 +26,7 @@ Since `AID_OLBG` is a global constant definition rather than a function block, i
 | `MAX_VALUE` | `USINT` | `8` | Attribute ID for the maximum value (`AID_OLBG_MAX_VALUE`). |
 | `VARIABLE_REF` | `USINT` | `9` | Attribute ID for the reference to a Variable object (`AID_OLBG_VARIABLE_REF`). |
 | `TARGET_VAL_VAR_REF` | `USINT` | `10` | Attribute ID for the target value variable reference (`AID_OLBG_TARGET_VAL_VAR_REF`). |
-| `TARGET_VALUE` | `USINT` | `[11]` | Attribute ID for target value (`AID_OLBG_TARGET_VALUE`). **Read-only** for *Change Attribute* (ISO 11783-6); updated at runtime via *Change Numeric Value* (F.22) or queryable via *Get Attribute Value* (F.58). |
+| `TARGET_VALUE` | `USINT` | `11` | Attribute ID for target value (`AID_OLBG_TARGET_VALUE`). |
 | `VALUE` | `USINT` | `[12]` | Attribute ID for current value (`AID_OLBG_VALUE`). **Read-only** for *Change Attribute* (ISO 11783-6); updated at runtime via *Change Numeric Value* (F.22) or queryable via *Get Attribute Value* (F.58). |
 
 ## Functionality

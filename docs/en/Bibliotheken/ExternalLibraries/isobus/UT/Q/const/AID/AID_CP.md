@@ -34,7 +34,7 @@ None.
 
 The sole constant defined within `AID_CP` is:
 
-- **OPTIONS** (USINT) – Value `USINT#1`. This constant represents the attribute ID for the “Options” field of a colour palette object. According to the ISOBUS specification, the options attribute is always set to 0, but the constant is defined to standardise access to it in code.
+- **OPTIONS** (USINT) – Value `USINT#1`. This constant represents the attribute ID for the “Options” field of a colour palette object (`AID_CP_OPTIONS`, defined in ISO 11783-6 Table B.73 as a reserved zero bitmask).
 
 ## Functionality
 

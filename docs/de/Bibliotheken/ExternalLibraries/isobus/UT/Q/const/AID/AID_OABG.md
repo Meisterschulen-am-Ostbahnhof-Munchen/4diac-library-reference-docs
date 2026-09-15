@@ -40,7 +40,7 @@ Nicht vorhanden.
 | `MAX_VALUE` | USINT | 10 | AID_OABG_MAX_VALUE – Maximalwert |
 | `VARIABLE_REF` | USINT | 11 | AID_OABG_VARIABLE_REF – Objekt-ID eines Variable-Objekts |
 | `TARGET_VAL_VAR_REF` | USINT | 12 | AID_OABG_TARGET_VAL_VAR_REF – Referenz auf die Zielwertvariable |
-| `TARGET_VALUE` | USINT | [13] | AID_OABG_TARGET_VALUE – **Read-only** für *Change Attribute* (ISO 11783-6). Abfragbar via *Get Attribute Value* (F.58); zur Laufzeit anpassbar via *Change Numeric Value* (F.22). Zielwert |
+| `TARGET_VALUE` | USINT | 13 | AID_OABG_TARGET_VALUE – Zielwert |
 | `VALUE` | USINT | [14] | AID_OABG_VALUE – **Read-only** für *Change Attribute* (ISO 11783-6). Abfragbar via *Get Attribute Value* (F.58); zur Laufzeit anpassbar via *Change Numeric Value* (F.22). Aktueller Wert |
 
 ### **Adapter**

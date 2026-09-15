@@ -38,9 +38,9 @@ Die bereitgestellten Konstanten sind:
 
 | Konstante | Typ | Wert | Bedeutung |
 |---|---|---|---|
-| `OPTIONS` | `USINT` | `1` | Bitmaske für Optionen; Bit 0 = Enabled, erlaubt externe Referenz per Name |
-| `NAME_0` | `USINT` | `2` | Attribut-ID für den ersten Namen des externen Referenzobjekts |
-| `NAME_1` | `USINT` | `3` | Attribut-ID für den zweiten Namen des externen Referenzobjekts |
+| `OPTIONS` | `USINT` | `1` | Bitmask für Optionen; Bit 0 = Enabled, erlaubt externe Referenz per Name |
+| `NAME_0` | `USINT` | `2` | Attribut-ID für NAME-Bytes 1–4 des externen Referenzobjekts (ISO 11783-6 Tabelle B.68) |
+| `NAME_1` | `USINT` | `3` | Attribut-ID für NAME-Bytes 5–8 des externen Referenzobjekts (ISO 11783-6 Tabelle B.68) |
 
 ## Funktionsweise
 
