@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The `AID_IB` type is a global constant definition that provides the standardized attribute identifiers for **Input Boolean objects** within the ISOBUS (ISO 11783) Universal Terminal (UT) protocol. These constants serve as semantic keys for accessing and manipulating the various attributes of an input boolean UI element. By centralizing these identifiers, the type ensures consistent and maintainable code when constructing or modifying ISOBUS object pools.
+The `AID_IB` type is a global constant definition that provides the standardized attribute identifiers for **Input Boolean objects** within the ISOBUS (ISO 11783) Universal Terminal (UT) protocol. These constants serve as semantic keys for accessing and querying the various attributes of an input boolean UI element. By centralizing these identifiers, the type ensures consistent and maintainable code when constructing or modifying ISOBUS object pools.
 
 This definition is part of the `isobus::UT::Q::const::AID` package and adheres to the IEC 61499-1 standard for data representation.
 
@@ -36,18 +36,18 @@ No adapters are provided. The constants are intended to be used as direct scalar
 
 ## Functionality
 
-The `AID_IB` constant set enumerates the six standard attribute identifiers defined for an Input Boolean object in the ISOBUS UT specification. Each constant maps an attribute name to its numeric identifier used in object pool definition and command payloads:
+The `AID_IB` constant set enumerates the six standard attribute identifiers defined for an Input Boolean object in the ISO 11783-6 specification. In accordance with ISO 11783-6, attribute IDs enclosed in square brackets `[ ]` (such as `[5]` `VALUE` and `[6]` `ENABLED`) indicate **read-only attributes** for the *Change Attribute* command, accessible via the *Get Attribute Value* message (F.58):
 
 | Constant Name | Value | Description |
 |---|---|---|
-| `BACKGROUND_COLOUR` | 1 | Index of the background colour used by the input boolean object. |
-| `WIDTH` | 2 | Width of the object in pixels. |
-| `FG_COLOUR` | 3 | Object ID of a Font Attributes object used to determine the font colour for the displayed text or symbol. |
-| `VARIABLE_REF` | 4 | Object ID of a Number Variable object to which the input value is bound. If NULL, the value is stored directly in the object. |
-| `VALUE` | 5 | Current value of the input field: `0` represents FALSE, any value greater than zero represents TRUE. |
-| `ENABLED` | 6 | Operational state of the object: `0` = disabled, `1` = enabled. |
+| `BACKGROUND_COLOUR` | 1 | Index of the background colour used by the input boolean object. (Writable via *Change Attribute* F.38) |
+| `WIDTH` | 2 | Width of the object in pixels. (Writable via *Change Attribute* F.38) |
+| `FG_COLOUR` | 3 | Object ID of a Font Attributes object used to determine the font colour for the displayed text or symbol. (Writable via *Change Attribute* F.38) |
+| `VARIABLE_REF` | 4 | Object ID of a Number Variable object to which the input value is bound. If NULL, the value is stored directly in the object. (Writable via *Change Attribute* F.38) |
+| `VALUE` | [5] | **Read-only** for *Change Attribute* (ISO 11783-6). Value of the input field: `0` represents FALSE, any value greater than zero represents TRUE. Queryable via *Get Attribute Value* (F.58); updated at runtime using the specialized *Change Numeric Value* command (F.22). |
+| `ENABLED` | [6] | **Read-only** for *Change Attribute* (ISO 11783-6). Operational state of the object: `0` = disabled, `1` = enabled. Queryable via *Get Attribute Value* (F.58); managed via *Select Input Object* (F.6) or state commands. |
 
-Use of these constants avoids hard-coded magic numbers in application code, improves readability, and ensures that attribute references remain aligned with the ISOBUS specification even if identifiers change in future revisions.
+Use of these constants avoids hard-coded magic numbers in application code, improves readability, and ensures that attribute references remain aligned with the ISOBUS specification.
 
 ## Technical Features
 
@@ -67,8 +67,9 @@ As a set of compile-time constants, `AID_IB` has no runtime state machine. The v
 Typical use cases for the `AID_IB` constants include:
 
 - **Object pool generation:** When building an ISOBUS Virtual Terminal object pool, these constants are used as attribute selectors in service requests (e.g., setting the background colour of an input boolean button).
-- **Runtime attribute modification:** Applications that need to dynamically change the appearance or behaviour of an input boolean object (for example, toggling its enabled state) reference `AID_IB.ENABLED` or `AID_IB.VALUE` to form the correct command payloads.
-- **HMI configuration:** When configuring input fields for operator interaction, such as toggle switches or buttons that represent boolean settings, these identifiers route configuration data to the correct attribute.
+- **Attribute querying via `GetAttribute` (F.58):** Applications that need to query the state or value of an input boolean object reference `AID_IB.VALUE` (`[5]`) or `AID_IB.ENABLED` (`[6]`) in *Get Attribute Value* request payloads.
+- **Runtime value modification via `Change Numeric Value` (F.22):** To dynamically change the boolean input value at runtime, applications transmit a *Change Numeric Value* command (F.22) rather than a *Change Attribute* command, as `VALUE` (`[5]`) is designated read-only for *Change Attribute*.
+- **Modifying appearance via `Change Attribute` (F.38):** Dynamic modifications to visual properties (such as `BACKGROUND_COLOUR`, `WIDTH`, `FG_COLOUR`, or `VARIABLE_REF`) reference the corresponding unbracketed AID constants in *Change Attribute* command payloads.
 - **Value binding:** The `VARIABLE_REF` constant is used to link an input boolean object to a Number Variable object, enabling bidirectional data exchange between the terminal and the implement controller.
 
 ## Comparison with Similar Blocks
@@ -83,4 +84,4 @@ Unlike those broader sets, `AID_IB` focuses exclusively on the boolean input sem
 
 ## Conclusion
 
-The `AID_IB` global constant type provides a clean, standardised, and type-safe way to reference Input Boolean object attribute identifiers in ISOBUS Universal Terminal applications. Its use eliminates magic numbers, improves code readability and maintainability, and guarantees alignment with the relevant protocol specifications. By incorporating these constants into object pool generation and runtime control logic, developers can build robust and portable ISOBUS HMI components with minimal risk of misaddressing.
+The `AID_IB` global constant type provides a clean, standardised, and type-safe way to reference Input Boolean object attribute identifiers in ISOBUS Universal Terminal applications. Its use eliminates magic numbers, improves code readability and maintainability, and guarantees alignment with the ISO 11783-6 protocol specifications.
