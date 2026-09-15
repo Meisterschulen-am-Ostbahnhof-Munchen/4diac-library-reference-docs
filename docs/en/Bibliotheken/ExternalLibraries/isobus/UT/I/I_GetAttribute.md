@@ -41,24 +41,21 @@ ID_NULL (65535) is not a valid command target but deactivates the FB when sent v
 ## Functionality
 
 1. **Initialization**:
+   - `INIT` with object ID (`u16ObjId`)
+   - `INITO` confirms operational readiness
 
-- `INIT` with object ID
-- `INITO` confirms operational readiness
+2. **Attribute Query (Asynchronous Event)**:
+   - `REQ` triggers the query for the specified attribute ID (`u8AID`).
+   - Since object attribute queries on the ISOBUS VT are **asynchronous events**, the response from the VT resource arrives asynchronously via an indication event (`IND` / `Attribute_ID`) or `CNF` with the current 32-bit attribute value `u32ValueAttribute`.
 
-1. **Attribute Query**:
-
-- `REQ` with desired attribute ID
-- Reads current attribute value from VT
-- `CNF` returns result status and current value
-
-1. **Error Handling**:
-
-- ISO-standardized error codes
-- Detailed status messages
+3. **Error Handling**:
+   - ISO-standardized error codes in `s16result`
+   - Detailed status messages via `STATUS`
 
 ## Technical Features
 
 ✔ **ISO 11783-6 compliant** (F.58)
+✔ **Asynchronous Event Handling** (Response indication via `IND` / `Attribute_ID`)
 ✔ **Exclusive to VT Version 4+**
 ✔ **Universally applicable** (All object types)
 ✔ **Real-time capable** (Fast query cycles)

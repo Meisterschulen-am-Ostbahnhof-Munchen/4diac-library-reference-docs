@@ -42,21 +42,21 @@ ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den
 ## Funktionsweise
 
 1. **Initialisierung**:
-   - `INIT` mit Objekt-ID
+   - `INIT` mit Objekt-ID (`u16ObjId`)
    - `INITO` bestätigt Betriebsbereitschaft
 
-2. **Attributabfrage**:
-   - `REQ` mit gewünschter Attribut-ID
-   - Liest aktuellen Attributwert aus VT
-   - `CNF` liefert Ergebnisstatus und aktuellen Wert
+2. **Attributabfrage (Asynchrones Event)**:
+   - `REQ` löst die Abfrage für die gewünschte Attribut-ID (`u8AID`) aus.
+   - Da die Attributabfrage ein **asynchrones Event** am ISOBUS VT ist, trifft die Antwort der Ressource asynchron über ein Indikations-Event (`IND` / `Attribute_ID`) bzw. `CNF` mit dem aktuellen 32-Bit-Attributwert `u32ValueAttribute` ein.
 
 3. **Fehlerbehandlung**:
-   - ISO-standardisierte Fehlercodes
-   - Detaillierte Statusmeldungen
+   - ISO-standardisierte Fehlercodes in `s16result`
+   - Detaillierte Statusmeldungen über `STATUS`
 
 ## Technische Besonderheiten
 
 ✔ **ISO 11783-6 konform** (F.58)
+✔ **Asynchrones Event-Handling** (Antwort-Indikation über `IND` / `Attribute_ID`)
 ✔ **Exklusiv für VT Version 4+**
 ✔ **Universal einsetzbar** (Alle Objekttypen)
 ✔ **Echtzeitfähig** (Schnelle Abfragezyklen)
