@@ -8,7 +8,7 @@
 
 `FT_PT2_AR` is an AR adapter wrapper around the OSCAT 2nd-order low-pass filter block `FT_PT2`. It enables 2nd-order low-pass filtering with configurable time constant `TM`, damping `D`, and gain `K` within purely adapter-based IEC 61499 applications.
 
-The time constant `TM` is provided via an `ATM` adapter socket (per section 13 of the `iec61499-creator` skill), while damping `D` and gain `K` remain plain `InputVars`. An internal `E_D_FF_ANY` D flip-flop ensures that output event `AR_OUT.E1` is fired only when an actual value change occurs.
+The time constant `TM` is provided via an `ATM` adapter socket (per section 13 of the `iec61499-creator` skill), while damping `D` and gain `K` remain plain `InputVars`. An internal `E_D_FF_ANY` D flip-flop ensures that output event `AR_OUT.E1` is fired unconditionally on the first cycle and subsequently only when an actual value change occurs.
 
 ## Interface Structure
 
@@ -54,8 +54,8 @@ The block embeds `FT_PT2` inside an internal FB network:
    `TM.D1` is read from the `ATM` socket. `D` and `K` are supplied as parameters.
 3. **2nd-Order Stateful Integration**:  
    `FT_PT2` filters the signal internally through two cascaded integration stages (`INTEGRATE`).
-4. **Change Filtering**:  
-   `FT_PT2.CNF` drives internal `E_D_FF_ANY`. `AR_OUT.E1` and `AR_OUT.D1` are updated only when the output value changes.
+4. **Change Filtering (`E_D_FF_ANY`)**:  
+   `FT_PT2.CNF` drives internal `E_D_FF_ANY`. The flip-flop forwards the computed output value to `AR_OUT` unconditionally on the first cycle. On subsequent cycles, `AR_OUT.E1` and `AR_OUT.D1` are updated only when the computed filter value differs from the previous value.
 5. **Reset & Initialization**:  
    `INIT` controls `FT_PT2.EINIT`. `RST` clears the internal memory of both integrator stages.
 

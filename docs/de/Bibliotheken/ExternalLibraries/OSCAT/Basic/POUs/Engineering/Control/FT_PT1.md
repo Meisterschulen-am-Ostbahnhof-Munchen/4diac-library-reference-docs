@@ -20,50 +20,53 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 | :--- | :--- | :----------------------- | :-------- |
 | `EINIT` | `Event` | Service-Initialisierung des Filters | |
 | `REQ` | `Event` | Ausführungsanforderung für neuen Berechnungszyklus | `in`, `TM`, `K` |
-| `RST` | `Event` | Setzt den Filterausgang `out` auf 0.0 zurück | |
+| `RST` | `Event` | Setzt den Filterausgang und die Zeitbasis zurück (`out = K * in`) | |
 
 ### **Ereignis-Ausgänge**
 
 | Name | Typ | Beschreibung | Mit Daten |
 | :--- | :--- | :----------------------- | :-------- |
 | `INITO` | `Event` | Initialisierungsbestätigung | |
-| `CNF` | `Event` | Ausführungsbestätigung nach Berechnung | `out` |
+| `CNF` | `Event` | Ausführungsbestätigung nach Berechnung | `delta_t`, `out` |
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Initialwert | Beschreibung |
 | :--- | :--- | :------------ | :------------------- |
 | `in` | `REAL` | `0.0` | Analoges Eingangssignal |
-| `TM` | `TIME` | `T#0s` | Zeitkonstante des Tiefpassfilters |
+| `TM` | `TIME` | `T#0s` | Filter-Zeitkonstante. Bei `TM = T#0s` wird der Filter umgangen und `out = K * in` gesetzt. |
 | `K` | `REAL` | `1.0` | Verstärkungsfaktor (Proportionalbeiwert) |
 
 ### **Daten-Ausgänge**
 
 | Name | Typ | Beschreibung |
 | :--- | :--- | :----------------------- |
+| `delta_t` | `UDINT` | Vergangene Zeit seit dem letzten Aufruf in Mikrosekunden ($\mu s$) |
 | `out` | `REAL` | Gefilterter Ausgangswert |
 
 ## Funktionsweise
 
 1. **Initialisierung (`EINIT`)**:  
-   Bereitet den Baustein vor, setzt die interne Zeitstempel-Erfassung zurück und signalisiert Einsatzbereitschaft über `INITO`.
+   Setzt den Initialisierungszustand zurück, setzt `out = 0.0` und signalisiert Einsatzbereitschaft über `INITO`.
 
 2. **Zyklische Berechnung (`REQ`)**:  
-   Bei jedem `REQ`-Ereignis ermittelt der Baustein die verstrichene Zeit seit dem letzten Aufruf ($\Delta t$) über die interne Systemzeit. Die Zeitkonstante `TM` wird mittels `TIME_TO_REAL` in Sekunden umgerechnet.  
-   Der neue Ausgangswert wird nach der Näherung:
+   Bei jedem `REQ`-Ereignis ermittelt der Baustein die verstrichene Zeit seit dem letzten Aufruf ($\Delta t$) mikrosekundengenau über `T_PLC_US()`.
+   - Ist der Baustein noch nicht initialisiert oder ist `TM = T#0s`, wird intern `RST` aufgerufen und `out = K * in` direkt ausgegeben.
+   - Bei `TM > T#0s` wird der neue Ausgangswert nach der Diskretisierungsformel berechnet:
    
-   $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{TM}$$
+     $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{TM}$$
    
-   berechnet und über `CNF` bereitgestellt.
+   - Um Unterläufe durch denormalisierte Fließkommazahlen zu vermeiden, werden Beträge $|out| < 1.0 \times 10^{-20}$ automatisch auf `0.0` gerundet.
 
 3. **Filter-Reset (`RST`)**:  
-   Setzt den intern gespeicherten Ausgangswert `out` sofort auf `0.0` zurück.
+   Setzt `out` unverzüglich auf den skalierten Eingangswert `K * in` und aktualisiert den internen Zeitstempel `last := T_PLC_US()`. Dadurch wird verhindert, dass beim nachfolgenden `REQ`-Aufruf ein verfälschter Sprung durch verstrichene Zeit entsteht.
 
 ## Technische Besonderheiten
 
-- **Genaue Zeitbasis**: Die Zeitdifferenz wird mikrosekundengenau ermittelt, wodurch die Filterfunktion unabhängig von Schwankungen der Aufrufzykluszeit exakt arbeitet.
-- **RST-Handhabung**: Ein anstehendes Reset-Signal stellt sicher, dass der Filter bei Bedarf augenblicklich auf Null gesetzt werden kann (z. B. bei Sensor-Abschaltung).
-- **Projektspezifische Zeitkonvertierung**: Verwendet die projekteigene Hilfsfunktion `TIME_TO_REAL.fct` zur sauberen Konvertierung des `TIME`-Eingangs `TM` in Sekunden (`REAL`).
+- **Zyklusunabhängige Zeitbasis**: Die Zeitdifferenz wird über `T_PLC_US()` in Mikrosekunden gemessen, wodurch Schwankungen der Aufrufzykluszeit kompensiert werden.
+- **Filter-Bypass bei `TM = 0`**: Ist `TM = T#0s`, schaltet der Baustein die Dämpfung ab und gibt das Eingangssignal direkt skaliert mit `K` aus.
+- **Glatte Reset-Wiedereingliederung**: `RST` aktualisiert den Zeitstempel `last`, sodass bei Wiederaufnahme des Filterbetriebs keine Ausreißer auftreten.
+- **Projektspezifische Zeitkonvertierung**: Verwendet die projekteigene Hilfsfunktion `TIME_TO_REAL.fct` zur Umrechnung des `TIME`-Eingangs `TM` in Sekunden (`REAL`).
 
 ## Anwendungsszenarien
 

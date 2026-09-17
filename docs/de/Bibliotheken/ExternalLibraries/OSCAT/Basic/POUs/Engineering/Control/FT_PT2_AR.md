@@ -8,7 +8,7 @@
 
 `FT_PT2_AR` ist ein AR-Adapter-Wrapper um den OSCAT-Tiefpassfilterbaustein 2. Ordnung `FT_PT2`. Er ermöglicht die Filterung 2. Ordnung mit einstellbarer Zeitkonstante `TM`, Dämpfung `D` und Verstärkung `K` in rein adapterbasierten IEC 61499 Anwendungen.
 
-Die Zeitkonstante `TM` wird über einen `ATM`-Adapter-Socket bereitgestellt (gemäß Section 13 des `iec61499-creator`-Skills), während Dämpfung `D` und Verstärkung `K` als gewöhnliche `InputVars` geführt werden. Ein internes `E_D_FF_ANY` D-Flipflop sorgt dafür, dass Ausgangsevent `AR_OUT.E1` nur bei tatsächlichen Wertänderungen gesendet wird.
+Die Zeitkonstante `TM` wird über einen `ATM`-Adapter-Socket bereitgestellt (gemäß Section 13 des `iec61499-creator`-Skills), während Dämpfung `D` und Verstärkung `K` als gewöhnliche `InputVars` geführt werden. Ein internes `E_D_FF_ANY` D-Flipflop sorgt dafür, dass Ausgangsevent `AR_OUT.E1` beim ersten Zyklus bedingungslos und danach nur bei tatsächlichen Wertänderungen gesendet wird.
 
 ## Schnittstellenstruktur
 
@@ -54,8 +54,8 @@ Der Baustein bettet `FT_PT2` in ein FBNetzwerk ein:
    `TM.D1` wird vom `ATM`-Socket eingelesen. `D` und `K` werden direkt als Parameter übergeben.
 3. **Zustandsbehaftete Integration 2. Ordnung**:  
    `FT_PT2` verarbeitet das Signal intern über zwei gekoppelte Integratoren (`INTEGRATE`).
-4. **Änderungsfilterung**:  
-   `FT_PT2.CNF` steuert das interne `E_D_FF_ANY`. Nur wenn der berechnete Filterwert vom bisherigen Wert abweicht, werden `AR_OUT.E1` und `AR_OUT.D1` aktualisiert.
+4. **Änderungsfilterung (`E_D_FF_ANY`)**:  
+   `FT_PT2.CNF` steuert das interne `E_D_FF_ANY`. Das Flipflop gibt beim ersten Zyklus den berechneten Ausgangswert an `AR_OUT` weiter. In Folgezyklen werden `AR_OUT.E1` und `AR_OUT.D1` nur aktualisiert, wenn der berechnete Filterwert vom bisherigen Wert abweicht.
 5. **Reset & Initialisierung**:  
    `INIT` steuert `FT_PT2.EINIT`. `RST` setzt die internen Speicher der beiden Integrationsstufen zurück.
 
