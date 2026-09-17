@@ -12,7 +12,7 @@ The time constant `TM` is provided via an `ATM` adapter socket (per section 13 o
 
 | Name | Type | Description |
 | :--- | :--- | :----------- |
-| `INIT` | `EInit` | Service initialization, passed to `FT_PT2.EINIT` |
+| `INIT` | `EInit` | Service initialization, passed to `FT_PT2.INIT` |
 | `RST` | `Event` | Resets the filter output via `FT_PT2.RST` |
 
 ### **Event Outputs**
@@ -53,7 +53,7 @@ The block embeds `FT_PT2` inside an internal FB network:
 4. **Change Filtering (`E_D_FF_ANY`)**:  
    `FT_PT2.CNF` drives internal `E_D_FF_ANY`. The flip-flop forwards the computed output value to `AR_OUT` unconditionally on the first cycle. On subsequent cycles, `AR_OUT.E1` and `AR_OUT.D1` are updated only when the computed filter value differs from the previous value.
 5. **Reset & Initialization**:  
-   `INIT` controls `FT_PT2.EINIT`. `RST` clears the internal memory of both integrator stages.
+   `INIT` controls `FT_PT2.INIT`. `RST` clears the internal memory of both integrator stages.
 
 ## Technical Features
 

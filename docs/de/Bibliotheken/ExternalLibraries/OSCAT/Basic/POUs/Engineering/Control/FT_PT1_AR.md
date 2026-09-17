@@ -12,7 +12,7 @@ Die Zeitkonstante `TM` ist als `ATM`-Socket ausgeführt (gemäß Section 13 des 
 
 | Name | Typ | Beschreibung |
 | :--- | :--- | :----------- |
-| `INIT` | `EInit` | Service-Initialisierung, wird an `FT_PT1.EINIT` durchgereicht |
+| `INIT` | `EInit` | Service-Initialisierung, wird an `FT_PT1.INIT` durchgereicht |
 | `RST` | `Event` | Setzt den Filterausgang über `FT_PT1.RST` zurück |
 
 ### **Ereignis-Ausgänge**
@@ -50,7 +50,7 @@ Der Baustein verbindet `FT_PT1` (OSCAT) und `E_D_FF_ANY` in einem internen Netzw
 3. **Änderungserkennung & Entkopplung (`E_D_FF_ANY`)**:  
    Nach der Berechnung feuert `FT_PT1.CNF` den `CLK`-Eingang des internen `E_D_FF_ANY`. Das Flipflop gibt beim ersten Aufruf nach dem Start den gefilterten Ausgangswert bedingungslos über `AR_OUT.E1` / `AR_OUT.D1` aus. Bei nachfolgenden Zyklen werden Ereignisse nur dann gefeuert, wenn sich der gefilterte Wert tatsächlich vom vorherigen Ausgangswert unterscheidet.
 4. **Reset & Initialisierung**:  
-   - `INIT` steuert `FT_PT1.EINIT` und meldet Vollzug über `INITO`. Unverdrahtete `INIT`-Events feuern beim Deployment automatisch einmalig.
+   - `INIT` steuert `FT_PT1.INIT` und meldet Vollzug über `INITO`. Unverdrahtete `INIT`-Events feuern beim Deployment automatisch einmalig.
    - `RST` wird an `FT_PT1.RST` weitergeleitet, um den Filter zurückzusetzen.
 
 ## Technische Besonderheiten

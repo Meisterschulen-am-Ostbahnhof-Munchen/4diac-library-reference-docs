@@ -12,7 +12,7 @@ Die Zeitkonstante `TM` wird über einen `ATM`-Adapter-Socket bereitgestellt (gem
 
 | Name | Typ | Beschreibung |
 | :--- | :--- | :----------- |
-| `INIT` | `EInit` | Service-Initialisierung, wird an `FT_PT2.EINIT` durchgereicht |
+| `INIT` | `EInit` | Service-Initialisierung, wird an `FT_PT2.INIT` durchgereicht |
 | `RST` | `Event` | Setzt den Filterausgang über `FT_PT2.RST` zurück |
 
 ### **Ereignis-Ausgänge**
@@ -53,7 +53,7 @@ Der Baustein bettet `FT_PT2` in ein FBNetzwerk ein:
 4. **Änderungsfilterung (`E_D_FF_ANY`)**:  
    `FT_PT2.CNF` steuert das interne `E_D_FF_ANY`. Das Flipflop gibt beim ersten Zyklus den berechneten Ausgangswert an `AR_OUT` weiter. In Folgezyklen werden `AR_OUT.E1` und `AR_OUT.D1` nur aktualisiert, wenn der berechnete Filterwert vom bisherigen Wert abweicht.
 5. **Reset & Initialisierung**:  
-   `INIT` steuert `FT_PT2.EINIT`. `RST` setzt die internen Speicher der beiden Integrationsstufen zurück.
+   `INIT` steuert `FT_PT2.INIT`. `RST` setzt die internen Speicher der beiden Integrationsstufen zurück.
 
 ## Technische Besonderheiten
 

@@ -12,7 +12,7 @@ The time constant `TM` is provided as an `ATM` socket (per section 13 of the `ie
 
 | Name | Type | Description |
 | :--- | :--- | :----------- |
-| `INIT` | `EInit` | Service initialization, passed to `FT_PT1.EINIT` |
+| `INIT` | `EInit` | Service initialization, passed to `FT_PT1.INIT` |
 | `RST` | `Event` | Resets the filter output via `FT_PT1.RST` |
 
 ### **Event Outputs**
@@ -50,7 +50,7 @@ The block connects `FT_PT1` (OSCAT) and `E_D_FF_ANY` in an internal network:
 3. **Change Detection & Decoupling (`E_D_FF_ANY`)**:  
    After calculation, `FT_PT1.CNF` triggers `CLK` on internal `E_D_FF_ANY`. The flip-flop emits the initial output value on the first clock after start. On subsequent cycles, `AR_OUT.E1` and `AR_OUT.D1` are updated **only** when a value change occurs.
 4. **Reset & Initialization**:  
-   - `INIT` controls `FT_PT1.EINIT` and confirms via `INITO`. Unconnected `INIT` events auto-fire once upon deployment.
+   - `INIT` controls `FT_PT1.INIT` and confirms via `INITO`. Unconnected `INIT` events auto-fire once upon deployment.
    - `RST` is passed to `FT_PT1.RST` to clear the filter state.
 
 ## Technical Features
