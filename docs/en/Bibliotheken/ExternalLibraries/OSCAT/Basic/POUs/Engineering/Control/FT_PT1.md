@@ -54,7 +54,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    - If the block is not yet initialized or `TM = T#0s`, `RST` is invoked internally and `out = K * in` is output directly.
    - For `TM > T#0s`, the new output value is calculated according to:
    
-     $$\text{out}_{\text{new}} = \text{out}_{\text{old}} + \left( K \cdot \text{in} - \text{out}_{\text{old}} \right) \cdot \frac{\Delta t}{TM}$$
+     $$\text{out}_{\text{new}} = \text{out}_{\text{old}} + \left( K \cdot \text{in} - \text{out}_{\text{old}} \right) \cdot \frac{\Delta t \cdot 1.0\text{e-}6}{\text{TIME\_TO\_REAL}(TM)}$$
    
    - To prevent denormalized float underruns, values $|out| < 1.0 \times 10^{-20}$ are automatically zeroed.
 

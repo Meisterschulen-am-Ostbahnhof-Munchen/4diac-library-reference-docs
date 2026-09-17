@@ -54,7 +54,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    - Ist der Baustein noch nicht initialisiert oder ist `TM = T#0s`, wird intern `RST` aufgerufen und `out = K * in` direkt ausgegeben.
    - Bei `TM > T#0s` wird der neue Ausgangswert nach der Diskretisierungsformel berechnet:
    
-     $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{TM}$$
+     $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t \cdot 1.0\text{e-}6}{\text{TIME\_TO\_REAL}(TM)}$$
    
    - Um Unterläufe durch denormalisierte Fließkommazahlen zu vermeiden, werden Beträge $|out| < 1.0 \times 10^{-20}$ automatisch auf `0.0` gerundet.
 
