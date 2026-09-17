@@ -1,9 +1,5 @@
 # AX_AND_6
 
-![AX_AND_6](AX_AND_6.svg)
-
-* * * * * * * * * *
-
 ## Introduction
 
 The `AX_AND_6` function block is a generic block for calculating a logical AND operation across six unidirectional AX adapter inputs. It is used to aggregate and monitor up to 6 input signals (e.g., emergency stop chains, enable or status signals) into a single adapter output signal.

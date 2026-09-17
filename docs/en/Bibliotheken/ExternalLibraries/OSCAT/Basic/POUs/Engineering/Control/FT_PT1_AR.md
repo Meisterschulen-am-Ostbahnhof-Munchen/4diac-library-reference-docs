@@ -1,9 +1,5 @@
 # FT_PT1_AR
 
-![FT_PT1_AR](FT_PT1_AR.svg)
-
-* * * * * * * * * *
-
 ## Introduction
 
 `FT_PT1_AR` is an AR adapter wrapper around the OSCAT low-pass filter block `FT_PT1`. It encapsulates first-order low-pass filtering behind a purely adapter-based interface for IEC 61499 applications.

@@ -1,9 +1,5 @@
 # FT_PT1_AR
 
-![FT_PT1_AR](FT_PT1_AR.svg)
-
-* * * * * * * * * *
-
 ## Einleitung
 
 `FT_PT1_AR` ist ein AR-Adapter-Wrapper um den OSCAT-Tiefpassfilterbaustein `FT_PT1`. Er kapselt die Tiefpassfilterung 1. Ordnung hinter einer rein adapterbasierten Schnittstelle für IEC 61499 Anwendungen.

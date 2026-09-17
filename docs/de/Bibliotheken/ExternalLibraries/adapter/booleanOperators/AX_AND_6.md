@@ -1,9 +1,5 @@
 # AX_AND_6
 
-![AX_AND_6](AX_AND_6.svg)
-
-* * * * * * * * * *
-
 ## Einleitung
 
 Der `AX_AND_6` Funktionsblock ist ein generischer Baustein zur Berechnung einer logischen UND-Verknüpfung mit sechs unidirektionalen AX-Adapter-Eingängen. Er dient zur Bündelung und Sammelüberwachung von bis zu 6 Eingangssignalen (z. B. Not-Halt-Ketten, Freigabe- oder Statussignalen) zu einem gemeinsamen Adapter-Ausgangssignal.

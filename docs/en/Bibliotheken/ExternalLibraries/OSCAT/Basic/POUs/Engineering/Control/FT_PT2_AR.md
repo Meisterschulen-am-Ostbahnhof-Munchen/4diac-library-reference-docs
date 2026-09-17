@@ -1,9 +1,5 @@
 # FT_PT2_AR
 
-![FT_PT2_AR](FT_PT2_AR.svg)
-
-* * * * * * * * * *
-
 ## Introduction
 
 `FT_PT2_AR` is an AR adapter wrapper around the OSCAT 2nd-order low-pass filter block `FT_PT2`. It enables 2nd-order low-pass filtering with configurable time constant `TM`, damping `D`, and gain `K` within purely adapter-based IEC 61499 applications.

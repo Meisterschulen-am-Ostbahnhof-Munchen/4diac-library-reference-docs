@@ -1,9 +1,5 @@
 # FT_PT2_AR
 
-![FT_PT2_AR](FT_PT2_AR.svg)
-
-* * * * * * * * * *
-
 ## Einleitung
 
 `FT_PT2_AR` ist ein AR-Adapter-Wrapper um den OSCAT-Tiefpassfilterbaustein 2. Ordnung `FT_PT2`. Er ermöglicht die Filterung 2. Ordnung mit einstellbarer Zeitkonstante `TM`, Dämpfung `D` und Verstärkung `K` in rein adapterbasierten IEC 61499 Anwendungen.
