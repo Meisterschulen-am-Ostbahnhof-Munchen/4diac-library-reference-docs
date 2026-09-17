@@ -64,9 +64,9 @@ The internal core (FB `I_CORE` of type `isobus::tecu::I_COGSOGRapidUpdate`) cont
 
 If no valid message is received within a configured time period, the function block activates the **TIMEOUT** adapter. This event can be used by the application to trigger error conditions or plausibility checks.
 
-1. **Output Cycles**
+1. **Output Cycles & Value-Change Filtering**
 
-The **COG**, **SOG**, **SID**, and **COG_REF** adapters are triggered together with each valid data reception (event connection `IND`). The **TIMEOUT** adapter is triggered independently upon timeout.
+Each of the **COG**, **SOG**, **SID**, and **COG_REF** adapters is filtered via an independent flip-flop element (`E_D_FF_ANY`). Consequently, each adapter fires independently only when its specific data value changes relative to the previous sample. This minimizes redundant event triggers across the control network. The **TIMEOUT** adapter triggers independently upon a communication timeout.
 
 ## Technical Features
 

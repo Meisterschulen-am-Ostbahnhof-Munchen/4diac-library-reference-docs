@@ -61,8 +61,8 @@ Der Funktionsblock **IA_COGSOGRapidUpdate** dient als ISOBUS-Adapter für die NM
 3. **Timeout-Überwachung**  
    Falls innerhalb einer konfigurierten Zeitspanne keine gültige Nachricht empfangen wird, setzt der Baustein den **TIMEOUT**-Adapter auf aktiv. Dieses Ereignis kann von der Anwendung genutzt werden, um Fehlerzustände oder Plausibilitätsprüfungen auszulösen.
 
-4. **Ausgabezyklen**  
-   Die Adapter **COG**, **SOG**, **SID** und **COG_REF** werden bei jedem gültigen Daten-Empfang gemeinsam getriggert (Ereignisverbindung `IND`). Der **TIMEOUT**-Adapter wird unabhängig davon bei Timeout ausgelöst.
+4. **Ausgabezyklen & Wertänderungs-Filterung**  
+   Jeder der Adapter **COG**, **SOG**, **SID** und **COG_REF** wird über ein eigenes Flip-Flop-Element (`E_D_FF_ANY`) gefiltert. Dadurch wird der jeweilige Adapter nur dann getriggert, wenn sich sein spezifischer Datenwert gegenüber der letzten Aktualisierung geändert hat. Dies minimiert redundante Event-Triggervorgänge im Steuerungssystem. Der **TIMEOUT**-Adapter wird unabhängig davon bei fehlenden Nachrichten ausgelöst.
 
 ## Technische Besonderheiten
 
