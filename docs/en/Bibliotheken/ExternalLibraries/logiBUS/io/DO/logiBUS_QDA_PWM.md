@@ -59,13 +59,10 @@ The adapter *OUT* receives an external event *E1* and a data value *D1*. The eve
 
 This function block allows for a clean separation of initialization and cyclic output: Configuration is performed once via INIT, while the actual PWM output is triggered by the adapter.
 
-## Technical Features
-
 - **Composite Function Block:** The function block encapsulates all the logic of a PWM output function block and provides a standardized adapter interface for data exchange with the resource.
-- **Double-Word Output:** The name indicates a 32-bit data width, which is transmitted via the adapter data element *D1*.
+- **13-Bit PWM Output (`0`–`8191`):** The adapter data element *D1* (`DWORD`) expects a 13-bit raw PWM value (`0` = 0% duty cycle, `8191` = 100% duty cycle, $2^{13} = 8192$ states).
 - **Initialization Parameters:** Flexible configuration data, necessary for addressing or parameterizing the logiBUS module, can be passed via *PARAMS* (STRING).
-
-**Initialization Parameters:** Flexible configuration data, necessary for addressing or parameterizing the logiBUS module, can be passed via *PARAMS* (STRING). - **Error Handling:** The *STATUS* output provides a textual description of the service status (e.g., error messages for invalid configurations).
+- **Error Handling:** The *STATUS* output provides a textual description of the service status (e.g., error messages for invalid configurations).
 
 ## State Overview
 

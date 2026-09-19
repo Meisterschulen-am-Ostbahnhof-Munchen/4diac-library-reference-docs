@@ -27,7 +27,7 @@ The function block `logiBUS_QD_PWM` is an output service interface function bloc
 
 - **QI** (BOOL): Event Input Qualifier
 - **PARAMS** (STRING): Service Parameters
-- **OUT** (DWORD): Output Data for the Resource
+- **OUT** (DWORD): Output Data for the Resource (13-bit raw PWM value `0` to `8191`, corresponding to `0 %` to `100 %` duty cycle, $2^{13} = 8192$ states)
 - **Output** (logiBUS_DO_S): Identifies the output Output_Q1..Q8
 - Initial Value: `logiBUS_DO::Invalid`
 
@@ -42,11 +42,11 @@ No adapter interfaces available.
 
 ## Functionality
 
-This function block enables PWM control of outputs via the logiBUS system. During initialization (INIT), the service parameters are configured and the specific output is identified. PWM data (DWORD) can be sent to the configured output via a REQ request. The block acknowledges both initialization and service requests via the corresponding output events.
+This function block enables PWM control of outputs via the logiBUS system. During initialization (INIT), the service parameters are configured and the specific output is identified. PWM data (`OUT`, 13-bit value `0` to `8191` inside a DWORD variable) can be sent to the configured output via a REQ request. The block acknowledges both initialization and service requests via the corresponding output events.
 
 ## Technical Features
 
-- Uses DWORD data type for PWM output data
+- **13-Bit PWM Resolution**: Uses 13-bit normalization (`0` to `8191`) stored in a `DWORD` data type (`0` = 0% duty cycle, `8191` = 100% duty cycle, scaling factor for ISO-Designer: `0.0122085215480405` or `100 / 8191`).
 - Supports up to 8 outputs (Q1-Q8) via output configuration
 - String-based parameter configuration for flexible service settings
 - Status feedback via STRING variable for detailed error information
@@ -67,7 +67,7 @@ The function block has two main states:
 
 ## ⚖️ Comparison with Similar Blocks
 
-Compared to simple digital output blocks, `logiBUS_QD_PWM` offers extended PWM functionality with 32-bit resolution (DWORD). Compared to analog output blocks, it enables direct PWM control without additional conversion.
+Compared to simple digital output blocks, `logiBUS_QD_PWM` offers precise PWM control with 13-bit resolution (`0`–`8191` inside a DWORD). Compared to analog output blocks, it enables direct PWM control without additional conversion.
 
 ## 🛠️ Related exercises
 
@@ -81,7 +81,7 @@ Compared to simple digital output blocks, `logiBUS_QD_PWM` offers extended PWM f
 
 ## Conclusion
 
-The `logiBUS_QD_PWM` function block provides a powerful interface for PWM outputs in the logiBUS system. Thanks to its flexible configuration and support for 32-bit PWM data, it is ideally suited for precise control applications in industrial automation systems.
+The `logiBUS_QD_PWM` function block provides a powerful interface for PWM outputs in the logiBUS system. Thanks to its flexible configuration and support for 13-bit PWM data (`0`–`8191`), it is ideally suited for precise control applications in industrial automation systems.
 
 ---
 
