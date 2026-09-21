@@ -10,7 +10,7 @@
 position (0…`i32PosMax`), reacts to navigation events (line/page up/down, first/last, absolute
 position) and writes the matching Y offset for both the list content and the scrollbar thumb via
 two `Q_ChildPosition` calls (ISO 11783-6 F.16, "Change Child Location") to the VT. It reads
-**no** physical buttons or input fields — that's what [ScrollFS_PHYS](ScrollFS_PHYS.md) and
+**no** physical buttons or input fields — that's what [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md) and
 [ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.md) are for, which wrap `ScrollFS` internally. See
 `Workspace_Scroll/SCROLL_KONZEPT.md` in the `4diac_training1` project for the full derivation.
 
@@ -49,7 +49,7 @@ No adapters available.
 
 ## Functionality
 
-`ScrollFS` wires four blocks together into a complete position engine:
+`ScrollFS` wires five blocks together into a complete position engine:
 
 1. **`Snap`** (`F_MOVE`, `DataType = ScrollObjectPool_S`): snapshots `stObj` once at `INIT`,
    after which all nine geometry fields are permanently available as `Snap.OUT.<field>`.
@@ -74,6 +74,8 @@ No adapters available.
    VT — `MoveList` moves `Container_Scrolling_Content` within `Container_Scrolling_Parent`,
    `MoveBar` moves `Container_Scrollbar_Content` within `Container_Scrollbar_Parent`. Both have a
    fixed `s16Xposition := 0` (vertical scrolling only).
+5. **`ScrollReport`** ([`ReportScrollOffset`](helpers/ReportScrollOffset.md)): on every `Ramp.CNF`
+   (and initially on `Ramp.INITO`), reports the current scroll position (pixel offset = `Ramp.OUT * Snap.OUT.i32RowHeight`) for container `Snap.OUT.u16ListContentId` to the ECU visibility gate (`VtMaskVisibility`) so visible elements can be precisely filtered for VT refreshes.
 
 `Ramp.qAtZero`/`Ramp.qAtFull` are passed through unchanged as `qAtFirst`/`qAtLast`.
 

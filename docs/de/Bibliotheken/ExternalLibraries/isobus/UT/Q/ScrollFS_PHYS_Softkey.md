@@ -1,12 +1,12 @@
-# ScrollFS_PHYS
+# ScrollFS_PHYS_Softkey
 
-![ScrollFS_PHYS](ScrollFS_PHYS.svg)
+![ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.svg)
 
 * * * * * * * * * *
 
 ## Einleitung
 
-`ScrollFS_PHYS` ist der fertige, sofort einsetzbare Baustein für eine scrollbare VT-Liste mit
+`ScrollFS_PHYS_Softkey` ist der fertige, sofort einsetzbare Baustein für eine scrollbare VT-Liste mit
 Softkey-Bedienung: eine `ScrollFull_S`-Konstante hinein (wie sie `GcfScript.py` aus dem
 ISO-Designer-Pool erzeugt), fertig — er verdrahtet die 6 physischen Softkeys, das
 Direkteingabe-Feld und die interne Positions-Engine [ScrollFS](ScrollFS.md) selbst, inklusive
