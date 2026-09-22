@@ -11,7 +11,7 @@ Zeilen-Position (0…`i32PosMax`), reagiert auf Navigations-Ereignisse (Zeile/Se
 Anfang/Ende, absolute Position) und schreibt die passende Y-Verschiebung sowohl für den
 Listen-Inhalt als auch für den Scrollbalken-Thumb über zwei `Q_ChildPosition`-Aufrufe
 (ISO 11783-6 F.16, „Change Child Location“) an den VT. Er liest **keine** physischen Tasten oder
-Eingabefelder — dafür ist [ScrollFS_PHYS](ScrollFS_PHYS.md) bzw.
+Eingabefelder — dafür ist [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md) bzw.
 [ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.md) zuständig, die `ScrollFS` intern kapseln. Details
 zur Herleitung siehe `Workspace_Scroll/SCROLL_KONZEPT.md` im Projekt `4diac_training1`.
 
@@ -51,7 +51,7 @@ Keine Adapter vorhanden.
 
 ## Funktionsweise
 
-`ScrollFS` verdrahtet vier Bausteine zu einer fertigen Positions-Engine:
+`ScrollFS` verdrahtet fünf Bausteine zu einer fertigen Positions-Engine:
 
 1. **`Snap`** (`F_MOVE`, `DataType = ScrollObjectPool_S`): schnappt `stObj` bei `INIT` einmalig,
    danach stehen alle neun Geometrie-Felder als `Snap.OUT.<Feldname>` dauerhaft zur Verfügung.
@@ -76,6 +76,8 @@ Keine Adapter vorhanden.
    Y-Werte an den VT — `MoveList` bewegt `Container_Scrolling_Content` innerhalb von
    `Container_Scrolling_Parent`, `MoveBar` bewegt `Container_Scrollbar_Content` innerhalb von
    `Container_Scrollbar_Parent`. Beide `s16Xposition := 0` fest (nur vertikales Scrollen).
+5. **`ScrollReport`** ([`ReportScrollOffset`](helpers/ReportScrollOffset.md)): meldet bei jedem
+   `Ramp.CNF` (sowie initial bei `Ramp.INITO`) die aktuelle Scroll-Position (Offset in Pixeln = `Ramp.OUT * Snap.OUT.i32RowHeight`) für den Container `Snap.OUT.u16ListContentId` an das ECU-Sichtbarkeits-Gate (`VtMaskVisibility`), damit sichtbare Objekte für VT-Refreshs präzise gefiltert werden können.
 
 `Ramp.qAtZero`/`Ramp.qAtFull` werden unverändert als `qAtFirst`/`qAtLast` durchgereicht.
 
@@ -104,7 +106,7 @@ Ereignissen erhalten, jedes Navigations-Event ändert ihn schrittweise oder spri
 
 ## Anwendungsszenarien
 
-- Wird nicht direkt verwendet, sondern immer über [ScrollFS_PHYS](ScrollFS_PHYS.md) (Softkeys)
+- Wird nicht direkt verwendet, sondern immer über [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md) (Softkeys)
   oder [ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.md) (Bildschirm-Buttons), die die acht
   Navigations-Events aus physischen Tastendrücken ableiten.
 

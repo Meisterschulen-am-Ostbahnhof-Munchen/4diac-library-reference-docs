@@ -1,12 +1,12 @@
-# ScrollFS_PHYS
+# ScrollFS_PHYS_Softkey
 
-![ScrollFS_PHYS](ScrollFS_PHYS.svg)
+![ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.svg)
 
 * * * * * * * * * *
 
 ## Einleitung
 
-`ScrollFS_PHYS` ist der fertige, sofort einsetzbare Baustein für eine scrollbare VT-Liste mit
+`ScrollFS_PHYS_Softkey` ist der fertige, sofort einsetzbare Baustein für eine scrollbare VT-Liste mit
 Softkey-Bedienung: eine `ScrollFull_S`-Konstante hinein (wie sie `GcfScript.py` aus dem
 ISO-Designer-Pool erzeugt), fertig — er verdrahtet die 6 physischen Softkeys, das
 Direkteingabe-Feld und die interne Positions-Engine [ScrollFS](ScrollFS.md) selbst, inklusive
@@ -100,7 +100,7 @@ Anschlag-Übergang.
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
-- **Gegenüber `ScrollFS`**: `ScrollFS_PHYS` ist der praxistaugliche Wrapper — `ScrollFS` selbst
+- **Gegenüber `ScrollFS`**: `ScrollFS_PHYS_Softkey` ist der praxistaugliche Wrapper — `ScrollFS` selbst
   kennt keine physischen Bedienelemente, nur abstrakte Navigationsereignisse.
 - **Gegenüber `ScrollFS_PHYS_Button`**: identische Struktur und Anschlag-Ausblendung, liest die
   6 Bedienelemente aber als Bildschirm-`Button`-Objekte (`BT_PRESSED_LATCHED`) statt als
@@ -114,6 +114,6 @@ Anschlag-Übergang.
 
 ## Fazit
 
-`ScrollFS_PHYS` ist der komplette, produktionsreife Scroll-Baustein für Softkey-bediente Listen —
+`ScrollFS_PHYS_Softkey` ist der komplette, produktionsreife Scroll-Baustein für Softkey-bediente Listen —
 inklusive automatischer Anschlag-Ausblendung der Navigationstasten, ohne dass die
 Steuerungsanwendung selbst Grenzwerte prüfen oder Object Pointer manuell umbiegen muss.
