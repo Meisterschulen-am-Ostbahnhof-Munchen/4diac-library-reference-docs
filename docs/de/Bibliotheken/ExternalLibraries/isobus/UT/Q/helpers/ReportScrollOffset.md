@@ -21,7 +21,7 @@
 ### **Daten-Eingänge**
 
 - `u16ContainerId` (UINT): Objekt-ID des `*_Scrolling_Content`-Containers.
-- `i32Pos` (DINT): Aktuelle Zeilen-Position (0…PosMax).
+- `i32Pos` (DINT): Aktuelle Zeilen-Position (0…i32PosMax).
 - `i32RowHeight` (DINT): Zeilenhöhe in Pixeln zur Umrechnung in den Pixel-Offset.
 
 ### **Daten-Ausgänge**
