@@ -14,8 +14,8 @@ Der **Q_LockUnlockMask** ist ein standardkonformer Funktionsbaustein zur Steueru
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung
-- `REQ`: Sperr-/Entsperr-Anforderung
+- `INIT`: Initialisierungsanforderung (mit Masken-Objekt-ID `u16MaskId`)
+- `REQ`: Sperr-/Entsperr-Anforderung (mit Sperrkommando und Timeout)
 
 ### **Ereignis-Ausgänge**
 
@@ -24,17 +24,20 @@ Der **Q_LockUnlockMask** ist ein standardkonformer Funktionsbaustein zur Steueru
 
 ### **Daten-Eingänge**
 
+- `u16MaskId` (UINT): Masken-Objekt-ID (bei `INIT` übergeben)
 - `u8LockCmd` (USINT): Sperrbefehl (0=Entsperren, 1=Sperren)
-- `u16MaskId` (UINT): Masken-Objekt-ID
 - `u16LockTimeoutMs` (UINT): Timeout in ms (0=kein Timeout)
 
 ### **Daten-Ausgänge**
 
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldLockCmd` (USINT): Vorheriger Sperrzustand
-- `u16OldMaskId` (UINT): Vorherige Masken-ID
 - `u16OldLockTimeoutMs` (UINT): Vorheriger Timeout
 - `s16result` (INT): ISO-konformer Ergebniscode
+
+## Instanz-Eindeutigkeit (Instance Uniqueness)
+
+Dieser Baustein erfordert Instanz-Eindeutigkeit bezüglich **u16MaskId**. Es darf im gesamten Programm nur eine Instanz von `Q_LockUnlockMask` für dieselbe Masken-ID existieren. `u16MaskId` wird bei `INIT` eingelesen — eine zweite Instanz auf dieselbe Masken-ID wird bei `INIT` deaktiviert (STATUS = "This objID is already in use"). Siehe auch [Instanz-Eindeutigkeit](./INSTANZ_EINDEUTIGKEIT.md).
 
 ## Gültige Objekt-IDs
 
@@ -47,68 +50,13 @@ ID_NULL (65535) ist kein gültiges Kommandoziel — das Kommando wird vom VT mit
 ## Funktionsweise
 
 1. **Initialisierung**:
-   - `INIT` ohne Parameter
+   - `INIT` mit `u16MaskId`
    - `INITO` bestätigt Betriebsbereitschaft
 
 2. **Maskensperrung**:
-   - `REQ` mit Sperrkommando, Masken-ID und Timeout
+   - `REQ` mit Sperrkommando und Timeout
    - Steuert die Bildschirmaktualisierung der Maske
-   - `CNF` liefert Betriebsstatus und vorherige Werte
+   - `CNF` liefert Betriebsstatus und vorherigen Sperrzustand/Timeout
 
 3. **Timeout-Verhalten**:
    - Automatische Entsperrung nach Ablauf
-
-## Technische Besonderheiten
-
-✔ **ISO 11783-6 konform** (F.46)
-✔ **Exklusiv für VT Version 4+**
-✔ **Zeitgesteuerte Sperrung** (Millisekunden-Genauigkeit)
-✔ **Bidirektionale Steuerung** (Sperren/Entsperren)
-
-## Kommandoreferenz
-
-| u8LockCmd | Funktion         |
-| --------- | ---------------- |
-| 0         | Maske entsperren |
-| 1         | Maske sperren    |
-
-## Rückgabecodes (s16result)
-
-| Code | Konstante                 | Bedeutung                |
-| ---- | ------------------------- | ------------------------ |
-| 0    | VT_E_NO_ERR               | Erfolgreiche Ausführung  |
-| -6   | VT_E_OVERFLOW             | Pufferüberlauf           |
-| -8   | VT_E_NOACT                | VT nicht bereit          |
-| -21  | VT_E_NO_INSTANCE          | Kein VT-Client verfügbar |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Ungültige VT-Instanz     |
-| -130 | VT_E_NOT_ALIVE            | VT nicht aktiv           |
-
-## Anwendungsszenarien
-
-- **Kritische Operationen**: Sperrung während Datenübertragung
-- **Benutzerinteraktion**: Temporäre Deaktivierung
-- **Energieeffizienz**: Reduzierung von Display-Updates
-- **Diagnoseprotokolle**: Gezielte Aufzeichnung
-
-## ⚖️ Vergleich mit ähnlichen Bausteinen
-
-| Feature          | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
-| ---------------- | ---------------- | ------------- | ------------ |
-| ISO-Standard     | ✔                | ✖             | ✖            |
-| Timeout          | ✔                | ✖             | ✔            |
-| Maskenspezifisch | ✔                | ✔             | ✖            |
-| Bidirektional    | ✔                | ✖             | ✔            |
-
-## Fazit
-
-Der Q_LockUnlockMask-Baustein bietet präzise Kontrolle über Maskenaktualisierungen:
-
-- **Performant**: Minimale Systemlast
-- **Zuverlässig**: Zeitgesteuerte Automatik
-- **Sicher**: Exklusiver Zugriffsschutz
-
-Unverzichtbar für:
-
-- Prozesskritische Anwendungen
-- Ressourcenoptimierte Systeme
-- Hochverfügbare VT-Lösungen

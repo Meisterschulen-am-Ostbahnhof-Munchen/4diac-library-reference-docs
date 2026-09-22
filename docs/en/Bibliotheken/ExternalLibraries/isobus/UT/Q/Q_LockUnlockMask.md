@@ -13,8 +13,8 @@ The **Q_LockUnlockMask** is a standards-compliant function block for controlling
 
 ### **Event Inputs**
 
-- `INIT`: Initialization Request
-- `REQ`: Lock/Unlock Request
+- `INIT`: Initialization Request (with mask object ID `u16MaskId`)
+- `REQ`: Lock/Unlock Request (with lock command and timeout)
 
 ### **Event Outputs**
 
@@ -23,17 +23,20 @@ The **Q_LockUnlockMask** is a standards-compliant function block for controlling
 
 ### **Data Inputs**
 
+- `u16MaskId` (UINT): Mask Object ID (provided at `INIT`)
 - `u8LockCmd` (USINT): Lock Command (0=Unlock, 1=Lock)
-- `u16MaskId` (UINT): Mask Object ID
 - `u16LockTimeoutMs` (UINT): Timeout in ms (0 = no timeout)
 
 ### **Data Outputs**
 
 - `STATUS` (STRING): Operational status message
 - `u8OldLockCmd` (USINT): Previous lock state
-- `u16OldMaskId` (UINT): Previous mask ID
 - `u16OldLockTimeoutMs` (UINT): Previous timeout
 - `s16result` (INT): ISO-compliant result code
+
+## Instance Uniqueness
+
+This block requires instance uniqueness regarding **u16MaskId**. Only one instance of `Q_LockUnlockMask` may exist in the entire program for the same mask ID. `u16MaskId` is read at `INIT` — a second instance with the same mask ID is deactivated during `INIT` (STATUS = "This objID is already in use"). See also [Instance Uniqueness](./INSTANCE_UNIQUENESS.md).
 
 ## Valid Object IDs
 
@@ -46,71 +49,13 @@ ID_NULL (65535) is not a valid command target — the command is answered by the
 ## Functionality
 
 1. **Initialization**:
+   - `INIT` with `u16MaskId`
+   - `INITO` confirms operational readiness
 
-- `INIT` without parameters
-- `INITO` confirms operational readiness
+2. **Mask Locking**:
+   - `REQ` with lock command and timeout
+   - Controls the screen refresh of the mask
+   - `CNF` provides operating status and previous values
 
-1. **Mask Locking**:
-
-- `REQ` with lock command, mask ID, and timeout
-- Controls the screen refresh of the mask
-- `CNF` provides operating status and previous values
-
-1. **Timeout Behavior**:
-
-- Automatic unlocking after expiration
-
-## Technical Features
-
-✔ **ISO 11783-6 compliant** (F.46)
-✔ **Exclusive to VT Version 4+**
-✔ **Time-controlled locking** (millisecond accuracy)
-✔ **Bidirectional control** (lock/unlock)
-
-## Command Reference
-
-| u8LockCmd | Function    |
-| --------- | ----------- |
-| 0         | Unlock mask |
-| 1         | Lock mask   |
-
-## Return Codes (s16result)
-
-| Code | Constant                  | Meaning                |
-| ---- | ------------------------- | ---------------------- |
-| 0    | VT_E_NO_ERR               | Successful execution   |
-| -6   | VT_E_OVERFLOW             | Buffer overflow        |
-| -8   | VT_E_NOACT                | VT not ready           |
-| -21  | VT_E_NO_INSTANCE          | No VT client available |
-| -129 | VT_E_ISO_INSTANCE_INVALID | Invalid VT instance    |
-| -130 | VT_E_NOT_ALIVE            | VT not active          |
-
-## Application Scenarios
-
-- **Critical Operations**: Locking During Data Transfer
-- **User Interaction**: Temporary Disabling
-- **Energy Efficiency**: Reducing Display Updates
-- **Diagnostic Logs**: Targeted Recording
-
-## ⚖️ Comparison with Similar Components
-
-| Feature       | Q_LockUnlockMask | VtMaskControl | VtScreenLock |
-| ------------- | ---------------- | ------------- | ------------ |
-| ISO Standard  | ✔                | ✖             | ✖            |
-| Timeout       | ✔                | ✖             | ✔            |
-| Mask-Specific | ✔                | ✔             | ✖            |
-| Bidirectional | ✔                | ✖             | ✔            |
-
-## Conclusion
-
-The Q_LockUnlockMask module offers precise control over mask updates:
-
-- **High Performance**: Minimal system load
-- **Reliable**: Time-controlled automation
-- **Secure**: Exclusive access protection
-
-Essential for:
-
-- Process-critical applications
-- Resource-optimized systems
-- High-availability VT solutions
+3. **Timeout Behavior**:
+   - Automatic unlock upon expiration
