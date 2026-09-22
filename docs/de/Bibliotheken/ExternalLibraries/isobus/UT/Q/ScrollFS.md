@@ -106,7 +106,7 @@ Ereignissen erhalten, jedes Navigations-Event ändert ihn schrittweise oder spri
 
 ## Anwendungsszenarien
 
-- Wird nicht direkt verwendet, sondern immer über [ScrollFS_PHYS](ScrollFS_PHYS.md) (Softkeys)
+- Wird nicht direkt verwendet, sondern immer über [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md) (Softkeys)
   oder [ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.md) (Bildschirm-Buttons), die die acht
   Navigations-Events aus physischen Tastendrücken ableiten.
 

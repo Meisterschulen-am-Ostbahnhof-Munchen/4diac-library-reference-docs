@@ -103,7 +103,7 @@ change, never maintained separately.
 
 ## Application Scenarios
 
-- Never used directly — always wrapped by [ScrollFS_PHYS](ScrollFS_PHYS.md) (softkeys) or
+- Never used directly — always wrapped by [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md) (softkeys) or
   [ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.md) (on-screen buttons), which derive the eight
   navigation events from physical button presses.
 
