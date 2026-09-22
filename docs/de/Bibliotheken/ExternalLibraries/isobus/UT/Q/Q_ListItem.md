@@ -14,26 +14,29 @@ Der **Q_ListItem** ist ein standardkonformer Funktionsbaustein zur Verwaltung vo
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Listen-Objekt-ID)
-- `REQ`: Änderungsanforderung (mit Index und neuer Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Listen-Objekt-ID `u16ObjId` und Listen-Index `u8ListIndex`)
+- `REQ`: Änderungsanforderung (mit neuer Objekt-ID `u16NewObjId`)
 
 ### **Ereignis-Ausgänge**
 
 - `INITO`: Initialisierungsbestätigung
-- `CNF`: Änderungsbestätigung (mit Status und vorherigen Werten)
+- `CNF`: Änderungsbestätigung (mit Status und vorheriger Objekt-ID)
 
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Listen-Objekt-ID (16-bit)
-- `u8ListIndex` (USINT): Listenindex (0-basiert)
+- `u8ListIndex` (USINT): Listenindex (0-basiert, bei `INIT` übergeben)
 - `u16NewObjId` (UINT): Neue Objekt-ID oder 0xFFFF (leerer Eintrag)
 
 ### **Daten-Ausgänge**
 
 - `STATUS` (STRING): Betriebsstatusmeldung
-- `u8OldListIndex` (USINT): Vorheriger Listenindex
 - `u16OldObjId` (UINT): Vorherige Objekt-ID
 - `s16result` (INT): ISO-konformer Ergebniscode
+
+## Instanz-Eindeutigkeit (Instance Uniqueness)
+
+Dieser Baustein erfordert Instanz-Eindeutigkeit bezüglich des Paares (**u16ObjId**, **u8ListIndex**). Es darf im gesamten Programm nur eine Instanz von `Q_ListItem` für denselben Listeneintrag existieren. `u8ListIndex` wird bei `INIT` eingelesen — eine zweite Instanz auf dieselbe Listen-Objekt-ID und denselben Listen-Index wird bei `INIT` deaktiviert (STATUS = "This objID is already in use"). Siehe auch [Instanz-Eindeutigkeit](./INSTANZ_EINDEUTIGKEIT.md).
 
 ## Gültige Objekt-IDs
 
@@ -49,13 +52,13 @@ ID_NULL (65535) ist für `u16ObjId` kein gültiges Kommandoziel, deaktiviert abe
 ## Funktionsweise
 
 1. **Initialisierung**:
-   - `INIT` mit Listen-Objekt-ID
+   - `INIT` mit Listen-Objekt-ID und Listen-Index
    - `INITO` bestätigt Betriebsbereitschaft
 
 2. **Listenänderung**:
-   - `REQ` mit Index und neuer Objekt-ID
+   - `REQ` mit neuer Objekt-ID
    - Aktualisiert den Listeneintrag
-   - `CNF` liefert Ergebnisstatus und vorherige Werte
+   - `CNF` liefert Ergebnisstatus und vorherige Objekt-ID
 
 3. **Spezialfall**:
    - `u16NewObjId = 0xFFFF` erzeugt leeren Eintrag
@@ -64,7 +67,7 @@ ID_NULL (65535) ist für `u16ObjId` kein gültiges Kommandoziel, deaktiviert abe
 
 ✔ **ISO 11783-6 konform** (F.42)
 ✔ **Dynamische Listenverwaltung** (Echtzeit-Änderungen)
-✔ **Rückverfolgbarkeit** (Vorherige Zustandsspeicherung)
+✔ **Paar-Eindeutigkeit bei INIT** (`u16ObjId` + `u8ListIndex`)
 ✔ **Flexible Leerstellen** (0xFFFF-Sonderwert)
 
 ## Index-Referenz
@@ -93,15 +96,6 @@ ID_NULL (65535) ist für `u16ObjId` kein gültiges Kommandoziel, deaktiviert abe
 - **Parametereinstellungen**: Auswahloptionen
 - **Diagnoselisten**: Fehlercode-Verwaltung
 
-## ⚖️ Vergleich mit ähnlichen Bausteinen
-
-| Feature          | Q_ListItem | VtListManager | VtDynamicMenu |
-| ---------------- | ---------- | ------------- | ------------- |
-| ISO-Standard     | ✔          | ✖             | ✖             |
-| Echtzeitänderung | ✔          | ✔             | ✖             |
-| Leereinträge     | ✔          | ✖             | ✔             |
-| Indexrückgabe    | ✔          | ✖             | ✖             |
-
 ## Fazit
 
 Der Q_ListItem-Baustein bietet effiziente Listenverwaltung:
@@ -109,9 +103,3 @@ Der Q_ListItem-Baustein bietet effiziente Listenverwaltung:
 - **Reaktiv**: Sofortige GUI-Aktualisierungen
 - **Robust**: Integrierte Fehlerbehandlung
 - **Kompatibel**: Volle ISO-Konformität
-
-Essential für:
-
-- Interaktive Auswahlmenüs
-- Dynamische Konfiguratoren
-- Adaptive Bedienoberflächen
