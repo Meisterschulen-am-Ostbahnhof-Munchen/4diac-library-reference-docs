@@ -71,7 +71,7 @@ The calibration is based on piecewise linear interpolation between three stored 
 
 ## Technical Features
 
-- **Bidirectional Adapters for Calibration Points:** The stored raw values (`X_MIN`, `X_MID`, `X_MAX`) are bidirectional adapters of type `AR2`. They can be both written to (during calibration) and read from (during calculation). This ensures that the calibration points are permanently retained.
+- **Bidirectional Adapters for Calibration Points:** The stored raw values (`X_MIN`, `X_MID`, `X_MAX`) are bidirectional adapters of type `AR2`. They can be both written to (during calibration) and read from (during calculation). This makes the calibration points available for subsequent calculations (non-volatile retention across reinitialization or power loss requires an external storage block such as INI/NVS).
 - **Atomic Event Triggering:** Calibration of the three points is triggered directly by specific event inputs (`C_MIN`, `C_MID`, `C_MAX`), eliminating intermediate AX adapters and data guards.
 - **Protection Against Invalid Intervals:** The algorithms check whether the ranges of the stored raw values are positive. If not (e.g., if the system is not yet calibrated), safe default values are output.
 - **No Self-Calibration:** The function block does not store a history – the system must explicitly set the calibration points by triggering the calibration events.

@@ -103,7 +103,7 @@ The transitions between the states are defined as follows:
 
 ## Comparison with Similar Blocks
 
-Details on calibration methods can be found under [Two-point and Three-point Calibration Methods](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
+Details on calibration methods can be found under [Two-point and Three-point Calibration Methods](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/en/latest/Kalibrierverfahren-Zwei-und-Dreipunkt/).
 
 Simple scaling blocks (e.g., `SCALE`) offer fixed multiplication and addition without automatic calibration. In contrast, `AR_CALIBRATE` integrates the complete calibration logic—including reference values and event-driven activation—making it suitable for dynamic environments where parameters must be adjusted during operation.
 

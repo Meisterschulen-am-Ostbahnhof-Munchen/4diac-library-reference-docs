@@ -71,7 +71,7 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 
 ## Technische Besonderheiten
 
-- **Bidirektionale Adapter für Kalibrierungspunkte:** Die gespeicherten Rohwerte (`X_MIN`, `X_MID`, `X_MAX`) sind bidirektionale Adapter vom Typ `AR2`. Sie können sowohl beschrieben (während der Kalibrierung) als auch gelesen (während der Berechnung) werden. Dadurch bleiben die Kalibrierungspunkte dauerhaft erhalten.
+- **Bidirektionale Adapter für Kalibrierungspunkte:** Die gespeicherten Rohwerte (`X_MIN`, `X_MID`, `X_MAX`) sind bidirektionale Adapter vom Typ `AR2`. Sie können sowohl beschrieben (während der Kalibrierung) als auch gelesen (während der Berechnung) werden. Dadurch stehen die Kalibrierungspunkte für nachfolgende Berechnungen zur Verfügung (eine dauerhafte Speicherung über Reinitialisierung oder Stromausfall hinaus erfordert ein nachgeschaltetes Speichermodul wie INI/NVS).
 - **Atomare Ereignisauslösung:** Die Kalibrierung der drei Punkte erfolgt direkt über spezifische Ereigniseingänge (`C_MIN`, `C_MID`, `C_MAX`) ohne vorgeschaltete AX-Adapter oder Flankenwächter-Guards.
 - **Schutz vor ungültigen Intervallen:** Die Algorithmen prüfen, ob die Spannweiten der gespeicherten Rohwerte positiv sind. Falls nicht (z. B. bei noch nicht kalibriertem Zustand), werden sichere Standardwerte ausgegeben.
 - **Keine Selbstkalibrierung:** Der FB speichert keine Historie – das System muss die Kalibrierungspunkte explizit durch Auslösen der Kalibrierereignisse setzen.
