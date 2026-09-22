@@ -97,7 +97,7 @@ just on the actual limit transition.
 
 ## ⚖️ Comparison with Similar Blocks
 
-- **Versus `ScrollFS`**: `ScrollFS_PHYS` is the practical wrapper - `ScrollFS` itself knows
+- **Versus `ScrollFS`**: `ScrollFS_PHYS_Softkey` is the practical wrapper - `ScrollFS` itself knows
   nothing about physical controls, only abstract navigation events.
 - **Versus `ScrollFS_PHYS_Button`**: identical structure and limit hiding, but reads the 6
   controls as on-screen `Button` objects (`BT_PRESSED_LATCHED`) instead of `SoftKey` objects -
@@ -111,6 +111,6 @@ just on the actual limit transition.
 
 ## Conclusion
 
-`ScrollFS_PHYS` is the complete, production-ready scroll block for softkey-operated lists -
+`ScrollFS_PHYS_Softkey` is the complete, production-ready scroll block for softkey-operated lists -
 including automatic hiding of the navigation buttons at the limits, without the control
 application having to check limits or redirect Object Pointers itself.
