@@ -28,7 +28,7 @@ No explicit event outputs are available. Output is exclusively via the **Y** ada
 | Name | Data Type | Default Value | Comment |
 | :--- | :--- | :--- | :--- |
 | `MIN_REF` | `REAL` | `0.0` | Target value for the smallest input value (Min). |
-| `MID_REF` | `REAL` | `50.0` | Target value for the middle value (Mid). |
+| `MID_REF` | `REAL` | `50.0` | Target value for the midpoint (Mid). |
 | `MAX_REF` | `REAL` | `100.0` | Target value for the largest input value (Max). |
 
 ### **Data Outputs**
@@ -41,7 +41,7 @@ No direct data outputs – all outputs are provided via **plugs** (output adapte
 | :--- | :--- | :--- | :--- |
 | **Plug** (Output) | `Y` | `adapter::types::unidirectional::AR` | Calibrated output value (analog value plus event). |
 | **Plug** (Output) | `X_MIN` | `adapter::types::bidirectional::AR2` | Stored minimum value (from the raw value). |
-| **Plug** (Output) | `X_MID` | `adapter::types::bidirectional::AR2` | Stored average value (from the raw value). |
+| **Plug** (Output) | `X_MID` | `adapter::types::bidirectional::AR2` | Stored midpoint value (from the raw value). |
 | **Plug** (Output) | `X_MAX` | `adapter::types::bidirectional::AR2` | Stored maximum value (from the raw value). |
 | **Socket** (Input) | `X` | `adapter::types::unidirectional::AR` | Raw value from the sensor (analog value plus event). |
 
@@ -55,7 +55,7 @@ The calibration is based on piecewise linear interpolation between three stored 
 2. **Calculation of the Calibrated Value:**  
    As soon as an event arrives from the raw value adapter (`X.E1`), the function block becomes active and executes the **REQ** algorithm. The raw value `X.D1` is then linearly mapped:
 
-   - If the raw value is below the stored mean `X_MID.DI1`, the lower branch of the characteristic curve is used:  
+   - If the raw value is below the stored midpoint `X_MID.DI1`, the lower branch of the characteristic curve is used:  
      `Y.D1 = MIN_REF + (X.D1 – X_MIN.DI1) * (MID_REF – MIN_REF) / (X_MID.DI1 – X_MIN.DI1)`  
      If the intervals are invalid (division by zero or negative range), `MIN_REF` is used.
 
@@ -83,7 +83,7 @@ The calibration is based on piecewise linear interpolation between three stored 
 | **IDLE** | Waiting state. Transitions: For `SET` → IDLE; for `X_MIN.EI1`, `X_MID.EI1`, `X_MAX.EI1` → IDLE; for `C_MIN` → CAL_MIN; for `C_MID` → CAL_MID; for `C_MAX` → CAL_MAX; for `X.E1` → REQ. |
 | **REQ** | Calculates the calibrated output value. Returns to IDLE immediately after execution. |
 | **CAL_MIN** | Stores the current raw value as minimum (`X_MIN.DO1 := X.D1`). Returns to IDLE automatically. |
-| **CAL_MID** | Stores the current raw value as average (`X_MID.DO1 := X.D1`). Returns to IDLE automatically. |
+| **CAL_MID** | Stores the current raw value as midpoint (`X_MID.DO1 := X.D1`). Returns to IDLE automatically. |
 | **CAL_MAX** | Stores the current raw value as maximum (`X_MAX.DO1 := X.D1`). Returns to IDLE automatically. |
 
 **Transition Conditions:**

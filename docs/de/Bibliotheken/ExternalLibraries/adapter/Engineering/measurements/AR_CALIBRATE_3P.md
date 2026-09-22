@@ -28,7 +28,7 @@ Keine expliziten Ereignisausgänge vorhanden. Die Ausgabe erfolgt ausschließlic
 | Name | Datentyp | Vorgabewert | Kommentar |
 | :--- | :--- | :--- | :--- |
 | `MIN_REF` | `REAL` | `0.0` | Zielwert für den kleinsten Eingangswert (Min). |
-| `MID_REF` | `REAL` | `50.0` | Zielwert für den Mittelwert (Mid). |
+| `MID_REF` | `REAL` | `50.0` | Zielwert für den Mittelpunkt (Mid). |
 | `MAX_REF` | `REAL` | `100.0` | Zielwert für den größten Eingangswert (Max). |
 
 ### **Daten-Ausgänge**
@@ -41,7 +41,7 @@ Keine direkten Datenausgänge – alle Ausgaben werden über die **Plugs** (Ausg
 | :--- | :--- | :--- | :--- |
 | **Plug** (Ausgang) | `Y` | `adapter::types::unidirectional::AR` | Kalibrierter Ausgabewert (Analogwert plus Ereignis). |
 | **Plug** (Ausgang) | `X_MIN` | `adapter::types::bidirectional::AR2` | Gespeicherter Minimalwert (vom Rohwert). |
-| **Plug** (Ausgang) | `X_MID` | `adapter::types::bidirectional::AR2` | Gespeicherter Mittelwert (vom Rohwert). |
+| **Plug** (Ausgang) | `X_MID` | `adapter::types::bidirectional::AR2` | Gespeicherter Mittelpunkt (vom Rohwert). |
 | **Plug** (Ausgang) | `X_MAX` | `adapter::types::bidirectional::AR2` | Gespeicherter Maximalwert (vom Rohwert). |
 | **Socket** (Eingang) | `X` | `adapter::types::unidirectional::AR` | Rohwert vom Sensor (Analogwert plus Ereignis). |
 
@@ -55,7 +55,7 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 2. **Berechnung des kalibrierten Werts:**  
    Sobald ein Ereignis vom Rohwert‑Adapter (`X.E1`) eintrifft, wird der Funktionsblock aktiv und führt den Algorithmus **REQ** aus. Dabei wird der Rohwert `X.D1` linear abgebildet:
 
-   - Liegt der Rohwert unterhalb des gespeicherten Mittelwerts `X_MID.DI1`, wird der untere Zweig der Kennlinie verwendet:  
+   - Liegt der Rohwert unterhalb des gespeicherten Mittelpunkts `X_MID.DI1`, wird der untere Zweig der Kennlinie verwendet:  
      `Y.D1 = MIN_REF + (X.D1 – X_MIN.DI1) * (MID_REF – MIN_REF) / (X_MID.DI1 – X_MIN.DI1)`  
      Falls die Intervalle ungültig sind (Division durch Null oder negative Spannweite), wird auf `MIN_REF` zurückgegriffen.
 
@@ -83,7 +83,7 @@ Die Kalibrierung basiert auf einer stückweisen linearen Interpolation zwischen 
 | **IDLE** | Wartezustand. Transitionen: Bei `SET` → IDLE; bei `X_MIN.EI1`, `X_MID.EI1`, `X_MAX.EI1` → IDLE; bei `C_MIN` → CAL_MIN; bei `C_MID` → CAL_MID; bei `C_MAX` → CAL_MAX; bei `X.E1` → REQ. |
 | **REQ** | Berechnung des kalibrierten Ausgangswerts. Nach Ausführung sofort zurück zu IDLE. |
 | **CAL_MIN** | Speichert den aktuellen Rohwert als Minimum (`X_MIN.DO1 := X.D1`). Kehrt automatisch zu IDLE zurück. |
-| **CAL_MID** | Speichert den aktuellen Rohwert als Mittelwert (`X_MID.DO1 := X.D1`). Kehrt automatisch zu IDLE zurück. |
+| **CAL_MID** | Speichert den aktuellen Rohwert als Mittelpunkt (`X_MID.DO1 := X.D1`). Kehrt automatisch zu IDLE zurück. |
 | **CAL_MAX** | Speichert den aktuellen Rohwert als Maximum (`X_MAX.DO1 := X.D1`). Kehrt automatisch zu IDLE zurück. |
 
 **Übergangsbedingungen:**
