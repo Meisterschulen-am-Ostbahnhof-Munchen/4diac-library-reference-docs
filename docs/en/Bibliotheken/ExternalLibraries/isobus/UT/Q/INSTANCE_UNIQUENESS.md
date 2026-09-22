@@ -58,6 +58,10 @@ The target is a variable VT Object ID (`u16ObjId`, set during `INIT` via `var_u1
 |---|---|
 | `Q_ESC` | No Object ID or old value buffering. Direct transmission upon `REQ`. |
 
+## Adapter Wrappers (`_AUI`, `_AUDI`, `_AB`, `_AX`, `_AR`)
+
+Adapter variants (e.g., `Q_NumericValue_AUDI`, `Q_ObjHideShow_AB`) are wrapper function blocks around their respective base classes (e.g., `Q_NumericValue`, `Q_ObjHideShow`). Because the adapter wrapper builds on the underlying base class, **instance uniqueness applies across the wrapper boundary**: An Object ID may be claimed program-wide by at most **one** instance (either base class or adapter wrapper). Simultaneous usage of base and wrapper instances on the same Object ID is invalid.
+
 ## Separate I_* Module
 
 `I_GetAttribute` (`isobus_UT/src/isobus/UT/I/`) requires pair uniqueness over (`u16ObjId`, `u8IdAttribute`).

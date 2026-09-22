@@ -62,8 +62,8 @@ Diese Bausteine haben KEINE variable Ziel-Objekt-ID - ihr eigentliches Ziel (Mas
 |---|---|
 | `Q_ESC` | Keine Objekt-ID, keine Old-Value-Pufferung überhaupt (`iso_init()` setzt nur `STATUS`) - jeder `REQ` sendet unmittelbar, nichts zum Verwechseln. Mehrere Instanzen sind harmlos. |
 
-## Nicht in dieser Übersicht - eigene, ungeprüfte Lücke
+## Adapter-Wrapper (`_AUI`, `_AUDI`, `_AB`, `_AX`, `_AR`)
 
-Die generischen `_AUI`/`_AUDI`/`_AB`/`_AX`/`_AR`-Adapter-Varianten (z. B. `Q_NumericValue_AUDI`, `Q_ObjHideShow_AB`) sind Adapter-Wrapper um die oben gelisteten Basisklassen, aber **eigene FB-Typen** mit eigener `getFBTypeId()`. `IsObjectIdAlreadyClaimed()` vergleicht `getFBTypeId()` - eine `Q_NumericValue`- und eine `Q_NumericValue_AUDI`-Instanz auf derselben Objekt-ID würden sich **nicht** gegenseitig erkennen, obwohl beide dasselbe Objekt beschreiben.
+Die Adapter-Varianten (z. B. `Q_NumericValue_AUDI`, `Q_ObjHideShow_AB`) sind Wrapper-Bausteine um die jeweiligen Basisklassen (z. B. `Q_NumericValue`, `Q_ObjHideShow`). Da der Adapter-Wrapper intern auf der Basisklasse aufbaut, **gilt die Instanz-Eindeutigkeit klassenübergreifend**: Eine Objekt-ID kann im gesamten Programm nur von **einer einzigen** Instanz (entweder der Basisklasse oder des Adapter-Wrappers) genutzt werden. Eine gleichzeitige Nutzung derselben Objekt-ID durch Basisklasse und Wrapper ist unzulässig.
 
 `I_GetAttribute` (`isobus_UT/src/isobus/UT/I/`) hat Paar-Eindeutigkeit über (`u16ObjId`, `u8IdAttribute`).
