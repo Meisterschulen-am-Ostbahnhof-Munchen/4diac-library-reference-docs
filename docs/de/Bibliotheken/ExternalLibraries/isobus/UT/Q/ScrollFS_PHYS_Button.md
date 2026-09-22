@@ -50,7 +50,7 @@ identisch zu `ScrollFS_PHYS_Softkey`.
 
 ## Technische Besonderheiten
 
-Siehe [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md), Abschnitt „Technische Besonderheiten" — alle dort
+Siehe [ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.md), Abschnitt „Technische Besonderheiten“ — alle dort
 beschriebenen Punkte (F_SEL-Richtung, ObjectPointer- vs. Key-ID, serielle Init-Kette) gelten
 unverändert. Der einzige Unterschied ist der Bedienelement-Typ (`Button_IE` statt `Softkey_IE`).
 
