@@ -11,7 +11,8 @@ Ziel ist eine variable VT-Objekt-ID (`u16ObjId`, bei INIT per `var_u16ObjId` ges
 | Baustein | Ziel-ID = |
 |---|---|
 | `Q_Attribute` | **Paar** (Objekt, Attribut-ID) - `mTargetObjectId=u16ObjId`, `mTargetSubId=u8IdAttribute`. Zwei Instanzen auf demselben Objekt, aber verschiedenen Attributen, sind KEIN Konflikt - nur dasselbe Paar zweimal ist einer. |
-| `Q_BackgroundColour` | Objekt mit Hintergrundfarbe |
+| `Q_BackgroundColour` | Objekt mit Hintergrundfarbe. Darf dieselbe Objekt-ID mit EINER `Q_BackgroundColourAux`-Instanz teilen (unterschiedliche FB-Klassen), aber NIEMALS zwei `Q_BackgroundColour`-Instanzen auf dieselbe ID. |
+| `Q_BackgroundColourAux` | AuxFunction-Objekt (AUX-VT, **durchgesetzt**). Eindeutig pro Objekt-ID innerhalb der eigenen FB-Klasse (`getFBTypeId()`). Darf dieselbe Objekt-ID mit EINER `Q_BackgroundColour`-Instanz teilen, aber NIEMALS zwei `Q_BackgroundColourAux`-Instanzen auf dieselbe ID. |
 | `Q_ChangeObjectLabel` | beschriftbares Objekt |
 | `Q_ChangePolygonPoint` | Polygon-Objekt |
 | `Q_ChangePolygonScale` | Polygon-Objekt |
@@ -23,7 +24,7 @@ Ziel ist eine variable VT-Objekt-ID (`u16ObjId`, bei INIT per `var_u16ObjId` ges
 | `Q_GraphicsContext` | Graphics-Context-Objekt |
 | `Q_LineAttributes` | Objekt mit Linienattributen |
 | `Q_ListItem` | **Paar** (Listen-Objekt, List-Index) - `mTargetObjectId=u16ObjId`, `mTargetSubId=u8ListIndex`. Zwei Instanzen auf derselben Liste, aber verschiedenen Indizes, sind KEIN Konflikt - nur dasselbe Paar zweimal ist einer. `u8ListIndex` wird bei `INIT` per `With Var="u8ListIndex"` eingelesen — Claim/Check erfolgt wie bei `Q_Attribute` direkt bei `INIT` in `iso_init()`. |
-| `Q_NumericValue` | Numeric-Value-Objekt. **Ausnahme ObjectPointer:** darf dieselbe ID zusammen mit EINER `Q_NumericValueAux`-Instanz haben (unterschiedliche Klasse, kein Konflikt - siehe `Q_BackgroundColourAux` oben; relevant nur bei ObjectPointer, weil `Q_NumericValueAux` ausschließlich ObjectPointer-Objekte anspricht). Für jedes andere Zielobjekt (kein ObjectPointer) passt nur eine `Q_NumericValue`-Instanz. |
+| `Q_NumericValue` | Numeric-Value-Objekt. **Ausnahme ObjectPointer:** darf dieselbe ID zusammen mit EINER `Q_NumericValueAux`-Instanz haben (unterschiedliche Klasse, kein Konflikt; relevant nur bei ObjectPointer, weil `Q_NumericValueAux` ausschließlich ObjectPointer-Objekte anspricht). Für jedes andere Zielobjekt (kein ObjectPointer) passt nur eine `Q_NumericValue`-Instanz. |
 | `Q_ObjEnableDisable` | de-/aktivierbares Objekt |
 | `Q_ObjHideShow` | Container (3000-3999) |
 | `Q_ObjSelectInput` | eingabe-selektierbares Objekt |
@@ -37,7 +38,6 @@ Diese Bausteine haben exakt dasselbe `u16ObjId`/`var_bObjIdValid`-Muster wie obe
 | Baustein | Ziel-ID = | Bemerkung |
 |---|---|---|
 | `Q_NumericValueAux` | Objekt (AUX-VT) | eigenes Gate zusätzlich (`VtAuxAssignment`) |
-| `Q_BackgroundColourAux` | AuxFunction-Objekt (AUX-VT, nur AuxFunctions - anders als `Q_BackgroundColour`, das für jedes Objekt mit Hintergrundfarbe geht) | eigenes Gate zusätzlich (`VtAuxAssignment`). **Wichtig:** unique nur INNERHALB der eigenen Klasse (`getFBTypeId()`) - dieselbe AuxFunction-ID darf gleichzeitig eine `Q_BackgroundColour`- UND eine `Q_BackgroundColourAux`-Instanz haben, das is KEIN Konflikt (unterschiedliche Klassen, `IsObjectIdAlreadyClaimed()` vergleicht `getFBTypeId()`) - nicht versehentlich klassenübergreifend "reparieren". |
 | `Q_ExecuteMacro` | Macro-Objekt | |
 | `Q_ExecuteExtendedMacro` | Macro-Objekt | |
 | `Q_LockUnlockMask` | Masken-Objekt (`u16MaskId`, bei `INIT` eingelesen) | Ziel ist eine Maske (`u16MaskId`), nicht ein beliebiges Objekt |

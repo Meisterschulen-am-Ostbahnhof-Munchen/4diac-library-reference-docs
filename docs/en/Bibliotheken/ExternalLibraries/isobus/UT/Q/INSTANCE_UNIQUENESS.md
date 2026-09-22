@@ -11,7 +11,8 @@ The target is a variable VT Object ID (`u16ObjId`, set during `INIT` via `var_u1
 | Function Block | Target ID Definition |
 |---|---|
 | `Q_Attribute` | **Pair** (Object ID, Attribute ID) - `mTargetObjectId=u16ObjId`, `mTargetSubId=u8IdAttribute`. Two instances targeting the same object but different attributes are valid; only duplicate pairs collide. |
-| `Q_BackgroundColour` | Object with background color attribute |
+| `Q_BackgroundColour` | Object with background color attribute. May share an Object ID with ONE `Q_BackgroundColourAux` instance (different FB class), but NEVER two `Q_BackgroundColour` instances on the same Object ID. |
+| `Q_BackgroundColourAux` | AuxFunction object (AUX VT, **enforced**). Unique per Object ID within its own FB class (`getFBTypeId()`). May share an Object ID with ONE `Q_BackgroundColour` instance, but NEVER two `Q_BackgroundColourAux` instances on the same Object ID. |
 | `Q_ChangeObjectLabel` | Labelable object |
 | `Q_ChangePolygonPoint` | Polygon object |
 | `Q_ChangePolygonScale` | Polygon object |
@@ -35,7 +36,6 @@ The target is a variable VT Object ID (`u16ObjId`, set during `INIT` via `var_u1
 | Function Block | Target ID Definition | Notes |
 |---|---|---|
 | `Q_NumericValueAux` | AUX VT Object | Additional gate (`VtAuxAssignment`) |
-| `Q_BackgroundColourAux` | AuxFunction Object | Unique per class (`getFBTypeId()`) |
 | `Q_ExecuteMacro` | Macro object | |
 | `Q_ExecuteExtendedMacro` | Macro object | |
 | `Q_LockUnlockMask` | Mask Object (`u16MaskId`, read at `INIT`) | Target is a mask (`u16MaskId`) |
