@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1273.10546875 212.0"
-     width="1273.10546875" height="212.0">
+     viewBox="0 0 1273.10546875 192.0"
+     width="1273.10546875" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 272.38671875 86.0
             L 279.38671875 86.0
             A 3 3 0 0 1 282.38671875 89.0
-            L 282.38671875 189.0
-            A 3 3 0 0 1 279.38671875 192.0
-            L 3 192.0
-            A 3 3 0 0 1 0 189.0
+            L 282.38671875 169.0
+            A 3 3 0 0 1 279.38671875 172.0
+            L 3 172.0
+            A 3 3 0 0 1 0 169.0
             L 0 89.0
             A 3 3 0 0 1 3 86.0
             L 10 86.0
@@ -112,11 +112,11 @@
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u8LockCmd</text>
+          fill="#000000" dominant-baseline="middle">u16MaskId</text>
 
     <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16MaskId</text>
+          fill="#000000" dominant-baseline="middle">u8LockCmd</text>
 
     <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#18519E"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -132,38 +132,37 @@
 
     <polygon points="275.88671875,131.0 280.88671875,136.0 275.88671875,141.0" fill="#18519E"/>
     <text x="272.88671875" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">u16OldMaskId</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">u16OldLockTimeoutMs</text>
 
     <polygon points="275.88671875,151.0 280.88671875,156.0 275.88671875,161.0" fill="#18519E"/>
     <text x="272.88671875" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">u16OldLockTimeoutMs</text>
-
-    <polygon points="275.88671875,171.0 280.88671875,176.0 275.88671875,181.0" fill="#18519E"/>
-    <text x="272.88671875" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">s16result</text>
 
 
     <!-- Event-Data Association Connectors and Lines -->
 
-    <rect x="-15" y="31.0" width="10" height="10"
+    <rect x="-15" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
     <rect x="-15" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="-10.0" y1="36.0" x2="-10.0" y2="96.0"
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="-15" y="111.0" width="10" height="10"
+    <rect x="-29" y="31.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="-10.0" y1="36.0" x2="-10.0" y2="116.0"
+    <rect x="-29" y="111.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="-15" y="131.0" width="10" height="10"
+    <rect x="-29" y="131.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="-10.0" y1="36.0" x2="-10.0" y2="136.0"
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <rect x="287.38671875" y="31.0" width="10" height="10"
@@ -173,12 +172,6 @@
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
     <line x1="292.38671875" y1="36.0" x2="292.38671875" y2="96.0"
-          stroke="#000000" stroke-width="1"/>
-
-    <rect x="287.38671875" y="171.0" width="10" height="10"
-          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
-
-    <line x1="292.38671875" y1="36.0" x2="292.38671875" y2="176.0"
           stroke="#000000" stroke-width="1"/>
 
     <rect x="287.38671875" y="111.0" width="10" height="10"
@@ -201,25 +194,25 @@
 
     <!-- Horizontal Connection Lines -->
 
-    <line x1="0" y1="36.0" x2="-20" y2="36.0"
+    <line x1="0" y1="16.0" x2="-20" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="36.0" x2="-34" y2="36.0"
           stroke="#000000" stroke-width="1"/>
 
     <line x1="0" y1="96.0" x2="-20" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="0" y1="116.0" x2="-20" y2="116.0"
+    <line x1="0" y1="116.0" x2="-34" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="0" y1="136.0" x2="-20" y2="136.0"
+    <line x1="0" y1="136.0" x2="-34" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <line x1="282.38671875" y1="36.0" x2="302.38671875" y2="36.0"
           stroke="#000000" stroke-width="1"/>
 
     <line x1="282.38671875" y1="96.0" x2="302.38671875" y2="96.0"
-          stroke="#000000" stroke-width="1"/>
-
-    <line x1="282.38671875" y1="176.0" x2="302.38671875" y2="176.0"
           stroke="#000000" stroke-width="1"/>
 
     <line x1="282.38671875" y1="116.0" x2="302.38671875" y2="116.0"
@@ -246,10 +239,10 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Requested Service</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">0 = Unlock, 1 = Lock data mask or user-layout data mask – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID of data mask or user layout data mask to lock or unlock  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID of data mask or user layout data mask to lock or unlock  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">0 = Unlock, 1 = Lock data mask or user-layout data mask – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Lock timeout in ms or zero for no timeout  – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
@@ -261,12 +254,9 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan> – Old 0 = Unlock, 1 = Lock data mask or user-layout data mask</text>
 
     <text x="307.38671875" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan> – Old object ID of data mask or user layout data mask to lock or unlock </text>
-
-    <text x="307.38671875" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan> – Old lock timeout in ms or zero for no timeout </text>
 
-    <text x="307.38671875" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="307.38671875" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – retval see description</text>
   </g>
 </svg>
