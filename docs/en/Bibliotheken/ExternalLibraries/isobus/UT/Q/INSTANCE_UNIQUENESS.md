@@ -38,7 +38,7 @@ The target is a variable VT Object ID (`u16ObjId`, set during `INIT` via `var_u1
 | `Q_BackgroundColourAux` | AuxFunction Object | Unique per class (`getFBTypeId()`) |
 | `Q_ExecuteMacro` | Macro object | |
 | `Q_ExecuteExtendedMacro` | Macro object | |
-| `Q_LockUnlockMask` | Mask object (`u16ObjId = var_u16MaskId`) | Target is a mask |
+| `Q_LockUnlockMask` | Mask Object (`u16MaskId`, read at `INIT`) | Target is a mask (`u16MaskId`) |
 | `Q_Priority` | Alarm Mask object | |
 
 ## Criterion: Exactly ONE Instance Program-Wide (Singleton)

@@ -40,7 +40,7 @@ Diese Bausteine haben exakt dasselbe `u16ObjId`/`var_bObjIdValid`-Muster wie obe
 | `Q_BackgroundColourAux` | AuxFunction-Objekt (AUX-VT, nur AuxFunctions - anders als `Q_BackgroundColour`, das für jedes Objekt mit Hintergrundfarbe geht) | eigenes Gate zusätzlich (`VtAuxAssignment`). **Wichtig:** unique nur INNERHALB der eigenen Klasse (`getFBTypeId()`) - dieselbe AuxFunction-ID darf gleichzeitig eine `Q_BackgroundColour`- UND eine `Q_BackgroundColourAux`-Instanz haben, das is KEIN Konflikt (unterschiedliche Klassen, `IsObjectIdAlreadyClaimed()` vergleicht `getFBTypeId()`) - nicht versehentlich klassenübergreifend "reparieren". |
 | `Q_ExecuteMacro` | Macro-Objekt | |
 | `Q_ExecuteExtendedMacro` | Macro-Objekt | |
-| `Q_LockUnlockMask` | Masken-Objekt (`u16ObjId = var_u16MaskId`) | Ziel ist eine Maske, nicht ein beliebiges Objekt - Kriterium sonst identisch |
+| `Q_LockUnlockMask` | Masken-Objekt (`u16MaskId`, bei `INIT` eingelesen) | Ziel ist eine Maske (`u16MaskId`), nicht ein beliebiges Objekt |
 | `Q_Priority` | Alarm-Mask-Objekt | |
 
 ## Kriterium: genau EINE Instanz im ganzen Programm (Singleton)
