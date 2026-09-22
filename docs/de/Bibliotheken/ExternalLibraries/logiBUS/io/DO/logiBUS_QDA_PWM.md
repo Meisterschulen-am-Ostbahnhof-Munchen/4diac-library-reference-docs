@@ -60,7 +60,7 @@ Damit ermöglicht der Baustein eine saubere Trennung von Initialisierung und zyk
 ## Technische Besonderheiten
 
 - **Composite-Baustein:** Der FB kapselt die gesamte Logik eines PWM-Ausgangsbausteins und bietet eine standardisierte Adapter-Schnittstelle für den Datenaustausch mit der Ressource.
-- **Double-Word-Ausgabe:** Der Name deutet auf eine 32-Bit-Datenbreite hin, die über das Adapter-Datenelement *D1* übertragen wird.
+- **13-Bit-PWM-Ausgabe (`0`–`8191`):** Das Adapter-Datenelement *D1* (`DWORD`) erwartet einen 13-Bit-Rohwert (`0` = 0 % Tastgrad, `8191` = 100 % Tastgrad, $2^{13} = 8192$ Zustände).
 - **Initialisierungsparameter:** Über *PARAMS* (STRING) können flexible Konfigurationsdaten übergeben werden, die für die Adressierung oder Parametrierung des logiBUS-Moduls notwendig sind.
 - **Fehlerbehandlung:** Der Ausgang *STATUS* liefert eine textuelle Beschreibung des Dienstzustands (z. B. Fehlermeldungen bei ungültiger Konfiguration).
 
@@ -78,7 +78,7 @@ Der interne FB wechselt zwischen diesen Zuständen abhängig von den Ereignissen
 ## Anwendungsszenarien
 
 - **Landwirtschaftliche Maschinen:** Steuerung von PWM-betriebenen Aktoren (z. B. Hydraulikventile, Motordrehzahl) über ein logiBUS-Netzwerk.
-- **Automatisierungsanlagen:** Ausgabe von analogen oder pulsweitenmodulierten Signalen mit 32-Bit-Auflösung, gesteuert durch eine übergeordnete Steuerung.
+- **Automatisierungsanlagen:** Ausgabe von pulsweitenmodulierten Signalen mit 13-Bit-Auflösung (`0`–`8191`), gesteuert durch eine übergeordnete Steuerung.
 - **Fernwartung und Konfiguration:** Über den Adapter können von einer übergeordneten Ressource (z. B. HMI oder SPS) neue PWM-Werte gesendet werden, ohne den Initialisierungsvorgang zu wiederholen.
 
 ## Vergleich mit ähnlichen Bausteinen
