@@ -59,6 +59,8 @@ The adapter *OUT* receives an external event *E1* and a data value *D1*. The eve
 
 This function block allows for a clean separation of initialization and cyclic output: Configuration is performed once via INIT, while the actual PWM output is triggered by the adapter.
 
+## Technical Features
+
 - **Composite Function Block:** The function block encapsulates all the logic of a PWM output function block and provides a standardized adapter interface for data exchange with the resource.
 - **13-Bit PWM Output (`0`–`8191`):** The adapter data element *D1* (`DWORD`) expects a 13-bit raw PWM value (`0` = 0% duty cycle, `8191` = 100% duty cycle, $2^{13} = 8192$ states).
 - **Initialization Parameters:** Flexible configuration data, necessary for addressing or parameterizing the logiBUS module, can be passed via *PARAMS* (STRING).
@@ -75,20 +77,10 @@ Since this is a composite function block without its own state machine, the stat
 
 The internal function block switches between these states depending on the events and data.
 
-**IDLE:** Waiting for initialization or a trigger.
-
-**INITIALIZING:** During initialization (INIT received, INITO not yet sent).
-
-**OPERATIONAL:** Ready for cyclic triggers (via adapter).
-
-**ERROR:** Error state, indicated by *QO = FALSE* or *STATUS* with an error message.
-
-**The internal function block switches between these states depending on the events and data.**
-
 ## Application Scenarios
 
 - **Agricultural Machinery:** Control of PWM-driven actuators (e.g., hydraulic valves, engine speed) via a logiBUS network.
-- **Automation Systems:** Output of analog or pulse-width modulated signals with 32-bit resolution, controlled by a higher-level controller.
+- **Automation Systems:** Output of pulse-width modulated signals with 13-bit resolution (`0`–`8191`), controlled by a higher-level controller.
 - **Remote Maintenance and Configuration:** The adapter allows new PWM values to be sent from a higher-level resource (e.g., HMI or PLC) without repeating the initialization process.
 
 ## Comparison with Similar Function Blocks
