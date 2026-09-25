@@ -1,6 +1,6 @@
 # net
 
-Hier finden Sie Funktionsbausteine, die die Netzwerk-Kommunikation (Publish/Subscribe) auf die unidirektionalen Adapter abbilden. Die Bausteine kapseln die entsprechenden `iec61499::net`-Funktionsbausteine und puffern die übertragenen Werte mit einem D-Flipflop.
+Hier finden Sie Funktionsbausteine, die die Netzwerk-Kommunikation (Publish/Subscribe sowie OPC-UA Client/Server) auf die unidirektionalen Adapter abbilden. Die Bausteine kapseln die entsprechenden `iec61499::net`-Funktionsbausteine und puffern die übertragenen Werte mit einem D-Flipflop.
 
 - [AB_PUBLISH_1](AB_PUBLISH_1.md)
 - [AB_SUBSCRIBE_1](AB_SUBSCRIBE_1.md)
@@ -22,11 +22,15 @@ Hier finden Sie Funktionsbausteine, die die Netzwerk-Kommunikation (Publish/Subs
 - [ALR_SUBSCRIBE_1](ALR_SUBSCRIBE_1.md)
 - [AQ_PUBLISH_1](AQ_PUBLISH_1.md)
 - [AQ_SUBSCRIBE_1](AQ_SUBSCRIBE_1.md)
+- [AR_CLIENT_1_0](AR_CLIENT_1_0.md)
 - [AR_PUBLISH_1](AR_PUBLISH_1.md)
+- [AR_SERVER_0_1](AR_SERVER_0_1.md)
 - [AR_SUBSCRIBE_1](AR_SUBSCRIBE_1.md)
 - [AS_PUBLISH_1](AS_PUBLISH_1.md)
 - [AS_SUBSCRIBE_1](AS_SUBSCRIBE_1.md)
+- [ATM_CLIENT_1_0](ATM_CLIENT_1_0.md)
 - [ATM_PUBLISH_1](ATM_PUBLISH_1.md)
+- [ATM_SERVER_0_1](ATM_SERVER_0_1.md)
 - [ATM_SUBSCRIBE_1](ATM_SUBSCRIBE_1.md)
 - [AUDI_PUBLISH_1](AUDI_PUBLISH_1.md)
 - [AUDI_SUBSCRIBE_1](AUDI_SUBSCRIBE_1.md)
@@ -40,6 +44,7 @@ Hier finden Sie Funktionsbausteine, die die Netzwerk-Kommunikation (Publish/Subs
 - [AW_SUBSCRIBE_1](AW_SUBSCRIBE_1.md)
 - [AX_CLIENT_1_0](AX_CLIENT_1_0.md)
 - [AX_PUBLISH_1](AX_PUBLISH_1.md)
+- [AX_SERVER_0_1](AX_SERVER_0_1.md)
 - [AX_SUBSCRIBE_1](AX_SUBSCRIBE_1.md)
 
 
@@ -69,7 +74,9 @@ ALR_PUBLISH_1
 ALR_SUBSCRIBE_1
 AQ_PUBLISH_1
 AQ_SUBSCRIBE_1
+AR_CLIENT_1_0
 AR_PUBLISH_1
+AR_SERVER_0_1
 AR_SUBSCRIBE_1
 AS_PUBLISH_1
 AS_SUBSCRIBE_1
@@ -79,7 +86,9 @@ ASR_CLIENT_0
 ASRT_AX_CLIENT_0_SUBSCRIBE_1
 ASRT_AX_SERVER_0_CLIENT_1_0
 ASRT_CLIENT_0
+ATM_CLIENT_1_0
 ATM_PUBLISH_1
+ATM_SERVER_0_1
 ATM_SUBSCRIBE_1
 AUDI_PUBLISH_1
 AUDI_SUBSCRIBE_1
@@ -93,5 +102,6 @@ AW_PUBLISH_1
 AW_SUBSCRIBE_1
 AX_CLIENT_1_0
 AX_PUBLISH_1
+AX_SERVER_0_1
 AX_SUBSCRIBE_1
 ```
