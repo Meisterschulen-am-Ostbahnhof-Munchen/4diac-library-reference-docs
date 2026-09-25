@@ -62,6 +62,7 @@ Im Unterschied zu **AR_PUBLISH_1** (lokales Publish/Subscribe) schreibt `CLIENT_
 
 ## Vergleich mit ähnlichen Bausteinen
 
+- **AR_CLIENT_1_0_UNGATED**: Verichtet auf das interne `E_D_FF_ANY`-Flipflop (Change-Filter) und löst bei jedem `IN.E1`-Ereignis bedingungslos den Remote-Write bzw. Methodenaufruf aus — ideal für wiederholte Taster-/VT-Eingaben desselben Werts.
 - **AX_CLIENT_1_0**: Identischer Aufbau, verarbeitet jedoch BOOL-Werte über einen AX-Adapter.
 - **ATM_CLIENT_1_0**: Identischer Aufbau, verarbeitet TIME-Werte über einen ATM-Adapter.
 - **AR_PUBLISH_1**: Kapselt `PUBLISH_1` statt `CLIENT_1_0` für lokale Publish/Subscribe-Verbindungen.

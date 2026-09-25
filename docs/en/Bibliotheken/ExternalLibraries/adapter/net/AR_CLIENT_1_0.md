@@ -62,6 +62,7 @@ Unlike **AR_PUBLISH_1** (local publish/subscribe), `CLIENT_1_0` actively writes 
 
 ## Comparison with Similar Blocks
 
+- **AR_CLIENT_1_0_UNGATED**: Omits the internal `E_D_FF_ANY` flip-flop (change filter) and triggers the remote write or method call unconditionally on every `IN.E1` event — ideal for repeated VT/HMI commits of the same value.
 - **AX_CLIENT_1_0**: Identical structure, but handles BOOL values via an AX adapter.
 - **ATM_CLIENT_1_0**: Identical structure, but handles TIME values via an ATM adapter.
 - **AR_PUBLISH_1**: Encapsulates `PUBLISH_1` instead of `CLIENT_1_0` for local publish/subscribe.
