@@ -13,7 +13,7 @@ The time constant `TM` is provided as an `ATM` socket (per section 13 of the `ie
 | Name | Type | Description |
 | :--- | :--- | :----------- |
 | `INIT` | `EInit` | Service initialization, passed to `FT_PT1.INIT` |
-| `RST` | `Event` | Resets the filter output via `FT_PT1.RST` |
+| `RST` | `Event` | Invalidates filter state via `FT_PT1.RST` (`init := FALSE`) |
 
 ### **Event Outputs**
 
@@ -46,17 +46,17 @@ The block connects `FT_PT1` (OSCAT) and `E_D_FF_ANY` in an internal network:
 1. **Signal Processing**:  
    An event on `AR_IN.E1` triggers `FT_PT1.REQ`. `AR_IN.D1` supplies the raw analog value.
 2. **Time Constant & Re-initialization**:  
-   The filter time `TM.D1` is supplied by the `ATM` socket and passed to `FT_PT1.TM`. An event on `TM.E1` also directly triggers `FT_PT1.RST` internally to immediately reset the filter output (`out := K * in`) and refresh the timing baseline for the new time constant.
+   The filter time `TM.D1` is supplied by the `ATM` socket and passed to `FT_PT1.TM`. An event on `TM.E1` also directly triggers `FT_PT1.RST` internally, invalidating the filter state (`init := FALSE`) so that the subsequent `AR_IN.E1` request reinitializes the filter (`out := K * in`) using fresh input data and the updated time constant.
 3. **Change Detection & Decoupling (`E_D_FF_ANY`)**:  
    After calculation, `FT_PT1.CNF` triggers `CLK` on internal `E_D_FF_ANY`. The flip-flop emits the initial output value on the first clock after start. On subsequent cycles, `AR_OUT.E1` and `AR_OUT.D1` are updated **only** when a value change occurs.
 4. **Reset & Initialization**:  
    - `INIT` controls `FT_PT1.INIT` and confirms via `INITO`. Unconnected `INIT` events auto-fire once upon deployment.
-   - `RST` as well as any incoming `TM.E1` event are passed to `FT_PT1.RST` to reset the filter state.
+   - `RST` as well as any incoming `TM.E1` event are passed to `FT_PT1.RST` to invalidate the filter state (`init := FALSE`). The next `AR_IN.E1` request performs clean re-initialization.
 
 ## Technical Features
 
 - **Clean Adapter Boundary**: Prevents direct accessing of internal `.E1`/`.D1` structures across SubApp networks.
-- **Automatic Filter Reset on TM Change**: Receiving a `TM.E1` event internally triggers `FT_PT1.RST`, immediately setting `out := K * in` and refreshing the timing baseline so modified time constants take effect cleanly without jump artifacts.
+- **Automatic Filter Re-initialization on TM Change**: Receiving a `TM.E1` event internally triggers `FT_PT1.RST` (setting `init := FALSE`). The subsequent `AR_IN.E1` request reinitializes `out := K * in` with fresh input data and resets the timing baseline, so modified time constants take effect cleanly without jump artifacts or stale seeding.
 - **Event Traffic Reduction**: `E_D_FF_ANY` prevents unnecessary event flooding down the processing chain for unchanged values.
 - **`ATM` Socket Convention**: Timing parameters are routed via `ATM` sockets rather than bare variables (fed at instantiation site e.g., via `initval_ATM`).
 
