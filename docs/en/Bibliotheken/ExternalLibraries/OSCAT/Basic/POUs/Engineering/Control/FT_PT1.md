@@ -56,7 +56,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    
      $$\text{out}_{\text{new}} = \text{out}_{\text{old}} + \left( K \cdot \text{in} - \text{out}_{\text{old}} \right) \cdot \frac{\Delta t}{T_{\text{eff}}}$$
    
-     where $\Delta t$ is the measured call interval in milliseconds and $T_{\text{eff}} = \max(T_M, \Delta t)$ is the effective time constant. When the call interval $\Delta t$ exceeds the configured filter time $T_M$, $T_{\text{eff}}$ is clamped to $\Delta t$, capping the weighting factor $\frac{\Delta t}{T_{\text{eff}}}$ to at most $1.0$.
+     where $\Delta t = \text{delta\_t} \cdot 10^{-6}\,\text{s}$ is the measured call interval in seconds (from `T_PLC_US()`), $T_M = \text{TIME\_TO\_REAL}(TM)$ is the filter time constant in seconds, and $T_{\text{eff}} = \max(T_M, \Delta t)$ is the effective time constant in seconds. When the call interval $\Delta t$ exceeds the configured filter time $T_M$, $T_{\text{eff}}$ is clamped to $\Delta t$, capping the weighting factor $\frac{\Delta t}{T_{\text{eff}}}$ to at most $1.0$.
    - To prevent denormalized float underruns, values $|out| < 1.0 \times 10^{-20}$ are automatically zeroed.
 
 3. **Filter Reset (`RST`)**:  

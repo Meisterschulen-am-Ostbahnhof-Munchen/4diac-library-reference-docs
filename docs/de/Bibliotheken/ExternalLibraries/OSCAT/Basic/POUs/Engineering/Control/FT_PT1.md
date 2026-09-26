@@ -56,7 +56,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    
      $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{T_{\text{eff}}}$$
    
-     wobei $\Delta t$ das gemessene Aufrufintervall in Millisekunden und $T_{\text{eff}} = \max(T_M, \Delta t)$ die effektive Zeitkonstante ist. Wenn das Aufrufintervall $\Delta t$ die eingestellte Filterzeit $T_M$ überschreitet, wird $T_{\text{eff}}$ auf $\Delta t$ begrenzt, sodass der Gewichtungsfaktor $\frac{\Delta t}{T_{\text{eff}}}$ auf maximal $1.0$ gedeckelt ist.
+     wobei $\Delta t = \text{delta\_t} \cdot 10^{-6}\,\text{s}$ das gemessene Aufrufintervall in Sekunden (aus `T_PLC_US()`), $T_M = \text{TIME\_TO\_REAL}(TM)$ die Filterzeitkonstante in Sekunden und $T_{\text{eff}} = \max(T_M, \Delta t)$ die effektive Zeitkonstante ist. Wenn das Aufrufintervall $\Delta t$ die eingestellte Filterzeit $T_M$ überschreitet, wird $T_{\text{eff}}$ auf $\Delta t$ begrenzt, sodass der Gewichtungsfaktor $\frac{\Delta t}{T_{\text{eff}}}$ auf maximal $1.0$ gedeckelt ist.
    - Um Unterläufe durch denormalisierte Fließkommazahlen zu vermeiden, werden Beträge $|out| < 1.0 \times 10^{-20}$ automatisch auf `0.0` gerundet.
 
 3. **Filter-Reset (`RST`)**:  
