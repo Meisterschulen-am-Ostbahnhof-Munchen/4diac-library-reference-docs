@@ -45,17 +45,18 @@ Der Baustein verbindet `FT_PT1` (OSCAT) und `E_D_FF_ANY` in einem internen Netzw
 
 1. **Messwertverarbeitung**:  
    Ein Ereignis auf `AR_IN.E1` löst `FT_PT1.REQ` aus. `AR_IN.D1` liefert den aktuellen Messwert.
-2. **Zeitkonstante**:  
-   Die Filterzeit `TM.D1` kommt vom `ATM`-Socket und wird an `FT_PT1.TM` übergeben.
+2. **Zeitkonstante & Reinitialisierung**:  
+   Die Filterzeit `TM.D1` kommt vom `ATM`-Socket und wird an `FT_PT1.TM` übergeben. Ein Ereignis auf `TM.E1` löst zusätzlich intern direkt `FT_PT1.RST` aus, um den Filter mit der neuen Zeitkonstante unverzüglich auf den skalierten Wert `K * in` zurückzusetzen und den Zeitstempel zu aktualisieren.
 3. **Änderungserkennung & Entkopplung (`E_D_FF_ANY`)**:  
    Nach der Berechnung feuert `FT_PT1.CNF` den `CLK`-Eingang des internen `E_D_FF_ANY`. Das Flipflop gibt beim ersten Aufruf nach dem Start den gefilterten Ausgangswert bedingungslos über `AR_OUT.E1` / `AR_OUT.D1` aus. Bei nachfolgenden Zyklen werden Ereignisse nur dann gefeuert, wenn sich der gefilterte Wert tatsächlich vom vorherigen Ausgangswert unterscheidet.
 4. **Reset & Initialisierung**:  
    - `INIT` steuert `FT_PT1.INIT` und meldet Vollzug über `INITO`. Unverdrahtete `INIT`-Events feuern beim Deployment automatisch einmalig.
-   - `RST` wird an `FT_PT1.RST` weitergeleitet, um den Filter zurückzusetzen.
+   - `RST` sowie jedes eintreffende `TM.E1`-Ereignis werden an `FT_PT1.RST` weitergeleitet, um den Filter zurückzusetzen.
 
 ## Technische Besonderheiten
 
 - **Saubere Adaptergrenze**: Verhindert das direkte Zugreifen auf interne `.E1`/`.D1`-Datenstrukturen in SubApp-Netzwerken.
+- **Automatische Filter-Reinitialisierung bei TM-Änderung**: Ein Eintreffen von `TM.E1` löst intern `FT_PT1.RST` aus. Dadurch wird `out` sofort auf `K * in` zurückgesetzt und der Zeitstempel aktualisiert, damit geänderte Filterzeiten ohne Sprungartefakte sofort wirksam werden.
 - **Entlastung der Ereigniskette**: `E_D_FF_ANY` verhindert unnötiges Event-Spamming in nachgelagerten SubApps bei unveränderten Werten.
 - **`ATM`-Socket-Konvention**: Zeitparameter werden nicht als nackte Variablen deklariert, sondern über `ATM`-Adapter-Sockets eingebunden (an der Instanziierungsstelle z. B. über `initval_ATM` zu speisen).
 

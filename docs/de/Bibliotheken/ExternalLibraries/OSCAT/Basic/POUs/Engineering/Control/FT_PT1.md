@@ -52,10 +52,11 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 2. **Zyklische Berechnung (`REQ`)**:  
    Bei jedem `REQ`-Ereignis ermittelt der Baustein die verstrichene Zeit seit dem letzten Aufruf ($\Delta t$) mikrosekundengenau über `T_PLC_US()`.
    - Ist der Baustein noch nicht initialisiert oder ist `TM = T#0s`, wird intern `RST` aufgerufen und `out = K * in` direkt ausgegeben.
-   - Bei `TM > T#0s` wird der neue Ausgangswert nach der Diskretisierungsformel berechnet:
+   - Bei `TM > T#0s` wird der neue Ausgangswert nach der zeitdiskreten PT1-Formel berechnet:
    
-     $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t \cdot 1.0\text{e-}6}{\text{TIME\_TO\_REAL}(TM)}$$
+     $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{T_{\text{eff}}}$$
    
+     wobei $\Delta t = \text{delta\_t} \cdot 10^{-6}\,\text{s}$ das gemessene Aufrufintervall in Sekunden (aus `T_PLC_US()`), $T_M = \text{TIME\_TO\_REAL}(TM)$ die Filterzeitkonstante in Sekunden und $T_{\text{eff}} = \max(T_M, \Delta t)$ die effektive Zeitkonstante ist. Wenn das Aufrufintervall $\Delta t$ die eingestellte Filterzeit $T_M$ überschreitet, wird $T_{\text{eff}}$ auf $\Delta t$ begrenzt, sodass der Gewichtungsfaktor $\frac{\Delta t}{T_{\text{eff}}}$ auf maximal $1.0$ gedeckelt ist.
    - Um Unterläufe durch denormalisierte Fließkommazahlen zu vermeiden, werden Beträge $|out| < 1.0 \times 10^{-20}$ automatisch auf `0.0` gerundet.
 
 3. **Filter-Reset (`RST`)**:  
@@ -64,6 +65,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 ## Technische Besonderheiten
 
 - **Zyklusunabhängige Zeitbasis**: Die Zeitdifferenz wird über `T_PLC_US()` in Mikrosekunden gemessen, wodurch Schwankungen der Aufrufzykluszeit kompensiert werden.
+- **Begrenzung der effektiven Filterzeit ($T_{\text{eff}} = \max(T_M, \Delta t)$)**: Liegt das Aufrufintervall $\Delta t$ über der Filterzeit $T_M$, deckelt der Baustein den Diskretisierungsfaktor $\frac{\Delta t}{T_{\text{eff}}}$ auf maximal $1.0$. Dadurch wird verhindert, dass es bei langsamen Aufrufzyklen zu Oszillationen oder Euler-Überschwingen kommt.
 - **Filter-Bypass bei `TM = 0`**: Ist `TM = T#0s`, schaltet der Baustein die Dämpfung ab und gibt das Eingangssignal direkt skaliert mit `K` aus.
 - **Glatte Reset-Wiedereingliederung**: `RST` aktualisiert den Zeitstempel `last`, sodass bei Wiederaufnahme des Filterbetriebs keine Ausreißer auftreten.
 - **Projektspezifische Zeitkonvertierung**: Verwendet die projekteigene Hilfsfunktion `TIME_TO_REAL.fct` zur Umrechnung des `TIME`-Eingangs `TM` in Sekunden (`REAL`).
