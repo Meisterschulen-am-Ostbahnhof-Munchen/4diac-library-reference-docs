@@ -54,8 +54,9 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    - If the block is not yet initialized or `TM = T#0s`, `RST` is invoked internally and `out = K * in` is output directly.
    - For `TM > T#0s`, the new output value is calculated according to:
    
-     $$\text{out}_{\text{new}} = \text{out}_{\text{old}} + \left( K \cdot \text{in} - \text{out}_{\text{old}} \right) \cdot \frac{\Delta t \cdot 1.0\text{e-}6}{\text{TIME\_TO\_REAL}(TM)}$$
+     $$\text{out}_{\text{new}} = \text{out}_{\text{old}} + \left( K \cdot \text{in} - \text{out}_{\text{old}} \right) \cdot \frac{\Delta t}{T_{\text{eff}}}$$
    
+     where $\Delta t$ is the measured call interval in milliseconds and $T_{\text{eff}} = \max(T_M, \Delta t)$ is the effective time constant. When the call interval $\Delta t$ exceeds the configured filter time $T_M$, $T_{\text{eff}}$ is clamped to $\Delta t$, capping the weighting factor $\frac{\Delta t}{T_{\text{eff}}}$ to at most $1.0$.
    - To prevent denormalized float underruns, values $|out| < 1.0 \times 10^{-20}$ are automatically zeroed.
 
 3. **Filter Reset (`RST`)**:  
@@ -64,6 +65,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 ## Technical Features
 
 - **Cycle-Independent Timebase**: Time differences are measured in microseconds via `T_PLC_US()`, compensating for call cycle variations.
+- **Clamped Effective Filter Time Constant ($T_{\text{eff}} = \max(T_M, \Delta t)$)**: If call interval $\Delta t$ exceeds filter time $T_M$, the block caps the discretization factor $\frac{\Delta t}{T_{\text{eff}}}$ to at most $1.0$. This prevents Euler instability and overshoot when call cycles occur slower than $T_M$.
 - **Filter Bypass at `TM = 0`**: When `TM = T#0s`, damping is disabled and the input signal is passed through scaled by `K`.
 - **Clean Reset Recovery**: `RST` updates `last` timestamp so no outlier steps occur when filter operation resumes.
 - **Project-Specific Time Conversion**: Uses the project-specific helper function `TIME_TO_REAL.fct` for clean conversion of `TIME` input `TM` to seconds (`REAL`).
