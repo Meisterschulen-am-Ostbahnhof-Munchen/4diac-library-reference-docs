@@ -20,7 +20,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 | :--- | :--- | :----------------------- | :-------- |
 | `EINIT` | `Event` | Service-Initialisierung des Filters | |
 | `REQ` | `Event` | Ausführungsanforderung für neuen Berechnungszyklus | `in`, `TM`, `K` |
-| `RST` | `Event` | Setzt den Filterausgang und die Zeitbasis zurück (`out = K * in`) | |
+| `RST` | `Event` | Invalidiert den Initialisierungszustand (`init = FALSE`) für Reinitialisierung beim nächsten `REQ` | |
 
 ### **Ereignis-Ausgänge**
 
@@ -51,7 +51,7 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
 
 2. **Zyklische Berechnung (`REQ`)**:  
    Bei jedem `REQ`-Ereignis ermittelt der Baustein die verstrichene Zeit seit dem letzten Aufruf ($\Delta t$) mikrosekundengenau über `T_PLC_US()`.
-   - Ist der Baustein noch nicht initialisiert oder ist `TM = T#0s`, wird intern `RST` aufgerufen und `out = K * in` direkt ausgegeben.
+   - Ist der Baustein noch nicht initialisiert (`init = FALSE`) oder ist `TM = T#0s`, wird der Filter (re-)initialisiert: `init := TRUE`, `out := K * in` wird direkt aus dem frisch abgetasteten Eingangssignal gesetzt, `delta_t := 0` und der Zeitstempel `last` aktualisiert.
    - Bei `TM > T#0s` wird der neue Ausgangswert nach der zeitdiskreten PT1-Formel berechnet:
    
      $$\text{out}_{\text{neu}} = \text{out}_{\text{alt}} + \left( K \cdot \text{in} - \text{out}_{\text{alt}} \right) \cdot \frac{\Delta t}{T_{\text{eff}}}$$
@@ -60,14 +60,14 @@ $$T_M \cdot \frac{dy}{dt} + y(t) = K \cdot x(t)$$
    - Um Unterläufe durch denormalisierte Fließkommazahlen zu vermeiden, werden Beträge $|out| < 1.0 \times 10^{-20}$ automatisch auf `0.0` gerundet.
 
 3. **Filter-Reset (`RST`)**:  
-   Setzt `out` unverzüglich auf den skalierten Eingangswert `K * in` und aktualisiert den internen Zeitstempel `last := T_PLC_US()`. Dadurch wird verhindert, dass beim nachfolgenden `REQ`-Aufruf ein verfälschter Sprung durch verstrichene Zeit entsteht.
+   Setzt den Initialisierungszustand zurück (setzt `init := FALSE`), ohne `out` oder den Zeitstempel unverzüglich zu verändern. Dadurch wird das Seeding bis zum nächsten `REQ`-Ereignis verzögert, wodurch das frische Eingangssignal (statt veralteter Werte oder `0.0`) abgetastet und die Zeitbasis aktualisiert wird.
 
 ## Technische Besonderheiten
 
 - **Zyklusunabhängige Zeitbasis**: Die Zeitdifferenz wird über `T_PLC_US()` in Mikrosekunden gemessen, wodurch Schwankungen der Aufrufzykluszeit kompensiert werden.
 - **Begrenzung der effektiven Filterzeit ($T_{\text{eff}} = \max(T_M, \Delta t)$)**: Liegt das Aufrufintervall $\Delta t$ über der Filterzeit $T_M$, deckelt der Baustein den Diskretisierungsfaktor $\frac{\Delta t}{T_{\text{eff}}}$ auf maximal $1.0$. Dadurch wird verhindert, dass es bei langsamen Aufrufzyklen zu Oszillationen oder Euler-Überschwingen kommt.
 - **Filter-Bypass bei `TM = 0`**: Ist `TM = T#0s`, schaltet der Baustein die Dämpfung ab und gibt das Eingangssignal direkt skaliert mit `K` aus.
-- **Glatte Reset-Wiedereingliederung**: `RST` aktualisiert den Zeitstempel `last`, sodass bei Wiederaufnahme des Filterbetriebs keine Ausreißer auftreten.
+- **Glatte Reset-Wiedereingliederung**: `RST` invalidiert den Initialisierungszustand (`init := FALSE`) ohne sofortiges Überschreiben des Ausgangs. Erst das nachfolgende `REQ`-Ereignis tastet das frische Eingangssignal ab, setzt `out := K * in` und aktualisiert den Zeitstempel `last`, wodurch verfälschte Sprünge durch veraltete Eingangswerte vermieden werden.
 - **Projektspezifische Zeitkonvertierung**: Verwendet die projekteigene Hilfsfunktion `TIME_TO_REAL.fct` zur Umrechnung des `TIME`-Eingangs `TM` in Sekunden (`REAL`).
 
 ## Anwendungsszenarien
