@@ -1,6 +1,7 @@
 # AX_AND_3
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_AND_3 is a generic function block for calculating a three-input logical AND operation. The block performs a Boolean AND operation on three independent input signals and outputs the result via an adapter output.

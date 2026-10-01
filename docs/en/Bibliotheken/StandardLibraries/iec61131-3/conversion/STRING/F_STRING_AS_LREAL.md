@@ -1,6 +1,7 @@
 # F_STRING_AS_LREAL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_LREAL` converts a STRING value to an LREAL value (64-bit floating-point number). This block is particularly useful when strings need to be converted into numeric values, for example, when processing user input or reading data from external sources.

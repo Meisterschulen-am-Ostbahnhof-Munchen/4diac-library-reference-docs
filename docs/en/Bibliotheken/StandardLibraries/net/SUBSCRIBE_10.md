@@ -1,6 +1,7 @@
 # SUBSCRIBE_10
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_10 function block acts as a subscriber in a publish-subscribe communication pattern and allows data to be received from a PUBLISH_10 block. The block can receive and process up to 10 different data values simultaneously.

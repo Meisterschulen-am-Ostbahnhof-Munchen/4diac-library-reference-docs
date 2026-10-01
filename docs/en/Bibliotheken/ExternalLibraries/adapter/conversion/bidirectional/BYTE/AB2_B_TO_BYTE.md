@@ -1,6 +1,7 @@
 # AB2_B_TO_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AB2_B_TO_BYTE is a composite function block used for bidirectional conversion between AB2 and BYTE data types. This function block acts as an adapter converter, enabling the seamless integration of different data types into automation systems.

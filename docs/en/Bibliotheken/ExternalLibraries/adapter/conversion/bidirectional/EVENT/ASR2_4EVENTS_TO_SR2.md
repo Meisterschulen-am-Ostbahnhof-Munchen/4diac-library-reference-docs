@@ -1,6 +1,7 @@
 # ASR2_4EVENTS_TO_SR2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block ASR2_4EVENTS_TO_SR2 is a composite function block used to convert four events into the ASR2 adapter format. It enables bidirectional conversion between individual set/reset events and the standardized ASR2 adapter.

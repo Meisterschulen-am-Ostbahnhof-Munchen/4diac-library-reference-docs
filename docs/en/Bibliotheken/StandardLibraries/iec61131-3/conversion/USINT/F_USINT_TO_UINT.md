@@ -1,6 +1,7 @@
 # F_USINT_TO_UINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_UINT` converts a `USINT` value (Unsigned Short Integer) to a `UINT` value (Unsigned Integer). This block is particularly useful in scenarios where a type conversion without data loss is required.

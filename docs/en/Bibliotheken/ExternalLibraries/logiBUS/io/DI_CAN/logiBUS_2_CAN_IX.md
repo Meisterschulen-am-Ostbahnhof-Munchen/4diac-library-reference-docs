@@ -1,6 +1,7 @@
 # logiBUS_2_CAN_IX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `logiBUS_2_CAN_IX` is a service interface function block for Boolean input data, specifically designed for integrating logiBUS systems with CAN bus communication. It serves as an input interface for digital signals and enables communication between the control system and connected CAN-enabled devices.

@@ -1,6 +1,7 @@
 # FB_R_TRIG
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_R_TRIG` is used to detect the rising edge of a Boolean signal. It is typically used to detect and react to state changes from `FALSE` to `TRUE`.

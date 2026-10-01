@@ -1,6 +1,7 @@
 # OR_BOOL_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_9` is a standardized building block according to IEC 61131-3 for calculating the logical OR operation. It performs the OR operation via nine separate Boolean inputs. The block follows the event-driven execution model of the 4diac IDE: The calculation is triggered by an incoming event, and the result is output along with an acknowledgment event.

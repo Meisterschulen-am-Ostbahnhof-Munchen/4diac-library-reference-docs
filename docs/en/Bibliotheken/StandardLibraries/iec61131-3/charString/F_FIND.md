@@ -1,6 +1,7 @@
 # F_FIND
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_FIND` determines the position of the first occurrence of a string (IN2) within another string (IN1). If the searched string is not found, the block returns the value 0.

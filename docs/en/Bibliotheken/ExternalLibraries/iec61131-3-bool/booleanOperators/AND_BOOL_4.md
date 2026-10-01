@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `AND_BOOL_4` is a standard function block for calculating the logical AND operation. It performs a bitwise AND operation on four Boolean input values. The block is implemented as a generic function block and complies with the IEC 61131-3 standard for basic Boolean functions.
 ![AND_BOOL_4](AND_BOOL_4.svg)
+
 - **REQ** (Normal Execution Request): This event triggers the execution of the function block. It is associated with all four data inputs (`IN1` to `IN4`).
 - **CNF** (Execution Confirmation): This event signals the completion of the calculation. It is output along with the result at data output `OUT`.
 - **IN1** (BOOL): First operand for the AND operation.

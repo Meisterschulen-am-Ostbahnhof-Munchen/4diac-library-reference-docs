@@ -1,6 +1,7 @@
 # F_WORD_TO_DWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_DWORD` converts a `WORD` value to a `DWORD` value. It is part of the `iec61131::conversion` package and enables simple and efficient type conversion.

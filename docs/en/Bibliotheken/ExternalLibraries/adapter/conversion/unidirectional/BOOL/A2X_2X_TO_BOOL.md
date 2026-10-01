@@ -1,6 +1,7 @@
 # A2X_2X_TO_BOOL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The A2X_2X_TO_BOOL function block is a composite function block used to convert A2X signals into two separate BOOL signals. It enables the conversion of bidirectional control signals into simple logic outputs for various applications.

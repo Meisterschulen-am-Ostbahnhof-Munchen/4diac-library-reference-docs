@@ -1,6 +1,7 @@
 # AB_B_TO_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AB_B_TO_BYTE function block is a composite function block used to convert AB data to the BYTE format. It acts as an adapter converter and enables the seamless integration of AB data sources into systems that expect BYTE data.

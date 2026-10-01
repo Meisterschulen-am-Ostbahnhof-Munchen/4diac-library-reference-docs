@@ -1,6 +1,7 @@
 # F_LWORD_AS_STRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_AS_STRING` converts a `LWORD` data type to a `STRING` data type. This block is particularly useful when large binary data (64-bit) needs to be converted into a readable string.

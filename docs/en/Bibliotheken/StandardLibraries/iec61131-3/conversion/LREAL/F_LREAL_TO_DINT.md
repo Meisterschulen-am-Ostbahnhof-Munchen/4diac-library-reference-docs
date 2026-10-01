@@ -1,6 +1,7 @@
 # F_LREAL_TO_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_TO_DINT` converts an LREAL value (64-bit floating-point number) to a DINT value (32-bit integer). This block is part of the `iec61131::conversion` package and implements a simple type conversion.

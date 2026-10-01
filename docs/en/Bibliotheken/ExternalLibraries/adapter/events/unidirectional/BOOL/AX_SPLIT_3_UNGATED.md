@@ -3,6 +3,7 @@
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_SPLIT_3`](AX_SPLIT_3.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_3_UNGATED is a generic function block that splits one AX adapter input into three separate AX adapter outputs. This block allows the distribution of an incoming AX signal to three different receivers within a 4diac system.

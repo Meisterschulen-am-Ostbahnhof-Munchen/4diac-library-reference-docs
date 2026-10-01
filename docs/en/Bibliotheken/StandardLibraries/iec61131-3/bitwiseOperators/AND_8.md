@@ -1,6 +1,7 @@
 # AND_8
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_8` performs a bitwise logical AND operation on up to eight inputs. It is a generic function block that can work with various bit data types. The block is classified according to the IEC 61131-3 standard and is used for processing Boolean operations.

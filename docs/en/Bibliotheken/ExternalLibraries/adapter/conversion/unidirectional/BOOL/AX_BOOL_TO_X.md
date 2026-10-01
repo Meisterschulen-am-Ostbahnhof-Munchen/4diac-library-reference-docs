@@ -1,6 +1,7 @@
 # AX_BOOL_TO_X
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_BOOL_TO_X function block is a composite function block used to convert a BOOL value into the AX adapter format. It enables the easy conversion of Boolean values into a standardized output format for further processing in automation systems.

@@ -1,6 +1,7 @@
 # F_BOOL_TO_INT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_TO_INT` converts a Boolean value (`BOOL`) into an integer value (`INT`). Specifically, `TRUE` is converted to `1`, and `FALSE` to `0`. This block is particularly useful in scenarios where Boolean logic needs to be integrated into numerical calculations.

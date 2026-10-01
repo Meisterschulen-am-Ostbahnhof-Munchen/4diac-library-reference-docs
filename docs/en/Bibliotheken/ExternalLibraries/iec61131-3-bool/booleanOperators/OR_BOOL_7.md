@@ -1,6 +1,7 @@
 # OR_BOOL_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_7` is a standard function block for calculating the logical OR operation. It performs an OR operation on seven separate Boolean inputs and provides the result at a single output. This function block is part of the IEC 61131-3 compliant library for bitwise operations.

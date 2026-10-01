@@ -1,6 +1,7 @@
 # F_INT_AS_WSTRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_AS_WSTRING` converts an integer value (`INT`) into a wide string (`WSTRING`). This functionality is particularly useful when numeric values are needed as text for display or further processing.

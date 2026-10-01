@@ -1,6 +1,7 @@
 # F_WORD_TO_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_DINT` converts a `WORD` data type to a `DINT` data type. This function block is particularly useful in scenarios where type conversion between these two data types is required, for example, when processing data from different sources or adapting data for different system components.

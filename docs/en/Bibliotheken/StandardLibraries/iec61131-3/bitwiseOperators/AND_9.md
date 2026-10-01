@@ -1,6 +1,7 @@
 # AND_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_9` performs a bitwise logical AND operation on up to nine input variables. It is a generic function block that can work with various bit data types. The block is classified according to the IEC 61131-3 standard and is suitable for automation applications.

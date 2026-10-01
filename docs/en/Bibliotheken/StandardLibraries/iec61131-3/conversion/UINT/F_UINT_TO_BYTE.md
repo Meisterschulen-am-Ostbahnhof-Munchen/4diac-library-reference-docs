@@ -1,6 +1,7 @@
 # F_UINT_TO_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_BYTE` converts an unsigned 16-bit integer value (UINT) to an 8-bit byte value (BYTE). This block is particularly useful in scenarios where type conversion between these two data types is required.

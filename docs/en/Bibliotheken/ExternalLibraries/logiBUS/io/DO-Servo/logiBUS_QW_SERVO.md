@@ -1,6 +1,7 @@
 # logiBUS_QW_SERVO
 
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_QW_SERVO is an output service interface function block for word output data, specifically designed for controlling logiBUS servo outputs. This block enables the initialization and control of digital outputs via a standardized interface.

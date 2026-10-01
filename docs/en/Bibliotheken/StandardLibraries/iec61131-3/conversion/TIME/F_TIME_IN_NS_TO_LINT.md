@@ -1,6 +1,7 @@
 # F_TIME_IN_NS_TO_LINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_NS_TO_LINT` converts a time value in nanoseconds (`TIME`) into a 64-bit integer value (`LINT`). This conversion is useful when time values are needed in numerical form for calculations or comparisons.

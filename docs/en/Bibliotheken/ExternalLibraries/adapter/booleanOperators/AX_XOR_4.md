@@ -1,6 +1,7 @@
 # AX_XOR_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_4 function block is a generic function block for calculating the Boolean XOR operation with four inputs. It implements the exclusive OR operation for up to four different input signals.

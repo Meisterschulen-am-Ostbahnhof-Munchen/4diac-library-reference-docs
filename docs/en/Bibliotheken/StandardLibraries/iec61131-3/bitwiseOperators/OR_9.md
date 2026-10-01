@@ -1,6 +1,7 @@
 # OR_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The OR_9 function block is a generic function block for calculating a bitwise logical OR operation. It supports up to nine input variables and outputs the result of the OR operation. The function block is part of the IEC 61131-3 standard library for bitwise Boolean functions.

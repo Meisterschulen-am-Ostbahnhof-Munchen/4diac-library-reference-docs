@@ -1,6 +1,7 @@
 # AB_BYTE_TO_B
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AB_BYTE_TO_B function block is a composite function block used to convert a BYTE data type to the AB adapter format. It enables unidirectional data transfer of byte values via a standardized adapter interface.

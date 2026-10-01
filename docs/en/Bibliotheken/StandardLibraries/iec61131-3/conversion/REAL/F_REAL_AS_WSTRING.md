@@ -1,6 +1,7 @@
 # F_REAL_AS_WSTRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_AS_WSTRING` converts a `REAL` value into a `WSTRING` value. This block is particularly useful when numeric values need to be converted into a string suitable for output or further processing.

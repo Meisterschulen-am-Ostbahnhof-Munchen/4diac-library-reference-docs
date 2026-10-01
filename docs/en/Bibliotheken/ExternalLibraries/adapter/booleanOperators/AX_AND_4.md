@@ -1,6 +1,7 @@
 # AX_AND_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_AND_4 function block is a generic function block for calculating a four-input logical AND operation. It is used to process Boolean signals in automation systems and allows the combination of multiple input signals into a single output signal.

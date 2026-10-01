@@ -1,6 +1,7 @@
 # ZephyrIO
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ZephyrIO function block serves as a template for modular input/output functionality with boards that use the Zephyr operating system. This block enables the initialization and configuration of I/O services in distributed automation systems.

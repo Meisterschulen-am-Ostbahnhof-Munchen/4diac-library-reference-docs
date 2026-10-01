@@ -1,6 +1,7 @@
 # F_TIME_AS_STRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_AS_STRING` is used to convert a `TIME` value into a `STRING` value. It is particularly useful when time values are needed for display or logging in textual form.

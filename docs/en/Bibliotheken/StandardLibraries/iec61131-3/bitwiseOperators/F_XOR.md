@@ -1,6 +1,7 @@
 # F_XOR
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_XOR` performs a bitwise XOR operation (exclusive OR) on two input values. It is part of the standard bitwise operations according to IEC 61131-3 and is suitable for logical processing in control applications.

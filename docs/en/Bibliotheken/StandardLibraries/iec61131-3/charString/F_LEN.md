@@ -1,6 +1,7 @@
 # F_LEN
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LEN` is used to determine the length of an input string. It is part of the standard library for character and string functions according to IEC 61131-3.

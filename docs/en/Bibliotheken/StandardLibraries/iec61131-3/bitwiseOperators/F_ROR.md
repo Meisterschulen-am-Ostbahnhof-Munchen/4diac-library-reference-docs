@@ -1,6 +1,7 @@
 # F_ROR
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ROR` (Rotate Right) performs a bitwise right rotation. It belongs to the category of standardized bit shift functions according to IEC 61131-3. The block rotates the input data a specified number of bits to the right and fills the freed bits with the bits rotated out.

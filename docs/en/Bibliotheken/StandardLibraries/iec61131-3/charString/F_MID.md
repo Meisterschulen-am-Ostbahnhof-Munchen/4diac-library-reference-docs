@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_MID` is used to extract a substring from a given string. A specific number of characters are extracted starting from a defined position. This function block is part of the standard character and string functions according to IEC 61131-3.
 ![F_MID](F_MID.svg)
+
 - **REQ**: Service request to execute the extraction. This is linked to the data inputs `IN`, `L`, and `P`.
 - **CNF**: Confirmation of successful request execution. Linked to the data output `OUT`.
 - **IN**: The input string from which the substring is to be extracted (Type: `ANY_STRING`).

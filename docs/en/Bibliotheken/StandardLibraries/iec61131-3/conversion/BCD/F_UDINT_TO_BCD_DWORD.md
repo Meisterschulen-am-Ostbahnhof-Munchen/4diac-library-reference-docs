@@ -1,6 +1,7 @@
 # F_UDINT_TO_BCD_DWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_TO_BCD_DWORD` converts an unsigned 32-bit integer value (UDINT) into a BCD-encoded DWORD. This conversion is particularly useful in applications where numeric values need to be represented or processed in a human-readable format.

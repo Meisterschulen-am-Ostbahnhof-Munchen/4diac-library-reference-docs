@@ -1,6 +1,7 @@
 # F_BYTE_TO_USINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_USINT` converts a `BYTE` value to a `USINT` value (Unsigned Short Integer). This function block is particularly useful in scenarios where type conversion between these two data types is required, for example, in communication between different systems or in data processing.

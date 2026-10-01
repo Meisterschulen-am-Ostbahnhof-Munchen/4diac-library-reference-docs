@@ -1,6 +1,7 @@
 # F_STRING_AS_INT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_INT` converts a `STRING` value to a `INT` value. This functionality is particularly useful when strings representing numeric values need to be converted into integer values.

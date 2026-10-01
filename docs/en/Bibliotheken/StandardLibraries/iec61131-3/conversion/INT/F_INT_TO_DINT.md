@@ -1,6 +1,7 @@
 # F_INT_TO_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_DINT` is used to convert a 16-bit integer value (`INT`) to a 32-bit integer value (`DINT`). This conversion is useful when exchanging data between systems or components that use different integer formats.

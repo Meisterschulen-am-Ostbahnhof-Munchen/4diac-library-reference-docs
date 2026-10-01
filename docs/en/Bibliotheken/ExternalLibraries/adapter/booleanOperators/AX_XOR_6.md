@@ -1,6 +1,7 @@
 # AX_XOR_6
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_6 is a generic function block for calculating the Boolean XOR operation with six inputs. The block implements the exclusive OR operation for up to six binary input signals and outputs the result via an adapter output.

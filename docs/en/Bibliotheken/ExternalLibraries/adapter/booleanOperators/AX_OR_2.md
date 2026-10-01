@@ -1,6 +1,7 @@
 # AX_OR_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_2 function block is a generic function block for calculating Boolean OR operations. It processes two input signals and outputs the logical OR result. This function block is specifically designed for use in automation systems.

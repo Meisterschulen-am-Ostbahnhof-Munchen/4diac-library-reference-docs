@@ -1,6 +1,7 @@
 # PUBLISH_6
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_6 function block is used to publish data to one or more SUBSCRIBE_6 blocks. It allows the transmission of up to six different data values via a publish-subscribe communication pattern and offers both acknowledged and unacknowledged send operations.

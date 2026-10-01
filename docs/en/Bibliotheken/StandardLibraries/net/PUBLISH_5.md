@@ -1,6 +1,7 @@
 # PUBLISH_5
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_5 function block is used to publish data to one or more SUBSCRIBE_5 blocks. It allows the transmission of up to five different data values using a publish-subscribe communication pattern.

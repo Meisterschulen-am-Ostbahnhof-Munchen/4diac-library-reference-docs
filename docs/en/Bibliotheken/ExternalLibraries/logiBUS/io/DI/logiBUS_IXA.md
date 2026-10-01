@@ -1,6 +1,7 @@
 # logiBUS_IXA
 
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_IXA is a composite function block for processing Boolean input data. It serves as an interface for digital inputs and enables the initialization and querying of input signals via standardized service interfaces.

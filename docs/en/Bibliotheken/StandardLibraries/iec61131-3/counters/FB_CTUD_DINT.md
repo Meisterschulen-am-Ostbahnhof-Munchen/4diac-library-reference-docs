@@ -1,6 +1,7 @@
 # FB_CTUD_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The FB_CTUD_DINT is a function block that acts as an up/down counter with a DINT counter value. It allows counting in both directions as well as resetting and loading a predefined value. The counter is particularly suitable for control applications where a flexible counting function is required.

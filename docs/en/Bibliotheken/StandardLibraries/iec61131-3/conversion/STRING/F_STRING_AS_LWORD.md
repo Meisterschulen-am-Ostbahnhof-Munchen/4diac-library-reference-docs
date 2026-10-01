@@ -1,6 +1,7 @@
 # F_STRING_AS_LWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_LWORD` converts a `STRING` value to a `LWORD` value. It is part of the `iec61131::conversion` package and enables easy conversion between these two data types.

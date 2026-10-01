@@ -1,6 +1,7 @@
 # eIX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The eIX function block is an input service interface for Boolean input data with event-based triggering. It serves as an interface between the control logic and physical input devices and enables the querying of digital input signals.

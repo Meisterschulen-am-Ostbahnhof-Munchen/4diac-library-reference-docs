@@ -1,6 +1,7 @@
 # F_STRING_AS_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_DINT` converts a `STRING` value to a `DINT` value. This function is particularly useful when strings need to be converted into numeric values, for example, when processing user input or interpreting text data.

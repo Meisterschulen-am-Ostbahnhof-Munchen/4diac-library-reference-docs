@@ -1,6 +1,7 @@
 # PUBLISH_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_4 function block is used to publish data to one or more SUBSCRIBE_4 blocks. It enables the unacknowledged transmission of up to four different data values using a publish-subscribe communication pattern.

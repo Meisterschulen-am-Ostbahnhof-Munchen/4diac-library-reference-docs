@@ -1,6 +1,7 @@
 # DataPanel_MI_IX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The DataPanel_MI_IX is a service interface function block for Boolean input data, specifically designed for communication with digital inputs in automation systems. This block enables the initialization and querying of digital input signals via standardized service interfaces.

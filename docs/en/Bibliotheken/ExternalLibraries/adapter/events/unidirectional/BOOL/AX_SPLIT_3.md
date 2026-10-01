@@ -1,6 +1,7 @@
 # AX_SPLIT_3
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_3 is a generic function block that splits one AX adapter input into three separate AX adapter outputs. This block allows the distribution of an incoming AX signal to three different receivers within a 4diac system.

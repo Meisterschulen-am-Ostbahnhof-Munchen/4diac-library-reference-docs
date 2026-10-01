@@ -1,6 +1,7 @@
 # ASR_2EVENTS_TO_SR
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ASR_2EVENTS_TO_SR function block is a composite function block that converts two separate events into an ASR (Set-Reset) signal. It serves as a bridge between event-based control signals and the ASR adapter format.

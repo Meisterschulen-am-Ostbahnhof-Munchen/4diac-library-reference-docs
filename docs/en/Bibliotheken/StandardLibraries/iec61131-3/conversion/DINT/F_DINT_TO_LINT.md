@@ -1,6 +1,7 @@
 # F_DINT_TO_LINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_LINT` converts a 32-bit integer value (DINT) to a 64-bit integer value (LINT). This block is particularly useful in scenarios where extending the value range or changing the type is required for subsequent processing steps.

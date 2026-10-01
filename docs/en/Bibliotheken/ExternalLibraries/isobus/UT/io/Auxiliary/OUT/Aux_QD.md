@@ -1,6 +1,7 @@
 # Aux_QD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_QD function block is an output service interface module for processing double-word output data (DWORD). It serves as an interface for auxiliary output functions and supports various auxiliary types for flexible data output.

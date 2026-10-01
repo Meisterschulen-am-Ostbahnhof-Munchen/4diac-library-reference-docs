@@ -1,6 +1,7 @@
 # AX_XOR_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_7 function block is a generic function block for calculating the Boolean XOR operation with seven inputs. It allows the processing of up to seven input signals and outputs the result of the XOR operation.

@@ -1,6 +1,7 @@
 # ASR_SR_TO_2EVENTS
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ASR_SR_TO_2EVENTS function block is a composite function block used to convert an ASR signal into two separate events. It enables the conversion of a bidirectional adapter signal into independent SET and RESET events.

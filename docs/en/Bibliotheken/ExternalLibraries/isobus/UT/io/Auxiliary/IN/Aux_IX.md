@@ -1,6 +1,7 @@
 # Aux_IX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_IX function block is a service interface function block for Boolean input data. It serves as an interface for input services and enables communication with resources for querying digital input signals.

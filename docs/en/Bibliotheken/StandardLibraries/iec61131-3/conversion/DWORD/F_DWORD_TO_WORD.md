@@ -1,6 +1,7 @@
 # F_DWORD_TO_WORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_WORD` converts a 32-bit DWORD value to a 16-bit WORD value. This conversion is useful when data needs to be exchanged between systems with different word lengths or when memory space needs to be optimized.

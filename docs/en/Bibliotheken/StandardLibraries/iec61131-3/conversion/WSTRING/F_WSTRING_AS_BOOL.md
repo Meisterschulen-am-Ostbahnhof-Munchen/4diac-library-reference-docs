@@ -1,6 +1,7 @@
 # F_WSTRING_AS_BOOL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_BOOL` is used to convert a WSTRING value to a BOOL value. This is particularly useful in scenarios where strings need to be converted to Boolean values, for example, when processing user input or interpreting configuration data.

@@ -1,6 +1,7 @@
 # F_LREAL_TO_INT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_TO_INT` converts an LREAL value (64-bit floating-point number) into an INT value (16-bit integer). This conversion is performed by rounding the LREAL value down to the nearest integer value.

@@ -1,6 +1,7 @@
 # F_WSTRING_AS_LREAL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_LREAL` is used to convert a WSTRING value into an LREAL value. This block is particularly useful when strings need to be converted into numerical values, for example, for mathematical calculations or data processing.

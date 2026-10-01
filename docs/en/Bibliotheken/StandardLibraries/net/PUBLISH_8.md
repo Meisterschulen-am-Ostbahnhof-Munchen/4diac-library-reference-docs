@@ -1,6 +1,7 @@
 # PUBLISH_8
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_8 function block is used to send data to one or more SUBSCRIBE_8 blocks. It implements a publisher-subscriber communication pattern and allows the distribution of up to eight different data values to subscribed recipients.

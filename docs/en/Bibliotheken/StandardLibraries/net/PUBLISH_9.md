@@ -1,6 +1,7 @@
 # PUBLISH_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_9 function block is used to publish data to one or more SUBSCRIBE_9 blocks. It enables the unacknowledged transmission of up to nine different data values over a communication network.

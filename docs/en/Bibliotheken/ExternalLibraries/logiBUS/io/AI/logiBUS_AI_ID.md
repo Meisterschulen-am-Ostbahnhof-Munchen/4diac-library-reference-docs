@@ -1,6 +1,7 @@
 # logiBUS_AI_ID
 
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_AI_ID is a Service Interface Function Block for processing double-word input data. This block serves as an interface for analog inputs and provides functions for initializing, querying, and indicating input data.

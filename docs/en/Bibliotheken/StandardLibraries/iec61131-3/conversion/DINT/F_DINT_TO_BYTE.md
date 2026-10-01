@@ -1,6 +1,7 @@
 # F_DINT_TO_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_BYTE` converts a 32-bit integer value (DINT) to an 8-bit integer value (BYTE). This conversion is particularly useful when data needs to be exchanged or processed between systems with different word lengths.

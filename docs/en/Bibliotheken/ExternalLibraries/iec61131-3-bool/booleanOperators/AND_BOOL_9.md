@@ -1,6 +1,7 @@
 # AND_BOOL_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_BOOL_9` is a standard building block for calculating the logical AND operation. It performs a bitwise AND operation across nine separate Boolean inputs. The block complies with the IEC 61131-3 standard and is designed for use in the 4diac IDE.

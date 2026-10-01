@@ -1,6 +1,7 @@
 # AND_10
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `AND_10` function block is a generic building block for calculating a bitwise logical AND operation. It supports up to 10 input variables and is classified according to the IEC 61131-3 standard. This function block is part of the `iec61131::bitwiseOperators` package and is suitable for applications requiring logical operations at the bit level.

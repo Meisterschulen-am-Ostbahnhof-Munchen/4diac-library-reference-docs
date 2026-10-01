@@ -1,6 +1,7 @@
 # PUBLISH_3
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_3 function block is used to distribute data to one or more SUBSCRIBE_3 blocks. It enables the unacknowledged transmission of up to three different data values to subscribers in a distributed system.

@@ -1,6 +1,7 @@
 # CallbackFB
 
 * * * * * * * * * *
+
 ## Introduction
 
 The `CallbackFB` is a composite function block that simplifies the use of the callback mechanism in subapplications. It serves as a wrapper block to provide a standardized interface for asynchronous communication via a callback adapter. Its primary purpose is to decouple and provide structured handling of acknowledgment messages (`CNF`) and requests (`REQ`) within a function block network.

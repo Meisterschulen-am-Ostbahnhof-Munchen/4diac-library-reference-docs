@@ -1,6 +1,7 @@
 # SUBSCRIBE_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_2 function block acts as a subscriber for a PUBLISH_2 block and enables the receipt of data via a publish-subscribe communication pattern. The block can receive and process two different data values from a publisher.

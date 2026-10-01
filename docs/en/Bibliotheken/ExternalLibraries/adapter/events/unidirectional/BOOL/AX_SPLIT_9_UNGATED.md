@@ -3,6 +3,7 @@
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_SPLIT_9`](AX_SPLIT_9.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_9_UNGATED function block is a generic component that splits a single AX adapter into nine separate AX outputs. The block acts as a distributor for unidirectional adapter connections and allows a single input signal to be distributed across multiple output channels.

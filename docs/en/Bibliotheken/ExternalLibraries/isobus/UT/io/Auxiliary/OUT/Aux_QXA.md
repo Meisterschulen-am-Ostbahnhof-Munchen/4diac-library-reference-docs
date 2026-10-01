@@ -1,6 +1,7 @@
 # Aux_QXA
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_QXA is a composite function block for outputting Boolean data. It serves as an interface for auxiliary outputs in ISOBUS-compatible systems and enables the control of Boolean output signals via standardized interfaces.

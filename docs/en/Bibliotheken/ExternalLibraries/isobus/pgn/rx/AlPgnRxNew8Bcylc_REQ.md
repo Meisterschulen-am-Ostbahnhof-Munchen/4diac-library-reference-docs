@@ -1,6 +1,7 @@
 # AlPgnRxNew8Bcylc_REQ
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AlPgnRxNew8Bcylc_REQ` is used for the cyclical request of data via a CAN network according to the ISOBUS standard (ISO 11783). Its main purpose is the installation and management of receive parameters for specific Parameter Group Numbers (PGNs). The block enables the configuration of cyclical receive and monitors the data flow by triggering corresponding events upon successful receive, timeouts, or errors.

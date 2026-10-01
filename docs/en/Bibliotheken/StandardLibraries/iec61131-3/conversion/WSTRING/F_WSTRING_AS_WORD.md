@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_WSTRING_AS_WORD` converts a WSTRING data type to a WORD data type. This functionality is particularly useful when strings need to be converted into numeric values, for example, for further processing in control algorithms.
 ![F_WSTRING_AS_WORD](F_WSTRING_AS_WORD.svg)
+
 - **REQ**: Starts the execution of the function block. This event input is linked to the data input `IN`.
 - **CNF**: Signals the successful completion of the conversion. This event output is linked to the data output `OUT`.
 - **IN**: Expects an input of type `WSTRING`, which is to be converted into a `WORD` value.

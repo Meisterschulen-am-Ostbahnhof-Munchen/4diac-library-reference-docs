@@ -1,6 +1,7 @@
 # Aux_QX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_QX function block is an output service interface function block for Boolean output data. It serves as an interface to auxiliary output devices and enables the control of Boolean output signals via a defined service mechanism.

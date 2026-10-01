@@ -1,6 +1,7 @@
 # FB_SR
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_SR` is a bistable element that functions as a set-reset flip-flop (SR flip-flop). It stores a state based on the input signals and retains this state until it is changed by new input signals.

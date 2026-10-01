@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_BOOL_TO_DINT` converts a Boolean value (`BOOL`) into a 32-bit integer value (`DINT`). This conversion is useful when Boolean signals need to be integrated into numerical calculations or control systems.
 ![F_BOOL_TO_DINT](F_BOOL_TO_DINT.svg)
+
 - **REQ**: Starts the conversion. When this event is triggered, the Boolean input value (`IN`) is converted into a `DINT` value.
 - **CNF**: Signals the completion of the conversion. This event is output along with the converted output value (`OUT`).
 - **IN**: The Boolean input value (`BOOL`) to be converted to a `DINT` value.

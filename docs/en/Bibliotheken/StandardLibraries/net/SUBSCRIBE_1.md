@@ -1,6 +1,7 @@
 # SUBSCRIBE_1
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_1 function block is used to subscribe to data from a PUBLISH_1 block. It enables communication between different components in a distributed system by receiving data from a publisher and making it available when new data is available.

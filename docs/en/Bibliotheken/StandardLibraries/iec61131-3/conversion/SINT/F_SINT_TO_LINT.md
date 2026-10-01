@@ -1,6 +1,7 @@
 # F_SINT_TO_LINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_LINT` converts a `SINT` value (8-bit integer) to a `LINT` value (64-bit integer). This conversion is useful when processing data with different bit widths.

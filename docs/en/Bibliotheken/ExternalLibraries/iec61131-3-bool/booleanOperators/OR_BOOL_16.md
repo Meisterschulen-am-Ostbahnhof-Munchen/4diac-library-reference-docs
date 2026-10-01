@@ -1,6 +1,7 @@
 # OR_BOOL_16
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_16` is a standard function block for calculating the logical OR operation. It performs the OR operation via 16 separate Boolean inputs and provides the result at a single output. This function block is part of the IEC 61131-3 compliant library for bitwise operations and is suitable for applications where a logical combination of multiple signals is required.

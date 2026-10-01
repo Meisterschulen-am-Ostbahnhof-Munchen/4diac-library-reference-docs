@@ -1,6 +1,7 @@
 # AX_SPLIT_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_4 function block is a generic function block that splits one AX adapter input into four separate AX adapter outputs. The block acts as a distributor for unidirectional AX adapters and enables the transmission of data and events to multiple receivers.

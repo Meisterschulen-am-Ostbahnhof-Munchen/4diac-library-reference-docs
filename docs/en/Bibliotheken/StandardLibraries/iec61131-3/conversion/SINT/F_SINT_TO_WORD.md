@@ -1,6 +1,7 @@
 # F_SINT_TO_WORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_WORD` converts a SINT value (8-bit signed integer count) to a WORD value (16-bit unsigned integer count). This block is particularly useful in scenarios where type conversion between different integer formats is required.

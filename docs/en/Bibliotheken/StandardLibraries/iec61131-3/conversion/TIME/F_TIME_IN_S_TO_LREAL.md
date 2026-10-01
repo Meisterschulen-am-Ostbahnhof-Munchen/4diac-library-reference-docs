@@ -1,6 +1,7 @@
 # F_TIME_IN_S_TO_LREAL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_S_TO_LREAL` converts a time value in seconds (`TIME`) into a floating-point value (`LREAL`). This conversion is useful when time values are needed in mathematical calculations or for further processing steps.

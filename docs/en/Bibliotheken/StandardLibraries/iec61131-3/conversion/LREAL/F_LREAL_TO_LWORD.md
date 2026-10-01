@@ -1,6 +1,7 @@
 # F_LREAL_TO_LWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_TO_LWORD` converts an LREAL value (64-bit floating-point number) to an LWORD value (64-bit unsigned integer). This conversion is particularly necessary in scenarios where floating-point numbers need to be converted to a binary representation.

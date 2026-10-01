@@ -1,6 +1,7 @@
 # F_CONCAT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_CONCAT` is used to concatenate two strings. It is part of the standard library for character and string operations according to IEC 61131-3.

@@ -1,6 +1,7 @@
 # F_WSTRING_AS_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_DINT` converts a WSTRING value to a DINT value. It is part of the package `iec61131::conversion` and enables the easy conversion of wide strings to integer values.

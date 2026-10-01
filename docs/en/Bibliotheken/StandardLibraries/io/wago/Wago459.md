@@ -1,6 +1,7 @@
 # Wago459
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Wago459 is a Service Interface Function Block for connecting Wago-750-459 analog input modules in 4diac systems. This function block enables the configuration and monitoring of up to four analog input channels and establishes communication with the Wago bus system.

@@ -1,6 +1,7 @@
 # strip_set_pixel
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `strip_set_pixel` is used to control an RGB LED strip. Its main function is to set the color of a single pixel (a single LED) on the strip or to turn off the entire strip. It is designed for use in control systems that require precise, pixel-by-pixel control of RGB LEDs.

@@ -1,6 +1,7 @@
 # SUBSCRIBE_5
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_5 function block is used to subscribe to data from a PUBLISH_5 block. It allows the reception of up to five different data points over a network connection and provides a standardized interface for communication between distributed automation components.

@@ -1,6 +1,7 @@
 # AX_OR_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_4 is a generic function block for calculating a four-input logical OR operation. The block processes Boolean signals and outputs the result of the OR operation via an adapter output.

@@ -1,6 +1,7 @@
 # CLIENT_3_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The CLIENT_3_2 is a function block for HTTP communication, designed as a client with three inputs and two outputs. It enables communication with a server via the HTTP protocol and supports both opening and closing connections as well as sending requests and receiving responses.

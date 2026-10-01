@@ -1,6 +1,7 @@
 # F_TIME_IN_MS_TO_UDINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_MS_TO_UDINT` converts a `TIME` value in milliseconds to a `UDINT` value. This is particularly useful when time values are to be used in numerical calculations or for control purposes.

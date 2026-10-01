@@ -1,6 +1,7 @@
 # F_DELETE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DELETE` is used to manipulate strings. It removes a specific number of characters (`L`) from an input string (`IN`), starting at a defined position (`P`). The result is output as a new string (`OUT`).

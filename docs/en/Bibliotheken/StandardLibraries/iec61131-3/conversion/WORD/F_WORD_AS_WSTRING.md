@@ -1,6 +1,7 @@
 # F_WORD_AS_WSTRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_AS_WSTRING` converts a `WORD` data type to a `WSTRING` data type. This function block is particularly useful in scenarios where numeric values need to be converted into a string, for example, for display or logging.

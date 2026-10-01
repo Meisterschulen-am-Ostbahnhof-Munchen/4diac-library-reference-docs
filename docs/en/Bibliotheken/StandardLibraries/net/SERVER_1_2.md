@@ -1,6 +1,7 @@
 # SERVER_1_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SERVER_1_2 function block communicates with a CLIENT_2_1 block and enables the creation of a server-client connection. The block can receive and send data, as well as initialize and terminate the connection.

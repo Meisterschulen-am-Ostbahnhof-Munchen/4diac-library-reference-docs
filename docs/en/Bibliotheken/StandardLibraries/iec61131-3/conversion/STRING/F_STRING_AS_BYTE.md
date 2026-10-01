@@ -1,6 +1,7 @@
 # F_STRING_AS_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_BYTE` converts a `STRING` value to a `BYTE` value. This functionality is particularly useful when strings need to be converted into their corresponding byte values, for example, for processing in protocols or when communicating with hardware.

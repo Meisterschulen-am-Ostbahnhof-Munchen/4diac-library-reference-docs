@@ -1,6 +1,7 @@
 # eIXconfig
 
 * * * * * * * * * *
+
 ## Introduction
 
 The eIXconfig function block serves as a Service Interface Function Block for configuring eIO instances. It allows you to set trigger properties for inputs and outputs and provides a connection to eIO instances via an adapter.

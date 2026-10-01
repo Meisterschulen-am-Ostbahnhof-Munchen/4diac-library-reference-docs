@@ -1,6 +1,7 @@
 # AlPgnTxNew8Bcycl
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AlPgnTxNew8Bcycl` is used for the cyclic transmission of data over a CAN network according to the ISOBUS standard (ISO 11783). Its main purpose is the installation, configuration, and regular transmission of Parameter Group Numbers (PGNs). It allows the definition of communication properties such as destination address, priority, and transmission interval, and ensures that data is transmitted reliably and at the configured frequency.

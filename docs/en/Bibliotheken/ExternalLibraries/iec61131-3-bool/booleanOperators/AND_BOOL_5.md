@@ -1,6 +1,7 @@
 # AND_BOOL_5
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_BOOL_5` is a standard function block for calculating the logical AND operation. It performs a bitwise AND operation on five separate Boolean input values. The block follows the real-time and event-driven processing model of IEC 61499, where the calculation is triggered by an incoming event and confirmed by an outgoing event.

@@ -1,6 +1,7 @@
 # F_INT_TO_WORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_WORD` converts an integer value (INT) into a 16-bit word value (WORD). This conversion is particularly useful in scenarios where data needs to be exchanged between systems with different data types.

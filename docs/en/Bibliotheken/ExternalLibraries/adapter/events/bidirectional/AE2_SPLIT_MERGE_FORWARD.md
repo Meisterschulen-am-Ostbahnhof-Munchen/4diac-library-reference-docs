@@ -1,6 +1,7 @@
 # AE2_SPLIT_MERGE_FORWARD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AE2_SPLIT_MERGE_FORWARD function block is a bidirectional splitter and merger with bidirectional forwarding. It serves as a universal distributor and collector for events in 4diac systems and enables the flexible distribution of events across various interfaces.

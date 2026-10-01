@@ -1,6 +1,7 @@
 # DualHysteresis
 
 * * * * * * * * * *
+
 ## Introduction
 
 The DualHysteresis function block enables bidirectional conversion of analog to digital signals using hysteresis. It is particularly useful in control applications where reliable switching point conversion with deadband and hysteresis is required.

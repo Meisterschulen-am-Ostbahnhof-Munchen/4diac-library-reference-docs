@@ -1,6 +1,7 @@
 # GET_STRUCT_VALUE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block (FB) `GET_STRUCT_VALUE` is a service interface module designed to dynamically read specific values from a given data structure. It provides a flexible way to access structure members whose names or paths are determined at runtime.

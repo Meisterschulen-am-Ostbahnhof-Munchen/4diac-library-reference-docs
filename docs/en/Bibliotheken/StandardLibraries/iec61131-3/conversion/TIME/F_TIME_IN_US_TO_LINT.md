@@ -1,6 +1,7 @@
 # F_TIME_IN_US_TO_LINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_US_TO_LINT` converts a TIME value in microseconds (µs) into a LINT value (64-bit integer). This conversion is useful when time values are needed in numerical calculations or for further processing.

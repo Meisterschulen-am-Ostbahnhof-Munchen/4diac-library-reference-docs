@@ -1,6 +1,7 @@
 # F_BYTE_TO_DWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_DWORD` converts a `BYTE` value to a `DWORD` value. This block is particularly useful in scenarios where an extension of the data width is required, for example, when processing sensor data or communicating between systems with different data formats.

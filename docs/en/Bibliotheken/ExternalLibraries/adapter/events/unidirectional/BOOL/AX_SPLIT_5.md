@@ -1,6 +1,7 @@
 # AX_SPLIT_5
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_5 function block is a generic function block used to split an AX adapter into five separate AX outputs. The block enables the distribution of an input signal to multiple output channels and is particularly useful in control applications where signals need to be distributed to different components.

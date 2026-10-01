@@ -1,6 +1,7 @@
 # SUBSCRIBE_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_4 function block is used to subscribe to data from a PUBLISH_4 block. It allows the receipt of up to four different data points via a communication link and makes them available when they become available.

@@ -1,6 +1,7 @@
 # F_WORD_TO_LWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_LWORD` is used to convert a `WORD` data type to a `LWORD` data type. This function block is particularly useful in scenarios where an extension of the data width is required, for example, in communication between systems with different data word sizes.

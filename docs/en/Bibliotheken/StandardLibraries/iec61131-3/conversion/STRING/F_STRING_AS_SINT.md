@@ -1,6 +1,7 @@
 # F_STRING_AS_SINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_SINT` converts a `STRING` value into a `SINT` value (8-bit signed integer). This block is particularly useful when strings need to be converted into numeric values, for example, when processing user input or interpreting text data.

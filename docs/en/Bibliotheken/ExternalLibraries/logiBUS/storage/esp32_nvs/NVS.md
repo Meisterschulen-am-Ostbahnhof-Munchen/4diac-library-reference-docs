@@ -1,6 +1,7 @@
 # NVS
 
 * * * * * * * * * *
+
 ## Introduction
 
 The NVS (Non-Volatile Storage) function block enables persistent storage and loading of data on an ESP32 microcontroller. It utilizes the ESP32's non-volatile storage (NVS) to store values under a defined key and retrieve them as needed. This block is particularly suitable for applications where configuration data, calibration values, or status information must be retained across device restarts.

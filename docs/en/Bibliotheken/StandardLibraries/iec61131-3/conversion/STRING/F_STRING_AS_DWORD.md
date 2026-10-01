@@ -1,6 +1,7 @@
 # F_STRING_AS_DWORD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_DWORD` converts a `STRING` value to a `DWORD` value. This functionality is particularly useful when strings need to be converted into numeric values, for example, for further processing in control algorithms.

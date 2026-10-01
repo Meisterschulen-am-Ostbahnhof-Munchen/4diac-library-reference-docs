@@ -6,6 +6,7 @@
 
 ----
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `QUARTERS_TO_BOOLS` is a composite function block that converts 16 separate 2-bit input values (so-called "quarter bytes") in parallel into corresponding Boolean output signals. It acts as a wrapper and simplifies handling by combining a multitude of individual conversion blocks into a single, easily manageable block. This block is particularly useful in control systems where compact data formats (such as 2-bit states in a byte) need to be converted into simple binary control signals for actuators or status indicators.

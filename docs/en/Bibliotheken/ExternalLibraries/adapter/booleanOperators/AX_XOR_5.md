@@ -1,6 +1,7 @@
 # AX_XOR_5
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_5 is a generic function block for calculating the Boolean XOR operation with five inputs. The block implements the exclusive OR operation for up to five input signals and outputs the result via an adapter output.

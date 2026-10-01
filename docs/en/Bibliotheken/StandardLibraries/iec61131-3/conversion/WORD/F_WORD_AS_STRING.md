@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_WORD_AS_STRING` converts a `WORD` data type to a `STRING`. This is particularly useful when numeric values need to be output or further processed in a human-readable format.
 ![F_WORD_AS_STRING](F_WORD_AS_STRING.svg)
+
 - **REQ**: Starts the conversion. When this event is triggered, the value of the data input `IN` is processed.
 - **CNF**: Signals the completion of the conversion. This event, along with the converted value, is output at data output `OUT`.
 - **IN**: Expects an input value of type `WORD`, which is to be converted to `STRING`.

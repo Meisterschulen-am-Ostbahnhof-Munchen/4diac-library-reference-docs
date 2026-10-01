@@ -1,6 +1,7 @@
 # CLIENT_2_1
 
 * * * * * * * * * *
+
 ## Introduction
 
 The CLIENT_2_1 function block is used to communicate with a SERVER_1_2 block via a network connection. It enables the establishment and termination of connections as well as data exchange between client and server.

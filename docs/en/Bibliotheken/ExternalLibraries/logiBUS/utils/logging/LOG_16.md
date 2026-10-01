@@ -1,6 +1,7 @@
 # LOG_16
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `LOG_16` is a ring logger designed for the cyclic recording of data of any type (`ANY`). It serves to hold incoming values in a buffer with 16 memory locations, overwriting older entries on new calls (ring buffer principle). This block is particularly suitable for logging process data or states in real-time controllers.

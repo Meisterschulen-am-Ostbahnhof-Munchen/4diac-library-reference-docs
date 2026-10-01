@@ -1,6 +1,7 @@
 # AX_AND_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_AND_2 is a generic function block for calculating the logical AND operation. The block processes two Boolean input signals and outputs the logical AND result.

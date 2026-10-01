@@ -1,6 +1,7 @@
 # Aux_Val1_QW
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_Val1_QW is an output service interface function block for word output data. This block serves as an interface to auxiliary output resources and enables the output of 16-bit data words to external peripheral devices.

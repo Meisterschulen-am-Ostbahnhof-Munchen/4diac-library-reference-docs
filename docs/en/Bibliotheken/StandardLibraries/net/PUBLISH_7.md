@@ -1,6 +1,7 @@
 # PUBLISH_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_7 function block is used to distribute data to one or more SUBSCRIBE_7 blocks. It enables the unacknowledged transmission of up to seven different data values via a publish-subscribe architecture.

@@ -1,6 +1,7 @@
 # F_WSTRING_AS_SINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_SINT` converts a WSTRING value to a SINT value (8-bit integer). This block is particularly useful in scenarios where strings need to be converted to numeric values.

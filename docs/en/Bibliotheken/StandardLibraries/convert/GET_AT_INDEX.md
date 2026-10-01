@@ -1,6 +1,7 @@
 # GET_AT_INDEX
 
 * * * * * * * * * *
+
 ## Introduction
 
 This function block (FB) is used to retrieve a value from an array at a specific index position. An important prerequisite for correct operation is that the data type of the input array matches the data type of the output value. It is a fundamental building block for accessing array elements.

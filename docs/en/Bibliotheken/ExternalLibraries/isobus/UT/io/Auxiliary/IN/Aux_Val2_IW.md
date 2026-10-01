@@ -1,6 +1,7 @@
 # Aux_Val2_IW
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_Val2_IW is an input service interface function block for word input data. This block serves as an interface for communication with resources and enables the processing of 16-bit word input data in distributed automation systems.

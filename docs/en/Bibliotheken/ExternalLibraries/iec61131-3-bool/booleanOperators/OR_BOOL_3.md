@@ -1,6 +1,7 @@
 # OR_BOOL_3
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_3` is a standardized block according to IEC 61131-3 for performing a logical OR operation. It calculates the logical OR (disjunction) of three Boolean input signals. The block is implemented as a generic function and is executed on every trigger event.

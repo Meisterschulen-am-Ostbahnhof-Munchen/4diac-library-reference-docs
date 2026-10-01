@@ -1,6 +1,7 @@
 # F_TIME_IN_US_TO_UDINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_US_TO_UDINT` converts a TIME value in microseconds (µs) into a UDINT value. This conversion is particularly useful in applications where time values need to be processed further in numerical form.

@@ -1,6 +1,7 @@
 # OFFSET_UDINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OFFSET_UDINT` is used to calculate an offset value. On the first execution with an input value greater than zero, the block stores this value as a reference (`FIRST`). On each subsequent call, the difference between the current input value and this stored reference value is calculated as the output (`OUT`). This is particularly useful for determining relative changes compared to an initial starting value.

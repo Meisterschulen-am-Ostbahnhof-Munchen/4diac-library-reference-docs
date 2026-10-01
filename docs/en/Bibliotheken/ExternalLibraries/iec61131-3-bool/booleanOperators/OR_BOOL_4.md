@@ -1,6 +1,7 @@
 # OR_BOOL_4
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_4` is a standard function block for calculating the logical OR operation. It performs an OR operation with up to four Boolean input values and outputs the result as a single Boolean value. The function block follows the IPO (Event-driven Processing) principle and is designed for use in control applications according to IEC 61131-3.

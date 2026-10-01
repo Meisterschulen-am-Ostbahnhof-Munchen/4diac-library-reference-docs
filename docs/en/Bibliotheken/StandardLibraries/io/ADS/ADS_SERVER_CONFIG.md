@@ -1,6 +1,7 @@
 # ADS_SERVER_CONFIG
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ADS_SERVER_CONFIG function block is used to configure ADS server connections in 4diac systems. It enables the initialization and parameterization of connection settings for ADS communication, which can be used in downstream I/O function blocks.

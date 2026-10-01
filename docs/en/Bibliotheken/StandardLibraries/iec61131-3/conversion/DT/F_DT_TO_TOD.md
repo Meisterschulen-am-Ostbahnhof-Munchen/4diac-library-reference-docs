@@ -1,6 +1,7 @@
 # F_DT_TO_TOD
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DT_TO_TOD` converts a date and time value (DT) into a pure time value (TOD - Time of Day). This function is particularly useful when only the time of day needs to be extracted from a combined date and time stamp.

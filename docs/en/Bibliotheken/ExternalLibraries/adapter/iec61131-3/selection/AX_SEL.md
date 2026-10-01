@@ -1,6 +1,7 @@
 # AX_SEL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SEL function block is a binary selector used to choose between two input values. It belongs to the category of standard selection functions according to IEC 61131-3 and enables flexible data selection based on a control signal.

@@ -1,6 +1,7 @@
 # SUBSCRIBE_6
 
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_6 function block is used to subscribe to data from a PUBLISH_6 block. It allows the receipt of up to six different data values via a network connection and makes them available for further processing in an IEC 61499 system.

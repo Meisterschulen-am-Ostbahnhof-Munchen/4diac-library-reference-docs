@@ -1,6 +1,7 @@
 # AX_SPLIT_8
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_8 function block is a generic function block that splits a single AX adapter into eight separate AX outputs. It is used to distribute adapter signals in complex control architectures.

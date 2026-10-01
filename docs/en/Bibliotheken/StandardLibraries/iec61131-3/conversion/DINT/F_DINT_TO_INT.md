@@ -1,6 +1,7 @@
 # F_DINT_TO_INT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_INT` converts a 32-bit DINT value to a 16-bit INT value. This conversion is particularly necessary in scenarios where data needs to be exchanged between systems with different word lengths.

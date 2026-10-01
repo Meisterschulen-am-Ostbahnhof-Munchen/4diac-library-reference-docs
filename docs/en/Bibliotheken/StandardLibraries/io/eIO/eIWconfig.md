@@ -1,6 +1,7 @@
 # eIWconfig
 
 * * * * * * * * * *
+
 ## Introduction
 
 The eIWconfig function block serves as a service interface for configuring eIO instances. It allows you to set thresholds and gradients for industrial I/O operations.

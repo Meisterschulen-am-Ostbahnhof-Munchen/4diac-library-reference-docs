@@ -1,6 +1,7 @@
 # F_BYTE_AS_WSTRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_AS_WSTRING` converts a BYTE value into a WSTRING value. This is particularly useful in scenarios where byte data needs to be further processed or output as Unicode strings.

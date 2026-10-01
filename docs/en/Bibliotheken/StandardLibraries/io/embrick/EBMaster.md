@@ -1,6 +1,7 @@
 # EBMaster
 
 * * * * * * * * * *
+
 ## Introduction
 
 The EBMaster function block is a Service Interface Function Block for communication with EtherBrick modules via SPI (Serial Peripheral Interface). It serves as the master component for controlling and configuring SPI bus communication with connected slave modules.

@@ -1,6 +1,7 @@
 # 🔌 IORevPiCore
 
 * * * * * * * * * *
+
 ## Introduction
 
 The IORevPiCore function block serves as the core module for the Revolution Pi hardware from KUNBUS GmbH. It enables basic communication and configuration of the Revolution Pi I/O modules within a 4diac-based control application.

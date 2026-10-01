@@ -1,6 +1,7 @@
 # XOR_8
 
 * * * * * * * * * *
+
 ## Introduction
 
 The XOR_8 function block performs a bitwise XOR operation on up to 8 input variables. It is a generic function block that can work with various bit data types (ANY_BIT). The block is classified according to the IEC 61131-3 standard and provides a simple way to perform XOR operations in control applications.

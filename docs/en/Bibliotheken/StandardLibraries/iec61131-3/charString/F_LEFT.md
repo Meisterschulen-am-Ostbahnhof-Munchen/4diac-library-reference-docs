@@ -1,6 +1,7 @@
 # F_LEFT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LEFT` extracts the leftmost characters `L` from the input string `IN`. It is part of the standard character and string functions according to IEC 61131-3.

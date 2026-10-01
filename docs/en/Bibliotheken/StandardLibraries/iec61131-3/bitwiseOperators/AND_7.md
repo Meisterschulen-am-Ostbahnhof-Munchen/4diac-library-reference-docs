@@ -1,6 +1,7 @@
 # AND_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AND_7 function block performs a bitwise logical AND operation on up to seven input variables. It is a generic function block that can work with various bit data types (ANY_BIT). The block is classified according to the IEC 61131-3 standard and is suitable for use in control and automation systems.

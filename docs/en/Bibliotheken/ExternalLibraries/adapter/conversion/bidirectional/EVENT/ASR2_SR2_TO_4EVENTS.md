@@ -1,6 +1,7 @@
 # ASR2_SR2_TO_4EVENTS
 
 * * * * * * * * * *
+
 ## Introduction
 
 The ASR2_SR2_TO_4EVENTS function block is a composite function block that provides the ASR2 adapter signals as four discrete event endpoints. It enables bidirectional conversion between ASR2 adapter interfaces and discrete event inputs and outputs.

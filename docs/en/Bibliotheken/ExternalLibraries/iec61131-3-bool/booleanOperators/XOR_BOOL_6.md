@@ -1,6 +1,7 @@
 # XOR_BOOL_6
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_6` is a generic block for calculating the logical exclusive OR (XOR) operation for up to six Boolean input values. It complies with the IEC 61131-3 standard and is designed for use in control and automation applications. The block waits for a trigger event, calculates the result of the XOR operation across all active inputs, and outputs it along with an acknowledgment event.

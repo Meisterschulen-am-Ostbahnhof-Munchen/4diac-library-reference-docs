@@ -1,6 +1,7 @@
 # Button_IX
 
 * * * * * * * * * *
+
 ## Introduction
 
 Button_IX is a service interface function block for Boolean input data, specifically designed for processing key presses in 4diac systems. This block serves as an interface between the application logic and physical input devices such as pushbuttons or switches.

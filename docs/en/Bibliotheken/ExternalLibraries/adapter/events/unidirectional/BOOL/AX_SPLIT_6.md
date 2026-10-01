@@ -1,6 +1,7 @@
 # AX_SPLIT_6
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_6 function block is a generic component used to split a single AX adapter into six separate AX outputs. This component enables the distribution of signals and data streams from a central source to multiple devices.

@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_DINT_TO_USINT` converts a 32-bit integer value (DINT) to an 8-bit unsigned integer value (USINT). This conversion is useful when data needs to be exchanged between systems or components that use different data types.
 ![F_DINT_TO_USINT](F_DINT_TO_USINT.svg)
+
 - **REQ**: Starts the conversion. This event input is linked to the data input `IN`.
 - **CNF**: Signals the completion of the conversion. This event output is linked to the data output `OUT`.
 - **IN**: The input value of type `DINT` (32-bit integer) to be converted.

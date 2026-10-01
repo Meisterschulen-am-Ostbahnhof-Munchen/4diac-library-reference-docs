@@ -1,6 +1,7 @@
 # AX_SPLIT_9
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_9 function block is a generic component that splits a single AX adapter into nine separate AX outputs. The block acts as a distributor for unidirectional adapter connections and allows a single input signal to be distributed across multiple output channels.

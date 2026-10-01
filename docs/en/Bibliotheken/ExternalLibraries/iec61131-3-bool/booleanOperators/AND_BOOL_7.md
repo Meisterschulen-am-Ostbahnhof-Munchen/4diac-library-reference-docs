@@ -1,6 +1,7 @@
 # AND_BOOL_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_BOOL_7` is a generic function block for calculating the logical AND operation. It performs a bitwise AND operation across seven separate BOOL inputs and outputs the result on a single BOOL output. The block follows the ECC execution model, where a calculation is triggered by an incoming event and confirmed by an outgoing event.

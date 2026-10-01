@@ -1,6 +1,7 @@
 # logiBUS_QD_PWM
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `logiBUS_QD_PWM` is an output service interface function block for double-word output data. It serves as an interface for controlling PWM (pulse-width modulation) outputs via the logiBUS system and enables the control of outputs Q1 to Q8.

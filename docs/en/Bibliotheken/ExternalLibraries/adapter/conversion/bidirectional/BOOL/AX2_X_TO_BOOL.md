@@ -1,6 +1,7 @@
 # AX2_X_TO_BOOL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX2_X_TO_BOOL function block is a composite function block for converting AX2 data to BOOL values. It serves as a bidirectional adapter for data type conversion between different interfaces in automation systems.

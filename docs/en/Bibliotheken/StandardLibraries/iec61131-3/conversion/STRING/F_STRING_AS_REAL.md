@@ -1,6 +1,7 @@
 # F_STRING_AS_REAL
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_REAL` converts a `STRING` value to a `REAL` value. It is particularly useful when data from a string needs to be converted into a numerical representation, for example, when processing user input or interpreting text files.

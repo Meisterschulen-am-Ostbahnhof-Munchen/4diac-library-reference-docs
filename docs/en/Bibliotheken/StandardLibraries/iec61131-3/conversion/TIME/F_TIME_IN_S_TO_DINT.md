@@ -1,6 +1,7 @@
 # F_TIME_IN_S_TO_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_S_TO_DINT` converts a time value in seconds (`TIME`) into a signed integer value (`DINT`). This conversion is useful when time values need to be used in numerical calculations or for control purposes.

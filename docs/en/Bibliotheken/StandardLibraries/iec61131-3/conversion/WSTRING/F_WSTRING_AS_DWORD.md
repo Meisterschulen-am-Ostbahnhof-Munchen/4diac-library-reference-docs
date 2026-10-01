@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_WSTRING_AS_DWORD` is used to convert a WSTRING value to a DWORD value. This functionality is particularly useful when strings need to be converted into numeric values, for example, for further processing in control algorithms.
 ![F_WSTRING_AS_DWORD](F_WSTRING_AS_DWORD.svg)
+
 - **REQ**: Normal execution request. Triggers the conversion.
 - **CNF**: Execution confirmation. Triggered after successful conversion.
 - **IN**: Input of type WSTRING. The string to be converted to a DWORD value.

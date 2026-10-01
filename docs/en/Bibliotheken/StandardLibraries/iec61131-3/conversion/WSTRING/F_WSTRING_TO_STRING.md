@@ -1,6 +1,7 @@
 # F_WSTRING_TO_STRING
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_TO_STRING` is used to convert a WSTRING data type to a STRING data type. This function block is particularly useful in scenarios where converting wide strings (Unicode) to simple strings (ASCII or similar) is required.

@@ -1,6 +1,7 @@
 # F_INT_TO_USINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_USINT` converts an integer value of data type `INT` (16-bit signed integer) to data type `USINT` (8-bit unsigned integer). This block is particularly useful in scenarios where type conversion between numeric values of different sizes is required.

@@ -1,6 +1,7 @@
 # F_SINT_TO_INT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_INT` converts a `SINT` value (8-bit signed integer) to a `INT` value (16-bit signed integer count). This block is particularly useful in scenarios where type conversion between different integer formats is required.

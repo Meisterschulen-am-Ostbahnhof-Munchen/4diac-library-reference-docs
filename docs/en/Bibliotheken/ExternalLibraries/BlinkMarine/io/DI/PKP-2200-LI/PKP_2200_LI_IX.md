@@ -1,6 +1,7 @@
 # PKP_2200_LI_IX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PKP_2200_LI_IX is a service interface function block for Boolean input data. This block serves as an interface for digital inputs and enables communication with corresponding hardware resources.

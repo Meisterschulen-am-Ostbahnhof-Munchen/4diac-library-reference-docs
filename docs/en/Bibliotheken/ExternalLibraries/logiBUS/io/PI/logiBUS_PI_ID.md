@@ -1,6 +1,7 @@
 # logiBUS_PI_ID
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `logiBUS_PI_ID` is an input service interface module for 32-bit DWORD input data. It serves as an interface to a physical input module (presumably part of the logiBUS system) and enables the initialization, cyclic polling, and event-driven (interrupt) output of digital input values. The module can be configured to report status changes either after a specific number of pulses or after a defined time interval.

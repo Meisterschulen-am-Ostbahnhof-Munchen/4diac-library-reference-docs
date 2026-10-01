@@ -1,6 +1,7 @@
 # F_TIME_IN_MS_TO_DINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_MS_TO_DINT` converts a TIME value in milliseconds to a DINT value. This is particularly useful when time values need to be converted into numerical values for use in calculations or for control purposes.

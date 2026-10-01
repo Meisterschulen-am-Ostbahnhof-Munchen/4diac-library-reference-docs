@@ -1,6 +1,7 @@
 # F_BYTE_TO_UINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_UINT` converts a `BYTE` value to a `UINT` value. This is particularly useful when data of different types needs to be processed in a system and type conversion is required.

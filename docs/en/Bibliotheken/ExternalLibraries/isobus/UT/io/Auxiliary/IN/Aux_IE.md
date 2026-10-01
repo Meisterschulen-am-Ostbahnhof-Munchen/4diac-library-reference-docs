@@ -1,6 +1,7 @@
 # Aux_IE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_IE function block is an input service interface function block for event input data. It is used to process auxiliary inputs and enables the recognition of various input events such as pressing, releasing, single-clicking, double-clicking, etc.

@@ -1,6 +1,7 @@
 # AX_OR_7
 
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_7 function block is a generic function block for calculating Boolean OR operations. It has seven inputs and calculates the logical OR of all input signals.

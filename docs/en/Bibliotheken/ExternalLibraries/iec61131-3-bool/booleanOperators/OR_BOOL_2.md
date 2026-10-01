@@ -1,6 +1,7 @@
 # OR_BOOL_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_2` performs a logical OR operation (disjunction) on two Boolean input values. It is a generic function block classified according to the IEC 61131-3 standard for standard Boolean functions. The block waits for an execution request, calculates the result, and signals its availability.

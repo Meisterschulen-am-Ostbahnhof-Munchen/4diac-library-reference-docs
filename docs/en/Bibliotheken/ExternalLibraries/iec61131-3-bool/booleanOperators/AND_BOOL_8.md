@@ -1,6 +1,7 @@
 # AND_BOOL_8
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AND_BOOL_8` is a standard function block for calculating the logical AND operation. It performs a bitwise AND operation on eight Boolean input values and outputs the result to a single Boolean output. The function block follows the event-driven execution model of IEC 61499.

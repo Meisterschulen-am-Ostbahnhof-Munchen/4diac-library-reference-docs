@@ -1,6 +1,7 @@
 # F_WORD_TO_BYTE
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_BYTE` is used to convert a `WORD` data type to a `BYTE` data type. It is part of the `iec61131::conversion` package and is suitable for applications where type conversion between these two data types is required.

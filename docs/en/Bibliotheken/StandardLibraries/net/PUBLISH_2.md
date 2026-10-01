@@ -1,6 +1,7 @@
 # PUBLISH_2
 
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_2 function block is used to send data to one or more SUBSCRIBE_2 blocks. It enables unacknowledged communication between different components in a distributed system.

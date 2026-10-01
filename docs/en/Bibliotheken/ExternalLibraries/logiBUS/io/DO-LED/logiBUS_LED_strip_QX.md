@@ -1,6 +1,7 @@
 # logiBUS_LED_strip_QX
 
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_LED_strip_QX function block is an output service interface function block for Boolean output data, specifically designed for controlling LED strips. It offers extensive configuration options for various LED parameters such as color, frequency, and output number.

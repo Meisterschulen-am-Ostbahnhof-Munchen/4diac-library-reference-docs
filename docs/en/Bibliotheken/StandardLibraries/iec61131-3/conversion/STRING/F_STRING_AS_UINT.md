@@ -1,6 +1,7 @@
 # F_STRING_AS_UINT
 
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_UINT` converts a `STRING` value to a `UINT` value (unsigned integer). This function is particularly useful when numeric values are stored as strings and are needed in numerical form for further calculations or control tasks.

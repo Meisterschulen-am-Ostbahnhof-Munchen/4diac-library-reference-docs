@@ -3,6 +3,7 @@
 * * * * * * * * * *
 The function block `F_BOOL_TO_ULINT` converts a Boolean value (`BOOL`) into an unsigned 64-bit integer value (`ULINT`). This conversion is particularly useful in scenarios where Boolean states need to be converted into numerical values, for example, for processing in mathematical operations or for storage in databases.
 ![F_BOOL_TO_ULINT](F_BOOL_TO_ULINT.svg)
+
 - **REQ**: Normal execution request. Triggers the conversion. Linked to the data input `IN`.
 - **CNF**: Execution Confirmation. Triggered after successful conversion. Linked to the data output `OUT`.
 - **IN**: Input for the Boolean value (`BOOL`) to be converted.
