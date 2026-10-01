@@ -2,6 +2,7 @@
 
 ![PLC01A1_fbt](PLC01A1_fbt.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The PLC01A1 function block serves as an interface for accessing the inputs and outputs of the PLC01A1 module. This block enables the control of 8 digital outputs and the reading of 8 digital inputs via a standardized 4diac interface.

@@ -2,6 +2,7 @@
 
 ![SCALE_LIM](SCALE_LIM.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The SCALE_LIM function block is a scaling module with additional limiting functions. It enables the linear scaling of an input value within a defined range and also offers the option of fixing output values when certain input limits are exceeded.

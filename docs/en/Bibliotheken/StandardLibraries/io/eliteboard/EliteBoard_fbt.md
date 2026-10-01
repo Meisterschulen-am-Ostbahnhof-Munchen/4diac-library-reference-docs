@@ -2,6 +2,7 @@
 
 ![EliteBoard_fbt](EliteBoard_fbt.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The EliteBoard function block is a Service Interface Function Block Type that serves as an interface for the EliteBoard hardware. This block enables the connection and control of up to 11 different ports via standardized adapter interfaces.

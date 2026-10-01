@@ -2,6 +2,7 @@
 
 ![FIELDBUS_PERCENT_TO_WORD](FIELDBUS_PERCENT_TO_WORD.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FIELDBUS_PERCENT_TO_WORD` converts a REAL value in the range of 0.0 to 100.0 into a WORD value in the range of 0 to FAFF (hexadecimal). This function block is particularly suitable for signal processing in fieldbus systems according to the SAE J1939 and ISO 11783 standards.
