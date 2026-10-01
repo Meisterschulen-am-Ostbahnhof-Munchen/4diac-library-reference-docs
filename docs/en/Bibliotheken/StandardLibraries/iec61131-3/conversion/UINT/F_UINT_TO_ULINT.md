@@ -1,7 +1,7 @@
 # F_UINT_TO_ULINT
 
-<img width="1454" height="216" alt="F_UINT_TO_ULINT" src="https://github.com/user-attachments/assets/ac28f9ed-ea55-4491-af81-a80502951c42" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_ULINT` converts an unsigned 16-bit integer value (`UINT`) into an unsigned 64-bit integer value (`ULINT`). This conversion is particularly necessary when exchanging values between systems with different word widths.

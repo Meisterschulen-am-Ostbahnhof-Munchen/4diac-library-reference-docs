@@ -1,7 +1,7 @@
 # logiBUS_QX
 
-<img width="2048" height="379" alt="image" src="https://github.com/user-attachments/assets/be731935-05c6-402b-9703-aa2d97f347b6" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_QX function block is an output service interface block for Boolean output data. It serves as an interface for controlling digital outputs via the logiBUS system and enables communication between the control application and the physical output channels.

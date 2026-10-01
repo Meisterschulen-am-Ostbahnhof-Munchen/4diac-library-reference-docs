@@ -1,7 +1,5 @@
 # AX_SPLIT_3
 
-<img width="711" height="299" alt="image" src="https://github.com/user-attachments/assets/79f5b696-e66f-481a-8642-b19ac2f35cb4" />
-
 * * * * * * * * * *
 
 ## Einleitung

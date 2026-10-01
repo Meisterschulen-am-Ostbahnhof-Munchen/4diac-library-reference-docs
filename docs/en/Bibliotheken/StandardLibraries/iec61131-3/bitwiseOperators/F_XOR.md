@@ -1,7 +1,7 @@
 # F_XOR
 
-<img width="1149" height="208" alt="F_XOR" src="https://github.com/user-attachments/assets/5f3451b6-8e0a-479b-9d80-1af4d73f9e69" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_XOR` performs a bitwise XOR operation (exclusive OR) on two input values. It is part of the standard bitwise operations according to IEC 61131-3 and is suitable for logical processing in control applications.

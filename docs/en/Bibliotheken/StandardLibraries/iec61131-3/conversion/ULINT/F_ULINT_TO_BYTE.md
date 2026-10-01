@@ -1,7 +1,7 @@
 # F_ULINT_TO_BYTE
 
-<img width="1453" height="214" alt="F_ULINT_TO_BYTE" src="https://github.com/user-attachments/assets/f578910e-677f-4594-b1b6-3901e60763ec" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_BYTE` converts a 64-bit unsigned integer value (ULINT) to an 8-bit unsigned integer value (BYTE). This block is particularly useful in scenarios where type conversion between these two data types is required.

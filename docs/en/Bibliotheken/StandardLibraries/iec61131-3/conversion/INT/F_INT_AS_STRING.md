@@ -1,7 +1,7 @@
 # F_INT_AS_STRING
 
-<img width="1244" height="182" alt="F_INT_AS_STRING" src="https://github.com/user-attachments/assets/c27e3bee-e252-420c-846b-caa7085610b7" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_AS_STRING` converts an integer value (`INT`) into a string (`STRING`). This functionality is particularly useful when numeric values need to be output in a user-readable format or further processed in a word processor.

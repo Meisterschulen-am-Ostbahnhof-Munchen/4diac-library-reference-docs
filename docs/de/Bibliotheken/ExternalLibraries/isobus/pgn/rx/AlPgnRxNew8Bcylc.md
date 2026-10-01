@@ -1,7 +1,5 @@
 # AlPgnRxNew8Bcylc
 
-<img width="1277" height="291" alt="image" src="https://github.com/user-attachments/assets/5d409e8c-eb17-45a5-a2af-fcaedc21d048" />
-
 * * * * * * * * * *
 
 ## Einleitung

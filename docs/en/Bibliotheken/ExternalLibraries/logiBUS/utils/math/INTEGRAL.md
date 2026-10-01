@@ -1,7 +1,7 @@
 # INTEGRAL
 
-<img width="1755" height="158" alt="image" src="https://github.com/user-attachments/assets/4eac3645-d857-4c04-9bc3-7692be451a96" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `INTEGRAL` approximates the time integral of an input signal. The integration is performed by summing partial areas that result from the product of the input value and the time elapsed since the last call. This block is useful for applications where cumulative values such as energy consumed, quantities conveyed, or distances traveled need to be determined.

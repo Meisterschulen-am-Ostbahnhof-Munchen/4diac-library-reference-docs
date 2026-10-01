@@ -1,7 +1,7 @@
 # F_REPLACE
 
-<img width="1244" height="258" alt="F_REPLACE" src="https://github.com/user-attachments/assets/f5ad83d5-e863-468c-b5d8-5e1fcf3c2462" />
 * * * * * * * * * *
+
 ## Introduction
 
 The F_REPLACE function block is used to manipulate strings. It replaces a specific number of characters (L) in the first input string (IN1) with the second input string (IN2), starting at a specified position (P).

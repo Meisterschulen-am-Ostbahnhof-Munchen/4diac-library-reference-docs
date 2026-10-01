@@ -1,7 +1,7 @@
 # I_PosDeltaHighPrecRapidUpd
 
-<img width="1602" height="224" alt="image" src="https://github.com/user-attachments/assets/d363a6f6-94da-4529-aecc-ff2e9fd7e3a9" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `I_PosDeltaHighPrecRapidUpd` implements the processing of the NMEA 2000 Parameter Group Number (PGN) 129027 "Position Delta, High Precision Rapid Update". This block is designed for applications requiring very high precision and very fast update rates for position data. It can provide position changes (delta) with a resolution of up to 1 millimeter and a delta time interval with an accuracy of 5 milliseconds.

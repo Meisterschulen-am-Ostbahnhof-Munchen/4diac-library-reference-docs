@@ -1,6 +1,5 @@
 # F_INSERT
 
-<img width="1330" height="232" alt="F_INSERT" src="https://github.com/user-attachments/assets/a4d23188-0238-4c4c-a6b8-f51a6a493b1c" />
 * * * * * * * * * *
 The function block `F_INSERT` is used to manipulate character strings. It inserts one character string (`IN2`) into another character string (`IN1`) at a specific position (`P`). The block is part of the standard character and string functions according to IEC 61131-3.
 ![F_INSERT](F_INSERT.svg)

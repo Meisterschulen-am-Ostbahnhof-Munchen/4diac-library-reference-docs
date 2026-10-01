@@ -1,7 +1,7 @@
 # F_UINT_AS_STRING
 
-<img width="1465" height="216" alt="F_UINT_AS_STRING" src="https://github.com/user-attachments/assets/23074f51-da16-4e74-8d92-77a0fcbc6f67" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_AS_STRING` converts an unsigned integer value (`UINT`) into a string (`STRING`). This functionality is particularly useful when numeric values are needed as text for output, logging, or further processing.

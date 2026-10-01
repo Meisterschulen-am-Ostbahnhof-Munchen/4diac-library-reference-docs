@@ -1,7 +1,5 @@
 # sequence_ET_04_04
 
-<img width="1369" height="422" alt="image" src="https://github.com/user-attachments/assets/5b5fc7b9-65cb-4c19-b1ee-bad5fd7b2d45" />
-
 ![sequence_ET_04_04_ecc](./sequence_ET_04_04_ecc.svg)
 
 * * * * * * * * * *

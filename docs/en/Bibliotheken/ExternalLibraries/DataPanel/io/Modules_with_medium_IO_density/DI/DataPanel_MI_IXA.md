@@ -1,7 +1,7 @@
 # DataPanel_MI_IXA
 
-<img width="1325" height="246" alt="image" src="https://github.com/user-attachments/assets/32729d23-7ab3-4b67-a1f0-aba3120aaa91" />
 * * * * * * * * * *
+
 ## Introduction
 
 The DataPanel_MI_IXA is a composite function block for processing Boolean input data. It serves as an interface for digital inputs and enables the initialization and querying of input data via standardized service interfaces.

@@ -1,7 +1,7 @@
 # F_ULINT_TO_LINT
 
-<img width="1448" height="214" alt="F_ULINT_TO_LINT" src="https://github.com/user-attachments/assets/198ce0c4-05ea-4392-8b16-aa83ed6ab931" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_LINT` converts an unsigned 64-bit integer value (ULINT) to a signed 64-bit integer value (LINT). This block is particularly useful in scenarios where type conversion between these two data types is required.

@@ -1,7 +1,7 @@
 # F_WSTRING_AS_UINT
 
-<img width="1481" height="214" alt="F_WSTRING_AS_UINT" src="https://github.com/user-attachments/assets/4ea92136-06dd-4514-be80-70cc9b719213" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_UINT` is used to convert a WSTRING value to a UINT value. This function is particularly useful when strings need to be converted into numeric values, for example, for further calculations or control tasks.

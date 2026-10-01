@@ -1,7 +1,7 @@
 # EBSlave2301
 
-<img width="1529" height="334" alt="image" src="https://github.com/user-attachments/assets/8995d004-b357-48c9-b1d3-cc1fdc00c9e3" />
 * * * * * * * * * *
+
 ## Introduction
 
 The EBSlave2301 is a Service Interface Function Block for communication with an EtherBrick slave module. This function block serves as an interface for configuring and controlling up to six relay outputs via an EtherBrick bus system.

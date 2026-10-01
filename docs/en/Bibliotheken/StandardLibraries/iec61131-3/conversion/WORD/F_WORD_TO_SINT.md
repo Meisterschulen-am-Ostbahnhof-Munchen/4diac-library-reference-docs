@@ -1,7 +1,7 @@
 # F_WORD_TO_SINT
 
-<img width="1442" height="214" alt="F_WORD_TO_SINT" src="https://github.com/user-attachments/assets/4194432e-902f-48f5-a898-c817d09cae5f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_SINT` converts a `WORD` data type to a `SINT` data type. It is part of the `iec61131::conversion` package and enables simple and efficient type conversion within 4diac IDE applications.

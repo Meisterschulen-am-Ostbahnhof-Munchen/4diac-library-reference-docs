@@ -1,7 +1,7 @@
 # AlPgnRxNew8B
 
-<img width="1333" height="262" alt="image" src="https://github.com/user-attachments/assets/2e08c1e6-0b31-4bfb-8214-dfea572f4849" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AlPgnRxNew8B` is used to receive data via a CAN network according to the ISOBUS standard (ISO 11783). Its main purpose is the installation and management of Parameter Group Numbers (PGNs) for receiving messages and the provision of received data to the application. It is part of a specialized library for ISOBUS communication.

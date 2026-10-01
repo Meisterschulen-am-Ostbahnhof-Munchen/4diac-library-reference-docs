@@ -1,7 +1,7 @@
 # F_LEN
 
-<img width="1366" height="211" alt="F_LEN" src="https://github.com/user-attachments/assets/ca04179e-54ed-4419-aee6-51c03a2829a8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LEN` is used to determine the length of an input string. It is part of the standard library for character and string functions according to IEC 61131-3.

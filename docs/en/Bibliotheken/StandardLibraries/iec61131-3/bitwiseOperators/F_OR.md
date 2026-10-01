@@ -1,7 +1,7 @@
 # F_OR
 
-<img width="1324" height="244" alt="F_OR" src="https://github.com/user-attachments/assets/aef4acae-7a18-40f2-85a5-69e0c6e0ef3b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_OR` implements a bitwise OR operation according to the IEC 61131-3 standard. It performs a logical OR operation on two input variables of type `ANY_BIT` and outputs the result.

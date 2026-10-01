@@ -2,8 +2,8 @@
 
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_OR_6`](AX_OR_6.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
-<img width="963" height="403" alt="image" src="https://github.com/user-attachments/assets/69d7eff1-3373-49b6-877a-d54f351451e1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_6_UNGATED is a generic function block for calculating a logical OR operation with six inputs. This block is used to process Boolean signals in automation systems and outputs the result of the OR operation via an adapter output.

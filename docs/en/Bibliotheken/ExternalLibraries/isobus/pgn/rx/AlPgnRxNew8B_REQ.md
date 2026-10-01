@@ -1,7 +1,7 @@
 # AlPgnRxNew8B_REQ
 
-<img width="1324" height="281" alt="image" src="https://github.com/user-attachments/assets/692b1960-1bad-4a6d-89ca-c6daba8a85cd" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AlPgnRxNew8B_REQ` is used to request data via an ISOBUS network. It enables the installation of a receive parameter set (RX PGN) and the triggering of a one-time request for this parameter. The block is part of an ISOBUS-specific communication library and handles the interaction with the CAN network protocol according to ISO 11783.

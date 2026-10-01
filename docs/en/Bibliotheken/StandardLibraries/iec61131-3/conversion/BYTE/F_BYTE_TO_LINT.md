@@ -1,7 +1,7 @@
 # F_BYTE_TO_LINT
 
-<img width="1232" height="182" alt="F_BYTE_TO_LINT" src="https://github.com/user-attachments/assets/1ff49b49-3588-44d9-9018-df1b47bce6ea" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_LINT` converts a `BYTE` value to a `LINT` value. This block is particularly useful in scenarios where a type conversion between these two data types is required.

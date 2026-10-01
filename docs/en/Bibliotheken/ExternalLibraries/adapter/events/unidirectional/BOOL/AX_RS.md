@@ -1,6 +1,5 @@
 # AX_RS
 
-<img width="1188" height="282" alt="image" src="https://github.com/user-attachments/assets/96fcd1e8-c68a-4b6e-a8f0-f615322d30e2" />
 ![AX_RS_ecc](./AX_RS_ecc.svg)
 
 * * * * * * * * * *

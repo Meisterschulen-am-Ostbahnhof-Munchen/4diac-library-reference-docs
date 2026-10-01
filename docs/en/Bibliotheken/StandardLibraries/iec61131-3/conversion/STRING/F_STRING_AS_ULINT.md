@@ -1,7 +1,7 @@
 # F_STRING_AS_ULINT
 
-<img width="1480" height="212" alt="F_STRING_AS_ULINT" src="https://github.com/user-attachments/assets/42f8c0fa-f5ad-4f51-9d6b-3c35653b6782" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_ULINT` converts a `STRING` value to a `ULINT` value (unsigned 64-bit integer). This block is particularly useful when strings need to be converted to numeric values, for example, when processing user input or parsing data from external sources.

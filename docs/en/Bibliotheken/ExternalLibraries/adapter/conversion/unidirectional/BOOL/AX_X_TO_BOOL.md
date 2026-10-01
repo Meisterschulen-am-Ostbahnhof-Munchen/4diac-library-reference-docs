@@ -1,7 +1,7 @@
 # AX_X_TO_BOOL
 
-<img width="1243" height="236" alt="image" src="https://github.com/user-attachments/assets/4e98b420-508f-407b-bb14-cfeee976d357" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_X_TO_BOOL function block is a composite function block designed for converting AX data to the BOOL data type. This block acts as an adapter converter and enables unidirectional data conversion between different data types in 4diac systems.

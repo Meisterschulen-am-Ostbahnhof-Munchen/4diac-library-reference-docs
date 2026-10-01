@@ -1,7 +1,7 @@
 # AE2_SPLIT_MERGE
 
-<img width="1100" height="217" alt="image" src="https://github.com/user-attachments/assets/2e9417e6-db5d-41ea-95a9-b176f5538af4" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AE2_SPLIT_MERGE is a bidirectional splitter and merge function block that can process events in both directions. The block enables the distribution and merging of events via adapter interfaces, without direct routing between the SOCKET and PLUG.

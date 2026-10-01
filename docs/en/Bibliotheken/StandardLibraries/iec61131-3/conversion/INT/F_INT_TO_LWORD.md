@@ -1,7 +1,7 @@
 # F_INT_TO_LWORD
 
-<img width="1232" height="182" alt="F_INT_TO_LWORD" src="https://github.com/user-attachments/assets/af2f07c7-56ec-498d-94f5-170a88e6a3e3" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_LWORD` converts an integer value (`INT`) into a 64-bit unsigned integer value (`LWORD`). This block is particularly useful in scenarios where type conversion between these two data types is required.

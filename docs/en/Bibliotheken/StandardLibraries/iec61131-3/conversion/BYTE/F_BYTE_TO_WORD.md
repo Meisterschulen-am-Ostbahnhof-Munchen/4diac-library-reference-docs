@@ -1,7 +1,7 @@
 # F_BYTE_TO_WORD
 
-<img width="1232" height="182" alt="F_BYTE_TO_WORD" src="https://github.com/user-attachments/assets/895b5f0c-a270-44f1-9dab-26aed65b0089" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_WORD` converts a `BYTE` data type to a `WORD` data type. This conversion is useful when data of different sizes needs to be processed or transferred.

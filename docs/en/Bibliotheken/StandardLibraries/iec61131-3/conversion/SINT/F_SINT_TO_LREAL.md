@@ -1,7 +1,7 @@
 # F_SINT_TO_LREAL
 
-<img width="1448" height="213" alt="F_SINT_TO_LREAL" src="https://github.com/user-attachments/assets/68877ca6-0d50-4534-9301-8bdead3b94f2" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_LREAL` converts an integer value of type `SINT` (8-bit integer) to a floating-point value of type `LREAL` (64-bit floating-point). This block is particularly useful in applications where type conversion between these two data types is required.

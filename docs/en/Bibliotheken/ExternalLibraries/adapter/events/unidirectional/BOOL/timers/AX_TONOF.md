@@ -1,7 +1,7 @@
 # AX_TONOF
 
-<img width="1154" height="290" alt="image" src="https://github.com/user-attachments/assets/eecdf987-773b-4d5a-9da7-7ba858235b94" />
 * * * * * * * * * *
+
 ## Introduction
 
 **Important note: This function block requires only one event and no cyclic calls. It has no output ET and does not display the elapsed time.**

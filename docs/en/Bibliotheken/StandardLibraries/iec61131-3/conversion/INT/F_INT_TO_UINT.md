@@ -1,7 +1,7 @@
 # F_INT_TO_UINT
 
-<img width="1218" height="183" alt="F_INT_TO_UINT" src="https://github.com/user-attachments/assets/ab9715b9-eb59-48da-9f6d-c159088ae19c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_UINT` converts a signed integer value (`INT`) to an unsigned integer value (`UINT`). This conversion is useful when exchanging data between systems that use different data types, or when unsigned processing is required.

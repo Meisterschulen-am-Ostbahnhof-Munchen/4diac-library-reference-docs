@@ -1,7 +1,7 @@
 # FB_CTU_ULINT
 
-<img width="1408" height="271" alt="FB_CTU_ULINT" src="https://github.com/user-attachments/assets/fb1bdbf1-e57f-4efd-8953-c3e697ae3f39" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_CTU_ULINT` is an up counter for the data type `ULINT` (Unsigned Long Integer). It increments with each counting event and can be reset to a predefined value. This block is particularly suitable for applications requiring large counting ranges.

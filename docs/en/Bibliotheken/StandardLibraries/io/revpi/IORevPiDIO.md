@@ -1,7 +1,7 @@
 # 🔌 IORevPiDIO
 
-<img width="921" height="625" alt="image" src="https://github.com/user-attachments/assets/755478f0-ea5d-495b-b524-68330b4f45d5" />
 * * * * * * * * * *
+
 ## Introduction
 
 The IORevPiDIO function block is a digital input/output module for Revolution Pi systems from KUNBUS GmbH. It enables the control and monitoring of digital inputs and outputs via the Revolution Pi system and serves as an interface between the 4diac IDE and the Revolution Pi hardware.

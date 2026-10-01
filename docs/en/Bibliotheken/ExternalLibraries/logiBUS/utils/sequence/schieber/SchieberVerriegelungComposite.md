@@ -1,7 +1,7 @@
 # SlideLockComposite
 
-<img width="1389" height="295" alt="image" src="https://github.com/user-attachments/assets/18618829-225f-479f-a034-f9c8d20b8b0c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `SchieberVerriegelungComposite` is a composite function block that serves as a wrapper for other function blocks. Its main purpose is to manage and coordinate the locking logic for multiple slides (main slide, left slide, right slide). It encapsulates the internal logic and provides a unified interface for initialization and data exchange with the connected actuators and sensors.

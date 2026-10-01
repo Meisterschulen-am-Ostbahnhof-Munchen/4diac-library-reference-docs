@@ -1,7 +1,7 @@
 # F_REAL_TO_UDINT
 
-<img width="1448" height="213" alt="F_REAL_TO_UDINT" src="https://github.com/user-attachments/assets/2045df2e-f71d-4277-9b58-2a655adc3493" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_UDINT` converts a REAL value to a UDINT value. This block is part of the `iec61131::conversion` package and implements a simple but important type conversion for use in control applications.

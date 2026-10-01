@@ -1,7 +1,7 @@
 # AX_OR_3
 
-<img width="963" height="297" alt="image" src="https://github.com/user-attachments/assets/3f0679d7-bd35-40d5-92eb-f7f1122507de" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_3 function block is a generic function block for calculating the logical OR operation with three inputs. It is used to process Boolean signals in control applications and allows the flexible combination of multiple input signals into a single output signal.

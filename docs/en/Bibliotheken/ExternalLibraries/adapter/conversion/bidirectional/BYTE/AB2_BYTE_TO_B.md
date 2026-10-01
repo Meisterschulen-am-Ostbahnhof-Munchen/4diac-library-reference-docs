@@ -1,7 +1,7 @@
 # AB2_BYTE_TO_B
 
-<img width="1224" height="196" alt="image" src="https://github.com/user-attachments/assets/d26afea7-42a5-4d51-b83f-a5b1dff4166d" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AB2_BYTE_TO_B function block is a composite function block used for conversion between BYTE data types and the AB2 adapter. It acts as a bidirectional converter and enables communication between system components with different interfaces.

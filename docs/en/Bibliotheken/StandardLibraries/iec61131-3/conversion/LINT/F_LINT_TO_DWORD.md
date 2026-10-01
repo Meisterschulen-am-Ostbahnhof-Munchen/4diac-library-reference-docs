@@ -1,7 +1,7 @@
 # F_LINT_TO_DWORD
 
-<img width="1450" height="214" alt="F_LINT_TO_DWORD" src="https://github.com/user-attachments/assets/5fa35257-cfd0-4a6b-811f-9a752eec55bc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_DWORD` converts a LINT value (64-bit integer) to a DWORD value (32-bit unsigned integer). This block is particularly useful in scenarios where type conversion between these two data types is required.

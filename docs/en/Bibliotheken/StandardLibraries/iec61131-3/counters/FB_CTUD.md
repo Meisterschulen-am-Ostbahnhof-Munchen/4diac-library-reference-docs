@@ -1,7 +1,7 @@
 # FB_CTUD
 
-<img width="1337" height="340" alt="FB_CTUD" src="https://github.com/user-attachments/assets/c27b281b-91cd-4e44-8224-7fc42017d1a2" />
 * * * * * * * * * *
+
 ## Introduction
 
 The FB_CTUD (Up Down Counter) is a function block that acts as a counter with up and down counting capabilities. It allows events to be counted in both directions and offers additional functions such as reset and loading a predefined value.

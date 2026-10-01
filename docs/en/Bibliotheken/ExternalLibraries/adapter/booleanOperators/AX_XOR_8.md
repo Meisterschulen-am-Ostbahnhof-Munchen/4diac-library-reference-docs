@@ -1,7 +1,7 @@
 # AX_XOR_8
 
-<img width="1009" height="465" alt="image" src="https://github.com/user-attachments/assets/360232e2-8dcb-496e-84cf-311179b598af" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_8 function block is a generic block for calculating Boolean XOR operations with 8 inputs. It enables the processing of logic signals according to the exclusive-OR principle and is designed for use in control applications.

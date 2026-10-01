@@ -1,7 +1,7 @@
 # F_SINT_TO_UINT
 
-<img width="1441" height="213" alt="F_SINT_TO_UINT" src="https://github.com/user-attachments/assets/76c8c3fe-c626-4192-8647-9b5e552de116" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_UINT` converts a signed 8-bit integer value (`SINT`) into an unsigned 16-bit integer value (`UINT`). This conversion is particularly necessary when exchanging data between systems that use different data types.

@@ -1,7 +1,7 @@
 # F_STRING_AS_LINT
 
-<img width="1463" height="213" alt="F_STRING_AS_LINT" src="https://github.com/user-attachments/assets/e550d809-5da9-4c01-b2c4-0041510891ef" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_LINT` converts a `STRING` value to a `LINT` value. This functionality is particularly useful when strings need to be converted into numeric values for use in further calculations or control logic.

@@ -1,7 +1,7 @@
 # SUBSCRIBE_7
 
-<img width="1108" height="417" alt="image" src="https://github.com/user-attachments/assets/ac515d80-1f79-40e2-ae6f-0236e0a0ec3b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_7 function block acts as a subscriber for data from a PUBLISH_7 block. It enables the reception of up to seven different data points over a single communication link. This block is part of the IEC 61499 network communication functionality and is used in distributed automation systems.

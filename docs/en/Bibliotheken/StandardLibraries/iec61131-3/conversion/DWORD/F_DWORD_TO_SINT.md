@@ -1,7 +1,7 @@
 # F_DWORD_TO_SINT
 
-<img width="1248" height="181" alt="F_DWORD_TO_SINT" src="https://github.com/user-attachments/assets/f27122be-9192-4b18-a187-5b5710f2bdcf" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_SINT` converts a 32-bit DWORD value to an 8-bit SINT value (signed integer). This block is part of the IEC 61131 conversion library and enables simple type conversion between these data types.

@@ -1,7 +1,7 @@
 # F_LWORD_TO_DWORD
 
-<img width="1461" height="211" alt="F_LWORD_TO_DWORD" src="https://github.com/user-attachments/assets/bf518310-0981-4a9a-b327-5d9ada8d10f1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_DWORD` is used to convert an LWORD data type to a DWORD data type. This conversion is useful when data needs to be exchanged between systems or components that use different data types.

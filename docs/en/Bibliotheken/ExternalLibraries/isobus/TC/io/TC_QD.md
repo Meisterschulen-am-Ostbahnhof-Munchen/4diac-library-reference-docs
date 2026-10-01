@@ -1,7 +1,7 @@
 # TC_QD
 
-<img width="1355" height="263" alt="image" src="https://github.com/user-attachments/assets/9eac6074-381e-43b4-a37b-11784ad4fd72" />
 * * * * * * * * * *
+
 ## Introduction
 
 The TC_QD function block is an output service interface function block for double-word output data. It serves as an interface for communication with external resources and enables the output of 32-bit data values via specified device elements.

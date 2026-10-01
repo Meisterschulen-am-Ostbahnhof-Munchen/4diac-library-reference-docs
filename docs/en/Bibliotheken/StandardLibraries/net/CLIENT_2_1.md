@@ -1,7 +1,7 @@
 # CLIENT_2_1
 
-<img width="1295" height="167" alt="image" src="https://github.com/user-attachments/assets/988495a6-1be4-41f0-9d85-c324b87e7290" />
 * * * * * * * * * *
+
 ## Introduction
 
 The CLIENT_2_1 function block is used to communicate with a SERVER_1_2 block via a network connection. It enables the establishment and termination of connections as well as data exchange between client and server.

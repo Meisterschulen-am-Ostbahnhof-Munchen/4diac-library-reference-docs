@@ -1,7 +1,7 @@
 # OR_BOOL_8
 
-<img width="1370" height="426" alt="image" src="https://github.com/user-attachments/assets/a2fa1484-476e-4e8f-b817-9aa20ff38361" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_8` is a standardized block for calculating the logical OR operation. It performs the OR operation on eight separate Boolean input values and outputs the result on a single Boolean output. This block is part of the IEC 61131-3 compliant library for bitwise operations and is used for simple and structured logic processing in control applications.

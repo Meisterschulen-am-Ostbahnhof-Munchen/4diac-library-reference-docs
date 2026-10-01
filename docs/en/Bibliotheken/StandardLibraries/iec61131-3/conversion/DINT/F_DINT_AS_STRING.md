@@ -1,7 +1,7 @@
 # F_DINT_AS_STRING
 
-<img width="1255" height="182" alt="F_DINT_AS_STRING" src="https://github.com/user-attachments/assets/541e2cdc-bed5-4e61-822c-cb2a32505087" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_AS_STRING` converts a 32-bit integer value (DINT) into a string (STRING). This functionality is particularly useful when numeric values are needed for display or logging in a human-readable format.

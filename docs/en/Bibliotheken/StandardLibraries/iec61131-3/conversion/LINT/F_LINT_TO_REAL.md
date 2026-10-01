@@ -1,7 +1,7 @@
 # F_LINT_TO_REAL
 
-<img width="1438" height="214" alt="F_LINT_TO_REAL" src="https://github.com/user-attachments/assets/0609cf87-5b1c-45c8-95bd-9cfaa561c08c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_REAL` converts an integer value of type `LINT` (64-bit integer) to a floating-point value of type `REAL`. This conversion is useful when data needs to be transformed from an integer format to a floating-point format, for example, for further calculations or display.

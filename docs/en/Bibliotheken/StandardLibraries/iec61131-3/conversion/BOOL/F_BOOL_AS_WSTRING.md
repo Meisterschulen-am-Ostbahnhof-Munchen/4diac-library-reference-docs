@@ -1,7 +1,7 @@
 # F_BOOL_AS_WSTRING
 
-<img width="1267" height="182" alt="F_BOOL_AS_WSTRING" src="https://github.com/user-attachments/assets/846eba87-3267-475f-8b1c-02faddc7fcca" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_AS_WSTRING` converts a Boolean value (`BOOL`) into a wide string (`WSTRING`). This functionality is particularly useful when Boolean values need to be output or further processed in a human-readable format.

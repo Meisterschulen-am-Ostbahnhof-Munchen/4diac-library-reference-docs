@@ -1,7 +1,7 @@
 # PUBLISH_0
 
-<img width="1376" height="275" alt="image" src="https://github.com/user-attachments/assets/f9770c1e-3c0e-439f-9f65-d01566aeb2a0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_0 function block is used to publish data to one or more SUBSCRIBE_0 blocks. It enables unacknowledged communication between different components in a 4diac system.

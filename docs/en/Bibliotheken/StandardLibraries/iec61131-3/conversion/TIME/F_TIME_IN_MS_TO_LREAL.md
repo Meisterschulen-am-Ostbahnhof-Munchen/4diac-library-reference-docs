@@ -1,7 +1,7 @@
 # F_TIME_IN_MS_TO_LREAL
 
-<img width="1520" height="212" alt="F_TIME_IN_MS_TO_LREAL" src="https://github.com/user-attachments/assets/fd32035d-3e73-424b-9bef-32b3ce7a10d8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_MS_TO_LREAL` is used to convert a TIME value in milliseconds to an LREAL value. This is particularly useful when time values are needed for further calculations or analyses with higher precision.

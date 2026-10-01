@@ -1,7 +1,7 @@
 # Aux_Val1_IW
 
-<img width="1351" height="292" alt="image" src="https://github.com/user-attachments/assets/c88e5ead-0835-4374-be47-397bd18dd315" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_Val1_IW function block is an input service interface function block for word input data. It serves as an interface between the control logic and external resources for processing 16-bit word input data in an ISOBUS context.

@@ -1,7 +1,7 @@
 # XOR_BOOL_3
 
-<img width="1186" height="241" alt="image" src="https://github.com/user-attachments/assets/a3d5273a-10df-4b36-b9ea-460635fa84fc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_3` is a standardized function block for calculating the logical exclusive OR (XOR) operation for three Boolean input values. It is implemented as a generic function block and performs its operation on every incoming execution event.

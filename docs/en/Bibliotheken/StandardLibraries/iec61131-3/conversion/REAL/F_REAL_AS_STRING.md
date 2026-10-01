@@ -1,9 +1,9 @@
 # F_REAL_AS_STRING
 
-<img width="1256" height="180" alt="F_REAL_AS_STRING" src="https://github.com/user-attachments/assets/7ac6c577-f078-4c20-a63e-216db88cf2e7" />
 * * * * * * * * * *
 The function block `F_REAL_AS_STRING` converts a REAL value to a STRING value. It is part of the package `iec61131::conversion` and enables the easy conversion of numeric values to a string.
 ![F_REAL_AS_STRING](F_REAL_AS_STRING.svg)
+
 - **REQ**: Starts the conversion of the REAL value to a STRING. This input is linked to the data input `IN`.
 - **CNF**: Signals the completion of the conversion. The output is linked to the data output `OUT`.
 - **IN**: The REAL value to be converted to a STRING.

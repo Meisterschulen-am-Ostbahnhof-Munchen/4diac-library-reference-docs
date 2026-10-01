@@ -1,7 +1,7 @@
 # F_CONCAT_DATE_TOD
 
-<img width="1388" height="208" alt="F_CONCAT_DATE_TOD" src="https://github.com/user-attachments/assets/7664ea18-4774-4f2d-b461-1b887d0a1c2a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_CONCAT_DATE_TOD` concatenates a date (`DATE`) and a time of day (`TIME_OF_DAY`) into a combined date and time stamp (`DATE_AND_TIME`). This block is particularly useful in scenarios where separate date and time information needs to be combined into a single timestamp.

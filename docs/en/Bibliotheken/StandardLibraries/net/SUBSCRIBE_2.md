@@ -1,7 +1,7 @@
 # SUBSCRIBE_2
 
-<img width="1291" height="336" alt="image" src="https://github.com/user-attachments/assets/55eb6a91-e2ee-4848-813e-eb2568e1ed1c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_2 function block acts as a subscriber for a PUBLISH_2 block and enables the receipt of data via a publish-subscribe communication pattern. The block can receive and process two different data values from a publisher.

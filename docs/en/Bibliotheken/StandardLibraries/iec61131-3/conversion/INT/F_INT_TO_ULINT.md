@@ -1,7 +1,7 @@
 # F_INT_TO_ULINT
 
-<img width="1232" height="183" alt="F_INT_TO_ULINT" src="https://github.com/user-attachments/assets/55a69d83-7b80-4166-9e24-3160c0e9d1b1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_ULINT` converts an integer value of data type `INT` into an unsigned 64-bit integer value of data type `ULINT`. This conversion is particularly useful when values need to be exchanged between different systems or components that use different data types.

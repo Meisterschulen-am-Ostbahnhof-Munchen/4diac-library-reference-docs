@@ -1,7 +1,7 @@
 # OR_BOOL_10
 
-<img width="1189" height="416" alt="image" src="https://github.com/user-attachments/assets/fcefab43-d591-4163-96ce-61260ebfac5d" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_10` is a generic block for calculating the logical OR operation. It performs the OR operation on up to ten separate Boolean input values and outputs the result on a single output. This block is classified according to the IEC 61131-3 standard and serves as a standard function for bitwise operations in control applications.

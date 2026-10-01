@@ -1,7 +1,7 @@
 # F_ROL
 
-<img width="1340" height="208" alt="F_ROL" src="https://github.com/user-attachments/assets/24e2181b-8b77-46bf-bf08-bc549c06ab07" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ROL` (Rotate Left) performs a bitwise left rotation. It rotates the input value a specified number of bits to the left. The bits rotated out on the left side are inserted again on the right side. This is a cyclic operation in which no bits are lost.

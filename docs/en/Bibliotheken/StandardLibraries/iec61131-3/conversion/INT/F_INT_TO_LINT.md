@@ -1,7 +1,7 @@
 # F_INT_TO_LINT
 
-<img width="1217" height="182" alt="F_INT_TO_LINT" src="https://github.com/user-attachments/assets/f954943f-b46e-43fd-b6c1-d3efa3135040" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_LINT` converts a 16-bit integer value (`INT`) into a 64-bit long integer value (`LINT`). This block is particularly useful in scenarios where extending the value range or changing the type is required for subsequent processing steps.

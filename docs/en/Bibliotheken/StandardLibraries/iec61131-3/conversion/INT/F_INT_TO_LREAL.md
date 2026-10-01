@@ -1,7 +1,7 @@
 # F_INT_TO_LREAL
 
-<img width="1232" height="182" alt="F_INT_TO_LREAL" src="https://github.com/user-attachments/assets/c99ad1d4-dafe-40fc-9bc4-7515768ec888" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_LREAL` converts an integer value (INT) into a 64-bit floating-point number (LREAL). This block is particularly useful in applications where type conversion between these two data types is required.

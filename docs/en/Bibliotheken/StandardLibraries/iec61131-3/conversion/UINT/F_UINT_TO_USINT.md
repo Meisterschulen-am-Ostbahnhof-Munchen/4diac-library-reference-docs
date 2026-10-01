@@ -1,6 +1,5 @@
 # F_UINT_TO_USINT
 
-<img width="1454" height="216" alt="F_UINT_TO_USINT" src="https://github.com/user-attachments/assets/a0991cf7-1e8b-4cee-971c-5bf9334f137f" />
 * * * * * * * * * *
 The function block `F_UINT_TO_USINT` converts an unsigned 16-bit integer value (UINT) to an unsigned 8-bit integer value (USINT). This block is part of the `iec61131::conversion` library and implements a simple type conversion.
 ![F_UINT_TO_USINT](F_UINT_TO_USINT.svg)

@@ -1,7 +1,7 @@
 # F_SINT_TO_DINT
 
-<img width="1439" height="213" alt="F_SINT_TO_DINT" src="https://github.com/user-attachments/assets/82945116-960d-4bc1-bc3c-40a845897785" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_DINT` converts a `SINT` value (8-bit signed count) to a `DINT` value (32-bit signed count). This block is particularly useful in scenarios where type conversion is required to prepare data for further processing.

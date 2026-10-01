@@ -1,7 +1,7 @@
 # Aux_Val1_QW
 
-<img width="1496" height="174" alt="image" src="https://github.com/user-attachments/assets/06793149-2165-45d1-91f2-b47c071b9248" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_Val1_QW is an output service interface function block for word output data. This block serves as an interface to auxiliary output resources and enables the output of 16-bit data words to external peripheral devices.

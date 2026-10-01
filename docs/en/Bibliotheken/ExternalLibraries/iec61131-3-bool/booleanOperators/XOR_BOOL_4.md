@@ -1,7 +1,7 @@
 # XOR_BOOL_4
 
-<img width="1383" height="304" alt="image" src="https://github.com/user-attachments/assets/50f4bab5-ea69-4673-9279-dcd715e0bef0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_4` is a standard block for calculating the logical exclusive OR (XOR) operation for up to four Boolean input values. It complies with the IEC 61131-3 standard and is implemented as a generic block used in control applications for combinational logic processing.

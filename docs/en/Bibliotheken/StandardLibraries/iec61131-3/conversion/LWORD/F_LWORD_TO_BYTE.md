@@ -1,7 +1,7 @@
 # F_LWORD_TO_BYTE
 
-<img width="1451" height="216" alt="F_LWORD_TO_BYTE" src="https://github.com/user-attachments/assets/c3044b5b-615a-4431-aacc-9746dab23af0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_BYTE` converts a 64-bit value (LWORD) to an 8-bit value (BYTE). This conversion is particularly useful when data needs to be exchanged or processed between systems with different word lengths.

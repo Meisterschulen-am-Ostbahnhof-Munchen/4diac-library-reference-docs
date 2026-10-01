@@ -1,7 +1,7 @@
 # F_BYTE_TO_UINT
 
-<img width="1436" height="212" alt="F_BYTE_TO_UINT" src="https://github.com/user-attachments/assets/8cb462ae-eb4e-4fd2-8556-33ab2b4fa9f3" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_UINT` converts a `BYTE` value to a `UINT` value. This is particularly useful when data of different types needs to be processed in a system and type conversion is required.

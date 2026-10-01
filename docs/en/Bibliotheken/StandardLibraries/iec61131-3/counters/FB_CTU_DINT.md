@@ -1,7 +1,7 @@
 # FB_CTU_DINT
 
-<img width="1396" height="277" alt="" src="https://github.com/user-attachments/assets/36c696fb-4dfc-457a-bd17-1842876fa432" />
 * * * * * * * * * *
+
 ## Introduction
 
 The FB_CTU_DINT is an up counter for the DINT data type (32-bit count). It increments with each count pulse and can be reset to a predefined value. This function block is particularly suitable for applications requiring large count ranges.

@@ -1,7 +1,7 @@
 # FB_RS
 
-<img width="1308" height="242" alt="FB_RS" src="https://github.com/user-attachments/assets/ff0ca1ab-bc02-459b-bbda-2ef4f8aa880b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The FB_RS function block is a bistable element that functions as a set-reset flip-flop (RS flip-flop). It stores a state and changes it based on the input signals S (Set) and R1 (Reset). The block is implemented according to the IEC 61499-1 standard and is suitable for control applications that require state storage.

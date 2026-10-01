@@ -1,7 +1,7 @@
 # F_LREAL_TO_REAL
 
-<img width="1453" height="214" alt="F_LREAL_TO_REAL" src="https://github.com/user-attachments/assets/460d2ce1-b841-4ad8-ad35-6599f1a8d70c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_TO_REAL` converts an LREAL value (64-bit floating-point number) to a REAL value (32-bit floating-point number). This block is particularly useful in scenarios where type conversion between these two numeric data types is required.

@@ -1,7 +1,7 @@
 # F_AND
 
-<img width="1336" height="244" alt="F_AND" src="https://github.com/user-attachments/assets/a65a419c-0126-4dd6-9ab3-6e40b32ddcac" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_AND` is a standardized bitwise Boolean AND operator according to IEC 61131-3. It performs a bitwise AND operation on two input variables and outputs the result. This block is particularly useful for logical operations in control applications.

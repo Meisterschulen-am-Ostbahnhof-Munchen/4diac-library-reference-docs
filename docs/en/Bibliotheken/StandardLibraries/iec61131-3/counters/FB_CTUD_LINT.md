@@ -1,7 +1,7 @@
 # FB_CTUD_LINT
 
-<img width="1418" height="340" alt="FB_CTUD_LINT" src="https://github.com/user-attachments/assets/3ef801dc-5210-49fd-b0d4-4c34251fea5f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The FB_CTUD_LINT is a function block for an incrementing and decrementing counter with 64-bit integer values (LINT). It provides functions for counting up and down, resetting the counter, and loading a predefined value. The counter is particularly suitable for applications requiring large number ranges.

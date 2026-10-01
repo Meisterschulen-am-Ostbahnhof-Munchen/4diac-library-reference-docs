@@ -1,6 +1,5 @@
 # F_LWORD_TO_INT
 
-<img width="1434" height="211" alt="F_LWORD_TO_INT" src="https://github.com/user-attachments/assets/1edfb2cc-ce64-4ed3-9668-580b531f4b11" />
 * * * * * * * * * *
 The function block `F_LWORD_TO_INT` converts a `LWORD` value (64-bit unsigned integer) to a `INT` value (16-bit signed integer). This conversion is useful when data needs to be exchanged or processed between systems with different word lengths.
 ![F_LWORD_TO_INT](F_LWORD_TO_INT.svg)

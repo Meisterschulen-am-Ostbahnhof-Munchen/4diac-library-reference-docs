@@ -1,7 +1,7 @@
 # F_USINT_TO_WORD
 
-<img width="1454" height="214" alt="F_USINT_TO_WORD" src="https://github.com/user-attachments/assets/a587789a-c16b-4b4c-a09f-643a2e300dcf" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_WORD` converts an unsigned 8-bit integer value (USINT) into a 16-bit word value (WORD). This conversion is particularly necessary in scenarios where data with different bit widths needs to be processed or transmitted.

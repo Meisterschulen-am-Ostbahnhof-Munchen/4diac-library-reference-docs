@@ -1,7 +1,7 @@
 # AX_OR_8
 
-<img width="960" height="469" alt="image" src="https://github.com/user-attachments/assets/a5f20ed5-b8ed-4f26-9696-860bc64cfb6f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_8 function block is a generic function block for calculating an eight-input logical OR operation. It is used to process Boolean signals in control applications and allows the combination of multiple input signals into a single output signal.

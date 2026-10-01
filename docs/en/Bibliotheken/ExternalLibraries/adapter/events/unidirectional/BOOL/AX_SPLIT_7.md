@@ -1,7 +1,7 @@
 # AX_SPLIT_7
 
-<img width="618" height="383" alt="image" src="https://github.com/user-attachments/assets/99075a52-1b48-461b-ad14-dbeefe086a52" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_7 function block is a generic component that splits a single AX adapter input into seven separate AX adapter outputs. The component acts as a distributor for unidirectional AX adapters and allows a single input signal to be distributed to multiple receivers.

@@ -2,8 +2,8 @@
 
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_XOR_2`](AX_XOR_2.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
-<img width="1009" height="261" alt="image" src="https://github.com/user-attachments/assets/8e5ec6ce-d2bb-4517-ac38-d14a7e43976b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_2_UNGATED function block is a generic function block for calculating the Boolean XOR operation (exclusive OR). It processes two input signals and outputs the logical XOR result.

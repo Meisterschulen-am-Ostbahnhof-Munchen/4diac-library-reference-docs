@@ -1,7 +1,7 @@
 # F_UDINT_TO_SINT
 
-<img width="1450" height="216" alt="F_UDINT_TO_SINT" src="https://github.com/user-attachments/assets/f2a89cd0-6440-43ae-88db-8360c9ffa1b8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_TO_SINT` converts a 32-bit unsigned integer value (UDINT) to an 8-bit signed integer value (SINT). This conversion is useful when data needs to be exchanged between systems or components that use different data types.

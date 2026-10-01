@@ -1,7 +1,7 @@
 # AX_XOR_3
 
-<img width="1009" height="299" alt="image" src="https://github.com/user-attachments/assets/716a2f15-e5b5-4f7f-b30c-42b13251bace" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_XOR_3 function block is a generic function block for calculating the Boolean XOR operation with three inputs. It implements the exclusive OR operation for three binary input signals and outputs the corresponding result.

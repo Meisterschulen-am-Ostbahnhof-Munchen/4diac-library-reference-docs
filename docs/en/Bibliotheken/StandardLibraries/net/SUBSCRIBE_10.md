@@ -1,7 +1,7 @@
 # SUBSCRIBE_10
 
-<img width="775" height="412" alt="image" src="https://github.com/user-attachments/assets/ac0698e2-c9c3-4335-bb7b-9d6afdab86ca" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_10 function block acts as a subscriber in a publish-subscribe communication pattern and allows data to be received from a PUBLISH_10 block. The block can receive and process up to 10 different data values simultaneously.

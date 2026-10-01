@@ -1,7 +1,5 @@
 # PUBLISH_8
 
-<img width="1180" height="444" alt="image" src="https://github.com/user-attachments/assets/3ea0daaf-96d3-41f7-955f-9e7819185dd9" />
-
 * * * * * * * * * *
 
 ## Einleitung

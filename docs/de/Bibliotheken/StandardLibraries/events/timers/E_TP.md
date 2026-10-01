@@ -4,10 +4,6 @@
 
 **Wichtiger Hinweis: Dieser Baustein benötigt nur ein Ereignis (Event) und keine zyklischen Aufrufe. Er besitzt keinen Ausgang ET und zeigt die verstrichene Zeit nicht an.**
 
-## Bild
-
-![image](https://github.com/user-attachments/assets/8d531305-da9a-42e8-b44d-afab3a955be6)
-
 ## Beschreibung
 
 Der Baustein **E_TP** (auch bekannt als **Pulsgeber** oder **Timer-Puls**) ist ein standardisiertes Funktionsbaustein (FB) nach der Norm **IEC 61499** (DIN EN 61499). Dieser Baustein wird verwendet, um einen pulsierenden Ausgang zu erzeugen, der für eine bestimmte Zeit aktiviert wird, wenn ein Eingangssignal empfangen wird. Er ist besonders nützlich in Steuerungsanwendungen, bei denen zeitgesteuerte Aktionen erforderlich sind.

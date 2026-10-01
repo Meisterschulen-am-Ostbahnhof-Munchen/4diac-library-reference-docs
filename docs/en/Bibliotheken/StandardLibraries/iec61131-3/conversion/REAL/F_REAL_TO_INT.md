@@ -1,7 +1,7 @@
 # F_REAL_TO_INT
 
-<img width="1423" height="216" alt="F_REAL_TO_INT" src="https://github.com/user-attachments/assets/35987aee-ae88-4b7f-9f53-776f056c104e" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_INT` converts a REAL value (floating-point number) to an INT value (integer). This conversion is particularly useful when data needs to be exchanged between systems that use different data types.

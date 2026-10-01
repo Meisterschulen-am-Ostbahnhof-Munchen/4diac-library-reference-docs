@@ -1,7 +1,7 @@
 # F_BYTE_AS_STRING
 
-<img width="1257" height="183" alt="F_BYTE_AS_STRING" src="https://github.com/user-attachments/assets/8c04d5bd-c228-49a9-a534-2d29765aedb1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_AS_STRING` is used to convert a BYTE value into a STRING. This functionality is particularly useful when numeric data needs to be converted into a text format suitable for display or logging.

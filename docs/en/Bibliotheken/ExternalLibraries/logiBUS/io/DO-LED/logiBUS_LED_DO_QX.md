@@ -1,7 +1,7 @@
 # logiBUS_LED_DO_QX
 
-<img width="1892" height="360" alt="image" src="https://github.com/user-attachments/assets/204fbb78-59ee-4621-89fd-817c40d20cfc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_LED_DO_QX function block is an output service interface function block for Boolean output data. It is used to control LED outputs via the logiBUS system and offers special functions for frequency control of the LEDs.

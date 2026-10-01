@@ -1,7 +1,7 @@
 # OR_BOOL_6
 
-<img width="1370" height="361" alt="image" src="https://github.com/user-attachments/assets/2144a80e-12ae-4dc2-8412-36059eace342" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_6` is a generic block for calculating the logical OR operation. It performs an OR operation on six separate BOOL inputs and outputs the result on a single output. The block complies with the IEC 61131-3 standard and is designed for use in control applications where multiple conditions must be combined to trigger an action.

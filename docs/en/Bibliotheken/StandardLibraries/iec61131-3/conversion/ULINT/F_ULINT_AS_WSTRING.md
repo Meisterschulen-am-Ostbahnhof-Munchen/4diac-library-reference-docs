@@ -1,7 +1,7 @@
 # F_ULINT_AS_WSTRING
 
-<img width="1490" height="214" alt="F_ULINT_AS_WSTRING" src="https://github.com/user-attachments/assets/b7e7929e-cc1c-4998-8090-b8ceb12f4d39" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_AS_WSTRING` converts an unsigned 64-bit integer value (`ULINT`) into a Unicode string (`WSTRING`). This functionality is particularly useful in scenarios where numeric values are needed for display or further processing as text.

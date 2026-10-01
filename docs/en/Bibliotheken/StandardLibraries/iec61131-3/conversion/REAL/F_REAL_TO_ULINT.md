@@ -1,7 +1,7 @@
 # F_REAL_TO_ULINT
 
-<img width="1447" height="213" alt="F_REAL_TO_ULINT" src="https://github.com/user-attachments/assets/4390420b-31fd-4ff4-a89b-ec4feaf6f353" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_ULINT` converts a `REAL` value (floating-point number) to a `ULINT` value (64-bit unsigned integer). This block is particularly useful in scenarios where type conversion between these two data types is required.

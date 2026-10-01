@@ -1,7 +1,7 @@
 # TC_ID
 
-<img width="1359" height="261" alt="image" src="https://github.com/user-attachments/assets/430341ae-f535-482b-b9f2-3bfad916e8e4" />
 * * * * * * * * * *
+
 ## Introduction
 
 The TC_ID function block is an input service interface module for double-word input data. It serves as an interface for communication with tractor control (TC) input devices and enables access to specific input data via defined data words.

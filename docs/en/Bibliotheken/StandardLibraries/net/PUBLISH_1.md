@@ -1,7 +1,7 @@
 # PUBLISH_1
 
-<img width="1376" height="304" alt="image" src="https://github.com/user-attachments/assets/7f3d2118-5ae0-42c5-9151-1387bc2aff24" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_1 function block is used to send data to one or more SUBSCRIBE_1 blocks. It implements a publish-subscribe communication pattern, in which data is distributed to all subscribed recipients without acknowledgment.

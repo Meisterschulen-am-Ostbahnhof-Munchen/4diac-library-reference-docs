@@ -1,7 +1,7 @@
 # XOR_9
 
-<img width="1122" height="386" alt="XOR_9" src="https://github.com/user-attachments/assets/c115089f-b2d9-4440-8c6f-6db5cba185f8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_9` is used for bitwise calculation of the XOR operation with up to nine inputs. It is part of the standard bit operations according to IEC 61131-3 and enables the processing of any bit data type (`ANY_BIT`).

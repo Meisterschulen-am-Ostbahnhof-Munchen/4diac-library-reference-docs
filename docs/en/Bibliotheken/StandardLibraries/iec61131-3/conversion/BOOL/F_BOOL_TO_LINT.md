@@ -1,7 +1,7 @@
 # F_BOOL_TO_LINT
 
-<img width="1234" height="182" alt="F_BOOL_TO_LINT" src="https://github.com/user-attachments/assets/4c333a4d-5021-4e63-8ee2-fdf1494dd38f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_TO_LINT` converts a Boolean value (`BOOL`) into a 64-bit integer value (`LINT`). This block is particularly useful in scenarios where type conversion between these two data types is required.

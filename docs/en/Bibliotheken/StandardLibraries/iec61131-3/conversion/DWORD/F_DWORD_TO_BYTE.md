@@ -1,7 +1,7 @@
 # F_DWORD_TO_BYTE
 
-<img width="1248" height="184" alt="F_DWORD_TO_BYTE" src="https://github.com/user-attachments/assets/3a6b0a87-3a1e-478f-a160-dfbaca28aa01" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_BYTE` converts a 32-bit value (DWORD) to an 8-bit value (BYTE). This conversion is useful in scenarios where data reduction or type conversion is required.

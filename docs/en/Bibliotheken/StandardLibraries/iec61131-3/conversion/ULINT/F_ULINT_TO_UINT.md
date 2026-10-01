@@ -1,6 +1,5 @@
 # F_ULINT_TO_UINT
 
-<img width="1453" height="214" alt="F_ULINT_TO_UINT" src="https://github.com/user-attachments/assets/398715a7-1e03-490c-83c0-41f0f4d745ed" />
 * * * * * * * * * *
 The function block `F_ULINT_TO_UINT` converts a 64-bit unsigned integer value (ULINT) to a 16-bit unsigned integer value (UINT). This block is part of the `iec61131::conversion` package and implements a simple type conversion.
 ![F_ULINT_TO_UINT](F_ULINT_TO_UINT.svg)

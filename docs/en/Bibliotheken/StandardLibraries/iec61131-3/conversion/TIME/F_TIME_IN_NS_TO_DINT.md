@@ -1,9 +1,9 @@
 # F_TIME_IN_NS_TO_DINT
 
-<img width="1528" height="212" alt="F_TIME_IN_NS_TO_DINT" src="https://github.com/user-attachments/assets/1bf1ef7f-a9cc-4407-a8c7-72c2401edce4" />
 * * * * * * * * * *
 The function block `F_TIME_IN_NS_TO_DINT` converts a TIME value in nanoseconds to a DINT value. This conversion is useful when time values are needed in numerical calculations or for further processing.
 ![F_TIME_IN_NS_TO_DINT](F_TIME_IN_NS_TO_DINT.svg)
+
 - **REQ**: Starts the execution of the function block. This input is linked to the data input `IN`.
 - **CNF**: Signals the successful completion of the conversion. This output is linked to the data output `OUT`.
 - **IN** (TIME): The input for the time value in nanoseconds to be converted.

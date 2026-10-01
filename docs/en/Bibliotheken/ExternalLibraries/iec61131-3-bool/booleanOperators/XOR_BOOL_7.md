@@ -1,7 +1,7 @@
 # XOR_BOOL_7
 
-<img width="1378" height="391" alt="image" src="https://github.com/user-attachments/assets/731f9ca4-e163-4c46-8eda-5b826a199574" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_7` is a generic block for calculating the logical exclusive OR (XOR) operation. It processes seven Boolean input signals and returns the result of the XOR operation as a Boolean output signal. The block complies with the IEC 61131-3 standard and is designed for use in control applications where odd parity checking or logical antivalence across multiple signals is required.

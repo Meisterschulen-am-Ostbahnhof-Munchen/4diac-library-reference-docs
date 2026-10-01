@@ -1,7 +1,7 @@
 # F_DWORD_TO_LWORD
 
-<img width="1255" height="181" alt="F_DWORD_TO_LWORD" src="https://github.com/user-attachments/assets/8b697d39-33ef-445c-8626-4e4ece73fda6" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_LWORD` converts a 32-bit data value (DWORD) to a 64-bit data value (LWORD). This conversion is particularly useful in scenarios where an increase in data width is required to ensure compatibility with subsequent processing steps.

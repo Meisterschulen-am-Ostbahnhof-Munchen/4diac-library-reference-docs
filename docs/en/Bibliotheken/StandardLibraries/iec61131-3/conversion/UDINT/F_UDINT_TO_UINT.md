@@ -1,7 +1,7 @@
 # F_UDINT_TO_UINT
 
-<img width="1450" height="216" alt="F_UDINT_TO_UINT" src="https://github.com/user-attachments/assets/9ee78872-0f37-4ed5-be3e-2592ac760277" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_TO_UINT` converts a 32-bit unsigned integer value (UDINT) to a 16-bit unsigned integer value (UINT). This block is part of the `iec61131::conversion` package.

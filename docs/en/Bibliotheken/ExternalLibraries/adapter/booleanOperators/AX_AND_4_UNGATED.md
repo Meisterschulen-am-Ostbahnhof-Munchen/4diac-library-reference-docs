@@ -2,8 +2,8 @@
 
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_AND_4`](AX_AND_4.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
-<img width="1010" height="334" alt="image" src="https://github.com/user-attachments/assets/439ed538-1eef-44d6-95c8-5d2a9f64fd6a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_AND_4_UNGATED function block is a generic function block for calculating a four-input logical AND operation. It is used to process Boolean signals in automation systems and allows the combination of multiple input signals into a single output signal.

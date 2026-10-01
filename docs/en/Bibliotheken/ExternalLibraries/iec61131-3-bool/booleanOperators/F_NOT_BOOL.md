@@ -1,7 +1,7 @@
 # F_NOT_BOOL
 
-<img width="1572" height="241" alt="image" src="https://github.com/user-attachments/assets/b637a4d2-b75e-4f3d-b5a9-99b2c93d33eb" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_NOT_BOOL` implements the logical NOT function (negation) for the data type `BOOL`. It inverts the logical state of a binary input signal. This block belongs to the standard bit operators according to IEC 61131-3 and is designed for use in control applications where logical operations are required.

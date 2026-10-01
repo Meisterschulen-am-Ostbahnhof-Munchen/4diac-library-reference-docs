@@ -1,7 +1,7 @@
 # F_TIME_AS_WSTRING
 
-<img width="1479" height="212" alt="F_TIME_AS_WSTRING" src="https://github.com/user-attachments/assets/ed6f36e7-4f40-4837-a19d-4f35b3fbce62" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_AS_WSTRING` converts a TIME value to a WSTRING value. This is particularly useful when time values are needed for display or logging in a human-readable format.

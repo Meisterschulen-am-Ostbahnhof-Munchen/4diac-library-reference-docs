@@ -1,7 +1,7 @@
 # PUBLISH_5
 
-<img width="1184" height="368" alt="image" src="https://github.com/user-attachments/assets/25597a0a-65c9-425b-8b73-46c3513d9ecc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_5 function block is used to publish data to one or more SUBSCRIBE_5 blocks. It allows the transmission of up to five different data values using a publish-subscribe communication pattern.

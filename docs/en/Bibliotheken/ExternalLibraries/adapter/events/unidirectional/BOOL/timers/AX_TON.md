@@ -1,7 +1,7 @@
 # AX_TON
 
-<img width="962" height="243" alt="image" src="https://github.com/user-attachments/assets/d92dd0e6-fa14-499e-8a97-5c1432d0df3e" />
 * * * * * * * * * *
+
 ## Introduction
 
 **Important note: This function block requires only one event and no cyclic calls. It has no output ET and does not display the elapsed time.**

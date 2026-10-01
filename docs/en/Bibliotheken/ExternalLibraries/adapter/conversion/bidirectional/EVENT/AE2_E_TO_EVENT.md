@@ -1,7 +1,7 @@
 # AE2_E_TO_EVENT
 
-<img width="1172" height="190" alt="image" src="https://github.com/user-attachments/assets/02b7c06e-111f-4166-ac20-aebdf89c9956" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AE2_E_TO_EVENT function block is a composite function block used to convert AE2 adapter signals into events. It enables bidirectional communication between adapter-based components and event-driven function blocks.

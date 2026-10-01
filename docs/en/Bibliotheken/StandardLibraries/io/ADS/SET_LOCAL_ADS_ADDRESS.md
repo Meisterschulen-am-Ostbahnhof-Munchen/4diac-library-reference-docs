@@ -1,7 +1,7 @@
 # SET_LOCAL_ADS_ADDRESS
 
-<img width="1327" height="235" alt="image" src="https://github.com/user-attachments/assets/79166574-02f4-4798-bfa1-22a3911fc8a1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SET_LOCAL_ADS_ADDRESS function block is a Service Interface Function Block for configuring the local ADS address. ADS (Automation Device Specification) is a communication protocol commonly used in automation technology. This block allows the dynamic setting of the local ADS address during runtime.

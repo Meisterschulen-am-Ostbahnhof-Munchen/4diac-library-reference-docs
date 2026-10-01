@@ -1,7 +1,7 @@
 # OR_7
 
-<img width="1295" height="391" alt="OR_7" src="https://github.com/user-attachments/assets/fb73db3a-416e-4f74-9f10-e46fc1e7714e" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_7` performs a bitwise logical OR operation on up to seven input variables. It is a generic function block that can work with various bit data types (`ANY_BIT`). The block is part of the `iec61131::bitwiseOperators` library and implements a standard bitwise operation according to IEC 61131-3.

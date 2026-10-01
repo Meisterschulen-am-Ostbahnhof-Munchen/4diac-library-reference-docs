@@ -8,8 +8,6 @@
 
 ----
 
-<img width="1521" height="186" alt="image" src="https://github.com/user-attachments/assets/90319dba-980a-464e-aa11-c9c9729af26a" />
-
 * * * * * * * * * *
 
 ## Einleitung

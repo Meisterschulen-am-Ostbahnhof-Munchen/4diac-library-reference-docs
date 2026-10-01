@@ -1,6 +1,5 @@
 # FB_CTU_UDINT
 
-<img width="1411" height="277" alt="FB_CTU_UDINT" src="https://github.com/user-attachments/assets/f36dc7f5-bd23-4af7-8a8a-fc038435ca79" />
 * * * * * * * * * *
 The function block `FB_CTU_UDINT` is an up counter for the data type `UDINT` (unsigned double integer). It increments with each event `REQ` as long as the input `CU` is active, and can be reset via the input `R`. The counter compares the current counter value with a predefined setpoint (`PV`) and outputs a signal via the output `Q` when this setpoint is reached or exceeded.
 ![FB_CTU_UDINT](FB_CTU_UDINT.svg)

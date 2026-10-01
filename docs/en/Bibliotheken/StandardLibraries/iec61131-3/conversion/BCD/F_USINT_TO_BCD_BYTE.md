@@ -1,7 +1,7 @@
 # F_USINT_TO_BCD_BYTE
 
-<img width="1293" height="181" alt="F_USINT_TO_BCD_BYTE" src="https://github.com/user-attachments/assets/80d3e282-af2a-4b59-89db-9d093b6ef103" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_BCD_BYTE` converts an unsigned 8-bit integer value (USINT) into a BCD-encoded byte (BYTE). BCD (Binary Coded Decimal) is an encoding in which each decimal digit is represented by four bits.

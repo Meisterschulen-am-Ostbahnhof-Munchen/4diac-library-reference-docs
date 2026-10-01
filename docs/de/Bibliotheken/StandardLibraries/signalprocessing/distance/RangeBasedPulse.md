@@ -1,7 +1,5 @@
 # RangeBasedPulse
 
-<img width="1038" height="216" alt="RangeBasedPulse" src="https://github.com/user-attachments/assets/7a38dda2-cdee-4a47-be13-09d2637500b0" />
-
 * * * * * * * * * *
 
 ## Einleitung

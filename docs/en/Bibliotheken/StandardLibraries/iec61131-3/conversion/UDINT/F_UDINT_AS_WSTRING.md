@@ -1,7 +1,7 @@
 # F_UDINT_AS_WSTRING
 
-<img width="1494" height="212" alt="F_UDINT_AS_WSTRING" src="https://github.com/user-attachments/assets/dd3fe324-73e2-4f6e-8ccc-6a9fe7bb8e35" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_AS_WSTRING` converts an unsigned 32-bit integer value (`UDINT`) into a Unicode string (`WSTRING`). This functionality is particularly useful when numeric values are needed as text for display or further processing.

@@ -5,7 +5,6 @@
 - [QUARTER](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/QUARTER-e36741d)
 
 ----
-<img width="1372" height="473" alt="image" src="https://github.com/user-attachments/assets/29cc86f3-ca17-48a7-8143-0a020e5cabcb" />
 * * * * * * * * * *
 The function block `BOOLS_TO_QUARTERS` is a composite function block (FB) that converts 16 individual Boolean input signals into a special 2-bit format called "Quarter Byte." It serves as a bundle and serial execution point for several basic conversion functions and is intended for applications where many binary states need to be converted into a compact, multi-valued control format.
 

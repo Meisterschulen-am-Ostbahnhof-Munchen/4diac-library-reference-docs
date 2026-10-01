@@ -1,7 +1,7 @@
 # F_TIME_IN_NS_TO_ULINT
 
-<img width="1538" height="212" alt="F_TIME_IN_NS_TO_ULINT" src="https://github.com/user-attachments/assets/8f77a80e-b99a-4045-87db-8e4bb1e7fc74" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_NS_TO_ULINT` converts a `TIME` value in nanoseconds to a `ULINT` value. This conversion is particularly useful when time values are needed in numerical calculations or for further processing steps.

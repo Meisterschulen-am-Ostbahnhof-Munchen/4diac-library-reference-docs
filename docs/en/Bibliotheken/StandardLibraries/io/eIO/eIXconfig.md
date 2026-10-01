@@ -1,7 +1,7 @@
 # eIXconfig
 
-<img width="1406" height="219" alt="image" src="https://github.com/user-attachments/assets/0d14f01f-7aa9-4cd7-93a2-74a47d4f4646" />
 * * * * * * * * * *
+
 ## Introduction
 
 The eIXconfig function block serves as a Service Interface Function Block for configuring eIO instances. It allows you to set trigger properties for inputs and outputs and provides a connection to eIO instances via an adapter.

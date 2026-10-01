@@ -1,6 +1,5 @@
 # XOR_10
 
-<img width="1133" height="411" alt="XOR_10" src="https://github.com/user-attachments/assets/fae74b7d-690a-4c2a-bd06-0c737cafc41d" />
 * * * * * * * * * *
 The XOR_10 function block is a generic function block for calculating a bitwise XOR operation with up to 10 inputs. It is part of the IEC 61131-3 standard library for bitwise Boolean operations and can be used with various bit data types (ANY_BIT).
 ![XOR_10](XOR_10.svg)

@@ -1,7 +1,7 @@
 # F_WSTRING_AS_INT
 
-<img width="1469" height="214" alt="F_WSTRING_AS_INT" src="https://github.com/user-attachments/assets/d83cc0b2-80c5-4d74-8885-958419a9091a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_INT` is used to convert a WSTRING value to an INT value. This block is particularly useful when strings need to be converted into numeric values, for example, when processing user input or interpreting text data.

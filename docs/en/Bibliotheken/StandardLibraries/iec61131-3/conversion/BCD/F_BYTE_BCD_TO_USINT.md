@@ -1,7 +1,7 @@
 # F_BYTE_BCD_TO_USINT
 
-<img width="1290" height="182" alt="F_BYTE_BCD_TO_USINT" src="https://github.com/user-attachments/assets/1877ce9e-1601-4cea-921e-6a7288e635b6" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_BCD_TO_USINT` converts a BCD-encoded BYTE value to a USINT value. BCD (Binary Coded Decimal) is an encoding in which each digit of a decimal number is represented by 4 bits. This function block is particularly useful in applications that need to process BCD-encoded data.

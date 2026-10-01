@@ -1,7 +1,7 @@
 # A2X_2X_TO_2AX
 
-<img width="1288" height="205" alt="image" src="https://github.com/user-attachments/assets/4b63ce13-a3c7-4b18-908a-dc885376b86d" />
 * * * * * * * * * *
+
 ## Introduction
 
 The A2X_2X_TO_2AX is a composite function block used to convert A2X signals into two separate AX signals. This block enables the conversion of bidirectional control signals into unidirectional motion commands.

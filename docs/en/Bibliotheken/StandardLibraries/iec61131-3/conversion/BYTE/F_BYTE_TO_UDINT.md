@@ -1,7 +1,7 @@
 # F_BYTE_TO_UDINT
 
-<img width="1245" height="183" alt="F_BYTE_TO_UDINT" src="https://github.com/user-attachments/assets/34a2230f-154d-4bae-ac66-db0481be7d57" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_UDINT` is used to convert a BYTE value to a UDINT value. This function block is particularly useful in scenarios where a type conversion between these two data types is required.

@@ -1,7 +1,7 @@
 # F_REAL_TO_LINT
 
-<img width="1433" height="216" alt="F_REAL_TO_LINT" src="https://github.com/user-attachments/assets/27a08bc4-5fb5-42da-95cd-5c700436c357" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_LINT` converts a REAL value (floating-point number) to a LINT value (64-bit integer). This conversion is particularly useful when numerical calculations need to be performed with different data types.

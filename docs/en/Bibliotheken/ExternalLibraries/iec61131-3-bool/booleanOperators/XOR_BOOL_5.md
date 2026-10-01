@@ -1,7 +1,7 @@
 # XOR_BOOL_5
 
-<img width="1186" height="283" alt="image" src="https://github.com/user-attachments/assets/0d8ae9ee-ae15-400f-8e0f-459aa54db0db" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_5` is a standard function block for calculating the logical exclusive OR (XOR) operation for five Boolean input values. It complies with the IEC 61131-3 standard and is implemented as a generic function block. The operation is performed on each incoming execution event, and the result is output via an acknowledgment event.

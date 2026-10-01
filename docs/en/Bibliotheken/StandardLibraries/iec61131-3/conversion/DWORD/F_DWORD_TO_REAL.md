@@ -1,7 +1,7 @@
 # F_DWORD_TO_REAL
 
-<img width="1248" height="181" alt="F_DWORD_TO_REAL" src="https://github.com/user-attachments/assets/0ae16249-44e5-4ae0-8d75-1705e8beef34" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_REAL` converts a DWORD value (32-bit unsigned integer) to a REAL value (32-bit floating-point number). This block is particularly useful in scenarios where type conversion between these two data types is required.

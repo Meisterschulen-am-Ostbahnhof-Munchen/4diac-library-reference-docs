@@ -1,7 +1,7 @@
 # F_WORD_BCD_TO_UINT
 
-<img width="1281" height="182" alt="F_WORD_BCD_TO_UINT" src="https://github.com/user-attachments/assets/37d8f223-a93a-45ff-8ae6-a51b72d499a3" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_BCD_TO_UINT` converts a BCD-encoded WORD value into an unsigned integer (UINT). This is particularly useful in applications where data in BCD format needs to be processed or displayed.

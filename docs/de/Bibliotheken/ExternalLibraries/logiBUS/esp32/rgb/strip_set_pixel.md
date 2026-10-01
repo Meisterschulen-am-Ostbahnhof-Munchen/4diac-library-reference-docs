@@ -1,7 +1,5 @@
 # strip_set_pixel
 
-<img width="1478" height="315" alt="image" src="https://github.com/user-attachments/assets/1892e226-bd9b-4dfc-bda7-8458f0a53619" />
-
 * * * * * * * * * *
 
 ## Einleitung

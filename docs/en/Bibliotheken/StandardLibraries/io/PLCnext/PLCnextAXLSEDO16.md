@@ -1,7 +1,7 @@
 # PLCnextAXLSEDO16
 
-<img width="1134" height="525" alt="image" src="https://github.com/user-attachments/assets/75f7b085-4f46-4f43-9c7b-b30650d90440" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PLCnextAXLSEDO16 is a Service Interface Function Block for controlling 16 digital outputs in PLCnext systems. This block serves as an interface between the IEC 61499-based control logic and the physical outputs of the PLCnext AXLSEDO16 module.

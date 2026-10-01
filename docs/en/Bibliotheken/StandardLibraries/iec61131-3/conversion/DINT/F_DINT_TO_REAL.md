@@ -1,7 +1,7 @@
 # F_DINT_TO_REAL
 
-<img width="1437" height="217" alt="F_DINT_TO_REAL" src="https://github.com/user-attachments/assets/9a171061-0724-4ae7-ae31-84f0ef970859" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_REAL` converts an integer value of type `DINT` into a floating-point value of type `REAL`. This conversion is necessary in many control and automation applications when data needs to be exchanged between different systems or components.

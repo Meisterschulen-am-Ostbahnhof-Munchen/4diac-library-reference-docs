@@ -1,7 +1,7 @@
 # F_BOOL_TO_UDINT
 
-<img width="1447" height="213" alt="F_BOOL_TO_UDINT" src="https://github.com/user-attachments/assets/2efcda08-ff53-40f4-ba50-1a4fa948991e" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_TO_UDINT` converts a `BOOL` value to a `UDINT` value. This conversion is useful when Boolean values are used in calculations or storage operations that require a larger numeric data type.

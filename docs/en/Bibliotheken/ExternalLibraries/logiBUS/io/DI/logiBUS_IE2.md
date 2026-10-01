@@ -1,7 +1,7 @@
 # logiBUS_IE2
 
-<img width="1746" height="283" alt="image" src="https://github.com/user-attachments/assets/ac2845b6-9709-446e-9377-bd61a000862d" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_IE2 is an input service interface function block for event input data. It serves as an interface for processing input events in logiBUS systems and enables the processing of various input event types such as key presses, clicks, and time-based events.

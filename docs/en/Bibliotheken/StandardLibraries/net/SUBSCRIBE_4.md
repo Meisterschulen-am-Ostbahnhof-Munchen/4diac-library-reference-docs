@@ -1,7 +1,7 @@
 # SUBSCRIBE_4
 
-<img width="1291" height="393" alt="image" src="https://github.com/user-attachments/assets/64c5b7ee-a7e0-4217-a6d8-5b4904bf79d4" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_4 function block is used to subscribe to data from a PUBLISH_4 block. It allows the receipt of up to four different data points via a communication link and makes them available when they become available.

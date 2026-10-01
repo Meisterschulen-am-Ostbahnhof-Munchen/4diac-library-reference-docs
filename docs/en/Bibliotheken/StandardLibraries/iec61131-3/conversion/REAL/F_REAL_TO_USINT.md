@@ -1,7 +1,7 @@
 # F_REAL_TO_USINT
 
-<img width="1450" height="213" alt="F_REAL_TO_USINT" src="https://github.com/user-attachments/assets/16d6af79-f844-41ac-bebb-55fd87c4d950" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_USINT` converts a REAL value (floating-point number) to a USINT value (unsigned 8-bit integer). This conversion is particularly useful when floating-point numbers need to be processed in a range that only accepts integer values.

@@ -1,7 +1,7 @@
 # FB_CTD_DINT
 
-<img width="1399" height="282" alt="FB_CTD_DINT" src="https://github.com/user-attachments/assets/a2d2a64a-c6b7-4d0e-9d5d-c1ab0452c96f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_CTD_DINT` is a down counter for 32-bit integers (DINT). It is used to decrease a value incrementally and output a signal when a specific threshold is reached.

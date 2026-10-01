@@ -1,7 +1,7 @@
 # F_REAL_TO_DINT
 
-<img width="1235" height="175" alt="F_REAL_TO_DINT" src="https://github.com/user-attachments/assets/fd78a595-bfca-47f7-b4d9-acd46bf10b52" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_DINT` converts a REAL value (floating-point number) into a DINT value (32-bit integer). This conversion is performed by rounding the REAL value down to the nearest integer.

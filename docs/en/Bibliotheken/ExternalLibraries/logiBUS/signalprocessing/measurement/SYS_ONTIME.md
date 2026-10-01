@@ -1,7 +1,7 @@
 # SYS_ONTIME
 
-<img width="1639" height="206" alt="image" src="https://github.com/user-attachments/assets/08d09491-2560-44d8-be18-94d431bac08b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `SYS_ONTIME` is a Service Interface Function Block (SIFB). Its main task is to read and provide the uptime (ontime) of the resource in which it is executed. It serves as a standardized interface between the application logic and the system-level services of the runtime environment.

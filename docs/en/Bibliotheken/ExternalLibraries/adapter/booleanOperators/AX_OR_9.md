@@ -1,7 +1,7 @@
 # AX_OR_9
 
-<img width="960" height="503" alt="image" src="https://github.com/user-attachments/assets/8e2166fd-c540-4651-a06b-83a9435a923c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_9 is a generic function block for calculating the Boolean OR operation with nine inputs. This block is used for the logical processing of signals in automation systems and outputs the result of the OR operation on all input signals.

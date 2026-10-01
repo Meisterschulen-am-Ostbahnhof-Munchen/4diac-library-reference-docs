@@ -1,7 +1,7 @@
 # F_UINT_TO_LWORD
 
-<img width="1452" height="216" alt="F_UINT_TO_LWORD" src="https://github.com/user-attachments/assets/be6bea7a-7598-41df-9c89-9d0b6d2272ef" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_LWORD` converts a `UINT` value (16-bit unsigned integer) to a `LWORD` value (64-bit unsigned integer). This conversion is particularly necessary in scenarios where data with different bit widths needs to be processed or transmitted.

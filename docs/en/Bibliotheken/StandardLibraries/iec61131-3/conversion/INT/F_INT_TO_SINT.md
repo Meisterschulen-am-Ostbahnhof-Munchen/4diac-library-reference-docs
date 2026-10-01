@@ -1,7 +1,7 @@
 # F_INT_TO_SINT
 
-<img width="1222" height="187" alt="F_INT_TO_SINT" src="https://github.com/user-attachments/assets/81773477-cbb0-47ae-bfa8-b2bda3807bca" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_SINT` converts an integer value of type `INT` into a signed 8-bit integer value of type `SINT`. This conversion is useful when data needs to be exchanged or processed between systems with different data types.

@@ -1,7 +1,7 @@
 # F_STRING_AS_BOOL
 
-<img width="1462" height="213" alt="F_STRING_AS_BOOL" src="https://github.com/user-attachments/assets/493e97a2-4fe1-488e-b506-d4a41641a727" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_BOOL` converts a `STRING` value to a `BOOL` value. This block is particularly useful when strings need to be converted into Boolean values, for example, when processing user input or interpreting text data.

@@ -1,7 +1,7 @@
 # F_ULINT_TO_BCD_LWORD
 
-<img width="1302" height="181" alt="F_ULINT_TO_BCD_LWORD" src="https://github.com/user-attachments/assets/e52c2e4c-a8aa-4dc5-bb01-ce013aadd734" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_BCD_LWORD` converts a `ULINT` value (64-bit unsigned integer) to a `LWORD` value type in BCD (Binary Coded Decimal) format. This block is particularly useful in applications where numeric values need to be converted into a format compatible with BCD systems.

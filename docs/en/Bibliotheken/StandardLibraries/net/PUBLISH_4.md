@@ -1,7 +1,7 @@
 # PUBLISH_4
 
-<img width="1179" height="342" alt="image" src="https://github.com/user-attachments/assets/0369a464-ad16-499d-9887-36a8fca536b5" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_4 function block is used to publish data to one or more SUBSCRIBE_4 blocks. It enables the unacknowledged transmission of up to four different data values using a publish-subscribe communication pattern.

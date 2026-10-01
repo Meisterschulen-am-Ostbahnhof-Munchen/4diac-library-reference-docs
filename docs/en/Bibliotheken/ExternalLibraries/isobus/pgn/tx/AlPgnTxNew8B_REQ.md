@@ -1,7 +1,7 @@
 # AlPgnTxNew8B_REQ
 
-<img width="1308" height="254" alt="image" src="https://github.com/user-attachments/assets/09f85519-8068-47fc-af54-0c2422fe947f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `AlPgnTxNew8B_REQ` is used to configure and control the transmission of parameter group numbers (PGNs) in an ISOBUS network (J1939). Its main purpose is to install a new transmit PGN (TX-PGN) in the network. The block responds to a REQ event (J1939 network event) and provides a callback interface for asynchronous feedback on the data transmission status. It is part of a specialized library for ISOBUS communication.

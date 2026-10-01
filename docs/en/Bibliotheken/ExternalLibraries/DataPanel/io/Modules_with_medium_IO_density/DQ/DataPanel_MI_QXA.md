@@ -1,7 +1,7 @@
 # DataPanel_MI_QXA
 
-<img width="1373" height="208" alt="image" src="https://github.com/user-attachments/assets/734858f5-fe59-47ff-9c4f-6ba7b19e3c85" />
 * * * * * * * * * *
+
 ## Introduction
 
 The DataPanel_MI_QXA is a composite function block for controlling Boolean output data in automation systems. This block serves as an interface for digital outputs and enables the configuration and control of output channels via standardized service parameters.

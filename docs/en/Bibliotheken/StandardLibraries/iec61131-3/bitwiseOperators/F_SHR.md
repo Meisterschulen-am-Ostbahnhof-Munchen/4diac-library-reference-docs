@@ -1,7 +1,7 @@
 # F_SHR
 
-<img width="1350" height="208" alt="F_SHR" src="https://github.com/user-attachments/assets/7ff0f80c-c8c6-4472-85d8-32658fa25627" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SHR` performs a bitwise right shift. It is part of the standard bit operators according to IEC 61131-3 and is used for logical and arithmetic operations in control applications.

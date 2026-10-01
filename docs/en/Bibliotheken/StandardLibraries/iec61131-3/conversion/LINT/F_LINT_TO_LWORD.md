@@ -1,7 +1,7 @@
 # F_LINT_TO_LWORD
 
-<img width="1448" height="214" alt="F_LINT_TO_LWORD" src="https://github.com/user-attachments/assets/9a0ef8d1-c702-4743-94c4-d151d7d9dd05" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_LWORD` converts a LINT data type (64-bit signed integer) to an LWORD data type (64-bit bit string). This block is particularly useful in scenarios where numeric values need to be converted to their binary representation.

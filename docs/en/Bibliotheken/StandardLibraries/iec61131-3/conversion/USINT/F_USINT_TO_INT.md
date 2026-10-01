@@ -1,7 +1,7 @@
 # F_USINT_TO_INT
 
-<img width="1436" height="214" alt="F_USINT_TO_INT" src="https://github.com/user-attachments/assets/d630e0ac-d3d0-4568-913f-698cfdc7ad6c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_INT` converts an unsigned 8-bit integer value (USINT) to a signed 16-bit integer value (INT). This block is part of the `iec61131::conversion` package and enables simple type conversion between these two data types.

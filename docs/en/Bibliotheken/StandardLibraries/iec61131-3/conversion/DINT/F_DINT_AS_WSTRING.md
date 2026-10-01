@@ -1,7 +1,7 @@
 # F_DINT_AS_WSTRING
 
-<img width="1268" height="182" alt="F_DINT_AS_WSTRING" src="https://github.com/user-attachments/assets/74b253fa-2cf2-41b1-9ad5-20ffb46856c2" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_AS_WSTRING` converts a 32-bit integer value (DINT) into a Unicode string (WSTRING). This functionality is particularly useful when numeric values are needed as text for display or further processing.

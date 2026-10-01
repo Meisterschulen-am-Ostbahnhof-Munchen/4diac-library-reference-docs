@@ -1,7 +1,7 @@
 # logiBUS_2_CAN_IXA
 
-<img width="2031" height="363" alt="image" src="https://github.com/user-attachments/assets/d06a9404-82e0-4172-9321-7677d642f03f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_2_CAN_IXA is a composite function block for processing Boolean input data via CAN bus interfaces. The block serves as an interface between logiBUS systems and CAN-based input devices and enables the initialization and querying of digital inputs.

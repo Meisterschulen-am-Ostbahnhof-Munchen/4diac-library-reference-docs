@@ -1,7 +1,7 @@
 # F_LINT_TO_SINT
 
-<img width="1438" height="214" alt="F_LINT_TO_SINT" src="https://github.com/user-attachments/assets/a76f6188-5a80-4252-a7d7-56944d50fde0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_SINT` converts a 64-bit integer value (`LINT`) into an 8-bit integer value (`SINT`). This conversion is useful when data needs to be exchanged or processed between systems with different word lengths.

@@ -1,7 +1,7 @@
 # F_BOOL_AS_STRING
 
-<img width="1257" height="182" alt="F_BOOL_AS_STRING" src="https://github.com/user-attachments/assets/943966eb-d165-4fd6-aead-9d6b33d6078d" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_AS_STRING` is used to convert a Boolean value (`BOOL`) into a string (`STRING`). This functionality is particularly useful when Boolean values are needed for output or further processing in a text format.

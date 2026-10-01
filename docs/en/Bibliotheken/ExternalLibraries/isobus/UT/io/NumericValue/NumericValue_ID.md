@@ -1,7 +1,7 @@
 # NumericValue_ID
 
-<img width="1399" height="290" alt="image" src="https://github.com/user-attachments/assets/d47cfe0c-6224-4132-bb02-d186bc0e0c55" />
 * * * * * * * * * *
+
 ## Introduction
 
 The NumericValue_ID function block is an input service interface function block for double-word input data (DWORD). It serves as an interface for communication with resources and enables the processing of numeric input values in ISOBUS-compatible systems.

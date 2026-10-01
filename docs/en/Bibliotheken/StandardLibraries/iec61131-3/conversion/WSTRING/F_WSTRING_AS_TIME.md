@@ -1,7 +1,7 @@
 # F_WSTRING_AS_TIME
 
-<img width="1481" height="214" alt="F_WSTRING_AS_TIME" src="https://github.com/user-attachments/assets/508ad921-2d01-48fe-b8ef-0c57d37b7f10" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_TIME` is used to convert a string in WSTRING format into a TIME value. This block is particularly useful when time values are in string format and need to be converted to TIME format for use in further calculations or control logic.

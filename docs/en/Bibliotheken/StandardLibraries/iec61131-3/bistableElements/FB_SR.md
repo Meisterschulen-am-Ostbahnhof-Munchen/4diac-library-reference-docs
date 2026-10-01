@@ -1,7 +1,7 @@
 # FB_SR
 
-<img width="1312" height="242" alt="FB_SR" src="https://github.com/user-attachments/assets/97406c32-e30d-47c7-958c-cb76b2fcd83c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_SR` is a bistable element that functions as a set-reset flip-flop (SR flip-flop). It stores a state based on the input signals and retains this state until it is changed by new input signals.

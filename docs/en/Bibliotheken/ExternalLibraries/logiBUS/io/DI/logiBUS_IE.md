@@ -1,7 +1,7 @@
 # logiBUS_IE
 
-<img width="2037" height="313" alt="image" src="https://github.com/user-attachments/assets/3cb31c53-ac68-4483-bfc4-834776122b60" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_IE function block is an input service interface module for event input data. It serves as an interface between the logiBUS system and the 4diac runtime environment for processing digital input signals with extended event detection functions.

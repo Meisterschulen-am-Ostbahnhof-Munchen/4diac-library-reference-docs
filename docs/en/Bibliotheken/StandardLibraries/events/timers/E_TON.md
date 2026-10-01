@@ -6,10 +6,6 @@
 
 - [E_TON in Industrial Automation: How a Simple Timer Creates Safety and Stability ](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/E_TON-in-der-Industrieautomation-Wie-ein-simpler-Timer-Sicherheit-und-Stabilitt-schafft-e3672u9)
 
-## Image
-
-![image](https://github.com/user-attachments/assets/cc035168-0f10-4159-bbe5-941ec9919630)
-
 ## Text
 
 The **E_TON** function block is a standardized function block type (FBType) according to the **IEC 61499** standard, used for **On-Delay Timers** in industrial automation systems. This function block allows a signal to be switched on with a time delay, which is required in many control applications, for example, to safely control machines or processes.

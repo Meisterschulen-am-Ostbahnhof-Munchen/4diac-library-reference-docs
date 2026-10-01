@@ -1,7 +1,7 @@
 # F_LWORD_TO_DINT
 
-<img width="1451" height="216" alt="F_LWORD_TO_DINT" src="https://github.com/user-attachments/assets/c7eaf578-dbd9-4dc8-95f4-7f9b31394843" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_DINT` converts a `LWORD` data type to a `DINT` data type. This block is particularly useful in scenarios where type conversion between these two data types is required, for example, when processing large binary datasets or when communicating between systems with different data type requirements.

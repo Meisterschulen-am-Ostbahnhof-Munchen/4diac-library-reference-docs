@@ -1,7 +1,7 @@
 # F_BYTE_TO_INT
 
-<img width="1421" height="210" alt="F_BYTE_TO_INT" src="https://github.com/user-attachments/assets/776dfcd4-d0f2-4a7f-9ef6-b4d4a2df49d0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BYTE_TO_INT` converts a `BYTE` value to a `INT` value. It is part of the `iec61131::conversion` package and enables simple and efficient type conversion between these two data types.

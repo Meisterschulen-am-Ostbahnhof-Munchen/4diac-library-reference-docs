@@ -1,7 +1,7 @@
 # Funk_IXA
 
-<img width="1725" height="316" alt="image" src="https://github.com/user-attachments/assets/18811a6e-8efc-454f-b9ec-ea728163a624" />
 * * * * * * * * * *
+
 ## Introduction
 
 The **Funk_IXA** function block is a composite function block for processing Boolean input data. It serves as an interface for digital inputs and enables the initialization and querying of input signals via a standardized interface.

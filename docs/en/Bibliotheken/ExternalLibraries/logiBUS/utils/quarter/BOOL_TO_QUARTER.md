@@ -7,7 +7,6 @@
 - [QUARTER](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/QUARTER-e36741d)
 
 ----
-<img width="1677" height="214" alt="image" src="https://github.com/user-attachments/assets/78d7da91-c9c9-424a-a08b-2ac7b67c5662" />
 
 * * * * * * * * * *
 The function block `BOOL_TO_QUARTER` converts a binary BOOL signal into a special, predefined quarter byte. It translates the logical states `TRUE` and `FALSE` into corresponding, semantically meaningful byte constants, typically used for control commands (e.g., ENABLE/DISABLE). This block is part of the `logiBUS::utils::quarter` library.

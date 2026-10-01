@@ -1,6 +1,5 @@
 # F_BOOL_TO_BYTE
 
-<img width="1231" height="182" alt="F_BOOL_TO_BYTE" src="https://github.com/user-attachments/assets/726d9bee-c530-487f-ab01-086582dfd936" />
 * * * * * * * * * *
 The function block `F_BOOL_TO_BYTE` converts a Boolean value (`BOOL`) into a byte value (`BYTE`). This conversion is useful when Boolean signals need to be processed in systems that require byte data.
 ![F_BOOL_TO_BYTE](F_BOOL_TO_BYTE.svg)

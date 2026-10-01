@@ -1,7 +1,7 @@
 # F_UINT_TO_REAL
 
-<img width="1441" height="216" alt="F_UINT_TO_REAL" src="https://github.com/user-attachments/assets/4cb48960-25c6-479d-9c4c-636b5a546a0c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_REAL` converts an unsigned integer value (`UINT`) into a floating-point number (`REAL`). This functionality is particularly useful when exchanging data between systems that use different data types.

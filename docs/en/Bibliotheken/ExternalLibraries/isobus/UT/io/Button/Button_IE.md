@@ -1,7 +1,7 @@
 # Button_IE
 
-<img width="1385" height="216" alt="image" src="https://github.com/user-attachments/assets/95422805-a0b9-47d0-9696-02c3ede5c9cf" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Button_IE function block is an input service interface function block for event input data. It serves as an interface for button events in control systems and enables the processing of various button activities such as pressing, releasing, or multiple clicks.

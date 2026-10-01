@@ -1,6 +1,5 @@
 # sequence_ET_05_loop
 
-<img width="1683" height="398" alt="image" src="https://github.com/user-attachments/assets/caae5b56-a31e-4867-ae04-0be4eeb193b6" />
 ![sequence_ET_05_loop_ecc](./sequence_ET_05_loop_ecc.svg)
 
 * * * * * * * * * *

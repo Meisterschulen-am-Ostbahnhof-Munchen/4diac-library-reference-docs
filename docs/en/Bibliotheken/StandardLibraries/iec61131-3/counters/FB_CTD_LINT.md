@@ -1,7 +1,7 @@
 # FB_CTD_LINT
 
-<img width="1399" height="282" alt="FB_CTD_LINT" src="https://github.com/user-attachments/assets/49df9c31-e52a-4ab3-9ab5-c17c58f2ee98" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_CTD_LINT` is a countdown counter for 64-bit integers (LINT). It allows counting down an internal counter value and provides functions for loading a predefined value. The block is particularly suitable for applications that need to work with large ranges of numbers.

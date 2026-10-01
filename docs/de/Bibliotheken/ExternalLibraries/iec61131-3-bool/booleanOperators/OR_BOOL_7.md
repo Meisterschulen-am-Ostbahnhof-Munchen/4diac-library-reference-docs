@@ -1,7 +1,5 @@
 # OR_BOOL_7
 
-<img width="1370" height="397" alt="image" src="https://github.com/user-attachments/assets/2570e3d4-32b7-4284-a7b2-d4cf9e42d644" />
-
 * * * * * * * * * *
 
 ## Einleitung

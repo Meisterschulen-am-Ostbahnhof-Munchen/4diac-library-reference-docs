@@ -1,6 +1,5 @@
 # XOR_BOOL_8
 
-<img width="1381" height="423" alt="image" src="https://github.com/user-attachments/assets/6d43c16c-0360-452c-bd8f-8caac2a5b590" />
 * * * * * * * * * *
 The function block `XOR_BOOL_8` is a generic block for calculating the logical exclusive OR (XOR) operation on up to eight Boolean input values. It complies with the IEC 61131-3 standard and is designed for use in the 4diac IDE. The block executes its operation in an event-driven manner and returns the result via a single Boolean output.
 ![XOR_BOOL_8](XOR_BOOL_8.svg)

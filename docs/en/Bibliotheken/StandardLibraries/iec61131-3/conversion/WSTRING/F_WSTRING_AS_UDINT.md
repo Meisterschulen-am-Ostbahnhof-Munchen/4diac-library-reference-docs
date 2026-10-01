@@ -1,7 +1,7 @@
 # F_WSTRING_AS_UDINT
 
-<img width="1494" height="214" alt="F_WSTRING_AS_UDINT" src="https://github.com/user-attachments/assets/80526643-8f3a-4829-a9c8-7fec610340b8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_UDINT` is used to convert a WSTRING value to a UDINT value. This block is particularly useful in scenarios where strings need to be converted into numeric values, for example, when processing user input or interpreting data from external sources.

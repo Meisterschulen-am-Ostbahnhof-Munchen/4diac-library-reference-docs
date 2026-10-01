@@ -1,7 +1,7 @@
 # F_LINT_TO_LREAL
 
-<img width="1448" height="214" alt="F_LINT_TO_LREAL" src="https://github.com/user-attachments/assets/411d5efa-708f-43f3-8da5-db0f863bcd2c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_LREAL` converts an integer value of type `LINT` (64-bit integer) to a floating-point value of type `LREAL` (64-bit floating-point). This conversion is particularly necessary when integer values are to be used in calculations with floating-point numbers.

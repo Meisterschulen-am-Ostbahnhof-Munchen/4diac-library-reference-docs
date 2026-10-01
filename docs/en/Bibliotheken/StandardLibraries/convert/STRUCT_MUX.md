@@ -1,7 +1,7 @@
 # STRUCT_MUX
 
-<img width="1174" height="182" alt="STRUCT_MUX" src="https://github.com/user-attachments/assets/f133152d-9c9e-4f60-83b9-425cf3f873dd" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block (FB) `STRUCT_MUX` is a generic multiplexer for structured data types. It functions as the counterpart to `STRUCT_DEMUX` and is responsible for combining individual data values from multiple inputs into a single data structure at the output.

@@ -1,7 +1,7 @@
 # AX_NOT
 
-<img width="820" height="231" alt="image" src="https://github.com/user-attachments/assets/dc31ab7f-e7b2-434e-88d6-7cf13a88d725" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_NOT function block is a standardized Boolean NOT operator implemented according to the IEC 61131-3 standard. This block performs a logical negation (NOT operation) on the input values and outputs the inverted result.

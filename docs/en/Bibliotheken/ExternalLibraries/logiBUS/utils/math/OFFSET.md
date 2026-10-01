@@ -1,7 +1,7 @@
 # OFFSET
 
-<img width="1417" height="209" alt="image" src="https://github.com/user-attachments/assets/95399eba-9583-4cfe-af8d-3c4314a23cc2" />
 * * * * * * * * * *
+
 ## Introduction
 
 The OFFSET function block is used to determine and apply an offset value. When an event with a non-zero input value is first processed, this value is stored as a reference point (`FIRST`). On each subsequent call, the block calculates the difference between the current input value and this stored reference value. This block is useful for measuring relative changes compared to an initial starting value.

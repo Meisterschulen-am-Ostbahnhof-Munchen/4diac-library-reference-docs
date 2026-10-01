@@ -1,7 +1,7 @@
 # logiBUS_IB
 
-<img width="1903" height="313" alt="image" src="https://github.com/user-attachments/assets/56357e8e-ea36-427f-8c9a-3e990b8f634c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_IB is a Service Interface Function Block for processing byte input data. This block serves as an input interface for logiBUS systems and enables communication with digital inputs. It supports special event handling such as key press repetitions and provides a standardized interface for initializing and operating input devices.

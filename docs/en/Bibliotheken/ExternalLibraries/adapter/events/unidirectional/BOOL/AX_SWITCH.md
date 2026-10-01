@@ -1,7 +1,7 @@
 # AX_SWITCH
 
-<img width="1215" height="181" alt="image" src="https://github.com/user-attachments/assets/e3a4235c-ef25-4396-b440-3929cea8731a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SWITCH function block serves as a switching module (demultiplexer) for events based on a Boolean input value. It forwards incoming events to one of two possible outputs, depending on the state of the control signal.

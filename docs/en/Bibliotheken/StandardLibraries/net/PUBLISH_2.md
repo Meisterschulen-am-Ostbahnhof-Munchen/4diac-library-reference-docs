@@ -1,7 +1,7 @@
 # PUBLISH_2
 
-<img width="1179" height="286" alt="image" src="https://github.com/user-attachments/assets/ae23ed15-e54c-43ad-8379-07e0e8126f56" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_2 function block is used to send data to one or more SUBSCRIBE_2 blocks. It enables unacknowledged communication between different components in a distributed system.

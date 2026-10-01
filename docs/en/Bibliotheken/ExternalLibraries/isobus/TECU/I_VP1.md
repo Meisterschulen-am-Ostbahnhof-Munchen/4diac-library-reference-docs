@@ -1,7 +1,7 @@
 # I_VP1
 
-<img width="1306" height="390" alt="image" src="https://github.com/user-attachments/assets/0d8b45f8-4fd0-475e-a261-694c0e7ecac1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `I_VP1` is used to process and provide vehicle position data according to the ISO 11783 standard (ISOBUS). It specifically implements the "Vehicle Position 1" function, which is defined by the parameter Group Number (PGN) 65267. The block receives position data from a resource (e.g., a GNSS receiver) and makes it available via standardized interfaces for downstream control and display functions in an agricultural or mobile machinery network.

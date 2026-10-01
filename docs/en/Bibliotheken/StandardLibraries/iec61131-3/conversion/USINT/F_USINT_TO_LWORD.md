@@ -1,7 +1,7 @@
 # F_USINT_TO_LWORD
 
-<img width="1466" height="214" alt="F_USINT_TO_LWORD" src="https://github.com/user-attachments/assets/1a7fa270-9594-45e3-be4d-fb8e84a64db2" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_LWORD` converts a `USINT` value (8-bit unsigned integer) to a `LWORD` value (64-bit unsigned integer). This conversion is useful when processing data with different bit lengths, especially in systems that require a uniform data width.

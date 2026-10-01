@@ -1,7 +1,7 @@
 # logiBUS_LED_PWM_QX
 
-<img width="1905" height="366" alt="image" src="https://github.com/user-attachments/assets/ff509262-3aeb-48fd-88e2-74c2323ab225" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_LED_PWM_QX is an output service interface function block for Boolean output data with PWM functionality for LED control. This block enables the control of LED outputs with configurable frequencies and provides a standardized interface for communication with logiBUS I/O resources.

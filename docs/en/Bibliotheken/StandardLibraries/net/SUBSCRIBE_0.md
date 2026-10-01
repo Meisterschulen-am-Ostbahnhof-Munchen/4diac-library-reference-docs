@@ -1,7 +1,7 @@
 # SUBSCRIBE_0
 
-<img width="1291" height="276" alt="image" src="https://github.com/user-attachments/assets/073a3edc-8308-4c4f-a920-8f96a1ac017e" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_0 function block is used to subscribe to data from a PUBLISH_0 block. It enables communication between different components in a distributed automation system by receiving data from a publisher and triggering events when new data is available.

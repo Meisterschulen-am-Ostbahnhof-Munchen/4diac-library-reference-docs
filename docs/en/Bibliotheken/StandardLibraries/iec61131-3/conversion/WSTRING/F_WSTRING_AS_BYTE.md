@@ -1,7 +1,7 @@
 # F_WSTRING_AS_BYTE
 
-<img width="1480" height="214" alt="F_WSTRING_AS_BYTE" src="https://github.com/user-attachments/assets/5af29946-8d1c-495b-a40a-d21f8d38b1fc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_BYTE` is used to convert a WSTRING data type to a BYTE data type. This block is particularly useful in scenarios where converting wide strings into individual bytes is required.

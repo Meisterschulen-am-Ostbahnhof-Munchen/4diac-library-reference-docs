@@ -1,7 +1,7 @@
 # F_STRING_AS_USINT
 
-<img width="1480" height="212" alt="F_STRING_AS_USINT" src="https://github.com/user-attachments/assets/70362b16-1ffa-4281-8a03-3acb4f428c33" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_USINT` converts a `STRING` value to a `USINT` value (Unsigned Short Integer). This block is part of the `iec61131::conversion` package and enables the easy conversion of strings to numeric values.

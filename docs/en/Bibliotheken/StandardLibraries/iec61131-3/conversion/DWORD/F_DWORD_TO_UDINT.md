@@ -1,7 +1,7 @@
 # F_DWORD_TO_UDINT
 
-<img width="1253" height="181" alt="F_DWORD_TO_UDINT" src="https://github.com/user-attachments/assets/0b023d3e-49d2-41d3-a6b3-db4d5f1970f8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_UDINT` converts a `DWORD` value to a `UDINT` value. This block is part of the `iec61131::conversion` package and enables simple and efficient type conversion.

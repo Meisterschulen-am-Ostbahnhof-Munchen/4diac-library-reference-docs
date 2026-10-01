@@ -1,7 +1,7 @@
 # logiBUS_ID
 
-<img width="1903" height="313" alt="image" src="https://github.com/user-attachments/assets/52ce1d6d-0a92-42d7-8fd0-ce51ed902a2b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_ID function block is an input service interface module for double-word input data (DWORD). It serves as an interface for communication with logiBUS input devices and enables the processing of digital input signals in 4diac control systems.

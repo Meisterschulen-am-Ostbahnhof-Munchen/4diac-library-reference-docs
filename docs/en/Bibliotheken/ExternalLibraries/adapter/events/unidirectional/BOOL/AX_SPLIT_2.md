@@ -1,7 +1,7 @@
 # AX_SPLIT_2
 
-<img width="711" height="266" alt="image" src="https://github.com/user-attachments/assets/35bdbc21-637d-4e15-9327-20c28f43b4b5" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_SPLIT_2 function block serves as a generic building block for distributing an AX signal to two separate outputs. The block enables the splitting of an incoming AX signal to two independent output channels.

@@ -1,7 +1,7 @@
 # F_REAL_TO_LREAL
 
-<img width="1451" height="213" alt="F_REAL_TO_LREAL" src="https://github.com/user-attachments/assets/d9c98d4f-9da0-484e-ac3d-998cf8b14b3a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_REAL_TO_LREAL` is used to convert a REAL value to an LREAL value. This block is part of the `iec61131::conversion` package and enables simple type conversion between the two numeric data types.

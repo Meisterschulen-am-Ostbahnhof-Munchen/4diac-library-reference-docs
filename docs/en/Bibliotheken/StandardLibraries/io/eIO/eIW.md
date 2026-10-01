@@ -1,7 +1,7 @@
 # eIW
 
-<img width="1434" height="296" alt="image" src="https://github.com/user-attachments/assets/4b045e96-1325-4fca-9291-53d4d39a6161" />
 * * * * * * * * * *
+
 ## Introduction
 
 The eIW function block is an input service interface for word input data (WORD) with event-based triggering. It serves as an interface between the control application and physical input devices and enables the querying of 16-bit data words.

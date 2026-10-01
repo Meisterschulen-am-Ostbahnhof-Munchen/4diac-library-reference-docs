@@ -1,7 +1,5 @@
 # logiBUS_LED_PWM_QX
 
-<img width="1905" height="366" alt="image" src="https://github.com/user-attachments/assets/ff509262-3aeb-48fd-88e2-74c2323ab225" />
-
 * * * * * * * * * *
 
 ## Einleitung

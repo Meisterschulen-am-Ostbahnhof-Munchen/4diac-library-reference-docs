@@ -1,7 +1,7 @@
 # logiBUS_IX
 
-<img width="1789" height="343" alt="image" src="https://github.com/user-attachments/assets/8c558337-facf-438d-87ba-69a1b8e110a9" />
 * * * * * * * * * *
+
 ## Introduction
 
 The logiBUS_IX function block is an input service interface for Boolean input data, specifically designed for communication with logiBUS input modules. It serves as an interface between the control logic and physical input signals, enabling the querying of digital input values.

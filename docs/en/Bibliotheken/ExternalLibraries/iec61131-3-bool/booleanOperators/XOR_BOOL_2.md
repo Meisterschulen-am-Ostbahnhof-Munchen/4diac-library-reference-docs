@@ -1,7 +1,7 @@
 # XOR_BOOL_2
 
-<img width="1186" height="216" alt="image" src="https://github.com/user-attachments/assets/7c34009d-7063-4900-b45e-5b35629a05c0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_2` is a standard function block for calculating the logical exclusive OR (XOR) operation of two Boolean input signals. It belongs to the category of bitwise operators and is implemented as a generic function block used in control applications according to IEC 61131-3. The block waits for an execution request, calculates the result, and returns it along with an acknowledgment.

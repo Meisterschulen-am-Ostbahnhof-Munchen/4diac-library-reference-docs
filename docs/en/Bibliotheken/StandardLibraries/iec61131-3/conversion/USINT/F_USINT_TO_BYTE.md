@@ -1,7 +1,7 @@
 # F_USINT_TO_BYTE
 
-<img width="1454" height="214" alt="F_USINT_TO_BYTE" src="https://github.com/user-attachments/assets/c086c1af-bc1b-492e-87cb-d7c3a52dd7a0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_BYTE` converts an unsigned 8-bit integer value (USINT) into a byte value (BYTE). This conversion is particularly necessary in scenarios where data needs to be exchanged between different formats or systems.

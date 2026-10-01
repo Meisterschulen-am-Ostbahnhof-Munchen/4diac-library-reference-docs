@@ -1,7 +1,7 @@
 # F_TIME_IN_NS_TO_UDINT
 
-<img width="1538" height="212" alt="F_TIME_IN_NS_TO_UDINT" src="https://github.com/user-attachments/assets/cd46fa62-6fda-4f4a-8e2f-92db543f9c19" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_NS_TO_UDINT` converts a time value in nanoseconds (`TIME`) into an unsigned 32-bit integer value (`UDINT`). This conversion is particularly useful when time values are needed in a numeric format for further calculations or control purposes.

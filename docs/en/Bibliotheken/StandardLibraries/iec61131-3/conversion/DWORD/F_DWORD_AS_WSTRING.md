@@ -1,7 +1,7 @@
 # F_DWORD_AS_WSTRING
 
-<img width="1281" height="184" alt="F_DWORD_AS_WSTRING" src="https://github.com/user-attachments/assets/58fe6e4a-3746-43a9-91ef-9a284241e67a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_AS_WSTRING` is used to convert a DWORD value to a WSTRING value. This function block is particularly useful in scenarios where numeric values need to be converted into a string, for example, for display or logging.

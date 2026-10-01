@@ -1,7 +1,7 @@
 # AX_TOF
 
-<img width="962" height="255" alt="image" src="https://github.com/user-attachments/assets/b86d8399-ca0b-492c-b20c-52dde7069371" />
 * * * * * * * * * *
+
 ## Introduction
 
 **Important note: This function block requires only one event and no cyclic calls. It has no output ET and does not display the elapsed time.**

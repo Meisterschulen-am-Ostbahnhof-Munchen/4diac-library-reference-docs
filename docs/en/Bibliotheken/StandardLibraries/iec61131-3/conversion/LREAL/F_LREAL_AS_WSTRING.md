@@ -1,7 +1,7 @@
 # F_LREAL_AS_WSTRING
 
-<img width="1280" height="182" alt="F_LREAL_AS_WSTRING" src="https://github.com/user-attachments/assets/440d684c-51cd-48e7-a918-9a5a0d6dcc22" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_AS_WSTRING` converts an LREAL value (64-bit floating-point number) into a WSTRING (wide string). This is particularly useful when numeric values are needed for display or further processing as text.

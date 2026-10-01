@@ -1,7 +1,7 @@
 # OR_BOOL_5
 
-<img width="1370" height="337" alt="image" src="https://github.com/user-attachments/assets/d3d2531f-35f3-4013-86ae-fbe3da61ed57" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `OR_BOOL_5` is a standard function block for calculating the logical OR operation. It performs an OR operation on five separate Boolean input signals. The function block belongs to the category of standard Boolean functions according to IEC 61131-3 and is implemented as a generic function block.

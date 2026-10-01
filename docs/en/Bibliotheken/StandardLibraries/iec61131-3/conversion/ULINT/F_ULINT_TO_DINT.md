@@ -1,7 +1,7 @@
 # F_ULINT_TO_DINT
 
-<img width="1453" height="214" alt="F_ULINT_TO_DINT" src="https://github.com/user-attachments/assets/0a9c4fad-0e7e-45ea-a121-a14bf7015759" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_DINT` converts a `ULINT` value (64-bit unsigned integer) to a `DINT` value (32-bit signed integer). This conversion is particularly relevant in scenarios where data needs to be exchanged between systems with different data types.

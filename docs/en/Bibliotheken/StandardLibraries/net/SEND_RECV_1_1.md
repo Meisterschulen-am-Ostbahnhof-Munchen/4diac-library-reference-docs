@@ -1,7 +1,7 @@
 # SEND_RECV_1_1
 
-<img width="1257" height="287" alt="image" src="https://github.com/user-attachments/assets/91b59d90-84f9-436c-93b0-702ec3b5def5" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SEND_RECV_1_1 function block implements a duplex communication interface for bidirectional data exchange over communication channels. The block enables both sending and receiving data over a shared channel and supports generic data types for maximum flexibility.

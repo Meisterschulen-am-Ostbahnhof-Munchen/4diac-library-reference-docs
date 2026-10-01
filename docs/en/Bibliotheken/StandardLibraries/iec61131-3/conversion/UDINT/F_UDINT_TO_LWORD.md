@@ -1,7 +1,7 @@
 # F_UDINT_TO_LWORD
 
-<img width="1462" height="216" alt="F_UDINT_TO_LWORD" src="https://github.com/user-attachments/assets/b952fbc8-443f-43ff-9840-5f002a169f93" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_TO_LWORD` converts a 32-bit unsigned integer value (UDINT) to a 64-bit unsigned integer value (LWORD). This block is particularly useful in scenarios where an extension of the data bit width is required.

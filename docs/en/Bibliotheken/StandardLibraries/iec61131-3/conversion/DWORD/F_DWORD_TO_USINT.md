@@ -1,7 +1,7 @@
 # F_DWORD_TO_USINT
 
-<img width="1255" height="182" alt="F_DWORD_TO_USINT" src="https://github.com/user-attachments/assets/4cdaf96f-2ab8-4655-8fed-b81775155fae" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DWORD_TO_USINT` converts a 32-bit value (DWORD) to an 8-bit unsigned integer (USINT). This conversion is particularly useful when data needs to be exchanged between systems with different word lengths.

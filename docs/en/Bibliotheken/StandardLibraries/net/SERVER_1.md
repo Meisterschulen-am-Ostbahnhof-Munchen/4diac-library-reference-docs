@@ -1,7 +1,7 @@
 # SERVER_1
 
-<img width="1394" height="159" alt="image" src="https://github.com/user-attachments/assets/1298c8cd-2696-4105-b2ea-370366175661" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SERVER_1 function block communicates with a CLIENT_1 block and enables the establishment of a server-client connection. The block can receive data from and send data to clients, providing a flexible communication interface for various use cases.

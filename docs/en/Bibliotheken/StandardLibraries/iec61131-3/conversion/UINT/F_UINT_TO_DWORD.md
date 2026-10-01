@@ -1,7 +1,7 @@
 # F_UINT_TO_DWORD
 
-<img width="1452" height="216" alt="F_UINT_TO_DWORD" src="https://github.com/user-attachments/assets/c6603f80-b56e-4aa5-92ad-42ed328a3833" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_DWORD` converts a UINT value (16-bit unsigned integer) to a DWORD value (32-bit unsigned integer). This conversion is particularly necessary in scenarios where data with different bit widths needs to be processed or transmitted.

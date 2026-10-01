@@ -1,7 +1,7 @@
 # F_ULINT_TO_LWORD
 
-<img width="1466" height="214" alt="F_ULINT_TO_LWORD" src="https://github.com/user-attachments/assets/8b0a2f9e-ac50-43f3-b73b-dadfee3ccecb" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_LWORD` converts a ULINT data type (64-bit unsigned integer) to an LWORD data type (64-bit bit string). This block is particularly useful in applications where direct type conversion between these two data types is required.

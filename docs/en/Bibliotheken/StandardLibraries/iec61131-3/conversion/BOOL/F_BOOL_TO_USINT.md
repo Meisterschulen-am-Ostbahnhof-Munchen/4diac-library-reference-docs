@@ -1,7 +1,7 @@
 # F_BOOL_TO_USINT
 
-<img width="1450" height="212" alt="F_BOOL_TO_USINT" src="https://github.com/user-attachments/assets/72e9600a-837a-49a8-b423-6f5380816310" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_TO_USINT` converts a Boolean value (`BOOL`) into an unsigned 8-bit integer (`USINT`). This conversion is useful when Boolean values need to be used in numerical operations or for communication with systems that do not directly support Boolean values.

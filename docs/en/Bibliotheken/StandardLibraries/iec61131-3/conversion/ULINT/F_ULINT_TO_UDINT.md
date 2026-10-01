@@ -1,7 +1,7 @@
 # F_ULINT_TO_UDINT
 
-<img width="1462" height="214" alt="F_ULINT_TO_UDINT" src="https://github.com/user-attachments/assets/15f7dfad-1b32-45df-af59-bbad295a6c11" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_UDINT` converts a 64-bit unsigned integer value (ULINT) to a 32-bit unsigned integer value (UDINT). This conversion is useful when exchanging data between systems or components that use different data types.

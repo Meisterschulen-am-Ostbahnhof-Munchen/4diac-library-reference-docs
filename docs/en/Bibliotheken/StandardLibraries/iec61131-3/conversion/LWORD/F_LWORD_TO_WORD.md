@@ -1,7 +1,7 @@
 # F_LWORD_TO_WORD
 
-<img width="1454" height="214" alt="F_LWORD_TO_WORD" src="https://github.com/user-attachments/assets/eeb29887-0982-497c-bd0d-0bac534c0573" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_WORD` is used to convert a 64-bit value (LWORD) to a 16-bit value (WORD). This conversion is particularly necessary in scenarios where data needs to be exchanged or processed between systems with different word widths.

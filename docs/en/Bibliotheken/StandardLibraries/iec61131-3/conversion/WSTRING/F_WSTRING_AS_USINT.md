@@ -1,7 +1,7 @@
 # F_WSTRING_AS_USINT
 
-<img width="1492" height="214" alt="F_WSTRING_AS_USINT" src="https://github.com/user-attachments/assets/8e64c350-6c28-45b7-9597-276c03f37b6b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_USINT` converts a WSTRING value to a USINT value. It is part of the package `iec61131::conversion` and enables the easy conversion of wide strings to unsigned 8-bit integers.

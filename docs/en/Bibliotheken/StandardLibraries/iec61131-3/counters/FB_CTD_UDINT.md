@@ -1,7 +1,7 @@
 # FB_CTD_UDINT
 
-<img width="1411" height="282" alt="FB_CTD_UDINT" src="https://github.com/user-attachments/assets/a8aab825-6766-4328-b0cb-4b841157bc33" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_CTD_UDINT` is a down counter for unsigned 32-bit integers (UDINT). It is used to decrement a counter value on each event until it reaches zero.

@@ -1,7 +1,7 @@
 # F_TIME_IN_US_TO_ULINT
 
-<img width="1536" height="212" alt="F_TIME_IN_US_TO_ULINT" src="https://github.com/user-attachments/assets/30c49e6f-e058-49c6-84cf-c4478d9a7c69" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_US_TO_ULINT` converts a time value in microseconds (`TIME`) into an unsigned 64-bit integer value (`ULINT`). This is particularly useful when time values need to be converted for numerical calculations or further processing.

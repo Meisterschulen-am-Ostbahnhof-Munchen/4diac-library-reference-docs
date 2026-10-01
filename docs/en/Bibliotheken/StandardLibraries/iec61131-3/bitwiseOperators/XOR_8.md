@@ -1,7 +1,7 @@
 # XOR_8
 
-<img width="1122" height="359" alt="XOR_8" src="https://github.com/user-attachments/assets/f41acaf2-1c82-4e78-b340-e454c61c1fc8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The XOR_8 function block performs a bitwise XOR operation on up to 8 input variables. It is a generic function block that can work with various bit data types (ANY_BIT). The block is classified according to the IEC 61131-3 standard and provides a simple way to perform XOR operations in control applications.

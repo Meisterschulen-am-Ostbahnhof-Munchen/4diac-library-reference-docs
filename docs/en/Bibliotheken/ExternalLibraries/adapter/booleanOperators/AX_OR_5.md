@@ -1,7 +1,7 @@
 # AX_OR_5
 
-<img width="963" height="369" alt="image" src="https://github.com/user-attachments/assets/7be25f5c-a69e-444a-9f06-b216c3290d77" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_5 function block is a generic block for calculating Boolean OR operations with five inputs. It is used for the logical processing of signals in automation systems and allows the combination of multiple input signals into a single output signal.

@@ -1,7 +1,7 @@
 # F_UINT_TO_LREAL
 
-<img width="1452" height="216" alt="F_UINT_TO_LREAL" src="https://github.com/user-attachments/assets/a0008558-2922-435e-9642-d1886e739723" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_LREAL` converts an unsigned 16-bit integer value (UINT) to a 64-bit floating-point value (LREAL). This conversion is particularly useful in control applications where different data types need to be processed.

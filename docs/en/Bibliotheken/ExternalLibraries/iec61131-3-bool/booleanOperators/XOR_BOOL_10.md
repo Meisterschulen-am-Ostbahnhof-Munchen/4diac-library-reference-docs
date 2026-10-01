@@ -1,7 +1,7 @@
 # XOR_BOOL_10
 
-<img width="1397" height="485" alt="image" src="https://github.com/user-attachments/assets/2a69233b-010f-46f7-af45-759eb7f7fdb4" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `XOR_BOOL_10` is a generic function block for calculating the logical exclusive OR (XOR) operation on up to ten Boolean input signals. It complies with the IEC 61131-3 standard and is designed for use in the 4diac IDE. The function block evaluates all connected inputs for each request and returns the corresponding result.

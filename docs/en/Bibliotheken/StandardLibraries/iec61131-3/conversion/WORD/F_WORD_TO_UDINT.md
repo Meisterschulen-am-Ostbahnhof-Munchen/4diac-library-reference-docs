@@ -1,7 +1,7 @@
 # F_WORD_TO_UDINT
 
-<img width="1455" height="214" alt="F_WORD_TO_UDINT" src="https://github.com/user-attachments/assets/0620ecfb-f811-4aea-b442-967e54ac35c8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WORD_TO_UDINT` converts a `WORD` data type to a `UDINT` data type. This function block is particularly useful in scenarios where type conversion is required to prepare data for further processing.

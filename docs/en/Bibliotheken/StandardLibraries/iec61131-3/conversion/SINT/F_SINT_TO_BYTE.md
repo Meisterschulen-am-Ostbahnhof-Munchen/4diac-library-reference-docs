@@ -1,7 +1,7 @@
 # F_SINT_TO_BYTE
 
-<img width="1439" height="213" alt="F_SINT_TO_BYTE" src="https://github.com/user-attachments/assets/af182d96-472c-4593-8202-182a67b19c5a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_BYTE` converts a signed 8-bit integer value (SINT) to an unsigned 8-bit integer value (BYTE). This conversion is useful when exchanging data between systems that use different representations for 8-bit values.

@@ -1,7 +1,7 @@
 # F_LINT_TO_USINT
 
-<img width="1448" height="214" alt="F_LINT_TO_USINT" src="https://github.com/user-attachments/assets/847133a9-041d-466e-af83-f73ad8337642" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_USINT` converts a 64-bit integer value (`LINT`) into an 8-bit unsigned integer value (`USINT`). This block is part of the IEC 61131 conversion library and is typically used in automation applications where data types of different sizes need to be processed.

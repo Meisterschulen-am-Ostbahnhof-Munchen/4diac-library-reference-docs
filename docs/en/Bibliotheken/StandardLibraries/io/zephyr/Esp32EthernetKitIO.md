@@ -1,7 +1,7 @@
 # Esp32EthernetKitIO
 
-<img width="1256" height="313" alt="image" src="https://github.com/user-attachments/assets/b66a0967-8b6e-47b2-b65a-10053927e12e" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Esp32EthernetKitIO function block serves as a template for modular input/output operations with the Esp32EthernetKit board. This block enables the control and monitoring of various hardware components of the board via a standardized interface.

@@ -1,7 +1,7 @@
 # F_USINT_TO_LREAL
 
-<img width="1466" height="214" alt="F_USINT_TO_LREAL" src="https://github.com/user-attachments/assets/2d3923ad-e527-4fda-be3b-8e21c0beb013" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_LREAL` converts an unsigned 8-bit integer value (USINT) to a 64-bit floating-point value (LREAL). This conversion is particularly useful when data needs to be exchanged or processed between systems with different data types.

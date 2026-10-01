@@ -1,7 +1,7 @@
 # F_STRING_AS_DINT
 
-<img width="1464" height="213" alt="F_STRING_AS_DINT" src="https://github.com/user-attachments/assets/cbb2bda3-8b1f-45cd-a56f-e4a1958ac543" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_STRING_AS_DINT` converts a `STRING` value to a `DINT` value. This function is particularly useful when strings need to be converted into numeric values, for example, when processing user input or interpreting text data.

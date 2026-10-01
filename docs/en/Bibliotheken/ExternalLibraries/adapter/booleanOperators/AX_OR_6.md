@@ -1,7 +1,7 @@
 # AX_OR_6
 
-<img width="963" height="403" alt="image" src="https://github.com/user-attachments/assets/69d7eff1-3373-49b6-877a-d54f351451e1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AX_OR_6 is a generic function block for calculating a logical OR operation with six inputs. This block is used to process Boolean signals in automation systems and outputs the result of the OR operation via an adapter output.

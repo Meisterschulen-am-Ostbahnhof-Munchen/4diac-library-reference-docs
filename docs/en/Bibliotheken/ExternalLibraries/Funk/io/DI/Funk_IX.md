@@ -1,7 +1,7 @@
 # Funk_IX
 
-<img width="1912" height="337" alt="image" src="https://github.com/user-attachments/assets/7b367819-772a-47fa-a298-1324da5fda1a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Funk_IX is a Service Interface Function Block for Boolean input data. It serves as an interface for communication with digital inputs in distributed automation systems and enables the initialization, querying, and asynchronous notification of input signals.

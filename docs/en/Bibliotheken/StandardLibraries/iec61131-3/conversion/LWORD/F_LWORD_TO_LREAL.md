@@ -1,7 +1,7 @@
 # F_LWORD_TO_LREAL
 
-<img width="1464" height="211" alt="F_LWORD_TO_LREAL" src="https://github.com/user-attachments/assets/89f93d44-7207-4ef1-ba65-ed61f446770f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_LREAL` converts an LWORD data value (64-bit unsigned integer) to an LREAL data value (64-bit floating-point number according to IEEE 754). This block is particularly useful in applications where direct type conversion between these two data types is required.

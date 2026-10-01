@@ -1,9 +1,9 @@
 # ARRAY2VALUES_2_LREAL
 
-<img width="1227" height="178" alt="image" src="https://github.com/user-attachments/assets/1fda84e9-cd29-43f7-a566-6a8e259fa26f" />
 * * * * * * * * * *
 The function block `ARRAY2VALUES_2_LREAL` is a service interface module designed to split an array of two `LREAL` values into two separate `LREAL` output variables. It facilitates the simple conversion from a structured array format to individual data points.
 ![ARRAY2VALUES_2_LREAL](ARRAY2VALUES_2_LREAL.svg)
+
 - **REQ**: A service request event that initiates the conversion. It is associated with the data input `IN`.
 - **CNF**: An acknowledgment event that signals the completion of the requested service. It is associated with the data outputs `OUT_1` and `OUT_2`.
 - **IN**: An array input of type `LREAL` with a size of 2 elements. This array contains the two values to be split.

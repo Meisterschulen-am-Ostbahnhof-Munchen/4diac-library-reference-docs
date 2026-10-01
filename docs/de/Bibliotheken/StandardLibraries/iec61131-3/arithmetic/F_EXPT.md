@@ -1,7 +1,5 @@
 # F_EXPT
 
-![F_EXPT](https://github.com/user-attachments/assets/0446a2d1-6283-400f-976d-18ac9c482b25)
-
 * * * * * * * * * *
 
 ![F_EXPT](F_EXPT.svg)

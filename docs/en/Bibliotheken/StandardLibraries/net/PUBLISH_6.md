@@ -1,7 +1,7 @@
 # PUBLISH_6
 
-<img width="1180" height="392" alt="image" src="https://github.com/user-attachments/assets/325420e2-652c-436d-8864-13d30e983684" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_6 function block is used to publish data to one or more SUBSCRIBE_6 blocks. It allows the transmission of up to six different data values via a publish-subscribe communication pattern and offers both acknowledged and unacknowledged send operations.

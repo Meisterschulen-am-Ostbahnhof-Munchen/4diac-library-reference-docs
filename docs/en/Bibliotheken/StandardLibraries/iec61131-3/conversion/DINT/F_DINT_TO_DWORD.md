@@ -1,7 +1,7 @@
 # F_DINT_TO_DWORD
 
-<img width="1449" height="212" alt="F_DINT_TO_DWORD" src="https://github.com/user-attachments/assets/bc0e5b81-4008-459d-832e-c81048024cbc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_DWORD` converts a 32-bit integer value (DINT) into a 32-bit unsigned value (DWORD). This conversion is particularly necessary when signed values need to be converted to unsigned values, for example, for further processing in certain control algorithms or for communication with other systems.

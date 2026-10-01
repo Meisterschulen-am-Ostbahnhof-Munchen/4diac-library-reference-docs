@@ -1,7 +1,7 @@
 # Aux_IXA
 
-<img width="1383" height="318" alt="image" src="https://github.com/user-attachments/assets/d064bd8f-6af0-4b04-9952-995892584e9a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_IXA is a composite function block for processing Boolean input data. It serves as a wrapper for the basic function block Aux_IX and provides an extended interface for integration into ISOBUS-compatible systems.

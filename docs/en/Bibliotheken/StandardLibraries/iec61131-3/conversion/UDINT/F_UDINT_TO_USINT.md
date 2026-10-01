@@ -1,6 +1,5 @@
 # F_UDINT_TO_USINT
 
-<img width="1470" height="216" alt="F_UDINT_TO_USINT" src="https://github.com/user-attachments/assets/1e0f089e-de96-4e75-91cb-739ff8cf6842" />
 * * * * * * * * * *
 The function block `F_UDINT_TO_USINT` converts a 32-bit unsigned integer value (UDINT) to an 8-bit unsigned integer value (USINT). This block is particularly useful in scenarios where type conversion between numerical values of different sizes is required.
 ![F_UDINT_TO_USINT](F_UDINT_TO_USINT.svg)

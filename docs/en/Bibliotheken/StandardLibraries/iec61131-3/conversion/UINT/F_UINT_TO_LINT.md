@@ -1,7 +1,7 @@
 # F_UINT_TO_LINT
 
-<img width="1436" height="216" alt="F_UINT_TO_LINT" src="https://github.com/user-attachments/assets/8f25baa4-d194-4dfd-887d-b962e086c413" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_LINT` converts an unsigned 16-bit integer value (UINT) to a signed 64-bit integer value (LINT). This conversion is particularly useful when data needs to be exchanged or processed between systems with different word lengths.

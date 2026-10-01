@@ -1,7 +1,7 @@
 # F_SINT_TO_REAL
 
-<img width="1439" height="213" alt="F_SINT_TO_REAL" src="https://github.com/user-attachments/assets/9477ea11-2b6e-441e-8fe2-16588d70cf27" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_REAL` converts a signed 8-bit integer value (`SINT`) into a floating-point value (`REAL`). This conversion is particularly useful in control applications where different data types need to be processed.

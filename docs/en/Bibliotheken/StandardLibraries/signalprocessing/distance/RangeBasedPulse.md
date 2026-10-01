@@ -1,7 +1,7 @@
 # RangeBasedPulse
 
-<img width="1038" height="216" alt="RangeBasedPulse" src="https://github.com/user-attachments/assets/7a38dda2-cdee-4a47-be13-09d2637500b0" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `RangeBasedPulse` is a distance-based pulse generator that controls a Boolean output (Q) based on the distance traveled (DIST_IN). The function block is started with a HIGH pulse and periodically generates output pulses according to the configured distance values for HIGH and LOW phases.

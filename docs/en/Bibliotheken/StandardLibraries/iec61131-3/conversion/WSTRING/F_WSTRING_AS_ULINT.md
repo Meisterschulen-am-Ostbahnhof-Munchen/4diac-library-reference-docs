@@ -1,7 +1,7 @@
 # F_WSTRING_AS_ULINT
 
-<img width="1492" height="214" alt="F_WSTRING_AS_ULINT" src="https://github.com/user-attachments/assets/1523dbf5-1b9f-4c01-b8af-755a1cd1c490" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_WSTRING_AS_ULINT` is used to convert a WSTRING data type to a ULINT data type. This function block is particularly useful in scenarios where strings need to be converted into numeric values, for example, when processing user input or parsing data from external sources.

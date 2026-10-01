@@ -1,7 +1,7 @@
 # F_LREAL_TO_UDINT
 
-<img width="1466" height="214" alt="F_LREAL_TO_UDINT" src="https://github.com/user-attachments/assets/8b6d5f6b-1cdf-44b6-a520-33c18fb77913" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LREAL_TO_UDINT` is used to convert a 64-bit floating-point value (LREAL) into a 32-bit unsigned integer value (UDINT). This conversion is useful when floating-point numbers need to be converted into unsigned integers, for example, for specific control or communication applications.

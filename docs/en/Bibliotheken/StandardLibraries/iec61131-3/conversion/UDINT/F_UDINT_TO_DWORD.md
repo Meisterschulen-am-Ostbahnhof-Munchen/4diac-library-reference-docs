@@ -1,7 +1,7 @@
 # F_UDINT_TO_DWORD
 
-<img width="1464" height="212" alt="F_UDINT_TO_DWORD" src="https://github.com/user-attachments/assets/2a17af0b-98a8-4d4b-ac10-de4278c1451a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UDINT_TO_DWORD` converts a `UDINT` value (32-bit unsigned integer) into a `DWORD` value (32-bit data word). This conversion is particularly useful in scenarios where numeric values need to be further processed or transmitted as bit patterns.

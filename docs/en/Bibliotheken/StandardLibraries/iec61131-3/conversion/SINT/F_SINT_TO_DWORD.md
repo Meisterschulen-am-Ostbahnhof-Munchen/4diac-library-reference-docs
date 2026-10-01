@@ -1,7 +1,7 @@
 # F_SINT_TO_DWORD
 
-<img width="1450" height="213" alt="F_SINT_TO_DWORD" src="https://github.com/user-attachments/assets/10f7168f-01f0-46a7-9a2e-ca0c754a294b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_TO_DWORD` converts a signed 8-bit integer value (SINT) to an unsigned 32-bit integer value (DWORD). This block is particularly useful in scenarios where type conversion between these two data types is required.

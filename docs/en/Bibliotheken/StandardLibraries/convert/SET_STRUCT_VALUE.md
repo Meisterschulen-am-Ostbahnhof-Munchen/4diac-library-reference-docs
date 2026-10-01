@@ -1,7 +1,7 @@
 # SET_STRUCT_VALUE
 
-<img width="1393" height="152" alt="image" src="https://github.com/user-attachments/assets/06ce9694-a203-4982-895d-68c27425acd1" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `SET_STRUCT_VALUE` is a service interface function block used to set a specific value within a data structure. It enables the dynamic manipulation of structure elements by assigning a new value to a named member of the structure.

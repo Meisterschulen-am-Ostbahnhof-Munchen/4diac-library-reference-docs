@@ -1,7 +1,7 @@
 # SUBSCRIBE_8
 
-<img width="1108" height="438" alt="image" src="https://github.com/user-attachments/assets/e671e3e6-2912-493f-ad24-79f5c5e9dfce" />
 * * * * * * * * * *
+
 ## Introduction
 
 The SUBSCRIBE_8 function block acts as a subscriber for a PUBLISH_8 block and allows the receipt of up to 8 different data values over a single communication link. The block implements a publish-subscribe communication pattern and is part of the iec61499::net package.

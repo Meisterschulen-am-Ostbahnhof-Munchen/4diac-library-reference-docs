@@ -1,7 +1,7 @@
 # F_INT_TO_UDINT
 
-<img width="1232" height="187" alt="F_INT_TO_UDINT" src="https://github.com/user-attachments/assets/8bceda1f-dc12-42bd-a8b4-17dea9411990" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_INT_TO_UDINT` converts a signed 16-bit integer value (`INT`) into an unsigned 32-bit integer value (`UDINT`). This conversion is particularly necessary in scenarios where data needs to be exchanged between systems with different data types.

@@ -1,7 +1,7 @@
 # F_LINT_TO_INT
 
-<img width="1421" height="214" alt="F_LINT_TO_INT" src="https://github.com/user-attachments/assets/59a9a468-b60b-4e33-9018-cc20619801a8" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_INT` is used to convert a 64-bit integer value (LINT) to a 16-bit integer value (INT). This conversion is useful when data needs to be exchanged or processed between systems with different word lengths.

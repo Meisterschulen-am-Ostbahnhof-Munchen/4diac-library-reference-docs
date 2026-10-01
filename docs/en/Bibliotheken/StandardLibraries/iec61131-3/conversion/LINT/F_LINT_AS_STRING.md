@@ -1,7 +1,7 @@
 # F_LINT_AS_STRING
 
-<img width="1256" height="183" alt="F_LINT_AS_STRING" src="https://github.com/user-attachments/assets/c1d86074-155a-49cf-b025-bacefa300e09" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_AS_STRING` converts a LINT data type (64-bit integer) to a STRING data type (character string). This block is particularly useful when numeric values are needed as text for output or further processing.

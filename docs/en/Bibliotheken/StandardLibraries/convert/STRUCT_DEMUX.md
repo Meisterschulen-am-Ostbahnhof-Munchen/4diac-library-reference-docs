@@ -1,6 +1,5 @@
 # STRUCT_DEMUX
 
-<img width="1196" height="182" alt="STRUCT_DEMUX" src="https://github.com/user-attachments/assets/2420186b-20ea-4920-85e4-746488942325" />
 * * * * * * * * * *
 The function block (FB) `STRUCT_DEMUX` is a generic demultiplexer for structured data types. Its main task is to split an input data structure into its individual components (members). These individual members are then made available via separate data outputs, which are generated dynamically.
 ![STRUCT_DEMUX](STRUCT_DEMUX.svg)

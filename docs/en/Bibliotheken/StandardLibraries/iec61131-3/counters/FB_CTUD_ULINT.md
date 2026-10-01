@@ -1,7 +1,7 @@
 # FB_CTUD_ULINT
 
-<img width="1423" height="340" alt="FB_CTUD_ULINT" src="https://github.com/user-attachments/assets/dbd0e935-fff7-4ac2-b484-178aa62809f7" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `FB_CTUD_ULINT` is a counter with up and down counting functionality for the data type `ULINT` (unsigned 64-bit integer). It offers additional functions such as reset, loading a default value, and status outputs for the counting direction.

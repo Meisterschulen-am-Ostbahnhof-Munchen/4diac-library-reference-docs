@@ -1,7 +1,7 @@
 # F_LINT_TO_BYTE
 
-<img width="1230" height="183" alt="F_LINT_TO_BYTE" src="https://github.com/user-attachments/assets/31f5aea5-3ee0-4d1d-83d9-c7897fad2fe4" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_TO_BYTE` converts a LINT data type (64-bit integer) to a BYTE data type (8-bit integer). This block is particularly useful in scenarios where type conversion between these two data types is required.

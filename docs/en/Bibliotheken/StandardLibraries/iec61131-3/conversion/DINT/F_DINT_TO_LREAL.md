@@ -1,7 +1,7 @@
 # F_DINT_TO_LREAL
 
-<img width="1449" height="212" alt="F_DINT_TO_LREAL" src="https://github.com/user-attachments/assets/bdda654f-6dbe-4c4a-aaba-6440c9a13e8f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_DINT_TO_LREAL` converts a 32-bit integer value (DINT) into a 64-bit floating-point value (LREAL). This conversion is particularly necessary in control systems where different data types need to be processed in various parts of the application.

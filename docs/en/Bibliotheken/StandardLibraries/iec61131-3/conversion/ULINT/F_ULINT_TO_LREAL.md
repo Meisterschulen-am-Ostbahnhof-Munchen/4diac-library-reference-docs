@@ -1,7 +1,7 @@
 # F_ULINT_TO_LREAL
 
-<img width="1466" height="214" alt="F_ULINT_TO_LREAL" src="https://github.com/user-attachments/assets/deffb0a4-6080-4c01-b592-e27e26f1d382" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_ULINT_TO_LREAL` converts a `ULINT` value (64-bit unsigned integer) to a `LREAL` value (64-bit floating point). This conversion is particularly necessary in scenarios where integer values need to be converted to floating-point numbers for further calculations.

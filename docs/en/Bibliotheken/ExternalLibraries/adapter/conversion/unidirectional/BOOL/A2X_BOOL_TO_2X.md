@@ -1,7 +1,7 @@
 # A2X_BOOL_TO_2X
 
-<img width="1145" height="205" alt="image" src="https://github.com/user-attachments/assets/8248af7a-7ffe-41f8-af30-bd33f4e69bed" />
 * * * * * * * * * *
+
 ## Introduction
 
 The A2X_BOOL_TO_2X is a compound function block that converts two BOOL values into an A2X output format. This block serves as a bridge between simple Boolean control signals and the standardized A2X adapter interface.

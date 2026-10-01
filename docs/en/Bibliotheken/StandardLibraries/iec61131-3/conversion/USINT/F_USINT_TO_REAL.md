@@ -1,6 +1,5 @@
 # F_USINT_TO_REAL
 
-<img width="1451" height="214" alt="F_USINT_TO_REAL" src="https://github.com/user-attachments/assets/f1f498f3-f7f6-48bb-9136-b03a341a2ec4" />
 * * * * * * * * * *
 The function block `F_USINT_TO_REAL` converts an unsigned 8-bit integer value (USINT) into a 32-bit floating-point value (REAL). This conversion is particularly necessary in scenarios where numeric values of different data types need to be processed or used further.
 ![F_USINT_TO_REAL](F_USINT_TO_REAL.svg)

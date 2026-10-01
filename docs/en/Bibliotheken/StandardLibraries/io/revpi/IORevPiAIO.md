@@ -1,7 +1,7 @@
 # 🔌 IORevPiAIO
 
-<img width="1354" height="423" alt="image" src="https://github.com/user-attachments/assets/165bf812-6c94-4b44-9d43-ee2d8f33454b" />
 * * * * * * * * * *
+
 ## Introduction
 
 The IORevPiAIO function block provides an interface for the analog I/O module of the Revolution Pi from KUNBUS GmbH. This module enables the control and reading of analog inputs and outputs, as well as RTD (Resistance Temperature Detector) sensors, via the Revolution Pi system.

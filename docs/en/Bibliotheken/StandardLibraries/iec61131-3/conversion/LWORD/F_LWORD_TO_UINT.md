@@ -1,7 +1,7 @@
 # F_LWORD_TO_UINT
 
-<img width="1451" height="216" alt="F_LWORD_TO_UINT" src="https://github.com/user-attachments/assets/1cbf487c-9149-449a-95ba-ada7735f19cc" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LWORD_TO_UINT` converts a `LWORD` data type to a `UINT` data type. This function block is particularly useful in scenarios where type conversion between these two data types is required, for example, in communication between systems with different data formats.

@@ -1,7 +1,7 @@
 # F_RIGHT
 
-<img width="1390" height="208" alt="F_RIGHT" src="https://github.com/user-attachments/assets/d39c7fe1-3c16-4c26-90c3-b78236b98380" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_RIGHT` is a standard function block for processing character strings according to the IEC 61131-3 standard. It extracts the rightmost characters `L` from the input string `IN` and outputs them as the result `OUT`. This function block is particularly useful in applications where parts of character strings need to be processed or analyzed.

@@ -1,7 +1,7 @@
 # F_TIME_AS_STRING
 
-<img width="1464" height="212" alt="F_TIME_AS_STRING" src="https://github.com/user-attachments/assets/e9156094-840f-4d48-bc5d-8fd718a9e157" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_AS_STRING` is used to convert a `TIME` value into a `STRING` value. It is particularly useful when time values are needed for display or logging in textual form.

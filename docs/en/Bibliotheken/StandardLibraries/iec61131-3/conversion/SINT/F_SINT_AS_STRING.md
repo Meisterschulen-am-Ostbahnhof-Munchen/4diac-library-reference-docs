@@ -1,7 +1,7 @@
 # F_SINT_AS_STRING
 
-<img width="1464" height="213" alt="F_SINT_AS_STRING" src="https://github.com/user-attachments/assets/8f81385a-a997-414c-938e-4a08f519242c" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_SINT_AS_STRING` converts a `SINT` value (8-bit integer) into a `STRING` (string). This block is particularly useful when numeric values are needed as text for display or further processing.

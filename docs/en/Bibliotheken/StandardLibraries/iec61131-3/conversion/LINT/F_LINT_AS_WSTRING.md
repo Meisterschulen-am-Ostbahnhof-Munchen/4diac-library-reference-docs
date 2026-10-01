@@ -1,7 +1,7 @@
 # F_LINT_AS_WSTRING
 
-<img width="1265" height="183" alt="F_LINT_AS_WSTRING" src="https://github.com/user-attachments/assets/541513e7-d8aa-464e-9e9c-48ecd85a527a" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_LINT_AS_WSTRING` is used to convert a LINT value (64-bit integer) into a WSTRING (wide string). This block is particularly useful in scenarios where numeric values need to be output as strings or processed further.

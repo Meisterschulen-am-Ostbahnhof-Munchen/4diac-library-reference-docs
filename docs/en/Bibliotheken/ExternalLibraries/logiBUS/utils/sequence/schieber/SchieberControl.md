@@ -1,6 +1,5 @@
 # Slide Control
 
-<img width="1509" height="338" alt="image" src="https://github.com/user-attachments/assets/ed91b9bc-3eed-4d26-8b19-06f71ea1f94d" />
 ![SchieberControl_ecc](./SchieberControl_ecc.svg)
 
 * * * * * * * * * *

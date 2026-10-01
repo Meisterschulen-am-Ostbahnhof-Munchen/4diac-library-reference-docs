@@ -1,7 +1,7 @@
 # F_TIME_IN_US_TO_LREAL
 
-<img width="1536" height="212" alt="F_TIME_IN_US_TO_LREAL" src="https://github.com/user-attachments/assets/ece70afa-d5af-4a67-a95e-e1c2a79fc167" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_TIME_IN_US_TO_LREAL` converts a time value in microseconds (`TIME`) into a double-precision floating-point number (`LREAL`). This conversion is particularly useful in control applications where time values are needed for further calculations.

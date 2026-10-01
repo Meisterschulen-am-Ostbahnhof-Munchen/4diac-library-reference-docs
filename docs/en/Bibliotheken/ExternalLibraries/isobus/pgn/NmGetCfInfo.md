@@ -1,7 +1,7 @@
 # NmGetCfInfo
 
-<img width="1465" height="241" alt="image" src="https://github.com/user-attachments/assets/3ea313ab-46a3-4f18-9a72-53f679663551" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `NmGetCfInfo` is used within an ISOBUS network to retrieve information about connected communication partners (Connected CFs). It allows both internal and external participants in the network to be identified and their details to be recorded. This block is part of ISOBUS PGN communication and is typically used for network management tasks.

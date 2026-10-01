@@ -1,7 +1,7 @@
 # F_BOOL_TO_LWORD
 
-<img width="1242" height="182" alt="F_BOOL_TO_LWORD" src="https://github.com/user-attachments/assets/eed96580-b3cb-4354-91df-bc8b33c8a966" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_BOOL_TO_LWORD` converts a Boolean value (`BOOL`) into a 64-bit unsigned integer (`LWORD`). This conversion is particularly useful in scenarios where Boolean values need to be embedded in larger data structures or processed with other long integer values.

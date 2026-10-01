@@ -1,7 +1,7 @@
 # Aux_IE
 
-<img width="1335" height="214" alt="image" src="https://github.com/user-attachments/assets/96c43b99-3ad6-4ea1-835a-f1ca01902622" />
 * * * * * * * * * *
+
 ## Introduction
 
 The Aux_IE function block is an input service interface function block for event input data. It is used to process auxiliary inputs and enables the recognition of various input events such as pressing, releasing, single-clicking, double-clicking, etc.

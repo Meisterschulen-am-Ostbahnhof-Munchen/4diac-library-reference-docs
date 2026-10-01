@@ -1,7 +1,7 @@
 # F_UINT_TO_WORD
 
-<img width="1436" height="216" alt="F_UINT_TO_WORD" src="https://github.com/user-attachments/assets/6e3b2752-57b0-41a0-b681-16c58d50879f" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_TO_WORD` converts an unsigned 16-bit integer value (UINT) into a 16-bit word (WORD). This conversion is particularly necessary in scenarios where data needs to be exchanged between different representation formats or systems.

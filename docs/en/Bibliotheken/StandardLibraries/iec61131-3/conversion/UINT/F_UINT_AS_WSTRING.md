@@ -1,7 +1,7 @@
 # F_UINT_AS_WSTRING
 
-<img width="1478" height="216" alt="F_UINT_AS_WSTRING" src="https://github.com/user-attachments/assets/d0bb6f38-30a0-4c95-ab3e-003a118d9f81" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_UINT_AS_WSTRING` converts an unsigned integer value (`UINT`) into a wide-string representation (`WSTRING`). This block is particularly useful in scenarios where numeric values need to be converted into human-readable text.

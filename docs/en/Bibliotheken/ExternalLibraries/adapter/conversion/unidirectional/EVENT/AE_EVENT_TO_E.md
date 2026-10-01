@@ -1,7 +1,7 @@
 # AE_EVENT_TO_E
 
-<img width="1310" height="249" alt="image" src="https://github.com/user-attachments/assets/4eca9bad-6eed-4dfd-9643-3b25d2e4cfc3" />
 * * * * * * * * * *
+
 ## Introduction
 
 The AE_EVENT_TO_E function block is a composite function block used to convert events into AE adapter signals. It enables the conversion of a simple event into an adapter-based output signal, which is particularly useful when integrating various communication interfaces.

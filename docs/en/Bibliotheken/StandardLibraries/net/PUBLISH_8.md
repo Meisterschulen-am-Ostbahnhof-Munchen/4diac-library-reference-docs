@@ -1,7 +1,7 @@
 # PUBLISH_8
 
-<img width="1180" height="444" alt="image" src="https://github.com/user-attachments/assets/3ea0daaf-96d3-41f7-955f-9e7819185dd9" />
 * * * * * * * * * *
+
 ## Introduction
 
 The PUBLISH_8 function block is used to send data to one or more SUBSCRIBE_8 blocks. It implements a publisher-subscriber communication pattern and allows the distribution of up to eight different data values to subscribed recipients.

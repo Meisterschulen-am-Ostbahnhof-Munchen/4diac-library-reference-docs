@@ -1,7 +1,7 @@
 # F_USINT_TO_SINT
 
-<img width="1451" height="214" alt="F_USINT_TO_SINT" src="https://github.com/user-attachments/assets/6cc23cdf-2a2a-43cf-b2fe-3158508fb208" />
 * * * * * * * * * *
+
 ## Introduction
 
 The function block `F_USINT_TO_SINT` converts an unsigned 8-bit integer value (USINT) to a signed 8-bit integer value (SINT). This block is particularly useful when exchanging data between systems that use different data types.
