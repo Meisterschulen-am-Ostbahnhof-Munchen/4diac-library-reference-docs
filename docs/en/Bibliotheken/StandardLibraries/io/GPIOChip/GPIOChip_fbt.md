@@ -1,6 +1,6 @@
 # GPIOChip
 
-<img width="1343" height="245" alt="image" src="https://github.com/user-attachments/assets/612f184c-bce3-4376-bb09-9881ec2162c0" />
+![GPIOChip_fbt](GPIOChip_fbt.svg)
 * * * * * * * * * *
 ## Introduction
 
