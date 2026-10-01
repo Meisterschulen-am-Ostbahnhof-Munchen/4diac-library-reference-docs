@@ -1,7 +1,8 @@
 # GPIOChip
 
-<img width="1343" height="245" alt="image" src="https://github.com/user-attachments/assets/612f184c-bce3-4376-bb09-9881ec2162c0" />
+![GPIOChip_fbt](GPIOChip_fbt.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The GPIOChip function block is a service interface function block for controlling GPIO chips under Linux systems. It enables access to GPIO lines via the Linux GPIO Character Device Interface (/dev/gpiochipX) and supports various operating modes for reading and writing GPIO signals.

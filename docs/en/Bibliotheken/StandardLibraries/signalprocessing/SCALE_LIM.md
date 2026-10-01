@@ -1,7 +1,8 @@
 # SCALE_LIM
 
-<img width="951" height="257" alt="SCALE_LIM" src="https://github.com/user-attachments/assets/9cc71e27-9ab8-454a-a6fc-01b86dfde68e" />
+![SCALE_LIM](SCALE_LIM.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 The SCALE_LIM function block is a scaling module with additional limiting functions. It enables the linear scaling of an input value within a defined range and also offers the option of fixing output values when certain input limits are exceeded.

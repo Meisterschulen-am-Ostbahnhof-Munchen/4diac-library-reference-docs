@@ -1,7 +1,8 @@
 # Touch-sensitive
 
-<img width="662" height="233" alt="image" src="https://github.com/user-attachments/assets/26789397-647c-4c13-b28d-5752fd19880c" />
+![tastend](tastend.svg)
 * * * * * * * * * *
+
 ## Introduction
 
 This exercise deals with creating and using a sub-application type in the 4diac IDE. The "touch-sensitive" function block serves as a sub-application and implements a unidirectional adapter connection between input and output adapters.

@@ -1,6 +1,6 @@
 # PLC01A1
 
-<img width="1073" height="540" alt="image" src="https://github.com/user-attachments/assets/5a5bf23e-8741-4ccf-8f3d-aac2afba49b1" />
+![PLC01A1_fbt](PLC01A1_fbt.svg)
 
 * * * * * * * * * *
 
