@@ -1,6 +1,5 @@
 # AX_SPLIT_6
 
-<img width="705" height="397" alt="image" src="https://github.com/user-attachments/assets/1b0e2281-e41d-47e1-bad4-9690070e18e8" />
 * * * * * * * * * *
 ## Introduction
 

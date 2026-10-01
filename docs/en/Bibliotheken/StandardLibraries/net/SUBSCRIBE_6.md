@@ -1,6 +1,5 @@
 # SUBSCRIBE_6
 
-<img width="1291" height="454" alt="image" src="https://github.com/user-attachments/assets/78e6c97e-e525-4b75-a586-df1070801dc0" />
 * * * * * * * * * *
 ## Introduction
 

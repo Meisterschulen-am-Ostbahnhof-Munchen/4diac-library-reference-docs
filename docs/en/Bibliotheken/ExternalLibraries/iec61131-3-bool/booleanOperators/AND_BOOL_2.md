@@ -1,6 +1,5 @@
 # AND_BOOL_2
 
-<img width="1383" height="250" alt="image" src="https://github.com/user-attachments/assets/10df4f18-5ed8-46f2-aaae-c0c787c2731e" />
 * * * * * * * * * *
 The function block `AND_BOOL_2` is a standard function block for calculating the logical AND operation (conjunction) of two Boolean input values. It complies with the IEC 61131-3 standard for basic Boolean functions and is designed for use in the 4diac IDE. The function block waits for a trigger event, executes the operation, and signals the completion of the calculation with an acknowledgment event.
 ![AND_BOOL_2](AND_BOOL_2.svg)

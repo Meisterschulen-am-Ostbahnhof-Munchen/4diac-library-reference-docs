@@ -1,7 +1,5 @@
 # AX_T_FF
 
-<img width="1181" height="187" alt="image" src="https://github.com/user-attachments/assets/fe3f05c1-c201-42ef-a5d8-874b826680de" />
-
 ![AX_T_FF_ecc](./AX_T_FF_ecc.svg)
 
 * * * * * * * * * *

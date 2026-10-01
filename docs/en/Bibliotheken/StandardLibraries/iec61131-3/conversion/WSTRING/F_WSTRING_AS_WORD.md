@@ -1,6 +1,5 @@
 # F_WSTRING_AS_WORD
 
-<img width="1482" height="214" alt="F_WSTRING_AS_WORD" src="https://github.com/user-attachments/assets/a3b2eb5b-24e3-4685-bc76-b8864d468811" />
 * * * * * * * * * *
 The function block `F_WSTRING_AS_WORD` converts a WSTRING data type to a WORD data type. This functionality is particularly useful when strings need to be converted into numeric values, for example, for further processing in control algorithms.
 ![F_WSTRING_AS_WORD](F_WSTRING_AS_WORD.svg)

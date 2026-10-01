@@ -1,6 +1,5 @@
 # logiBUS_QXA
 
-<img width="2042" height="360" alt="image" src="https://github.com/user-attachments/assets/a209d37d-5012-4889-853b-e7a36dfc6644" />
 * * * * * * * * * *
 ## Introduction
 

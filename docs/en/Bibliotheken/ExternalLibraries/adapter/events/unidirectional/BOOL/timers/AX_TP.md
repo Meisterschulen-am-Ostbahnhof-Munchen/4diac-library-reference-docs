@@ -1,6 +1,5 @@
 # AX_TP
 
-<img width="915" height="258" alt="image" src="https://github.com/user-attachments/assets/650ebf90-0b85-464b-a6bb-79536b7a5119" />
 * * * * * * * * * *
 ## Introduction
 

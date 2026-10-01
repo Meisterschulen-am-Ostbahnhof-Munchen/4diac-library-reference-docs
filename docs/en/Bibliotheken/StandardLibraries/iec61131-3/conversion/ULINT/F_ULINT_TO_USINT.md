@@ -1,6 +1,5 @@
 # F_ULINT_TO_USINT
 
-<img width="1462" height="214" alt="F_ULINT_TO_USINT" src="https://github.com/user-attachments/assets/317d59b5-d0e5-42d1-9ad1-3b37c6c9f91d" />
 * * * * * * * * * *
 The function block `F_ULINT_TO_USINT` converts a 64-bit unsigned integer value (`ULINT`) to an 8-bit unsigned integer value (`USINT`). This block is particularly useful in scenarios where type conversion between these two data types is required.
 ![F_ULINT_TO_USINT](F_ULINT_TO_USINT.svg)

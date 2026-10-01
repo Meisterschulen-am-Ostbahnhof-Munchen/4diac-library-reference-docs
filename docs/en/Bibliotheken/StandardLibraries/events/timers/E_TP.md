@@ -4,10 +4,6 @@
 
 **Important note: This function block requires only one event and no cyclic calls. It does not have an output ET and does not display the elapsed time.**
 
-## Image
-
-![image](https://github.com/user-attachments/assets/8d531305-da9a-42e8-b44d-afab3a955be6)
-
 ## Description
 
 The **E_TP** function block (also known as **Pulse Generator** or **Timer Pulse**) is a standardized function block (FB) according to the **IEC 61499** (DIN EN 61499) standard. This block is used to generate a pulsating output that is activated for a specific duration when an input signal is received. It is particularly useful in control applications where time-controlled actions are required.

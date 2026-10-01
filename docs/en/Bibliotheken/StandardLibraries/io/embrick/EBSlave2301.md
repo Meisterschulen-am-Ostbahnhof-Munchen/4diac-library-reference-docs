@@ -1,6 +1,5 @@
 # EBSlave2301
 
-<img width="1529" height="334" alt="image" src="https://github.com/user-attachments/assets/8995d004-b357-48c9-b1d3-cc1fdc00c9e3" />
 * * * * * * * * * *
 ## Introduction
 

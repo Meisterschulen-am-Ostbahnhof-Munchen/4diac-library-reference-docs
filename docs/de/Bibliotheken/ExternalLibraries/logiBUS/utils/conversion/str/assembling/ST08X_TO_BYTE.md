@@ -1,7 +1,5 @@
 # ST08X_TO_BYTE
 
-<img width="1075" height="213" alt="image" src="https://github.com/user-attachments/assets/006152fd-288f-460f-9c7b-723922245e8e" />
-
 ![ST08X_TO_BYTE](./ST08X_TO_BYTE.svg)
 
 * * * * * * * * * *

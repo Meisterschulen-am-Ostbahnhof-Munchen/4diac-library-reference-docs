@@ -1,6 +1,5 @@
 # F_ULINT_TO_WORD
 
-<img width="1448" height="214" alt="F_ULINT_TO_WORD" src="https://github.com/user-attachments/assets/8be2ddee-0d88-4c60-98ec-e97dc61f329c" />
 * * * * * * * * * *
 The function block `F_ULINT_TO_WORD` converts a 64-bit unsigned integer value (ULINT) to a 16-bit unsigned integer value (WORD). This block is part of the `iec61131::conversion` package and implements a simple type conversion.
 ![F_ULINT_TO_WORD](F_ULINT_TO_WORD.svg)

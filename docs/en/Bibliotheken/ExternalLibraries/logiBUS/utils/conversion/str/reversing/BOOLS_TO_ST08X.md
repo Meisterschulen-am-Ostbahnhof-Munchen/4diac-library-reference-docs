@@ -1,6 +1,5 @@
 # BOOLS_TO_ST08X
 
-<img width="1032" height="423" alt="image" src="https://github.com/user-attachments/assets/6ba52e2e-b4e7-4f80-ac9f-c05e7c05956f" />
 ![BOOLS_TO_ST08X](./BOOLS_TO_ST08X.svg)
 
 * * * * * * * * * *

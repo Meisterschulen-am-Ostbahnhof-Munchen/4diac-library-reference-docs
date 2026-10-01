@@ -1,6 +1,5 @@
 # F_LREAL_TO_UINT
 
-<img width="1452" height="214" alt="F_LREAL_TO_UINT" src="https://github.com/user-attachments/assets/4379189d-901b-46e8-aab5-83f178f84371" />
 * * * * * * * * * *
 The function block `F_LREAL_TO_UINT` converts an LREAL value (64-bit floating-point number) to a UINT value (unsigned 16-bit integer). This block is part of the `iec61131::conversion` library and enables simple and efficient type conversion in automation applications.
 ![F_LREAL_TO_UINT](F_LREAL_TO_UINT.svg)

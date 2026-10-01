@@ -2,7 +2,6 @@
 
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_OR_9`](AX_OR_9.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
-<img width="960" height="503" alt="image" src="https://github.com/user-attachments/assets/8e2166fd-c540-4651-a06b-83a9435a923c" />
 * * * * * * * * * *
 ## Introduction
 

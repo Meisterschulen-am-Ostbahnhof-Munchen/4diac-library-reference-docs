@@ -1,7 +1,5 @@
 # logiBUS_IE
 
-<img width="2037" height="313" alt="image" src="https://github.com/user-attachments/assets/3cb31c53-ac68-4483-bfc4-834776122b60" />
-
 * * * * * * * * * *
 
 ## Einleitung

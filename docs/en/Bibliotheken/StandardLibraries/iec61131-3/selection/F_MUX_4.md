@@ -1,6 +1,5 @@
 # F_MUX_4
 
-<img width="1298" height="244" alt="image" src="https://github.com/user-attachments/assets/ca36e916-c580-4eb8-bf05-67d67557302f" />
 * * * * * * * * * *
 The function block `F_MUX_4` is a four-input multiplexer that selects one of four input values based on a control signal and outputs it. It is part of the IEC 61131-3 standard library and is used for selection operations in control applications.
 ![F_MUX_4](F_MUX_4.svg)

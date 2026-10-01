@@ -1,6 +1,5 @@
 # F_UDINT_AS_STRING
 
-<img width="1481" height="212" alt="F_UDINT_AS_STRING" src="https://github.com/user-attachments/assets/a7240c03-594a-4f72-a90f-85145981374e" />
 * * * * * * * * * *
 The function block `F_UDINT_AS_STRING` converts an unsigned 32-bit integer value (UDINT) into a string (STRING). This block is particularly useful when numeric values need to be converted into a readable text format for display or logging.
 ![F_UDINT_AS_STRING](F_UDINT_AS_STRING.svg)

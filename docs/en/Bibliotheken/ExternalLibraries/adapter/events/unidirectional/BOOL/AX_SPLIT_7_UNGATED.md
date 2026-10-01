@@ -2,7 +2,6 @@
 
 > ℹ️ **UNGATED variant:** This block is the ungated version of [`AX_SPLIT_7`](AX_SPLIT_7.md). It suppresses **no** unchanged repeats – every newly computed result is forwarded unconditionally, even without a value change. This matters for consumers that need a periodic cadence regardless of value change (e.g. derivative/frequency calculations that would otherwise fail to decay toward zero). Any change-detection/gating statements further down this page do **not** apply to this block.
 
-<img width="618" height="383" alt="image" src="https://github.com/user-attachments/assets/99075a52-1b48-461b-ad14-dbeefe086a52" />
 * * * * * * * * * *
 ## Introduction
 

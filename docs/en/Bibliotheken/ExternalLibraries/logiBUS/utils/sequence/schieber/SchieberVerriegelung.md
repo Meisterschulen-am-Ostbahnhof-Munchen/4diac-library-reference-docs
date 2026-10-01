@@ -1,6 +1,5 @@
 # Slide Lock
 
-<img width="1448" height="327" alt="image" src="https://github.com/user-attachments/assets/ce587957-0a58-4d7e-b8e0-cb14bd8c2ef0" />
 ![SchieberVerriegelung_ecc](./SchieberVerriegelung_ecc.svg)
 
 * * * * * * * * * *

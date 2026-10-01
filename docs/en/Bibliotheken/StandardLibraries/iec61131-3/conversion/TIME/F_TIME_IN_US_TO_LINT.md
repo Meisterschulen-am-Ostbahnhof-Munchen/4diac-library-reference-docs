@@ -1,6 +1,5 @@
 # F_TIME_IN_US_TO_LINT
 
-<img width="1522" height="212" alt="F_TIME_IN_US_TO_LINT" src="https://github.com/user-attachments/assets/ec011268-cf2a-49c0-8b92-65bb95c903f0" />
 * * * * * * * * * *
 ## Introduction
 

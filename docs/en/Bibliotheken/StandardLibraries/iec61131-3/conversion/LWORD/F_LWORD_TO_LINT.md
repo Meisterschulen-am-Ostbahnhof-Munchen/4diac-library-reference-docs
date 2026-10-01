@@ -1,6 +1,5 @@
 # F_LWORD_TO_LINT
 
-<img width="1450" height="211" alt="F_LWORD_TO_LINT" src="https://github.com/user-attachments/assets/af814d4f-020f-4276-840f-113fb63e2f16" />
 * * * * * * * * * *
 The function block `F_LWORD_TO_LINT` converts a `LWORD` value (64-bit unsigned) to a `LINT` value (64-bit signed). This block is particularly useful in scenarios where type conversion between these two data types is required.
 ![F_LWORD_TO_LINT](F_LWORD_TO_LINT.svg)

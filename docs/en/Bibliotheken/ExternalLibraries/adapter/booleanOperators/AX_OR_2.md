@@ -1,6 +1,5 @@
 # AX_OR_2
 
-<img width="963" height="265" alt="image" src="https://github.com/user-attachments/assets/3c1d3b81-2420-46cc-b7cf-fc6828db919c" />
 * * * * * * * * * *
 ## Introduction
 

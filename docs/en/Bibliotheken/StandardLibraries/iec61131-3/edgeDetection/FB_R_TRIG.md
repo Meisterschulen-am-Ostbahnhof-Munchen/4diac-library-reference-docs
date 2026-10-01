@@ -1,6 +1,5 @@
 # FB_R_TRIG
 
-<img width="1366" height="212" alt="FB_R_TRIG" src="https://github.com/user-attachments/assets/b8af3b36-dc40-44c3-8692-198ed7f809a8" />
 * * * * * * * * * *
 ## Introduction
 

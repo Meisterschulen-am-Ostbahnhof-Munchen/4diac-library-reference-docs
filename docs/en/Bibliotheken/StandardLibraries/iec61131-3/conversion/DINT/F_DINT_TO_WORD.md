@@ -1,6 +1,5 @@
 # F_DINT_TO_WORD
 
-<img width="1438" height="211" alt="F_DINT_TO_WORD" src="https://github.com/user-attachments/assets/0eae21ae-dfc1-44bc-a956-609f3c8000a1" />
 * * * * * * * * * *
 The function block `F_DINT_TO_WORD` converts a 32-bit integer value (DINT) into a 16-bit word value (WORD). This conversion is particularly useful when data needs to be exchanged between systems with different word widths.
 ![F_DINT_TO_WORD](F_DINT_TO_WORD.svg)

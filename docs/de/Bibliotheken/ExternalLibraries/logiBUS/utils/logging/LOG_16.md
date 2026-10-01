@@ -1,7 +1,5 @@
 # LOG_16
 
-<img width="971" height="474" alt="image" src="https://github.com/user-attachments/assets/768789e5-7784-41c2-9d5c-c9492d64a38b" />
-
 * * * * * * * * * *
 
 ## Einleitung

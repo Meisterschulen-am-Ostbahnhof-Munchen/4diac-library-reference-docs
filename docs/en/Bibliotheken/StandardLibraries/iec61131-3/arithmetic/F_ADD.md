@@ -1,7 +1,5 @@
 # F_ADD
 
-![Additionsbaustein](https://github.com/user-attachments/assets/3173760a-3b67-48dc-b078-43bcfc56423a)
-
 * * * * * * * * * *
 ![F_ADD](F_ADD.svg)
 

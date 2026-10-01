@@ -1,6 +1,5 @@
 # F_WORD_AS_STRING
 
-<img width="1466" height="214" alt="F_WORD_AS_STRING" src="https://github.com/user-attachments/assets/d08aada6-dc95-4b9f-9089-6933a20a8560" />
 * * * * * * * * * *
 The function block `F_WORD_AS_STRING` converts a `WORD` data type to a `STRING`. This is particularly useful when numeric values need to be output or further processed in a human-readable format.
 ![F_WORD_AS_STRING](F_WORD_AS_STRING.svg)

@@ -1,6 +1,5 @@
 # AND_BOOL_5
 
-<img width="1383" height="334" alt="image" src="https://github.com/user-attachments/assets/26c969c4-f1f2-4142-9188-57cd244d9cd6" />
 * * * * * * * * * *
 ## Introduction
 

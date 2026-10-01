@@ -1,7 +1,5 @@
 # ST08X_TO_ARR08X
 
-<img width="1352" height="215" alt="image" src="https://github.com/user-attachments/assets/d556a75a-b21c-4bf2-b1c3-909baea1e51e" />
-
 ![ST08X_TO_ARR08X](./ST08X_TO_ARR08X.svg)
 
 * * * * * * * * * *

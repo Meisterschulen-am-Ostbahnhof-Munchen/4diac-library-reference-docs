@@ -1,6 +1,5 @@
 # XOR_BOOL_7
 
-<img width="1378" height="391" alt="image" src="https://github.com/user-attachments/assets/731f9ca4-e163-4c46-8eda-5b826a199574" />
 * * * * * * * * * *
 ## Introduction
 

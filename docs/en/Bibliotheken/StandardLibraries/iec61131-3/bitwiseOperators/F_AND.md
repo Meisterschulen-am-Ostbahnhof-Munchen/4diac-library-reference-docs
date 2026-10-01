@@ -1,6 +1,5 @@
 # F_AND
 
-<img width="1336" height="244" alt="F_AND" src="https://github.com/user-attachments/assets/a65a419c-0126-4dd6-9ab3-6e40b32ddcac" />
 * * * * * * * * * *
 ## Introduction
 

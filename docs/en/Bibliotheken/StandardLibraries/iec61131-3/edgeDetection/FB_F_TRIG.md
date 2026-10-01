@@ -1,6 +1,5 @@
 # FB_F_TRIG
 
-<img width="1366" height="219" alt="FB_F_TRIG" src="https://github.com/user-attachments/assets/9ea529ec-c4e2-4e3f-96f0-9a5ddd42ebf5" />
 * * * * * * * * * *
 The function block `FB_F_TRIG` is used to detect the falling edge of a Boolean signal. It is frequently used in control applications to detect state changes from `TRUE` to `FALSE` and trigger corresponding actions.
 ![FB_F_TRIG](FB_F_TRIG.svg)

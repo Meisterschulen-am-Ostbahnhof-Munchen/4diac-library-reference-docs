@@ -1,6 +1,5 @@
 # I_PosDeltaHighPrecRapidUpd
 
-<img width="1602" height="224" alt="image" src="https://github.com/user-attachments/assets/d363a6f6-94da-4529-aecc-ff2e9fd7e3a9" />
 * * * * * * * * * *
 ## Introduction
 

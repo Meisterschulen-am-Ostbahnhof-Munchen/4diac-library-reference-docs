@@ -1,6 +1,5 @@
 # Button_IE
 
-<img width="1385" height="216" alt="image" src="https://github.com/user-attachments/assets/95422805-a0b9-47d0-9696-02c3ede5c9cf" />
 * * * * * * * * * *
 ## Introduction
 

@@ -1,6 +1,5 @@
 # F_TIME_IN_MS_TO_ULINT
 
-<img width="1534" height="212" alt="F_TIME_IN_MS_TO_ULINT" src="https://github.com/user-attachments/assets/1e823341-98ae-4b40-bc4f-74b28764bb74" />
 * * * * * * * * * *
 The function block `F_TIME_IN_MS_TO_ULINT` converts a time value in milliseconds (`TIME`) into an unsigned 64-bit integer value (`ULINT`). This block is particularly useful when time values are needed in numerical form for further calculations or comparisons.
 ![F_TIME_IN_MS_TO_ULINT](F_TIME_IN_MS_TO_ULINT.svg)

@@ -1,6 +1,5 @@
 # F_DT_TO_DATE
 
-<img width="1211" height="187" alt="F_DT_TO_DATE" src="https://github.com/user-attachments/assets/aebf2922-2636-4bac-b28f-2510579fdb3b" />
 * * * * * * * * * *
 The function block `F_DT_TO_DATE` converts a date-time value (DT) into a date (DATE). This functionality is particularly useful when control applications only require the date without time information.
 ![F_DT_TO_DATE](F_DT_TO_DATE.svg)

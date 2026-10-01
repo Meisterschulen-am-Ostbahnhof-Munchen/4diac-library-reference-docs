@@ -1,6 +1,5 @@
 # AX_X_TO_BOOL
 
-<img width="1243" height="236" alt="image" src="https://github.com/user-attachments/assets/4e98b420-508f-407b-bb14-cfeee976d357" />
 * * * * * * * * * *
 ## Introduction
 

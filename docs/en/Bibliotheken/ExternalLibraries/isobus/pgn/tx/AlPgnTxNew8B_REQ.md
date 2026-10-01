@@ -1,6 +1,5 @@
 # AlPgnTxNew8B_REQ
 
-<img width="1308" height="254" alt="image" src="https://github.com/user-attachments/assets/09f85519-8068-47fc-af54-0c2422fe947f" />
 * * * * * * * * * *
 ## Introduction
 

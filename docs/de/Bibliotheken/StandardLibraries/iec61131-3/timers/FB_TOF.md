@@ -7,8 +7,6 @@
 
 ----
 
-![image](https://github.com/user-attachments/assets/e60568d1-aba5-4e35-9488-8a79d1cb877b)
-
 * * * * * * * * * *
 
 Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und noch nicht korrekturgelesen (HF)

@@ -1,6 +1,5 @@
 # F_SINT_TO_USINT
 
-<img width="1450" height="213" alt="F_SINT_TO_USINT" src="https://github.com/user-attachments/assets/e1008d5b-c1c4-4a42-8bfd-7d328b59eced" />
 * * * * * * * * * *
 ## Introduction
 

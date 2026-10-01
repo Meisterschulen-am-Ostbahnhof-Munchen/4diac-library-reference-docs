@@ -1,6 +1,5 @@
 # F_DWORD_TO_ULINT
 
-<img width="1254" height="181" alt="F_DWORD_TO_ULINT" src="https://github.com/user-attachments/assets/e5bbb4d1-3d9a-4a73-b891-646529c28a89" />
 * * * * * * * * * *
 The function block `F_DWORD_TO_ULINT` converts a `DWORD` value to a `ULINT` value. It is part of the `iec61131::conversion` package and is typically used in automation applications where type conversion between these two data types is required.
 ![F_DWORD_TO_ULINT](F_DWORD_TO_ULINT.svg)

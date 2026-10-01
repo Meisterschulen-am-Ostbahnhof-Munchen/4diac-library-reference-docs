@@ -1,6 +1,5 @@
 # SERVER_1
 
-<img width="1394" height="159" alt="image" src="https://github.com/user-attachments/assets/1298c8cd-2696-4105-b2ea-370366175661" />
 * * * * * * * * * *
 ## Introduction
 

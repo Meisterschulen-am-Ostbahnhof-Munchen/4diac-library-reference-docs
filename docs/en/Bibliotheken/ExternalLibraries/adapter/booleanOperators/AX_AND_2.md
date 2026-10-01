@@ -1,6 +1,5 @@
 # AX_AND_2
 
-<img width="1009" height="265" alt="image" src="https://github.com/user-attachments/assets/e9225b9f-ba25-427f-bf49-71f15c562b73" />
 * * * * * * * * * *
 ## Introduction
 

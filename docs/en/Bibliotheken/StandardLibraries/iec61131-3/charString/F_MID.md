@@ -1,6 +1,5 @@
 # F_MID
 
-<img width="1158" height="232" alt="F_MID" src="https://github.com/user-attachments/assets/0f4a4667-023e-4ada-8ea0-2df3b494c7db" />
 * * * * * * * * * *
 The function block `F_MID` is used to extract a substring from a given string. A specific number of characters are extracted starting from a defined position. This function block is part of the standard character and string functions according to IEC 61131-3.
 ![F_MID](F_MID.svg)

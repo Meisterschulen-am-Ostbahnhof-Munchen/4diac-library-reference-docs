@@ -1,7 +1,5 @@
 # hsv2rgb
 
-<img width="1412" height="272" alt="image" src="https://github.com/user-attachments/assets/d564035b-fcbb-4237-a4be-75da3e2fd29d" />
-
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,6 +1,5 @@
 # F_DWORD_TO_UINT
 
-<img width="1242" height="181" alt="F_DWORD_TO_UINT" src="https://github.com/user-attachments/assets/8aa2ae37-3b94-46bf-9683-ee81e0a3e434" />
 * * * * * * * * * *
 The function block `F_DWORD_TO_UINT` converts a `DWORD` value to a `UINT` value. This function block is particularly useful in scenarios where type conversion between these two data types is required, for example, in communication between different systems or when processing data from different sources.
 ![F_DWORD_TO_UINT](F_DWORD_TO_UINT.svg)

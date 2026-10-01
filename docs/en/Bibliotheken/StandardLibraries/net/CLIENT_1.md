@@ -1,6 +1,5 @@
 # CLIENT_1
 
-<img width="1355" height="161" alt="image" src="https://github.com/user-attachments/assets/add0b8a4-197b-4733-b9d8-45407aae8979" />
 * * * * * * * * * *
 ## Introduction
 

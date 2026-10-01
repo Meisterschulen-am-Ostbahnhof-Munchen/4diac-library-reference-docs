@@ -1,6 +1,5 @@
 # CallbackFB
 
-<img width="1298" height="232" alt="image" src="https://github.com/user-attachments/assets/3e1dbee0-183b-4d4f-a9e7-110505249cb4" />
 * * * * * * * * * *
 ## Introduction
 

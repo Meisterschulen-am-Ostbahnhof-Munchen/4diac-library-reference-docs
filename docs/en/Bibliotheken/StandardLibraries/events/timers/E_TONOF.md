@@ -4,10 +4,6 @@
 
 **Important note: This function block requires only one event and no cyclic calls. It does not have an output ET and does not display the elapsed time.**
 
-## Image
-
-![image](https://github.com/user-attachments/assets/e09eae11-e153-429f-8eaf-6bfff456f35a)
-
 ## Description
 
 The **E_TONOF** function block is a standardized function block type (FBType) according to the **IEC 61499** standard, used for time-delayed switching operations in industrial automation systems. This function block combines the functions of an **On-Delay Timer** and an **Off-Delay Timer** in a single block. It allows for the time delay of both the switching on and off of a signal.

@@ -1,6 +1,5 @@
 # F_UDINT_TO_BYTE
 
-<img width="1454" height="212" alt="F_UDINT_TO_BYTE" src="https://github.com/user-attachments/assets/55120ea3-8221-4095-8f59-51cc6eb4207a" />
 * * * * * * * * * *
 The function block `F_UDINT_TO_BYTE` converts a 32-bit unsigned integer (UDINT) value to an 8-bit unsigned integer (BYTE) value. This conversion is useful when data needs to be exchanged between systems with different word lengths or when memory space needs to be optimized.
 ![F_UDINT_TO_BYTE](F_UDINT_TO_BYTE.svg)

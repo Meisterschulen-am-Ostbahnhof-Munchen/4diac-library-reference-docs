@@ -1,6 +1,5 @@
 # logiBUS_LED_strip_QX
 
-<img width="1879" height="394" alt="image" src="https://github.com/user-attachments/assets/3a675690-c734-4d38-bc52-a9ff1d611d4f" />
 * * * * * * * * * *
 ## Introduction
 

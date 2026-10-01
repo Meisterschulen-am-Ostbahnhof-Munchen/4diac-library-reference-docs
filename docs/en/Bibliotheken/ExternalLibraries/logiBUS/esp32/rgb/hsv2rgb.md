@@ -1,6 +1,5 @@
 # hsv2rgb
 
-<img width="1412" height="272" alt="image" src="https://github.com/user-attachments/assets/d564035b-fcbb-4237-a4be-75da3e2fd29d" />
 * * * * * * * * * *
 The function block `hsv2rgb` is a utility block for color space conversion. It converts a color defined in the HSV color model (Hue, Saturation, Value) into the corresponding values of the RGB color model (Red, Green, Blue). This is particularly useful for applications that need to control colors based on their perceptual properties (hue, saturation, brightness), while output devices (such as LEDs or displays) expect RGB values.
 ![hsv2rgb](hsv2rgb.svg)

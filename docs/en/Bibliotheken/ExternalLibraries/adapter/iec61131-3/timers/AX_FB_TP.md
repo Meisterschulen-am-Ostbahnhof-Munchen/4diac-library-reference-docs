@@ -1,6 +1,5 @@
 # AX_FB_TP
 
-<img width="962" height="243" alt="image" src="https://github.com/user-attachments/assets/d92dd0e6-fa14-499e-8a97-5c1432d0df3e" />
 * * * * * * * * * *
 ## Introduction
 

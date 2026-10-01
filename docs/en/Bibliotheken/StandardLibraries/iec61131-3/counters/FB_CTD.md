@@ -1,6 +1,5 @@
 # FB_CTD
 
-<img width="1325" height="282" alt="FB_CTD" src="https://github.com/user-attachments/assets/22cf142b-4252-487d-b0dc-2b3379946fbe" />
 * * * * * * * * * *
 The FB_CTD (Down Counter) is a function block that acts as a down counter. It counts down the internal counter value on each trigger event and outputs a signal when the counter reaches or falls below a specific value.
 ![FB_CTD](FB_CTD.svg)
