@@ -5,7 +5,7 @@
 - [QUARTER](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/QUARTER-e36741d)
 
 ----
-![ASSEMBLE_DWORD_FROM_QUARTERS](https://github.com/user-attachments/assets/b87a9cb4-49aa-4375-be7f-c4e32422490e)
+![ASSEMBLE_DWORD_FROM_QUARTERS](ASSEMBLE_DWORD_FROM_QUARTERS.svg)
 
 * * * * * * * * * *
 

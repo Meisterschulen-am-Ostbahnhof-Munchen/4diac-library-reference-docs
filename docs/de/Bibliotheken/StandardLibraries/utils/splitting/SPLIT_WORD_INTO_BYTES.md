@@ -1,6 +1,6 @@
 # SPLIT_WORD_INTO_BYTES
 
-![SPLIT_WORD_INTO_BYTES](https://github.com/user-attachments/assets/5c99635d-3f7d-4266-a108-12d075d58313)
+![SPLIT_WORD_INTO_BYTES](SPLIT_WORD_INTO_BYTES.svg)
 
 * * * * * * * * * *
 

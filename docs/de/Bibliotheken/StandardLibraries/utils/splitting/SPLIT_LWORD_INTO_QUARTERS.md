@@ -6,7 +6,7 @@
 
 ----
 
-![SPLIT_LWORD_INTO_QUARTERS](https://github.com/user-attachments/assets/673b8e11-a630-41ed-ab74-5c16e3fe349b)
+![SPLIT_LWORD_INTO_QUARTERS](SPLIT_LWORD_INTO_QUARTERS.svg)
 
 * * * * * * * * * *
 

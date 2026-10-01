@@ -1,6 +1,6 @@
 # SPLIT_BYTE_INTO_BOOLS
 
-![SPLIT_BYTE_INTO_BOOLS](https://github.com/user-attachments/assets/666a1be8-3ac9-4da7-b5ab-b11513e98c9c)
+![SPLIT_BYTE_INTO_BOOLS](SPLIT_BYTE_INTO_BOOLS.svg)
 
 * * * * * * * * * *
 

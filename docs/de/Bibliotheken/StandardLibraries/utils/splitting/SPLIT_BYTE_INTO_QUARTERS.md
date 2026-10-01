@@ -6,7 +6,7 @@
 
 ----
 
-![SPLIT_BYTE_INTO_QUARTERS](https://github.com/user-attachments/assets/9cbf32e0-f8c2-437f-88d3-8e29db1731dd)
+![SPLIT_BYTE_INTO_QUARTERS](SPLIT_BYTE_INTO_QUARTERS.svg)
 
 * * * * * * * * * *
 
