@@ -1,6 +1,12 @@
 # AUS (USINT)
 
-![AUS](AUS.svg)
+**Plug (Adapter-Ausgang)**
+
+![AUS_plug](AUS_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AUS_socket](AUS_socket.svg)
 
 ## 🎧 Podcast
 

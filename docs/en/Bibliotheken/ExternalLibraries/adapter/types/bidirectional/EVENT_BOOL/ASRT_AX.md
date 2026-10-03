@@ -1,6 +1,12 @@
 # ASRT_AX
 
-![ASRT_AX](ASRT_AX.svg)
+**Plug (adapter output)**
+
+![ASRT_AX_plug](ASRT_AX_plug.svg)
+
+**Socket (adapter input)**
+
+![ASRT_AX_socket](ASRT_AX_socket.svg)
 
 bidirectional adapter interface for 3 events (forward, Set/Reset/Toggle) and 1 bool (backward, AX-style)
 

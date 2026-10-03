@@ -1,6 +1,12 @@
 # AULI (ULINT)
 
-![AULI](AULI.svg)
+**Plug (Adapter-Ausgang)**
+
+![AULI_plug](AULI_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AULI_socket](AULI_socket.svg)
 
 ## 🎧 Podcast
 

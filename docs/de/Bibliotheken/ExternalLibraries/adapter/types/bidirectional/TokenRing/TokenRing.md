@@ -1,6 +1,12 @@
 # TokenRing
 
-![TokenRing](./TokenRing.svg)
+**Plug (Adapter-Ausgang)**
+
+![TokenRing_plug](TokenRing_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![TokenRing_socket](TokenRing_socket.svg)
 
 * * * * * * * * * *
 

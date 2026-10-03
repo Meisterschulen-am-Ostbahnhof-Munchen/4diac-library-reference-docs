@@ -1,6 +1,12 @@
 # ALR (LREAL)
 
-![ALR](ALR.svg)
+**Plug (adapter output)**
+
+![ALR_plug](ALR_plug.svg)
+
+**Socket (adapter input)**
+
+![ALR_socket](ALR_socket.svg)
 
 unidirectional Adapter Interface for 1 Event and 1 Lreal
 

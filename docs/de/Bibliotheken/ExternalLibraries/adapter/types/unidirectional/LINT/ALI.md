@@ -1,6 +1,12 @@
 # ALI (LINT)
 
-![ALI](ALI.svg)
+**Plug (Adapter-Ausgang)**
+
+![ALI_plug](ALI_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![ALI_socket](ALI_socket.svg)
 
 ## 🎧 Podcast
 

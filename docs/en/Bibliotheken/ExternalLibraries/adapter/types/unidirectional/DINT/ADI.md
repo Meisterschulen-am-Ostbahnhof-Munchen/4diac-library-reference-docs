@@ -1,6 +1,12 @@
 # ADI (DINT)
 
-![ADI](ADI.svg)
+**Plug (adapter output)**
+
+![ADI_plug](ADI_plug.svg)
+
+**Socket (adapter input)**
+
+![ADI_socket](ADI_socket.svg)
 
 ## 🎧 Podcast
 

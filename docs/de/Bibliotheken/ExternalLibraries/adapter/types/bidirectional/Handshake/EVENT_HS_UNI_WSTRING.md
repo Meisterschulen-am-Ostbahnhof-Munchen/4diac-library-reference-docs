@@ -1,6 +1,12 @@
 # EVENT_HS_UNI_WSTRING
 
-![EVENT_HS_UNI_WSTRING](./EVENT_HS_UNI_WSTRING.svg)
+**Plug (Adapter-Ausgang)**
+
+![EVENT_HS_UNI_WSTRING_plug](EVENT_HS_UNI_WSTRING_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![EVENT_HS_UNI_WSTRING_socket](EVENT_HS_UNI_WSTRING_socket.svg)
 
 * * * * * * * * * *
 

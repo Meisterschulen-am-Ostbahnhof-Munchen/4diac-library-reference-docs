@@ -1,6 +1,12 @@
 # AQ
 
-![AQ](./AQ.svg)
+**Plug (Adapter-Ausgang)**
+
+![AQ_plug](AQ_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AQ_socket](AQ_socket.svg)
 
 * * * * * * * * * *
 

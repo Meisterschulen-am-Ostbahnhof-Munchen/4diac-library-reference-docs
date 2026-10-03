@@ -1,6 +1,12 @@
 # AB (BYTE)
 
-![AB](AB.svg)
+**Plug (Adapter-Ausgang)**
+
+![AB_plug](AB_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AB_socket](AB_socket.svg)
 
 ## 🎧 Podcast
 

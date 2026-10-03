@@ -1,6 +1,12 @@
 # ASR2
 
-![ASR2](ASR2.svg)
+**Plug (adapter output)**
+
+![ASR2_plug](ASR2_plug.svg)
+
+**Socket (adapter input)**
+
+![ASR2_socket](ASR2_socket.svg)
 
 bidirectional adapter interface for 2 events
 

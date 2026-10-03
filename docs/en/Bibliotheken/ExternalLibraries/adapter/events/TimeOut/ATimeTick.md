@@ -1,6 +1,12 @@
 # ATimeTick
 
-![ATimeTick](./ATimeTick.svg)
+**Plug (adapter output)**
+
+![ATimeTick_plug](ATimeTick_plug.svg)
+
+**Socket (adapter input)**
+
+![ATimeTick_socket](ATimeTick_socket.svg)
 
 * * * * * * * * * *
 

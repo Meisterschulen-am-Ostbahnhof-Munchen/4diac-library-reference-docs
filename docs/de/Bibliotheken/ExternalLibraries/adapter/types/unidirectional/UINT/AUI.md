@@ -1,6 +1,12 @@
 # AUI (UINT)
 
-![AUI](AUI.svg)
+**Plug (Adapter-Ausgang)**
+
+![AUI_plug](AUI_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AUI_socket](AUI_socket.svg)
 
 unidirectional Adapter Interface for 1 Event and 1 Uint
 

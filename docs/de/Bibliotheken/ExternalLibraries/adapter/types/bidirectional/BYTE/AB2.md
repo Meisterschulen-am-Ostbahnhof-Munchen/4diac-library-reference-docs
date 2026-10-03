@@ -1,6 +1,12 @@
 # AB2
 
-![AB2](AB2.svg)
+**Plug (Adapter-Ausgang)**
+
+![AB2_plug](AB2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AB2_socket](AB2_socket.svg)
 
 bidirectional Adapter Interface for 1 Event and 1 Byte
 

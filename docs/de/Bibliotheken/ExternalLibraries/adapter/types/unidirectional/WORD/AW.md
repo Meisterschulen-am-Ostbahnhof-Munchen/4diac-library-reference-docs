@@ -1,6 +1,12 @@
 # AW (WORD)
 
-![AW](AW.svg)
+**Plug (Adapter-Ausgang)**
+
+![AW_plug](AW_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AW_socket](AW_socket.svg)
 
 ## 🎧 Podcast
 

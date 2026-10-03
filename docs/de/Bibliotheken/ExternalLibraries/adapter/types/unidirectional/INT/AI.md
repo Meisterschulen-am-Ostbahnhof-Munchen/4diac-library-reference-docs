@@ -1,6 +1,12 @@
 # AI (INT)
 
-![AI](AI.svg)
+**Plug (Adapter-Ausgang)**
+
+![AI_plug](AI_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AI_socket](AI_socket.svg)
 
 ## 🎧 Podcast
 

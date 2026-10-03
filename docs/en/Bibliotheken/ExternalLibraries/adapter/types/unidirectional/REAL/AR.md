@@ -1,6 +1,12 @@
 # AR (REAL)
 
-![AR](AR.svg)
+**Plug (adapter output)**
+
+![AR_plug](AR_plug.svg)
+
+**Socket (adapter input)**
+
+![AR_socket](AR_socket.svg)
 
 ## 🎧 Podcast
 

@@ -1,6 +1,12 @@
 # ASR (EVENT)
 
-![ASR](ASR.svg)
+**Plug (adapter output)**
+
+![ASR_plug](ASR_plug.svg)
+
+**Socket (adapter input)**
+
+![ASR_socket](ASR_socket.svg)
 
 unidirectional adapter interface for 2 events
 
