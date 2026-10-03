@@ -10,6 +10,8 @@
 
 > **⚠️ Important note from the block's own comment:** `AD_TO_AR`/`F_DWORD_TO_REAL` would be **wrong** here — that's a bit-reinterpretation (IEEE754 cast), not a numeric conversion (see `forte_real.cpp`, `CIEC_REAL::setValue`, `case e_DWORD: setValueSimple`). The correct path is `AD_TO_AUDI` (bit-reinterpretation DWORD→UDINT, valid here, same bit width/representation) followed by `AUDI_TO_AR` (internally uses `F_UDINT_TO_REAL`, a real numeric conversion). Details in [Numeric vs. bitwise: the FORTE conversion trap](../../../../Bibliotheken/ExternalLibraries/adapter/conversion/unidirectional/Numeric_vs_Bitwise.md).
 
+![F_AI_RAW_TO_PERCENT_AD](F_AI_RAW_TO_PERCENT_AD.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: F_AI_RAW_TO_PERCENT_AD

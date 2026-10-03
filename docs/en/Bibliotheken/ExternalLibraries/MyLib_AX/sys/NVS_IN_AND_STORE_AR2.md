@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+![NVS_IN_AND_STORE_AR2](NVS_IN_AND_STORE_AR2.svg)
+
 ## Technical notes
 
 - `SETM=TRUE`, same reasoning as [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md): live changes are confirmed immediately, not only at the next boot.

@@ -8,6 +8,8 @@
 
 `A2X_TO_A2X_AX` is the bundled counterpart to `AX_2_TO_3`: Instead of two separate `AX` sockets/plugs (`UP_IN`/`DOWN_IN`, `UP_OUT`/`DOWN_OUT`), this block receives UP/DOWN signals bundled together as a single `A2X` signal, passes it through unchanged, and additionally provides a single `AX` signal that is the OR of both directions (e.g., for a common driver enable).
 
+![A2X_TO_A2X_AX](A2X_TO_A2X_AX.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: A2X_TO_A2X_AX

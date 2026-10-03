@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPic_2_3](SwitchPic_2_3.svg)
+
 ## Zusammenfassung
 
 Variante "3" (normales Softkey-Objekt + AUX-Objekt + zweites normales Button-Objekt) der 2-Zustände-Bildumschaltung — die umfangreichste Variante der `SwitchPic_2_*`-Reihe.

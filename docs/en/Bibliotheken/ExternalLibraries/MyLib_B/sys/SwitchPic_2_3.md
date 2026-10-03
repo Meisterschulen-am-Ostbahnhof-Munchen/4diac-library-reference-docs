@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPic_2_3](SwitchPic_2_3.svg)
+
 ## Summary
 
 Variant "3" (regular softkey object + AUX object + second regular button object) of the 2-state picture switch — the most extensive variant in the `SwitchPic_2_*` series.

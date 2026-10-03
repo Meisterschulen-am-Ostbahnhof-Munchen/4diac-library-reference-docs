@@ -8,6 +8,8 @@
 
 `AX_GT_0_UINT` checks whether a UINT adapter value is greater than 0 and outputs the result as a boolean AX adapter signal — useful for turning, say, an object-ID or counter value directly into an active/inactive signal for a VT status display.
 
+![AX_GT_0_UINT](AX_GT_0_UINT.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: AX_GT_0_UINT

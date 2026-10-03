@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+![INI_IN_AND_STORE_AIS](INI_IN_AND_STORE_AIS.svg)
+
 ## Zusammenfassung
 
 AIS-Variante (String) der INI-Speicherfamilie.

@@ -8,6 +8,8 @@
 
 `SoftKeyT_PC_B_OPC_Adapter` is the adapter-bundled variant of [`Uebung_010d_PC_B_OPC`](./Uebung_010d_PC_B_OPC.md) (device B, station 12): the `CLIENT_0`/`SERVER_0` trigger and `AX_CLIENT_1_0` are bundled behind a SINGLE `AE_AX_SERVER_0_CLIENT_1_0` block behind one bidirectional adapter connection; `AE_AX_AX_SPLIT` feeds both `DigitalOutput_Q1` and the toggle flip-flop logic (`AE_AX_T_FF`). Counterpart: [`SoftKeyT_PC_A_OPC_Adapter`](./SoftKeyT_PC_A_OPC_Adapter.md).
 
+![SoftKeyT_PC_B_OPC_Adapter](SoftKeyT_PC_B_OPC_Adapter.svg)
+
 ## Function blocks used
 
 - **TRIGGER** (`adapter::net::AE_AX_SERVER_0_CLIENT_1_0`): bundles server reception (`ID_TRIGGER_METHOD`) and state feedback (`ID_STATE_WRITE`).

@@ -8,6 +8,8 @@
 
 `Button_IX_TO_logiBUS_QX_BG` erweitert [`Button_IX_TO_logiBUS_QX`](./Button_IX_TO_logiBUS_QX.md) um eine VT-Statusfarbe — das test_B-Gegenstück zu [`Button_IXA_TO_logiBUS_QXA_BG`](../../MyLib_AX/sys/Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Button_IX_TO_logiBUS_QX_BG](Button_IX_TO_logiBUS_QX_BG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Button_IX_TO_logiBUS_QX_BG

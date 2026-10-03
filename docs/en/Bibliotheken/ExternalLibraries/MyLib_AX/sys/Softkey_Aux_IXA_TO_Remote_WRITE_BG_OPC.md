@@ -11,6 +11,8 @@
 
 ``Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`` reads a VT softkey OR an AUX assignment (joystick) OR a local web override and writes the result to a target module via remote OPC UA write. Since version 1.2, the function block is a thin-walled wrapper that places two independently reusable sub-blocks side by side: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (command) and [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (status). The external interface remains unchanged.
 
+![Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC](Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC

@@ -8,6 +8,8 @@
 
 `Softkey_Aux_IXA_TO_Remote_WRITE` ist die Kommando-Hälfte von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, herausgelöst als eigenständiger Baustein: VT-SoftKey, AUX-Zuweisung (Joystick) und ein lokaler Web-Override (z. B. vt-ui-mirror auf demselben Modul) werden per ODER zusammengeführt und per Remote-Write an ein Zielmodul geschrieben — ohne Status-Feedback.
 
+![Softkey_Aux_IXA_TO_Remote_WRITE](Softkey_Aux_IXA_TO_Remote_WRITE.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_Aux_IXA_TO_Remote_WRITE

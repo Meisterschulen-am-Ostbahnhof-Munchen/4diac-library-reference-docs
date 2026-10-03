@@ -8,6 +8,8 @@
 
 `SystemTickSender_OPC` ist die schlankste SystemTick-Variante für Module ohne eigene VT-Anbindung: Der laufende Tick-Zähler von [`System_Tick`](./System_Tick.md) wird direkt per OPC-UA veröffentlicht, ohne lokale VT-Anzeige. Ein anderes Modul mit VT kann diesen Wert per Remote-Subscribe abonnieren und anzeigen, um die Lebendigkeit dieses Moduls zu überwachen.
 
+![SystemTickSender_OPC](SystemTickSender_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: SystemTickSender_OPC

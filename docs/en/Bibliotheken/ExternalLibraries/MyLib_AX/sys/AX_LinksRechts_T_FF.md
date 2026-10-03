@@ -8,6 +8,8 @@
 
 `AX_LinksRechts_T_FF` ("left/right toggle flip-flop") converts a single button press (`IN`) via a toggle flip-flop into two complementary adapter outputs `Links`/`Rechts` (left/right) — each button press switches between "left active" and "right active".
 
+![AX_LinksRechts_T_FF](AX_LinksRechts_T_FF.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: AX_LinksRechts_T_FF

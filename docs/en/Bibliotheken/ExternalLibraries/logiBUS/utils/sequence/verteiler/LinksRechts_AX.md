@@ -11,6 +11,8 @@ The function block **LeftRight_AX** (from the package `logiBUS::utils::sequence:
 
 Of particular note is the ability to prevent automatic switching via digital inputs (`DI_Rechts`, `DI_Links`) to force operation in only one direction. The block uses the `AX` adapter interface for this purpose.
 
+![LinksRechts_AX](LinksRechts_AX.svg)
+
 ## Interface Structure
 
 This function block primarily uses adapters for communication but also provides a status string as a direct output.

@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA` connects a VT button (`Button_IXA`) directly to a physical digital output (`logiBUS_QXA`) — the simplest form of a VT-switchable output, with no status display and no OPC-UA. For the variant with a VT status color, see [`Button_IXA_TO_logiBUS_QXA_BG`](./Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Button_IXA_TO_logiBUS_QXA](Button_IXA_TO_logiBUS_QXA.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Button_IXA_TO_logiBUS_QXA

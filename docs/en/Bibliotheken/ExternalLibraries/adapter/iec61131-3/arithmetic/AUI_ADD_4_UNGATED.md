@@ -21,6 +21,8 @@ The `AUI_ADD_4_UNGATED` is a practical utility function block for advanced contr
 
 ## Introduction
 
+![AUI_ADD_4_UNGATED](AUI_ADD_4_UNGATED.svg)
+
 ## Interface Structure
 
 ### Event Inputs

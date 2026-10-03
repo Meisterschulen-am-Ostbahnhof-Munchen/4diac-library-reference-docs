@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPicCol_5_2](SwitchPicCol_5_2.svg)
+
 ## Zusammenfassung
 
 Erweiterung von [`SwitchPicCol_5_1`](./SwitchPicCol_5_1.md) um die AUX-Objekte für Bild und Farbe gleichzeitig — die umfangreichste Variante der `SwitchPicCol`-Reihe.

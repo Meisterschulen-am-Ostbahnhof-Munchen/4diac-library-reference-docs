@@ -8,6 +8,8 @@
 
 `F_PWM_PERCENT_TO_RAW` rechnet einen **PWM-Sollwert-Anteil (REAL 0.0–1.0)** in den **Fieldbus-Rohwert (DINT, 0–64255)** um, den `RampLimitFS.PV` erwartet. Trotz des Namens erwartet der Baustein keinen Prozentwert (0–100), sondern einen Anteil (0.0–1.0) — die Umrechnung von Prozent auf Anteil übernimmt vorgeschaltet `logiBUS::signalprocessing::fieldbus::F_PERCENT_TO_FRACTION`.
 
+![F_PWM_PERCENT_TO_RAW](F_PWM_PERCENT_TO_RAW.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: F_PWM_PERCENT_TO_RAW

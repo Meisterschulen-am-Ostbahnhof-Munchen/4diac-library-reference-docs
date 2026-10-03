@@ -8,6 +8,8 @@
 
 `logiBUS_QXA_FROM_SUBSCRIBE_OPC` drives a digital output (`logiBUS_QXA`) from a locally-subscribed OPC-UA node that is remotely written by ANOTHER device via `AX_CLIENT_1_0` - "Krauternter style" (per the source comment): the protocol (`AX_SUBSCRIBE_1`) lives INSIDE the block itself, not in the device's resource.
 
+![logiBUS_QXA_FROM_SUBSCRIBE_OPC](logiBUS_QXA_FROM_SUBSCRIBE_OPC.svg)
+
 ## Function blocks used
 
 - **AX_SUBSCRIBE_1** (`adapter::net::AX_SUBSCRIBE_1`): subscribes to the locally-monitored address `ID` (BOOL, written remotely).

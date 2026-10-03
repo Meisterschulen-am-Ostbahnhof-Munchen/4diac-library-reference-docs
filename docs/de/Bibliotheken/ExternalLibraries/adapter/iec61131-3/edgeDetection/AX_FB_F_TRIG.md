@@ -10,6 +10,8 @@
 
 Der Funktionsblock **AX_FB_F_TRIG** (Falling Edge Trigger mit AX-Adapter) dient zur Erkennung einer fallenden Flanke (Signalwechsel von TRUE auf FALSE) innerhalb einer adapterbasierten Architektur. Er implementiert die Logik eines Standard-IEC 61131-3 `F_TRIG`-Bausteins, nutzt jedoch **AX-Adapter** zur Kapselung von Daten- und Ereignissignalen, um die Verdrahtungskomplexität in IEC 61499-Anwendungen zu reduzieren.
 
+![AX_FB_F_TRIG](AX_FB_F_TRIG.svg)
+
 ## Schnittstellenstruktur
 
 Der Baustein verzichtet auf klassische separate Ereignis- und Daten-Pins und nutzt stattdessen Adapter-Schnittstellen.

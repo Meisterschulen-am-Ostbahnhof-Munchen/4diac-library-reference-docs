@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA` verbindet einen VT-Taster (`Button_IXA`) direkt mit einem physischen digitalen Ausgang (`logiBUS_QXA`) — die einfachste Form eines VT-schaltbaren Ausgangs, ohne Statusanzeige und ohne OPC-UA. Für die Variante mit VT-Statusfarbe siehe [`Button_IXA_TO_logiBUS_QXA_BG`](./Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Button_IXA_TO_logiBUS_QXA](Button_IXA_TO_logiBUS_QXA.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Button_IXA_TO_logiBUS_QXA

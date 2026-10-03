@@ -8,6 +8,8 @@
 
 `Uebung_010d_PC_A_OPC` is the device-A side (station 11, 192.168.1.11) of the PC-to-PC OPC-UA variant of exercise 010d (toggle flip-flop via softkey): a softkey press calls an argument- and return-value-less OPC-UA method on device B via `CLIENT_0` (a pure RPC trigger, no value-change trick needed, no toggle logic on this device). `GreenWhiteBackground1_AX` shows the flip-flop state locally monitored from device B. "SUB style": the protocol lives in the `MyLib::sys` composite, not in the device's resource - counterpart: [`Uebung_010d_PC_B_OPC`](./Uebung_010d_PC_B_OPC.md).
 
+![Uebung_010d_PC_A_OPC](Uebung_010d_PC_A_OPC.svg)
+
 ## Function blocks used
 
 - **SoftKey_UP_F1** (`isobus::UT::io::Softkey::Softkey_IE`): physical softkey (F1), `InputEvent=SK_RELEASED`.

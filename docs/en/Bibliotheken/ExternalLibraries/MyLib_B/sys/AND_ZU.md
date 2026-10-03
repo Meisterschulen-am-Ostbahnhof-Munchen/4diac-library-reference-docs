@@ -8,6 +8,8 @@
 
 `AND_ZU` computes the logical `IN1 AND NOT IN2` and provides the enable condition for a "CLOSE" movement (e.g. closing a valve/flap): `IN1` must be true and `IN2` must be false. Complementary to [`AND_AUF`](./AND_AUF.md).
 
+![AND_ZU](AND_ZU.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: AND_ZU

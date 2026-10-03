@@ -8,6 +8,8 @@
 
 `Q_BackgroundColour_EnableOk_AX` entspricht `Q_BackgroundColour_EnableOk`, aber `bEnable`/`bOk` kommen als AX-Adapter (statt Klartext-BOOL) - Stil/Schnittstelle wie die bestehende GreenBlueBackground1_AX/GreenRedBackground1_AX-Familie: nur `CNF` (kein `REQ`), zusaetzlich `STATUS_1`/`u8OldColour_1`/`result_1` als benannte Ausgaenge.
 
+![Q_BackgroundColour_EnableOk_AX](Q_BackgroundColour_EnableOk_AX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **Select_EnableOk_Colour** (SubApp, Typ `MyLib::sys::Select_EnableOk_AX`): `valDisabled=COLOR_WHITE`, `valOk=COLOR_GREEN`, `valFault=COLOR_RED`.

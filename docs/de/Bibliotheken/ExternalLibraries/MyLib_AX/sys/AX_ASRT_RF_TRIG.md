@@ -8,6 +8,8 @@
 
 `AX_ASRT_RF_TRIG` erkennt steigende und fallende Flanken eines `AX`-Signals und bündelt sie als `ASRT`-Adapter (Set/Reset, Toggle bleibt ungenutzt). Statt eines neuen Low-Level-`FBType` ist der Baustein als Composite aus dem bestehenden `AX_ASR_RF_TRIG` (liefert ein `ASR` aus einer Flanke) und `ASRT_SR_AE_TO_SRT` (kombiniert ein `ASR` mit einem optionalen AE-Toggle-Event zu einem `ASRT`) aufgebaut.
 
+![AX_ASRT_RF_TRIG](AX_ASRT_RF_TRIG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_ASRT_RF_TRIG

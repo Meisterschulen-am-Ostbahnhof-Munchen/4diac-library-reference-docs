@@ -8,6 +8,8 @@
 
 `Uebung_010d_PC_B_OPC` ist die Geraet-B-Seite (Station 12, 192.168.1.12) der PC-zu-PC-OPC-UA-Variante von Uebung 010d: empfaengt den Trigger-Methodenaufruf von Geraet A per `SERVER_0` (reiner RPC-Trigger, kein Wertwechsel-Trick, keine Bridge noetig), taktet die echte Toggle-Flipflop-Logik (`AX_T_FF`), schaltet `DigitalOutput_Q1` und schreibt den neuen Zustand aktiv per `AX_CLIENT_1_0` zurueck auf Geraet A. Gegenstueck: [`Uebung_010d_PC_A_OPC`](./Uebung_010d_PC_A_OPC.md).
 
+![Uebung_010d_PC_B_OPC](Uebung_010d_PC_B_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **TRIGGER_SERVER** (`iec61499::net::SERVER_0`): empfaengt den Methodenaufruf unter `ID_TRIGGER_METHOD`.

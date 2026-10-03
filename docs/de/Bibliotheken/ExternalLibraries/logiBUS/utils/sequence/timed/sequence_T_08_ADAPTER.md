@@ -8,6 +8,8 @@
 
 `sequence_T_08_ADAPTER` ist ein Composite-Wrapper um [sequence_T_08](sequence_T_08.md): derselbe generische zeitgesteuerte 8-Schritt-Sequenzer, aber mit allen Ausgängen und Übergangszeiten auf Adapterverbindungen umgestellt. Anders als [sequence_T_08_AX](sequence_T_08_AX.md), das nur die acht Ausgänge auf `AX`-Adapter umstellt, bündelt `sequence_T_08_ADAPTER` zusätzlich die Zustandsnummer (`AS`) und führt jede der acht Übergangszeiten über einen eigenen `ATM`-Adapter-Socket ein.
 
+![sequence_T_08_ADAPTER](sequence_T_08_ADAPTER.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: sequence_T_08_ADAPTER

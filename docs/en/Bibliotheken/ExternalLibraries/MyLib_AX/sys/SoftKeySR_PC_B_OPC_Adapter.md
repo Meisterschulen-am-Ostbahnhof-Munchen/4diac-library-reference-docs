@@ -8,6 +8,8 @@
 
 `SoftKeySR_PC_B_OPC_Adapter` is the adapter-bundled variant of [`SoftKeySR_PC_B_OPC`](./SoftKeySR_PC_B_OPC.md) (device B, station 12): the 2 `SERVER_0` instances + `AX_CLIENT_1_0` are bundled behind a SINGLE `ASR_AX_SERVER_0_CLIENT_1_0` block behind one bidirectional adapter connection; `ASR_AX_AX_SPLIT` feeds both `DigitalOutput_Q1` and the pure SR flip-flop logic (`ASR_AX_SR_2`, no toggle). Counterpart: [`SoftKeySR_PC_A_OPC_Adapter`](./SoftKeySR_PC_A_OPC_Adapter.md).
 
+![SoftKeySR_PC_B_OPC_Adapter](SoftKeySR_PC_B_OPC_Adapter.svg)
+
 ## Function blocks used
 
 - **TRIGGER** (`adapter::net::ASR_AX_SERVER_0_CLIENT_1_0`): bundles server reception (`ID_SET_METHOD`/`ID_RESET_METHOD`) and state feedback (`ID_STATE_WRITE`).

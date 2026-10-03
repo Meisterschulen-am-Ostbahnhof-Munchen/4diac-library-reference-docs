@@ -8,6 +8,8 @@
 
 `AND_AUF` bildet die logische Verknüpfung `IN1 AND IN2` und liefert damit die Freigabebedingung für eine "AUF"-Bewegung (z. B. Ventil/Klappe öffnen): beide Bedingungen müssen gleichzeitig erfüllt sein. Für die komplementäre "ZU"-Bedingung siehe [`AND_ZU`](./AND_ZU.md).
 
+![AND_AUF](AND_AUF.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AND_AUF

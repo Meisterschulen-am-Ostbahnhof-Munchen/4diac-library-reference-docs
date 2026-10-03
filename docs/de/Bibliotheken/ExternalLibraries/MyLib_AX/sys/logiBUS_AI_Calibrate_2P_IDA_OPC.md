@@ -8,6 +8,8 @@
 
 `logiBUS_AI_Calibrate_2P_IDA_OPC` bindet einen physischen Analogeingang (`logiBUS_AI_IDA`) an eine vollständige VT- und OPC-UA-gestützte 2-Punkt-Kalibrierung (`AR_CALIBRATE_2P_REF`) an — genutzt vom [AI_Calibrate_2P-Trainingsbeispiel](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_2P_OPC_UA/InputOutputTesterButton_AI_Calibrate_2P_OPC_UA/). Der Rohwert des Eingangs wird über die 2-Punkt-Kalibrierkette in einen physikalisch skalierten Wert gewandelt; Nullpunkt (`Zero`) und Spanne (`Span`) sowie deren gemessene Rohwerte (`ZeroRaw`/`SpanRaw`) sind sowohl per VT als auch per OPC-UA einstell- bzw. ablesbar und werden per INI-Datei persistiert. Bei Teilkalibrierung (nur ein Punkt kalibriert) greift sofort eine saubere Ausweichlösung auf den verfügbaren Referenzwert.
 
+![logiBUS_AI_Calibrate_2P_IDA_OPC](logiBUS_AI_Calibrate_2P_IDA_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **logiBUS_AI_IDA** (`logiBUS::io::AI::logiBUS_AI_IDA`): physischer Analogeingang, liefert den Rohwert als Adapter.

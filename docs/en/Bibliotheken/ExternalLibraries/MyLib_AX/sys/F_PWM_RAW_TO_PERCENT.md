@@ -8,6 +8,8 @@
 
 `F_PWM_RAW_TO_PERCENT` is the counterpart to [`F_PWM_PERCENT_TO_RAW`](./F_PWM_PERCENT_TO_RAW.md): it converts the **fieldbus raw value (DINT, 0–64255)** from `RampLimitFS.OUT` back into a **fraction (REAL 0.0–1.0)**. Despite its name, the block does not produce a percent value — the fraction-to-percent conversion is handled downstream by `logiBUS::signalprocessing::fieldbus::F_FRACTION_TO_PERCENT`.
 
+![F_PWM_RAW_TO_PERCENT](F_PWM_RAW_TO_PERCENT.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: F_PWM_RAW_TO_PERCENT

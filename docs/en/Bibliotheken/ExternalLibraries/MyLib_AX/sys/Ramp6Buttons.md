@@ -8,6 +8,8 @@
 
 `Ramp6Buttons` encapsulates the **7 VT buttons of a PWM channel** — the 6 ramp buttons (`0 -- - + ++ F`) plus the channel enable/disable switch — as its own reusable SubApp. It was extracted from [`RampLimitFS_TO_logiBUS_QDA_PWM_OPC`](./RampLimitFS_TO_logiBUS_QDA_PWM_OPC.md) to declutter that block's network and make the button logic independently reusable.
 
+![Ramp6Buttons](Ramp6Buttons.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Ramp6Buttons

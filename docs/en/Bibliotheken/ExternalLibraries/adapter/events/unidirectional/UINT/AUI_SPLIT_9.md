@@ -1,6 +1,5 @@
 # AUI_SPLIT_9
 
-[Image of the function block not available]
 ![AUI_SPLIT_9](./AUI_SPLIT_9.svg)
 
 * * * * * * * * * *

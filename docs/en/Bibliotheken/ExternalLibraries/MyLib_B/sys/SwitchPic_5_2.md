@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPic_5_2](SwitchPic_5_2.svg)
+
 ## Summary
 
 5-state counterpart to [`SwitchPic_2_2`](./SwitchPic_2_2.md).

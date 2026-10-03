@@ -10,6 +10,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
+![RedWhiteBackground1](RedWhiteBackground1.svg)
+
 ## Summary
 
 One of many variants in the background color block family: color pair Rot/Weiß, 1 object, BOOL selector.

@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPic_2_1_aux](SwitchPic_2_1_aux.svg)
+
 ## Summary
 
 AUX counterpart to [`SwitchPic_2_1`](./SwitchPic_2_1.md): same 2-state logic, but for an AUX object instead of a regular VT object.

@@ -10,6 +10,8 @@ Der Funktionsbaustein **sequence_Pattern_04_04_loop_AX** ist ein Sequenzer (Schr
 
 Der Baustein nutzt **AX-Adapter** für die Ausgänge und unterstützt sowohl zeitgesteuerte Übergänge (Timeouts) als auch ereignisgesteuerte manuelle Weiterschaltung. Nach dem vierten Schritt springt die Sequenz automatisch oder manuell zurück zum ersten Schritt (Loop-Verhalten).
 
+![sequence_Pattern_04_04_loop_AX](sequence_Pattern_04_04_loop_AX.svg)
+
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**

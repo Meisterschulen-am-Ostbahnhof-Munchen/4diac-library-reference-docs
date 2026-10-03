@@ -9,6 +9,8 @@
 `SystemTickSender_ISO_OPC` combines [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (display on a local VT number field) with [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (remote publishing via OPC UA) so that the same status indicator is visible both on the local screen and can be monitored by other modules via remote subscribe.
 
 
+![SystemTickSender_ISO_OPC](SystemTickSender_ISO_OPC.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: SystemTickSender_ISO_OPC

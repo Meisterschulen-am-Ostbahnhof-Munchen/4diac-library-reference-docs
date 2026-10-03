@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_TO_logiBUS_QXA` wires a physical digital input (`logiBUS_IXA`) directly to a physical digital output (`logiBUS_QXA`) — a pure hardware pass-through with no VT involvement, adapter-based (acyclic with confirmation, `QI=TRUE`). For the event-driven variant without an adapter, see [`logiBUS_IX_TO_logiBUS_QX`](./logiBUS_IX_TO_logiBUS_QX.md).
 
+![logiBUS_IXA_TO_logiBUS_QXA](logiBUS_IXA_TO_logiBUS_QXA.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: logiBUS_IXA_TO_logiBUS_QXA

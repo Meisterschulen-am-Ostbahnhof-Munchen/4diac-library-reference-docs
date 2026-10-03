@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+![NVS_IN_AND_STORE_AR2](NVS_IN_AND_STORE_AR2.svg)
+
 ## Technische Besonderheiten
 
 - `SETM=TRUE`, gleiche Begruendung wie bei [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md): Live-Aenderungen werden sofort bestaetigt, nicht erst beim naechsten Boot.

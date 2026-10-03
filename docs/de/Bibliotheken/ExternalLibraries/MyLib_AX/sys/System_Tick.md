@@ -8,6 +8,8 @@
 
 `System_Tick` erzeugt einen fortlaufenden, zyklisch inkrementierten DINT-Zähler (200-ms-Takt, Wertebereich 1..100, danach Rücksprung auf 1 via Modulo) und stellt ihn über einen `ADI`-Adapter (DINT) für andere Bausteine bereit — ein einfacher "Lebenszeichen"- bzw. Heartbeat-Zähler.
 
+![System_Tick](System_Tick.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: System_Tick

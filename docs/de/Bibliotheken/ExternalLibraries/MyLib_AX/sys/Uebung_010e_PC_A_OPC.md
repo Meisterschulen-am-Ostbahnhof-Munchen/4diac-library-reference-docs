@@ -8,6 +8,8 @@
 
 `Uebung_010e_PC_A_OPC` ist die Geraet-A-Seite (Station 11, 192.168.1.11) der PC-zu-PC-OPC-UA-Variante von Uebung 010e (SR+Toggle-Flipflop via 3 SoftKeys): 3 SoftKeys (Set/Reset/Toggle) rufen je einen eigenen argument- und rueckgabewertlosen OPC-UA-Methodenaufruf auf Geraet B auf (`CLIENT_0`, 3 eigene Methoden statt 1 String-Parameter - Option A). `GreenWhiteBackground1_AX` am Toggle-SoftKey zeigt den von Geraet B lokal ueberwachten Flipflop-Zustand. Gegenstueck: [`Uebung_010e_PC_B_OPC`](./Uebung_010e_PC_B_OPC.md).
 
+![Uebung_010e_PC_A_OPC](Uebung_010e_PC_A_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKey_SET / SoftKey_RESET / SoftKey_TOGGLE** (`isobus::UT::io::Softkey::Softkey_IE`): die 3 physischen SoftKeys.

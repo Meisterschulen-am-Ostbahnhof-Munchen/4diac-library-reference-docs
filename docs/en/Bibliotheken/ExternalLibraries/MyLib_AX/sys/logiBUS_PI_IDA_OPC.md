@@ -8,6 +8,8 @@
 
 `logiBUS_PI_IDA_OPC` connects a physical pulse/counter input (`logiBUS_PI_IDA`) to two independent VT numeric fields (raw counter value and a frequency in Hz derived from it) and to OPC-UA: the raw counter value (DWORD) is published directly, while the frequency is computed from the counter via a time derivative (`FT_DERIV_AR`) and published separately (REAL, physically scaled via `NumericObjectPool_S`).
 
+![logiBUS_PI_IDA_OPC](logiBUS_PI_IDA_OPC.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: logiBUS_PI_IDA_OPC

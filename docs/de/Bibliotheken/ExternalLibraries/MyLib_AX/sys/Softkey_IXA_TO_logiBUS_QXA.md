@@ -8,6 +8,8 @@
 
 `Softkey_IXA_TO_logiBUS_QXA` verbindet einen VT-Softkey (`Softkey_IXA`) direkt mit einem physischen digitalen Ausgang (`logiBUS_QXA`) — funktional identisch zu [`Button_IXA_TO_logiBUS_QXA`](./Button_IXA_TO_logiBUS_QXA.md), aber für Softkeys statt Buttons.
 
+![Softkey_IXA_TO_logiBUS_QXA](Softkey_IXA_TO_logiBUS_QXA.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_IXA_TO_logiBUS_QXA

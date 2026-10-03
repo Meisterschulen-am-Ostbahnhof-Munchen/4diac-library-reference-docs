@@ -8,6 +8,8 @@
 
 `SoftKeySR_ASR_AX` buendelt 2 SoftKeys (Set/Reset) und ein `GreenWhiteBackground1_AX` (am Set-SoftKey) hinter einem einzigen `ASR_AX`-Plug (bidirektional: Set/Reset gehen raus, Zustand kommt rein). Reiner HMI-Baustein ohne jeden OPC-UA-Bezug.
 
+![SoftKeySR_ASR_AX](SoftKeySR_ASR_AX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKey_SET / SoftKey_RESET** (`isobus::UT::io::Softkey::Softkey_IE`, `InputEvent=SK_RELEASED`): die beiden physischen SoftKeys.

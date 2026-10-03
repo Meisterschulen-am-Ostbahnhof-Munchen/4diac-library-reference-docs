@@ -8,6 +8,8 @@
 
 `AX_2_TO_3` nimmt zwei unabhängige AX-Adapter-Signale (`UP_IN`, `DOWN_IN`) entgegen und stellt drei Ausgänge bereit: die beiden Eingänge unverändert durchgereicht (`UP_OUT`, `DOWN_OUT`) sowie zusätzlich deren ODER-Verknüpfung (`OR_OUT`) — typischerweise für "Hoch"/"Runter"-Taster, bei denen zusätzlich ein gemeinsames "irgendeine Richtung aktiv"-Signal gebraucht wird.
 
+![AX_2_TO_3](AX_2_TO_3.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_2_TO_3

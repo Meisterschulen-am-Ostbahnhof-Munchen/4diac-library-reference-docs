@@ -8,6 +8,8 @@
 
 `System_Tick` generates a continuous, cyclically incrementing DINT counter (200 ms tick, value range 0..99, wrapping via modulo) and exposes it through an `ADI` adapter (DINT) for other blocks to consume — a simple heartbeat counter.
 
+![System_Tick](System_Tick.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: System_Tick

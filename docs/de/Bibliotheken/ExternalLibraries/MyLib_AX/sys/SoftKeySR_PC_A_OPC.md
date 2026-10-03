@@ -8,6 +8,8 @@
 
 `SoftKeySR_PC_A_OPC` ist die Geraet-A-Seite (Station 11, 192.168.1.11) eines PC-zu-PC-OPC-UA-Set/Reset-Musters: 2 SoftKeys (Set/Reset) rufen je einen eigenen argument- und rueckgabewertlosen OPC-UA-Methodenaufruf auf Geraet B auf (`CLIENT_0`, 2 eigene Methoden - wie Training_04, aber ohne Toggle). `GreenWhiteBackground1_AX` am Set-SoftKey zeigt den von Geraet B lokal ueberwachten Flipflop-Zustand. "SUB style": das Protokoll steckt im `MyLib::sys`-Composite, nicht in der Resource des Geraets - Gegenstueck: [`SoftKeySR_PC_B_OPC`](./SoftKeySR_PC_B_OPC.md).
 
+![SoftKeySR_PC_A_OPC](SoftKeySR_PC_A_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKey_SET / SoftKey_RESET** (`isobus::UT::io::Softkey::Softkey_IE`): die beiden physischen SoftKeys.

@@ -9,6 +9,8 @@
 `MERGE_SWITCH_1_QXA_OPC` drives a single (non-double-acting) logiBUS output from two OPC UA sources: the existing I/O test command (remote subscribe) and the actual function command (also remote subscribe, e.g., from a soft key/AUX via `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`). Both are combined using a level OR gate, so the existing I/O test remains usable while the actual function can simultaneously control the same output. For double-acting actuators (left/right, up/down), use `ILOCK_SWITCH_2_QXA_OPC` instead.
 
 
+![MERGE_SWITCH_1_QXA_OPC](MERGE_SWITCH_1_QXA_OPC.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: MERGE_SWITCH_1_QXA_OPC

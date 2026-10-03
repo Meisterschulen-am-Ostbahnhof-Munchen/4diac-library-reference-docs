@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](../../MyLib_AX/sys/INI-NVS-Speicherbausteine.md).
 
+![INI_IN_AND_STORE_UDINT](INI_IN_AND_STORE_UDINT.svg)
+
 ## Zusammenfassung
 
 UDINT-Variante der INI-Speicherfamilie (MyLib_B).

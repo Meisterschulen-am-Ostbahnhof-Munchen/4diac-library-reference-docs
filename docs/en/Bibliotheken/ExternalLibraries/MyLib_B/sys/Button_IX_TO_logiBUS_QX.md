@@ -8,6 +8,8 @@
 
 `Button_IX_TO_logiBUS_QX` is the test_B counterpart to [`Button_IXA_TO_logiBUS_QXA`](../../MyLib_AX/sys/Button_IXA_TO_logiBUS_QXA.md): a VT button (`Button_IX`) directly switches a physical digital output (`logiBUS_QX`) — here without adapters, using classic event/data connections.
 
+![Button_IX_TO_logiBUS_QX](Button_IX_TO_logiBUS_QX.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Button_IX_TO_logiBUS_QX

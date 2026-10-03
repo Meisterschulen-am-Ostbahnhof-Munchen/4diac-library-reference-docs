@@ -9,6 +9,8 @@
 `INI_OPC_PARAM_AX` is the BOOL variant of [`INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md): Instead of a REAL value, a BOOL parameter (e.g., a direction or operating mode switch) is read/written via OPC UA, permanently stored in the INI file, and made available as the `AX` adapter for local use.
 
 
+![INI_OPC_PARAM_AX](INI_OPC_PARAM_AX.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: INI_OPC_PARAM_AX

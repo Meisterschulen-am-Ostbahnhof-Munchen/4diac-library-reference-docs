@@ -8,6 +8,8 @@
 
 `NumericValue_TO_AR2_OPC` ist der VT+OPC-UA-Zwilling von [`NumericValue_TO_AR2`](./NumericValue_TO_AR2.md) (VT-only) und [`OPC_TO_AR2`](./OPC_TO_AR2.md) (OPC-only): sowohl das VT-Eingabefeld als auch ein per OPC-UA remote geschriebener Wert (`AR_SUBSCRIBE_1`) speisen `AR_LAST_2` - "letzter Schreiber gewinnt". Das Ergebnis geht als AR2-Adapter (`VALUEO`) an den Consumer; was dieser zurueckechot, wird auf BEIDE Wege zurueckgemeldet: VT-Anzeige (`Q_NumericValue_PHYSA`) und OPC-UA-Publish (`AR_PUBLISH_1`).
 
+![NumericValue_TO_AR2_OPC](NumericValue_TO_AR2_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **NumericValue_PHYSA**: VT-Eingabefeld, lokaler Wert.

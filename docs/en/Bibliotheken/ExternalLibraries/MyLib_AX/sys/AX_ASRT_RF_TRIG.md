@@ -10,6 +10,8 @@
 
 
 
+![AX_ASRT_RF_TRIG](AX_ASRT_RF_TRIG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: AX_ASRT_RF_TRIG

@@ -8,6 +8,8 @@
 
 `AnlagenSequenz_06_ADAPTER` ist ein Composite-Wrapper um [AnlagenSequenz_06](AnlagenSequenz_06.md): dieselbe Ring-Sequenzer-Logik für sechs Motoren, aber mit allen datentragenden Ein-/Ausgängen auf Adapterverbindungen umgestellt, damit der Baustein in einer Anwendung ausschließlich über Adapter (`AX`, `AS`, `ATM`) verdrahtet werden kann, ohne einzelne Event/BOOL/TIME-Leitungen ziehen zu müssen. Die Zeitsteuerung (`timeOut`) bleibt intern und wird nicht nach außen geführt.
 
+![AnlagenSequenz_06_ADAPTER](AnlagenSequenz_06_ADAPTER.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AnlagenSequenz_06_ADAPTER

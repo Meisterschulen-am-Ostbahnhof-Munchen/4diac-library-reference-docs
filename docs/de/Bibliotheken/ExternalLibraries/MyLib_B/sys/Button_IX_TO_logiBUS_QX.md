@@ -8,6 +8,8 @@
 
 `Button_IX_TO_logiBUS_QX` ist das test_B-Gegenstück zu [`Button_IXA_TO_logiBUS_QXA`](../../MyLib_AX/sys/Button_IXA_TO_logiBUS_QXA.md): Ein VT-Taster (`Button_IX`) schaltet direkt einen physischen digitalen Ausgang (`logiBUS_QX`) — hier ohne Adapter, mit klassischen Ereignis-/Datenverbindungen.
 
+![Button_IX_TO_logiBUS_QX](Button_IX_TO_logiBUS_QX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Button_IX_TO_logiBUS_QX

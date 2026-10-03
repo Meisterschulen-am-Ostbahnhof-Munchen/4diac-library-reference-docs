@@ -15,6 +15,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
+![RedWhiteBackground2_AXS](RedWhiteBackground2_AXS.svg)
+
 ## Summary
 
 One of many variants in the background color block family: color pair Rot/Weiß, 2 objects, adapter selector, struct. object ID.

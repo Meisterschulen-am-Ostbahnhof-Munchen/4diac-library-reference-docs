@@ -8,6 +8,8 @@
 
 `AX_SUBSCRIBE_BG3_WEB_OPC` ist die Status-Hälfte von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, herausgelöst als eigenständiger Baustein: ein Remote-Subscribe-Wert wird sowohl als Hintergrundfarbe auf einem SoftKey UND einer AuxFunction2 dargestellt (`GreenWhiteBackground3_AX`) als auch lokal per OPC-UA erneut veröffentlicht, damit ein Web-Client (z. B. vt-ui-mirror) auf demselben Modul denselben Status ohne eigene Verbindung zum Zielmodul lesen kann.
 
+![AX_SUBSCRIBE_BG3_WEB_OPC](AX_SUBSCRIBE_BG3_WEB_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_SUBSCRIBE_BG3_WEB_OPC

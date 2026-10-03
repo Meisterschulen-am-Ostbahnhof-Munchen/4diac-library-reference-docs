@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA_BG` extends [`Button_IXA_TO_logiBUS_QXA`](./Button_IXA_TO_logiBUS_QXA.md) with a VT status color: the button state not only switches the physical output but also the button's own background color (green/white). The OPC-UA-capable follow-up is [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](Button_IXA_TO_logiBUS_QXA_BG_OPC.md).
 
+![Button_IXA_TO_logiBUS_QXA_BG](Button_IXA_TO_logiBUS_QXA_BG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Button_IXA_TO_logiBUS_QXA_BG

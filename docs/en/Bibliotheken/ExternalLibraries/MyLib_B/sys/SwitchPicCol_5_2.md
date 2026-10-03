@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPicCol_5_2](SwitchPicCol_5_2.svg)
+
 ## Summary
 
 Extends [`SwitchPicCol_5_1`](./SwitchPicCol_5_1.md) with the AUX objects for both picture and color at once — the most extensive variant in the `SwitchPicCol` series.

@@ -8,6 +8,8 @@
 
 `logiBUS_IX_TO_logiBUS_QX` wires a physical digital input (`logiBUS_IX`) directly to a physical digital output (`logiBUS_QX`) — functionally equivalent to [`logiBUS_IXA_TO_logiBUS_QXA`](./logiBUS_IXA_TO_logiBUS_QXA.md), but using the non-adapter-based `logiBUS_IX`/`logiBUS_QX` variants: the connection is made via an explicit event connection plus a data connection instead of an adapter.
 
+![logiBUS_IX_TO_logiBUS_QX](logiBUS_IX_TO_logiBUS_QX.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: logiBUS_IX_TO_logiBUS_QX

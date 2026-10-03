@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPicCol_5_1](SwitchPicCol_5_1.svg)
+
 ## Summary
 
 Combines picture and color switching (`Col`) for 5 states on regular VT objects.

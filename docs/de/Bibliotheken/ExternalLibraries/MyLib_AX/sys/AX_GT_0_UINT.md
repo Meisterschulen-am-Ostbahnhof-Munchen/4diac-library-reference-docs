@@ -8,6 +8,8 @@
 
 `AX_GT_0_UINT` prüft, ob ein UINT-Adapter-Wert größer als 0 ist, und gibt das Ergebnis als boolesches AX-Adapter-Signal aus — nützlich, um z. B. einen Objekt-ID- oder Zählerwert direkt in ein Aktiv/Inaktiv-Signal für eine VT-Statusanzeige umzuwandeln.
 
+![AX_GT_0_UINT](AX_GT_0_UINT.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_GT_0_UINT

@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+![NVS_IN_AND_STORE_AR](NVS_IN_AND_STORE_AR.svg)
+
 ## Summary
 
 NVS counterpart to `INI_IN_AND_STORE_AR`.

@@ -1,6 +1,5 @@
 # AX_FB_SR
 
-[Image of the AX_FB_SR function block, if available]
 ![AX_FB_SR_ecc](./AX_FB_SR_ecc.svg)
 
 * * * * * * * * * *
@@ -10,6 +9,8 @@
 The **AX_FB_SR** function block implements a bistable latch with **set dominance** (SR flip-flop). Unlike conventional IEC 61131-3 function blocks, this block does not use discrete event and data connections, but rather **adapters** for signal transmission. This allows for a more compact representation and simplified wiring in complex control applications based on the adapter concept.
 
 The block stores a binary state. If both the set (SET) and reset (RESET) signals are active simultaneously, the set signal takes precedence (set dominance).
+
+![AX_FB_SR](AX_FB_SR.svg)
 
 ## Interface Structure
 

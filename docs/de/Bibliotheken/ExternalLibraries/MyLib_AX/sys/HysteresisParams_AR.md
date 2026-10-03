@@ -8,6 +8,8 @@
 
 `HysteresisParams_AR` bündelt die drei Parameter `MI` (Mittelwert/Sollwert), `DEAD` (Totzone) und `HYSTERESIS` (zusätzliche Hysterese) als feste `AR`-Adapter-Konstanten für `DualHysteresis_AR_AX`/`DualHysteresis_AR_A2X`. Statt drei `initval_AR`-Instanzen in jeder Übung/SubApp einzeln zu wiederholen, fasst dieser Baustein sie zusammen.
 
+![HysteresisParams_AR](HysteresisParams_AR.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: HysteresisParams_AR

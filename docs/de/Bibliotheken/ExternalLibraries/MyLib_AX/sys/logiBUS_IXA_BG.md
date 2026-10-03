@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_BG` verbindet einen physischen digitalen Eingang (`logiBUS_IXA`) mit einer VT-Statusanzeige über die Hintergrundfarbfamilie `GreenWhiteBackground1_AX` (siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md)) — der aktuelle Zustand des Eingangs wird als grün/weißer Hintergrund auf dem VT sichtbar gemacht, ohne OPC-UA-Anbindung. Für die Variante mit zusätzlicher OPC-UA-Rückmeldung siehe [`logiBUS_IXA_BG_OPC`](./logiBUS_IXA_BG_OPC.md).
 
+![logiBUS_IXA_BG](logiBUS_IXA_BG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: logiBUS_IXA_BG

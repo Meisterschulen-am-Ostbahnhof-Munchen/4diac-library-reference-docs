@@ -1,7 +1,5 @@
 # sequence_Pattern_08_08_loop_AX
 
-[Bild des sequence_Pattern_08_08_loop_AX, falls vorhanden]
-
 ![sequence_Pattern_08_08_loop_AX_ecc](./sequence_Pattern_08_08_loop_AX_ecc.svg)
 
 * * * * * * * * * *
@@ -11,6 +9,8 @@
 Der Funktionsbaustein **sequence_Pattern_08_08_loop_AX** ist ein Sequenzer (Schrittkette), der ein konfigurierbares "Nockenschaltwerk" mit 8 Zuständen (Schritten) und 8 Ausgängen implementiert. Er ist darauf ausgelegt, zyklisch zu arbeiten (Loop-Verhalten), wobei der Übergang von Schritt 8 zurück zu Schritt 1 erfolgt.
 
 Dieser Baustein ermöglicht die Definition von Bitmustern für jeden der 8 Schritte, die über spezielle Adapter (AX-Schnittstelle) ausgegeben werden. Die Weiterschaltung zwischen den Zuständen kann entweder ereignisgesteuert oder zeitgesteuert erfolgen.
+
+![sequence_Pattern_08_08_loop_AX](sequence_Pattern_08_08_loop_AX.svg)
 
 ## Schnittstellenstruktur
 

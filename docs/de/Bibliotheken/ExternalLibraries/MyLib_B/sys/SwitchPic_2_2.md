@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPic_2_2](SwitchPic_2_2.svg)
+
 ## Zusammenfassung
 
 Variante "2" (normales Objekt + AUX-Objekt) der 2-Zustände-Bildumschaltung.

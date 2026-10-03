@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_TO_CLIENT_OPC` liest einen digitalen Eingang (`logiBUS_IXA`) und schreibt den Wert aktiv per `AX_CLIENT_1_0` auf ein ANDERES Geraet via OPC-UA - "Krauternter-Stil" (laut Quellcode-Kommentar): das Protokoll (`AX_CLIENT_1_0`) steckt IM Baustein selbst, nicht in der Resource des Geraets, im Gegensatz zum "SUB style" der PC_A/PC_B-Bausteine, wo Trigger/Server-Instanzen extra im Composite verkabelt sind.
 
+![logiBUS_IXA_TO_CLIENT_OPC](logiBUS_IXA_TO_CLIENT_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **logiBUS_IXA** (`logiBUS::io::DI::logiBUS_IXA`): physischer digitaler Eingang, identifiziert ueber `Input_I1..I8`.

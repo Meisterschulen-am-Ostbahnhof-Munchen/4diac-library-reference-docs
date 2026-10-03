@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+![INI_IN_AND_STORE_AR](INI_IN_AND_STORE_AR.svg)
+
 ## Zusammenfassung
 
 AR-Variante (physikalisch skaliertes REAL) der INI-Speicherfamilie.

@@ -8,6 +8,8 @@
 
 `logiBUS_PI_IDA_OPC` bindet einen physischen Puls-/Zähler-Eingang (`logiBUS_PI_IDA`) an zwei unabhängige VT-Zahlenfelder (roher Zählerstand und daraus abgeleitete Frequenz in Hz) sowie an OPC-UA an: der rohe Zählerstand (DWORD) wird direkt publiziert, die Frequenz wird per zeitlicher Ableitung (`FT_DERIV_AR`) aus dem Zählerstand berechnet und separat publiziert (REAL, physikalisch skaliert über `NumericObjectPool_S`).
 
+![logiBUS_PI_IDA_OPC](logiBUS_PI_IDA_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: logiBUS_PI_IDA_OPC

@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](../../MyLib_AX/sys/INI-NVS-Storage-Blocks.md).
 
+![INI_IN_AND_STORE_UDINT](INI_IN_AND_STORE_UDINT.svg)
+
 ## Summary
 
 UDINT variant of the INI storage family (MyLib_B).
