@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+![INI_IN_AND_STORE_AR](INI_IN_AND_STORE_AR.svg)
+
 ## Summary
 
 AR (physically scaled REAL) variant of the INI storage family.

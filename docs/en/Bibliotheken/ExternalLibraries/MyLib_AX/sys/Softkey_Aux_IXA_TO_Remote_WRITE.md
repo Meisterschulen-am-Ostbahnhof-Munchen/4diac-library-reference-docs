@@ -10,6 +10,8 @@
 
 
 
+![Softkey_Aux_IXA_TO_Remote_WRITE](Softkey_Aux_IXA_TO_Remote_WRITE.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: Softkey_Aux_IXA_TO_Remote_WRITE

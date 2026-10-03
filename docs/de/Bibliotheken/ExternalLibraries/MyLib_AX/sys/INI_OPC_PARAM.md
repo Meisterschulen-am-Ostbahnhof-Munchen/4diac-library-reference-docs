@@ -8,6 +8,8 @@
 
 `INI_OPC_PARAM` liest und schreibt einen REAL-Parameter per OPC-UA und speichert ihn remanent in der INI-Datei (`settings.ini`). Ein Client kann über `ID_READ` einen neuen Wert setzen; der aktuell gespeicherte Wert wird über `ID_WRITE` veröffentlicht. Nach einem Neustart wird der zuletzt gespeicherte Wert (oder `DEFAULT_VALUE`, falls noch keiner vorhanden ist) automatisch geladen und wieder publiziert.
 
+![INI_OPC_PARAM](INI_OPC_PARAM.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: INI_OPC_PARAM

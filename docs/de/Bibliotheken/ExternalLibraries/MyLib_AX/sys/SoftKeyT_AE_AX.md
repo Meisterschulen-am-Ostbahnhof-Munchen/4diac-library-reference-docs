@@ -8,6 +8,8 @@
 
 `SoftKeyT_AE_AX` buendelt 1 SoftKey (Trigger) und ein `GreenWhiteBackground1_AX` hinter einem einzigen `AE_AX`-Plug (bidirektional: Trigger geht raus, Zustand kommt rein). Reiner HMI-Baustein ohne jeden OPC-UA-Bezug - wiederverwendbar in jedem Netzwerk, das einen einzelnen Trigger-SoftKey mit Zustandsanzeige braucht.
 
+![SoftKeyT_AE_AX](SoftKeyT_AE_AX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKey_UP_F1** (`isobus::UT::io::Softkey::Softkey_IE`, `InputEvent=SK_RELEASED`): physischer SoftKey.

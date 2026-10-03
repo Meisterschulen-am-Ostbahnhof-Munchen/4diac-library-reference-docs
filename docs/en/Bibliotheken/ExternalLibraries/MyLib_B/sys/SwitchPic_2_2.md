@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPic_2_2](SwitchPic_2_2.svg)
+
 ## Summary
 
 Variant "2" (regular object + AUX object) of the 2-state picture switch.

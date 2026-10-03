@@ -12,6 +12,8 @@ Der Funktionsbaustein **LinksRechts_AX** (aus dem Paket `logiBUS::utils::sequenc
 
 Besonders hervorzuheben ist die Möglichkeit, den automatischen Wechsel durch digitale Eingänge (`DI_Rechts`, `DI_Links`) zu unterbinden, um einen Lauf in nur einer Richtung zu erzwingen. Der Baustein nutzt hierfür die `AX` Adapter-Schnittstelle.
 
+![LinksRechts_AX](LinksRechts_AX.svg)
+
 ## Schnittstellenstruktur
 
 Der Baustein verwendet primär Adapter für die Kommunikation, stellt jedoch auch einen Status-String als direkten Ausgang zur Verfügung.

@@ -22,6 +22,8 @@ This function block has no direct data outputs.
 
 ### Event Inputs
 
+![AX_F_TRIG](AX_F_TRIG.svg)
+
 ## Interface Structure
 
 ## Introduction

@@ -1,6 +1,5 @@
 # AUI_SPLIT_9
 
-[Bild des FB nicht verfügbar]
 
 ![AUI_SPLIT_9](./AUI_SPLIT_9.svg)
 

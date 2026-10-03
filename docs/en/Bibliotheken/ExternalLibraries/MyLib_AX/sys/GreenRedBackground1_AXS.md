@@ -10,6 +10,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
+![GreenRedBackground1_AXS](GreenRedBackground1_AXS.svg)
+
 ## Summary
 
 One of many variants in the background color block family: color pair Grün/Rot, 1 object, adapter selector, struct. object ID.

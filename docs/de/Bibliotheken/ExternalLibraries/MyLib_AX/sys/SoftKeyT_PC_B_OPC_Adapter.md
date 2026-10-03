@@ -8,6 +8,8 @@
 
 `SoftKeyT_PC_B_OPC_Adapter` ist die adapter-gebuendelte Variante von [`Uebung_010d_PC_B_OPC`](./Uebung_010d_PC_B_OPC.md) (Geraet B, Station 12): `CLIENT_0`/`SERVER_0`-Trigger und `AX_CLIENT_1_0` sind hinter EINEM `AE_AX_SERVER_0_CLIENT_1_0`-Baustein hinter einem einzigen bidirektionalen Adapter-Anschluss gebuendelt; `AE_AX_AX_SPLIT` speist sowohl `DigitalOutput_Q1` als auch die Toggle-Flipflop-Logik (`AE_AX_T_FF`). Gegenstueck: [`SoftKeyT_PC_A_OPC_Adapter`](./SoftKeyT_PC_A_OPC_Adapter.md).
 
+![SoftKeyT_PC_B_OPC_Adapter](SoftKeyT_PC_B_OPC_Adapter.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **TRIGGER** (`adapter::net::AE_AX_SERVER_0_CLIENT_1_0`): buendelt Server-Empfang (`ID_TRIGGER_METHOD`) und Zustands-Rueckmeldung (`ID_STATE_WRITE`).

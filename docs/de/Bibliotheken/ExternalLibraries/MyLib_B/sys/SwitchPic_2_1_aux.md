@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPic_2_1_aux](SwitchPic_2_1_aux.svg)
+
 ## Zusammenfassung
 
 AUX-Gegenstück zu [`SwitchPic_2_1`](./SwitchPic_2_1.md): dieselbe 2-Zustände-Logik, aber nur für ein AUX-Objekt statt ein normales VT-Objekt.

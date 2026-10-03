@@ -16,6 +16,8 @@
 
 Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
+![GreenRedBackground3_AX](GreenRedBackground3_AX.svg)
+
 ## Zusammenfassung
 
 Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Grün/Rot, 3 Objekte, Adapter-Selector.

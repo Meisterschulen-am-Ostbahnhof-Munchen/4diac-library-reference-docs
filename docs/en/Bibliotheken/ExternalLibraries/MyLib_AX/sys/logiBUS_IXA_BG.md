@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_BG` connects a physical digital input (`logiBUS_IXA`) to a VT status indication via the background-color family `GreenWhiteBackground1_AX` (see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md)) — the current state of the input is made visible on the VT as a green/white background, with no OPC-UA connection. For the variant with additional OPC-UA feedback, see [`logiBUS_IXA_BG_OPC`](./logiBUS_IXA_BG_OPC.md).
 
+![logiBUS_IXA_BG](logiBUS_IXA_BG.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: logiBUS_IXA_BG

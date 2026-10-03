@@ -8,6 +8,8 @@
 
 `Softkey_IX_TO_logiBUS_QX_BG` erweitert [`Softkey_IX_TO_logiBUS_QX`](./Softkey_IX_TO_logiBUS_QX.md) um eine VT-Statusfarbe — das test_B-Gegenstück zu [`Softkey_IXA_TO_logiBUS_QXA_BG`](../../MyLib_AX/sys/Softkey_IXA_TO_logiBUS_QXA_BG.md).
 
+![Softkey_IX_TO_logiBUS_QX_BG](Softkey_IX_TO_logiBUS_QX_BG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_IX_TO_logiBUS_QX_BG

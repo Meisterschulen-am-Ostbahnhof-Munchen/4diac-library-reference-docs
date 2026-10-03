@@ -8,6 +8,8 @@
 
 `AnlagenSequenz_06_ADAPTER` is a composite wrapper around [AnlagenSequenz_06](AnlagenSequenz_06.md): the same ring-sequencer logic for six motors, but with every data-carrying input/output moved onto adapter connections, so the block can be wired into an application entirely through adapters (`AX`, `AS`, `ATM`) without pulling individual Event/BOOL/TIME lines. The timing (`timeOut`) stays internal and is not exposed.
 
+![AnlagenSequenz_06_ADAPTER](AnlagenSequenz_06_ADAPTER.svg)
+
 ## Function Blocks Used (FBs)
 
 ### Sub-modules: AnlagenSequenz_06_ADAPTER

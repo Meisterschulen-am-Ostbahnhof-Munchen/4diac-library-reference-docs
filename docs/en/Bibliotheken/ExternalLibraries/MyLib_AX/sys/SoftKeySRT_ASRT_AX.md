@@ -8,6 +8,8 @@
 
 `SoftKeySRT_ASRT_AX` bundles 3 softkeys (set/reset/toggle) and a `GreenWhiteBackground1_AX` (on the toggle softkey) behind a single `ASRT_AX` plug (bidirectional: set/reset/toggle go out, state comes in). A pure HMI block with no OPC-UA involvement - the SR+toggle counterpart of [`SoftKeySR_ASR_AX`](./SoftKeySR_ASR_AX.md).
 
+![SoftKeySRT_ASRT_AX](SoftKeySRT_ASRT_AX.svg)
+
 ## Function blocks used
 
 - **SoftKey_SET / SoftKey_RESET / SoftKey_TOGGLE** (`isobus::UT::io::Softkey::Softkey_IE`, `InputEvent=SK_RELEASED`): the 3 physical softkeys.

@@ -1,7 +1,5 @@
 # AX_FB_SR
 
-[Bild des Funktionsbausteins AX_FB_SR, falls vorhanden]
-
 ![AX_FB_SR_ecc](./AX_FB_SR_ecc.svg)
 
 * * * * * * * * * *
@@ -11,6 +9,8 @@
 Der Funktionsbaustein **AX_FB_SR** realisiert ein bistabiles Kippglied (Latch) mit **Setz-Dominanz** (SR-Flip-Flop). Im Gegensatz zu herkömmlichen IEC 61131-3 Bausteinen verwendet dieser FB jedoch keine diskreten Ereignis- und Datenanschlüsse, sondern **Adapter** für die Signalübertragung. Dies ermöglicht eine kompaktere Darstellung und vereinfachte Verdrahtung in komplexen Steuerungsanwendungen, die auf dem Adapter-Konzept basieren.
 
 Der Baustein speichert einen binären Zustand. Wenn sowohl das Setz- (SET) als auch das Rücksetzsignal (RESET) gleichzeitig aktiv sind, hat das Setzsignal Vorrang (Setz-Dominanz).
+
+![AX_FB_SR](AX_FB_SR.svg)
 
 ## Schnittstellenstruktur
 

@@ -8,6 +8,8 @@
 
 `logiBUS_QXA_FROM_SUBSCRIBE_OPC` steuert einen digitalen Ausgang (`logiBUS_QXA`) von einem lokal ueberwachten OPC-UA-Knoten, der von einem ANDEREN Geraet per `AX_CLIENT_1_0` remote beschrieben wird - "Krauternter-Stil" (laut Quellcode-Kommentar): das Protokoll (`AX_SUBSCRIBE_1`) steckt IM Baustein selbst, nicht in der Resource des Geraets.
 
+![logiBUS_QXA_FROM_SUBSCRIBE_OPC](logiBUS_QXA_FROM_SUBSCRIBE_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **AX_SUBSCRIBE_1** (`adapter::net::AX_SUBSCRIBE_1`): abonniert die lokal ueberwachte Adresse `ID` (BOOL, remote beschrieben).

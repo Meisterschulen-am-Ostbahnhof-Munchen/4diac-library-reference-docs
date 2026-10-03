@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](../../MyLib_AX/sys/INI-NVS-Storage-Blocks.md).
 
+![NVS_IN_AND_STORE_UDINT](NVS_IN_AND_STORE_UDINT.svg)
+
 ## Summary
 
 NVS counterpart to `INI_IN_AND_STORE_UDINT` (MyLib_B).

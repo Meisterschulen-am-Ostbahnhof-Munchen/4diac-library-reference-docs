@@ -8,6 +8,8 @@
 
 `F_PWM_PERCENT_TO_RAW` converts a **PWM setpoint fraction (REAL 0.0–1.0)** into the **fieldbus raw value (DINT, 0–64255)** expected by `RampLimitFS.PV`. Despite its name, the block does not expect a percent value (0–100) but a fraction (0.0–1.0) — the percent-to-fraction conversion is handled upstream by `logiBUS::signalprocessing::fieldbus::F_PERCENT_TO_FRACTION`.
 
+![F_PWM_PERCENT_TO_RAW](F_PWM_PERCENT_TO_RAW.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: F_PWM_PERCENT_TO_RAW

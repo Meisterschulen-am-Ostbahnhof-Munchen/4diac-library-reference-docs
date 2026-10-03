@@ -10,6 +10,8 @@
 
 Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
+![GreenWhiteBackground1_AX](GreenWhiteBackground1_AX.svg)
+
 ## Zusammenfassung
 
 Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Grün/Weiß, 1 Objekt, Adapter-Selector.

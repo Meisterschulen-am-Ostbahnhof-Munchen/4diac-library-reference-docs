@@ -9,6 +9,8 @@
 `HysteresisParams_AR` bundles the three parameters `MI` (mean/target value), `DEAD` (dead zone), and `HYSTERESIS` (additional hysteresis) as fixed `AR` adapter constants for `DualHysteresis_AR_AX`/`DualHysteresis_AR_A2X`. Instead of repeating three `initval_AR` instances individually in each exercise/subapp, this building block combines them.
 
 
+![HysteresisParams_AR](HysteresisParams_AR.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: HysteresisParams_AR

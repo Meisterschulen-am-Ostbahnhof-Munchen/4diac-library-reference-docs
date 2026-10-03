@@ -8,6 +8,8 @@
 
 `INI_OPC_PARAM_AR` erweitert [`INI_OPC_PARAM`](./INI_OPC_PARAM.md) um einen zusätzlichen `AR`-Adapter-Ausgang (`OUT`), der den aktuell gespeicherten/geladenen Wert direkt für die Weiterverwendung im aufrufenden Netzwerk bereitstellt — z. B. für eine lokal einzustellende Drehzahl, die sowohl per OPC-UA editierbar sein als auch direkt in derselben Applikation verwendet werden soll.
 
+![INI_OPC_PARAM_AR](INI_OPC_PARAM_AR.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: INI_OPC_PARAM_AR

@@ -8,6 +8,8 @@
 
 `AND_AUF` computes the logical `IN1 AND IN2` and provides the enable condition for an "OPEN" movement (e.g. opening a valve/flap): both conditions must be true at the same time. For the complementary "CLOSE" condition, see [`AND_ZU`](./AND_ZU.md).
 
+![AND_AUF](AND_AUF.svg)
+
 ## Function Blocks Used
 
 ### Sub-blocks: AND_AUF

@@ -8,6 +8,8 @@
 
 `Softkey_IXA_TO_logiBUS_QXA_BG` extends [`Softkey_IXA_TO_logiBUS_QXA`](./Softkey_IXA_TO_logiBUS_QXA.md) with a VT status color — the softkey counterpart to [`Button_IXA_TO_logiBUS_QXA_BG`](./Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Softkey_IXA_TO_logiBUS_QXA_BG](Softkey_IXA_TO_logiBUS_QXA_BG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Softkey_IXA_TO_logiBUS_QXA_BG

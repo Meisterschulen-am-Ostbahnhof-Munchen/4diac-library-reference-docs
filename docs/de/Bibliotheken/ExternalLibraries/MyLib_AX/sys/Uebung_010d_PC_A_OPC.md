@@ -8,6 +8,8 @@
 
 `Uebung_010d_PC_A_OPC` ist die Geraet-A-Seite (Station 11, 192.168.1.11) der PC-zu-PC-OPC-UA-Variante von Uebung 010d (Toggle-Flipflop via SoftKey): ein SoftKey-Tastendruck ruft per `CLIENT_0` einen argument- und rueckgabewertlosen OPC-UA-Methodenaufruf auf Geraet B auf (reiner RPC-Trigger, kein Wertwechsel-Trick noetig, keine Toggle-Logik auf diesem Geraet). `GreenWhiteBackground1_AX` zeigt den von Geraet B lokal ueberwachten Flipflop-Zustand. "SUB style": das Protokoll steckt im `MyLib::sys`-Composite, nicht in der Resource des Geraets - Gegenstueck: [`Uebung_010d_PC_B_OPC`](./Uebung_010d_PC_B_OPC.md).
 
+![Uebung_010d_PC_A_OPC](Uebung_010d_PC_A_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKey_UP_F1** (`isobus::UT::io::Softkey::Softkey_IE`): physischer SoftKey (F1), `InputEvent=SK_RELEASED`.

@@ -6,6 +6,8 @@
 
 The function block **AE_CYCLE** (Adapter Event Cycle) serves as a periodic event generator. It generates an output event at regular intervals, defined by a timer. Unlike the standard `E_CYCLE` block, this function block uses an adapter for signal output, making it particularly suitable for architectural patterns based on event adapters.
 
+![AE_CYCLE](AE_CYCLE.svg)
+
 ## Interface Structure
 
 ### **Event Inputs**

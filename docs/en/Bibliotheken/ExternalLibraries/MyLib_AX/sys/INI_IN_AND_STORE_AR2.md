@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+![INI_IN_AND_STORE_AR2](INI_IN_AND_STORE_AR2.svg)
+
 ## Technical notes
 
 - `SETM=TRUE`: a live change during operation is confirmed/echoed immediately, not only at boot - important since the fresh value can be reused in the same run via `VALUEO`.

@@ -8,6 +8,8 @@
 
 `logiBUS_AI_Calibrate_2P_IDA_OPC` connects a physical analog input (`logiBUS_AI_IDA`) to a full VT- and OPC-UA-backed 2-point calibration (`AR_CALIBRATE_2P_REF`) — used by the [AI_Calibrate_2P training sample](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_2P_OPC_UA/InputOutputTesterButton_AI_Calibrate_2P_OPC_UA/). The input's raw value is converted into a physically scaled value through the 2-point calibration chain; zero point (`Zero`) and span (`Span`) as well as their measured raw values (`ZeroRaw`/`SpanRaw`) are adjustable and readable via both VT and OPC-UA, and are persisted in an INI file. In partial calibration (only one point calibrated), a clean fallback logic immediately utilizes the available reference value.
 
+![logiBUS_AI_Calibrate_2P_IDA_OPC](logiBUS_AI_Calibrate_2P_IDA_OPC.svg)
+
 ## Function blocks used
 
 - **logiBUS_AI_IDA** (`logiBUS::io::AI::logiBUS_AI_IDA`): physical analog input, provides the raw value as an adapter.

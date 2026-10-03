@@ -8,6 +8,8 @@
 
 `AND_ZU` bildet die logische Verknüpfung `IN1 AND NOT IN2` und liefert damit die Freigabebedingung für eine "ZU"-Bewegung (z. B. Ventil/Klappe schließen): `IN1` muss erfüllt und `IN2` muss negiert erfüllt sein. Komplementär zu [`AND_AUF`](./AND_AUF.md).
 
+![AND_ZU](AND_ZU.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AND_ZU

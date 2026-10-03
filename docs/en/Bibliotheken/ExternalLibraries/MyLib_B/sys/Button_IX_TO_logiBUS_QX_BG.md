@@ -8,6 +8,8 @@
 
 `Button_IX_TO_logiBUS_QX_BG` extends [`Button_IX_TO_logiBUS_QX`](./Button_IX_TO_logiBUS_QX.md) with a VT status color — the test_B counterpart to [`Button_IXA_TO_logiBUS_QXA_BG`](../../MyLib_AX/sys/Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Button_IX_TO_logiBUS_QX_BG](Button_IX_TO_logiBUS_QX_BG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Button_IX_TO_logiBUS_QX_BG

@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPic_5_1](SwitchPic_5_1.svg)
+
 ## Zusammenfassung
 
 Variante "1" (nur normales Objekt) der 5-Zustände-Bildumschaltung — das 5-Zustände-Gegenstück zu [`SwitchPic_2_1`](./SwitchPic_2_1.md).

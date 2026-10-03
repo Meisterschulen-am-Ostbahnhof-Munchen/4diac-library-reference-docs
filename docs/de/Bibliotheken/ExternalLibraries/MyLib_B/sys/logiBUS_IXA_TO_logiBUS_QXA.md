@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_TO_logiBUS_QXA` verdrahtet einen physischen digitalen Eingang (`logiBUS_IXA`) direkt auf einen physischen digitalen Ausgang (`logiBUS_QXA`) — eine reine Hardware-Durchschaltung ohne VT-Beteiligung, adapterbasiert (azyklisch mit Bestätigung, `QI=TRUE`). Für die ereignisgesteuerte Variante ohne Adapter siehe [`logiBUS_IX_TO_logiBUS_QX`](./logiBUS_IX_TO_logiBUS_QX.md).
 
+![logiBUS_IXA_TO_logiBUS_QXA](logiBUS_IXA_TO_logiBUS_QXA.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: logiBUS_IXA_TO_logiBUS_QXA

@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+![SwitchPicCol_5_1_aux](SwitchPicCol_5_1_aux.svg)
+
 ## Summary
 
 AUX counterpart to [`SwitchPicCol_5_1`](./SwitchPicCol_5_1.md).

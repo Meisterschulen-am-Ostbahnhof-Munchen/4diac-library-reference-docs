@@ -8,6 +8,8 @@
 
 `F_AI_RAW_TO_PERCENT` rechnet den Analog-Rohwert von `logiBUS_AI_ID`/`logiBUS_AI_IDA` (DWORD, 0-4095, 12-bit ESP32-P4-ADC-Vollausschlag) **linear** in Prozent (REAL 0.0-100.0) um — ohne physikalische Kalibrierung (die folgt als späterer Ausbauschritt). Datenbasierte Variante; die volladapterbasierte Alternative ist [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
 
+![F_AI_RAW_TO_PERCENT](F_AI_RAW_TO_PERCENT.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: F_AI_RAW_TO_PERCENT

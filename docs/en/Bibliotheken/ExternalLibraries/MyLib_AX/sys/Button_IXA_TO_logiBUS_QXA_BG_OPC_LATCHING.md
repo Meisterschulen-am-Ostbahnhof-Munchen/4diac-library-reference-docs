@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` replaces the simple OR gate (`AX_OR_2`) of [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) with an edge-detection/merge/latch chain (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). This is **not** a true click-toggle: `AX_ASR_RF_TRIG` maps the rising edge (press) to `SET` and the falling edge (release) to `RESET`, so with only one source active the block behaves exactly like the momentary `AX_OR_2` variant (ON only while held). The difference only shows up once the VT button and the OPC UA command overlap in time: unlike a true OR gate (which stays ON as long as either source is active), the last edge to arrive always wins here, regardless of which source it came from — e.g. if the OPC UA side sends a release while the VT button is still held, the output switches OFF immediately anyway. The block is retained for use cases that need exactly this last-wins behavior between two sources. Both function blocks share the same interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) and are interface-compatible — their switching behavior differs only in this overlap case.
 
+![Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING](Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING

@@ -8,6 +8,8 @@
 
 `Select_EnableOk_AX` is the adapter-native variant of `Select_EnableOk`: `bEnable`/`bOk` arrive as AX adapters (instead of plain BOOL), `value` leaves as an AUS adapter. No event handling needed - any change to `bEnable`/`bOk` propagates automatically through the adapter chain.
 
+![Select_EnableOk_AX](Select_EnableOk_AX.svg)
+
 ## Function blocks used
 
 - **initval_AUS_DISABLED / initval_AUS_OK / initval_AUS_FAULT** (`adapter::types::unidirectional::AUS::initval::initval_AUS`): feed the 3 parameter values (`valDisabled`/`valOk`/`valFault`) in as AUS adapters, once at instantiation.

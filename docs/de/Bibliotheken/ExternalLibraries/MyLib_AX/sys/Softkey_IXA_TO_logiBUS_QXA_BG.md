@@ -8,6 +8,8 @@
 
 `Softkey_IXA_TO_logiBUS_QXA_BG` erweitert [`Softkey_IXA_TO_logiBUS_QXA`](./Softkey_IXA_TO_logiBUS_QXA.md) um eine VT-Statusfarbe — das Softkey-Pendant zu [`Button_IXA_TO_logiBUS_QXA_BG`](./Button_IXA_TO_logiBUS_QXA_BG.md).
 
+![Softkey_IXA_TO_logiBUS_QXA_BG](Softkey_IXA_TO_logiBUS_QXA_BG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_IXA_TO_logiBUS_QXA_BG

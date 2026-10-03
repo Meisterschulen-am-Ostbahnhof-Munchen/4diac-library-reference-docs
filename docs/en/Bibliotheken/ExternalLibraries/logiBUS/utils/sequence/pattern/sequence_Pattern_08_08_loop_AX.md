@@ -1,6 +1,5 @@
 # sequence_Pattern_08_08_loop_AX
 
-[Image of sequence_Pattern_08_08_loop_AX, if available]
 ![sequence_Pattern_08_08_loop_AX_ecc](./sequence_Pattern_08_08_loop_AX_ecc.svg)
 
 * * * * * * * * * *
@@ -10,6 +9,8 @@
 The function block **sequence_Pattern_08_08_loop_AX** is a sequencer (step chain) that implements a configurable cam switch with 8 states (steps) and 8 outputs. It is designed to operate cyclically (loop behavior), transitioning from step 8 back to step 1.
 
 This block allows the definition of bit patterns for each of the 8 steps, which are output via special adapters (AX interface). Transitions between states can be either event-driven or time-controlled.
+
+![sequence_Pattern_08_08_loop_AX](sequence_Pattern_08_08_loop_AX.svg)
 
 ## Interface Structure
 

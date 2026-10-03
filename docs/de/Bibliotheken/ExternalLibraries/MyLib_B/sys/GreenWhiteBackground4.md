@@ -17,6 +17,8 @@
 
 Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) siehe [Background-Farbbausteine (gemeinsames Muster)](../../MyLib_AX/sys/Background-Farbbausteine.md).
 
+![GreenWhiteBackground4](GreenWhiteBackground4.svg)
+
 ## Zusammenfassung
 
 Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Grün/Weiß, 4 Objekte, BOOL-Selector.

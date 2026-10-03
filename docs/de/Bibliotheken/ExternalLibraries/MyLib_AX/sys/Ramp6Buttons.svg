@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 788.138671875 352.0"
+     width="788.138671875" height="352.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(66.9375, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 309.125 0
+            A 3 3 0 0 1 312.125 3
+            L 312.125 143.0
+            A 3 3 0 0 1 309.125 146.0
+            L 302.125 146.0
+            L 302.125 186.0
+            L 309.125 186.0
+            A 3 3 0 0 1 312.125 189.0
+            L 312.125 329.0
+            A 3 3 0 0 1 309.125 332.0
+            L 3 332.0
+            A 3 3 0 0 1 0 329.0
+            L 0 189.0
+            A 3 3 0 0 1 3 186.0
+            L 10 186.0
+            L 10 146.0
+            L 3 146.0
+            A 3 3 0 0 1 0 143.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="305.625,11.0 310.625,16.0 305.625,21.0" fill="#63B31F"/>
+    <text x="302.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_SWITCH</text>
+
+    <polygon points="305.625,31.0 310.625,36.0 305.625,41.0" fill="#63B31F"/>
+    <text x="302.625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_ZERO</text>
+
+    <polygon points="305.625,51.0 310.625,56.0 305.625,61.0" fill="#63B31F"/>
+    <text x="302.625" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_UP_SLOW</text>
+
+    <polygon points="305.625,71.0 310.625,76.0 305.625,81.0" fill="#63B31F"/>
+    <text x="302.625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_UP_FAST</text>
+
+    <polygon points="305.625,91.0 310.625,96.0 305.625,101.0" fill="#63B31F"/>
+    <text x="302.625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_DOWN_SLOW</text>
+
+    <polygon points="305.625,111.0 310.625,116.0 305.625,121.0" fill="#63B31F"/>
+    <text x="302.625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_DOWN_FAST</text>
+
+    <polygon points="305.625,131.0 310.625,136.0 305.625,141.0" fill="#63B31F"/>
+    <text x="302.625" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">IND_FULL</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 104.34375 157.0
+            L 120.34375 157.0
+            A 1 1 0 0 1 121.34375 158.0
+            L 121.34375 161.5
+            L 119.34375 161.5
+            L 119.34375 164.5
+            L 121.34375 164.5
+            L 121.34375 174.0
+            A 1 1 0 0 1 120.34375 175.0
+            L 104.34375 175.0
+            A 1 1 0 0 1 103.34375 174.0
+            L 103.34375 164.5
+            L 105.34375 164.5
+            L 105.34375 161.5
+            L 103.34375 161.5
+            L 103.34375 158.0
+            A 1 1 0 0 1 104.34375 157.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <path d="M 105.84375 166.5 L 110.34375 166.5 A 0.5 0.5 0 0 1 110.84375 167.0 L 110.84375 168.25 L 110.01875 168.25 L 110.01875 169.41666666666666 L 110.84375 169.41666666666666 L 110.84375 173.0 A 0.5 0.5 0 0 1 110.34375 173.5 L 105.84375 173.5 A 0.5 0.5 0 0 1 105.34375 173.0 L 105.34375 169.41666666666666 L 106.16875 169.41666666666666 L 106.16875 168.25 L 105.34375 168.25 L 105.34375 167.0 A 0.5 0.5 0 0 1 105.84375 166.5 Z" fill="#1565C0" stroke="none"/>
+    <path d="M 114.34375 166.5 L 118.84375 166.5 A 0.5 0.5 0 0 1 119.34375 167.0 L 119.34375 168.25 L 118.51875 168.25 L 118.51875 169.41666666666666 L 119.34375 169.41666666666666 L 119.34375 173.0 A 0.5 0.5 0 0 1 118.84375 173.5 L 114.34375 173.5 A 0.5 0.5 0 0 1 113.84375 173.0 L 113.84375 169.41666666666666 L 114.66875 169.41666666666666 L 114.66875 168.25 L 113.84375 168.25 L 113.84375 167.0 A 0.5 0.5 0 0 1 114.34375 166.5 Z" fill="#1565C0" stroke="none"/>
+    <line x1="110.84375" y1="167.34" x2="113.84375" y2="167.34"
+          stroke="#3DA015" stroke-width="1.2"/>
+    <line x1="110.84375" y1="171.4" x2="113.84375" y2="171.4"
+          stroke="#FF0000" stroke-width="1.2"/>
+
+    <!-- Block Name -->
+    <text x="126.34375" y="171.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">Ramp6Buttons</text>
+    
+    <text x="156.0625" y="186.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#18519E"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_SWITCH</text>
+
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#18519E"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_ZERO</text>
+
+    <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#18519E"/>
+    <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_UP_SLOW</text>
+
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#18519E"/>
+    <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_UP_FAST</text>
+
+    <polygon points="1.5,271.0 6.5,276.0 1.5,281.0" fill="#18519E"/>
+    <text x="9.5" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_DOWN_SLOW</text>
+
+    <polygon points="1.5,291.0 6.5,296.0 1.5,301.0" fill="#18519E"/>
+    <text x="9.5" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_DOWN_FAST</text>
+
+    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#18519E"/>
+    <text x="9.5" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_FULL</text>
+
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <!-- Horizontal Connection Lines -->
+
+    <!-- External Labels -->
+
+    <text x="337.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Kanal-Ein/Aus-Taste gedrueckt (togglet Enable-Zustand)</text>
+
+    <text x="337.125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste '0' gedrueckt (RampLimitFS.ZERO)</text>
+
+    <text x="337.125" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste '+' gedrueckt (RampLimitFS.UP_SLOW, ~1%)</text>
+
+    <text x="337.125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste '++' gedrueckt (RampLimitFS.UP_FAST, ~10%)</text>
+
+    <text x="337.125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste '-' gedrueckt (RampLimitFS.DOWN_SLOW, ~1%)</text>
+
+    <text x="337.125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste '--' gedrueckt (RampLimitFS.DOWN_FAST, ~10%)</text>
+
+    <text x="337.125" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Taste 'F' gedrueckt (RampLimitFS.FULL, 100%)</text>
+
+    <text x="-25" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+  </g>
+</svg>

@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPicCol_5_1](SwitchPicCol_5_1.svg)
+
 ## Zusammenfassung
 
 Kombiniert Bild- und Farbumschaltung (`Col`) für 5 Zustände auf normalen VT-Objekten.

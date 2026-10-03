@@ -8,6 +8,8 @@
 
 `Uebung_010e_PC_A_OPC` is the device-A side (station 11, 192.168.1.11) of the PC-to-PC OPC-UA variant of exercise 010e (SR+toggle flip-flop via 3 softkeys): 3 softkeys (set/reset/toggle) each call their own argument- and return-value-less OPC-UA method on device B (`CLIENT_0`, 3 distinct methods instead of 1 string parameter - option A). `GreenWhiteBackground1_AX` on the toggle softkey shows the flip-flop state locally monitored from device B. Counterpart: [`Uebung_010e_PC_B_OPC`](./Uebung_010e_PC_B_OPC.md).
 
+![Uebung_010e_PC_A_OPC](Uebung_010e_PC_A_OPC.svg)
+
 ## Function blocks used
 
 - **SoftKey_SET / SoftKey_RESET / SoftKey_TOGGLE** (`isobus::UT::io::Softkey::Softkey_IE`): the 3 physical softkeys.

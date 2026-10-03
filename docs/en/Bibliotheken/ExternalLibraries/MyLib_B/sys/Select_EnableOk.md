@@ -8,6 +8,8 @@
 
 `Select_EnableOk` derives one of 3 parameterized USINT values from 2 bools (`bEnable`, `bOk`): `valDisabled` (bEnable=FALSE), `valOk` (bEnable=TRUE and bOk=TRUE), `valFault` (bEnable=TRUE and bOk=FALSE). A generic 2-stage `F_SEL`, not limited to colors - per the source comment, extracted from [`Q_BackgroundColour_EnableOk`](./Q_BackgroundColour_EnableOk.md) to decouple the pure selection logic from the VT background-color application.
 
+![Select_EnableOk](Select_EnableOk.svg)
+
 ## Function blocks used
 
 - **F_SEL_OK_FAULT** (`iec61131::selection::F_SEL`): selects between `valFault`/`valOk` based on `bOk`.

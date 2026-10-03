@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+![NVS_IN_AND_STORE_AIS](NVS_IN_AND_STORE_AIS.svg)
+
 ## Zusammenfassung
 
 NVS-Pendant zu `INI_IN_AND_STORE_AIS`.

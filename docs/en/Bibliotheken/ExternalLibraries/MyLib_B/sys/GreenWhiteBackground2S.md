@@ -15,6 +15,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
+![GreenWhiteBackground2S](GreenWhiteBackground2S.svg)
+
 ## Summary
 
 One of many variants in the background color block family: color pair Grün/Weiß, 2 objects, BOOL selector, struct. object ID.

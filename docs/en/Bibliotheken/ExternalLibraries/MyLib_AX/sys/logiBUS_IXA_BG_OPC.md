@@ -8,6 +8,8 @@
 
 `logiBUS_IXA_BG_OPC` is the reusable block for **a single digital input** with VT status display (background color) and OPC-UA publish. It is instantiated 8 times with different parameters in [`InputOutputTesterButton_DIDO_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_DIDO_OPC_UA/InputOutputTesterButton_DIDO_OPC_UA/) and is reused unchanged for the 8 inputs in the PWM example [`InputOutputTesterButton_PWM_OPC_UA`](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_PWM_OPC_UA/InputOutputTesterButton_PWM_OPC_UA/).
 
+![logiBUS_IXA_BG_OPC](logiBUS_IXA_BG_OPC.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: logiBUS_IXA_BG_OPC

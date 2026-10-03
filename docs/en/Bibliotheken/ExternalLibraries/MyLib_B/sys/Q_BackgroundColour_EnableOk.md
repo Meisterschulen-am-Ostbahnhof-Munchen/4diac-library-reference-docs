@@ -8,6 +8,8 @@
 
 `Q_BackgroundColour_EnableOk` derives a 3-color VT background color from 2 bools (channel enabled + hardware QO): white = disabled, green = enabled and QO TRUE, red = enabled and QO FALSE (fault). Generic for any channel with an enable switch + status LED (PWM, PI, ...). The pure selection logic now lives in [`Select_EnableOk`](./Select_EnableOk.md); this block just instantiates it with the 3 colors as parameters and attaches `Q_BackgroundColour`.
 
+![Q_BackgroundColour_EnableOk](Q_BackgroundColour_EnableOk.svg)
+
 ## Function blocks used
 
 - **Select_EnableOk_Colour** (SubApp, type `MyLib::sys::Select_EnableOk`): `valDisabled=COLOR_WHITE`, `valOk=COLOR_GREEN`, `valFault=COLOR_RED`.

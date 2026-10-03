@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 2375.703125 472.0"
+     width="2375.703125" height="472.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(814.6669921875, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 281.8876953125 0
+            A 3 3 0 0 1 284.8876953125 3
+            L 284.8876953125 63.0
+            A 3 3 0 0 1 281.8876953125 66.0
+            L 274.8876953125 66.0
+            L 274.8876953125 106.0
+            L 281.8876953125 106.0
+            A 3 3 0 0 1 284.8876953125 109.0
+            L 284.8876953125 449.0
+            A 3 3 0 0 1 281.8876953125 452.0
+            L 3 452.0
+            A 3 3 0 0 1 0 449.0
+            L 0 109.0
+            A 3 3 0 0 1 3 106.0
+            L 10 106.0
+            L 10 66.0
+            L 3 66.0
+            A 3 3 0 0 1 0 63.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="1.5,31.0 6.5,36.0 1.5,41.0" fill="#63B31F"/>
+    <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EIN</text>
+
+    <polygon points="1.5,51.0 6.5,56.0 1.5,61.0" fill="#63B31F"/>
+    <text x="9.5" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">AUS</text>
+
+    <polygon points="278.3876953125,11.0 283.3876953125,16.0 278.3876953125,21.0" fill="#63B31F"/>
+    <text x="275.3876953125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
+
+    <polygon points="278.3876953125,31.0 283.3876953125,36.0 278.3876953125,41.0" fill="#63B31F"/>
+    <text x="275.3876953125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 41.35009765625 77.0
+            L 57.35009765625 77.0
+            A 1 1 0 0 1 58.35009765625 78.0
+            L 58.35009765625 81.5
+            L 56.35009765625 81.5
+            L 56.35009765625 84.5
+            L 58.35009765625 84.5
+            L 58.35009765625 94.0
+            A 1 1 0 0 1 57.35009765625 95.0
+            L 41.35009765625 95.0
+            A 1 1 0 0 1 40.35009765625 94.0
+            L 40.35009765625 84.5
+            L 42.35009765625 84.5
+            L 42.35009765625 81.5
+            L 40.35009765625 81.5
+            L 40.35009765625 78.0
+            A 1 1 0 0 1 41.35009765625 77.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <text x="49.35009765625" y="91.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
+          fill="#000000" text-anchor="middle">C</text>
+
+    <!-- Block Name -->
+    <text x="63.35009765625" y="91.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">AnlagenSequenz_06_ADAPTER</text>
+    
+    <text x="142.44384765625" y="106.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#3366FF"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TC</text>
+
+    <!-- Adapter Ports -->
+
+    <path d="M 1.5 137.0
+            L 6.5 137.0
+            L 6.5 138.66666666666666
+            L 9.0 138.66666666666666
+            L 9.0 137.0
+            L 11.5 137.0
+            L 11.5 147.0
+            L 9.0 147.0
+            L 9.0 145.33333333333334
+            L 6.5 145.33333333333334
+            L 6.5 147.0
+            L 1.5 147.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE1_EIN</text>
+
+    <path d="M 1.5 157.0
+            L 6.5 157.0
+            L 6.5 158.66666666666666
+            L 9.0 158.66666666666666
+            L 9.0 157.0
+            L 11.5 157.0
+            L 11.5 167.0
+            L 9.0 167.0
+            L 9.0 165.33333333333334
+            L 6.5 165.33333333333334
+            L 6.5 167.0
+            L 1.5 167.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE2_EIN</text>
+
+    <path d="M 1.5 177.0
+            L 6.5 177.0
+            L 6.5 178.66666666666666
+            L 9.0 178.66666666666666
+            L 9.0 177.0
+            L 11.5 177.0
+            L 11.5 187.0
+            L 9.0 187.0
+            L 9.0 185.33333333333334
+            L 6.5 185.33333333333334
+            L 6.5 187.0
+            L 1.5 187.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE3_EIN</text>
+
+    <path d="M 1.5 197.0
+            L 6.5 197.0
+            L 6.5 198.66666666666666
+            L 9.0 198.66666666666666
+            L 9.0 197.0
+            L 11.5 197.0
+            L 11.5 207.0
+            L 9.0 207.0
+            L 9.0 205.33333333333334
+            L 6.5 205.33333333333334
+            L 6.5 207.0
+            L 1.5 207.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE4_EIN</text>
+
+    <path d="M 1.5 217.0
+            L 6.5 217.0
+            L 6.5 218.66666666666666
+            L 9.0 218.66666666666666
+            L 9.0 217.0
+            L 11.5 217.0
+            L 11.5 227.0
+            L 9.0 227.0
+            L 9.0 225.33333333333334
+            L 6.5 225.33333333333334
+            L 6.5 227.0
+            L 1.5 227.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE5_EIN</text>
+
+    <path d="M 1.5 237.0
+            L 6.5 237.0
+            L 6.5 238.66666666666666
+            L 9.0 238.66666666666666
+            L 9.0 237.0
+            L 11.5 237.0
+            L 11.5 247.0
+            L 9.0 247.0
+            L 9.0 245.33333333333334
+            L 6.5 245.33333333333334
+            L 6.5 247.0
+            L 1.5 247.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE1_AUS</text>
+
+    <path d="M 1.5 257.0
+            L 6.5 257.0
+            L 6.5 258.6666666666667
+            L 9.0 258.6666666666667
+            L 9.0 257.0
+            L 11.5 257.0
+            L 11.5 267.0
+            L 9.0 267.0
+            L 9.0 265.3333333333333
+            L 6.5 265.3333333333333
+            L 6.5 267.0
+            L 1.5 267.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE2_AUS</text>
+
+    <path d="M 1.5 277.0
+            L 6.5 277.0
+            L 6.5 278.6666666666667
+            L 9.0 278.6666666666667
+            L 9.0 277.0
+            L 11.5 277.0
+            L 11.5 287.0
+            L 9.0 287.0
+            L 9.0 285.3333333333333
+            L 6.5 285.3333333333333
+            L 6.5 287.0
+            L 1.5 287.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE3_AUS</text>
+
+    <path d="M 1.5 297.0
+            L 6.5 297.0
+            L 6.5 298.6666666666667
+            L 9.0 298.6666666666667
+            L 9.0 297.0
+            L 11.5 297.0
+            L 11.5 307.0
+            L 9.0 307.0
+            L 9.0 305.3333333333333
+            L 6.5 305.3333333333333
+            L 6.5 307.0
+            L 1.5 307.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE4_AUS</text>
+
+    <path d="M 1.5 317.0
+            L 6.5 317.0
+            L 6.5 318.6666666666667
+            L 9.0 318.6666666666667
+            L 9.0 317.0
+            L 11.5 317.0
+            L 11.5 327.0
+            L 9.0 327.0
+            L 9.0 325.3333333333333
+            L 6.5 325.3333333333333
+            L 6.5 327.0
+            L 1.5 327.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="323.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ATM_ZE5_AUS</text>
+
+    <path d="M 1.5 337.0
+            L 6.5 337.0
+            L 6.5 338.6666666666667
+            L 9.0 338.6666666666667
+            L 9.0 337.0
+            L 11.5 337.0
+            L 11.5 347.0
+            L 9.0 347.0
+            L 9.0 345.3333333333333
+            L 6.5 345.3333333333333
+            L 6.5 347.0
+            L 1.5 347.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="343.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M1</text>
+
+    <path d="M 1.5 357.0
+            L 6.5 357.0
+            L 6.5 358.6666666666667
+            L 9.0 358.6666666666667
+            L 9.0 357.0
+            L 11.5 357.0
+            L 11.5 367.0
+            L 9.0 367.0
+            L 9.0 365.3333333333333
+            L 6.5 365.3333333333333
+            L 6.5 367.0
+            L 1.5 367.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="363.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M2</text>
+
+    <path d="M 1.5 377.0
+            L 6.5 377.0
+            L 6.5 378.6666666666667
+            L 9.0 378.6666666666667
+            L 9.0 377.0
+            L 11.5 377.0
+            L 11.5 387.0
+            L 9.0 387.0
+            L 9.0 385.3333333333333
+            L 6.5 385.3333333333333
+            L 6.5 387.0
+            L 1.5 387.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M3</text>
+
+    <path d="M 1.5 397.0
+            L 6.5 397.0
+            L 6.5 398.6666666666667
+            L 9.0 398.6666666666667
+            L 9.0 397.0
+            L 11.5 397.0
+            L 11.5 407.0
+            L 9.0 407.0
+            L 9.0 405.3333333333333
+            L 6.5 405.3333333333333
+            L 6.5 407.0
+            L 1.5 407.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="403.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M4</text>
+
+    <path d="M 1.5 417.0
+            L 6.5 417.0
+            L 6.5 418.6666666666667
+            L 9.0 418.6666666666667
+            L 9.0 417.0
+            L 11.5 417.0
+            L 11.5 427.0
+            L 9.0 427.0
+            L 9.0 425.3333333333333
+            L 6.5 425.3333333333333
+            L 6.5 427.0
+            L 1.5 427.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="423.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M5</text>
+
+    <path d="M 1.5 437.0
+            L 6.5 437.0
+            L 6.5 438.6666666666667
+            L 9.0 438.6666666666667
+            L 9.0 437.0
+            L 11.5 437.0
+            L 11.5 447.0
+            L 9.0 447.0
+            L 9.0 445.3333333333333
+            L 6.5 445.3333333333333
+            L 6.5 447.0
+            L 1.5 447.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="443.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">STOERUNG_M6</text>
+
+    <path d="M 273.3876953125 137.0
+            L 275.8876953125 137.0
+            L 275.8876953125 138.66666666666666
+            L 278.3876953125 138.66666666666666
+            L 278.3876953125 137.0
+            L 283.3876953125 137.0
+            L 283.3876953125 147.0
+            L 278.3876953125 147.0
+            L 278.3876953125 145.33333333333334
+            L 275.8876953125 145.33333333333334
+            L 275.8876953125 147.0
+            L 273.3876953125 147.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS_BETRIEB</text>
+
+    <path d="M 273.3876953125 157.0
+            L 275.8876953125 157.0
+            L 275.8876953125 158.66666666666666
+            L 278.3876953125 158.66666666666666
+            L 278.3876953125 157.0
+            L 283.3876953125 157.0
+            L 283.3876953125 167.0
+            L 278.3876953125 167.0
+            L 278.3876953125 165.33333333333334
+            L 275.8876953125 165.33333333333334
+            L 275.8876953125 167.0
+            L 273.3876953125 167.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS_STOERUNG</text>
+
+    <path d="M 273.3876953125 177.0
+            L 275.8876953125 177.0
+            L 275.8876953125 178.66666666666666
+            L 278.3876953125 178.66666666666666
+            L 278.3876953125 177.0
+            L 283.3876953125 177.0
+            L 283.3876953125 187.0
+            L 278.3876953125 187.0
+            L 278.3876953125 185.33333333333334
+            L 275.8876953125 185.33333333333334
+            L 275.8876953125 187.0
+            L 273.3876953125 187.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ZAEHLSTAND</text>
+
+    <path d="M 273.3876953125 197.0
+            L 275.8876953125 197.0
+            L 275.8876953125 198.66666666666666
+            L 278.3876953125 198.66666666666666
+            L 278.3876953125 197.0
+            L 283.3876953125 197.0
+            L 283.3876953125 207.0
+            L 278.3876953125 207.0
+            L 278.3876953125 205.33333333333334
+            L 275.8876953125 205.33333333333334
+            L 275.8876953125 207.0
+            L 273.3876953125 207.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">EINSCHALTBEREIT</text>
+
+    <path d="M 273.3876953125 217.0
+            L 275.8876953125 217.0
+            L 275.8876953125 218.66666666666666
+            L 278.3876953125 218.66666666666666
+            L 278.3876953125 217.0
+            L 283.3876953125 217.0
+            L 283.3876953125 227.0
+            L 278.3876953125 227.0
+            L 278.3876953125 225.33333333333334
+            L 275.8876953125 225.33333333333334
+            L 275.8876953125 227.0
+            L 273.3876953125 227.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TRANSIT_MOTOR</text>
+
+    <path d="M 273.3876953125 237.0
+            L 275.8876953125 237.0
+            L 275.8876953125 238.66666666666666
+            L 278.3876953125 238.66666666666666
+            L 278.3876953125 237.0
+            L 283.3876953125 237.0
+            L 283.3876953125 247.0
+            L 278.3876953125 247.0
+            L 278.3876953125 245.33333333333334
+            L 275.8876953125 245.33333333333334
+            L 275.8876953125 247.0
+            L 273.3876953125 247.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TRANSIT_ART</text>
+
+    <path d="M 273.3876953125 257.0
+            L 275.8876953125 257.0
+            L 275.8876953125 258.6666666666667
+            L 278.3876953125 258.6666666666667
+            L 278.3876953125 257.0
+            L 283.3876953125 257.0
+            L 283.3876953125 267.0
+            L 278.3876953125 267.0
+            L 278.3876953125 265.3333333333333
+            L 275.8876953125 265.3333333333333
+            L 275.8876953125 267.0
+            L 273.3876953125 267.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M1</text>
+
+    <path d="M 273.3876953125 277.0
+            L 275.8876953125 277.0
+            L 275.8876953125 278.6666666666667
+            L 278.3876953125 278.6666666666667
+            L 278.3876953125 277.0
+            L 283.3876953125 277.0
+            L 283.3876953125 287.0
+            L 278.3876953125 287.0
+            L 278.3876953125 285.3333333333333
+            L 275.8876953125 285.3333333333333
+            L 275.8876953125 287.0
+            L 273.3876953125 287.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M2</text>
+
+    <path d="M 273.3876953125 297.0
+            L 275.8876953125 297.0
+            L 275.8876953125 298.6666666666667
+            L 278.3876953125 298.6666666666667
+            L 278.3876953125 297.0
+            L 283.3876953125 297.0
+            L 283.3876953125 307.0
+            L 278.3876953125 307.0
+            L 278.3876953125 305.3333333333333
+            L 275.8876953125 305.3333333333333
+            L 275.8876953125 307.0
+            L 273.3876953125 307.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M3</text>
+
+    <path d="M 273.3876953125 317.0
+            L 275.8876953125 317.0
+            L 275.8876953125 318.6666666666667
+            L 278.3876953125 318.6666666666667
+            L 278.3876953125 317.0
+            L 283.3876953125 317.0
+            L 283.3876953125 327.0
+            L 278.3876953125 327.0
+            L 278.3876953125 325.3333333333333
+            L 275.8876953125 325.3333333333333
+            L 275.8876953125 327.0
+            L 273.3876953125 327.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="323.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M4</text>
+
+    <path d="M 273.3876953125 337.0
+            L 275.8876953125 337.0
+            L 275.8876953125 338.6666666666667
+            L 278.3876953125 338.6666666666667
+            L 278.3876953125 337.0
+            L 283.3876953125 337.0
+            L 283.3876953125 347.0
+            L 278.3876953125 347.0
+            L 278.3876953125 345.3333333333333
+            L 275.8876953125 345.3333333333333
+            L 275.8876953125 347.0
+            L 273.3876953125 347.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="343.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M5</text>
+
+    <path d="M 273.3876953125 357.0
+            L 275.8876953125 357.0
+            L 275.8876953125 358.6666666666667
+            L 278.3876953125 358.6666666666667
+            L 278.3876953125 357.0
+            L 283.3876953125 357.0
+            L 283.3876953125 367.0
+            L 278.3876953125 367.0
+            L 278.3876953125 365.3333333333333
+            L 275.8876953125 365.3333333333333
+            L 275.8876953125 367.0
+            L 273.3876953125 367.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="363.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DO_M6</text>
+
+    <path d="M 273.3876953125 377.0
+            L 275.8876953125 377.0
+            L 275.8876953125 378.6666666666667
+            L 278.3876953125 378.6666666666667
+            L 278.3876953125 377.0
+            L 283.3876953125 377.0
+            L 283.3876953125 387.0
+            L 278.3876953125 387.0
+            L 278.3876953125 385.3333333333333
+            L 275.8876953125 385.3333333333333
+            L 275.8876953125 387.0
+            L 273.3876953125 387.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ANLAGE_AUS</text>
+
+    <path d="M 273.3876953125 397.0
+            L 275.8876953125 397.0
+            L 275.8876953125 398.6666666666667
+            L 278.3876953125 398.6666666666667
+            L 278.3876953125 397.0
+            L 283.3876953125 397.0
+            L 283.3876953125 407.0
+            L 278.3876953125 407.0
+            L 278.3876953125 405.3333333333333
+            L 275.8876953125 405.3333333333333
+            L 275.8876953125 407.0
+            L 273.3876953125 407.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="403.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">PT</text>
+
+    <path d="M 273.3876953125 417.0
+            L 275.8876953125 417.0
+            L 275.8876953125 418.6666666666667
+            L 278.3876953125 418.6666666666667
+            L 278.3876953125 417.0
+            L 283.3876953125 417.0
+            L 283.3876953125 427.0
+            L 278.3876953125 427.0
+            L 278.3876953125 425.3333333333333
+            L 275.8876953125 425.3333333333333
+            L 275.8876953125 427.0
+            L 273.3876953125 427.0
+            Z" fill="#845DAF"/>
+    <text x="270.3876953125" y="423.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ET</text>
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <rect x="-15" y="11.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="111.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- Horizontal Connection Lines -->
+
+    <line x1="0" y1="16.0" x2="-20" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="116.0" x2="-20" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Startsequenz auslösen; nur wirksam wenn EINSCHALTBEREIT=TRUE; quittiert dabei zugleich eine anstehende Störungsanzeige – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Stopsequenz auslösen, aus jedem Schritt der Vorlauf-Kette oder aus S_LAEUFT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="309.8876953125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
+    <text x="309.8876953125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Ausführungsbestätigung, mit jedem Zustands-Update (Werte selbst laufen ueber STATUS_BETRIEB/STATUS_STOERUNG/ZAEHLSTAND/EINSCHALTBEREIT/TRANSIT_MOTOR/TRANSIT_ART Plugs)</text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Cycle time for the internal TimeTicker (PT/ET readback) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+
+    <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_VOR1 zu S_VOR2, M5 startet (Vorlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_VOR2 zu S_VOR3, M4 startet (Vorlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_VOR3 zu S_VOR4, M3 startet (Vorlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_VOR4 zu S_VOR5, M2 startet (Vorlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_VOR5 zu S_LAEUFT, M1 startet (Vorlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_NACH1 zu S_NACH2, M2 stoppt (Nachlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_NACH2 zu S_NACH3, M3 stoppt (Nachlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_NACH3 zu S_NACH4, M4 stoppt (Nachlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_NACH4 zu S_NACH5, M5 stoppt (Nachlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="323.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">S_NACH5 zu S_AUS, M6 stoppt (Nachlauf) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
+
+    <text x="-25" y="343.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 1 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="-25" y="363.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 2 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="-25" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 3 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="-25" y="403.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 4 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="-25" y="423.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 5 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="-25" y="443.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Motor 6 hat aktuell eine Störung anstehen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="309.8876953125" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – 0=Aus 1=Hochfahren 2=Läuft 3=Herunterfahren</text>
+
+    <text x="309.8876953125" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – 0=keine 4=aktiv, verriegelt bis EIN</text>
+
+    <text x="309.8876953125" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – 0..6, Anzahl aktuell laufender Motoren</text>
+
+    <text x="309.8876953125" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – TRUE nur wenn alle Motoren stehen UND alle Motoren störungsfrei sind</text>
+
+    <text x="309.8876953125" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – 0 = keiner (S_AUS/S_LAEUFT), 1..6 = Motor-Nr., der nach Ablauf der aktuellen Zeit startet/stoppt (siehe TRANSIT_ART)</text>
+
+    <text x="309.8876953125" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – anlagenSequenz::TRANSIT_ART_KEINE/_VORLAUF/_NACHLAUF</text>
+
+    <text x="309.8876953125" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 1</text>
+
+    <text x="309.8876953125" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 2</text>
+
+    <text x="309.8876953125" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 3</text>
+
+    <text x="309.8876953125" y="323.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 4</text>
+
+    <text x="309.8876953125" y="343.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 5</text>
+
+    <text x="309.8876953125" y="363.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Laufbefehl Motor 6</text>
+
+    <text x="309.8876953125" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – TRUE nur in S_AUS - Voraussetzung fuer Handbetrieb</text>
+
+    <text x="309.8876953125" y="403.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan> – Process time</text>
+
+    <text x="309.8876953125" y="423.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan> – Elapsed time</text>
+  </g>
+</svg>

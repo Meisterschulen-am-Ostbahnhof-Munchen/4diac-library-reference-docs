@@ -9,6 +9,8 @@
 `SystemTickSender_OPC` is the most streamlined SystemTick variant for modules without their own VT connection: The running tick counter from [`System_Tick`](./System_Tick.md) is published directly via OPC UA, without a local VT display. Another module with VT can subscribe to and display this value via remote subscribe to monitor the module's activity.
 
 
+![SystemTickSender_OPC](SystemTickSender_OPC.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: SystemTickSender_OPC

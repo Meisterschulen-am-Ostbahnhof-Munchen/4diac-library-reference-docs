@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA_BG` erweitert [`Button_IXA_TO_logiBUS_QXA`](./Button_IXA_TO_logiBUS_QXA.md) um eine VT-Statusfarbe: Der Taster-Zustand schaltet nicht nur den physischen Ausgang, sondern zusätzlich die Hintergrundfarbe des Tasters selbst (Grün/Weiß). Die OPC-UA-fähige Weiterentwicklung ist [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](Button_IXA_TO_logiBUS_QXA_BG_OPC.md).
 
+![Button_IXA_TO_logiBUS_QXA_BG](Button_IXA_TO_logiBUS_QXA_BG.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Button_IXA_TO_logiBUS_QXA_BG

@@ -8,6 +8,8 @@
 
 `Softkey_IXA_TO_logiBUS_QXA_BG_OPC` ist das SoftKey-Pendant zu [`Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`](./Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.md): Ein VT-SoftKey und ein OPC-UA-Remote-Kommando werden je über eine Flankenerkennung in Set/Reset-Ereignisse gewandelt und in einem gemeinsamen Latch zusammengeführt. Das ist **kein** echtes Klick-Toggle: Drücken löst `SET` aus, Loslassen `RESET` — bei nur einer aktiven Quelle also rein tastendes Verhalten. Der Unterschied zu einer einfachen ODER-Verknüpfung zeigt sich erst, wenn sich SoftKey und OPC-UA-Kommando zeitlich überlappen: Es gewinnt immer die zuletzt eingetroffene Flanke, unabhängig von der Quelle (Last-Wins), statt dass der Ausgang so lange EIN bleibt, wie irgendeine der beiden Quellen aktiv ist.
 
+![Softkey_IXA_TO_logiBUS_QXA_BG_OPC](Softkey_IXA_TO_logiBUS_QXA_BG_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_IXA_TO_logiBUS_QXA_BG_OPC

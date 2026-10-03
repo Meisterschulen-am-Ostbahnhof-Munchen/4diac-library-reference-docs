@@ -8,6 +8,8 @@
 
 `Softkey_IX_TO_logiBUS_QX` is the test_B counterpart to [`Softkey_IXA_TO_logiBUS_QXA`](../../MyLib_AX/sys/Softkey_IXA_TO_logiBUS_QXA.md) — a VT softkey (`Softkey_IX`) directly switches a physical output (`logiBUS_QX`), without adapters.
 
+![Softkey_IX_TO_logiBUS_QX](Softkey_IX_TO_logiBUS_QX.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Softkey_IX_TO_logiBUS_QX

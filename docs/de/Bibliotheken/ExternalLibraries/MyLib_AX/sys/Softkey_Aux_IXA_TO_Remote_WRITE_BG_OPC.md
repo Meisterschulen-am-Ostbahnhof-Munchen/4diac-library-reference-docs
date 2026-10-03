@@ -10,6 +10,8 @@
 
 Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenständig wiederverwendbare Teilbausteine nebeneinanderstellt: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (Kommando) und [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (Status). Die externe Schnittstelle blieb dabei unverändert.
 
+![Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC](Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC

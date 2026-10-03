@@ -10,6 +10,8 @@ Der Funktionsbaustein **AX_FB_R_TRIG** (Rising Trigger mit AX-Adapter) dient zur
 
 Das Ziel ist es, ein `TRUE`-Signal am Ausgang zu erzeugen, wenn das Eingangssignal von `FALSE` auf `TRUE` wechselt.
 
+![AX_FB_R_TRIG](AX_FB_R_TRIG.svg)
+
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**

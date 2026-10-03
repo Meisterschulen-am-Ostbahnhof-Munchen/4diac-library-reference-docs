@@ -8,6 +8,8 @@
 
 `SystemTickSender_ISO` zeigt den [`System_Tick`](./System_Tick.md)-Heartbeat rein lokal auf einem VT-Zahlenausgabefeld an, ohne OPC-UA. Der laufende Tick-Zähler wird direkt in ein VT-Zahlenfeld geschrieben, sodass am Bildschirm auf einen Blick erkennbar ist, ob die Steuerung noch lebt (der Wert muss sich alle 200 ms ändern).
 
+![SystemTickSender_ISO](SystemTickSender_ISO.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: SystemTickSender_ISO

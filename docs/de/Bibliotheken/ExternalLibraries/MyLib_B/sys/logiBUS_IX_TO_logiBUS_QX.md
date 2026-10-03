@@ -8,6 +8,8 @@
 
 `logiBUS_IX_TO_logiBUS_QX` verdrahtet einen physischen digitalen Eingang (`logiBUS_IX`) direkt auf einen physischen digitalen Ausgang (`logiBUS_QX`) — funktional äquivalent zu [`logiBUS_IXA_TO_logiBUS_QXA`](./logiBUS_IXA_TO_logiBUS_QXA.md), jedoch mit den nicht-adapterbasierten Bausteinvarianten `logiBUS_IX`/`logiBUS_QX`: die Verbindung erfolgt über eine explizite Ereignis- und eine Datenverbindung statt über einen Adapter.
 
+![logiBUS_IX_TO_logiBUS_QX](logiBUS_IX_TO_logiBUS_QX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: logiBUS_IX_TO_logiBUS_QX

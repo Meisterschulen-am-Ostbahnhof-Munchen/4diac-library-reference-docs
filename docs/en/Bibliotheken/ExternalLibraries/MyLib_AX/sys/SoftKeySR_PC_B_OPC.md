@@ -8,6 +8,8 @@
 
 `SoftKeySR_PC_B_OPC` is the device-B side (station 12, 192.168.1.12): receives set/reset each via its own `SERVER_0` method call (a pure RPC trigger, no value-change trick, no bridge needed), clocks the pure SR flip-flop logic (`AX_SR`, no toggle), drives `DigitalOutput_Q1`, and actively writes the new state back to device A via `AX_CLIENT_1_0`. Counterpart: [`SoftKeySR_PC_A_OPC`](./SoftKeySR_PC_A_OPC.md).
 
+![SoftKeySR_PC_B_OPC](SoftKeySR_PC_B_OPC.svg)
+
 ## Function blocks used
 
 - **TRIGGER_SET_SERVER / TRIGGER_RESET_SERVER** (`iec61499::net::SERVER_0`): each receives its own method call (`ID_SET_METHOD`/`ID_RESET_METHOD`).

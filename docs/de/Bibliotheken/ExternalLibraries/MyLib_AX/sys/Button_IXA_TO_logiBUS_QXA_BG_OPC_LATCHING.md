@@ -8,6 +8,8 @@
 
 `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING` ersetzt bei [`Button_IXA_TO_logiBUS_QXA_BG_OPC`](./Button_IXA_TO_logiBUS_QXA_BG_OPC.md) die einfache ODER-Verknüpfung (`AX_OR_2`) durch eine Flankenerkennungs-/Merge-/Latch-Kette (`AX_ASR_RF_TRIG` × 2, `ASR_MERGE_2`, `ASR_AX_SR`). Das ist **kein** echtes Klick-Toggle: `AX_ASR_RF_TRIG` bildet die steigende Flanke (Drücken) auf `SET` und die fallende Flanke (Loslassen) auf `RESET` ab, `ASR_AX_SR` setzt/rücksetzt entsprechend — bei nur einer aktiven Quelle verhält sich der Baustein also tastend, genau wie die `AX_OR_2`-Variante (EIN nur solange gedrückt). Der Unterschied zeigt sich erst, wenn sich VT-Taste und OPC-UA-Kommando zeitlich überlappen: Anders als bei einer echten ODER-Verknüpfung (die EIN bleibt, solange irgendeine Quelle aktiv ist) gewinnt hier immer die zuletzt eingetroffene Flanke, unabhängig davon, von welcher Quelle sie stammt — löst z. B. die OPC-UA-Seite ein Loslassen aus, während die VT-Taste noch gehalten wird, schaltet der Ausgang trotzdem sofort AUS. Der Baustein ist aufbewahrt für Anwendungsfälle, in denen genau dieses Last-Wins-Verhalten zwischen zwei Quellen gebraucht wird. Beide Bausteine teilen dasselbe Interface (`u16ObjId`/`Output`/`ID_READ`/`ID_WRITE`) und sind schnittstellenkompatibel — ihr Schaltverhalten unterscheidet sich jedoch in genau diesem Überlappungsfall.
 
+![Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING](Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING

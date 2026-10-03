@@ -8,6 +8,8 @@
 
 `Ramp6Buttons` kapselt die **7 VT-Taster eines PWM-Kanals** — die 6 Ramp-Tasten (`0 -- - + ++ F`) plus den Kanal-Ein/Aus-Schalter — als eigene, wiederverwendbare SubApp. Sie wurde aus [`RampLimitFS_TO_logiBUS_QDA_PWM_OPC`](./RampLimitFS_TO_logiBUS_QDA_PWM_OPC.md) extrahiert, um dessen Netzwerk zu entlasten und die Tasten-Logik unabhängig wiederverwendbar zu machen.
 
+![Ramp6Buttons](Ramp6Buttons.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: Ramp6Buttons

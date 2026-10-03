@@ -8,6 +8,8 @@
 
 `SoftKeyT_AE_AX` bundles 1 SoftKey (trigger) and a `GreenWhiteBackground1_AX` behind a single `AE_AX` plug (bidirectional: trigger goes out, state comes in). A pure HMI block with no OPC-UA involvement - reusable in any network that needs a single trigger softkey with a state display.
 
+![SoftKeyT_AE_AX](SoftKeyT_AE_AX.svg)
+
 ## Function blocks used
 
 - **SoftKey_UP_F1** (`isobus::UT::io::Softkey::Softkey_IE`, `InputEvent=SK_RELEASED`): physical softkey.

@@ -8,6 +8,8 @@
 
 Der Funktionsbaustein **AX_FB_RS** realisiert ein bistabiles Kippglied mit vorrangigem Rücksetzen (Reset-Dominanz), basierend auf der IEC 61131-3 Norm. Im Gegensatz zum Standard-`RS`-Baustein nutzt dieser FB Adapter-Schnittstellen (`AX`), um Ereignisse und Daten gebündelt zu übertragen. Dies ermöglicht eine kompaktere Darstellung in Steuerungsdiagrammen, da Daten- und Ereignisverbindungen in einer einzigen Linie zusammengefasst werden.
 
+![AX_FB_RS](AX_FB_RS.svg)
+
 ## Schnittstellenstruktur
 
 Da dieser Baustein ausschließlich auf Adaptern basiert, sind die klassischen Ereignis- und Daten-Ein-/Ausgänge leer. Die Kommunikation erfolgt vollständig über die definierten Plugs und Sockets.

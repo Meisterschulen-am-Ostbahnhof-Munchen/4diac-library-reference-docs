@@ -8,6 +8,8 @@
 
 `AX_LinksRechts_T_FF` wandelt einen einzelnen Taster (`IN`) über ein Toggle-Flipflop in zwei komplementäre Adapter-Ausgänge `Links`/`Rechts` um — jeder Tastendruck schaltet zwischen "Links aktiv" und "Rechts aktiv" um.
 
+![AX_LinksRechts_T_FF](AX_LinksRechts_T_FF.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_LinksRechts_T_FF

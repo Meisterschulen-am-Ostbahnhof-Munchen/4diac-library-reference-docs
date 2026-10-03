@@ -6,6 +6,8 @@
 
 The function block **AX_R_TRIG** (Boolean rising edge detection) is used to detect a rising edge based on a Boolean signal provided via an adapter. It is specifically designed for use with unidirectional adapters of type `AX` and only forwards an event if the transmitted data value is `TRUE`.
 
+![AX_R_TRIG](AX_R_TRIG.svg)
+
 ## Interface Structure
 
 The function block primarily uses an adapter interface for communicating input data and events.

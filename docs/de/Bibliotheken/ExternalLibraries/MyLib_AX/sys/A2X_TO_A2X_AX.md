@@ -8,6 +8,8 @@
 
 `A2X_TO_A2X_AX` ist das gebündelte Pendant zu `AX_2_TO_3`: Statt zwei getrennter `AX`-Sockets/Plugs (`UP_IN`/`DOWN_IN`, `UP_OUT`/`DOWN_OUT`) nimmt dieser Baustein UP/DOWN gebündelt als ein einziges `A2X`-Signal entgegen, reicht es unverändert durch und liefert zusätzlich ein einzelnes `AX`-Signal mit dem ODER aus beiden Richtungen (z. B. für ein gemeinsames Treiber-Enable).
 
+![A2X_TO_A2X_AX](A2X_TO_A2X_AX.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: A2X_TO_A2X_AX

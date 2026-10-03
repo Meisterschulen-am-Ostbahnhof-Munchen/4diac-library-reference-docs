@@ -9,6 +9,8 @@
 The function block **AX_FB_R_TRIG** (Rising Trigger with AX Adapter) is used to detect the rising edge of a Boolean signal. Unlike the standard `R_TRIG` block according to IEC 61131-3, this block uses **AX adapters** for input and output. It encapsulates the edge detection logic in an adapter-based architecture, which simplifies integration into systems that use `adapter::types::unidirectional::AX`.
 The goal is to generate a `TRUE` signal at the output when the input signal transitions from `FALSE` to `TRUE`.
 
+![AX_FB_R_TRIG](AX_FB_R_TRIG.svg)
+
 ## Interface Structure
 
 ### **Event Inputs**

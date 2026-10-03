@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](../../MyLib_AX/sys/INI-NVS-Speicherbausteine.md).
 
+![NVS_IN_AND_STORE_UDINT](NVS_IN_AND_STORE_UDINT.svg)
+
 ## Zusammenfassung
 
 NVS-Pendant zu `INI_IN_AND_STORE_UDINT` (MyLib_B).

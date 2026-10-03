@@ -8,6 +8,8 @@
 
 `F_AI_RAW_TO_PERCENT` converts the raw analog value from `logiBUS_AI_ID`/`logiBUS_AI_IDA` (DWORD, 0-4095, 12-bit ESP32-P4 ADC full scale) **linearly** into percent (REAL 0.0-100.0) — no physical calibration (planned as a later step). Data-based variant; the fully adapter-based alternative is [`F_AI_RAW_TO_PERCENT_AD`](./F_AI_RAW_TO_PERCENT_AD.md).
 
+![F_AI_RAW_TO_PERCENT](F_AI_RAW_TO_PERCENT.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: F_AI_RAW_TO_PERCENT

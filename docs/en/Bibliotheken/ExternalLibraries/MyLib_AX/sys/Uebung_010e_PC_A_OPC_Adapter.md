@@ -8,6 +8,8 @@
 
 `Uebung_010e_PC_A_OPC_Adapter` is the adapter-bundled variant of [`Uebung_010e_PC_A_OPC`](./Uebung_010e_PC_A_OPC.md) (device A, station 11): HMI (3 softkeys + `GreenWhiteBackground`) and OPC-UA trigger are separated. [`SoftKeySRT_ASRT_AX`](./SoftKeySRT_ASRT_AX.md) bundles the HMI behind an `ASRT_AX` plug; `ASRT_AX_CLIENT_0_SUBSCRIBE_1` bundles the 3 `CLIENT_0` instances + `AX_SUBSCRIBE_1` behind an `ASRT_AX` socket. Counterpart: [`Uebung_010e_PC_B_OPC_Adapter`](./Uebung_010e_PC_B_OPC_Adapter.md).
 
+![Uebung_010e_PC_A_OPC_Adapter](Uebung_010e_PC_A_OPC_Adapter.svg)
+
 ## Function blocks used
 
 - **SoftKeySRT_ASRT_AX** (SubApp, type `MyLib::sys::SoftKeySRT_ASRT_AX`): 3 softkeys + status display, bundled behind an `ASRT_AX` plug.

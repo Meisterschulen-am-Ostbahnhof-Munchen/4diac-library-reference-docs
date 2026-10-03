@@ -10,6 +10,8 @@
 
 
 
+![INI_OPC_PARAM_AR](INI_OPC_PARAM_AR.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: INI_OPC_PARAM_AR

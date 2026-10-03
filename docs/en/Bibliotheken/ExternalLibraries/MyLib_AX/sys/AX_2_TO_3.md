@@ -8,6 +8,8 @@
 
 `AX_2_TO_3` takes two independent AX adapter signals (`UP_IN`, `DOWN_IN`) and provides three outputs: the two inputs passed through unchanged (`UP_OUT`, `DOWN_OUT`) plus their OR combination as a third signal (`OR_OUT`) — typically for "up"/"down" buttons where a combined "either direction active" signal is also needed.
 
+![AX_2_TO_3](AX_2_TO_3.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: AX_2_TO_3

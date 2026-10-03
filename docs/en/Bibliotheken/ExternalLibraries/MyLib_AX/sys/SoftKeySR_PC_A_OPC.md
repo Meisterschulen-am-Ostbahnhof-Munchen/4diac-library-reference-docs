@@ -8,6 +8,8 @@
 
 `SoftKeySR_PC_A_OPC` is the device-A side (station 11, 192.168.1.11) of a PC-to-PC OPC-UA set/reset pattern: 2 softkeys (set/reset) each call their own argument- and return-value-less OPC-UA method on device B (`CLIENT_0`, 2 distinct methods - like Training_04, but without toggle). `GreenWhiteBackground1_AX` on the set softkey shows the flip-flop state locally monitored from device B. "SUB style": the protocol lives in the `MyLib::sys` composite, not in the device's resource - counterpart: [`SoftKeySR_PC_B_OPC`](./SoftKeySR_PC_B_OPC.md).
 
+![SoftKeySR_PC_A_OPC](SoftKeySR_PC_A_OPC.svg)
+
 ## Function blocks used
 
 - **SoftKey_SET / SoftKey_RESET** (`isobus::UT::io::Softkey::Softkey_IE`): the two physical softkeys.

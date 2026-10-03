@@ -8,6 +8,8 @@
 
 `sequence_T_08_ADAPTER` is a composite wrapper around [sequence_T_08](sequence_T_08.md): the same generic time-controlled 8-step sequencer, but with every output and transition time moved onto adapter connections. Unlike [sequence_T_08_AX](sequence_T_08_AX.md), which only moves the eight outputs onto `AX` adapters, `sequence_T_08_ADAPTER` additionally bundles the state number (`AS`) and feeds each of the eight transition times through its own `ATM` adapter socket.
 
+![sequence_T_08_ADAPTER](sequence_T_08_ADAPTER.svg)
+
 ## Function Blocks Used (FBs)
 
 ### Sub-modules: sequence_T_08_ADAPTER

@@ -9,6 +9,8 @@
 `SystemTickSender_ISO` displays the heartbeat locally on a VT numeric output field, without OPC UA. The running tick counter is written directly to a VT numeric field, so it's immediately clear on the screen whether the controller is still active (the value must change every 200 ms).
 
 
+![SystemTickSender_ISO](SystemTickSender_ISO.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: SystemTickSender_ISO

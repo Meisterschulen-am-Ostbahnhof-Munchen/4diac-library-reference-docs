@@ -8,6 +8,8 @@
 
 `SystemTickSender_ISO_OPC` kombiniert [`SystemTickSender_ISO`](./SystemTickSender_ISO.md) (Anzeige auf einem lokalen VT-Zahlenfeld) mit [`SystemTickSender_OPC`](./SystemTickSender_OPC.md) (Remote-Publish per OPC-UA), damit dasselbe Lebenszeichen sowohl am eigenen Bildschirm sichtbar ist als auch von anderen Modulen per Remote-Subscribe überwacht werden kann.
 
+![SystemTickSender_ISO_OPC](SystemTickSender_ISO_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: SystemTickSender_ISO_OPC

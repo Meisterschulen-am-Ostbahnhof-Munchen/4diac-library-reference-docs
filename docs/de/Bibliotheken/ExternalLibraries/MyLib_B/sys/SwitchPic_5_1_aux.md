@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./SwitchPic-Bausteine.md).
 
+![SwitchPic_5_1_aux](SwitchPic_5_1_aux.svg)
+
 ## Zusammenfassung
 
 AUX-Gegenstück zu [`SwitchPic_5_1`](./SwitchPic_5_1.md).

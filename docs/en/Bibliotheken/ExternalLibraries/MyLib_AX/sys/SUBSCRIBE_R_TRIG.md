@@ -9,6 +9,8 @@
 `SUBSCRIBE_R_TRIG` monitors a `AX` value (BOOL) subscribed to via OPC UA for a rising edge and outputs it as a single event (`EO`). This allows a remotely set BOOL value to be used directly as a triggering event without having to process the level itself further.
 
 
+![SUBSCRIBE_R_TRIG](SUBSCRIBE_R_TRIG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: SUBSCRIBE_R_TRIG

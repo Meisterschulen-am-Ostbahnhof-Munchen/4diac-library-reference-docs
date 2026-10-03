@@ -8,6 +8,8 @@
 
 `MERGE_SWITCH_1_QXA_OPC` treibt einen einzelnen (nicht doppelwirkenden) logiBUS-Ausgang aus zwei OPC-UA-Quellen: dem bestehenden IO-Test-Kommando (Remote-Subscribe) und dem echten Funktions-Kommando (ebenfalls Remote-Subscribe, z. B. von einem SoftKey/AUX über `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`). Beide werden per Pegel-ODER zusammengeführt, sodass der bestehende IO-Test weiterhin nutzbar bleibt, während gleichzeitig die echte Funktion denselben Ausgang ansteuern kann. Für doppelwirkende Aktoren (Links/Rechts, Auf/Ab) ist stattdessen `ILOCK_SWITCH_2_QXA_OPC` zu verwenden.
 
+![MERGE_SWITCH_1_QXA_OPC](MERGE_SWITCH_1_QXA_OPC.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: MERGE_SWITCH_1_QXA_OPC

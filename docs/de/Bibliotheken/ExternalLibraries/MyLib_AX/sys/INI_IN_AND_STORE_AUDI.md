@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+![INI_IN_AND_STORE_AUDI](INI_IN_AND_STORE_AUDI.svg)
+
 ## Zusammenfassung
 
 AUDI-Variante (UDINT) der INI-Speicherfamilie.

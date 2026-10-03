@@ -8,6 +8,8 @@
 
 `Uebung_010d_PC_B_OPC` is the device-B side (station 12, 192.168.1.12) of the PC-to-PC OPC-UA variant of exercise 010d: receives the trigger method call from device A via `SERVER_0` (a pure RPC trigger, no value-change trick, no bridge needed), clocks the actual toggle flip-flop logic (`AX_T_FF`), drives `DigitalOutput_Q1`, and actively writes the new state back to device A via `AX_CLIENT_1_0`. Counterpart: [`Uebung_010d_PC_A_OPC`](./Uebung_010d_PC_A_OPC.md).
 
+![Uebung_010d_PC_B_OPC](Uebung_010d_PC_B_OPC.svg)
+
 ## Function blocks used
 
 - **TRIGGER_SERVER** (`iec61499::net::SERVER_0`): receives the method call under `ID_TRIGGER_METHOD`.

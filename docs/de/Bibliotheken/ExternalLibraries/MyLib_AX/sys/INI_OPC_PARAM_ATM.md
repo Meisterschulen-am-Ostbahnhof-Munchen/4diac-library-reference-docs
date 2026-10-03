@@ -8,6 +8,8 @@
 
 `INI_OPC_PARAM_ATM` ist die Zeitparameter-Variante von [`INI_OPC_PARAM_AR`](./INI_OPC_PARAM_AR.md): Der remanent gespeicherte REAL-Wert wird zusätzlich in einen `ATM`-Adapter (`TIME`) umgerechnet — `DEFAULT_VALUE` und der gespeicherte Wert werden dabei als Sekunden interpretiert (`T#1s * Sekunden`).
 
+![INI_OPC_PARAM_ATM](INI_OPC_PARAM_ATM.svg)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: INI_OPC_PARAM_ATM

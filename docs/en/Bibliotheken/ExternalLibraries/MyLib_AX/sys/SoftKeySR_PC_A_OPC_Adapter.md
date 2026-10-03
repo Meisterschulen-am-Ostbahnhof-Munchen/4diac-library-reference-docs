@@ -8,6 +8,8 @@
 
 `SoftKeySR_PC_A_OPC_Adapter` is the adapter-bundled variant of [`SoftKeySR_PC_A_OPC`](./SoftKeySR_PC_A_OPC.md) (device A, station 11): HMI (2 softkeys + `GreenWhiteBackground`) and OPC-UA trigger are separated. [`SoftKeySR_ASR_AX`](./SoftKeySR_ASR_AX.md) bundles the HMI behind an `ASR_AX` plug; `ASR_AX_CLIENT_0_SUBSCRIBE_1` bundles the 2 `CLIENT_0` instances + `AX_SUBSCRIBE_1` behind an `ASR_AX` socket. Counterpart: [`SoftKeySR_PC_B_OPC_Adapter`](./SoftKeySR_PC_B_OPC_Adapter.md).
 
+![SoftKeySR_PC_A_OPC_Adapter](SoftKeySR_PC_A_OPC_Adapter.svg)
+
 ## Function blocks used
 
 - **SoftKeySR_ASR_AX** (SubApp, type `MyLib::sys::SoftKeySR_ASR_AX`): 2 softkeys + status display, bundled behind an `ASR_AX` plug.

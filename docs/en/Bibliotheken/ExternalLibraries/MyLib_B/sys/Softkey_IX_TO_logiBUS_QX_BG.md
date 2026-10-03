@@ -8,6 +8,8 @@
 
 `Softkey_IX_TO_logiBUS_QX_BG` extends [`Softkey_IX_TO_logiBUS_QX`](./Softkey_IX_TO_logiBUS_QX.md) with a VT status color — the test_B counterpart to [`Softkey_IXA_TO_logiBUS_QXA_BG`](../../MyLib_AX/sys/Softkey_IXA_TO_logiBUS_QXA_BG.md).
 
+![Softkey_IX_TO_logiBUS_QX_BG](Softkey_IX_TO_logiBUS_QX_BG.svg)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: Softkey_IX_TO_logiBUS_QX_BG

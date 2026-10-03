@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+![INI_IN_AND_STORE_AIS](INI_IN_AND_STORE_AIS.svg)
+
 ## Summary
 
 AIS (string) variant of the INI storage family.
