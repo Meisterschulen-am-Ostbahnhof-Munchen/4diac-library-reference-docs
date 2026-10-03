@@ -1,6 +1,12 @@
 # EVENT_HS_ACK_WSTRING
 
-![EVENT_HS_ACK_WSTRING](./EVENT_HS_ACK_WSTRING.svg)
+**Plug (adapter output)**
+
+![EVENT_HS_ACK_WSTRING_plug](EVENT_HS_ACK_WSTRING_plug.svg)
+
+**Socket (adapter input)**
+
+![EVENT_HS_ACK_WSTRING_socket](EVENT_HS_ACK_WSTRING_socket.svg)
 
 * * * * * * * * * *
 

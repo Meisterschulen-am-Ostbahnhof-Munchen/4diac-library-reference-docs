@@ -1,6 +1,12 @@
 # ATM
 
-![ATM](./ATM.svg)
+**Plug (Adapter-Ausgang)**
+
+![ATM_plug](ATM_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![ATM_socket](ATM_socket.svg)
 
 * * * * * * * * * *
 

@@ -1,6 +1,12 @@
 # AL (LWORD)
 
-![AL](AL.svg)
+**Plug (Adapter-Ausgang)**
+
+![AL_plug](AL_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AL_socket](AL_socket.svg)
 
 ## 🎧 Podcast
 

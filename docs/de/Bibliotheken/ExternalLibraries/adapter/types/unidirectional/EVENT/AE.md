@@ -1,6 +1,12 @@
 # AE (EVENT)
 
-![AE](AE.svg)
+**Plug (Adapter-Ausgang)**
+
+![AE_plug](AE_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AE_socket](AE_socket.svg)
 
 ## Interface
 

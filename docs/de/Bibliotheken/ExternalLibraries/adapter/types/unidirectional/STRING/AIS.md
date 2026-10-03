@@ -1,6 +1,12 @@
 # AIS
 
-![AIS](./AIS.svg)
+**Plug (Adapter-Ausgang)**
+
+![AIS_plug](AIS_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AIS_socket](AIS_socket.svg)
 
 **Unidirektionaler Adapter für 1 Ereignis und 1 Zeichenkette**
 

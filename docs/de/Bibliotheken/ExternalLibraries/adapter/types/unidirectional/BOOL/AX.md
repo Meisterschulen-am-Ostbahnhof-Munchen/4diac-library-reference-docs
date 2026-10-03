@@ -1,6 +1,12 @@
 # AX (BOOL)
 
-![AX](AX.svg)
+**Plug (Adapter-Ausgang)**
+
+![AX_plug](AX_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AX_socket](AX_socket.svg)
 
 ## 🎧 Podcast
 

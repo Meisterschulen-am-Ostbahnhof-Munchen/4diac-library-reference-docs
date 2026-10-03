@@ -1,6 +1,12 @@
 # AE_AX
 
-![AE_AX](AE_AX.svg)
+**Plug (adapter output)**
+
+![AE_AX_plug](AE_AX_plug.svg)
+
+**Socket (adapter input)**
+
+![AE_AX_socket](AE_AX_socket.svg)
 
 bidirectional adapter interface for 1 event (forward) and 1 bool (backward, AX-style)
 

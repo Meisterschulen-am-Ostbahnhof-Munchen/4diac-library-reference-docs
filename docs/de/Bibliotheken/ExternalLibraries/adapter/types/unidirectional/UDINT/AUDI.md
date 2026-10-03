@@ -1,6 +1,12 @@
 # AUDI (UDINT)
 
-![AUDI](AUDI.svg)
+**Plug (Adapter-Ausgang)**
+
+![AUDI_plug](AUDI_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AUDI_socket](AUDI_socket.svg)
 
 unidirectional Adapter Interface for 1 Event and 1 Udint
 

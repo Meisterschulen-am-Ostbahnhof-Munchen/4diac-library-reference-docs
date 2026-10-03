@@ -1,6 +1,12 @@
 # ASRT (EVENT)
 
-![ASRT](ASRT.svg)
+**Plug (adapter output)**
+
+![ASRT_plug](ASRT_plug.svg)
+
+**Socket (adapter input)**
+
+![ASRT_socket](ASRT_socket.svg)
 
 unidirectional adapter interface for 3 events
 

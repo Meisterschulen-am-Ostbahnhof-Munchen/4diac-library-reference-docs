@@ -1,6 +1,12 @@
 # EVENT_HS
 
-![EVENT_HS](./EVENT_HS.svg)
+**Plug (Adapter-Ausgang)**
+
+![EVENT_HS_plug](EVENT_HS_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![EVENT_HS_socket](EVENT_HS_socket.svg)
 
 * * * * * * * * * *
 

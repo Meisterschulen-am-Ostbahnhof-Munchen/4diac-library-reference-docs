@@ -1,6 +1,12 @@
 # AS (SINT)
 
-![AS](AS.svg)
+**Plug (adapter output)**
+
+![AS_plug](AS_plug.svg)
+
+**Socket (adapter input)**
+
+![AS_socket](AS_socket.svg)
 
 ## 🎧 Podcast
 

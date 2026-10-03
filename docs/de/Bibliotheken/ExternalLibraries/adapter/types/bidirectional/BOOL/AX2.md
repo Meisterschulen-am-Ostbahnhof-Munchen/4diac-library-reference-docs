@@ -1,6 +1,12 @@
 # AX2
 
-![AX2](AX2.svg)
+**Plug (Adapter-Ausgang)**
+
+![AX2_plug](AX2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AX2_socket](AX2_socket.svg)
 
 bidirectional Adapter Interface for 1 Event and 1 Bool
 

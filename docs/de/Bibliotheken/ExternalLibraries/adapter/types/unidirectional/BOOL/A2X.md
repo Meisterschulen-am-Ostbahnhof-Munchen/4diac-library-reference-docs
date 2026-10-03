@@ -1,6 +1,12 @@
 # A2X (BOOL)
 
-![A2X](A2X.svg)
+**Plug (Adapter-Ausgang)**
+
+![A2X_plug](A2X_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![A2X_socket](A2X_socket.svg)
 
 unidirectional Adapter Interface for 2 Events and 2 Bools
 

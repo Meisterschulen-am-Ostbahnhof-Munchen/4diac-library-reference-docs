@@ -1,6 +1,12 @@
 # AIWS
 
-![AIWS](./AIWS.svg)
+**Plug (Adapter-Ausgang)**
+
+![AIWS_plug](AIWS_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AIWS_socket](AIWS_socket.svg)
 
 * * * * * * * * * *
 

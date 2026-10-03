@@ -1,6 +1,12 @@
 # AR2
 
-![AR2](./AR2.svg)
+**Plug (Adapter-Ausgang)**
+
+![AR2_plug](AR2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AR2_socket](AR2_socket.svg)
 
 * * * * * * * * * *
 

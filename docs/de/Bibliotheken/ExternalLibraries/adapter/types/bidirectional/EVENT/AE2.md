@@ -1,6 +1,12 @@
 # AE2
 
-![AE2](AE2.svg)
+**Plug (Adapter-Ausgang)**
+
+![AE2_plug](AE2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AE2_socket](AE2_socket.svg)
 
 bidirectional Adapter Interface for 1 Event
 

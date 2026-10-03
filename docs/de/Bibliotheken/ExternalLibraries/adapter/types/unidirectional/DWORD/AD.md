@@ -1,6 +1,12 @@
 # AD (DWORD)
 
-![AD](AD.svg)
+**Plug (Adapter-Ausgang)**
+
+![AD_plug](AD_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AD_socket](AD_socket.svg)
 
 ## 🎧 Podcast
 
