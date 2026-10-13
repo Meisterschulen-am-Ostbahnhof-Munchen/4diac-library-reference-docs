@@ -2,6 +2,8 @@
 
 ![ILOCK_IO_AX](./ILOCK_IO_AX.svg)
 
+![ILOCK_IO_AX_ecc](./ILOCK_IO_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

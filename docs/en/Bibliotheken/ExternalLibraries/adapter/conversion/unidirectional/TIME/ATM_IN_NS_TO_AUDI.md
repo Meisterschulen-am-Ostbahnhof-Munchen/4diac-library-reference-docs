@@ -2,6 +2,8 @@
 
 ![ATM_IN_NS_TO_AUDI](ATM_IN_NS_TO_AUDI.svg)
 
+![ATM_IN_NS_TO_AUDI_network](./ATM_IN_NS_TO_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

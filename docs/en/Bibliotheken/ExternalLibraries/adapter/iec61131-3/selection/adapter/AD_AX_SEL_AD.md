@@ -2,6 +2,8 @@
 
 ![AD_AX_SEL_AD](./AD_AX_SEL_AD.svg)
 
+![AD_AX_SEL_AD_network](./AD_AX_SEL_AD_network.svg)
+
 * * * * * * * * * *
 The function block `AD_AX_SEL_AD` performs binary selection between two input signals provided via adapter structures. Based on the state of a selection signal (G), either the value of input `IN0` or input `IN1` is passed to output `OUT`. Internally, the block is implemented as a composite function block and utilizes standardized IEC 61499 and IEC 61131 mechanisms to ensure event-driven, type-safe signal propagation.
 

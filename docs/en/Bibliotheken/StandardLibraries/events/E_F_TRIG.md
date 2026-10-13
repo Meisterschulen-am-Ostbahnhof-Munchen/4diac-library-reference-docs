@@ -2,6 +2,8 @@
 
 ![E_F_TRIG Diagram](https://user-images.githubusercontent.com/113907528/204898671-3eb058ff-7481-4fc8-a2d4-8cf50f349cee.png)
 
+![E_F_TRIG_network](./E_F_TRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -62,7 +64,7 @@ The internal logic of the function block (as of `events-3.0.0`) is incorrect and
 
 ## 🛠️ Related Exercises
 
-- [Exercise_088](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
+- [Exercise_088](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_088/)
 
 ## Conclusion
 

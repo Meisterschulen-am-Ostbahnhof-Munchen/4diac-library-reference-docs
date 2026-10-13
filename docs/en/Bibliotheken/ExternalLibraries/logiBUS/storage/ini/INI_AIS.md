@@ -2,6 +2,8 @@
 
 ![INI_AIS](./INI_AIS.svg)
 
+![INI_AIS_network](./INI_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -27,6 +29,7 @@ The function block **INI_AIS** is used to load and save strings (STRING) from a 
 | Name          | Type   | Description                                   |
 | ------------- | ------ | --------------------------------------------- |
 | QI            | BOOL   | Qualifier for the event input                 |
+| SETM            | BOOL   | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | SECTION       | STRING | Name of the section in the configuration file |
 | KEY           | STRING | Name of the key in the specified section      |
 | DEFAULT_VALUE | STRING | Default value if the entry does not exist     |
@@ -51,7 +54,7 @@ The function block internally contains an instance of the function block `INI` (
 
 1. **Initialization (INIT)**
 
-- The data `QI`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the internal INI block.
+- The data `QI`, `SETM`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the internal INI block.
 - The INIT event pulse starts the INI block.
 - Upon completion, INI returns the event `INITO`, which is output externally as `INITO` of the INI_AIS. Simultaneously, the outputs `QO` and `STATUS` are also received.
 

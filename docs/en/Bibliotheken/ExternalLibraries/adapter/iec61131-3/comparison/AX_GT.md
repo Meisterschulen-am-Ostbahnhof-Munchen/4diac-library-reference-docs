@@ -2,6 +2,8 @@
 
 ![AX_GT](./AX_GT.svg)
 
+![AX_GT_network](./AX_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

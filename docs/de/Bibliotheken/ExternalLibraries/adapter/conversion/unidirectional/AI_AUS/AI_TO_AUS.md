@@ -2,6 +2,8 @@
 
 ![AI_TO_AUS](./AI_TO_AUS.svg)
 
+![AI_TO_AUS_network](./AI_TO_AUS_network.svg)
+
 *Bild des Funktionsblocks – nicht in der XML enthalten, daher kein automatisch generiertes Bild vorhanden.*
 
 * * * * * * * * * *

@@ -2,6 +2,8 @@
 
 ![ALR_LT](./ALR_LT.svg)
 
+![ALR_LT_network](./ALR_LT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

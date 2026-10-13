@@ -2,6 +2,14 @@
 
 ![AUI2](AUI2.svg)
 
+**Plug (adapter output)**
+
+![AUI2_plug](./AUI2_plug.svg)
+
+**Socket (adapter input)**
+
+![AUI2_socket](./AUI2_socket.svg)
+
 bidirectional Adapter Interface for 1 Event and 1 UINT
 
 ## Interface

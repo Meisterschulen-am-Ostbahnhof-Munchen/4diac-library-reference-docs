@@ -2,6 +2,8 @@
 
 ![AUI_CTU](./AUI_CTU.svg)
 
+![AUI_CTU_ecc](./AUI_CTU_ecc.svg)
+
 *Bild des Funktionsblocks nicht verfügbar*
 
 * * * * * * * * * *

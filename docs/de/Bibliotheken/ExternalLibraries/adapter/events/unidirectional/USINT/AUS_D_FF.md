@@ -2,6 +2,8 @@
 
 ![AUS_D_FF](./AUS_D_FF.svg)
 
+![AUS_D_FF_network](./AUS_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

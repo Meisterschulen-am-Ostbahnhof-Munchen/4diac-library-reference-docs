@@ -2,6 +2,8 @@
 
 ![AUS_SUBSCRIBE_1](./AUS_SUBSCRIBE_1.svg)
 
+![AUS_SUBSCRIBE_1_network](./AUS_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

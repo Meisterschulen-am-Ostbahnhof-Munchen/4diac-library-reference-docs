@@ -1,12 +1,14 @@
-# OFF_TO_AX
+# AUS_TO_AX
 
 ![AUS_TO_AX](./AUS_TO_AX.svg)
+
+![AUS_TO_AX_network](./AUS_TO_AX_network.svg)
 
 * * * * * * * * * *
 
 ## Introduction
 
-The function block **OFF_TO_AX** is a composite FB for converting an **OFF** adapter (USINT data) into an **AX** adapter (BOOL data).
+The function block **AUS_TO_AX** is a composite FB for converting an **AUS** adapter (USINT data) into an **AX** adapter (BOOL data).
 It compares the incoming USINT value with zero and outputs the result as a Boolean signal. This enables the simple conversion of counter or sensor data into a binary status signal.
 
 ## Interface Structure
@@ -15,7 +17,7 @@ The FB does not offer direct event or data connections, but only adapter interfa
 
 ### **Event Inputs**
 
-No direct event inputs. The event signal is provided via the **OFF_IN.E1** adapter.
+No direct event inputs. The event signal is provided via the **AUS\_IN.E1** adapter.
 
 ### **Event Outputs**
 
@@ -47,7 +49,7 @@ The function block internally uses an **F_NE** block (comparison for inequality)
 
 ## Technical Features
 
-- **Stores the integer's bit pattern**, as expected for a bit-string destination (truncates if the destination is narrower than the source).
+- **Not-equal-to-zero comparison, not a bit pattern**: The result is `TRUE` for any value other than 0, not the least significant bit. The comment in the source block ("stores the bit pattern ... truncates") describes different behaviour and is outdated; the `F_NE` network is authoritative.
 
 - The function block (FB) is implemented as a **Composite FB**, meaning its logic is represented by an internal network of standard function blocks.
 - It uses the **F_NE** comparison block, which is from the **iec61131::comparison** library.

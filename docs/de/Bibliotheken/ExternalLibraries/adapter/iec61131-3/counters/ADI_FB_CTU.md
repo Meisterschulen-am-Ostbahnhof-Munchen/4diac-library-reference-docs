@@ -2,6 +2,8 @@
 
 ![ADI_FB_CTU](./ADI_FB_CTU.svg)
 
+![ADI_FB_CTU_network](./ADI_FB_CTU_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

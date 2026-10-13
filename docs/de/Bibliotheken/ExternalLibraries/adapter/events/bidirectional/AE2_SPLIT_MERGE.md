@@ -1,5 +1,7 @@
 # AE2_SPLIT_MERGE
 
+![AE2_SPLIT_MERGE_network](./AE2_SPLIT_MERGE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

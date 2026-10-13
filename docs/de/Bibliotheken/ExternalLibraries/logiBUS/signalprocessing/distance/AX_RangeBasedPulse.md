@@ -2,6 +2,8 @@
 
 ![AX_RangeBasedPulse](./AX_RangeBasedPulse.svg)
 
+![AX_RangeBasedPulse_ecc](./AX_RangeBasedPulse_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

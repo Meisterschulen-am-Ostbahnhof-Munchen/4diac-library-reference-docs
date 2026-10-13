@@ -2,6 +2,8 @@
 
 ![AS_D_FF_HYS_TMIN](./AS_D_FF_HYS_TMIN.svg)
 
+![AS_D_FF_HYS_TMIN_network](./AS_D_FF_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![ASR_TO_ASR_AX_SPLIT](ASR_TO_ASR_AX_SPLIT.svg)
 
+![ASR_TO_ASR_AX_SPLIT_network](./ASR_TO_ASR_AX_SPLIT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

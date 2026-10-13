@@ -2,6 +2,8 @@
 
 ![Q_SetAudioVolume_AUS](./Q_SetAudioVolume_AUS.svg)
 
+![Q_SetAudioVolume_AUS_network](./Q_SetAudioVolume_AUS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

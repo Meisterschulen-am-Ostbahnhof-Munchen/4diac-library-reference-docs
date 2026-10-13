@@ -2,6 +2,8 @@
 
 ![INI_AUDI](./INI_AUDI.svg)
 
+![INI_AUDI_network](./INI_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -27,6 +29,7 @@ Der Funktionsblock **INI_AUDI** ermöglicht das Lesen und Speichern von UDINT-Da
 | Name          | Typ    | Kommentar                                             |
 | ------------- | ------ | ----------------------------------------------------- |
 | QI            | BOOL   | Event Input Qualifier                                 |
+| SETM          | BOOL   | Spiegelung (Mirroring) bei SET aktivieren             |
 | SECTION       | STRING | Section name in der settings.ini                      |
 | KEY           | STRING | Key name in der settings.ini                          |
 | DEFAULT_VALUE | UDINT  | Rückfallwert, falls der Schlüssel nicht gefunden wird |
@@ -50,7 +53,7 @@ Der Funktionsblock **INI_AUDI** ermöglicht das Lesen und Speichern von UDINT-Da
 Der Baustein arbeitet mit dem internen `INI`-Funktionsblock zusammen. Die grundlegende Abfolge ist:
 
 1. **Initialisierung (`INIT`-Ereignis)**
-   - Die mit `INIT` verbundenen Eingabedaten (`QI`, `SECTION`, `KEY`, `DEFAULT_VALUE`) werden an den internen `INI`-Baustein weitergeleitet.
+   - Die mit `INIT` verbundenen Eingabedaten (`QI`, `SETM`, `SECTION`, `KEY`, `DEFAULT_VALUE`) werden an den internen `INI`-Baustein weitergeleitet.
    - `INI` wird gestartet und bestätigt mit `INITO`.
 
 2. **Lesen eines Werts**

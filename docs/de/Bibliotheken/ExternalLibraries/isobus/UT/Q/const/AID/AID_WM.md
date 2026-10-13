@@ -1,7 +1,5 @@
 # AID_WM
 
-![AID_WM](./AID_WM.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

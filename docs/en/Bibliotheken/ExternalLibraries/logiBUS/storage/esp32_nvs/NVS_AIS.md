@@ -2,6 +2,8 @@
 
 ![NVS_AIS](./NVS_AIS.svg)
 
+![NVS_AIS_network](./NVS_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block `NVS_AIS` is used to store and load strings (STRING) in the n
 
 | Event | Type  | Description                                                                            | Data Carried           |
 | ----- | ----- | -------------------------------------------------------------------------------------- | ---------------------- |
-| INIT  | EInit | **Service Initialization** – Starts the function block and communication with the NVS. | QI, KEY, DEFAULT_VALUE |
+| INIT  | EInit | **Service Initialization** – Starts the function block and communication with the NVS. | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block `NVS_AIS` is used to store and load strings (STRING) in the n
 | Name          | Data Type | Description                                                                                 |
 | ------------- | --------- | ------------------------------------------------------------------------------------------- |
 | QI            | BOOL      | **Event Input Qualifier** – Controls the behavior during the INIT phase (e.g., activation). |
+| SETM            | BOOL      | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | KEY           | STRING    | **Key name** – The key under which the value is stored/retrieved in the NVS.                |
 | DEFAULT_VALUE | STRING    | **Default value** – Value that is read if no entry exists in the NVS for the specified KEY. |
 
@@ -48,7 +51,7 @@ The function block `NVS_AIS` is used to store and load strings (STRING) in the n
 
 1. **Initialization**
 
-An event at the `INIT` input starts the internal logic. The function block calls the embedded `NVS` function block, which prepares the non-volatile memory. The supplied data (`QI`, `KEY`, `DEFAULT_VALUE`) are forwarded to the internal function block.
+An event at the `INIT` input starts the internal logic. The function block calls the embedded `NVS` function block, which prepares the non-volatile memory. The supplied data (`QI`, `SETM`, `KEY`, `DEFAULT_VALUE`) are forwarded to the internal function block.
 
 1. **Read Operation**
 

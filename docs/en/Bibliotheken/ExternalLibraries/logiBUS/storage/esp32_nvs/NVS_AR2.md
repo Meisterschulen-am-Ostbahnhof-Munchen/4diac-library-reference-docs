@@ -2,6 +2,8 @@
 
 ![NVS_AR2](./NVS_AR2.svg)
 
+![NVS_AR2_network](./NVS_AR2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -12,7 +14,7 @@ The NVS_AR2 function block is used to store and load real values (floating-point
 
 ### **Event Inputs**
 
-- **INIT**: Initializes the block. This event passes the parameters QI (Qualifier), KEY (Key), and DEFAULT_VALUE (Default Value). After successful initialization, the INITO output is triggered.
+- **INIT**: Initializes the block. This event passes the parameters QI (Qualifier), SETM (mirroring on SET), KEY (Key), and DEFAULT_VALUE (Default Value). After successful initialization, the INITO output is triggered.
 
 ### **Event Outputs**
 
@@ -21,6 +23,7 @@ The NVS_AR2 function block is used to store and load real values (floating-point
 ### **Data Inputs**
 
 - **QI** (BOOL): Input qualifier for controlling execution. Typically, this is set to TRUE to activate initialization.
+- **SETM** (BOOL): Enable mirroring on SET.
 - **KEY** (STRING): The key name under which the value is to be stored or read in the NVS.
 - **DEFAULT_VALUE** (REAL): The value returned if no entry exists in the NVS under the specified key.
 

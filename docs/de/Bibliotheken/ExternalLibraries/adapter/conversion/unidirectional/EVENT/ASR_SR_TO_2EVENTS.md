@@ -1,5 +1,7 @@
 # ASR_SR_TO_2EVENTS
 
+![ASR_SR_TO_2EVENTS_network](./ASR_SR_TO_2EVENTS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

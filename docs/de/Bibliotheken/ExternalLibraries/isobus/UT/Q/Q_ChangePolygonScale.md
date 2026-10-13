@@ -14,7 +14,7 @@ Der **Q_ChangePolygonScale** ist ein standardkonformer Funktionsbaustein zur Ska
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Polygon-Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Polygon-Objekt-ID und `xScale`)
 - `REQ`: Skalierungsanforderung (mit neuen Abmessungen)
 
 ### **Ereignis-Ausgänge**
@@ -25,6 +25,7 @@ Der **Q_ChangePolygonScale** ist ein standardkonformer Funktionsbaustein zur Ska
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Polygon-Objekt-ID
+- `xScale` (BOOL, Initialwert `FALSE`): `FALSE` = Bypass, `u16NewWidth`/`u16NewHeight` werden unverändert gesendet; `TRUE` = beide werden mit dem DM/SKM-Faktor für `u16ObjId` skaliert
 - `u16NewWidth` (UINT): Neue Breite in Pixeln
 - `u16NewHeight` (UINT): Neue Höhe in Pixeln
 

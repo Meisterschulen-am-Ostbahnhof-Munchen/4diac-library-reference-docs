@@ -2,6 +2,8 @@
 
 ![SPLIT_SIGNED_LINT](./SPLIT_SIGNED_LINT.svg)
 
+![SPLIT_SIGNED_LINT_ecc](./SPLIT_SIGNED_LINT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

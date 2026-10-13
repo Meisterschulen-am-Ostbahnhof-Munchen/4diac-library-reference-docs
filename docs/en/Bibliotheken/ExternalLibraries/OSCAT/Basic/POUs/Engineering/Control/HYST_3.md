@@ -1,5 +1,7 @@
 # HYST_3
 
+![HYST_3](./HYST_3.svg)
+
 Hysteresis function
 this is a double hysteresis function. Out1 follows a hysteresis function defined by val1and hyst,
 while out 2 follows val2 and hyst.

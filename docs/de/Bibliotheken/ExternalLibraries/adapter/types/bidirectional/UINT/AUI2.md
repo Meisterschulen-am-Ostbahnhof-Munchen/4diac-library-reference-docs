@@ -2,6 +2,14 @@
 
 ![AUI2](./AUI2.svg)
 
+**Plug (Adapter-Ausgang)**
+
+![AUI2_plug](./AUI2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AUI2_socket](./AUI2_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![ILOCK_SWITCH_PROTECT](./ILOCK_SWITCH_PROTECT.svg)
 
+![ILOCK_SWITCH_PROTECT_ecc](./ILOCK_SWITCH_PROTECT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

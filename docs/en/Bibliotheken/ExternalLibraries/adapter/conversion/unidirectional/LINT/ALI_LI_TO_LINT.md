@@ -1,5 +1,7 @@
 # ALI_LI_TO_LINT
 
+![ALI_LI_TO_LINT_network](./ALI_LI_TO_LINT_network.svg)
+
 ## Introduction
 
 The ALI_LI_TO_LINT function block is a composite function block used to convert the ALI adapter format to a LINT value.

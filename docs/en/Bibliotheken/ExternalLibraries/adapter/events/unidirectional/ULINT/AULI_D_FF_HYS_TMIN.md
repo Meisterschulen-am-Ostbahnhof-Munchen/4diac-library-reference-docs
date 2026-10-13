@@ -2,6 +2,8 @@
 
 ![AULI_D_FF_HYS_TMIN](./AULI_D_FF_HYS_TMIN.svg)
 
+![AULI_D_FF_HYS_TMIN_network](./AULI_D_FF_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 The function block **AULI_D_FF_HYS_TMIN** implements a clock-edge-triggered D flip-flop (data latch) with hysteresis and a minimum dwell time between successive events. It is typically used to smooth noisy or fluctuating input signals and suppress unwanted rapid switching. The block communicates via standardized unidirectional adapters.
 

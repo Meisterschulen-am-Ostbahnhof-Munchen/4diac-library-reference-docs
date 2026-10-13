@@ -2,6 +2,8 @@
 
 ![ATM_PUBLISH_1](./ATM_PUBLISH_1.svg)
 
+![ATM_PUBLISH_1_network](./ATM_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

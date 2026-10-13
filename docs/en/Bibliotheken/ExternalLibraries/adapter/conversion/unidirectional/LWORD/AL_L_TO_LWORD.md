@@ -1,5 +1,7 @@
 # AL_L_TO_LWORD
 
+![AL_L_TO_LWORD_network](./AL_L_TO_LWORD_network.svg)
+
 ## Introduction
 
 The AL_L_TO_LWORD function block is a composite function block used to convert the AL adapter format to an LWORD value.

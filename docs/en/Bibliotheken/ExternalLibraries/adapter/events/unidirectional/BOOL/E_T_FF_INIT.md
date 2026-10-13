@@ -2,6 +2,8 @@
 
 ![E_T_FF_INIT](./E_T_FF_INIT.svg)
 
+![E_T_FF_INIT_ecc](./E_T_FF_INIT_ecc.svg)
+
 * * * * * * * * * *
 The function block **E_T_FF_INIT** implements a **toggle flip-flop** with integrated initialization logic. It combines the classic behavior of a T flip-flop (switching the output *Q* on each *CLK* event) with targeted output setting during initialization. This block is particularly suitable for applications where a defined initial state is required after startup before normal toggle operation begins.
 

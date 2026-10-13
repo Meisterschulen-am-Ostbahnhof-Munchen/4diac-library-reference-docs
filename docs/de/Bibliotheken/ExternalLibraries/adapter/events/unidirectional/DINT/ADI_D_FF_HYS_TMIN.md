@@ -2,6 +2,8 @@
 
 ![ADI_D_FF_HYS_TMIN](./ADI_D_FF_HYS_TMIN.svg)
 
+![ADI_D_FF_HYS_TMIN_network](./ADI_D_FF_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

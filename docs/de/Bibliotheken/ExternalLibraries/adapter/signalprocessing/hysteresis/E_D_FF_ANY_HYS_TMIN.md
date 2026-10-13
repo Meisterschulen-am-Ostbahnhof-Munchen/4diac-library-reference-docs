@@ -3,6 +3,8 @@
 
 ![E_D_FF_ANY_HYS_TMIN](./E_D_FF_ANY_HYS_TMIN.svg)
 
+![E_D_FF_ANY_HYS_TMIN_network](./E_D_FF_ANY_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

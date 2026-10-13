@@ -2,6 +2,8 @@
 
 ![AR_CALIBRATE_3P](./AR_CALIBRATE_3P.svg)
 
+![AR_CALIBRATE_3P_ecc](./AR_CALIBRATE_3P_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

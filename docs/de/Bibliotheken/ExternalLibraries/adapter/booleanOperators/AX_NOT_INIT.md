@@ -2,6 +2,8 @@
 
 ![AX_NOT_INIT](./AX_NOT_INIT.svg)
 
+![AX_NOT_INIT_network](./AX_NOT_INIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

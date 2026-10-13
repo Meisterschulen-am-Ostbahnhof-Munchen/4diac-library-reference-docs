@@ -2,6 +2,8 @@
 
 ![IA_MSS](./IA_MSS.svg)
 
+![IA_MSS_network](./IA_MSS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

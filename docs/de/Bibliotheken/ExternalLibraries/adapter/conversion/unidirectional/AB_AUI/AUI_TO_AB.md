@@ -2,6 +2,8 @@
 
 ![AUI_TO_AB](./AUI_TO_AB.svg)
 
+![AUI_TO_AB_network](./AUI_TO_AB_network.svg)
+
 *Kein Bild verfügbar*
 
 * * * * * * * * * *

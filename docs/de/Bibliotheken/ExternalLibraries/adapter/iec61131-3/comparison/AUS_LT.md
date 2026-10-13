@@ -2,6 +2,8 @@
 
 ![AUS_LT](./AUS_LT.svg)
 
+![AUS_LT_network](./AUS_LT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

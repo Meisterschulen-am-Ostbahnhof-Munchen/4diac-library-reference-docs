@@ -2,6 +2,8 @@
 
 ![AL_D_FF](./AL_D_FF.svg)
 
+![AL_D_FF_network](./AL_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

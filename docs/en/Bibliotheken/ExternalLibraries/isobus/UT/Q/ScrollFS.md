@@ -2,6 +2,8 @@
 
 ![ScrollFS](ScrollFS.svg)
 
+![ScrollFS_network](./ScrollFS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -18,7 +20,7 @@ two `Q_ChildPosition` calls (ISO 11783-6 F.16, "Change Child Location") to the V
 
 ### **Event Inputs**
 
-- `INIT`: Snapshots the configuration (`stObj`).
+- `INIT`: Snapshots the configuration (`stObj`) and takes `xScale`.
 - `FIRST`: Jumps to the first row (position 0).
 - `PAGE_UP`: Page up (fast, by `stObj.i32Step` rows).
 - `LINE_UP`: One row up.
@@ -35,6 +37,7 @@ two `Q_ChildPosition` calls (ISO 11783-6 F.16, "Change Child Location") to the V
 
 - `stObj` (`isobus::utils::scroll::ScrollObjectPool_S`): list/bar geometry (container IDs, row
   height, bar offsets, `i32PosMax`, `i32Step`) — snapshotted once at `INIT`.
+- `xScale` (BOOL, default `FALSE`): `FALSE` = bypass, `s16Yposition` is sent through unchanged; `TRUE` = scale it by the DM/SKM factor for the respective parent ID. Passed straight through to the internal MoveList/MoveBar (`Q_ChildPosition`).
 - `SET_POS` (DINT): Target position for `GOTO`.
 
 ### **Data Outputs**

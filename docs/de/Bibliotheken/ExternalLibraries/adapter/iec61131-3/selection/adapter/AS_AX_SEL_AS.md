@@ -3,6 +3,8 @@
 
 ![AS_AX_SEL_AS](./AS_AX_SEL_AS.svg)
 
+![AS_AX_SEL_AS_network](./AS_AX_SEL_AS_network.svg)
+
 *(Kein Bild vorhanden)*
 
 * * * * * * * * * *

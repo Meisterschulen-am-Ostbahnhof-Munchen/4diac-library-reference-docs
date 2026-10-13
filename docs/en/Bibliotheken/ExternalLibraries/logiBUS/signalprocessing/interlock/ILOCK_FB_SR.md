@@ -2,6 +2,8 @@
 
 ![ILOCK_FB_SR](./ILOCK_FB_SR.svg)
 
+![ILOCK_FB_SR_network](./ILOCK_FB_SR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

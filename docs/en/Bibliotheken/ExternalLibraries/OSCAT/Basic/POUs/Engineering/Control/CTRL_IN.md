@@ -1,5 +1,7 @@
 # CTRL_IN
 
+![CTRL_IN](./CTRL_IN.svg)
+
 calculate the process error DIFF
 
 ## Interface

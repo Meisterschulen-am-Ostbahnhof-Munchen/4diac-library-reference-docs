@@ -1,5 +1,9 @@
 # AR_MAX
 
+![AR_MAX_network](./AR_MAX_network.svg)
+
+![AR_MAX](./AR_MAX.svg)
+
 ## Introduction
 
 The function block `AR_MAX` is used to determine the maximum value of two analog input signals transmitted via adapters (`AR`). It compares the data values of the two input sockets `IN0` and `IN1` and passes the larger value to the output plug `OUT`.

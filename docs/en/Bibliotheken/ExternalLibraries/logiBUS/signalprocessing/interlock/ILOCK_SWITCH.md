@@ -2,6 +2,8 @@
 
 ![ILOCK_SWITCH](./ILOCK_SWITCH.svg)
 
+![ILOCK_SWITCH_ecc](./ILOCK_SWITCH_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

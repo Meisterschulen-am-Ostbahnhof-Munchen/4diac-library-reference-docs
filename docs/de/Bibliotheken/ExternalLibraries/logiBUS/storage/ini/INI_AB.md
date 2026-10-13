@@ -2,6 +2,8 @@
 
 ![INI_AB](INI_AB.svg)
 
+![INI_AB_network](./INI_AB_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

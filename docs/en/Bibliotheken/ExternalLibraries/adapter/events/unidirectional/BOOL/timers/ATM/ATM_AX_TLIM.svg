@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 655.8603515625 152.0"
-     width="655.8603515625" height="152.0">
+     viewBox="0 0 591.8125 152.0"
+     width="591.8125" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(282.939453125, 10)">
+  <g transform="translate(219.3125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 141.251953125 0
-            A 3 3 0 0 1 144.251953125 3
-            L 144.251953125 23.0
-            A 3 3 0 0 1 141.251953125 26.0
-            L 134.251953125 26.0
-            L 134.251953125 66.0
-            L 141.251953125 66.0
-            A 3 3 0 0 1 144.251953125 69.0
-            L 144.251953125 129.0
-            A 3 3 0 0 1 141.251953125 132.0
+            L 141.0625 0
+            A 3 3 0 0 1 144.0625 3
+            L 144.0625 23.0
+            A 3 3 0 0 1 141.0625 26.0
+            L 134.0625 26.0
+            L 134.0625 66.0
+            L 141.0625 66.0
+            A 3 3 0 0 1 144.0625 69.0
+            L 144.0625 129.0
+            A 3 3 0 0 1 141.0625 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -57,10 +57,6 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
-
-    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
-    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">EIPT</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -92,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ATM_AX_TLIM</text>
     
-    <text x="72.1259765625" y="66.0"
+    <text x="72.03125" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -132,20 +128,20 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">PT</text>
 
-    <path d="M 132.751953125 97.0
-            L 135.251953125 97.0
-            L 135.251953125 98.66666666666667
-            L 137.751953125 98.66666666666667
-            L 137.751953125 97.0
-            L 142.751953125 97.0
-            L 142.751953125 107.0
-            L 137.751953125 107.0
-            L 137.751953125 105.33333333333333
-            L 135.251953125 105.33333333333333
-            L 135.251953125 107.0
-            L 132.751953125 107.0
+    <path d="M 132.5625 97.0
+            L 135.0625 97.0
+            L 135.0625 98.66666666666667
+            L 137.5625 98.66666666666667
+            L 137.5625 97.0
+            L 142.5625 97.0
+            L 142.5625 107.0
+            L 137.5625 107.0
+            L 137.5625 105.33333333333333
+            L 135.0625 105.33333333333333
+            L 135.0625 107.0
+            L 132.5625 107.0
             Z" fill="#845DAF"/>
-    <text x="129.751953125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="129.5625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Q</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -154,16 +150,13 @@
 
     <!-- External Labels -->
 
-    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Set Preset Time (non-triggering) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
-
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Timer input (AX adapter) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Time limit (AT adapter) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
 
-    <text x="169.251953125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="169.0625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Timer output (AX adapter)</text>
   </g>
 </svg>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 598.982421875 132.0"
-     width="598.982421875" height="132.0">
+     viewBox="0 0 598.3125 132.0"
+     width="598.3125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(207.484375, 10)">
+  <g transform="translate(207.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -76,37 +76,37 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 28.27197265625 57.0
-            L 44.27197265625 57.0
-            A 1 1 0 0 1 45.27197265625 58.0
-            L 45.27197265625 61.5
-            L 43.27197265625 61.5
-            L 43.27197265625 64.5
-            L 45.27197265625 64.5
-            L 45.27197265625 74.0
-            A 1 1 0 0 1 44.27197265625 75.0
-            L 28.27197265625 75.0
-            A 1 1 0 0 1 27.27197265625 74.0
-            L 27.27197265625 64.5
-            L 29.27197265625 64.5
-            L 29.27197265625 61.5
-            L 27.27197265625 61.5
-            L 27.27197265625 58.0
-            A 1 1 0 0 1 28.27197265625 57.0
+    <path d="M 28.28125 57.0
+            L 44.28125 57.0
+            A 1 1 0 0 1 45.28125 58.0
+            L 45.28125 61.5
+            L 43.28125 61.5
+            L 43.28125 64.5
+            L 45.28125 64.5
+            L 45.28125 74.0
+            A 1 1 0 0 1 44.28125 75.0
+            L 28.28125 75.0
+            A 1 1 0 0 1 27.28125 74.0
+            L 27.28125 64.5
+            L 29.28125 64.5
+            L 29.28125 61.5
+            L 27.28125 61.5
+            L 27.28125 58.0
+            A 1 1 0 0 1 28.28125 57.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="36.27197265625" y="71.0"
+    <text x="36.28125" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="50.27197265625" y="71.0"
+    <text x="50.28125" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">INIT</text>
     
     <text x="50.0" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
-          fill="#666666" text-anchor="middle">1.0</text>
+          fill="#666666" text-anchor="middle">3.1</text>
 
     <!-- Data Ports -->
 

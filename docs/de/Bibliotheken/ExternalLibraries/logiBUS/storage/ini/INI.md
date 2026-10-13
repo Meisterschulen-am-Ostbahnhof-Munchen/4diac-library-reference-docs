@@ -24,7 +24,9 @@ Der Funktionsblock **INI** dient dem sicheren Lesen und Schreiben von Konfigurat
 | ----- | ----- | ------------------------------- |
 | INITO | EInit | Bestätigung der Initialisierung |
 | SETO  | Event | Bestätigung des Schreibvorgangs |
+| SETOE | Event | Bestätigung von SET im Fehlerfall (siehe `STATUS`) |
 | GETO  | Event | Bestätigung des Lesevorgangs    |
+| GETOE | Event | Bestätigung von GET im Fehlerfall (siehe `STATUS`) |
 
 ### **Daten-Eingänge**
 

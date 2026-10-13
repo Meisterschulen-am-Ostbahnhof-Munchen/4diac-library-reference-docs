@@ -1,5 +1,7 @@
 # AUS_USINT_TO_US
 
+![AUS_USINT_TO_US_network](./AUS_USINT_TO_US_network.svg)
+
 ## Einleitung
 
 Der AUS_USINT_TO_US Funktionsblock ist ein Composite-Funktionsblock, der zur Konvertierung eines USINT-Werts in das AUS-Adapterformat dient.

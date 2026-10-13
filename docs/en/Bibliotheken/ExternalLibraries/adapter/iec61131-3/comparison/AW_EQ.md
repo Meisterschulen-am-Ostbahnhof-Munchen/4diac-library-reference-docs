@@ -2,6 +2,8 @@
 
 ![AW_EQ](./AW_EQ.svg)
 
+![AW_EQ_network](./AW_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

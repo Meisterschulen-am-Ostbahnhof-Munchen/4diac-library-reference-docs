@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 555.5703125 132.0"
-     width="555.5703125" height="132.0">
+     viewBox="0 0 555.125 132.0"
+     width="555.125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(151.34765625, 10)">
+  <g transform="translate(151.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 239.306640625 0
-            A 3 3 0 0 1 242.306640625 3
-            L 242.306640625 23.0
-            A 3 3 0 0 1 239.306640625 26.0
-            L 232.306640625 26.0
-            L 232.306640625 66.0
-            L 239.306640625 66.0
-            A 3 3 0 0 1 242.306640625 69.0
-            L 242.306640625 109.0
-            A 3 3 0 0 1 239.306640625 112.0
+            L 239.1875 0
+            A 3 3 0 0 1 242.1875 3
+            L 242.1875 23.0
+            A 3 3 0 0 1 239.1875 26.0
+            L 232.1875 26.0
+            L 232.1875 66.0
+            L 239.1875 66.0
+            A 3 3 0 0 1 242.1875 69.0
+            L 242.1875 109.0
+            A 3 3 0 0 1 239.1875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">EI</text>
 
-    <polygon points="235.806640625,11.0 240.806640625,16.0 235.806640625,21.0" fill="#63B31F"/>
-    <text x="232.806640625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.6875,11.0 240.6875,16.0 235.6875,21.0" fill="#63B31F"/>
+    <text x="232.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AE2_SPLIT_MERGE_FORWARD</text>
     
-    <text x="121.1533203125" y="66.0"
+    <text x="121.09375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -120,20 +120,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">SOCKET</text>
 
-    <path d="M 230.806640625 97.0
-            L 233.306640625 97.0
-            L 233.306640625 98.66666666666667
-            L 235.806640625 98.66666666666667
-            L 235.806640625 97.0
-            L 240.806640625 97.0
-            L 240.806640625 107.0
-            L 235.806640625 107.0
-            L 235.806640625 105.33333333333333
-            L 233.306640625 105.33333333333333
-            L 233.306640625 107.0
-            L 230.806640625 107.0
+    <path d="M 230.6875 97.0
+            L 233.1875 97.0
+            L 233.1875 98.66666666666667
+            L 235.6875 98.66666666666667
+            L 235.6875 97.0
+            L 240.6875 97.0
+            L 240.6875 107.0
+            L 235.6875 107.0
+            L 235.6875 105.33333333333333
+            L 233.1875 105.33333333333333
+            L 233.1875 107.0
+            L 230.6875 107.0
             Z" fill="#845DAF"/>
-    <text x="227.806640625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="227.6875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">PLUG</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -145,13 +145,13 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input Event – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="267.306640625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="267.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Output Event</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE2</tspan></text>
 
-    <text x="267.306640625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="267.1875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE2</tspan></text>
   </g>
 </svg>

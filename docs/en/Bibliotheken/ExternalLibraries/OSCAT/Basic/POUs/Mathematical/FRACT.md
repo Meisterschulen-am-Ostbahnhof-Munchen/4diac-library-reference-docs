@@ -1,5 +1,7 @@
 # FRACT
 
+![FRACT](./FRACT.svg)
+
 this function returns the fraction of a real number
 
 ## Interface

@@ -2,6 +2,8 @@
 
 ![AW_FIELDBUS_WORD_TO_SIGNAL_SCALED](./AW_FIELDBUS_WORD_TO_SIGNAL_SCALED.svg)
 
+![AW_FIELDBUS_WORD_TO_SIGNAL_SCALED_network](./AW_FIELDBUS_WORD_TO_SIGNAL_SCALED_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![NVS_AUDI](./NVS_AUDI.svg)
 
+![NVS_AUDI_network](./NVS_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The **NVS_AUDI** function block enables the storage and loading of **UDINT** dat
 
 | Name | Type  | Data Carried           | Comment                 |
 | ---- | ----- | ---------------------- | ----------------------- |
-| INIT | EInit | QI, KEY, DEFAULT_VALUE | Initializes the service |
+| INIT | EInit | QI, SETM, KEY, DEFAULT_VALUE | Initializes the service |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The **NVS_AUDI** function block enables the storage and loading of **UDINT** dat
 | Name          | Type   | Comment                                 |
 | ------------- | ------ | --------------------------------------- |
 | QI            | BOOL   | Event Input Qualifier                   |
+| SETM          | BOOL   | Enable mirroring on SET                 |
 | KEY           | STRING | Key Name for NVS Access                 |
 | DEFAULT_VALUE | UDINT  | Default value if no value exists in NVS |
 
@@ -46,7 +49,7 @@ The **NVS_AUDI** function block enables the storage and loading of **UDINT** dat
 
 ## Functionality
 
-Upon arrival of the **INIT** event, the internal NVS module is initialized (QI, KEY, and DEFAULT_VALUE are passed). After successful initialization, **INITO** fires, and simultaneously a **GET** request is sent to the NVS to load the stored value. The result of the GET operation is provided via **AUDI_OUT** (data on D1, event on E1).
+Upon arrival of the **INIT** event, the internal NVS module is initialized (QI, SETM, KEY, and DEFAULT_VALUE are passed). After successful initialization, **INITO** fires, and simultaneously a **GET** request is sent to the NVS to load the stored value. The result of the GET operation is provided via **AUDI_OUT** (data on D1, event on E1).
 
 If an event (E1) with a value (D1) is received via the **AUDI_IN** adapter, a **SET** request is sent to the NVS to store the value under the current KEY. After saving, **SETO** fires, and the result is also acknowledged via **AUDI_OUT**.
 

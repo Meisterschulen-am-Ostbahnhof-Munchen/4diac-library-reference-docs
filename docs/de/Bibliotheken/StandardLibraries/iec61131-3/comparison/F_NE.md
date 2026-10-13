@@ -16,6 +16,25 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine internationale Norm, die sich mit der Modellierung von Funktionsbausteinen für industrielle Automatisierungssysteme beschäftigt. Sie bietet ein standardisiertes Framework für die Entwicklung von verteilten Steuerungssystemen, wobei logische und arithmetische Operatoren eine zentrale Rolle spielen. Einer dieser Operatoren ist der **NE-Operator** (Not Equal, „ungleich“), der in diesem Aufsatz näher beleuchtet werden soll.
 
+## Schnittstelle
+
+### Ereignis-Eingänge
+
+- `REQ`: Service-Anforderung (mit `IN1`, `IN2`)
+
+### Ereignis-Ausgänge
+
+- `CNF`: Bestätigung der angeforderten Operation (mit `OUT`)
+
+### Daten-Eingänge
+
+- `IN1` (ANY_ELEMENTARY): Eingangswert 1
+- `IN2` (ANY_ELEMENTARY): Eingangswert 2
+
+### Daten-Ausgänge
+
+- `OUT` (BOOL): Wert 1 <> Wert 2 = TRUE
+
 ## Was ist der NE-Operator?
 
 Der NE-Operator ist ein Vergleichsoperator, der verwendet wird, um festzustellen, ob zwei Werte ungleich sind. In der IEC 61499 wird dieser Operator häufig in Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen basierend auf Vergleichen zu treffen. Der NE-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (`TRUE` oder `FALSE`) zurück, je nachdem, ob die Werte ungleich sind.

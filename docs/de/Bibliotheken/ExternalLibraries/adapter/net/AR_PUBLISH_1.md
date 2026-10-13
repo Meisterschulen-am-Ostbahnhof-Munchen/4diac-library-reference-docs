@@ -2,6 +2,8 @@
 
 ![AR_PUBLISH_1](./AR_PUBLISH_1.svg)
 
+![AR_PUBLISH_1_network](./AR_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

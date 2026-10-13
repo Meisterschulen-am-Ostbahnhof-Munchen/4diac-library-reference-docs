@@ -2,6 +2,8 @@
 
 ![ILOCK_2_E_AX](./ILOCK_2_E_AX.svg)
 
+![ILOCK_2_E_AX_ecc](./ILOCK_2_E_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

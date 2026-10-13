@@ -10,6 +10,5 @@ DataPanel Modules with medium IO density DO Struct
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
-- [Uebung_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Uebung_003b3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Funk_IX_TO_DataPanel_MI_QX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/Funk_IX_TO_DataPanel_MI_QX/)
+- [Funk_IXA_TO_DataPanel_MI_QXA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_AX/sys/Funk_IXA_TO_DataPanel_MI_QXA/)

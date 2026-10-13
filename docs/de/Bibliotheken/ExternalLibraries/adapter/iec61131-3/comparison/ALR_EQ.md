@@ -2,6 +2,8 @@
 
 ![ALR_EQ](./ALR_EQ.svg)
 
+![ALR_EQ_network](./ALR_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

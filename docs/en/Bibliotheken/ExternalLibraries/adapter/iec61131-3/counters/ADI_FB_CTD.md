@@ -2,6 +2,8 @@
 
 ![ADI_FB_CTD](./ADI_FB_CTD.svg)
 
+![ADI_FB_CTD_network](./ADI_FB_CTD_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,10 @@
   <rect x="-41.7" y="-144.0" width="1193.7" height="649.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-41.7" y="-144.0" width="1193.7" height="25.0" fill="white" stroke="none"/>
   <line x1="-41.7" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-36.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Ein gebuendeltes unidirektionales A2X (UP/DOWN) auf 2 physische logiBUS-Digitalausgaenge entbuendelt: A2X_2X_TO_2AX spaltet das Paar unmittelbar vor den beiden logiBUS_QXA-Ausgaengen auf 2 einzelne AX-Signale auf - 'SUB style': das Entbuendeln steckt im Composite, nicht in der Resource des Geraets.</text>
+  <text x="-36.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Ein gebuendeltes unidirektionales A2X (UP/DOWN) auf 2 physische
+logiBUS-Digitalausgaenge entbuendelt: A2X_2X_TO_2AX spaltet das Paar unmittelbar
+vor den beiden logiBUS_QXA-Ausgaengen auf 2 einzelne AX-Signale auf - 'SUB
+style': das Entbuendeln steckt im Composite, nicht in der Resource des Geraets.</text>
   <g id="sidebars">
     <rect x="-41.7" y="-119.0" width="81.7" height="624.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="505.0" stroke="#A0A0A0" stroke-width="0.5"/>

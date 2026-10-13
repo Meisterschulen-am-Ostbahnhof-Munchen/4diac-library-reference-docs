@@ -2,6 +2,8 @@
 
 ![Q_ExecuteExtendedMacro_AUI](./Q_ExecuteExtendedMacro_AUI.svg)
 
+![Q_ExecuteExtendedMacro_AUI_network](./Q_ExecuteExtendedMacro_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

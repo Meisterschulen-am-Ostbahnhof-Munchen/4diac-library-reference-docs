@@ -1,5 +1,7 @@
 # AX_BLINK
 
+![AX_BLINK_network](./AX_BLINK_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -9,19 +11,25 @@ The AX_BLINK is a function block that outputs a flashing signal via an AX adapte
 
 ## Interface Structure
 
+### **Event Inputs**
+
+- **START**: Starts the periodic generation of events; carries `TIMELOW` and `TIMEHIGH`.
+- **STOP**: Stops the generation of events.
+
 ### **Data Inputs**
 
-- **DT** (TIME): Flashing period.
+- **TIMELOW** (TIME): Time for OUT to be FALSE.
+- **TIMEHIGH** (TIME): Time for OUT to be TRUE.
 
 ### **Adapters**
 
 **Plugs (Outputs):**
 
-- **OUT** (adapter::types::unidirectional::AX)
+- **OUT** (adapter::types::unidirectional::AX): Output value, starts with FALSE and switches between TRUE and FALSE for the given high and low times.
 
 ## Functionality
 
-The function block switches the output OUT on and off alternately with the period DT.
+After `START`, the function block alternately switches the output OUT off (FALSE) for the time `TIMELOW` and on (TRUE) for the time `TIMEHIGH`, until `STOP` arrives.
 
 ## Technical Features
 
@@ -41,7 +49,7 @@ Flashing displays.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020f3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
+- [Exercise_020f3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f3_AX/)
 
 ## Conclusion
 

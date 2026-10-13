@@ -76,7 +76,7 @@ Es gibt in der Standardbibliothek von 4diac keine direkt vergleichbaren Funktion
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_052](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
+- [Uebung_052](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_052/)
 
 ## Fazit
 

@@ -2,6 +2,8 @@
 
 ![Q_NumericValue_PHYSA](./Q_NumericValue_PHYSA.svg)
 
+![Q_NumericValue_PHYSA_network](./Q_NumericValue_PHYSA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,5 +1,7 @@
 # TIME_TO_REAL
 
+![TIME_TO_REAL](./TIME_TO_REAL.svg)
+
 ## Einleitung
 
 `TIME_TO_REAL` ist eine projekteigene Hilfsfunktion (`FunctionType`), die eine Zeitdauer vom Typ `TIME` in einen Fließkommawert (`REAL`) umrechnet. Das Ergebnis entspricht der Zeitdauer in **Sekunden**.

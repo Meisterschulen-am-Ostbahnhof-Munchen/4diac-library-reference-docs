@@ -2,6 +2,8 @@
 
 ![AIS_D_FF_TMIN](./AIS_D_FF_TMIN.svg)
 
+![AIS_D_FF_TMIN_network](./AIS_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

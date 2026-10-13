@@ -2,18 +2,21 @@
 
 ![NVS_AS](./NVS_AS.svg)
 
+![NVS_AS_network](./NVS_AS_network.svg)
+
 * * * * * * * * * *
 The function block **NVS_AS** serves as an interface for reading and writing SINT (signed integer) data in non-volatile storage (NVS). Storage is performed using a user-defined key (KEY). The block extends access to the NVS with an adapter interface (unidirectional AS type), allowing values to be received and sent via standardized adapter connections. This enables modular and reusable connectivity to storage functions in IEC 61499 applications.
 
 | Event         | Description                                                           | Associated Variables                                          |
 | ------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- |
-| INIT          | Initializes the NVS and triggers the first loading of a stored value. | QI, KEY, DEFAULT_VALUE                                        |
+| INIT          | Initializes the NVS and triggers the first loading of a stored value. | QI, SETM, KEY, DEFAULT_VALUE                                        |
 | Event         | Description                                                           | Associated Variables                                          |
 | ----------    | ---------------                                                       | -----------------------                                       |
 | INITO         | Confirmation of initialization and the first loading process.         | QO, STATUS                                                    |
 | Variable      | Type                                                                  | Description                                                   |
 | ----------    | --------                                                              | --------------                                                |
 | QI            | BOOL                                                                  | Enables initialization (TRUE = enable).                       |
+| SETM            | BOOL                                                                  | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | KEY           | STRING                                                                | Key under which the value is stored in the NVS.               |
 | DEFAULT_VALUE | SINT                                                                  | Default value, read if no value exists under the key.         |
 | Variable      | Type                                                                  | Description                                                   |

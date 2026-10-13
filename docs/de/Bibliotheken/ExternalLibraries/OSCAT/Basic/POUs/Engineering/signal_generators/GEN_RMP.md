@@ -15,11 +15,11 @@ in addition to the analog output Out there is a second boolean output Q with is 
 
 ### Event Inputs
 
-| Name | Comment                  | With           |
-| :--- | :----------------------- | :------------- |
-| INIT | Init Request             |                |
-| REQ  | Normal Execution Request | PT, AM, OS, DL |
-| RST  | Reset                    |                |
+| Name  | Comment                  | With           |
+| :---- | :----------------------- | :------------- |
+| EINIT | Init Request             |                |
+| REQ   | Normal Execution Request | PT, AM, OS, DL |
+| RST   | Reset                    |                |
 
 ### Event Outputs
 

@@ -1,5 +1,7 @@
 # AX_FB_TON
 
+![AX_FB_TON_network](./AX_FB_TON_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -17,7 +19,7 @@ AX_FB_TON is a standardized timer function block according to IEC 61131-3 that i
 
 ### **Event Outputs**
 
-- No direct event outputs available (control via adapter)
+- **CNF** (Event): Execution Confirmation; carries `ET`
 
 ### **Data Inputs**
 
@@ -67,7 +69,7 @@ Compared to [AX_TON](../../events/unidirectional/BOOL/timers/AX_TON.md), AX_FB_T
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Exercise_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Conclusion
 

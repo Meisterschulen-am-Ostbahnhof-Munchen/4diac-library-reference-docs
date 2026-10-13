@@ -75,7 +75,7 @@ Im Vergleich zu einfachen digitalen Eingangsbausteinen bietet Funk_IX erweiterte
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
+- [Funk_IX_TO_DataPanel_MI_QX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/Funk_IX_TO_DataPanel_MI_QX/)
 
 ## Fazit
 

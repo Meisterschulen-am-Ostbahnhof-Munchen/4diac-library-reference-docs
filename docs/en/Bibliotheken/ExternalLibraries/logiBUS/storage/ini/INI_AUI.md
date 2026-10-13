@@ -2,6 +2,8 @@
 
 ![INI_AUI](./INI_AUI.svg)
 
+![INI_AUI_network](./INI_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -27,6 +29,7 @@ The function block `INI_AUI` is used to read and store **UINT data** (more preci
 | Name          | Type   | Short Description                                           |
 | ------------- | ------ | ----------------------------------------------------------- |
 | QI            | BOOL   | Qualifier for the event input (enables processing)          |
+| SETM            | BOOL   | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | SECTION       | STRING | Name of the section in `settings.ini` (e.g., `[MySection]`) |
 | KEY           | STRING | Key name within the section                                 |
 | DEFAULT_VALUE | UDINT  | Value returned if no entry exists                           |
@@ -52,7 +55,7 @@ The `INI_AUI` function block encapsulates an internal `INI` function block (`ecl
 1. **Reading a Value**
 
 - An **INIT** event at the input triggers the internal `INI.INIT`.
-- The data `QI`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the `INI` function block.
+- The data `QI`, `SETM`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the `INI` function block.
 - After successful processing, `INI.INITO` sends the confirmation event and internally triggers `INI.GET` to load the value from the file.
 - The read value appears at `INI.VALUEO` and is output via the **AUI_OUT** adapter (plug) as `D1`.
 - Simultaneously, `QO` and `STATUS` are taken from the internal function block.

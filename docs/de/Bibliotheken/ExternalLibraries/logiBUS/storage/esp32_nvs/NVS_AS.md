@@ -2,6 +2,8 @@
 
 ![NVS_AS](./NVS_AS.svg)
 
+![NVS_AS_network](./NVS_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AS** dient als Schnittstelle zum Lesen und Schreiben vo
 
 | Ereignis | Beschreibung                                                                  | Mitgeführte Variablen  |
 | -------- | ----------------------------------------------------------------------------- | ---------------------- |
-| INIT     | Initialisiert den NVS und löst das erste Laden eines gespeicherten Werts aus. | QI, KEY, DEFAULT_VALUE |
+| INIT     | Initialisiert den NVS und löst das erste Laden eines gespeicherten Werts aus. | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AS** dient als Schnittstelle zum Lesen und Schreiben vo
 | Variable      | Typ    | Beschreibung                                                                   |
 | ------------- | ------ | ------------------------------------------------------------------------------ |
 | QI            | BOOL   | Freigabe der Initialisierung (TRUE = aktivieren).                              |
+| SETM            | BOOL   | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | KEY           | STRING | Schlüssel, unter dem der Wert im NVS gespeichert ist.                          |
 | DEFAULT_VALUE | SINT   | Standardwert, der gelesen wird, falls kein Wert unter dem Schlüssel existiert. |
 

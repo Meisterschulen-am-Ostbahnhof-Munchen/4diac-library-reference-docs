@@ -1,10 +1,14 @@
 # logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC
 
+![logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC_network](./logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC_network.svg)
+
+![logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC](./logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
 
-`logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC` bindet einen per Subscribe empfangenen Rohwert an eine vollständige VT- und OPC-UA-gestützte 3-Punkt-Kalibrierung (`AR_CALIBRATE_3P_REF`) an — genutzt vom 3-Punkt-Kalibrierungs-Trainingsbeispiel [InputOutputTesterButton_AI_Calibrate_3P_Subscribe_VT_OPC](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_3P_Subscribe_VT_OPC/InputOutputTesterButton_AI_Calibrate_3P_Subscribe_VT_OPC/). Der Rohwert wird über 3 Referenzpunkte (`Min`, `Mid`, `Max`) stückweise linear skaliert. Neben den Sollwerten werden auch die gemessenen Rohwerte (`MinRaw`, `MidRaw`, `MaxRaw`) live diagnostiziert, über VT sowie OPC-UA bereitgestellt und per INI-Datei persistiert. Bei Teilkalibrierung (z.B. nur 1 oder 2 Punkte kalibriert) greift sofort eine saubere Ausweichlogik auf die verfügbaren Referenzpunkte.
+`logiBUS_AI_Calibrate_3P_Subscribe_VT_OPC` bindet einen per Subscribe empfangenen Rohwert an eine vollständige VT- und OPC-UA-gestützte 3-Punkt-Kalibrierung (`AR_CALIBRATE_3P_REF`) an — genutzt vom 3-Punkt-Kalibrierungs-Trainingsbeispiel [InputOutputTesterButton_AI_Calibrate_3P_OPC_UA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Meins/InputOutputTester/Button_AI_Calibrate_3P_OPC_UA/InputOutputTesterButton_AI_Calibrate_3P_OPC_UA/). Der Rohwert wird über 3 Referenzpunkte (`Min`, `Mid`, `Max`) stückweise linear skaliert. Neben den Sollwerten werden auch die gemessenen Rohwerte (`MinRaw`, `MidRaw`, `MaxRaw`) live diagnostiziert, über VT sowie OPC-UA bereitgestellt und per INI-Datei persistiert. Bei Teilkalibrierung (z.B. nur 1 oder 2 Punkte kalibriert) greift sofort eine saubere Ausweichlogik auf die verfügbaren Referenzpunkte.
 
 ## Verwendete Funktionsbausteine (FBs)
 

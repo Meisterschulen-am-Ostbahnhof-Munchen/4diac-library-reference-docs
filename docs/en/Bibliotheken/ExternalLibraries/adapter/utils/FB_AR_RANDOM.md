@@ -2,6 +2,8 @@
 
 ![FB_AR_RANDOM](./FB_AR_RANDOM.svg)
 
+![FB_AR_RANDOM_network](./FB_AR_RANDOM_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

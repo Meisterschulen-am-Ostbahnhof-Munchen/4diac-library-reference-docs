@@ -2,6 +2,8 @@
 
 ![initval_AR](initval_AR.svg)
 
+![initval_AR_network](./initval_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

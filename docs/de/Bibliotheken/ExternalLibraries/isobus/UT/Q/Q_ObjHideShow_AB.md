@@ -2,6 +2,8 @@
 
 ![Q_ObjHideShow_AB](./Q_ObjHideShow_AB.svg)
 
+![Q_ObjHideShow_AB_network](./Q_ObjHideShow_AB_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

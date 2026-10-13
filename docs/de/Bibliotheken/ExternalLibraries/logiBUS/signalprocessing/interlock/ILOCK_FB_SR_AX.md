@@ -2,6 +2,8 @@
 
 ![ILOCK_FB_SR_AX](./ILOCK_FB_SR_AX.svg)
 
+![ILOCK_FB_SR_AX_ecc](./ILOCK_FB_SR_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

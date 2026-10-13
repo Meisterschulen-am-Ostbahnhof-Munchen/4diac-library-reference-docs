@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1442.724609375 192.0"
-     width="1442.724609375" height="192.0">
+     viewBox="0 0 1441.625 192.0"
+     width="1441.625" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(633.30859375, 10)">
+  <g transform="translate(632.75, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 238.978515625 0
-            A 3 3 0 0 1 241.978515625 3
-            L 241.978515625 43.0
-            A 3 3 0 0 1 238.978515625 46.0
-            L 231.978515625 46.0
-            L 231.978515625 86.0
-            L 238.978515625 86.0
-            A 3 3 0 0 1 241.978515625 89.0
-            L 241.978515625 169.0
-            A 3 3 0 0 1 238.978515625 172.0
+            L 238.75 0
+            A 3 3 0 0 1 241.75 3
+            L 241.75 43.0
+            A 3 3 0 0 1 238.75 46.0
+            L 231.75 46.0
+            L 231.75 86.0
+            L 238.75 86.0
+            A 3 3 0 0 1 241.75 89.0
+            L 241.75 169.0
+            A 3 3 0 0 1 238.75 172.0
             L 3 172.0
             A 3 3 0 0 1 0 169.0
             L 0 89.0
@@ -62,12 +62,12 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="235.478515625,11.0 240.478515625,16.0 235.478515625,21.0" fill="#63B31F"/>
-    <text x="232.478515625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.25,11.0 240.25,16.0 235.25,21.0" fill="#63B31F"/>
+    <text x="232.25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
-    <polygon points="235.478515625,31.0 240.478515625,36.0 235.478515625,41.0" fill="#63B31F"/>
-    <text x="232.478515625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.25,31.0 240.25,36.0 235.25,41.0" fill="#63B31F"/>
+    <text x="232.25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -100,7 +100,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AE_AX_SERVER_0_CLIENT_1_0</text>
     
-    <text x="120.9892578125" y="86.0"
+    <text x="120.875" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -118,34 +118,34 @@
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_STATE</text>
 
-    <polygon points="235.478515625,91.0 240.478515625,96.0 235.478515625,101.0" fill="#A3B08F"/>
-    <text x="232.478515625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.25,91.0 240.25,96.0 235.25,101.0" fill="#A3B08F"/>
+    <text x="232.25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
-    <polygon points="235.478515625,111.0 240.478515625,116.0 235.478515625,121.0" fill="#BD8663"/>
-    <text x="232.478515625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.25,111.0 240.25,116.0 235.25,121.0" fill="#BD8663"/>
+    <text x="232.25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS_TRIGGER</text>
 
-    <polygon points="235.478515625,131.0 240.478515625,136.0 235.478515625,141.0" fill="#BD8663"/>
-    <text x="232.478515625" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.25,131.0 240.25,136.0 235.25,141.0" fill="#BD8663"/>
+    <text x="232.25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS_STATE</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 230.478515625 157.0
-            L 232.978515625 157.0
-            L 232.978515625 158.66666666666666
-            L 235.478515625 158.66666666666666
-            L 235.478515625 157.0
-            L 240.478515625 157.0
-            L 240.478515625 167.0
-            L 235.478515625 167.0
-            L 235.478515625 165.33333333333334
-            L 232.978515625 165.33333333333334
-            L 232.978515625 167.0
-            L 230.478515625 167.0
+    <path d="M 230.25 157.0
+            L 232.75 157.0
+            L 232.75 158.66666666666666
+            L 235.25 158.66666666666666
+            L 235.25 157.0
+            L 240.25 157.0
+            L 240.25 167.0
+            L 235.25 167.0
+            L 235.25 165.33333333333334
+            L 232.75 165.33333333333334
+            L 232.75 167.0
+            L 230.25 167.0
             Z" fill="#845DAF"/>
-    <text x="227.478515625" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="227.25" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">TRIGGER</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -159,25 +159,25 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.978515625" y="31.0" width="10" height="10"
+    <rect x="246.75" y="31.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.978515625" y="91.0" width="10" height="10"
+    <rect x="246.75" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="251.978515625" y1="36.0" x2="251.978515625" y2="96.0"
+    <line x1="251.75" y1="36.0" x2="251.75" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.978515625" y="111.0" width="10" height="10"
+    <rect x="246.75" y="111.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="251.978515625" y1="36.0" x2="251.978515625" y2="116.0"
+    <line x1="251.75" y1="36.0" x2="251.75" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.978515625" y="131.0" width="10" height="10"
+    <rect x="246.75" y="131.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="251.978515625" y1="36.0" x2="251.978515625" y2="136.0"
+    <line x1="251.75" y1="36.0" x2="251.75" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -188,16 +188,16 @@
     <line x1="0" y1="96.0" x2="-20" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.978515625" y1="36.0" x2="261.978515625" y2="36.0"
+    <line x1="241.75" y1="36.0" x2="261.75" y2="36.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.978515625" y1="96.0" x2="261.978515625" y2="96.0"
+    <line x1="241.75" y1="96.0" x2="261.75" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.978515625" y1="116.0" x2="261.978515625" y2="116.0"
+    <line x1="241.75" y1="116.0" x2="261.75" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.978515625" y1="136.0" x2="261.978515625" y2="136.0"
+    <line x1="241.75" y1="136.0" x2="261.75" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -205,10 +205,10 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="266.978515625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
-    <text x="266.978515625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – QO/STATUS updated</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -220,16 +220,16 @@
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Ziel-Adresse (ACTION=WRITE) fuer den Zustand – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="266.978515625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – TRUE nur wenn SERVER_0_1 und STATE_CLIENT aktuell beide QO=TRUE melden</text>
 
-    <text x="266.978515625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan> – STATUS von SERVER_0_1</text>
 
-    <text x="266.978515625" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan> – STATUS von STATE_CLIENT</text>
 
-    <text x="266.978515625" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.75" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE_AX</tspan> – Trigger (in), Zustand (out)</text>
   </g>
 </svg>

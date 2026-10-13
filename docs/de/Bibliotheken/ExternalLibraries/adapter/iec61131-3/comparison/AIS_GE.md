@@ -2,6 +2,8 @@
 
 ![AIS_GE](./AIS_GE.svg)
 
+![AIS_GE_network](./AIS_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

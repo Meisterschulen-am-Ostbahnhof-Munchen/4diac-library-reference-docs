@@ -19,21 +19,23 @@ The NVS (Non-Volatile Storage) function block enables persistent storage and loa
 
 - **INITO**: Confirms the execution of the initialization (INIT) and returns the result.
 - **SETO**: Confirms the execution of the write operation (SET) and returns the status.
+- **SETOE**: Confirmation of SET in the error case (see `STATUS`); carries `QO` and `STATUS`.
 - **GETO**: Confirms the execution of the read operation (GET) and returns the read value.
+- **GETOE**: Confirmation of GET in the error case (see `STATUS`); carries `QO` and `STATUS`.
 
 ### **Data Inputs**
 
 - **QI** (BOOL): Qualifies the INIT event input. The service is activated by `TRUE` and deactivated by `FALSE`.
 - **KEY** (STRING): The unique key name under which the value is stored in the NVS or from which it is read. This value must be set during the INIT phase.
-- **VALUE** (ANY_ELEMENTARY): The data record to be stored. It can be any elementary data type (e.g., BOOL, INT, REAL, STRING).
-- **DEFAULT_VALUE** (ANY_ELEMENTARY): The default value returned during a read operation (INIT or GET) if no value is yet stored in the NVS under the specified key.
+- **VALUE** (ANY): The data record to be stored. It can be any elementary data type (e.g., BOOL, INT, REAL, STRING).
+- **DEFAULT_VALUE** (ANY): The default value returned during a read operation (INIT or GET) if no value is yet stored in the NVS under the specified key.
 -
 
 ### **Data Outputs**
 
 - **QO** (BOOL): Reflects the current operating state of the function block (`TRUE` = ready/successful, `FALSE` = not ready/error).
 - **STATUS** (STRING): Contains a status message describing the success or type of error of the last operation (e.g., "OK", "Key not found", "Storage full").
-- **VALUEO** (ANY_ELEMENTARY): The value actually read from the NVS or, if no value was present, the value from `DEFAULT_VALUE`.
+- **VALUEO** (ANY): The value actually read from the NVS or, if no value was present, the value from `DEFAULT_VALUE`.
 
 ### **Adapters**
 
@@ -41,7 +43,7 @@ This function block does not use adapters.
 
 ## Operation
 
-The NVS block operates based on its state. During initialization (INIT with `QI=TRUE`), the specified `KEY` is set. The system then automatically attempts to read the corresponding value from the NVS (Network Value System). The result (stored value or `DEFAULT_VALUE`) is output along with the status via `INITO`.
+The NVS block operates based on its state. During initialization (INIT with `QI=TRUE`), the specified `KEY` is set. The system then automatically attempts to read the corresponding value from the NVS (Non-Volatile Storage). The result (stored value or `DEFAULT_VALUE`) is output along with the status via `INITO`.
 
 Afterward, the block can perform two main operations:
 
@@ -54,7 +56,7 @@ The data types of the inputs and outputs `VALUE`, `DEFAULT_VALUE`, and `VALUEO` 
 ## Technical Features
 
 - **ESP32-Specific**: This block directly uses the NVS API of the ESP32-IDF and is therefore only compatible with ESP32-based target platforms.
-- **Type Flexibility**: The use of the generic data type `ANY_ELEMENTARY` allows for the storage of various elementary data types. The specific type is set during initial use (INIT) and must be retained for all subsequent operations.
+- **Type Flexibility**: The use of the generic data type `ANY` allows for the storage of various elementary data types. The specific type is set during initial use (INIT) and must be retained for all subsequent operations.
 
 **Persistence**: Data in the NVS survives a microcontroller restart and is also retained after a power failure (depending on the NVS memory configuration).
 
@@ -80,9 +82,9 @@ The data types of the inputs and outputs `VALUE`, `DEFAULT_VALUE`, and `VALUEO` 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
-- [Exercise_012a_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012a_sub/)
-- [Exercise_020c2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2_sub/)
+- [Exercise_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
+- [Exercise_012a_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/en/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/NumericValue_ID_TO_NVS/)
+- [Exercise_020c2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2_sub/)
 
 ## Conclusion
 

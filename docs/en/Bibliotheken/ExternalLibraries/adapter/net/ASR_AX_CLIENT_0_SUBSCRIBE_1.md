@@ -2,6 +2,8 @@
 
 ![ASR_AX_CLIENT_0_SUBSCRIBE_1](ASR_AX_CLIENT_0_SUBSCRIBE_1.svg)
 
+![ASR_AX_CLIENT_0_SUBSCRIBE_1_network](./ASR_AX_CLIENT_0_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

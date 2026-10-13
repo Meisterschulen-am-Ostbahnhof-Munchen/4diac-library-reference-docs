@@ -2,6 +2,8 @@
 
 ![ATM_IN_MS_TO_ALR](ATM_IN_MS_TO_ALR.svg)
 
+![ATM_IN_MS_TO_ALR_network](./ATM_IN_MS_TO_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![AI_FB_CTD](./AI_FB_CTD.svg)
 
+![AI_FB_CTD_network](./AI_FB_CTD_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

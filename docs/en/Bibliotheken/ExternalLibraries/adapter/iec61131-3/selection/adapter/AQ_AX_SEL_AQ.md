@@ -2,6 +2,8 @@
 
 ![AQ_AX_SEL_AQ](./AQ_AX_SEL_AQ.svg)
 
+![AQ_AX_SEL_AQ_network](./AQ_AX_SEL_AQ_network.svg)
+
 * * * * * * * * * *
 
 The function block `AQ_AX_SEL_AQ` is used for binary selection between two analog or value-based input signals provided via adapters. A selector adapter controls which of the two inputs is passed through to the output. The block encapsulates the classic selection logic and prepares it for event-driven execution in IEC 61499 environments.

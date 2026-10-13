@@ -1,5 +1,7 @@
 # E_BLINK
 
+![E_BLINK_network](./E_BLINK_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

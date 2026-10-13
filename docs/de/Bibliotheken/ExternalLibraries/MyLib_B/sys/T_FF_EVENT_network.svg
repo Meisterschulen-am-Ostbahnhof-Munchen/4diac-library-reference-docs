@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,8 @@
   <rect x="16.1" y="-144.0" width="1157.4" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="16.1" y="-144.0" width="1157.4" height="25.0" fill="white" stroke="none"/>
   <line x1="16.1" y1="-119.5" x2="1173.5" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="21.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Einfaches Toggle-Flip-Flop (E_SWITCH + E_SR): jeder IND-Klick kippt den Ausgang Q, EO meldet die Flanke. Generisch, keine Hardware-Abhaengigkeit.</text>
+  <text x="21.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Einfaches Toggle-Flip-Flop (E_SWITCH + E_SR): jeder IND-Klick kippt den Ausgang
+Q, EO meldet die Flanke. Generisch, keine Hardware-Abhaengigkeit.</text>
   <g id="sidebars">
     <rect x="16.1" y="-119.0" width="23.9" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
@@ -56,7 +57,7 @@
     <polyline points="338.9,102.5 410.3,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="478.7,85.5 941.7,85.5 946.7,80.5 946.7,-79.0 951.7,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-84.0 47.2,-84.0 52.0,-79.2 52.0,80.5 57.0,85.5 245.3,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="478.7,136.5 485.9,136.5 490.7,141.3 490.7,155.5 485.7,160.5 238.3,160.5 233.3,155.5 233.3,141.3 238.1,136.5 245.3,136.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="478.7,136.5 485.9,136.5 490.7,141.3 490.7,155.5 485.7,160.5 238.3,160.5 233.3,155.5 233.3,141.3 238.1,136.5 245.3,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="478.7,136.5 941.7,136.5 946.7,131.5 946.7,-62.0 951.7,-67.0 1152.0,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
@@ -131,7 +132,7 @@
       <polygon points="63.375,5.5 68.375,10.5 63.375,15.5" fill="#63B31F"/>
       <text x="62.375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO</text>
-      <polygon points="63.375,56.5 68.375,61.5 63.375,66.5" fill="#3366FF"/>
+      <polygon points="63.375,56.5 68.375,61.5 63.375,66.5" fill="#A3B08F"/>
       <text x="62.375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">Q</text>
 
@@ -201,7 +202,7 @@
       <polygon points="88.625,22.5 93.625,27.5 88.625,32.5" fill="#63B31F"/>
       <text x="87.625" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO1</text>
-      <polygon points="0,56.5 5,61.5 0,66.5" fill="#3366FF"/>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">G</text>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 758.3037109375 172.0"
-     width="758.3037109375" height="172.0">
+     viewBox="0 0 757.8125 172.0"
+     width="757.8125" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(235.1083984375, 10)">
+  <g transform="translate(234.75, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 312.5810546875 0
-            A 3 3 0 0 1 315.5810546875 3
-            L 315.5810546875 23.0
-            A 3 3 0 0 1 312.5810546875 26.0
-            L 305.5810546875 26.0
-            L 305.5810546875 66.0
-            L 312.5810546875 66.0
-            A 3 3 0 0 1 315.5810546875 69.0
-            L 315.5810546875 149.0
-            A 3 3 0 0 1 312.5810546875 152.0
+            L 312.5 0
+            A 3 3 0 0 1 315.5 3
+            L 315.5 23.0
+            A 3 3 0 0 1 312.5 26.0
+            L 305.5 26.0
+            L 305.5 66.0
+            L 312.5 66.0
+            A 3 3 0 0 1 315.5 69.0
+            L 315.5 149.0
+            A 3 3 0 0 1 312.5 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="309.0810546875,11.0 314.0810546875,16.0 309.0810546875,21.0" fill="#63B31F"/>
-    <text x="306.0810546875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="309.0,11.0 314.0,16.0 309.0,21.0" fill="#63B31F"/>
+    <text x="306.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AW_FIELDBUS_WORD_TO_SIGNAL_SCALED</text>
     
-    <text x="157.79052734375" y="66.0"
+    <text x="157.75" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -128,36 +128,36 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN</text>
 
-    <path d="M 304.0810546875 117.0
-            L 306.5810546875 117.0
-            L 306.5810546875 118.66666666666667
-            L 309.0810546875 118.66666666666667
-            L 309.0810546875 117.0
-            L 314.0810546875 117.0
-            L 314.0810546875 127.0
-            L 309.0810546875 127.0
-            L 309.0810546875 125.33333333333333
-            L 306.5810546875 125.33333333333333
-            L 306.5810546875 127.0
-            L 304.0810546875 127.0
+    <path d="M 304.0 117.0
+            L 306.5 117.0
+            L 306.5 118.66666666666667
+            L 309.0 118.66666666666667
+            L 309.0 117.0
+            L 314.0 117.0
+            L 314.0 127.0
+            L 309.0 127.0
+            L 309.0 125.33333333333333
+            L 306.5 125.33333333333333
+            L 306.5 127.0
+            L 304.0 127.0
             Z" fill="#845DAF"/>
-    <text x="301.0810546875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="301.0" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
-    <path d="M 304.0810546875 137.0
-            L 306.5810546875 137.0
-            L 306.5810546875 138.66666666666666
-            L 309.0810546875 138.66666666666666
-            L 309.0810546875 137.0
-            L 314.0810546875 137.0
-            L 314.0810546875 147.0
-            L 309.0810546875 147.0
-            L 309.0810546875 145.33333333333334
-            L 306.5810546875 145.33333333333334
-            L 306.5810546875 147.0
-            L 304.0810546875 147.0
+    <path d="M 304.0 137.0
+            L 306.5 137.0
+            L 306.5 138.66666666666666
+            L 309.0 138.66666666666666
+            L 309.0 137.0
+            L 314.0 137.0
+            L 314.0 147.0
+            L 309.0 147.0
+            L 309.0 145.33333333333334
+            L 306.5 145.33333333333334
+            L 306.5 147.0
+            L 304.0 147.0
             Z" fill="#845DAF"/>
-    <text x="301.0810546875" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="301.0" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">VALID</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -169,7 +169,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Init Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="340.5810546875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="340.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Init Confirmation</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -181,10 +181,10 @@
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
 
-    <text x="340.5810546875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="340.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Output Filtered</text>
 
-    <text x="340.5810546875" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="340.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – TRUE if Signal is VALID</text>
   </g>
 </svg>

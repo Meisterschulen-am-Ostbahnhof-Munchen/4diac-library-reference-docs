@@ -1,5 +1,7 @@
 # T_PLC_MS
 
+![T_PLC_MS](./T_PLC_MS.svg)
+
 T_PLC_MS reads the internal PLC timer and returns the time
 
 ## Interface

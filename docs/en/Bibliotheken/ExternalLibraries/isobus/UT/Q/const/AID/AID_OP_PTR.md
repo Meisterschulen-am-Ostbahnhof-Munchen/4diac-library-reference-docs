@@ -1,7 +1,5 @@
 # AID_OP_PTR
 
-![AID_OP_PTR](./AID_OP_PTR.svg)
-
 * * * * * * * * * *
 
 ## Introduction

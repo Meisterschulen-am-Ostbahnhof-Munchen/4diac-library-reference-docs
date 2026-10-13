@@ -58,7 +58,7 @@ Der Funktionsblock führt die Konvertierung durch, sobald das Ereignis `REQ` emp
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_126b_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
+- [SIN_TO_PCAN_Callback_Byte](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/SIN_TO_PCAN_Callback_Byte/)
 
 ## Fazit
 

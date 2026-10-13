@@ -7,6 +7,37 @@
 Real-time variant of the E_R_TRIG function block (rising edge).
 ![RT_E_R_TRIG](RT_E_R_TRIG.svg)
 
+## Interface
+
+### Event inputs
+
+| Event | Associated variables | Description |
+| :---- | :------------------- | :---------- |
+| INIT | QI, Tmin, Deadline, WCET | Initialization |
+| EI | QI | Event input |
+
+### Event outputs
+
+| Event | Associated variables | Description |
+| :---- | :------------------- | :---------- |
+| INITO | QO | Confirmation of the initialization |
+| EO | - | Event output |
+
+### Input variables
+
+| Name | Type | Description |
+| :--- | :--- | :---------- |
+| QI | BOOL | Input (with INIT: initialization; with EI: value to be evaluated) |
+| Tmin | TIME | Timing parameter of the real-time variant (not further commented in the source) |
+| Deadline | TIME | Timing parameter of the real-time variant (not further commented in the source) |
+| WCET | TIME | Timing parameter of the real-time variant (not further commented in the source) |
+
+### Output variables
+
+| Name | Type | Description |
+| :--- | :--- | :---------- |
+| QO | BOOL | Initialization output (with INITO) |
+
 ## Metadata
 
 | Attribute     | Value                            |

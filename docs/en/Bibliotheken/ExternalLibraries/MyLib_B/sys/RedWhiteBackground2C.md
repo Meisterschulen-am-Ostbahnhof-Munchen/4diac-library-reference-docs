@@ -1,5 +1,9 @@
 # RedWhiteBackground2C
 
+![RedWhiteBackground2C_network](./RedWhiteBackground2C_network.svg)
+
+![RedWhiteBackground2C](./RedWhiteBackground2C.svg)
+
 * * * * * * * * * *
 
 ## Introduction

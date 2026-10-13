@@ -2,6 +2,8 @@
 
 ![AX_NE](./AX_NE.svg)
 
+![AX_NE_network](./AX_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

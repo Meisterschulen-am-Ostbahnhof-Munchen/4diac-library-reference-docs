@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,12 @@
   <rect x="-70.8" y="-144.0" width="1222.8" height="677.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-70.8" y="-144.0" width="1222.8" height="25.0" fill="white" stroke="none"/>
   <line x1="-70.8" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-65.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-SoftKey lesen ODER AUX-Zuweisung (Joystick) lesen ODER lokaler Web-Override ODER physischer Remote-Taster auf einem dritten Modul + Remote-OPC-UA-Write an Zielmodul + VT-Hintergrundfarbe (SoftKey UND AUX) aus Remote-Subscribe (4-Quellen-Variante von Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC, fuer Funktionen mit einem zusaetzlichen fest verbauten Taster auf einem dritten Modul, z.B. Schnittverstellung)</text>
+  <text x="-65.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-SoftKey lesen ODER AUX-Zuweisung (Joystick) lesen ODER lokaler Web-Override
+ODER physischer Remote-Taster auf einem dritten Modul + Remote-OPC-UA-Write an
+Zielmodul + VT-Hintergrundfarbe (SoftKey UND AUX) aus Remote-Subscribe
+(4-Quellen-Variante von Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC, fuer Funktionen
+mit einem zusaetzlichen fest verbauten Taster auf einem dritten Modul, z.B.
+Schnittverstellung)</text>
   <g id="sidebars">
     <rect x="-70.8" y="-119.0" width="110.8" height="652.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="533.0" stroke="#A0A0A0" stroke-width="0.5"/>

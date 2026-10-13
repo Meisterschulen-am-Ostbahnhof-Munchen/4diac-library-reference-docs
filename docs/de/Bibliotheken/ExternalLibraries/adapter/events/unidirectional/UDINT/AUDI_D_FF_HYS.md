@@ -2,6 +2,8 @@
 
 ![AUDI_D_FF_HYS](./AUDI_D_FF_HYS.svg)
 
+![AUDI_D_FF_HYS_network](./AUDI_D_FF_HYS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

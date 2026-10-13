@@ -60,7 +60,7 @@ Im Vergleich zu einfachen booleschen Ausgabeblöcken bietet Aux_QX erweiterte Se
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003c_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003c_sub/)
+- [IX_TO_Aux_QX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/IX_TO_Aux_QX/)
 
 ## Fazit
 

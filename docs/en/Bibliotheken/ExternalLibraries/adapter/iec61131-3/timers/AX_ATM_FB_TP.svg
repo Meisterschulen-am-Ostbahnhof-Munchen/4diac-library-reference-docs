@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2003.2509765625 152.0"
-     width="2003.2509765625" height="152.0">
+     viewBox="0 0 2000.5 152.0"
+     width="2000.5" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1510.9130859375, 10)">
+  <g transform="translate(1508.9375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 150.5283203125 0
-            A 3 3 0 0 1 153.5283203125 3
-            L 153.5283203125 23.0
-            A 3 3 0 0 1 150.5283203125 26.0
-            L 143.5283203125 26.0
-            L 143.5283203125 66.0
-            L 150.5283203125 66.0
-            A 3 3 0 0 1 153.5283203125 69.0
-            L 153.5283203125 129.0
-            A 3 3 0 0 1 150.5283203125 132.0
+            L 150.3125 0
+            A 3 3 0 0 1 153.3125 3
+            L 153.3125 23.0
+            A 3 3 0 0 1 150.3125 26.0
+            L 143.3125 26.0
+            L 143.3125 66.0
+            L 150.3125 66.0
+            A 3 3 0 0 1 153.3125 69.0
+            L 153.3125 129.0
+            A 3 3 0 0 1 150.3125 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -92,7 +92,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_ATM_FB_TP</text>
     
-    <text x="76.76416015625" y="66.0"
+    <text x="76.65625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -132,36 +132,36 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">PT</text>
 
-    <path d="M 142.0283203125 97.0
-            L 144.5283203125 97.0
-            L 144.5283203125 98.66666666666667
-            L 147.0283203125 98.66666666666667
-            L 147.0283203125 97.0
-            L 152.0283203125 97.0
-            L 152.0283203125 107.0
-            L 147.0283203125 107.0
-            L 147.0283203125 105.33333333333333
-            L 144.5283203125 105.33333333333333
-            L 144.5283203125 107.0
-            L 142.0283203125 107.0
+    <path d="M 141.8125 97.0
+            L 144.3125 97.0
+            L 144.3125 98.66666666666667
+            L 146.8125 98.66666666666667
+            L 146.8125 97.0
+            L 151.8125 97.0
+            L 151.8125 107.0
+            L 146.8125 107.0
+            L 146.8125 105.33333333333333
+            L 144.3125 105.33333333333333
+            L 144.3125 107.0
+            L 141.8125 107.0
             Z" fill="#845DAF"/>
-    <text x="139.0283203125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="138.8125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Q</text>
 
-    <path d="M 142.0283203125 117.0
-            L 144.5283203125 117.0
-            L 144.5283203125 118.66666666666667
-            L 147.0283203125 118.66666666666667
-            L 147.0283203125 117.0
-            L 152.0283203125 117.0
-            L 152.0283203125 127.0
-            L 147.0283203125 127.0
-            L 147.0283203125 125.33333333333333
-            L 144.5283203125 125.33333333333333
-            L 144.5283203125 127.0
-            L 142.0283203125 127.0
+    <path d="M 141.8125 117.0
+            L 144.3125 117.0
+            L 144.3125 118.66666666666667
+            L 146.8125 118.66666666666667
+            L 146.8125 117.0
+            L 151.8125 117.0
+            L 151.8125 127.0
+            L 146.8125 127.0
+            L 146.8125 125.33333333333333
+            L 144.3125 125.33333333333333
+            L 144.3125 127.0
+            L 141.8125 127.0
             Z" fill="#845DAF"/>
-    <text x="139.0283203125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="138.8125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ET</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -179,10 +179,10 @@
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Pulse time; live/nicht gelatched - PT.E1 loest wie IN.E1/REQ sofort eine Neuauswertung mit dem neuen PT-Wert aus, keine Entprellung. PT=0 laesst den Impuls bei der naechsten Auswertung bereits als abgelaufen gelten – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
 
-    <text x="178.5283203125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="178.3125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Output</text>
 
-    <text x="178.5283203125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="178.3125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan> – Elapsed time, Event nur bei Wertaenderung</text>
   </g>
 </svg>

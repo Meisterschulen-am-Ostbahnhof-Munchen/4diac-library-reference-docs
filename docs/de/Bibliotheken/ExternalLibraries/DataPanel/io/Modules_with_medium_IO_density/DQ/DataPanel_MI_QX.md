@@ -75,8 +75,8 @@ Im Vergleich zu einfachen digitalen Ausgabeblöcken bietet DataPanel_MI_QX erwei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_003b2_sub/)
-- [Uebung_010a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a4/)
+- [Funk_IX_TO_DataPanel_MI_QX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/Funk_IX_TO_DataPanel_MI_QX/)
+- [Uebung_010a4](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_010a4/)
 
 ## Fazit
 

@@ -2,6 +2,8 @@
 
 ![AI_SPLIT_SIGNED](./AI_SPLIT_SIGNED.svg)
 
+![AI_SPLIT_SIGNED_network](./AI_SPLIT_SIGNED_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

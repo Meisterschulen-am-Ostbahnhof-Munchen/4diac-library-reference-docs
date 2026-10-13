@@ -2,6 +2,8 @@
 
 ![AX_TO_AULI](./AX_TO_AULI.svg)
 
+![AX_TO_AULI_network](./AX_TO_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,5 +1,7 @@
 # ALR_LREAL_TO_LR
 
+![ALR_LREAL_TO_LR_network](./ALR_LREAL_TO_LR_network.svg)
+
 ## Introduction
 
 The ALR_LREAL_TO_LR function block is a composite function block used to convert an LREAL value to the ALR adapter format.

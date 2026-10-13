@@ -1,5 +1,7 @@
 # AS_S_TO_SINT
 
+![AS_S_TO_SINT_network](./AS_S_TO_SINT_network.svg)
+
 ## Einleitung
 
 Der AS_S_TO_SINT Funktionsblock ist ein Composite-Funktionsblock, der zur Konvertierung des AS-Adapterformats in einen SINT-Wert dient.

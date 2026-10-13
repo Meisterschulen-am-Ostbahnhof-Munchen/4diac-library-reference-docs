@@ -2,6 +2,8 @@
 
 ![AUDI_FB_CTU](./AUDI_FB_CTU.svg)
 
+![AUDI_FB_CTU_network](./AUDI_FB_CTU_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

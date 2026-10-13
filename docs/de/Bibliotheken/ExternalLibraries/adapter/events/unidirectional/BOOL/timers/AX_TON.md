@@ -1,5 +1,7 @@
 # AX_TON
 
+![AX_TON_network](./AX_TON_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ AX_TON ist ein standardisierter Timer-Funktionsblock, der eine Einschaltverzöge
 
 ### **Ereignis-Eingänge**
 
-- Keine direkten Ereigniseingänge vorhanden
+- **EIPT** (Event): Setzt die Vorgabezeit (nicht auslösend); trägt `PT`
 
 ### **Ereignis-Ausgänge**
 
@@ -66,8 +68,8 @@ Vergleich mit [E_TON](../../../../../../StandardLibraries/events/timers/E_TON.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
-- [Uebung_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
+- [Uebung_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
+- [Uebung_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
 
 ## Fazit
 

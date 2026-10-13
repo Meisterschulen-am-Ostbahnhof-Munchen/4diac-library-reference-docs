@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 3573.4375 332.0"
+     width="3573.4375" height="332.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(1454.9375, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 379.75 0
+            A 3 3 0 0 1 382.75 3
+            L 382.75 63.0
+            A 3 3 0 0 1 379.75 66.0
+            L 372.75 66.0
+            L 372.75 106.0
+            L 379.75 106.0
+            A 3 3 0 0 1 382.75 109.0
+            L 382.75 309.0
+            A 3 3 0 0 1 379.75 312.0
+            L 3 312.0
+            A 3 3 0 0 1 0 309.0
+            L 0 109.0
+            A 3 3 0 0 1 3 106.0
+            L 10 106.0
+            L 10 66.0
+            L 3 66.0
+            A 3 3 0 0 1 0 63.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">FORCE_ON</text>
+
+    <polygon points="1.5,31.0 6.5,36.0 1.5,41.0" fill="#63B31F"/>
+    <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">FORCE_OFF</text>
+
+    <polygon points="1.5,51.0 6.5,56.0 1.5,61.0" fill="#63B31F"/>
+    <text x="9.5" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">AUS</text>
+
+    <polygon points="376.25,11.0 381.25,16.0 376.25,21.0" fill="#63B31F"/>
+    <text x="373.25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">AUTOMATIK_SET_FROM_VT</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 106.15625 77.0
+            L 122.15625 77.0
+            A 1 1 0 0 1 123.15625 78.0
+            L 123.15625 81.5
+            L 121.15625 81.5
+            L 121.15625 84.5
+            L 123.15625 84.5
+            L 123.15625 94.0
+            A 1 1 0 0 1 122.15625 95.0
+            L 106.15625 95.0
+            A 1 1 0 0 1 105.15625 94.0
+            L 105.15625 84.5
+            L 107.15625 84.5
+            L 107.15625 81.5
+            L 105.15625 81.5
+            L 105.15625 78.0
+            A 1 1 0 0 1 106.15625 77.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <path d="M 107.65625 86.5 L 112.15625 86.5 A 0.5 0.5 0 0 1 112.65625 87.0 L 112.65625 88.25 L 111.83125 88.25 L 111.83125 89.41666666666667 L 112.65625 89.41666666666667 L 112.65625 93.0 A 0.5 0.5 0 0 1 112.15625 93.5 L 107.65625 93.5 A 0.5 0.5 0 0 1 107.15625 93.0 L 107.15625 89.41666666666667 L 107.98125 89.41666666666667 L 107.98125 88.25 L 107.15625 88.25 L 107.15625 87.0 A 0.5 0.5 0 0 1 107.65625 86.5 Z" fill="#1565C0" stroke="none"/>
+    <path d="M 116.15625 86.5 L 120.65625 86.5 A 0.5 0.5 0 0 1 121.15625 87.0 L 121.15625 88.25 L 120.33125 88.25 L 120.33125 89.41666666666667 L 121.15625 89.41666666666667 L 121.15625 93.0 A 0.5 0.5 0 0 1 120.65625 93.5 L 116.15625 93.5 A 0.5 0.5 0 0 1 115.65625 93.0 L 115.65625 89.41666666666667 L 116.48125 89.41666666666667 L 116.48125 88.25 L 115.65625 88.25 L 115.65625 87.0 A 0.5 0.5 0 0 1 116.15625 86.5 Z" fill="#1565C0" stroke="none"/>
+    <line x1="112.65625" y1="87.34" x2="115.65625" y2="87.34"
+          stroke="#3DA015" stroke-width="1.2"/>
+    <line x1="112.65625" y1="91.4" x2="115.65625" y2="91.4"
+          stroke="#FF0000" stroke-width="1.2"/>
+
+    <!-- Block Name -->
+    <text x="128.15625" y="91.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">Automatik_Toggle_Button</text>
+    
+    <text x="191.375" y="106.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.12</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_Automatik_Toggle</text>
+
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#18519E"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjIdA_Automatik_Toggle</text>
+
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#18519E"/>
+    <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjIdB_Automatik_Toggle</text>
+
+    <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#A3B08F"/>
+    <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">bDefaultAutomatik</text>
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#BD8663"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_AUTOMATIK_STATE_WRITE</text>
+
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#18519E"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_RESET</text>
+
+    <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#18519E"/>
+    <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjIdA_RESET</text>
+
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#BD8663"/>
+    <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_RESET_METHOD</text>
+
+    <!-- Adapter Ports -->
+
+    <path d="M 1.5 277.0
+            L 6.5 277.0
+            L 6.5 278.6666666666667
+            L 9.0 278.6666666666667
+            L 9.0 277.0
+            L 11.5 277.0
+            L 11.5 287.0
+            L 9.0 287.0
+            L 9.0 285.3333333333333
+            L 6.5 285.3333333333333
+            L 6.5 287.0
+            L 1.5 287.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">PERMIT</text>
+
+    <path d="M 371.25 277.0
+            L 373.75 277.0
+            L 373.75 278.6666666666667
+            L 376.25 278.6666666666667
+            L 376.25 277.0
+            L 381.25 277.0
+            L 381.25 287.0
+            L 376.25 287.0
+            L 376.25 285.3333333333333
+            L 373.75 285.3333333333333
+            L 373.75 287.0
+            L 371.25 287.0
+            Z" fill="#845DAF"/>
+    <text x="368.25" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">AUTOMATIK</text>
+
+    <path d="M 371.25 297.0
+            L 373.75 297.0
+            L 373.75 298.6666666666667
+            L 376.25 298.6666666666667
+            L 376.25 297.0
+            L 381.25 297.0
+            L 381.25 307.0
+            L 376.25 307.0
+            L 376.25 305.3333333333333
+            L 373.75 305.3333333333333
+            L 373.75 307.0
+            L 371.25 307.0
+            Z" fill="#845DAF"/>
+    <text x="368.25" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">AX_MAN</text>
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <!-- Horizontal Connection Lines -->
+
+    <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Schaltet die Automatik hart EIN (z.B. von einer anderen, uebergeordneten Automatik oder einem Methodenaufruf). Unverdrahtet lassen, wenn nicht gebraucht. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Schaltet die Automatik hart AUS (z.B. von einem Kollisionsschutz-Methodenaufruf). Unverdrahtet lassen, wenn nicht gebraucht. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Reset hart auf Hand/AUS, von aussen als Event (z.B. 1 zentral gelesener gemeinsamer SoftKey) - zusaetzlich zum eigenen u16ObjId_RESET/u16ObjIdA_RESET/ID_RESET_METHOD-Pfad. Unverdrahtet lassen, wenn nicht gebraucht. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="407.75" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Feuert nur beim Klick (Button/Softkey/Aux, PERMIT-gefiltert), der die Automatik von AUS auf EIN schaltet (per E_SWITCH auf dem Q-Zustand VOR dem Klick gefiltert - ein Klick der AUS schaltet feuert das NICHT). Echter Display-Klick-Event, kein Zustands-Level/Republish.</text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID VT-Softkey (Automatik/Hand-Umschalter) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2 (Joystick), gleichberechtigt zum VT-Button - optional, ID_NULL wenn kein AUX gebraucht wird – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID VT-Button (Automatik/Hand-Umschalter) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Automatik-Zustand beim Start – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="-25" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (BOOL, ACTION=WRITE) fuer den Automatik-Ein/Aus-Zustand - Status-Text auf der VT + Web-Client/Dashboard – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Softkey 'Alles Aus' (Reset, hart auf Hand/AUS) - z.B. SoftKey_AUS – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2 (Joystick) fuer den Reset - gleichberechtigt zum Softkey 'Alles Aus' – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den argumentlosen Reset-Trigger (hart auf Hand/AUS) - wird von Web-Client UND OPC-Dashboard aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
+
+    <text x="407.75" y="283.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Automatik aktiv (roh, z.B. fuer eine Freigabe-UND-Verknuepfung)</text>
+
+    <text x="407.75" y="303.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – NICHT Automatik aktiv (fuer PID-Regler MAN-Eingang)</text>
+  </g>
+</svg>

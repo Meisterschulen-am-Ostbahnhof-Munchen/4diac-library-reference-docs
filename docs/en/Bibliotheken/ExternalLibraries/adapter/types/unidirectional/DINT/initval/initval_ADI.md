@@ -2,6 +2,8 @@
 
 ![initval_ADI](initval_ADI.svg)
 
+![initval_ADI_network](./initval_ADI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

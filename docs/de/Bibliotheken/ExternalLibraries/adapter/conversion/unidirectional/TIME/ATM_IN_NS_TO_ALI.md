@@ -2,6 +2,8 @@
 
 ![ATM_IN_NS_TO_ALI](ATM_IN_NS_TO_ALI.svg)
 
+![ATM_IN_NS_TO_ALI_network](./ATM_IN_NS_TO_ALI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

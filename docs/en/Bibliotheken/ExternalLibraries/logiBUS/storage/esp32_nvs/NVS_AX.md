@@ -2,6 +2,8 @@
 
 ![NVS_AX](NVS_AX.svg)
 
+![NVS_AX_network](./NVS_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

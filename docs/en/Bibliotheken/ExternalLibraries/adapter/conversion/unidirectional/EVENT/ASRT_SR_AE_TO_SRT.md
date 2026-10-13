@@ -2,6 +2,8 @@
 
 ![ASRT_SR_AE_TO_SRT](ASRT_SR_AE_TO_SRT.svg)
 
+![ASRT_SR_AE_TO_SRT_network](./ASRT_SR_AE_TO_SRT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

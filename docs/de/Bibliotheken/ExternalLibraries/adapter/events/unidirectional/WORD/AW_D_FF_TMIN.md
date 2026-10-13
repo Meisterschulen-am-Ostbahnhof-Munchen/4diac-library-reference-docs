@@ -1,5 +1,7 @@
 # AW_D_FF_TMIN
 
+![AW_D_FF_TMIN_network](./AW_D_FF_TMIN_network.svg)
+
 (Bild des Funktionsblocks – in der XML nicht enthalten, daher kein Bild)
 
 ![AW_D_FF_TMIN](./AW_D_FF_TMIN.svg)

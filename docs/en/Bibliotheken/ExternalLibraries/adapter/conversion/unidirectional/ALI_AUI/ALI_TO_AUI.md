@@ -2,6 +2,8 @@
 
 ![ALI_TO_AUI](./ALI_TO_AUI.svg)
 
+![ALI_TO_AUI_network](./ALI_TO_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

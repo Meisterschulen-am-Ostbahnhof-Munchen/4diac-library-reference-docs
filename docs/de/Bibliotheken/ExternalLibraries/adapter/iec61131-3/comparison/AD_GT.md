@@ -2,6 +2,8 @@
 
 ![AD_GT](./AD_GT.svg)
 
+![AD_GT_network](./AD_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

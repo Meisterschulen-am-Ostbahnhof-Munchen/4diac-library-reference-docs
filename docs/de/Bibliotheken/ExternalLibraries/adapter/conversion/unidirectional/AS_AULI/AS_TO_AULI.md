@@ -1,5 +1,7 @@
 # AS_TO_AULI
 
+![AS_TO_AULI_network](./AS_TO_AULI_network.svg)
+
 ---
 
 ## Einleitung

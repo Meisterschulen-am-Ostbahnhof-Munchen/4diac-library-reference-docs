@@ -8,6 +8,16 @@
 
 ![F_GE](F_GE.svg)
 
+## Schnittstelle
+
+| Port | Typ            | Beschreibung                                           |
+| :--- | :------------- | :----------------------------------------------------- |
+| REQ  | Event          | Service-Anforderung (mit IN1, IN2)                     |
+| CNF  | Event          | Bestätigung der angeforderten Service-Operation (mit OUT) |
+| IN1  | ANY_ELEMENTARY | Eingangswert 1                                         |
+| IN2  | ANY_ELEMENTARY | Eingangswert 2                                         |
+| OUT  | BOOL           | TRUE, wenn IN1 größer oder gleich IN2                      |
+
 Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und noch nicht korrekturgelesen (HF)
 
 **Der GE-Operator in IEC 61499: Eine Einführung**

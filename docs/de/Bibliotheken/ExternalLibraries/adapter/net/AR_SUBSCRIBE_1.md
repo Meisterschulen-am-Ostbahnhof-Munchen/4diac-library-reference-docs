@@ -2,6 +2,8 @@
 
 ![AR_SUBSCRIBE_1](./AR_SUBSCRIBE_1.svg)
 
+![AR_SUBSCRIBE_1_network](./AR_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

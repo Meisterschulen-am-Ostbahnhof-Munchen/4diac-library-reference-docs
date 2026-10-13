@@ -2,6 +2,8 @@
 
 ![ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.svg)
 
+![ScrollFS_PHYS_Softkey_network](./ScrollFS_PHYS_Softkey_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -17,7 +19,7 @@ limit. Two lists on one mask = two instances, each with its own `ScrollFull_S` c
 
 ### **Event Inputs**
 
-- `INIT`: Snapshots the complete configuration (`stObj`).
+- `INIT`: Snapshots the complete configuration (`stObj`), with `xScale`.
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ limit. Two lists on one mask = two instances, each with its own `ScrollFull_S` c
 
 - `stObj` (`isobus::utils::scroll::ScrollFull_S`): complete configuration (geometry + control
   IDs), snapshotted at `INIT`.
+- `xScale` (BOOL, initial value `FALSE`): `FALSE` = bypass, `TRUE` = scale by the DM/SKM factor. Passed straight through to the internal `ScrollFS` instance.
 
 ### **Data Outputs**
 

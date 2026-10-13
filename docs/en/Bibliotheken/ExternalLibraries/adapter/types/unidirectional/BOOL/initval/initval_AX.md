@@ -2,6 +2,8 @@
 
 ![initval_AX](initval_AX.svg)
 
+![initval_AX_network](./initval_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

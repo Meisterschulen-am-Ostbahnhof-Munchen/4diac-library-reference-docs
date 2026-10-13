@@ -2,6 +2,8 @@
 
 ![NVS_AIS](./NVS_AIS.svg)
 
+![NVS_AIS_network](./NVS_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock `NVS_AIS` dient zum Speichern und Laden von Zeichenketten (ST
 
 | Ereignis | Typ   | Beschreibung                                                                         | Mitgeführte Daten      |
 | -------- | ----- | ------------------------------------------------------------------------------------ | ---------------------- |
-| INIT     | EInit | **Service Initialization** – Startet den Baustein und die Kommunikation mit dem NVS. | QI, KEY, DEFAULT_VALUE |
+| INIT     | EInit | **Service Initialization** – Startet den Baustein und die Kommunikation mit dem NVS. | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock `NVS_AIS` dient zum Speichern und Laden von Zeichenketten (ST
 | Name          | Datentyp | Beschreibung                                                                                         |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------- |
 | QI            | BOOL     | **Event Input Qualifier** – Steuert das Verhalten während der INIT‑Phase (z. B. Aktivierung).        |
+| SETM            | BOOL     | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | KEY           | STRING   | **Key name** – Der Schlüssel, unter dem der Wert im NVS gespeichert/abgerufen wird.                  |
 | DEFAULT_VALUE | STRING   | **Default value** – Wert, der gelesen wird, falls im NVS kein Eintrag zum angegebenen KEY existiert. |
 
@@ -47,7 +50,7 @@ Der Funktionsblock `NVS_AIS` dient zum Speichern und Laden von Zeichenketten (ST
 ## Funktionsweise
 
 1. **Initialisierung**
-   Ein Ereignis am `INIT`-Eingang startet die interne Logik. Der Baustein ruft den eingebetteten `NVS`‑Funktionsblock auf, der den nichtflüchtigen Speicher vorbereitet. Die mitgelieferten Daten (`QI`, `KEY`, `DEFAULT_VALUE`) werden an den internen Baustein weitergeleitet.
+   Ein Ereignis am `INIT`-Eingang startet die interne Logik. Der Baustein ruft den eingebetteten `NVS`‑Funktionsblock auf, der den nichtflüchtigen Speicher vorbereitet. Die mitgelieferten Daten (`QI`, `SETM`, `KEY`, `DEFAULT_VALUE`) werden an den internen Baustein weitergeleitet.
 
 2. **Lesevorgang**
    Nach erfolgreicher INIT‑Phase (Ereignis `INITO` des internen NVS) wird automatisch der `GET`‑Ereigniseingang des internen NVS aktiviert. Der gelesene Wert (oder der `DEFAULT_VALUE`, falls kein Eintrag existiert) wird über den `AIS_OUT`‑Adapter als `E1`‑Ereignis und `D1`‑Daten ausgegeben.

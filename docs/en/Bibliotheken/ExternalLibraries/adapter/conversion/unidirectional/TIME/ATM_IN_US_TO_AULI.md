@@ -2,6 +2,8 @@
 
 ![ATM_IN_US_TO_AULI](ATM_IN_US_TO_AULI.svg)
 
+![ATM_IN_US_TO_AULI_network](./ATM_IN_US_TO_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

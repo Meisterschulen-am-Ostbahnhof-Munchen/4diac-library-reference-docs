@@ -1,6 +1,8 @@
 # E_T_FF_SR_SYM_INIT
 
 ![E_T_FF_SR_SYM_INIT](./E_T_FF_SR_SYM_INIT.svg)
+![E_T_FF_SR_SYM_INIT_ecc](./E_T_FF_SR_SYM_INIT_ecc.svg)
+
 **Image of the function block:** (not available)
 
 * * * * * * * * * *

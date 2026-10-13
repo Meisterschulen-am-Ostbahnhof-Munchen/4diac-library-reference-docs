@@ -2,6 +2,8 @@
 
 ![AR_GE](./AR_GE.svg)
 
+![AR_GE_network](./AR_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

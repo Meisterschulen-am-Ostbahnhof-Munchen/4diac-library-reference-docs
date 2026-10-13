@@ -2,6 +2,8 @@
 
 ![AUS_GE](./AUS_GE.svg)
 
+![AUS_GE_network](./AUS_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

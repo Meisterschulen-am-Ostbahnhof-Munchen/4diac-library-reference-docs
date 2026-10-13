@@ -1,5 +1,7 @@
 # TIME_TO_REAL
 
+![TIME_TO_REAL](./TIME_TO_REAL.svg)
+
 ## Introduction
 
 `TIME_TO_REAL` is a project-specific helper function (`FunctionType`) that converts a time duration of type `TIME` into a floating-point value (`REAL`). The return value represents the duration in **seconds**.

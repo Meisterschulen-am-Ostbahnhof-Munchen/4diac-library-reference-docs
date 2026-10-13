@@ -2,6 +2,8 @@
 
 ![AR_TO_AUS](./AR_TO_AUS.svg)
 
+![AR_TO_AUS_network](./AR_TO_AUS_network.svg)
+
 * * * * * * * * * *
 The AR_TO_AUS function block is a composite block for converting a REAL value to a USINT value via a unidirectional adapter interface. It encapsulates the conversion process and provides a standardized connection between a REAL adapter socket and a USINT adapter plug. The function block is designed for use in automation systems that require data type conversion.
 

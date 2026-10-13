@@ -2,6 +2,8 @@
 
 ![INI_ALR](./INI_ALR.svg)
 
+![INI_ALR_network](./INI_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **INI_ALR** dient dem Lesen und Speichern von Gleitkommawerte
 
 | Ereignis | Typ   | Kommentar                                     | Mit Variablen                   |
 | -------- | ----- | --------------------------------------------- | ------------------------------- |
-| INIT     | EInit | Initialisiert den Baustein und löst Lesen aus | QI, SECTION, KEY, DEFAULT_VALUE |
+| INIT     | EInit | Initialisiert den Baustein und löst Lesen aus | QI, SETM, SECTION, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **INI_ALR** dient dem Lesen und Speichern von Gleitkommawerte
 | Name          | Typ    | Kommentar                                                |
 | ------------- | ------ | -------------------------------------------------------- |
 | QI            | BOOL   | Event‑Eingangs‑Qualifizierer (Freigabe)                  |
+| SETM | BOOL | Spiegelung (Mirroring) bei SET aktivieren (Enable Mirroring on SET) |
 | SECTION       | STRING | Abschnittsname in der INI‑Datei                          |
 | KEY           | STRING | Schlüsselname innerhalb des Abschnitts                   |
 | DEFAULT_VALUE | LREAL  | Rückfallwert, falls der Schlüssel in der INI‑Datei fehlt |
@@ -48,7 +51,7 @@ Der Funktionsblock **INI_ALR** dient dem Lesen und Speichern von Gleitkommawerte
 ## Funktionsweise
 
 1. **Initialisierung und erstes Lesen**
-   Ein Ereignis am Eingang `INIT` triggert die Initialisierung des internen `INI`-Bausteins. Die Parameter `QI`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den `INI`‑Baustein weitergeleitet. Nach dessen Quittierung (`INITO`) wird automatisch der GET‑Vorgang des `INI`-Bausteins ausgelöst. Der gelesene Wert erscheint am Datenausgang des Adapters `ALR_OUT.D1` und wird gleichzeitig über das Ereignis `ALR_OUT.E1` signalisiert. Die Ausgänge `QO` und `STATUS` des `INI`-Bausteins werden direkt an die gleichnamigen Ausgänge des `INI_ALR` durchgereicht.
+   Ein Ereignis am Eingang `INIT` triggert die Initialisierung des internen `INI`-Bausteins. Die Parameter `QI`, `SETM`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den `INI`‑Baustein weitergeleitet. Nach dessen Quittierung (`INITO`) wird automatisch der GET‑Vorgang des `INI`-Bausteins ausgelöst. Der gelesene Wert erscheint am Datenausgang des Adapters `ALR_OUT.D1` und wird gleichzeitig über das Ereignis `ALR_OUT.E1` signalisiert. Die Ausgänge `QO` und `STATUS` des `INI`-Bausteins werden direkt an die gleichnamigen Ausgänge des `INI_ALR` durchgereicht.
 
 2. **Schreiben über ALR-IN**
    Ein Set‑Ereignis am Adapter‑Socket `ALR_IN.E1` wird an den SET-Eingang des internen `INI`-Bausteins weitergeleitet. Der zu speichernde Wert liegt an `ALR_IN.D1` und wird über `INI.VALUE` gesetzt. Nach erfolgreichem Schreiben quittiert der `INI`-Baustein mit `SETO`, was wiederum `ALR_OUT.E1` auslöst.

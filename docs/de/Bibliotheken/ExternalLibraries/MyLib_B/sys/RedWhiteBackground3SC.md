@@ -1,5 +1,9 @@
 # RedWhiteBackground3SC
 
+![RedWhiteBackground3SC_network](./RedWhiteBackground3SC_network.svg)
+
+![RedWhiteBackground3SC](./RedWhiteBackground3SC.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

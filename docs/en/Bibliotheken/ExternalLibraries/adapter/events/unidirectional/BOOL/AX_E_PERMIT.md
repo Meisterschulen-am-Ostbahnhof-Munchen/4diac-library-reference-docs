@@ -2,6 +2,8 @@
 
 ![AX_E_PERMIT](./AX_E_PERMIT.svg)
 
+![AX_E_PERMIT_network](./AX_E_PERMIT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

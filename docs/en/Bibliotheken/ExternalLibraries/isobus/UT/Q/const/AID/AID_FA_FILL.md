@@ -1,7 +1,5 @@
 # AID_FA_FILL
 
-![AID_FA_FILL](./AID_FA_FILL.svg)
-
 * * * * * * * * * *
 
 ## Introduction

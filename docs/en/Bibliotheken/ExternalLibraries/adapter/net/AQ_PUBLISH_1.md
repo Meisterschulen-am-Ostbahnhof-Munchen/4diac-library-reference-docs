@@ -2,6 +2,8 @@
 
 ![AQ_PUBLISH_1](./AQ_PUBLISH_1.svg)
 
+![AQ_PUBLISH_1_network](./AQ_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

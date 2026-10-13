@@ -20,6 +20,17 @@
     - **TimeTicker**: `adapter::events::TimeOut::TimeTicker` — erzeugt den zyklischen Zeittakt (`TC`, Default `T#200ms`) für die interne Zeitsteuerung.
     - **E_TimeOut**: `adapter::events::TimeOut::E_FB_TimeOut` — koppelt `Sequence.timeOut` an `TimeTicker`, damit die Vor-/Nachlauf-Zeiten ohne eigenen Timer-FB in der Anwendung ablaufen.
 - **Funktionsweise**: Bündelt die sechs `DO_Mx`-Laufbefehle und sechs `STOERUNG_Mx`-Störungseingänge sowie alle Statuswerte (`STATUS_BETRIEB`, `STATUS_STOERUNG`, `ZAEHLSTAND`, `EINSCHALTBEREIT`, `TRANSIT_MOTOR`, `TRANSIT_ART`, `ANLAGE_AUS`) in `AX`/`AS`-Adapter, und jede der zehn Verweildauern (`ZE1..5_EIN`/`_AUS`) über einen eigenen `ATM`-Adapter-Socket, statt sie als einzelne `TIME`-Dateneingänge freizulegen. `PT`/`ET` (Process-/Elapsed-Time) werden als `ATM`-Plugs für ein Readback der internen Zeitsteuerung nach außen geführt.
+- **Verweildauer-Sockets (`ATM`)**: Die zehn Sockets `ATM_ZE1_EIN`..`ATM_ZE5_EIN` und `ATM_ZE1_AUS`..`ATM_ZE5_AUS` (jeweils Typ `adapter::types::unidirectional::ATM`) liefern die Verweildauern der Übergänge:
+    - `ATM_ZE1_EIN`: S_VOR1 zu S_VOR2, M5 startet (Vorlauf)
+    - `ATM_ZE2_EIN`: S_VOR2 zu S_VOR3, M4 startet (Vorlauf)
+    - `ATM_ZE3_EIN`: S_VOR3 zu S_VOR4, M3 startet (Vorlauf)
+    - `ATM_ZE4_EIN`: S_VOR4 zu S_VOR5, M2 startet (Vorlauf)
+    - `ATM_ZE5_EIN`: S_VOR5 zu S_LAEUFT, M1 startet (Vorlauf)
+    - `ATM_ZE1_AUS`: S_NACH1 zu S_NACH2, M2 stoppt (Nachlauf)
+    - `ATM_ZE2_AUS`: S_NACH2 zu S_NACH3, M3 stoppt (Nachlauf)
+    - `ATM_ZE3_AUS`: S_NACH3 zu S_NACH4, M4 stoppt (Nachlauf)
+    - `ATM_ZE4_AUS`: S_NACH4 zu S_NACH5, M5 stoppt (Nachlauf)
+    - `ATM_ZE5_AUS`: S_NACH5 zu S_AUS, M6 stoppt (Nachlauf)
 
 ## Programmablauf und Verbindungen
 

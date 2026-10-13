@@ -2,6 +2,8 @@
 
 ![INI_ALR2](./INI_ALR2.svg)
 
+![INI_ALR2_network](./INI_ALR2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -8,6 +8,25 @@
 
 ![F_EQ](F_EQ.svg)
 
+## Schnittstelle
+
+### **Ereignis-Eingänge**
+
+- `REQ`: Dienstanforderung, trägt `IN1` und `IN2`.
+
+### **Ereignis-Ausgänge**
+
+- `CNF`: Bestätigung des angeforderten Dienstes, trägt `OUT`.
+
+### **Daten-Eingänge**
+
+- `IN1` (`ANY_ELEMENTARY`): Eingangswert 1.
+- `IN2` (`ANY_ELEMENTARY`): Eingangswert 2.
+
+### **Daten-Ausgänge**
+
+- `OUT` (`BOOL`): `TRUE`, wenn Wert 1 = Wert 2.
+
 Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und noch nicht korrekturgelesen (HF)
 
 **Der EQ-Operator in IEC 61499: Eine Einführung**

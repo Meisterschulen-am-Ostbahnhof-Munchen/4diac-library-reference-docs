@@ -13,7 +13,7 @@ The **Q_ChangePolygonPoint** is a standards-compliant function block for modifyi
 
 ### **Event Inputs**
 
-- `INIT`: Initialization Request (with polygon object ID)
+- `INIT`: Initialization Request (with polygon object ID and xScale)
 - `REQ`: Point Change Request (with index and coordinates)
 
 ### **Event Outputs**
@@ -24,6 +24,7 @@ The **Q_ChangePolygonPoint** is a standards-compliant function block for modifyi
 ### **Data Inputs**
 
 - `u16ObjId` (UINT): Polygon Object ID
+- `xScale` (BOOL): If TRUE, `u16NewXValue`/`u16NewYValue` are scaled by the DM/SKM factor for `u16ObjId` before sending; if FALSE (default) they are passed through unchanged.
 - `u8PointIndex` (USINT): Point Index (0-based)
 - `u16NewXValue` (UINT): New X-coordinate (relative)
 - `u16NewYValue` (UINT): New Y-coordinate (relative)

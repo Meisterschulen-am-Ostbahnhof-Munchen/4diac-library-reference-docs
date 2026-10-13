@@ -1,5 +1,7 @@
 # HYST_1
 
+![HYST_1](./HYST_1.svg)
+
 Hystereses function
 
 this hysteresis function switches the output high if the input signal reaches obove high and will

@@ -15,6 +15,7 @@ The function block `sequence_T_08` is a time-controlled sequencer with eight out
 
 - `START_S1`: Starts the sequence. An event at this input causes the transition from state `START` to the first active state, `State_01`. All eight time data inputs are read.
 - `RESET`: Immediately resets the sequence. An event at this input leads from any state to state `START` and disables all outputs.
+- `SET_DT_S1_S2`, `SET_DT_S2_S3`, `SET_DT_S3_S4`, `SET_DT_S4_S5`, `SET_DT_S5_S6`, `SET_DT_S6_S7`, `SET_DT_S7_S8`, `SET_DT_S8_START`: Update the time of the same name (`DT_S1_S2` to `DT_S8_START`) independently of `START_S1`. If the FB is currently in the corresponding state, that state's time setting is executed again (live update of the running timer).
 
 ### **Event Outputs**
 

@@ -11,12 +11,13 @@ The function block `logiBUS_PI_ID` is an input service interface module for 32-b
 
 ### **Event Inputs**
 
-- **`INIT`**: Initializes the service. Accompanied by the data `QI`, `PARAMS`, `Input`, `ImpulseDelta`, and `TimeDelta`.
+- **`INIT`**: Initializes the service. Accompanied by the data `QI`, `PARAMS`, `Input`, `ImpulseDelta`, `TimeDelta`, and `TimeRateLimit`.
 - **`REQ`**: Triggers a cyclic poll of the input value. Accompanied by the data `QI`.
 
 ### **Event Outputs**
 
-- **`INITO`**: Confirms initialization. Returns the data `QO` and qzmsdocs000013 ... * **`CNF`**: Acknowledges a requested query (`REQ`). Returns the data `QO`, `STATUS`, and the current input value `IN`.
+- **`INITO`**: Confirms initialization. Returns the data `QO` and `STATUS`.
+- **`CNF`**: Acknowledges a requested query (`REQ`). Returns the data `QO`, `STATUS`, and the current input value `IN`.
 - **`IND`**: Indicates an event-driven status change (interrupt). Returns the data `QO`, `STATUS`, and the new input value `IN`.
 
 ### **Data Inputs**
@@ -25,7 +26,8 @@ The function block `logiBUS_PI_ID` is an input service interface module for 32-b
 - **`PARAMS` (STRING)**: Contains service-specific parameters for initialization (e.g., hardware address, channel configuration).
 - **`Input` (logiBUS_PI_S)**: Identifies the specific physical input (e.g., I1..I8). The initial value is `logiBUS_PI::Invalid`.
 - **`ImpulseDelta` (DWORD)**: Defines after how many consecutive state changes (pulses) a `IND` event should be generated.
-- - **`TimeDelta` (DWORD)**: Defines the time interval in milliseconds after which a `IND` event should be generated if the value has changed.
+- **`TimeDelta` (DWORD)**: Defines the time interval in milliseconds after which a `IND` event should be generated if the value has changed.
+- **`TimeRateLimit` (DWORD)**: At most one `IND` event per the given time in milliseconds (must be smaller than `TimeDelta`). The initial value is `100`.
 
 ### **Data Outputs**
 
@@ -75,12 +77,12 @@ Initialization (`INIT`) is a prerequisite for both operating modes. During initi
 
 ## 🛠️ Related exercises
 
-- [Uebung_150](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_150/)
-- [Uebung_150_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_150_AX/)
-- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
-- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
-- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
-- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
+- [Uebung_150](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_150/)
+- [Uebung_150_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_150_AX/)
+- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
+- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
+- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
+- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
 
 ## Conclusion
 

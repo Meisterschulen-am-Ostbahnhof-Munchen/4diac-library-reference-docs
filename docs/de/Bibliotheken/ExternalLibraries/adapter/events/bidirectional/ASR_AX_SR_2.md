@@ -2,6 +2,8 @@
 
 ![ASR_AX_SR_2](ASR_AX_SR_2.svg)
 
+![ASR_AX_SR_2_ecc](./ASR_AX_SR_2_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

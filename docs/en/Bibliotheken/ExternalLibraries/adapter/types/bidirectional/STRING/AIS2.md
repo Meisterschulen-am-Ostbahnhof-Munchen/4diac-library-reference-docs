@@ -2,6 +2,14 @@
 
 ![AIS2](AIS2.svg)
 
+**Plug (adapter output)**
+
+![AIS2_plug](./AIS2_plug.svg)
+
+**Socket (adapter input)**
+
+![AIS2_socket](./AIS2_socket.svg)
+
 bidirectional Adapter Interface for 1 Event and 1 STRING
 
 ## Interface

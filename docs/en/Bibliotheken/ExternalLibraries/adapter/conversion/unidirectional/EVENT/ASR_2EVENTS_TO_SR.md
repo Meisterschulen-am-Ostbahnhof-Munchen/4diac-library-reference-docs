@@ -1,5 +1,7 @@
 # ASR_2EVENTS_TO_SR
 
+![ASR_2EVENTS_TO_SR_network](./ASR_2EVENTS_TO_SR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -56,7 +58,7 @@ Compared to simple event function blocks, ASR_2EVENTS_TO_SR offers a specific in
 
 ## 🛠️ Related Exercises
 
-- [Exercise_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
+- [Exercise_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
 
 ## Conclusion
 

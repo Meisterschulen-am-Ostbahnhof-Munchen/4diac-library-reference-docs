@@ -1,7 +1,5 @@
 # AID_OS
 
-![AID_OS](./AID_OS.svg)
-
 * * * * * * * * * *
 
 ## Introduction

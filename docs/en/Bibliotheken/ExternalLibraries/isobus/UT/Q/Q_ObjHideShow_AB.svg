@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 840.3486328125 132.0"
-     width="840.3486328125" height="132.0">
+     viewBox="0 0 839.5 132.0"
+     width="839.5" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(211.8046875, 10)">
+  <g transform="translate(211.625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 176.1767578125 0
-            A 3 3 0 0 1 179.1767578125 3
-            L 179.1767578125 23.0
-            A 3 3 0 0 1 176.1767578125 26.0
-            L 169.1767578125 26.0
-            L 169.1767578125 66.0
-            L 176.1767578125 66.0
-            A 3 3 0 0 1 179.1767578125 69.0
-            L 179.1767578125 109.0
-            A 3 3 0 0 1 176.1767578125 112.0
+            L 176.125 0
+            A 3 3 0 0 1 179.125 3
+            L 179.125 23.0
+            A 3 3 0 0 1 176.125 26.0
+            L 169.125 26.0
+            L 169.125 66.0
+            L 176.125 66.0
+            A 3 3 0 0 1 179.125 69.0
+            L 179.125 109.0
+            A 3 3 0 0 1 176.125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="172.6767578125,11.0 177.6767578125,16.0 172.6767578125,21.0" fill="#63B31F"/>
-    <text x="169.6767578125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="172.625,11.0 177.625,16.0 172.625,21.0" fill="#63B31F"/>
+    <text x="169.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Q_ObjHideShow_AB</text>
     
-    <text x="89.58837890625" y="66.0"
+    <text x="89.5625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -124,20 +124,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">qVisible</text>
 
-    <path d="M 167.6767578125 97.0
-            L 170.1767578125 97.0
-            L 170.1767578125 98.66666666666667
-            L 172.6767578125 98.66666666666667
-            L 172.6767578125 97.0
-            L 177.6767578125 97.0
-            L 177.6767578125 107.0
-            L 172.6767578125 107.0
-            L 172.6767578125 105.33333333333333
-            L 170.1767578125 105.33333333333333
-            L 170.1767578125 107.0
-            L 167.6767578125 107.0
+    <path d="M 167.625 97.0
+            L 170.125 97.0
+            L 170.125 98.66666666666667
+            L 172.625 98.66666666666667
+            L 172.625 97.0
+            L 177.625 97.0
+            L 177.625 107.0
+            L 172.625 107.0
+            L 172.625 105.33333333333333
+            L 170.125 105.33333333333333
+            L 170.125 107.0
+            L 167.625 107.0
             Z" fill="#845DAF"/>
-    <text x="164.6767578125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="164.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">qOldVisible</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -164,7 +164,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="204.1767578125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="204.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -173,7 +173,7 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">0 == hidden, 1 == shown – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AB</tspan></text>
 
-    <text x="204.1767578125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="204.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AB</tspan> – Old value of Visible 0 == hidden, 1 == shown, 0xFF == undefined</text>
   </g>
 </svg>

@@ -1,5 +1,7 @@
 # AR_REAL_TO_R
 
+![AR_REAL_TO_R_network](./AR_REAL_TO_R_network.svg)
+
 ## Introduction
 
 The AR_REAL_TO_R function block is a composite function block used to convert a REAL value to the AR adapter format.

@@ -2,6 +2,8 @@
 
 ![AX_TO_AUI](./AX_TO_AUI.svg)
 
+![AX_TO_AUI_network](./AX_TO_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

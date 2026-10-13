@@ -2,6 +2,8 @@
 
 ![AB_FIELDBUS_BYTE_TO_SIGNAL_SCALED](./AB_FIELDBUS_BYTE_TO_SIGNAL_SCALED.svg)
 
+![AB_FIELDBUS_BYTE_TO_SIGNAL_SCALED_network](./AB_FIELDBUS_BYTE_TO_SIGNAL_SCALED_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

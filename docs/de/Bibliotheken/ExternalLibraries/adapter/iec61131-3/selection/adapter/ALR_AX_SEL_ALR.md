@@ -3,6 +3,8 @@
 
 ![ALR_AX_SEL_ALR](./ALR_AX_SEL_ALR.svg)
 
+![ALR_AX_SEL_ALR_network](./ALR_AX_SEL_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

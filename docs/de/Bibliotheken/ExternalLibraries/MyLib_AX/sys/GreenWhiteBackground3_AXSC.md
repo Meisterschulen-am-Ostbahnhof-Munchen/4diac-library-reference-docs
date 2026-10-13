@@ -1,5 +1,9 @@
 # GreenWhiteBackground3_AXSC
 
+![GreenWhiteBackground3_AXSC_network](./GreenWhiteBackground3_AXSC_network.svg)
+
+![GreenWhiteBackground3_AXSC](./GreenWhiteBackground3_AXSC.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

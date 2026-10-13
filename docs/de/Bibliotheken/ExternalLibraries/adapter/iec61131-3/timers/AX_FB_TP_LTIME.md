@@ -2,6 +2,8 @@
 
 ![AX_FB_TP_LTIME](./AX_FB_TP_LTIME.svg)
 
+![AX_FB_TP_LTIME_network](./AX_FB_TP_LTIME_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

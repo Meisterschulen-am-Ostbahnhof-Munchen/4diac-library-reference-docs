@@ -2,6 +2,8 @@
 
 ![initval_ATM](initval_ATM.svg)
 
+![initval_ATM_network](./initval_ATM_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

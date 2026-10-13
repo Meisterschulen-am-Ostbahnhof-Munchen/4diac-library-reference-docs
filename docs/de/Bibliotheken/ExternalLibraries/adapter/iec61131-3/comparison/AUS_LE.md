@@ -2,6 +2,8 @@
 
 ![AUS_LE](./AUS_LE.svg)
 
+![AUS_LE_network](./AUS_LE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

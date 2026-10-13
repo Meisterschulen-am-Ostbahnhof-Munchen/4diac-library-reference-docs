@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 874.0703125 132.0"
-     width="874.0703125" height="132.0">
+     viewBox="0 0 872.9375 132.0"
+     width="872.9375" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(335.80859375, 10)">
+  <g transform="translate(335.3125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 199.453125 0
-            A 3 3 0 0 1 202.453125 3
-            L 202.453125 23.0
-            A 3 3 0 0 1 199.453125 26.0
-            L 192.453125 26.0
-            L 192.453125 66.0
-            L 199.453125 66.0
-            A 3 3 0 0 1 202.453125 69.0
-            L 202.453125 109.0
-            A 3 3 0 0 1 199.453125 112.0
+            L 199.3125 0
+            A 3 3 0 0 1 202.3125 3
+            L 202.3125 23.0
+            A 3 3 0 0 1 199.3125 26.0
+            L 192.3125 26.0
+            L 192.3125 66.0
+            L 199.3125 66.0
+            A 3 3 0 0 1 202.3125 69.0
+            L 202.3125 109.0
+            A 3 3 0 0 1 199.3125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="195.953125,11.0 200.953125,16.0 195.953125,21.0" fill="#63B31F"/>
-    <text x="192.953125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="195.8125,11.0 200.8125,16.0 195.8125,21.0" fill="#63B31F"/>
+    <text x="192.8125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Q_ObjEnableDisable_AB</text>
     
-    <text x="101.2265625" y="66.0"
+    <text x="101.15625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -124,20 +124,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">qAbility</text>
 
-    <path d="M 190.953125 97.0
-            L 193.453125 97.0
-            L 193.453125 98.66666666666667
-            L 195.953125 98.66666666666667
-            L 195.953125 97.0
-            L 200.953125 97.0
-            L 200.953125 107.0
-            L 195.953125 107.0
-            L 195.953125 105.33333333333333
-            L 193.453125 105.33333333333333
-            L 193.453125 107.0
-            L 190.953125 107.0
+    <path d="M 190.8125 97.0
+            L 193.3125 97.0
+            L 193.3125 98.66666666666667
+            L 195.8125 98.66666666666667
+            L 195.8125 97.0
+            L 200.8125 97.0
+            L 200.8125 107.0
+            L 195.8125 107.0
+            L 195.8125 105.33333333333333
+            L 193.3125 105.33333333333333
+            L 193.3125 107.0
+            L 190.8125 107.0
             Z" fill="#845DAF"/>
-    <text x="187.953125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="187.8125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">qOldAbility</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -164,7 +164,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="227.453125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="227.3125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -173,7 +173,7 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">0 == disable, 1 == enable, 0xFF == undefined – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AB</tspan></text>
 
-    <text x="227.453125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="227.3125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AB</tspan> – 0 == disable, 1 == enable, 0xFF == undefined</text>
   </g>
 </svg>

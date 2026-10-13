@@ -1,5 +1,7 @@
 # AUDI_UDINT_TO_UDI
 
+![AUDI_UDINT_TO_UDI_network](./AUDI_UDINT_TO_UDI_network.svg)
+
 ## Einleitung
 
 Der AUDI_UDINT_TO_UDI Funktionsblock ist ein Composite-Funktionsblock, der zur Konvertierung eines UDINT-Werts in das AUDI-Adapterformat dient.
@@ -34,4 +36,4 @@ Der Funktionsblock empfängt einen UDINT-Wert am Daten-Eingang OUT und wandelt d
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_083_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
+- [Uebung_083_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)

@@ -2,6 +2,8 @@
 
 ![ALI_TO_ALR](./ALI_TO_ALR.svg)
 
+![ALI_TO_ALR_network](./ALI_TO_ALR_network.svg)
+
 *(Bild nicht verfügbar)*
 
 * * * * * * * * * *

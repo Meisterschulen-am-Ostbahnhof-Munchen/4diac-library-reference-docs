@@ -1,5 +1,7 @@
 # AX_FB_TOF
 
+![AX_FB_TOF_network](./AX_FB_TOF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -17,7 +19,7 @@ AX_FB_TOF is a standardized timer function block according to IEC 61131-3 that i
 
 ### **Event Outputs**
 
-- No direct event outputs available
+- **CNF** (Event): Execution Confirmation (with `ET`)
 
 ### **Data Inputs**
 
@@ -69,7 +71,7 @@ Compared to event-based timers such as [AX_TOF](../../events/unidirectional/BOOL
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
+- [Exercise_020e2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e2_AX/)
 
 ## Conclusion
 

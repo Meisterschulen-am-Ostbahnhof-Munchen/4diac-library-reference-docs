@@ -2,6 +2,8 @@
 
 ![DualHysteresis_AR_AX](./DualHysteresis_AR_AX.svg)
 
+![DualHysteresis_AR_AX_ecc](./DualHysteresis_AR_AX_ecc.svg)
+
 *(No image available)*
 
 * * * * * * * * * *

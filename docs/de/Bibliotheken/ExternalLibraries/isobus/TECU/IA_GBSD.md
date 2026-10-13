@@ -2,6 +2,8 @@
 
 ![IA_GBSD](./IA_GBSD.svg)
 
+![IA_GBSD_network](./IA_GBSD_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

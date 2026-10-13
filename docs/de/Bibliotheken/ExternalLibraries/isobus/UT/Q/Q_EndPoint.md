@@ -14,7 +14,7 @@ Der **Q_EndPoint** ist ein standardkonformer Funktionsbaustein zur Steuerung von
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Objekt-ID und `xScale`)
 - `REQ`: Endpunktänderungs-Anforderung (mit Position/Richtung)
 
 ### **Ereignis-Ausgänge**
@@ -25,6 +25,7 @@ Der **Q_EndPoint** ist ein standardkonformer Funktionsbaustein zur Steuerung von
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Linienobjekt-ID
+- `xScale` (BOOL, Initialwert `FALSE`): `FALSE` = Bypass, `u16Width`/`u16Height` werden unverändert gesendet; `TRUE` = beide werden mit dem DM/SKM-Faktor für `u16ObjId` skaliert
 - `u16Width` (UINT): Neue X-Endposition (0-65535 Pixel)
 - `u16Height` (UINT): Neue Y-Endposition (0-65535 Pixel)
 - `u8LineDirection` (USINT): Linienrichtung (ISO 11783-6 B.27)

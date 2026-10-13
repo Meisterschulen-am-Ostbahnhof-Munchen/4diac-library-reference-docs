@@ -2,6 +2,8 @@
 
 ![sequence_B_08_AX_AX](./sequence_B_08_AX_AX.svg)
 
+![sequence_B_08_AX_AX_ecc](./sequence_B_08_AX_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

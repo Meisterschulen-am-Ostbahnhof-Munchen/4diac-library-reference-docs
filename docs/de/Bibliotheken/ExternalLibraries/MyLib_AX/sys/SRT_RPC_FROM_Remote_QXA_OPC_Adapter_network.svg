@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,12 @@
   <rect x="-72.3" y="-144.0" width="1278.9" height="589.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-72.3" y="-144.0" width="1278.9" height="25.0" fill="white" stroke="none"/>
   <line x1="-72.3" y1="-119.5" x2="1206.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-67.3" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Geraet B (Station 12, 192.168.1.12): wie SRT_RPC_FROM_Remote_QXA_OPC, aber die 3 SERVER_0-Instanzen + AX_CLIENT_1_0 sind hinter EINEM ASRT_AX_SERVER_0_CLIENT_1_0-Baustein hinter einem einzigen bidirektionalen Adapter-Anschluss gebuendelt; ASRT_AX_AX_SPLIT speist sowohl DigitalOutput_Q1 als auch die SR/Toggle-Flipflop-Logik (ASRT_AX_T_FF_SR_2) - 'SUB style': das Protokoll steckt im MyLib::sys-Composite, nicht in der Resource des Geraets</text>
+  <text x="-67.3" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Geraet B (Station 12, 192.168.1.12): wie SRT_RPC_FROM_Remote_QXA_OPC, aber die 3
+SERVER_0-Instanzen + AX_CLIENT_1_0 sind hinter EINEM
+ASRT_AX_SERVER_0_CLIENT_1_0-Baustein hinter einem einzigen bidirektionalen
+Adapter-Anschluss gebuendelt; ASRT_AX_AX_SPLIT speist sowohl DigitalOutput_Q1
+als auch die SR/Toggle-Flipflop-Logik (ASRT_AX_T_FF_SR_2) - 'SUB style': das
+Protokoll steckt im MyLib::sys-Composite, nicht in der Resource des Geraets</text>
   <g id="sidebars">
     <rect x="-72.3" y="-119.0" width="112.3" height="564.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="445.0" stroke="#A0A0A0" stroke-width="0.5"/>

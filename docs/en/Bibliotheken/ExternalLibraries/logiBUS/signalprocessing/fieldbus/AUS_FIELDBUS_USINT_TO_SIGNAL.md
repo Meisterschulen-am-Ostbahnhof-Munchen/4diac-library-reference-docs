@@ -2,6 +2,8 @@
 
 ![AUS_FIELDBUS_USINT_TO_SIGNAL](./AUS_FIELDBUS_USINT_TO_SIGNAL.svg)
 
+![AUS_FIELDBUS_USINT_TO_SIGNAL_network](./AUS_FIELDBUS_USINT_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

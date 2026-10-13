@@ -13,7 +13,7 @@ The **Q_ChildPosition** is a standards-compliant function block for the absolute
 
 ### **Event Inputs**
 
-- `INIT`: Initialization request (with object and parent ID)
+- `INIT`: Initialization request (with object ID, parent ID and xScale)
 - `REQ`: Position change request (with absolute coordinates)
 
 ### **Event Outputs**
@@ -25,6 +25,7 @@ The **Q_ChildPosition** is a standards-compliant function block for the absolute
 
 - `u16ObjId` (UINT): Child object ID
 - `u16ObjIdParent` (UINT): Parent object ID
+- `xScale` (BOOL): If TRUE, `s16Xposition`/`s16Yposition` are scaled by the DM/SKM factor for `u16ObjIdParent` before sending; if FALSE (default) they are passed through unchanged.
 - `s16Xposition` (INT): Absolute X-position relative to the parent
 - `s16Yposition` (INT): Absolute Y-position relative to the parent
 

@@ -2,6 +2,8 @@
 
 ![initval_AUDI](initval_AUDI.svg)
 
+![initval_AUDI_network](./initval_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

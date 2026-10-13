@@ -2,6 +2,8 @@
 
 ![AULI_EQ](./AULI_EQ.svg)
 
+![AULI_EQ_network](./AULI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

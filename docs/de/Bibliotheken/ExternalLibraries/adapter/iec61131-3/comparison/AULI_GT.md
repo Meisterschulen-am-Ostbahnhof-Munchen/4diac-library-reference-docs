@@ -2,6 +2,8 @@
 
 ![AULI_GT](./AULI_GT.svg)
 
+![AULI_GT_network](./AULI_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

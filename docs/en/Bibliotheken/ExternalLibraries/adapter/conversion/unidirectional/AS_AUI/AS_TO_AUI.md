@@ -2,6 +2,8 @@
 
 ![AS_TO_AUI](./AS_TO_AUI.svg)
 
+![AS_TO_AUI_network](./AS_TO_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

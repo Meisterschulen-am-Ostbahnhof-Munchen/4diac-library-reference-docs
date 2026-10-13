@@ -1,5 +1,9 @@
 # RedWhiteBackground2_AXC
 
+![RedWhiteBackground2_AXC_network](./RedWhiteBackground2_AXC_network.svg)
+
+![RedWhiteBackground2_AXC](./RedWhiteBackground2_AXC.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,5 +1,7 @@
 # AB_B_TO_BYTE
 
+![AB_B_TO_BYTE_network](./AB_B_TO_BYTE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

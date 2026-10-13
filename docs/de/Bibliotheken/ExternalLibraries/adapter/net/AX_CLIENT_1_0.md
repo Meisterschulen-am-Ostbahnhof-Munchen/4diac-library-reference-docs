@@ -2,6 +2,8 @@
 
 ![AX_CLIENT_1_0](./AX_CLIENT_1_0.svg)
 
+![AX_CLIENT_1_0_network](./AX_CLIENT_1_0_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

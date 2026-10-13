@@ -3,6 +3,8 @@
 
 ![AB_AX_SEL_AB](./AB_AX_SEL_AB.svg)
 
+![AB_AX_SEL_AB_network](./AB_AX_SEL_AB_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

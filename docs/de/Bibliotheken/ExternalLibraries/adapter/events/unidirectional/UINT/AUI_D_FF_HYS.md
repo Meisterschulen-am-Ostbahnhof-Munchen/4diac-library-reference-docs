@@ -2,6 +2,8 @@
 
 ![AUI_D_FF_HYS](./AUI_D_FF_HYS.svg)
 
+![AUI_D_FF_HYS_network](./AUI_D_FF_HYS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,6 +1,8 @@
 # IA_RPTO
 
 ![IA_RPTO](./IA_RPTO.svg)
+![IA_RPTO_network](./IA_RPTO_network.svg)
+
 **********
 
 ## Introduction

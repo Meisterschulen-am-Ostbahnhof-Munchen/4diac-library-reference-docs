@@ -1,7 +1,5 @@
 # AID_TYPE
 
-![AID_TYPE](./AID_TYPE.svg)
-
 * * * * * * * * * *
 
 ## Introduction

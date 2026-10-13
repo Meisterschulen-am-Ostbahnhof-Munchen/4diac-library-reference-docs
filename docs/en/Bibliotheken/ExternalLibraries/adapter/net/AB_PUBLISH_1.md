@@ -2,6 +2,8 @@
 
 ![AB_PUBLISH_1](./AB_PUBLISH_1.svg)
 
+![AB_PUBLISH_1_network](./AB_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

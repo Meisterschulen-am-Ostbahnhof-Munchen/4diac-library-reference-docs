@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 850.048828125 152.0"
-     width="850.048828125" height="152.0">
+     viewBox="0 0 849.375 152.0"
+     width="849.375" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(157.103515625, 10)">
+  <g transform="translate(157.0, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 175.4111328125 0
-            A 3 3 0 0 1 178.4111328125 3
-            L 178.4111328125 23.0
-            A 3 3 0 0 1 175.4111328125 26.0
-            L 168.4111328125 26.0
-            L 168.4111328125 66.0
-            L 175.4111328125 66.0
-            A 3 3 0 0 1 178.4111328125 69.0
-            L 178.4111328125 129.0
-            A 3 3 0 0 1 175.4111328125 132.0
+            L 175.375 0
+            A 3 3 0 0 1 178.375 3
+            L 178.375 23.0
+            A 3 3 0 0 1 175.375 26.0
+            L 168.375 26.0
+            L 168.375 66.0
+            L 175.375 66.0
+            A 3 3 0 0 1 178.375 69.0
+            L 178.375 129.0
+            A 3 3 0 0 1 175.375 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ALR_SPLIT_SIGNED</text>
     
-    <text x="89.20556640625" y="66.0"
+    <text x="89.1875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -112,36 +112,36 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">Y</text>
 
-    <path d="M 166.9111328125 97.0
-            L 169.4111328125 97.0
-            L 169.4111328125 98.66666666666667
-            L 171.9111328125 98.66666666666667
-            L 171.9111328125 97.0
-            L 176.9111328125 97.0
-            L 176.9111328125 107.0
-            L 171.9111328125 107.0
-            L 171.9111328125 105.33333333333333
-            L 169.4111328125 105.33333333333333
-            L 169.4111328125 107.0
-            L 166.9111328125 107.0
+    <path d="M 166.875 97.0
+            L 169.375 97.0
+            L 169.375 98.66666666666667
+            L 171.875 98.66666666666667
+            L 171.875 97.0
+            L 176.875 97.0
+            L 176.875 107.0
+            L 171.875 107.0
+            L 171.875 105.33333333333333
+            L 169.375 105.33333333333333
+            L 169.375 107.0
+            L 166.875 107.0
             Z" fill="#845DAF"/>
-    <text x="163.9111328125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="163.875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">NEG_MAG</text>
 
-    <path d="M 166.9111328125 117.0
-            L 169.4111328125 117.0
-            L 169.4111328125 118.66666666666667
-            L 171.9111328125 118.66666666666667
-            L 171.9111328125 117.0
-            L 176.9111328125 117.0
-            L 176.9111328125 127.0
-            L 171.9111328125 127.0
-            L 171.9111328125 125.33333333333333
-            L 169.4111328125 125.33333333333333
-            L 169.4111328125 127.0
-            L 166.9111328125 127.0
+    <path d="M 166.875 117.0
+            L 169.375 117.0
+            L 169.375 118.66666666666667
+            L 171.875 118.66666666666667
+            L 171.875 117.0
+            L 176.875 117.0
+            L 176.875 127.0
+            L 171.875 127.0
+            L 171.875 125.33333333333333
+            L 169.375 125.33333333333333
+            L 169.375 127.0
+            L 166.875 127.0
             Z" fill="#845DAF"/>
-    <text x="163.9111328125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="163.875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">POS_MAG</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -153,10 +153,10 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Eingangswert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ALR</tspan></text>
 
-    <text x="203.4111328125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="203.375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ALR</tspan> – MAX(0, -Y) - Betrag der negativen Auslenkung, Event nur bei Aenderung</text>
 
-    <text x="203.4111328125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="203.375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ALR</tspan> – MAX(0, Y) - Betrag der positiven Auslenkung, Event nur bei Aenderung</text>
   </g>
 </svg>

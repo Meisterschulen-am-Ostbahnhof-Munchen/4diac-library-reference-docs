@@ -2,6 +2,8 @@
 
 ![Q_BackgroundColourAux_AUS](./Q_BackgroundColourAux_AUS.svg)
 
+![Q_BackgroundColourAux_AUS_network](./Q_BackgroundColourAux_AUS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

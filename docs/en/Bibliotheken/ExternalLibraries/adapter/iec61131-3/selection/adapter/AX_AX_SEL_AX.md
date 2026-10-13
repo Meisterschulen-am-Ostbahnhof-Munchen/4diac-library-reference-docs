@@ -1,5 +1,7 @@
 # AX_AX_SEL_AX
 
+![AX_AX_SEL_AX_network](./AX_AX_SEL_AX_network.svg)
+
 <!-- Bild des FB falls vorhanden (Platzhalter) -->
 
 ![AX_AX_SEL_AX](./AX_AX_SEL_AX.svg)

@@ -2,6 +2,8 @@
 
 ![StringValue_AIWS](./StringValue_AIWS.svg)
 
+![StringValue_AIWS_network](./StringValue_AIWS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

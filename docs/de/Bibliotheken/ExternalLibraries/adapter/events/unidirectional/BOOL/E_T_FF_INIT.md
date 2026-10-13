@@ -2,6 +2,8 @@
 
 ![E_T_FF_INIT](./E_T_FF_INIT.svg)
 
+![E_T_FF_INIT_ecc](./E_T_FF_INIT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

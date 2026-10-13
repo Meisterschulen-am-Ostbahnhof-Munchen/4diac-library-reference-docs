@@ -25,7 +25,9 @@ The logiBUS_AI_ID is a Service Interface Function Block for processing double-wo
 - **QI** (BOOL): Event Input Qualifier - Enables/Disables the Service
 - **PARAMS** (STRING): Service Parameter for Configuration
 - **Input** (logiBUS_AI_S): Identifies the input (I1..I8) with the initial value "Invalid"
-- **AnalogInput_hysteresis** (DWORD): Hysteresis Value for Analog Inputs
+- **AnalogInput_hysteresis** (DWORD): Hysteresis Value for Analog Inputs. IND when the raw value changes by more than this value (0 = off, 1 = every change)
+- **TimeDelta** (DWORD): Cyclic IND after at most this many ms (poll interval, 0 or 16#FFFFFFFF = off). Initial value 250
+- **TimeRateLimit** (DWORD): Maximum of one IND per this many ms (less than TimeDelta). Initial value 100
 
 ### **Data Outputs**
 
@@ -71,8 +73,8 @@ Compared to simple analog input function blocks, logiBUS_AI_ID offers extended f
 
 ## 🛠️ Related Exercises
 
-- [Exercise_028](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
-- [Exercise_034](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
+- [Exercise_028](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_028/)
+- [Exercise_034](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_034/)
 
 ## Conclusion
 

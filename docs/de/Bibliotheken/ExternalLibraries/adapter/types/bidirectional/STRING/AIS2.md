@@ -2,6 +2,14 @@
 
 ![AIS2](./AIS2.svg)
 
+**Plug (Adapter-Ausgang)**
+
+![AIS2_plug](./AIS2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AIS2_socket](./AIS2_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

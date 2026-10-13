@@ -1,5 +1,7 @@
 # ASRT_SRT_TO_3EVENTS
 
+![ASRT_SRT_TO_3EVENTS_network](./ASRT_SRT_TO_3EVENTS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -5,6 +5,8 @@
 
 ![AR_AX_SEL_AR](./AR_AX_SEL_AR.svg)
 
+![AR_AX_SEL_AR_network](./AR_AX_SEL_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

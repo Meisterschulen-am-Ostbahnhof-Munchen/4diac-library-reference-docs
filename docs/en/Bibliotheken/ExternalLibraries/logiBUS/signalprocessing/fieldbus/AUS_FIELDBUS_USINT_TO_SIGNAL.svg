@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 578.9150390625 152.0"
-     width="578.9150390625" height="152.0">
+     viewBox="0 0 578.75 152.0"
+     width="578.75" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(103.947265625, 10)">
+  <g transform="translate(103.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 264.353515625 0
-            A 3 3 0 0 1 267.353515625 3
-            L 267.353515625 23.0
-            A 3 3 0 0 1 264.353515625 26.0
-            L 257.353515625 26.0
-            L 257.353515625 66.0
-            L 264.353515625 66.0
-            A 3 3 0 0 1 267.353515625 69.0
-            L 267.353515625 129.0
-            A 3 3 0 0 1 264.353515625 132.0
+            L 264.3125 0
+            A 3 3 0 0 1 267.3125 3
+            L 267.3125 23.0
+            A 3 3 0 0 1 264.3125 26.0
+            L 257.3125 26.0
+            L 257.3125 66.0
+            L 264.3125 66.0
+            A 3 3 0 0 1 267.3125 69.0
+            L 267.3125 129.0
+            A 3 3 0 0 1 264.3125 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AUS_FIELDBUS_USINT_TO_SIGNAL</text>
     
-    <text x="133.6767578125" y="66.0"
+    <text x="133.65625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -112,36 +112,36 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN</text>
 
-    <path d="M 255.853515625 97.0
-            L 258.353515625 97.0
-            L 258.353515625 98.66666666666667
-            L 260.853515625 98.66666666666667
-            L 260.853515625 97.0
-            L 265.853515625 97.0
-            L 265.853515625 107.0
-            L 260.853515625 107.0
-            L 260.853515625 105.33333333333333
-            L 258.353515625 105.33333333333333
-            L 258.353515625 107.0
-            L 255.853515625 107.0
+    <path d="M 255.8125 97.0
+            L 258.3125 97.0
+            L 258.3125 98.66666666666667
+            L 260.8125 98.66666666666667
+            L 260.8125 97.0
+            L 265.8125 97.0
+            L 265.8125 107.0
+            L 260.8125 107.0
+            L 260.8125 105.33333333333333
+            L 258.3125 105.33333333333333
+            L 258.3125 107.0
+            L 255.8125 107.0
             Z" fill="#845DAF"/>
-    <text x="252.853515625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="252.8125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
-    <path d="M 255.853515625 117.0
-            L 258.353515625 117.0
-            L 258.353515625 118.66666666666667
-            L 260.853515625 118.66666666666667
-            L 260.853515625 117.0
-            L 265.853515625 117.0
-            L 265.853515625 127.0
-            L 260.853515625 127.0
-            L 260.853515625 125.33333333333333
-            L 258.353515625 125.33333333333333
-            L 258.353515625 127.0
-            L 255.853515625 127.0
+    <path d="M 255.8125 117.0
+            L 258.3125 117.0
+            L 258.3125 118.66666666666667
+            L 260.8125 118.66666666666667
+            L 260.8125 117.0
+            L 265.8125 117.0
+            L 265.8125 127.0
+            L 260.8125 127.0
+            L 260.8125 125.33333333333333
+            L 258.3125 125.33333333333333
+            L 258.3125 127.0
+            L 255.8125 127.0
             Z" fill="#845DAF"/>
-    <text x="252.853515625" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="252.8125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">VALID</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -153,10 +153,10 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUS</tspan></text>
 
-    <text x="292.353515625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="292.3125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUS</tspan> – Output Filtered</text>
 
-    <text x="292.353515625" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="292.3125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – TRUE if Signal is VALID</text>
   </g>
 </svg>

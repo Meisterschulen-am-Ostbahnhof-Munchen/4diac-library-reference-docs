@@ -2,6 +2,8 @@
 
 ![AR_TO_AS](./AR_TO_AS.svg)
 
+![AR_TO_AS_network](./AR_TO_AS_network.svg)
+
 * * * * * * * * * *
 The function block **AR_TO_AS** is a composite block that converts a **REAL adapter** (AR) into a **SINT adapter** (AS). It enables simple and standardized conversion between the adapter types and encapsulates the necessary logic in a reusable block.
 The function block does not have separate event or data ports at the IEC 61499 level. All communication takes place via the integrated adapters. The following table describes the available adapters.

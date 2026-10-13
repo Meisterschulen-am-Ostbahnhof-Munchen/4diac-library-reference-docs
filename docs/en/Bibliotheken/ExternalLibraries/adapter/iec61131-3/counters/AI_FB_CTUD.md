@@ -2,6 +2,8 @@
 
 ![AI_FB_CTUD](./AI_FB_CTUD.svg)
 
+![AI_FB_CTUD_network](./AI_FB_CTUD_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

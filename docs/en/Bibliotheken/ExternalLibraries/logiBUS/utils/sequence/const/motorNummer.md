@@ -1,7 +1,5 @@
 # motorNummer
 
-![motorNummer](./motorNummer.svg)
-
 * * * * * * * * * *
 
 ## Introduction

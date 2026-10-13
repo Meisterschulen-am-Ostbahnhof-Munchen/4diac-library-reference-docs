@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1099.0478515625 152.0"
-     width="1099.0478515625" height="152.0">
+     viewBox="0 0 1097.75 152.0"
+     width="1097.75" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(280.177734375, 10)">
+  <g transform="translate(279.75, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 138.66796875 0
-            A 3 3 0 0 1 141.66796875 3
-            L 141.66796875 23.0
-            A 3 3 0 0 1 138.66796875 26.0
-            L 131.66796875 26.0
-            L 131.66796875 66.0
-            L 138.66796875 66.0
-            A 3 3 0 0 1 141.66796875 69.0
-            L 141.66796875 129.0
-            A 3 3 0 0 1 138.66796875 132.0
+            L 138.6875 0
+            A 3 3 0 0 1 141.6875 3
+            L 141.6875 23.0
+            A 3 3 0 0 1 138.6875 26.0
+            L 131.6875 26.0
+            L 131.6875 66.0
+            L 138.6875 66.0
+            A 3 3 0 0 1 141.6875 69.0
+            L 141.6875 129.0
+            A 3 3 0 0 1 138.6875 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -60,35 +60,35 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 27.75048828125 37.0
-            L 43.75048828125 37.0
-            A 1 1 0 0 1 44.75048828125 38.0
-            L 44.75048828125 41.5
-            L 42.75048828125 41.5
-            L 42.75048828125 44.5
-            L 44.75048828125 44.5
-            L 44.75048828125 54.0
-            A 1 1 0 0 1 43.75048828125 55.0
-            L 27.75048828125 55.0
-            A 1 1 0 0 1 26.75048828125 54.0
-            L 26.75048828125 44.5
-            L 28.75048828125 44.5
-            L 28.75048828125 41.5
-            L 26.75048828125 41.5
-            L 26.75048828125 38.0
-            A 1 1 0 0 1 27.75048828125 37.0
+    <path d="M 27.84375 37.0
+            L 43.84375 37.0
+            A 1 1 0 0 1 44.84375 38.0
+            L 44.84375 41.5
+            L 42.84375 41.5
+            L 42.84375 44.5
+            L 44.84375 44.5
+            L 44.84375 54.0
+            A 1 1 0 0 1 43.84375 55.0
+            L 27.84375 55.0
+            A 1 1 0 0 1 26.84375 54.0
+            L 26.84375 44.5
+            L 28.84375 44.5
+            L 28.84375 41.5
+            L 26.84375 41.5
+            L 26.84375 38.0
+            A 1 1 0 0 1 27.84375 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="35.75048828125" y="51.0"
+    <text x="35.84375" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="49.75048828125" y="51.0"
+    <text x="49.84375" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AR_TO_AR2</text>
     
-    <text x="70.833984375" y="66.0"
+    <text x="70.84375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -112,36 +112,36 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">AR_IN</text>
 
-    <path d="M 130.16796875 97.0
-            L 132.66796875 97.0
-            L 132.66796875 98.66666666666667
-            L 135.16796875 98.66666666666667
-            L 135.16796875 97.0
-            L 140.16796875 97.0
-            L 140.16796875 107.0
-            L 135.16796875 107.0
-            L 135.16796875 105.33333333333333
-            L 132.66796875 105.33333333333333
-            L 132.66796875 107.0
-            L 130.16796875 107.0
+    <path d="M 130.1875 97.0
+            L 132.6875 97.0
+            L 132.6875 98.66666666666667
+            L 135.1875 98.66666666666667
+            L 135.1875 97.0
+            L 140.1875 97.0
+            L 140.1875 107.0
+            L 135.1875 107.0
+            L 135.1875 105.33333333333333
+            L 132.6875 105.33333333333333
+            L 132.6875 107.0
+            L 130.1875 107.0
             Z" fill="#845DAF"/>
-    <text x="127.16796875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="127.1875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">AR2_BIDIR</text>
 
-    <path d="M 130.16796875 117.0
-            L 132.66796875 117.0
-            L 132.66796875 118.66666666666667
-            L 135.16796875 118.66666666666667
-            L 135.16796875 117.0
-            L 140.16796875 117.0
-            L 140.16796875 127.0
-            L 135.16796875 127.0
-            L 135.16796875 125.33333333333333
-            L 132.66796875 125.33333333333333
-            L 132.66796875 127.0
-            L 130.16796875 127.0
+    <path d="M 130.1875 117.0
+            L 132.6875 117.0
+            L 132.6875 118.66666666666667
+            L 135.1875 118.66666666666667
+            L 135.1875 117.0
+            L 140.1875 117.0
+            L 140.1875 127.0
+            L 135.1875 127.0
+            L 135.1875 125.33333333333333
+            L 132.6875 125.33333333333333
+            L 132.6875 127.0
+            L 130.1875 127.0
             Z" fill="#845DAF"/>
-    <text x="127.16796875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="127.1875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">AR_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -153,10 +153,10 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Adapter Input: unidirectional source – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>
 
-    <text x="166.66796875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.6875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR2</tspan> – Adapter Output: bidirectional tap, outgoing side driven by AR_IN, incoming side forwarded to AR_OUT</text>
 
-    <text x="166.66796875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.6875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Adapter Output: mirrors AR2_BIDIR's incoming (request) side</text>
   </g>
 </svg>

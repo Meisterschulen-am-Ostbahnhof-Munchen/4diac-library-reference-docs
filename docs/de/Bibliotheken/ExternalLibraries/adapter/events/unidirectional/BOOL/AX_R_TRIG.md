@@ -3,6 +3,8 @@
 
 ![AX_R_TRIG](./AX_R_TRIG.svg)
 
+![AX_R_TRIG_network](./AX_R_TRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

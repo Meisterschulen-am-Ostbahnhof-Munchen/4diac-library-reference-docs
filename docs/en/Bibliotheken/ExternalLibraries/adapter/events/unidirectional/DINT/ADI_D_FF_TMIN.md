@@ -2,6 +2,8 @@
 
 ![ADI_D_FF_TMIN](./ADI_D_FF_TMIN.svg)
 
+![ADI_D_FF_TMIN_network](./ADI_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,7 +1,5 @@
 # AID_IP
 
-![AID_IP](./AID_IP.svg)
-
 * * * * * * * * * *
 
 ## Introduction

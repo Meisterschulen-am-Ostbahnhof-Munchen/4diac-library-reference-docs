@@ -2,6 +2,8 @@
 
 ![INI_AR](./INI_AR.svg)
 
+![INI_AR_network](./INI_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -21,6 +23,7 @@ The INI_AR function block is used to load and save real data from a settings.ini
 ### **Data Inputs**
 
 - `QI` (BOOL): Qualifier for the event input.
+- `SETM` (BOOL): Enable mirroring on SET.
 - `SECTION` (STRING): Name of the section in the INI file.
 - `KEY` (STRING): Name of the key within the section.
 - `DEFAULT_VALUE` (REAL): Value to be used if no entry is found in the settings.ini file.

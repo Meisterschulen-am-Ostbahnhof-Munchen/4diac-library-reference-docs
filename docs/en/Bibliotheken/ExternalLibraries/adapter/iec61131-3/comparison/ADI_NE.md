@@ -2,6 +2,8 @@
 
 ![ADI_NE](./ADI_NE.svg)
 
+![ADI_NE_network](./ADI_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

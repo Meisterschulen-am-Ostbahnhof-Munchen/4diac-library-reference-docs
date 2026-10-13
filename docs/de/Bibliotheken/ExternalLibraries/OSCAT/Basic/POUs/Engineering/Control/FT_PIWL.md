@@ -21,11 +21,11 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 
 ### Event Inputs
 
-| Name | Comment                  | With                     |
-| :--- | :----------------------- | :----------------------- |
-| INIT | Init Request             |                          |
-| REQ  | Normal Execution Request | IN, KP, KI, LIM_L, LIM_H |
-| RST  | Reset Integrator         | IN                       |
+| Name  | Comment                  | With                     |
+| :---- | :----------------------- | :----------------------- |
+| EINIT | Init Request             |                          |
+| REQ   | Normal Execution Request | IN, KP, KI, LIM_L, LIM_H |
+| RST   | Reset Integrator         | IN                       |
 
 ### Event Outputs
 

@@ -2,6 +2,8 @@
 
 ![AIS_PUBLISH_1](./AIS_PUBLISH_1.svg)
 
+![AIS_PUBLISH_1_network](./AIS_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

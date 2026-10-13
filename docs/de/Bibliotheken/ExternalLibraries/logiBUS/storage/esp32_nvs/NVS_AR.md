@@ -2,6 +2,8 @@
 
 ![NVS_AR](./NVS_AR.svg)
 
+![NVS_AR_network](./NVS_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -12,7 +14,7 @@ Der Funktionsblock `NVS_AR` dient zum Laden und Speichern von REAL-Daten in eine
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (EInit) – Initialisiert den Baustein. Beim Eintreten dieses Ereignisses werden die Daten-Eingänge `QI`, `KEY` und `DEFAULT_VALUE` übernommen.
+- **INIT** (EInit) – Initialisiert den Baustein. Beim Eintreten dieses Ereignisses werden die Daten-Eingänge `QI`, `SETM`, `KEY` und `DEFAULT_VALUE` übernommen.
 
 ### **Ereignis-Ausgänge**
 
@@ -21,6 +23,7 @@ Der Funktionsblock `NVS_AR` dient zum Laden und Speichern von REAL-Daten in eine
 ### **Daten-Eingänge**
 
 - **QI** (BOOL) – Eingangsqualifizierer; steuert die Ausführung der Initialisierung.
+- **SETM** (BOOL) – Spiegelung (Mirroring) bei SET aktivieren (Enable Mirroring on SET).
 - **KEY** (STRING) – Schlüsselname, unter dem der Wert im NVS gespeichert/abgerufen wird.
 - **DEFAULT_VALUE** (REAL) – Standardwert, der zurückgegeben wird, falls kein Eintrag mit dem angegebenen Schlüssel im NVS existiert.
 
@@ -38,7 +41,7 @@ Der Funktionsblock `NVS_AR` dient zum Laden und Speichern von REAL-Daten in eine
 
 Der Baustein arbeitet wie folgt:
 
-1. **Initialisierung**: Ein Ereignis an `INIT` startet die Initialisierung des internen `NVS`-Bausteins. Die Eingänge `QI`, `KEY` und `DEFAULT_VALUE` werden an `NVS` weitergeleitet.
+1. **Initialisierung**: Ein Ereignis an `INIT` startet die Initialisierung des internen `NVS`-Bausteins. Die Eingänge `QI`, `SETM`, `KEY` und `DEFAULT_VALUE` werden an `NVS` weitergeleitet.
 2. **Nach Initialisierung**: Sobald `NVS` die Initialisierung abschließt (Ereignis `INITO`), wird automatisch ein **Lesebefehl** (`GET`) an `NVS` gesendet. Der gelesene Wert (oder der Standardwert) wird anschließend über den Adapterausgang `AR_OUT` ausgegeben.
 3. **Speichern**: Ein über den Adaptereingang `AR_IN` eingehendes Ereignis (`AR_IN.E1`) löst einen **Speicherbefehl** (`SET`) im internen `NVS` aus. Der zu speichernde Wert wird aus dem Adapterdatenkanal (`AR_IN.D1`) übernommen.
 4. **Rückmeldung**: Sowohl nach einem Lese- als auch nach einem Speichervorgang wird das Ergebnis (Erfolg/Fehler) über das Adapterereignis `AR_OUT.E1` und über die Datenausgänge `QO`/`STATUS` zurückgemeldet.

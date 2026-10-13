@@ -1,5 +1,7 @@
 # MODR
 
+![MODR](./MODR.svg)
+
 this is a modulo function for real numbers
 
 ## Interface

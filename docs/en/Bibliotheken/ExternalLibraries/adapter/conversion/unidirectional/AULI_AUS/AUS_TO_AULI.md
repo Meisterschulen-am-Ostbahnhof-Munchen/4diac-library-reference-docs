@@ -2,6 +2,8 @@
 
 ![AUS_TO_AULI](./AUS_TO_AULI.svg)
 
+![AUS_TO_AULI_network](./AUS_TO_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

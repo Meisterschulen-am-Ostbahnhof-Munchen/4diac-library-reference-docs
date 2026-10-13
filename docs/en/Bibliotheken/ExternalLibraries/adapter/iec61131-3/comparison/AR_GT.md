@@ -2,6 +2,8 @@
 
 ![AR_GT](./AR_GT.svg)
 
+![AR_GT_network](./AR_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

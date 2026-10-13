@@ -2,6 +2,14 @@
 
 ![AS2](./AS2.svg)
 
+**Plug (Adapter-Ausgang)**
+
+![AS2_plug](./AS2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AS2_socket](./AS2_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

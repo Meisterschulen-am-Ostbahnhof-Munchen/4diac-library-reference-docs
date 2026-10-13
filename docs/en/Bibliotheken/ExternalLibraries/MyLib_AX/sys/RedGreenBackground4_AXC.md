@@ -1,5 +1,9 @@
 # RedGreenBackground4_AXC
 
+![RedGreenBackground4_AXC_network](./RedGreenBackground4_AXC_network.svg)
+
+![RedGreenBackground4_AXC](./RedGreenBackground4_AXC.svg)
+
 * * * * * * * * * *
 
 ## Introduction

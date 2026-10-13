@@ -7,6 +7,22 @@
 Real-time version of the E_REND block (Rendezvous). Waits for two events.
 ![RT_E_REND](RT_E_REND.svg)
 
+## Interface
+
+| Port     | Type  | Description                                     |
+| :------- | :---- | :---------------------------------------------- |
+| INIT     | Event | Initialization (with QI, Tmin, Deadline, WCET)  |
+| EI1      | Event | First event input                               |
+| EI2      | Event | Second event input                              |
+| R        | Event | Reset event                                     |
+| INITO    | Event | Initialization done (with QO)                   |
+| EO       | Event | Rendezvous output event                         |
+| QI       | BOOL  | Input (with INIT)                               |
+| Tmin     | TIME  | Real-time parameter (with INIT)                 |
+| Deadline | TIME  | Real-time parameter (with INIT)                 |
+| WCET     | TIME  | Real-time parameter (with INIT)                 |
+| QO       | BOOL  | Output (with INITO)                             |
+
 ## Metadata
 
 | Attribute     | Value                            |

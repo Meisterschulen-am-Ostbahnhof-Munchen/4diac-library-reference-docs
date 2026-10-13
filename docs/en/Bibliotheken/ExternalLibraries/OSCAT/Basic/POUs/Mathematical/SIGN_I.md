@@ -1,5 +1,7 @@
 # SIGN_I
 
+![SIGN_I](./SIGN_I.svg)
+
 this function returns true if the integer input is negative
 
 ## Interface

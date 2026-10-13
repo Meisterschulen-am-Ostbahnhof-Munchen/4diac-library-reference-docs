@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,13 @@
   <rect x="-41.0" y="-144.0" width="2246.1" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-41.0" y="-144.0" width="2246.1" height="25.0" fill="white" stroke="none"/>
   <line x1="-41.0" y1="-119.5" x2="2205.1" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-36.0" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Buendelt den NET-Roundtrip (bidirektionales A2X2) mit der Last-Wins-Arbitrierung samt Schutz-Totzeit: A2X2_TO_A2X spaltet A2X2 in ein unidirektionales A2X-Socket (Taster-Zustand) + -Plug (Rueckschreibe-Zustand), ILOCK_SWITCH_PROTECT_A2X arbeitet direkt auf dem gebuendelten Paar, A2X_SPLIT_2 dupliziert den interlocked Zustand auf den Rueckschreibe-Pfad und auf den externen A2X-Plug (fuer die physischen Ausgaenge) - 'SUB style': Bridge+Interlock+Split stecken im Composite, nicht in der Resource des Geraets.</text>
+  <text x="-36.0" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Buendelt den NET-Roundtrip (bidirektionales A2X2) mit der Last-Wins-Arbitrierung
+samt Schutz-Totzeit: A2X2_TO_A2X spaltet A2X2 in ein unidirektionales A2X-Socket
+(Taster-Zustand) + -Plug (Rueckschreibe-Zustand), ILOCK_SWITCH_PROTECT_A2X
+arbeitet direkt auf dem gebuendelten Paar, A2X_SPLIT_2 dupliziert den
+interlocked Zustand auf den Rueckschreibe-Pfad und auf den externen A2X-Plug
+(fuer die physischen Ausgaenge) - 'SUB style': Bridge+Interlock+Split stecken im
+Composite, nicht in der Resource des Geraets.</text>
   <g id="sidebars">
     <rect x="-41.0" y="-119.0" width="81.0" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
@@ -57,6 +63,8 @@
     <polyline points="40.0,-67.0 358.0,-67.0 363.0,-62.0 363.0,233.5 368.0,238.5 454.0,238.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="590.6,238.5 625.6,238.5 630.6,233.5 630.6,156.5 635.6,151.5 694.0,151.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="590.6,238.5 625.6,238.5 630.6,233.5 630.6,156.5 635.6,151.5 694.0,151.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="838.4,168.5 863.4,168.5 868.4,173.5 868.4,203.5 873.4,208.5 994.0,208.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="838.4,168.5 863.4,168.5 868.4,173.5 868.4,203.5 873.4,208.5 994.0,208.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="838.4,151.5 892.4,151.5 897.4,146.5 897.4,123.5 902.4,118.5 1024.0,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="838.4,151.5 892.4,151.5 897.4,146.5 897.4,123.5 902.4,118.5 1024.0,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="1131.3,135.5 1137.3,135.5 1141.3,139.5 1141.3,311.5 1136.3,316.5 429.0,316.5 424.0,311.5 424.0,260.5 429.0,255.5 454.0,255.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
@@ -290,18 +298,18 @@
     </g>
     <g id="fb_E_TimeOut" transform="translate(994.0, 165.0)">
       <path d="M 3 0
-            L 92.25 0
-            A 3 3 0 0 1 95.25 3
-            L 95.25 18
-            A 3 3 0 0 1 92.25 21
-            L 86.25 21
-            L 86.25 35
-            L 92.25 35
-            A 3 3 0 0 1 95.25 38
-            L 95.25 35
-            A 3 3 0 0 1 92.25 38
-            L 3 38
-            A 3 3 0 0 1 0 35
+            L 98.3125 0
+            A 3 3 0 0 1 101.3125 3
+            L 101.3125 18
+            A 3 3 0 0 1 98.3125 21
+            L 92.3125 21
+            L 92.3125 35
+            L 98.3125 35
+            A 3 3 0 0 1 101.3125 38
+            L 101.3125 52
+            A 3 3 0 0 1 98.3125 55
+            L 3 55
+            A 3 3 0 0 1 0 52
             L 0 38
             A 3 3 0 0 1 3 35
             L 9 35
@@ -314,37 +322,51 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 16.03125 20.0
+            L 30.03125 20.0
+            A 1 1 0 0 1 31.03125 21.0
+            L 31.03125 24.0
+            L 29.53125 24.0
+            L 29.53125 26.666666666666668
+            L 31.03125 26.666666666666668
+            L 31.03125 35.0
+            A 1 1 0 0 1 30.03125 36.0
+            L 16.03125 36.0
+            A 1 1 0 0 1 15.03125 35.0
+            L 15.03125 26.666666666666668
+            L 16.53125 26.666666666666668
+            L 16.53125 24.0
+            L 15.03125 24.0
+            L 15.03125 21.0
+            A 1 1 0 0 1 16.03125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="23.03125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
-            fill="#000000" text-anchor="middle">B</text>
-      <text x="30.0" y="32.0"
+            fill="#000000" text-anchor="middle">C</text>
+      <text x="33.03125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">E_TimeOut</text>
 
 
 
-
+      <path d="M 0 38.5
+            L 5.0 38.5
+            L 5.0 40.166666666666664
+            L 7.5 40.166666666666664
+            L 7.5 38.5
+            L 10 38.5
+            L 10 48.5
+            L 7.5 48.5
+            L 7.5 46.833333333333336
+            L 5.0 46.833333333333336
+            L 5.0 48.5
+            L 0 48.5
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+      <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">TimeOutSocke…</text>
       <!-- Instance Name -->
-      <text x="47.625" y="-5"
+      <text x="50.65625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_TimeOut</text>
     </g>

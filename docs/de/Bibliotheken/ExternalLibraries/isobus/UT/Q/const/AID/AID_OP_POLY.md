@@ -1,7 +1,5 @@
 # AID_OP_POLY
 
-![AID_OP_POLY](./AID_OP_POLY.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

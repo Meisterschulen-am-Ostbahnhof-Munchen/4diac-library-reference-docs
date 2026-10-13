@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 679.0 152.0"
-     width="679.0" height="152.0">
+     viewBox="0 0 566.125 152.0"
+     width="566.125" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(261.8, 10)">
+  <g transform="translate(203.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 202.8 0
-            A 3 3 0 0 1 205.8 3
-            L 205.8 23.0
-            A 3 3 0 0 1 202.8 26.0
-            L 195.8 26.0
-            L 195.8 66.0
-            L 202.8 66.0
-            A 3 3 0 0 1 205.8 69.0
-            L 205.8 129.0
-            A 3 3 0 0 1 202.8 132.0
+            L 185.0 0
+            A 3 3 0 0 1 188.0 3
+            L 188.0 23.0
+            A 3 3 0 0 1 185.0 26.0
+            L 178.0 26.0
+            L 178.0 66.0
+            L 185.0 66.0
+            A 3 3 0 0 1 188.0 69.0
+            L 188.0 129.0
+            A 3 3 0 0 1 185.0 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ASRT_SR_AE_TO_SRT</text>
     
-    <text x="102.9" y="66.0"
+    <text x="94.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -128,20 +128,20 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">TOGGLE_IN</text>
 
-    <path d="M 194.3 97.0
-            L 196.8 97.0
-            L 196.8 98.66666666666667
-            L 199.3 98.66666666666667
-            L 199.3 97.0
-            L 204.3 97.0
-            L 204.3 107.0
-            L 199.3 107.0
-            L 199.3 105.33333333333333
-            L 196.8 105.33333333333333
-            L 196.8 107.0
-            L 194.3 107.0
+    <path d="M 176.5 97.0
+            L 179.0 97.0
+            L 179.0 98.66666666666667
+            L 181.5 98.66666666666667
+            L 181.5 97.0
+            L 186.5 97.0
+            L 186.5 107.0
+            L 181.5 107.0
+            L 181.5 105.33333333333333
+            L 179.0 105.33333333333333
+            L 179.0 107.0
+            L 176.5 107.0
             Z" fill="#845DAF"/>
-    <text x="191.3" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="173.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ASRT_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -156,7 +156,7 @@
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Toggle / Switch output – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE</tspan></text>
 
-    <text x="230.8" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="213.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ASRT</tspan> – Adapter Output</text>
   </g>
 </svg>

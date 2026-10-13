@@ -1,5 +1,7 @@
 # Aux_QXA
 
+![Aux_QXA_network](./Aux_QXA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -76,7 +78,7 @@ Im Vergleich zu einfachen booleschen Ausgabeblöcken bietet Aux_QXA:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_003c_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003c_sub_AX/)
+- [IXA_TO_Aux_QXA](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_AX/sys/IXA_TO_Aux_QXA/)
 
 ## Fazit
 

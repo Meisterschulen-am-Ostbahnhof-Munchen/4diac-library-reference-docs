@@ -29,7 +29,8 @@ Entwickelt unter EPL-2.0 Lizenz,ermöglicht er die Überwachung und Steuerung vo
 
 - `QO` (BOOL): Statusqualifier
 - `STATUS` (STRING): Betriebsstatus
-- `timestamp_*` (DINT): Zeitstempel
+- `timestamp_data` (DINT): Zeitstempel der Daten (mit `IND`)
+- `timestamp_timeout` (DINT): Zeitstempel des Timeouts (mit `TIMEOUT`)
 - `Q_timeout` (BOOL): Timeout-Indikator
 
 ## Parameter (SPN-Details)
@@ -82,7 +83,7 @@ Entwickelt unter EPL-2.0 Lizenz,ermöglicht er die Überwachung und Steuerung vo
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

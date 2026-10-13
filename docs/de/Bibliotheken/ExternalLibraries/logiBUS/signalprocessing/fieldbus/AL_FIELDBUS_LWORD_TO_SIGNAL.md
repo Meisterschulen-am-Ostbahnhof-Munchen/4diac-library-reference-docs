@@ -2,6 +2,8 @@
 
 ![AL_FIELDBUS_LWORD_TO_SIGNAL](./AL_FIELDBUS_LWORD_TO_SIGNAL.svg)
 
+![AL_FIELDBUS_LWORD_TO_SIGNAL_network](./AL_FIELDBUS_LWORD_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

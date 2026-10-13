@@ -2,6 +2,8 @@
 
 ![AL_GT](./AL_GT.svg)
 
+![AL_GT_network](./AL_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

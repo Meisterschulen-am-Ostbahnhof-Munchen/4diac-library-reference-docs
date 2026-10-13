@@ -2,6 +2,8 @@
 
 ![A2X_LAST_2](A2X_LAST_2.svg)
 
+![A2X_LAST_2_ecc](./A2X_LAST_2_ecc.svg)
+
 ## Einleitung
 
 Der A2X_LAST_2 Funktionsblock führt zwei A2X-Adapter-Signale (**IN1**, **IN2**) auf einen gemeinsamen Ausgang (**OUT**) zusammen. Anders als beim einkanaligen [`AX_LAST_2`](AX_LAST_2.md) trägt A2X zwei unabhängige Kanäle (**UP** und **DOWN**), die deshalb auch unabhängig voneinander nach Last-Writer-Wins gemergt werden: welcher Socket zuletzt auf UP geschrieben hat, gewinnt für UP; welcher zuletzt auf DOWN geschrieben hat, gewinnt für DOWN - unabhängig davon, was auf dem jeweils anderen Kanal passiert.

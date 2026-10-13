@@ -16,11 +16,11 @@ The output flags lim will signal that the output limits are active.
 
 ### Event inputs
 
-| Name | Comment                  | With                         |
-| :--- | :----------------------- | :--------------------------- |
-| INIT | InitRequest              |                              |
-| REQ  | Normal Execution Request | IN, KP, TN, TV, LIM_L, LIM_H |
-| RST  | Reset Integrator         | IN                           |
+| Name  | Comment                  | With                         |
+| :---- | :----------------------- | :--------------------------- |
+| EINIT | Init Request             |                              |
+| REQ   | Normal Execution Request | IN, KP, TN, TV, LIM_L, LIM_H |
+| RST   | Reset Integrator         | IN                           |
 
 ### Event Outputs
 
@@ -34,7 +34,7 @@ The output flags lim will signal that the output limits are active.
 | Name  | Type | Initial Value | Comment                |
 | :---- | :--- | :------------ | :--------------------- |
 | IN    | REAL |               | Process Variable Input |
-| CP    | REAL | 1.0           | Proportional Gain      |
+| KP    | REAL | 1.0           | Proportional Gain      |
 | TN    | REAL | 1.0           | Integral Time          |
 | TV    | REAL | 1.0           | Derivative Time        |
 | LIM_L | REAL | -1.0E38       | Output Limit Low       |

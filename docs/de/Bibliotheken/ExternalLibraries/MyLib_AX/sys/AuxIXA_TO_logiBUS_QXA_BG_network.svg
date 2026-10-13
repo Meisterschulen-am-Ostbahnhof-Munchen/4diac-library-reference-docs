@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,8 @@
   <rect x="-15.1" y="-144.0" width="1194.6" height="745.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-15.1" y="-144.0" width="1194.6" height="25.0" fill="white" stroke="none"/>
   <line x1="-15.1" y1="-119.5" x2="1179.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-10.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">AUX-Funktion (Aux_IXA) auf DigitalOutput QXA mit GreenWhiteBackground. Generisch, analog zu Button_IXA_TO_logiBUS_QXA_BG (dort Button statt AUX).</text>
+  <text x="-10.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">AUX-Funktion (Aux_IXA) auf DigitalOutput QXA mit GreenWhiteBackground.
+Generisch, analog zu Button_IXA_TO_logiBUS_QXA_BG (dort Button statt AUX).</text>
   <g id="sidebars">
     <rect x="-15.1" y="-119.0" width="55.1" height="720.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="601.0" stroke="#A0A0A0" stroke-width="0.5"/>

@@ -2,6 +2,8 @@
 
 ![INI_AUI](./INI_AUI.svg)
 
+![INI_AUI_network](./INI_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -27,6 +29,7 @@ Der Funktionsblock `INI_AUI` dient zum Lesen und Speichern von **UINT-Daten** (g
 | Name          | Typ    | Kurzbeschreibung                                                   |
 | ------------- | ------ | ------------------------------------------------------------------ |
 | QI            | BOOL   | Qualifizierer für den Ereigniseingang (aktiviert die Verarbeitung) |
+| SETM            | BOOL   | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | SECTION       | STRING | Name des Abschnitts in der `settings.ini` (z. B. `[MySection]`)    |
 | KEY           | STRING | Schlüsselname innerhalb des Abschnitts                             |
 | DEFAULT_VALUE | UDINT  | Wert, der zurückgegeben wird, wenn kein Eintrag existiert          |
@@ -51,7 +54,7 @@ Der `INI_AUI`-FB kapselt einen internen `INI`-Funktionsblock (`eclipse4diac::sto
 
 1. **Lesen eines Wertes**
    - Ein **INIT**-Ereignis am Eingang löst den internen `INI.INIT` aus.
-   - Die Daten `QI`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den `INI`-FB weitergeleitet.
+   - Die Daten `QI`, `SETM`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den `INI`-FB weitergeleitet.
    - Nach erfolgreicher Verarbeitung sendet `INI.INITO` das Bestätigungsereignis und löst intern `INI.GET` aus, um den Wert aus der Datei zu laden.
    - Der gelesene Wert erscheint an `INI.VALUEO` und wird über den **AUI_OUT**-Adapter (Plug) als `D1` ausgegeben.
    - Gleichzeitig werden `QO` und `STATUS` vom internen FB übernommen.

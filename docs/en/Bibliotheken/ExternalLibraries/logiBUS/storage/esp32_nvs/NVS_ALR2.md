@@ -2,6 +2,8 @@
 
 ![NVS_ALR2](./NVS_ALR2.svg)
 
+![NVS_ALR2_network](./NVS_ALR2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The **NVS_ALR2** function block is used to load and store LREAL data in non-vola
 
 | Event | Type | Comment | Associated Variables |
 | ----- | ---- | ------- | -------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The **NVS_ALR2** function block is used to load and store LREAL data in non-vola
 | Name | Type | Comment |
 | ---- | ---- | ------- |
 | `QI` | BOOL | Event Input Qualifier |
+| `SETM` | BOOL | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | `KEY` | STRING | Key name for NVS entry |
 | `DEFAULT_VALUE` | LREAL | Default value if key does not exist in NVS (Default: 0.0) |
 

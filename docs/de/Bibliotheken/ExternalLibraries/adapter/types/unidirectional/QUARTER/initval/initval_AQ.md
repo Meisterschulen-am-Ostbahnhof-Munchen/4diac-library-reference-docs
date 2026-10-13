@@ -2,6 +2,8 @@
 
 ![initval_AQ](initval_AQ.svg)
 
+![initval_AQ_network](./initval_AQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![E_RS_SYM](./E_RS_SYM.svg)
 
+![E_RS_SYM_ecc](./E_RS_SYM_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

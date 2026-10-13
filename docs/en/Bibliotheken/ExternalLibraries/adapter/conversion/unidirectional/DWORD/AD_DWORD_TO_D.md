@@ -1,5 +1,7 @@
 # AD_DWORD_TO_D
 
+![AD_DWORD_TO_D_network](./AD_DWORD_TO_D_network.svg)
+
 ## Introduction
 
 The AD_DWORD_TO_D function block is a composite function block used to convert a DWORD value to the AD adapter format.

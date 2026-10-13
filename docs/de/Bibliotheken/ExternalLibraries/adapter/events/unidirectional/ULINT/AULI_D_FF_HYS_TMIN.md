@@ -2,6 +2,8 @@
 
 ![AULI_D_FF_HYS_TMIN](./AULI_D_FF_HYS_TMIN.svg)
 
+![AULI_D_FF_HYS_TMIN_network](./AULI_D_FF_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

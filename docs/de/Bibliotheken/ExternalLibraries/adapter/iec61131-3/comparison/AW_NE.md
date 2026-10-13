@@ -2,6 +2,8 @@
 
 ![AW_NE](./AW_NE.svg)
 
+![AW_NE_network](./AW_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

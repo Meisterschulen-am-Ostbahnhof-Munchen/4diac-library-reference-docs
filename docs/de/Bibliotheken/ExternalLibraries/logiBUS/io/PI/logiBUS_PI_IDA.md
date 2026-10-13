@@ -2,6 +2,8 @@
 
 ![logiBUS_PI_IDA](./logiBUS_PI_IDA.svg)
 
+![logiBUS_PI_IDA_network](./logiBUS_PI_IDA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

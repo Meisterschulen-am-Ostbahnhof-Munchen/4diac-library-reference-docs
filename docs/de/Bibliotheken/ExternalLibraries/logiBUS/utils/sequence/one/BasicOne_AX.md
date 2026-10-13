@@ -2,6 +2,8 @@
 
 ![BasicOne_AX](./BasicOne_AX.svg)
 
+![BasicOne_AX_ecc](./BasicOne_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

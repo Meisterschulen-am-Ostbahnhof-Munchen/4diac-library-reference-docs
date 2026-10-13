@@ -1,7 +1,5 @@
 # Industry_Groups
 
-![Industry_Groups](./Industry_Groups.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

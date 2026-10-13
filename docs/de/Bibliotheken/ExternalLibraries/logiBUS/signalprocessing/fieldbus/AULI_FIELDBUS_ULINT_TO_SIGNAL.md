@@ -2,6 +2,8 @@
 
 ![AULI_FIELDBUS_ULINT_TO_SIGNAL](./AULI_FIELDBUS_ULINT_TO_SIGNAL.svg)
 
+![AULI_FIELDBUS_ULINT_TO_SIGNAL_network](./AULI_FIELDBUS_ULINT_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

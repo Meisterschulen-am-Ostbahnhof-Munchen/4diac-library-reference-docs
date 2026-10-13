@@ -2,6 +2,8 @@
 
 ![ALI_D_FF_TMIN](./ALI_D_FF_TMIN.svg)
 
+![ALI_D_FF_TMIN_network](./ALI_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

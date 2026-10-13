@@ -2,6 +2,8 @@
 
 ![ALI_FB_CTU](./ALI_FB_CTU.svg)
 
+![ALI_FB_CTU_network](./ALI_FB_CTU_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-31.8 -151.0 1281.6 588.0"
+     width="1282" height="588">
+  <style>
+    @font-face {
+      font-family: "TGL 0-17_std";
+      src: local("TGL 0-17_std"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-17";
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16_std";
+      src: local("TGL 0-16_std"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16";
+      src: local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="-31.8" y="-151.0" width="1281.6" height="588.0" fill="white"/>
+  <rect x="-24.8" y="-144.0" width="1267.6" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-24.8" y="-144.0" width="1267.6" height="25.0" fill="white" stroke="none"/>
+  <line x1="-24.8" y1="-119.5" x2="1242.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-19.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Composite FB for convert 2 BOOLS to A2X2</text>
+  <g id="sidebars">
+    <rect x="-24.8" y="-119.0" width="64.8" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1178.2" y="-119.0" width="64.5" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1178.2" y1="-119.0" x2="1178.2" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+  </g>
+  <g id="connections">
+    <polyline points="40.0,-84.0 316.0,-84.0 321.0,-79.0 321.0,80.5 326.0,85.5 412.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 311.0,-67.0 316.0,-62.0 316.0,97.5 321.0,102.5 412.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="531.2,85.5 863.2,85.5 868.2,80.5 868.2,-79.0 873.2,-84.0 1178.2,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="531.2,102.5 868.2,102.5 873.2,97.5 873.2,-62.0 878.2,-67.0 1178.2,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 306.0,-50.0 311.0,-45.0 311.0,131.5 316.0,136.5 412.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-33.0 301.0,-33.0 306.0,-28.0 306.0,148.5 311.0,153.5 412.0,153.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="531.2,136.5 873.2,136.5 878.2,131.5 878.2,-45.0 883.2,-50.0 1178.2,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="531.2,153.5 1153.2,153.5 1158.2,148.5 1158.2,-28.0 1163.2,-33.0 1178.2,-33.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="interface_ports">
+    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
+    <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">REQ_UP</text>
+    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#63B31F"/>
+    <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">REQ_DOWN</text>
+    <polygon points="1183.2495,-89.0 1178.2495,-84.0 1183.2495,-79.0" fill="#63B31F"/>
+    <text x="1184.2495" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">CNF_UP</text>
+    <polygon points="1183.2495,-72.0 1178.2495,-67.0 1183.2495,-62.0" fill="#63B31F"/>
+    <text x="1184.2495" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">CNF_DOWN</text>
+    <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#A3B08F"/>
+    <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">OUT_UP</text>
+    <polygon points="35.0,-38.0 40.0,-33.0 35.0,-28.0" fill="#A3B08F"/>
+    <text x="34.0" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">OUT_DOWN</text>
+    <polygon points="1183.2495,-55.0 1178.2495,-50.0 1183.2495,-45.0" fill="#A3B08F"/>
+    <text x="1184.2495" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">IN_UP</text>
+    <polygon points="1183.2495,-38.0 1178.2495,-33.0 1183.2495,-28.0" fill="#A3B08F"/>
+    <text x="1184.2495" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">IN_DOWN</text>
+  </g>
+  <g id="instances">
+    <g id="fb_A2X2_OUT" transform="translate(412.0, 75.0)">
+      <path d="M 3 0
+            L 116.25 0
+            A 3 3 0 0 1 119.25 3
+            L 119.25 35
+            A 3 3 0 0 1 116.25 38
+            L 110.25 38
+            L 110.25 52
+            L 116.25 52
+            A 3 3 0 0 1 119.25 55
+            L 119.25 86
+            A 3 3 0 0 1 116.25 89
+            L 3 89
+            A 3 3 0 0 1 0 86
+            L 0 55
+            A 3 3 0 0 1 3 52
+            L 9 52
+            L 9 38
+            L 3 38
+            A 3 3 0 0 1 0 35
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 38.1875 37.0
+            L 52.1875 37.0
+            A 1 1 0 0 1 53.1875 38.0
+            L 53.1875 41.0
+            L 51.6875 41.0
+            L 51.6875 43.666666666666664
+            L 53.1875 43.666666666666664
+            L 53.1875 52.0
+            A 1 1 0 0 1 52.1875 53.0
+            L 38.1875 53.0
+            A 1 1 0 0 1 37.1875 52.0
+            L 37.1875 43.666666666666664
+            L 38.6875 43.666666666666664
+            L 38.6875 41.0
+            L 37.1875 41.0
+            L 37.1875 38.0
+            A 1 1 0 0 1 38.1875 37.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="45.1875" y="49.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">A</text>
+      <text x="55.1875" y="49.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">A2X2</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">EO_UP</text>
+      <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
+      <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">EO_DOWN</text>
+      <polygon points="114.25,5.5 119.25,10.5 114.25,15.5" fill="#63B31F"/>
+      <text x="113.25" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">EI_UP</text>
+      <polygon points="114.25,22.5 119.25,27.5 114.25,32.5" fill="#63B31F"/>
+      <text x="113.25" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">EI_DOWN</text>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
+      <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">DO_UP</text>
+      <polygon points="0,73.5 5,78.5 0,83.5" fill="#A3B08F"/>
+      <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">DO_DOWN</text>
+      <polygon points="114.25,56.5 119.25,61.5 114.25,66.5" fill="#A3B08F"/>
+      <text x="113.25" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">DI_UP</text>
+      <polygon points="114.25,73.5 119.25,78.5 114.25,83.5" fill="#A3B08F"/>
+      <text x="113.25" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">DI_DOWN</text>
+
+
+      <!-- Instance Name -->
+      <text x="59.625" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">A2X2_OUT</text>
+    </g>
+  </g>
+</svg>

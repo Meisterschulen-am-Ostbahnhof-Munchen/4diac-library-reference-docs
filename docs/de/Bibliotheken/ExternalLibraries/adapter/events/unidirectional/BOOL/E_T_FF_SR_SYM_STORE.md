@@ -2,6 +2,8 @@
 
 ![E_T_FF_SR_SYM_STORE](./E_T_FF_SR_SYM_STORE.svg)
 
+![E_T_FF_SR_SYM_STORE_ecc](./E_T_FF_SR_SYM_STORE_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

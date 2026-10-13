@@ -2,6 +2,8 @@
 
 ![AUDI_TO_AX](./AUDI_TO_AX.svg)
 
+![AUDI_TO_AX_network](./AUDI_TO_AX_network.svg)
+
 * * * * * * * * * *
 The function block `AUDI_TO_AX` is a composite function block that converts an **AUDI** adapter (UDINT data) into an **AX** adapter (BOOL data). It serves as a unidirectional converter for applications where an integer value (e.g., from a counter) needs to be mapped to a binary signal – specifically, it checks whether the input value is non-zero. The function block is implemented as a pure network connection using IEC 61131-compliant components.
 The function block does not have its own event inputs. The event to start processing is provided via the socket adapter `AUDI_IN` (see section Adapters).

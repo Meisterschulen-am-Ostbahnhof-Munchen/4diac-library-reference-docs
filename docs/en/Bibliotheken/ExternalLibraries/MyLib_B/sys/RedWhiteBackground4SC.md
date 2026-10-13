@@ -1,5 +1,9 @@
 # RedWhiteBackground4SC
 
+![RedWhiteBackground4SC_network](./RedWhiteBackground4SC_network.svg)
+
+![RedWhiteBackground4SC](./RedWhiteBackground4SC.svg)
+
 * * * * * * * * * *
 
 ## Introduction

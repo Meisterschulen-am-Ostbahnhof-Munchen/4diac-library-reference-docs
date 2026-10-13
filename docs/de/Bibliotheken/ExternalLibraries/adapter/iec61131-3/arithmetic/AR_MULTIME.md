@@ -2,6 +2,8 @@
 
 ![AR_MULTIME](./AR_MULTIME.svg)
 
+![AR_MULTIME_network](./AR_MULTIME_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

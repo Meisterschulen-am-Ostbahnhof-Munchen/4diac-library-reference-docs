@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 550.29296875 132.0"
-     width="550.29296875" height="132.0">
+     viewBox="0 0 549.8125 132.0"
+     width="549.8125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(207.484375, 10)">
+  <g transform="translate(207.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 119.85546875 0
-            A 3 3 0 0 1 122.85546875 3
-            L 122.85546875 23.0
-            A 3 3 0 0 1 119.85546875 26.0
-            L 112.85546875 26.0
-            L 112.85546875 66.0
-            L 119.85546875 66.0
-            A 3 3 0 0 1 122.85546875 69.0
-            L 122.85546875 109.0
-            A 3 3 0 0 1 119.85546875 112.0
+            L 119.8125 0
+            A 3 3 0 0 1 122.8125 3
+            L 122.8125 23.0
+            A 3 3 0 0 1 119.8125 26.0
+            L 112.8125 26.0
+            L 112.8125 66.0
+            L 119.8125 66.0
+            A 3 3 0 0 1 122.8125 69.0
+            L 122.8125 109.0
+            A 3 3 0 0 1 119.8125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="116.35546875,11.0 121.35546875,16.0 116.35546875,21.0" fill="#63B31F"/>
-    <text x="113.35546875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="116.3125,11.0 121.3125,16.0 116.3125,21.0" fill="#63B31F"/>
+    <text x="113.3125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">initval_AX</text>
     
-    <text x="61.427734375" y="66.0"
+    <text x="61.40625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -108,20 +108,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 111.35546875 97.0
-            L 113.85546875 97.0
-            L 113.85546875 98.66666666666667
-            L 116.35546875 98.66666666666667
-            L 116.35546875 97.0
-            L 121.35546875 97.0
-            L 121.35546875 107.0
-            L 116.35546875 107.0
-            L 116.35546875 105.33333333333333
-            L 113.85546875 105.33333333333333
-            L 113.85546875 107.0
-            L 111.35546875 107.0
+    <path d="M 111.3125 97.0
+            L 113.8125 97.0
+            L 113.8125 98.66666666666667
+            L 116.3125 98.66666666666667
+            L 116.3125 97.0
+            L 121.3125 97.0
+            L 121.3125 107.0
+            L 116.3125 107.0
+            L 116.3125 105.33333333333333
+            L 113.8125 105.33333333333333
+            L 113.8125 107.0
+            L 111.3125 107.0
             Z" fill="#845DAF"/>
-    <text x="108.35546875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="108.3125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -148,13 +148,13 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="147.85546875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="147.8125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
-    <text x="147.85546875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="147.8125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – will output FALSE at INIT</text>
   </g>
 </svg>

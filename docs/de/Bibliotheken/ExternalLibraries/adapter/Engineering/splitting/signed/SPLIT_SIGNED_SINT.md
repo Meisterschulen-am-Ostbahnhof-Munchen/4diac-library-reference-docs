@@ -2,6 +2,8 @@
 
 ![SPLIT_SIGNED_SINT](./SPLIT_SIGNED_SINT.svg)
 
+![SPLIT_SIGNED_SINT_ecc](./SPLIT_SIGNED_SINT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![ALR_SPLIT_SIGNED](./ALR_SPLIT_SIGNED.svg)
 
+![ALR_SPLIT_SIGNED_network](./ALR_SPLIT_SIGNED_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

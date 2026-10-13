@@ -2,6 +2,8 @@
 
 ![AULI_TO_AR](./AULI_TO_AR.svg)
 
+![AULI_TO_AR_network](./AULI_TO_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

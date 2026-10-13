@@ -3,6 +3,8 @@
 
 ![Hysteresis_AR_AX](./Hysteresis_AR_AX.svg)
 
+![Hysteresis_AR_AX_ecc](./Hysteresis_AR_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

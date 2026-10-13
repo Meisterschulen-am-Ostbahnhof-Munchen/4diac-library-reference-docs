@@ -2,6 +2,8 @@
 
 ![ALI_TO_AS](./ALI_TO_AS.svg)
 
+![ALI_TO_AS_network](./ALI_TO_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

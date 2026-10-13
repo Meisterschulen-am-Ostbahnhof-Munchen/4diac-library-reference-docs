@@ -1,5 +1,9 @@
 # GreenWhiteBackground1_aux_AXSC
 
+![GreenWhiteBackground1_aux_AXSC_network](./GreenWhiteBackground1_aux_AXSC_network.svg)
+
+![GreenWhiteBackground1_aux_AXSC](./GreenWhiteBackground1_aux_AXSC.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

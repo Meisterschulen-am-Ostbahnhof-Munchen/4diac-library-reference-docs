@@ -11,34 +11,36 @@ The `AUDI_CTUD_UDINT` is an event-driven up/down counter for unsigned 32-bit int
 
 ### **Event Inputs**
 
-- **CU**: `Event` - Increments the value by one (`Count Up`).
-- **CD**: `Event` - Decrements the value by one (`Count Down`).
+- **CU**: `Event` - Increments the value by one (`Count Up`; only if `CV.D1` < 4294967295).
+- **CD**: `Event` - Decrements the value by one (`Count Down`; only if `CV.D1` > 0).
 - **R**: `Event` - Resets the counter to zero (`Reset`).
+- **LD**: `Event` - Loads the counter value `CV.D1` with the preset value `PV.D1` (`Load CV with PV`).
 
 ### **Event Outputs**
 
-- **CO**: `Event` - Triggered when the counter reaches the default value `PV` (`Count Output`).
-- Linked to variables `QU` and `QD`.
-- **RO**: `Event` - Triggered when the counter is reset to zero (`Reset Output`).
-- Linked to variables `QU` and `QD`.
+- **CUO**: `Event` - Confirmation of `CU` (`Count Up Output`).
+- **CDO**: `Event` - Confirmation of `CD` (`Count Down Output`).
+- **RO**: `Event` - Confirmation of `R` (`Reset Output`).
+- **LDO**: `Event` - Confirmation of `LD` (`Load Output`).
 
 ### **Output Variables**
 
-- **QU**: `BOOL` - `TRUE` when the counter value (`CV.D1`) is greater than or equal to the default value (`PV.D1`).
-- **QD**: `BOOL` - `TRUE`, if the counter value (`CV.D1`) is less than or equal to zero.
+No classic data outputs; the status signals `QU` and `QD` are provided as AX adapters (plugs), see the Adapter section.
 
 ### **Adapter**
 
+- **QU** (Plug): `AX` - `TRUE` when the counter value (`CV.D1`) is greater than or equal to the preset value (`PV.D1`). The event `QU.E1` is only fired when `QU` changes.
+- **QD** (Plug): `AX` - `TRUE` if the counter value (`CV.D1`) is less than or equal to zero. The event `QD.E1` is only fired when `QD` changes.
 - **CV** (Plug): `AUDI` - The current counter value (`Counter Value`).
 - **PV** (Socket): `AUDI` - The default value (`Preset Value`) against which the counter is checked (for `QU`).
 
 ## Functionality
 
-The counter reacts to the event inputs `CU`, `CD` and `R`. A `CU` event increments `CV.D1` by 1, a `CD` event decrements `CV.D1` by 1. A `R` event resets `CV.D1` to 0.
+The counter reacts to the event inputs `CU`, `CD`, `R` and `LD`. A `CU` event increments `CV.D1` by 1, a `CD` event decrements `CV.D1` by 1. A `R` event resets `CV.D1` to 0, a `LD` event sets `CV.D1` to `PV.D1`.
 
-Loading a default value (`PV.D1`) into the counter (`CV.D1`) occurs automatically when an event (`PV.E1`) arrives at the `PV` adapter. This replaces the explicit `LD` input of the original `E_CTUD_UDINT`.
+When an event (`PV.E1`) arrives at the `PV` adapter, only the status signals `QU`/`QD` are re-evaluated; the counter value `CV.D1` is left unchanged.
 
-The counter value is output via the `CV` adapter as the `AUDI` signal. The outputs `CO` and `RO` signal state changes and provide `QU`/`QD`.
+The counter value is output via the `CV` adapter as the `AUDI` signal. After each counting action, `CUO`, `CDO`, `RO` or `LDO` confirms the operation and `CV.E1` signals the value change; `QU.E1`/`QD.E1` are only fired when the respective status changes (on-change triggering).
 
 ## Technical Features
 
@@ -48,7 +50,7 @@ The counter value is output via the `CV` adapter as the `AUDI` signal. The outpu
 
 ✔ **UDINT-based**: Supports the full range of unsigned 32-bit integers.
 
-✔ **Simplified Loading Logic**: The explicit `LD` input has been removed and replaced by event detection on the `PV` adapter (`PV.E1`). The `LDO` output has been eliminated. Instead, `CV.E1` signals the value change.
+✔ **On-change triggering**: `QU.E1` and `QD.E1` only fire when `QU` or `QD` changes; `PV.E1` re-evaluates both statuses.
 
 ## Application Scenarios
 
@@ -58,8 +60,8 @@ The counter value is output via the `CV` adapter as the `AUDI` signal. The outpu
 
 ## 🛠️ Related exercises
 
-- [Uebung_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
-- [Uebung_083_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
+- [Uebung_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
+- [Uebung_083_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_083_AX/)
 
 ---
 

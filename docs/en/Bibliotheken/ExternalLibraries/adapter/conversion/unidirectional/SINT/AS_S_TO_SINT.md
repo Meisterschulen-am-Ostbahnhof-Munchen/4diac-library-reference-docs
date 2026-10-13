@@ -1,5 +1,7 @@
 # AS_S_TO_SINT
 
+![AS_S_TO_SINT_network](./AS_S_TO_SINT_network.svg)
+
 ## Introduction
 
 The AS_S_TO_SINT function block is a composite function block used to convert the AS adapter format to a SINT value.

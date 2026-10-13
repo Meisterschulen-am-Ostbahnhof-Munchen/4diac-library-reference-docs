@@ -1,5 +1,7 @@
 # AD_TO_AUDI
 
+![AD_TO_AUDI_network](./AD_TO_AUDI_network.svg)
+
 ## Introduction
 
 The AD_TO_AUDI function block is a specialized adapter conversion module. It is used to convert a unidirectional **AD** (DWORD) adapter socket into a unidirectional **AUDI** (UDINT) adapter plug.
@@ -34,4 +36,4 @@ As soon as an event (`E1`) arrives at `AD_IN` along with data (`D1`), the DWORD 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)
+- [Exercise_011_AUDI](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_011_AUDI/)

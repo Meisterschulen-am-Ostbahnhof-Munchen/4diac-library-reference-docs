@@ -2,6 +2,8 @@
 
 ![AS_GE](./AS_GE.svg)
 
+![AS_GE_network](./AS_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

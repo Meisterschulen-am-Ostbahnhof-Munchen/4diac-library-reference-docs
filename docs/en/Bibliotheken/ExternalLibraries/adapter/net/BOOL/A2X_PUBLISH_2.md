@@ -2,6 +2,8 @@
 
 ![A2X_PUBLISH_2](./A2X_PUBLISH_2.svg)
 
+![A2X_PUBLISH_2_network](./A2X_PUBLISH_2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

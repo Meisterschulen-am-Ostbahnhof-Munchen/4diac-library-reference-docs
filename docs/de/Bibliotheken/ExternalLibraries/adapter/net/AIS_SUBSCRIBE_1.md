@@ -2,6 +2,8 @@
 
 ![AIS_SUBSCRIBE_1](./AIS_SUBSCRIBE_1.svg)
 
+![AIS_SUBSCRIBE_1_network](./AIS_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

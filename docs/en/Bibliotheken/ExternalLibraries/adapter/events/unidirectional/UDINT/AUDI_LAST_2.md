@@ -2,6 +2,8 @@
 
 ![AUDI_LAST_2](AUDI_LAST_2.svg)
 
+![AUDI_LAST_2_ecc](./AUDI_LAST_2_ecc.svg)
+
 ## Introduction
 
 The AUDI_LAST_2 function block merges two same-type UDINT adapter signals (**IN1**, **IN2**) into one shared output (**OUT**), using a **last-writer-wins** rule: whichever of the two sockets last wrote an event wins, and its data value is passed through to OUT immediately and unchanged. This is explicitly not a naive merge (e.g. averaging or OR-ing) - it is pure arbitration by write order.

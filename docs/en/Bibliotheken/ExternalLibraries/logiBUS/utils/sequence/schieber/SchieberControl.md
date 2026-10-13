@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The function block `SchieberControl` is a basic function block (FB) according to IEC 61499 for controlling a slide actuator (e.g., pneumatic). It implements a complete state control (ECC) that manages the movement (open/close), holding states, and fault states of a slide. The block offers a comprehensive interface for parameterization, operation via pushbuttons, softkeys, and auxiliary controls, as well as for outputting control signals to the actuators.
+The function block `SchieberControl` is a basic function block (FB) according to IEC 61499 for controlling a slide actuator (e.g., pneumatic). It implements a complete state control (ECC) that manages the movement (open/close), holding states, and fault states of a slide. The block offers an interface for parameterization, operation via the `Open`, `Close`, and `RESET` events, as well as for outputting the state and control signals to the actuators.
 
 ![SchieberControl](SchieberControl.svg)
 
@@ -18,23 +18,18 @@ The function block `SchieberControl` is a basic function block (FB) according to
 - **`Open`**: Starts the opening process of the slide.
 - **`Close`**: Starts the closing process of the slide.
 - **`RESET`**: Resets the internal state to "Unknown".
-- **`INPUT_DATA`**: Transmits the configured input data for pushbuttons, softkeys, and auxiliary controls. Linked to the data outputs `BT`, `SK`, and `AUXC`.
 
 ### **Event Outputs**
 
 - **`INITO`**: Initialization confirmation. Linked to the data output `QO`.
-- **`EO`**: General output event that provides the current system state and the configured output values. Linked to `Button`, `Softkey`, `Auxiliary`, and `STATE`.
+- **`EO`**: General output event that provides the current system state and the configured output values. Linked to `iSTATE` and `STATE`.
 - **`EO_POWERED`**: Control signal for actuating the "open" valve for the pneumatic system. Linked to `DO_POWERED`.
 - **`EO_OPEN`**: Control signal for actuating the "open" valve. Linked to `DO_OPEN`.
 - **`EO_CLOSE`**: Control signal for actuating the "close" valve. Linked to `DO_CLOSE`.
-- **`EO1`**: Additional output event without data.
 
 ### **Data Inputs**
 
 - **`QI` (BOOL)**: Qualifier for the INIT event.
-- **`BT` (SliderStruct)**: Configuration for the push-button controls.
-- **`SK` (SliderStruct)**: Configuration for the softkey controls.
-- **`AUXC` (SliderAuxInStruct)**: Configuration for the auxiliary controls (image and color).
 - **`DT_Opening` (TIME)**: Time duration for the opening process.
 - **`DT_Closing` (TIME)**: Duration of the closing process.
 - **`START` (UINT)**: Defines the desired start state after initialization (e.g., `START::STARTClosed`, `START::STARTOpened`, `START::STARTUnknown`).
@@ -42,12 +37,10 @@ The function block `SchieberControl` is a basic function block (FB) according to
 ### **Data Outputs**
 
 - **`QO` (BOOL)**: Qualifier for the INITO event.
-- **`Button` (UINT)**: Current value for the button output, depending on the state.
-- **`Softkey` (UINT)**: Current value for the softkey output, depending on the state.
-- **`Auxiliary` (SchieberAuxOutStruct)**: Current values for the auxiliary control output (image and color).
 - **`DO_POWERED` (BOOL)**: Binary signal to actuate the "open" valve for the pneumatics.
 - **`DO_OPEN` (BOOL)**: Binary signal to actuate the "open" valve.
 - **`DO_CLOSE` (BOOL)**: Binary signal to actuate the "close" valve.
+- **`iSTATE` (USINT)**: Numeric value of the current internal state of the function block (output with `EO`).
 - **`STATE` (STRING)**: String describing the current internal state of the function block (e.g., "Closed", "Opening").
 
 ### **Adapter**
@@ -56,13 +49,12 @@ The function block `SchieberControl` is a basic function block (FB) according to
 
 ## Functionality
 
-The `SchieberControl` FB operates as a state-controlled sequence. The internal control flow graph (ECC) defines the states `Closed` (Closed), `Opened` (Open), `Opening` (Opening), `Closing` (Closing), various STOP states, and `Unknown` (Unknown). Each state change triggers a corresponding algorithm that sets the data outputs (such as `DO_OPEN`, `STATE`, `Button`) and, if necessary, starts the timer adapter. The movement between `Closed` and `Opened` is time-controlled via the states `Opening` and `Closing`. During a movement, a stop can be initiated by the opposite event (`Open` during `Closing` or `Close` during `Opening`), which transitions to the corresponding STOP state. From any state, a `RESET` event can move the function block to the `Unknown` state.
+The `SchieberControl` FB operates as a state-controlled sequence. The internal control flow graph (ECC) defines the states `Closed` (Closed), `Opened` (Open), `Opening` (Opening), `Closing` (Closing), various STOP states, and `Unknown` (Unknown). Each state change triggers a corresponding algorithm that sets the data outputs (such as `DO_OPEN`, `iSTATE`, `STATE`) and, if necessary, starts the timer adapter. The movement between `Closed` and `Opened` is time-controlled via the states `Opening` and `Closing`. During a movement, a stop can be initiated by the opposite event (`Open` during `Closing` or `Close` during `Opening`), which transitions to the corresponding STOP state. From any state, a `RESET` event can move the function block to the `Unknown` state.
 
 ## Technical Features
 
-- **State Initialization**: The desired initial state (State_01, State_02, or State_03) can be specified via the `START` input after `INIT`. This requires the subsequent arrival of the `INPUT_DATA` event.
-- **Adapter Usage**: The timing control is completely outsourced to the `timeOut` adapter, enabling a clear separation of functionality and potential reusability.
-- - **Data Configuration**: The output values for user interfaces (`Button`, `Softkey`, `Auxiliary`) are not hard-coded, but configured via corresponding input structures (`BT`, `SK`, `AUXC`), allowing for flexible adaptation to various HMIs.
+- **State Initialization**: The desired initial state (State_01, State_02, or State_03) can be specified via the `START` input after `INIT`.- **Adapter Usage**: The timing control is completely outsourced to the `timeOut` adapter, enabling a clear separation of functionality and potential reusability.
+- **State Output**: The current state is output both numerically (`iSTATE`, USINT) and as text (`STATE`, STRING) with the `EO` event, so it can be evaluated by user interfaces.
 - **Power Signal**: The signal `DO_POWERED` is only activated in states `Opening` and `Opened`, indicating a specific pneumatic control logic (e.g., maintaining compressed air in the open state).
 
 ## State Overview
@@ -82,7 +74,7 @@ The ECC comprises the following main states:
 
 - **Control of pneumatic slides** in packaging, conveying, or sorting systems.
 - **Integration into higher-level sequencers** for material flow control.
-- **Connection to operator panels (HMI)**, as structured data is provided for buttons, softkeys, and displays.
+- **Connection to operator panels (HMI)**, as the state is provided as a number (`iSTATE`) and text (`STATE`) for displays.
 - **Logging and visualization** of the slide state via the `STATE` string output.
 
 ## ⚖️ Comparison with similar function blocks

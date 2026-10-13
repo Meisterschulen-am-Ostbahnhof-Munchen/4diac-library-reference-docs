@@ -2,6 +2,8 @@
 
 ![A2X_CLIENT_2_0](./A2X_CLIENT_2_0.svg)
 
+![A2X_CLIENT_2_0_network](./A2X_CLIENT_2_0_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

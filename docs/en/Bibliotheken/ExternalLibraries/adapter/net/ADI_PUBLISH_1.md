@@ -2,6 +2,8 @@
 
 ![ADI_PUBLISH_1](./ADI_PUBLISH_1.svg)
 
+![ADI_PUBLISH_1_network](./ADI_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

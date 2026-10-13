@@ -8,6 +8,22 @@ Echtzeit-Variante des E_REND Bausteins (Rendezvous). Wartet auf zwei Ereignisse.
 
 ![RT_E_REND](RT_E_REND.svg)
 
+## Schnittstelle
+
+| Port     | Typ   | Beschreibung                                    |
+| :------- | :---- | :---------------------------------------------- |
+| INIT     | Event | Initialisierung (mit QI, Tmin, Deadline, WCET)  |
+| EI1      | Event | Erster Ereigniseingang                          |
+| EI2      | Event | Zweiter Ereigniseingang                         |
+| R        | Event | Reset-Ereignis                                  |
+| INITO    | Event | Initialisierung abgeschlossen (mit QO)          |
+| EO       | Event | Rendezvous-Ausgangsereignis                     |
+| QI       | BOOL  | Eingang (mit INIT)                              |
+| Tmin     | TIME  | Echtzeit-Parameter (mit INIT)                   |
+| Deadline | TIME  | Echtzeit-Parameter (mit INIT)                   |
+| WCET     | TIME  | Echtzeit-Parameter (mit INIT)                   |
+| QO       | BOOL  | Ausgang (mit INITO)                             |
+
 ## Metadaten
 
 | Attribut    | Wert                             |

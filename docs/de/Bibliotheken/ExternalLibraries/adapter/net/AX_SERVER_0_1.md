@@ -1,5 +1,9 @@
 # AX_SERVER_0_1
 
+![AX_SERVER_0_1_network](./AX_SERVER_0_1_network.svg)
+
+![AX_SERVER_0_1](./AX_SERVER_0_1.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

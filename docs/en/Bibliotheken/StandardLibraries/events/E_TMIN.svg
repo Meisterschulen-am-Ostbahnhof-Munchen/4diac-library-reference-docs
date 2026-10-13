@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 667.8369140625 132.0"
-     width="667.8369140625" height="132.0">
+     viewBox="0 0 667.0 132.0"
+     width="667.0" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(355.46875, 10)">
+  <g transform="translate(354.9375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 103.23046875 0
-            A 3 3 0 0 1 106.23046875 3
-            L 106.23046875 43.0
-            A 3 3 0 0 1 103.23046875 46.0
-            L 96.23046875 46.0
-            L 96.23046875 86.0
-            L 103.23046875 86.0
-            A 3 3 0 0 1 106.23046875 89.0
-            L 106.23046875 109.0
-            A 3 3 0 0 1 103.23046875 112.0
+            L 103.1875 0
+            A 3 3 0 0 1 106.1875 3
+            L 106.1875 43.0
+            A 3 3 0 0 1 103.1875 46.0
+            L 96.1875 46.0
+            L 96.1875 86.0
+            L 103.1875 86.0
+            A 3 3 0 0 1 106.1875 89.0
+            L 106.1875 109.0
+            A 3 3 0 0 1 103.1875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 89.0
@@ -66,12 +66,12 @@
     <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">EI</text>
 
-    <polygon points="99.73046875,11.0 104.73046875,16.0 99.73046875,21.0" fill="#63B31F"/>
-    <text x="96.73046875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="99.6875,11.0 104.6875,16.0 99.6875,21.0" fill="#63B31F"/>
+    <text x="96.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
-    <polygon points="99.73046875,31.0 104.73046875,36.0 99.73046875,41.0" fill="#63B31F"/>
-    <text x="96.73046875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="99.6875,31.0 104.6875,36.0 99.6875,41.0" fill="#63B31F"/>
+    <text x="96.6875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Name Section -->
@@ -104,7 +104,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_TMIN</text>
     
-    <text x="53.115234375" y="86.0"
+    <text x="53.09375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -142,10 +142,10 @@
     <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="131.23046875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="131.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
-    <text x="131.23046875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="131.1875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

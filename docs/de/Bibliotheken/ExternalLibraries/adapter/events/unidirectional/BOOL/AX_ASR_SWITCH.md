@@ -1,5 +1,7 @@
 # AX_ASR_SWITCH / AX_ASR_SWITCH_X
 
+![AX_ASR_SWITCH_network](./AX_ASR_SWITCH_network.svg)
+
 ## Einleitung
 
 Diese Funktionsbausteine dienen als Brücke zwischen der datenorientierten AX-Welt und der ereignisorientierten ASR-Welt (Set/Reset). Sie wandeln ein boolesches Signal (verpackt in einen AX-Adapter) in dedizierte `SET` und `RESET` Ereignisse um.

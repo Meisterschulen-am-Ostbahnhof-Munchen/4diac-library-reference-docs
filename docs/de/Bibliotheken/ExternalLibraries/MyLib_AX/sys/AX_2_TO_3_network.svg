@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-24.6 -151.0 1253.3 588.0"
-     width="1253" height="588">
+     viewBox="-24.7 -151.0 1253.5 588.0"
+     width="1254" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,15 +40,16 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-24.6" y="-151.0" width="1253.3" height="588.0" fill="white"/>
-  <rect x="-17.6" y="-144.0" width="1239.3" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-17.6" y="-144.0" width="1239.3" height="25.0" fill="white" stroke="none"/>
-  <line x1="-17.6" y1="-119.5" x2="1221.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-12.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Konvertierung von 2 auf 3 AX-Adapter Signale</text>
+  <rect x="-24.7" y="-151.0" width="1253.5" height="588.0" fill="white"/>
+  <rect x="-17.7" y="-144.0" width="1239.5" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-17.7" y="-144.0" width="1239.5" height="25.0" fill="white" stroke="none"/>
+  <line x1="-17.7" y1="-119.5" x2="1221.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-12.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">UP/DOWN durchgereicht + gemeinsames ODER (z.B. Treiber-Enable) als drittes
+Signal - kein generischer ODER+SPLIT-Baustein, siehe AX_2_3 dafuer</text>
   <g id="sidebars">
-    <rect x="-17.6" y="-119.0" width="57.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-17.7" y="-119.0" width="57.7" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="69.7" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="69.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
@@ -87,16 +88,16 @@
   <g id="instances">
     <g id="fb_AX_SPLIT_DOWN" transform="translate(529.8, 210.0)">
       <path d="M 3 0
-            L 98.349609375 0
-            A 3 3 0 0 1 101.349609375 3
-            L 101.349609375 18
-            A 3 3 0 0 1 98.349609375 21
-            L 92.349609375 21
-            L 92.349609375 35
-            L 98.349609375 35
-            A 3 3 0 0 1 101.349609375 38
-            L 101.349609375 69
-            A 3 3 0 0 1 98.349609375 72
+            L 98.3125 0
+            A 3 3 0 0 1 101.3125 3
+            L 101.3125 18
+            A 3 3 0 0 1 98.3125 21
+            L 92.3125 21
+            L 92.3125 35
+            L 98.3125 35
+            A 3 3 0 0 1 101.3125 38
+            L 101.3125 69
+            A 3 3 0 0 1 98.3125 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -154,53 +155,53 @@
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <path d="M 91.349609375 38.5
-            L 93.849609375 38.5
-            L 93.849609375 40.166666666666664
-            L 96.349609375 40.166666666666664
-            L 96.349609375 38.5
-            L 101.349609375 38.5
-            L 101.349609375 48.5
-            L 96.349609375 48.5
-            L 96.349609375 46.833333333333336
-            L 93.849609375 46.833333333333336
-            L 93.849609375 48.5
-            L 91.349609375 48.5
+      <path d="M 91.3125 38.5
+            L 93.8125 38.5
+            L 93.8125 40.166666666666664
+            L 96.3125 40.166666666666664
+            L 96.3125 38.5
+            L 101.3125 38.5
+            L 101.3125 48.5
+            L 96.3125 48.5
+            L 96.3125 46.833333333333336
+            L 93.8125 46.833333333333336
+            L 93.8125 48.5
+            L 91.3125 48.5
             Z" fill="#845DAF"/>
-      <text x="88.349609375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="88.3125" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT1</text>
-      <path d="M 91.349609375 55.5
-            L 93.849609375 55.5
-            L 93.849609375 57.166666666666664
-            L 96.349609375 57.166666666666664
-            L 96.349609375 55.5
-            L 101.349609375 55.5
-            L 101.349609375 65.5
-            L 96.349609375 65.5
-            L 96.349609375 63.833333333333336
-            L 93.849609375 63.833333333333336
-            L 93.849609375 65.5
-            L 91.349609375 65.5
+      <path d="M 91.3125 55.5
+            L 93.8125 55.5
+            L 93.8125 57.166666666666664
+            L 96.3125 57.166666666666664
+            L 96.3125 55.5
+            L 101.3125 55.5
+            L 101.3125 65.5
+            L 96.3125 65.5
+            L 96.3125 63.833333333333336
+            L 93.8125 63.833333333333336
+            L 93.8125 65.5
+            L 91.3125 65.5
             Z" fill="#845DAF"/>
-      <text x="88.349609375" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="88.3125" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT2</text>
       <!-- Instance Name -->
-      <text x="50.6748046875" y="-5"
+      <text x="50.65625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_SPLIT_DOWN</text>
     </g>
     <g id="fb_AX_SPLIT_UP" transform="translate(529.8, 75.0)">
       <path d="M 3 0
-            L 98.349609375 0
-            A 3 3 0 0 1 101.349609375 3
-            L 101.349609375 18
-            A 3 3 0 0 1 98.349609375 21
-            L 92.349609375 21
-            L 92.349609375 35
-            L 98.349609375 35
-            A 3 3 0 0 1 101.349609375 38
-            L 101.349609375 69
-            A 3 3 0 0 1 98.349609375 72
+            L 98.3125 0
+            A 3 3 0 0 1 101.3125 3
+            L 101.3125 18
+            A 3 3 0 0 1 98.3125 21
+            L 92.3125 21
+            L 92.3125 35
+            L 98.3125 35
+            A 3 3 0 0 1 101.3125 38
+            L 101.3125 69
+            A 3 3 0 0 1 98.3125 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -258,53 +259,53 @@
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <path d="M 91.349609375 38.5
-            L 93.849609375 38.5
-            L 93.849609375 40.166666666666664
-            L 96.349609375 40.166666666666664
-            L 96.349609375 38.5
-            L 101.349609375 38.5
-            L 101.349609375 48.5
-            L 96.349609375 48.5
-            L 96.349609375 46.833333333333336
-            L 93.849609375 46.833333333333336
-            L 93.849609375 48.5
-            L 91.349609375 48.5
+      <path d="M 91.3125 38.5
+            L 93.8125 38.5
+            L 93.8125 40.166666666666664
+            L 96.3125 40.166666666666664
+            L 96.3125 38.5
+            L 101.3125 38.5
+            L 101.3125 48.5
+            L 96.3125 48.5
+            L 96.3125 46.833333333333336
+            L 93.8125 46.833333333333336
+            L 93.8125 48.5
+            L 91.3125 48.5
             Z" fill="#845DAF"/>
-      <text x="88.349609375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="88.3125" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT1</text>
-      <path d="M 91.349609375 55.5
-            L 93.849609375 55.5
-            L 93.849609375 57.166666666666664
-            L 96.349609375 57.166666666666664
-            L 96.349609375 55.5
-            L 101.349609375 55.5
-            L 101.349609375 65.5
-            L 96.349609375 65.5
-            L 96.349609375 63.833333333333336
-            L 93.849609375 63.833333333333336
-            L 93.849609375 65.5
-            L 91.349609375 65.5
+      <path d="M 91.3125 55.5
+            L 93.8125 55.5
+            L 93.8125 57.166666666666664
+            L 96.3125 57.166666666666664
+            L 96.3125 55.5
+            L 101.3125 55.5
+            L 101.3125 65.5
+            L 96.3125 65.5
+            L 96.3125 63.833333333333336
+            L 93.8125 63.833333333333336
+            L 93.8125 65.5
+            L 91.3125 65.5
             Z" fill="#845DAF"/>
-      <text x="88.349609375" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="88.3125" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT2</text>
       <!-- Instance Name -->
-      <text x="50.6748046875" y="-5"
+      <text x="50.65625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_SPLIT_UP</text>
     </g>
     <g id="fb_AX_OR_2" transform="translate(739.8, 135.0)">
       <path d="M 3 0
-            L 82.59375 0
-            A 3 3 0 0 1 85.59375 3
-            L 85.59375 18
-            A 3 3 0 0 1 82.59375 21
-            L 76.59375 21
-            L 76.59375 35
-            L 82.59375 35
-            A 3 3 0 0 1 85.59375 38
-            L 85.59375 69
-            A 3 3 0 0 1 82.59375 72
+            L 82.5625 0
+            A 3 3 0 0 1 85.5625 3
+            L 85.5625 18
+            A 3 3 0 0 1 82.5625 21
+            L 76.5625 21
+            L 76.5625 35
+            L 82.5625 35
+            A 3 3 0 0 1 85.5625 38
+            L 85.5625 69
+            A 3 3 0 0 1 82.5625 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -377,23 +378,23 @@
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN2</text>
-      <path d="M 75.59375 38.5
-            L 78.09375 38.5
-            L 78.09375 40.166666666666664
-            L 80.59375 40.166666666666664
-            L 80.59375 38.5
-            L 85.59375 38.5
-            L 85.59375 48.5
-            L 80.59375 48.5
-            L 80.59375 46.833333333333336
-            L 78.09375 46.833333333333336
-            L 78.09375 48.5
-            L 75.59375 48.5
+      <path d="M 75.5625 38.5
+            L 78.0625 38.5
+            L 78.0625 40.166666666666664
+            L 80.5625 40.166666666666664
+            L 80.5625 38.5
+            L 85.5625 38.5
+            L 85.5625 48.5
+            L 80.5625 48.5
+            L 80.5625 46.833333333333336
+            L 78.0625 46.833333333333336
+            L 78.0625 48.5
+            L 75.5625 48.5
             Z" fill="#845DAF"/>
-      <text x="72.59375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="72.5625" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <!-- Instance Name -->
-      <text x="42.796875" y="-5"
+      <text x="42.78125" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_OR_2</text>
     </g>

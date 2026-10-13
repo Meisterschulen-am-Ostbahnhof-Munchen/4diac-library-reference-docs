@@ -1,7 +1,5 @@
 # AID_WSSC
 
-![AID_WSSC](./AID_WSSC.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

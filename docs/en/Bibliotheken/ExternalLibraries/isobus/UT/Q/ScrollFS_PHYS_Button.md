@@ -2,6 +2,8 @@
 
 ![ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.svg)
 
+![ScrollFS_PHYS_Button_network](./ScrollFS_PHYS_Button_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -19,16 +21,18 @@ scrolling without a softkey column available (e.g. touch operation). The 6 IDs i
 
 ### **Event Inputs**
 
-- `INIT`: Snapshots the complete configuration (`stObj`).
+- `INIT`: Snapshots the complete configuration (`stObj`) (with `stObj`, `xScale`).
 
 ### **Event Outputs**
 
+- `INITO`: Initialization confirmation.
 - `CNF`: Confirms a position change, delivers `OUT`.
 
 ### **Data Inputs**
 
 - `stObj` (`isobus::utils::scroll::ScrollFull_S`): complete configuration (geometry + control
   IDs), snapshotted at `INIT`.
+- `xScale` (BOOL): FALSE (default) = bypass, TRUE = scale by the DM/SKM factor. Passed straight through to the internal `ScrollFS` instance.
 
 ### **Data Outputs**
 

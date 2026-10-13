@@ -2,6 +2,8 @@
 
 ![TimeTicker](./TimeTicker.svg)
 
+![TimeTicker_network](./TimeTicker_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

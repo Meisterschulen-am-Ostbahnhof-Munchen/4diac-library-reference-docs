@@ -1,7 +1,5 @@
 # AID_CO
 
-![AID_CO](./AID_CO.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

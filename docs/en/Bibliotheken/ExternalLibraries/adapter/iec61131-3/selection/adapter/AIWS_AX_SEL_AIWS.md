@@ -2,6 +2,8 @@
 
 ![AIWS_AX_SEL_AIWS](./AIWS_AX_SEL_AIWS.svg)
 
+![AIWS_AX_SEL_AIWS_network](./AIWS_AX_SEL_AIWS_network.svg)
+
 *(No image available)*
 
 * * * * * * * * * *

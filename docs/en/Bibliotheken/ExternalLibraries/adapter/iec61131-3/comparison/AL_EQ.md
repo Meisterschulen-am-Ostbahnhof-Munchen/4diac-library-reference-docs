@@ -2,6 +2,8 @@
 
 ![AL_EQ](./AL_EQ.svg)
 
+![AL_EQ_network](./AL_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

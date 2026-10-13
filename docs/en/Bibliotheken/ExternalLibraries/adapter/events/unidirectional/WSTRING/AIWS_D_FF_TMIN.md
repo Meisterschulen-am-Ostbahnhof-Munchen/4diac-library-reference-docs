@@ -2,6 +2,8 @@
 
 ![AIWS_D_FF_TMIN](./AIWS_D_FF_TMIN.svg)
 
+![AIWS_D_FF_TMIN_network](./AIWS_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

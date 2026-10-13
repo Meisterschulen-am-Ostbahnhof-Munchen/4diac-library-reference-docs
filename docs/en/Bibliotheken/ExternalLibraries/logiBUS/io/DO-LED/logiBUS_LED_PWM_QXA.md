@@ -2,6 +2,8 @@
 
 ![logiBUS_LED_PWM_QXA](./logiBUS_LED_PWM_QXA.svg)
 
+![logiBUS_LED_PWM_QXA_network](./logiBUS_LED_PWM_QXA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

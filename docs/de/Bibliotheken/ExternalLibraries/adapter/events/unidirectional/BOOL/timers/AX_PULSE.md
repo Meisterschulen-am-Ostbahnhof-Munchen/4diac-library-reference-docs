@@ -1,5 +1,7 @@
 # AX_PULSE
 
+![AX_PULSE_network](./AX_PULSE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -12,19 +14,24 @@ Der AX_PULSE ist ein Funktionsblock, der einen Impuls über einen AX-Adapter aus
 
 ## Schnittstellenstruktur
 
+### **Ereignis-Eingänge**
+
+- **REQ** (Event): Service-Anforderung (mit `PT`); löst den Impuls aus.
+- **R** (Event): Reset.
+
+### **Daten-Eingänge**
+
+- **PT** (TIME): Impulsdauer.
+
 ### **Adapter**
-
-**Sockets (Eingänge):**
-
-- **REQ** (adapter::types::unidirectional::AX): Trigger.
 
 **Plugs (Ausgänge):**
 
-- **PULSE** (adapter::types::unidirectional::AX): Impulsausgang.
+- **Q** (adapter::types::unidirectional::AX): Timer-Ausgang (AX-Adapter), liefert den Impuls.
 
 ## Funktionsweise
 
-Bei REQ wird PULSE kurzzeitig aktiv.
+Bei REQ wird Q für die Dauer `PT` aktiv (nicht nachtriggerbar); R setzt den Impuls zurück. Intern wird ein `E_PULSE` verwendet, dessen `CNF`/`Q` auf den Adapter `Q` geführt werden.
 
 ## Technische Besonderheiten
 
@@ -44,8 +51,8 @@ Signalisierung.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020h_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020h_AX/)
-- [Uebung_020i_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
+- [Uebung_020h_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020h_AX/)
+- [Uebung_020i_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
 
 ## Fazit
 

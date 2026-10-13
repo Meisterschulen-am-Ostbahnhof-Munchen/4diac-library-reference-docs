@@ -2,6 +2,8 @@
 
 ![NVS_ALR](./NVS_ALR.svg)
 
+![NVS_ALR_network](./NVS_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block **NVS_ALR** is used to load and store values of type `LREAL` 
 
 | Event    | Description                                                                         | Associated Variables   |
 | -------- | ----------------------------------------------------------------------------------- | ---------------------- |
-| **INIT** | Initializes the function block and performs an initial read operation from the NVS. | QI, KEY, DEFAULT_VALUE |
+| **INIT** | Initializes the function block and performs an initial read operation from the NVS. | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block **NVS_ALR** is used to load and store values of type `LREAL` 
 | Variable      | Type   | Description                                                             |
 | ------------- | ------ | ----------------------------------------------------------------------- |
 | QI            | BOOL   | Control for initialization (TRUE = active).                             |
+| SETM          | BOOL   | Enable mirroring on SET.                                                |
 | KEY           | STRING | Key name for NVS access.                                                |
 | DEFAULT_VALUE | LREAL  | Value to be read if no entry exists in the NVS under the specified key. |
 

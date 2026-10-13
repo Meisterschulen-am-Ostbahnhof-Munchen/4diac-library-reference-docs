@@ -2,6 +2,8 @@
 
 ![ATM_EQ](./ATM_EQ.svg)
 
+![ATM_EQ_network](./ATM_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -12,7 +12,7 @@ Der Funktionsblock `logiBUS_PI_ID` ist ein Eingabeservice-Interface-Baustein fü
 
 ### **Ereignis-Eingänge**
 
--   **`INIT`**: Initialisiert den Service. Begleitet von den Daten `QI`, `PARAMS`, `Input`, `ImpulseDelta` und `TimeDelta`.
+-   **`INIT`**: Initialisiert den Service. Begleitet von den Daten `QI`, `PARAMS`, `Input`, `ImpulseDelta`, `TimeDelta` und `TimeRateLimit`.
 -   **`REQ`**: Löst eine zyklische Abfrage (Polling) des Eingangswerts aus. Begleitet von dem Daten `QI`.
 
 ### **Ereignis-Ausgänge**
@@ -28,6 +28,7 @@ Der Funktionsblock `logiBUS_PI_ID` ist ein Eingabeservice-Interface-Baustein fü
 -   **`Input` (logiBUS_PI_S)**: Identifiziert den konkreten physischen Eingang (z.B. I1..I8). Der Initialwert ist `logiBUS_PI::Invalid`.
 -   **`ImpulseDelta` (DWORD)**: Definiert, nach wie vielen aufeinanderfolgenden Zustandsänderungen (Impulsen) ein `IND`-Ereignis generiert werden soll.
 -   **`TimeDelta` (DWORD)**: Definiert das Zeitintervall in Millisekunden, nach dem ein `IND`-Ereignis generiert werden soll, wenn sich der Wert geändert hat.
+-   **`TimeRateLimit` (DWORD)**: Maximal ein `IND`-Ereignis pro angegebener Zeit in Millisekunden (muss kleiner als `TimeDelta` sein). Der Initialwert ist `100`.
 
 ### **Daten-Ausgänge**
 
@@ -76,12 +77,12 @@ Die Initialisierung (`INIT`) ist Voraussetzung für beide Betriebsarten. Dabei w
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_150](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_150/)
-- [Uebung_150_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_150_AX/)
-- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
-- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
-- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
-- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
+- [Uebung_150](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_150/)
+- [Uebung_150_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_150_AX/)
+- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
+- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
+- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
+- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
 
 ## Fazit
 

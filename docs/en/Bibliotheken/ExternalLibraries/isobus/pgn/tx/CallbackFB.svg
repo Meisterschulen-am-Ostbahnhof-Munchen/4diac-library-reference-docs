@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 567.546875 132.0"
-     width="567.546875" height="132.0">
+     viewBox="0 0 567.125 132.0"
+     width="567.125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(223.740234375, 10)">
+  <g transform="translate(223.5, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 130.095703125 0
-            A 3 3 0 0 1 133.095703125 3
-            L 133.095703125 23.0
-            A 3 3 0 0 1 130.095703125 26.0
-            L 123.095703125 26.0
-            L 123.095703125 66.0
-            L 130.095703125 66.0
-            A 3 3 0 0 1 133.095703125 69.0
-            L 133.095703125 109.0
-            A 3 3 0 0 1 130.095703125 112.0
+            L 130.125 0
+            A 3 3 0 0 1 133.125 3
+            L 133.125 23.0
+            A 3 3 0 0 1 130.125 26.0
+            L 123.125 26.0
+            L 123.125 66.0
+            L 130.125 66.0
+            A 3 3 0 0 1 133.125 69.0
+            L 133.125 109.0
+            A 3 3 0 0 1 130.125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">CNF</text>
 
-    <polygon points="126.595703125,11.0 131.595703125,16.0 126.595703125,21.0" fill="#63B31F"/>
-    <text x="123.595703125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="126.625,11.0 131.625,16.0 126.625,21.0" fill="#63B31F"/>
+    <text x="123.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">REQ</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">CallbackFB</text>
     
-    <text x="66.5478515625" y="66.0"
+    <text x="66.5625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -108,20 +108,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 121.595703125 97.0
-            L 124.095703125 97.0
-            L 124.095703125 98.66666666666667
-            L 126.595703125 98.66666666666667
-            L 126.595703125 97.0
-            L 131.595703125 97.0
-            L 131.595703125 107.0
-            L 126.595703125 107.0
-            L 126.595703125 105.33333333333333
-            L 124.095703125 105.33333333333333
-            L 124.095703125 107.0
-            L 121.595703125 107.0
+    <path d="M 121.625 97.0
+            L 124.125 97.0
+            L 124.125 98.66666666666667
+            L 126.625 98.66666666666667
+            L 126.625 97.0
+            L 131.625 97.0
+            L 131.625 107.0
+            L 126.625 107.0
+            L 126.625 105.33333333333333
+            L 124.125 105.33333333333333
+            L 124.125 107.0
+            L 121.625 107.0
             Z" fill="#845DAF"/>
-    <text x="118.595703125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="118.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">PLUG1</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -148,13 +148,13 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Confirmation from Plug – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="158.095703125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="158.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Request from Socket</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">isobus::pgn::CAN_MSG</tspan></text>
 
-    <text x="158.095703125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="158.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Callback</tspan></text>
   </g>
 </svg>

@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,12 +44,14 @@
   <rect x="-94.1" y="-144.0" width="1167.1" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-94.1" y="-144.0" width="1167.1" height="25.0" fill="white" stroke="none"/>
   <line x1="-94.1" y1="-119.5" x2="1073.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-89.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">logiBUS DI Kanal: OPC-UA-Publish (generisch, ein Kanal, ohne VT-Hintergrundfarbe - fuer Module ohne ISOBUS/VT-Anbindung)</text>
+  <text x="-89.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">logiBUS DI Kanal: OPC-UA-Publish (generisch, ein Kanal, ohne VT-Hintergrundfarbe
+- fuer Module ohne ISOBUS/VT-Anbindung)</text>
   <g id="sidebars">
     <rect x="-94.1" y="-119.0" width="55.1" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-39.0" y1="-119.0" x2="-39.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
+    <polyline points="507.6,85.5 516.4,85.5 519.6,88.7 519.6,90.3 516.4,93.5 387.7,93.5 384.1,97.1 384.1,98.9 387.7,102.5 396.1,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-39.0,-84.0 -31.8,-84.0 -27.0,-79.2 -27.0,165.5 -22.0,170.5 396.1,170.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="-39.0,-84.0 -31.8,-84.0 -27.0,-79.2 -27.0,165.5 -22.0,170.5 396.1,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="-39.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,148.5 45.0,153.5 621.1,153.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>

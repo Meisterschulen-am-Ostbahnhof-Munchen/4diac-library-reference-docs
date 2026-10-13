@@ -3,6 +3,8 @@
 
 ![AUI_AX_SEL_AUI](./AUI_AX_SEL_AUI.svg)
 
+![AUI_AX_SEL_AUI_network](./AUI_AX_SEL_AUI_network.svg)
+
 *Kein Bild verfügbar*
 
 * * * * * * * * * *

@@ -2,6 +2,8 @@
 
 ![AL_LE](./AL_LE.svg)
 
+![AL_LE_network](./AL_LE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

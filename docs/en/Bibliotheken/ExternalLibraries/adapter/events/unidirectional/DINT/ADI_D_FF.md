@@ -2,6 +2,8 @@
 
 ![ADI_D_FF](./ADI_D_FF.svg)
 
+![ADI_D_FF_network](./ADI_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

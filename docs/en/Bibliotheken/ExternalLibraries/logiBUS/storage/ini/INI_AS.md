@@ -2,6 +2,8 @@
 
 ![INI_AS](./INI_AS.svg)
 
+![INI_AS_network](./INI_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block **INI_AS** is used to load and save SINT data from a `setting
 
 | Event | Type | With Vars | Description |
 | Event | Type | With Vars | Description | |----------|------|----------|--------------|
-| `INIT` | EInit | QI, SECTION, KEY, DEFAULT_VALUE | Service Initialization: Reads the value from the INI file and outputs it via the adapter. |
+| `INIT` | EInit | QI, SETM, SECTION, KEY, DEFAULT_VALUE | Service Initialization: Reads the value from the INI file and outputs it via the adapter. |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block **INI_AS** is used to load and save SINT data from a `setting
 | Name            | Data Type | Description                                               |
 | --------------- | --------- | --------------------------------------------------------- |
 | `QI`            | BOOL      | Input qualifier (e.g., enable).                           |
+| `SETM` | BOOL | Enable mirroring on SET |
 | `SECTION`       | STRING    | Name of the section in the INI file.                      |
 | `KEY`           | STRING    | Name of the key within the section.                       |
 | `DEFAULT_VALUE` | SINT      | Value returned if the key is not present in the INI file. |

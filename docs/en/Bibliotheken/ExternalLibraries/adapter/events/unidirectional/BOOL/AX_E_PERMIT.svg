@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 461.2685546875 132.0"
-     width="461.2685546875" height="132.0">
+     viewBox="0 0 460.8125 132.0"
+     width="460.8125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(155.72265625, 10)">
+  <g transform="translate(155.5625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 142.0517578125 0
-            A 3 3 0 0 1 145.0517578125 3
-            L 145.0517578125 23.0
-            A 3 3 0 0 1 142.0517578125 26.0
-            L 135.0517578125 26.0
-            L 135.0517578125 66.0
-            L 142.0517578125 66.0
-            A 3 3 0 0 1 145.0517578125 69.0
-            L 145.0517578125 109.0
-            A 3 3 0 0 1 142.0517578125 112.0
+            L 141.9375 0
+            A 3 3 0 0 1 144.9375 3
+            L 144.9375 23.0
+            A 3 3 0 0 1 141.9375 26.0
+            L 134.9375 26.0
+            L 134.9375 66.0
+            L 141.9375 66.0
+            A 3 3 0 0 1 144.9375 69.0
+            L 144.9375 109.0
+            A 3 3 0 0 1 141.9375 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">EI</text>
 
-    <polygon points="138.5517578125,11.0 143.5517578125,16.0 138.5517578125,21.0" fill="#63B31F"/>
-    <text x="135.5517578125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="138.4375,11.0 143.4375,16.0 138.4375,21.0" fill="#63B31F"/>
+    <text x="135.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_E_PERMIT</text>
     
-    <text x="72.52587890625" y="66.0"
+    <text x="72.46875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -129,7 +129,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"> Event input – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="170.0517578125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="169.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Event output</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

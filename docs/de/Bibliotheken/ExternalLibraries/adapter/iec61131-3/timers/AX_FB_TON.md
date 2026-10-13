@@ -1,5 +1,7 @@
 # AX_FB_TON
 
+![AX_FB_TON_network](./AX_FB_TON_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -18,7 +20,7 @@ AX_FB_TON ist ein standardisierter Timer-Funktionsblock gemäß IEC 61131-3, der
 
 ### **Ereignis-Ausgänge**
 
-- Keine direkten Ereignisausgänge vorhanden (Steuerung über Adapter)
+- **CNF** (Event): Execution Confirmation (Ausführungsbestätigung); trägt `ET`
 
 ### **Daten-Eingänge**
 
@@ -68,7 +70,7 @@ Im Vergleich zum [AX_TON](../../events/unidirectional/BOOL/timers/AX_TON.md) bie
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
+- [Uebung_020c3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c3_AX/)
 
 ## Fazit
 

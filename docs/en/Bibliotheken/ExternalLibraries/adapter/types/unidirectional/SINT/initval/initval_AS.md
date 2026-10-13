@@ -2,6 +2,8 @@
 
 ![initval_AS](initval_AS.svg)
 
+![initval_AS_network](./initval_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

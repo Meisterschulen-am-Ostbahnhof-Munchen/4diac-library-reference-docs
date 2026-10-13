@@ -2,6 +2,8 @@
 
 ![FT_DERIV_AR](./FT_DERIV_AR.svg)
 
+![FT_DERIV_AR_network](./FT_DERIV_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

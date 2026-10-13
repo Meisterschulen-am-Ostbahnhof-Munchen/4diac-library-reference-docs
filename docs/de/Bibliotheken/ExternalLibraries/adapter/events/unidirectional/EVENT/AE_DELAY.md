@@ -3,6 +3,8 @@
 
 ![AE_DELAY](./AE_DELAY.svg)
 
+![AE_DELAY_network](./AE_DELAY_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -15,9 +17,7 @@ Der Baustein kapselt die Funktionalität eines Einschaltverzögerungs-Timers (On
 
 ### **Ereignis-Eingänge**
 
-| Name    | Kommentar                                                    |
-| :------ | :----------------------------------------------------------- |
-| **REQ** | Dient zur Aktualisierung des Zeitwerts am Dateneingang `DT`. |
+Dieser Baustein verfügt über keine direkten Ereignis-Eingänge. Alle Eingangsereignisse werden über die Adapter `START` und `STOP` geleitet.
 
 ### **Ereignis-Ausgänge**
 
@@ -25,9 +25,7 @@ Dieser Baustein verfügt über keine direkten Ereignis-Ausgänge auf der Haupteb
 
 ### **Daten-Eingänge**
 
-| Name   | Datentyp | Kommentar                                                                         |
-| :----- | :------- | :-------------------------------------------------------------------------------- |
-| **DT** | TIME     | **Delay Time**: Die Zeitdauer, um die das Eingangsereignis verzögert werden soll. |
+Dieser Baustein verfügt über keine direkten Daten-Eingänge. Die Verzögerungszeit wird über den Adapter `PT` bereitgestellt.
 
 ### **Daten-Ausgänge**
 
@@ -39,15 +37,16 @@ Dieser Baustein verfügt über keine Daten-Ausgänge.
 | :-------- | :--------------------------------- | :--------------- | :----------------------------------------------------------------- |
 | **START** | adapter::types::unidirectional::AE | Socket (Eingang) | Startet die Zeitverzögerung (löst intern `START` aus).             |
 | **STOP**  | adapter::types::unidirectional::AE | Socket (Eingang) | Stoppt/bricht die Zeitverzögerung ab (löst intern `STOP` aus).     |
-| **EO**    | adapter::types::unidirectional::AE | Plug (Ausgang)   | **Event Output**: Gibt das Ereignis nach Ablauf der Zeit `DT` aus. |
+| **PT**    | adapter::types::unidirectional::ATM | Socket (Eingang) | **Preset Time**: Verzögerungszeit (`PT.D1`, TIME). |
+| **EO**    | adapter::types::unidirectional::AE | Plug (Ausgang)   | **Event Output**: Gibt das Ereignis nach Ablauf der Zeit `PT` aus. |
 
 ## Funktionsweise
 
 Der **AE_DELAY** Baustein agiert als Brücke zwischen der Adapter-Welt und dem klassischen `E_DELAY` Timer:
 
-1.  **Initialisierung:** Über den Dateneingang `DT` wird die gewünschte Verzögerungszeit festgelegt. Dies kann über das Ereignis `REQ` aktualisiert werden.
+1.  **Initialisierung:** Über den Adapter-Socket `PT` (Datenwert `PT.D1`) wird die gewünschte Verzögerungszeit festgelegt.
 2.  **Starten des Timers:** Trifft ein Ereignis (üblicherweise `E1`) am Adapter-Socket **START** ein, wird dieses intern an den `START`-Eingang des eingebetteten `E_DELAY` Bausteins weitergeleitet. Der Timer beginnt zu laufen.
-3.  **Ablauf der Zeit:** Sobald die Zeit `DT` verstrichen ist, generiert der interne Timer ein Ereignis. Dieses wird an den Adapter-Plug **EO** (Ereignis `E1`) weitergeleitet.
+3.  **Ablauf der Zeit:** Sobald die Zeit `PT` verstrichen ist, generiert der interne Timer ein Ereignis. Dieses wird an den Adapter-Plug **EO** (Ereignis `E1`) weitergeleitet.
 4.  **Abbrechen:** Trifft ein Ereignis am Adapter-Socket **STOP** ein, wird der laufende Timer sofort unterbrochen und zurückgesetzt. Es wird kein Ereignis am Ausgang `EO` generiert.
 
 ## Technische Besonderheiten
@@ -61,8 +60,8 @@ Der **AE_DELAY** Baustein agiert als Brücke zwischen der Adapter-Welt und dem k
 Der Baustein selbst besitzt keine explizite Zustandsmaschine (ECC), da es sich um ein zusammengesetztes Netzwerk (Composite FB) handelt. Das Verhalten wird vollständig durch den internen `E_DELAY` bestimmt:
 
 -   **Idle:** Warten auf ein Ereignis am `START`-Adapter.
--   **Timing:** Nach Empfang eines Signals an `START` läuft die Zeit `DT`.
--   **Triggered:** Nach Ablauf von `DT` wird das Signal an `EO` gesendet und der Baustein kehrt in den Idle-Zustand zurück.
+-   **Timing:** Nach Empfang eines Signals an `START` läuft die Zeit `PT`.
+-   **Triggered:** Nach Ablauf von `PT` wird das Signal an `EO` gesendet und der Baustein kehrt in den Idle-Zustand zurück.
 -   **Reset:** Ein Signal an `STOP` während der Phase *Timing* setzt den Baustein sofort in den Idle-Zustand zurück.
 
 ## Anwendungsszenarien

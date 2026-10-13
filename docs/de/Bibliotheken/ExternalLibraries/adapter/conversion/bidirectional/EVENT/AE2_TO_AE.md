@@ -2,6 +2,8 @@
 
 ![AE2_TO_AE](AE2_TO_AE.svg)
 
+![AE2_TO_AE_network](./AE2_TO_AE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

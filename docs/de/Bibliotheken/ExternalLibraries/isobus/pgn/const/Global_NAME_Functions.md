@@ -1,7 +1,5 @@
 # Global_NAME_Functions
 
-![Global_NAME_Functions](./Global_NAME_Functions.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

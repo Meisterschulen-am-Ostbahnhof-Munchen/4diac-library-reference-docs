@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1108.9052734375 172.0"
-     width="1108.9052734375" height="172.0">
+     viewBox="0 0 1107.9375 172.0"
+     width="1107.9375" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(500.7392578125, 10)">
+  <g transform="translate(500.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 175.0009765625 0
-            A 3 3 0 0 1 178.0009765625 3
-            L 178.0009765625 23.0
-            A 3 3 0 0 1 175.0009765625 26.0
-            L 168.0009765625 26.0
-            L 168.0009765625 66.0
-            L 175.0009765625 66.0
-            A 3 3 0 0 1 178.0009765625 69.0
-            L 178.0009765625 149.0
-            A 3 3 0 0 1 175.0009765625 152.0
+            L 175.0 0
+            A 3 3 0 0 1 178.0 3
+            L 178.0 23.0
+            A 3 3 0 0 1 175.0 26.0
+            L 168.0 26.0
+            L 168.0 66.0
+            L 175.0 66.0
+            A 3 3 0 0 1 178.0 69.0
+            L 178.0 149.0
+            A 3 3 0 0 1 175.0 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 69.0
@@ -60,35 +60,35 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 27.193359375 37.0
-            L 43.193359375 37.0
-            A 1 1 0 0 1 44.193359375 38.0
-            L 44.193359375 41.5
-            L 42.193359375 41.5
-            L 42.193359375 44.5
-            L 44.193359375 44.5
-            L 44.193359375 54.0
-            A 1 1 0 0 1 43.193359375 55.0
-            L 27.193359375 55.0
-            A 1 1 0 0 1 26.193359375 54.0
-            L 26.193359375 44.5
-            L 28.193359375 44.5
-            L 28.193359375 41.5
-            L 26.193359375 41.5
-            L 26.193359375 38.0
-            A 1 1 0 0 1 27.193359375 37.0
+    <path d="M 27.3125 37.0
+            L 43.3125 37.0
+            A 1 1 0 0 1 44.3125 38.0
+            L 44.3125 41.5
+            L 42.3125 41.5
+            L 42.3125 44.5
+            L 44.3125 44.5
+            L 44.3125 54.0
+            A 1 1 0 0 1 43.3125 55.0
+            L 27.3125 55.0
+            A 1 1 0 0 1 26.3125 54.0
+            L 26.3125 44.5
+            L 28.3125 44.5
+            L 28.3125 41.5
+            L 26.3125 41.5
+            L 26.3125 38.0
+            A 1 1 0 0 1 27.3125 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="35.193359375" y="51.0"
+    <text x="35.3125" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="49.193359375" y="51.0"
+    <text x="49.3125" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">A2X2_2X_TO_4AX</text>
     
-    <text x="89.00048828125" y="66.0"
+    <text x="89.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -144,36 +144,36 @@
     <text x="14.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">REQ_DOWN</text>
 
-    <path d="M 166.5009765625 97.0
-            L 169.0009765625 97.0
-            L 169.0009765625 98.66666666666667
-            L 171.5009765625 98.66666666666667
-            L 171.5009765625 97.0
-            L 176.5009765625 97.0
-            L 176.5009765625 107.0
-            L 171.5009765625 107.0
-            L 171.5009765625 105.33333333333333
-            L 169.0009765625 105.33333333333333
-            L 169.0009765625 107.0
-            L 166.5009765625 107.0
+    <path d="M 166.5 97.0
+            L 169.0 97.0
+            L 169.0 98.66666666666667
+            L 171.5 98.66666666666667
+            L 171.5 97.0
+            L 176.5 97.0
+            L 176.5 107.0
+            L 171.5 107.0
+            L 171.5 105.33333333333333
+            L 169.0 105.33333333333333
+            L 169.0 107.0
+            L 166.5 107.0
             Z" fill="#845DAF"/>
-    <text x="163.5009765625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="163.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">IND_UP</text>
 
-    <path d="M 166.5009765625 117.0
-            L 169.0009765625 117.0
-            L 169.0009765625 118.66666666666667
-            L 171.5009765625 118.66666666666667
-            L 171.5009765625 117.0
-            L 176.5009765625 117.0
-            L 176.5009765625 127.0
-            L 171.5009765625 127.0
-            L 171.5009765625 125.33333333333333
-            L 169.0009765625 125.33333333333333
-            L 169.0009765625 127.0
-            L 166.5009765625 127.0
+    <path d="M 166.5 117.0
+            L 169.0 117.0
+            L 169.0 118.66666666666667
+            L 171.5 118.66666666666667
+            L 171.5 117.0
+            L 176.5 117.0
+            L 176.5 127.0
+            L 171.5 127.0
+            L 171.5 125.33333333333333
+            L 169.0 125.33333333333333
+            L 169.0 127.0
+            L 166.5 127.0
             Z" fill="#845DAF"/>
-    <text x="163.5009765625" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="163.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">IND_DOWN</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -191,10 +191,10 @@
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Request DOWN, received from outside, forwarded into A2X2_IN.EI_DOWN – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
 
-    <text x="203.0009765625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="203.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Indication UP, published outward from A2X2_IN.EO_UP</text>
 
-    <text x="203.0009765625" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="203.0" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Indication DOWN, published outward from A2X2_IN.EO_DOWN</text>
   </g>
 </svg>

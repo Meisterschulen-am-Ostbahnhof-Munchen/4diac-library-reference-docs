@@ -7,6 +7,31 @@
 Real-time version of the E_SELECT block. Selects one of two input events based on a selector.
 ![RT_E_SELECT](RT_E_SELECT.svg)
 
+## Interface Structure
+
+### **Event Inputs**
+
+- **INIT**: Initialization, carries `QI`, `Tmin`, `Deadline` and `WCET`.
+- **EI0**: Input event, selected when `G` = 0; carries `G`.
+- **EI1**: Input event, selected when `G` = 1; carries `G`.
+
+### **Event Outputs**
+
+- **INITO**: Confirms the initialization, carries `QO`.
+- **EO**: Output event; carries no data.
+
+### **Data Inputs**
+
+- **QI** (`BOOL`): Qualifier for the initialization.
+- **G** (`BOOL`): Selector: `EI0` when `G` = 0, `EI1` when `G` = 1.
+- **Tmin** (`TIME`): Real-time parameter (minimum distance).
+- **Deadline** (`TIME`): Real-time parameter (deadline).
+- **WCET** (`TIME`): Real-time parameter (worst-case execution time).
+
+### **Data Outputs**
+
+- **QO** (`BOOL`): Output qualifier of the initialization.
+
 ## Metadata
 
 | Attribute     | Value                            |

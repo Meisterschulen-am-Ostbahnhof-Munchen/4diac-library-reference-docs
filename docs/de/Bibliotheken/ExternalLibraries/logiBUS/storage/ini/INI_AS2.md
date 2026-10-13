@@ -2,6 +2,8 @@
 
 ![INI_AS2](./INI_AS2.svg)
 
+![INI_AS2_network](./INI_AS2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

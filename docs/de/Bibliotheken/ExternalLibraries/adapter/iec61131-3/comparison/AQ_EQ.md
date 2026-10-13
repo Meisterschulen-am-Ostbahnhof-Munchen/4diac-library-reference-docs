@@ -2,6 +2,8 @@
 
 ![AQ_EQ](./AQ_EQ.svg)
 
+![AQ_EQ_network](./AQ_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

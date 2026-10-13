@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 687.3740234375 132.0"
-     width="687.3740234375" height="132.0">
+     viewBox="0 0 686.5625 132.0"
+     width="686.5625" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(342.1728515625, 10)">
+  <g transform="translate(341.75, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 120.2451171875 0
-            A 3 3 0 0 1 123.2451171875 3
-            L 123.2451171875 23.0
-            A 3 3 0 0 1 120.2451171875 26.0
-            L 113.2451171875 26.0
-            L 113.2451171875 66.0
-            L 120.2451171875 66.0
-            A 3 3 0 0 1 123.2451171875 69.0
-            L 123.2451171875 109.0
-            A 3 3 0 0 1 120.2451171875 112.0
+            L 120.125 0
+            A 3 3 0 0 1 123.125 3
+            L 123.125 23.0
+            A 3 3 0 0 1 120.125 26.0
+            L 113.125 26.0
+            L 113.125 66.0
+            L 120.125 66.0
+            A 3 3 0 0 1 123.125 69.0
+            L 123.125 109.0
+            A 3 3 0 0 1 120.125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">REQ</text>
 
-    <polygon points="116.7451171875,11.0 121.7451171875,16.0 116.7451171875,21.0" fill="#63B31F"/>
-    <text x="113.7451171875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="116.625,11.0 121.625,16.0 116.625,21.0" fill="#63B31F"/>
+    <text x="113.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_FB_TP</text>
     
-    <text x="61.62255859375" y="66.0"
+    <text x="61.5625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -106,8 +106,8 @@
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">PT</text>
 
-    <polygon points="116.7451171875,71.0 121.7451171875,76.0 116.7451171875,81.0" fill="#3366FF"/>
-    <text x="113.7451171875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="116.625,71.0 121.625,76.0 116.625,81.0" fill="#3366FF"/>
+    <text x="113.625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ET</text>
 
     <!-- Adapter Ports -->
@@ -128,20 +128,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN</text>
 
-    <path d="M 111.7451171875 97.0
-            L 114.2451171875 97.0
-            L 114.2451171875 98.66666666666667
-            L 116.7451171875 98.66666666666667
-            L 116.7451171875 97.0
-            L 121.7451171875 97.0
-            L 121.7451171875 107.0
-            L 116.7451171875 107.0
-            L 116.7451171875 105.33333333333333
-            L 114.2451171875 105.33333333333333
-            L 114.2451171875 107.0
-            L 111.7451171875 107.0
+    <path d="M 111.625 97.0
+            L 114.125 97.0
+            L 114.125 98.66666666666667
+            L 116.625 98.66666666666667
+            L 116.625 97.0
+            L 121.625 97.0
+            L 121.625 107.0
+            L 116.625 107.0
+            L 116.625 105.33333333333333
+            L 114.125 105.33333333333333
+            L 114.125 107.0
+            L 111.625 107.0
             Z" fill="#845DAF"/>
-    <text x="108.7451171875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="108.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Q</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -155,13 +155,13 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="128.2451171875" y="11.0" width="10" height="10"
+    <rect x="128.125" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="128.2451171875" y="71.0" width="10" height="10"
+    <rect x="128.125" y="71.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="133.2451171875" y1="16.0" x2="133.2451171875" y2="76.0"
+    <line x1="133.125" y1="16.0" x2="133.125" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -172,10 +172,10 @@
     <line x1="0" y1="76.0" x2="-20" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="123.2451171875" y1="16.0" x2="143.2451171875" y2="16.0"
+    <line x1="123.125" y1="16.0" x2="143.125" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="123.2451171875" y1="76.0" x2="143.2451171875" y2="76.0"
+    <line x1="123.125" y1="76.0" x2="143.125" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -183,19 +183,19 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Normal Execution Request (non-triggering) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="148.2451171875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="148.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Execution Confirmation</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Pulse time – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
 
-    <text x="148.2451171875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="148.125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan> – elapse time</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
 
-    <text x="148.2451171875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="148.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Output</text>
   </g>
 </svg>

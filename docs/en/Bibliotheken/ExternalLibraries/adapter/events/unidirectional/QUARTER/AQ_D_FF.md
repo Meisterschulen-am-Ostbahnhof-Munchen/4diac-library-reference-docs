@@ -2,6 +2,8 @@
 
 ![AQ_D_FF](./AQ_D_FF.svg)
 
+![AQ_D_FF_network](./AQ_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 593.6669921875 152.0"
-     width="593.6669921875" height="152.0">
+     viewBox="0 0 593.25 152.0"
+     width="593.25" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(318.431640625, 10)">
+  <g transform="translate(318.0625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0

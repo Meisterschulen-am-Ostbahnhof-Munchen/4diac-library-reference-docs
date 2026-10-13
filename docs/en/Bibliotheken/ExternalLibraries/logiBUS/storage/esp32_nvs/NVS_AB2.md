@@ -2,11 +2,13 @@
 
 ![NVS_AB2](./NVS_AB2.svg)
 
+![NVS_AB2_network](./NVS_AB2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
 
-The function block **NVS_AB2** enables the loading and saving of `REAL` data in non-volatile storage (NVS) using a string key. It encapsulates NVS access in a convenient, asynchronous interface and communicates with the environment via a bidirectional **AB2** adapter. This makes the block particularly suitable for scenarios where configuration values or status data need to be permanently stored on an ESP32.
+The function block **NVS_AB2** enables the loading and saving of `BYTE` data in non-volatile storage (NVS) using a string key. It encapsulates NVS access in a convenient, asynchronous interface and communicates with the environment via a bidirectional **AB2** adapter. This makes the block particularly suitable for scenarios where configuration values or status data need to be permanently stored on an ESP32.
 
 ## Interface Structure
 
@@ -14,7 +16,7 @@ The function block **NVS_AB2** enables the loading and saving of `REAL` data in 
 
 | Event  | Type  | Description                                                                                                           |
 | ------ | ----- | --------------------------------------------------------------------------------------------------------------------- |
-| `INIT` | EInit | Initializes the function block. The input data (`QI`, `KEY`, `DEFAULT_VALUE`) are transferred when this event occurs. |
+| `INIT` | EInit | Initializes the function block. The input data (`QI`, `SETM`, `KEY`, `DEFAULT_VALUE`) are transferred when this event occurs. |
 
 ### **Event Outputs**
 
@@ -27,8 +29,9 @@ The function block **NVS_AB2** enables the loading and saving of `REAL` data in 
 | Name           | Type   | Description                                                         |
 | -------------- | ------ | ------------------------------------------------------------------- |
 | `QI`           | BOOL   | Qualifier for the initialization event (e.g., enabling processing). |
-| KEY`           | STRING | Name of the key under which the value is stored in the NVS.         |
-| DEFAULT_VALUE` | REAL   | Value returned if no value exists in the NVS for the specified key. |
+| `SETM`         | BOOL   | Enable mirroring on SET.                                            |
+| `KEY`          | STRING | Name of the key under which the value is stored in the NVS.         |
+| `DEFAULT_VALUE` | BYTE  | Value returned if no value exists in the NVS for the specified key. |
 
 ### **Data Outputs**
 

@@ -19,11 +19,11 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 
 ### Event inputs
 
-| Name | Comment                  | With                     |
-| :--- | :----------------------- | :----------------------- |
-| INIT | InitRequest              |                          |
-| REQ  | Normal Execution Request | IN, KP, KI, LIM_L, LIM_H |
-| RST  | Reset Integrator         | IN                       |
+| Name  | Comment                  | With                     |
+| :---- | :----------------------- | :----------------------- |
+| EINIT | Init Request             |                          |
+| REQ   | Normal Execution Request | IN, KP, KI, LIM_L, LIM_H |
+| RST   | Reset Integrator         | IN                       |
 
 ### Event Outputs
 
@@ -37,8 +37,8 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 | Name  | Type | Initial Value | Comment                        |
 | :---- | :--- | :------------ | :----------------------------- |
 | IN    | REAL |               | Process Variable / Error Input |
-| CP    | REAL | 1.0           | Proportional Gain              |
-| AI    | REAL | 1.0           | Integral Gain                  |
+| KP    | REAL | 1.0           | Proportional Gain              |
+| KI    | REAL | 1.0           | Integral Gain                  |
 | LIM_L | REAL | -1.0E38       | Lower Limit                    |
 | LIM_H | REAL | 1.0E38        | Upper Limit                    |
 

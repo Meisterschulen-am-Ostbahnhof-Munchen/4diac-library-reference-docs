@@ -2,6 +2,8 @@
 
 ![logiBUS_QWA_SERVO](./logiBUS_QWA_SERVO.svg)
 
+![logiBUS_QWA_SERVO_network](./logiBUS_QWA_SERVO_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

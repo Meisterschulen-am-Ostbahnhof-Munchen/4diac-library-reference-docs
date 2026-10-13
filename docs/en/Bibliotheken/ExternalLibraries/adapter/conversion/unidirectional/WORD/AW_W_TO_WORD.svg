@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 556.71875 132.0"
-     width="556.71875" height="132.0">
+     viewBox="0 0 556.125 132.0"
+     width="556.125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(151.046875, 10)">
+  <g transform="translate(150.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 155.83984375 0
-            A 3 3 0 0 1 158.83984375 3
-            L 158.83984375 23.0
-            A 3 3 0 0 1 155.83984375 26.0
-            L 148.83984375 26.0
-            L 148.83984375 66.0
-            L 155.83984375 66.0
-            A 3 3 0 0 1 158.83984375 69.0
-            L 158.83984375 109.0
-            A 3 3 0 0 1 155.83984375 112.0
+            L 155.6875 0
+            A 3 3 0 0 1 158.6875 3
+            L 158.6875 23.0
+            A 3 3 0 0 1 155.6875 26.0
+            L 148.6875 26.0
+            L 148.6875 66.0
+            L 155.6875 66.0
+            A 3 3 0 0 1 158.6875 69.0
+            L 158.6875 109.0
+            A 3 3 0 0 1 155.6875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -58,8 +58,8 @@
 
     <!-- Event Ports -->
 
-    <polygon points="152.33984375,11.0 157.33984375,16.0 152.33984375,21.0" fill="#63B31F"/>
-    <text x="149.33984375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="152.1875,11.0 157.1875,16.0 152.1875,21.0" fill="#63B31F"/>
+    <text x="149.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -92,14 +92,14 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AW_W_TO_WORD</text>
     
-    <text x="79.419921875" y="66.0"
+    <text x="79.34375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="152.33984375,71.0 157.33984375,76.0 152.33984375,81.0" fill="#82A3A9"/>
-    <text x="149.33984375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="152.1875,71.0 157.1875,76.0 152.1875,81.0" fill="#82A3A9"/>
+    <text x="149.1875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">IN</text>
 
     <!-- Adapter Ports -->
@@ -122,29 +122,29 @@
 
     <!-- Event-Data Association Connectors and Lines -->
 
-    <rect x="163.83984375" y="11.0" width="10" height="10"
+    <rect x="163.6875" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="163.83984375" y="71.0" width="10" height="10"
+    <rect x="163.6875" y="71.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="168.83984375" y1="16.0" x2="168.83984375" y2="76.0"
+    <line x1="168.6875" y1="16.0" x2="168.6875" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
 
-    <line x1="158.83984375" y1="16.0" x2="178.83984375" y2="16.0"
+    <line x1="158.6875" y1="16.0" x2="178.6875" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="158.83984375" y1="76.0" x2="178.83984375" y2="76.0"
+    <line x1="158.6875" y1="76.0" x2="178.6875" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
 
-    <text x="183.83984375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="183.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation from Adapter</text>
 
-    <text x="183.83984375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="183.6875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WORD</tspan> – Input data from Adapter</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

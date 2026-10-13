@@ -2,6 +2,8 @@
 
 ![IA_VDS](./IA_VDS.svg)
 
+![IA_VDS_network](./IA_VDS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

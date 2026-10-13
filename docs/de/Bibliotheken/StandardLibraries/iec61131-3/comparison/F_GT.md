@@ -14,6 +14,25 @@ Folgender Text wurde erzeugt von <https://chat.deepseek.com/> am 05.02.2025 und 
 
 Die IEC 61499 ist eine internationale Norm, die sich mit der Modellierung von Funktionsbausteinen für industrielle Automatisierungssysteme beschäftigt. Sie bietet ein standardisiertes Framework für die Entwicklung von verteilten Steuerungssystemen, wobei logische und arithmetische Operatoren eine zentrale Rolle spielen. Einer dieser Operatoren ist der **GT-Operator** (Greater Than, „größer als“), der in diesem Aufsatz näher beleuchtet werden soll.
 
+## Schnittstelle
+
+### Ereignis-Eingänge
+
+- `REQ`: Service-Anforderung (mit `IN1`, `IN2`)
+
+### Ereignis-Ausgänge
+
+- `CNF`: Bestätigung der angeforderten Operation (mit `OUT`)
+
+### Daten-Eingänge
+
+- `IN1` (ANY_ELEMENTARY): Eingangswert 1
+- `IN2` (ANY_ELEMENTARY): Eingangswert 2
+
+### Daten-Ausgänge
+
+- `OUT` (BOOL): Wert 1 > Wert 2 = TRUE
+
 ## Was ist der GT-Operator?
 
 Der GT-Operator ist ein Vergleichsoperator, der verwendet wird, um festzustellen, ob ein Wert größer als ein anderer Wert ist. In der IEC 61499 wird dieser Operator häufig in Funktionsbausteinen eingesetzt, um Bedingungen zu evaluieren und Entscheidungen basierend auf numerischen Vergleichen zu treffen. Der GT-Operator vergleicht zwei Eingangswerte und gibt einen booleschen Wert (`TRUE` oder `FALSE`) zurück, je nachdem, ob der erste Wert größer als der zweite Wert ist.
@@ -75,11 +94,11 @@ Hierbei sind `Eingang1` und `Eingang2` die beiden Werte, die verglichen werden s
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
-- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
-- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
-- [Uebung_110](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_110/)
-- [Uebung_111](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_111/)
+- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
+- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
+- [Uebung_110](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_110/)
+- [Uebung_111](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_111/)
 
 ## Fazit
 

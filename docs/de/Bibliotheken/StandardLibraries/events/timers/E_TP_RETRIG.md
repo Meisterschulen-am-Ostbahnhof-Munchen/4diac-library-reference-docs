@@ -1,5 +1,7 @@
 # E_TP_RETRIG
 
+![E_TP_RETRIG_network](./E_TP_RETRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

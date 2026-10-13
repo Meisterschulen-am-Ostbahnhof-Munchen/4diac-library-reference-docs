@@ -2,6 +2,8 @@
 
 ![NVS_AR2](./NVS_AR2.svg)
 
+![NVS_AR2_network](./NVS_AR2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -12,7 +14,7 @@ Der Funktionsbaustein NVS_AR2 dient zum Speichern und Laden von REAL-Werten (Gle
 
 ### **Ereignis-Eingänge**
 
-- **INIT**: Initialisiert den Baustein. Mit diesem Ereignis werden die Parameter QI (Qualifier), KEY (Schlüssel) und DEFAULT_VALUE (Standardwert) übergeben. Nach erfolgreicher Initialisierung wird der Ausgang INITO ausgelöst.
+- **INIT**: Initialisiert den Baustein. Mit diesem Ereignis werden die Parameter QI (Qualifier), SETM (Spiegelung bei SET), KEY (Schlüssel) und DEFAULT_VALUE (Standardwert) übergeben. Nach erfolgreicher Initialisierung wird der Ausgang INITO ausgelöst.
 
 ### **Ereignis-Ausgänge**
 
@@ -21,6 +23,7 @@ Der Funktionsbaustein NVS_AR2 dient zum Speichern und Laden von REAL-Werten (Gle
 ### **Daten-Eingänge**
 
 - **QI** (BOOL): Eingangsqualifizierer zur Steuerung der Ausführung. Typischerweise wird dieser auf TRUE gesetzt, um die Initialisierung zu aktivieren.
+- **SETM** (BOOL): Aktiviert die Spiegelung (Mirroring) bei SET.
 - **KEY** (STRING): Der Schlüsselname, unter dem der Wert im NVS gespeichert oder gelesen werden soll.
 - **DEFAULT_VALUE** (REAL): Der Wert, der zurückgegeben wird, falls im NVS kein Eintrag unter dem angegebenen Schlüssel existiert.
 

@@ -2,6 +2,8 @@
 
 ![AR_NE](./AR_NE.svg)
 
+![AR_NE_network](./AR_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

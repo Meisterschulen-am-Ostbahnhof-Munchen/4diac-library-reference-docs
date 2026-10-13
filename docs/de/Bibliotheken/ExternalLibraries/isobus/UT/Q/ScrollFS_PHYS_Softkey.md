@@ -2,6 +2,8 @@
 
 ![ScrollFS_PHYS_Softkey](ScrollFS_PHYS_Softkey.svg)
 
+![ScrollFS_PHYS_Softkey_network](./ScrollFS_PHYS_Softkey_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -19,7 +21,7 @@ Herleitung.
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Übernimmt die komplette Konfiguration (`stObj`) per Snapshot.
+- `INIT`: Übernimmt die komplette Konfiguration (`stObj`) per Snapshot, mit `xScale`.
 
 ### **Ereignis-Ausgänge**
 
@@ -29,6 +31,7 @@ Herleitung.
 
 - `stObj` (`isobus::utils::scroll::ScrollFull_S`): komplette Konfiguration (Geometrie +
   Bedienelemente-IDs), bei `INIT` geschnappt.
+- `xScale` (BOOL, Initialwert `FALSE`): `FALSE` = Bypass, `TRUE` = Skalierung mit dem DM/SKM-Faktor. Wird direkt an die interne `ScrollFS`-Instanz durchgereicht.
 
 ### **Daten-Ausgänge**
 

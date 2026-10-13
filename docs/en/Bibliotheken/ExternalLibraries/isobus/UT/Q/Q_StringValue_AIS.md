@@ -2,6 +2,8 @@
 
 ![Q_StringValue_AIS](./Q_StringValue_AIS.svg)
 
+![Q_StringValue_AIS_network](./Q_StringValue_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

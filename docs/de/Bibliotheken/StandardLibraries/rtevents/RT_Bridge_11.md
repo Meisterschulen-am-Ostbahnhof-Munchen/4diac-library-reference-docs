@@ -1,5 +1,7 @@
 # RT_Bridge_11
 
+![RT_Bridge_11](./RT_Bridge_11.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

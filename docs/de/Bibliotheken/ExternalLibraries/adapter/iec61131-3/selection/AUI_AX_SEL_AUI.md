@@ -1,5 +1,7 @@
 # AUI_AX_SEL_AUI
 
+![AUI_AX_SEL_AUI_network](./AUI_AX_SEL_AUI_network.svg)
+
 binary selection
 
 ![AUI_AX_SEL_AUI](./AUI_AX_SEL_AUI.svg)

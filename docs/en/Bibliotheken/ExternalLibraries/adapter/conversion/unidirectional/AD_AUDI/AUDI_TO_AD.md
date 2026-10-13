@@ -1,5 +1,7 @@
 # AUDI_TO_AD
 
+![AUDI_TO_AD_network](./AUDI_TO_AD_network.svg)
+
 ## Introduction
 
 The AUDI_TO_AD function block is a specialized adapter conversion module. It converts a unidirectional **AUDI** (UDINT) adapter socket into a unidirectional **AD** (DWORD) adapter plug.

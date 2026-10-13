@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="4.3 -151.0 1183.4 588.0"
-     width="1183" height="588">
+     viewBox="4.2 -151.0 1183.5 588.0"
+     width="1184" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,24 +40,25 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="4.3" y="-151.0" width="1183.4" height="588.0" fill="white"/>
-  <rect x="11.3" y="-144.0" width="1169.4" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="11.3" y="-144.0" width="1169.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="11.3" y1="-119.5" x2="1180.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="16.3" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Fieldbus-Rohwert (DINT, 0-64255) in PWM-Sollwert-Anteil (REAL 0.0-1.0) umrechnen, Gegenstueck zu F_PWM_PERCENT_TO_RAW, fuer RampLimitFS.OUT</text>
+  <rect x="4.2" y="-151.0" width="1183.5" height="588.0" fill="white"/>
+  <rect x="11.2" y="-144.0" width="1169.5" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="11.2" y="-144.0" width="1169.5" height="25.0" fill="white" stroke="none"/>
+  <line x1="11.2" y1="-119.5" x2="1180.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="16.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Fieldbus-Rohwert (DINT, 0-64255) in PWM-Sollwert-Anteil (REAL 0.0-1.0)
+umrechnen, Gegenstueck zu F_PWM_PERCENT_TO_RAW, fuer RampLimitFS.OUT</text>
   <g id="sidebars">
-    <rect x="11.3" y="-119.0" width="28.7" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="11.2" y="-119.0" width="28.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="28.7" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="28.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 212.0,-84.0 217.0,-79.0 217.0,80.5 222.0,85.5 362.5,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="492.7,85.5 624.9,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="775.5,85.5 1072.5,85.5 1077.5,80.5 1077.5,-79.0 1082.5,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 179.0,-67.0 184.0,-62.0 184.0,114.5 189.0,119.5 362.5,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="492.7,119.5 624.9,119.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="775.5,119.5 1072.5,119.5 1077.5,114.5 1077.5,-62.0 1082.5,-67.0 1152.0,-67.0" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 212.0,-84.0 217.0,-79.0 217.0,80.5 222.0,85.5 362.4,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="492.6,85.5 625.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="775.6,85.5 1072.6,85.5 1077.6,80.5 1077.6,-79.0 1082.6,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 179.0,-67.0 184.0,-62.0 184.0,114.5 189.0,119.5 362.4,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="492.6,119.5 625.0,119.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="775.6,119.5 1072.6,119.5 1077.6,114.5 1077.6,-62.0 1082.6,-67.0 1152.0,-67.0" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
@@ -74,18 +75,18 @@
           fill="#000000" text-anchor="start">OUT</text>
   </g>
   <g id="instances">
-    <g id="fb_F_DINT_TO_WORD" transform="translate(362.5, 75.0)">
+    <g id="fb_F_DINT_TO_WORD" transform="translate(362.4, 75.0)">
       <path d="M 3 0
-            L 127.2890625 0
-            A 3 3 0 0 1 130.2890625 3
-            L 130.2890625 18
-            A 3 3 0 0 1 127.2890625 21
-            L 121.2890625 21
-            L 121.2890625 35
-            L 127.2890625 35
-            A 3 3 0 0 1 130.2890625 38
-            L 130.2890625 52
-            A 3 3 0 0 1 127.2890625 55
+            L 127.1875 0
+            A 3 3 0 0 1 130.1875 3
+            L 130.1875 18
+            A 3 3 0 0 1 127.1875 21
+            L 121.1875 21
+            L 121.1875 35
+            L 127.1875 35
+            A 3 3 0 0 1 130.1875 38
+            L 130.1875 52
+            A 3 3 0 0 1 127.1875 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -128,34 +129,34 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="125.2890625,5.5 130.2890625,10.5 125.2890625,15.5" fill="#63B31F"/>
-      <text x="124.2890625" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="125.1875,5.5 130.1875,10.5 125.1875,15.5" fill="#63B31F"/>
+      <text x="124.1875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="125.2890625,39.5 130.2890625,44.5 125.2890625,49.5" fill="#82A3A9"/>
-      <text x="124.2890625" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="125.1875,39.5 130.1875,44.5 125.1875,49.5" fill="#82A3A9"/>
+      <text x="124.1875" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="65.14453125" y="-5"
+      <text x="65.09375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_DINT_TO_WORD</text>
     </g>
-    <g id="fb_FIELDBUS_WORD_TO_PERCENT" transform="translate(624.9, 75.0)">
+    <g id="fb_FIELDBUS_WORD_TO_PERCENT" transform="translate(625.0, 75.0)">
       <path d="M 3 0
-            L 147.662109375 0
-            A 3 3 0 0 1 150.662109375 3
-            L 150.662109375 18
-            A 3 3 0 0 1 147.662109375 21
-            L 141.662109375 21
-            L 141.662109375 35
-            L 147.662109375 35
-            A 3 3 0 0 1 150.662109375 38
-            L 150.662109375 52
-            A 3 3 0 0 1 147.662109375 55
+            L 147.625 0
+            A 3 3 0 0 1 150.625 3
+            L 150.625 18
+            A 3 3 0 0 1 147.625 21
+            L 141.625 21
+            L 141.625 35
+            L 147.625 35
+            A 3 3 0 0 1 150.625 38
+            L 150.625 52
+            A 3 3 0 0 1 147.625 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -198,19 +199,19 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="145.662109375,5.5 150.662109375,10.5 145.662109375,15.5" fill="#63B31F"/>
-      <text x="144.662109375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.625,5.5 150.625,10.5 145.625,15.5" fill="#63B31F"/>
+      <text x="144.625" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#3366FF"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">WI</text>
-      <polygon points="145.662109375,39.5 150.662109375,44.5 145.662109375,49.5" fill="#3366FF"/>
-      <text x="144.662109375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.625,39.5 150.625,44.5 145.625,49.5" fill="#3366FF"/>
+      <text x="144.625" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end"></text>
 
 
       <!-- Instance Name -->
-      <text x="75.3310546875" y="-5"
+      <text x="75.3125" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">FIELDBUS_WORD_TO_PERCENT</text>
     </g>

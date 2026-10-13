@@ -1,5 +1,9 @@
 # GreenRedBackground4SC
 
+![GreenRedBackground4SC_network](./GreenRedBackground4SC_network.svg)
+
+![GreenRedBackground4SC](./GreenRedBackground4SC.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![AIS_PUBLISH_1](./AIS_PUBLISH_1.svg)
 
+![AIS_PUBLISH_1_network](./AIS_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 The **AIS_PUBLISH_1** function block is a composite function block that encapsulates the network-based `PUBLISH_1` function block from the IEC 61499 standard library and maps its interface to a unidirectional **AIS adapter**. A **STRING** value present at the adapter socket `IN` is buffered via an internal D flip-flop (E_D_FF_ANY) and then sent to all associated `SUBSCRIBE_1` receivers via the configured publish channel.

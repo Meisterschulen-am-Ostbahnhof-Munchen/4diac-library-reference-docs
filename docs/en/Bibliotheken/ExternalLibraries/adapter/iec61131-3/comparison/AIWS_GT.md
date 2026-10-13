@@ -2,6 +2,8 @@
 
 ![AIWS_GT](./AIWS_GT.svg)
 
+![AIWS_GT_network](./AIWS_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

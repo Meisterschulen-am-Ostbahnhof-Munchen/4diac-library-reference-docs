@@ -2,6 +2,8 @@
 
 ![AUI_EQ](./AUI_EQ.svg)
 
+![AUI_EQ_network](./AUI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

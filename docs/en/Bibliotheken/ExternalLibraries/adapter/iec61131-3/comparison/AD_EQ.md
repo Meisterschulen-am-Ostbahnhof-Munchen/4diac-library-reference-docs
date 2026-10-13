@@ -2,6 +2,8 @@
 
 ![AD_EQ](./AD_EQ.svg)
 
+![AD_EQ_network](./AD_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

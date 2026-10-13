@@ -1,7 +1,5 @@
 # AID_AUXI2
 
-![AID_AUXI2](./AID_AUXI2.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

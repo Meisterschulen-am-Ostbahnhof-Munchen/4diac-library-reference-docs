@@ -2,6 +2,8 @@
 
 ![logiBUS_IEA](./logiBUS_IEA.svg)
 
+![logiBUS_IEA_network](./logiBUS_IEA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

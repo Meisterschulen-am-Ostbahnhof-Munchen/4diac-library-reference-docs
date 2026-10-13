@@ -2,6 +2,8 @@
 
 ![IA_FPTO](./IA_FPTO.svg)
 
+![IA_FPTO_network](./IA_FPTO_network.svg)
+
 *[Bild des Funktionsblocks, falls vorhanden]*
 
 * * * * * * * * * *

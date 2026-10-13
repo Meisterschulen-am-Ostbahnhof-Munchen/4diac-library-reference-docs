@@ -2,6 +2,8 @@
 
 ![AX_TP_RETRIG](./AX_TP_RETRIG.svg)
 
+![AX_TP_RETRIG_network](./AX_TP_RETRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

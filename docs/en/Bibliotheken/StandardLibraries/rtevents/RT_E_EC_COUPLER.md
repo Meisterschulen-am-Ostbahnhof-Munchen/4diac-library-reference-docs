@@ -7,6 +7,29 @@
 Couples event chains with real-time parameters.
 ![RT_E_EC_COUPLER](RT_E_EC_COUPLER.svg)
 
+## Interface Structure
+
+### **Event Inputs**
+
+- **INIT**: Initialization, carries `QI`, `Tmin`, `Deadline` and `WCET`.
+- **EI**: Event input (start of the coupling); carries no data.
+
+### **Event Outputs**
+
+- **INITO**: Confirms the initialization, carries `QO`.
+- **EO**: Event output (continuation of the event chain); carries no data.
+
+### **Data Inputs**
+
+- **QI** (`BOOL`): Qualifier for the initialization.
+- **Tmin** (`TIME`): Real-time parameter (minimum distance).
+- **Deadline** (`TIME`): Real-time parameter (deadline).
+- **WCET** (`TIME`): Real-time parameter (worst-case execution time).
+
+### **Data Outputs**
+
+- **QO** (`BOOL`): Output qualifier of the initialization.
+
 ## Metadata
 
 | Attribute     | Value                            |

@@ -1,5 +1,9 @@
 # tactile_TON_5s
 
+![tastend_TON_5s_network](./tastend_TON_5s_network.svg)
+
+![tastend_TON_5s](./tastend_TON_5s.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -66,8 +70,8 @@ The sub-application tastend_TON_5s provides a compact solution for time-delayed 
 
 ## 🛠️ Related Exercises
 
-- [Exercise_103](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
-- [Exercise_103c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
+- [Exercise_103](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
+- [Exercise_103c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
 
 ---
 

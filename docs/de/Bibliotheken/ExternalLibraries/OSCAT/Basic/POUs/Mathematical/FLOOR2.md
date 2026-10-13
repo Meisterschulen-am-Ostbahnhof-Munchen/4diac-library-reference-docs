@@ -1,5 +1,7 @@
 # FLOOR2
 
+![FLOOR2](./FLOOR2.svg)
+
 This is a rounding function which returns the biggest possible integer which is less or equal
 to X.
 

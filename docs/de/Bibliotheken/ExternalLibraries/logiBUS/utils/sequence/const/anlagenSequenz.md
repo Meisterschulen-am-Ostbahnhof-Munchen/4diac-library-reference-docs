@@ -1,7 +1,5 @@
 # anlagenSequenz
 
-![anlagenSequenz](./anlagenSequenz.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

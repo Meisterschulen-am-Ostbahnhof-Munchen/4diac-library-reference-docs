@@ -18,8 +18,8 @@ Der Baustein integriert Navigationsdaten für moderne Landmaschinen und Nutzfahr
 ### **Ereignis-Ausgänge**
 
 - `INITO`: Initialisierungsbestätigung (mit Status)
-- `IND`: Datenindikation mit Navigationsparametern
-- `TIMEOUT`: Timeout-Ereignis
+- `IND`: Datenindikation mit Navigationsparametern (mit `QO`, `timestamp_data`, `CompassBearing`, `NavigationBasedVehicleSpeed`, `Pitch`, `STATUS`, `Q_timeout`, `Altitude`). Feuert bei jedem Zyklus ohne aktiven Timeout und publiziert dabei auch den Reset von `Q_timeout` auf FALSE
+- `TIMEOUT`: Timeout-Ereignis (mit `timestamp_timeout`, `STATUS`, `Q_timeout`). Feuert ausschließlich beim tatsächlichen Eintreten eines Timeouts; das Zurücksetzen von `Q_timeout` wird nicht hier, sondern über `IND` gemeldet
 
 ### **Daten-Eingänge**
 
@@ -35,6 +35,9 @@ Der Baustein integriert Navigationsdaten für moderne Landmaschinen und Nutzfahr
 | `NavigationBasedVehicleSpeed` | UINT   | 517 | 16  | 1/256 km/h/bit | 0-250 km/h | GPS-basierte Geschwindigkeit |
 | `Pitch`                       | UINT   | 583 | 16  | -              | 0xFFFF     | Nickwinkel (reserviert)      |
 | `Altitude`                    | UINT   | 580 | 16  | -              | 0xFFFF     | Höhe über NN (reserviert)    |
+| `Q_timeout`                   | BOOL   | -   | -   | -              | TRUE/FALSE | Timeout-Flag (gesetzt mit `TIMEOUT`, Reset über `IND`) |
+| `timestamp_data`              | DINT   | -   | -   | -              | -          | Zeitstempel der Daten (mit `IND`) |
+| `timestamp_timeout`           | DINT   | -   | -   | -              | -          | Zeitstempel des Timeouts (mit `TIMEOUT`) |
 
 ## Funktionsweise
 
@@ -84,8 +87,8 @@ Der Baustein integriert Navigationsdaten für moderne Landmaschinen und Nutzfahr
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_073](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_073/)
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_073](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_073/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

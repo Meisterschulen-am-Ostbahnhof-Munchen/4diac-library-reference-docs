@@ -14,7 +14,7 @@ Der **Q_Size** ist ein standardkonformer Funktionsbaustein zur Größenänderung
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Objekt-ID und xScale)
 - `REQ`: Größenänderungs-Anforderung
 
 ### **Ereignis-Ausgänge**
@@ -25,6 +25,7 @@ Der **Q_Size** ist ein standardkonformer Funktionsbaustein zur Größenänderung
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Objekt-ID (16-bit)
+- `xScale` (BOOL): Bei TRUE werden die Werte `u16Width`/`u16Height` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjId` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
 - `u16Width` (UINT): Neue Breite in Pixeln
 - `u16Height` (UINT): Neue Höhe in Pixeln
 

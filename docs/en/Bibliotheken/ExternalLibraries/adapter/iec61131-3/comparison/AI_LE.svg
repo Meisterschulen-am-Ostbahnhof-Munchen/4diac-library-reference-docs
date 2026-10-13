@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 588.0517578125 152.0"
-     width="588.0517578125" height="152.0">
+     viewBox="0 0 587.625 152.0"
+     width="587.625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(313.44140625, 10)">
+  <g transform="translate(313.0625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -60,31 +60,31 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 23.11083984375 37.0
-            L 39.11083984375 37.0
-            A 1 1 0 0 1 40.11083984375 38.0
-            L 40.11083984375 41.5
-            L 38.11083984375 41.5
-            L 38.11083984375 44.5
-            L 40.11083984375 44.5
-            L 40.11083984375 54.0
-            A 1 1 0 0 1 39.11083984375 55.0
-            L 23.11083984375 55.0
-            A 1 1 0 0 1 22.11083984375 54.0
-            L 22.11083984375 44.5
-            L 24.11083984375 44.5
-            L 24.11083984375 41.5
-            L 22.11083984375 41.5
-            L 22.11083984375 38.0
-            A 1 1 0 0 1 23.11083984375 37.0
+    <path d="M 23.125 37.0
+            L 39.125 37.0
+            A 1 1 0 0 1 40.125 38.0
+            L 40.125 41.5
+            L 38.125 41.5
+            L 38.125 44.5
+            L 40.125 44.5
+            L 40.125 54.0
+            A 1 1 0 0 1 39.125 55.0
+            L 23.125 55.0
+            A 1 1 0 0 1 22.125 54.0
+            L 22.125 44.5
+            L 24.125 44.5
+            L 24.125 41.5
+            L 22.125 41.5
+            L 22.125 38.0
+            A 1 1 0 0 1 23.125 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="31.11083984375" y="51.0"
+    <text x="31.125" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="45.11083984375" y="51.0"
+    <text x="45.125" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AI_LE</text>
     

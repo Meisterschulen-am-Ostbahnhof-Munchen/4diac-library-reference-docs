@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 592.6826171875 172.0"
-     width="592.6826171875" height="172.0">
+     viewBox="0 0 592.125 172.0"
+     width="592.125" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(164.58203125, 10)">
+  <g transform="translate(164.375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 204.12890625 0
-            A 3 3 0 0 1 207.12890625 3
-            L 207.12890625 63.0
-            A 3 3 0 0 1 204.12890625 66.0
-            L 197.12890625 66.0
-            L 197.12890625 106.0
-            L 204.12890625 106.0
-            A 3 3 0 0 1 207.12890625 109.0
-            L 207.12890625 149.0
-            A 3 3 0 0 1 204.12890625 152.0
+            L 203.9375 0
+            A 3 3 0 0 1 206.9375 3
+            L 206.9375 63.0
+            A 3 3 0 0 1 203.9375 66.0
+            L 196.9375 66.0
+            L 196.9375 106.0
+            L 203.9375 106.0
+            A 3 3 0 0 1 206.9375 109.0
+            L 206.9375 149.0
+            A 3 3 0 0 1 203.9375 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 109.0
@@ -58,16 +58,16 @@
 
     <!-- Event Ports -->
 
-    <polygon points="200.62890625,11.0 205.62890625,16.0 200.62890625,21.0" fill="#63B31F"/>
-    <text x="197.62890625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="200.4375,11.0 205.4375,16.0 200.4375,21.0" fill="#63B31F"/>
+    <text x="197.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">SET</text>
 
-    <polygon points="200.62890625,31.0 205.62890625,36.0 200.62890625,41.0" fill="#63B31F"/>
-    <text x="197.62890625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="200.4375,31.0 205.4375,36.0 200.4375,41.0" fill="#63B31F"/>
+    <text x="197.4375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">RESET</text>
 
-    <polygon points="200.62890625,51.0 205.62890625,56.0 200.62890625,61.0" fill="#63B31F"/>
-    <text x="197.62890625" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="200.4375,51.0 205.4375,56.0 200.4375,61.0" fill="#63B31F"/>
+    <text x="197.4375" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">TOGGLE</text>
 
     <!-- Name Section -->
@@ -100,7 +100,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ASRT_SRT_TO_3EVENTS</text>
     
-    <text x="103.564453125" y="106.0"
+    <text x="103.46875" y="106.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -130,13 +130,13 @@
 
     <!-- External Labels -->
 
-    <text x="232.12890625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="231.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Set / Switch on</text>
 
-    <text x="232.12890625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="231.9375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Reset / Switch off</text>
 
-    <text x="232.12890625" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="231.9375" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Toggle / Switch output</text>
 
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

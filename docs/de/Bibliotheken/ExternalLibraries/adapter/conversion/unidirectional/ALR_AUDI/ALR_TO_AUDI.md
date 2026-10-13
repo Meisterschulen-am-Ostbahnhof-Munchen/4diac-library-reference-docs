@@ -2,6 +2,8 @@
 
 ![ALR_TO_AUDI](./ALR_TO_AUDI.svg)
 
+![ALR_TO_AUDI_network](./ALR_TO_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![IA_VP1](./IA_VP1.svg)
 
+![IA_VP1_network](./IA_VP1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

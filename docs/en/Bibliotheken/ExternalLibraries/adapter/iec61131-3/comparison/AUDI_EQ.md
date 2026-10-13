@@ -2,6 +2,8 @@
 
 ![AUDI_EQ](./AUDI_EQ.svg)
 
+![AUDI_EQ_network](./AUDI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

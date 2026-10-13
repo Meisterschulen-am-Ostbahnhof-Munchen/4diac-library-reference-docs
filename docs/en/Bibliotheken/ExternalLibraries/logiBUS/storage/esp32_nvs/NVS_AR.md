@@ -2,6 +2,8 @@
 
 ![NVS_AR](./NVS_AR.svg)
 
+![NVS_AR_network](./NVS_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -12,7 +14,7 @@ The function block `NVS_AR` is used to load and store REAL data in non-volatile 
 
 ### **Event Inputs**
 
-- **INIT** (EInit) – Initializes the function block. Upon this event, the data inputs `QI`, `KEY`, and `DEFAULT_VALUE` are accepted.
+- **INIT** (EInit) – Initializes the function block. Upon this event, the data inputs `QI`, `SETM`, `KEY`, and `DEFAULT_VALUE` are accepted.
 
 ### **Event Outputs**
 
@@ -21,6 +23,7 @@ The function block `NVS_AR` is used to load and store REAL data in non-volatile 
 ### **Data Inputs**
 
 - **QI** (BOOL) – Input qualifier; controls the execution of the initialization.
+- **SETM** (BOOL) – Enable mirroring on SET.
 - **KEY** (STRING) – Key name under which the value is stored/retrieved in the NVS.
 - **DEFAULT_VALUE** (REAL) – Default value that is returned if no entry with the specified key exists in the NVS.
 
@@ -38,7 +41,7 @@ The function block `NVS_AR` is used to load and store REAL data in non-volatile 
 
 The function block operates as follows:
 
-1. **Initialization**: An event at `INIT` starts the initialization of the internal `NVS` function block. The inputs `QI`, `KEY`, and `DEFAULT_VALUE` are forwarded to `NVS`.
+1. **Initialization**: An event at `INIT` starts the initialization of the internal `NVS` function block. The inputs `QI`, `SETM`, `KEY`, and `DEFAULT_VALUE` are forwarded to `NVS`.
 2. **After Initialization**: Once `NVS` completes initialization (event `INITO`), a **read command** (`GET`) is automatically sent to `NVS`. The read value (or the default value) is then output via the adapter output `AR_OUT`.
 ... 3. **Save**: An event received via the adapter input `AR_IN` (`AR_IN.E1`) triggers a **save command** (`SET`) in the internal `NVS`. The value to be saved is taken from the adapter data channel (`AR_IN.D1`).
 

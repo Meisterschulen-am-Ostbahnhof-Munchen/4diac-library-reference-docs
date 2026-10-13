@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 556.08984375 132.0"
-     width="556.08984375" height="132.0">
+     viewBox="0 0 555.5625 132.0"
+     width="555.5625" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(149.0302734375, 10)">
+  <g transform="translate(148.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 157.2275390625 0
-            A 3 3 0 0 1 160.2275390625 3
-            L 160.2275390625 23.0
-            A 3 3 0 0 1 157.2275390625 26.0
-            L 150.2275390625 26.0
-            L 150.2275390625 66.0
-            L 157.2275390625 66.0
-            A 3 3 0 0 1 160.2275390625 69.0
-            L 160.2275390625 109.0
-            A 3 3 0 0 1 157.2275390625 112.0
+            L 157.125 0
+            A 3 3 0 0 1 160.125 3
+            L 160.125 23.0
+            A 3 3 0 0 1 157.125 26.0
+            L 150.125 26.0
+            L 150.125 66.0
+            L 157.125 66.0
+            A 3 3 0 0 1 160.125 69.0
+            L 160.125 109.0
+            A 3 3 0 0 1 157.125 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -58,8 +58,8 @@
 
     <!-- Event Ports -->
 
-    <polygon points="153.7275390625,11.0 158.7275390625,16.0 153.7275390625,21.0" fill="#63B31F"/>
-    <text x="150.7275390625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="153.625,11.0 158.625,16.0 153.625,21.0" fill="#63B31F"/>
+    <text x="150.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -92,7 +92,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AE_E_TO_EVENT</text>
     
-    <text x="80.11376953125" y="66.0"
+    <text x="80.0625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -122,7 +122,7 @@
 
     <!-- External Labels -->
 
-    <text x="185.2275390625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="185.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation from Adapter</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

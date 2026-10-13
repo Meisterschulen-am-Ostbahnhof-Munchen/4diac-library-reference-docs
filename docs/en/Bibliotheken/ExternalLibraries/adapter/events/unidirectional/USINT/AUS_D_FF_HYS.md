@@ -2,6 +2,8 @@
 
 ![AUS_D_FF_HYS](./AUS_D_FF_HYS.svg)
 
+![AUS_D_FF_HYS_network](./AUS_D_FF_HYS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,5 +1,7 @@
 # E_D_FF_ANY_TMIN
 
+![E_D_FF_ANY_TMIN_network](./E_D_FF_ANY_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

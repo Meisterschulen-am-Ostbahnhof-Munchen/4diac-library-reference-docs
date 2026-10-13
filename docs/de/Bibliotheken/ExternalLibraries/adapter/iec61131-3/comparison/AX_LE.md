@@ -2,6 +2,8 @@
 
 ![AX_LE](./AX_LE.svg)
 
+![AX_LE_network](./AX_LE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

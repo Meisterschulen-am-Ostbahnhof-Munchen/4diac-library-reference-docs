@@ -1,5 +1,7 @@
 # E_TRAIN
 
+![E_TRAIN_network](./E_TRAIN_network.svg)
+
 <img width="1139" height="202" alt="E_TRAIN" src="https://user-images.githubusercontent.com/116869307/214142742-8ce9523e-eb2b-416c-afe8-109fb601dd20.png">
 
 * * * * * * * * * *
@@ -64,9 +66,9 @@ Der `E_TRAIN` (Event Train) ist ein Funktionsbaustein nach IEC 61499, der eine e
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_035a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
-- [Uebung_035a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a2_AX/)
-- [Uebung_091](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_091/)
+- [Uebung_035a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
+- [Uebung_035a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a2_AX/)
+- [Uebung_091](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_091/)
 
 ## Fazit
 

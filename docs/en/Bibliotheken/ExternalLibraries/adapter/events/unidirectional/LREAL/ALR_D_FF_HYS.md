@@ -2,6 +2,8 @@
 
 ![ALR_D_FF_HYS](./ALR_D_FF_HYS.svg)
 
+![ALR_D_FF_HYS_network](./ALR_D_FF_HYS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

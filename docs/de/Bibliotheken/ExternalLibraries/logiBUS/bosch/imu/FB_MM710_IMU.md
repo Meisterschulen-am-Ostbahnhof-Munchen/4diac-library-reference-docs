@@ -15,15 +15,14 @@ Der Funktionsblock **FB_MM710_IMU** ist ein serviceorientierter Baustein (SIFB) 
 | Ereignis | Typ   | Beschreibung                                                                                                                                           |
 | -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | INIT     | EInit | Initialisierung des Bausteins. Mit diesem Ereignis werden die CAN‑Parameter (Index, Source‑Address) sowie der Aktivierungs‑Qualifier QI gesetzt.       |
-| REQ      | Event | Auslösen einer erneuten Messwertabfrage. Nach erfolgreicher Initialisierung können die Sensordaten zyklisch oder ereignisgesteuert angefordert werden. |
 
 ### **Ereignis‑Ausgänge**
 
 | Ereignis | Typ   | Beschreibung                                                                                      |
 | -------- | ----- | ------------------------------------------------------------------------------------------------- |
 | INITO    | EInit | Bestätigung der erfolgreichen Initialisierung (QO = TRUE) oder Fehlermeldung.                     |
-| CNF      | Event | Bestätigung einer Messwertanforderung. Liefert die aktuellen Sensordaten und Statusinformationen. |
-| ERROR    | Event | Tritt bei Kommunikations‑ oder CRC‑Fehlern auf. Enthält detaillierte Fehlerinformationen.         |
+| IND      | Event | Indikation von der Ressource: feuert bei jedem Zyklus ohne aktiven Fehler und publiziert dabei auch das Zurücksetzen von `bCommError`/`bCRCError` auf FALSE. Liefert QO, STATUS, alle Mess- und Statuswerte (`rAcc*`, `rRate*`, `rRoll`, `rPitch`, `rYaw`, `rTempRateZ`, `uiHW_Index`, `eStatus*`, `bAllSignalsReady`, `uiSysStatus`, `uiSysStatus5`, `uiSysDiag`, `uiMessageCounter`). |
+| ERROR    | Event | Feuert ausschließlich beim tatsächlichen Eintreten eines Fehlers (Entry-Trigger); liefert QO, STATUS, `bCommError`, `bCRCError` und `sErrorMsg`. Das Zurücksetzen von `bCommError`/`bCRCError` wird nicht hier, sondern über IND gemeldet. |
 
 ### **Daten‑Eingänge**
 
@@ -45,8 +44,8 @@ Der Funktionsblock **FB_MM710_IMU** ist ein serviceorientierter Baustein (SIFB) 
 | rRoll, rPitch, rYaw         | REAL   | Neigungswinkel (Roll, Pitch, Yaw) [deg].                         |
 | rTempRateZ                  | REAL   | Sensortemperatur [°C].                                           |
 | uiHW_Index                  | UINT   | Hardware‑Index (0 = MM5.10, 1 = MM7.10).                         |
-| eStatusAccX … eStatusAccZ   | BYTE   | Signalqualität der Beschleunigung (0 = bereit, 1 .. 7 = Fehler). |
-| eStatusRateX … eStatusRateZ | BYTE   | Signalqualität der Drehraten (0 = bereit, 1 .. 7 = Fehler).      |
+| eStatusAccX … eStatusAccZ   | BYTE   | Signalqualität der Beschleunigung (einzeln `eStatusAccX`, `eStatusAccY`, `eStatusAccZ`; 0 = bereit, 1 .. 7 = Fehler). |
+| eStatusRateX … eStatusRateZ | BYTE   | Signalqualität der Drehraten (einzeln `eStatusRateX`, `eStatusRateY`, `eStatusRateZ`; 0 = bereit, 1 .. 7 = Fehler).      |
 | bAllSignalsReady            | BOOL   | TRUE, wenn alle Signal‑Status 0 sind.                            |
 | uiSysStatus                 | BYTE   | Systemstatus aus TX‑Nachricht 1.                                 |
 | uiSysStatus5                | BYTE   | Systemstatus aus TX‑Nachricht 2.                                 |
@@ -62,7 +61,7 @@ Keine Adapter definiert.
 
 ## Funktionsweise
 
-Der FB_MM710_IMU initialisiert beim Eintreffen von **INIT** mit QI = TRUE die CAN‑Kommunikation und den internen Empfangspuffer. Nach erfolgreicher Initialisierung wird **INITO** mit QO = TRUE gesetzt. Durch jeden **REQ‑Impuls** wird eine Messwertabfrage ausgelöst – der Baustein wartet dann auf die CAN‑Antwort des Sensors. Sind gültige Daten empfangen, wird **CNF** ausgegeben und alle Datenausgänge aktualisiert. Tritt ein Kommunikations‑ oder CRC‑Fehler auf oder überschreitet der Nachrichtenzähler einen Timeout, wird stattdessen **ERROR** gesetzt. Der Baustein kann mehrfach hintereinander zyklisch mit REQ getriggert werden.
+Der FB_MM710_IMU initialisiert beim Eintreffen von **INIT** mit QI = TRUE die CAN‑Kommunikation und den internen Empfangspuffer. Nach erfolgreicher Initialisierung wird **INITO** mit QO = TRUE gesetzt. Der Baustein hat keinen Anforderungseingang: Sind gültige Daten vom Sensor empfangen, wird in jedem Zyklus ohne aktiven Fehler **IND** ausgegeben und alle Datenausgänge aktualisiert. Tritt ein Kommunikations‑ oder CRC‑Fehler auf oder überschreitet der Nachrichtenzähler einen Timeout, wird **ERROR** gesetzt.
 
 Die Signal‑Status (eStatus*) ermöglichen eine Einzelfehleranalyse für jede Achse. Der Hardware‑Index unterscheidet zwischen älteren MM5.10 und aktuellen MM7.10 Sensoren.
 
@@ -80,10 +79,9 @@ Der Baustein durchläuft folgende Zustände (nicht explizit als ECC, aber aus de
 
 1. **Inaktiv** – Nach dem Start, wartet auf INIT.
 2. **Initialisieren** – Nach INIT‑Ereignis; Aufbau der CAN‑Kommunikation.
-3. **Bereit** – Nach erfolgreichem INITO; auf REQ wartend.
-4. **Anforderung gesendet** – Nach REQ; auf Antwort wartend (CAN‑Message).
-5. **Daten empfangen** – Nach erfolgreicher CAN‑Antwort; CNF wird gesendet.
-6. **Fehler** – Bei Timeout oder CRC‑Fehler; ERROR wird gesendet (Rückfall in Bereit nach Fehlerbehandlung).
+3. **Bereit** – Nach erfolgreichem INITO; auf Sensor‑Nachrichten wartend.
+4. **Daten empfangen** – Nach erfolgreicher CAN‑Nachricht; IND wird gesendet.
+5. **Fehler** – Bei Timeout oder CRC‑Fehler; ERROR wird gesendet (Rückfall in Bereit nach Fehlerbehandlung).
 
 ## Anwendungsszenarien
 
@@ -98,4 +96,4 @@ Gegenüber einfachen IMU‑Treibern (z. B. per SPI/I²C) bietet dieser FB eine
 
 ## Fazit
 
-Der FB_MM710_IMU ist ein mächtiger Baustein für die zuverlässige Erfassung von IMU‑Daten in CAN‑basierten Automatisierungssystemen. Seine umfangreichen Status‑ und Fehlerinformationen unterstützen eine lückenlose Diagnose, und die einfache Parametrisierung über INIT und REQ macht ihn flexibel einsetzbar. Besonders in sicherheitskritischen Anwendungen mit J1939 ist er eine optimale Wahl.
+Der FB_MM710_IMU ist ein mächtiger Baustein für die zuverlässige Erfassung von IMU‑Daten in CAN‑basierten Automatisierungssystemen. Seine umfangreichen Status‑ und Fehlerinformationen unterstützen eine lückenlose Diagnose, und die einfache Parametrisierung über INIT macht ihn flexibel einsetzbar. Besonders in sicherheitskritischen Anwendungen mit J1939 ist er eine optimale Wahl.

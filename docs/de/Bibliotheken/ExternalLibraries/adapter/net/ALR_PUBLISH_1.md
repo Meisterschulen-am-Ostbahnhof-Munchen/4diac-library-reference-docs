@@ -2,6 +2,8 @@
 
 ![ALR_PUBLISH_1](./ALR_PUBLISH_1.svg)
 
+![ALR_PUBLISH_1_network](./ALR_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

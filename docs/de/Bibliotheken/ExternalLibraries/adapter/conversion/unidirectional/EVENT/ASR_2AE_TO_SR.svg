@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 606.2 152.0"
-     width="606.2" height="152.0">
+     viewBox="0 0 505.1875 152.0"
+     width="505.1875" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(228.20000000000005, 10)">
+  <g transform="translate(174.5, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 172.0 0
-            A 3 3 0 0 1 175.0 3
-            L 175.0 23.0
-            A 3 3 0 0 1 172.0 26.0
-            L 165.0 26.0
-            L 165.0 66.0
-            L 172.0 66.0
-            A 3 3 0 0 1 175.0 69.0
-            L 175.0 129.0
-            A 3 3 0 0 1 172.0 132.0
+            L 160.0 0
+            A 3 3 0 0 1 163.0 3
+            L 163.0 23.0
+            A 3 3 0 0 1 160.0 26.0
+            L 153.0 26.0
+            L 153.0 66.0
+            L 160.0 66.0
+            A 3 3 0 0 1 163.0 69.0
+            L 163.0 129.0
+            A 3 3 0 0 1 160.0 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -60,35 +60,35 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 22.400000000000006 37.0
-            L 38.400000000000006 37.0
-            A 1 1 0 0 1 39.400000000000006 38.0
-            L 39.400000000000006 41.5
-            L 37.400000000000006 41.5
-            L 37.400000000000006 44.5
-            L 39.400000000000006 44.5
-            L 39.400000000000006 54.0
-            A 1 1 0 0 1 38.400000000000006 55.0
-            L 22.400000000000006 55.0
-            A 1 1 0 0 1 21.400000000000006 54.0
-            L 21.400000000000006 44.5
-            L 23.400000000000006 44.5
-            L 23.400000000000006 41.5
-            L 21.400000000000006 41.5
-            L 21.400000000000006 38.0
-            A 1 1 0 0 1 22.400000000000006 37.0
+    <path d="M 23.1875 37.0
+            L 39.1875 37.0
+            A 1 1 0 0 1 40.1875 38.0
+            L 40.1875 41.5
+            L 38.1875 41.5
+            L 38.1875 44.5
+            L 40.1875 44.5
+            L 40.1875 54.0
+            A 1 1 0 0 1 39.1875 55.0
+            L 23.1875 55.0
+            A 1 1 0 0 1 22.1875 54.0
+            L 22.1875 44.5
+            L 24.1875 44.5
+            L 24.1875 41.5
+            L 22.1875 41.5
+            L 22.1875 38.0
+            A 1 1 0 0 1 23.1875 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="30.400000000000006" y="51.0"
+    <text x="31.1875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="44.400000000000006" y="51.0"
+    <text x="45.1875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ASR_2AE_TO_SR</text>
     
-    <text x="87.5" y="66.0"
+    <text x="81.5" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -128,20 +128,20 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">RESET_IN</text>
 
-    <path d="M 163.5 97.0
-            L 166.0 97.0
-            L 166.0 98.66666666666667
-            L 168.5 98.66666666666667
-            L 168.5 97.0
-            L 173.5 97.0
-            L 173.5 107.0
-            L 168.5 107.0
-            L 168.5 105.33333333333333
-            L 166.0 105.33333333333333
-            L 166.0 107.0
-            L 163.5 107.0
+    <path d="M 151.5 97.0
+            L 154.0 97.0
+            L 154.0 98.66666666666667
+            L 156.5 98.66666666666667
+            L 156.5 97.0
+            L 161.5 97.0
+            L 161.5 107.0
+            L 156.5 107.0
+            L 156.5 105.33333333333333
+            L 154.0 105.33333333333333
+            L 154.0 107.0
+            L 151.5 107.0
             Z" fill="#845DAF"/>
-    <text x="160.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="148.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ASR_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -156,7 +156,7 @@
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Reset / Switch off – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE</tspan></text>
 
-    <text x="200.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="188.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ASR</tspan> – Adapter Output</text>
   </g>
 </svg>

@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,9 @@
   <rect x="11.9" y="-144.0" width="1173.8" height="703.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="11.9" y="-144.0" width="1173.8" height="25.0" fill="white" stroke="none"/>
   <line x1="11.9" y1="-119.5" x2="1185.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="16.9" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">3-Wege-Multiplexer fuer AUS-Werte mit 3 internen initval_AUS und AUI_MUX_3 / AUS_AUI_MUX_3. Schaltet per Event-Input (EI1, EI2, EI3) zwischen val1, val2, val3 um.</text>
+  <text x="16.9" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">3-Wege-Multiplexer fuer AUS-Werte mit 3 internen initval_AUS und AUI_MUX_3 /
+AUS_AUI_MUX_3. Schaltet per Event-Input (EI1, EI2, EI3) zwischen val1, val2,
+val3 um.</text>
   <g id="sidebars">
     <rect x="11.9" y="-119.0" width="28.1" height="678.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="559.0" stroke="#A0A0A0" stroke-width="0.5"/>

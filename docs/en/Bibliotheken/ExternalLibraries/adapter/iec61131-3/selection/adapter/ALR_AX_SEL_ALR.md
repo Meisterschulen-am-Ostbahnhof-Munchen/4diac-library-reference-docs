@@ -2,6 +2,8 @@
 
 ![ALR_AX_SEL_ALR](./ALR_AX_SEL_ALR.svg)
 
+![ALR_AX_SEL_ALR_network](./ALR_AX_SEL_ALR_network.svg)
+
 * * * * * * * * * *
 The function block `ALR_AX_SEL_ALR` is used for binary selection between two analog input signals provided by adapters of type `ALR`. This selection is controlled by a selector adapter of type `AX`. The selected signal is passed on to an output adapter of type `ALR`.
 

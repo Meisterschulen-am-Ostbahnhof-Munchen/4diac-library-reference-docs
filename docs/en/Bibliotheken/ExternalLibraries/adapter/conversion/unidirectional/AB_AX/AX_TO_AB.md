@@ -2,6 +2,8 @@
 
 ![AX_TO_AB](./AX_TO_AB.svg)
 
+![AX_TO_AB_network](./AX_TO_AB_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

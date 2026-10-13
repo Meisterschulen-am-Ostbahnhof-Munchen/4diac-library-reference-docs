@@ -2,6 +2,8 @@
 
 ![ALI_SPLIT_SIGNED](./ALI_SPLIT_SIGNED.svg)
 
+![ALI_SPLIT_SIGNED_network](./ALI_SPLIT_SIGNED_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

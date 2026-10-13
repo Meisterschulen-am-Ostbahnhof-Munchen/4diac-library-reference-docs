@@ -2,6 +2,8 @@
 
 ![SPLIT_SIGNED_DINT](./SPLIT_SIGNED_DINT.svg)
 
+![SPLIT_SIGNED_DINT_ecc](./SPLIT_SIGNED_DINT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![AUS_TO_AR](./AUS_TO_AR.svg)
 
+![AUS_TO_AR_network](./AUS_TO_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

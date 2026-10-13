@@ -1,6 +1,8 @@
 # IA_FPTO
 
 ![IA_FPTO](./IA_FPTO.svg)
+![IA_FPTO_network](./IA_FPTO_network.svg)
+
 *[Image of the function block, if available]*
 
 * * * * * * * * * *

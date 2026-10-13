@@ -2,6 +2,8 @@
 
 ![logiBUS_QDA_PWM](./logiBUS_QDA_PWM.svg)
 
+![logiBUS_QDA_PWM_network](./logiBUS_QDA_PWM_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

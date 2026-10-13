@@ -2,6 +2,8 @@
 
 ![AI_EQ](./AI_EQ.svg)
 
+![AI_EQ_network](./AI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

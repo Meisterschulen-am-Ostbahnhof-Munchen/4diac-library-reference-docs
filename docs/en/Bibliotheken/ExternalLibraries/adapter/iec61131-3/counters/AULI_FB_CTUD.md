@@ -2,6 +2,8 @@
 
 ![AULI_FB_CTUD](./AULI_FB_CTUD.svg)
 
+![AULI_FB_CTUD_network](./AULI_FB_CTUD_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

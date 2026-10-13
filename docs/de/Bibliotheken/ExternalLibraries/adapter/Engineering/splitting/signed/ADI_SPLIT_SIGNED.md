@@ -2,6 +2,8 @@
 
 ![ADI_SPLIT_SIGNED](./ADI_SPLIT_SIGNED.svg)
 
+![ADI_SPLIT_SIGNED_network](./ADI_SPLIT_SIGNED_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

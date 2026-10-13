@@ -2,6 +2,8 @@
 
 ![ALR_TO_AULI](./ALR_TO_AULI.svg)
 
+![ALR_TO_AULI_network](./ALR_TO_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

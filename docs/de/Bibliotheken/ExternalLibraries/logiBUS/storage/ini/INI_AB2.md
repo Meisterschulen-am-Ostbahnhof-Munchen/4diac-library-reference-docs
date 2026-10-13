@@ -2,11 +2,13 @@
 
 ![INI_AB2](./INI_AB2.svg)
 
+![INI_AB2_network](./INI_AB2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
 
-Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von REAL-Werten aus oder in eine `settings.ini`-Datei. Der Zugriff erfolgt über eine Kombination aus Abschnittsnamen (Section) und Schlüsselnamen (Key). Die Kommunikation mit der Außenwelt erfolgt über einen bidirektionalen **AB2-Adapter**, der es ermöglicht, Werte aus der INI-Datei an andere Bausteine weiterzugeben oder Werte von anderen Bausteinen entgegenzunehmen und in der Datei zu speichern. Der Baustein wurde gemäß der Norm IEC 61499-2 entwickelt.
+Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von BYTE-Werten aus oder in eine `settings.ini`-Datei. Der Zugriff erfolgt über eine Kombination aus Abschnittsnamen (Section) und Schlüsselnamen (Key). Die Kommunikation mit der Außenwelt erfolgt über einen bidirektionalen **AB2-Adapter**, der es ermöglicht, Werte aus der INI-Datei an andere Bausteine weiterzugeben oder Werte von anderen Bausteinen entgegenzunehmen und in der Datei zu speichern. Der Baustein wurde gemäß der Norm IEC 61499-2 entwickelt.
 
 ## Schnittstellenstruktur
 
@@ -14,7 +16,7 @@ Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von REAL-Werten aus o
 
 | Ereignis | Typ   | Beschreibung                                                                                                                                                                          |
 | -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| INIT     | EInit | Initialisierungsereignis; startet den Lese- oder Schreibvorgang abhängig von der angeschlossenen Adapterlogik. Die mitgegebenen Daten legen Section, Key und einen Standardwert fest. |
+| INIT     | EInit | Initialisierungsereignis; startet den Lese- oder Schreibvorgang abhängig von der angeschlossenen Adapterlogik. Die mitgegebenen Daten legen die Spiegelung bei SET (`SETM`), Section, Key und einen Standardwert fest. |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,9 +29,10 @@ Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von REAL-Werten aus o
 | Variable      | Typ    | Beschreibung                                                                                 |
 | ------------- | ------ | -------------------------------------------------------------------------------------------- |
 | QI            | BOOL   | Qualifizierer für den Ereigniseingang; steuert die Ausführung.                               |
+| SETM          | BOOL   | Aktiviert die Spiegelung (Mirroring) bei SET.                                                |
 | SECTION       | STRING | Name des Abschnitts (Section) in der `settings.ini`.                                         |
 | KEY           | STRING | Name des Schlüssels (Key) innerhalb des Abschnitts.                                          |
-| DEFAULT_VALUE | REAL   | Der Wert, der zurückgegeben wird, falls der Schlüssel in der `settings.ini` nicht existiert. |
+| DEFAULT_VALUE | BYTE   | Der Wert, der zurückgegeben wird, falls der Schlüssel in der `settings.ini` nicht existiert. |
 
 ### **Daten-Ausgänge**
 
@@ -42,7 +45,7 @@ Der Funktionsblock `INI_AB2` dient zum Lesen und Schreiben von REAL-Werten aus o
 
 | Adapter | Typ                                | Beschreibung                                                                                                                                                                                         |
 | ------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| VAL     | adapter::types::bidirectional::AB2 | Bidirektionaler Adapter zum Austausch von REAL-Werten. Der eingehende Wert (`DO1`) wird in die INI-Datei geschrieben; der ausgehende Wert (`DI1`) wird aus der INI-Datei gelesen und weitergereicht. |
+| VAL     | adapter::types::bidirectional::AB2 | Bidirektionaler Adapter zum Austausch von BYTE-Werten. Der eingehende Wert (`DO1`) wird in die INI-Datei geschrieben; der ausgehende Wert (`DI1`) wird aus der INI-Datei gelesen und weitergereicht. |
 
 ## Funktionsweise
 

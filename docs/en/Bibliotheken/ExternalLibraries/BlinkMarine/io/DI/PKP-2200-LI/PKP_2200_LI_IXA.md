@@ -1,5 +1,7 @@
 # PKP_2200_LI_IXA
 
+![PKP_2200_LI_IXA_network](./PKP_2200_LI_IXA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![A2X2_TO_A2X](A2X2_TO_A2X.svg)
 
+![A2X2_TO_A2X_network](./A2X2_TO_A2X_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

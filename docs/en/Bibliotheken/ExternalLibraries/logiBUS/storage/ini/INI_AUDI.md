@@ -2,6 +2,8 @@
 
 ![INI_AUDI](./INI_AUDI.svg)
 
+![INI_AUDI_network](./INI_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -27,6 +29,7 @@ The **INI_AUDI** function block enables reading and saving UDINT data from a `se
 | Name          | Type   | Comment                                |
 | ------------- | ------ | -------------------------------------- |
 | QI            | BOOL   | Event Input Qualifier                  |
+| SETM          | BOOL   | Enable mirroring on SET                |
 | SECTION       | STRING | Section name in settings.ini           |
 | KEY           | STRING | Key name in settings.ini               |
 | DEFAULT_VALUE | UDINT  | Fallback value if the key is not found |
@@ -51,7 +54,7 @@ This function block works in conjunction with the internal `INI` function block.
 
 1. **Initialization (`INIT` event)**
 
-- The input data associated with `INIT` (`QI`, `SECTION`, `KEY`, `DEFAULT_VALUE`) is forwarded to the internal `INI` module.
+- The input data associated with `INIT` (`QI`, `SETM`, `SECTION`, `KEY`, `DEFAULT_VALUE`) is forwarded to the internal `INI` module.
 - `INI` is started and acknowledged with `INITO`.
 
 1. **Reading a Value**

@@ -1,5 +1,7 @@
 # AUS_US_TO_USINT
 
+![AUS_US_TO_USINT_network](./AUS_US_TO_USINT_network.svg)
+
 ## Introduction
 
 The AUS_US_TO_USINT function block is a composite function block used to convert the AUS adapter format to a USINT value.

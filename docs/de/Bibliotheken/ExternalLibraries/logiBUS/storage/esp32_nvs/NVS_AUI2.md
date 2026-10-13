@@ -2,6 +2,8 @@
 
 ![NVS_AUI2](./NVS_AUI2.svg)
 
+![NVS_AUI2_network](./NVS_AUI2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AUI2** dient dem Laden und Speichern von UINT-Daten im 
 
 | Ereignis | Typ | Kommentar | Mitgeführte Variablen |
 | -------- | --- | --------- | --------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AUI2** dient dem Laden und Speichern von UINT-Daten im 
 | Name | Typ | Kommentar |
 | ---- | --- | --------- |
 | `QI` | BOOL | Event Input Qualifier |
+| `SETM` | BOOL | Aktiviert die Spiegelung (Mirroring) bei SET |
 | `KEY` | STRING | Schlüsselname für den NVS-Eintrag |
 | `DEFAULT_VALUE` | UINT | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: 0) |
 

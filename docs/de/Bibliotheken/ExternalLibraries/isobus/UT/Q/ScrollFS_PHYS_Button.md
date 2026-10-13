@@ -2,6 +2,8 @@
 
 ![ScrollFS_PHYS_Button](ScrollFS_PHYS_Button.svg)
 
+![ScrollFS_PHYS_Button_network](./ScrollFS_PHYS_Button_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -20,16 +22,18 @@ Herleitung.
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Übernimmt die komplette Konfiguration (`stObj`) per Snapshot.
+- `INIT`: Übernimmt die komplette Konfiguration (`stObj`) per Snapshot (mit `stObj`, `xScale`).
 
 ### **Ereignis-Ausgänge**
 
+- `INITO`: Bestätigung der Initialisierung.
 - `CNF`: Bestätigt eine Positionsänderung, liefert `OUT`.
 
 ### **Daten-Eingänge**
 
 - `stObj` (`isobus::utils::scroll::ScrollFull_S`): komplette Konfiguration (Geometrie +
   Bedienelemente-IDs), bei `INIT` geschnappt.
+- `xScale` (BOOL): FALSE (Standard) = Bypass, TRUE = Skalierung mit dem DM/SKM-Faktor. Wird unverändert an die interne `ScrollFS`-Instanz durchgereicht.
 
 ### **Daten-Ausgänge**
 

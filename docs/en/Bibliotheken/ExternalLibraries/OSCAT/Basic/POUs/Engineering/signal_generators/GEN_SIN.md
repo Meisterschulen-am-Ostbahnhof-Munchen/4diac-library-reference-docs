@@ -16,7 +16,7 @@ in addition to an analog output Out there is a second boolean output Q with the 
 
 | Name | Comment                  | With           |
 | :--- | :----------------------- | :------------- |
-| INIT | InitRequest              |                |
+| EINIT | Init Request             |                |
 | REQ  | Normal Execution Request | PT, AM, OS, DL |
 | RST  | Reset                    |                |
 
@@ -45,5 +45,5 @@ in addition to an analog output Out there is a second boolean output Q with the 
 
 ## 🛠️ Related exercises
 
-- [Uebung_126b2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b2_sub/)
-- [Uebung_126b_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_126b_sub/)
+- [SIN_TO_PCAN_Callback_DWord](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/en/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/SIN_TO_PCAN_Callback_DWord/)
+- [SIN_TO_PCAN_Callback_Byte](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/en/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/SIN_TO_PCAN_Callback_Byte/)

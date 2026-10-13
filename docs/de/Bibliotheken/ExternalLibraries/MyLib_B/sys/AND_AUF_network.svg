@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="4.3 -151.0 1268.4 588.0"
+     viewBox="4.2 -151.0 1268.4 588.0"
      width="1268" height="588">
   <style>
     @font-face {
@@ -40,30 +40,30 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="4.3" y="-151.0" width="1268.4" height="588.0" fill="white"/>
-  <rect x="11.3" y="-144.0" width="1254.4" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="11.3" y="-144.0" width="1254.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="11.3" y1="-119.5" x2="1265.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="16.3" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Logisches UND (IN1 AND IN2) für AUF-Bedingung</text>
+  <rect x="4.2" y="-151.0" width="1268.4" height="588.0" fill="white"/>
+  <rect x="11.2" y="-144.0" width="1254.4" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="11.2" y="-144.0" width="1254.4" height="25.0" fill="white" stroke="none"/>
+  <line x1="11.2" y1="-119.5" x2="1265.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="16.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Logisches UND (IN1 AND IN2) für AUF-Bedingung</text>
   <g id="sidebars">
-    <rect x="11.3" y="-119.0" width="28.7" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="11.2" y="-119.0" width="28.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1237.0" y="-119.0" width="28.7" height="549.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1237.0" y1="-119.0" x2="1237.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1236.9" y="-119.0" width="28.8" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1236.9" y1="-119.0" x2="1236.9" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
     <polyline points="40.0,-84.0 350.0,-84.0 355.0,-79.0 355.0,80.5 360.0,85.5 446.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="520.0,85.5 1212.0,85.5 1217.0,80.5 1217.0,-79.0 1222.0,-84.0 1237.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="519.9,85.5 1211.9,85.5 1216.9,80.5 1216.9,-79.0 1221.9,-84.0 1236.9,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-67.0 350.0,-67.0 355.0,-62.0 355.0,114.5 360.0,119.5 446.0,119.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-50.0 350.0,-50.0 355.0,-45.0 355.0,131.5 360.0,136.5 446.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="520.0,119.5 1212.0,119.5 1217.0,114.5 1217.0,-62.0 1222.0,-67.0 1237.0,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="519.9,119.5 1211.9,119.5 1216.9,114.5 1216.9,-62.0 1221.9,-67.0 1236.9,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">REQ</text>
-    <polygon points="1241.96925,-89.0 1236.96925,-84.0 1241.96925,-79.0" fill="#63B31F"/>
-    <text x="1242.96925" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1241.8755,-89.0 1236.8755,-84.0 1241.8755,-79.0" fill="#63B31F"/>
+    <text x="1242.8755" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">CNF</text>
     <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#A3B08F"/>
     <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -71,23 +71,23 @@
     <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#A3B08F"/>
     <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">IN2</text>
-    <polygon points="1241.96925,-72.0 1236.96925,-67.0 1241.96925,-62.0" fill="#A3B08F"/>
-    <text x="1242.96925" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1241.8755,-72.0 1236.8755,-67.0 1241.8755,-62.0" fill="#A3B08F"/>
+    <text x="1242.8755" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">OUT</text>
   </g>
   <g id="instances">
     <g id="fb_AND_2" transform="translate(446.0, 75.0)">
       <path d="M 3 0
-            L 70.96875 0
-            A 3 3 0 0 1 73.96875 3
-            L 73.96875 18
-            A 3 3 0 0 1 70.96875 21
-            L 64.96875 21
-            L 64.96875 35
-            L 70.96875 35
-            A 3 3 0 0 1 73.96875 38
-            L 73.96875 69
-            A 3 3 0 0 1 70.96875 72
+            L 70.875 0
+            A 3 3 0 0 1 73.875 3
+            L 73.875 18
+            A 3 3 0 0 1 70.875 21
+            L 64.875 21
+            L 64.875 35
+            L 70.875 35
+            A 3 3 0 0 1 73.875 38
+            L 73.875 69
+            A 3 3 0 0 1 70.875 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -130,8 +130,8 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="68.96875,5.5 73.96875,10.5 68.96875,15.5" fill="#63B31F"/>
-      <text x="67.96875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="68.875,5.5 73.875,10.5 68.875,15.5" fill="#63B31F"/>
+      <text x="67.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#82A3A9"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -139,13 +139,13 @@
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#82A3A9"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN2</text>
-      <polygon points="68.96875,39.5 73.96875,44.5 68.96875,49.5" fill="#82A3A9"/>
-      <text x="67.96875" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="68.875,39.5 73.875,44.5 68.875,49.5" fill="#82A3A9"/>
+      <text x="67.875" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="36.984375" y="-5"
+      <text x="36.9375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AND_2</text>
     </g>

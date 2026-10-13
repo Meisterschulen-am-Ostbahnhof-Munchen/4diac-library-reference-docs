@@ -2,6 +2,8 @@
 
 ![AI_FB_CTU](./AI_FB_CTU.svg)
 
+![AI_FB_CTU_network](./AI_FB_CTU_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

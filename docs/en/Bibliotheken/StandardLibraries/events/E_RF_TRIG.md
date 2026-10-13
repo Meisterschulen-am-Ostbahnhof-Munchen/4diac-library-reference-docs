@@ -1,5 +1,7 @@
 # E_RF_TRIG
 
+![E_RF_TRIG_network](./E_RF_TRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
