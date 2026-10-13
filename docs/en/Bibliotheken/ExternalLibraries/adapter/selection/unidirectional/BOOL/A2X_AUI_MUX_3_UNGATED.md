@@ -20,9 +20,7 @@ None.
 
 ### **Event Outputs**
 
-| Name | Description |
-|------|-------------|
-| `CNF` | Confirmation that the index `K` has been applied and the corresponding input is now selected. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -49,7 +47,6 @@ The function block behaves as a three-way multiplexer:
 1. It reads the current index from the `K` adapter.
 2. According to the index value, it selects one of the three A2X input adapters.
 3. It forwards the selected input stream to the `OUT` adapter.
-4. It emits `CNF` to confirm that the new index has been applied.
 
 The block is "ungated", meaning there is no internal comparison between the current value and the previously forwarded value. Every new calculation result from the selected input is forwarded without filtering. This is intentional and is the main difference from a change-detecting multiplexer.
 
@@ -59,14 +56,13 @@ The block is "ungated", meaning there is no internal comparison between the curr
 - The block supports exactly three A2X input channels.
 - The adapter types are defined in the package `adapter::types::unidirectional`.
 - No direct data inputs or outputs; all data transfer occurs through unidirectional adapters.
-- Single event output `CNF` for confirmation of the selection index.
 - No value-change recognition, no gating logic, no event suppression.
 
 ## State Overview
 
 The block is intentionally stateless with respect to value history. It does not store previous A2X values and does not compare incoming values with earlier ones. Once an index is supplied via `K`, the corresponding input is routed to `OUT` without additional conditions.
 
-The only implicit state is the currently active selection index. After a new index is received and processed, `CNF` is emitted and the new selection becomes active.
+The only implicit state is the currently active selection index. After a new index is received and processed, the new selection becomes active.
 
 ## Application Scenarios
 

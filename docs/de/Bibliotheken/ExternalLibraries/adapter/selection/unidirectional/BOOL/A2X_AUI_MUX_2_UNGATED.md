@@ -16,9 +16,7 @@ Der Baustein besitzt keine Ereignis-Eingänge. Die Steuerung erfolgt ausschließ
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|----------|-----------|
-| `CNF` | Bestätigung der Übernahme des Auswahl-Index K (Confirmation of Set Index K). |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -39,7 +37,7 @@ Der Baustein besitzt keine direkten Daten-Ausgänge. Der ausgewählte Wert wird 
 
 ## Funktionsweise
 
-Der Baustein empfängt über den Adapter `K` einen Auswahl-Index. Abhängig von diesem Index wird der Wert von `IN1` (bei K = 0) oder von `IN2` (bei K = 1) an den Ausgang `OUT` durchgereicht. Nach erfolgreicher Übernahme des Index wird das Ereignis `CNF` ausgegeben, um die Verarbeitung zu bestätigen.
+Der Baustein empfängt über den Adapter `K` einen Auswahl-Index. Abhängig von diesem Index wird der Wert von `IN1` (bei K = 0) oder von `IN2` (bei K = 1) an den Ausgang `OUT` durchgereicht.
 
 Die Kennzeichnung `UNGATED` bedeutet, dass keine Änderungserkennung zwischen altem und neuem Wert stattfindet. Jeder am ausgewählten Eingang anliegende neue Datenwert wird sofort und vollständig an den Ausgang weitergegeben. Es findet keine Filterung identischer Werte statt. Dadurch wird sichergestellt, dass nachfolgende Verbraucher, die auf eine gleichmäßige zeitliche Abfolge angewiesen sind, kontinuierlich mit Daten versorgt werden.
 
@@ -49,7 +47,6 @@ Die Kennzeichnung `UNGATED` bedeutet, dass keine Änderungserkennung zwischen al
 - **Reine Adapter-Schnittstelle**: Es existieren keine klassischen Ereignis- oder Daten-Pins. Die gesamte Kommunikation läuft über die Adapter `K`, `IN1`, `IN2` und `OUT`.
 - **Unidirektionale Adapter**: Alle verwendeten Adapter sind vom Typ `unidirectional`, d.h. die Datenflussrichtung ist fest vorgegeben und es findet keine Rückkanal-Kommunikation statt.
 - **Keine Änderungserkennung**: Identische Datenwerte werden dennoch als Ereignis weitergegeben. Dies unterscheidet den Baustein von der Variante mit Änderungserkennung.
-- **Bestätigungsmechanismus**: Das Ereignis `CNF` signalisiert, dass der Auswahl-Index K übernommen und die Umschaltung abgeschlossen wurde.
 
 ## Zustandsübersicht
 
@@ -57,7 +54,6 @@ Der Baustein lässt sich konzeptionell in drei Zustände gliedern:
 
 1. **Bereit**: Der Baustein wartet auf einen neuen Auswahl-Index über den Adapter `K`.
 2. **Auswahl**: Der an `K` anliegende Index wird ausgewertet und der entsprechende Eingang (`IN1` oder `IN2`) ausgewählt.
-3. **Weiterleitung**: Der Wert des ausgewählten Eingangs wird unmittelbar an den Ausgang `OUT` durchgereicht und das Ereignis `CNF` ausgelöst.
 
 Eine interne Speicherung vorheriger Werte oder ein Vergleich mit dem aktuellen Wert findet nicht statt.
 

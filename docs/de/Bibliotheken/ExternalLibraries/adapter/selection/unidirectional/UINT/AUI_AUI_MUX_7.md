@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsbaustein **AUI_AUI_MUX_7** ist ein Multiplexer, der es ermöglicht, einen von sieben Eingangsadaptern (IN1 bis IN7) auf einen Ausgangsadapter (OUT) zu schalten. Die Auswahl des aktiven Eingangs erfolgt über den Indexadapter **K**. Der Baustein ist als generischer Typ definiert und wird für die Auswahl von AUI-Datenströmen verwendet. Der Adapter-Ausgang wird nur bei einer tatsächlichen Wertänderung aktualisiert, wobei das Ereignis **CNF** nur bei einer Änderung des Index oder des ausgewählten Eingangs ausgelöst wird.
+Der Funktionsbaustein **AUI_AUI_MUX_7** ist ein Multiplexer, der es ermöglicht, einen von sieben Eingangsadaptern (IN1 bis IN7) auf einen Ausgangsadapter (OUT) zu schalten. Die Auswahl des aktiven Eingangs erfolgt über den Indexadapter **K**. Der Baustein ist als generischer Typ definiert und wird für die Auswahl von AUI-Datenströmen verwendet. Der Adapter-Ausgang wird nur bei einer tatsächlichen Wertänderung aktualisiert.
 
 ## Schnittstellenstruktur
 
@@ -16,9 +16,7 @@ Es sind keine Ereignis-Eingänge vorhanden.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Beschreibung |
-|------|--------------|
-| CNF | Bestätigung der gesetzten Indexauswahl (Confirmation of Set Index K) |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -51,7 +49,7 @@ Es sind keine direkten Datenausgänge vorhanden; der Ausgang wird über den Adap
 
 ## Funktionsweise
 
-Der Baustein überwacht den Indexadapter **K** sowie alle Eingangsadapter. Sobald sich der Wert von **K** oder der Wert des aktuell ausgewählten Eingangs (IN1..IN7) ändert, wird der Ausgang **OUT** aktualisiert. Das Ereignis **CNF** wird ausgelöst, um eine erfolgreiche Übernahme des neuen Werts zu bestätigen. Die Auswahl erfolgt gemäß dem Index **K** mit folgender Zuordnung:
+Der Baustein überwacht den Indexadapter **K** sowie alle Eingangsadapter. Sobald sich der Wert von **K** oder der Wert des aktuell ausgewählten Eingangs (IN1..IN7) ändert, wird der Ausgang **OUT** aktualisiert. Die Auswahl erfolgt gemäß dem Index **K** mit folgender Zuordnung:
 
 * K = 0 → IN1
 * K = 1 → IN2
@@ -67,13 +65,13 @@ Wenn **K** außerhalb des gültigen Bereichs liegt (größer als 6), wird kein E
 
 * Der Baustein ist als **generischer Typ** (**GenericClassName** = `GEN_AUI_AUI_MUX`) implementiert, wodurch er für andere Anzahlen von Eingängen erweiterbar ist.
 * Der Baustein verwendet ausschließlich Adapter für die Ein-/Ausgabe (unidirektionaler AUI-Typ). Dadurch werden die datenflussorientierten Verbindungen vereinfacht.
-* Die Erkennung von Wertänderungen basiert auf einem Vergleich der aktuellen und vorherigen Werte; nur bei Änderung werden **OUT** und **CNF** aktualisiert.
+* Die Erkennung von Wertänderungen basiert auf einem Vergleich der aktuellen und vorherigen Werte; nur bei Änderung wird **OUT** aktualisiert.
 * Es gibt keine ereignisgesteuerten Eingänge; die gesamte Logik wird durch Datenänderungen an den Adaptern getriggert.
 * Der Baustein wurde für den Einsatz in der Agrartechnik entwickelt und unter der Eclipse Public License 2.0 veröffentlicht.
 
 ## Zustandsübersicht
 
-Der Baustein besitzt keinen expliziten Zustandsautomaten. Die Funktionsweise ist rein reaktiv: Bei jeder Änderung an **K** oder dem ausgewählten Eingang wird der Ausgang neu berechnet und das Ereignis **CNF** ausgelöst, falls sich der Ausgangswert tatsächlich geändert hat. Es gibt keine internen Zustände außer den aktuell gespeicherten Werten.
+Der Baustein besitzt keinen expliziten Zustandsautomaten. Die Funktionsweise ist rein reaktiv: Bei jeder Änderung an **K** oder dem ausgewählten Eingang wird der Ausgang neu berechnet und aktualisiert, falls sich der Ausgangswert tatsächlich geändert hat. Es gibt keine internen Zustände außer den aktuell gespeicherten Werten.
 
 ## Anwendungsszenarien
 

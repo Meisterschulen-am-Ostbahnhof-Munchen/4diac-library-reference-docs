@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 681.693359375 212.0"
-     width="681.693359375" height="212.0">
+     viewBox="0 0 1099.0 212.0"
+     width="1099.0" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(143.14453125, 10)">
+  <g transform="translate(371.0, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 145.8662109375 0
-            A 3 3 0 0 1 148.8662109375 3
-            L 148.8662109375 23.0
-            A 3 3 0 0 1 145.8662109375 26.0
-            L 138.8662109375 26.0
-            L 138.8662109375 66.0
-            L 145.8662109375 66.0
-            A 3 3 0 0 1 148.8662109375 69.0
-            L 148.8662109375 189.0
-            A 3 3 0 0 1 145.8662109375 192.0
+            L 160.8 0
+            A 3 3 0 0 1 163.8 3
+            L 163.8 23.0
+            A 3 3 0 0 1 160.8 26.0
+            L 153.8 26.0
+            L 153.8 66.0
+            L 160.8 66.0
+            A 3 3 0 0 1 163.8 69.0
+            L 163.8 189.0
+            A 3 3 0 0 1 160.8 192.0
             L 3 192.0
             A 3 3 0 0 1 0 189.0
             L 0 69.0
@@ -57,10 +57,6 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
-
-    <polygon points="142.3662109375,11.0 147.3662109375,16.0 142.3662109375,21.0" fill="#63B31F"/>
-    <text x="139.3662109375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -92,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AL_AUI_MUX_4</text>
     
-    <text x="74.43310546875" y="66.0"
+    <text x="81.9" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -180,20 +176,20 @@
     <text x="14.5" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN4</text>
 
-    <path d="M 137.3662109375 97.0
-            L 139.8662109375 97.0
-            L 139.8662109375 98.66666666666667
-            L 142.3662109375 98.66666666666667
-            L 142.3662109375 97.0
-            L 147.3662109375 97.0
-            L 147.3662109375 107.0
-            L 142.3662109375 107.0
-            L 142.3662109375 105.33333333333333
-            L 139.8662109375 105.33333333333333
-            L 139.8662109375 107.0
-            L 137.3662109375 107.0
+    <path d="M 152.3 97.0
+            L 154.8 97.0
+            L 154.8 98.66666666666667
+            L 157.3 98.66666666666667
+            L 157.3 97.0
+            L 162.3 97.0
+            L 162.3 107.0
+            L 157.3 107.0
+            L 157.3 105.33333333333333
+            L 154.8 105.33333333333333
+            L 154.8 107.0
+            L 152.3 107.0
             Z" fill="#845DAF"/>
-    <text x="134.3662109375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="149.3" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -202,25 +198,22 @@
 
     <!-- External Labels -->
 
-    <text x="173.8662109375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Set Index K</text>
-
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">index – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan></text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 1 (selected when K = 0) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
 
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 2 (selected when K = 1) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
 
     <text x="-25" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 3 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 3 (selected when K = 2) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
 
     <text x="-25" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 4 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 4 (selected when K = 3) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan></text>
 
-    <text x="173.8662109375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="188.8" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AL</tspan> – IN1 for K = 0, IN2 for K = 1, IN3 for K = 2, IN4 for K = 3</text>
   </g>
 </svg>

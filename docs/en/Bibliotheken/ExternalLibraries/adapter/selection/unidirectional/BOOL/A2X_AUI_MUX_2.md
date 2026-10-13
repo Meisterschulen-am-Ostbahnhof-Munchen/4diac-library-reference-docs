@@ -16,9 +16,7 @@ The FB does not declare any top-level event inputs. It is triggered through its 
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|------|---------|
-| CNF | Event | Confirmation of Set Index K. Emitted when the selected value has actually been changed. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -44,7 +42,7 @@ A2X_AUI_MUX_2 selects one of two A2X input streams based on the index supplied b
 - K = 0 selects IN1.
 - K = 1 selects IN2.
 
-The selected value is written to the output adapter OUT. The generic runtime implementation `GEN_A2X_AUI_MUX` compares the newly selected value with the value currently present on OUT. If the values are the same, the output is not updated and no event is emitted. If the value differs, OUT is updated and the CNF event confirms the operation.
+The selected value is written to the output adapter OUT. The generic runtime implementation `GEN_A2X_AUI_MUX` compares the newly selected value with the value currently present on OUT. If the values are the same, the output is not updated and no event is emitted. If the value differs, OUT is updated.
 
 ## Technical Features
 
@@ -52,13 +50,12 @@ The selected value is written to the output adapter OUT. The generic runtime imp
 - Fully adapter-based interface, no direct data I/O.
 - Unidirectional data flow from the input adapters to the output adapter.
 - Value-change detection avoids unnecessary output updates and events.
-- Single confirmation event output: CNF.
 - Part of the package `adapter::selection::unidirectional`.
 - Compliant with the IEC 61499-2 type specification.
 
 ## State Overview
 
-A2X_AUI_MUX_2 does not define an explicit ECC state machine. Instead, its behavior is implemented by the generic runtime class. Internally, the FB retains the last value written to OUT. When a new index is applied, the generic implementation checks whether the newly selected input differs from the stored value. If a change is detected, the output and internal state are updated, and CNF is raised. If no change is detected, the FB remains in its current output state and suppresses the confirmation event.
+A2X_AUI_MUX_2 does not define an explicit ECC state machine. Instead, its behavior is implemented by the generic runtime class. Internally, the FB retains the last value written to OUT. When a new index is applied, the generic implementation checks whether the newly selected input differs from the stored value. If a change is detected, the output and internal state are updated. If no change is detected, the FB remains in its current output state.
 
 ## Application Scenarios
 

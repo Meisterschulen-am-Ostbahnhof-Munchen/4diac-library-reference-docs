@@ -20,9 +20,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `CNF` | Event | Bestätigung, dass der Index `K` gesetzt beziehungsweise verarbeitet wurde. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -52,7 +50,6 @@ Der Baustein arbeitet als Demultiplexer auf Adapterebene:
    - K = 0 → `OUT1`
    - K = 1 → `OUT2`
    - K = 2 → `OUT3`
-4. Das Ereignis `CNF` wird ausgelöst, nachdem der Index `K` verarbeitet wurde.
 
 Da es sich um die **_UNGATED**-Variante handelt, wird keine Prüfung durchgeführt, ob sich der Eingangswert geändert hat. Jeder ankommende Wert wird unabhängig von einer Wertänderung weitergeleitet. Dadurch eignet sich der Baustein besonders für Verbraucher, die eine periodische Kadenz benötigen – etwa für Ableitungs- oder Frequenzberechnungen.
 
@@ -75,7 +72,6 @@ In der übergebenen XML ist keine explizite ECC-Zustandsmaschine hinterlegt. Das
 | `IDLE` | Warten auf gültigen Index `K` und/oder Eingangswert `IN` |
 | `SELECT` | Auswahl des Zielausgangs anhand von `K` |
 | `FORWARD` | Bedingungslose Weiterleitung von `IN` an den gewählten Ausgang |
-| `CONFIRM` | Auslösen des Ereignisses `CNF` nach Verarbeitung von `K` |
 
 ## Anwendungsszenarien
 

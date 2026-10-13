@@ -6,11 +6,11 @@
 
 ## Einleitung
 
-Der Funktionsbaustein **A2X_AUI_MUX_5** ist ein generischer Multiplexer auf Basis unidirektionaler Adapter. Er wählt anhand eines über den **AUI**-Adapter zugeführten Indexes einen von fünf **A2X**-Adaptereingängen aus und leitet dessen Wert über einen **A2X**-Adapterausgang weiter. Der Ausgang wird dabei nur bei einer tatsächlichen Wertänderung aktualisiert; auch das Ereignis `CNF` wird ausschließlich bei einer solchen Änderung ausgelöst.
+Der Funktionsbaustein **A2X_AUI_MUX_5** ist ein generischer Multiplexer auf Basis unidirektionaler Adapter. Er wählt anhand eines über den **AUI**-Adapter zugeführten Indexes einen von fünf **A2X**-Adaptereingängen aus und leitet dessen Wert über einen **A2X**-Adapterausgang weiter. Der Ausgang wird dabei nur bei einer tatsächlichen Wertänderung aktualisiert.
 
 ## Schnittstellenstruktur
 
-Der Baustein besitzt keine klassischen Datenein- oder Datenausgänge. Alle Werte werden über Adapter übertragen. Ereignisse stehen nur als Ereignisausgänge zur Verfügung.
+Der Baustein besitzt keine klassischen Datenein- oder Datenausgänge. Alle Werte werden über Adapter übertragen. Ereignis-Ein- und -Ausgänge sind nicht vorhanden.
 
 ### **Ereignis-Eingänge**
 
@@ -18,9 +18,7 @@ Es sind keine Ereignis-Eingänge definiert.
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Kommentar |
-|---|---|
-| `CNF` | Bestätigung der Übernahme des über `K` ausgewählten Indexes (`Confirmation of Set Index K`) |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -57,7 +55,6 @@ Der Baustein arbeitet als adapterbasierter Multiplexer:
 
 3. Der Wert des ausgewählten Eingangs wird auf den `OUT`-Adapter übertragen.
 4. Die Übertragung auf `OUT` erfolgt nur dann, wenn sich der resultierende Wert gegenüber dem zuletzt gesendeten Wert tatsächlich geändert hat.
-5. Bei einer tatsächlichen Wertänderung wird zusätzlich das Ereignis `CNF` ausgelöst. Bleibt der Wert unverändert, wird kein Ereignis erzeugt.
 
 Der Baustein reagiert damit nicht nur auf eine Änderung des Indexes, sondern auch auf eine Wertänderung am aktuell ausgewählten Eingang.
 
@@ -76,7 +73,7 @@ Ein explizites Zustandsdiagramm ist in der XML nicht hinterlegt. Logisch lässt 
 | Zustand | Beschreibung |
 |---|---|
 | `WARTEN` | Der Baustein wartet auf eine Änderung des Indexes `K` oder auf eine Wertänderung des aktuell ausgewählten Eingangs. |
-| `AKTUALISIEREN` | Bei einer tatsächlichen Wertänderung wird der neue Wert auf `OUT` übertragen und das Ereignis `CNF` ausgelöst. |
+| `AKTUALISIEREN` | Bei einer tatsächlichen Wertänderung wird der neue Wert auf `OUT` übertragen. |
 
 Ein Wechsel in den Zustand `AKTUALISIEREN` findet nur statt, wenn sich der auszugebende Wert tatsächlich ändert. Andernfalls verbleibt der Baustein im Zustand `WARTEN`.
 

@@ -14,7 +14,7 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialisation; passed on to `DigitalOutput.INIT` instead of automatic distribution
 
 ### **Event Outputs**
 
@@ -22,6 +22,7 @@ The function block has no direct event outputs.
 
 ### **Data Inputs**
 
+- **QI** (BOOL): qualifier for the physical output; FALSE keeps this instance completely inactive (default `TRUE`)
 - **u16ObjId** (UINT): object ID of the SoftKey, carries the background colour (default `ID_NULL`)
 - **u16ObjIdA** (UINT): object ID of the AuxFunction2 (joystick), also shows the background colour at the aux handle (default `ID_NULL`)
 - **Output** (`logiBUS::io::DQ::logiBUS_DO_S`): selection of the output `Output_Q1`..`Output_Q12` (default `logiBUS_DO::Invalid`)
@@ -39,7 +40,7 @@ The function block has no direct data outputs.
 
 `IN` is routed to an `AX_SPLIT_3` (`adapter::events::unidirectional::AX_SPLIT_3`), which distributes the state to three destinations:
 
-- `AX_SPLIT_3.OUT1` → `DigitalOutput.OUT`: `DigitalOutput` (`logiBUS::io::DQ::logiBUS_QXA`, `QI = TRUE`) switches the physical output; `Output` → `DigitalOutput.Output`.
+- `AX_SPLIT_3.OUT1` → `DigitalOutput.OUT`: `DigitalOutput` (`logiBUS::io::DQ::logiBUS_QXA`) switches the physical output; `Output` → `DigitalOutput.Output`, `QI` → `DigitalOutput.QI` and the event `INIT` → `DigitalOutput.INIT`.
 - `AX_SPLIT_3.OUT2` → `GreenWhiteBackground_AX.DI1`: `GreenWhiteBackground_AX` ([`MyLib::sys::GreenWhiteBackground3_AX`](GreenWhiteBackground3_AX.md)) colours the background green (TRUE) or white (FALSE); `u16ObjId` and `u16ObjIdA` go to its inputs of the same name.
 - `AX_SPLIT_3.OUT3` → `PUBLISH_STATE.IN`: `PUBLISH_STATE` (`adapter::net::AX_PUBLISH_1`, `QI = TRUE`) publishes the state to the address `ID_STATE_WRITE` (`ID_STATE_WRITE` → `PUBLISH_STATE.ID`).
 
@@ -47,6 +48,7 @@ The function block has no direct data outputs.
 
 - Extracted from `Baender_EinAus` (wired three times identically there for hedgehog belt, elevator and cross belt)
 - `ID_STATE_WRITE` is new because the web mirror needs its own state publish for the individual belt softkeys
+- Version 1.1: `QI` and `INIT` are passed on to `DigitalOutput` (instead of a hard `TRUE` and automatic distribution), so that e.g. classic-vs-PVEA variants sharing pins can keep an instance inactive and the initialisation can be sequenced by the caller
 - There are no own event or data ports for the state; everything runs via the AX adapter `IN`
 
 ## Application Scenarios

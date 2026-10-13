@@ -18,7 +18,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-- `CNF` – Bestätigung für das Setzen des Index `K` (`Confirmation of Set Index K`). Dieses Ereignis wird ausgegeben, nachdem ein neuer Index übernommen und der entsprechende Ausgang aktualisiert wurde.
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -49,7 +49,7 @@ Keine.
 
 Der Baustein arbeitet als Demultiplexer auf Adapterebene. Ein über den `IN`-Adapter eintreffender Wert wird an denjenigen Ausgang weitergegeben, der durch den aktuellen Wert des `K`-Adapters bestimmt wird.
 
-Der Index `K` wird über den gleichnamigen Socket empfangen. Sobald sich der Index ändert, wird die Zuordnung angepasst. Ein `CNF`-Ereignis bestätigt, dass die Indexänderung übernommen wurde.
+Der Index `K` wird über den gleichnamigen Socket empfangen. Sobald sich der Index ändert, wird die Zuordnung angepasst.
 
 Der eigentliche Datenwert wird über den `A2X`-Adapter `IN` empfangen. Nur der aktuell ausgewählte Ausgang erhält den Wert. Die nicht ausgewählten Ausgänge bleiben unverändert.
 
@@ -70,7 +70,7 @@ Der generische Baustein besitzt in der XML-Definition keine explizit sichtbare E
 | Zustand | Auslöser | Verhalten |
 |---------|----------|-----------|
 | `IDLE` | Keine Änderung | Wartet auf neue Werte oder einen neuen Index. Es findet keine Ausgabeänderung statt. |
-| `INDEX_CHANGE` | Neuer Wert am Adapter `K` | Die Auswahl wird auf `OUT1`, `OUT2` oder `OUT3` umgestellt. `CNF` wird ausgelöst. |
+| `INDEX_CHANGE` | Neuer Wert am Adapter `K` | Die Auswahl wird auf `OUT1`, `OUT2` oder `OUT3` umgestellt. |
 | `VALUE_CHANGE` | Neuer Wert am Adapter `IN` | Der Wert wird an den aktuell ausgewählten Ausgang übergeben. Die Aktualisierung erfolgt nur bei tatsächlicher Wertänderung. |
 
 ## Anwendungsszenarien

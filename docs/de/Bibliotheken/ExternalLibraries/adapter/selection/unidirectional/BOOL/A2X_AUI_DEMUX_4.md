@@ -9,7 +9,7 @@
 
 Der Baustein `A2X_AUI_DEMUX_4` ist ein Demultiplexer auf Basis unidirektionaler Adapter. Er leitet den am Socket `IN` anliegenden A2X-Wert an genau einen der vier Ausgänge `OUT1` bis `OUT4` weiter. Welcher Ausgang aktiviert wird, bestimmt der Socket `K`.
 
-Besonderheit dieses Bausteins ist das änderungsbasierte Verhalten: Ein Adapter-Ausgang wird nur dann aktualisiert, wenn sich der Wert tatsächlich ändert. Nur in diesem Fall wird auch ein Ereignis an den nachgeschalteten Baustein weitergegeben. Das Ereignis `CNF` bestätigt die Übernahme des Auswahlindex `K`.
+Besonderheit dieses Bausteins ist das änderungsbasierte Verhalten: Ein Adapter-Ausgang wird nur dann aktualisiert, wenn sich der Wert tatsächlich ändert. Nur in diesem Fall wird auch ein Ereignis an den nachgeschalteten Baustein weitergegeben.
 
 ## Schnittstellenstruktur
 
@@ -19,9 +19,7 @@ Es sind keine eigenständigen Ereignis-Eingänge vorhanden. Der Baustein wird ü
 
 ### **Ereignis-Ausgänge**
 
-| Name | Kommentar |
-|------|-----------|
-| `CNF` | Bestätigung der Übernahme des Auswahlindex `K`. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -53,7 +51,6 @@ Der Baustein arbeitet als 1-zu-4-Demultiplexer. Der Wert am Socket `IN` wird abh
 
 Wird ein neuer Wert am `IN`-Socket empfangen, prüft der Baustein, ob der Wert dem zuletzt ausgegebenen Wert des ausgewählten Ausgangs entspricht. Nur bei einer tatsächlichen Wertänderung wird der Ausgang aktualisiert und ein Ereignis über den entsprechenden A2X-Adapter ausgelöst. Nicht ausgewählte Ausgänge behalten ihren letzten Wert.
 
-Nach der Übernahme eines neuen Auswahlindex `K` wird das Ereignis `CNF` ausgegeben.
 
 ## Technische Besonderheiten
 
@@ -74,7 +71,6 @@ In der XML-Definition ist kein expliziter ECC hinterlegt. Das Verhalten lässt s
 | Auswahl | Der Auswahlindex `K` wird ausgewertet und der zugehörige Ausgang `OUT1` bis `OUT4` bestimmt. |
 | Prüfen | Der an `IN` anliegende Wert wird mit dem aktuellen Wert des ausgewählten Ausgangs verglichen. |
 | Aktualisieren | Bei Wertänderung wird der A2X-Ausgang aktualisiert und das Ereignis ausgelöst. |
-| Bestätigen | `CNF` signalisiert die erfolgreiche Übernahme des Auswahlindex `K`. |
 
 ## Anwendungsszenarien
 

@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsblock **AUI_AUI_MUX_8** ist ein generischer Multiplexer auf Basis von AUI-Adaptern. Er wählt aus acht Eingangsadaptern (IN1 bis IN8) denjenigen aus, dessen Index über den Adapter **K** bestimmt wird, und stellt den Wert über den Ausgangsadapter **OUT** bereit. Dabei wird der Ausgangswert nur bei tatsächlicher Änderung aktualisiert; ein Ereignis am Ausgang **CNF** signalisiert eine erfolgreiche Übernahme des neuen Index oder eines neuen Wertes.
+Der Funktionsblock **AUI_AUI_MUX_8** ist ein generischer Multiplexer auf Basis von AUI-Adaptern. Er wählt aus acht Eingangsadaptern (IN1 bis IN8) denjenigen aus, dessen Index über den Adapter **K** bestimmt wird, und stellt den Wert über den Ausgangsadapter **OUT** bereit. Dabei wird der Ausgangswert nur bei tatsächlicher Änderung aktualisiert.
 
 ## Schnittstellenstruktur
 
@@ -16,7 +16,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-- **CNF** (Event) – Bestätigung, dass der über **K** gesetzte Index akzeptiert wurde und der Ausgang den entsprechenden Wert übernommen hat.
+- Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -46,13 +46,13 @@ Alle Adapter sind vom Typ `adapter::types::unidirectional::AUI` und arbeiten uni
 ## Funktionsweise
 
 Der Funktionsblock überwacht den Indexadapter **K** sowie alle acht Eingangsadapter **IN1** bis **IN8**. Sobald sich der Wert von **K** ändert, wird der entsprechende Eingang ausgewählt. Der Wert dieses Eingangs wird direkt auf den Ausgangsadapter **OUT** übertragen.  
-Eine Aktualisierung des Ausgangs erfolgt jedoch nur dann, wenn sich der Wert des ausgewählten Eingangs gegenüber dem zuletzt ausgegebenen Wert tatsächlich geändert hat. In diesem Fall wird am Ereignisausgang **CNF** ein Ereignis erzeugt, das den erfolgreichen Transfer bestätigt. Dadurch werden unnötige Ausgangsaktivierungen vermieden und nachgeschaltete Bausteine werden nur bei echten Wertänderungen benachrichtigt.
+Eine Aktualisierung des Ausgangs erfolgt jedoch nur dann, wenn sich der Wert des ausgewählten Eingangs gegenüber dem zuletzt ausgegebenen Wert tatsächlich geändert hat. Dadurch werden unnötige Ausgangsaktivierungen vermieden und nachgeschaltete Bausteine werden nur bei echten Wertänderungen benachrichtigt.
 
 ## Technische Besonderheiten
 
 - **Generischer Funktionsblock** – Der Baustein ist als generischer Typ mit dem Klassennamen `GEN_AUI_AUI_MUX` definiert und kann für verschiedene Anwendungen instanziiert werden.
 - **Reine Adapter-basierte Kommunikation** – Es gibt keine direkten Daten- oder eventbasierten Ein-/Ausgänge; die gesamte Datenübertragung erfolgt über AUI-Adapter.
-- **Änderungsdetektion** – Der Ausgang wird nur bei einer tatsächlichen Wertänderung des ausgewählten Eingangs aktualisiert; das CNF-Ereignis wird entsprechend nur dann ausgelöst.
+- **Änderungsdetektion** – Der Ausgang wird nur bei einer tatsächlichen Wertänderung des ausgewählten Eingangs aktualisiert.
 - **Unidirektionale Adapter** – Alle AUI-Adapter sind unidirektional, d.h. die Daten fließen nur in eine Richtung (Sockets liefern Werte, Plugs geben Werte aus).
 
 ## Zustandsübersicht
@@ -60,7 +60,7 @@ Eine Aktualisierung des Ausgangs erfolgt jedoch nur dann, wenn sich der Wert des
 Der Funktionsblock besitzt keinen expliziten Zustandsautomaten, sondern verwendet intern einen Speicher für den zuletzt auf **OUT** ausgegebenen Wert. Dieser Speicher dient als Referenz zur Erkennung von Wertänderungen. Der Zustand kann wie folgt beschrieben werden:
 
 - **Bereit** oder **Wartend** – wartet auf eine Änderung von **K** oder eines Eingangswerts.
-- **Aktualisierung** – wenn sich der ausgewählte Eingangswert ändert, wird der neue Wert auf **OUT** übernommen und **CNF** ausgelöst.
+- **Aktualisierung** – wenn sich der ausgewählte Eingangswert ändert, wird der neue Wert auf **OUT** übernommen.
 Dieser einfache Zustandsübergang ist implizit und erfordert keine spezielle Konfiguration.
 
 ## Anwendungsszenarien

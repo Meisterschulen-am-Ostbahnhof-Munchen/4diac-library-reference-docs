@@ -13,7 +13,8 @@ The AX_SEL function block is a binary selector used to choose between two input 
 
 ### **Event Inputs**
 
-*No event inputs available*
+- **EI0** - Set IN0 (data association: `IN0`)
+- **EI1** - Set IN1 (data association: `IN1`)
 
 ### **Event Outputs**
 
@@ -34,7 +35,7 @@ The AX_SEL function block is a binary selector used to choose between two input 
 
 ## Functionality
 
-The AX_SEL function block selects between two input values (IN0 and IN1) and outputs the selected value at output OUT. The selection is controlled via the connected adapter G. When the CNF event is activated, the selected value is provided at output OUT.
+The AX_SEL function block selects between two input values (IN0 and IN1) and outputs the selected value at output OUT. The selection is controlled via the connected adapter G: `G.E1` clocks an internal D flip-flop (`E_D_FF_G`) that takes over `G.D1` and supplies it as selector `G` to `F_SEL`. `F_SEL` is triggered by the flip-flop event (G has changed) and directly by `EI0` and `EI1`; its `CNF` is output as the block's `CNF` and the selected value is then available at OUT. An output event is therefore generated only on an event at `G.E1`, `EI0` or `EI1`.
 ...
 
 ## Technical Features
@@ -48,7 +49,7 @@ The AX_SEL function block selects between two input values (IN0 and IN1) and out
 The function block has a simple state:
 
 - **Ready**: Waits for a control signal from adapter G
-- Upon receiving the control signal, the corresponding input is selected and the CNF event is triggered
+- Upon receiving an event (`EI0`, `EI1` or `G.E1`), the corresponding input is selected and the CNF event is triggered
 
 ## Application Scenarios
 

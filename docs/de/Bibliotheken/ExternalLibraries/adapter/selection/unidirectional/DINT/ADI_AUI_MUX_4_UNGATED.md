@@ -18,7 +18,7 @@ Der `ADI_AUI_MUX_4_UNGATED` ist die adapterbasierte Variante des generischen Mul
 
 ### **Ereignis-Ausgänge**
 
-- **CNF**: Wird immer gesendet, sobald ein Ereignis des Selektor-Adapters `K` verarbeitet wurde – unabhängig davon, ob sich der Ausgangswert dabei geändert hat.
+- Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -43,7 +43,6 @@ Der Funktionsblock wertet den aktuellen Wert von **K** bei jedem eingehenden Ere
 
 1. Der aktuelle Wert von `K.D1` bestimmt, welcher der 4 Eingangs-Adapter (`IN1` … `IN4`) gerade ausgewählt ist.
 2. Der Datenwert dieses ausgewählten Eingangs wird mit dem aktuell auf `OUT` gehaltenen Wert verglichen. Nur bei tatsächlicher Änderung wird `OUT` neu beschrieben und dessen Adapter-Event gesendet (siehe „Änderungserkennung“ unten).
-3. Kommt das auslösende Ereignis vom Selektor-Adapter `K`, wird zusätzlich -- unabhängig davon, ob sich `OUT` dabei geändert hat -- immer das Ereignis `CNF` gesendet, um die Verarbeitung des Index-Updates zu bestätigen.
 
 Dadurch zieht auch eine reine Änderung von `K` den Ausgang sofort nach, selbst wenn sich der Datenwert des neu ausgewählten Eingangs seit dessen letztem eigenen Ereignis nicht verändert hat.
 
@@ -58,7 +57,6 @@ Dadurch zieht auch eine reine Änderung von `K` den Ausgang sofort nach, selbst 
 Der FB besitzt keinen expliziten Zustandsautomaten, sondern wertet bei jedem eingehenden Ereignis den aktuellen Wert von `K.D1` neu aus:
 
 - **Beliebiges Ereignis** (Selektor-Adapter `K` oder `IN1`…`IN4`) → aktuell selektierten Eingang auslesen, `OUT` bei Wertänderung aktualisieren und dessen Adapter-Event senden.
-- **Zusätzlich beim Ereignis von `K`** → `CNF` wird immer gesendet, unabhängig davon, ob sich `OUT` dabei geändert hat.
 
 ## Anwendungsszenarien
 

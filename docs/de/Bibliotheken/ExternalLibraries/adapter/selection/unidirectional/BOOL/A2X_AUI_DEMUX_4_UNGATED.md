@@ -12,7 +12,7 @@ Die Besonderheit dieser Variante ist der Zusatz `UNGATED`: Im Gegensatz zu einem
 
 ## Schnittstellenstruktur
 
-Der Baustein besitzt außer dem Ereignisausgang `CNF` keine direkten Ereignis- oder Datenports. Alle Eingangs- und Ausgangswerte werden über Adapter übertragen.
+Der Baustein besitzt keine direkten Ereignis- oder Datenports. Alle Eingangs- und Ausgangswerte werden über Adapter übertragen.
 
 ### **Ereignis-Eingänge**
 
@@ -22,9 +22,7 @@ Die Steuerung und Datenübertragung erfolgt über die Adapter `K` und `IN`.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|---|---|---|
-| `CNF` | Event | Bestätigung des Set-Index-K-Vorgangs |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -56,8 +54,7 @@ Der Baustein arbeitet als Adapter-basierter Demultiplexer:
 1. Über den Adapter `K` wird der Auswahlindex empfangen.
 2. Über den Adapter `IN` wird der aktuelle Eingangswert empfangen.
 3. Der Baustein leitet diesen Wert unverändert an den Ausgang weiter, der dem Index `K` entspricht.
-4. Nach der Übernahme des Index wird das Ereignis `CNF` ausgelöst.
-5. Da die Variante `UNGATED` keine Änderungserkennung besitzt, wird jeder ankommende Ergebniszyklus weitergegeben – auch bei unveränderten Werten.
+4. Da die Variante `UNGATED` keine Änderungserkennung besitzt, wird jeder ankommende Ergebniszyklus weitergegeben – auch bei unveränderten Werten.
 
 Nicht ausgewählte Ausgänge werden in der Regel nicht bedient und behalten ihren bisherigen Zustand.
 

@@ -18,7 +18,7 @@ Der `AR_AUI_DEMUX_4_UNGATED` ist die adapterbasierte Variante des generischen De
 
 ### **Ereignis-Ausgänge**
 
-- **CNF**: Wird immer gesendet, sobald ein Ereignis des Selektor-Adapters `K` verarbeitet wurde – unabhängig davon, ob sich der ausgewählte Ausgang dabei geändert hat.
+- Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -43,7 +43,6 @@ Der Funktionsblock wertet den aktuellen Wert von **K** bei jedem eingehenden Ere
 
 1. Der aktuelle Wert von `K.D1` bestimmt, welcher der 4 Ausgangs-Adapter (`OUT1` … `OUT4`) gerade ausgewählt ist.
 2. Der Datenwert von `IN` wird mit dem aktuell auf dem ausgewählten Ausgang gehaltenen Wert verglichen. Nur bei tatsächlicher Änderung wird dieser Ausgang neu beschrieben und dessen Adapter-Event gesendet (siehe „Änderungserkennung“ unten).
-3. Kommt das auslösende Ereignis vom Selektor-Adapter `K`, wird zusätzlich -- unabhängig davon, ob sich der ausgewählte Ausgang dabei geändert hat -- immer das Ereignis `CNF` gesendet, um die Verarbeitung des Index-Updates zu bestätigen.
 
 Dadurch übernimmt auch eine reine Änderung von `K` sofort den aktuellen Wert von `IN` auf den neu ausgewählten Ausgang, selbst wenn sich `IN` seit dessen letztem eigenen Ereignis nicht verändert hat.
 
@@ -58,7 +57,6 @@ Dadurch übernimmt auch eine reine Änderung von `K` sofort den aktuellen Wert v
 Der FB besitzt keinen expliziten Zustandsautomaten, sondern wertet bei jedem eingehenden Ereignis den aktuellen Wert von `K.D1` neu aus:
 
 - **Beliebiges Ereignis** (Selektor-Adapter `K` oder `IN`) → aktuell selektierten Ausgang bestimmen, ihn bei Wertänderung mit dem aktuellen `IN`-Wert aktualisieren und sein Adapter-Event senden.
-- **Zusätzlich beim Ereignis von `K`** → `CNF` wird immer gesendet, unabhängig davon, ob sich der ausgewählte Ausgang dabei geändert hat.
 
 ## Anwendungsszenarien
 

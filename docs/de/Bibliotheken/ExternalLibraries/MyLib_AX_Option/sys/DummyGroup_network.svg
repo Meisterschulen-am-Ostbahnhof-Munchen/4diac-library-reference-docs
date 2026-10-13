@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-22.2 -151.0 1181.2 588.0"
+     width="1181" height="588">
+  <style>
+    @font-face {
+      font-family: "TGL 0-17_std";
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-17";
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16_std";
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16";
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="-22.2" y="-151.0" width="1181.2" height="588.0" fill="white"/>
+  <rect x="-15.2" y="-144.0" width="1167.2" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-15.2" y="-144.0" width="1167.2" height="25.0" fill="white" stroke="none"/>
+  <line x1="-15.2" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-10.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Platzhalter-Optionsgruppe ohne reale I/O: quittiert INIT_REQ sofort selbst per INIT_CNF (kein QI, keine Wirkung) - nuetzlich als neutraler/unbelegter Slot in einem AOption_AUI_DEMUX (z.B. fuer 'nichts ausgewaehlt' bei K=1, wenn echte Optionen erst ab K=2 beginnen)</text>
+  <g id="sidebars">
+    <rect x="-15.2" y="-119.0" width="55.2" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+  </g>
+  <g id="connections">
+    <polyline points="746.3,85.5 753.5,85.5 758.3,80.7 758.3,49.5 753.3,44.5 581.7,44.5 576.7,49.5 576.7,80.7 581.5,85.5 588.7,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 87.0,-84.0 92.0,-79.0 92.0,131.5 97.0,136.5 588.7,136.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 87.0,-84.0 92.0,-79.0 92.0,131.5 97.0,136.5 588.7,136.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+  </g>
+  <g id="interface_ports">
+    <path d="M 30.0 -89.0 L 32.5 -89.0 L 32.5 -87.33333333333333 L 35.0 -87.33333333333333 L 35.0 -89.0 L 40.0 -89.0 L 40.0 -79.0 L 35.0 -79.0 L 35.0 -80.66666666666667 L 32.5 -80.66666666666667 L 32.5 -79.0 L 30.0 -79.0 Z" fill="#845DAF"/>
+    <text x="27.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">OPTION</text>
+  </g>
+  <g id="instances">
+    <g id="fb_AOption_X_TO_EVENT" transform="translate(588.7, 75.0)">
+      <path d="M 3 0
+            L 154.6 0
+            A 3 3 0 0 1 157.6 3
+            L 157.6 18
+            A 3 3 0 0 1 154.6 21
+            L 148.6 21
+            L 148.6 35
+            L 154.6 35
+            A 3 3 0 0 1 157.6 38
+            L 157.6 69
+            A 3 3 0 0 1 154.6 72
+            L 3 72
+            A 3 3 0 0 1 0 69
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.200000000000003 20.0
+            L 27.200000000000003 20.0
+            A 1 1 0 0 1 28.200000000000003 21.0
+            L 28.200000000000003 24.0
+            L 26.700000000000003 24.0
+            L 26.700000000000003 26.666666666666668
+            L 28.200000000000003 26.666666666666668
+            L 28.200000000000003 35.0
+            A 1 1 0 0 1 27.200000000000003 36.0
+            L 13.200000000000003 36.0
+            A 1 1 0 0 1 12.200000000000003 35.0
+            L 12.200000000000003 26.666666666666668
+            L 13.700000000000003 26.666666666666668
+            L 13.700000000000003 24.0
+            L 12.200000000000003 24.0
+            L 12.200000000000003 21.0
+            A 1 1 0 0 1 13.200000000000003 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.200000000000003" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">C</text>
+      <text x="30.200000000000003" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AOption_X_TO_EV…</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">INIT_CNF</text>
+      <polygon points="152.6,5.5 157.6,10.5 152.6,15.5" fill="#63B31F"/>
+      <text x="151.6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">INIT_REQ</text>
+      <polygon points="152.6,39.5 157.6,44.5 152.6,49.5" fill="#A3B08F"/>
+      <text x="151.6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">QI_OUT</text>
+
+      <path d="M 0 56.5
+            L 5.0 56.5
+            L 5.0 58.166666666666664
+            L 7.5 58.166666666666664
+            L 7.5 56.5
+            L 10 56.5
+            L 10 66.5
+            L 7.5 66.5
+            L 7.5 64.83333333333333
+            L 5.0 64.83333333333333
+            L 5.0 66.5
+            L 0 66.5
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+      <text x="13" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AOption_IN</text>
+      <!-- Instance Name -->
+      <text x="78.8" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">AOption_X_TO_EVENT</text>
+    </g>
+  </g>
+</svg>

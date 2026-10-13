@@ -16,7 +16,7 @@
 
 ### **Event Outputs**
 
-- **CNF**: confirms that the index received via K has been evaluated and the target plug updated accordingly.
+- No event outputs.
 
 ### **Data Inputs**
 
@@ -37,7 +37,7 @@
 
 ## Functionality
 
-`AE_AUI_MUX_4` selects one of the 4 input sockets `IN1` … `IN4` via the adapter socket **K** (type `AUI`) and forwards its value to the single output plug `OUT`. As soon as the `AUI` plug connected to K fires its internal `E1` event carrying the data value `D1`, `AE_AUI_MUX_4` interprets that value as a 0-based index (`0` … `3`), copies the selected event to `OUT` and triggers its adapter event. `AE_AUI_MUX_4` then confirms the operation via the **CNF** event.
+`AE_AUI_MUX_4` selects one of the 4 input sockets `IN1` … `IN4` via the adapter socket **K** (type `AUI`) and forwards its value to the single output plug `OUT`. As soon as the `AUI` plug connected to K fires its internal `E1` event carrying the data value `D1`, `AE_AUI_MUX_4` interprets that value as a 0-based index (`0` … `3`), copies the selected event to `OUT` and triggers its adapter event.
 
 ## Technical Details
 
@@ -47,7 +47,7 @@
 
 ## State Overview
 
-The block is stateless with respect to any sequencing logic: it waits for the `E1` event on socket **K**, evaluates the index carried with it once it arrives, updates the affected adapter plug and reports completion via **CNF**. No state beyond the most recently written adapter value is kept between calls.
+The block is stateless with respect to any sequencing logic: it waits for the `E1` event on socket **K**, evaluates the index carried with it once it arrives and updates the affected adapter plug. No state beyond the most recently written adapter value is kept between calls.
 
 ## Application Scenarios
 

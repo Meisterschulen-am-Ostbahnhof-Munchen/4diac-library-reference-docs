@@ -17,7 +17,9 @@ The subapplication exposes only input variables; all events, adapters, and data 
 
 ### **Event Inputs**
 
-None. All event handling is performed inside the subapplication via an embedded OPC UA server (SERVER_0) and the internal event connections.
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `DigitalOutput_DO.INIT`
+
+The toggle events themselves are still generated internally via the embedded OPC UA server (SERVER_0) and the internal event connections.
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ None.
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Qualifier for the physical output; FALSE keeps the instance completely inactive (no hardware binding); passed on to `DigitalOutput_DO.QI`. |
 | `Output_DO` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Configuration/description of the physical enable output channel. Drives the digital output as a click-toggle with default state **ON**. |
 | `ID_DO_TOGGLE_METHOD` | `WSTRING` | – | OPC UA method node address (ACTION=CREATE_METHOD) for the argumentless toggle trigger. This address is shared by all callers; every caller clocks the same flip-flop. |
 | `ID_DO_STATE_WRITE` | `WSTRING` | – | OPC UA variable node address (ACTION=WRITE) used to publish the actual enable state (`AX_T_FF_INIT.Q`). This address is subscribed by remote clients. |
@@ -49,7 +52,7 @@ The subapplication is built around five internal function blocks:
 
 3. **SPLIT_DO_STATE** (`adapter::events::unidirectional::AX_SPLIT_2`) – fans out the flip-flop output to two identical copies.
 
-4. **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`) – the physical digital output driver; receives `OUT1` from the split and applies it to the channel configured by `Output_DO`.
+4. **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`) – the physical digital output driver; receives `OUT1` from the split and applies it to the channel configured by `Output_DO`; `QI` and `INIT` come from the subapplication interface.
 
 5. **PUBLISH_STATE_DO** (`adapter::net::AX_PUBLISH_1`) – publishes `OUT2` as the current enable state to the OPC UA variable addressed by `ID_DO_STATE_WRITE`.
 

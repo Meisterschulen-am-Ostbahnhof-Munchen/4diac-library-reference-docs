@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsblock `AUDI_AUI_MUX_32` ist ein generischer Multiplexer, der es ermöglicht, aus 32 unidirektionalen Eingangssignalen (`IN1` bis `IN32`) genau eines auszuwählen und auf einen unidirektionalen Ausgang (`OUT`) zu übertragen. Die Auswahl wird über einen separaten Indexadapter `K` gesteuert, der den Wert des gewünschten Kanals (0 bis 31) liefert. Ein besonderes Merkmal ist, dass das ausgegebene Signal nur dann aktualisiert wird, wenn sich der Wert des ausgewählten Eingangs tatsächlich ändert. Das Ereignis `CNF` bestätigt eine solche Aktualisierung. Der Baustein ist als generischer Typ (`GEN_AUDI_AUI_MUX`) implementiert und kann dadurch mit unterschiedlichen Datentypen verwendet werden, solange die verwendeten Adapter vom entsprechenden Typ sind.
+Der Funktionsblock `AUDI_AUI_MUX_32` ist ein generischer Multiplexer, der es ermöglicht, aus 32 unidirektionalen Eingangssignalen (`IN1` bis `IN32`) genau eines auszuwählen und auf einen unidirektionalen Ausgang (`OUT`) zu übertragen. Die Auswahl wird über einen separaten Indexadapter `K` gesteuert, der den Wert des gewünschten Kanals (0 bis 31) liefert. Ein besonderes Merkmal ist, dass das ausgegebene Signal nur dann aktualisiert wird, wenn sich der Wert des ausgewählten Eingangs tatsächlich ändert. Der Baustein ist als generischer Typ (`GEN_AUDI_AUI_MUX`) implementiert und kann dadurch mit unterschiedlichen Datentypen verwendet werden, solange die verwendeten Adapter vom entsprechenden Typ sind.
 
 ## Schnittstellenstruktur
 
@@ -16,9 +16,7 @@ Der Funktionsblock besitzt **keine** Ereignis-Eingänge.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Kommentar |
-|------|-----------|
-| `CNF` | Bestätigung der Übernahme eines neuen Indexwerts oder eines geänderten Eingangswerts (nur bei tatsächlicher Änderung). |
+Der Funktionsblock besitzt **keine** Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -73,14 +71,14 @@ Der Funktionsblock verwendet ausschließlich Adapter für seine Ein- und Ausgabe
 
 Der `AUDI_AUI_MUX_32` arbeitet als klassischer Multiplexer mit 32 Kanälen. Der über den Adapter `K` anliegende Wert bestimmt, welcher der 32 Eingänge (`IN1` bis `IN32`) auf den Ausgang `OUT` durchgeschaltet wird. Der Index `K` wird als ganzzahliger Wert erwartet, wobei gültige Werte von 0 bis 31 reichen (bei Werten außerhalb dieses Bereichs wird das Verhalten nicht definiert und das ausgewählte Signal bleibt unverändert).
 
-Die Besonderheit dieses Bausteins liegt in der auslösenden Bedingung für die Ausgangsaktualisierung: Der Ausgang `OUT` wird nur dann mit einem neuen Wert belegt, wenn sich der Wert des aktuell ausgewählten Eingangs gegenüber dem zuletzt übertragenen Wert geändert hat. Eine Änderung des Index `K` allein löst noch keine Aktualisierung aus, es sei denn, der neu ausgewählte Eingang hat einen anderen Wert als der zuvor aktive. Sobald eine solche Änderung erkannt wird, wird der Ausgang aktualisiert und das Ereignis `CNF` (Confirmation) ausgelöst. Dies reduziert unnötigen Datenverkehr und Ereignisfrequenzen im nachgeschalteten System.
+Die Besonderheit dieses Bausteins liegt in der auslösenden Bedingung für die Ausgangsaktualisierung: Der Ausgang `OUT` wird nur dann mit einem neuen Wert belegt, wenn sich der Wert des aktuell ausgewählten Eingangs gegenüber dem zuletzt übertragenen Wert geändert hat. Eine Änderung des Index `K` allein löst noch keine Aktualisierung aus, es sei denn, der neu ausgewählte Eingang hat einen anderen Wert als der zuvor aktive. Sobald eine solche Änderung erkannt wird, wird der Ausgang aktualisiert. Dies reduziert unnötigen Datenverkehr und Ereignisfrequenzen im nachgeschalteten System.
 
 Die Kommunikation über die Adapter ist unidirektional: Die Eingangsadapter (`IN*`) liefern Daten an den Baustein, der Indexadapter `K` liefert den Steuerwert, und der Ausgangsadapter `OUT` überträgt das ausgewählte Signal an die aufnehmende Einheit. Intern basiert der Baustein auf dem generischen Typ `GEN_AUDI_AUI_MUX`, sodass er mit unterschiedlichen Datentypen wie z. B. `INT`, `REAL`, `BOOL` oder auch strukturierten Typen arbeiten kann, sofern die jeweils verwendeten Adapter vom Typ `AUDI` und `AUI` passend instanziiert sind.
 
 ## Technische Besonderheiten
 
 - **Generischer Aufbau:** Der FB ist als generischer Baustein implementiert (Attribut `GenericClassName` = `'GEN_AUDI_AUI_MUX'`), wodurch er für verschiedene Datentypen verwendet werden kann. Die konkrete Datentypbindung erfolgt über die Typisierung der verwendeten Adapter.
-- **Ereignisgesteuerte Aktualisierung:** Das Ereignis `CNF` wird nur dann ausgelöst, wenn sich der Wert des ausgewählten Eingangs tatsächlich ändert. Bei gleichbleibenden Werten wird kein Ereignis erzeugt, was die Systemlast minimiert.
+- **Änderungsgesteuerte Aktualisierung:** Der Ausgang wird nur dann aktualisiert, wenn sich der Wert des ausgewählten Eingangs tatsächlich ändert. Bei gleichbleibenden Werten erfolgt keine Aktualisierung, was die Systemlast minimiert.
 - **Unidirektionale Adapter:** Alle Adapter sind als unidirektional deklariert. Dadurch wird eine klare Datenflussrichtung ohne Rückwärtskommunikation gewährleistet.
 - **32 Kanäle:** Der Baustein unterstützt 32 Eingänge und einen einzigen Ausgang – ideal für Anwendungen, bei denen viele Signale auf einen gemeinsamen Bus ausgewählt werden müssen.
 

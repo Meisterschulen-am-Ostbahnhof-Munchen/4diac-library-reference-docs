@@ -20,9 +20,7 @@ The FB does not declare any direct event inputs.
 
 ### **Event Outputs**
 
-| Event | Description |
-| --- | --- |
-| `CNF` | Confirmation that the index `K` has been set and the demultiplexing selection has been applied. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -57,7 +55,6 @@ The functional behavior can be summarized as:
    - `K = 4` selects `OUT5`
 3. The value received on the `IN` socket is forwarded to the selected output plug.
 4. The output adapter is updated only when the value has actually changed. This avoids unnecessary adapter update events.
-5. After the selection has been applied, the `CNF` event is emitted.
 
 The valid index range is therefore `0` to `4`. Behavior for indices outside this range depends on the concrete generic runtime implementation.
 
@@ -68,7 +65,6 @@ The valid index range is therefore `0` to `4`. Behavior for indices outside this
 - Two unidirectional input adapters: `K` (`AUI`) and `IN` (`A2X`).
 - Adapter-based interface: no direct data inputs or outputs.
 - Value-change-triggered output update.
-- Event output `CNF` for confirmation of the index selection.
 - Declared as an IEC 61499-2 FB type.
 - Compiler package: `adapter::selection::unidirectional`.
 
@@ -81,7 +77,6 @@ The FB type does not contain an explicit ECC state machine. The behavior is ther
 | Wait | The FB waits for a new value on `IN` or a new index on `K`. |
 | Select | The current value of `K` determines the active output plug. |
 | Forward | The current `IN` value is written to the selected output if it changed. |
-| Confirm | `CNF` is emitted after the selection has been applied. |
 
 These phases are not necessarily separate ECC states; they describe the observable behavior of the demultiplexor.
 

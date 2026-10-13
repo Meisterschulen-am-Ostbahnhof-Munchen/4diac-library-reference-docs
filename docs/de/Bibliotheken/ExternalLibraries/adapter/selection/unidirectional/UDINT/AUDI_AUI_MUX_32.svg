@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 721.6875 772.0"
-     width="721.6875" height="772.0">
+     viewBox="0 0 939.4000000000001 772.0"
+     width="939.4000000000001" height="772.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(305.25, 10)">
+  <g transform="translate(404.6, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 164.9375 0
-            A 3 3 0 0 1 167.9375 3
-            L 167.9375 23.0
-            A 3 3 0 0 1 164.9375 26.0
-            L 157.9375 26.0
-            L 157.9375 66.0
-            L 164.9375 66.0
-            A 3 3 0 0 1 167.9375 69.0
-            L 167.9375 749.0
-            A 3 3 0 0 1 164.9375 752.0
+            L 186.0 0
+            A 3 3 0 0 1 189.0 3
+            L 189.0 23.0
+            A 3 3 0 0 1 186.0 26.0
+            L 179.0 26.0
+            L 179.0 66.0
+            L 186.0 66.0
+            A 3 3 0 0 1 189.0 69.0
+            L 189.0 749.0
+            A 3 3 0 0 1 186.0 752.0
             L 3 752.0
             A 3 3 0 0 1 0 749.0
             L 0 69.0
@@ -57,10 +57,6 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
-
-    <polygon points="161.4375,11.0 166.4375,16.0 161.4375,21.0" fill="#63B31F"/>
-    <text x="158.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -92,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AUDI_AUI_MUX_32</text>
     
-    <text x="83.96875" y="66.0"
+    <text x="94.5" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -628,20 +624,20 @@
     <text x="14.5" y="743.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN32</text>
 
-    <path d="M 156.4375 97.0
-            L 158.9375 97.0
-            L 158.9375 98.66666666666667
-            L 161.4375 98.66666666666667
-            L 161.4375 97.0
-            L 166.4375 97.0
-            L 166.4375 107.0
-            L 161.4375 107.0
-            L 161.4375 105.33333333333333
-            L 158.9375 105.33333333333333
-            L 158.9375 107.0
-            L 156.4375 107.0
+    <path d="M 177.5 97.0
+            L 180.0 97.0
+            L 180.0 98.66666666666667
+            L 182.5 98.66666666666667
+            L 182.5 97.0
+            L 187.5 97.0
+            L 187.5 107.0
+            L 182.5 107.0
+            L 182.5 105.33333333333333
+            L 180.0 105.33333333333333
+            L 180.0 107.0
+            L 177.5 107.0
             Z" fill="#845DAF"/>
-    <text x="153.4375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="174.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -649,9 +645,6 @@
     <!-- Horizontal Connection Lines -->
 
     <!-- External Labels -->
-
-    <text x="192.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Set Index K</text>
 
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">index – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan></text>
@@ -752,7 +745,7 @@
     <text x="-25" y="743.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input value 32 (selected when K = 31) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUDI</tspan></text>
 
-    <text x="192.9375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="214.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUDI</tspan> – IN1 for K = 0..IN32 for K = 31</text>
   </g>
 </svg>

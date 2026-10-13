@@ -19,9 +19,7 @@ The FB is triggered through its adapter sockets rather than through explicit eve
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|---|---|---|
-| `CNF` | Event | Confirmation that the selected index `K` has been processed and the output has been updated. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -54,7 +52,6 @@ The FB works as a unidirectional adapter multiplexer:
 1. The index adapter `K` determines which of the five input adapters is currently selected.
 2. The selected input adapter is connected through to the output adapter `OUT`.
 3. Every newly available result on the selected input is forwarded immediately and unconditionally.
-4. The event output `CNF` is emitted as confirmation that the forwarding step has been completed.
 
 The selection mapping is zero-based:
 
@@ -66,7 +63,7 @@ The selection mapping is zero-based:
 | `3` | `IN4` |
 | `4` | `IN5` |
 
-Because the FB is **ungated**, it does not compare old and new values and does not suppress repeated or unchanged data. Any refresh of the selected input results in an output update and a `CNF` event.
+Because the FB is **ungated**, it does not compare old and new values and does not suppress repeated or unchanged data. Any refresh of the selected input results in an output update.
 
 ## Technical Features
 
@@ -75,7 +72,6 @@ Because the FB is **ungated**, it does not compare old and new values and does n
 - 5 input channels and 1 output channel.
 - Zero-based channel selection via the `AUI` index adapter.
 - No change detection, no value filtering, no hysteresis.
-- Emits exactly one `CNF` event per forwarded result.
 - Configured as a generic FB type using `GEN_A2X_AUI_MUX`.
 - Belongs to the compiler package `adapter::selection::unidirectional`.
 
@@ -87,7 +83,6 @@ The FB does not define an explicit internal state machine. Its behavior is essen
 |---|---|
 | Current selection | Determined by the current value delivered through the `K` adapter. |
 | Forwarding | The selected `INx` adapter is continuously passed through to `OUT`. |
-| Confirmation | `CNF` is issued after each forwarding operation. |
 | Change detection | Not present. Every newly computed result is forwarded. |
 
 There is no stored "last value" and no internal comparison logic.
@@ -118,4 +113,4 @@ Thus, the ungated variant is not a replacement for the gated variant, but a comp
 
 ## Conclusion
 
-`A2X_AUI_MUX_5_UNGATED` is a compact, adapter-only multiplexer for selecting one of five unidirectional `A2X` inputs via an `AUI` index. Its main characteristic is the unconditional forwarding of every newly computed result, independent of value changes. This behavior makes it well suited for periodic, time-sensitive consumers, especially derivative and frequency calculations, while still providing the familiar multiplexer structure and a clear `CNF` confirmation event.
+`A2X_AUI_MUX_5_UNGATED` is a compact, adapter-only multiplexer for selecting one of five unidirectional `A2X` inputs via an `AUI` index. Its main characteristic is the unconditional forwarding of every newly computed result, independent of value changes. This behavior makes it well suited for periodic, time-sensitive consumers, especially derivative and frequency calculations, while still providing the familiar multiplexer structure.

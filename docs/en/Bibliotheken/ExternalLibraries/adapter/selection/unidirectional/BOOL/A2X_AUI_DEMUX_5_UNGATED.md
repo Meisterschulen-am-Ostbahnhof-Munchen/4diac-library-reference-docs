@@ -18,9 +18,7 @@ There are no explicit event inputs declared in the interface list. The FB is con
 
 ### **Event Outputs**
 
-| Event | Comment |
-|-------|---------|
-| `CNF` | Confirmation of Set Index K |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -54,7 +52,7 @@ The `K` index mapping is fixed:
 - `K = 3` → `OUT4`
 - `K = 4` → `OUT5`
 
-The designation "UNGATED" indicates that no gating mechanism suppresses repeated values. If a new result arrives, it is forwarded to the selected output regardless of whether the value differs from the previous one. The `CNF` event output confirms that the index selection has been processed.
+The designation "UNGATED" indicates that no gating mechanism suppresses repeated values. If a new result arrives, it is forwarded to the selected output regardless of whether the value differs from the previous one.
 
 ## Technical Features
 

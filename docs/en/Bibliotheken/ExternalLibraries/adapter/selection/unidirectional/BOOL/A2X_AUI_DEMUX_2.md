@@ -8,7 +8,7 @@
 
 A2X_AUI_DEMUX_2 is a generic, unidirectional demultiplexer function block for 4diac-ide. It receives one value through an A2X adapter socket and forwards it to one of two A2X output adapters. The selected output is controlled by an index value received through the AUI adapter socket K.
 
-The block is designed as a generic FB: the actual behavior is provided by the generic implementation class `GEN_A2X_AUI_DEMUX`. The adapter outputs are only updated when the routed value actually changes, and the confirmation event `CNF` is only emitted in that case.
+The block is designed as a generic FB: the actual behavior is provided by the generic implementation class `GEN_A2X_AUI_DEMUX`. The adapter outputs are only updated when the routed value actually changes.
 
 ## Interface Structure
 
@@ -20,9 +20,7 @@ There are no top-level event inputs. The FB is activated through data changes ar
 
 ### **Event Outputs**
 
-| Event | Description |
-|-------|-------------|
-| `CNF` | Confirmation that the index K has been set and the selected output was updated. It is only emitted if an actual value change occurred. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -49,8 +47,7 @@ The FB behaves as a 1-to-2 demultiplexer:
 2. If `K = 0`, the value from `IN` is routed to `OUT1`.
 3. If `K = 1`, the value from `IN` is routed to `OUT2`.
 4. The selected output adapter is updated only when the new value differs from the previously output value.
-5. If a value is actually changed, the `CNF` event is emitted.
-6. If the value is unchanged, no output update and no event take place.
+5. If the value is unchanged, no output update and no event take place.
 
 This behavior reduces unnecessary communication between adapters and prevents downstream function blocks from reacting to unchanged values.
 
@@ -61,7 +58,6 @@ This behavior reduces unnecessary communication between adapters and prevents do
 - Fully adapter-based interface without direct data inputs or outputs.
 - Unidirectional A2X and AUI adapter types.
 - Two output adapters allow selecting between two destinations.
-- Event output `CNF` for acknowledgment.
 - Event generation is suppressed when the output value has not changed.
 - Suitable for use inside modular IEC 61499 applications with adapter-based communication.
 
@@ -74,7 +70,6 @@ The XML type definition does not contain an explicit ECC state machine. The beha
 | `WAITING` | The FB waits for a new index value on `K` or a new input value on `IN`. |
 | `ROUTING` | The current input value is routed to the output selected by `K`. |
 | `UPDATING` | The selected output adapter is updated because the value has changed. |
-| `CONFIRMING` | `CNF` is emitted after a successful value change. |
 | `IDLE` | The value is unchanged, so no adapter update and no event occur. |
 
 ## Application Scenarios

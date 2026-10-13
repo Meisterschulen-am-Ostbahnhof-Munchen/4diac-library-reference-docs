@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 641.990234375 192.0"
-     width="641.990234375" height="192.0">
+     viewBox="0 0 855.4000000000001 192.0"
+     width="855.4000000000001" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(224.1708984375, 10)">
+  <g transform="translate(295.40000000000003, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 165.984375 0
-            A 3 3 0 0 1 168.984375 3
-            L 168.984375 23.0
-            A 3 3 0 0 1 165.984375 26.0
-            L 158.984375 26.0
-            L 158.984375 66.0
-            L 165.984375 66.0
-            A 3 3 0 0 1 168.984375 69.0
-            L 168.984375 169.0
-            A 3 3 0 0 1 165.984375 172.0
+            L 177.60000000000002 0
+            A 3 3 0 0 1 180.60000000000002 3
+            L 180.60000000000002 23.0
+            A 3 3 0 0 1 177.60000000000002 26.0
+            L 170.60000000000002 26.0
+            L 170.60000000000002 66.0
+            L 177.60000000000002 66.0
+            A 3 3 0 0 1 180.60000000000002 69.0
+            L 180.60000000000002 169.0
+            A 3 3 0 0 1 177.60000000000002 172.0
             L 3 172.0
             A 3 3 0 0 1 0 169.0
             L 0 69.0
@@ -57,10 +57,6 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
-
-    <polygon points="162.484375,11.0 167.484375,16.0 162.484375,21.0" fill="#63B31F"/>
-    <text x="159.484375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -92,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AW_AUI_DEMUX_4</text>
     
-    <text x="84.4921875" y="66.0"
+    <text x="90.30000000000001" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -132,68 +128,68 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN</text>
 
-    <path d="M 157.484375 97.0
-            L 159.984375 97.0
-            L 159.984375 98.66666666666667
-            L 162.484375 98.66666666666667
-            L 162.484375 97.0
-            L 167.484375 97.0
-            L 167.484375 107.0
-            L 162.484375 107.0
-            L 162.484375 105.33333333333333
-            L 159.984375 105.33333333333333
-            L 159.984375 107.0
-            L 157.484375 107.0
+    <path d="M 169.10000000000002 97.0
+            L 171.60000000000002 97.0
+            L 171.60000000000002 98.66666666666667
+            L 174.10000000000002 98.66666666666667
+            L 174.10000000000002 97.0
+            L 179.10000000000002 97.0
+            L 179.10000000000002 107.0
+            L 174.10000000000002 107.0
+            L 174.10000000000002 105.33333333333333
+            L 171.60000000000002 105.33333333333333
+            L 171.60000000000002 107.0
+            L 169.10000000000002 107.0
             Z" fill="#845DAF"/>
-    <text x="154.484375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.10000000000002" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT1</text>
 
-    <path d="M 157.484375 117.0
-            L 159.984375 117.0
-            L 159.984375 118.66666666666667
-            L 162.484375 118.66666666666667
-            L 162.484375 117.0
-            L 167.484375 117.0
-            L 167.484375 127.0
-            L 162.484375 127.0
-            L 162.484375 125.33333333333333
-            L 159.984375 125.33333333333333
-            L 159.984375 127.0
-            L 157.484375 127.0
+    <path d="M 169.10000000000002 117.0
+            L 171.60000000000002 117.0
+            L 171.60000000000002 118.66666666666667
+            L 174.10000000000002 118.66666666666667
+            L 174.10000000000002 117.0
+            L 179.10000000000002 117.0
+            L 179.10000000000002 127.0
+            L 174.10000000000002 127.0
+            L 174.10000000000002 125.33333333333333
+            L 171.60000000000002 125.33333333333333
+            L 171.60000000000002 127.0
+            L 169.10000000000002 127.0
             Z" fill="#845DAF"/>
-    <text x="154.484375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.10000000000002" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT2</text>
 
-    <path d="M 157.484375 137.0
-            L 159.984375 137.0
-            L 159.984375 138.66666666666666
-            L 162.484375 138.66666666666666
-            L 162.484375 137.0
-            L 167.484375 137.0
-            L 167.484375 147.0
-            L 162.484375 147.0
-            L 162.484375 145.33333333333334
-            L 159.984375 145.33333333333334
-            L 159.984375 147.0
-            L 157.484375 147.0
+    <path d="M 169.10000000000002 137.0
+            L 171.60000000000002 137.0
+            L 171.60000000000002 138.66666666666666
+            L 174.10000000000002 138.66666666666666
+            L 174.10000000000002 137.0
+            L 179.10000000000002 137.0
+            L 179.10000000000002 147.0
+            L 174.10000000000002 147.0
+            L 174.10000000000002 145.33333333333334
+            L 171.60000000000002 145.33333333333334
+            L 171.60000000000002 147.0
+            L 169.10000000000002 147.0
             Z" fill="#845DAF"/>
-    <text x="154.484375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.10000000000002" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT3</text>
 
-    <path d="M 157.484375 157.0
-            L 159.984375 157.0
-            L 159.984375 158.66666666666666
-            L 162.484375 158.66666666666666
-            L 162.484375 157.0
-            L 167.484375 157.0
-            L 167.484375 167.0
-            L 162.484375 167.0
-            L 162.484375 165.33333333333334
-            L 159.984375 165.33333333333334
-            L 159.984375 167.0
-            L 157.484375 167.0
+    <path d="M 169.10000000000002 157.0
+            L 171.60000000000002 157.0
+            L 171.60000000000002 158.66666666666666
+            L 174.10000000000002 158.66666666666666
+            L 174.10000000000002 157.0
+            L 179.10000000000002 157.0
+            L 179.10000000000002 167.0
+            L 174.10000000000002 167.0
+            L 174.10000000000002 165.33333333333334
+            L 171.60000000000002 165.33333333333334
+            L 171.60000000000002 167.0
+            L 169.10000000000002 167.0
             Z" fill="#845DAF"/>
-    <text x="154.484375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="166.10000000000002" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT4</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -202,25 +198,22 @@
 
     <!-- External Labels -->
 
-    <text x="193.984375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Set Index K</text>
-
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">index – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan></text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Input Value to demultiplex – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
 
-    <text x="193.984375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
+    <text x="205.60000000000002" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan> – Output value 1 (selected when K = 0)</text>
 
-    <text x="193.984375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
+    <text x="205.60000000000002" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan> – Output value 2 (selected when K = 1)</text>
 
-    <text x="193.984375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
+    <text x="205.60000000000002" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan> – Output value 3 (selected when K = 2)</text>
 
-    <text x="193.984375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan></text>
+    <text x="205.60000000000002" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AW</tspan> – Output value 4 (selected when K = 3)</text>
   </g>
 </svg>

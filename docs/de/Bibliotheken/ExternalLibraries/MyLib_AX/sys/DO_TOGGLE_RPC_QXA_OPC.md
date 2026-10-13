@@ -15,7 +15,9 @@ Der Funktionsbaustein **DO_TOGGLE_RPC_QXA_OPC** realisiert einen digitalen Freig
 
 ### **Ereignis-Eingänge**
 
-Keine (extern). Die auslösenden Ereignisse werden intern über den RPC-Server generiert.
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DigitalOutput_DO.INIT` durchgereicht
+
+Die auslösenden Toggle-Ereignisse werden weiterhin intern über den RPC-Server generiert.
 
 ### **Ereignis-Ausgänge**
 
@@ -25,6 +27,7 @@ Keine (extern).
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Qualifier für den physischen Ausgang; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE`; wird an `DigitalOutput_DO.QI` durchgereicht. |
 | `Output_DO` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Freigabe-Ausgang; steuert den digitalen Output (Klick-Toggle, Default AN). |
 | `ID_DO_TOGGLE_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION=CREATE_METHOD) für den argumentlosen RPC-Trigger; wird von mehreren Aufrufern gemeinsam genutzt. |
 | `ID_DO_STATE_WRITE` | `WSTRING` | Lokale Publish-Adresse (ACTION=WRITE) für den aktuellen Freigabe-Zustand (Flipflop-Q); wird remote abonniert. |
@@ -44,7 +47,7 @@ Der Baustein besteht intern aus folgenden Funktionsblöcken:
 - **DO_TOGGLE_SERVER** (`iec61499::net::SERVER_0`): Ein OPC-UA-Server, der eingehende RPC-Aufrufe auf der konfigurierten Methodenadresse (`ID_DO_TOGGLE_METHOD`) empfängt. Bei jedem Trigger wird das Ereignis `IND` ausgelöst.
 - **AX_T_FF_INIT_DO** (`adapter::events::unidirectional::AX_T_FF_INIT`): Ein Flipflop mit initialem Ausgang `TRUE` (AN). Jedes `CLK`-Ereignis toggelt den Zustand.
 - **SPLIT_DO_STATE** (`adapter::events::unidirectional::AX_SPLIT_2`): Verteilt den Zustand (Q) auf zwei parallele Ausgänge (OUT1 und OUT2).
-- **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`): Schaltet den physischen Ausgang entsprechend dem Flipflop-Zustand.
+- **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`): Schaltet den physischen Ausgang entsprechend dem Flipflop-Zustand; `QI` und `INIT` kommen von der Schnittstelle der SubApp.
 - **PUBLISH_STATE_DO** (`adapter::net::AX_PUBLISH_1`): Veröffentlicht den Zustand als OPC-UA-Write auf der Adresse `ID_DO_STATE_WRITE`.
 
 **Ablauf:** Ein RPC-Trigger (z. B. vom OPC-Dashboard oder SoftKey) ruft die Methode auf. Der Server erzeugt ein `IND`-Ereignis, das direkt den Flipflop (CLK) taktet. Gleichzeitig wird `RSP` sofort zurückgesendet, um den Server-Thread nicht zu blockieren (siehe Technische Besonderheiten). Der Flipflop-Ausgang `Q` wechselt seinen Zustand (toggle). Über den Splitter wird dieser Zustand gleichzeitig an den physischen Ausgang und an den Publisher übergeben. Der Publisher aktualisiert den remote überwachten Wert.

@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The **AUDI_AUI_MUX_6** function block is a generic 6‑to‑1 multiplexer specifically designed for use with unidirectional AUDI/AUI adapter types. It selects one of six input adapters (IN1…IN6) based on an index value provided via the K adapter, and forwards the selected data to a single output adapter (OUT). The block optimises communication by emitting an output event (CNF) only when the value on the selected input actually changes, thus reducing unnecessary network traffic and processing overhead.
+The **AUDI_AUI_MUX_6** function block is a generic 6‑to‑1 multiplexer specifically designed for use with unidirectional AUDI/AUI adapter types. It selects one of six input adapters (IN1…IN6) based on an index value provided via the K adapter, and forwards the selected data to a single output adapter (OUT). The block optimises communication by updating the output only when the value on the selected input actually changes, thus reducing unnecessary network traffic and processing overhead.
 
 The block belongs to the 4diac IDE environment and follows the IEC 61499 standard. It is intended for scenarios where multiple data sources need to be routed to a common destination, with a dynamic selection mechanism.
 
@@ -18,7 +18,7 @@ None.
 
 ### **Event Outputs**
 
-- **CNF** – Confirmation event that indicates a successful update of the selected input value on the output adapter. This event is emitted only when the value transferred from the currently selected input differs from the previously forwarded value.
+- No event outputs.
 
 ### **Data Inputs**
 
@@ -50,7 +50,7 @@ All adapters are unidirectional, meaning data flows in one direction: from the i
 
 ## Functionality
 
-The AUDI_AUI_MUX_6 acts as a data selector. It continuously reads the value from the input adapter selected by the current index K. If the value on that input differs from the last value forwarded to the output, the block updates the output adapter and triggers a **CNF** event to signal the update. If the value remains unchanged, no output update or event is generated, thereby avoiding unnecessary communication.
+The AUDI_AUI_MUX_6 acts as a data selector. It continuously reads the value from the input adapter selected by the current index K. If the value on that input differs from the last value forwarded to the output, the block updates the output adapter. If the value remains unchanged, no output update or event is generated, thereby avoiding unnecessary communication.
 
 The selection index K is provided through a dedicated adapter, allowing the selection to be changed dynamically during operation. The block is designed for use with adapters that carry both data and control information, but the multiplexing logic focuses solely on the data part of the adapter.
 
@@ -66,8 +66,8 @@ The selection index K is provided through a dedicated adapter, allowing the sele
 
 The block does not expose complex internal states. Its behaviour can be described by two main conditions:
 
-1. **Value unchanged** – The value on the selected input matches the value previously forwarded to the output. In this state, no update is performed and no CNF event is emitted.
-2. **Value changed** – The value on the selected input differs from the previously forwarded value. The output adapter is updated with the new value and the CNF event is emitted.
+1. **Value unchanged** – The value on the selected input matches the value previously forwarded to the output. In this state, no update is performed.
+2. **Value changed** – The value on the selected input differs from the previously forwarded value. The output adapter is updated with the new value.
 
 The selection index K can change at any time, and the block immediately re‑evaluates the appropriate input.
 
@@ -84,4 +84,4 @@ Unlike a conventional multiplexer (e.g., a multi‑input FB with an integer inde
 
 ## Conclusion
 
-The AUDI_AUI_MUX_6 is a specialised function block for multiplexing up to six unidirectional AUDI data streams to a single output, with an index‑based selection via an AUI adapter. Its change‑driven output update mechanism and generic design make it a valuable component in IEC 61499‑based distributed automation systems where efficient data routing and minimal communication overhead are required. The block simplifies the integration of multiple data sources into a single sink, while maintaining high responsiveness and clear event‑based feedback.
+The AUDI_AUI_MUX_6 is a specialised function block for multiplexing up to six unidirectional AUDI data streams to a single output, with an index‑based selection via an AUI adapter. Its change‑driven output update mechanism and generic design make it a valuable component in IEC 61499‑based distributed automation systems where efficient data routing and minimal communication overhead are required. The block simplifies the integration of multiple data sources into a single sink, while maintaining high responsiveness.

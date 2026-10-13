@@ -19,9 +19,7 @@ Die auslösenden Ereignisse werden über die Adapter-Schnittstellen transportier
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `CNF` | Event | Bestätigung, dass der Index `K` gesetzt wurde |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -51,7 +49,6 @@ Der Baustein arbeitet als Demultiplexer:
 
 Der Zusatz **UNGATED** ist die entscheidende Eigenschaft: Es findet keine Erkennung statt, ob sich der Wert geändert hat. Jeder neue Berechnungsschritt beziehungsweise jedes neue Ergebnis wird unmittelbar und bedingungslos an den ausgewählten Ausgang weitergegeben.
 
-Über das Ereignis `CNF` wird bestätigt, dass der an `K` anliegende Index übernommen wurde.
 
 ## Technische Besonderheiten
 
@@ -70,7 +67,6 @@ Der Baustein besitzt keine explizite Zustandsmaschine beziehungsweise keinen eig
 |-------|--------------|
 | Indexübernahme | Der Socket `K` liefert den Auswahlindex `0` oder `1`. |
 | Wertweiterleitung | Der aktuelle `IN`-Wert wird an `OUT1` oder `OUT2` übergeben. |
-| Quittung | Das Ereignis `CNF` signalisiert die Übernahme des Indexes. |
 
 Da keine Änderungserkennung erfolgt, wird auch ein unveränderter Wert in jedem Zyklus erneut weitergeleitet.
 

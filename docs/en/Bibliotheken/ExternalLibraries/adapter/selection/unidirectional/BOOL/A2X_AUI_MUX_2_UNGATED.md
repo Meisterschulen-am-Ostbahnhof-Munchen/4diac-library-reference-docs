@@ -12,7 +12,7 @@ This behavior is intended for consumers that require a periodic cadence or a reg
 
 ## Interface Structure
 
-The function block has no conventional event inputs or data inputs/outputs. Its interface is entirely built around unidirectional adapters. The only direct event output is a confirmation event.
+The function block has no conventional event inputs or data inputs/outputs. Its interface is entirely built around unidirectional adapters. It has no event outputs.
 
 ### **Event Inputs**
 
@@ -20,9 +20,7 @@ None.
 
 ### **Event Outputs**
 
-| Event | Description |
-|-------|-------------|
-| `CNF` | Confirmation that the index selection requested via the `K` adapter has been applied. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -47,8 +45,6 @@ The block acts as a two-input multiplexer for unidirectional adapter streams. Th
 
 The "UNGATED" characteristic means that the block does not compare incoming values with previous values. Every incoming result is forwarded immediately to the output. This makes the block well suited for applications in which downstream blocks need each processing cycle to be triggered, even if the underlying value has not changed.
 
-The `CNF` event output provides a confirmation that the index set on `K` has been accepted and that the corresponding input stream is now routed to the output.
-
 The block is a generic function block realized through the generic class name `GEN_A2X_AUI_MUX`. It is intended for use in unidirectional, adapter-based selection scenarios.
 
 ## Technical Features
@@ -57,7 +53,6 @@ The block is a generic function block realized through the generic class name `G
 - Supports one `AUI` index socket for selecting one of two `A2X` input sockets.
 - Provides a single unidirectional `A2X` output plug.
 - Forwards all incoming results unconditionally without change detection.
-- Emits a `CNF` confirmation event after applying the index.
 - Generic implementation using `GEN_A2X_AUI_MUX`.
 - Package: `adapter::selection::unidirectional`.
 - Suitable for periodic and cadence-sensitive data flow architectures.

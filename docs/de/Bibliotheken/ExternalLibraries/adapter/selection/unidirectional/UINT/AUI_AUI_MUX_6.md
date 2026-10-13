@@ -16,9 +16,7 @@ Keine Ereignis-Eingänge vorhanden.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                                       |
-|------|-------|-------------------------------------------------|
-| `CNF`| Event | Bestätigung des gesetzten Index (K) und der Aktualisierung des Ausgangs. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -54,7 +52,7 @@ Der FB verwendet ausschließlich unidirektionale AUI‑Adapter (Typ `adapter::ty
 
 Der Baustein `AUI_AUI_MUX_6` implementiert eine 6‑zu‑1‑Auswahl (Multiplexer) auf Basis von AUI‑Adaptern. Der über den Adapter `K` übertragene Indexwert bestimmt, welcher der sechs Eingangsadapter (`IN1` bis `IN6`) aktuell durchgeschaltet wird. Der Wert des ausgewählten Eingangs wird permanent am Ausgangsadapter `OUT` bereitgestellt.
 
-Wesentlich ist die ereignisgesteuerte Aktualisierung: Der Ausgang `OUT` wird nur dann mit einem neuen Wert versehen und das Ereignis `CNF` ausgelöst, wenn sich der Wert des gewählten Eingangs gegenüber dem zuletzt gesendeten Ausgangswert geändert hat. Dies gilt sowohl bei einem Wechsel des Index (K) als auch bei einer Änderung des aktiven Eingangswerts. Bleibt der Wert unverändert, wird kein Ereignis erzeugt.
+Wesentlich ist die ereignisgesteuerte Aktualisierung: Der Ausgang `OUT` wird nur dann mit einem neuen Wert versehen, wenn sich der Wert des gewählten Eingangs gegenüber dem zuletzt gesendeten Ausgangswert geändert hat. Dies gilt sowohl bei einem Wechsel des Index (K) als auch bei einer Änderung des aktiven Eingangswerts. Bleibt der Wert unverändert, wird kein Ereignis erzeugt.
 
 Die Kommunikation erfolgt asynchron und unidirektional über die jeweiligen Adapter‑Schnittstellen. Der Baustein besitzt keine eigenen Daten‑ oder Ereignis‑Ein‑/Ausgänge, sondern ausschließlich Adapter, die eine lose Kopplung und Wiederverwendbarkeit ermöglichen.
 
@@ -62,7 +60,7 @@ Die Kommunikation erfolgt asynchron und unidirektional über die jeweiligen Adap
 
 - **Generischer Aufbau**: Der Baustein ist als generischer FB mit dem Klassennamen `GEN_AUI_AUI_MUX` definiert. Dadurch kann er parametrisiert und in unterschiedlichen Kontexten eingesetzt werden.
 - **Nur Adapter‑Schnittstelle**: Sämtliche Ein‑ und Ausgänge sind als unidirektionale AUI‑Adapter ausgeführt. Dies erlaubt eine flexible Verbindung mit anderen AUI‑basierten Bausteinen und eine modulare Systemarchitektur.
-- **Ereignis‑Minimierung**: Durch die interne Erkennung von Wertänderungen wird das Ereignis `CNF` nur bei tatsächlichen Änderungen generiert. Dies reduziert die Netzwerk- und Prozessorlast in verteilten Systemen.
+- **Ereignis‑Minimierung**: Durch die interne Erkennung von Wertänderungen wird der Ausgang nur bei tatsächlichen Änderungen aktualisiert. Dies reduziert die Netzwerk- und Prozessorlast in verteilten Systemen.
 - **Keine Zustandsautomaten**: Die Logik ist rein funktional; es existiert kein explizit modellierter Zustandsautomat. Die Auswahl und Aktualisierung erfolgt vollständig datengetrieben.
 - **Lizenzierung**: Der Baustein ist unter der Eclipse Public License 2.0 veröffentlicht.
 
@@ -72,7 +70,6 @@ Da der Baustein keinen internen Zustandsautomaten besitzt, entfällt eine klassi
 
 1. **Initialisierung**: Beim ersten Durchlauf wird der Eingang `IN1` als Ausgang gesetzt, falls keine gültige Indexvorgabe vorliegt.
 2. **Indexauswahl**: Durch Änderung des Adapters `K` wird der entsprechende Eingang aktiviert.
-3. **Wertprüfung**: Der aktivierte Eingang wird kontinuierlich überwacht. Bei einer Wertänderung wird der neue Wert auf `OUT` gespiegelt und das Ereignis `CNF` erzeugt.
 4. **Keine Änderung**: Liegt keine Änderung vor, bleibt der Ausgang unverändert und es wird kein Ereignis ausgelöst.
 
 Somit existiert nur der funktionale Zustand „aktiv“ ohne spezifische Unterzustände.

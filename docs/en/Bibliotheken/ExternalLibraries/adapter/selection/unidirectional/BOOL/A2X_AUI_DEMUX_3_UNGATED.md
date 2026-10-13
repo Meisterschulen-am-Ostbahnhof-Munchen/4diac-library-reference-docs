@@ -18,9 +18,7 @@ No event inputs are declared. The FB is driven entirely through its adapter sock
 
 ### **Event Outputs**
 
-| Event | Description |
-|---|---|
-| `CNF` | Confirmation of Set Index K. This event signals that the index selection and forwarding step has been processed. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -50,14 +48,13 @@ A2X_AUI_DEMUX_3_UNGATED forwards data received on the `IN` adapter to exactly on
 
 Each time a new value arrives on `IN`, the FB passes that value to the currently selected output. No comparison with a previously forwarded value is performed. This is the key difference between this block and a gated demultiplexer: the output is updated as often as new results arrive, regardless of whether the data content has changed.
 
-After the forwarding step is completed, the event output `CNF` is emitted as confirmation. Because all data and selection information is transported through adapter connections, no separate input events or data inputs are required.
+Because all data and selection information is transported through adapter connections, no separate input events, output events or data inputs are required.
 
 ## Technical Features
 
 - Three unidirectional output plugs: `OUT1`, `OUT2`, `OUT3`.
 - One unidirectional input socket `IN` for the data stream to be demultiplexed.
 - One unidirectional index socket `K` for output selection.
-- Event output `CNF` for confirmation of the index selection.
 - No change detection or gating logic.
 - No internal storage of the last forwarded value.
 - Generic FB implementation using the class name `GEN_A2X_AUI_DEMUX`.
@@ -71,7 +68,6 @@ The FB does not define a complex state machine. Because no change detection is r
 - Awaiting index selection through `K`.
 - Awaiting a new value on `IN`.
 - Forwarding the received value to the output selected by `K`.
-- Emitting `CNF` to confirm the action.
 
 This simple structure makes the FB deterministic and easy to use in periodic processing chains.
 
