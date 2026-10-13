@@ -20,9 +20,7 @@ Keine eigenständigen Ereignis-Eingänge. Die verarbeitungsrelevanten Ereignisse
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Beschreibung |
-|------|-------|--------------|
-| CNF  | Event | Bestätigung der Verarbeitung von Index K bzw. der erfolgten Ausgabe. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -53,7 +51,6 @@ Der Baustein arbeitet als 1-aus-5-Demultiplexer auf Adapterbasis.
 1. Über den Socket `K` wird der gewünschte Ausgangskanal als Index empfangen.
 2. Über den Socket `IN` trifft der zu verteilende Wert ein.
 3. Der Wert wird an den durch `K` ausgewählten Ausgangs-Adapter `OUT1` bis `OUT5` weitergeleitet.
-4. Nach der Weiterleitung wird das Ereignis `CNF` ausgegeben.
 
 Die Zuordnung lautet:
 

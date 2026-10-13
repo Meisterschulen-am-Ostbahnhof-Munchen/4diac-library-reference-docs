@@ -6,7 +6,7 @@
 
 ## Introduction
 
-A2X_AUI_MUX_3 is a generic adapter-based 3-to-1 multiplexer function block for IEC 61499 applications. It selects one of three A2X input adapters and forwards the selected value to an A2X output adapter. The selection index is supplied through an AUI adapter. The block is implemented as the typed generic variant `GEN_A2X_AUI_MUX` and is designed so that the output adapter is only updated when the selected value actually changes. The confirmation event `CNF` is therefore emitted only after a real value change, not for redundant index updates.
+A2X_AUI_MUX_3 is a generic adapter-based 3-to-1 multiplexer function block for IEC 61499 applications. It selects one of three A2X input adapters and forwards the selected value to an A2X output adapter. The selection index is supplied through an AUI adapter. The block is implemented as the typed generic variant `GEN_A2X_AUI_MUX` and is designed so that the output adapter is only updated when the selected value actually changes.
 
 ## Interface Structure
 
@@ -18,9 +18,7 @@ None.
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|------|---------|
-| `CNF` | Event | Confirmation of set index K |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -50,8 +48,6 @@ A2X_AUI_MUX_3 behaves as an adapter-based multiplexer:
    - K = 1 selects `IN2`
    - K = 2 selects `IN3`
 3. The value of the selected input adapter is compared with the current value on the output adapter `OUT`.
-4. If the value has changed, the output adapter is updated and the `CNF` event is emitted.
-5. If the value has not changed, no output update and no `CNF` event occur.
 
 This behavior reduces unnecessary event and data traffic on the adapter connection. The block is therefore especially useful in applications where the index may be set repeatedly to the same value, but only actual value changes should be propagated.
 
@@ -64,7 +60,6 @@ This behavior reduces unnecessary event and data traffic on the adapter connecti
 - Fully adapter-based interface; no direct data inputs or outputs
 - Unidirectional adapter communication
 - Change-only output update behavior
-- Confirmation event `CNF` emitted only on actual value change
 - Suitable for distributed IEC 61499 applications
 - Licensed under EPL-2.0
 
@@ -75,7 +70,7 @@ The block does not declare an explicit state machine in its interface definition
 - **Idle**: waiting for a new index value on the `K` adapter.
 - **Evaluate**: reading the index and selecting the corresponding input adapter.
 - **Compare**: checking whether the selected input value differs from the current output value.
-- **Publish**: updating the `OUT` adapter and emitting `CNF` if an actual change occurred.
+- **Publish**: updating the `OUT` adapter if an actual change occurred.
 
 This state behavior ensures that redundant selections do not cause unnecessary output activity.
 
@@ -86,7 +81,7 @@ A2X_AUI_MUX_3 is suitable for the following use cases:
 - Selecting one of three process values or measurement signals connected via adapters.
 - Routing different data sources to a single consumer without using direct data connections.
 - Building adapter-based signal selection logic in distributed control systems.
-- Reducing network or communication load by suppressing confirmation events when the selected value is unchanged.
+- Reducing network or communication load by suppressing output updates when the selected value is unchanged.
 - Using as a reusable building block in larger adapter-based multiplexer or routing structures.
 
 ## Comparison with Similar Blocks

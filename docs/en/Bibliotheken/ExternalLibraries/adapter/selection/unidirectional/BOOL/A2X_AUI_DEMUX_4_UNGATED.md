@@ -18,9 +18,7 @@ None.
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|-------|------|---------|
-| `CNF` | Event | Confirmation of Set Index K. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -48,7 +46,6 @@ None. All data is transferred through adapters.
 1. The value to distribute is available on the `IN` adapter.
 2. The selection index is available on the `K` adapter.
 3. Depending on `K`, the value is routed to `OUT1`, `OUT2`, `OUT3`, or `OUT4`.
-4. The `CNF` event confirms that the index Set operation has been accepted.
 
 The term `UNGATED` indicates that the FB does not suppress repeated values. While a normal gated demultiplexer would compare the current value with the previous one and only forward a result when a change is detected, this variant always passes the newly calculated/received value through. Therefore, each input update triggers an output update, and the output cadence follows the input cadence.
 
@@ -62,7 +59,6 @@ The term `UNGATED` indicates that the FB does not suppress repeated values. Whil
 - Unidirectional `AUI` input socket for the selection index.
 - No explicit data inputs or data outputs; all payload data crosses the adapter interface.
 - No change-detection state or old-value storage.
-- Confirmation output event `CNF`.
 
 ## State Overview
 

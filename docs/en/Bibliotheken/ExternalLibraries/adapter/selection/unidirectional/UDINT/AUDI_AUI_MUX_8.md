@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The AUDI_AUI_MUX_8 is a generic multiplexer function block designed to select one of eight input adapters (IN1 to IN8) and forward its value to a single output adapter (OUT). The selection is controlled by a dedicated index adapter (K). This FB is implemented as a generic type (GEN_AUDI_AUI_MUX), allowing flexible adaptation across different data types. A key feature is that the output adapter is only updated when the actual value changes, and the confirmation event CNF is only triggered upon a genuine change.
+The AUDI_AUI_MUX_8 is a generic multiplexer function block designed to select one of eight input adapters (IN1 to IN8) and forward its value to a single output adapter (OUT). The selection is controlled by a dedicated index adapter (K). This FB is implemented as a generic type (GEN_AUDI_AUI_MUX), allowing flexible adaptation across different data types. A key feature is that the output adapter is only updated when the actual value changes.
 
 ## Interface Structure
 
@@ -16,9 +16,7 @@ None.
 
 ### **Event Outputs**
 
-| Name | Type | Description |
-|------|------|-------------|
-| CNF | Event | Confirmation that the output has been updated with the selected input value. This event is only emitted when a value change actually occurred. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -56,12 +54,11 @@ The AUDI_AUI_MUX_8 function block acts as an 8-to-1 multiplexer for adapter-base
 - K = 6 → IN7
 - K = 7 → IN8
 
-The output is updated only when the value of the selected input differs from the current output value. If no change is detected, the OUT adapter remains unchanged and no confirmation event is emitted. This behavior reduces unnecessary communication and processing overhead in the system.
+The output is updated only when the value of the selected input differs from the current output value. If no change is detected, the OUT adapter remains unchanged and no update is performed. This behavior reduces unnecessary communication and processing overhead in the system.
 
 ## Technical Features
 
 - **Generic implementation**: The FB is based on the generic class GEN_AUDI_AUI_MUX, making it adaptable for different data types.
-- **Event-based confirmation**: A CNF event is generated only when the output value actually changes.
 - **Adapter-based connectivity**: All inputs and the output use unidirectional adapter interfaces, ensuring clean and type-safe connections.
 - **Eight selectable channels**: Supports up to 8 distinct input sources.
 - **Single index input**: The selection is performed via a dedicated index adapter (K), simplifying control logic.
@@ -73,7 +70,7 @@ The FB does not maintain a complex state machine. It operates in a purely combin
 1. The index K is evaluated.
 2. The corresponding input is read.
 3. The new value is compared with the stored output value.
-4. If different, the OUT adapter is updated and the CNF event is triggered.
+4. If different, the OUT adapter is updated.
 
 ## Application Scenarios
 
@@ -84,7 +81,7 @@ The FB does not maintain a complex state machine. It operates in a purely combin
 
 ## Comparison with Similar Blocks
 
-Compared to standard multiplexer FBs (e.g., those with discrete data inputs), the AUDI_AUI_MUX_8 uses adapter interfaces instead of plain data pins. This allows it to connect to complex datatype structures and unidirectional communication channels. Unlike many other multiplexers, this FB only emits a confirmation event when the output actually changes, making it more efficient for event-driven systems. It also provides a generic implementation, which reduces the need for multiple specific FB types.
+Compared to standard multiplexer FBs (e.g., those with discrete data inputs), the AUDI_AUI_MUX_8 uses adapter interfaces instead of plain data pins. This allows it to connect to complex datatype structures and unidirectional communication channels. Unlike many other multiplexers, this FB only updates the output when the value actually changes, making it more efficient for event-driven systems. It also provides a generic implementation, which reduces the need for multiple specific FB types.
 
 ## Conclusion
 

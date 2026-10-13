@@ -14,7 +14,7 @@ In contrast to a change-detecting multiplexer, the “UNGATED” variant does no
 
 ## Interface Structure
 
-The FB has no direct data inputs or data outputs. All runtime values are transported through unidirectional adapters. The interface consists of one event output, one index socket, four input sockets, and one output plug.
+The FB has no direct data inputs or data outputs. All runtime values are transported through unidirectional adapters. The interface consists of one index socket, four input sockets, and one output plug.
 
 ### **Event Inputs**
 
@@ -22,9 +22,7 @@ There are no explicit event inputs. Control and data flow are handled through th
 
 ### **Event Outputs**
 
-| Event | Description |
-|-------|-------------|
-| `CNF` | Confirmation that the index `K` has been applied and the selected input has been forwarded to the output. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -58,7 +56,7 @@ The input selection is mapped as follows:
 - `K = 2` → `IN3`
 - `K = 3` → `IN4`
 
-The selected input adapter is connected to the `OUT` plug, and the data is forwarded without any value-change filtering. After the selection and forwarding step has been completed, the event output `CNF` is issued as a confirmation.
+The selected input adapter is connected to the `OUT` plug, and the data is forwarded without any value-change filtering.
 
 The main characteristic of this FB is that it is “ungated”. A normal gated multiplexer may suppress an output update when the selected value has not changed. This block does not do that. Every updated result coming from the selected input is passed through to `OUT`, even if it is identical to the previously forwarded value.
 
@@ -71,7 +69,6 @@ The main characteristic of this FB is that it is “ungated”. A normal gated m
 - Unidirectional adapter types from the package `adapter::types::unidirectional`
 - Four A2X input channels plus one AUI index channel
 - One A2X output plug
-- Single confirmation event output: `CNF`
 - No change detection or value filtering
 - Suitable for periodic, time-driven data consumers
 
@@ -86,7 +83,6 @@ The FB type is declared as a generic FB, so the XML does not contain an explicit
 | Waiting | The FB waits for an update on the `K` index adapter or on the selected A2X input. |
 | Decoding | The index `K` is evaluated and mapped to `IN1`, `IN2`, `IN3`, or `IN4`. |
 | Forwarding | The selected input data is passed to the `OUT` plug. |
-| Confirmation | The `CNF` event is emitted to confirm that the output has been updated. |
 
 No state compares current and previous values. Therefore, every processed result is forwarded unconditionally.
 
@@ -106,9 +102,6 @@ No state compares current and previous values. Therefore, every processed result
 - **Adapter-based signal routing**  
   Because the FB uses only adapters, it can be integrated into unidirectional, adapter-oriented data flows without mixing in conventional data inputs or outputs.
 
-- **Synchronization and handshaking**  
-  The `CNF` output can be used by downstream logic to know that the selected input has been accepted and the output has been updated.
-
 * * * * * * * * * *
 
 ## Comparison with Similar Blocks
@@ -127,4 +120,4 @@ The essential difference is the “UNGATED” behavior: downstream blocks that r
 
 A2X_AUI_MUX_4_UNGATED is a specialized adapter-based multiplexer that selects one of four A2X inputs and forwards the selected data without change detection. Its strength is deterministic, periodic forwarding of all calculated results, which makes it ideal for time-critical consumers such as derivative and frequency calculations.
 
-By combining a clear four-input structure, an AUI-based index interface, and a confirmation output, the block offers a simple yet flexible building block for unidirectional adapter-oriented control and measurement applications.
+By combining a clear four-input structure, and an AUI-based index interface, the block offers a simple yet flexible building block for unidirectional adapter-oriented control and measurement applications.

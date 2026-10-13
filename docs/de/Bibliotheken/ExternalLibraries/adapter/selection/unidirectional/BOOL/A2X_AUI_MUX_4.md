@@ -18,9 +18,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Beschreibung |
-|------|-----|--------------|
-| `CNF` | Event | Bestätigung, dass der über `K` ausgewählte Eingangswert auf `OUT` ausgegeben wurde. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -49,7 +47,6 @@ Der Baustein arbeitet als adapterbasierter Multiplexer:
 2. Bei `K = 0` wird `IN1` ausgewählt, bei `K = 1` `IN2`, bei `K = 2` `IN3` und bei `K = 3` `IN4`.
 3. Der Wert des ausgewählten Eingangsadapter wird auf den Ausgangsadapter `OUT` übertragen.
 4. `OUT` wird nur dann aktualisiert, wenn sich der Wert gegenüber der letzten Ausgabe tatsächlich geändert hat.
-5. Eine Wertänderung wird über das Ereignis `CNF` quittiert. Bleibt der Wert unverändert, wird kein Ereignis erzeugt.
 
 ## Technische Besonderheiten
 
@@ -67,7 +64,7 @@ In der XML-Definition ist keine explizite ECC-Zustandsmaschine enthalten. Funkti
 |---------|--------------|-------------------|
 | `Bereit` | Der FB wartet auf einen gültigen Index `K` und prüft die Eingänge. | Kein Ereignis. |
 | `Vergleich` | Der Wert des ausgewählten Eingangs wird mit dem zuletzt ausgegebenen Wert verglichen. | Kein Ereignis. |
-| `Aktualisierung` | Eine Wertänderung wurde erkannt; `OUT` wird gesetzt. | `CNF` wird erzeugt. |
+| `Aktualisierung` | Eine Wertänderung wurde erkannt; `OUT` wird gesetzt. | `OUT` wird aktualisiert. |
 | `Unverändert` | Der Wert entspricht dem letzten Ausgangswert. | Kein Ereignis, `OUT` bleibt unverändert. |
 
 ## Anwendungsszenarien

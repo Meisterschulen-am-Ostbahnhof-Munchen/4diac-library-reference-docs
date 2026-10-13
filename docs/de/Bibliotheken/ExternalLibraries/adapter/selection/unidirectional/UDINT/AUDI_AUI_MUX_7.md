@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsbaustein **AUDI_AUI_MUX_7** realisiert einen generischen Multiplexer, der über einen Index (K) einen von sieben Eingängen (IN1 bis IN7) auf einen Ausgang (OUT) durchschaltet. Der Baustein ist speziell für die Verwendung mit den Adaptertypen `adapter::types::unidirectional::AUDI` und `adapter::types::unidirectional::AUI` ausgelegt und arbeitet rein ereignisgesteuert. Der Ausgang wird dabei nur dann aktualisiert, wenn sich der tatsächliche Wert am ausgewählten Eingang ändert. Dies wird durch das Ereignis `CNF` bestätigt.
+Der Funktionsbaustein **AUDI_AUI_MUX_7** realisiert einen generischen Multiplexer, der über einen Index (K) einen von sieben Eingängen (IN1 bis IN7) auf einen Ausgang (OUT) durchschaltet. Der Baustein ist speziell für die Verwendung mit den Adaptertypen `adapter::types::unidirectional::AUDI` und `adapter::types::unidirectional::AUI` ausgelegt und arbeitet rein ereignisgesteuert. Der Ausgang wird dabei nur dann aktualisiert, wenn sich der tatsächliche Wert am ausgewählten Eingang ändert.
 
 ## Schnittstellenstruktur
 
@@ -16,9 +16,7 @@ Keine – der Baustein besitzt keine Ereignis-Eingänge.
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ     | Kommentar |
-|-------|---------|-----------|
-| `CNF` | `Event` | Bestätigt, dass der Index K gesetzt und der Ausgang bei einer tatsächlichen Wertänderung aktualisiert wurde. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -46,20 +44,20 @@ Keine direkten Datenausgänge; die Ausgangsdaten werden ausschließlich über di
 
 Der Baustein arbeitet als Multiplexer mit sieben Datenquellen und einer Indexsteuerung. Der Wert am Adapter `K` wird als Index interpretiert. Abhängig vom Wert (0 für `IN1`, 1 für `IN2`, ... bis 6 für `IN7`) wird der korrespondierende Eingang ausgewählt. Der aktuelle Wert des ausgewählten Eingangs wird auf den Ausgang `OUT` übertragen.
 
-Die Besonderheit liegt in der Ereignisbehandlung: Ein `CNF`-Ereignis wird nur dann erzeugt, wenn sich der Wert am Ausgang tatsächlich ändert. Dies reduziert unnötige Ereignisflüsse und verbessert die Effizienz in der Datenweiterleitung.
+Die Besonderheit liegt in der Ereignisbehandlung: Der Ausgang wird nur dann aktualisiert, wenn sich der Wert am Ausgang tatsächlich ändert. Dies reduziert unnötige Ereignisflüsse und verbessert die Effizienz in der Datenweiterleitung.
 
 Der Baustein ist als generischer Funktionsbaustein (Generic FB) deklariert (`eclipse4diac::core::GenericClassName = 'GEN_AUDI_AUI_MUX'`). Dadurch kann er in unterschiedlichen Kontexten wiederverwendet werden, ohne die internen Typen fest zu verdrahten.
 
 ## Technische Besonderheiten
 
 - **Generischer Typ:** Der Baustein ist als generischer FB implementiert, was eine flexible Anpassung an verschiedene Datentypen ermöglicht (hier speziell die Adaptertypen `AUDI` und `AUI`).
-- **Ereignisreduzierung:** Der Ausgang wird nur bei einer Wertänderung aktualisiert; dies wird durch das Ereignis `CNF` bestätigt.
+- **Ereignisreduzierung:** Der Ausgang wird nur bei einer Wertänderung aktualisiert.
 - **Adapterbasierte Kommunikation:** Alle Ein- und Ausgänge sind über unidirektionale Adapter (`AdapterDeclaration`) realisiert, was eine lose Kopplung und einfache Integration in bestehende Adaptertopologien ermöglicht.
 - **Kein Zustandsautomat:** Es ist kein ECC (Execution Control Chart) definiert; die Verarbeitung erfolgt rein ereignisorientiert ohne interne Zustände.
 
 ## Zustandsübersicht
 
-Da kein ECC vorhanden ist, existiert keine explizite Zustandsmaschine. Der Baustein führt bei Aktivierung die Multiplexfunktion deterministisch aus. Das `CNF`-Ereignis stellt das Abschlussereignis dar und signalisiert die erfolgreiche Verarbeitung des aktuellen Index und die Aktualisierung des Ausgangs (falls eine Wertänderung stattgefunden hat).
+Da kein ECC vorhanden ist, existiert keine explizite Zustandsmaschine. Der Baustein führt bei Aktivierung die Multiplexfunktion deterministisch aus.
 
 ## Anwendungsszenarien
 
@@ -73,4 +71,4 @@ Typische Multiplexer in der 4diac-Umgebung verwenden oft direkte Dateneingänge 
 
 ## Fazit
 
-Der **AUDI_AUI_MUX_7** ist ein leistungsfähiger, generischer Multiplexer für Adapter-basierte Kommunikation. Seine Fähigkeit, den Ausgang nur bei tatsächlichen Wertänderungen zu aktualisieren und dies über das Ereignis `CNF` zu bestätigen, macht ihn besonders für Anwendungen geeignet, bei denen Effizienz und Datenreduktion im Vordergrund stehen. Die klare Trennung von Eingängen, Ausgang und Indexsteuerung ermöglicht eine einfache Integration in bestehende Automatisierungsstrukturen und bietet eine flexible, wiederverwendbare Lösung für vielfältige Selektionsaufgaben.
+Der **AUDI_AUI_MUX_7** ist ein leistungsfähiger, generischer Multiplexer für Adapter-basierte Kommunikation. Seine Fähigkeit, den Ausgang nur bei tatsächlichen Wertänderungen zu aktualisieren, macht ihn besonders für Anwendungen geeignet, bei denen Effizienz und Datenreduktion im Vordergrund stehen. Die klare Trennung von Eingängen, Ausgang und Indexsteuerung ermöglicht eine einfache Integration in bestehende Automatisierungsstrukturen und bietet eine flexible, wiederverwendbare Lösung für vielfältige Selektionsaufgaben.

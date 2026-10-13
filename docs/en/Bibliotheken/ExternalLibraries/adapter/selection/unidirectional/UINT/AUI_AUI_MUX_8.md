@@ -20,9 +20,7 @@ The block has **no event inputs**. All triggering is performed implicitly throug
 
 ### **Event Outputs**
 
-| Event   | Description                                             |
-|---------|---------------------------------------------------------|
-| **CNF** | Confirmation event indicating that the index **K** has been successfully applied and the output **OUT** has been updated. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -61,16 +59,14 @@ The multiplexer operates on an event-driven basis:
 1. The index value **K** is continuously monitored through its adapter socket.
 2. Whenever **K** changes to a new value within the valid range (0–7), the block connects the corresponding input adapter (**IN1** through **IN8**) to the output adapter **OUT**.
 3. The connected input's current value is copied to **OUT**.
-4. After successful propagation, the `CNF` event is emitted to signal that the selection has been applied.
 
-Key design characteristic: **the output is only updated when the index value actually changes**. If **K** is set repeatedly to the same index, no update occurs and no confirmation event is generated. This behavior minimizes unnecessary communication on the output adapter and reduces processing overhead in the connected downstream logic.
+Key design characteristic: **the output is only updated when the index value actually changes**. If **K** is set repeatedly to the same index, no update occurs. This behavior minimizes unnecessary communication on the output adapter and reduces processing overhead in the connected downstream logic.
 
 The block is declared as a generic FB (`eclipse4diac::core::GenericClassName = 'GEN_AUI_AUI_MUX'`), meaning it can be instantiated with type parameters to match the concrete AUI adapter variant required by the application.
 
 ## Technical Features
 
 - **Eight-to-one multiplexing** with unidirectional AUI adapter type.
-- **Event-based confirmation** – the `CNF` event confirms a successful index change and value propagation.
 - **Change-only update strategy** – output is refreshed exclusively when the selected index changes, avoiding redundant transmissions.
 - **Generic implementation** – can be specialized via the generic class name for different adapter data types.
 - **Adapter-based interface** – no direct data pins; all data traffic flows through standardised AUI adapters, enabling easy connection to other AUI-compatible blocks.
@@ -84,8 +80,8 @@ The block maintains an internal state representing the currently active index. T
 | Current State | Trigger Condition                  | Action                                          | New State |
 |---------------|------------------------------------|-------------------------------------------------|-----------|
 | **Idle**      | No change on **K**                 | None (no output update, no event)               | Idle      |
-| **Idle**      | **K** changes to valid index n     | Select **IN_(n+1)**, copy value to **OUT**, raise `CNF` | Active (index n) |
-| **Active**    | **K** changes to a different valid index m | Select **IN_(m+1)**, copy value to **OUT**, raise `CNF` | Active (index m) |
+| **Idle**      | **K** changes to valid index n     | Select **IN_(n+1)**, copy value to **OUT** | Active (index n) |
+| **Active**    | **K** changes to a different valid index m | Select **IN_(m+1)**, copy value to **OUT** | Active (index m) |
 | **Active**    | **K** set to same value again      | No action (no update, no event)                | Active (unchanged) |
 | **Any**       | **K** out of valid range (0–7)     | No valid selection; output remains unchanged    | Last valid state |
 
@@ -103,13 +99,13 @@ The internal state is only the last applied index; no additional sequencing or t
 
 | Block            | Type     | Number of Inputs | Update Behaviour                                      | Output Event          |
 |------------------|----------|------------------|-------------------------------------------------------|-----------------------|
-| **AUI_AUI_MUX_8** | Adapter-based | 8              | Only on index change                                  | Yes (`CNF`)           |
-| Typical MUX (data pin) | Direct data | 2–16      | On every input change or on selector event            | Usually none or REQ/CNF |
-| AUI_AUI_MUX_2     | Adapter-based | 2              | Only on index change                                  | Yes (`CNF`)           |
+| **AUI_AUI_MUX_8** | Adapter-based | 8              | Only on index change                                  | None           |
+| Typical MUX (data pin) | Direct data | 2–16      | On every input change or on selector event            | Usually none |
+| AUI_AUI_MUX_2     | Adapter-based | 2              | Only on index change                                  | None           |
 | DEMUX variants    | Adapter-based | 1 input, multiple outputs | Selects one of several outputs | Optional confirmation |
 
 Compared to classic data-pin multiplexers, this block offers the advantage of a fully adapter-based interface, making it seamlessly interoperable with other AUI blocks in the 4diac environment. Its change-only update strategy distinguishes it from conventional multiplexers that propagate updates on every input variation, which can be beneficial in bandwidth-constrained or event-intensive systems.
 
 ## Conclusion
 
-The **AUI_AUI_MUX_8** is a versatile, generic multiplexer block for the AUI adapter family, providing reliable eight-channel selection with an event-driven confirmation mechanism. Its adapter-only interface and change-detection logic make it well suited for modern distributed automation applications where communication efficiency and modularity are essential. By integrating seamlessly with the Eclipse 4diac suite and adhering to the IEC 61499 standard, it offers a robust solution for signal routing tasks in agricultural, industrial, and process automation environments.
+The **AUI_AUI_MUX_8** is a versatile, generic multiplexer block for the AUI adapter family, providing reliable eight-channel selection with a change-detection mechanism. Its adapter-only interface and change-detection logic make it well suited for modern distributed automation applications where communication efficiency and modularity are essential. By integrating seamlessly with the Eclipse 4diac suite and adhering to the IEC 61499 standard, it offers a robust solution for signal routing tasks in agricultural, industrial, and process automation environments.

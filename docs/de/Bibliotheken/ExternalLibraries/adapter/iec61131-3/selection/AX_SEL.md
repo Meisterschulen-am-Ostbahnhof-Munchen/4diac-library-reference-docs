@@ -14,7 +14,8 @@ Der AX_SEL Funktionsblock ist ein binärer Selektor, der zur Auswahl zwischen zw
 
 ### **Ereignis-Eingänge**
 
-*Keine Ereignis-Eingänge vorhanden*
+- **EI0** - Setzt IN0 (Datenzuordnung: `IN0`)
+- **EI1** - Setzt IN1 (Datenzuordnung: `IN1`)
 
 ### **Ereignis-Ausgänge**
 
@@ -35,7 +36,7 @@ Der AX_SEL Funktionsblock ist ein binärer Selektor, der zur Auswahl zwischen zw
 
 ## Funktionsweise
 
-Der AX_SEL Funktionsblock wählt zwischen zwei Eingangswerten (IN0 und IN1) aus und gibt den selektierten Wert am Ausgang OUT aus. Die Auswahl wird über den angeschlossenen Adapter G gesteuert. Bei Aktivierung des CNF-Ereignisses wird der ausgewählte Wert am Ausgang OUT bereitgestellt.
+Der AX_SEL Funktionsblock wählt zwischen zwei Eingangswerten (IN0 und IN1) aus und gibt den selektierten Wert am Ausgang OUT aus. Die Auswahl wird über den angeschlossenen Adapter G gesteuert: `G.E1` taktet ein internes D-Flipflop (`E_D_FF_G`), das `G.D1` übernimmt und als Auswahl `G` an `F_SEL` liefert. `F_SEL` wird durch das Flipflop-Ereignis (G hat sich geändert) sowie direkt durch `EI0` und `EI1` angestoßen; sein `CNF` wird als `CNF` des Bausteins ausgegeben und der ausgewählte Wert steht dann an OUT bereit. Ein Ausgangsereignis entsteht also nur bei einem Ereignis an `G.E1`, `EI0` oder `EI1`.
 
 ## Technische Besonderheiten
 
@@ -48,7 +49,7 @@ Der AX_SEL Funktionsblock wählt zwischen zwei Eingangswerten (IN0 und IN1) aus 
 Der Funktionsblock besitzt einen einfachen Zustand:
 
 - **Bereit**: Wartet auf Steuersignal vom Adapter G
-- Bei Empfang des Steuersignals wird der entsprechende Eingang ausgewählt und das CNF-Ereignis ausgelöst
+- Bei Empfang eines Ereignisses (`EI0`, `EI1` oder `G.E1`) wird der entsprechende Eingang ausgewählt und das CNF-Ereignis ausgelöst
 
 ## Anwendungsszenarien
 

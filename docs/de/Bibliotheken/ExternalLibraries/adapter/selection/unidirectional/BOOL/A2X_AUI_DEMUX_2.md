@@ -10,7 +10,7 @@ Der Funktionsblock **A2X_AUI_DEMUX_2** ist ein generischer Demultiplexer, der ei
 
 ## Schnittstellenstruktur
 
-Der Baustein besitzt keine klassischen Datenports. Der Datenaustausch erfolgt über Adapter-Sockets und Adapter-Plugs. Es ist ein Ereignisausgang vorhanden.
+Der Baustein besitzt keine klassischen Datenports. Der Datenaustausch erfolgt über Adapter-Sockets und Adapter-Plugs. Es sind keine Ereignisausgänge vorhanden.
 
 ### **Ereignis-Eingänge**
 
@@ -18,9 +18,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|---|---|---|
-| `CNF` | Event | Bestätigung der Übernahme des Index `K`. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -48,14 +46,13 @@ Der Demultiplexer arbeitet wie ein umschaltbarer Verteiler:
 - Bei `K = 1` wird `OUT2` aktualisiert.
 - Der jeweils nicht ausgewählte Ausgang behält seinen bisherigen Wert.
 
-Eine Aktualisierung eines Adapter-Ausgangs erfolgt nur bei einer tatsächlichen Wertänderung. Das Ereignis `CNF` wird ebenfalls nur dann erzeugt und bestätigt die Übernahme des Index `K`. Dadurch werden unnötige Ereignisse und Datenübertragungen vermieden.
+Eine Aktualisierung eines Adapter-Ausgangs erfolgt nur bei einer tatsächlichen Wertänderung. Dadurch werden unnötige Ereignisse und Datenübertragungen vermieden.
 
 ## Technische Besonderheiten
 
 - Vollständig adapterbasierte Schnittstelle ohne klassische Daten-Ein-/Ausgänge.
 - Verwendung unidirektionaler Adaptertypen `A2X` und `AUI`.
 - Der Baustein ist als generischer Funktionsblock mit dem ClassName `GEN_A2X_AUI_DEMUX` hinterlegt.
-- Die Ereignisausgabe `CNF` erfolgt nur bei tatsächlicher Änderung, nicht bei jedem Zyklus.
 - Der Baustein ist dem Compiler-Paket `adapter::selection::unidirectional` zugeordnet.
 - Laut Versionsinformation ist das zugehörige Adapter-Backend `GEN_A2X_AUI_DEMUX` noch zu implementieren.
 
@@ -67,7 +64,6 @@ Eine explizite Zustandsmaschine ist in der Typdefinition nicht enthalten. Das Ve
 |---|---|
 | Warten | Es liegt keine Wertänderung vor; `OUT1` und `OUT2` behalten ihre Werte. |
 | Auswahl | Der Index `K` wird ausgewertet und der zugehörige Ausgang wird mit dem Wert von `IN` aktualisiert. |
-| Bestätigung | Nach der Aktualisierung wird `CNF` ausgegeben und der Baustein kehrt in den Wartezustand zurück. |
 
 ## Anwendungsszenarien
 
@@ -77,7 +73,7 @@ Eine explizite Zustandsmaschine ist in der Typdefinition nicht enthalten. Das Ve
 
 ## Vergleich mit ähnlichen Bausteinen
 
-Gegenüber klassischen Demultiplexer-Bausteinen, die separate Daten- und Ereignisports verwenden, kapselt `A2X_AUI_DEMUX_2` die Datenschnittstellen vollständig in Adapter. Eine verwandte Variante ist `AX_AUI_DEMUX_2`, auf der dieser Baustein basiert. Der wesentliche Unterschied liegt in der Adapter-basierten Anbindung und der integrierten Änderungserkennung, durch die das Ereignis `CNF` nur bei tatsächlichen Wertänderungen ausgelöst wird.
+Gegenüber klassischen Demultiplexer-Bausteinen, die separate Daten- und Ereignisports verwenden, kapselt `A2X_AUI_DEMUX_2` die Datenschnittstellen vollständig in Adapter. Eine verwandte Variante ist `AX_AUI_DEMUX_2`, auf der dieser Baustein basiert. Der wesentliche Unterschied liegt in der Adapter-basierten Anbindung und der integrierten Änderungserkennung, durch die Adapter-Ausgänge nur bei tatsächlichen Wertänderungen aktualisiert werden.
 
 ## Fazit
 

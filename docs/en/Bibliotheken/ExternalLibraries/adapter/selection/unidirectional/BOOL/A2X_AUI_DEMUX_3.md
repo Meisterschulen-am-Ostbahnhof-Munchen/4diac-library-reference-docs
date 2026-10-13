@@ -18,7 +18,7 @@ The FB does not declare dedicated event inputs on its FB interface. Event intera
 
 ### **Event Outputs**
 
-- `CNF` — Confirmation of Set Index K. This event indicates that the index selection has been accepted and the selected output path is active.
+No event outputs.
 
 ### **Data Inputs**
 
@@ -45,7 +45,7 @@ Plugs:
 
 A2X_AUI_DEMUX_3 acts as a 1-to-3 demultiplexer for A2X adapter values. The index received on the `K` socket selects which of the three output adapters receives the incoming value from the `IN` socket.
 
-The block only forwards an output value if the value has actually changed compared to the last forwarded value. This reduces unnecessary output updates and event traffic. When a new index is applied, the block sends a `CNF` event as confirmation.
+The block only forwards an output value if the value has actually changed compared to the last forwarded value. This reduces unnecessary output updates and event traffic.
 
 ## Technical Features
 
@@ -54,7 +54,6 @@ The block only forwards an output value if the value has actually changed compar
 - Unidirectional adapter interface.
 - 1-of-3 demultiplexing.
 - Change detection on the output value.
-- Event output `CNF` for confirming index changes.
 - Suitable for integration into adapter-based 4diac applications.
 
 ## State Overview
@@ -63,7 +62,7 @@ The FB does not expose an internal ECC state machine in its XML definition. Conc
 
 - **Idle state** — No new index or value has arrived. The selected output keeps its last value.
 - **Value update** — A new value arrives on `IN`. If it differs from the previously forwarded value, the selected output adapter is updated and an event is generated.
-- **Index change** — A new value arrives on `K`. The next value update is redirected to the newly selected output. The `CNF` event confirms the selection change.
+- **Index change** — A new value arrives on `K`. The next value update is redirected to the newly selected output.
 
 ## Application Scenarios
 
@@ -78,7 +77,7 @@ A2X_AUI_DEMUX_3 can be used wherever one input value must be routed to one of se
 
 | Block / Variant | Characteristics |
 |---|---|
-| `A2X_AUI_DEMUX_3` | Generic A2X-based 1-to-3 demultiplexer with change detection and `CNF` confirmation. |
+| `A2X_AUI_DEMUX_3` | Generic A2X-based 1-to-3 demultiplexer with change detection. |
 | `AX_AUI_DEMUX_3` | Closely related variant that does not use the A2X generic adapter backend. |
 | Conventional demultiplexer without change detection | Forwards every input value and event unconditionally, causing higher communication load. |
 

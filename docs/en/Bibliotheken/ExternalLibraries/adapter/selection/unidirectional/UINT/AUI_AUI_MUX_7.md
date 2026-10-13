@@ -16,11 +16,7 @@ The function block does not declare any explicit event inputs. Its operation is 
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|------|------|---------|
-| `CNF` | Event | Confirmation of Set Index K |
-
-The `CNF` event is emitted whenever a new index value is applied via the `K` adapter, confirming that the selection has been processed.
+No event outputs.
 
 ### **Data Inputs**
 
@@ -70,7 +66,6 @@ The output is **not** updated on every input change. Instead, the output adapter
 - **Generic FB Implementation:** The block is defined as a generic type (`GEN_AUI_AUI_MUX`) and instantiated for the 7-input variant.
 - **Unidirectional Adapter Interface:** All adapters (input and output) use the `adapter::types::unidirectional::AUI` type, ensuring a one-way data flow.
 - **Event-Driven Output Update:** Output refresh occurs solely on actual value change, reducing communication overhead.
-- **Confirmation Event:** The `CNF` event provides explicit feedback that a new index has been applied.
 - **No Direct Data I/O:** All data exchange is encapsulated within the adapter interface, promoting modular and reusable design.
 
 ## State Overview
@@ -79,7 +74,6 @@ The block does not exhibit a complex state machine. Its behavior can be describe
 
 1. **Idle / Monitoring State:** The block monitors the index adapter `K` and the selected input channel.
 2. **Change Detection State:** When the index changes or the value of the selected input changes, the block compares the new value with the previously forwarded value.
-3. **Update State:** If the new value differs from the previous output value, the output adapter is updated and the `CNF` event is issued. If the value is identical, no action is taken.
 
 ## Application Scenarios
 
@@ -96,11 +90,10 @@ The block does not exhibit a complex state machine. Its behavior can be describe
 | Number of inputs | 7 | Typically 2, 4, 8 (binary select) |
 | Selection | Via adapter `K` | Via binary select lines |
 | Output update | Only on value change | Always on new input/select |
-| Confirmation event | Yes (`CNF`) | Usually none |
 | Generic instantiation | Yes (`GEN_AUI_AUI_MUX`) | Usually fixed type |
 
 Compared to conventional data multiplexers, this block offers a cleaner adapter abstraction, supports a larger number of inputs, and incorporates an event-based change detection that can significantly reduce communication and processing overhead in event-driven 4diac applications.
 
 ## Conclusion
 
-The **AUI_AUI_MUX_7** provides a robust and efficient solution for adapter-level multiplexing in IEC 61499 environments. Its key strengths lie in the unidirectional adapter interface, the generic instantiation pattern, and the intelligent change-detection mechanism that only updates the output when actual value differences occur. This makes it particularly suitable for distributed automation scenarios where bandwidth and processing efficiency are critical, while the `CNF` event ensures deterministic feedback on selection changes.
+The **AUI_AUI_MUX_7** provides a robust and efficient solution for adapter-level multiplexing in IEC 61499 environments. Its key strengths lie in the unidirectional adapter interface, the generic instantiation pattern, and the intelligent change-detection mechanism that only updates the output when actual value differences occur. This makes it particularly suitable for distributed automation scenarios where bandwidth and processing efficiency are critical.

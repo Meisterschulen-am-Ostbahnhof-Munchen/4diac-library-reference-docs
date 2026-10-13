@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1622.0 232.0"
-     width="1622.0" height="232.0">
+     viewBox="0 0 2090.2000000000003 232.0"
+     width="2090.2000000000003" height="232.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1380.625, 10)">
+  <g transform="translate(1832.6000000000001, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 203.375 0
-            A 3 3 0 0 1 206.375 3
-            L 206.375 23.0
-            A 3 3 0 0 1 203.375 26.0
-            L 196.375 26.0
-            L 196.375 66.0
-            L 203.375 66.0
-            A 3 3 0 0 1 206.375 69.0
-            L 206.375 209.0
-            A 3 3 0 0 1 203.375 212.0
+            L 219.6 0
+            A 3 3 0 0 1 222.6 3
+            L 222.6 23.0
+            A 3 3 0 0 1 219.6 26.0
+            L 212.6 26.0
+            L 212.6 66.0
+            L 219.6 66.0
+            A 3 3 0 0 1 222.6 69.0
+            L 222.6 209.0
+            A 3 3 0 0 1 219.6 212.0
             L 3 212.0
             A 3 3 0 0 1 0 209.0
             L 0 69.0
@@ -57,6 +57,10 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,9 +95,9 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">HebenSenken_QDA_PWM</text>
     
-    <text x="103.1875" y="66.0"
+    <text x="111.3" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
-          fill="#666666" text-anchor="middle">1.1</text>
+          fill="#666666" text-anchor="middle">1.2</text>
 
     <!-- Data Ports -->
 
@@ -168,6 +172,9 @@
     <!-- Horizontal Connection Lines -->
 
     <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialisierung - vom Aufrufer sequenziert statt per Auto-Verteilung, damit QI vor der physischen Kanalbindung feststeht – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physischer PWM-Ausgang: 25/50/75% Tastgrad, ratiometrisch – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>

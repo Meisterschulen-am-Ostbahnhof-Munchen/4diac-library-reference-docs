@@ -14,7 +14,7 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialisation; passed on to `Publish.INIT` instead of automatic distribution
 
 ### **Event Outputs**
 
@@ -22,6 +22,7 @@ None.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`): qualifier for the physical output; FALSE keeps this instance completely inactive (default `TRUE`)
 - **u16ObjId** (`UINT`): object ID of the SoftKey, carries the background colour (default `ID_NULL`)
 - **u16ObjIdA** (`UINT`): object ID of the AuxFunction2 (joystick), also shows the background colour on the aux handle (default `ID_NULL`)
 - **Output** (`logiBUS::io::DQ::logiBUS_DO_S`): selection of the output `Output_Q1`..`Output_Q12` (default `logiBUS_DO::Invalid`)
@@ -46,13 +47,15 @@ None.
 ## Functionality
 
 - `IN` → `AX_SPLIT_2.IN`
-- `AX_SPLIT_2.OUT1` → `Publish.IN`; `u16ObjId`, `u16ObjIdA`, `Output`, `ID_STATE_WRITE` → the like-named inputs of `Publish`
+- `AX_SPLIT_2.OUT1` → `Publish.IN`; `u16ObjId`, `u16ObjIdA`, `Output`, `ID_STATE_WRITE`, `QI` → the like-named inputs of `Publish`
+- `INIT` → `Publish.INIT`
 - `AX_SPLIT_2.OUT2` → `ObjPtr.DI1`; `Picture` → `ObjPtr.Picture`, `pictures` → `ObjPtr.pictures`
 
 ## Technical Details
 
 - The `AX_SPLIT_2` is necessary because an adapter must not branch to two sub-blocks
 - No logic of its own, just a combination of two existing SubApps
+- Version 1.1: `QI` and `INIT` are passed on to `Publish` (`AX_TO_QXA_BG_PUBLISH` v1.1) (QI gate classic-vs-PVEA, initialisation sequenced by the caller)
 
 ## Application Scenarios
 

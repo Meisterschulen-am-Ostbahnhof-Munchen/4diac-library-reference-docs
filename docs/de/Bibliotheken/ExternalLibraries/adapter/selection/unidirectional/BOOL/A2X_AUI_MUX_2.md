@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-Der Funktionsbaustein **A2X_AUI_MUX_2** ist ein generischer 2‑zu‑1‑Multiplexer auf Basis von Adapter‑Schnittstellen. Er wählt zwischen zwei A2X‑Adapter‑Eingängen anhand eines über einen AUI‑Adapter bereitgestellten Index aus und leitet den gewählten Wert an den A2X‑Adapter‑Ausgang weiter. Eine Besonderheit ist die aktualisierungsoptimierte Arbeitsweise: Der Ausgang wird nur dann mit einem neuen Wert versorgt, wenn sich der ausgewählte Wert tatsächlich ändert. Ebenso wird das Bestätigungsereignis **CNF** ausschließlich bei einer realen Wertänderung ausgelöst.
+Der Funktionsbaustein **A2X_AUI_MUX_2** ist ein generischer 2‑zu‑1‑Multiplexer auf Basis von Adapter‑Schnittstellen. Er wählt zwischen zwei A2X‑Adapter‑Eingängen anhand eines über einen AUI‑Adapter bereitgestellten Index aus und leitet den gewählten Wert an den A2X‑Adapter‑Ausgang weiter. Eine Besonderheit ist die aktualisierungsoptimierte Arbeitsweise: Der Ausgang wird nur dann mit einem neuen Wert versorgt, wenn sich der ausgewählte Wert tatsächlich ändert.
 
 Der Baustein ist als generischer Funktionsbaustein (Generic FB) angelegt. Die eigentliche Ausführungslogik wird über die zugeordnete generische Klasse `GEN_A2X_AUI_MUX` bereitgestellt und kann an die konkreten Adapter‑Typen angepasst werden.
 
@@ -18,9 +18,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar                                        |
-|------|-------|--------------------------------------------------|
-| CNF  | Event | Bestätigung der Übernahme des gewählten Index K. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -46,13 +44,12 @@ Der Baustein überwacht den über den Adapter **K** bereitgestellten Index. Der 
 - Bei **K = 0** wird der Wert von **IN1** zum Ausgang **OUT** durchgeschaltet.
 - Bei **K = 1** wird der Wert von **IN2** zum Ausgang **OUT** durchgeschaltet.
 
-Sobald sich entweder der Index K oder der aktuell ausgewählte Eingangswert ändert, wird der neue Wert mit dem zuletzt am Ausgang anliegenden Wert verglichen. Nur wenn sich der Wert tatsächlich unterscheidet, wird der Ausgangs‑Adapter **OUT** mit dem neuen Wert aktualisiert und anschließend das Ereignis **CNF** ausgelöst. Bleibt der Wert unverändert, unterbleibt sowohl die Aktualisierung des Ausgangs als auch die Ereignisausgabe. Dadurch werden unnötige Datenübertragungen und Ereignisfluten im nachgelagerten Netzwerk vermieden.
+Sobald sich entweder der Index K oder der aktuell ausgewählte Eingangswert ändert, wird der neue Wert mit dem zuletzt am Ausgang anliegenden Wert verglichen. Nur wenn sich der Wert tatsächlich unterscheidet, wird der Ausgangs‑Adapter **OUT** mit dem neuen Wert aktualisiert. Bleibt der Wert unverändert, unterbleibt die Aktualisierung des Ausgangs. Dadurch werden unnötige Datenübertragungen und Ereignisfluten im nachgelagerten Netzwerk vermieden.
 
 ## Technische Besonderheiten
 
 - **Generischer Funktionsbaustein:** Die konkrete Verarbeitungslogik wird über die generische Klasse `GEN_A2X_AUI_MUX` bereitgestellt. Die Implementierung ist noch nicht vollständig im Standardumfang enthalten und muss für die jeweilige Zielumgebung bereitgestellt werden.
 - **Änderungsbasierte Ausgabe:** Der Ausgang wird nur bei einer tatsächlichen Wertänderung aktualisiert. Dadurch wird das nachgeschaltete System entlastet und die Datenkonsistenz bei unveränderten Werten sichergestellt.
-- **Ereignis nur bei Änderung:** Das Bestätigungsereignis **CNF** wird ausschließlich dann gesendet, wenn der neue Wert vom vorherigen Ausgangswert abweicht.
 - **Adapterbasierte Schnittstellen:** Sämtliche Ein- und Ausgänge sind als unidirektionale Adapter ausgeführt. Dadurch ist der Baustein flexibel in verschiedene Adapter‑Topologien integrierbar.
 - **Zwei Eingänge, ein Index:** Die Auswahl erfolgt ausschließlich über den adapterbasierten Index K. Die Wertebereiche der Adapter‑Typen A2X und AUI werden durch die jeweiligen Adapterdefinitionen festgelegt.
 
@@ -63,7 +60,7 @@ Der Baustein besitzt keine explizit modellierten Zustände. Die Funktionsweise k
 1. **Warten:** Der Baustein wartet auf Änderungen am Index K oder an den Eingangsadaptern IN1/IN2.
 2. **Auswahl:** Der aktuelle Index K wird ausgewertet und der entsprechende Eingang ausgewählt.
 3. **Vergleich:** Der neue Wert wird mit dem aktuell am Ausgang anliegenden Wert verglichen.
-4. **Aktualisierung & Bestätigung:** Bei Abweichung wird OUT aktualisiert und CNF ausgelöst. Bei Übereinstimmung bleibt der Zustand unverändert.
+4. **Aktualisierung:** Bei Abweichung wird OUT aktualisiert. Bei Übereinstimmung bleibt der Zustand unverändert.
 
 ## Anwendungsszenarien
 
@@ -74,7 +71,7 @@ Der Baustein besitzt keine explizit modellierten Zustände. Die Funktionsweise k
 
 ## Vergleich mit ähnlichen Bausteinen
 
-Im Gegensatz zu einfachen Multiplexern, die bei jeder Änderung eines Eingangs oder des Index ein Ereignis auslösen, arbeitet **A2X_AUI_MUX_2** ereignisoptimiert. Ein herkömmlicher Multiplexer würde den Ausgang bei jeder Neuberechnung aktualisieren, auch wenn sich der Wert nicht ändert. Dieser Baustein unterdrückt solche redundanten Ausgaben und erzeugt nur dann ein **CNF**‑Ereignis, wenn der tatsächliche Wert am Ausgang wechselt.
+Im Gegensatz zu einfachen Multiplexern, die bei jeder Änderung eines Eingangs oder des Index ein Ereignis auslösen, arbeitet **A2X_AUI_MUX_2** ereignisoptimiert. Ein herkömmlicher Multiplexer würde den Ausgang bei jeder Neuberechnung aktualisieren, auch wenn sich der Wert nicht ändert. Dieser Baustein unterdrückt solche redundanten Ausgaben und aktualisiert den Ausgang nur dann, wenn der tatsächliche Wert wechselt.
 
 Gegenüber einer nicht‑generischen Variante ist dieser Baustein über die generische Klasse `GEN_A2X_AUI_MUX` an verschiedene Adapterausprägungen anpassbar. Dadurch ist er flexibler, erfordert jedoch eine angepasste Implementierung in der Zielumgebung.
 

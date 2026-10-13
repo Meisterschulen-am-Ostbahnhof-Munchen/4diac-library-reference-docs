@@ -18,9 +18,7 @@ There are no event inputs.
 
 ### **Event Outputs**
 
-| Name | Type | Comment |
-|---|---|---|
-| `CNF` | Event | Confirmation of Set Index K |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -49,7 +47,6 @@ A2X_AUI_DEMUX_4 acts as a unidirectional adapter-based demultiplexer:
 2. The value to be routed is received through the `IN` socket.
 3. Depending on `K`, one of the four output adapters `OUT1` ... `OUT4` is selected.
 4. The selected output is updated with the incoming value.
-5. The `CNF` event confirms that the index setting has been processed.
 
 According to the FB type comment, the adapter output is only updated when the value changes. If the new value is identical to the previous value, no unnecessary output update or event is generated.
 
@@ -64,7 +61,7 @@ Because the FB is a generic FB, the detailed internal processing is delegated to
 - One AUI index socket: `K`
 - One A2X input socket: `IN`
 - No direct data inputs or data outputs
-- Only one event output: `CNF`
+- No event inputs or outputs
 - Output updates and events are suppressed when the value has not actually changed
 - Suitable for IEC 61499-2 adapter-based applications
 
@@ -77,7 +74,6 @@ The XML type definition does not contain an explicit ECC. The behavior is theref
 | Idle | The FB waits for a new index or input value. |
 | Select | The index `K` is read and one of the four outputs is selected. |
 | Update | The selected output adapter is updated with the value from `IN`. If the value has not changed, this step is skipped. |
-| Confirm | The `CNF` event is emitted to confirm that the index selection has been processed. |
 
 ## Application Scenarios
 

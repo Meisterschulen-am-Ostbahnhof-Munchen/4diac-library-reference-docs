@@ -18,9 +18,7 @@ Keine.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-| --- | --- | --- |
-| `CNF` | Event | Bestätigung des gesetzten Index `K` |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -50,7 +48,6 @@ Der Baustein arbeitet als Adapter-Multiplexer:
    - `K = 1` → `IN2`
    - `K = 2` → `IN3`
 3. Die Daten des ausgewählten Eingangs werden auf den Ausgangsadapter `OUT` durchgeschaltet.
-4. Über das Ereignis `CNF` wird bestätigt, dass der Index `K` übernommen wurde.
 
 Jedes an einem aktiven Eingang ankommende Ergebnis wird weitergeleitet. Eine Prüfung, ob sich der Wert gegenüber der vorherigen Übertragung geändert hat, findet nicht statt.
 

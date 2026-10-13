@@ -16,7 +16,7 @@ Der Funktionsblock `AUDI_AUI_MUX_8` ist ein generischer Multiplexer, der über e
 
 ### **Ereignis-Ausgänge**
 
-- **CNF** (Confirmation): Wird ausgelöst, wenn sich der ausgewählte Wert (also der aktuelle Wert am Ausgang) tatsächlich ändert. Dies kann durch eine Änderung des Index `K` oder durch eine neue Wertänderung des aktuell ausgewählten Eingangs verursacht werden.
+- Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -41,13 +41,13 @@ Der Funktionsblock `AUDI_AUI_MUX_8` ist ein generischer Multiplexer, der über e
 
 ## Funktionsweise
 
-Der Baustein wartet auf Aktualisierungen der angeschlossenen Adapter. Sobald sich entweder der Index `K` oder der Wert des momentan ausgewählten Eingangs ändert, wird der neue Wert an den Ausgang `OUT` übertragen und das Ereignis `CNF` ausgelöst. Diese Logik stellt sicher, dass keine unnötigen Ereignisse generiert werden, wenn sich nicht relevante Eingänge ändern oder wenn sich der Index zwar ändert, aber der ausgewählte Wert identisch bleibt (z. B. wenn zwei Eingänge denselben Wert liefern). Der Baustein ist als generischer Funktionsblock definiert, wodurch er mit verschiedenen Datentypen wiederverwendet werden kann, die den jeweiligen Adapterdefinitionen entsprechen.
+Der Baustein wartet auf Aktualisierungen der angeschlossenen Adapter. Sobald sich entweder der Index `K` oder der Wert des momentan ausgewählten Eingangs ändert, wird der neue Wert an den Ausgang `OUT` übertragen. Diese Logik stellt sicher, dass keine unnötigen Ereignisse generiert werden, wenn sich nicht relevante Eingänge ändern oder wenn sich der Index zwar ändert, aber der ausgewählte Wert identisch bleibt (z. B. wenn zwei Eingänge denselben Wert liefern). Der Baustein ist als generischer Funktionsblock definiert, wodurch er mit verschiedenen Datentypen wiederverwendet werden kann, die den jeweiligen Adapterdefinitionen entsprechen.
 
 ## Technische Besonderheiten
 
 - **Generische Implementierung:** Der FB verwendet das Attribut `GenericClassName = 'GEN_AUDI_AUI_MUX'`, was eine typlose, wiederverwendbare Ausführung ermöglicht.
 - **Adapter-basierte Schnittstelle:** Alle Werte werden über Adapter übertragen, die eine lose Kopplung zwischen den Bausteinen in einem verteilten System ermöglichen.
-- **Effiziente Ereignissteuerung:** Nur bei tatsächlicher Wertänderung wird ein Ereignis `CNF` ausgegeben, was die Netzwerkkommunikation reduziert.
+- **Effiziente Aktualisierung:** Der Ausgang wird nur bei tatsächlicher Wertänderung aktualisiert, was die Netzwerkkommunikation reduziert.
 - **Keine Ereignis-Eingänge:** Die Steuerung des Bausteins erfolgt rein über die Datenaktualisierung der Adapter; ein explizites Trigger-Ereignis ist nicht erforderlich.
 
 ## Zustandsübersicht
@@ -55,7 +55,7 @@ Der Baustein wartet auf Aktualisierungen der angeschlossenen Adapter. Sobald sic
 Der FB besitzt keine extern sichtbaren Zustände im klassischen Sinne. Im internen Verhalten wird jedoch implizit der aktuelle Index `K` und der zuletzt ausgegebene Wert gespeichert, um eine Änderung zu erkennen. Diese internen Zustände sind:
 
 - **Wartezustand:** Es wird auf eine Änderung des Index oder des ausgewählten Eingangswerts gewartet.
-- **Aktualisierungszustand:** Bei Erkennung einer relevanten Änderung wird der Ausgangswert übernommen und `CNF` ausgelöst, danach wechselt der FB zurück in den Wartezustand.
+- **Aktualisierungszustand:** Bei Erkennung einer relevanten Änderung wird der Ausgangswert übernommen, danach wechselt der FB zurück in den Wartezustand.
 
 ## Anwendungsszenarien
 

@@ -20,9 +20,7 @@ Der Baustein besitzt keine direkten Ereignis-Eingänge. Die auslösenden Ereigni
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `CNF` | Event | Bestätigung, dass der Index `K` gesetzt und die entsprechende Auswahl übernommen wurde. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -54,7 +52,6 @@ Der Baustein verhält sich wie ein klassischer 4-zu-1-Multiplexer:
 1. Der **AUI**-Socket `K` liefert einen Indexwert.
 2. Anhand dieses Indexes wird einer der vier **A2X**-Sockets `IN1`–`IN4` ausgewählt.
 3. Das über diesen Socket ankommende Adapter-Paket wird unverändert an den **A2X**-Plug `OUT` weitergegeben.
-4. Anschließend wird das Ereignis `CNF` ausgelöst.
 
 Die entscheidende Eigenschaft ist das **Fehlen einer Änderungserkennung**. Der Baustein vergleicht keinen alten mit einem neuen Wert. Jedes ankommende Ereignis und jedes neu berechnete Ergebnis wird sofort und ohne Prüfung weitergereicht. Dadurch bleibt auch dann ein kontinuierlicher Datenstrom erhalten, wenn sich der Wert über mehrere Zyklen nicht ändert.
 
@@ -67,7 +64,6 @@ Die entscheidende Eigenschaft ist das **Fehlen einer Änderungserkennung**. Der 
 - **Generischer Baustein:** Die tatsächliche Implementierung wird über das Attribut `eclipse4diac::core::GenericClassName` mit `GEN_A2X_AUI_MUX` referenziert.
 - **Unidirektionale Adapter:** Der Baustein verwendet ausschließlich unidirektionale Adapter, was eine klare, gerichtete Datenflussstruktur ermöglicht.
 - **Indexbereich:** Der Auswahlindex `K` wird entsprechend den Kommentaren als Wert `0` bis `3` erwartet. Werte außerhalb dieses Bereichs sind nicht definiert.
-- **Direkte Bestätigung:** Der Ereignisausgang `CNF` signalisiert, dass der Index `K` übernommen wurde.
 
 * * * * * * * * * *
 
@@ -80,7 +76,6 @@ Der Baustein ist als generischer Funktionsblock ohne eigenes, in der XML abgebil
 | **Bereit** | Der Baustein wartet auf einen gültigen Index über den AUI-Adapter `K`. |
 | **Auswahl** | Der Index wird ausgewertet und der zugehörige Eingang `IN1`–`IN4` ausgewählt. |
 | **Durchreichen** | Das Datenpaket des gewählten Eingangs wird unabhängig von einer Wertänderung an `OUT` weitergegeben. |
-| **Bestätigen** | Das Ereignis `CNF` wird ausgelöst; der Baustein kehrt danach in den Bereit-Zustand zurück. |
 
 Es gibt keinen Zustand, der eine Weitergabe aufgrund unveränderter Werte blockiert.
 

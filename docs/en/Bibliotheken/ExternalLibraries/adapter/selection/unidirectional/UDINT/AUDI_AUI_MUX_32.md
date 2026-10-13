@@ -6,7 +6,7 @@
 
 ## Introduction
 
-AUDI_AUI_MUX_32 is a generic function block that implements a 32-channel adapter multiplexer. It selects one of 32 unidirectional AUDI adapter inputs (IN1 to IN32) based on an index value received via a dedicated AUI adapter input (K) and forwards the selected data to the unidirectional AUDI adapter output (OUT). The output is only updated when the value actually changes, meaning the confirmation event is emitted solely upon a real value change, avoiding unnecessary retransmissions.
+AUDI_AUI_MUX_32 is a generic function block that implements a 32-channel adapter multiplexer. It selects one of 32 unidirectional AUDI adapter inputs (IN1 to IN32) based on an index value received via a dedicated AUI adapter input (K) and forwards the selected data to the unidirectional AUDI adapter output (OUT). The output is only updated when the value actually changes, avoiding unnecessary retransmissions.
 
 This block is part of the adapter-based selection pattern and is designed for applications where multiple data sources must be routed to a single consumer under dynamic index control.
 
@@ -18,9 +18,7 @@ The function block has **no event inputs**. All data transfer is handled through
 
 ### **Event Outputs**
 
-| Event | Description |
-|-------|-------------|
-| `CNF` | Confirmation that the set index K has been processed and the output was updated (only issued if an actual value change occurred). |
+The function block has **no event outputs**.
 
 ### **Data Inputs**
 
@@ -71,14 +69,14 @@ There are **no direct data outputs**. All output data is provided through the pl
 
 ## Functionality
 
-The block continuously monitors the index value received on the `K` socket. When the index changes (or a new value arrives), the corresponding input adapter data (IN1 to IN32) is routed to the `OUT` adapter. The output value is compared with the previously forwarded value; if a difference is detected, the `CNF` event is emitted. If the value remains identical, no event is generated, preventing unnecessary load on downstream components.
+The block continuously monitors the index value received on the `K` socket. When the index changes (or a new value arrives), the corresponding input adapter data (IN1 to IN32) is routed to the `OUT` adapter. The output value is compared with the previously forwarded value; if a difference is detected, the output is updated. If the value remains identical, no update is performed, preventing unnecessary load on downstream components.
 
 The multiplexing logic is generic – the block is marked as a generic function block (`GEN_AUDI_AUI_MUX`), meaning the actual adapter types and internal behavior are resolved at deployment time.
 
 ## Technical Features
 
 - **32-to-1 multiplexing** with unidirectional adapter interfaces.
-- **Change-detection** on the output: `CNF` is only triggered when the selected value actually changes.
+- **Change-detection** on the output: the output is only updated when the selected value actually changes.
 - **No event inputs** required – the block operates autonomously on incoming adapter data.
 - **Index range**: 0 to 31, corresponding to IN1 to IN32.
 - **Unidirectional data flow** – all adapters are unidirectional, simplifying the interface.
@@ -89,7 +87,6 @@ The multiplexing logic is generic – the block is marked as a generic function 
 The block does not expose explicit internal states. It can be conceptually described by two implicit operating phases:
 
 1. **Idle / Monitoring** – Waiting for a new index or input value change.
-2. **Update** – Forwarding the selected input and evaluating whether the output value differs from the previous one, optionally issuing `CNF`.
 
 No persistent state or mode beyond the current selected value and its cached copy is maintained.
 
@@ -105,7 +102,7 @@ No persistent state or mode beyond the current selected value and its cached cop
 | Feature | AUDI_AUI_MUX_32 | Conventional Data MUX |
 |---------|----------------|-----------------------|
 | Interface | Fully adapter-based (AUDI/AUI) | Direct data inputs (ANY) |
-| Change detection | Yes, `CNF` only on real change | Typically always raises event |
+| Change detection | Yes, only on real change | Typically always raises event |
 | Number of channels | 32 | Variable (often 2, 4, 8) |
 | Generic type | Yes (generic FB) | Usually typed |
 | Event inputs | None (autonomous) | Often explicit trigger event |

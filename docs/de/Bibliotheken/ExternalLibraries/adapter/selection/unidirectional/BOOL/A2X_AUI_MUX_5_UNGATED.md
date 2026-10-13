@@ -18,9 +18,7 @@ In der XML sind keine direkten Ereignis-Eingänge deklariert. Ereignisse zur Üb
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ | Kommentar |
-|------|-----|-----------|
-| `CNF` | Event | Bestätigung der Übernahme des eingestellten Indexes `K` |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -57,7 +55,6 @@ Der Baustein arbeitet als 5:1-Multiplexer:
 
 3. Es findet keine Prüfung statt, ob sich der Eingangswert gegenüber dem vorherigen Zyklus verändert hat. Jedes neu berechnete Ergebnis wird unmittelbar weitergeleitet.
 
-4. Der Ereignisausgang `CNF` bestätigt die Übernahme des eingestellten Indexes `K`.
 
 Durch das Fehlen einer Änderungserkennung bleibt die Ausgangskadenz vollständig von der Berechnungskadenz der Eingangsquelle abhängig. Auch unveränderte Werte erzeugen eine Ausgabe.
 
@@ -79,7 +76,7 @@ Die XML enthält keinen expliziten Ausführungszustandsautomaten (ECC). Der Baus
 | Initial | Warten auf einen gültigen Index `K` und anliegende Eingangswerte |
 | Auswahl | Der zu `K` gehörende Eingang wird an den Ausgang `OUT` gekoppelt |
 | Weiterleitung | Jeder neu berechnete Wert des aktiven Eingangs wird unmittelbar an `OUT` weitergegeben |
-| Umschaltung | Bei Änderung von `K` wird die Auswahl aktualisiert; `CNF` bestätigt den neuen Index |
+| Umschaltung | Bei Änderung von `K` wird die Auswahl aktualisiert |
 
 ## Anwendungsszenarien
 

@@ -16,7 +16,7 @@ Der `AE_AUI_MUX_5` ist die adapterbasierte Variante des generischen Multiplexers
 
 ### **Ereignis-Ausgänge**
 
-- **CNF**: Bestätigt die erfolgte Auswertung des über K empfangenen Index und die daraus resultierende Aktualisierung des Ziel-Plugs.
+- Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -38,7 +38,7 @@ Der `AE_AUI_MUX_5` ist die adapterbasierte Variante des generischen Multiplexers
 
 ## Funktionsweise
 
-Der `AE_AUI_MUX_5` wählt über den Adapter-Socket **K** (Typ `AUI`) einen von 5 Eingangs-Sockets `IN1` … `IN5` aus und reicht dessen Wert an den einzigen Ausgangs-Plug `OUT` weiter. Sobald der an K angeschlossene `AUI`-Plug sein internes `E1`-Ereignis mit dem Datenwert `D1` sendet, interpretiert `AE_AUI_MUX_5` diesen Wert als 0-basierten Index (`0` … `4`), kopiert das durchgereichte Ereignis auf `OUT` und löst dort das Adapter-Event aus. Danach bestätigt `AE_AUI_MUX_5` den Vorgang über das Ereignis **CNF**.
+Der `AE_AUI_MUX_5` wählt über den Adapter-Socket **K** (Typ `AUI`) einen von 5 Eingangs-Sockets `IN1` … `IN5` aus und reicht dessen Wert an den einzigen Ausgangs-Plug `OUT` weiter. Sobald der an K angeschlossene `AUI`-Plug sein internes `E1`-Ereignis mit dem Datenwert `D1` sendet, interpretiert `AE_AUI_MUX_5` diesen Wert als 0-basierten Index (`0` … `4`), kopiert das durchgereichte Ereignis auf `OUT` und löst dort das Adapter-Event aus.
 
 ## Technische Besonderheiten
 
@@ -48,7 +48,7 @@ Der `AE_AUI_MUX_5` wählt über den Adapter-Socket **K** (Typ `AUI`) einen von 5
 
 ## Zustandsübersicht
 
-Der Baustein ist zustandslos bezüglich einer Ablaufsteuerung: Er wartet auf das `E1`-Ereignis am Socket **K**, wertet bei dessen Eintreffen den mitgelieferten Index aus, aktualisiert den betroffenen Adapter-Plug und meldet den Abschluss über **CNF**. Zwischen zwei Aufrufen wird kein Zustand außer dem zuletzt geschriebenen Adapterwert gehalten.
+Der Baustein ist zustandslos bezüglich einer Ablaufsteuerung: Er wartet auf das `E1`-Ereignis am Socket **K**, wertet bei dessen Eintreffen den mitgelieferten Index aus und aktualisiert den betroffenen Adapter-Plug. Zwischen zwei Aufrufen wird kein Zustand außer dem zuletzt geschriebenen Adapterwert gehalten.
 
 ## Anwendungsszenarien
 

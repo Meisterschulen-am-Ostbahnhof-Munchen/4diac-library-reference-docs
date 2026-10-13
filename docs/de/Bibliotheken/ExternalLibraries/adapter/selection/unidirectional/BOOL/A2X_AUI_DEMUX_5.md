@@ -16,9 +16,7 @@ Der Baustein besitzt keine Ereignis-Eingänge.
 
 ### **Ereignis-Ausgänge**
 
-| Name | Typ   | Kommentar |
-|------|-------|-----------|
-| `CNF` | Event | Bestätigung (Confirmation) für das Setzen des Indexes `K`. |
+Keine Ereignis-Ausgänge.
 
 ### **Daten-Eingänge**
 
@@ -59,14 +57,14 @@ Der Demultiplexer leitet den über `IN` empfangenen Wert an den durch `K` bestim
 - `K = 3` → Ausgabe auf `OUT4`
 - `K = 4` → Ausgabe auf `OUT5`
 
-Der Baustein arbeitet rein wertänderungsbasiert. Ein Adapter-Ausgang wird nur dann aktualisiert, wenn sich der Wert tatsächlich ändert. Das Ereignis `CNF` wird nur ausgesendet, wenn bei einer Änderung des Indexes `K` oder des Eingangswertes `IN` eine tatsächliche Wertänderung an einem Ausgang stattgefunden hat.
+Der Baustein arbeitet rein wertänderungsbasiert. Ein Adapter-Ausgang wird nur dann aktualisiert, wenn sich der Wert tatsächlich ändert.
 
 ## Technische Besonderheiten
 
 - Der Baustein ist eine **A2X-Variante** von `AX_AUI_DEMUX_5` und nutzt den Adaptertyp `A2X` für Ein- und Ausgänge sowie `AUI` für den Index.
 - Er ist als **generischer Funktionsblock** angelegt. Die generische Klasse lautet `GEN_A2X_AUI_DEMUX`. Die vorliegende Instanz `A2X_AUI_DEMUX_5` hat fest fünf Ausgänge.
 - Der Baustein enthält keine klassischen Daten- oder Ereignis-Ein-/Ausgänge; die gesamte Kommunikation erfolgt über Adapter.
-- Das Ausgabe-Verhalten ist ereignisgesteuert, jedoch wird `CNF` nur bei tatsächlicher Wertänderung ausgelöst.
+- Das Ausgabe-Verhalten ist ereignisgesteuert, jedoch werden die Adapter-Ausgänge nur bei tatsächlicher Wertänderung aktualisiert.
 - Die Paketbezeichnung `adapter::selection::unidirectional` ordnet den Baustein in eine Bibliothek für unidirektionale Selektions-Adapter ein.
 
 ## Zustandsübersicht
@@ -74,7 +72,6 @@ Der Baustein arbeitet rein wertänderungsbasiert. Ein Adapter-Ausgang wird nur d
 Eine explizite Zustandsmaschine ist für diesen Funktionsblock nicht hinterlegt. Das Verhalten wird durch den generischen Backend-Baustein `GEN_A2X_AUI_DEMUX` realisiert. Konzeptionell lässt sich der Ablauf in zwei Phasen beschreiben:
 
 1. **Bereitschaft**: Der Baustein wartet auf einen neuen Wert an `IN` oder einen neuen Indexwert an `K`.
-2. **Weiterleitung**: Sobald sich der Index oder der Eingangswert ändert, wird der entsprechende Ausgang mit dem Wert belegt und nach erfolgreicher Aktualisierung das Ereignis `CNF` ausgesendet.
 
 Da keine expliziten Zustände definiert sind, beschreibt dieses Modell das erwartete Kommunikationsverhalten.
 
@@ -86,7 +83,7 @@ Da keine expliziten Zustände definiert sind, beschreibt dieses Modell das erwar
 
 ## Vergleich mit ähnlichen Bausteinen
 
-Im Gegensatz zu einem klassischen Multiplexer (mehrere Eingänge, ein Ausgang) führt dieser Baustein eine Demultiplex-Funktion aus. Während Varianten wie `AX_AUI_DEMUX_5` möglicherweise herkömmliche Daten- und Ereignisschnittstellen verwenden, setzt `A2X_AUI_DEMUX_5` konsequent auf die unidirektionalen Adaptertypen `A2X` und `AUI`. Dadurch wird die Integration in adapterbasierte Kommunikationsstrukturen erleichtert. Durch die wertänderungsbasierte Aktualisierung und die daraus folgende bedingte `CNF`-Ausgabe unterscheidet er sich von Bausteinen, die bei jedem Empfang eines Ereignisses einen Ausgang unabhängig von einer Wertänderung aktualisieren.
+Im Gegensatz zu einem klassischen Multiplexer (mehrere Eingänge, ein Ausgang) führt dieser Baustein eine Demultiplex-Funktion aus. Während Varianten wie `AX_AUI_DEMUX_5` möglicherweise herkömmliche Daten- und Ereignisschnittstellen verwenden, setzt `A2X_AUI_DEMUX_5` konsequent auf die unidirektionalen Adaptertypen `A2X` und `AUI`. Dadurch wird die Integration in adapterbasierte Kommunikationsstrukturen erleichtert. Durch die wertänderungsbasierte Aktualisierung und die daraus folgende bedingte Ausgabe unterscheidet er sich von Bausteinen, die bei jedem Empfang eines Ereignisses einen Ausgang unabhängig von einer Wertänderung aktualisieren.
 
 ## Fazit
 

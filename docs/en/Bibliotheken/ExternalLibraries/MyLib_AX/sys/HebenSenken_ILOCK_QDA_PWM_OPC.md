@@ -21,11 +21,13 @@ The subapp is generic and can be reused with any PVEA actuator equipped with a r
 
 ## Interface Structure
 
-The subapplication exposes only data inputs. It does not provide any event inputs, event outputs, or adapter interfaces at its boundary; all event and adapter communication occurs internally within the subapp network.
+The subapplication exposes data inputs and a single event input (`INIT`). It does not provide any event outputs or adapter interfaces at its boundary; all other event and adapter communication occurs internally within the subapp network.
 
 ### **Event Inputs**
 
-None. The subapp provides no event inputs; all triggering is handled internally via the subscribe/publish adapter pattern.
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `PWM_Mux.INIT` (`HebenSenken_QDA_PWM`)
+
+All other triggering is handled internally via the subscribe/publish adapter pattern.
 
 ### **Event Outputs**
 
@@ -35,6 +37,7 @@ None. The subapp provides no event outputs.
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QI` | `BOOL` | Qualifier for the physical PWM output (default `TRUE`); FALSE keeps the instance completely inactive (no hardware binding) in case the same physical channel is used differently depending on the machine variant; passed on to `PWM_Mux.QI`. |
 | `Output_PWM` | `logiBUS::io::DQ::logiBUS_DO_S` | Physical PWM output: 25/50/75% duty cycle, ratiometric. Default: `logiBUS_DO::Invalid` |
 | `DT_PROTECT` | `TIME` | Protection deadtime before direction changes. Default: `T#300ms` |
 | `ID_HEBEN_READ` | `WSTRING` | Actual function command for Raise (Subscribe). |

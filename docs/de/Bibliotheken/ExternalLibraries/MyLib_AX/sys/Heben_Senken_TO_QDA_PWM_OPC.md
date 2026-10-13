@@ -15,7 +15,7 @@ Die SubApp `Heben_Senken_TO_QDA_PWM_OPC` ist ein generischer Baustein zur Steuer
 
 ### **Ereignis-Eingänge**
 
-Keine Ereignis-Eingänge vorhanden.
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `PWM_Mux.INIT` und `DO_Toggle.INIT` durchgereicht
 
 ### **Ereignis-Ausgänge**
 
@@ -25,6 +25,7 @@ Keine Ereignis-Ausgänge vorhanden.
 
 | Name | Typ | Initialwert | Kommentar |
 |------|-----|-------------|-----------|
+| `QI` | `BOOL` | `TRUE` | Qualifier für beide physischen Ausgänge (PWM + Freigabe-DO); FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), falls derselbe Kanal je nach Maschinenvariante anderweitig genutzt wird |
 | `Output_PWM` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Physischer PWM-Ausgang (linker Kanal): 25/50/75% Tastgrad, ratiometrisch |
 | `Output_DO` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Physischer Freigabe-Ausgang (rechter Kanal): Klick-Toggle, Default AN |
 | `DT_PROTECT` | `TIME` | `T#300ms` | Schutz-Totzeit vor Richtungswechsel |
@@ -62,6 +63,8 @@ Die SubApp ist eine Zusammensetzung aus zwei internen SubApps:
    - Implementiert einen Klick-Toggle-Flipflop (`AX_T_FF_INIT`) für den Freigabe-Ausgang `Output_DO`.  
    - Der Ausgang ist initial AN und kann über die RPC-Methode `ID_DO_TOGGLE_METHOD` umgeschaltet werden.  
    - Der aktuelle Zustand wird über `ID_DO_STATE_WRITE` publiziert.
+
+`QI` wird gemeinsam an `PWM_Mux.QI` und `DO_Toggle.QI` geführt, das Ereignis `INIT` an `PWM_Mux.INIT` und `DO_Toggle.INIT`; beide physischen Kanäle werden also gemeinsam inaktiv gehalten bzw. vom Aufrufer initialisiert.
 
 Die beiden Teile sind in der Schnittstelle vollständig gekapselt; extern ist nur die Parameterisierung und die Kommunikationsadressen sichtbar.
 

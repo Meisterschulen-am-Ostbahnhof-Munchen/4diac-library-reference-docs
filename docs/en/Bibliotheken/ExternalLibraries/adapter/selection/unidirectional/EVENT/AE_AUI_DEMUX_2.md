@@ -16,7 +16,7 @@
 
 ### **Event Outputs**
 
-- **CNF**: confirms that the index received via K has been evaluated and the target plug updated accordingly.
+- No event outputs.
 
 ### **Data Inputs**
 
@@ -35,7 +35,7 @@
 
 ## Functionality
 
-`AE_AUI_DEMUX_2` receives an event on socket **IN** and forwards it to exactly one of the 2 output plugs `OUT1` … `OUT2`. Which output is written is decided by the index arriving on the adapter socket **K** (type `AUI`): as soon as the `AUI` plug connected to K fires its internal `E1` event carrying the data value `D1`, `AE_AUI_DEMUX_2` interprets that value as a 0-based index (`0` … `1`), writes the forwarded event to the corresponding `OUT` plug and triggers that plug's adapter event. `AE_AUI_DEMUX_2` then confirms completion via the **CNF** event.
+`AE_AUI_DEMUX_2` receives an event on socket **IN** and forwards it to exactly one of the 2 output plugs `OUT1` … `OUT2`. Which output is written is decided by the index arriving on the adapter socket **K** (type `AUI`): as soon as the `AUI` plug connected to K fires its internal `E1` event carrying the data value `D1`, `AE_AUI_DEMUX_2` interprets that value as a 0-based index (`0` … `1`), writes the forwarded event to the corresponding `OUT` plug and triggers that plug's adapter event.
 
 ## Technical Details
 
@@ -45,7 +45,7 @@
 
 ## State Overview
 
-The block is stateless with respect to any sequencing logic: it waits for the `E1` event on socket **K**, evaluates the index carried with it once it arrives, updates the affected adapter plug and reports completion via **CNF**. No state beyond the most recently written adapter value is kept between calls.
+The block is stateless with respect to any sequencing logic: it waits for the `E1` event on socket **K**, evaluates the index carried with it once it arrives and updates the affected adapter plug. No state beyond the most recently written adapter value is kept between calls.
 
 ## Application Scenarios
 

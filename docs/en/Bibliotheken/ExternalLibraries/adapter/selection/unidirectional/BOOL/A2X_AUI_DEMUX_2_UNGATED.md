@@ -12,7 +12,7 @@ The “UNGATED” variant does not perform any change detection. Every newly com
 
 ## Interface Structure
 
-The block does not use dedicated data inputs or data outputs. All value and index information is exchanged through unidirectional adapters. The only event interface element is the confirmation event `CNF`.
+The block does not use dedicated data inputs or data outputs. All value and index information is exchanged through unidirectional adapters. The block has no event outputs.
 
 ### **Event Inputs**
 
@@ -20,9 +20,7 @@ None. Incoming triggers are received through the adapter sockets.
 
 ### **Event Outputs**
 
-| Name | Type   | Description                                |
-|------|--------|--------------------------------------------|
-| `CNF` | Event  | Confirmation that the index `K` has been set/applied. |
+No event outputs.
 
 ### **Data Inputs**
 
@@ -49,7 +47,6 @@ The function block operates as a one-to-two demultiplexer:
 2. The value adapter `IN` provides the value to be routed.
 3. If `K = 0`, the incoming value is forwarded to `OUT1`.
 4. If `K = 1`, the incoming value is forwarded to `OUT2`.
-5. After the index has been applied, the `CNF` event is issued as confirmation.
 
 Because the block is “ungated”, it does not compare the current value against the previous value. Every new calculation result or incoming value is passed through even if the payload is unchanged. This behavior is essential for consumers that rely on a steady event stream or periodic update rate.
 
@@ -58,7 +55,7 @@ Because the block is “ungated”, it does not compare the current value agains
 - Adapter-based interface without separate data inputs or outputs.
 - Unidirectional adapter types are used for both index and data transfer.
 - Generic FB implementation via the attribute `eclipse4diac::core::GenericClassName` with value `GEN_A2X_AUI_DEMUX`.
-- One event output: `CNF`.
+- No event outputs.
 - Two socket adapters: `K` and `IN`.
 - Two plug adapters: `OUT1` and `OUT2`.
 - No change detection or value gating logic.

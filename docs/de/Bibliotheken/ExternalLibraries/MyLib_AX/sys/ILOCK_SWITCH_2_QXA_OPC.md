@@ -21,20 +21,21 @@ Er ist speziell für Anlagen konzipiert, bei denen die Bedienung über ein zentr
 
 ## Schnittstellenstruktur
 
-Die Subapplikation besitzt keine Ereignis-Eingänge oder -Ausgänge, keine Adapter an der Subapplikationsgrenze, sondern ausschließlich **Daten-Eingänge** (InputVars). Die interne Steuerung erfolgt rein über diese Datenwerte und asynchrone Kommunikation (über die intern eingebetteten Subscribe/Publish-Bausteine).
+Die Subapplikation besitzt je einen Ereignis-Eingang `INIT` und einen Ereignis-Ausgang `INITO`, keine Adapter an der Subapplikationsgrenze und ansonsten **Daten-Eingänge** (InputVars). Die interne Steuerung erfolgt über diese Datenwerte und asynchrone Kommunikation (über die intern eingebetteten Subscribe/Publish-Bausteine).
 
 ### **Ereignis-Eingänge**
 
-Keine (nicht vorhanden).
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DigitalOutput_UP.INIT` und `DigitalOutput_DOWN.INIT` durchgereicht. Der Aufrufer muss `INIT` selbst auslösen (z. B. ohne Verzögerung für unverändertes Sofort-Verhalten oder verzögert, wenn auf einen INI-Wert gewartet werden muss).
 
 ### **Ereignis-Ausgänge**
 
-Keine (nicht vorhanden).
+- **INITO** (`EInit`): Initialisierung bestätigt (von `DigitalOutput_UP.INITO`); für Aufrufer, die eine echte Confirm-Kette brauchen (z. B. hinter einem `Option::AOption`-Adapter). Rein additiv, unverdrahtet harmlos.
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Kommentar |
 |------|----------|-----------|
+| `QI` | `BOOL` | Qualifier für die physischen Ausgänge; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE` |
 | `Output_UP` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang Richtung UP/Links. Initialwert: `logiBUS_DO::Invalid` |
 | `Output_DOWN` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang Richtung DOWN/Rechts. Initialwert: `logiBUS_DO::Invalid` |
 | `DT_PROTECT` | `TIME` | Schutz-Totzeit vor Richtungswechsel. Initialwert: `T#300ms` |

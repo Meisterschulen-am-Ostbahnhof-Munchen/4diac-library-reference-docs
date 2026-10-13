@@ -14,7 +14,7 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DigitalOutput_PWM.INIT` durchgereicht
 
 ### **Ereignis-Ausgänge**
 
@@ -45,13 +45,14 @@ Die Kette im Netzwerk:
 2. `AB_TO_AUI` wandelt das Byte in einen `AUI`-Wert, der als Auswahl `K` an `AR_AUI_MUX_3` geht: `K = 0` (beide FALSE) wählt `IN1` = `OUT_50` (Neutral), `K = 1` (`HEBEN`) wählt `IN2` = `OUT_75`, `K = 2` (`SENKEN`) wählt `IN3` = `OUT_25`.
 3. `values_50_75_25` liefert aus `PWM_POW` sowie `FACTOR_75`/`FACTOR_25` die drei Sollwerte `OUT_50`, `OUT_75`, `OUT_25`.
 4. `AR_AUI_MUX_3.OUT` → `AR_R_MUL_Korrektur` (Faktor `PWM_LASTTEILER_KORREKTUR`) → `AR_R_MUL_PWM13BIT` (Faktor `PWM_13BIT_SKALIERUNG`) → `AR_TO_AD_NUM` → `DigitalOutput_PWM.OUT`.
-5. `DigitalOutput_PWM` (`logiBUS::io::DQ::logiBUS_QDA_PWM`) gibt den Wert am Ausgang `Output_PWM` aus; `QI` wird direkt an `DigitalOutput_PWM.QI` geführt.
+5. `DigitalOutput_PWM` (`logiBUS::io::DQ::logiBUS_QDA_PWM`) gibt den Wert am Ausgang `Output_PWM` aus; `QI` wird direkt an `DigitalOutput_PWM.QI` und das Ereignis `INIT` an `DigitalOutput_PWM.INIT` geführt.
 
 ## Technische Besonderheiten
 
 - Es gibt **keine** Verriegelung: Der Aufrufer muss sicherstellen, dass `HEBEN` und `SENKEN` nie gleichzeitig TRUE sind, sonst liefert `AR_AUI_MUX_3` für `K = 3` ein undefiniertes Verhalten
 - Die Plug-/Variablennamen `_75`/`_25` sind historisch; die tatsächlich kalibrierten Werte liegen bei `PWM_POW = 1.0` bei 90.0 bzw. 15.0 (siehe [`values_50_75_25`](values_50_75_25.md))
 - Der Eingang `QI` (Version 1.1) erlaubt, die Instanz komplett inaktiv zu halten, wenn der Kanal anderweitig genutzt wird
+- Der Ereigniseingang `INIT` (Version 1.2) ersetzt die Auto-Verteilung der Initialisierung: der Aufrufer löst sie selbst aus („Init wie bei Tecu“), sodass `QI` vor der physischen Kanalbindung feststeht
 - Erster Aufrufer: `Bunkerboden_PWM.SUB`, die nur `SENKEN` (Vollgas) nutzt und `HEBEN` dauerhaft auf FALSE legt
 
 ## Anwendungsszenarien

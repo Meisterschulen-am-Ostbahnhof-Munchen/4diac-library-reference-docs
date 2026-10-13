@@ -18,7 +18,7 @@
 
 ### **Event Outputs**
 
-- **CNF**: Always sent once an event from the selector adapter `K` has been processed -- regardless of whether the output value changed.
+- No event outputs.
 
 ### **Data Inputs**
 
@@ -43,7 +43,6 @@ The function block re-evaluates the current value of **K** on every incoming eve
 
 1. The current value of `K.D1` determines which of the 4 input adapters (`IN1` … `IN4`) is currently selected.
 2. The data value of that selected input is compared against the value currently held on `OUT`. Only on an actual change is `OUT` rewritten and its adapter event sent (see "Change Detection" below).
-3. If the triggering event comes from the selector adapter `K`, the `CNF` event is additionally always sent -- regardless of whether `OUT` changed -- to confirm that the index update was processed.
 
 As a result, a pure change of `K` alone also propagates to the output immediately, even if the data value of the newly selected input hasn't changed since its own last event.
 
@@ -59,7 +58,6 @@ As a result, a pure change of `K` alone also propagates to the output immediatel
 The function block has no explicit state machine; instead it re-evaluates the current value of `K.D1` on every incoming event:
 
 - **Any event** (selector adapter `K` or `IN1`…`IN4`) → read the currently selected input, update `OUT` on a value change and send its adapter event.
-- **Additionally on an event from `K`** → `CNF` is always sent, regardless of whether `OUT` changed.
 
 ## Application Scenarios
 
