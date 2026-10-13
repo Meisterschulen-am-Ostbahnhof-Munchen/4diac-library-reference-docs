@@ -70,7 +70,7 @@ Da der Baustein keinen internen Zustandsautomaten besitzt, entfällt eine klassi
 
 1. **Initialisierung**: Beim ersten Durchlauf wird der Eingang `IN1` als Ausgang gesetzt, falls keine gültige Indexvorgabe vorliegt.
 2. **Indexauswahl**: Durch Änderung des Adapters `K` wird der entsprechende Eingang aktiviert.
-4. **Keine Änderung**: Liegt keine Änderung vor, bleibt der Ausgang unverändert und es wird kein Ereignis ausgelöst.
+3. **Keine Änderung**: Liegt keine Änderung vor, bleibt der Ausgang unverändert und es wird kein Ereignis ausgelöst.
 
 Somit existiert nur der funktionale Zustand „aktiv“ ohne spezifische Unterzustände.
 
