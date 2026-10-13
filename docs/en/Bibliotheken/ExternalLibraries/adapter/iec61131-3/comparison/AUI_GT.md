@@ -2,6 +2,8 @@
 
 ![AUI_GT](./AUI_GT.svg)
 
+![AUI_GT_network](./AUI_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

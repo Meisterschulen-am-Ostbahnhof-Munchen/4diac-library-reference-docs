@@ -2,6 +2,8 @@
 
 ![F_NOT_BOOL_INIT](./F_NOT_BOOL_INIT.svg)
 
+![F_NOT_BOOL_INIT_network](./F_NOT_BOOL_INIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

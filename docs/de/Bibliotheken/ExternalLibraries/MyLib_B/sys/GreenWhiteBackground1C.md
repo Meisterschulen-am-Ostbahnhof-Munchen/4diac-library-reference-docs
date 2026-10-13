@@ -1,5 +1,9 @@
 # GreenWhiteBackground1C
 
+![GreenWhiteBackground1C_network](./GreenWhiteBackground1C_network.svg)
+
+![GreenWhiteBackground1C](./GreenWhiteBackground1C.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

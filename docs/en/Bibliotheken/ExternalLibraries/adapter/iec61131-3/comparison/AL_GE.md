@@ -2,6 +2,8 @@
 
 ![AL_GE](./AL_GE.svg)
 
+![AL_GE_network](./AL_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

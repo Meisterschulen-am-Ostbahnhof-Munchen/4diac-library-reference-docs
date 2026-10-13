@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,11 @@
   <rect x="-63.8" y="-144.0" width="1215.8" height="677.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-63.8" y="-144.0" width="1215.8" height="25.0" fill="white" stroke="none"/>
   <line x1="-63.8" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-58.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-SoftKey lesen ODER AUX-Zuweisung (Joystick) lesen ODER lokaler Web-Override (z.B. vt-ui-mirror auf demselben Modul) + Remote-OPC-UA-Write an Zielmodul + VT-Hintergrundfarbe (SoftKey UND AUX) aus Remote-Subscribe (generisch, ein Kanal, fuer Funktionen ohne lokalen physischen Ausgang - Bedienung sitzt auf STG1, Aktor auf einem Modul ohne eigene VT-Anbindung)</text>
+  <text x="-58.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-SoftKey lesen ODER AUX-Zuweisung (Joystick) lesen ODER lokaler Web-Override
+(z.B. vt-ui-mirror auf demselben Modul) + Remote-OPC-UA-Write an Zielmodul +
+VT-Hintergrundfarbe (SoftKey UND AUX) aus Remote-Subscribe (generisch, ein
+Kanal, fuer Funktionen ohne lokalen physischen Ausgang - Bedienung sitzt auf
+STG1, Aktor auf einem Modul ohne eigene VT-Anbindung)</text>
   <g id="sidebars">
     <rect x="-63.8" y="-119.0" width="103.8" height="652.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="533.0" stroke="#A0A0A0" stroke-width="0.5"/>
@@ -82,16 +86,16 @@
   <g id="instances">
     <g id="fb_Command" transform="translate(594.0, 75.0)">
       <path d="M 3 0
-            L 131.525390625 0
-            A 3 3 0 0 1 134.525390625 3
-            L 134.525390625 18
-            A 3 3 0 0 1 131.525390625 21
-            L 125.525390625 21
-            L 125.525390625 35
-            L 131.525390625 35
-            A 3 3 0 0 1 134.525390625 38
-            L 134.525390625 103
-            A 3 3 0 0 1 131.525390625 106
+            L 131.5 0
+            A 3 3 0 0 1 134.5 3
+            L 134.5 18
+            A 3 3 0 0 1 131.5 21
+            L 125.5 21
+            L 125.5 35
+            L 131.5 35
+            A 3 3 0 0 1 134.5 38
+            L 134.5 103
+            A 3 3 0 0 1 131.5 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 38
@@ -150,22 +154,22 @@
 
 
       <!-- Instance Name -->
-      <text x="67.2626953125" y="-5"
+      <text x="67.25" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Command</text>
     </g>
     <g id="fb_Status" transform="translate(594.0, 300.0)">
       <path d="M 3 0
-            L 147.052734375 0
-            A 3 3 0 0 1 150.052734375 3
-            L 150.052734375 18
-            A 3 3 0 0 1 147.052734375 21
-            L 141.052734375 21
-            L 141.052734375 35
-            L 147.052734375 35
-            A 3 3 0 0 1 150.052734375 38
-            L 150.052734375 103
-            A 3 3 0 0 1 147.052734375 106
+            L 147.0 0
+            A 3 3 0 0 1 150.0 3
+            L 150.0 18
+            A 3 3 0 0 1 147.0 21
+            L 141.0 21
+            L 141.0 35
+            L 147.0 35
+            A 3 3 0 0 1 150.0 38
+            L 150.0 103
+            A 3 3 0 0 1 147.0 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 38
@@ -224,7 +228,7 @@
 
 
       <!-- Instance Name -->
-      <text x="75.0263671875" y="-5"
+      <text x="75.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Status</text>
     </g>

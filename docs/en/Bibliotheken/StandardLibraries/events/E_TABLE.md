@@ -1,5 +1,7 @@
 # E_TABLE
 
+![E_TABLE_network](./E_TABLE_network.svg)
+
 <img width="1139" height="202" alt="E_TABLE" src="https://user-images.githubusercontent.com/113907528/204904862-ebdcc4da-7a49-4931-b534-673c9449cf5e.png">
 * * * * * * * * * *
 ## Introduction
@@ -73,7 +75,7 @@ The `E_TABLE` (Event Table) is a function block according to IEC 61499 that gene
 
 ## 🛠️ Related Exercises
 
-- [Exercise_093](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093/)
+- [Exercise_093](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093/)
 
 ## Conclusion
 

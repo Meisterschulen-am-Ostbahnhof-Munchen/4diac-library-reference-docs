@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1315.0" height="800" viewBox="0 0 1315.0 800">
+<defs>
+</defs>
+<rect x="0" y="0" width="1315.0" height="800" fill="#ffffff" />
+<text x="657.0" y="25" font-size="14" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">ECC: AX_T_FF_SR_SEQ_GATE</text>
+<rect x="10.0" y="266.6086956521739" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="50.0" y="282.6086956521739" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">START</text>
+<rect x="0.3999999999999986" y="599.2173913043479" width="99.2" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="50.0" y="615.2173913043479" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">GATE_CLOSED</text>
+<rect x="109.6" y="599.2173913043479" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M99.6,615.2173913043479 L109.6,610.2173913043479" stroke="#000000" stroke-width="2" />
+<path d="M189.6,599.2173913043479 L189.6,621.2173913043479" stroke="#cccccc" stroke-width="1" />
+<rect x="109.6" y="603.2173913043479" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="149.6" y="611.2173913043479" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET</text>
+<rect x="190.6" y="603.2173913043479" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="230.6" y="611.2173913043479" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<rect x="244.7826086956522" y="168.78260869565216" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="284.7826086956522" y="184.78260869565216" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">SET</text>
+<rect x="334.7826086956522" y="168.78260869565216" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M324.7826086956522,184.78260869565216 L334.7826086956522,179.78260869565216" stroke="#000000" stroke-width="2" />
+<path d="M414.7826086956522,168.78260869565216 L414.7826086956522,190.78260869565216" stroke="#cccccc" stroke-width="1" />
+<rect x="334.7826086956522" y="172.78260869565216" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="374.7826086956522" y="180.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">SET</text>
+<rect x="415.7826086956522" y="172.78260869565216" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="455.7826086956522" y="180.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<rect x="244.7826086956522" y="364.4347826086956" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="284.7826086956522" y="380.4347826086956" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET</text>
+<rect x="334.7826086956522" y="364.4347826086956" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M324.7826086956522,380.4347826086956 L334.7826086956522,375.4347826086956" stroke="#000000" stroke-width="2" />
+<path d="M414.7826086956522,364.4347826086956 L414.7826086956522,386.4347826086956" stroke="#cccccc" stroke-width="1" />
+<rect x="334.7826086956522" y="368.4347826086956" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="374.7826086956522" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET</text>
+<rect x="415.7826086956522" y="368.4347826086956" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="455.7826086956522" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<rect x="516.295652173913" y="168.78260869565216" width="84.8" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="558.695652173913" y="184.78260869565216" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">SET_CHAIN</text>
+<rect x="611.095652173913" y="168.78260869565216" width="185.0" height="36" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M601.095652173913,184.78260869565216 L611.095652173913,179.78260869565216" stroke="#000000" stroke-width="2" />
+<path d="M691.095652173913,168.78260869565216 L691.095652173913,204.78260869565216" stroke="#cccccc" stroke-width="1" />
+<rect x="611.095652173913" y="172.78260869565216" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="651.095652173913" y="180.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">SET</text>
+<rect x="692.095652173913" y="172.78260869565216" width="104.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="744.095652173913" y="180.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<path d="M611.095652173913,186.78260869565216 L796.095652173913,186.78260869565216" stroke="#cccccc" stroke-width="0.5" />
+<rect x="611.095652173913" y="186.78260869565216" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="651.095652173913" y="194.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="692.095652173913" y="186.78260869565216" width="104.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="744.095652173913" y="194.78260869565216" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EO_SET</text>
+<rect x="509.095652173913" y="364.4347826086956" width="99.2" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="558.695652173913" y="380.4347826086956" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET_CHAIN</text>
+<rect x="618.295652173913" y="364.4347826086956" width="197.0" height="36" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M608.295652173913,380.4347826086956 L618.295652173913,375.4347826086956" stroke="#000000" stroke-width="2" />
+<path d="M698.295652173913,364.4347826086956 L698.295652173913,400.4347826086956" stroke="#cccccc" stroke-width="1" />
+<rect x="618.295652173913" y="368.4347826086956" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="658.295652173913" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET</text>
+<rect x="699.295652173913" y="368.4347826086956" width="116.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="757.295652173913" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<path d="M618.295652173913,382.4347826086956 L815.295652173913,382.4347826086956" stroke="#cccccc" stroke-width="0.5" />
+<rect x="618.295652173913" y="382.4347826086956" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="658.295652173913" y="390.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="699.295652173913" y="382.4347826086956" width="116.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="757.295652173913" y="390.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EO_RESET</text>
+<rect x="877.5478260869567" y="176.6086956521739" width="113.6" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="934.3478260869566" y="192.6086956521739" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">SET_CHAIN_BWD</text>
+<rect x="1001.1478260869566" y="176.6086956521739" width="179.0" height="36" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M991.1478260869566,192.6086956521739 L1001.1478260869566,187.6086956521739" stroke="#000000" stroke-width="2" />
+<path d="M1081.1478260869567,176.6086956521739 L1081.1478260869567,212.6086956521739" stroke="#cccccc" stroke-width="1" />
+<rect x="1001.1478260869566" y="180.6086956521739" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1041.1478260869567" y="188.6086956521739" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">SET</text>
+<rect x="1082.1478260869567" y="180.6086956521739" width="98.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1131.1478260869567" y="188.6086956521739" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<path d="M1001.1478260869566,194.6086956521739 L1180.1478260869567,194.6086956521739" stroke="#cccccc" stroke-width="0.5" />
+<rect x="1001.1478260869566" y="194.6086956521739" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1041.1478260869567" y="202.6086956521739" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="1082.1478260869567" y="194.6086956521739" width="98.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1131.1478260869567" y="202.6086956521739" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EI_SET</text>
+<rect x="886.0" y="364.4347826086956" width="128.0" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="950.0" y="380.4347826086956" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET_CHAIN_BWD</text>
+<rect x="1024.0" y="364.4347826086956" width="191.0" height="36" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M1014.0,380.4347826086956 L1024.0,375.4347826086956" stroke="#000000" stroke-width="2" />
+<path d="M1104.0,364.4347826086956 L1104.0,400.4347826086956" stroke="#cccccc" stroke-width="1" />
+<rect x="1024.0" y="368.4347826086956" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1064.0" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">RESET</text>
+<rect x="1105.0" y="368.4347826086956" width="110.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1160.0" y="376.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">Q.E1</text>
+<path d="M1024.0,382.4347826086956 L1215.0,382.4347826086956" stroke="#cccccc" stroke-width="0.5" />
+<rect x="1024.0" y="382.4347826086956" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1064.0" y="390.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central"></text>
+<rect x="1105.0" y="382.4347826086956" width="110.0" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="1160.0" y="390.4347826086956" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EI_RESET</text>
+<path d="M50.0,298.6086956521739 C50.0,420.0487565161226,7.48571428571428,448.9130434782609,7.48571428571428,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M7.48571428571428,599.2173913043479 L3.4857142857142813,592.2891880740724 L11.485714285714279,592.2891880740724 L7.48571428571428,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(28.74285714285714,438.08893586745904)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M90.0,275.1086956521739 C170.0,275.1086956521739,249.7826086956522,280.78260869565213,249.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M249.7826086956522,200.78260869565216 L253.7826086956522,207.71081192592766 L245.7826086956522,207.71081192592766 L249.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(199.8913043478261,267.945652173913)">
+<rect x="-36.5" y="-7.5" width="73.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">S[GATE.D1]</text>
+</g>
+<path d="M90.0,290.1086956521739 C185.0,290.1086956521739,259.7826086956522,295.78260869565213,259.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M259.7826086956522,200.78260869565216 L263.7826086956522,207.71081192592766 L255.7826086956522,207.71081192592766 L259.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(210.5163043478261,295.78260869565213)">
+<rect x="-43.0" y="-7.5" width="86.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK[GATE.D1]</text>
+</g>
+<path d="M90.0,282.6086956521739 C266.0111123209134,282.6086956521739,522.3527950310558,376.79372101656554,522.3527950310558,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M522.3527950310558,200.78260869565216 L526.3527950310558,207.71081192592766 L518.3527950310558,207.71081192592766 L522.3527950310558,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(372.18056463587044,307.6998192942555)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M90.0,282.6086956521739 C263.5862048085671,282.6086956521739,516.1813664596273,190.84857780012848,516.1813664596273,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M516.1813664596273,364.4347826086956 L512.1813664596273,357.5065793784201 L520.1813664596273,357.5065793784201 L516.1813664596273,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(368.1855100330263,258.42691232722206)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M90.0,282.6086956521739 C411.1063243400711,282.6086956521739,889.3478260869566,529.7150199922451,889.3478260869566,208.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M889.3478260869566,208.6086956521739 L893.3478260869566,215.5368988824494 L885.3478260869566,215.5368988824494 L889.3478260869566,208.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(610.088784671005,366.0235672797006)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M90.0,282.6086956521739 C417.6389497008233,282.6086956521739,905.0,36.79583290787235,905.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M905.0,364.4347826086956 L901.0,357.5065793784201 L909.0,357.5065793784201 L905.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(620.3646061378088,200.65713299262603)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M244.7826086956522,184.78260869565216 C56.509971260864575,184.78260869565216,21.65714285714285,392.0,21.65714285714285,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M21.65714285714285,599.2173913043479 L17.65714285714285,592.2891880740724 L25.65714285714285,592.2891880740724 L21.65714285714285,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(62.61763673835216,314.29347826086956)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M262.2826086956522,200.78260869565216 C262.2826086956522,233.5978107140396,250.4968944099379,331.61958059030815,250.4968944099379,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M250.4968944099379,364.4347826086956 L246.4968944099379,357.5065793784201 L254.4968944099379,357.5065793784201 L250.4968944099379,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(256.389751552795,282.6086956521739)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">R</text>
+</g>
+<path d="M277.2826086956522,200.78260869565216 C277.2826086956522,233.65683924981096,261.92546583850935,331.5605520545368,261.92546583850935,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M261.92546583850935,364.4347826086956 L257.92546583850935,357.5065793784201 L265.92546583850935,357.5065793784201 L261.92546583850935,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(269.6040372670808,300.6086956521739)">
+<rect x="-13.75" y="-7.5" width="27.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK</text>
+</g>
+<path d="M324.7826086956522,184.78260869565216 C364.7826086956522,184.78260869565216,534.4670807453416,128.78260869565216,534.4670807453416,168.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M534.4670807453416,168.78260869565216 L530.4670807453416,161.85440546537666 L538.4670807453416,161.85440546537666 L534.4670807453416,168.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(444.6248447204969,161.78260869565216)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M324.7826086956522,169.78260869565216 C438.0247000356103,169.78260869565216,530.3527950310558,251.19269126873755,530.3527950310558,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M530.3527950310558,364.4347826086956 L526.3527950310558,357.5065793784201 L534.3527950310558,357.5065793784201 L530.3527950310558,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(470.03348611583834,224.64291139968958)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M324.7826086956522,184.78260869565216 C364.7826086956522,184.78260869565216,904.3478260869566,136.6086956521739,904.3478260869566,176.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M904.3478260869566,176.6086956521739 L900.3478260869566,169.6804924218984 L908.3478260869566,169.6804924218984 L904.3478260869566,176.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(629.5652173913045,165.69565217391306)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M324.7826086956522,169.78260869565216 C575.2775465192263,169.78260869565216,920.0,113.93984478512144,920.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M920.0,364.4347826086956 L916.0,357.5065793784201 L924.0,357.5065793784201 L920.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(716.3269060316663,173.17309396833357)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M244.7826086956522,372.9347826086956 C121.58156409727404,372.9347826086956,35.82857142857142,476.01634670596974,35.82857142857142,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M35.82857142857142,599.2173913043479 L31.828571428571422,592.2891880740724 L39.82857142857142,592.2891880740724 L35.82857142857142,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(94.10519833772,439.87569523212994)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M292.2826086956522,364.4347826086956 C292.2826086956522,254.43478260869563,269.7826086956522,310.78260869565213,269.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M269.7826086956522,200.78260869565216 L273.7826086956522,207.71081192592766 L265.7826086956522,207.71081192592766 L269.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(281.0326086956522,318.6086956521739)">
+<rect x="-36.5" y="-7.5" width="73.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">S[GATE.D1]</text>
+</g>
+<path d="M307.2826086956522,364.4347826086956 C307.2826086956522,239.43478260869563,279.7826086956522,325.78260869565213,279.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M279.7826086956522,200.78260869565216 L283.7826086956522,207.71081192592766 L275.7826086956522,207.71081192592766 L279.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(293.53260869565213,336.6086956521739)">
+<rect x="-43.0" y="-7.5" width="86.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK[GATE.D1]</text>
+</g>
+<path d="M324.7826086956522,365.4347826086956 C435.27606719519133,365.4347826086956,546.5813664596272,311.27606719519133,546.5813664596272,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M546.5813664596272,200.78260869565216 L550.5813664596272,207.71081192592766 L542.5813664596272,207.71081192592766 L546.5813664596272,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(477.1170345149669,324.54374258950105)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M324.7826086956522,380.4347826086956 C364.7826086956522,380.4347826086956,544.5242236024844,324.4347826086956,544.5242236024844,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M544.5242236024844,364.4347826086956 L540.5242236024844,357.5065793784201 L548.5242236024844,357.5065793784201 L544.5242236024844,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(449.65341614906833,357.4347826086956)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M324.7826086956522,365.4347826086956 C570.7426767657887,365.4347826086956,919.3478260869566,454.56876372231045,919.3478260869566,208.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M919.3478260869566,208.6086956521739 L923.3478260869566,215.5368988824494 L915.3478260869566,215.5368988824494 L919.3478260869566,208.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(714.3002429176057,379.256764656736)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M324.7826086956522,380.4347826086956 C364.7826086956522,380.4347826086956,935.0,324.4347826086956,935.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M935.0,364.4347826086956 L931.0,357.5065793784201 L939.0,357.5065793784201 L935.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(644.8913043478261,357.4347826086956)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M516.295652173913,184.78260869565216 C266.7559721958504,184.78260869565216,50.0,349.67771132628525,50.0,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M50.0,599.2173913043479 L46.0,592.2891880740724 L54.0,592.2891880740724 L50.0,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(189.57044609518303,298.42262000822654)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M516.295652173913,184.78260869565216 C380.43505025899816,184.78260869565216,273.35403726708074,228.57418069378076,273.35403726708074,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M273.35403726708074,364.4347826086956 L269.35403726708074,357.5065793784201 L277.35403726708074,357.5065793784201 L273.35403726708074,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(343.87711900240384,223.6609699340808)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">R</text>
+</g>
+<path d="M516.295652173913,199.78260869565216 C372.65859647473843,199.78260869565216,284.7826086956522,220.79772690952103,284.7826086956522,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M284.7826086956522,364.4347826086956 L280.7826086956522,357.5065793784201 L288.7826086956522,357.5065793784201 L284.7826086956522,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(346.6752345475921,246.24479976498338)">
+<rect x="-13.75" y="-7.5" width="27.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK</text>
+</g>
+<path d="M579.895652173913,200.78260869565216 C643.495652173913,256.78260869565213,473.895652173913,256.78260869565213,537.495652173913,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M537.495652173913,200.78260869565216 L534.9392168223796,208.3631520992236 L529.6524913361628,202.3589424398774 L537.495652173913,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(558.695652173913,220.78260869565216)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M551.195652173913,200.78260869565216 C551.195652173913,233.54739712864225,558.695652173913,331.66999417570554,558.695652173913,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M558.695652173913,364.4347826086956 L554.695652173913,357.5065793784201 L562.695652173913,357.5065793784201 L558.695652173913,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(554.945652173913,282.6086956521739)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M601.095652173913,177.28260869565216 C641.095652173913,177.28260869565216,934.3478260869566,136.6086956521739,934.3478260869566,176.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M934.3478260869566,176.6086956521739 L930.3478260869566,169.6804924218984 L938.3478260869566,169.6804924218984 L934.3478260869566,176.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(782.7217391304349,161.94565217391306)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M601.095652173913,177.28260869565216 C759.4674578123283,177.28260869565216,950.0,206.0629769702802,950.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M950.0,364.4347826086956 L946.0,357.5065793784201 L954.0,357.5065793784201 L950.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(834.9372532013622,211.46926853776807)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M509.095652173913,380.4347826086956 C310.77333084181544,380.4347826086956,64.17142857142858,400.8950699722503,64.17142857142858,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M64.17142857142858,599.2173913043479 L60.17142857142858,592.2891880740724 L68.17142857142858,592.2891880740724 L64.17142857142858,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(212.2626698731342,415.45521645698517)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M509.095652173913,380.4347826086956 C380.695042206326,380.4347826086956,289.7826086956522,329.18321866323913,289.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M289.7826086956522,200.78260869565216 L293.7826086956522,207.71081192592766 L285.7826086956522,207.71081192592766 L289.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(351.28890169693744,338.758924390019)">
+<rect x="-36.5" y="-7.5" width="73.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">S[GATE.D1]</text>
+</g>
+<path d="M509.095652173913,395.4347826086956 C364.76181187860516,395.4347826086956,299.7826086956522,345.11644899096,299.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M299.7826086956522,200.78260869565216 L303.7826086956522,207.71081192592766 L295.7826086956522,207.71081192592766 L299.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(350.3139403240421,370.2338857629143)">
+<rect x="-43.0" y="-7.5" width="86.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK[GATE.D1]</text>
+</g>
+<path d="M566.195652173913,364.4347826086956 C566.195652173913,331.6913401145912,570.8099378881988,233.52605118975657,570.8099378881988,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M570.8099378881988,200.78260869565216 L574.8099378881988,207.71081192592766 L566.8099378881988,207.71081192592766 L570.8099378881988,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(568.5027950310558,300.6086956521739)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M583.495652173913,396.4347826086956 C657.895652173913,452.4347826086956,459.495652173913,452.4347826086956,533.895652173913,396.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M533.895652173913,396.4347826086956 L530.7657349691917,403.79709327122475 L525.9547455072492,397.40535012892957 L533.895652173913,396.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(558.695652173913,416.4347826086956)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M608.295652173913,372.9347826086956 C759.7259784287318,372.9347826086956,949.3478260869566,360.0390219069926,949.3478260869566,208.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M949.3478260869566,208.6086956521739 L953.3478260869566,215.5368988824494 L945.3478260869566,215.5368988824494 L949.3478260869566,208.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(835.6081114759919,347.5581114759918)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M608.295652173913,372.9347826086956 C648.295652173913,372.9347826086956,965.0,324.4347826086956,965.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M965.0,364.4347826086956 L961.0,357.5065793784201 L969.0,357.5065793784201 L965.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(801.6478260869565,353.6847826086956)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M877.5478260869567,192.6086956521739 C518.8704303643042,192.6086956521739,78.34285714285714,240.53999558169545,78.34285714285714,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M78.34285714285714,599.2173913043479 L74.34285714285714,592.2891880740724 L82.34285714285714,592.2891880740724 L78.34285714285714,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(343.4413182189122,261.40902008226624)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M877.5478260869567,192.6086956521739 C620.0684661082598,192.6086956521739,296.21118012422363,106.95542262999885,296.21118012422363,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M296.21118012422363,364.4347826086956 L292.21118012422363,357.5065793784201 L300.21118012422363,357.5065793784201 L296.21118012422363,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(490.32474311357885,181.96697913842348)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">R</text>
+</g>
+<path d="M877.5478260869567,207.6086956521739 C611.111065842081,207.6086956521739,307.639751552795,97.99802236381998,307.639751552795,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M307.639751552795,364.4347826086956 L303.639751552795,357.5065793784201 L311.639751552795,357.5065793784201 L307.639751552795,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(492.68000372804744,204.1079540386064)">
+<rect x="-13.75" y="-7.5" width="27.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK</text>
+</g>
+<path d="M877.5478260869567,200.1086956521739 C832.5478260869567,200.1086956521739,582.9242236024844,245.78260869565216,582.9242236024844,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M582.9242236024844,200.78260869565216 L586.9242236024844,207.71081192592766 L578.9242236024844,207.71081192592766 L582.9242236024844,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(713.3610248447206,217.32065217391303)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M877.5478260869567,200.1086956521739 C729.0420353602782,200.1086956521739,587.0385093167702,215.92899188201716,587.0385093167702,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M587.0385093167702,364.4347826086956 L583.0385093167702,357.5065793784201 L591.0385093167702,357.5065793784201 L587.0385093167702,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(676.6034961793589,226.58206760793036)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M962.7478260869566,208.6086956521739 C1047.9478260869566,264.6086956521739,820.7478260869566,264.6086956521739,905.9478260869566,208.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M905.9478260869566,208.6086956521739 L902.3552698132934,215.75667014992936 L897.9612204494655,209.07143790353405 L905.9478260869566,208.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(934.3478260869565,228.6086956521739)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M926.8478260869566,208.6086956521739 C926.8478260869566,288.6086956521739,980.0,284.4347826086956,980.0,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M980.0,364.4347826086956 L976.0,357.5065793784201 L984.0,357.5065793784201 L980.0,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(953.4239130434783,286.52173913043475)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M886.0,380.4347826086956 C556.7619928032159,380.4347826086956,92.51428571428572,269.9793841075638,92.51428571428572,599.2173913043479" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M92.51428571428572,599.2173913043479 L88.51428571428572,592.2891880740724 L96.51428571428572,592.2891880740724 L92.51428571428572,599.2173913043479" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(365.79289015834877,366.36183425772776)">
+<rect x="-46.25" y="-7.5" width="92.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">[NOT GATE.D1]</text>
+</g>
+<path d="M886.0,380.4347826086956 C629.5704622434876,380.4347826086956,309.7826086956522,457.2121464521646,309.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M309.7826086956522,200.78260869565216 L313.7826086956522,207.71081192592766 L305.7826086956522,207.71081192592766 L309.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(501.73022768913387,386.769772310866)">
+<rect x="-36.5" y="-7.5" width="73.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">S[GATE.D1]</text>
+</g>
+<path d="M886.0,395.4347826086956 C616.5033267789886,395.4347826086956,319.7826086956522,470.27928191666354,319.7826086956522,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M319.7826086956522,200.78260869565216 L323.7826086956522,207.71081192592766 L315.7826086956522,207.71081192592766 L319.7826086956522,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(501.8300518899468,417.16994811005316)">
+<rect x="-43.0" y="-7.5" width="86.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CLK[GATE.D1]</text>
+</g>
+<path d="M886.0,387.9347826086956 C732.6181946867376,387.9347826086956,595.0385093167702,354.16441400891455,595.0385093167702,200.78260869565216" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M595.0385093167702,200.78260869565216 L599.0385093167702,207.71081192592766 L591.0385093167702,207.71081192592766 L595.0385093167702,200.78260869565216" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(683.0010776659117,351.8768726446473)">
+<rect x="-82.0" y="-7.5" width="164.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_SET[GATE.D1]</text>
+</g>
+<path d="M886.0,387.9347826086956 C756.6968035599049,387.9347826086956,601.2099378881987,235.13158616860048,601.2099378881987,364.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M601.2099378881987,364.4347826086956 L597.2099378881987,357.5065793784201 L605.2099378881987,357.5065793784201 L601.2099378881987,364.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(695.1162702790637,327.6960839436599)">
+<rect x="-59.25" y="-7.5" width="118.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_IN.EO_RESET</text>
+</g>
+<path d="M957.5,364.4347826086956 C957.5,269.4347826086956,979.3478260869566,303.6086956521739,979.3478260869566,208.6086956521739" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M979.3478260869566,208.6086956521739 L983.3478260869566,215.5368988824494 L975.3478260869566,215.5368988824494 L979.3478260869566,208.6086956521739" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(968.4239130434784,304.52173913043475)">
+<rect x="-85.25" y="-7.5" width="170.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_SET[GATE.D1]</text>
+</g>
+<path d="M982.0,396.4347826086956 C1078.0,452.4347826086956,822.0,452.4347826086956,918.0,396.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M918.0,396.4347826086956 L914.031048330648,403.3808190789676 L910.0000801264553,396.4705878717801 L918.0,396.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(950.0,416.4347826086956)">
+<rect x="-62.5" y="-7.5" width="125.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CHAIN_OUT.EI_RESET</text>
+</g>
+<path d="M99.6,622.7173913043479 C240.6921338008763,622.7173913043479,319.06832298136646,537.5269164095719,319.06832298136646,396.4347826086956" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M319.06832298136646,396.4347826086956 L323.06832298136646,403.36298583897116 L315.06832298136646,403.36298583897116 L319.06832298136646,396.4347826086956" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(262.24371166601185,562.4856371318504)">
+<rect x="-56.0" y="-7.5" width="112.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">GATE.E1[GATE.D1]</text>
+</g>
+</svg>

@@ -2,6 +2,8 @@
 
 ![AW_TO_AUDI](./AW_TO_AUDI.svg)
 
+![AW_TO_AUDI_network](./AW_TO_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

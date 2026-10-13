@@ -1,5 +1,7 @@
 # DataPanel_LO_QXA
 
+![DataPanel_LO_QXA_network](./DataPanel_LO_QXA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

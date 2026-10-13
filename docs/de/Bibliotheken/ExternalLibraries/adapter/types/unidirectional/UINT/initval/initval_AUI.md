@@ -2,6 +2,8 @@
 
 ![initval_AUI](initval_AUI.svg)
 
+![initval_AUI_network](./initval_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

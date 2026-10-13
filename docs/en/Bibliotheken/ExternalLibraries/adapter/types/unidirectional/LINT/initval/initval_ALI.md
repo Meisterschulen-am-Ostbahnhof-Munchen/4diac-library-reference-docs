@@ -2,6 +2,8 @@
 
 ![initval_ALI](initval_ALI.svg)
 
+![initval_ALI_network](./initval_ALI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

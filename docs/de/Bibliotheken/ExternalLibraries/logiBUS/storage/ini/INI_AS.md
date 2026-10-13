@@ -2,6 +2,8 @@
 
 ![INI_AS](./INI_AS.svg)
 
+![INI_AS_network](./INI_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **INI_AS** dient dem Laden und Speichern von SINT‑Daten aus
 
 | Ereignis | Typ   | Mit‑Vars                        | Beschreibung                                                                                 |
 | -------- | ----- | ------------------------------- | -------------------------------------------------------------------------------------------- |
-| `INIT`   | EInit | QI, SECTION, KEY, DEFAULT_VALUE | Service‑Initialisierung: Liest den Wert aus der INI‑Datei und gibt ihn über den Adapter aus. |
+| `INIT`   | EInit | QI, SETM, SECTION, KEY, DEFAULT_VALUE | Service‑Initialisierung: Liest den Wert aus der INI‑Datei und gibt ihn über den Adapter aus. |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **INI_AS** dient dem Laden und Speichern von SINT‑Daten aus
 | Name            | Datentyp | Beschreibung                                                                           |
 | --------------- | -------- | -------------------------------------------------------------------------------------- |
 | `QI`            | BOOL     | Eingangsqualifikator (z. B. Freigabe).                                                 |
+| `SETM` | BOOL | Spiegelung (Mirroring) bei SET aktivieren (Enable Mirroring on SET) |
 | `SECTION`       | STRING   | Name des Abschnitts in der INI‑Datei.                                                  |
 | `KEY`           | STRING   | Name des Schlüssels innerhalb des Abschnitts.                                          |
 | `DEFAULT_VALUE` | SINT     | Wert, der zurückgegeben wird, wenn der Schlüssel in der INI‑Datei nicht vorhanden ist. |

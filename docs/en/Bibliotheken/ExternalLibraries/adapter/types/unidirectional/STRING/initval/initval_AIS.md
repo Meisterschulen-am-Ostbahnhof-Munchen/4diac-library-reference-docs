@@ -2,6 +2,8 @@
 
 ![initval_AIS](initval_AIS.svg)
 
+![initval_AIS_network](./initval_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

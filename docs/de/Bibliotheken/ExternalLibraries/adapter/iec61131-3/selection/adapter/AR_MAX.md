@@ -1,5 +1,9 @@
 # AR_MAX
 
+![AR_MAX_network](./AR_MAX_network.svg)
+
+![AR_MAX](./AR_MAX.svg)
+
 ## Einleitung
 
 Der Funktionsbaustein `AR_MAX` dient der Ermittlung des Maximalwerts aus zwei analogen Eingangssignalen, die über Adapter (`AR`) übertragen werden. Er vergleicht die Datenwerte der beiden Eingangs-Sockets `IN0` und `IN1` und gibt den größeren der beiden Werte an den Ausgangs-Plug `OUT` weiter.

@@ -2,6 +2,8 @@
 
 ![AUDI_FB_CTUD](./AUDI_FB_CTUD.svg)
 
+![AUDI_FB_CTUD_network](./AUDI_FB_CTUD_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

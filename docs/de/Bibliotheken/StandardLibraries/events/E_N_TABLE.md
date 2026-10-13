@@ -1,5 +1,7 @@
 # E_N_TABLE
 
+![E_N_TABLE_network](./E_N_TABLE_network.svg)
+
 <img width="1139" height="202" alt="E_N_TABLE" src="https://user-images.githubusercontent.com/113907528/204900000-9780540c-1565-4ef7-8669-5ff19940274e.png">
 
 * * * * * * * * * *
@@ -62,7 +64,7 @@ Der `E_N_TABLE` (Event N-Table) ist ein Funktionsbaustein nach IEC 61499, der ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_093b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_093b/)
+- [Uebung_093b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_093b/)
 
 ## Fazit
 

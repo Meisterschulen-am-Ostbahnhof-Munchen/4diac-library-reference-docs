@@ -2,6 +2,8 @@
 
 ![NVS_AUDI](./NVS_AUDI.svg)
 
+![NVS_AUDI_network](./NVS_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AUDI** ermöglicht das Speichern und Laden von **UDINT*
 
 | Name | Typ   | Mitgeführte Daten      | Kommentar                |
 | ---- | ----- | ---------------------- | ------------------------ |
-| INIT | EInit | QI, KEY, DEFAULT_VALUE | Initialisiert den Dienst |
+| INIT | EInit | QI, SETM, KEY, DEFAULT_VALUE | Initialisiert den Dienst |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AUDI** ermöglicht das Speichern und Laden von **UDINT*
 | Name          | Typ    | Kommentar                                      |
 | ------------- | ------ | ---------------------------------------------- |
 | QI            | BOOL   | Ereignis-Eingangs-Qualifikator                 |
+| SETM          | BOOL   | Spiegelung (Mirroring) bei SET aktivieren      |
 | KEY           | STRING | Schlüsselname für den NVS-Zugriff              |
 | DEFAULT_VALUE | UDINT  | Standardwert, falls kein Wert im NVS vorhanden |
 
@@ -46,7 +49,7 @@ Der Funktionsblock **NVS_AUDI** ermöglicht das Speichern und Laden von **UDINT*
 
 ## Funktionsweise
 
-Beim Eintreffen des **INIT**-Ereignisses wird der interne NVS-Baustein initialisiert (übergeben werden QI, KEY und DEFAULT_VALUE). Nach erfolgreicher Initialisierung feuert **INITO** und gleichzeitig wird ein **GET**-Auftrag an den NVS gesendet, um den gespeicherten Wert zu laden. Das Ergebnis des GET-Vorgangs wird über **AUDI_OUT** bereitgestellt (Daten auf D1, Ereignis auf E1).
+Beim Eintreffen des **INIT**-Ereignisses wird der interne NVS-Baustein initialisiert (übergeben werden QI, SETM, KEY und DEFAULT_VALUE). Nach erfolgreicher Initialisierung feuert **INITO** und gleichzeitig wird ein **GET**-Auftrag an den NVS gesendet, um den gespeicherten Wert zu laden. Das Ergebnis des GET-Vorgangs wird über **AUDI_OUT** bereitgestellt (Daten auf D1, Ereignis auf E1).
 
 Wird über den **AUDI_IN**-Adapter ein Ereignis (E1) mit einem Wert (D1) empfangen, so wird ein **SET**-Auftrag an den NVS gesendet, um den Wert unter dem aktuellen KEY zu speichern. Nach dem Speichern feuert **SETO** und das Ergebnis wird ebenfalls über **AUDI_OUT** quittiert.
 

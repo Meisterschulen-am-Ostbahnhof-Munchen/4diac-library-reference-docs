@@ -2,6 +2,8 @@
 
 ![I_TD_TD](./I_TD_TD.svg)
 
+![I_TD_TD_network](./I_TD_TD_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

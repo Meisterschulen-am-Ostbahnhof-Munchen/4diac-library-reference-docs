@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 715.244140625 152.0"
-     width="715.244140625" height="152.0">
+     viewBox="0 0 714.375 152.0"
+     width="714.375" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(315.1572265625, 10)">
+  <g transform="translate(314.6875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 121.318359375 0
-            A 3 3 0 0 1 124.318359375 3
-            L 124.318359375 43.0
-            A 3 3 0 0 1 121.318359375 46.0
-            L 114.318359375 46.0
-            L 114.318359375 86.0
-            L 121.318359375 86.0
-            A 3 3 0 0 1 124.318359375 89.0
-            L 124.318359375 129.0
-            A 3 3 0 0 1 121.318359375 132.0
+            L 121.375 0
+            A 3 3 0 0 1 124.375 3
+            L 124.375 43.0
+            A 3 3 0 0 1 121.375 46.0
+            L 114.375 46.0
+            L 114.375 86.0
+            L 121.375 86.0
+            A 3 3 0 0 1 124.375 89.0
+            L 124.375 129.0
+            A 3 3 0 0 1 121.375 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 89.0
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AE_CYCLE</text>
     
-    <text x="62.1591796875" y="86.0"
+    <text x="62.1875" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -108,20 +108,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 112.818359375 117.0
-            L 115.318359375 117.0
-            L 115.318359375 118.66666666666667
-            L 117.818359375 118.66666666666667
-            L 117.818359375 117.0
-            L 122.818359375 117.0
-            L 122.818359375 127.0
-            L 117.818359375 127.0
-            L 117.818359375 125.33333333333333
-            L 115.318359375 125.33333333333333
-            L 115.318359375 127.0
-            L 112.818359375 127.0
+    <path d="M 112.875 117.0
+            L 115.375 117.0
+            L 115.375 118.66666666666667
+            L 117.875 118.66666666666667
+            L 117.875 117.0
+            L 122.875 117.0
+            L 122.875 127.0
+            L 117.875 127.0
+            L 117.875 125.33333333333333
+            L 115.375 125.33333333333333
+            L 115.375 127.0
+            L 112.875 127.0
             Z" fill="#845DAF"/>
-    <text x="109.818359375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="109.875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -154,7 +154,7 @@
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">cycle time – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
 
-    <text x="149.318359375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="149.375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AE</tspan> – Periodically triggered output event</text>
   </g>
 </svg>

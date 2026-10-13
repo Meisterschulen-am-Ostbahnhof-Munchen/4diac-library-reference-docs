@@ -2,6 +2,8 @@
 
 ![ALI_D_FF_TMIN](./ALI_D_FF_TMIN.svg)
 
+![ALI_D_FF_TMIN_network](./ALI_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 The function block **ALI_D_FF_TMIN** implements a data storage (D flip-flop) with an adapter-based input and output and a configurable minimum dwell time between output events. It serves to accept an incoming data value on a rising edge at the input and release it after a minimum time to avoid cyclical conditions or timing issues in communication.
 

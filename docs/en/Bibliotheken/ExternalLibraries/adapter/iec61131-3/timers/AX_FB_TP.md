@@ -1,5 +1,7 @@
 # AX_FB_TP
 
+![AX_FB_TP_network](./AX_FB_TP_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -17,7 +19,7 @@ AX_FB_TP is a standardized timer function block according to IEC 61131-3 that ge
 
 ### **Event Outputs**
 
-- No direct event outputs available
+- **CNF** (Event): Execution Confirmation (with ET)
 
 ### **Data Inputs**
 
@@ -69,7 +71,7 @@ Compared to [AX_PULSE](../../events/unidirectional/BOOL/timers/AX_PULSE.md), AX_
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020f2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f2_AX/)
+- [Exercise_020f2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020f2_AX/)
 
 ## Conclusion
 

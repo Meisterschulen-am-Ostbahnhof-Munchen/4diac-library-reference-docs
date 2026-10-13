@@ -25,7 +25,7 @@ Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleit
 
 | Ereignis | Typ | Kommentar |
 |----------|-----|-----------|
-| `CNF` | Event | Bestätigung für den `REQ`‑Aufruf. |
+| `CNF` | Event | Bestätigung für den `REQ`‑Aufruf (mit `ET`, `REST`). |
 | `STARTO` | Event | Wird bei erfolgreichem Start ausgegeben. |
 | `STOPO` | Event | Wird bei erfolgreichem Stopp ausgegeben. |
 | `EO` | Event | Verzögertes Ereignis; wird ausgelöst, wenn die Verzögerungszeit abgelaufen ist. |
@@ -41,8 +41,9 @@ Der Funktionsblock **E_FB_DELAY** realisiert eine verzögerte Ereignisweiterleit
 | Variable | Typ | Kommentar |
 |----------|-----|-----------|
 | `Q` | BOOL | Zeigt an, ob der Timer aktiv ist (`TRUE` = gestartet). |
-| `PT` | TIME | Prozesszeit (hier statisch, wird nicht modifiziert). |
+| `PT` | TIME | Vorgabezeit (SOLL); wird bei `START` auf `DT` gesetzt. |
 | `ET` | TIME | Abgelaufene Zeit seit dem letzten Start. |
+| `REST` | TIME | Restzeit = `PT` - `ET`. |
 
 ### **Adapter**
 
@@ -63,7 +64,7 @@ Nach einem `START` kann nur ein einziger `EO`‑Ausgang ausgelöst werden. Erst 
 - **Zeitbasis**: Verwendet `NOW_MONOTONIC()` – eine monotone Uhr, die unabhängig von Systemzeit‑Anpassungen ist.
 - **Keine eigene Zeitbasis**: Der FB besitzt keinen eigenen Timer‑Interrupt, sondern muss über das `REQ`‑Ereignis zyklisch aufgerufen werden. Dadurch ist die Aktualität von `ET` abhängig von der Aufruffrequenz.
 - **Verzögerungsauslösung** erfolgt über die Bedingung `[ET >= DT]` im ECC. Da nach der Auslösung von `EO` `ET` auf 0 gesetzt wird, kann ein späteres `REQ` nicht erneut ein `EO` auslösen, solange kein neuer `START` erfolgt.
-- **`PT`** wird als Ausgang geführt, jedoch nie verändert – sie kann zur Dokumentation oder Weiterverarbeitung verwendet werden.
+- **`PT`** wird bei `START` auf `DT` gesetzt (Vorgabezeit); `REST` wird bei `START` auf `PT` gesetzt, bei `REQ` als `PT - ET` nachgeführt und bei `STOP`/`EO` auf 0 zurückgesetzt.
 
 ## Zustandsübersicht
 

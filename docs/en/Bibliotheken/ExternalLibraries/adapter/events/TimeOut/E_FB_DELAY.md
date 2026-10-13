@@ -33,8 +33,9 @@ The **E_FB_DELAY** function block is a basic IEC 61499 FB designed to propagate 
 ### **Data Outputs**
 
 - **Q** (`BOOL`): Output indicating that the timer is currently armed (`TRUE` when the delay is in progress, `FALSE` otherwise).
-- **PT** (`TIME`): Process time. Represents the total delay time configured (i.e., the value of `DT`). It is provided as an output for informational purposes.
+- **PT** (`TIME`): Preset time (SOLL). Set to `DT` at `START`. It is provided as an output for informational purposes.
 - **ET** (`TIME`): Elapsed time. Shows how much time has passed since the timer was started. This value is only updated when the `REQ` event is triggered while the timer is armed.
+- **REST** (`TIME`): Remaining time = `PT` - `ET`. Set to `PT` at `START`, tracked on `REQ`, and reset to zero on `STOP`/`EO`.
 
 ### **Adapters**
 

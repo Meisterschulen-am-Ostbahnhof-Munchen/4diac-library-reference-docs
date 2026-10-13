@@ -2,6 +2,8 @@
 
 ![ASR_TO_ASR2](ASR_TO_ASR2.svg)
 
+![ASR_TO_ASR2_network](./ASR_TO_ASR2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

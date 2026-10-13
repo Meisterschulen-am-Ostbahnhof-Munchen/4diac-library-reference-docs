@@ -2,6 +2,8 @@
 
 ![AULI_FB_CTU](./AULI_FB_CTU.svg)
 
+![AULI_FB_CTU_network](./AULI_FB_CTU_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

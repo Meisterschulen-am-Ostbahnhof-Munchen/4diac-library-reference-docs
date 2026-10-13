@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 268.6728515625 132.0"
-     width="268.6728515625" height="132.0">
+     viewBox="0 0 268.625 132.0"
+     width="268.625" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(99.96875, 10)">
+  <g transform="translate(99.9375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 130.7041015625 0
-            A 3 3 0 0 1 133.7041015625 3
-            L 133.7041015625 23.0
-            A 3 3 0 0 1 130.7041015625 26.0
-            L 123.7041015625 26.0
-            L 123.7041015625 66.0
-            L 130.7041015625 66.0
-            A 3 3 0 0 1 133.7041015625 69.0
-            L 133.7041015625 109.0
-            A 3 3 0 0 1 130.7041015625 112.0
+            L 130.6875 0
+            A 3 3 0 0 1 133.6875 3
+            L 133.6875 23.0
+            A 3 3 0 0 1 130.6875 26.0
+            L 123.6875 26.0
+            L 123.6875 66.0
+            L 130.6875 66.0
+            A 3 3 0 0 1 133.6875 69.0
+            L 133.6875 109.0
+            A 3 3 0 0 1 130.6875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_RTimeOut</text>
     
-    <text x="66.85205078125" y="66.0"
+    <text x="66.84375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 

@@ -2,6 +2,8 @@
 
 ![SPLIT_SIGNED_INT](./SPLIT_SIGNED_INT.svg)
 
+![SPLIT_SIGNED_INT_ecc](./SPLIT_SIGNED_INT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![AX_T_FF_SR_SYM_INIT](./AX_T_FF_SR_SYM_INIT.svg)
 
+![AX_T_FF_SR_SYM_INIT_ecc](./AX_T_FF_SR_SYM_INIT_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

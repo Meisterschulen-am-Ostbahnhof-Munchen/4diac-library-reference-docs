@@ -20,20 +20,22 @@ Der NVS-Funktionsblock (Non-Volatile Storage) ermöglicht das persistente Speich
 
 -   **INITO**: Bestätigt die Ausführung der Initialisierung (INIT) und liefert das Ergebnis.
 -   **SETO**: Bestätigt die Ausführung des Schreibvorgangs (SET) und liefert den Status.
+-   **SETOE**: Bestätigung von SET im Fehlerfall (siehe `STATUS`); führt `QO` und `STATUS` mit.
 -   **GETO**: Bestätigt die Ausführung des Lesevorgangs (GET) und liefert den gelesenen Wert.
+-   **GETOE**: Bestätigung von GET im Fehlerfall (siehe `STATUS`); führt `QO` und `STATUS` mit.
 
 ### **Daten-Eingänge**
 
 -   **QI** (BOOL): Qualifiziert den INIT-Ereigniseingang. Bei `TRUE` wird der Dienst aktiviert, bei `FALSE` deaktiviert.
 -   **KEY** (STRING): Der eindeutige Schlüsselname, unter dem der Wert im NVS gespeichert oder von dem er gelesen wird. Dieser Wert muss während der INIT-Phase gesetzt sein.
--   **VALUE** (ANY_ELEMENTARY): Der zu speichernde Datensatz. Kann einen beliebigen elementaren Datentyp (z.B. BOOL, INT, REAL, STRING) annehmen.
--   **DEFAULT_VALUE** (ANY_ELEMENTARY): Der Standardwert, der bei einem Lesevorgang (INIT oder GET) zurückgegeben wird, wenn unter dem angegebenen Schlüssel noch kein Wert im NVS gespeichert ist.
+-   **VALUE** (ANY): Der zu speichernde Datensatz. Kann einen beliebigen elementaren Datentyp (z.B. BOOL, INT, REAL, STRING) annehmen.
+-   **DEFAULT_VALUE** (ANY): Der Standardwert, der bei einem Lesevorgang (INIT oder GET) zurückgegeben wird, wenn unter dem angegebenen Schlüssel noch kein Wert im NVS gespeichert ist.
 
 ### **Daten-Ausgänge**
 
 -   **QO** (BOOL): Gibt den aktuellen Betriebszustand des Funktionsblocks wider (`TRUE` = bereit/erfolgreich, `FALSE` = nicht bereit/Fehler).
 -   **STATUS** (STRING): Enthält eine Statusmeldung, die den Erfolg oder die Art eines Fehlers bei der letzten Operation beschreibt (z.B. "OK", "Key not found", "Storage full").
--   **VALUEO** (ANY_ELEMENTARY): Der tatsächlich gelesene Wert aus dem NVS oder, falls kein Wert vorhanden war, der `DEFAULT_VALUE`.
+-   **VALUEO** (ANY): Der tatsächlich gelesene Wert aus dem NVS oder, falls kein Wert vorhanden war, der `DEFAULT_VALUE`.
 
 ### **Adapter**
 
@@ -53,7 +55,7 @@ Die Datentypen der Ein- und Ausgänge `VALUE`, `DEFAULT_VALUE` und `VALUEO` müs
 ## Technische Besonderheiten
 
 -   **ESP32-spezifisch**: Dieser Block nutzt direkt die NVS-API des ESP32-IDF und ist daher nur auf ESP32-basierten Zieltplattformen lauffähig.
--   **Typflexibilität**: Die Verwendung des generischen Datentyps `ANY_ELEMENTARY` erlaubt es, verschiedene elementare Datentypen zu speichern. Der konkrete Typ wird bei der ersten Verwendung (INIT) festgelegt und muss bei allen folgenden Operationen beibehalten werden.
+-   **Typflexibilität**: Die Verwendung des generischen Datentyps `ANY` erlaubt es, verschiedene elementare Datentypen zu speichern. Der konkrete Typ wird bei der ersten Verwendung (INIT) festgelegt und muss bei allen folgenden Operationen beibehalten werden.
 -   **Persistenz**: Daten im NVS überleben einen Neustart des Mikrocontrollers und bleiben auch nach einem Stromausfall erhalten (je nach Konfiguration des NVS-Speichers).
 
 ## Zustandsübersicht
@@ -78,9 +80,9 @@ Die Datentypen der Ein- und Ausgänge `VALUE`, `DEFAULT_VALUE` und `VALUEO` müs
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
-- [Uebung_012a_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012a_sub/)
-- [Uebung_020c2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2_sub/)
+- [Uebung_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
+- [NumericValue_ID_TO_NVS](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/de/latest/Bibliotheken/ExternalLibraries/MyLib_B/sys/NumericValue_ID_TO_NVS/)
+- [Uebung_020c2_sub](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020c2_sub/)
 
 ## Fazit
 

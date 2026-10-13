@@ -24,7 +24,9 @@ The **INI** function block is used for the secure reading and writing of configu
 | ----- | ----- | --------------------------- |
 | INITO | EInit | Initialization Confirmation |
 | SETO  | Event | Write Confirmation          |
+| SETOE | Event | Confirmation of SET in error case (see `STATUS`) |
 | GETO  | Event | Read Confirmation           |
+| GETOE | Event | Confirmation of GET in error case (see `STATUS`) |
 
 ### **Data Inputs**
 

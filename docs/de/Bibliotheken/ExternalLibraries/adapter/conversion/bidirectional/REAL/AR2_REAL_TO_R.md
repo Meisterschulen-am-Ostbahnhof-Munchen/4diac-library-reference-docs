@@ -2,6 +2,8 @@
 
 ![AR2_REAL_TO_R](./AR2_REAL_TO_R.svg)
 
+![AR2_REAL_TO_R_network](./AR2_REAL_TO_R_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

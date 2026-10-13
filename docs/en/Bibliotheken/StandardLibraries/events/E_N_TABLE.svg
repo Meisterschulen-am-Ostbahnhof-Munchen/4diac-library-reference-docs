@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 368.9697265625 192.0"
-     width="368.9697265625" height="192.0">
+     viewBox="0 0 368.875 192.0"
+     width="368.875" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(168.1298828125, 10)">
+  <g transform="translate(168.125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 128.5029296875 0
-            A 3 3 0 0 1 131.5029296875 3
-            L 131.5029296875 83.0
-            A 3 3 0 0 1 128.5029296875 86.0
-            L 121.5029296875 86.0
-            L 121.5029296875 126.0
-            L 128.5029296875 126.0
-            A 3 3 0 0 1 131.5029296875 129.0
-            L 131.5029296875 169.0
-            A 3 3 0 0 1 128.5029296875 172.0
+            L 128.4375 0
+            A 3 3 0 0 1 131.4375 3
+            L 131.4375 83.0
+            A 3 3 0 0 1 128.4375 86.0
+            L 121.4375 86.0
+            L 121.4375 126.0
+            L 128.4375 126.0
+            A 3 3 0 0 1 131.4375 129.0
+            L 131.4375 169.0
+            A 3 3 0 0 1 128.4375 172.0
             L 3 172.0
             A 3 3 0 0 1 0 169.0
             L 0 129.0
@@ -66,20 +66,20 @@
     <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">STOP</text>
 
-    <polygon points="125.0029296875,11.0 130.0029296875,16.0 125.0029296875,21.0" fill="#63B31F"/>
-    <text x="122.0029296875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="124.9375,11.0 129.9375,16.0 124.9375,21.0" fill="#63B31F"/>
+    <text x="121.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO0</text>
 
-    <polygon points="125.0029296875,31.0 130.0029296875,36.0 125.0029296875,41.0" fill="#63B31F"/>
-    <text x="122.0029296875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="124.9375,31.0 129.9375,36.0 124.9375,41.0" fill="#63B31F"/>
+    <text x="121.9375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO1</text>
 
-    <polygon points="125.0029296875,51.0 130.0029296875,56.0 125.0029296875,61.0" fill="#63B31F"/>
-    <text x="122.0029296875" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="124.9375,51.0 129.9375,56.0 124.9375,61.0" fill="#63B31F"/>
+    <text x="121.9375" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO2</text>
 
-    <polygon points="125.0029296875,71.0 130.0029296875,76.0 125.0029296875,81.0" fill="#63B31F"/>
-    <text x="122.0029296875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="124.9375,71.0 129.9375,76.0 124.9375,81.0" fill="#63B31F"/>
+    <text x="121.9375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO3</text>
 
     <!-- Name Section -->
@@ -112,7 +112,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_N_TABLE</text>
     
-    <text x="65.75146484375" y="126.0"
+    <text x="65.71875" y="126.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0.1</text>
 
@@ -163,16 +163,16 @@
     <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="156.5029296875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="156.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="156.5029296875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="156.4375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="156.5029296875" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="156.4375" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="156.5029296875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="156.4375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

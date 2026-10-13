@@ -1,5 +1,7 @@
 # ALI_LI_TO_LINT
 
+![ALI_LI_TO_LINT_network](./ALI_LI_TO_LINT_network.svg)
+
 ## Einleitung
 
 Der ALI_LI_TO_LINT Funktionsblock ist ein Composite-Funktionsblock, der zur Konvertierung des ALI-Adapterformats in einen LINT-Wert dient.

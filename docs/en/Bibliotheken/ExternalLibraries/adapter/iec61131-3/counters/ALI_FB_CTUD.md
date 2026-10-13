@@ -2,6 +2,8 @@
 
 ![ALI_FB_CTUD](./ALI_FB_CTUD.svg)
 
+![ALI_FB_CTUD_network](./ALI_FB_CTUD_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

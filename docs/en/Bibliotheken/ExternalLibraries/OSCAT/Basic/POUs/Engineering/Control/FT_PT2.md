@@ -10,7 +10,7 @@
 
 | Name | Comment                  | With         |
 | :--- | :----------------------- | :----------- |
-| INIT | InitRequest              | in, TM, D, K |
+| EINIT | Init Request             | in, TM, D, K |
 | REQ  | Normal Execution Request | in, TM, D, K |
 | RST  | Reset filters            |              |
 

@@ -2,6 +2,8 @@
 
 ![AE_CLIENT_0](AE_CLIENT_0.svg)
 
+![AE_CLIENT_0_network](./AE_CLIENT_0_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

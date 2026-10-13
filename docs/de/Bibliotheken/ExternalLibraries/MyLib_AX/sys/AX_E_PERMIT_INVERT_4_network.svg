@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,8 @@
   <rect x="-86.8" y="-144.0" width="1192.1" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-86.8" y="-144.0" width="1192.1" height="25.0" fill="white" stroke="none"/>
   <line x1="-86.8" y1="-119.5" x2="1105.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-81.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">4-Kanal Invertiertes Event-Freigabe-Gate mit Adapter (AX_NOT_INIT + AX_E_PERMIT_4)</text>
+  <text x="-81.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">4-Kanal Invertiertes Event-Freigabe-Gate mit Adapter (AX_NOT_INIT +
+AX_E_PERMIT_4)</text>
   <g id="sidebars">
     <rect x="-86.8" y="-119.0" width="51.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-35.0" y1="-119.0" x2="-35.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>

@@ -17,8 +17,8 @@ The block enables the precise monitoring of vehicle movements and operating cond
 ### **Event Outputs**
 
 - `INITO`: Initialization Confirmation (with status)
-- `IND`: Data Indication with Motion and State Parameters
-- `TIMEOUT`: Timeout Event
+- `IND`: Data Indication with Motion and State Parameters (incl. `timestamp_data`, `Q_timeout`); fires on every cycle without an active timeout and thereby also publishes the reset of `Q_timeout` to `FALSE`
+- `TIMEOUT`: Timeout Event (with `timestamp_timeout`, `STATUS`, `Q_timeout`); fires only when a timeout actually occurs (entry trigger). The reset of `Q_timeout` to `FALSE` is not reported here but via `IND`
 
 ### **Data Inputs**
 
@@ -30,6 +30,9 @@ The block enables the precise monitoring of vehicle movements and operating cond
 | |-----------|-----|-----|-----|------------|----------|-------------|
 | `QO` | BOOL | - | 1 | - | TRUE/FALSE | Event Qualifier |
 | `STATUS` | STRING | - | - | - | - | System Status Message |
+| `Q_timeout` | BOOL | - | - | - | TRUE/FALSE | Timeout flag (`TRUE` while a timeout is active) |
+| `timestamp_timeout` | DINT | - | - | - | - | Timestamp of the timeout (with `TIMEOUT`) |
+| `timestamp_data` | DINT | - | - | - | - | Timestamp of the data (with `IND`) |
 | `WHEELBASEDMACHINESPEED` | UINT | 1862 | 16 | 0.001 m/s/bit | 0-65.535 m/s | Wheel-Based Speed |
 | `WHEELBASEDMACHINEDISTANCE` | UDINT | 1863 | 32 | 0.001 m/bit | 0-4,294,967 km | Distance traveled |
 | `MAXI_TIMEOFTRACPOWER` | USINT | 1866 | 8 | 1 min/bit | 0-255 min | Maximum operating time |
@@ -102,13 +105,13 @@ The block enables the precise monitoring of vehicle movements and operating cond
 
 ## 🛠️ Related exercises
 
-- [Uebung_070](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_070/)
-- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
-- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
-- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
-- [Uebung_072](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072/)
-- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_070](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_070/)
+- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
+- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
+- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
+- [Uebung_072](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072/)
+- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 

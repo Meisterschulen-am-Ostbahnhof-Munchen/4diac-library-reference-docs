@@ -1,5 +1,7 @@
 # AW_WORD_TO_W
 
+![AW_WORD_TO_W_network](./AW_WORD_TO_W_network.svg)
+
 ## Einleitung
 
 Der AW_WORD_TO_W Funktionsblock ist ein Composite-Funktionsblock, der zur Konvertierung eines WORD-Werts in das AW-Adapterformat dient.

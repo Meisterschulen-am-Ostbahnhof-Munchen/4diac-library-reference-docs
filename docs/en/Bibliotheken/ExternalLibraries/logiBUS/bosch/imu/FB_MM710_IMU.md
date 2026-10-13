@@ -15,15 +15,14 @@ The function block **FB_MM710_IMU** is a service-oriented module (SIFB) for conn
 | Event | Type  | Description                                                                                                                 |
 | ----- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
 | INIT  | EInit | Initialization of the module. This event sets the CAN parameters (index, source address) and the activation qualifier QI.   |
-| REQ   | Event | Triggers a new measurement query. After successful initialization, sensor data can be requested cyclically or event-driven. |
 
 ### **Event Outputs**
 
 | Event | Type  | Description                                                                                     |
 | ----- | ----- | ----------------------------------------------------------------------------------------------- |
 | INITO | EInit | Confirmation of successful initialization (QO = TRUE) or error message.                         |
-| CNF   | Event | Confirmation of a measurement request. Provides the current sensor data and status information. |
-| ERROR | Event | Occurs in case of communication or CRC errors. Contains detailed error information.             |
+| IND   | Event | Indication from the resource: fires on every cycle without an active error and also publishes the reset of `bCommError`/`bCRCError` to FALSE. Provides QO, STATUS, all measurement and status values (`rAcc*`, `rRate*`, `rRoll`, `rPitch`, `rYaw`, `rTempRateZ`, `uiHW_Index`, `eStatus*`, `bAllSignalsReady`, `uiSysStatus`, `uiSysStatus5`, `uiSysDiag`, `uiMessageCounter`). |
+| ERROR | Event | Fires only when an error actually occurs (entry trigger); provides QO, STATUS, `bCommError`, `bCRCError`, and `sErrorMsg`. The reset of `bCommError`/`bCRCError` to FALSE is not reported here but via IND. |
 
 ### **Data Inputs**
 
@@ -45,8 +44,8 @@ The function block **FB_MM710_IMU** is a service-oriented module (SIFB) for conn
 | rRoll, rPitch, rYaw | REAL | Tilt angle (roll, pitch, yaw) [deg]. |
 | rTempRateZ | REAL | Sensor temperature [°C]. |
 | uiHW_Index | UINT | Hardware Index (0 = MM5.10, 1 = MM7.10). |
-| eStatusAccX … eStatusAccZ | BYTE | Acceleration signal quality (0 = ready, 1..7 = error). |
-| eStatusRateX … eStatusRateZ | BYTE | Rotation rate signal quality (0 = ready, 1..7 = error). |
+| eStatusAccX … eStatusAccZ | BYTE | Acceleration signal quality (individually `eStatusAccX`, `eStatusAccY`, `eStatusAccZ`; 0 = ready, 1..7 = error). |
+| eStatusRateX … eStatusRateZ | BYTE | Rotation rate signal quality (individually `eStatusRateX`, `eStatusRateY`, `eStatusRateZ`; 0 = ready, 1..7 = error). |
 | bAllSignalsReady | BOOL | TRUE if all signal statuses are 0. |
 | uiSysStatus | BYTE | System status from TX message 1. |
 | uiSysStatus5 | BYTE | System status from TX message 2. |
@@ -62,7 +61,7 @@ No adapters defined.
 
 ## Functionality
 
-Upon receiving **INIT** with QI = TRUE, the FB_MM710_IMU initializes the CAN communication and the internal receive buffer. After successful initialization, **INITO** is set with QO = TRUE. Each **REQ pulse** triggers a measurement query – the function block then waits for the CAN response from the sensor. If valid data is received, **CNF** is output and all data outputs are updated. If a communication or CRC error occurs, or if the message counter exceeds a timeout, **ERROR** is set instead. The module can be triggered cyclically multiple times in succession using REQ.
+Upon receiving **INIT** with QI = TRUE, the FB_MM710_IMU initializes the CAN communication and the internal receive buffer. After successful initialization, **INITO** is set with QO = TRUE. The block has no request input: once valid data is received from the sensor, **IND** is output on every cycle without an active error and all data outputs are updated. If a communication or CRC error occurs, or if the message counter exceeds a timeout, **ERROR** is set.
 
 The signal statuses (eStatus*) enable individual fault analysis for each axis. The hardware index distinguishes between older MM5.10 and current MM7.10 sensors.
 
@@ -80,10 +79,9 @@ The module goes through the following states (not explicitly as ECC, but inferab
 
 1. **Inactive** – After startup, waiting for INIT.
 2. **Initializing** – After an INIT event; establishing CAN communication.
-3. **Ready** – After successful INITO; waiting for REQ.
-4. **Request Sent** – After REQ; waiting for a response (CAN message).
-5. **Data Received** – After a successful CAN response; CNF is sent.
-6. **Error** – In case of timeout or CRC error; ERROR is sent (fallback to Ready after error handling).
+3. **Ready** – After successful INITO; waiting for sensor messages.
+4. **Data Received** – After a successful CAN message; IND is sent.
+5. **Error** – In case of timeout or CRC error; ERROR is sent (fallback to Ready after error handling).
 
 ## Application Scenarios
 
@@ -98,4 +96,4 @@ Compared to simple IMU drivers (e.g., via SPI/I²C), this function block offers 
 
 ## Conclusion
 
-The FB_MM710_IMU is a powerful module for the reliable acquisition of IMU data in CAN-based automation systems. Its comprehensive status and error information supports complete diagnostics, and its simple parameterization via INIT and REQ makes it highly versatile. It is an ideal choice, especially in safety-critical applications using J1939.
+The FB_MM710_IMU is a powerful module for the reliable acquisition of IMU data in CAN-based automation systems. Its comprehensive status and error information supports complete diagnostics, and its simple parameterization via INIT makes it highly versatile. It is an ideal choice, especially in safety-critical applications using J1939.

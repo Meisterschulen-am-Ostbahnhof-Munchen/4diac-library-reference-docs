@@ -2,6 +2,8 @@
 
 ![ATM_NE](./ATM_NE.svg)
 
+![ATM_NE_network](./ATM_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

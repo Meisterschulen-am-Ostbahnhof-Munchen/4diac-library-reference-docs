@@ -2,6 +2,8 @@
 
 ![initval_AW](initval_AW.svg)
 
+![initval_AW_network](./initval_AW_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

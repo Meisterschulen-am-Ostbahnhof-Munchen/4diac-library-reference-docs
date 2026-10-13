@@ -1,7 +1,5 @@
 # storageStatusMessages
 
-![storageStatusMessages](./storageStatusMessages.sv
-
 * * * * * * * * * *
 
 ## Einleitung

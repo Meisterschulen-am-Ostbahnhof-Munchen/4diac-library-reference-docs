@@ -2,6 +2,8 @@
 
 ![INI_AIS](./INI_AIS.svg)
 
+![INI_AIS_network](./INI_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -27,6 +29,7 @@ Der Funktionsblock **INI_AIS** dient zum Laden und Speichern von Zeichenketten (
 | Name          | Typ    | Beschreibung                                    |
 | ------------- | ------ | ----------------------------------------------- |
 | QI            | BOOL   | Qualifikator für den Ereigniseingang            |
+| SETM            | BOOL   | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | SECTION       | STRING | Name des Abschnitts in der Konfigurationsdatei  |
 | KEY           | STRING | Name des Schlüssels im angegebenen Abschnitt    |
 | DEFAULT_VALUE | STRING | Standardwert, falls der Eintrag nicht existiert |
@@ -50,7 +53,7 @@ Der Funktionsblock **INI_AIS** dient zum Laden und Speichern von Zeichenketten (
 Der Baustein enthält intern eine Instanz des Funktionsblocks `INI` (aus der Bibliothek `eclipse4diac::storage`). Die Abläufe sind wie folgt:
 
 1. **Initialisierung (INIT)**
-   - Die Daten `QI`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den internen INI-Baustein weitergeleitet.
+   - Die Daten `QI`, `SETM`, `SECTION`, `KEY` und `DEFAULT_VALUE` werden an den internen INI-Baustein weitergeleitet.
    - Der INIT-Ereignisimpuls startet den INI-Baustein.
    - Nach Abschluss liefert INI das Ereignis `INITO` zurück, das nach außen als `INITO` des INI_AIS ausgegeben wird. Gleichzeitig werden die Ausgänge `QO` und `STATUS` übernommen.
    - Unmittelbar nach der Initialisierung wird im INI-Baustein automatisch der `GET`-Dienst ausgelöst, um den Wert aus der `settings.ini` zu lesen.

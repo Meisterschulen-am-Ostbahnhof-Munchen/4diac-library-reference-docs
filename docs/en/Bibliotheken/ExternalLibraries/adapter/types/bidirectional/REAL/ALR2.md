@@ -2,6 +2,14 @@
 
 ![ALR2](ALR2.svg)
 
+**Plug (adapter output)**
+
+![ALR2_plug](./ALR2_plug.svg)
+
+**Socket (adapter input)**
+
+![ALR2_socket](./ALR2_socket.svg)
+
 bidirectional Adapter Interface for 1 Event and 1 LREAL
 
 ## Interface

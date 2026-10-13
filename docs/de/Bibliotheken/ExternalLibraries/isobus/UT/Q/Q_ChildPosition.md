@@ -14,7 +14,7 @@ Der **Q_ChildPosition** ist ein standardkonformer Funktionsbaustein zur absolute
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Objekt- und Parent-ID)
+- `INIT`: Initialisierungsanforderung (mit Objekt-ID, Parent-ID und xScale)
 - `REQ`: Positionsänderungs-Anforderung (mit absoluten Koordinaten)
 
 ### **Ereignis-Ausgänge**
@@ -26,6 +26,7 @@ Der **Q_ChildPosition** ist ein standardkonformer Funktionsbaustein zur absolute
 
 - `u16ObjId` (UINT): Child-Objekt-ID
 - `u16ObjIdParent` (UINT): Parent-Objekt-ID
+- `xScale` (BOOL): Bei TRUE werden die Werte `s16Xposition`/`s16Yposition` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjIdParent` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
 - `s16Xposition` (INT): Absolute X-Position relativ zum Parent
 - `s16Yposition` (INT): Absolute Y-Position relativ zum Parent
 

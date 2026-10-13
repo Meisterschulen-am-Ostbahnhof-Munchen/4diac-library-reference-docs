@@ -2,6 +2,8 @@
 
 ![AUI_LT](./AUI_LT.svg)
 
+![AUI_LT_network](./AUI_LT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

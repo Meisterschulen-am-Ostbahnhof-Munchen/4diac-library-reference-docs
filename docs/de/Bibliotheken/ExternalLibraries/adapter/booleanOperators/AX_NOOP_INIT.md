@@ -2,6 +2,8 @@
 
 ![AX_NOOP_INIT](./AX_NOOP_INIT.svg)
 
+![AX_NOOP_INIT_network](./AX_NOOP_INIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

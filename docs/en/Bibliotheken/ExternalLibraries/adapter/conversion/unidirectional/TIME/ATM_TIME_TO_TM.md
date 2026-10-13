@@ -2,6 +2,8 @@
 
 ![ATM_TIME_TO_TM](ATM_TIME_TO_TM.svg)
 
+![ATM_TIME_TO_TM_network](./ATM_TIME_TO_TM_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

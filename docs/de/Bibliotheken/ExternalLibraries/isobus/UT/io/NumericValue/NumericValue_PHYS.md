@@ -1,5 +1,7 @@
 # NumericValue_PHYS
 
+![NumericValue_PHYS_network](./NumericValue_PHYS_network.svg)
+
 (Bild nicht vorhanden)
 
 ![NumericValue_PHYS](./NumericValue_PHYS.svg)

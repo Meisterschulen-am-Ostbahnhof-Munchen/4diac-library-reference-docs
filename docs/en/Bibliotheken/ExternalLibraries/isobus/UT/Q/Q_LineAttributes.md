@@ -13,7 +13,7 @@ The **Q_LineAttributes** is a standards-compliant function module for modifying 
 
 ### **Event Inputs**
 
-- `INIT`: Initialization request (with object ID)
+- `INIT`: Initialization request (with object ID and `xScale`)
 - `REQ`: Attribute change request (with new line attributes)
 
 ### **Event Outputs**
@@ -24,6 +24,7 @@ The **Q_LineAttributes** is a standards-compliant function module for modifying 
 ### **Data Inputs**
 
 - `u16ObjId` (UINT): Object ID (16-bit)
+- `xScale` (BOOL, default `FALSE`): `FALSE` = bypass, `u8LineWidth` is sent through unchanged; `TRUE` = scale it by the DM/SKM factor for `u16ObjId`
 - `u8LineColour` (USINT): New line color
 - `u8LineWidth` (USINT): New line width
 - `u16LineArt` (UINT): New line style

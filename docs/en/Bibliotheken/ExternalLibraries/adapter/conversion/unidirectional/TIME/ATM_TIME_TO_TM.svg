@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 535.869140625 132.0"
-     width="535.869140625" height="132.0">
+     viewBox="0 0 535.1875 132.0"
+     width="535.1875" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(202.029296875, 10)">
+  <g transform="translate(201.8125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 162.498046875 0
-            A 3 3 0 0 1 165.498046875 3
-            L 165.498046875 23.0
-            A 3 3 0 0 1 162.498046875 26.0
-            L 155.498046875 26.0
-            L 155.498046875 66.0
-            L 162.498046875 66.0
-            A 3 3 0 0 1 165.498046875 69.0
-            L 165.498046875 109.0
-            A 3 3 0 0 1 162.498046875 112.0
+            L 162.25 0
+            A 3 3 0 0 1 165.25 3
+            L 165.25 23.0
+            A 3 3 0 0 1 162.25 26.0
+            L 155.25 26.0
+            L 155.25 66.0
+            L 162.25 66.0
+            A 3 3 0 0 1 165.25 69.0
+            L 165.25 109.0
+            A 3 3 0 0 1 162.25 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -92,7 +92,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ATM_TIME_TO_TM</text>
     
-    <text x="82.7490234375" y="66.0"
+    <text x="82.625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -104,20 +104,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 153.998046875 97.0
-            L 156.498046875 97.0
-            L 156.498046875 98.66666666666667
-            L 158.998046875 98.66666666666667
-            L 158.998046875 97.0
-            L 163.998046875 97.0
-            L 163.998046875 107.0
-            L 158.998046875 107.0
-            L 158.998046875 105.33333333333333
-            L 156.498046875 105.33333333333333
-            L 156.498046875 107.0
-            L 153.998046875 107.0
+    <path d="M 153.75 97.0
+            L 156.25 97.0
+            L 156.25 98.66666666666667
+            L 158.75 98.66666666666667
+            L 158.75 97.0
+            L 163.75 97.0
+            L 163.75 107.0
+            L 158.75 107.0
+            L 158.75 105.33333333333333
+            L 156.25 105.33333333333333
+            L 156.25 107.0
+            L 153.75 107.0
             Z" fill="#845DAF"/>
-    <text x="150.998046875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="150.75" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ATM_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -147,7 +147,7 @@
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
 
-    <text x="190.498046875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="190.25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan> – Adapter Output</text>
   </g>
 </svg>

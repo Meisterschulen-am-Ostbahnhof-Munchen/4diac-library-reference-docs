@@ -1,5 +1,7 @@
 # AE_DELAY
 
+![AE_DELAY_network](./AE_DELAY_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,9 +16,7 @@ The function block encapsulates the functionality of an on-delay timer in adapte
 
 ### **Event Inputs**
 
-| Name    | Comment                                           |
-| :------ | :------------------------------------------------ |
-| **REQ** | Used to update the time value at data input `DT`. |
+This function block does not have direct event inputs. All input events are routed via the adapters `START` and `STOP`.
 
 ### **Event Outputs**
 
@@ -24,9 +24,7 @@ This function block does not have direct event outputs at the main level. All ou
 
 ### **Data Inputs**
 
-| Name   | Data Type | Comment                                                                  |
-| :----- | :-------- | :----------------------------------------------------------------------- |
-| **DT** | TIME      | **Delay Time**: The duration by which the input event should be delayed. |
+This function block does not have direct data inputs. The delay time is provided via the adapter `PT`.
 
 ### **Data Outputs**
 
@@ -38,15 +36,16 @@ This function block does not have any data outputs.
 | :-------- | :--------------------------------- | :------------- | :-------------------------------------------------------------------------- |
 | **START** | adapter::types::unidirectional::AE | Socket (Input) | Starts the time delay (internally triggers `START`).                        |
 | **STOP**  | adapter::types::unidirectional::AE | Socket (Input) | Stops/cancels the time delay (internally triggers `STOP`).                  |
-| **EO**    | adapter::types::unidirectional::AE | Plug (Output)  | **Event Output**: Outputs the event after the specified time elapses, `DT`. |
+| **PT**    | adapter::types::unidirectional::ATM | Socket (Input) | **Preset Time**: Delay time (`PT.D1`, TIME). |
+| **EO**    | adapter::types::unidirectional::AE | Plug (Output)  | **Event Output**: Outputs the event after the specified time elapses, `PT`. |
 
 ## Functionality
 
 The **AE_DELAY** block acts as a bridge between the adapter world and the classic `E_DELAY` timer:
 
-1. **Initialization:** The desired delay time is set via the data input `DT`. This can be updated via the event `REQ`.
+1. **Initialization:** The desired delay time is set via the adapter socket `PT` (data value `PT.D1`).
 2. **Starting the Timer:** When an event (usually `E1`) arrives at the adapter socket **START**, it is internally forwarded to the `START` input of the embedded `E_DELAY` block. The timer then starts running.
-3. **Time Expiration:** Once the time `DT` has elapsed, the internal timer generates an event. This is forwarded to the adapter plug **EO** (event `E1`).
+3. **Time Expiration:** Once the time `PT` has elapsed, the internal timer generates an event. This is forwarded to the adapter plug **EO** (event `E1`).
 4. **Stopping:** When an event arrives at the adapter socket **STOP**, the running timer is immediately stopped and reset. No event is generated at output `EO`.
 
 ## Technical Details
@@ -60,8 +59,8 @@ The **AE_DELAY** block acts as a bridge between the adapter world and the classi
 The function block itself does not have an explicit state machine (ECC) because it is a composite network (FB). The behavior is entirely determined by the internal `E_DELAY`:
 
 - **Idle:** Waiting for an event at the `START` adapter.
-- **Timing:** After receiving a signal at `START`, the timer `DT` starts.
-- **Triggered:** After `DT` expires, the signal is sent to `EO`, and the block returns to the idle state.
+- **Timing:** After receiving a signal at `START`, the timer `PT` starts.
+- **Triggered:** After `PT` expires, the signal is sent to `EO`, and the block returns to the idle state.
 - **Reset:** A signal at `STOP` during the *Timing* phase immediately resets the block to the idle state.
 
 ## Application Scenarios

@@ -2,6 +2,8 @@
 
 ![INI_AX](INI_AX.svg)
 
+![INI_AX_network](./INI_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![AUDI_GT](./AUDI_GT.svg)
 
+![AUDI_GT_network](./AUDI_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

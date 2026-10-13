@@ -2,6 +2,8 @@
 
 ![A2X2_2X_TO_BOOL](A2X2_2X_TO_BOOL.svg)
 
+![A2X2_2X_TO_BOOL_network](./A2X2_2X_TO_BOOL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

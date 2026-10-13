@@ -2,6 +2,8 @@
 
 ![AR_EQ](./AR_EQ.svg)
 
+![AR_EQ_network](./AR_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

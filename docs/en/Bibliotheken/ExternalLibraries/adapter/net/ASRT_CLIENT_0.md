@@ -2,6 +2,8 @@
 
 ![ASRT_CLIENT_0](ASRT_CLIENT_0.svg)
 
+![ASRT_CLIENT_0_network](./ASRT_CLIENT_0_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

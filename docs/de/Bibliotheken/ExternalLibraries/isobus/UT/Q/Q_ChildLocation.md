@@ -14,7 +14,7 @@ Der **Q_ChildLocation** ist ein standardkonformer Funktionsbaustein zur Position
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Objekt- und Parent-ID)
+- `INIT`: Initialisierungsanforderung (mit Objekt- und Parent-ID sowie `xScale`)
 - `REQ`: Positionsänderungs-Anforderung (mit relativen Koordinaten)
 
 ### **Ereignis-Ausgänge**
@@ -26,6 +26,7 @@ Der **Q_ChildLocation** ist ein standardkonformer Funktionsbaustein zur Position
 
 - `u16ObjId` (UINT): Child-Objekt-ID
 - `u16ObjIdParent` (UINT): Parent-Objekt-ID
+- `xScale` (BOOL, Standard `FALSE`): `FALSE` = Bypass, `u8Xchange`/`u8Ychange` werden unverändert gesendet; `TRUE` = Skalierung mit dem DM/SKM-Faktor für `u16ObjIdParent`
 - `u8Xchange` (USINT): Relative X-Positionsänderung (-128 bis +127)
 - `u8Ychange` (USINT): Relative Y-Positionsänderung (-128 bis +127)
 

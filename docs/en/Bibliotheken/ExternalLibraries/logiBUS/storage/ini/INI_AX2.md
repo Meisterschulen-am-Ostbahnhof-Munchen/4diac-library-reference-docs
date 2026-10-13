@@ -2,6 +2,8 @@
 
 ![INI_AX2](./INI_AX2.svg)
 
+![INI_AX2_network](./INI_AX2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The INI_AX2 function block is used to read and write real data from a settings.i
 
 | Name | Description                                                                                                   |
 | ---- | ------------------------------------------------------------------------------------------------------------- |
-| INIT | Initialization event to start the read operation. Expects the parameters QI, SECTION, KEY, and DEFAULT_VALUE. |
+| INIT | Initialization event to start the read operation. Expects the parameters QI, SETM, SECTION, KEY, and DEFAULT_VALUE. |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The INI_AX2 function block is used to read and write real data from a settings.i
 | Name          | Type   | Description                                                               |
 | ------------- | ------ | ------------------------------------------------------------------------- |
 | QI            | BOOL   | Input qualifier for controlling processing.                               |
+| SETM | BOOL | Enable mirroring on SET |
 | SECTION       | STRING | Name of the section in the settings.ini file.                             |
 | KEY           | STRING | Name of the key within the section.                                       |
 | DEFAULT_VALUE | BOOL   | Default value read if the key is not present in the file. Default: FALSE. |
@@ -48,7 +51,7 @@ The INI_AX2 function block is used to read and write real data from a settings.i
 
 The INI_AX2 function block contains an internal INI function block (eclipse4diac::storage::INI) that performs the actual file operation. The network connections implement the following processes:
 
-- Upon arrival of INIT, QI, SECTION, KEY, and DEFAULT_VALUE are forwarded to the INI function block.
+- Upon arrival of INIT, QI, SETM, SECTION, KEY, and DEFAULT_VALUE are forwarded to the INI function block.
 - The INI function block performs a read operation and passes the result (via VALUEO) to the adapter output (VAL.DI1).
 - Simultaneously, after a successful read, the GET event is triggered, which activates the adapter input (VAL.EI1) to transmit the value.
 - A write operation is initiated as soon as the adapter sends an EO1 event. This event triggers the SET event on the INI function block, setting the value received via VAL.DO1 as the new VALUE.

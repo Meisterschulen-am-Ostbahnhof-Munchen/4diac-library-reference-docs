@@ -1,5 +1,7 @@
 # A2X_2X_TO_BOOL
 
+![A2X_2X_TO_BOOL_network](./A2X_2X_TO_BOOL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

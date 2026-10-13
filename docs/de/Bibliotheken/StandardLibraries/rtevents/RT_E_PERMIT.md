@@ -8,6 +8,30 @@ Echtzeit-Variante des E_PERMIT Bausteins. Lässt ein Ereignis nur durch, wenn di
 
 ![RT_E_PERMIT](RT_E_PERMIT.svg)
 
+## Schnittstellenstruktur
+
+### **Ereignis-Eingänge**
+
+- **INIT**: Initialisierung, trägt `QI`, `Tmin`, `Deadline` und `WCET`.
+- **EI**: Ereigniseingang, trägt `PERMIT`.
+
+### **Ereignis-Ausgänge**
+
+- **INITO**: Bestätigt die Initialisierung, trägt `QO`.
+- **EO**: Ereignisausgang; trägt keine Daten.
+
+### **Daten-Eingänge**
+
+- **QI** (`BOOL`): Qualifier für die Initialisierung.
+- **PERMIT** (`BOOL`): Freigabebedingung für die Weitergabe des Ereignisses.
+- **Tmin** (`TIME`): Echtzeitparameter (minimaler Abstand).
+- **Deadline** (`TIME`): Echtzeitparameter (Deadline).
+- **WCET** (`TIME`): Echtzeitparameter (maximale Ausführungszeit).
+
+### **Daten-Ausgänge**
+
+- **QO** (`BOOL`): Ausgangsqualifier der Initialisierung.
+
 ## Metadaten
 
 | Attribut    | Wert                             |

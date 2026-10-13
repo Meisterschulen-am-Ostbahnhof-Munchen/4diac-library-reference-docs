@@ -1,5 +1,9 @@
 # AR_MIN
 
+![AR_MIN_network](./AR_MIN_network.svg)
+
+![AR_MIN](./AR_MIN.svg)
+
 ## Einleitung
 
 Der Funktionsbaustein `AR_MIN` dient der Ermittlung des Minimalwerts aus zwei analogen Eingangssignalen, die über Adapter (`AR`) übertragen werden. Er vergleicht die Datenwerte der beiden Eingangs-Sockets `IN0` und `IN1` und gibt den kleineren der beiden Werte an den Ausgangs-Plug `OUT` weiter.

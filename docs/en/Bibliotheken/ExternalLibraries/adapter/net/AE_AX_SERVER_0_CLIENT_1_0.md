@@ -2,6 +2,8 @@
 
 ![AE_AX_SERVER_0_CLIENT_1_0](AE_AX_SERVER_0_CLIENT_1_0.svg)
 
+![AE_AX_SERVER_0_CLIENT_1_0_network](./AE_AX_SERVER_0_CLIENT_1_0_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

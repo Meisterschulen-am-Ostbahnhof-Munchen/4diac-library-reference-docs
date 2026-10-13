@@ -2,6 +2,8 @@
 
 ![ATM_GT](./ATM_GT.svg)
 
+![ATM_GT_network](./ATM_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![AB_NE](./AB_NE.svg)
 
+![AB_NE_network](./AB_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![IA_FHS](./IA_FHS.svg)
 
+![IA_FHS_network](./IA_FHS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

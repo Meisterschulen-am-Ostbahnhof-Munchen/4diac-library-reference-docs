@@ -2,6 +2,8 @@
 
 ![AW_TO_AS](./AW_TO_AS.svg)
 
+![AW_TO_AS_network](./AW_TO_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![StringValue_AIS](./StringValue_AIS.svg)
 
+![StringValue_AIS_network](./StringValue_AIS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

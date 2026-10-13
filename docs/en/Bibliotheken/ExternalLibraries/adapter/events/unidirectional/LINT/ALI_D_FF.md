@@ -2,6 +2,8 @@
 
 ![ALI_D_FF](./ALI_D_FF.svg)
 
+![ALI_D_FF_network](./ALI_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

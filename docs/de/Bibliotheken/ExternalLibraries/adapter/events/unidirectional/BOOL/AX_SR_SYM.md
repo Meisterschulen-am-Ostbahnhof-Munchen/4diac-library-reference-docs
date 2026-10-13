@@ -2,6 +2,8 @@
 
 ![AX_SR_SYM](./AX_SR_SYM.svg)
 
+![AX_SR_SYM_ecc](./AX_SR_SYM_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

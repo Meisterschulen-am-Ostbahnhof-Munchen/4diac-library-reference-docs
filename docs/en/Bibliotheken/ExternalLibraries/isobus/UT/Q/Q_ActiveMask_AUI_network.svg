@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="16.4 -151.0 1204.8 588.0"
+     width="1205" height="588">
+  <style>
+    @font-face {
+      font-family: "TGL 0-17_std";
+      src: local("TGL 0-17_std"), url("../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-17";
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16_std";
+      src: local("TGL 0-16_std"), url("../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL 0-16";
+      src: local("TGL 0-16"), url("../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="16.4" y="-151.0" width="1204.8" height="588.0" fill="white"/>
+  <rect x="23.4" y="-144.0" width="1190.8" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="23.4" y="-144.0" width="1190.8" height="25.0" fill="white" stroke="none"/>
+  <line x1="23.4" y1="-119.5" x2="1214.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="28.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Command change active mask with AUI adapter (UINT)</text>
+  <g id="sidebars">
+    <rect x="23.4" y="-119.0" width="26.2" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="49.7" y1="-119.0" x2="49.7" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1161.7" y="-119.0" width="52.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1161.7" y1="-119.0" x2="1161.7" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+  </g>
+  <g id="connections">
+    <polyline points="49.7,-84.0 240.7,-84.0 245.7,-79.0 245.7,80.5 250.7,85.5 453.8,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,85.5 840.6,85.5 845.6,80.5 845.6,-79.0 850.6,-84.0 1161.7,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,102.5 878.6,102.5 883.6,97.5 883.6,-62.0 888.6,-67.0 1161.7,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="352.3,202.5 395.3,202.5 400.3,197.5 400.3,107.5 405.3,102.5 453.8,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,102.5 750.6,102.5 755.6,107.5 755.6,182.5 760.6,187.5 965.7,187.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,136.5 914.6,136.5 919.6,131.5 919.6,-45.0 924.6,-50.0 1161.7,-50.0" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="352.3,236.5 420.3,236.5 425.3,231.5 425.3,141.5 430.3,136.5 453.8,136.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,153.5 705.6,153.5 710.6,158.5 710.6,216.5 715.6,221.5 965.7,221.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="619.6,170.5 1000.6,170.5 1005.6,165.5 1005.6,-28.0 1010.6,-33.0 1161.7,-33.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g id="interface_ports">
+    <polygon points="44.6875,-89.0 49.6875,-84.0 44.6875,-79.0" fill="#63B31F"/>
+    <text x="43.6875" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">INIT</text>
+    <polygon points="1166.6875,-89.0 1161.6875,-84.0 1166.6875,-79.0" fill="#63B31F"/>
+    <text x="1167.6875" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="1166.6875,-72.0 1161.6875,-67.0 1166.6875,-62.0" fill="#63B31F"/>
+    <text x="1167.6875" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">CNF</text>
+    <polygon points="1166.6875,-55.0 1161.6875,-50.0 1166.6875,-45.0" fill="#BD8663"/>
+    <text x="1167.6875" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">STATUS</text>
+    <polygon points="1166.6875,-38.0 1161.6875,-33.0 1166.6875,-28.0" fill="#18519E"/>
+    <text x="1167.6875" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">s16result</text>
+  </g>
+  <g id="instances">
+    <g id="fb_u16OldMaskId" transform="translate(965.7, 177.0)">
+      <path d="M 3 0
+            L 55.8125 0
+            A 3 3 0 0 1 58.8125 3
+            L 58.8125 18
+            A 3 3 0 0 1 55.8125 21
+            L 49.8125 21
+            L 49.8125 35
+            L 55.8125 35
+            A 3 3 0 0 1 58.8125 38
+            L 58.8125 52
+            A 3 3 0 0 1 55.8125 55
+            L 3 55
+            A 3 3 0 0 1 0 52
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.0" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">A</text>
+      <text x="30.0" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AUI</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">E1</text>
+      <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
+      <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">D1</text>
+
+
+      <!-- Instance Name -->
+      <text x="29.40625" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">u16OldMaskId</text>
+    </g>
+    <g id="fb_u16NewMaskId" transform="translate(293.5, 192.0)">
+      <path d="M 3 0
+            L 55.8125 0
+            A 3 3 0 0 1 58.8125 3
+            L 58.8125 18
+            A 3 3 0 0 1 55.8125 21
+            L 49.8125 21
+            L 49.8125 35
+            L 55.8125 35
+            A 3 3 0 0 1 58.8125 38
+            L 58.8125 52
+            A 3 3 0 0 1 55.8125 55
+            L 3 55
+            A 3 3 0 0 1 0 52
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.0" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">A</text>
+      <text x="30.0" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AUI</text>
+      <polygon points="53.8125,5.5 58.8125,10.5 53.8125,15.5" fill="#63B31F"/>
+      <text x="52.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">E1</text>
+      <polygon points="53.8125,39.5 58.8125,44.5 53.8125,49.5" fill="#18519E"/>
+      <text x="52.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">D1</text>
+
+
+      <!-- Instance Name -->
+      <text x="29.40625" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">u16NewMaskId</text>
+    </g>
+    <g id="fb_Q_ActiveMask" transform="translate(453.8, 75.0)">
+      <path d="M 3 0
+            L 162.75 0
+            A 3 3 0 0 1 165.75 3
+            L 165.75 35
+            A 3 3 0 0 1 162.75 38
+            L 156.75 38
+            L 156.75 52
+            L 162.75 52
+            A 3 3 0 0 1 165.75 55
+            L 165.75 103
+            A 3 3 0 0 1 162.75 106
+            L 3 106
+            A 3 3 0 0 1 0 103
+            L 0 55
+            A 3 3 0 0 1 3 52
+            L 9 52
+            L 9 38
+            L 3 38
+            A 3 3 0 0 1 0 35
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 39.8125 37.0
+            L 53.8125 37.0
+            A 1 1 0 0 1 54.8125 38.0
+            L 54.8125 41.0
+            L 53.3125 41.0
+            L 53.3125 43.666666666666664
+            L 54.8125 43.666666666666664
+            L 54.8125 52.0
+            A 1 1 0 0 1 53.8125 53.0
+            L 39.8125 53.0
+            A 1 1 0 0 1 38.8125 52.0
+            L 38.8125 43.666666666666664
+            L 40.3125 43.666666666666664
+            L 40.3125 41.0
+            L 38.8125 41.0
+            L 38.8125 38.0
+            A 1 1 0 0 1 39.8125 37.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="46.8125" y="49.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">Si</text>
+      <text x="56.8125" y="49.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">Q_ActiveMask</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">INIT</text>
+      <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
+      <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">REQ</text>
+      <polygon points="160.75,5.5 165.75,10.5 160.75,15.5" fill="#63B31F"/>
+      <text x="159.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">INITO</text>
+      <polygon points="160.75,22.5 165.75,27.5 160.75,32.5" fill="#63B31F"/>
+      <text x="159.75" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">CNF</text>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
+      <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">u16NewMaskId</text>
+      <polygon points="160.75,56.5 165.75,61.5 160.75,66.5" fill="#BD8663"/>
+      <text x="159.75" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">STATUS</text>
+      <polygon points="160.75,73.5 165.75,78.5 160.75,83.5" fill="#18519E"/>
+      <text x="159.75" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">u16OldMaskId</text>
+      <polygon points="160.75,90.5 165.75,95.5 160.75,100.5" fill="#18519E"/>
+      <text x="159.75" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">s16result</text>
+
+
+      <!-- Instance Name -->
+      <text x="82.875" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">Q_ActiveMask</text>
+    </g>
+  </g>
+</svg>

@@ -16,6 +16,7 @@ Der Funktionsblock `sequence_T_08` ist ein zeitgesteuerter Sequenzer mit acht Au
 
 -   `START_S1`: Startet die Sequenz. Ein Ereignis an diesem Eingang bewirkt den Übergang vom `START`-Zustand in den ersten aktiven Zustand `State_01`. Es werden alle acht Zeitdaten-Eingänge mitgelesen.
 -   `RESET`: Setzt die Sequenz sofort zurück. Ein Ereignis an diesem Eingang führt von jedem beliebigen Zustand zum `START`-Zustand und deaktiviert alle Ausgänge.
+-   `SET_DT_S1_S2`, `SET_DT_S2_S3`, `SET_DT_S3_S4`, `SET_DT_S4_S5`, `SET_DT_S5_S6`, `SET_DT_S6_S7`, `SET_DT_S7_S8`, `SET_DT_S8_START`: Aktualisieren die jeweils gleichnamige Zeit (`DT_S1_S2` bis `DT_S8_START`) unabhängig von `START_S1`. Befindet sich der FB gerade im zugehörigen Zustand, wird dessen Zeitvorgabe neu ausgeführt (Live-Update des laufenden Timers).
 
 ### **Ereignis-Ausgänge**
 

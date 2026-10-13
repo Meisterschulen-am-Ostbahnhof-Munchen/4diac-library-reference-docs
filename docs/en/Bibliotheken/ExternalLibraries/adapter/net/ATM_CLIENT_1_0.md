@@ -1,5 +1,9 @@
 # ATM_CLIENT_1_0
 
+![ATM_CLIENT_1_0_network](./ATM_CLIENT_1_0_network.svg)
+
+![ATM_CLIENT_1_0](./ATM_CLIENT_1_0.svg)
+
 * * * * * * * * * *
 
 ## Introduction

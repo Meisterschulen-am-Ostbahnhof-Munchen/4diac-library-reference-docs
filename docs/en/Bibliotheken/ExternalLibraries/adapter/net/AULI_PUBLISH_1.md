@@ -2,6 +2,8 @@
 
 ![AULI_PUBLISH_1](./AULI_PUBLISH_1.svg)
 
+![AULI_PUBLISH_1_network](./AULI_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,6 +1,8 @@
 # AI_TO_AUS
 
 ![AI_TO_AUS](./AI_TO_AUS.svg)
+![AI_TO_AUS_network](./AI_TO_AUS_network.svg)
+
 *Image of the function block – not included in the XML, therefore no automatically generated image is available.*
 
 * * * * * * * * * *

@@ -2,6 +2,8 @@
 
 ![AX_TO_ADI](./AX_TO_ADI.svg)
 
+![AX_TO_ADI_network](./AX_TO_ADI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

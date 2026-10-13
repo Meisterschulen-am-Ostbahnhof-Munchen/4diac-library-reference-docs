@@ -2,6 +2,8 @@
 
 ![ADI_EQ](./ADI_EQ.svg)
 
+![ADI_EQ_network](./ADI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

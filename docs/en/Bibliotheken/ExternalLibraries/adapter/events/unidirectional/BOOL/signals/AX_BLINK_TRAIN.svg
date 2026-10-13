@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1187.935546875 192.0"
-     width="1187.935546875" height="192.0">
+     viewBox="0 0 1186.625 192.0"
+     width="1186.625" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(315.1572265625, 10)">
+  <g transform="translate(314.6875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 161.0966796875 0
-            A 3 3 0 0 1 164.0966796875 3
-            L 164.0966796875 43.0
-            A 3 3 0 0 1 161.0966796875 46.0
-            L 154.0966796875 46.0
-            L 154.0966796875 86.0
-            L 161.0966796875 86.0
-            A 3 3 0 0 1 164.0966796875 89.0
-            L 164.0966796875 169.0
-            A 3 3 0 0 1 161.0966796875 172.0
+            L 160.9375 0
+            A 3 3 0 0 1 163.9375 3
+            L 163.9375 43.0
+            A 3 3 0 0 1 160.9375 46.0
+            L 153.9375 46.0
+            L 153.9375 86.0
+            L 160.9375 86.0
+            A 3 3 0 0 1 163.9375 89.0
+            L 163.9375 169.0
+            A 3 3 0 0 1 160.9375 172.0
             L 3 172.0
             A 3 3 0 0 1 0 169.0
             L 0 89.0
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_BLINK_TRAIN</text>
     
-    <text x="82.04833984375" y="86.0"
+    <text x="81.96875" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -116,20 +116,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 152.5966796875 157.0
-            L 155.0966796875 157.0
-            L 155.0966796875 158.66666666666666
-            L 157.5966796875 158.66666666666666
-            L 157.5966796875 157.0
-            L 162.5966796875 157.0
-            L 162.5966796875 167.0
-            L 157.5966796875 167.0
-            L 157.5966796875 165.33333333333334
-            L 155.0966796875 165.33333333333334
-            L 155.0966796875 167.0
-            L 152.5966796875 167.0
+    <path d="M 152.4375 157.0
+            L 154.9375 157.0
+            L 154.9375 158.66666666666666
+            L 157.4375 158.66666666666666
+            L 157.4375 157.0
+            L 162.4375 157.0
+            L 162.4375 167.0
+            L 157.4375 167.0
+            L 157.4375 165.33333333333334
+            L 154.9375 165.33333333333334
+            L 154.9375 167.0
+            L 152.4375 167.0
             Z" fill="#845DAF"/>
-    <text x="149.5966796875" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="149.4375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -186,7 +186,7 @@
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Number of events to generate – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
-    <text x="189.0966796875" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="188.9375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Output value, starts with FALSE and switches between TRUE and FALSE for the given high and low times</text>
   </g>
 </svg>

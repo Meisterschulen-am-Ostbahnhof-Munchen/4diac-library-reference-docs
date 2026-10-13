@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 706.029296875 132.0"
-     width="706.029296875" height="132.0">
+     viewBox="0 0 1119.0625 132.0"
+     width="1119.0625" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(203.2255859375, 10)">
+  <g transform="translate(476.5, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 162.6416015625 0
-            A 3 3 0 0 1 165.6416015625 3
-            L 165.6416015625 23.0
-            A 3 3 0 0 1 162.6416015625 26.0
-            L 155.6416015625 26.0
-            L 155.6416015625 66.0
-            L 162.6416015625 66.0
-            A 3 3 0 0 1 165.6416015625 69.0
-            L 165.6416015625 109.0
-            A 3 3 0 0 1 162.6416015625 112.0
+            L 162.5625 0
+            A 3 3 0 0 1 165.5625 3
+            L 165.5625 23.0
+            A 3 3 0 0 1 162.5625 26.0
+            L 155.5625 26.0
+            L 155.5625 66.0
+            L 162.5625 66.0
+            A 3 3 0 0 1 165.5625 69.0
+            L 165.5625 109.0
+            A 3 3 0 0 1 162.5625 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">CLK</text>
 
-    <polygon points="159.1416015625,11.0 164.1416015625,16.0 159.1416015625,21.0" fill="#63B31F"/>
-    <text x="156.1416015625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="159.0625,11.0 164.0625,16.0 159.0625,21.0" fill="#63B31F"/>
+    <text x="156.0625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_D_FF_ANY_HYS</text>
     
-    <text x="82.82080078125" y="66.0"
+    <text x="82.78125" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -110,8 +110,8 @@
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">HYSTERESIS</text>
 
-    <polygon points="159.1416015625,71.0 164.1416015625,76.0 159.1416015625,81.0" fill="#18519E"/>
-    <text x="156.1416015625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="159.0625,71.0 164.0625,76.0 159.0625,81.0" fill="#18519E"/>
+    <text x="156.0625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Q</text>
 
 
@@ -132,13 +132,13 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="170.6416015625" y="11.0" width="10" height="10"
+    <rect x="170.5625" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="170.6416015625" y="71.0" width="10" height="10"
+    <rect x="170.5625" y="71.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="175.6416015625" y1="16.0" x2="175.6416015625" y2="76.0"
+    <line x1="175.5625" y1="16.0" x2="175.5625" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -152,10 +152,10 @@
     <line x1="0" y1="96.0" x2="-20" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="165.6416015625" y1="16.0" x2="185.6416015625" y2="16.0"
+    <line x1="165.5625" y1="16.0" x2="185.5625" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="165.6416015625" y1="76.0" x2="185.6416015625" y2="76.0"
+    <line x1="165.5625" y1="76.0" x2="185.5625" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -163,16 +163,16 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Clock – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="190.6416015625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="190.5625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Triggered if clock results in a change of Q</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Value to latch – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Value to latch. Must be the same type as Q and HYSTERESIS – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Hysteresis band – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Hysteresis band. Must be the same type as D and Q – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan></text>
 
-    <text x="190.6416015625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan> – Latched value</text>
+    <text x="190.5625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ANY_NUM</tspan> – Latched value. Must be the same type as D and HYSTERESIS</text>
   </g>
 </svg>

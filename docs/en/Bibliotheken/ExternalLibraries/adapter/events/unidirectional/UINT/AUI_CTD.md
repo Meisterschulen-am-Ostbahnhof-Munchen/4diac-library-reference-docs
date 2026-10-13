@@ -2,6 +2,8 @@
 
 ![AUI_CTD](./AUI_CTD.svg)
 
+![AUI_CTD_ecc](./AUI_CTD_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

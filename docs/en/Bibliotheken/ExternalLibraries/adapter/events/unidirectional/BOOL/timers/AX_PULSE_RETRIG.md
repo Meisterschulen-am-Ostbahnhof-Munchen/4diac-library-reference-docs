@@ -2,6 +2,8 @@
 
 ![AX_PULSE_RETRIG](./AX_PULSE_RETRIG.svg)
 
+![AX_PULSE_RETRIG_network](./AX_PULSE_RETRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

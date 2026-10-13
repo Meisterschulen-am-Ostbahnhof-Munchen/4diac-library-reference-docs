@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,12 +44,15 @@
   <rect x="-0.6" y="-144.0" width="1158.5" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-0.6" y="-144.0" width="1158.5" height="25.0" fill="white" stroke="none"/>
   <line x1="-0.6" y1="-119.5" x2="1157.9" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="4.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Taster IXA schaltet einen LED-Strip blinkend (Farbe, Strip-Nummer parametrierbar), adapter-basiert. Generisch. Schwester-Baustein zu MyLib::sys::IX_TO_logiBUS_LED_strip_QX (dort event-basiert statt AX-Adapter).</text>
+  <text x="4.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Taster IXA schaltet einen LED-Strip blinkend (Farbe, Strip-Nummer
+parametrierbar), adapter-basiert. Generisch. Schwester-Baustein zu
+MyLib::sys::IX_TO_logiBUS_LED_strip_QX (dort event-basiert statt AX-Adapter).</text>
   <g id="sidebars">
     <rect x="-0.6" y="-119.0" width="40.6" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
+    <polyline points="682.6,85.5 691.4,85.5 694.6,88.7 694.6,90.3 691.4,93.5 562.6,93.5 559.0,97.1 559.0,98.9 562.6,102.5 571.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-84.0 475.0,-84.0 480.0,-79.0 480.0,165.5 485.0,170.5 571.0,170.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="40.0,-84.0 475.0,-84.0 480.0,-79.0 480.0,165.5 485.0,170.5 571.0,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="40.0,-50.0 696.0,-50.0 701.0,-45.0 701.0,180.5 706.0,185.5 1021.0,185.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>

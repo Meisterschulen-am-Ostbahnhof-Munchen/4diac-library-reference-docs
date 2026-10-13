@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1095.14453125 152.0"
-     width="1095.14453125" height="152.0">
+     viewBox="0 0 1094.25 152.0"
+     width="1094.25" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(148.9140625, 10)">
+  <g transform="translate(148.8125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 167.2216796875 0
-            A 3 3 0 0 1 170.2216796875 3
-            L 170.2216796875 23.0
-            A 3 3 0 0 1 167.2216796875 26.0
-            L 160.2216796875 26.0
-            L 160.2216796875 66.0
-            L 167.2216796875 66.0
-            A 3 3 0 0 1 170.2216796875 69.0
-            L 170.2216796875 129.0
-            A 3 3 0 0 1 167.2216796875 132.0
+            L 167.1875 0
+            A 3 3 0 0 1 170.1875 3
+            L 170.1875 23.0
+            A 3 3 0 0 1 167.1875 26.0
+            L 160.1875 26.0
+            L 160.1875 66.0
+            L 167.1875 66.0
+            A 3 3 0 0 1 170.1875 69.0
+            L 170.1875 129.0
+            A 3 3 0 0 1 167.1875 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AS_SPLIT_SIGNED</text>
     
-    <text x="85.11083984375" y="66.0"
+    <text x="85.09375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -112,36 +112,36 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">Y</text>
 
-    <path d="M 158.7216796875 97.0
-            L 161.2216796875 97.0
-            L 161.2216796875 98.66666666666667
-            L 163.7216796875 98.66666666666667
-            L 163.7216796875 97.0
-            L 168.7216796875 97.0
-            L 168.7216796875 107.0
-            L 163.7216796875 107.0
-            L 163.7216796875 105.33333333333333
-            L 161.2216796875 105.33333333333333
-            L 161.2216796875 107.0
-            L 158.7216796875 107.0
+    <path d="M 158.6875 97.0
+            L 161.1875 97.0
+            L 161.1875 98.66666666666667
+            L 163.6875 98.66666666666667
+            L 163.6875 97.0
+            L 168.6875 97.0
+            L 168.6875 107.0
+            L 163.6875 107.0
+            L 163.6875 105.33333333333333
+            L 161.1875 105.33333333333333
+            L 161.1875 107.0
+            L 158.6875 107.0
             Z" fill="#845DAF"/>
-    <text x="155.7216796875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="155.6875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">NEG_MAG</text>
 
-    <path d="M 158.7216796875 117.0
-            L 161.2216796875 117.0
-            L 161.2216796875 118.66666666666667
-            L 163.7216796875 118.66666666666667
-            L 163.7216796875 117.0
-            L 168.7216796875 117.0
-            L 168.7216796875 127.0
-            L 163.7216796875 127.0
-            L 163.7216796875 125.33333333333333
-            L 161.2216796875 125.33333333333333
-            L 161.2216796875 127.0
-            L 158.7216796875 127.0
+    <path d="M 158.6875 117.0
+            L 161.1875 117.0
+            L 161.1875 118.66666666666667
+            L 163.6875 118.66666666666667
+            L 163.6875 117.0
+            L 168.6875 117.0
+            L 168.6875 127.0
+            L 163.6875 127.0
+            L 163.6875 125.33333333333333
+            L 161.1875 125.33333333333333
+            L 161.1875 127.0
+            L 158.6875 127.0
             Z" fill="#845DAF"/>
-    <text x="155.7216796875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="155.6875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">POS_MAG</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -153,10 +153,10 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Eingangswert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan></text>
 
-    <text x="195.2216796875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="195.1875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – MAX(0, -Y) - Betrag der negativen Auslenkung, bei Y=SINT#-128 gesaettigt auf SINT#127, Event nur bei Aenderung</text>
 
-    <text x="195.2216796875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="195.1875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – MAX(0, Y) - Betrag der positiven Auslenkung, Event nur bei Aenderung</text>
   </g>
 </svg>

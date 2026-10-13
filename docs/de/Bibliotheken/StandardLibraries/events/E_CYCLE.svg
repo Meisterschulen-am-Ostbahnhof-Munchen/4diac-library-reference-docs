@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 724.978515625 132.0"
-     width="724.978515625" height="132.0">
+     viewBox="0 0 726.875 132.0"
+     width="726.875" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(315.1572265625, 10)">
+  <g transform="translate(317.4375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 113.416015625 0
-            A 3 3 0 0 1 116.416015625 3
-            L 116.416015625 43.0
-            A 3 3 0 0 1 113.416015625 46.0
-            L 106.416015625 46.0
-            L 106.416015625 86.0
-            L 113.416015625 86.0
-            A 3 3 0 0 1 116.416015625 89.0
-            L 116.416015625 109.0
-            A 3 3 0 0 1 113.416015625 112.0
+            L 113.5 0
+            A 3 3 0 0 1 116.5 3
+            L 116.5 43.0
+            A 3 3 0 0 1 113.5 46.0
+            L 106.5 46.0
+            L 106.5 86.0
+            L 113.5 86.0
+            A 3 3 0 0 1 116.5 89.0
+            L 116.5 109.0
+            A 3 3 0 0 1 113.5 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 89.0
@@ -66,8 +66,8 @@
     <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">STOP</text>
 
-    <polygon points="109.916015625,11.0 114.916015625,16.0 109.916015625,21.0" fill="#63B31F"/>
-    <text x="106.916015625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="110.0,11.0 115.0,16.0 110.0,21.0" fill="#63B31F"/>
+    <text x="107.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EO</text>
 
     <!-- Name Section -->
@@ -100,7 +100,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">E_CYCLE</text>
     
-    <text x="58.2080078125" y="86.0"
+    <text x="58.25" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">3.0</text>
 
@@ -133,12 +133,12 @@
     <!-- External Labels -->
 
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Start the perodic generation of events – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Start the periodic generation of events – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Stop the generation of events – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="141.416015625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="141.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Periodically triggered output event</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

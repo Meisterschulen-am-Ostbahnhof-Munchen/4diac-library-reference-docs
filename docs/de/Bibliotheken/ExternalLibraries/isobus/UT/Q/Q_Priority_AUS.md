@@ -2,6 +2,8 @@
 
 ![Q_Priority_AUS](./Q_Priority_AUS.svg)
 
+![Q_Priority_AUS_network](./Q_Priority_AUS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 587.849609375 132.0"
-     width="587.849609375" height="132.0">
+     viewBox="0 0 587.1875 132.0"
+     width="587.1875" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(207.484375, 10)">
+  <g transform="translate(207.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 119.4111328125 0
-            A 3 3 0 0 1 122.4111328125 3
-            L 122.4111328125 23.0
-            A 3 3 0 0 1 119.4111328125 26.0
-            L 112.4111328125 26.0
-            L 112.4111328125 66.0
-            L 119.4111328125 66.0
-            A 3 3 0 0 1 122.4111328125 69.0
-            L 122.4111328125 109.0
-            A 3 3 0 0 1 119.4111328125 112.0
+            L 119.375 0
+            A 3 3 0 0 1 122.375 3
+            L 122.375 23.0
+            A 3 3 0 0 1 119.375 26.0
+            L 112.375 26.0
+            L 112.375 66.0
+            L 119.375 66.0
+            A 3 3 0 0 1 122.375 69.0
+            L 122.375 109.0
+            A 3 3 0 0 1 119.375 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="115.9111328125,11.0 120.9111328125,16.0 115.9111328125,21.0" fill="#63B31F"/>
-    <text x="112.9111328125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="115.875,11.0 120.875,16.0 115.875,21.0" fill="#63B31F"/>
+    <text x="112.875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">initval_AB</text>
     
-    <text x="61.20556640625" y="66.0"
+    <text x="61.1875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -108,20 +108,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 110.9111328125 97.0
-            L 113.4111328125 97.0
-            L 113.4111328125 98.66666666666667
-            L 115.9111328125 98.66666666666667
-            L 115.9111328125 97.0
-            L 120.9111328125 97.0
-            L 120.9111328125 107.0
-            L 115.9111328125 107.0
-            L 115.9111328125 105.33333333333333
-            L 113.4111328125 105.33333333333333
-            L 113.4111328125 107.0
-            L 110.9111328125 107.0
+    <path d="M 110.875 97.0
+            L 113.375 97.0
+            L 113.375 98.66666666666667
+            L 115.875 98.66666666666667
+            L 115.875 97.0
+            L 120.875 97.0
+            L 120.875 107.0
+            L 115.875 107.0
+            L 115.875 105.33333333333333
+            L 113.375 105.33333333333333
+            L 113.375 107.0
+            L 110.875 107.0
             Z" fill="#845DAF"/>
-    <text x="107.9111328125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="107.875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -148,13 +148,13 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="147.4111328125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="147.375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BYTE</tspan></text>
 
-    <text x="147.4111328125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="147.375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AB</tspan> – will output BYTE default at INIT</text>
   </g>
 </svg>

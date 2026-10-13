@@ -2,6 +2,8 @@
 
 ![AS_NE](./AS_NE.svg)
 
+![AS_NE_network](./AS_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

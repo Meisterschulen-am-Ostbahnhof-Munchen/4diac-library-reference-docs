@@ -2,6 +2,8 @@
 
 ![AW_GE](./AW_GE.svg)
 
+![AW_GE_network](./AW_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

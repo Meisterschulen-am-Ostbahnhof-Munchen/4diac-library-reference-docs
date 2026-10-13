@@ -1,6 +1,8 @@
 # AUDI_TO_AULI
 
 ![AUDI_TO_AULI](./AUDI_TO_AULI.svg)
+![AUDI_TO_AULI_network](./AUDI_TO_AULI_network.svg)
+
 *Image not available*
 
 * * * * * * * * * *

@@ -7,6 +7,30 @@
 Real-time version of the E_PERMIT block. Allows an event only if the condition (PERMIT) is true.
 ![RT_E_PERMIT](RT_E_PERMIT.svg)
 
+## Interface Structure
+
+### **Event Inputs**
+
+- **INIT**: Initialization, carries `QI`, `Tmin`, `Deadline` and `WCET`.
+- **EI**: Event input, carries `PERMIT`.
+
+### **Event Outputs**
+
+- **INITO**: Confirms the initialization, carries `QO`.
+- **EO**: Event output; carries no data.
+
+### **Data Inputs**
+
+- **QI** (`BOOL`): Qualifier for the initialization.
+- **PERMIT** (`BOOL`): Permission condition for propagating the event.
+- **Tmin** (`TIME`): Real-time parameter (minimum distance).
+- **Deadline** (`TIME`): Real-time parameter (deadline).
+- **WCET** (`TIME`): Real-time parameter (worst-case execution time).
+
+### **Data Outputs**
+
+- **QO** (`BOOL`): Output qualifier of the initialization.
+
 ## Metadata
 
 | Attribute     | Value                            |

@@ -19,14 +19,18 @@ Der **CbVtStatus** ist ein standardisierter Callback-Baustein für Virtual-Termi
 ### **Ereignis-Ausgänge**
 
 - `INITO`: Initialisierungsbestätigung (mit STATUS)
-- `IND`: Seitenwechsel-Indikation (mit Seiteninfo)
+- `IND`: Seitenwechsel-Indikation (mit Seiteninfo, `STATUS`, `wPage`, `qWsActive`, `u8Instance`, `wSKM_Scal`, `w_DMScal`, `u8SKM_Number`, `qScalingTestEnabled`)
 
 ### **Daten-Ausgänge**
 
 - `STATUS` (STRING): Betriebsstatus
 - `u8Instance` (USINT): Client-Instanzkennung
 - `qWsActive` (BOOL): Arbeitsmengen-Status
-- `wPage` (UINT): Aktuelle Seiten-ID
+- `wPage` (UINT): Objekt-ID der geöffneten/letzten Maske, oder `ID_NULL` (0xFFFF), falls unbekannt
+- `wSKM_Scal` (UINT): Skalierungsfaktor der Softkey-Maske (PoolSoftKeyMaskScalFaktor), Einheit 1/10000 (10000 = 100 %); ggf. durch SCALING-TEST überschrieben
+- `w_DMScal` (UINT): Skalierungsfaktor der Datenmaske (PoolDataMaskScalFaktor), Einheit 1/10000 (10000 = 100 %); ggf. durch SCALING-TEST überschrieben
+- `u8SKM_Number` (USINT): Anzahl der physischen Softkeys (VT_PHYSICALSOFTKEYS/sknu), gültiger Bereich 6..11; ggf. durch SCALING-TEST überschrieben
+- `qScalingTestEnabled` (BOOL): `TRUE`, wenn der SCALING-TEST-Override (`[ScalingTest] enable=1` in der `settings.ini`) aktiv ist
 
 ## Funktionsweise
 
@@ -83,10 +87,10 @@ Der **CbVtStatus** ist ein standardisierter Callback-Baustein für Virtual-Termi
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
-- [Uebung_012a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012a/)
-- [Uebung_012b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012b/)
-- [Uebung_012c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_012c/)
+- [Uebung_012](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_012/)
+- [Uebung_012a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_012a/)
+- [Uebung_012b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_012b/)
+- [Uebung_012c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_012c/)
 
 ## Fazit
 

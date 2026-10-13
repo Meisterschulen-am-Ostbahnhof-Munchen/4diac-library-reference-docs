@@ -2,6 +2,8 @@
 
 ![AULI_SUBSCRIBE_1](./AULI_SUBSCRIBE_1.svg)
 
+![AULI_SUBSCRIBE_1_network](./AULI_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

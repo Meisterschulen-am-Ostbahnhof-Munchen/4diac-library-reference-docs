@@ -1,5 +1,7 @@
 # Funk_IXA
 
+![Funk_IXA_network](./Funk_IXA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -73,8 +75,7 @@ Compared to simple digital input blocks, Funk_IXA offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b2_sub_AX/)
-- [Exercise_003b3_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_003b3_sub_AX/)
+- [Exercise_003b2_sub_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-library-reference-docs/en/latest/Bibliotheken/ExternalLibraries/MyLib_AX/sys/Funk_IXA_TO_DataPanel_MI_QXA/)
 
 ## Conclusion
 

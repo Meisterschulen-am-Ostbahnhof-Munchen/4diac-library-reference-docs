@@ -2,6 +2,8 @@
 
 ![IA_COGSOGRapidUpdate](./IA_COGSOGRapidUpdate.svg)
 
+![IA_COGSOGRapidUpdate_network](./IA_COGSOGRapidUpdate_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

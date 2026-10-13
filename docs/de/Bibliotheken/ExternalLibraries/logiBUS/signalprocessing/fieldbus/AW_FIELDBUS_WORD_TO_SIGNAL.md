@@ -2,6 +2,8 @@
 
 ![AW_FIELDBUS_WORD_TO_SIGNAL](./AW_FIELDBUS_WORD_TO_SIGNAL.svg)
 
+![AW_FIELDBUS_WORD_TO_SIGNAL_network](./AW_FIELDBUS_WORD_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *  
 
 ## Einleitung  

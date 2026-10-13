@@ -2,6 +2,8 @@
 
 ![ADI_GE](./ADI_GE.svg)
 
+![ADI_GE_network](./ADI_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

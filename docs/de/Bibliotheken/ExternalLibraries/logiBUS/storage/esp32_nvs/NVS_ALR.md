@@ -2,6 +2,8 @@
 
 ![NVS_ALR](./NVS_ALR.svg)
 
+![NVS_ALR_network](./NVS_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsbaustein **NVS_ALR** dient zum Laden und Speichern von Werten des T
 
 | Ereignis | Beschreibung                                                                     | Mitgeführte Variablen  |
 | -------- | -------------------------------------------------------------------------------- | ---------------------- |
-| **INIT** | Initialisiert den Baustein und führt einen ersten Lesevorgang aus dem NVS durch. | QI, KEY, DEFAULT_VALUE |
+| **INIT** | Initialisiert den Baustein und führt einen ersten Lesevorgang aus dem NVS durch. | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsbaustein **NVS_ALR** dient zum Laden und Speichern von Werten des T
 | Variable      | Typ    | Beschreibung                                                                                      |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------- |
 | QI            | BOOL   | Steuerung für die Initialisierung (TRUE = aktiv).                                                 |
+| SETM          | BOOL   | Aktiviert die Spiegelung (Mirroring) bei SET.                                                     |
 | KEY           | STRING | Schlüsselname für den NVS-Zugriff.                                                                |
 | DEFAULT_VALUE | LREAL  | Wert, der gelesen wird, falls im NVS noch kein Eintrag unter dem angegebenen Schlüssel existiert. |
 

@@ -2,6 +2,8 @@
 
 ![A2X2_CLIENT_2_0_SUBSCRIBE_2](./A2X2_CLIENT_2_0_SUBSCRIBE_2.svg)
 
+![A2X2_CLIENT_2_0_SUBSCRIBE_2_network](./A2X2_CLIENT_2_0_SUBSCRIBE_2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

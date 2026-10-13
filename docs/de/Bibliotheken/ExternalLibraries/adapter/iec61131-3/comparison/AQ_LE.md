@@ -2,6 +2,8 @@
 
 ![AQ_LE](./AQ_LE.svg)
 
+![AQ_LE_network](./AQ_LE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

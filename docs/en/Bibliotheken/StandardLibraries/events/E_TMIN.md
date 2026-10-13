@@ -1,5 +1,7 @@
 # E_TMIN
 
+![E_TMIN_network](./E_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

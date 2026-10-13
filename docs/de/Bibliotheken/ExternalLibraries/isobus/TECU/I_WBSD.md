@@ -18,8 +18,8 @@ Der Baustein ermöglicht die präzise Überwachung von Fahrzeugbewegungen und Be
 ### **Ereignis-Ausgänge**
 
 - `INITO`: Initialisierungsbestätigung (mit Status)
-- `IND`: Datenindikation mit Bewegungs- und Zustandsparametern
-- `TIMEOUT`: Timeout-Ereignis
+- `IND`: Datenindikation mit Bewegungs- und Zustandsparametern (inkl. `timestamp_data`, `Q_timeout`); feuert bei jedem Zyklus ohne aktiven Timeout und publiziert dabei auch das Zurücksetzen von `Q_timeout` auf `FALSE`
+- `TIMEOUT`: Timeout-Ereignis (mit `timestamp_timeout`, `STATUS`, `Q_timeout`); feuert ausschließlich beim tatsächlichen Eintreten eines Timeouts (Entry-Trigger). Das Zurücksetzen von `Q_timeout` auf `FALSE` wird nicht hier, sondern über `IND` gemeldet
 
 ### **Daten-Eingänge**
 
@@ -31,6 +31,9 @@ Der Baustein ermöglicht die präzise Überwachung von Fahrzeugbewegungen und Be
 | ---------------------------- | ------ | ---- | --- | ------------- | -------------- | --------------------------- |
 | `QO`                         | BOOL   | -    | 1   | -             | TRUE/FALSE     | Ereignisqualifier           |
 | `STATUS`                     | STRING | -    | -   | -             | -              | Systemstatusmeldung         |
+| `Q_timeout`                  | BOOL   | -    | -   | -             | TRUE/FALSE     | Timeout-Flag (`TRUE` bei aktivem Timeout) |
+| `timestamp_timeout`          | DINT   | -    | -   | -             | -              | Zeitstempel des Timeouts (mit `TIMEOUT`) |
+| `timestamp_data`             | DINT   | -    | -   | -             | -              | Zeitstempel der Daten (mit `IND`) |
 | `WHEELBASEDMACHINESPEED`     | UINT   | 1862 | 16  | 0.001 m/s/bit | 0-65.535 m/s   | Radbasierte Geschwindigkeit |
 | `WHEELBASEDMACHINEDISTANCE`  | UDINT  | 1863 | 32  | 0.001 m/bit   | 0-4,294,967 km | Zurückgelegte Distanz       |
 | `MAXI_TIMEOFTRACPOWER`       | USINT  | 1866 | 8   | 1 min/bit     | 0-255 min      | Maximale Betriebszeit       |
@@ -100,13 +103,13 @@ Der Baustein ermöglicht die präzise Überwachung von Fahrzeugbewegungen und Be
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_070](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_070/)
-- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
-- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
-- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
-- [Uebung_072](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072/)
-- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_070](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_070/)
+- [Uebung_071](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_071/)
+- [Uebung_071a](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_071a/)
+- [Uebung_071b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_071b/)
+- [Uebung_072](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_072/)
+- [Uebung_072b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_072b/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

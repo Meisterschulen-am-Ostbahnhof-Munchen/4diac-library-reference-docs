@@ -2,6 +2,8 @@
 
 ![sequence_E_08_AX_DM](./sequence_E_08_AX_DM.svg)
 
+![sequence_E_08_AX_DM_ecc](./sequence_E_08_AX_DM_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

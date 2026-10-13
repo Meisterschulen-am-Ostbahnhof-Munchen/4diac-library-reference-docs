@@ -2,6 +2,8 @@
 
 ![AR_SPLIT_SIGNED](./AR_SPLIT_SIGNED.svg)
 
+![AR_SPLIT_SIGNED_network](./AR_SPLIT_SIGNED_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

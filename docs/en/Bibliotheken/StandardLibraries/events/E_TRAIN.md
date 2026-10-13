@@ -1,5 +1,7 @@
 # E_TRAIN
 
+![E_TRAIN_network](./E_TRAIN_network.svg)
+
 <img width="1139" height="202" alt="E_TRAIN" src="https://user-images.githubusercontent.com/116869307/214142742-8ce9523e-eb2b-416c-afe8-109fb601dd20.png">
 * * * * * * * * * *
 ## Introduction
@@ -63,9 +65,9 @@ The `E_TRAIN` (Event Train) is a function block according to IEC 61499 that gene
 
 ## 🛠️ Related Exercises
 
-- [Exercise_035a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
-- [Exercise_035a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a2_AX/)
-- [Exercise_091](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_091/)
+- [Exercise_035a2](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035a2/)
+- [Exercise_035a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_035a2_AX/)
+- [Exercise_091](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_091/)
 
 ## Conclusion
 

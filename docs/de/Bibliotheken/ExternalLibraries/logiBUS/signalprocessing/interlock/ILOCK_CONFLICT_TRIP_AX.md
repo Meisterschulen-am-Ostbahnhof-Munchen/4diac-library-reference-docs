@@ -2,6 +2,8 @@
 
 ![ILOCK_CONFLICT_TRIP_AX](./ILOCK_CONFLICT_TRIP_AX.svg)
 
+![ILOCK_CONFLICT_TRIP_AX_ecc](./ILOCK_CONFLICT_TRIP_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

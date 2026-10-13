@@ -2,6 +2,8 @@
 
 ![AR_DIVTIME](./AR_DIVTIME.svg)
 
+![AR_DIVTIME_network](./AR_DIVTIME_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

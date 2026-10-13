@@ -2,6 +2,8 @@
 
 ![NVS_AS2](./NVS_AS2.svg)
 
+![NVS_AS2_network](./NVS_AS2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AS2** dient dem Laden und Speichern von SINT-Daten im n
 
 | Ereignis | Typ | Kommentar | Mitgeführte Variablen |
 | -------- | --- | --------- | --------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AS2** dient dem Laden und Speichern von SINT-Daten im n
 | Name | Typ | Kommentar |
 | ---- | --- | --------- |
 | `QI` | BOOL | Event Input Qualifier |
+| `SETM` | BOOL | Spiegelung (Mirroring) bei SET aktivieren (Enable Mirroring on SET) |
 | `KEY` | STRING | Schlüsselname für den NVS-Eintrag |
 | `DEFAULT_VALUE` | SINT | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: 0) |
 

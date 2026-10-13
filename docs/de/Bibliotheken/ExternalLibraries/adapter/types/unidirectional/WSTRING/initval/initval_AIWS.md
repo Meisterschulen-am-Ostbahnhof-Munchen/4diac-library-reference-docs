@@ -2,6 +2,8 @@
 
 ![initval_AIWS](initval_AIWS.svg)
 
+![initval_AIWS_network](./initval_AIWS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

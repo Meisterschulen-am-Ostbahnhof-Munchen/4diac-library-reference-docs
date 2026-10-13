@@ -2,6 +2,8 @@
 
 ![AUS_D_FF_TMIN](./AUS_D_FF_TMIN.svg)
 
+![AUS_D_FF_TMIN_network](./AUS_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

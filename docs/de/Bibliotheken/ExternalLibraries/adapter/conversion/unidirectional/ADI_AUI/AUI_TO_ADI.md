@@ -2,6 +2,8 @@
 
 ![AUI_TO_ADI](./AUI_TO_ADI.svg)
 
+![AUI_TO_ADI_network](./AUI_TO_ADI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

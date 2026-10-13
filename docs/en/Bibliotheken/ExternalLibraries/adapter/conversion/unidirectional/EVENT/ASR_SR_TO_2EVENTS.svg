@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 541.802734375 152.0"
-     width="541.802734375" height="152.0">
+     viewBox="0 0 541.375 152.0"
+     width="541.375" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(157.3017578125, 10)">
+  <g transform="translate(157.125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 189.2744140625 0
-            A 3 3 0 0 1 192.2744140625 3
-            L 192.2744140625 43.0
-            A 3 3 0 0 1 189.2744140625 46.0
-            L 182.2744140625 46.0
-            L 182.2744140625 86.0
-            L 189.2744140625 86.0
-            A 3 3 0 0 1 192.2744140625 89.0
-            L 192.2744140625 129.0
-            A 3 3 0 0 1 189.2744140625 132.0
+            L 189.125 0
+            A 3 3 0 0 1 192.125 3
+            L 192.125 43.0
+            A 3 3 0 0 1 189.125 46.0
+            L 182.125 46.0
+            L 182.125 86.0
+            L 189.125 86.0
+            A 3 3 0 0 1 192.125 89.0
+            L 192.125 129.0
+            A 3 3 0 0 1 189.125 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 89.0
@@ -58,12 +58,12 @@
 
     <!-- Event Ports -->
 
-    <polygon points="185.7744140625,11.0 190.7744140625,16.0 185.7744140625,21.0" fill="#63B31F"/>
-    <text x="182.7744140625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="185.625,11.0 190.625,16.0 185.625,21.0" fill="#63B31F"/>
+    <text x="182.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">SET</text>
 
-    <polygon points="185.7744140625,31.0 190.7744140625,36.0 185.7744140625,41.0" fill="#63B31F"/>
-    <text x="182.7744140625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="185.625,31.0 190.625,36.0 185.625,41.0" fill="#63B31F"/>
+    <text x="182.625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">RESET</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ASR_SR_TO_2EVENTS</text>
     
-    <text x="96.13720703125" y="86.0"
+    <text x="96.0625" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -126,10 +126,10 @@
 
     <!-- External Labels -->
 
-    <text x="217.2744140625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="217.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Set / Switch on</text>
 
-    <text x="217.2744140625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="217.125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Reset / Switch off</text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

@@ -1,5 +1,7 @@
 # AX_PERMIT (Unidirectional Adapter Permit)
 
+![AX_PERMIT_network](./AX_PERMIT_network.svg)
+
 ## Einleitung
 
 ![AX_PERMIT_ecc](./AX_PERMIT_ecc.svg)
@@ -40,4 +42,4 @@ Der Baustein empfängt ein kombiniertes Ereignis- und Bool-Signal über einen `A
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)
+- [Uebung_009_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_009_AX/)

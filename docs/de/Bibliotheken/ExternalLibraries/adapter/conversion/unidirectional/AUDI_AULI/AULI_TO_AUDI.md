@@ -2,6 +2,8 @@
 
 ![AULI_TO_AUDI](./AULI_TO_AUDI.svg)
 
+![AULI_TO_AUDI_network](./AULI_TO_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

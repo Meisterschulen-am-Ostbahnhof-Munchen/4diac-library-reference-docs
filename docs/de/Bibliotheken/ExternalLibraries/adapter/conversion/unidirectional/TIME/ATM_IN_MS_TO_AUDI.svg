@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 725.9287109375 132.0"
-     width="725.9287109375" height="132.0">
+     viewBox="0 0 725.125 132.0"
+     width="725.125" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(206.69140625, 10)">
+  <g transform="translate(206.375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 179.3896484375 0
-            A 3 3 0 0 1 182.3896484375 3
-            L 182.3896484375 23.0
-            A 3 3 0 0 1 179.3896484375 26.0
-            L 172.3896484375 26.0
-            L 172.3896484375 66.0
-            L 179.3896484375 66.0
-            A 3 3 0 0 1 182.3896484375 69.0
-            L 182.3896484375 109.0
-            A 3 3 0 0 1 179.3896484375 112.0
+            L 179.1875 0
+            A 3 3 0 0 1 182.1875 3
+            L 182.1875 23.0
+            A 3 3 0 0 1 179.1875 26.0
+            L 172.1875 26.0
+            L 172.1875 66.0
+            L 179.1875 66.0
+            A 3 3 0 0 1 182.1875 69.0
+            L 182.1875 109.0
+            A 3 3 0 0 1 179.1875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">ATM_IN_MS_TO_AUDI</text>
     
-    <text x="91.19482421875" y="66.0"
+    <text x="91.09375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -112,20 +112,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">IN</text>
 
-    <path d="M 170.8896484375 97.0
-            L 173.3896484375 97.0
-            L 173.3896484375 98.66666666666667
-            L 175.8896484375 98.66666666666667
-            L 175.8896484375 97.0
-            L 180.8896484375 97.0
-            L 180.8896484375 107.0
-            L 175.8896484375 107.0
-            L 175.8896484375 105.33333333333333
-            L 173.3896484375 105.33333333333333
-            L 173.3896484375 107.0
-            L 170.8896484375 107.0
+    <path d="M 170.6875 97.0
+            L 173.1875 97.0
+            L 173.1875 98.66666666666667
+            L 175.6875 98.66666666666667
+            L 175.6875 97.0
+            L 180.6875 97.0
+            L 180.6875 107.0
+            L 175.6875 107.0
+            L 175.6875 105.33333333333333
+            L 173.1875 105.33333333333333
+            L 173.1875 107.0
+            L 170.6875 107.0
             Z" fill="#845DAF"/>
-    <text x="167.8896484375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="167.6875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -137,7 +137,7 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Time value to convert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ATM</tspan></text>
 
-    <text x="207.3896484375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="207.1875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUDI</tspan> – TIME value of IN expressed in MS as UDINT</text>
   </g>
 </svg>

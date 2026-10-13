@@ -1,5 +1,7 @@
 # AX_F_TRIG
 
+![AX_F_TRIG_network](./AX_F_TRIG_network.svg)
+
 * * * * * * * * * *
 The function block **AX_F_TRIG** (Boolean falling edge detection) is used to detect a falling edge (change from TRUE to FALSE) based on an adapter interface. It is specifically designed for use with the unidirectional adapter type `AX`.
 The block checks the Boolean value received via the adapter and triggers an output event if this value is `FALSE`. In the context of event chains where the adapter's event signals a value change, this corresponds to the detection of a falling edge.

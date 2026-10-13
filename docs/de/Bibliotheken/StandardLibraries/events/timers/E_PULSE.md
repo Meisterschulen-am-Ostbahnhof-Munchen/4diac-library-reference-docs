@@ -1,5 +1,7 @@
 # E_PULSE
 
+![E_PULSE_network](./E_PULSE_network.svg)
+
 **Wichtiger Hinweis: Dieser Baustein benötigt nur ein Ereignis (Event) und keine zyklischen Aufrufe. Er besitzt keinen Ausgang ET und zeigt die verstrichene Zeit nicht an.**
 
 * * * * * * * * * *
@@ -67,8 +69,8 @@ Der E_PULSE-Baustein kann in verschiedenen industriellen Steuerungsanwendungen e
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020h](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
-- [Uebung_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Uebung_020h](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
+- [Uebung_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
 
 ## Fazit
 

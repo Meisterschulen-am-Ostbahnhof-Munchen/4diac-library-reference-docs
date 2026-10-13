@@ -2,6 +2,8 @@
 
 ![AR_AX_SEL_AR](./AR_AX_SEL_AR.svg)
 
+![AR_AX_SEL_AR_network](./AR_AX_SEL_AR_network.svg)
+
 * * * * * * * * * *
 
 The function block `AR_AX_SEL_AR` is used for binary selection between two analog input signals transmitted via adapters. Based on the state of a selector signal, one of the two inputs is passed through to the output.

@@ -2,6 +2,8 @@
 
 ![E_TOF](E_TOF.svg)
 
+![E_TOF_network](./E_TOF_network.svg)
+
 ## 🎧 Podcast
 
 - [E_TOF vs. FB_TOF: Der Event-Timer, der nicht zyklisch tickt – Revolution für Automatisierungssysteme?](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/E_TOF-vs--FB_TOF-Der-Event-Timer--der-nicht-zyklisch-tickt--Revolution-fr-Automatisierungssysteme-e3673qk)
@@ -70,7 +72,7 @@ Der E_TOF-Baustein kann in verschiedenen industriellen Steuerungsanwendungen ein
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
+- [Uebung_020e](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020e/)
 
 ## Fazit
 

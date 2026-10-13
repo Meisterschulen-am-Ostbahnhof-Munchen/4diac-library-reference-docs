@@ -1,5 +1,9 @@
 # RedWhiteBackground1_AXSC
 
+![RedWhiteBackground1_AXSC_network](./RedWhiteBackground1_AXSC_network.svg)
+
+![RedWhiteBackground1_AXSC](./RedWhiteBackground1_AXSC.svg)
+
 * * * * * * * * * *
 
 ## Introduction

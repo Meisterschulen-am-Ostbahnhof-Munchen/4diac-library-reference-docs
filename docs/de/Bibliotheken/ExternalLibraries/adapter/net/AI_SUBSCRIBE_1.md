@@ -2,6 +2,8 @@
 
 ![AI_SUBSCRIBE_1](./AI_SUBSCRIBE_1.svg)
 
+![AI_SUBSCRIBE_1_network](./AI_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

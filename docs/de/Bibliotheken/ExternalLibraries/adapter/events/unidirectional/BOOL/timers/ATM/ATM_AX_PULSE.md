@@ -2,6 +2,8 @@
 
 ![ATM_AX_PULSE](./ATM_AX_PULSE.svg)
 
+![ATM_AX_PULSE_network](./ATM_AX_PULSE_network.svg)
+
 *Bild nicht verfügbar*
 
 * * * * * * * * * *

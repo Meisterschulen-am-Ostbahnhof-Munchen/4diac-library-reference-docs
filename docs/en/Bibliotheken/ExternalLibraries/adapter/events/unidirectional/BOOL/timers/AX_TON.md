@@ -1,5 +1,7 @@
 # AX_TON
 
+![AX_TON_network](./AX_TON_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -13,7 +15,7 @@ AX_TON is a standardized timer function block that implements on-delay timing. A
 
 ### **Event Inputs**
 
-- No direct event inputs available
+- **EIPT** (Event): Set Preset Time (non-triggering); carries `PT`
 
 ### **Event Outputs**
 
@@ -65,8 +67,8 @@ Comparison with [E_TON](../../../../../../StandardLibraries/events/timers/E_TON.
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
-- [Exercise_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
+- [Exercise_020c_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020c_AX/)
+- [Exercise_160b2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_160b2_AX/)
 
 ## Conclusion
 

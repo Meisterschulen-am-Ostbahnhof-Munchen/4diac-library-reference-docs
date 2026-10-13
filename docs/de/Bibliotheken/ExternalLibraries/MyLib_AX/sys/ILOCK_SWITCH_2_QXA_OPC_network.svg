@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,16 @@
   <rect x="-521.2" y="-144.0" width="1917.1" height="1082.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-521.2" y="-144.0" width="1917.1" height="25.0" fill="white" stroke="none"/>
   <line x1="-521.2" y1="-119.5" x2="1395.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-516.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">2-Richtungs-Doppelwirkungs-Ausgang (Last-Wins mit Schutzzeit): je Richtung wird das echte Funktions-Kommando (Remote-Subscribe) mit dem bestehenden IO-Test-Kommando (Remote-Subscribe) per AX_OR_2 zusammengefuehrt, bevor es in den Interlock geht - IO-Test bleibt nutzbar, kann aber die beiden Richtungen nicht mehr dauerhaft gleichzeitig schalten. Interlocked Ausgang treibt den physischen logiBUS-Kanal UND meldet seinen tatsaechlichen Zustand sowohl an die bestehende IO-Test-Ueberwachung als auch an die echte Funktions-Rueckmeldung (z.B. GreenWhiteBackground am SoftKey) zurueck. Generisch fuer jeden 'digital DW'-Aktor (siehe IO-Liste_Vereinheitlicht.md) mit Bedienung von einem Modul ohne eigenes VT.</text>
+  <text x="-516.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">2-Richtungs-Doppelwirkungs-Ausgang (Last-Wins mit Schutzzeit): je Richtung wird
+das echte Funktions-Kommando (Remote-Subscribe) mit dem bestehenden
+IO-Test-Kommando (Remote-Subscribe) per AX_OR_2 zusammengefuehrt, bevor es in
+den Interlock geht - IO-Test bleibt nutzbar, kann aber die beiden Richtungen
+nicht mehr dauerhaft gleichzeitig schalten. Interlocked Ausgang treibt den
+physischen logiBUS-Kanal UND meldet seinen tatsaechlichen Zustand sowohl an die
+bestehende IO-Test-Ueberwachung als auch an die echte Funktions-Rueckmeldung
+(z.B. GreenWhiteBackground am SoftKey) zurueck. Generisch fuer jeden 'digital
+DW'-Aktor (siehe IO-Liste_Vereinheitlicht.md) mit Bedienung von einem Modul ohne
+eigenes VT.</text>
   <g id="sidebars">
     <rect x="-521.2" y="-119.0" width="124.2" height="1057.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-397.0" y1="-119.0" x2="-397.0" y2="938.0" stroke="#A0A0A0" stroke-width="0.5"/>
@@ -59,6 +68,8 @@
     <polyline points="-397.0,-84.0 35.0,-84.0 40.0,-79.0 40.0,165.5 45.0,170.5 1275.0,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="-397.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,540.5 45.0,545.5 1275.0,545.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="-397.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,540.5 45.0,545.5 1275.0,545.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-397.0,103.0 35.0,103.0 40.0,108.0 40.0,131.5 45.0,136.5 1275.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-397.0,103.0 35.0,103.0 40.0,108.0 40.0,506.5 45.0,511.5 1275.0,511.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-397.0,-16.0 -210.0,-16.0 -205.0,-11.0 -205.0,283.5 -200.0,288.5 1275.0,288.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-397.0,52.0 -210.0,52.0 -205.0,57.0 -205.0,403.5 -200.0,408.5 1275.0,408.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-397.0,18.0 -210.0,18.0 -205.0,23.0 -205.0,658.5 -200.0,663.5 1276.3,663.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
@@ -75,6 +86,8 @@
     <polyline points="205.9,665.5 242.9,665.5 247.9,660.5 247.9,590.5 252.9,585.5 330.0,585.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="415.6,568.5 583.1,568.5 588.1,563.5 588.1,473.5 593.1,468.5 630.0,468.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="415.6,568.5 583.1,568.5 588.1,563.5 588.1,473.5 593.1,468.5 630.0,468.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="784.8,485.5 821.8,485.5 826.8,490.5 826.8,683.5 831.8,688.5 945.0,688.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="784.8,485.5 821.8,485.5 826.8,490.5 826.8,683.5 831.8,688.5 945.0,688.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="784.8,451.5 863.8,451.5 868.8,446.5 868.8,273.5 873.8,268.5 930.0,268.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="784.8,451.5 863.8,451.5 868.8,446.5 868.8,273.5 873.8,268.5 930.0,268.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="1031.6,268.5 1116.6,268.5 1121.6,263.5 1121.6,192.5 1126.6,187.5 1275.0,187.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
@@ -126,6 +139,9 @@
     <polygon points="-401.99949999999995,81.0 -396.99949999999995,86.0 -401.99949999999995,91.0" fill="#BD8663"/>
     <text x="-402.99949999999995" y="90.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">ID_WRITE_DOWN</text>
+    <polygon points="-401.99949999999995,98.0 -396.99949999999995,103.0 -401.99949999999995,108.0" fill="#A3B08F"/>
+    <text x="-402.99949999999995" y="107.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
   </g>
   <g id="instances">
     <g id="fb_SUBSCRIBE_TEST_UP" transform="translate(60.0, 135.0)">
@@ -860,18 +876,18 @@
     </g>
     <g id="fb_E_TimeOut" transform="translate(945.0, 645.0)">
       <path d="M 3 0
-            L 92.25 0
-            A 3 3 0 0 1 95.25 3
-            L 95.25 18
-            A 3 3 0 0 1 92.25 21
-            L 86.25 21
-            L 86.25 35
-            L 92.25 35
-            A 3 3 0 0 1 95.25 38
-            L 95.25 35
-            A 3 3 0 0 1 92.25 38
-            L 3 38
-            A 3 3 0 0 1 0 35
+            L 98.3125 0
+            A 3 3 0 0 1 101.3125 3
+            L 101.3125 18
+            A 3 3 0 0 1 98.3125 21
+            L 92.3125 21
+            L 92.3125 35
+            L 98.3125 35
+            A 3 3 0 0 1 101.3125 38
+            L 101.3125 52
+            A 3 3 0 0 1 98.3125 55
+            L 3 55
+            A 3 3 0 0 1 0 52
             L 0 38
             A 3 3 0 0 1 3 35
             L 9 35
@@ -884,37 +900,51 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 16.03125 20.0
+            L 30.03125 20.0
+            A 1 1 0 0 1 31.03125 21.0
+            L 31.03125 24.0
+            L 29.53125 24.0
+            L 29.53125 26.666666666666668
+            L 31.03125 26.666666666666668
+            L 31.03125 35.0
+            A 1 1 0 0 1 30.03125 36.0
+            L 16.03125 36.0
+            A 1 1 0 0 1 15.03125 35.0
+            L 15.03125 26.666666666666668
+            L 16.53125 26.666666666666668
+            L 16.53125 24.0
+            L 15.03125 24.0
+            L 15.03125 21.0
+            A 1 1 0 0 1 16.03125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="23.03125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
-            fill="#000000" text-anchor="middle">B</text>
-      <text x="30.0" y="32.0"
+            fill="#000000" text-anchor="middle">C</text>
+      <text x="33.03125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">E_TimeOut</text>
 
 
 
-
+      <path d="M 0 38.5
+            L 5.0 38.5
+            L 5.0 40.166666666666664
+            L 7.5 40.166666666666664
+            L 7.5 38.5
+            L 10 38.5
+            L 10 48.5
+            L 7.5 48.5
+            L 7.5 46.833333333333336
+            L 5.0 46.833333333333336
+            L 5.0 48.5
+            L 0 48.5
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+      <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">TimeOutSocke…</text>
       <!-- Instance Name -->
-      <text x="47.625" y="-5"
+      <text x="50.65625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_TimeOut</text>
     </g>
@@ -1231,7 +1261,7 @@
       <polygon points="106.5625,73.5 111.5625,78.5 106.5625,83.5" fill="#BD8663"/>
       <text x="105.5625" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
       <path d="M 0 107.5
             L 5.0 107.5
             L 5.0 109.16666666666667
@@ -1327,7 +1357,7 @@
       <polygon points="106.5625,73.5 111.5625,78.5 106.5625,83.5" fill="#BD8663"/>
       <text x="105.5625" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
       <path d="M 0 107.5
             L 5.0 107.5
             L 5.0 109.16666666666667

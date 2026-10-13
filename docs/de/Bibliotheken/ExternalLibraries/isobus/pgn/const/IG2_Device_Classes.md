@@ -1,7 +1,5 @@
 # IG2_Device_Classes
 
-![IG2_Device_Classes](./IG2_Device_Classes.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

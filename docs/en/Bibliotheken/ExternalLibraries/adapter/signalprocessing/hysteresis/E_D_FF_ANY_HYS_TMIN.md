@@ -2,6 +2,8 @@
 
 ![E_D_FF_ANY_HYS_TMIN](./E_D_FF_ANY_HYS_TMIN.svg)
 
+![E_D_FF_ANY_HYS_TMIN_network](./E_D_FF_ANY_HYS_TMIN_network.svg)
+
 * * * * * * * * * *
 
 The function block `E_D_FF_ANY_HYS_TMIN` is a composite function block for IEC 61499-based systems. It implements an edge-triggered D flip-flop (data latch) with integrated threshold hysteresis and a minimum time interval limit (`Tmin`) for outgoing events.

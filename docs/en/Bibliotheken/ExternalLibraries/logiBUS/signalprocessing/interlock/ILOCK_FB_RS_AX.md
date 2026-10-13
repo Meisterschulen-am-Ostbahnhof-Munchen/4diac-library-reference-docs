@@ -1,5 +1,7 @@
 # ILOCK_FB_RS_AX
 
+![ILOCK_FB_RS_AX_ecc](./ILOCK_FB_RS_AX_ecc.svg)
+
 ## Introduction
 
 ![ILOCK_FB_RS_AX](./ILOCK_FB_RS_AX.svg)

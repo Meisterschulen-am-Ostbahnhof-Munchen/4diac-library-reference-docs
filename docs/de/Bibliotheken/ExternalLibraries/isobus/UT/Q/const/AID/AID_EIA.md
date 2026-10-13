@@ -1,7 +1,5 @@
 # AID_EIA
 
-![AID_EIA](./AID_EIA.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

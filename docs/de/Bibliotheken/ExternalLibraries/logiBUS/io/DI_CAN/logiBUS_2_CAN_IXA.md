@@ -1,5 +1,7 @@
 # logiBUS_2_CAN_IXA
 
+![logiBUS_2_CAN_IXA_network](./logiBUS_2_CAN_IXA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

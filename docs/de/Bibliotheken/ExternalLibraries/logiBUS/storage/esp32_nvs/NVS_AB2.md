@@ -2,11 +2,13 @@
 
 ![NVS_AB2](./NVS_AB2.svg)
 
+![NVS_AB2_network](./NVS_AB2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
 
-Der Funktionsblock **NVS_AB2** ermöglicht das Laden und Speichern von `REAL`-Daten in einem nichtflüchtigen Speicher (Non‑Volatile Storage, NVS) unter Verwendung eines Zeichenketten-Schlüssels. Er kapselt den NVS-Zugriff in einer komfortablen, asynchronen Schnittstelle und kommuniziert mit der Umgebung über einen bidirektionalen **AB2**‑Adapter. Dadurch eignet sich der Baustein besonders für Szenarien, in denen Konfigurationswerte oder Zustandsdaten dauerhaft auf einem ESP32 gespeichert werden müssen.
+Der Funktionsblock **NVS_AB2** ermöglicht das Laden und Speichern von `BYTE`-Daten in einem nichtflüchtigen Speicher (Non‑Volatile Storage, NVS) unter Verwendung eines Zeichenketten-Schlüssels. Er kapselt den NVS-Zugriff in einer komfortablen, asynchronen Schnittstelle und kommuniziert mit der Umgebung über einen bidirektionalen **AB2**‑Adapter. Dadurch eignet sich der Baustein besonders für Szenarien, in denen Konfigurationswerte oder Zustandsdaten dauerhaft auf einem ESP32 gespeichert werden müssen.
 
 ## Schnittstellenstruktur
 
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AB2** ermöglicht das Laden und Speichern von `REAL`-Da
 
 | Ereignis | Typ   | Beschreibung                                                                                                                     |
 | -------- | ----- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `INIT`   | EInit | Initialisiert den Baustein. Die Eingangsdaten (`QI`, `KEY`, `DEFAULT_VALUE`) werden beim Eintritt dieses Ereignisses übernommen. |
+| `INIT`   | EInit | Initialisiert den Baustein. Die Eingangsdaten (`QI`, `SETM`, `KEY`, `DEFAULT_VALUE`) werden beim Eintritt dieses Ereignisses übernommen. |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,8 +29,9 @@ Der Funktionsblock **NVS_AB2** ermöglicht das Laden und Speichern von `REAL`-Da
 | Name            | Typ    | Beschreibung                                                                                       |
 | --------------- | ------ | -------------------------------------------------------------------------------------------------- |
 | `QI`            | BOOL   | Qualifizierer für das Initialisierungsereignis (z. B. Freigabe der Verarbeitung).                  |
+| `SETM`          | BOOL   | Aktiviert die Spiegelung (Mirroring) bei SET.                                                      |
 | `KEY`           | STRING | Name des Schlüssels, unter dem der Wert im NVS abgelegt ist.                                       |
-| `DEFAULT_VALUE` | REAL   | Wert, der zurückgegeben wird, falls im NVS noch kein Wert für den angegebenen Schlüssel existiert. |
+| `DEFAULT_VALUE` | BYTE   | Wert, der zurückgegeben wird, falls im NVS noch kein Wert für den angegebenen Schlüssel existiert. |
 
 ### **Daten-Ausgänge**
 

@@ -2,6 +2,8 @@
 
 ![BargraphSplitFS](./BargraphSplitFS.svg)
 
+![BargraphSplitFS_network](./BargraphSplitFS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

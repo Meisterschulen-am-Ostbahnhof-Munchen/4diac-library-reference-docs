@@ -2,6 +2,8 @@
 
 ![AI_D_FF](./AI_D_FF.svg)
 
+![AI_D_FF_network](./AI_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

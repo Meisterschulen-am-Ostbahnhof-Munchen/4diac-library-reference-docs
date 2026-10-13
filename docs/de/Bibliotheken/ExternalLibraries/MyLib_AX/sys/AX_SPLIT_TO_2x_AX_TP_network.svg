@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,9 @@
   <rect x="7.5" y="-144.0" width="1169.8" height="583.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="7.5" y="-144.0" width="1169.8" height="25.0" fill="white" stroke="none"/>
   <line x1="7.5" y1="-119.5" x2="1177.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="12.5" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">1 AX-Eingang gesplittet auf 2 unabhaengig retriggerbare Pulstimer (AX_TP), je eigene Pulsdauer (TQ1/TQ2) und eigener AX-Ausgang (Q1/Q2). Generisch, hardwareunabhaengig.</text>
+  <text x="12.5" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">1 AX-Eingang gesplittet auf 2 unabhaengig retriggerbare Pulstimer (AX_TP), je
+eigene Pulsdauer (TQ1/TQ2) und eigener AX-Ausgang (Q1/Q2). Generisch,
+hardwareunabhaengig.</text>
   <g id="sidebars">
     <rect x="7.5" y="-119.0" width="32.5" height="558.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="439.0" stroke="#A0A0A0" stroke-width="0.5"/>

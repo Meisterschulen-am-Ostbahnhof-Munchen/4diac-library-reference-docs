@@ -2,6 +2,8 @@
 
 ![AUDI_FIELDBUS_UDINT_TO_SIGNAL](./AUDI_FIELDBUS_UDINT_TO_SIGNAL.svg)
 
+![AUDI_FIELDBUS_UDINT_TO_SIGNAL_network](./AUDI_FIELDBUS_UDINT_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

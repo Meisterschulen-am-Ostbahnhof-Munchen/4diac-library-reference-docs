@@ -2,6 +2,8 @@
 
 ![ALI_EQ](./ALI_EQ.svg)
 
+![ALI_EQ_network](./ALI_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

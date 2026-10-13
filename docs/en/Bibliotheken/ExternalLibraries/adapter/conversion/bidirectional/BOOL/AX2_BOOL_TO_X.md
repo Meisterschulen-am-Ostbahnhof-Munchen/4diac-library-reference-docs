@@ -1,5 +1,7 @@
 # AX2_BOOL_TO_X
 
+![AX2_BOOL_TO_X_network](./AX2_BOOL_TO_X_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

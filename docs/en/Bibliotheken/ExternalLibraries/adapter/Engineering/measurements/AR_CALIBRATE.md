@@ -2,6 +2,8 @@
 
 ![AR_CALIBRATE](./AR_CALIBRATE.svg)
 
+![AR_CALIBRATE_ecc](./AR_CALIBRATE_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

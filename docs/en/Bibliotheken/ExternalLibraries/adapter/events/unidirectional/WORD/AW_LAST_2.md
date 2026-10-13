@@ -2,6 +2,8 @@
 
 ![AW_LAST_2](AW_LAST_2.svg)
 
+![AW_LAST_2_ecc](./AW_LAST_2_ecc.svg)
+
 ## Introduction
 
 The AW_LAST_2 function block merges two same-type WORD adapter signals (**IN1**, **IN2**) into one shared output (**OUT**), using a **last-writer-wins** rule: whichever of the two sockets last wrote an event wins, and its data value is passed through to OUT immediately and unchanged. This is explicitly not a naive merge (e.g. averaging or OR-ing) - it is pure arbitration by write order.

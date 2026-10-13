@@ -2,6 +2,8 @@
 
 ![initval_AI](initval_AI.svg)
 
+![initval_AI_network](./initval_AI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

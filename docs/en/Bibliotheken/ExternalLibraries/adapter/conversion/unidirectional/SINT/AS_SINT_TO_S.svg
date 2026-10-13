@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 507.103515625 132.0"
-     width="507.103515625" height="132.0">
+     viewBox="0 0 506.5625 132.0"
+     width="506.5625" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(202.029296875, 10)">
+  <g transform="translate(201.8125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 142.7763671875 0
-            A 3 3 0 0 1 145.7763671875 3
-            L 145.7763671875 23.0
-            A 3 3 0 0 1 142.7763671875 26.0
-            L 135.7763671875 26.0
-            L 135.7763671875 66.0
-            L 142.7763671875 66.0
-            A 3 3 0 0 1 145.7763671875 69.0
-            L 145.7763671875 109.0
-            A 3 3 0 0 1 142.7763671875 112.0
+            L 142.625 0
+            A 3 3 0 0 1 145.625 3
+            L 145.625 23.0
+            A 3 3 0 0 1 142.625 26.0
+            L 135.625 26.0
+            L 135.625 66.0
+            L 142.625 66.0
+            A 3 3 0 0 1 145.625 69.0
+            L 145.625 109.0
+            A 3 3 0 0 1 142.625 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -92,7 +92,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AS_SINT_TO_S</text>
     
-    <text x="72.88818359375" y="66.0"
+    <text x="72.8125" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -104,20 +104,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 134.2763671875 97.0
-            L 136.7763671875 97.0
-            L 136.7763671875 98.66666666666667
-            L 139.2763671875 98.66666666666667
-            L 139.2763671875 97.0
-            L 144.2763671875 97.0
-            L 144.2763671875 107.0
-            L 139.2763671875 107.0
-            L 139.2763671875 105.33333333333333
-            L 136.7763671875 105.33333333333333
-            L 136.7763671875 107.0
-            L 134.2763671875 107.0
+    <path d="M 134.125 97.0
+            L 136.625 97.0
+            L 136.625 98.66666666666667
+            L 139.125 98.66666666666667
+            L 139.125 97.0
+            L 144.125 97.0
+            L 144.125 107.0
+            L 139.125 107.0
+            L 139.125 105.33333333333333
+            L 136.625 105.33333333333333
+            L 136.625 107.0
+            L 134.125 107.0
             Z" fill="#845DAF"/>
-    <text x="131.2763671875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="131.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">AS_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -147,7 +147,7 @@
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">SINT</tspan></text>
 
-    <text x="170.7763671875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="170.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AS</tspan> – Adapter Output</text>
   </g>
 </svg>

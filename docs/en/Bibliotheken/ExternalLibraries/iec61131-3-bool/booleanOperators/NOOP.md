@@ -2,6 +2,8 @@
 
 ![NOOP](./NOOP.svg)
 
+![NOOP_network](./NOOP_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

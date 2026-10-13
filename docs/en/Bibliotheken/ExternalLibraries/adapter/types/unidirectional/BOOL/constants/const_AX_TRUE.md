@@ -2,6 +2,8 @@
 
 ![const_AX_TRUE](const_AX_TRUE.svg)
 
+![const_AX_TRUE_network](./const_AX_TRUE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

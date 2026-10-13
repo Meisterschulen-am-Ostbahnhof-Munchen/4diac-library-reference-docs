@@ -1,5 +1,7 @@
 # SchieberVerriegelungComposite
 
+![SchieberVerriegelungComposite_network](./SchieberVerriegelungComposite_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

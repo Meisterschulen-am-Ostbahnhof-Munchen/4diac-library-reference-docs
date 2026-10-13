@@ -2,6 +2,8 @@
 
 ![AW_LAST_2](AW_LAST_2.svg)
 
+![AW_LAST_2_ecc](./AW_LAST_2_ecc.svg)
+
 ## Einleitung
 
 Der AW_LAST_2 Funktionsblock führt zwei gleichartige WORD-Adapter-Signale (**IN1**, **IN2**) auf einen gemeinsamen Ausgang (**OUT**) zusammen, nach dem Prinzip **Last Writer Wins**: welcher der beiden Sockets zuletzt ein Ereignis geschrieben hat, gewinnt, und sein Datenwert wird sofort und unverändert an OUT durchgereicht. Es handelt sich ausdrücklich nicht um ein naives Zusammenführen (z. B. Mittelwert oder ODER-Verknüpfung), sondern um eine reine Arbitrierung nach zeitlicher Reihenfolge.

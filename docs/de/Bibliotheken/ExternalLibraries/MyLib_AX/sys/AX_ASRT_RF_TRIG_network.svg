@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="11.4 -151.0 1166.8 588.0"
+     viewBox="11.4 -151.0 1166.9 588.0"
      width="1167" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -40,11 +40,12 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="11.4" y="-151.0" width="1166.8" height="588.0" fill="white"/>
-  <rect x="18.4" y="-144.0" width="1152.8" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="18.4" y="-144.0" width="1152.8" height="25.0" fill="white" stroke="none"/>
+  <rect x="11.4" y="-151.0" width="1166.9" height="588.0" fill="white"/>
+  <rect x="18.4" y="-144.0" width="1152.9" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="18.4" y="-144.0" width="1152.9" height="25.0" fill="white" stroke="none"/>
   <line x1="18.4" y1="-119.5" x2="1171.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="23.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Boolean falling and rising edge detection, gebuendelt als ASRT (SET/RESET, TOGGLE ungenutzt) - aus AX_ASR_RF_TRIG + ASRT_SR_AE_TO_SRT</text>
+  <text x="23.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Boolean falling and rising edge detection, gebuendelt als ASRT (SET/RESET,
+TOGGLE ungenutzt) - aus AX_ASR_RF_TRIG + ASRT_SR_AE_TO_SRT</text>
   <g id="sidebars">
     <rect x="18.4" y="-119.0" width="21.6" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
@@ -52,10 +53,10 @@
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 85.0,-84.0 90.0,-79.0 90.0,113.5 95.0,118.5 426.8,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 85.0,-84.0 90.0,-79.0 90.0,113.5 95.0,118.5 426.8,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="555.5,118.5 666.8,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="555.5,118.5 666.8,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 85.0,-84.0 90.0,-79.0 90.0,113.5 95.0,118.5 426.7,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 85.0,-84.0 90.0,-79.0 90.0,113.5 95.0,118.5 426.7,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="555.4,118.5 666.7,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="555.4,118.5 666.7,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="811.2,118.5 881.2,118.5 886.2,113.5 886.2,-79.0 891.2,-84.0 1152.0,-84.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="811.2,118.5 881.2,118.5 886.2,113.5 886.2,-79.0 891.2,-84.0 1152.0,-84.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
@@ -68,18 +69,18 @@
           fill="#000000" text-anchor="start">Q</text>
   </g>
   <g id="instances">
-    <g id="fb_AX_ASR_RF_TRIG_1" transform="translate(426.8, 75.0)">
+    <g id="fb_AX_ASR_RF_TRIG_1" transform="translate(426.7, 75.0)">
       <path d="M 3 0
-            L 125.66015625 0
-            A 3 3 0 0 1 128.66015625 3
-            L 128.66015625 18
-            A 3 3 0 0 1 125.66015625 21
-            L 119.66015625 21
-            L 119.66015625 35
-            L 125.66015625 35
-            A 3 3 0 0 1 128.66015625 38
-            L 128.66015625 52
-            A 3 3 0 0 1 125.66015625 55
+            L 125.6875 0
+            A 3 3 0 0 1 128.6875 3
+            L 128.6875 18
+            A 3 3 0 0 1 125.6875 21
+            L 119.6875 21
+            L 119.6875 35
+            L 125.6875 35
+            A 3 3 0 0 1 128.6875 38
+            L 128.6875 52
+            A 3 3 0 0 1 125.6875 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -137,38 +138,38 @@
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">QI</text>
-      <path d="M 118.66015625 38.5
-            L 121.16015625 38.5
-            L 121.16015625 40.166666666666664
-            L 123.66015625 40.166666666666664
-            L 123.66015625 38.5
-            L 128.66015625 38.5
-            L 128.66015625 48.5
-            L 123.66015625 48.5
-            L 123.66015625 46.833333333333336
-            L 121.16015625 46.833333333333336
-            L 121.16015625 48.5
-            L 118.66015625 48.5
+      <path d="M 118.6875 38.5
+            L 121.1875 38.5
+            L 121.1875 40.166666666666664
+            L 123.6875 40.166666666666664
+            L 123.6875 38.5
+            L 128.6875 38.5
+            L 128.6875 48.5
+            L 123.6875 48.5
+            L 123.6875 46.833333333333336
+            L 121.1875 46.833333333333336
+            L 121.1875 48.5
+            L 118.6875 48.5
             Z" fill="#845DAF"/>
-      <text x="115.66015625" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="115.6875" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">Q</text>
       <!-- Instance Name -->
-      <text x="64.330078125" y="-5"
+      <text x="64.34375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_ASR_RF_TRIG_1</text>
     </g>
-    <g id="fb_ASRT_SR_AE_TO_SRT_1" transform="translate(666.8, 75.0)">
+    <g id="fb_ASRT_SR_AE_TO_SRT_1" transform="translate(666.7, 75.0)">
       <path d="M 3 0
-            L 141.3984375 0
-            A 3 3 0 0 1 144.3984375 3
-            L 144.3984375 18
-            A 3 3 0 0 1 141.3984375 21
-            L 135.3984375 21
-            L 135.3984375 35
-            L 141.3984375 35
-            A 3 3 0 0 1 144.3984375 38
-            L 144.3984375 69
-            A 3 3 0 0 1 141.3984375 72
+            L 141.5 0
+            A 3 3 0 0 1 144.5 3
+            L 144.5 18
+            A 3 3 0 0 1 141.5 21
+            L 135.5 21
+            L 135.5 35
+            L 141.5 35
+            A 3 3 0 0 1 144.5 38
+            L 144.5 69
+            A 3 3 0 0 1 141.5 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -183,29 +184,29 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 13.03125 20.0
+            L 27.03125 20.0
+            A 1 1 0 0 1 28.03125 21.0
+            L 28.03125 24.0
+            L 26.53125 24.0
+            L 26.53125 26.666666666666668
+            L 28.03125 26.666666666666668
+            L 28.03125 35.0
+            A 1 1 0 0 1 27.03125 36.0
+            L 13.03125 36.0
+            A 1 1 0 0 1 12.03125 35.0
+            L 12.03125 26.666666666666668
+            L 13.53125 26.666666666666668
+            L 13.53125 24.0
+            L 12.03125 24.0
+            L 12.03125 21.0
+            A 1 1 0 0 1 13.03125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="20.03125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="32.0"
+      <text x="30.03125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ASRT_SR_AE_TO_S…</text>
 
@@ -241,23 +242,23 @@
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">TOGGLE_IN</text>
-      <path d="M 134.3984375 38.5
-            L 136.8984375 38.5
-            L 136.8984375 40.166666666666664
-            L 139.3984375 40.166666666666664
-            L 139.3984375 38.5
-            L 144.3984375 38.5
-            L 144.3984375 48.5
-            L 139.3984375 48.5
-            L 139.3984375 46.833333333333336
-            L 136.8984375 46.833333333333336
-            L 136.8984375 48.5
-            L 134.3984375 48.5
+      <path d="M 134.5 38.5
+            L 137.0 38.5
+            L 137.0 40.166666666666664
+            L 139.5 40.166666666666664
+            L 139.5 38.5
+            L 144.5 38.5
+            L 144.5 48.5
+            L 139.5 48.5
+            L 139.5 46.833333333333336
+            L 137.0 46.833333333333336
+            L 137.0 48.5
+            L 134.5 48.5
             Z" fill="#845DAF"/>
-      <text x="131.3984375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="131.5" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">ASRT_OUT</text>
       <!-- Instance Name -->
-      <text x="72.19921875" y="-5"
+      <text x="72.25" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">ASRT_SR_AE_TO_SRT_1</text>
     </g>

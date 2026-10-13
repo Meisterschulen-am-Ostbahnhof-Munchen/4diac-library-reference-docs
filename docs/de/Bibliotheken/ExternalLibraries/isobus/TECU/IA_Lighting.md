@@ -2,6 +2,8 @@
 
 ![IA_Lighting](./IA_Lighting.svg)
 
+![IA_Lighting_network](./IA_Lighting_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

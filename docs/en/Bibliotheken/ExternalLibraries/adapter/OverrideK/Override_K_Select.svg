@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1076.33203125 152.0"
-     width="1076.33203125" height="152.0">
+     viewBox="0 0 1076.125 152.0"
+     width="1076.125" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(151.662109375, 10)">
+  <g transform="translate(151.5, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 168.568359375 0
-            A 3 3 0 0 1 171.568359375 3
-            L 171.568359375 23.0
-            A 3 3 0 0 1 168.568359375 26.0
-            L 161.568359375 26.0
-            L 161.568359375 66.0
-            L 168.568359375 66.0
-            A 3 3 0 0 1 171.568359375 69.0
-            L 171.568359375 129.0
-            A 3 3 0 0 1 168.568359375 132.0
+            L 168.5 0
+            A 3 3 0 0 1 171.5 3
+            L 171.5 23.0
+            A 3 3 0 0 1 168.5 26.0
+            L 161.5 26.0
+            L 161.5 66.0
+            L 168.5 66.0
+            A 3 3 0 0 1 171.5 69.0
+            L 171.5 129.0
+            A 3 3 0 0 1 168.5 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -88,7 +88,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Override_K_Select</text>
     
-    <text x="85.7841796875" y="66.0"
+    <text x="85.75" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -128,20 +128,20 @@
     <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">Wert</text>
 
-    <path d="M 160.068359375 97.0
-            L 162.568359375 97.0
-            L 162.568359375 98.66666666666667
-            L 165.068359375 98.66666666666667
-            L 165.068359375 97.0
-            L 170.068359375 97.0
-            L 170.068359375 107.0
-            L 165.068359375 107.0
-            L 165.068359375 105.33333333333333
-            L 162.568359375 105.33333333333333
-            L 162.568359375 107.0
-            L 160.068359375 107.0
+    <path d="M 160.0 97.0
+            L 162.5 97.0
+            L 162.5 98.66666666666667
+            L 165.0 98.66666666666667
+            L 165.0 97.0
+            L 170.0 97.0
+            L 170.0 107.0
+            L 165.0 107.0
+            L 165.0 105.33333333333333
+            L 162.5 105.33333333333333
+            L 162.5 107.0
+            L 160.0 107.0
             Z" fill="#845DAF"/>
-    <text x="157.068359375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="157.0" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">K</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -156,7 +156,7 @@
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Override.Wert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
 
-    <text x="196.568359375" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="196.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan> – 0=Normal (Aktiv=FALSE), 1=Force FALSE (Aktiv=TRUE, Wert=FALSE), 2=Force TRUE (Aktiv=TRUE, Wert=TRUE)</text>
   </g>
 </svg>

@@ -2,6 +2,8 @@
 
 ![SPLIT_SIGNED_REAL](./SPLIT_SIGNED_REAL.svg)
 
+![SPLIT_SIGNED_REAL_ecc](./SPLIT_SIGNED_REAL_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

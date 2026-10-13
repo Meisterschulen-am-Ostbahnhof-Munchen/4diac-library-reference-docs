@@ -1,7 +1,5 @@
 # Manufacturer_IDs
 
-![Manufacturer_IDs](./Manufacturer_IDs.svg)
-
 * * * * * * * * * *
 
 ## Introduction

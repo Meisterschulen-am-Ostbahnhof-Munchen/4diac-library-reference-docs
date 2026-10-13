@@ -2,6 +2,8 @@
 
 ![INIT](./INIT.svg)
 
+![INIT_network](./INIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

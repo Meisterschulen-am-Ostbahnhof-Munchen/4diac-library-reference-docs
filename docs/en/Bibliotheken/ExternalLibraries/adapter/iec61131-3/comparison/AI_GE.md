@@ -2,6 +2,8 @@
 
 ![AI_GE](./AI_GE.svg)
 
+![AI_GE_network](./AI_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

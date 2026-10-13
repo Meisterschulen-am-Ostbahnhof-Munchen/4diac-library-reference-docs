@@ -2,6 +2,14 @@
 
 ![AUDI2](AUDI2.svg)
 
+**Plug (adapter output)**
+
+![AUDI2_plug](./AUDI2_plug.svg)
+
+**Socket (adapter input)**
+
+![AUDI2_socket](./AUDI2_socket.svg)
+
 bidirectional Adapter Interface for 1 Event and 1 UDINT
 
 ## Interface

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 832.470703125 212.0"
-     width="832.470703125" height="212.0">
+     viewBox="0 0 831.6875 212.0"
+     width="831.6875" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(403.115234375, 10)">
+  <g transform="translate(402.4375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 192.9765625 0
-            A 3 3 0 0 1 195.9765625 3
-            L 195.9765625 23.0
-            A 3 3 0 0 1 192.9765625 26.0
-            L 185.9765625 26.0
-            L 185.9765625 66.0
-            L 192.9765625 66.0
-            A 3 3 0 0 1 195.9765625 69.0
-            L 195.9765625 189.0
-            A 3 3 0 0 1 192.9765625 192.0
+            L 193.125 0
+            A 3 3 0 0 1 196.125 3
+            L 196.125 23.0
+            A 3 3 0 0 1 193.125 26.0
+            L 186.125 26.0
+            L 186.125 66.0
+            L 193.125 66.0
+            A 3 3 0 0 1 196.125 69.0
+            L 196.125 189.0
+            A 3 3 0 0 1 193.125 192.0
             L 3 192.0
             A 3 3 0 0 1 0 189.0
             L 0 69.0
@@ -62,41 +62,41 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="189.4765625,11.0 194.4765625,16.0 189.4765625,21.0" fill="#63B31F"/>
-    <text x="186.4765625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="189.625,11.0 194.625,16.0 189.625,21.0" fill="#63B31F"/>
+    <text x="186.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 69.2431640625 37.0
-            L 85.2431640625 37.0
-            A 1 1 0 0 1 86.2431640625 38.0
-            L 86.2431640625 41.5
-            L 84.2431640625 41.5
-            L 84.2431640625 44.5
-            L 86.2431640625 44.5
-            L 86.2431640625 54.0
-            A 1 1 0 0 1 85.2431640625 55.0
-            L 69.2431640625 55.0
-            A 1 1 0 0 1 68.2431640625 54.0
-            L 68.2431640625 44.5
-            L 70.2431640625 44.5
-            L 70.2431640625 41.5
-            L 68.2431640625 41.5
-            L 68.2431640625 38.0
-            A 1 1 0 0 1 69.2431640625 37.0
+    <path d="M 69.34375 37.0
+            L 85.34375 37.0
+            A 1 1 0 0 1 86.34375 38.0
+            L 86.34375 41.5
+            L 84.34375 41.5
+            L 84.34375 44.5
+            L 86.34375 44.5
+            L 86.34375 54.0
+            A 1 1 0 0 1 85.34375 55.0
+            L 69.34375 55.0
+            A 1 1 0 0 1 68.34375 54.0
+            L 68.34375 44.5
+            L 70.34375 44.5
+            L 70.34375 41.5
+            L 68.34375 41.5
+            L 68.34375 38.0
+            A 1 1 0 0 1 69.34375 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="77.2431640625" y="51.0"
+    <text x="77.34375" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="91.2431640625" y="51.0"
+    <text x="91.34375" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">INI_AR</text>
     
-    <text x="97.98828125" y="66.0"
+    <text x="98.0625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -122,12 +122,12 @@
     <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">DEFAULT_VALUE</text>
 
-    <polygon points="189.4765625,71.0 194.4765625,76.0 189.4765625,81.0" fill="#A3B08F"/>
-    <text x="186.4765625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="189.625,71.0 194.625,76.0 189.625,81.0" fill="#A3B08F"/>
+    <text x="186.625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
-    <polygon points="189.4765625,91.0 194.4765625,96.0 189.4765625,101.0" fill="#BD8663"/>
-    <text x="186.4765625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="189.625,91.0 194.625,96.0 189.625,101.0" fill="#BD8663"/>
+    <text x="186.625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
 
     <!-- Adapter Ports -->
@@ -148,20 +148,20 @@
     <text x="14.5" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">AR_IN</text>
 
-    <path d="M 184.4765625 177.0
-            L 186.9765625 177.0
-            L 186.9765625 178.66666666666666
-            L 189.4765625 178.66666666666666
-            L 189.4765625 177.0
-            L 194.4765625 177.0
-            L 194.4765625 187.0
-            L 189.4765625 187.0
-            L 189.4765625 185.33333333333334
-            L 186.9765625 185.33333333333334
-            L 186.9765625 187.0
-            L 184.4765625 187.0
+    <path d="M 184.625 177.0
+            L 187.125 177.0
+            L 187.125 178.66666666666666
+            L 189.625 178.66666666666666
+            L 189.625 177.0
+            L 194.625 177.0
+            L 194.625 187.0
+            L 189.625 187.0
+            L 189.625 185.33333333333334
+            L 187.125 185.33333333333334
+            L 187.125 187.0
+            L 184.625 187.0
             Z" fill="#845DAF"/>
-    <text x="181.4765625" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="181.625" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">AR_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -199,19 +199,19 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="156.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="200.9765625" y="11.0" width="10" height="10"
+    <rect x="201.125" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="200.9765625" y="71.0" width="10" height="10"
+    <rect x="201.125" y="71.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="205.9765625" y1="16.0" x2="205.9765625" y2="76.0"
+    <line x1="206.125" y1="16.0" x2="206.125" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="200.9765625" y="91.0" width="10" height="10"
+    <rect x="201.125" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="205.9765625" y1="16.0" x2="205.9765625" y2="96.0"
+    <line x1="206.125" y1="16.0" x2="206.125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -234,13 +234,13 @@
     <line x1="0" y1="156.0" x2="-20" y2="156.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="195.9765625" y1="16.0" x2="215.9765625" y2="16.0"
+    <line x1="196.125" y1="16.0" x2="216.125" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="195.9765625" y1="76.0" x2="215.9765625" y2="76.0"
+    <line x1="196.125" y1="76.0" x2="216.125" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="195.9765625" y1="96.0" x2="215.9765625" y2="96.0"
+    <line x1="196.125" y1="96.0" x2="216.125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -248,7 +248,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="220.9765625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="221.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -266,16 +266,16 @@
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">The value to read if there is nothing in the settings.ini – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
 
-    <text x="220.9765625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="221.125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Event Output Qualifier</text>
 
-    <text x="220.9765625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="221.125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
 
     <text x="-25" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Value to store (SET) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>
 
-    <text x="220.9765625" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="221.125" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Stored value output (GETO)</text>
   </g>
 </svg>

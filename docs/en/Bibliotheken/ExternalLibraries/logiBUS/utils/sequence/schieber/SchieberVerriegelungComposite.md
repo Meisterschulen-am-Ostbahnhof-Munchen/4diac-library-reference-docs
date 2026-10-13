@@ -1,5 +1,7 @@
 # SlideLockComposite
 
+![SchieberVerriegelungComposite_network](./SchieberVerriegelungComposite_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

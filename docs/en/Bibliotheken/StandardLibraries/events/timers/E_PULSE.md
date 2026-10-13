@@ -1,5 +1,7 @@
 # E_PULSE
 
+![E_PULSE_network](./E_PULSE_network.svg)
+
 **Important note: This function block requires only one event and no cyclic calls. It has no output ET and does not display the elapsed time.**
 
 * * * * * * * * * *
@@ -60,8 +62,8 @@ The E_PULSE function block can be used in various industrial control application
 
 ## 🛠️ Related Exercises
 
-- [Exercise_020h](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
-- [Exercise_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Exercise_020h](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020h/)
+- [Exercise_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
 
 ## Conclusion
 

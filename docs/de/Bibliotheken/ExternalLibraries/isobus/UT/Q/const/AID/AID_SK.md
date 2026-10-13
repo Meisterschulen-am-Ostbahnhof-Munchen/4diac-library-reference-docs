@@ -1,7 +1,5 @@
 # AID_SK
 
-![AID_SK](./AID_SK.svg)
-
 * * * * * * * * * *
 
 ## Einleitung

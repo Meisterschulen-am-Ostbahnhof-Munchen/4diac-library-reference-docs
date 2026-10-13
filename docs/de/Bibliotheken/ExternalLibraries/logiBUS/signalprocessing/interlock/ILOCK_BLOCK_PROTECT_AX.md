@@ -2,6 +2,8 @@
 
 ![ILOCK_BLOCK_PROTECT_AX](./ILOCK_BLOCK_PROTECT_AX.svg)
 
+![ILOCK_BLOCK_PROTECT_AX_ecc](./ILOCK_BLOCK_PROTECT_AX_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

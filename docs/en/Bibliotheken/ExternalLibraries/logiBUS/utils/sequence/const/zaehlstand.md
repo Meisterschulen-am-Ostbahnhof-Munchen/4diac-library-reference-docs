@@ -1,7 +1,5 @@
 # zaehlstand
 
-![zaehlstand](./zaehlstand.svg)
-
 * * * * * * * * * *
 
 ## Introduction

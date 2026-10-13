@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 717.3125 412.0"
+     width="717.3125" height="412.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(252.5625, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 178.0 0
+            A 3 3 0 0 1 181.0 3
+            L 181.0 163.0
+            A 3 3 0 0 1 178.0 166.0
+            L 171.0 166.0
+            L 171.0 206.0
+            L 178.0 206.0
+            A 3 3 0 0 1 181.0 209.0
+            L 181.0 389.0
+            A 3 3 0 0 1 178.0 392.0
+            L 3 392.0
+            A 3 3 0 0 1 0 389.0
+            L 0 209.0
+            A 3 3 0 0 1 3 206.0
+            L 10 206.0
+            L 10 166.0
+            L 3 166.0
+            A 3 3 0 0 1 0 163.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI1</text>
+
+    <polygon points="1.5,31.0 6.5,36.0 1.5,41.0" fill="#63B31F"/>
+    <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI2</text>
+
+    <polygon points="1.5,51.0 6.5,56.0 1.5,61.0" fill="#63B31F"/>
+    <text x="9.5" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI3</text>
+
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#63B31F"/>
+    <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI4</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#63B31F"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI5</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#63B31F"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI6</text>
+
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#63B31F"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI7</text>
+
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#63B31F"/>
+    <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">EI8</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 21.0 177.0
+            L 37.0 177.0
+            A 1 1 0 0 1 38.0 178.0
+            L 38.0 181.5
+            L 36.0 181.5
+            L 36.0 184.5
+            L 38.0 184.5
+            L 38.0 194.0
+            A 1 1 0 0 1 37.0 195.0
+            L 21.0 195.0
+            A 1 1 0 0 1 20.0 194.0
+            L 20.0 184.5
+            L 22.0 184.5
+            L 22.0 181.5
+            L 20.0 181.5
+            L 20.0 178.0
+            A 1 1 0 0 1 21.0 177.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <path d="M 22.5 186.5 L 27.0 186.5 A 0.5 0.5 0 0 1 27.5 187.0 L 27.5 188.25 L 26.675 188.25 L 26.675 189.41666666666666 L 27.5 189.41666666666666 L 27.5 193.0 A 0.5 0.5 0 0 1 27.0 193.5 L 22.5 193.5 A 0.5 0.5 0 0 1 22.0 193.0 L 22.0 189.41666666666666 L 22.825 189.41666666666666 L 22.825 188.25 L 22.0 188.25 L 22.0 187.0 A 0.5 0.5 0 0 1 22.5 186.5 Z" fill="#1565C0" stroke="none"/>
+    <path d="M 31.0 186.5 L 35.5 186.5 A 0.5 0.5 0 0 1 36.0 187.0 L 36.0 188.25 L 35.175 188.25 L 35.175 189.41666666666666 L 36.0 189.41666666666666 L 36.0 193.0 A 0.5 0.5 0 0 1 35.5 193.5 L 31.0 193.5 A 0.5 0.5 0 0 1 30.5 193.0 L 30.5 189.41666666666666 L 31.325 189.41666666666666 L 31.325 188.25 L 30.5 188.25 L 30.5 187.0 A 0.5 0.5 0 0 1 31.0 186.5 Z" fill="#1565C0" stroke="none"/>
+    <line x1="27.5" y1="187.34" x2="30.5" y2="187.34"
+          stroke="#3DA015" stroke-width="1.2"/>
+    <line x1="27.5" y1="191.4" x2="30.5" y2="191.4"
+          stroke="#FF0000" stroke-width="1.2"/>
+
+    <!-- Block Name -->
+    <text x="43.0" y="191.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">AUI_AUI_MUX_8_VAL</text>
+    
+    <text x="90.5" y="206.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#18519E"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val1</text>
+
+    <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#18519E"/>
+    <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val2</text>
+
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#18519E"/>
+    <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val3</text>
+
+    <polygon points="1.5,271.0 6.5,276.0 1.5,281.0" fill="#18519E"/>
+    <text x="9.5" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val4</text>
+
+    <polygon points="1.5,291.0 6.5,296.0 1.5,301.0" fill="#18519E"/>
+    <text x="9.5" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val5</text>
+
+    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#18519E"/>
+    <text x="9.5" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val6</text>
+
+    <polygon points="1.5,331.0 6.5,336.0 1.5,341.0" fill="#18519E"/>
+    <text x="9.5" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val7</text>
+
+    <polygon points="1.5,351.0 6.5,356.0 1.5,361.0" fill="#18519E"/>
+    <text x="9.5" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">val8</text>
+
+    <!-- Adapter Ports -->
+
+    <path d="M 169.5 377.0
+            L 172.0 377.0
+            L 172.0 378.6666666666667
+            L 174.5 378.6666666666667
+            L 174.5 377.0
+            L 179.5 377.0
+            L 179.5 387.0
+            L 174.5 387.0
+            L 174.5 385.3333333333333
+            L 172.0 385.3333333333333
+            L 172.0 387.0
+            L 169.5 387.0
+            Z" fill="#845DAF"/>
+    <text x="166.5" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <!-- Horizontal Connection Lines -->
+
+    <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val1 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val2 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val3 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val4 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val5 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val6 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val7 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event zur Auswahl von val8 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-25" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI1 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI2 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI3 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI4 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI5 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI6 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI7 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialer Ausgabewert bei EI8 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="206.0" y="383.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan> – Ausgewaehlter AUI-Adapter Output</text>
+  </g>
+</svg>

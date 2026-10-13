@@ -2,6 +2,8 @@
 
 ![AIWS_NE](./AIWS_NE.svg)
 
+![AIWS_NE_network](./AIWS_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

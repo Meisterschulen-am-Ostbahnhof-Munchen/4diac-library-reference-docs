@@ -2,6 +2,8 @@
 
 ![AUS_GT](./AUS_GT.svg)
 
+![AUS_GT_network](./AUS_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

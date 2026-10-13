@@ -1,7 +1,5 @@
 # AID_DM
 
-![AID_DM](./AID_DM.svg)
-
 * * * * * * * * * *
 
 ## Introduction

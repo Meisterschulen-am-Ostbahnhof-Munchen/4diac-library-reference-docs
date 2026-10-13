@@ -1,7 +1,5 @@
 # AID_SKM
 
-![AID_SKM](./AID_SKM.svg)
-
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![IA_RHS](./IA_RHS.svg)
 
+![IA_RHS_network](./IA_RHS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

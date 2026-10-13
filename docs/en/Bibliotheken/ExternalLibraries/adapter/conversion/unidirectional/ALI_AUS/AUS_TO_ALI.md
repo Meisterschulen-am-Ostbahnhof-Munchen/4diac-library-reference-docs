@@ -2,6 +2,8 @@
 
 ![AUS_TO_ALI](./AUS_TO_ALI.svg)
 
+![AUS_TO_ALI_network](./AUS_TO_ALI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

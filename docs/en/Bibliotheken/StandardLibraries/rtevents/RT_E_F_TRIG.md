@@ -7,6 +7,20 @@
 Real-time version of the E_F_TRIG block (Falling Edge).
 ![RT_E_F_TRIG](RT_E_F_TRIG.svg)
 
+## Interface
+
+| Port     | Type  | Description                                     |
+| :------- | :---- | :---------------------------------------------- |
+| INIT     | Event | Initialization (with QI, Tmin, Deadline, WCET)  |
+| EI       | Event | Event input (with QI)                           |
+| INITO    | Event | Initialization done (with QO)                   |
+| EO       | Event | Event output                                    |
+| QI       | BOOL  | Input signal                                    |
+| Tmin     | TIME  | Real-time parameter (with INIT)                 |
+| Deadline | TIME  | Real-time parameter (with INIT)                 |
+| WCET     | TIME  | Real-time parameter (with INIT)                 |
+| QO       | BOOL  | Output signal (with INITO)                      |
+
 ## Metadata
 
 | Attribute     | Value                            |

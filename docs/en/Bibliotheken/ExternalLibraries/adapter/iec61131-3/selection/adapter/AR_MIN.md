@@ -1,5 +1,9 @@
 # AR_MIN
 
+![AR_MIN_network](./AR_MIN_network.svg)
+
+![AR_MIN](./AR_MIN.svg)
+
 ## Introduction
 
 The function block `AR_MIN` is used to determine the minimum value of two analog input signals transmitted via adapters (`AR`). It compares the data values of the two input sockets `IN0` and `IN1` and passes the smaller value to the output plug `OUT`.

@@ -1,7 +1,5 @@
 # AID_FA_FONT
 
-![AID_FA_FONT](./AID_FA_FONT.svg)
-
 * * * * * * * * * *
 
 ## Introduction

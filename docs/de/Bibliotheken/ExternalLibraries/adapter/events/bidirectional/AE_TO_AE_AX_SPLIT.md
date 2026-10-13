@@ -2,6 +2,8 @@
 
 ![AE_TO_AE_AX_SPLIT](AE_TO_AE_AX_SPLIT.svg)
 
+![AE_TO_AE_AX_SPLIT_network](./AE_TO_AE_AX_SPLIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

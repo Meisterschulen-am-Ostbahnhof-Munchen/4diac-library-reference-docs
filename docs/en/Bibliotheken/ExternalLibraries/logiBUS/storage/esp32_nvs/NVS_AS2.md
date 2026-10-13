@@ -2,6 +2,8 @@
 
 ![NVS_AS2](./NVS_AS2.svg)
 
+![NVS_AS2_network](./NVS_AS2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The **NVS_AS2** function block is used to load and store SINT data in non-volati
 
 | Event | Type | Comment | Associated Variables |
 | ----- | ---- | ------- | -------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The **NVS_AS2** function block is used to load and store SINT data in non-volati
 | Name | Type | Comment |
 | ---- | ---- | ------- |
 | `QI` | BOOL | Event Input Qualifier |
+| `SETM` | BOOL | Enable mirroring on SET |
 | `KEY` | STRING | Key name for NVS entry |
 | `DEFAULT_VALUE` | SINT | Default value if key does not exist in NVS (Default: 0) |
 

@@ -2,6 +2,8 @@
 
 ![AS_GT](./AS_GT.svg)
 
+![AS_GT_network](./AS_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

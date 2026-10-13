@@ -1,5 +1,7 @@
 # BOOLS_TO_QUARTERS
 
+![BOOLS_TO_QUARTERS_network](./BOOLS_TO_QUARTERS_network.svg)
+
 ## 🎧 Podcast
 
 - [QUARTER](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/QUARTER-e36741d)
@@ -76,7 +78,7 @@ Als Composite FB ohne eigene, explizite Zustandsmaschine besitzt `BOOLS_TO_QUART
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Fazit
 

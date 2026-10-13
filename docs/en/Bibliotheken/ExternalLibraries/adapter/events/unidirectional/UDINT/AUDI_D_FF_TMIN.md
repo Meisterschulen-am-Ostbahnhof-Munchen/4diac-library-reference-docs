@@ -2,6 +2,8 @@
 
 ![AUDI_D_FF_TMIN](./AUDI_D_FF_TMIN.svg)
 
+![AUDI_D_FF_TMIN_network](./AUDI_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

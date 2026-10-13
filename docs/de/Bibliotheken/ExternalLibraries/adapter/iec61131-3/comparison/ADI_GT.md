@@ -2,6 +2,8 @@
 
 ![ADI_GT](./ADI_GT.svg)
 
+![ADI_GT_network](./ADI_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![NVS_AB](NVS_AB.svg)
 
+![NVS_AB_network](./NVS_AB_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

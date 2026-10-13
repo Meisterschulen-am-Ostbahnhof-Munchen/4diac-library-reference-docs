@@ -2,6 +2,8 @@
 
 ![ALR_GT](./ALR_GT.svg)
 
+![ALR_GT_network](./ALR_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -2,6 +2,8 @@
 
 ![AUI_PUBLISH_1](./AUI_PUBLISH_1.svg)
 
+![AUI_PUBLISH_1_network](./AUI_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

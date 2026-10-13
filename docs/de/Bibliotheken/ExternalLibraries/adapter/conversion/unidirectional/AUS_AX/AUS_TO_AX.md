@@ -2,6 +2,8 @@
 
 ![AUS_TO_AX](./AUS_TO_AX.svg)
 
+![AUS_TO_AX_network](./AUS_TO_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -47,7 +49,7 @@ Der FB nutzt intern einen **F_NE**-Baustein (Vergleich auf Ungleichheit) aus der
 
 ## Technische Besonderheiten
 
-- **Speichert das Bitmuster des Ganzzahlwerts**, wie für ein Bit-String-Ziel erwartet (schneidet ab, falls das Ziel schmaler ist als die Quelle).
+- **Kein Bitmuster, sondern Ungleich-Null-Vergleich**: Das Ergebnis ist `TRUE` für jeden Wert ungleich 0, nicht das niederwertigste Bit. Der Kommentar im Quellbaustein („speichert das Bitmuster …, schneidet ab“) beschreibt ein anderes Verhalten und ist veraltet; maßgeblich ist das Netzwerk mit `F_NE`.
 
 - Der FB ist als **Composite-FB** realisiert, d.h. seine Logik wird durch ein internes Netzwerk aus Standardbausteinen abgebildet.
 - Er verwendet den **F_NE**-Vergleichsbaustein, der der Bibliothek **iec61131::comparison** entstammt.

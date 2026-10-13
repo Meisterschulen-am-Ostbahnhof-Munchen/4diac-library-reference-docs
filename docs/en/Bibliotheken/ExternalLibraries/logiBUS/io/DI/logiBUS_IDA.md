@@ -2,6 +2,8 @@
 
 ![logiBUS_IDA](./logiBUS_IDA.svg)
 
+![logiBUS_IDA_network](./logiBUS_IDA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

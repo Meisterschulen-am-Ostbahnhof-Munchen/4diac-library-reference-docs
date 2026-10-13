@@ -1,5 +1,7 @@
 # AI_I_TO_INT
 
+![AI_I_TO_INT_network](./AI_I_TO_INT_network.svg)
+
 ## Introduction
 
 The AI_I_TO_INT function block is a composite function block used to convert the AI adapter format to an INT value.

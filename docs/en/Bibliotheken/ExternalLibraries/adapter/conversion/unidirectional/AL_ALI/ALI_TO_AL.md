@@ -2,6 +2,8 @@
 
 ![ALI_TO_AL](./ALI_TO_AL.svg)
 
+![ALI_TO_AL_network](./ALI_TO_AL_network.svg)
+
 * * * * * * * * * *
 The **ALI_TO_AL** function block is a composite function block that converts an **ALI adapter** (data type LINT) into an **AL adapter** (data type LWORD). It serves as an interface converter between different adapter types and enables seamless data transfer in 4diac and IEC 61499 systems.
 

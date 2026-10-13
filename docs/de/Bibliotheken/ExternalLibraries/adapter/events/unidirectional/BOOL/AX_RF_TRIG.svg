@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 808.6298828125 152.0"
-     width="808.6298828125" height="152.0">
+     viewBox="0 0 807.4375 152.0"
+     width="807.4375" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(314.91796875, 10)">
+  <g transform="translate(314.4375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 131.2919921875 0
-            A 3 3 0 0 1 134.2919921875 3
-            L 134.2919921875 43.0
-            A 3 3 0 0 1 131.2919921875 46.0
-            L 124.2919921875 46.0
-            L 124.2919921875 86.0
-            L 131.2919921875 86.0
-            A 3 3 0 0 1 134.2919921875 89.0
-            L 134.2919921875 129.0
-            A 3 3 0 0 1 131.2919921875 132.0
+            L 131.1875 0
+            A 3 3 0 0 1 134.1875 3
+            L 134.1875 43.0
+            A 3 3 0 0 1 131.1875 46.0
+            L 124.1875 46.0
+            L 124.1875 86.0
+            L 131.1875 86.0
+            A 3 3 0 0 1 134.1875 89.0
+            L 134.1875 129.0
+            A 3 3 0 0 1 131.1875 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 89.0
@@ -58,12 +58,12 @@
 
     <!-- Event Ports -->
 
-    <polygon points="127.7919921875,11.0 132.7919921875,16.0 127.7919921875,21.0" fill="#63B31F"/>
-    <text x="124.7919921875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="127.6875,11.0 132.6875,16.0 127.6875,21.0" fill="#63B31F"/>
+    <text x="124.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ER</text>
 
-    <polygon points="127.7919921875,31.0 132.7919921875,36.0 127.7919921875,41.0" fill="#63B31F"/>
-    <text x="124.7919921875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="127.6875,31.0 132.6875,36.0 127.6875,41.0" fill="#63B31F"/>
+    <text x="124.6875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">EF</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_RF_TRIG</text>
     
-    <text x="67.14599609375" y="86.0"
+    <text x="67.09375" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -126,10 +126,10 @@
 
     <!-- External Labels -->
 
-    <text x="159.2919921875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="159.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – confirmation that a rising edge was detected</text>
 
-    <text x="159.2919921875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="159.1875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – confirmation that a falling edge was detected</text>
 
     <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

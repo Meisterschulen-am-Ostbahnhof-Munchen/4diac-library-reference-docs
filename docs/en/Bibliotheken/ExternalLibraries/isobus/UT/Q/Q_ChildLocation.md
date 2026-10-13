@@ -13,7 +13,7 @@ The **Q_ChildLocation** is a standards-compliant function block for changing the
 
 ### **Event Inputs**
 
-- `INIT`: Initialization Request (with object and parent ID)
+- `INIT`: Initialization Request (with object and parent ID as well as `xScale`)
 - `REQ`: Position Change Request (with relative coordinates)
 
 ### **Event Outputs**
@@ -25,6 +25,7 @@ The **Q_ChildLocation** is a standards-compliant function block for changing the
 
 - `u16ObjId` (UINT): Child Object ID
 - `u16ObjIdParent` (UINT): Parent Object ID
+- `xScale` (BOOL, default `FALSE`): `FALSE` = bypass, `u8Xchange`/`u8Ychange` are sent through unchanged; `TRUE` = scale them by the DM/SKM factor for `u16ObjIdParent`
 - `u8Xchange` (USINT): Relative X-Position Change (-128 to +127)
 - `u8Ychange` (USINT): Relative Y-position change (-128 to +127)
 

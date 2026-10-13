@@ -3,6 +3,8 @@
 
 ![AULI_AX_SEL_AULI](./AULI_AX_SEL_AULI.svg)
 
+![AULI_AX_SEL_AULI_network](./AULI_AX_SEL_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

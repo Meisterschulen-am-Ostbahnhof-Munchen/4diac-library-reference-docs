@@ -12,25 +12,25 @@ Der AX_SELECT ist ein Funktionsblock, der basierend auf einem booleschen Eingang
 
 ## Schnittstellenstruktur
 
-### **Daten-Eingänge**
+### **Ereignis-Eingänge**
 
-- **G** (BOOL): Auswahlsignal. FALSE = IN0, TRUE = IN1.
+- **EI0**: Eingangsereignis, wird bei G = 0 ausgewählt.
+- **EI1**: Eingangsereignis, wird bei G = 1 ausgewählt.
+
+### **Ereignis-Ausgänge**
+
+- **EO**: Ausgangsereignis.
 
 ### **Adapter**
 
 **Sockets (Eingänge):**
 
-- **IN0** (adapter::types::unidirectional::AX)
-- **IN1** (adapter::types::unidirectional::AX)
-
-**Plugs (Ausgänge):**
-
-- **OUT** (adapter::types::unidirectional::AX)
+- **G** (adapter::types::unidirectional::AX): Auswahlsignal. EI0 wird bei G = 0 ausgewählt, EI1 bei G = 1.
 
 ## Funktionsweise
 
-Wenn G = FALSE, wird IN0 an OUT weitergeleitet.
-Wenn G = TRUE, wird IN1 an OUT weitergeleitet.
+Wenn G = 0, wird das Ereignis EI0 als EO ausgegeben.
+Wenn G = 1, wird das Ereignis EI1 als EO ausgegeben.
 
 ## Technische Besonderheiten
 
@@ -50,7 +50,7 @@ Auswahl von Signalen.
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_095_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
+- [Uebung_095_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_095_AX/)
 
 ## Fazit
 

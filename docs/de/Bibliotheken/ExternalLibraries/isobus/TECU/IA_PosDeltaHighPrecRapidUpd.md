@@ -2,6 +2,8 @@
 
 ![IA_PosDeltaHighPrecRapidUpd](./IA_PosDeltaHighPrecRapidUpd.svg)
 
+![IA_PosDeltaHighPrecRapidUpd_network](./IA_PosDeltaHighPrecRapidUpd_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

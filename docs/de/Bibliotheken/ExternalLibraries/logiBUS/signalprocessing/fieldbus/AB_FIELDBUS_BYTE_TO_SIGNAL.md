@@ -2,6 +2,8 @@
 
 ![AB_FIELDBUS_BYTE_TO_SIGNAL](./AB_FIELDBUS_BYTE_TO_SIGNAL.svg)
 
+![AB_FIELDBUS_BYTE_TO_SIGNAL_network](./AB_FIELDBUS_BYTE_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

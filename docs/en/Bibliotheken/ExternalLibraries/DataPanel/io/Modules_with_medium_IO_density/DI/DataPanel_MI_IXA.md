@@ -1,5 +1,7 @@
 # DataPanel_MI_IXA
 
+![DataPanel_MI_IXA_network](./DataPanel_MI_IXA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

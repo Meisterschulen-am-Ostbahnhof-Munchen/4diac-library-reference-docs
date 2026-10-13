@@ -2,6 +2,8 @@
 
 ![IEC 61499 Timeout Symbol](https://user-images.githubusercontent.com/113907528/204902807-7fadcd7d-d6e1-47c0-812e-f5c2d80f79e0.png)
 
+![E_RTimeOut_network](./E_RTimeOut_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -13,7 +15,7 @@ The **E_RTimeOut** is a special function block according to IEC 61499-2. It impl
 
 ### **Adapter Interface (Socket Perspective)**
 
-The block uses a **socket** of type `ARTimeOut`. Since it is a socket, the signal directions are inverted compared to the adapter definition (plug):
+The block uses a **socket** named `TimeOutSocket` of type `ARTimeOut` (`iec61499::events::ARTimeOut`); the block has no other event or data connections. Since it is a socket, the signal directions are inverted compared to the adapter definition (plug):
 
 - **Inputs (received from the socket)**:
 - `START`: Starts or resets the internal timer.
@@ -74,8 +76,8 @@ The block uses a **socket** of type `ARTimeOut`. Since it is a socket, the signa
 
 ## 🛠️ Related Exercises
 
-- [Exercise_035b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
-- [Exercise_170](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
+- [Exercise_035b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_035b/)
+- [Exercise_170](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_170/)
 
 ## Conclusion
 

@@ -2,6 +2,8 @@
 
 ![ALI_FB_CTD](./ALI_FB_CTD.svg)
 
+![ALI_FB_CTD_network](./ALI_FB_CTD_network.svg)
+
 * * * * * * * * * *
 The **ALI_FB_CTD** is a down counter for LINT values (64-bit integers) with adapter interfaces according to IEC 61499. It is specifically designed for use with the unidirectional adapters `AX` (event/boolean carrier) and `ALI` (LINT value carrier). The function block encapsulates the standard FB `FB_CTD_LINT` from the library `iec61131::counters` and extends it with an adapter-based connection that enables loose coupling between the function blocks.
 The function block fires its event outputs with every update – regardless of whether the counter value actually changes. For change-triggered processing, it is recommended to use a `AX_D_FF` as a filter.

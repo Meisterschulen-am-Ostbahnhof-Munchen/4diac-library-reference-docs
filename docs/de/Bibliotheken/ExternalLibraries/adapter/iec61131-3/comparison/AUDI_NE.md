@@ -2,6 +2,8 @@
 
 ![AUDI_NE](./AUDI_NE.svg)
 
+![AUDI_NE_network](./AUDI_NE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

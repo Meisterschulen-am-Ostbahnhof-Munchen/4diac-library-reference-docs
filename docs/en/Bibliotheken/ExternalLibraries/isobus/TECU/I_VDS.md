@@ -17,8 +17,8 @@ The block integrates navigation data for modern agricultural machinery and comme
 ### **Event Outputs**
 
 - `INITO`: Initialization Confirmation (with status)
-- `IND`: Data Indication with Navigation Parameters
-- `TIMEOUT`: Timeout Event
+- `IND`: Data Indication with Navigation Parameters (with `QO`, `timestamp_data`, `CompassBearing`, `NavigationBasedVehicleSpeed`, `Pitch`, `STATUS`, `Q_timeout`, `Altitude`). Fires on every cycle without an active timeout and thereby also publishes the reset of `Q_timeout` to FALSE
+- `TIMEOUT`: Timeout Event (with `timestamp_timeout`, `STATUS`, `Q_timeout`). Fires only when a timeout actually occurs; the reset of `Q_timeout` is reported via `IND`, not here
 
 ### **Data Inputs**
 
@@ -34,6 +34,9 @@ The block integrates navigation data for modern agricultural machinery and comme
 | `NavigationBasedVehicleSpeed` | UINT | 517 | 16 | 1/256 km/h/bit | 0-250 km/h | GPS-based speed |
 | `Pitch` | UINT | 583 | 16 | - | 0xFFFF | Pitch angle (reserved) |
 | `Altitude` | UINT | 580 | 16 | - | 0xFFFF | Altitude above sea level (reserved) |
+| `Q_timeout` | BOOL | - | - | - | TRUE/FALSE | Timeout flag (set with `TIMEOUT`, reset via `IND`) |
+| `timestamp_data` | DINT | - | - | - | - | Timestamp of the data (with `IND`) |
+| `timestamp_timeout` | DINT | - | - | - | - | Timestamp of the timeout (with `TIMEOUT`) |
 
 ## Functionality
 
@@ -89,8 +92,8 @@ The block integrates navigation data for modern agricultural machinery and comme
 
 ## 🛠️ Related Exercises
 
-- [Exercise_073](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_073/)
-- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Exercise_073](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_073/)
+- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 

@@ -1,5 +1,9 @@
 # AR_CLIENT_1_0
 
+![AR_CLIENT_1_0_network](./AR_CLIENT_1_0_network.svg)
+
+![AR_CLIENT_1_0](./AR_CLIENT_1_0.svg)
+
 * * * * * * * * * *
 
 ## Introduction

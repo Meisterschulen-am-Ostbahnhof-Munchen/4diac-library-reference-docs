@@ -2,6 +2,8 @@
 
 ![ILOCK_SWITCH_AX](./ILOCK_SWITCH_AX.svg)
 
+![ILOCK_SWITCH_AX_ecc](./ILOCK_SWITCH_AX_ecc.svg)
+
 *(Kein Bild verfügbar)*
 
 * * * * * * * * * *

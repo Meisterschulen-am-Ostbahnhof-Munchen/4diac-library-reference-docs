@@ -2,6 +2,8 @@
 
 ![ASR_AX_SWITCH](./ASR_AX_SWITCH.svg)
 
+![ASR_AX_SWITCH_ecc](./ASR_AX_SWITCH_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

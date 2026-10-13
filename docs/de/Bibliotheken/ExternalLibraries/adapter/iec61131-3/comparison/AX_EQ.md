@@ -2,6 +2,8 @@
 
 ![AX_EQ](./AX_EQ.svg)
 
+![AX_EQ_network](./AX_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

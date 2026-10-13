@@ -2,6 +2,8 @@
 
 ![E_STOPWATCH](https://user-images.githubusercontent.com/116869307/214154982-af9a1e9b-6839-43e1-8191-1eca65a4308c.png)
 
+![E_STOPWATCH_ecc](./E_STOPWATCH_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -97,8 +99,8 @@ stateDiagram-v2
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
-- [Uebung_020i_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
+- [Uebung_020i](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020i/)
+- [Uebung_020i_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020i_AX/)
 
 ## Fazit
 

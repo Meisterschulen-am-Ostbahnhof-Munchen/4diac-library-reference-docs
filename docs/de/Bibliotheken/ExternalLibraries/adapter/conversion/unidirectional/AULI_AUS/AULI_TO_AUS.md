@@ -2,6 +2,8 @@
 
 ![AULI_TO_AUS](./AULI_TO_AUS.svg)
 
+![AULI_TO_AUS_network](./AULI_TO_AUS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

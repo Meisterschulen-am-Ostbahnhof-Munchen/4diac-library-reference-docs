@@ -2,6 +2,8 @@
 
 ![NVS_AUDI2](./NVS_AUDI2.svg)
 
+![NVS_AUDI2_network](./NVS_AUDI2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AUDI2** dient dem Laden und Speichern von UDINT-Daten i
 
 | Ereignis | Typ | Kommentar | Mitgeführte Variablen |
 | -------- | --- | --------- | --------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AUDI2** dient dem Laden und Speichern von UDINT-Daten i
 | Name | Typ | Kommentar |
 | ---- | --- | --------- |
 | `QI` | BOOL | Event Input Qualifier |
+| `SETM` | BOOL | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | `KEY` | STRING | Schlüsselname für den NVS-Eintrag |
 | `DEFAULT_VALUE` | UDINT | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: 0) |
 

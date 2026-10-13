@@ -2,6 +2,8 @@
 
 ![ALR_TO_AS](./ALR_TO_AS.svg)
 
+![ALR_TO_AS_network](./ALR_TO_AS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

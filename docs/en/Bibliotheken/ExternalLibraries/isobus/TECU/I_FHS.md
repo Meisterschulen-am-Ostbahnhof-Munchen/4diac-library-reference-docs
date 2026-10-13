@@ -28,7 +28,8 @@ Developed under the EPL-2.0 license, it enables the monitoring and control of fr
 
 - `QO` (BOOL): Status Qualifier
 - `STATUS` (STRING): Operational Status
-- `timestamp_*` (DINT): Timestamp
+- `timestamp_data` (DINT): Timestamp of the data (with `IND`)
+- `timestamp_timeout` (DINT): Timestamp of the timeout (with `TIMEOUT`)
 - `Q_timeout` (BOOL): Timeout Indicator
 
 ## Parameters (SPN Details)
@@ -85,7 +86,7 @@ Developed under the EPL-2.0 license, it enables the monitoring and control of fr
 
 ## 🛠️ Related Exercises
 
-- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Exercise_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Conclusion
 

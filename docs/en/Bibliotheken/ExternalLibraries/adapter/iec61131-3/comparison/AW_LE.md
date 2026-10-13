@@ -2,6 +2,8 @@
 
 ![AW_LE](./AW_LE.svg)
 
+![AW_LE_network](./AW_LE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

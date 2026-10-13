@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 578.0302734375 152.0"
-     width="578.0302734375" height="152.0">
+     viewBox="0 0 577.625 152.0"
+     width="577.625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(310.92578125, 10)">
+  <g transform="translate(310.5625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -60,31 +60,31 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 21.37451171875 37.0
-            L 37.37451171875 37.0
-            A 1 1 0 0 1 38.37451171875 38.0
-            L 38.37451171875 41.5
-            L 36.37451171875 41.5
-            L 36.37451171875 44.5
-            L 38.37451171875 44.5
-            L 38.37451171875 54.0
-            A 1 1 0 0 1 37.37451171875 55.0
-            L 21.37451171875 55.0
-            A 1 1 0 0 1 20.37451171875 54.0
-            L 20.37451171875 44.5
-            L 22.37451171875 44.5
-            L 22.37451171875 41.5
-            L 20.37451171875 41.5
-            L 20.37451171875 38.0
-            A 1 1 0 0 1 21.37451171875 37.0
+    <path d="M 21.40625 37.0
+            L 37.40625 37.0
+            A 1 1 0 0 1 38.40625 38.0
+            L 38.40625 41.5
+            L 36.40625 41.5
+            L 36.40625 44.5
+            L 38.40625 44.5
+            L 38.40625 54.0
+            A 1 1 0 0 1 37.40625 55.0
+            L 21.40625 55.0
+            A 1 1 0 0 1 20.40625 54.0
+            L 20.40625 44.5
+            L 22.40625 44.5
+            L 22.40625 41.5
+            L 20.40625 41.5
+            L 20.40625 38.0
+            A 1 1 0 0 1 21.40625 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="29.37451171875" y="51.0"
+    <text x="29.40625" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="43.37451171875" y="51.0"
+    <text x="43.40625" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AL_LT</text>
     

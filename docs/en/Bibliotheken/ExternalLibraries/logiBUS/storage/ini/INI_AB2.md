@@ -2,11 +2,13 @@
 
 ![INI_AB2](./INI_AB2.svg)
 
+![INI_AB2_network](./INI_AB2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
 
-The function block `INI_AB2` is used to read and write REAL values to or from a `settings.ini` file. Access is via a combination of section name and key name. Communication with external systems is via a bidirectional **AB2 adapter**, which allows values from the INI file to be passed to other function blocks or values from other function blocks to be received and stored in the file. The function block was developed according to the IEC 61499-2 standard.
+The function block `INI_AB2` is used to read and write BYTE values to or from a `settings.ini` file. Access is via a combination of section name and key name. Communication with external systems is via a bidirectional **AB2 adapter**, which allows values from the INI file to be passed to other function blocks or values from other function blocks to be received and stored in the file. The function block was developed according to the IEC 61499-2 standard.
 
 ## Interface Structure
 
@@ -14,7 +16,7 @@ The function block `INI_AB2` is used to read and write REAL values to or from a 
 
 | Event | Type  | Description                                                                                                                                                         |
 | ----- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| INIT  | EInit | Initialization event; starts the read or write operation depending on the connected adapter logic. The data passed specifies the section, key, and a default value. |
+| INIT  | EInit | Initialization event; starts the read or write operation depending on the connected adapter logic. The data passed specifies the mirroring on SET (`SETM`), section, key, and a default value. |
 
 ### **Event Outputs**
 
@@ -27,9 +29,10 @@ The function block `INI_AB2` is used to read and write REAL values to or from a 
 | Variable      | Type   | Description                                                     |
 | ------------- | ------ | --------------------------------------------------------------- |
 | QI            | BOOL   | Qualifier for the event input; controls its execution.          |
+| SETM          | BOOL   | Enable mirroring on SET.                                        |
 | SECTION       | STRING | Name of the section in `settings.ini`.                          |
 | KEY           | STRING | Name of the key within the section.                             |
-| DEFAULT_VALUE | REAL   | The value returned if the key does not exist in `settings.ini`. |
+| DEFAULT_VALUE | BYTE   | The value returned if the key does not exist in `settings.ini`. |
 
 ### **Data Outputs**
 
@@ -42,7 +45,7 @@ The function block `INI_AB2` is used to read and write REAL values to or from a 
 
 | Adapter | Type                               | Description                                                                                                                                                                  |
 | ------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| VAL     | adapter::types::bidirectional::AB2 | Bidirectional adapter for exchanging real values. The incoming value (`DO1`) is written to the INI file; the outgoing value (`DI1`) is read from the INI file and passed on. |
+| VAL     | adapter::types::bidirectional::AB2 | Bidirectional adapter for exchanging BYTE values. The incoming value (`DO1`) is written to the INI file; the outgoing value (`DI1`) is read from the INI file and passed on. |
 
 ## Functionality
 

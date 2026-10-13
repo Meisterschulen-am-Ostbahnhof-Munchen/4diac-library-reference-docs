@@ -3,6 +3,8 @@
 
 ![ALI_AX_SEL_ALI](./ALI_AX_SEL_ALI.svg)
 
+![ALI_AX_SEL_ALI_network](./ALI_AX_SEL_ALI_network.svg)
+
 *[Bild des Funktionsblocks]*
 
 * * * * * * * * * *

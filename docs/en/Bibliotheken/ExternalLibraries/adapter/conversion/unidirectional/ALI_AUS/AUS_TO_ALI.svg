@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 531.6650390625 132.0"
-     width="531.6650390625" height="132.0">
+     viewBox="0 0 531.4375 132.0"
+     width="531.4375" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(198.3173828125, 10)">
+  <g transform="translate(198.1875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 136.576171875 0
-            A 3 3 0 0 1 139.576171875 3
-            L 139.576171875 23.0
-            A 3 3 0 0 1 136.576171875 26.0
-            L 129.576171875 26.0
-            L 129.576171875 66.0
-            L 136.576171875 66.0
-            A 3 3 0 0 1 139.576171875 69.0
-            L 139.576171875 109.0
-            A 3 3 0 0 1 136.576171875 112.0
+            L 136.625 0
+            A 3 3 0 0 1 139.625 3
+            L 139.625 23.0
+            A 3 3 0 0 1 136.625 26.0
+            L 129.625 26.0
+            L 129.625 66.0
+            L 136.625 66.0
+            A 3 3 0 0 1 139.625 69.0
+            L 139.625 109.0
+            A 3 3 0 0 1 136.625 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -60,35 +60,35 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 24.61279296875 37.0
-            L 40.61279296875 37.0
-            A 1 1 0 0 1 41.61279296875 38.0
-            L 41.61279296875 41.5
-            L 39.61279296875 41.5
-            L 39.61279296875 44.5
-            L 41.61279296875 44.5
-            L 41.61279296875 54.0
-            A 1 1 0 0 1 40.61279296875 55.0
-            L 24.61279296875 55.0
-            A 1 1 0 0 1 23.61279296875 54.0
-            L 23.61279296875 44.5
-            L 25.61279296875 44.5
-            L 25.61279296875 41.5
-            L 23.61279296875 41.5
-            L 23.61279296875 38.0
-            A 1 1 0 0 1 24.61279296875 37.0
+    <path d="M 24.6875 37.0
+            L 40.6875 37.0
+            A 1 1 0 0 1 41.6875 38.0
+            L 41.6875 41.5
+            L 39.6875 41.5
+            L 39.6875 44.5
+            L 41.6875 44.5
+            L 41.6875 54.0
+            A 1 1 0 0 1 40.6875 55.0
+            L 24.6875 55.0
+            A 1 1 0 0 1 23.6875 54.0
+            L 23.6875 44.5
+            L 25.6875 44.5
+            L 25.6875 41.5
+            L 23.6875 41.5
+            L 23.6875 38.0
+            A 1 1 0 0 1 24.6875 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="32.61279296875" y="51.0"
+    <text x="32.6875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="46.61279296875" y="51.0"
+    <text x="46.6875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AUS_TO_ALI</text>
     
-    <text x="69.7880859375" y="66.0"
+    <text x="69.8125" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -112,20 +112,20 @@
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">AUS_IN</text>
 
-    <path d="M 128.076171875 97.0
-            L 130.576171875 97.0
-            L 130.576171875 98.66666666666667
-            L 133.076171875 98.66666666666667
-            L 133.076171875 97.0
-            L 138.076171875 97.0
-            L 138.076171875 107.0
-            L 133.076171875 107.0
-            L 133.076171875 105.33333333333333
-            L 130.576171875 105.33333333333333
-            L 130.576171875 107.0
-            L 128.076171875 107.0
+    <path d="M 128.125 97.0
+            L 130.625 97.0
+            L 130.625 98.66666666666667
+            L 133.125 98.66666666666667
+            L 133.125 97.0
+            L 138.125 97.0
+            L 138.125 107.0
+            L 133.125 107.0
+            L 133.125 105.33333333333333
+            L 130.625 105.33333333333333
+            L 130.625 107.0
+            L 128.125 107.0
             Z" fill="#845DAF"/>
-    <text x="125.076171875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="125.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">ALI_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -137,7 +137,7 @@
     <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">USINT Adapter Input – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUS</tspan></text>
 
-    <text x="164.576171875" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="164.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ALI</tspan> – LINT Adapter Output</text>
   </g>
 </svg>

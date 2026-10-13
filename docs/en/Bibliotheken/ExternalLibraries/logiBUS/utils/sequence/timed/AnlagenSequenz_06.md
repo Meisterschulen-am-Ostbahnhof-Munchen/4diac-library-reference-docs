@@ -24,12 +24,17 @@ exactly the upstream motors that are still running at that moment.
 
 ### **Event Inputs**
 
+-   **`INIT`**: Initialization request (type `EInit`).
 -   **`EIN`**: Starts the start-up chain (transition `sAUS` → `sVOR1`). Only effective when
     `EINSCHALTBEREIT = TRUE` (condition `EIN[NOT (STOERUNG_M1 OR ... OR STOERUNG_M6)]`); also
     acknowledges a pending, latched `STATUS_STOERUNG` indication.
 -   **`AUS`**: Triggers the shutdown sequence from any start-up step (`sVOR1`..`sVOR5`) or from
     `sLAEUFT`. Jumps to the mirror point of the shutdown chain (`sVOR_k` → `sNACH_(6-k)`), since
     this is an operator request, not a motor fault.
+-   **`SET_ZE1_EIN`, `SET_ZE2_EIN`, `SET_ZE3_EIN`, `SET_ZE4_EIN`, `SET_ZE5_EIN`**: Update `ZE1_EIN` .. `ZE5_EIN` independently of `EIN`; each
+    event carries (`With`) the identically named time variable (`SET_ZEk_EIN` → `ZEk_EIN`).
+-   **`SET_ZE1_AUS`, `SET_ZE2_AUS`, `SET_ZE3_AUS`, `SET_ZE4_AUS`, `SET_ZE5_AUS`**: Update `ZE1_AUS` .. `ZE5_AUS` independently of `AUS`; each
+    event carries (`With`) the identically named time variable (`SET_ZEk_AUS` → `ZEk_AUS`).
 -   **`EI_M1`**: Motor 1 fault status has changed. Leads (`With STOERUNG_M1`) directly to
     `sNACH1` from every state that precedes it.
 -   **`EI_M2`**: Motor 2 fault status has changed. Leads (`With STOERUNG_M2`) directly to
@@ -45,8 +50,10 @@ exactly the upstream motors that are still running at that moment.
 
 ### **Event Outputs**
 
+-   **`INITO`**: Initialization confirmation (type `EInit`).
 -   **`CNF`**: Execution confirmation, triggered on every state change; carries `STATUS_BETRIEB`,
-    `STATUS_STOERUNG`, `ZAEHLSTAND`, and `EINSCHALTBEREIT`.
+    `STATUS_STOERUNG`, `ZAEHLSTAND`, `EINSCHALTBEREIT`, `ANLAGE_AUS`, `TRANSIT_MOTOR`, and
+    `TRANSIT_ART`.
 -   **`EO_M1`**: Motor 1 run command updated; carries `DO_M1` (analogous to `EO_Sx` in
     `sequence_T_04`/`_08`).
 -   **`EO_M2`**: Motor 2 run command updated; carries `DO_M2`.
@@ -57,9 +64,11 @@ exactly the upstream motors that are still running at that moment.
 
 ### **Data Inputs**
 
--   **`ZE1_EIN` .. `ZE5_EIN`** (TIME): Dwell time per start-up step (`sVOR1`→`sVOR2` through
+-   **`ZE1_EIN` .. `ZE5_EIN`** (TIME; individually `ZE1_EIN`, `ZE2_EIN`, `ZE3_EIN`, `ZE4_EIN`,
+    `ZE5_EIN`): Dwell time per start-up step (`sVOR1`→`sVOR2` through
     `sVOR5`→`sLAEUFT`) before the next motor is automatically added. Default: `NO_TIME`.
--   **`ZE1_AUS` .. `ZE5_AUS`** (TIME): Dwell time per shutdown step (`sNACH1`→`sNACH2` through
+-   **`ZE1_AUS` .. `ZE5_AUS`** (TIME; individually `ZE1_AUS`, `ZE2_AUS`, `ZE3_AUS`, `ZE4_AUS`,
+    `ZE5_AUS`): Dwell time per shutdown step (`sNACH1`→`sNACH2` through
     `sNACH5`→`sAUS`) before the next motor is automatically switched off. Default: `NO_TIME`.
 -   **`STOERUNG_M1` .. `STOERUNG_M6`** (BOOL): Live, continuous fault signal per motor (not a
     pulse). Default: `FALSE`.
@@ -72,6 +81,12 @@ exactly the upstream motors that are still running at that moment.
 -   **`EINSCHALTBEREIT`** (BOOL): `TRUE` only when `ZAEHLSTAND = 0` (all motors stopped) AND all
     six `STOERUNG_Mx` are currently `FALSE`.
 -   **`ZAEHLSTAND`** (SINT): 0..6, number of motors currently running.
+-   **`ANLAGE_AUS`** (BOOL): `TRUE` only in `sAUS` (`STATUS_BETRIEB` = Off) — prerequisite for
+    manual operation.
+-   **`TRANSIT_MOTOR`** (SINT): 0 = none (`sAUS`/`sLAEUFT`), 1..6 = number of the motor that
+    starts/stops after the current time elapses (see `TRANSIT_ART`).
+-   **`TRANSIT_ART`** (SINT): Kind of transition: `anlagenSequenz::TRANSIT_ART_KEINE`, `_VORLAUF`
+    or `_NACHLAUF`.
 -   **`DO_M1` .. `DO_M6`** (BOOL): Run command per motor.
 
 ### **Adapters**

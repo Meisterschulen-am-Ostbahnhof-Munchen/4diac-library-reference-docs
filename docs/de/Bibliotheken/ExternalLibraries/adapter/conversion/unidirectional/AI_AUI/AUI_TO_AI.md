@@ -2,6 +2,8 @@
 
 ![AUI_TO_AI](./AUI_TO_AI.svg)
 
+![AUI_TO_AI_network](./AUI_TO_AI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

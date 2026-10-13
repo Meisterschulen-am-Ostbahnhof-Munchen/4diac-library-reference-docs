@@ -1,5 +1,9 @@
 # tastend_TON_5s
 
+![tastend_TON_5s_network](./tastend_TON_5s_network.svg)
+
+![tastend_TON_5s](./tastend_TON_5s.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -64,8 +68,8 @@ Die Subapplikation tastend_TON_5s stellt eine kompakte Lösung für zeitverzöge
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_103](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
-- [Uebung_103c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
+- [Uebung_103](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_103/)
+- [Uebung_103c](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_103c/)
 
 
 

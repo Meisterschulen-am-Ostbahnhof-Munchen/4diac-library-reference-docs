@@ -2,6 +2,8 @@
 
 ![AB_AX_SEL_AB](./AB_AX_SEL_AB.svg)
 
+![AB_AX_SEL_AB_network](./AB_AX_SEL_AB_network.svg)
+
 * * * * * * * * * *
 
 The function block `AB_AX_SEL_AB` is a composite function block for IEC 61499 that implements binary selection at the adapter level. Based on a control signal from a selector adapter (`G`), it selects between the signals of two input adapters (`IN0` and `IN1`) and forwards the selected signal to an output adapter (`OUT`).

@@ -1,7 +1,5 @@
 # AID_EXOP
 
-![AID_EXOP](./AID_EXOP.svg)
-
 * * * * * * * * * *
 
 ## Introduction

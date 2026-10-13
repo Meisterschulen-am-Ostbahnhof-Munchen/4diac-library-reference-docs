@@ -2,6 +2,8 @@
 
 ![ILOCK_T_FF](./ILOCK_T_FF.svg)
 
+![ILOCK_T_FF_network](./ILOCK_T_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

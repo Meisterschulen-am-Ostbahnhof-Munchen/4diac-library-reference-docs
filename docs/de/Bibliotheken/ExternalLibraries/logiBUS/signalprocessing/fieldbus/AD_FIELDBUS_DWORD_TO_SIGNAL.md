@@ -2,6 +2,8 @@
 
 ![AD_FIELDBUS_DWORD_TO_SIGNAL](./AD_FIELDBUS_DWORD_TO_SIGNAL.svg)
 
+![AD_FIELDBUS_DWORD_TO_SIGNAL_network](./AD_FIELDBUS_DWORD_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

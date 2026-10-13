@@ -2,6 +2,8 @@
 
 ![AQ_GE](./AQ_GE.svg)
 
+![AQ_GE_network](./AQ_GE_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

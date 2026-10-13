@@ -2,6 +2,8 @@
 
 ![INI_AR](./INI_AR.svg)
 
+![INI_AR_network](./INI_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -21,6 +23,7 @@ Der Funktionsblock INI_AR dient zum Laden und Speichern von REAL-Daten aus einer
 ### **Daten-Eingänge**
 
 - `QI` (BOOL): Qualifizierer für den Ereignis-Eingang.
+- `SETM` (BOOL): Aktiviert die Spiegelung (Mirroring) bei SET.
 - `SECTION` (STRING): Name des Abschnitts in der INI-Datei.
 - `KEY` (STRING): Name des Schlüssels innerhalb des Abschnitts.
 - `DEFAULT_VALUE` (REAL): Wert, der verwendet wird, falls kein Eintrag in der settings.ini gefunden wird.

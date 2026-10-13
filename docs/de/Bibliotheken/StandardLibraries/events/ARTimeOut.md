@@ -2,6 +2,14 @@
 
 ![ARTimeOut](https://user-images.githubusercontent.com/116869307/214142115-28b88284-c3b6-4c78-9145-6de372738f36.png)
 
+**Plug (Adapter-Ausgang)**
+
+![ARTimeOut_plug](./ARTimeOut_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![ARTimeOut_socket](./ARTimeOut_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

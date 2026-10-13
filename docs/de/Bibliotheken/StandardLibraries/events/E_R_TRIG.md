@@ -2,6 +2,8 @@
 
 ![E_R_TRIG Funktionsbaustein](https://user-images.githubusercontent.com/113907528/204903134-9fbf33a3-4041-428e-9a9a-10a573c0b6f2.png)
 
+![E_R_TRIG_network](./E_R_TRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -69,7 +71,7 @@ Laut XML-Spezifikation besteht der Baustein aus:
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_089](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
+- [Uebung_089](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_089/)
 
 ## Fazit
 

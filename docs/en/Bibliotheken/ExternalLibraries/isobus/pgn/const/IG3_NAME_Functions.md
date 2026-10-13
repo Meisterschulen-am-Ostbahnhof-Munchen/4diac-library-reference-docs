@@ -1,7 +1,5 @@
 # IG3_NAME_Functions
 
-![IG3_NAME_Functions](./IG3_NAME_Functions.svg)
-
 * * * * * * * * * *
 
 ## Introduction

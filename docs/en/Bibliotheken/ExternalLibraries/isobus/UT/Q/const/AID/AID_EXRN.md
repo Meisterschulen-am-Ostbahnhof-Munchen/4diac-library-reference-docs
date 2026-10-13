@@ -1,7 +1,5 @@
 # AID_EXRN
 
-![AID_EXRN](./AID_EXRN.svg)
-
 * * * * * * * * * *
 
 ## Introduction

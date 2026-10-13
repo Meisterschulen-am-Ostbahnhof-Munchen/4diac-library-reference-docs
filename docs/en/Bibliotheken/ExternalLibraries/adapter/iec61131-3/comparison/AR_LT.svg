@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 578.48828125 152.0"
-     width="578.48828125" height="152.0">
+     viewBox="0 0 578.0625 152.0"
+     width="578.0625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(311.3837890625, 10)">
+  <g transform="translate(311.0, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -60,31 +60,31 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 21.1455078125 37.0
-            L 37.1455078125 37.0
-            A 1 1 0 0 1 38.1455078125 38.0
-            L 38.1455078125 41.5
-            L 36.1455078125 41.5
-            L 36.1455078125 44.5
-            L 38.1455078125 44.5
-            L 38.1455078125 54.0
-            A 1 1 0 0 1 37.1455078125 55.0
-            L 21.1455078125 55.0
-            A 1 1 0 0 1 20.1455078125 54.0
-            L 20.1455078125 44.5
-            L 22.1455078125 44.5
-            L 22.1455078125 41.5
-            L 20.1455078125 41.5
-            L 20.1455078125 38.0
-            A 1 1 0 0 1 21.1455078125 37.0
+    <path d="M 21.1875 37.0
+            L 37.1875 37.0
+            A 1 1 0 0 1 38.1875 38.0
+            L 38.1875 41.5
+            L 36.1875 41.5
+            L 36.1875 44.5
+            L 38.1875 44.5
+            L 38.1875 54.0
+            A 1 1 0 0 1 37.1875 55.0
+            L 21.1875 55.0
+            A 1 1 0 0 1 20.1875 54.0
+            L 20.1875 44.5
+            L 22.1875 44.5
+            L 22.1875 41.5
+            L 20.1875 41.5
+            L 20.1875 38.0
+            A 1 1 0 0 1 21.1875 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="29.1455078125" y="51.0"
+    <text x="29.1875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="43.1455078125" y="51.0"
+    <text x="43.1875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AR_LT</text>
     

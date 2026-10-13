@@ -2,6 +2,8 @@
 
 ![AUS_EQ](./AUS_EQ.svg)
 
+![AUS_EQ_network](./AUS_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

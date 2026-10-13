@@ -2,6 +2,14 @@
 
 ![ALR2](./ALR2.svg)
 
+**Plug (Adapter-Ausgang)**
+
+![ALR2_plug](./ALR2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![ALR2_socket](./ALR2_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

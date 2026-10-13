@@ -10,8 +10,8 @@ Derivative with variable window size (0..9 periods)
 
 | Name | Comment                  | With               |
 | :--- | :----------------------- | :----------------- |
-| INIT | InitRequest              |                    |
-| REQ  | Normal Execution Request | in, K, factor, run |
+| EINIT | Init Request             |                    |
+| REQ  | Normal Execution Request | in, K, Faktor, run |
 | RST  | Reset Buffer             |                    |
 
 ### Event Outputs
@@ -27,7 +27,7 @@ Derivative with variable window size (0..9 periods)
 | :----- | :--- | :------------ | :-------------------------------------- |
 | in     | REAL |               | Input signal                            |
 | K      | UINT | 0             | Window Select: 0=1 Period, 9=10 Periods |
-| factor | REAL | 1.0           | Multiplication Factor (formerly K)      |
+| Faktor | REAL | 1.0           | Multiplication Factor (formerly K)      |
 | run    | BOOL | 1             | Enable calculation                      |
 
 ### Output Vars
@@ -59,5 +59,5 @@ Derivative with variable window size (0..9 periods)
 
 ## 🛠️ Related exercises
 
-- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
-- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)
+- [Uebung_152](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_152/)
+- [Uebung_153](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_153/)

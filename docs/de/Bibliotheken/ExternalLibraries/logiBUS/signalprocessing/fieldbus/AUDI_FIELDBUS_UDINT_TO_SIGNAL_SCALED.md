@@ -2,6 +2,8 @@
 
 ![AUDI_FIELDBUS_UDINT_TO_SIGNAL_SCALED](./AUDI_FIELDBUS_UDINT_TO_SIGNAL_SCALED.svg)
 
+![AUDI_FIELDBUS_UDINT_TO_SIGNAL_SCALED_network](./AUDI_FIELDBUS_UDINT_TO_SIGNAL_SCALED_network.svg)
+
 *Bild des Funktionsblocks: nicht verfügbar*
 
 * * * * * * * * * *

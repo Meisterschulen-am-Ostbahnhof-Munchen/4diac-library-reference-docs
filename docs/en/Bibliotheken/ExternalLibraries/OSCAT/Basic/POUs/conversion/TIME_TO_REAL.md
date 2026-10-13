@@ -1,5 +1,7 @@
 # TIME_TO_REAL
 
+![TIME_TO_REAL](./TIME_TO_REAL.svg)
+
 Convert TIME to REAL
 
 ## Interface

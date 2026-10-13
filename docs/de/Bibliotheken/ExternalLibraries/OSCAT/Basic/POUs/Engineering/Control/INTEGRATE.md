@@ -8,11 +8,11 @@ Integrator with I/O for out
 
 ### Event Inputs
 
-| Name | Comment                  | With        |
-| :--- | :----------------------- | :---------- |
-| INIT | Init Request             |             |
-| REQ  | Normal Execution Request | EN, X, K, Y |
-| RST  | Reset Integrator         | X           |
+| Name  | Comment                  | With        |
+| :---- | :----------------------- | :---------- |
+| EINIT | Init Request             |             |
+| REQ   | Normal Execution Request | EN, X, K, Y |
+| RST   | Reset Integrator         | X           |
 
 ### Event Outputs
 

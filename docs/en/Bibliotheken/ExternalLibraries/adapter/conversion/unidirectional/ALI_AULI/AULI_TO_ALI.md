@@ -2,6 +2,8 @@
 
 ![AULI_TO_ALI](./AULI_TO_ALI.svg)
 
+![AULI_TO_ALI_network](./AULI_TO_ALI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -1,7 +1,5 @@
 # IG4_Source_Addresses
 
-![IG4_Source_Addresses](./IG4_Source_Addresses.svg)
-
 * * * * * * * * * *
 
 ## Introduction

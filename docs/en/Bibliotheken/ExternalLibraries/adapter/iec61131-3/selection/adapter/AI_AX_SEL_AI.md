@@ -2,6 +2,8 @@
 
 ![AI_AX_SEL_AI](./AI_AX_SEL_AI.svg)
 
+![AI_AX_SEL_AI_network](./AI_AX_SEL_AI_network.svg)
+
 *(No image available)*
 
 * * * * * * * * * *

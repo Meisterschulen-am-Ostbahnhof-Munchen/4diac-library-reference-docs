@@ -2,6 +2,8 @@
 
 ![AUI_FIELDBUS_UINT_TO_SIGNAL](./AUI_FIELDBUS_UINT_TO_SIGNAL.svg)
 
+![AUI_FIELDBUS_UINT_TO_SIGNAL_network](./AUI_FIELDBUS_UINT_TO_SIGNAL_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

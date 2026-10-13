@@ -2,6 +2,8 @@
 
 ![Hysteresis](./Hysteresis.svg)
 
+![Hysteresis_ecc](./Hysteresis_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

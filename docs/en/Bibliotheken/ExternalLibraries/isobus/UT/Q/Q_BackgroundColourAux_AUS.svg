@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1024.21484375 172.0"
-     width="1024.21484375" height="172.0">
+     viewBox="0 0 1023.375 172.0"
+     width="1023.375" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(490.9296875, 10)">
+  <g transform="translate(490.4375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 238.787109375 0
-            A 3 3 0 0 1 241.787109375 3
-            L 241.787109375 43.0
-            A 3 3 0 0 1 238.787109375 46.0
-            L 231.787109375 46.0
-            L 231.787109375 86.0
-            L 238.787109375 86.0
-            A 3 3 0 0 1 241.787109375 89.0
-            L 241.787109375 149.0
-            A 3 3 0 0 1 238.787109375 152.0
+            L 238.8125 0
+            A 3 3 0 0 1 241.8125 3
+            L 241.8125 43.0
+            A 3 3 0 0 1 238.8125 46.0
+            L 231.8125 46.0
+            L 231.8125 86.0
+            L 238.8125 86.0
+            A 3 3 0 0 1 241.8125 89.0
+            L 241.8125 149.0
+            A 3 3 0 0 1 238.8125 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 89.0
@@ -62,12 +62,12 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="235.287109375,11.0 240.287109375,16.0 235.287109375,21.0" fill="#63B31F"/>
-    <text x="232.287109375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.3125,11.0 240.3125,16.0 235.3125,21.0" fill="#63B31F"/>
+    <text x="232.3125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
-    <polygon points="235.287109375,31.0 240.287109375,36.0 235.287109375,41.0" fill="#63B31F"/>
-    <text x="232.287109375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.3125,31.0 240.3125,36.0 235.3125,41.0" fill="#63B31F"/>
+    <text x="232.3125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -100,7 +100,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Q_BackgroundColourAux_AUS</text>
     
-    <text x="120.8935546875" y="86.0"
+    <text x="120.90625" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -110,12 +110,12 @@
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16ObjId</text>
 
-    <polygon points="235.287109375,91.0 240.287109375,96.0 235.287109375,101.0" fill="#BD8663"/>
-    <text x="232.287109375" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.3125,91.0 240.3125,96.0 235.3125,101.0" fill="#BD8663"/>
+    <text x="232.3125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
 
-    <polygon points="235.287109375,111.0 240.287109375,116.0 235.287109375,121.0" fill="#18519E"/>
-    <text x="232.287109375" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="235.3125,111.0 240.3125,116.0 235.3125,121.0" fill="#18519E"/>
+    <text x="232.3125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">s16result</text>
 
     <!-- Adapter Ports -->
@@ -136,20 +136,20 @@
     <text x="14.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u8Colour</text>
 
-    <path d="M 230.287109375 137.0
-            L 232.787109375 137.0
-            L 232.787109375 138.66666666666666
-            L 235.287109375 138.66666666666666
-            L 235.287109375 137.0
-            L 240.287109375 137.0
-            L 240.287109375 147.0
-            L 235.287109375 147.0
-            L 235.287109375 145.33333333333334
-            L 232.787109375 145.33333333333334
-            L 232.787109375 147.0
-            L 230.287109375 147.0
+    <path d="M 230.3125 137.0
+            L 232.8125 137.0
+            L 232.8125 138.66666666666666
+            L 235.3125 138.66666666666666
+            L 235.3125 137.0
+            L 240.3125 137.0
+            L 240.3125 147.0
+            L 235.3125 147.0
+            L 235.3125 145.33333333333334
+            L 232.8125 145.33333333333334
+            L 232.8125 147.0
+            L 230.3125 147.0
             Z" fill="#845DAF"/>
-    <text x="227.287109375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="227.3125" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">u8OldColour</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -163,19 +163,19 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.787109375" y="31.0" width="10" height="10"
+    <rect x="246.8125" y="31.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.787109375" y="91.0" width="10" height="10"
+    <rect x="246.8125" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="251.787109375" y1="36.0" x2="251.787109375" y2="96.0"
+    <line x1="251.8125" y1="36.0" x2="251.8125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="246.787109375" y="111.0" width="10" height="10"
+    <rect x="246.8125" y="111.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="251.787109375" y1="36.0" x2="251.787109375" y2="116.0"
+    <line x1="251.8125" y1="36.0" x2="251.8125" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -186,13 +186,13 @@
     <line x1="0" y1="96.0" x2="-20" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.787109375" y1="36.0" x2="261.787109375" y2="36.0"
+    <line x1="241.8125" y1="36.0" x2="261.8125" y2="36.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.787109375" y1="96.0" x2="261.787109375" y2="96.0"
+    <line x1="241.8125" y1="96.0" x2="261.8125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="241.787109375" y1="116.0" x2="261.787109375" y2="116.0"
+    <line x1="241.8125" y1="116.0" x2="261.8125" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -200,25 +200,25 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="266.787109375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.8125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
-    <text x="266.787109375" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.8125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Requested Service</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
-    <text x="266.787109375" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.8125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
 
-    <text x="266.787109375" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.8125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – retval see description</text>
 
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">New Background colour see Part 6 - A.3 VT standard colour palette – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUS</tspan></text>
 
-    <text x="266.787109375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="266.8125" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUS</tspan> – Old value of ID</text>
   </g>
 </svg>

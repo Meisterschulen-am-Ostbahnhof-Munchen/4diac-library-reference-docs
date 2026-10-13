@@ -1,5 +1,7 @@
 # DualHysteresis
 
+![DualHysteresis_ecc](./DualHysteresis_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

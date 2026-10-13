@@ -2,6 +2,8 @@
 
 ![ScrollFS](ScrollFS.svg)
 
+![ScrollFS_network](./ScrollFS_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -19,7 +21,7 @@ zur Herleitung siehe `Workspace_Scroll/SCROLL_KONZEPT.md` im Projekt `4diac_trai
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Übernimmt die Konfiguration (`stObj`) per Snapshot.
+- `INIT`: Übernimmt die Konfiguration (`stObj`) per Snapshot und `xScale`.
 - `FIRST`: Springt zur ersten Zeile (Position 0).
 - `PAGE_UP`: Eine Seite nach oben (schnell, um `stObj.i32Step` Zeilen).
 - `LINE_UP`: Eine Zeile nach oben.
@@ -37,6 +39,7 @@ zur Herleitung siehe `Workspace_Scroll/SCROLL_KONZEPT.md` im Projekt `4diac_trai
 
 - `stObj` (`isobus::utils::scroll::ScrollObjectPool_S`): Listen-/Balken-Geometrie (Container-IDs,
   Zeilenhöhe, Balken-Offsets, `i32PosMax`, `i32Step`) — wird bei `INIT` einmalig geschnappt.
+- `xScale` (BOOL, Standard `FALSE`): `FALSE` = Bypass, `s16Yposition` wird unverändert gesendet; `TRUE` = Skalierung mit dem DM/SKM-Faktor der jeweiligen Parent-ID. Wird direkt an das interne MoveList/MoveBar (`Q_ChildPosition`) durchgereicht.
 - `SET_POS` (DINT): Zielposition für `GOTO`.
 
 ### **Daten-Ausgänge**

@@ -2,6 +2,8 @@
 
 ![AL_D_FF_TMIN](./AL_D_FF_TMIN.svg)
 
+![AL_D_FF_TMIN_network](./AL_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

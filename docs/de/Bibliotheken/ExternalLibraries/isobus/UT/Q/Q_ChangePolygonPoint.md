@@ -14,7 +14,7 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Polygon-Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Polygon-Objekt-ID und xScale)
 - `REQ`: Punktänderungs-Anforderung (mit Index und Koordinaten)
 
 ### **Ereignis-Ausgänge**
@@ -25,6 +25,7 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Polygon-Objekt-ID
+- `xScale` (BOOL): Bei TRUE werden die Werte `u16NewXValue`/`u16NewYValue` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjId` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
 - `u8PointIndex` (USINT): Punktindex (0-basiert)
 - `u16NewXValue` (UINT): Neue X-Koordinate (relativ)
 - `u16NewYValue` (UINT): Neue Y-Koordinate (relativ)

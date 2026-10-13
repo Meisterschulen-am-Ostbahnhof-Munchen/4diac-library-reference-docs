@@ -2,6 +2,8 @@
 
 ![A2X_OR_2](A2X_OR_2.svg)
 
+![A2X_OR_2_network](./A2X_OR_2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

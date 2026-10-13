@@ -1,5 +1,9 @@
 # GreenRedBackground1_auxSC
 
+![GreenRedBackground1_auxSC_network](./GreenRedBackground1_auxSC_network.svg)
+
+![GreenRedBackground1_auxSC](./GreenRedBackground1_auxSC.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

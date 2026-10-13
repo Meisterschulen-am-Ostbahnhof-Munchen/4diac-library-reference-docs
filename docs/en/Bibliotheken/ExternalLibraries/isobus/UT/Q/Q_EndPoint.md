@@ -13,7 +13,7 @@ The **Q_EndPoint** is a standards-compliant function block for controlling line 
 
 ### **Event Inputs**
 
-- `INIT`: Initialization Request (with object ID)
+- `INIT`: Initialization Request (with object ID and `xScale`)
 - `REQ`: Endpoint Change Request (with position/direction)
 
 ### **Event Outputs**
@@ -24,6 +24,7 @@ The **Q_EndPoint** is a standards-compliant function block for controlling line 
 ### **Data Inputs**
 
 - `u16ObjId` (UINT): Line Object ID
+- `xScale` (BOOL, initial value `FALSE`): `FALSE` = bypass, `u16Width`/`u16Height` are sent unchanged; `TRUE` = both are scaled by the DM/SKM factor for `u16ObjId`
 - `u16Width` (UINT): New X End Position (0-65535 pixels)
 - `u16Height` (UINT): New Y-End Position (0-65535 pixels)
 - `u8LineDirection` (USINT): Line Direction (ISO 11783-6 B.27)

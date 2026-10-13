@@ -2,6 +2,8 @@
 
 ![INI_AR2](./INI_AR2.svg)
 
+![INI_AR2_network](./INI_AR2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -21,6 +23,7 @@ Der Funktionsblock INI_AR2 dient zum Auslesen und Schreiben von REAL-Werten aus 
 ### **Daten-Eingänge**
 
 - **QI** (BOOL): Eingangsqualifizierer. Steuert die Ausführung (z.B. Aktivierung/Deaktivierung).
+- **SETM** (BOOL): Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt).
 - **SECTION** (STRING): Sektionsname in der settings.ini (z.B. "[MySection]").
 - **KEY** (STRING): Schlüsselname in der Sektion (z.B. "MyKey").
 - **DEFAULT_VALUE** (REAL): Standardwert, der zurückgegeben wird, falls der Schlüssel in der Datei nicht vorhanden ist.
@@ -38,7 +41,7 @@ Der Funktionsblock INI_AR2 dient zum Auslesen und Schreiben von REAL-Werten aus 
 
 Der FB INI_AR2 ist ein zusammengesetzter (Composite) Baustein, der intern einen INI-Funktionsblock (`eclipse4diac::storage::INI`) verwendet. Der Ablauf ist wie folgt:
 
-1. **Initialisierung**: Beim Eintreffen des INIT-Ereignisses werden die Parameter QI, SECTION, KEY, DEFAULT_VALUE an den internen INI-Block übergeben.
+1. **Initialisierung**: Beim Eintreffen des INIT-Ereignisses werden die Parameter QI, SETM, SECTION, KEY, DEFAULT_VALUE an den internen INI-Block übergeben.
 2. **Lesen**: Der INI-Block führt nach INIT automatisch einen GET-Vorgang aus (gesteuert durch die Eventverbindung von INI.INITO zu INI.GET). Er liest den Wert aus der settings.ini für die angegebene Sektion und den Schlüssel. Falls kein Eintrag vorhanden ist, wird der DEFAULT_VALUE verwendet.
 3. **Ausgabe über Adapter**: Der gelesene Wert wird über die Datenverbindung INI.VALUEO -> VAL.DI1 und das Ereignis INI.GETO -> VAL.EI1 an den Adapter-Ausgang weitergegeben.
 4. **Schreiben über Adapter**: Wenn über den Adapter ein neuer Wert an VAL.DO1 ankommt (ausgelöst durch VAL.EO1), wird das Ereignis VAL.EO1 -> INI.SET geleitet. Der INI-Block schreibt dann den neuen Wert zurück in die Datei. Nach dem Schreiben wird INI.SETO -> VAL.EI1 gesendet, was die Bestätigung an den Adapter zurückgibt.

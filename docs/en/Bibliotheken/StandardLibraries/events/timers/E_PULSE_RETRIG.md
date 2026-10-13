@@ -1,5 +1,7 @@
 # E_PULSE_RETRIG
 
+![E_PULSE_RETRIG_network](./E_PULSE_RETRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

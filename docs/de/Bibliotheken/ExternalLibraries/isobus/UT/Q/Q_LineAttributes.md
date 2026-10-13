@@ -14,7 +14,7 @@ Der **Q_LineAttributes** ist ein standardkonformer Funktionsbaustein zur Änderu
 
 ### **Ereignis-Eingänge**
 
-- `INIT`: Initialisierungsanforderung (mit Objekt-ID)
+- `INIT`: Initialisierungsanforderung (mit Objekt-ID und `xScale`)
 - `REQ`: Attributänderungs-Anforderung (mit neuen Linienattributen)
 
 ### **Ereignis-Ausgänge**
@@ -25,6 +25,7 @@ Der **Q_LineAttributes** ist ein standardkonformer Funktionsbaustein zur Änderu
 ### **Daten-Eingänge**
 
 - `u16ObjId` (UINT): Objekt-ID (16-bit)
+- `xScale` (BOOL, Standard `FALSE`): `FALSE` = Bypass, `u8LineWidth` wird unverändert gesendet; `TRUE` = Skalierung mit dem DM/SKM-Faktor für `u16ObjId`
 - `u8LineColour` (USINT): Neue Linienfarbe
 - `u8LineWidth` (USINT): Neue Linienbreite
 - `u16LineArt` (UINT): Neuer Linienstil

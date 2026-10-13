@@ -2,6 +2,8 @@
 
 ![ASRT_TO_ASRT_AX_SPLIT](ASRT_TO_ASRT_AX_SPLIT.svg)
 
+![ASRT_TO_ASRT_AX_SPLIT_network](./ASRT_TO_ASRT_AX_SPLIT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

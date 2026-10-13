@@ -2,6 +2,8 @@
 
 ![ASRT_AX_CLIENT_0_SUBSCRIBE_1](ASRT_AX_CLIENT_0_SUBSCRIBE_1.svg)
 
+![ASRT_AX_CLIENT_0_SUBSCRIBE_1_network](./ASRT_AX_CLIENT_0_SUBSCRIBE_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

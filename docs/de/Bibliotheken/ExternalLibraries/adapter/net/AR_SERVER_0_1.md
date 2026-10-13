@@ -1,5 +1,9 @@
 # AR_SERVER_0_1
 
+![AR_SERVER_0_1_network](./AR_SERVER_0_1_network.svg)
+
+![AR_SERVER_0_1](./AR_SERVER_0_1.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

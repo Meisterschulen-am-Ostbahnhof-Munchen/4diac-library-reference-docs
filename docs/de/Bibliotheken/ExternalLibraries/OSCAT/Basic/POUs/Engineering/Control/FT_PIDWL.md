@@ -18,11 +18,11 @@ the output flags lim will signal that the output limits are active.
 
 ### Event Inputs
 
-| Name | Comment                  | With                         |
-| :--- | :----------------------- | :--------------------------- |
-| INIT | Init Request             |                              |
-| REQ  | Normal Execution Request | IN, KP, TN, TV, LIM_L, LIM_H |
-| RST  | Reset Integrator         | IN                           |
+| Name  | Comment                  | With                         |
+| :---- | :----------------------- | :--------------------------- |
+| EINIT | Init Request             |                              |
+| REQ   | Normal Execution Request | IN, KP, TN, TV, LIM_L, LIM_H |
+| RST   | Reset Integrator         | IN                           |
 
 ### Event Outputs
 

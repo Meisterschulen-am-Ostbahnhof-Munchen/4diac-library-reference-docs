@@ -2,6 +2,8 @@
 
 ![NVS_AX2](./NVS_AX2.svg)
 
+![NVS_AX2_network](./NVS_AX2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock **NVS_AX2** dient dem Laden und Speichern von REAL-Daten im n
 
 | Ereignis | Typ   | Kommentar              | Mitgeführte Variablen  |
 | -------- | ----- | ---------------------- | ---------------------- |
-| `INIT`   | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT`   | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock **NVS_AX2** dient dem Laden und Speichern von REAL-Daten im n
 | Name            | Typ    | Kommentar                                                                        |
 | --------------- | ------ | -------------------------------------------------------------------------------- |
 | `QI`            | BOOL   | Event Input Qualifier (Freigabe der Initialisierung)                             |
+| `SETM`            | BOOL   | Enable Mirroring on SET: Bei TRUE wird die Bestätigung eines SET (SETO) zusätzlich am Ausgangsadapter ausgegeben (gespiegelt) |
 | `KEY`           | STRING | Schlüsselname für den NVS-Eintrag                                                |
 | `DEFAULT_VALUE` | BOOL   | Standardwert, falls der Schlüssel im NVS nicht existiert (Voreinstellung: FALSE) |
 
@@ -47,7 +50,7 @@ Der Adapter **VAL** stellt eine bidirektionale Verbindung zu einem externen Baus
 
 ## Funktionsweise
 
-1. **Initialisierung**: Ein Ereignis am Eingang `INIT` löst die Initialisierung des internen NVS-Bausteins aus. Dabei werden `QI`, `KEY` und `DEFAULT_VALUE` übergeben. Nach erfolgreicher Initialisierung wird das Ereignis `INITO` am Ausgang gesendet. Gleichzeitig wird automatisch ein Lesevorgang (GET) für den angegebenen Schlüssel angestoßen.
+1. **Initialisierung**: Ein Ereignis am Eingang `INIT` löst die Initialisierung des internen NVS-Bausteins aus. Dabei werden `QI`, `SETM`, `KEY` und `DEFAULT_VALUE` übergeben. Nach erfolgreicher Initialisierung wird das Ereignis `INITO` am Ausgang gesendet. Gleichzeitig wird automatisch ein Lesevorgang (GET) für den angegebenen Schlüssel angestoßen.
 
 2. **Wert auslesen**: Der gelesene Wert wird über den Adapter `VAL` als `DI1` (Datenausgang des Adapters) ausgegeben und ein Ereignis `EI1` am Adapter ausgelöst. Der Ausgang `QO` und `STATUS` spiegeln das Ergebnis des Lesevorgangs wider.
 

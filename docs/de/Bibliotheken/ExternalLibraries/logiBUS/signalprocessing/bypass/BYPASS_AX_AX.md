@@ -2,6 +2,8 @@
 
 ![BYPASS_AX_AX](./BYPASS_AX_AX.svg)
 
+![BYPASS_AX_AX_network](./BYPASS_AX_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

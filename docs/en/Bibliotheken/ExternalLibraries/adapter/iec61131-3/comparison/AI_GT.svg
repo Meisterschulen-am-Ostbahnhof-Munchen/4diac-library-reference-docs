@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 573.0400390625 152.0"
-     width="573.0400390625" height="152.0">
+     viewBox="0 0 572.625 152.0"
+     width="572.625" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,7 +28,7 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(305.935546875, 10)">
+  <g transform="translate(305.5625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
@@ -60,31 +60,31 @@
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 23.94140625 37.0
-            L 39.94140625 37.0
-            A 1 1 0 0 1 40.94140625 38.0
-            L 40.94140625 41.5
-            L 38.94140625 41.5
-            L 38.94140625 44.5
-            L 40.94140625 44.5
-            L 40.94140625 54.0
-            A 1 1 0 0 1 39.94140625 55.0
-            L 23.94140625 55.0
-            A 1 1 0 0 1 22.94140625 54.0
-            L 22.94140625 44.5
-            L 24.94140625 44.5
-            L 24.94140625 41.5
-            L 22.94140625 41.5
-            L 22.94140625 38.0
-            A 1 1 0 0 1 23.94140625 37.0
+    <path d="M 23.96875 37.0
+            L 39.96875 37.0
+            A 1 1 0 0 1 40.96875 38.0
+            L 40.96875 41.5
+            L 38.96875 41.5
+            L 38.96875 44.5
+            L 40.96875 44.5
+            L 40.96875 54.0
+            A 1 1 0 0 1 39.96875 55.0
+            L 23.96875 55.0
+            A 1 1 0 0 1 22.96875 54.0
+            L 22.96875 44.5
+            L 24.96875 44.5
+            L 24.96875 41.5
+            L 22.96875 41.5
+            L 22.96875 38.0
+            A 1 1 0 0 1 23.96875 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="31.94140625" y="51.0"
+    <text x="31.96875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="45.94140625" y="51.0"
+    <text x="45.96875" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AI_GT</text>
     

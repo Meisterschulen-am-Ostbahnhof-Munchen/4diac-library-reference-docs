@@ -2,6 +2,8 @@
 
 ![AR_LT](./AR_LT.svg)
 
+![AR_LT_network](./AR_LT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

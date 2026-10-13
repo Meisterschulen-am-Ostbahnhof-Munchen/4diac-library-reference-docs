@@ -2,6 +2,8 @@
 
 ![ASRT_AX_T_FF_SR](ASRT_AX_T_FF_SR.svg)
 
+![ASRT_AX_T_FF_SR_ecc](./ASRT_AX_T_FF_SR_ecc.svg)
+
 * * * * * * * * * *
 
 ## Introduction

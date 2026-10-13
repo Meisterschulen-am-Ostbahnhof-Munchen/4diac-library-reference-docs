@@ -2,6 +2,8 @@
 
 ![AQ_GT](./AQ_GT.svg)
 
+![AQ_GT_network](./AQ_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

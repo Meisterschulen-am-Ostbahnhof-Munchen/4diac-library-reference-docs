@@ -2,6 +2,8 @@
 
 ![Q_SelectColourMap_AUI](./Q_SelectColourMap_AUI.svg)
 
+![Q_SelectColourMap_AUI_network](./Q_SelectColourMap_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

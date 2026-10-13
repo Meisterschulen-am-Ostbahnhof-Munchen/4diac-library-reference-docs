@@ -2,6 +2,8 @@
 
 ![ATM_D_FF_TMIN](./ATM_D_FF_TMIN.svg)
 
+![ATM_D_FF_TMIN_network](./ATM_D_FF_TMIN_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

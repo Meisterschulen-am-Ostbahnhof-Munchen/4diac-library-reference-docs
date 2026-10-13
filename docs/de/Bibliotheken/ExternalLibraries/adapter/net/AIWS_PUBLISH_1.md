@@ -2,6 +2,8 @@
 
 ![AIWS_PUBLISH_1](./AIWS_PUBLISH_1.svg)
 
+![AIWS_PUBLISH_1_network](./AIWS_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,6 +1,8 @@
 # AUI_CTU
 
 ![AUI_CTU](./AUI_CTU.svg)
+![AUI_CTU_ecc](./AUI_CTU_ecc.svg)
+
 *Image of function block not available*
 
 * * * * * * * * * *

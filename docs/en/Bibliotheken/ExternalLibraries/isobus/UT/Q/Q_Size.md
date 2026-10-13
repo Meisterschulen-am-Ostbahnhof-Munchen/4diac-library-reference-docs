@@ -13,7 +13,7 @@ The **Q_Size** is a standards-compliant function block for resizing objects in V
 
 ### **Event Inputs**
 
-- `INIT`: Initialization request (with object ID)
+- `INIT`: Initialization request (with object ID and xScale)
 - `REQ`: Resize request
 
 ### **Event Outputs**
@@ -24,6 +24,7 @@ The **Q_Size** is a standards-compliant function block for resizing objects in V
 ### **Data Inputs**
 
 - `u16ObjId` (UINT): Object ID (16-bit)
+- `xScale` (BOOL): If TRUE, `u16Width`/`u16Height` are scaled by the DM/SKM factor for `u16ObjId` before sending; if FALSE (default) they are passed through unchanged.
 - `u16Width` (UINT): New width in pixels
 - `u16Height` (UINT): New height in pixels
 

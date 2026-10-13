@@ -71,7 +71,7 @@ Der Baustein agiert als passiver Empfänger für das NMEA 2000 PGN 129026. Nach 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
+- [Uebung_079](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_079/)
 
 ## Fazit
 

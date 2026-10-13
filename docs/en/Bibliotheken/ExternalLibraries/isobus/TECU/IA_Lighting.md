@@ -2,6 +2,8 @@
 
 ![IA_Lighting](./IA_Lighting.svg)
 
+![IA_Lighting_network](./IA_Lighting_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -52,16 +54,16 @@ The block has **32 unidirectional adapter plugs** (type `adapter::types::unidire
 | LEFT_TURN_SIGNAL_LIGHTS                | Left Turn Signal                                      |
 | BACK_UP_LIGHTS_AND_ALARM_HORN          | Reversing Light and Alarm Horn                        |
 | CENTER_STOP_LIGHTS                     | Center Brake Light                                    |
-| RIGHT STOP LIGHTS                      | Right Brake Light                                     |
-| LEFT STOP LIGHTS                       | Left Brake Light                                      |
-| IMPLEMENT CLEARANCE LIGHTS             | Implement Marker Lights                               |
-| TRACTOR CLEARANCE LIGHTS               | Tractor Marker Lights                                 |
-| IMPLEMENT MARKER LIGHTS                | Implement Marker Lights                               |
-| TRACTOR MARKER LIGHTS                  | Tractor Marker Lights                                 |
-| REAR FOG LIGHTS                        | Rear Fog Lights                                       |
-| TRACTOR UNDERSIDE MOUNTED WORK LIGHTS  | Tractor Work Lights (Underside Mounted)               |
-| TRACTOR REAR LOW MOUNTED WORK LIGHTS   | Tractor Work Lights (Rear, Low Mounted)               |
-| TRACTOR REAR HIGH MOUNTED WORK LIGHTS  | Tractor Work Lights (Rear, High Mounted)              |
+| RIGHT_STOP_LIGHTS                      | Right Brake Light                                     |
+| LEFT_STOP_LIGHTS                       | Left Brake Light                                      |
+| IMPLEMENT_CLEARANCE_LIGHTS             | Implement Marker Lights                               |
+| TRACTOR_CLEARANCE_LIGHTS               | Tractor Marker Lights                                 |
+| IMPLEMENT_MARKER_LIGHTS                | Implement Marker Lights                               |
+| TRACTOR_MARKER_LIGHTS                  | Tractor Marker Lights                                 |
+| REAR_FOG_LIGHTS                        | Rear Fog Lights                                       |
+| TRACTOR_UNDERSIDE_MOUNTED_WORK_LIGHTS  | Tractor Work Lights (Underside Mounted)               |
+| TRACTOR_REAR_LOW_MOUNTED_WORK_LIGHTS   | Tractor Work Lights (Rear, Low Mounted)               |
+| TRACTOR_REAR_HIGH_MOUNTED_WORK_LIGHTS  | Tractor Work Lights (Rear, High Mounted)              |
 | TRACTOR_SIDE_LOW_MOUNTED_WORK_LIGHTS   | Tractor work lights (side, low)                       |
 | TRACTOR_SIDE_HIGH_MOUNTED_WORK_LIGHTS  | Tractor work lights (side, high)                      |
 | TRACTOR_FRONT_LOW_MOUNTED_WORK_LIGHTS  | Tractor work lights (front, low)                      |

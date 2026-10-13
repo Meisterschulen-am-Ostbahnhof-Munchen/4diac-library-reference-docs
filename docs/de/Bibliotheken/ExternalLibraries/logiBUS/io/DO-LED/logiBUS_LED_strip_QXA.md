@@ -2,6 +2,8 @@
 
 ![logiBUS_LED_strip_QXA](./logiBUS_LED_strip_QXA.svg)
 
+![logiBUS_LED_strip_QXA_network](./logiBUS_LED_strip_QXA_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

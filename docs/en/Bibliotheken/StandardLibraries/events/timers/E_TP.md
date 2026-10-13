@@ -2,6 +2,8 @@
 
 ![E_TP](E_TP.svg)
 
+![E_TP_network](./E_TP_network.svg)
+
 **Important note: This function block requires only one event and no cyclic calls. It does not have an output ET and does not display the elapsed time.**
 
 ## Description
@@ -61,7 +63,7 @@ The **E_TP** function block is a useful tool in IEC 61499-based control technolo
 
 ## 🛠️ Related exercises
 
-- [Uebung_020f](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020f/)
-- [Uebung_039b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039b/)
-- [Uebung_177](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_177/)
-- [Uebung_178](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)
+- [Uebung_020f](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020f/)
+- [Uebung_039b](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_039b/)
+- [Uebung_177](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_177/)
+- [Uebung_178](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_178/)

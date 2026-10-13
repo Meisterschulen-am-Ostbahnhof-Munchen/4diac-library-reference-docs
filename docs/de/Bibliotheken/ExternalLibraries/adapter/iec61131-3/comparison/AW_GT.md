@@ -2,6 +2,8 @@
 
 ![AW_GT](./AW_GT.svg)
 
+![AW_GT_network](./AW_GT_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

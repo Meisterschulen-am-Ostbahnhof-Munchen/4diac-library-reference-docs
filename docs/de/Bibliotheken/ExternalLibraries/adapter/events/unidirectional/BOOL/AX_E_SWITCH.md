@@ -2,6 +2,8 @@
 
 ![AX_E_SWITCH](./AX_E_SWITCH.svg)
 
+![AX_E_SWITCH_network](./AX_E_SWITCH_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

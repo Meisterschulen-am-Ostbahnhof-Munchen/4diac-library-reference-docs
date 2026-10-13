@@ -2,6 +2,8 @@
 
 ![INI_ALR](./INI_ALR.svg)
 
+![INI_ALR_network](./INI_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block **INI_ALR** is used to read and write floating-point values o
 
 | Event | Type  | Comment                                                      | With Variables                  |
 | ----- | ----- | ------------------------------------------------------------ | ------------------------------- |
-| INIT  | EInit | Initializes the function block and triggers a read operation | QI, SECTION, KEY, DEFAULT_VALUE |
+| INIT  | EInit | Initializes the function block and triggers a read operation | QI, SETM, SECTION, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block **INI_ALR** is used to read and write floating-point values o
 | Name          | Type   | Comment                                              |
 | ------------- | ------ | ---------------------------------------------------- |
 | QI            | BOOL   | Event Input Qualifier (Allow)                        |
+| SETM | BOOL | Enable mirroring on SET |
 | SECTION       | STRING | Section name in the INI file                         |
 | KEY           | STRING | Key name within the section                          |
 | DEFAULT_VALUE | LREAL  | Fallback value if the key is missing in the INI file |
@@ -49,7 +52,7 @@ The function block **INI_ALR** is used to read and write floating-point values o
 
 1. **Initialization and First Read**
 
-An event at the input `INIT` triggers the initialization of the internal `INI` block. The parameters `QI`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the `INI` block. After its acknowledgment (`INITO`), the GET operation of the `INI` block is automatically triggered. The read value appears at the data output of the adapter `ALR_OUT.D1` and is simultaneously signaled via the event `ALR_OUT.E1`. The outputs `QO` and `STATUS` of the `INI` block are directly passed through to the corresponding outputs of the `INI_ALR` block.
+An event at the input `INIT` triggers the initialization of the internal `INI` block. The parameters `QI`, `SETM`, `SECTION`, `KEY`, and `DEFAULT_VALUE` are forwarded to the `INI` block. After its acknowledgment (`INITO`), the GET operation of the `INI` block is automatically triggered. The read value appears at the data output of the adapter `ALR_OUT.D1` and is simultaneously signaled via the event `ALR_OUT.E1`. The outputs `QO` and `STATUS` of the `INI` block are directly passed through to the corresponding outputs of the `INI_ALR` block.
 
 ... 2. **Write via ALR-IN**
 

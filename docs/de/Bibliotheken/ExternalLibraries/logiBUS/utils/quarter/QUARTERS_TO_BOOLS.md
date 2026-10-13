@@ -1,5 +1,7 @@
 # QUARTERS_TO_BOOLS
 
+![QUARTERS_TO_BOOLS_network](./QUARTERS_TO_BOOLS_network.svg)
+
 ## 🎧 Podcast
 
 - [QUARTER](https://podcasters.spotify.com/pod/show/iec-61499-grundkurs-de/episodes/QUARTER-e36741d)
@@ -70,7 +72,7 @@ Als Composite Function Block besitzt `QUARTERS_TO_BOOLS` keinen eigenen komplexe
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
+- [Uebung_060](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_060/)
 
 ## Fazit
 

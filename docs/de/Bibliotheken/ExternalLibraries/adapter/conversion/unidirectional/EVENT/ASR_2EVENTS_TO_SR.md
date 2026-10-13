@@ -1,5 +1,7 @@
 # ASR_2EVENTS_TO_SR
 
+![ASR_2EVENTS_TO_SR_network](./ASR_2EVENTS_TO_SR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -57,7 +59,7 @@ Im Vergleich zu einfachen Ereignis-Funktionsblöcken bietet ASR_2EVENTS_TO_SR ei
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
+- [Uebung_171_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_171_AX/)
 
 ## Fazit
 

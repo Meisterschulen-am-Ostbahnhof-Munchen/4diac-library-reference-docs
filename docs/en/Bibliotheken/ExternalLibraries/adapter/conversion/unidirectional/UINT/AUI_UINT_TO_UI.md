@@ -1,5 +1,7 @@
 # AUI_UINT_TO_UI
 
+![AUI_UINT_TO_UI_network](./AUI_UINT_TO_UI_network.svg)
+
 ## Introduction
 
 The AUI_UINT_TO_UI function block is a composite function block used to convert a UINT value to the AUI adapter format.

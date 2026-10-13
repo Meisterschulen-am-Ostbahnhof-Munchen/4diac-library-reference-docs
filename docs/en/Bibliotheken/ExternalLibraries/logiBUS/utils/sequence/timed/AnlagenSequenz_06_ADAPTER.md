@@ -20,6 +20,17 @@
     - **TimeTicker**: `adapter::events::TimeOut::TimeTicker` - generates the cyclic time tick (`TC`, default `T#200ms`) for the internal timing.
     - **E_TimeOut**: `adapter::events::TimeOut::E_FB_TimeOut` - couples `Sequence.timeOut` to `TimeTicker`, so the lead/lag times run without a dedicated timer FB in the application.
 - **Functionality**: Bundles the six `DO_Mx` run commands and six `STOERUNG_Mx` fault inputs, plus every status value (`STATUS_BETRIEB`, `STATUS_STOERUNG`, `ZAEHLSTAND`, `EINSCHALTBEREIT`, `TRANSIT_MOTOR`, `TRANSIT_ART`, `ANLAGE_AUS`), into `AX`/`AS` adapters, and feeds each of the ten dwell times (`ZE1..5_EIN`/`_AUS`) through its own `ATM` adapter socket instead of exposing them as individual `TIME` data inputs. `PT`/`ET` (process/elapsed time) are exposed as `ATM` plugs for a readback of the internal timing.
+- **Dwell-time sockets (`ATM`)**: The ten sockets `ATM_ZE1_EIN`..`ATM_ZE5_EIN` and `ATM_ZE1_AUS`..`ATM_ZE5_AUS` (each of type `adapter::types::unidirectional::ATM`) deliver the dwell times of the transitions:
+    - `ATM_ZE1_EIN`: S_VOR1 to S_VOR2, M5 starts (lead)
+    - `ATM_ZE2_EIN`: S_VOR2 to S_VOR3, M4 starts (lead)
+    - `ATM_ZE3_EIN`: S_VOR3 to S_VOR4, M3 starts (lead)
+    - `ATM_ZE4_EIN`: S_VOR4 to S_VOR5, M2 starts (lead)
+    - `ATM_ZE5_EIN`: S_VOR5 to S_LAEUFT, M1 starts (lead)
+    - `ATM_ZE1_AUS`: S_NACH1 to S_NACH2, M2 stops (lag)
+    - `ATM_ZE2_AUS`: S_NACH2 to S_NACH3, M3 stops (lag)
+    - `ATM_ZE3_AUS`: S_NACH3 to S_NACH4, M4 stops (lag)
+    - `ATM_ZE4_AUS`: S_NACH4 to S_NACH5, M5 stops (lag)
+    - `ATM_ZE5_AUS`: S_NACH5 to S_AUS, M6 stops (lag)
 
 ## Program Flow and Connections
 

@@ -2,6 +2,8 @@
 
 ![AULI_D_FF](./AULI_D_FF.svg)
 
+![AULI_D_FF_network](./AULI_D_FF_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -3,6 +3,8 @@
 
 ![AE_CYCLE](./AE_CYCLE.svg)
 
+![AE_CYCLE_network](./AE_CYCLE_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

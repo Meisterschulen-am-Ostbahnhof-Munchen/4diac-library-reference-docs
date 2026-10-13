@@ -8,11 +8,11 @@ Calculate derivative over signal 'in' with Factor 'K'
 
 ### Event inputs
 
-| Name | Comment                  | With       |
-| :--- | :----------------------- | :--------- |
-| INIT | InitRequest              |            |
-| REQ  | Normal Execution Request | in, K, run |
-| RST  | Reset                    |            |
+| Name  | Comment                  | With       |
+| :---- | :----------------------- | :--------- |
+| EINIT | Init Request             | K, run     |
+| REQ   | Normal Execution Request | in, K, run |
+| RST   | Reset                    |            |
 
 ### Event Outputs
 
@@ -39,5 +39,5 @@ Calculate derivative over signal 'in' with Factor 'K'
 
 ## 🛠️ Related exercises
 
-- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
-- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)
+- [Uebung_151](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_151/)
+- [Uebung_151_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_151_AX/)

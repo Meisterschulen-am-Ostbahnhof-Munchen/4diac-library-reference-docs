@@ -1,5 +1,7 @@
 # Button_IXA
 
+![Button_IXA_network](./Button_IXA_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -70,8 +72,8 @@ Compared to simple Boolean input blocks, Button_IXA offers:
 
 ## 🛠️ Related Exercises
 
-- [Exercise_010a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a2_AX/)
-- [Exercise_010a3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a3_AX/)
+- [Exercise_010a2_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a2_AX/)
+- [Exercise_010a3_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_010a3_AX/)
 
 ## Conclusion
 

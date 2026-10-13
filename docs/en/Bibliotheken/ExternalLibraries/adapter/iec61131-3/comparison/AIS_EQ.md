@@ -2,6 +2,8 @@
 
 ![AIS_EQ](./AIS_EQ.svg)
 
+![AIS_EQ_network](./AIS_EQ_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

@@ -2,6 +2,8 @@
 
 ![INI_AR2](./INI_AR2.svg)
 
+![INI_AR2_network](./INI_AR2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -21,6 +23,7 @@ The INI_AR2 function block is used to read and write real values to and from a s
 ### **Data Inputs**
 
 - **QI** (BOOL): Input qualifier. Controls execution (e.g., activation/deactivation).
+- **SETM** (BOOL): Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored).
 - **SECTION** (STRING): Section name in the settings.ini file (e.g., "[MySection]").
 - **KEY** (STRING): Key name in the section (e.g., "MyKey").
 - **DEFAULT_VALUE** (REAL): Default value returned if the key is not present in the file.
@@ -38,7 +41,7 @@ The INI_AR2 function block is used to read and write real values to and from a s
 
 The FB INI_AR2 is a composite function block that internally uses an INI function block (`eclipse4diac::storage::INI`). The process is as follows:
 
-1. **Initialization**: Upon arrival of the INIT event, the parameters QI, SECTION, KEY, and DEFAULT_VALUE are passed to the internal INI block.
+1. **Initialization**: Upon arrival of the INIT event, the parameters QI, SETM, SECTION, KEY, and DEFAULT_VALUE are passed to the internal INI block.
 2. **Reading**: After INIT, the INI block automatically performs a GET operation (controlled by the event connection from INI.INITO to INI.GET). It reads the value from the settings.ini file for the specified section and key. If no entry exists, the DEFAULT_VALUE is used.
 3. **Output via Adapter**: The read value is passed to the adapter output via the data connection INI.VALUEO -> VAL.DI1 and the event INI.GETO -> VAL.EI1.
 4. **Write via Adapter**: When a new value arrives at VAL.DO1 via the adapter (triggered by VAL.EO1), the event VAL.EO1 -> INI.SET is sent. The INI block then writes the new value back to the file. After writing, INI.SETO -> VAL.EI1 is sent, which returns the acknowledgment to the adapter.

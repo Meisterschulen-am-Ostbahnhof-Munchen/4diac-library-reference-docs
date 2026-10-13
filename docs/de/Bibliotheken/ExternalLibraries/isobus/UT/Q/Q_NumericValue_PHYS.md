@@ -1,5 +1,7 @@
 # Q_NumericValue_PHYS
 
+![Q_NumericValue_PHYS_network](./Q_NumericValue_PHYS_network.svg)
+
 ## Einleitung
 
 ![Q_NumericValue_PHYS](./Q_NumericValue_PHYS.svg)

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1200" height="800" viewBox="0 0 1200 800">
+<defs>
+</defs>
+<rect x="0" y="0" width="1200" height="800" fill="#ffffff" />
+<text x="600" y="25" font-size="14" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">ECC: E_CALIBRATE_2P</text>
+<rect x="10.0" y="384.0" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="50.0" y="400.0" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">START</text>
+<rect x="550.0" y="384.0" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="590.0" y="400.0" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">REQ</text>
+<rect x="640.0" y="384.0" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M630.0,400.0 L640.0,395.0" stroke="#000000" stroke-width="2" />
+<path d="M720.0,384.0 L720.0,406.0" stroke="#cccccc" stroke-width="1" />
+<rect x="640.0" y="388.0" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="680.0" y="396.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">REQ</text>
+<rect x="721.0" y="388.0" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="761.0" y="396.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">CNF</text>
+<rect x="550.0" y="114.0" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="590.0" y="130.0" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">C_LOW</text>
+<rect x="640.0" y="114.0" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M630.0,130.0 L640.0,125.0" stroke="#000000" stroke-width="2" />
+<path d="M720.0,114.0 L720.0,136.0" stroke="#cccccc" stroke-width="1" />
+<rect x="640.0" y="118.0" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="680.0" y="126.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">C_LOW</text>
+<rect x="721.0" y="118.0" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="761.0" y="126.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">EO_LOW</text>
+<rect x="550.0" y="654.0" width="80" height="32" fill="#f5f5f5" stroke="#000000" stroke-width="2" rx="8" ry="8" />
+<text x="590.0" y="670.0" font-size="12" fontWeight="bold" font-family="Verdana, sans-serif" fill="#000000" text-anchor="middle" dominant-baseline="central">C_HIGH</text>
+<rect x="640.0" y="654.0" width="161" height="22" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="4" ry="4" />
+<path d="M630.0,670.0 L640.0,665.0" stroke="#000000" stroke-width="2" />
+<path d="M720.0,654.0 L720.0,676.0" stroke="#cccccc" stroke-width="1" />
+<rect x="640.0" y="658.0" width="80" height="14" fill="#e6f7e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="680.0" y="666.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">C_HIGH</text>
+<rect x="721.0" y="658.0" width="80" height="14" fill="#ffe6e6" stroke="#cccccc" stroke-width="0.5" />
+<text x="761.0" y="666.0" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">EO_HIGH</text>
+<path d="M90.0,392.5 C130.0,392.5,590.0,344.0,590.0,384.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M590.0,384.0 L586.0,377.0717967697245 L594.0,377.0717967697245 L590.0,384.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(355.0,373.25)">
+<rect x="-13.75" y="-7.5" width="27.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">REQ</text>
+</g>
+<path d="M550.0,407.5 C328.7856455044897,407.5,35.0,162.78564550448968,35.0,384.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M35.0,384.0 L31.0,377.0717967697245 L39.0,377.0717967697245 L35.0,384.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(209.54461706418363,312.7946170641836)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">1</text>
+</g>
+<path d="M90.0,392.5 C312.984214687946,392.5,590.0,368.984214687946,590.0,146.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M590.0,146.0 L594.0,152.9282032302755 L586.0,152.9282032302755 L590.0,146.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(423.6190805079798,352.8690805079798)">
+<rect x="-23.5" y="-7.5" width="47.0" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">EI_LOW</text>
+</g>
+<path d="M550.0,137.5 C312.015785312054,137.5,50.0,146.015785312054,50.0,384.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M50.0,384.0 L46.0,377.0717967697245 L54.0,377.0717967697245 L50.0,384.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(210.75591949202024,171.50591949202024)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">1</text>
+</g>
+<path d="M90.0,392.5 C315.70148426627594,392.5,590.0,428.29851573372406,590.0,654.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M590.0,654.0 L586.0,647.0717967697245 L594.0,647.0717967697245 L590.0,654.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(424.6380565998535,438.6119434001465)">
+<rect x="-26.75" y="-7.5" width="53.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">EI_HIGH</text>
+</g>
+<path d="M550.0,677.5 C314.59773140913455,677.5,65.0,651.4022685908654,65.0,416.0" stroke="#404040" stroke-width="1.2" fill="none" />
+<path d="M65.0,416.0 L69.0,422.9282032302755 L61.0,422.9282032302755 L65.0,416.0" fill="#404040" stroke="#404040" stroke-width="1" />
+<g transform="translate(219.22414927842544,635.0258507215746)">
+<rect x="-7.25" y="-7.5" width="14.5" height="15" fill="#ffffff" opacity="0.9" rx="3" ry="3" />
+<text x="0" y="3.5" font-size="10" font-family="Consolas, monospace" fill="#000000" text-anchor="middle" dominant-baseline="central">1</text>
+</g>
+</svg>

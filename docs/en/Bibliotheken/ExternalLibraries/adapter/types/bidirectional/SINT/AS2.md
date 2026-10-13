@@ -2,6 +2,14 @@
 
 ![AS2](AS2.svg)
 
+**Plug (adapter output)**
+
+![AS2_plug](./AS2_plug.svg)
+
+**Socket (adapter input)**
+
+![AS2_socket](./AS2_socket.svg)
+
 bidirectional Adapter Interface for 1 Event and 1 SINT
 
 ## Interface

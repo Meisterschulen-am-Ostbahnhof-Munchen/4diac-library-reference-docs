@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 673.75 132.0"
-     width="673.75" height="132.0">
+     viewBox="0 0 673.4375 132.0"
+     width="673.4375" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL";
-      src: local("TGL 0-16_std"), local("TGL 0-16");
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: italic;
       font-weight: normal;
     }
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(219.1123046875, 10)">
+  <g transform="translate(218.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 184.208984375 0
-            A 3 3 0 0 1 187.208984375 3
-            L 187.208984375 23.0
-            A 3 3 0 0 1 184.208984375 26.0
-            L 177.208984375 26.0
-            L 177.208984375 66.0
-            L 184.208984375 66.0
-            A 3 3 0 0 1 187.208984375 69.0
-            L 187.208984375 109.0
-            A 3 3 0 0 1 184.208984375 112.0
+            L 184.1875 0
+            A 3 3 0 0 1 187.1875 3
+            L 187.1875 23.0
+            A 3 3 0 0 1 184.1875 26.0
+            L 177.1875 26.0
+            L 177.1875 66.0
+            L 184.1875 66.0
+            A 3 3 0 0 1 187.1875 69.0
+            L 187.1875 109.0
+            A 3 3 0 0 1 184.1875 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">REQ</text>
 
-    <polygon points="180.708984375,11.0 185.708984375,16.0 180.708984375,21.0" fill="#63B31F"/>
-    <text x="177.708984375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="180.6875,11.0 185.6875,16.0 180.6875,21.0" fill="#63B31F"/>
+    <text x="177.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
@@ -96,7 +96,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">SPLIT_SIGNED_REAL</text>
     
-    <text x="93.6044921875" y="66.0"
+    <text x="93.59375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -106,12 +106,12 @@
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">Y</text>
 
-    <polygon points="180.708984375,71.0 185.708984375,76.0 180.708984375,81.0" fill="#DBB418"/>
-    <text x="177.708984375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="180.6875,71.0 185.6875,76.0 180.6875,81.0" fill="#DBB418"/>
+    <text x="177.6875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">NEG_MAG</text>
 
-    <polygon points="180.708984375,91.0 185.708984375,96.0 180.708984375,101.0" fill="#DBB418"/>
-    <text x="177.708984375" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="180.6875,91.0 185.6875,96.0 180.6875,101.0" fill="#DBB418"/>
+    <text x="177.6875" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">POS_MAG</text>
 
 
@@ -126,19 +126,19 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="192.208984375" y="11.0" width="10" height="10"
+    <rect x="192.1875" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="192.208984375" y="71.0" width="10" height="10"
+    <rect x="192.1875" y="71.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="197.208984375" y1="16.0" x2="197.208984375" y2="76.0"
+    <line x1="197.1875" y1="16.0" x2="197.1875" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="192.208984375" y="91.0" width="10" height="10"
+    <rect x="192.1875" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="197.208984375" y1="16.0" x2="197.208984375" y2="96.0"
+    <line x1="197.1875" y1="16.0" x2="197.1875" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -149,13 +149,13 @@
     <line x1="0" y1="76.0" x2="-20" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="187.208984375" y1="16.0" x2="207.208984375" y2="16.0"
+    <line x1="187.1875" y1="16.0" x2="207.1875" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="187.208984375" y1="76.0" x2="207.208984375" y2="76.0"
+    <line x1="187.1875" y1="76.0" x2="207.1875" y2="76.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="187.208984375" y1="96.0" x2="207.208984375" y2="96.0"
+    <line x1="187.1875" y1="96.0" x2="207.1875" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -163,16 +163,16 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Neuer Y-Wert liegt an – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="212.208984375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="212.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – NEG_MAG/POS_MAG berechnet</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Eingangswert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
 
-    <text x="212.208984375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="212.1875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – MAX(0, -Y)</text>
 
-    <text x="212.208984375" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="212.1875" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – MAX(0, Y)</text>
   </g>
 </svg>

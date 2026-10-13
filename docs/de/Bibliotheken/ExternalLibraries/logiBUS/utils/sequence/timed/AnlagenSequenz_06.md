@@ -26,12 +26,17 @@ vorgeordneten Motoren berücksichtigt.
 
 ### **Ereignis-Eingänge**
 
+-   **`INIT`**: Initialisierungsanforderung (Typ `EInit`).
 -   **`EIN`**: Startet die Vorlauf-Kette (Übergang `sAUS` → `sVOR1`). Nur wirksam, wenn
     `EINSCHALTBEREIT = TRUE` (Bedingung `EIN[NOT (STOERUNG_M1 OR ... OR STOERUNG_M6)]`); quittiert
     dabei zugleich eine anstehende, verriegelte `STATUS_STOERUNG`-Anzeige.
 -   **`AUS`**: Löst die Stopp-Sequenz aus jedem Schritt der Vorlauf-Kette (`sVOR1`..`sVOR5`) oder
     aus `sLAEUFT` aus. Springt auf den jeweiligen Spiegelpunkt der Nachlauf-Kette
     (`sVOR_k` → `sNACH_(6-k)`), da hier kein Motor-Fehler, sondern nur ein Bedienerwunsch vorliegt.
+-   **`SET_ZE1_EIN`, `SET_ZE2_EIN`, `SET_ZE3_EIN`, `SET_ZE4_EIN`, `SET_ZE5_EIN`**: Aktualisieren `ZE1_EIN` .. `ZE5_EIN` unabhängig von `EIN`;
+    jedes Ereignis trägt (`With`) die gleichnamige Zeitvariable (`SET_ZEk_EIN` → `ZEk_EIN`).
+-   **`SET_ZE1_AUS`, `SET_ZE2_AUS`, `SET_ZE3_AUS`, `SET_ZE4_AUS`, `SET_ZE5_AUS`**: Aktualisieren `ZE1_AUS` .. `ZE5_AUS` unabhängig von `AUS`;
+    jedes Ereignis trägt (`With`) die gleichnamige Zeitvariable (`SET_ZEk_AUS` → `ZEk_AUS`).
 -   **`EI_M1`**: Störungsstatus Motor 1 hat sich geändert. Führt (`With STOERUNG_M1`) aus jedem
     Zustand vor `sNACH1` direkt dorthin.
 -   **`EI_M2`**: Störungsstatus Motor 2 hat sich geändert. Führt (`With STOERUNG_M2`) direkt nach
@@ -47,8 +52,10 @@ vorgeordneten Motoren berücksichtigt.
 
 ### **Ereignis-Ausgänge**
 
+-   **`INITO`**: Initialisierungsbestätigung (Typ `EInit`).
 -   **`CNF`**: Ausführungsbestätigung, ausgelöst bei jedem Zustandswechsel; liefert
-    `STATUS_BETRIEB`, `STATUS_STOERUNG`, `ZAEHLSTAND` und `EINSCHALTBEREIT`.
+    `STATUS_BETRIEB`, `STATUS_STOERUNG`, `ZAEHLSTAND`, `EINSCHALTBEREIT`, `ANLAGE_AUS`,
+    `TRANSIT_MOTOR` und `TRANSIT_ART`.
 -   **`EO_M1`**: Laufbefehl Motor 1 aktualisiert; liefert `DO_M1` (analog `EO_Sx` in
     `sequence_T_04`/`_08`).
 -   **`EO_M2`**: Laufbefehl Motor 2 aktualisiert; liefert `DO_M2`.
@@ -59,10 +66,12 @@ vorgeordneten Motoren berücksichtigt.
 
 ### **Daten-Eingänge**
 
--   **`ZE1_EIN` .. `ZE5_EIN`** (TIME): Verweildauer je Vorlauf-Schritt (`sVOR1`→`sVOR2` bis
+-   **`ZE1_EIN` .. `ZE5_EIN`** (TIME; einzeln `ZE1_EIN`, `ZE2_EIN`, `ZE3_EIN`, `ZE4_EIN`,
+    `ZE5_EIN`): Verweildauer je Vorlauf-Schritt (`sVOR1`→`sVOR2` bis
     `sVOR5`→`sLAEUFT`), bevor automatisch der nächste Motor dazugeschaltet wird. Initialwert:
     `NO_TIME`.
--   **`ZE1_AUS` .. `ZE5_AUS`** (TIME): Verweildauer je Nachlauf-Schritt (`sNACH1`→`sNACH2` bis
+-   **`ZE1_AUS` .. `ZE5_AUS`** (TIME; einzeln `ZE1_AUS`, `ZE2_AUS`, `ZE3_AUS`, `ZE4_AUS`,
+    `ZE5_AUS`): Verweildauer je Nachlauf-Schritt (`sNACH1`→`sNACH2` bis
     `sNACH5`→`sAUS`), bevor automatisch der nächste Motor abgeschaltet wird. Initialwert:
     `NO_TIME`.
 -   **`STOERUNG_M1` .. `STOERUNG_M6`** (BOOL): Live-Störungssignal je Motor, dauerhaft (kein
@@ -76,6 +85,12 @@ vorgeordneten Motoren berücksichtigt.
 -   **`EINSCHALTBEREIT`** (BOOL): `TRUE` nur wenn `ZAEHLSTAND = 0` (alle Motoren stehen) UND alle
     sechs `STOERUNG_Mx` aktuell `FALSE` sind.
 -   **`ZAEHLSTAND`** (SINT): 0..6, Anzahl der aktuell laufenden Motoren.
+-   **`ANLAGE_AUS`** (BOOL): `TRUE` nur in `sAUS` (`STATUS_BETRIEB` = Aus) — Voraussetzung für
+    Handbetrieb.
+-   **`TRANSIT_MOTOR`** (SINT): 0 = keiner (`sAUS`/`sLAEUFT`), 1..6 = Nummer des Motors, der nach
+    Ablauf der aktuellen Zeit startet/stoppt (siehe `TRANSIT_ART`).
+-   **`TRANSIT_ART`** (SINT): Art des Übergangs: `anlagenSequenz::TRANSIT_ART_KEINE`, `_VORLAUF`
+    oder `_NACHLAUF`.
 -   **`DO_M1` .. `DO_M6`** (BOOL): Laufbefehl je Motor.
 
 ### **Adapter**

@@ -2,6 +2,8 @@
 
 ![initval_AULI](initval_AULI.svg)
 
+![initval_AULI_network](./initval_AULI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

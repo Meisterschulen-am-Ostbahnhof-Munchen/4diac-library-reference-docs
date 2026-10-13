@@ -2,6 +2,8 @@
 
 ![E_TONOF](E_TONOF.svg)
 
+![E_TONOF_network](./E_TONOF_network.svg)
+
 **Wichtiger Hinweis: Dieser Baustein benötigt nur ein Ereignis (Event) und keine zyklischen Aufrufe. Er besitzt keinen Ausgang ET und zeigt die verstrichene Zeit nicht an.**
 
 ## Beschreibung
@@ -91,4 +93,4 @@ Der **E_TONOF**-Baustein ist ein leistungsstarkes Werkzeug in der IEC 61499, um 
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020g](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)
+- [Uebung_020g](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_B/Uebungen_doc/Uebung_020g/)

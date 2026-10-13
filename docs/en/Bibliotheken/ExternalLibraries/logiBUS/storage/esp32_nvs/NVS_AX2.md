@@ -2,6 +2,8 @@
 
 ![NVS_AX2](./NVS_AX2.svg)
 
+![NVS_AX2_network](./NVS_AX2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block **NVS_AX2** is used to load and save REAL data to the non-vol
 
 | Event  | Type  | Comment                | Carried Variables      |
 | ------ | ----- | ---------------------- | ---------------------- |
-| `INIT` | EInit | Service Initialization | QI, KEY, DEFAULT_VALUE |
+| `INIT` | EInit | Service Initialization | QI, SETM, KEY, DEFAULT_VALUE |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block **NVS_AX2** is used to load and save REAL data to the non-vol
 | Name            | Type   | Comment                                                             |
 | --------------- | ------ | ------------------------------------------------------------------- |
 | `QI`            | BOOL   | Event Input Qualifier (Initialization Enabled)                      |
+| `SETM`            | BOOL   | Enable Mirroring on SET: if TRUE, the confirmation of a SET (SETO) is additionally forwarded to the output adapter (mirrored) |
 | `KEY`           | STRING | Key name for the NVS entry                                          |
 | `DEFAULT_VALUE` | BOOL   | Default value if the key does not exist in the NVS (default: FALSE) |
 
@@ -47,7 +50,7 @@ The **VAL** adapter establishes a bidirectional connection to an external compon
 
 ## Functionality
 
-1. **Initialization**: An event at input `INIT` triggers the initialization of the internal NVS component. The values `QI`, `KEY`, and `DEFAULT_VALUE` are passed. After successful initialization, the event `INITO` is sent at the output. Simultaneously, a read operation (GET) for the specified key is automatically initiated.
+1. **Initialization**: An event at input `INIT` triggers the initialization of the internal NVS component. The values `QI`, `SETM`, `KEY`, and `DEFAULT_VALUE` are passed. After successful initialization, the event `INITO` is sent at the output. Simultaneously, a read operation (GET) for the specified key is automatically initiated.
 
 2. **Read Value**: The read value is output via the adapter `VAL` as `DI1` (data output of the adapter), and an event `EI1` is triggered on the adapter. The outputs `QO` and `STATUS` reflect the result of the read operation.
 

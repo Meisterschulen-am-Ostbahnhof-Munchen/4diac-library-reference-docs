@@ -1,5 +1,7 @@
 # AUDI_D_FF_HYS_TMIN
 
+![AUDI_D_FF_HYS_TMIN_network](./AUDI_D_FF_HYS_TMIN_network.svg)
+
 No image available
 ![AUDI_D_FF_HYS_TMIN](./AUDI_D_FF_HYS_TMIN.svg)
 

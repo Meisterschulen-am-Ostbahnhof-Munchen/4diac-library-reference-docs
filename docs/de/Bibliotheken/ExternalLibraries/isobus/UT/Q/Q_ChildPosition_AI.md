@@ -2,6 +2,8 @@
 
 ![Q_ChildPosition_AI](./Q_ChildPosition_AI.svg)
 
+![Q_ChildPosition_AI_network](./Q_ChildPosition_AI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

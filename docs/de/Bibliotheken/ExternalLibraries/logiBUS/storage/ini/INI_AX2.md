@@ -2,6 +2,8 @@
 
 ![INI_AX2](./INI_AX2.svg)
 
+![INI_AX2_network](./INI_AX2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -14,7 +16,7 @@ Der Funktionsblock INI_AX2 dient dem Lesen und Speichern von REAL-Daten aus eine
 
 | Name | Beschreibung                                                                                                      |
 | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| INIT | Initialisierungsereignis zum Starten des Lesevorgangs. Erwartet die Parameter QI, SECTION, KEY und DEFAULT_VALUE. |
+| INIT | Initialisierungsereignis zum Starten des Lesevorgangs. Erwartet die Parameter QI, SETM, SECTION, KEY und DEFAULT_VALUE. |
 
 ### **Ereignis-Ausgänge**
 
@@ -27,6 +29,7 @@ Der Funktionsblock INI_AX2 dient dem Lesen und Speichern von REAL-Daten aus eine
 | Name          | Typ    | Beschreibung                                                                                                 |
 | ------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
 | QI            | BOOL   | Eingangsqualifikator zur Steuerung der Verarbeitung.                                                         |
+| SETM | BOOL | Spiegelung (Mirroring) bei SET aktivieren (Enable Mirroring on SET) |
 | SECTION       | STRING | Name des Abschnitts in der settings.ini-Datei.                                                               |
 | KEY           | STRING | Name des Schlüssels innerhalb des Abschnitts.                                                                |
 | DEFAULT_VALUE | BOOL   | Standardwert, der gelesen wird, falls der Schlüssel in der Datei nicht vorhanden ist. Voreinstellung: FALSE. |
@@ -48,7 +51,7 @@ Der Funktionsblock INI_AX2 dient dem Lesen und Speichern von REAL-Daten aus eine
 
 Der Baustein INI_AX2 beinhaltet einen internen INI-Funktionsblock (eclipse4diac::storage::INI), der die eigentliche Dateioperation durchführt. Die Verbindungen im Netzwerk realisieren folgende Abläufe:
 
-- Beim Eintreffen von INIT werden QI, SECTION, KEY und DEFAULT_VALUE an den INI-Baustein weitergeleitet.
+- Beim Eintreffen von INIT werden QI, SETM, SECTION, KEY und DEFAULT_VALUE an den INI-Baustein weitergeleitet.
 - Der INI-Baustein führt einen Lesevorgang aus und gibt das Ergebnis (über VALUEO) an den Adapter-Ausgang (VAL.DI1) weiter.
 - Gleichzeitig wird nach erfolgreichem Lesen das Ereignis GET ausgelöst, das den Adapter-Eingang (VAL.EI1) aktiviert, um den Wert zu übermitteln.
 - Ein Schreibvorgang wird initiiert, sobald der Adapter ein Ereignis EO1 sendet. Dieses Ereignis triggert das SET-Ereignis am INI-Baustein, wobei der über VAL.DO1 empfangene Wert als neuer VALUE gesetzt wird.

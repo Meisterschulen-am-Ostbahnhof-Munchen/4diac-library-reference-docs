@@ -1,5 +1,7 @@
 # AX_TOF
 
+![AX_TOF_network](./AX_TOF_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung
@@ -75,7 +77,7 @@ Vergleich mit [E_TOF](../../../../../../StandardLibraries/events/timers/E_TOF.md
 
 ## 🛠️ Zugehörige Übungen
 
-- [Uebung_020e_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs-de/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
+- [Uebung_020e_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/de/latest/Uebungen/test_AX/Uebungen_doc/Uebung_020e_AX/)
 
 ## Fazit
 

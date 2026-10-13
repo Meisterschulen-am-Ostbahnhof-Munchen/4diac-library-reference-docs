@@ -2,6 +2,8 @@
 
 ![AUDI_PUBLISH_1](./AUDI_PUBLISH_1.svg)
 
+![AUDI_PUBLISH_1_network](./AUDI_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

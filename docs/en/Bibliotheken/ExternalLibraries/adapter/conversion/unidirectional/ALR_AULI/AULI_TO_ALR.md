@@ -1,5 +1,7 @@
 # AULI_TO_ALR
 
+![AULI_TO_ALR_network](./AULI_TO_ALR_network.svg)
+
 No image available.
 ![AULI_TO_ALR](./AULI_TO_ALR.svg)
 

@@ -2,6 +2,8 @@
 
 ![Q_NumericValueAux_AUDI](./Q_NumericValueAux_AUDI.svg)
 
+![Q_NumericValueAux_AUDI_network](./Q_NumericValueAux_AUDI_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

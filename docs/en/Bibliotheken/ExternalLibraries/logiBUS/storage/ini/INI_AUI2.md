@@ -2,6 +2,8 @@
 
 ![INI_AUI2](./INI_AUI2.svg)
 
+![INI_AUI2_network](./INI_AUI2_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

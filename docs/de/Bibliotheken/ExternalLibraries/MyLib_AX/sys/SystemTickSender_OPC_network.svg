@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-22.0 -151.0 1181.0 588.0"
+     viewBox="-22.1 -151.0 1181.1 588.0"
      width="1181" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -40,13 +40,14 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-22.0" y="-151.0" width="1181.0" height="588.0" fill="white"/>
-  <rect x="-15.0" y="-144.0" width="1167.0" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-15.0" y="-144.0" width="1167.0" height="25.0" fill="white" stroke="none"/>
-  <line x1="-15.0" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-10.0" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">SystemTick-Heartbeat NUR per OPC-UA publizieren, fuer Module ohne eigene VT-Anbindung</text>
+  <rect x="-22.1" y="-151.0" width="1181.1" height="588.0" fill="white"/>
+  <rect x="-15.1" y="-144.0" width="1167.1" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-15.1" y="-144.0" width="1167.1" height="25.0" fill="white" stroke="none"/>
+  <line x1="-15.1" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-10.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">SystemTick-Heartbeat NUR per OPC-UA publizieren, fuer Module ohne eigene
+VT-Anbindung</text>
   <g id="sidebars">
-    <rect x="-15.0" y="-119.0" width="55.0" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-15.1" y="-119.0" width="55.1" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
@@ -62,16 +63,16 @@
   <g id="instances">
     <g id="fb_ADI_PUBLISH_1" transform="translate(854.6, 75.0)">
       <path d="M 3 0
-            L 114.873046875 0
-            A 3 3 0 0 1 117.873046875 3
-            L 117.873046875 35
-            A 3 3 0 0 1 114.873046875 38
-            L 108.873046875 38
-            L 108.873046875 52
-            L 114.873046875 52
-            A 3 3 0 0 1 117.873046875 55
-            L 117.873046875 103
-            A 3 3 0 0 1 114.873046875 106
+            L 114.8125 0
+            A 3 3 0 0 1 117.8125 3
+            L 117.8125 35
+            A 3 3 0 0 1 114.8125 38
+            L 108.8125 38
+            L 108.8125 52
+            L 114.8125 52
+            A 3 3 0 0 1 117.8125 55
+            L 117.8125 103
+            A 3 3 0 0 1 114.8125 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -114,11 +115,11 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="112.873046875,5.5 117.873046875,10.5 112.873046875,15.5" fill="#63B31F"/>
-      <text x="111.873046875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="112.8125,5.5 117.8125,10.5 112.8125,15.5" fill="#63B31F"/>
+      <text x="111.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="112.873046875,22.5 117.873046875,27.5 112.873046875,32.5" fill="#63B31F"/>
-      <text x="111.873046875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="112.8125,22.5 117.8125,27.5 112.8125,32.5" fill="#63B31F"/>
+      <text x="111.8125" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -126,11 +127,11 @@
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="112.873046875,56.5 117.873046875,61.5 112.873046875,66.5" fill="#A3B08F"/>
-      <text x="111.873046875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="112.8125,56.5 117.8125,61.5 112.8125,66.5" fill="#A3B08F"/>
+      <text x="111.8125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="112.873046875,73.5 117.873046875,78.5 112.873046875,83.5" fill="#BD8663"/>
-      <text x="111.873046875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="112.8125,73.5 117.8125,78.5 112.8125,83.5" fill="#BD8663"/>
+      <text x="111.8125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <path d="M 0 90.5
@@ -149,22 +150,22 @@
       <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
       <!-- Instance Name -->
-      <text x="58.9365234375" y="-5"
+      <text x="58.90625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">ADI_PUBLISH_1</text>
     </g>
     <g id="fb_System_Tick" transform="translate(239.6, 135.0)">
       <path d="M 3 0
-            L 98.525390625 0
-            A 3 3 0 0 1 101.525390625 3
-            L 101.525390625 18
-            A 3 3 0 0 1 98.525390625 21
-            L 92.525390625 21
-            L 92.525390625 35
-            L 98.525390625 35
-            A 3 3 0 0 1 101.525390625 38
-            L 101.525390625 52
-            A 3 3 0 0 1 98.525390625 55
+            L 98.5 0
+            A 3 3 0 0 1 101.5 3
+            L 101.5 18
+            A 3 3 0 0 1 98.5 21
+            L 92.5 21
+            L 92.5 35
+            L 98.5 35
+            A 3 3 0 0 1 101.5 38
+            L 101.5 52
+            A 3 3 0 0 1 98.5 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -210,23 +211,23 @@
 
 
 
-      <path d="M 91.525390625 38.5
-            L 94.025390625 38.5
-            L 94.025390625 40.166666666666664
-            L 96.525390625 40.166666666666664
-            L 96.525390625 38.5
-            L 101.525390625 38.5
-            L 101.525390625 48.5
-            L 96.525390625 48.5
-            L 96.525390625 46.833333333333336
-            L 94.025390625 46.833333333333336
-            L 94.025390625 48.5
-            L 91.525390625 48.5
+      <path d="M 91.5 38.5
+            L 94.0 38.5
+            L 94.0 40.166666666666664
+            L 96.5 40.166666666666664
+            L 96.5 38.5
+            L 101.5 38.5
+            L 101.5 48.5
+            L 96.5 48.5
+            L 96.5 46.833333333333336
+            L 94.0 46.833333333333336
+            L 94.0 48.5
+            L 91.5 48.5
             Z" fill="#845DAF"/>
-      <text x="88.525390625" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="88.5" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">ADI_OUT</text>
       <!-- Instance Name -->
-      <text x="50.7626953125" y="-5"
+      <text x="50.75" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">System_Tick</text>
     </g>

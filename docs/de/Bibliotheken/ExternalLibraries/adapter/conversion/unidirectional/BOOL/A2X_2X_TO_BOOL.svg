@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 718.662109375 172.0"
-     width="718.662109375" height="172.0">
+     viewBox="0 0 718.0625 172.0"
+     width="718.0625" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(156.6865234375, 10)">
+  <g transform="translate(156.5, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 164.48046875 0
-            A 3 3 0 0 1 167.48046875 3
-            L 167.48046875 43.0
-            A 3 3 0 0 1 164.48046875 46.0
-            L 157.48046875 46.0
-            L 157.48046875 86.0
-            L 164.48046875 86.0
-            A 3 3 0 0 1 167.48046875 89.0
-            L 167.48046875 149.0
-            A 3 3 0 0 1 164.48046875 152.0
+            L 164.3125 0
+            A 3 3 0 0 1 167.3125 3
+            L 167.3125 43.0
+            A 3 3 0 0 1 164.3125 46.0
+            L 157.3125 46.0
+            L 157.3125 86.0
+            L 164.3125 86.0
+            A 3 3 0 0 1 167.3125 89.0
+            L 167.3125 149.0
+            A 3 3 0 0 1 164.3125 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 89.0
@@ -58,12 +58,12 @@
 
     <!-- Event Ports -->
 
-    <polygon points="160.98046875,11.0 165.98046875,16.0 160.98046875,21.0" fill="#63B31F"/>
-    <text x="157.98046875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="160.8125,11.0 165.8125,16.0 160.8125,21.0" fill="#63B31F"/>
+    <text x="157.8125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">E_UP</text>
 
-    <polygon points="160.98046875,31.0 165.98046875,36.0 160.98046875,41.0" fill="#63B31F"/>
-    <text x="157.98046875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="160.8125,31.0 165.8125,36.0 160.8125,41.0" fill="#63B31F"/>
+    <text x="157.8125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">E_DOWN</text>
 
     <!-- Name Section -->
@@ -96,18 +96,18 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">A2X_2X_TO_BOOL</text>
     
-    <text x="83.740234375" y="86.0"
+    <text x="83.65625" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="160.98046875,91.0 165.98046875,96.0 160.98046875,101.0" fill="#A3B08F"/>
-    <text x="157.98046875" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="160.8125,91.0 165.8125,96.0 160.8125,101.0" fill="#A3B08F"/>
+    <text x="157.8125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">UP</text>
 
-    <polygon points="160.98046875,111.0 165.98046875,116.0 160.98046875,121.0" fill="#A3B08F"/>
-    <text x="157.98046875" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="160.8125,111.0 165.8125,116.0 160.8125,121.0" fill="#A3B08F"/>
+    <text x="157.8125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">DOWN</text>
 
     <!-- Adapter Ports -->
@@ -130,50 +130,50 @@
 
     <!-- Event-Data Association Connectors and Lines -->
 
-    <rect x="172.48046875" y="11.0" width="10" height="10"
+    <rect x="172.3125" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="172.48046875" y="91.0" width="10" height="10"
+    <rect x="172.3125" y="91.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="177.48046875" y1="16.0" x2="177.48046875" y2="96.0"
+    <line x1="177.3125" y1="16.0" x2="177.3125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="186.48046875" y="31.0" width="10" height="10"
+    <rect x="186.3125" y="31.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="186.48046875" y="111.0" width="10" height="10"
+    <rect x="186.3125" y="111.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="191.48046875" y1="36.0" x2="191.48046875" y2="116.0"
+    <line x1="191.3125" y1="36.0" x2="191.3125" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
 
-    <line x1="167.48046875" y1="16.0" x2="187.48046875" y2="16.0"
+    <line x1="167.3125" y1="16.0" x2="187.3125" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="167.48046875" y1="36.0" x2="201.48046875" y2="36.0"
+    <line x1="167.3125" y1="36.0" x2="201.3125" y2="36.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="167.48046875" y1="96.0" x2="187.48046875" y2="96.0"
+    <line x1="167.3125" y1="96.0" x2="187.3125" y2="96.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="167.48046875" y1="116.0" x2="201.48046875" y2="116.0"
+    <line x1="167.3125" y1="116.0" x2="201.3125" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
 
-    <text x="206.48046875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="206.3125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – UP</text>
 
-    <text x="206.48046875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="206.3125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – DOWN</text>
 
-    <text x="206.48046875" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="206.3125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – TRUE = forward, up, right, clockwise</text>
 
-    <text x="206.48046875" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="206.3125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – TRUE = backward, down, left, counter-clockwise</text>
 
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

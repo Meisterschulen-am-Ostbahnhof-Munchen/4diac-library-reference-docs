@@ -2,6 +2,14 @@
 
 ![AUDI2](./AUDI2.svg)
 
+**Plug (Adapter-Ausgang)**
+
+![AUDI2_plug](./AUDI2_plug.svg)
+
+**Socket (Adapter-Eingang)**
+
+![AUDI2_socket](./AUDI2_socket.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

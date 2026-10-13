@@ -2,6 +2,8 @@
 
 ![AUDI_TO_AR](./AUDI_TO_AR.svg)
 
+![AUDI_TO_AR_network](./AUDI_TO_AR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

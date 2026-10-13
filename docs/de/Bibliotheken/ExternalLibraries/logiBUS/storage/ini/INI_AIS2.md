@@ -2,6 +2,8 @@
 
 ![INI_AIS2](./INI_AIS2.svg)
 
+![INI_AIS2_network](./INI_AIS2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

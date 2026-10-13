@@ -5,25 +5,25 @@
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
-      src: local("TGL 0-17_std");
+      src: local("TGL 0-17_std"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-17";
-      src: local("TGL 0-17"), local("TGL 0-17 alt");
+      src: local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16_std";
-      src: local("TGL 0-16_std");
+      src: local("TGL 0-16_std"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
     @font-face {
       font-family: "TGL 0-16";
-      src: local("TGL 0-16");
+      src: local("TGL 0-16"), url("../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
       font-style: normal;
       font-weight: normal;
     }
@@ -44,7 +44,13 @@
   <rect x="-245.2" y="-144.0" width="1205.2" height="662.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-245.2" y="-144.0" width="1205.2" height="25.0" fill="white" stroke="none"/>
   <line x1="-245.2" y1="-119.5" x2="960.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-240.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">1 Kanal einer geschalteten Gruppe (z.B. Scheinwerfer): nimmt den Toggle-Zustand eines gemeinsamen TOGGLE_RPC_MASTER_QXA_OPC ueber den MASTER-Socket entgegen, verzoegert das Einschalten um PT (AX_TON, Ausschalten sofort), verknuepft per AX_OR_2 mit dem bestehenden IO-Test-Kommando dieses Kanals und treibt den physischen Ausgang. Fuer einen komplett eigenstaendigen Kanal (eigener SoftKey, kein gemeinsamer Master) stattdessen TOGGLE_RPC_MERGE_QXA_OPC oder MERGE_SWITCH_1_QXA_OPC verwenden.</text>
+  <text x="-240.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">1 Kanal einer geschalteten Gruppe (z.B. Scheinwerfer): nimmt den Toggle-Zustand
+eines gemeinsamen TOGGLE_RPC_MASTER_QXA_OPC ueber den MASTER-Socket entgegen,
+verzoegert das Einschalten um PT (AX_TON, Ausschalten sofort), verknuepft per
+AX_OR_2 mit dem bestehenden IO-Test-Kommando dieses Kanals und treibt den
+physischen Ausgang. Fuer einen komplett eigenstaendigen Kanal (eigener SoftKey,
+kein gemeinsamer Master) stattdessen TOGGLE_RPC_MERGE_QXA_OPC oder
+MERGE_SWITCH_1_QXA_OPC verwenden.</text>
   <g id="sidebars">
     <rect x="-245.2" y="-119.0" width="93.2" height="637.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-152.0" y1="-119.0" x2="-152.0" y2="518.0" stroke="#A0A0A0" stroke-width="0.5"/>

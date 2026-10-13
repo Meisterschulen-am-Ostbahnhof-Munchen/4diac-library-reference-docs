@@ -2,6 +2,8 @@
 
 ![AX_RF_TRIG](./AX_RF_TRIG.svg)
 
+![AX_RF_TRIG_network](./AX_RF_TRIG_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

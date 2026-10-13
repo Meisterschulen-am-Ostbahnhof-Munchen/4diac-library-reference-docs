@@ -2,6 +2,8 @@
 
 ![AUS_PUBLISH_1](./AUS_PUBLISH_1.svg)
 
+![AUS_PUBLISH_1_network](./AUS_PUBLISH_1_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

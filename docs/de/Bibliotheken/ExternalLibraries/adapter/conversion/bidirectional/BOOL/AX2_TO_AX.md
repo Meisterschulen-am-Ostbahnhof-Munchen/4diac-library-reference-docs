@@ -2,6 +2,8 @@
 
 ![AX2_TO_AX](AX2_TO_AX.svg)
 
+![AX2_TO_AX_network](./AX2_TO_AX_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

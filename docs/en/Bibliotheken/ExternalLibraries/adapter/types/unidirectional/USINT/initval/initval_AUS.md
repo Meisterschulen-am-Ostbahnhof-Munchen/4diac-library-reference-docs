@@ -2,6 +2,8 @@
 
 ![initval_AUS](initval_AUS.svg)
 
+![initval_AUS_network](./initval_AUS_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction

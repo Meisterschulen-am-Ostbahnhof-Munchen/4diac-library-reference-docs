@@ -2,6 +2,8 @@
 
 ![INI_AUDI2](./INI_AUDI2.svg)
 
+![INI_AUDI2_network](./INI_AUDI2_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

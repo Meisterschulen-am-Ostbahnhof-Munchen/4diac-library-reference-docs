@@ -2,6 +2,8 @@
 
 ![AE_SWITCH](./AE_SWITCH.svg)
 
+![AE_SWITCH_ecc](./AE_SWITCH_ecc.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

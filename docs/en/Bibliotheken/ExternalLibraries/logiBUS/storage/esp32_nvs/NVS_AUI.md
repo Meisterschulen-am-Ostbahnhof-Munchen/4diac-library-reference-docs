@@ -2,6 +2,8 @@
 
 ![NVS_AUI](./NVS_AUI.svg)
 
+![NVS_AUI_network](./NVS_AUI_network.svg)
+
 * * * * * * * * * *
 
 ## Introduction
@@ -14,7 +16,7 @@ The function block **NVS_AUI** is used to load and store UINT data in non-volati
 
 | Event  | Comment                | Accompanying Data                                    |
 | ------ | ---------------------- | ---------------------------------------------------- |
-| `INIT` | Service Initialization | `QI` (BOOL), `KEY` (STRING), `DEFAULT_VALUE` (UDINT) |
+| `INIT` | Service Initialization | `QI` (BOOL), `SETM` (BOOL), `KEY` (STRING), `DEFAULT_VALUE` (UDINT) |
 
 ### **Event Outputs**
 
@@ -27,6 +29,7 @@ The function block **NVS_AUI** is used to load and store UINT data in non-volati
 | Name            | Type   | Comment                                        |
 | --------------- | ------ | ---------------------------------------------- |
 | `QI`            | BOOL   | Qualifier for the input event                  |
+| `SETM`          | BOOL   | Enable mirroring on SET                        |
 | `KEY`           | STRING | Key name for NVS access                        |
 | `DEFAULT_VALUE` | UDINT  | Value to be read if no entry exists in the NVS |
 

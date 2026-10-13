@@ -2,6 +2,8 @@
 
 ![initval_ALR](initval_ALR.svg)
 
+![initval_ALR_network](./initval_ALR_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

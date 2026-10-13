@@ -3,6 +3,8 @@
 
 ![AX_ASR_SWITCH_X](./AX_ASR_SWITCH_X.svg)
 
+![AX_ASR_SWITCH_X_network](./AX_ASR_SWITCH_X_network.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

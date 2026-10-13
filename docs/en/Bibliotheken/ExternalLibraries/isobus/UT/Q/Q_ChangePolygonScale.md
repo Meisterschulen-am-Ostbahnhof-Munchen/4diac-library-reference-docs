@@ -13,7 +13,7 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 
 ### **Event Inputs**
 
-- `INIT`: Initialization request (with polygon object ID)
+- `INIT`: Initialization request (with polygon object ID and `xScale`)
 - `REQ`: Scaling request (with new dimensions)
 
 ### **Event Outputs**
@@ -24,6 +24,7 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 ### **Data Inputs**
 
 - `u16ObjId` (UINT): Polygon object ID
+- `xScale` (BOOL, initial value `FALSE`): `FALSE` = bypass, `u16NewWidth`/`u16NewHeight` are sent unchanged; `TRUE` = both are scaled by the DM/SKM factor for `u16ObjId`
 - `u16NewWidth` (UINT): New width in pixels
 - `u16NewHeight` (UINT): New height in pixels
 
