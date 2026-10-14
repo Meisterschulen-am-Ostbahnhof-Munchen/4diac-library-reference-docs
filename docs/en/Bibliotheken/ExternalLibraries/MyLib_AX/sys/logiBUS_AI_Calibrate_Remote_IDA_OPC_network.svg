@@ -81,6 +81,7 @@ Der Rohwert wird dort per logiBUS_AI_Raw_Publish_OPC publiziert.</text>
     <polyline points="380.1,370.5 387.3,370.5 392.1,375.3 392.1,515.5 387.1,520.5 238.0,520.5 233.0,525.5 233.0,665.7 237.8,670.5 245.0,670.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="365.1,670.5 2714.1,670.5 2719.1,665.5 2719.1,-79.0 2724.1,-84.0 3267.3,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="365.1,670.5 1636.1,670.5 1641.1,665.5 1641.1,345.5 1646.1,340.5 2870.0,340.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2567.2,220.5 2817.2,220.5 2822.2,225.5 2822.2,335.5 2827.2,340.5 2870.0,340.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="380.1,404.5 684.1,404.5 689.1,409.5 689.1,515.5 694.1,520.5 1025.0,520.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="648.1,520.5 703.1,520.5 708.1,525.5 708.1,532.5 713.1,537.5 1025.0,537.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="648.1,537.5 826.1,537.5 831.1,542.5 831.1,549.5 836.1,554.5 1025.0,554.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>

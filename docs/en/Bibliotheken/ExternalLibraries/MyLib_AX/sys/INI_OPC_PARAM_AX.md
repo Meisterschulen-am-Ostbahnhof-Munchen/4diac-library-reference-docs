@@ -32,7 +32,7 @@
 
 ## Program Flow and Connections
 
-1. **Initialization Chain**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AX.INIT`; `INI_AX.INITO` → `INITO` (and → `AND_QO.REQ`). In addition, the network still contains the older connections `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT` and `INI_AX.INITO` → `AX_PUBLISH_1.INIT`.
+1. **Initialization Chain**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT`; `INI_AX.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INITO` (and → `AND_QO.REQ`).
 2. **Parameters**: `SECTION` → `INI_AX.SECTION`; `KEY` → `INI_AX.KEY`; `DEFAULT_VALUE` (BOOL) → `INI_AX.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 3. **Quality**: `QI` → `.QI` of `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` and `INI_AX` (no longer hard-wired `QI=TRUE`); `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 4. **Adapter Chain**: `AX_SUBSCRIBE_1.OUT` → `INI_AX.AX_IN` → `INI_AX.AX_OUT` → `AX_SPLIT_2.IN`; `AX_SPLIT_2.OUT1` → `AX_PUBLISH_1.IN` **and** `AX_SPLIT_2.OUT2` → `OUT` (plug into the SubApp interface).

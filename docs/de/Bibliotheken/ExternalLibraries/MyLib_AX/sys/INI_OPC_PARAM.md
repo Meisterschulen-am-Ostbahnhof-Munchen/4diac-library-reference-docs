@@ -25,7 +25,7 @@
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` → `INI_AR.INITO` → `AX_PUBLISH_1.INIT`. Zusätzlich sind im Quelltext `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` und `AX_PUBLISH_1.INITO` → `INI_AR.INIT` verdrahtet; `INI_AR.INITO` → `INITO` und → `AND_QO.REQ`.
+1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INITO` und → `AND_QO.REQ`.
 2. **Qualität**: `QI` → `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `INI_AR.QI`; `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AR.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 3. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 4. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` (neuer Wert vom Client) → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` (gespeicherter/aktueller Wert zurück an den Client).

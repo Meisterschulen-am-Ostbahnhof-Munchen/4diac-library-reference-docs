@@ -25,7 +25,7 @@
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: Ereigniseingang `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` und → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`, → Ereignisausgang `INITO` und → `AND_QO.REQ`.
+1. **Initialisierungskette**: Ereigniseingang `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → Ereignisausgang `INITO` und → `AND_QO.REQ`.
 2. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` (Sekunden) → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 3. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` (REAL, unverändert per OPC-UA veröffentlicht) **und** → `Sec_To_Time.IN2` → `Sec_To_Time.OUT` → `OUT` (als `TIME`).
 4. **Qualität**: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `INI_AR.QI`; deren `QO` → `AND_QO.IN1`, `AND_QO.IN2`, `AND_QO.IN3`; `AND_QO.OUT` → Datenausgang `QO`.

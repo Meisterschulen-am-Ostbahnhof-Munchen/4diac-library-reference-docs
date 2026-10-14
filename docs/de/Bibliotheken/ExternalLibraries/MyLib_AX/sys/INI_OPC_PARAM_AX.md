@@ -25,7 +25,7 @@
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AX.INIT`; `INI_AX.INITO` → `INITO` (und → `AND_QO.REQ`). Zusätzlich enthält das Netzwerk weiterhin die älteren Verbindungen `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT` und `INI_AX.INITO` → `AX_PUBLISH_1.INIT`.
+1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT`; `INI_AX.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INITO` (und → `AND_QO.REQ`).
 2. **Parameter**: `SECTION` → `INI_AX.SECTION`; `KEY` → `INI_AX.KEY`; `DEFAULT_VALUE` (BOOL) → `INI_AX.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 3. **Qualität**: `QI` → `.QI` von `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `INI_AX` (nicht mehr fest `QI=TRUE`); `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 4. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AX.AX_IN` → `INI_AX.AX_OUT` → `AX_SPLIT_2.IN`; `AX_SPLIT_2.OUT1` → `AX_PUBLISH_1.IN` **und** `AX_SPLIT_2.OUT2` → `OUT` (Plug an die SubApp-Schnittstelle).
