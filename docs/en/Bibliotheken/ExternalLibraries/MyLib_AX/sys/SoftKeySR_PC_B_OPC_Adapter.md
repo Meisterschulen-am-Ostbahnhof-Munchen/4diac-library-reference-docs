@@ -16,6 +16,13 @@
 - **SPLIT** (`adapter::events::bidirectional::ASR_AX_AX_SPLIT`): splits to the physical output + the flip-flop logic.
 - **FLIPFLOP** (`adapter::events::bidirectional::ASR_AX_SR_2`): pure SR flip-flop logic as an adapter block, no toggle.
 - **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`): physical output.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `TRIGGER.QO` and `DigitalOutput_Q1.QO` into the `QO` of the SubApp.
+
+## Initialization and Quality
+
+- **Event input `INIT`** (`EInit`) and **event output `INITO`** (`EInit`): `INIT` → `TRIGGER.INIT`; `TRIGGER.INITO` → `DigitalOutput_Q1.INIT`; `DigitalOutput_Q1.INITO` → `INITO` (and → `AND_QO.REQ`).
+- **Data input `QI`** (`BOOL`, default `TRUE`) → `TRIGGER.QI` and `DigitalOutput_Q1.QI`.
+- **Data output `QO`** (`BOOL`): `TRIGGER.QO` → `AND_QO.IN1`; `DigitalOutput_Q1.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Summary
 

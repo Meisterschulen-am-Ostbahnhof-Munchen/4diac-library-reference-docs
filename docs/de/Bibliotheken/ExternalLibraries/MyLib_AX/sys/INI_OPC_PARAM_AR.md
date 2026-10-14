@@ -16,16 +16,18 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` (`QI=TRUE`) — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
-    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`QI=TRUE`, `SETM=FALSE`) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` als Startwert.
-    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` (`QI=TRUE`) — veröffentlicht den aktuellen Wert per OPC-UA (`ID_WRITE`).
-- **Funktionsweise**: Identisch zu `INI_OPC_PARAM`, zusätzlich wird `INI_AR.AR_OUT` direkt auf den Plug `OUT` geführt.
+    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` (`QI` kommt vom Eingang `QI`) — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
+    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`QI` kommt vom Eingang `QI`, `SETM=FALSE`) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` als Startwert.
+    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` (`QI` kommt vom Eingang `QI`) — veröffentlicht den aktuellen Wert per OPC-UA (`ID_WRITE`).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO`-Ausgänge der drei FBs zum Ausgang `QO`.
+- **Funktionsweise**: Identisch zu `INI_OPC_PARAM`, zusätzlich wird `INI_AR.AR_OUT` direkt auf den Plug `OUT` geführt. Die SubApp-Schnittstelle hat außerdem die Ereignisse `INIT`/`INITO` und die Daten `QI` (BOOL, Initialwert `TRUE`) und `QO` (BOOL).
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` → `INI_AR.INITO` → `AX_PUBLISH_1.INIT`.
+1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` und → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`, → `INITO` und → `AND_QO.REQ`.
 2. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 3. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` **und** → `OUT` (Plug an die SubApp-Schnittstelle).
+4. **Qualität**: `QI` → `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `INI_AR.QI`; `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AR.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

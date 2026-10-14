@@ -13,26 +13,31 @@ The `AuxIXA_TO_logiBUS_QXA_BG` subapplication is a generic, reusable composite f
 
 ## Interface Structure
 
-The subapplication exposes only data inputs; no explicit event inputs/outputs or adapters are visible at its boundary.
+The subapplication exposes the initialization events `INIT`/`INITO`, the status pair `QI`/`QO` and data inputs; no adapters are visible at its boundary.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): Initialization Request - starts the initialization chain of the internal blocks.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): Initialization Confirm - emitted after the initialization chain has completed.
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable the service |
 | `u16ObjIdA` | `UINT` | `ID_NULL` | Object ID of the AUX input |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Selects the physical output (Q1..Q8) |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully |
+
+`QO` is the AND (`AND_QO`, type `iec61131::booleanOperators::AND_BOOL_3`) of the `QO` outputs of `DigitalOutput_Q1`, `AuxFunction2_X1` and `GreenWhiteBackground2_AX`.
 
 ### **Adapters**
 
@@ -42,11 +47,13 @@ The subapplication does not expose any adapters; all internal adapter connection
 
 The subapplication receives an AUX object ID (`u16ObjIdA`) and an output selection (`Output`). Internally, it performs the following steps:
 
-1. The `AuxFunction2_X1` block (type `isobus::UT::io::Auxiliary::IN::Aux_IXA`) is configured with `QI = TRUE` and processes the AUX input based on the provided object ID. It generates an event on its `IN` adapter when the AUX input is activated.
+1. The `AuxFunction2_X1` block (type `isobus::UT::io::Auxiliary::IN::Aux_IXA`) receives `QI` from the subapplication's `QI` input and processes the AUX input based on the provided object ID. It generates an event on its `IN` adapter when the AUX input is activated.
 2. The `AX_SPLIT_2` block (type `adapter::events::unidirectional::AX_SPLIT_2`) splits the incoming event into two parallel event connections.
 3. One event output (`OUT1`) goes to the `DigitalOutput_Q1` block (type `logiBUS::io::DQ::logiBUS_QXA`), which drives the selected logiBUS digital output (based on the `Output` data input).
 4. The other event output (`OUT2`) goes to the `GreenWhiteBackground2_AX` subapplication, which presumably handles the green/white background color logic for the display.
 5. The `u16ObjIdA` is also connected to `GreenWhiteBackground2_AX` to keep the color logic synchronized with the AUX object.
+
+Initialization and status: `INIT` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `AuxFunction2_X1.INIT`, `AuxFunction2_X1.INITO` → `GreenWhiteBackground2_AX.INIT`, `GreenWhiteBackground2_AX.INITO` → `INITO` (and additionally → `AND_QO.REQ`). `QI` is forwarded to `DigitalOutput_Q1`, `AuxFunction2_X1` and `GreenWhiteBackground2_AX`; their `QO` outputs go to `AND_QO.IN1`..`IN3`, and `AND_QO.OUT` → `QO`.
 
 The subapp thus provides a complete mapping from an AUX input to a physical digital output with visual feedback on the user interface.
 

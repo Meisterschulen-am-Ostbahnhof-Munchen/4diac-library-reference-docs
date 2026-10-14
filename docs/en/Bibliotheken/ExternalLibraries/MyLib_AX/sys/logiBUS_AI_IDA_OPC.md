@@ -16,12 +16,13 @@
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **logiBUS_AI_IDA**: `logiBUS::io::AI::logiBUS_AI_IDA` — physical analog input, raw value 0-4095 (12-bit), `AnalogInput_hysteresis=DWORD#0`, `TimeDelta=DWORD#250`, `TimeRateLimit=DWORD#100`, `QI=TRUE`.
+    - **logiBUS_AI_IDA**: `logiBUS::io::AI::logiBUS_AI_IDA` — physical analog input, raw value 0-4095 (12-bit), `AnalogInput_hysteresis=DWORD#0`, `TimeDelta=DWORD#250`, `TimeRateLimit=DWORD#100`, `QI` comes from the input `QI`.
     - **AD_SPLIT_2** (type `AD_SPLIT_3`): `adapter::events::unidirectional::AD_SPLIT_3` — splits the DWORD adapter value into three independent outputs (`OUT1..OUT3`).
-    - **AD_PUBLISH_RAW** (type `AD_PUBLISH_1`): `adapter::net::AD_PUBLISH_1` — publishes the raw value (DWORD) via OPC-UA, target address `ID_RAW_WRITE`, `QI=TRUE`.
+    - **AD_PUBLISH_RAW** (type `AD_PUBLISH_1`): `adapter::net::AD_PUBLISH_1` — publishes the raw value (DWORD) via OPC-UA, target address `ID_RAW_WRITE`, `QI` comes from the input `QI`.
     - **Q_NumericValue** (type `Q_NumericValue_AUDI`): `isobus::UT::Q::Q_NumericValue_AUDI` — writes the raw value into the VT numeric field `u16ObjId_VALUEVAR`.
     - **F_AI_RAW_TO_PERCENT** (SubApp, type `F_AI_RAW_TO_PERCENT_AD`): `MyLib::sys::F_AI_RAW_TO_PERCENT_AD` — linearly converts the raw value to percent (see [F_AI_RAW_TO_PERCENT / F_AI_RAW_TO_PERCENT_AD](./F_AI_RAW_TO_PERCENT.md)).
-    - **AR_PUBLISH_PERCENT** (type `AR_PUBLISH_1`): `adapter::net::AR_PUBLISH_1` — publishes the percent value (REAL) via OPC-UA, target address `ID_PERCENT_WRITE`, `QI=TRUE`.
+    - **AR_PUBLISH_PERCENT** (type `AR_PUBLISH_1`): `adapter::net::AR_PUBLISH_1` — publishes the percent value (REAL) via OPC-UA, target address `ID_PERCENT_WRITE`, `QI` comes from the input `QI`.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` — combines the `QO` outputs of `Q_NumericValue`, `logiBUS_AI_IDA`, `AD_PUBLISH_RAW` and `AR_PUBLISH_PERCENT` into the output `QO`.
     - **AD_TO_AUDI**: `adapter::conversion::unidirectional::AD_TO_AUDI` — converts the DWORD raw value to UDINT for the VT numeric field.
 - **Operation**: The raw value is split three ways via `AD_SPLIT_2`: one branch goes directly to the raw-value OPC-UA publication, a second via `AD_TO_AUDI` to the VT raw-value numeric field, and a third via `F_AI_RAW_TO_PERCENT_AD` for percent conversion followed by OPC-UA publication.
 
@@ -33,7 +34,8 @@
 4. `AD_SPLIT_2.OUT2` → `AD_TO_AUDI.AD_IN`; `AD_TO_AUDI.AUDI_OUT` → `Q_NumericValue.u32NewValue` (VT raw-value branch).
 5. `AD_SPLIT_2.OUT3` → `F_AI_RAW_TO_PERCENT.RAW_IN`; `F_AI_RAW_TO_PERCENT.PERCENT_OUT` → `AR_PUBLISH_PERCENT.IN` (percent OPC-UA branch).
 
-6. `QI` (`BOOL`, default `TRUE`, new) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, new, Quality Output - `TRUE` if the VT write to the raw-value number field succeeded).
+6. `QI` (`BOOL`, default `TRUE`) → `Q_NumericValue.QI`, `logiBUS_AI_IDA.QI`, `AD_PUBLISH_RAW.QI` and `AR_PUBLISH_PERCENT.QI`; their `QO` outputs → `AND_QO.IN1` (`Q_NumericValue`), `IN2` (`logiBUS_AI_IDA`), `IN3` (`AD_PUBLISH_RAW`), `IN4` (`AR_PUBLISH_PERCENT`); `AND_QO.OUT` → `QO` (`BOOL`, Quality Output - `TRUE` if all four services succeeded).
+7. Initialization chain (event input `INIT` / event output `INITO`, both `EInit`): `INIT` → `logiBUS_AI_IDA.INIT` → `AD_PUBLISH_RAW.INIT` → `AR_PUBLISH_PERCENT.INIT` → `Q_NumericValue.INIT` (each `INITO` → next `INIT`); `Q_NumericValue.INITO` → `INITO` and `AND_QO.REQ`.
 
 ## Technical Details
 

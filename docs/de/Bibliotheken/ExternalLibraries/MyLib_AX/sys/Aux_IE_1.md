@@ -14,20 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialisierungsanforderung; wird an `Aux.INIT` durchgereicht
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `Aux.INITO`
 - **IND**: feuert, wenn das konfigurierte `InputEvent` auftritt
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL): Quality Input, Freigabe des Dienstes (Initialwert `TRUE`), wird an `Aux.QI` durchgereicht
 - **u16ObjId** (UINT): Object ID der AuxFunction2 (Default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Auxiliary::IN::AuxiliaryState_S`): z. B. `AuxEnabled`, `AuxDisabled` (Default `Invalid`)
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (BOOL): Quality Output, kommt von `Aux.QO`
 
 ### **Adapter**
 
@@ -35,12 +37,12 @@ Es werden keine Adapter verwendet.
 
 ## Funktionsweise
 
-Das Netzwerk enthält genau eine Instanz `Aux` des Typs `isobus::UT::io::Auxiliary::IN::Aux_IE` mit dem Parameter `QI = TRUE`. `u16ObjId` und `InputEvent` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, und deren Ereignis `IND` wird direkt als `IND` der SubApp ausgegeben.
+Das Netzwerk enthält genau eine Instanz `Aux` des Typs `isobus::UT::io::Auxiliary::IN::Aux_IE`. `u16ObjId` und `InputEvent` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, und deren Ereignis `IND` wird direkt als `IND` der SubApp ausgegeben. Zusätzlich werden `INIT` → `Aux.INIT`, `Aux.INITO` → `INITO`, `QI` → `Aux.QI` und `Aux.QO` → `QO` durchgereicht.
 
 ## Technische Besonderheiten
 
 - Reine Durchreichung ohne eigene Logik oder Zustand
-- `QI` ist fest auf TRUE verdrahtet; der Baustein ist also immer aktiv
+- `QI` ist nicht mehr fest auf TRUE verdrahtet, sondern wird zusammen mit `INIT`/`INITO` und `QO` durchgereicht (Initialwert von `QI` ist `TRUE`)
 - Weil `InputEvent` ein Parameter ist, kann dieselbe SubApp für unterschiedliche Ereignisarten (z. B. Drücken oder Loslassen) verwendet werden
 
 ## Anwendungsszenarien

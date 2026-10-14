@@ -10,6 +10,8 @@
 
 `GreenRedBackground3_AXSC` is a **compact wrapper** around [`GreenRedBackground3_AXS`](GreenRedBackground3_AXS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
 
+Interface (quality pattern): The wrapper additionally has the event input `INIT` and the event output `INITO` (each `EInit`) as well as the data input `QI` (`BOOL`, default `TRUE`) and the data output `QO` (`BOOL`). They are passed straight through to the inner instance `GreenRedBackground`: `INIT` → `GreenRedBackground.INIT`, `GreenRedBackground.INITO` → `INITO`, `QI` → `GreenRedBackground.QI`, `GreenRedBackground.QO` → `QO`.
+
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
 ## Summary

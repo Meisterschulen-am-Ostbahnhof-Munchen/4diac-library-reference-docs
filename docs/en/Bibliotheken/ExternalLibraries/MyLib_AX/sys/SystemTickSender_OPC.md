@@ -20,7 +20,7 @@
 
 - **System_Tick** (SubApp, `MyLib::sys`): returns the counter reading as a `ADI` adapter (DINT).
 
-- **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI=TRUE`) — publishes the counter reading directly via OPC UA (`ID_WRITE`).
+- **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` — publishes the counter reading directly via OPC UA (`ID_WRITE`).
 
 - **Functionality**: The counter reading from `System_Tick` is passed directly to `ADI_PUBLISH_1` without conversion.
 
@@ -30,6 +30,10 @@
 1. `ID_WRITE` → `ADI_PUBLISH_1.ID` (Data connection, hidden).
 
 2. `System_Tick.ADI_OUT` → `ADI_PUBLISH_1.IN`.
+
+3. Initialization: event input `INIT` → `ADI_PUBLISH_1.INIT`; `ADI_PUBLISH_1.INITO` → event output `INITO`.
+
+4. Quality: data input `QI` (`BOOL`, default `TRUE`) → `ADI_PUBLISH_1.QI`; `ADI_PUBLISH_1.QO` → data output `QO`.
 
 ## Technical Features
 

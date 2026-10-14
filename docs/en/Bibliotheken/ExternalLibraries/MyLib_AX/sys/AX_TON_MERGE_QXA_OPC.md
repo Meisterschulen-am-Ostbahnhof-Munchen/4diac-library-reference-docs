@@ -15,16 +15,19 @@ The `AX_TON_MERGE_QXA_OPC` function block (subapplication) implements a single c
 
 ### **Event Inputs**
 
-None – the block is data‑driven and uses internal event connections only.
+- **INIT** (`EInit`): initialization request; starts the init chain at `SUBSCRIBE_TEST.INIT`.
+
+The actual signal processing remains purely data‑ and adapter‑driven.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `PUBLISH_TEST.INITO`, the end of the init chain.
 
 ### **Data Inputs**
 
 | Name             | Type                        | Description                                                               |
 |------------------|-----------------------------|---------------------------------------------------------------------------|
+| `QI`             | `BOOL`                      | Quality input, enables the service; initial value `TRUE`; passed on to `SUBSCRIBE_TEST`, `DigitalOutput` and `PUBLISH_TEST`. |
 | `Output`         | `logiBUS::io::DQ::logiBUS_DO_S` | Physical output for this channel (initial value: `logiBUS_DO::Invalid`). |
 | `PT`             | `TIME`                      | Switch‑on delay relative to the master toggle. Set per instance (e.g., `T#0ms`, `T#800ms`, `T#1600ms`). Switch‑off is always immediate. |
 | `ID_TEST_READ`   | `WSTRING`                   | Existing IO‑test subscribe address for this channel (e.g., `STG5_Q0x_READ`). |
@@ -32,7 +35,9 @@ None.
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| `QO` | `BOOL` | Quality output, AND combination (`AND_QO`, `AND_BOOL_3`) of the `QO` outputs of `SUBSCRIBE_TEST`, `DigitalOutput` and `PUBLISH_TEST`. |
 
 ### **Adapters**
 
@@ -48,6 +53,8 @@ None.
 4. The merged output is then split (`AX_SPLIT_2`) into two paths:  
    - **Path 1** drives the physical output via `logiBUS_QXA`.  
    - **Path 2** publishes the state back to the OPC UA address `ID_TEST_WRITE` for monitoring or test feedback.  
+
+Initialization and quality: `INIT` → `SUBSCRIBE_TEST.INIT`, `SUBSCRIBE_TEST.INITO` → `DigitalOutput.INIT`, `DigitalOutput.INITO` → `PUBLISH_TEST.INIT`, `PUBLISH_TEST.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `SUBSCRIBE_TEST.QI`, `DigitalOutput.QI` and `PUBLISH_TEST.QI`; their `QO` outputs are combined in `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`, `IN1` to `IN3`) into the output `QO`.
 
 The complete signal flow is internal and appears as a single logical unit to the application.
 

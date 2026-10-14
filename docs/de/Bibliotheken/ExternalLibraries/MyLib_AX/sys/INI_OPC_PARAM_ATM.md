@@ -16,17 +16,19 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` (`QI=TRUE`) — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
-    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`QI=TRUE`, `SETM=FALSE`) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` (in Sekunden) als Startwert.
-    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` (`QI=TRUE`) — veröffentlicht den aktuellen REAL-Wert per OPC-UA (`ID_WRITE`).
+    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` (`QI` von außen) — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
+    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`SETM=FALSE`, `QI` von außen) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` (in Sekunden) als Startwert.
+    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` (`QI` von außen) — veröffentlicht den aktuellen REAL-Wert per OPC-UA (`ID_WRITE`).
     - **Sec_To_Time**: `adapter::iec61131::arithmetic::AR_MULTIME` (`IN1=T#1s`) — multipliziert den gespeicherten REAL-Wert (Sekunden) mit `T#1s`, um ihn als `TIME`-Wert bereitzustellen.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO` von `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `INI_AR` zum Ausgang `QO`.
 - **Funktionsweise**: Wie `INI_OPC_PARAM_AR`, zusätzlich wird `INI_AR.AR_OUT` über `Sec_To_Time` (`AR_MULTIME`) in `TIME` umgerechnet und als `ATM`-Plug `OUT` bereitgestellt.
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` → `INI_AR.INITO` → `AX_PUBLISH_1.INIT`.
+1. **Initialisierungskette**: Ereigniseingang `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` und → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`, → Ereignisausgang `INITO` und → `AND_QO.REQ`.
 2. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` (Sekunden) → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
 3. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` (REAL, unverändert per OPC-UA veröffentlicht) **und** → `Sec_To_Time.IN2` → `Sec_To_Time.OUT` → `OUT` (als `TIME`).
+4. **Qualität**: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `INI_AR.QI`; deren `QO` → `AND_QO.IN1`, `AND_QO.IN2`, `AND_QO.IN3`; `AND_QO.OUT` → Datenausgang `QO`.
 
 ## Technische Besonderheiten
 

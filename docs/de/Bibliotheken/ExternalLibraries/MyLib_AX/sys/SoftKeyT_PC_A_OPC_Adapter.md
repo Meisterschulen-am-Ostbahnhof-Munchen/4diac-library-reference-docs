@@ -10,14 +10,24 @@
 
 ![SoftKeyT_PC_A_OPC_Adapter](SoftKeyT_PC_A_OPC_Adapter.svg)
 
+## Schnittstelle
+
+- **Ereignis-Eingang**: `INIT` (`EInit`, Initialization Request)
+- **Ereignis-Ausgang**: `INITO` (`EInit`, Initialization Confirm)
+- **Daten-Eingänge**: `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input), `u16ObjId`, `ID_TRIGGER_CALL`, `ID_STATE_READ`
+- **Daten-Ausgang**: `QO` (`BOOL`, Quality Output)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftKeyT_AE_AX** (SubApp, Typ `MyLib::sys::SoftKeyT_AE_AX`): SoftKey + Statusanzeige, gebuendelt hinter einem `AE_AX`-Plug.
 - **TRIGGER** (`adapter::net::AE_AX_CLIENT_0_SUBSCRIBE_1`): buendelt Methodenaufruf (`ID_TRIGGER_CALL`) und Zustands-Abo (`ID_STATE_READ`) hinter einem einzigen `AE_AX`-Socket.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `TRIGGER.QO` und `SoftKeyT_AE_AX.QO` per UND zum Baustein-Ausgang `QO`.
 
 ## Programmablauf und Verbindungen
 
 `SoftKeyT_AE_AX.OUT` -> `TRIGGER.TRIGGER` (bidirektional: Trigger raus, Zustand zurueck an die HMI-SubApp).
+
+Initialisierungskette: `INIT` -> `TRIGGER.INIT`, `TRIGGER.INITO` -> `SoftKeyT_AE_AX.INIT`, `SoftKeyT_AE_AX.INITO` -> `INITO` und -> `AND_QO.REQ`. `QI` -> `TRIGGER.QI` und `SoftKeyT_AE_AX.QI`; `TRIGGER.QO` -> `AND_QO.IN1`, `SoftKeyT_AE_AX.QO` -> `AND_QO.IN2`, `AND_QO.OUT` -> `QO`.
 
 ## Zusammenfassung
 

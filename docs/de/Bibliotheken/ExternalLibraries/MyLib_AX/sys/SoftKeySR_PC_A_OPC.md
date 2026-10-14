@@ -16,6 +16,14 @@
 - **TRIGGER_SET_CLIENT / TRIGGER_RESET_CLIENT** (`iec61499::net::CLIENT_0`): rufen je eine eigene argumentlose Remote-Methode auf Geraet B auf (`ID_SET_CALL`/`ID_RESET_CALL`).
 - **STATE_SUBSCRIBE** (`adapter::net::AX_SUBSCRIBE_1`): abonniert den Flipflop-Zustand unter `ID_STATE_READ`.
 - **GreenWhiteBackground_AX** (SubApp, Typ `MyLib::sys::GreenWhiteBackground1_AX`): zeigt den Zustand am Set-SoftKey an.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_6`): verknüpft die `QO`-Ausgänge der sechs Bausteine oben zum SubApp-Ausgang `QO`.
+
+## Initialisierung und Qualität
+
+- Ereignisse: `INIT` (EInit, Eingang) und `INITO` (EInit, Ausgang, kommt von `GreenWhiteBackground_AX.INITO`).
+- Dateneingang `QI` (BOOL, Vorgabe `TRUE`) und Datenausgang `QO` (BOOL); die internen FBs tragen kein festes `QI=TRUE` mehr.
+- Initialisierungskette: `INIT` → `SoftKey_SET.INIT` → `SoftKey_RESET.INIT` → `TRIGGER_SET_CLIENT.INIT` → `TRIGGER_RESET_CLIENT.INIT` → `STATE_SUBSCRIBE.INIT` → `GreenWhiteBackground_AX.INIT` (jeweils über `INITO`); `GreenWhiteBackground_AX.INITO` → `INITO` und → `AND_QO.REQ`.
+- Qualität: `QI` → `.QI` aller sechs Bausteine; deren `QO`-Ausgänge → `AND_QO.IN1` bis `IN6` (`SoftKey_SET`, `SoftKey_RESET`, `TRIGGER_SET_CLIENT`, `TRIGGER_RESET_CLIENT`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`); `AND_QO.OUT` → `QO`.
 
 ## Zusammenfassung
 

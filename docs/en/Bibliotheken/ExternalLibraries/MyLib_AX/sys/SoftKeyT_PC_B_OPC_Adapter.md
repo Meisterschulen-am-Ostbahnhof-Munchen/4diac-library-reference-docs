@@ -16,6 +16,14 @@
 - **SPLIT** (`adapter::events::bidirectional::AE_AX_AX_SPLIT`): splits the trigger to the physical output + the flip-flop logic.
 - **FLIPFLOP** (`adapter::events::bidirectional::AE_AX_T_FF`): toggle flip-flop logic as an adapter block.
 - **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`): physical output.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `TRIGGER.QO` and `DigitalOutput_Q1.QO` into the SubApp output `QO`.
+
+## Initialization and quality
+
+- Events: `INIT` (EInit, input) and `INITO` (EInit, output, comes from `DigitalOutput_Q1.INITO`).
+- Data input `QI` (BOOL, default `TRUE`) and data output `QO` (BOOL); `TRIGGER` and `DigitalOutput_Q1` no longer carry a fixed `QI=TRUE`.
+- Initialization: `INIT` → `TRIGGER.INIT`, `TRIGGER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `INITO` and → `AND_QO.REQ`.
+- Quality: `QI` → `TRIGGER.QI` and `DigitalOutput_Q1.QI`; `TRIGGER.QO` → `AND_QO.IN1`, `DigitalOutput_Q1.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Summary
 

@@ -15,20 +15,21 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the init chain at `UpKey.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `BG_Down.INITO`, the end of the init chain
 
 ### **Data Inputs**
 
+- `QI` (BOOL, initial value `TRUE`): Quality input, enables the service; passed on to `UpKey`, `DownKey`, `BG_Up` and `BG_Down`.
 - `u16ObjId_UP` (UINT): Object ID for the “UP” softkey. This ID is used both by the softkey logic and by the background colouring subapplication.
 - `u16ObjId_DOWN` (UINT): Object ID for the “DOWN” softkey. This ID is used both by the softkey logic and by the background colouring subapplication.
 
 ### **Data Outputs**
 
-None.
+- `QO` (BOOL): Quality output, AND combination (`AND_QO`, `AND_BOOL_4`) of the `QO` outputs of `UpKey`, `DownKey`, `BG_Up` and `BG_Down`.
 
 ### **Adapters**
 
@@ -39,6 +40,8 @@ None.
 The subapplication internally instantiates two `Softkey_IXA` function blocks (`UpKey` and `DownKey`) to handle the ISOagriLib softkey semantics. Each softkey receives its object ID from the corresponding data input. The key press events are forwarded via adapter connections to a conversion block (`A2X2_4AX_TO_2X`), which consolidates the two separate softkey streams into a single A2X2 adapter connection.
 
 The same A2X2 adapter also carries the returned state (e.g. which softkey is actually pressed or released at the remote terminal). This state is fed back to two `GreenWhiteBackground1_AX` subapplications (`BG_Up` and `BG_Down`), each associated with one softkey. These subapplications colour the respective softkey background green (active) or white (inactive) based on the feedback received via the adapter.
+
+Initialization and quality: `INIT` → `UpKey.INIT`, `UpKey.INITO` → `DownKey.INIT`, `DownKey.INITO` → `BG_Up.INIT`, `BG_Up.INITO` → `BG_Down.INIT`, `BG_Down.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `UpKey`, `DownKey`, `BG_Up` and `BG_Down`; their `QO` outputs go in this order to `AND_QO.IN1` to `AND_QO.IN4` (`iec61131::booleanOperators::AND_BOOL_4`), `AND_QO.OUT` → `QO`.
 
 Thus, the entire round trip — sending key presses and receiving state — is done through the single `OUT` adapter, and the visual status is updated accordingly.
 

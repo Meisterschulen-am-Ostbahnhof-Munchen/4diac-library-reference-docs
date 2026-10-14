@@ -15,22 +15,23 @@ Der Funktionsblock **Softkey2_TO_A2X2_BG** ist ein Composite-SubApp, der zwei vi
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `UpKey.INIT`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `BG_Down.INITO`, dem Ende der Init-Kette
 
 ### **Daten-Eingänge**
 
 | Name           | Datentyp | Initialwert | Kommentar                                                                |
 |----------------|----------|-------------|--------------------------------------------------------------------------|
+| `QI`            | `BOOL`   | `TRUE`      | Quality Input, schaltet den Dienst frei; wird an `UpKey`, `DownKey`, `BG_Up` und `BG_Down` weitergereicht. |
 | `u16ObjId_UP`   | `UINT`   | `ID_NULL`   | Objekt-ID des SoftKeys „Hoch“ (trägt auch das Green‑White‑Background).    |
 | `u16ObjId_DOWN` | `UINT`   | `ID_NULL`   | Objekt-ID des SoftKeys „Runter“ (trägt auch das Green‑White‑Background).  |
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_4`) der `QO`-Ausgänge von `UpKey`, `DownKey`, `BG_Up` und `BG_Down`
 
 ### **Adapter**
 
@@ -44,15 +45,17 @@ Der SubApp enthält zwei Instanzen des Softkey-Bausteins `Softkey_IXA` (`UpKey` 
 
 Parallel dazu wird der vom Adapter zurückkommende Zustand (der tatsächlich erreichte Softkey‑Zustand) durch denselben Konverter in zwei separate Rückmeldesignale `REQ_UP` und `REQ_DOWN` aufgeteilt. Diese werden an die beiden SubApps `GreenWhiteBackground1_AX` übergeben, die die Objekt‑IDs der Softkeys mit der entsprechenden Hintergrundfarbe (grün = aktiv, weiß = inaktiv) belegen.
 
+Initialisierung und Qualität: `INIT` → `UpKey.INIT`, `UpKey.INITO` → `DownKey.INIT`, `DownKey.INITO` → `BG_Up.INIT`, `BG_Up.INITO` → `BG_Down.INIT`, `BG_Down.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `UpKey`, `DownKey`, `BG_Up` und `BG_Down` weitergereicht; deren `QO`-Ausgänge gehen in dieser Reihenfolge auf `AND_QO.IN1` bis `AND_QO.IN4` (`iec61131::booleanOperators::AND_BOOL_4`), `AND_QO.OUT` → `QO`.
+
 Die Verbindung der Objekt‑IDs von den Eingängen zu den beiden Softkeys sowie zu den Hintergrund‑SubApps erfolgt intern über Datenverbindungen.
 
 ## Technische Besonderheiten
 
-- **Keine Ereignisse:** Der Baustein arbeitet rein daten‑ und adapterbasiert ohne IEC‑61499‑Ereignisse.
+- **Nur Init-Ereignisse:** Die Signalverarbeitung arbeitet daten‑ und adapterbasiert; als Ereignisse besitzt der Baustein nur `INIT` und `INITO` für die Init-Kette.
 - **Bidirektionale Kommunikation:** Der A2X2‑Adapter ermöglicht gleichzeitiges Senden (Tastendrücke) und Empfangen (Rückmeldung) über dieselbe Verbindung.
 - **Interner Konverter `A2X2_4AX_TO_2X`:** Bündelt zwei Einzelkanäle zu einem A2X2‑Datenstrom und teilt den eingehenden A2X2‑Strom wieder in zwei getrennte Signale auf.
 - **Wiederverwendbare SubApps:** Für die Hintergrundfärbung wird die SubApp `GreenWhiteBackground1_AX` aus der Bibliothek `MyLib::sys` eingesetzt.
-- **Vorgabe der Softkey‑Aktivierung:** Beide Softkey‑Instanzen sind fest mit `QI = TRUE` parametriert, sodass sie permanent aktiv sind.
+- **Freigabe über `QI`:** Die Softkey‑Instanzen und die Hintergrund‑SubApps sind nicht mehr fest mit `QI = TRUE` parametriert, sondern erhalten `QI` vom Baustein‑Eingang `QI` (Initialwert `TRUE`).
 
 ## Zustandsübersicht
 

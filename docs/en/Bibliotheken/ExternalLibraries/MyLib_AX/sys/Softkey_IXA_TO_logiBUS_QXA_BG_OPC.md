@@ -19,7 +19,7 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) — VT SoftKey, `u16ObjId` identifies the SoftKey.
+- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT SoftKey, `u16ObjId` identifies the SoftKey.
 
 - **AX_ASR_RF_TRIG_BT** / **AX_ASR_RF_TRIG_OPC**: each `adapter::events::unidirectional::AX_ASR_RF_TRIG` — convert the rising/falling edge of the SoftKey or the OPC UA Subscribe value into a Set/Reset event pair (ASR).
 
@@ -29,11 +29,13 @@
 
 - **AX_SPLIT_3**: `adapter::events::unidirectional::AX_SPLIT_3` — distributes the latch output to three destinations.
 
-- **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) — physical digital output.
+- **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` — physical digital output.
 
 - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): VT background color matching the output state.
 
-- **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: each `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` (`QI=TRUE`) — OPC UA read/write access.
+- **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: each `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` — OPC UA read/write access.
+
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` — combines the `QO` of `logiBUS_QXA`, `Softkey_IXA`, `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` and `GreenWhiteBackground1_AX`.
 
 - **Functionality**: Identical to the latching structure of `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`, but with `Softkey_IXA` instead of `Button_IXA` as the local input source.
 
@@ -44,9 +46,11 @@
 2. `AX_SUBSCRIBE_1.OUT` → `AX_ASR_RF_TRIG_OPC.QI` → `AX_ASR_RF_TRIG_OPC.Q` → `ASR_MERGE_2.IN1`.
 3. `ASR_MERGE_2.OUT` → `ASR_AX_SR.S_R`.
 4. `ASR_AX_SR.Q` → `AX_SPLIT_3.IN` → `AX_SPLIT_3.OUT1` → `logiBUS_QXA.OUT`, `AX_SPLIT_3.OUT2` → `GreenWhiteBackground1_AX.DI1`, `AX_SPLIT_3.OUT3` → `AX_PUBLISH_1.IN`.
-5. Initialization: `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (hidden connection).
+5. Initialization: event input `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (hidden connection), `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → event output `INITO` and → `AND_QO.REQ`.
 
 6. Parameters: `u16ObjId` → `Softkey_IXA.u16ObjId` and `GreenWhiteBackground1_AX.u16ObjId`; `Output` → `logiBUS_QXA.Output`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
+
+7. Quality: data input `QI` (`BOOL`, default `TRUE`) → `logiBUS_QXA.QI`, `Softkey_IXA.QI`, `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` and `GreenWhiteBackground1_AX.QI`; their `QO` → `AND_QO.IN1`..`IN5`; `AND_QO.OUT` → data output `QO`.
 
 
 ## Technical Features

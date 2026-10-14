@@ -16,11 +16,13 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) — VT-SoftKey-Adapter (`u16ObjId`).
-    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`) — AUX-Zuweisung/Joystick-Adapter (`u16ObjIdA`).
-    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — lokaler Web-Subscribe (`ID_WEB_READ`), z. B. von einem vt-ui-mirror auf demselben Modul.
+    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT-SoftKey-Adapter (`u16ObjId`).
+    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` — AUX-Zuweisung/Joystick-Adapter (`u16ObjIdA`).
+    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` — lokaler Web-Subscribe (`ID_WEB_READ`), z. B. von einem vt-ui-mirror auf demselben Modul.
     - **OR_MERGE**: `adapter::booleanOperators::AX_OR_3` — führt SoftKey, Aux und Web-Override per ODER zusammen.
-    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` (`QI=TRUE`) — schreibt das zusammengeführte Signal per Remote-Write (`ID_WRITE_REMOTE`) an das Zielmodul.
+    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` — schreibt das zusammengeführte Signal per Remote-Write (`ID_WRITE_REMOTE`) an das Zielmodul.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` — verknüpft die `QO`-Ausgänge von `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` und `AX_CLIENT_1_0` zum SubApp-Ausgang `QO`.
+- **Schnittstelle**: Ereigniseingang `INIT`, Ereignisausgang `INITO`, Dateneingang `QI` (Vorgabe `TRUE`, an die vier FBs durchgereicht), Datenausgang `QO`.
 - **Funktionsweise**: Drei unabhängige Kommandoquellen (SoftKey, Aux, lokaler Web-Override) werden per `AX_OR_3` zusammengeführt und als einzelnes Remote-Write-Kommando an das Zielmodul übertragen.
 
 ## Programmablauf und Verbindungen
@@ -28,6 +30,8 @@
 1. `u16ObjId` → `Softkey_IXA.u16ObjId`; `u16ObjIdA` → `Aux_IXA.u16ObjId`; `ID_WEB_READ` → `SUBSCRIBE_WEB.ID`; `ID_WRITE_REMOTE` → `AX_CLIENT_1_0.ID` (Datenverbindungen, ausgeblendet).
 2. `Softkey_IXA.IN` → `OR_MERGE.IN1`; `Aux_IXA.IN` → `OR_MERGE.IN2`; `SUBSCRIBE_WEB.OUT` → `OR_MERGE.IN3`.
 3. `OR_MERGE.OUT` → `AX_CLIENT_1_0.IN`.
+4. Initialisierung: `INIT` → `Softkey_IXA.INIT`; `Softkey_IXA.INITO` → `Aux_IXA.INIT`; `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`; `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`; `AX_CLIENT_1_0.INITO` → `INITO` und → `AND_QO.REQ`.
+5. Qualität: `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI`, `SUBSCRIBE_WEB.QI` und `AX_CLIENT_1_0.QI`; deren `QO`-Ausgänge → `AND_QO.IN1` bis `IN4`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

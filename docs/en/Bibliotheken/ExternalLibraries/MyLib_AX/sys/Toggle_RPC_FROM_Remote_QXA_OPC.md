@@ -13,27 +13,28 @@
 
 ## Interface Structure
 
-The SubApplication exposes no event inputs, no event outputs, no data outputs, and no adapter plugs/sockets. All external information enters through three data inputs.
+The SubApplication exposes the initialization events `INIT`/`INITO`, the status ports `QI`/`QO` and no adapter plugs/sockets. All other external information enters through three data inputs.
 
 ### **Event Inputs**
 
-None.
+- `INIT` (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
-None.
+- `INITO` (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
 
 | Name                | Type                            | Initial Value          | Description                                                                                     |
 |---------------------|---------------------------------|------------------------|-------------------------------------------------------------------------------------------------|
+| `QI`                | `BOOL`                          | `TRUE`                 | Quality Input - TRUE enables the service.                                                       |
 | `Output`            | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid`  | Selects the digital output channel, e.g. Q1..Q8, that shall be toggled.                         |
 | `ID_TRIGGER_METHOD` | `WSTRING`                       |                        | Local method address for the argumentless RPC trigger. Device A calls this method using `CALL_METHOD`. |
 | `ID_STATE_WRITE`    | `WSTRING`                       |                        | Remote address on Device A where the new flip-flop state is written back as a BOOL.             |
 
 ### **Data Outputs**
 
-None.
+- `QO` (`BOOL`): Quality Output - TRUE if the service executed successfully (AND of `TRIGGER_SERVER.QO`, `DigitalOutput_Q1.QO` and `STATE_CLIENT.QO`).
 
 ### **Adapters**
 
@@ -50,6 +51,8 @@ The SubApplication implements a remote toggle request/response cycle:
 5. The flip-flop output `Q` is fed into `AX_SPLIT_2`, which duplicates the adapter event/data stream.
 6. The first split output drives `DigitalOutput_Q1`, a `logiBUS::io::DQ::logiBUS_QXA` instance, to set or clear the selected physical digital output.
 7. The second split output feeds `STATE_CLIENT`, an `adapter::net::AX_CLIENT_1_0` instance, which writes the new state back to Device A using the address given by `ID_STATE_WRITE`.
+
+8. Initialization and status: `INIT` → `TRIGGER_SERVER.INIT`, `TRIGGER_SERVER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `STATE_CLIENT.INIT`, `STATE_CLIENT.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is forwarded to `TRIGGER_SERVER`, `DigitalOutput_Q1` and `STATE_CLIENT`; their `QO` outputs go to `AND_QO.IN1`..`IN3` (block `AND_QO`, type `iec61131::booleanOperators::AND_BOOL_3`), and `AND_QO.OUT` → `QO`.
 
 The result is a complete remote toggle operation: Device A triggers, Device B toggles, Device B updates its output, and Device A receives the new state.
 

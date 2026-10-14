@@ -15,25 +15,27 @@ Die SubApp kombiniert Funktionen einer Toggle-Flipflop-Schaltung mit einer Inter
 
 ## Schnittstellenstruktur
 
-Die SubApp besitzt ausschließlich Eingangsschnittstellen; Ausgänge (Ereignis, Daten, Adapter) sind nicht vorhanden.
+Die SubApp besitzt die Initialisierungs-/Qualitäts-Schnittstelle `INIT`/`INITO` und `QI`/`QO`; Adapter sind nicht vorhanden.
 
 ### **Ereignis-Eingänge**
 
+- **`INIT`** (`EInit`) – Initialisierungsanforderung.
 - **`SET`** – Setzt den Ausgang unabhängig vom Toggle-Verhalten auf `TRUE`.
 - **`RESET`** – Setzt den Ausgang unabhängig vom Toggle-Verhalten auf `FALSE`.
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **`INITO`** (`EInit`) – Initialisierungsbestätigung (von `GreenWhiteBackground.INITO`).
 
 ### **Daten-Eingänge**
 
+- **`QI`** (`BOOL`) – Quality Input, TRUE gibt den Dienst frei. Initialwert: `TRUE`.
 - **`u16ObjId`** (`UINT`) – Objektidentifikation des Softkeys/Buttons. Initialwert: `ID_NULL`.
 - **`Output`** (`logiBUS::io::DQ::logiBUS_DO_S`) – Ausgangskonfiguration für den logiBUS-Digitalausgang. Initialwert: `logiBUS_DO::Invalid`.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **`QO`** (`BOOL`) – Quality Output, UND aus `QX.QO`, `IE.QO` und `GreenWhiteBackground.QO` (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_3`).
 
 ### **Adapter**
 
@@ -48,7 +50,8 @@ Die SubApp realisiert eine kombinierte Toggle- und Interlock-Logik für einen Di
 3. **Externes Set/Reset**: Über die Ereigniseingänge `SET` und `RESET` kann der Zustand des Flipflops unabhängig von der Toggle-Funktion direkt geändert werden. Ein `SET` setzt `Q` auf `TRUE`, ein `RESET` auf `FALSE`. Diese externen Ereignisse haben Vorrang und können als Verriegelung (Interlock) verwendet werden.
 4. **Ausgangssignal**: Der Ausgang `Q` von `E_SR` speist den Daten-Eingang `OUT` des Digitalausgangsblocks `QX` (Typ `logiBUS_QX`). Dieser setzt den physischen Ausgang entsprechend dem Signalpegel.
 5. **Hintergrundvisualisierung**: Parallel wird `Q` an den Eingang `DI1` der SubApp `GreenWhiteBackground` übergeben. Diese steuert die Darstellung eines Hintergrundelements (z. B. Farbe) entsprechend dem Zustand. Die Objekt-ID aus `u16ObjId` wird sowohl an `GreenWhiteBackground` als auch an `Softkey_IE` weitergeleitet, um die richtige Zuordnung zu gewährleisten.
-6. **Konfiguration**: Der externe Daten-Eingang `Output` (Typ `logiBUS_DO_S`) spezifiziert die Ausgangskonfiguration (z. B. logische Zuordnung) und wird direkt an den `QX`-Block übergeben. Der Qualifier `QI` des `QX`-Blocks ist fest auf `TRUE` gesetzt, sodass der Ausgang immer aktiv ist.
+6. **Konfiguration**: Der externe Daten-Eingang `Output` (Typ `logiBUS_DO_S`) spezifiziert die Ausgangskonfiguration (z. B. logische Zuordnung) und wird direkt an den `QX`-Block übergeben. Der Qualifier `QI` des `QX`-Blocks ist nicht mehr fest auf `TRUE` gesetzt, sondern kommt vom SubApp-Eingang `QI` (Vorgabe `TRUE`); `QI` wird außerdem an `IE.QI` und `GreenWhiteBackground.QI` verteilt.
+7. **Initialisierung und Qualität**: `INIT` → `QX.INIT`; `QX.INITO` → `IE.INIT`; `IE.INITO` → `GreenWhiteBackground.INIT`; `GreenWhiteBackground.INITO` → `INITO` (und → `AND_QO.REQ`). `QX.QO` → `AND_QO.IN1`; `IE.QO` → `AND_QO.IN2`; `GreenWhiteBackground.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

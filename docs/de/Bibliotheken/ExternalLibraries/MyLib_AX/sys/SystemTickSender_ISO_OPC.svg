@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1678.6 152.0"
-     width="1678.6" height="152.0">
+     viewBox="0 0 1327.875 152.0"
+     width="1327.875" height="152.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(866.6, 10)">
+  <g transform="translate(688.125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 261.6 0
-            A 3 3 0 0 1 264.6 3
-            L 264.6 23.0
-            A 3 3 0 0 1 261.6 26.0
-            L 254.60000000000002 26.0
-            L 254.60000000000002 66.0
-            L 261.6 66.0
-            A 3 3 0 0 1 264.6 69.0
-            L 264.6 129.0
-            A 3 3 0 0 1 261.6 132.0
+            L 226.75 0
+            A 3 3 0 0 1 229.75 3
+            L 229.75 23.0
+            A 3 3 0 0 1 226.75 26.0
+            L 219.75 26.0
+            L 219.75 66.0
+            L 226.75 66.0
+            A 3 3 0 0 1 229.75 69.0
+            L 229.75 129.0
+            A 3 3 0 0 1 226.75 132.0
             L 3 132.0
             A 3 3 0 0 1 0 129.0
             L 0 69.0
@@ -62,8 +62,8 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="258.1,11.0 263.1,16.0 258.1,21.0" fill="#63B31F"/>
-    <text x="255.10000000000002" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="223.25,11.0 228.25,16.0 223.25,21.0" fill="#63B31F"/>
+    <text x="220.25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
@@ -99,7 +99,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">SystemTickSender_ISO_OPC</text>
     
-    <text x="132.3" y="66.0"
+    <text x="114.875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -117,8 +117,8 @@
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_WRITE</text>
 
-    <polygon points="258.1,71.0 263.1,76.0 258.1,81.0" fill="#A3B08F"/>
-    <text x="255.10000000000002" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="223.25,71.0 228.25,76.0 223.25,81.0" fill="#A3B08F"/>
+    <text x="220.25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
@@ -131,7 +131,7 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="289.6" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="254.75" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
@@ -143,7 +143,7 @@
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OPC-UA Publish-Key fuer den Tick-Zaehlerstand (fuer Remote-Subscribe durch andere Module) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="289.6" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="254.75" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

@@ -15,20 +15,21 @@ This is the 4-source variant of `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, intend
 
 ## Interface Structure
 
-The subapplication exposes seven data inputs and no event inputs, event outputs, data outputs, or adapters. Internally, it connects these inputs to two child subapplications: `Command` (type `MyLib::sys::Softkey_Aux_Switch_TO_Remote_WRITE`) and `Status` (type `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`).
+The subapplication exposes the events `INIT`/`INITO`, the data `QI`/`QO` and seven further data inputs, but no adapters. Internally, it connects these inputs to two child subapplications: `Command` (type `MyLib::sys::Softkey_Aux_Switch_TO_Remote_WRITE`) and `Status` (type `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`).
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the init chain at `Command.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `Status.INITO`, the end of the init chain
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QI` | BOOL | Quality input, initial value `TRUE`; passed on to `Command.QI` and `Status.QI`. |
 | `u16ObjId` | UINT | Object ID of the SoftKey/background element on the VT. |
 | `u16ObjIdA` | UINT | Object ID of the AuxFunction2/background element on the VT. |
 | `ID_SUBSCRIBE` | WSTRING | Remote subscribe address for status/color data (ACTION=SUBSCRIBE). |
@@ -39,7 +40,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_2`) of `Command.QO` and `Status.QO`
 
 ### **Adapters**
 
@@ -47,7 +48,9 @@ None.
 
 ## Functionality
 
-The subapplication operates in two parallel paths:
+Initialization and quality: `INIT` → `Command.INIT`, `Command.INITO` → `Status.INIT`, `Status.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `Command.QI` and `Status.QI`; `Command.QO` → `AND_QO.IN1`, `Status.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
+
+The subapplication operates in two parallel paths (with respect to data; they are connected only by the init chain and the AND combination of the quality outputs):
 
 1. **Command path (Write):** The internal `Command` subapplication reads the four input sources:
    - `u16ObjId` — SoftKey state at the VT.

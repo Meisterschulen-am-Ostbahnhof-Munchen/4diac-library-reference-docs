@@ -59,18 +59,34 @@ NumberVariable-ID (Franz, live verifiziert).</text>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 125.0,-84.0 130.0,-79.0 130.0,165.5 135.0,170.5 430.7,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 230.3,-84.0 235.3,-79.0 235.3,80.5 240.3,85.5 430.7,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="566.8,85.5 854.4,85.5 859.4,80.5 859.4,-79.0 864.4,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 125.0,-50.0 130.0,-45.0 130.0,165.5 135.0,170.5 430.7,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 230.3,-67.0 235.3,-62.0 235.3,131.5 240.3,136.5 430.7,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="566.8,136.5 854.4,136.5 859.4,131.5 859.4,-62.0 864.4,-67.0 1152.0,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="566.8,187.5 651.8,187.5 656.8,182.5 656.8,123.5 661.8,118.5 730.7,118.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="566.8,187.5 651.8,187.5 656.8,182.5 656.8,123.5 661.8,118.5 730.7,118.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="832.3,118.5 917.3,118.5 922.3,113.5 922.3,-79.0 927.3,-84.0 1152.0,-84.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="832.3,118.5 917.3,118.5 922.3,113.5 922.3,-79.0 927.3,-84.0 1152.0,-84.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="832.3,118.5 917.3,118.5 922.3,113.5 922.3,-45.0 927.3,-50.0 1152.0,-50.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="832.3,118.5 917.3,118.5 922.3,113.5 922.3,-45.0 927.3,-50.0 1152.0,-50.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#18519E"/>
+    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">INIT</text>
+    <polygon points="1157.0,-89.0 1152.0,-84.0 1157.0,-79.0" fill="#63B31F"/>
+    <text x="1158.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#A3B08F"/>
+    <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
+    <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#18519E"/>
+    <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">u16ObjId</text>
-    <path d="M 1152.0 -89.0 L 1157.0 -89.0 L 1157.0 -87.33333333333333 L 1159.5 -87.33333333333333 L 1159.5 -89.0 L 1162.0 -89.0 L 1162.0 -79.0 L 1159.5 -79.0 L 1159.5 -80.66666666666667 L 1157.0 -80.66666666666667 L 1157.0 -79.0 L 1152.0 -79.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="1165.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1157.0,-72.0 1152.0,-67.0 1157.0,-62.0" fill="#A3B08F"/>
+    <text x="1158.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
+    <path d="M 1152.0 -55.0 L 1157.0 -55.0 L 1157.0 -53.333333333333336 L 1159.5 -53.333333333333336 L 1159.5 -55.0 L 1162.0 -55.0 L 1162.0 -45.0 L 1159.5 -45.0 L 1159.5 -46.666666666666664 L 1157.0 -46.666666666666664 L 1157.0 -45.0 L 1152.0 -45.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="1165.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">PERMIT_OUT</text>
   </g>
   <g id="instances">
@@ -149,7 +165,7 @@ NumberVariable-ID (Franz, live verifiziert).</text>
       <polygon points="131.125,73.5 136.125,78.5 131.125,83.5" fill="#BD8663"/>
       <text x="130.125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
       <path d="M 126.125 107.5
             L 128.625 107.5
             L 128.625 109.16666666666667

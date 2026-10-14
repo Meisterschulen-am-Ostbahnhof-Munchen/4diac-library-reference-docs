@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-10.3 -151.0 1194.4 588.0"
-     width="1194" height="588">
+     viewBox="-10.3 -151.0 1202.8 588.0"
+     width="1203" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,42 +40,58 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-10.3" y="-151.0" width="1194.4" height="588.0" fill="white"/>
-  <rect x="-3.3" y="-144.0" width="1180.4" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-3.3" y="-144.0" width="1180.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="-3.3" y1="-119.5" x2="1177.1" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="-10.3" y="-151.0" width="1202.8" height="588.0" fill="white"/>
+  <rect x="-3.3" y="-144.0" width="1188.8" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-3.3" y="-144.0" width="1188.8" height="25.0" fill="white" stroke="none"/>
+  <line x1="-3.3" y1="-119.5" x2="1185.5" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="1.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">SET/RESET-Latch (E_SR) auf QX, mit Event-Echo EO1 nach jeder steigenden Flanke
 des Latch-Zustands. Generisch.</text>
   <g id="sidebars">
     <rect x="-3.3" y="-119.0" width="43.3" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="25.1" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="33.5" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
     <polyline points="574.7,100.5 685.9,100.5 686.7,101.3 686.7,101.7 687.5,102.5 801.3,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="574.7,100.5 599.7,100.5 604.7,105.5 604.7,220.5 609.7,225.5 686.3,225.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 106.0,-84.0 111.0,-79.0 111.0,95.5 116.0,100.5 506.3,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 96.0,-67.0 101.0,-62.0 101.0,112.5 106.0,117.5 506.3,117.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="774.7,225.5 987.7,225.5 992.7,220.5 992.7,-79.0 997.7,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 106.0,-67.0 111.0,-62.0 111.0,95.5 116.0,100.5 506.3,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 96.0,-50.0 101.0,-45.0 101.0,112.5 106.0,117.5 506.3,117.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="774.7,225.5 987.7,225.5 992.7,220.5 992.7,-62.0 997.7,-67.0 1152.0,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 415.7,-84.0 420.7,-79.0 420.7,80.5 425.7,85.5 801.3,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="912.9,85.5 1027.5,85.5 1032.5,80.5 1032.5,-79.0 1037.5,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="574.7,151.5 682.7,151.5 687.7,156.5 687.7,165.5 692.7,170.5 801.3,170.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="574.7,151.5 599.7,151.5 604.7,156.5 604.7,254.5 609.7,259.5 686.3,259.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-50.0 566.0,-50.0 571.0,-45.0 571.0,182.5 576.0,187.5 801.3,187.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="40.0,-50.0 566.0,-50.0 571.0,-45.0 571.0,182.5 576.0,187.5 801.3,187.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="40.0,-16.0 566.0,-16.0 571.0,-11.0 571.0,182.5 576.0,187.5 801.3,187.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="40.0,-16.0 566.0,-16.0 571.0,-11.0 571.0,182.5 576.0,187.5 801.3,187.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="40.0,-33.0 415.7,-33.0 420.7,-28.0 420.7,131.5 425.7,136.5 801.3,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="912.9,136.5 1027.5,136.5 1032.5,131.5 1032.5,-45.0 1037.5,-50.0 1152.0,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">SET</text>
+          fill="#000000" text-anchor="end">INIT</text>
     <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#63B31F"/>
     <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">SET</text>
+    <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#63B31F"/>
+    <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">RESET</text>
     <polygon points="1157.0,-89.0 1152.0,-84.0 1157.0,-79.0" fill="#63B31F"/>
     <text x="1158.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="1157.0,-72.0 1152.0,-67.0 1157.0,-62.0" fill="#63B31F"/>
+    <text x="1158.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">EO1</text>
-    <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#3366FF"/>
-    <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="35.0,-38.0 40.0,-33.0 35.0,-28.0" fill="#A3B08F"/>
+    <text x="34.0" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
+    <polygon points="35.0,-21.0 40.0,-16.0 35.0,-11.0" fill="#3366FF"/>
+    <text x="34.0" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">Output</text>
+    <polygon points="1157.0,-55.0 1152.0,-50.0 1157.0,-45.0" fill="#A3B08F"/>
+    <text x="1158.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
   </g>
   <g id="instances">
     <g id="fb_E_SR" transform="translate(506.3, 90.0)">
@@ -229,7 +245,7 @@ des Latch-Zustands. Generisch.</text>
       <polygon points="106.5625,73.5 111.5625,78.5 106.5625,83.5" fill="#BD8663"/>
       <text x="105.5625" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
 
       <!-- Instance Name -->
       <text x="55.78125" y="-5"

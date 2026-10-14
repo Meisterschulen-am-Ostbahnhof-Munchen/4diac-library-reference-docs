@@ -14,11 +14,11 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation
 
 ### **Data Inputs**
 
@@ -29,7 +29,7 @@ None.
 
 ### **Data Outputs**
 
-- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (AND of `Q_NumericValue_AUDI.QO`, `ID.QO` and `INI_AUDI2.QO`)
 
 ### **Adapters**
 
@@ -37,12 +37,13 @@ None.
 
 ## Function Blocks (FBs) Used
 
-- **`ID`** (`isobus::UT::io::NumericValue::NumericValue_IDA`, `QI = TRUE`): delivers the VT value entered by the operator
+- **`ID`** (`isobus::UT::io::NumericValue::NumericValue_IDA`): delivers the VT value entered by the operator
 - **`AD_TO_AUDI`** (`adapter::conversion::unidirectional::AD_TO_AUDI`): converts the `AD` value to `AUDI`
 - **`AUDI_TO_AUDI2`** (`adapter::conversion::bidirectional::AUDI_TO_AUDI2`): converts `AUDI` into the bidirectional `AUDI2` adapter
-- **`INI_AUDI2`** (`eclipse4diac::storage::INI_AUDI2`): `QI = TRUE`, `SETM = TRUE`, `DEFAULT_VALUE = UDINT#0`; loads and stores the value
+- **`INI_AUDI2`** (`eclipse4diac::storage::INI_AUDI2`): `SETM = TRUE`, `DEFAULT_VALUE = UDINT#0`; loads and stores the value
 - **`AUDI_SPLIT_2`** (`adapter::events::unidirectional::AUDI_SPLIT_2`): duplicates the value
 - **`Q_NumericValue_AUDI`** (`isobus::UT::Q::Q_NumericValue_AUDI`): writes the value into the VT number variable
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_3`): combines the `QO` outputs of `Q_NumericValue_AUDI`, `ID` and `INI_AUDI2`
 
 ## Functionality
 
@@ -51,7 +52,9 @@ None.
 - `AUDI_TO_AUDI2.AUDI_OUT` → `AUDI_SPLIT_2.IN`
 - `AUDI_SPLIT_2.OUT1` → `VALUEO`; `AUDI_SPLIT_2.OUT2` → `Q_NumericValue_AUDI.u32NewValue` (VT display)
 - `KEY`, `SECTION` → `INI_AUDI2`; `u16ObjId` → `ID` and `Q_NumericValue_AUDI`
-- `QI` → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO`
+- `INIT` → `ID.INIT`; `ID.INITO` → `INI_AUDI2.INIT`; `INI_AUDI2.INITO` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Q_NumericValue_AUDI.QI`, `ID.QI` and `INI_AUDI2.QI`
+- `Q_NumericValue_AUDI.QO` → `AND_QO.IN1`; `ID.QO` → `AND_QO.IN2`; `INI_AUDI2.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

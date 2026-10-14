@@ -18,7 +18,7 @@
 
 ### **Ereignis-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
+- **INITO** (`EInit`): Initialisierung abgeschlossen; echtes Confirm von `DigitalOutput_PWM.INITO`
 
 ### **Daten-Eingänge**
 
@@ -29,7 +29,7 @@ Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (BOOL): Quality Output, kommt von `DigitalOutput_PWM.QO`
 
 ### **Adapter**
 
@@ -45,7 +45,7 @@ Die Kette im Netzwerk:
 2. `AB_TO_AUI` wandelt das Byte in einen `AUI`-Wert, der als Auswahl `K` an `AR_AUI_MUX_3` geht: `K = 0` (beide FALSE) wählt `IN1` = `OUT_50` (Neutral), `K = 1` (`HEBEN`) wählt `IN2` = `OUT_75`, `K = 2` (`SENKEN`) wählt `IN3` = `OUT_25`.
 3. `values_50_75_25` liefert aus `PWM_POW` sowie `FACTOR_75`/`FACTOR_25` die drei Sollwerte `OUT_50`, `OUT_75`, `OUT_25`.
 4. `AR_AUI_MUX_3.OUT` → `AR_R_MUL_Korrektur` (Faktor `PWM_LASTTEILER_KORREKTUR`) → `AR_R_MUL_PWM13BIT` (Faktor `PWM_13BIT_SKALIERUNG`) → `AR_TO_AD_NUM` → `DigitalOutput_PWM.OUT`.
-5. `DigitalOutput_PWM` (`logiBUS::io::DQ::logiBUS_QDA_PWM`) gibt den Wert am Ausgang `Output_PWM` aus; `QI` wird direkt an `DigitalOutput_PWM.QI` und das Ereignis `INIT` an `DigitalOutput_PWM.INIT` geführt.
+5. `DigitalOutput_PWM` (`logiBUS::io::DQ::logiBUS_QDA_PWM`) gibt den Wert am Ausgang `Output_PWM` aus; `QI` wird direkt an `DigitalOutput_PWM.QI` und das Ereignis `INIT` an `DigitalOutput_PWM.INIT` geführt; `DigitalOutput_PWM.INITO` wird als `INITO` und `DigitalOutput_PWM.QO` als `QO` ausgegeben.
 
 ## Technische Besonderheiten
 
@@ -53,6 +53,7 @@ Die Kette im Netzwerk:
 - Die Plug-/Variablennamen `_75`/`_25` sind historisch; die tatsächlich kalibrierten Werte liegen bei `PWM_POW = 1.0` bei 90.0 bzw. 15.0 (siehe [`values_50_75_25`](values_50_75_25.md))
 - Der Eingang `QI` (Version 1.1) erlaubt, die Instanz komplett inaktiv zu halten, wenn der Kanal anderweitig genutzt wird
 - Der Ereigniseingang `INIT` (Version 1.2) ersetzt die Auto-Verteilung der Initialisierung: der Aufrufer löst sie selbst aus („Init wie bei Tecu“), sodass `QI` vor der physischen Kanalbindung feststeht
+- Der Ereignisausgang `INITO` und der Datenausgang `QO` (Version 1.3) reichen das echte Confirm bzw. den Quality-Status von `DigitalOutput_PWM` durch; so kann der Aufrufer (z. B. `Aufnahme_Option.SUB` über den `Option::AOption`-Socket) auf ein echtes `INIT_CNF` statt auf ein Timing-Delay warten
 - Erster Aufrufer: `Bunkerboden_PWM.SUB`, die nur `SENKEN` (Vollgas) nutzt und `HEBEN` dauerhaft auf FALSE legt
 
 ## Anwendungsszenarien

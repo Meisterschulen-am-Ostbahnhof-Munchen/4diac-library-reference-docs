@@ -15,21 +15,24 @@ Der Funktionsblock **SoftkeyOverride_TO_QX_BG** realisiert einen digitalen Ausga
 
 ### **Ereignis-Eingänge**
 
+- `INIT` (EInit) – Initialisierungsanforderung: startet die Kette `QX` → `IX` → `GreenWhiteBackground`.
 - `REQ` (Event) – Service Request: Triggert die Verarbeitung der Eingangsdaten und die Aktualisierung des Ausgangs.
 
 ### **Ereignis-Ausgänge**
 
-- Keine (Es sind keine Ereignis-Ausgänge definiert; der Abschluss der Verarbeitung wird intern über `QX.CNF` an den Hintergrundbaustein weitergeleitet.)
+- `INITO` (EInit) – Initialisierungsbestätigung: kommt von `GreenWhiteBackground.INITO`.
+- Darüber hinaus gibt es keine Ereignis-Ausgänge; der Abschluss der Verarbeitung wird intern über `QX.CNF` an den Hintergrundbaustein weitergeleitet.
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL) – Quality Input, Freigabe des Dienstes (Initialwert `TRUE`); wird an `QX`, `IX` und `GreenWhiteBackground` weitergereicht.
 - `OUT` (BOOL) – Programmsignal für den Ausgang.
 - `u16ObjId` (UINT) – Objekt-ID der Softkey-Taste (Initialwert `ID_NULL`).
 - `Output` (logiBUS::io::DQ::logiBUS_DO_S) – Konfigurationsparameter für den logiBUS-Ausgang (Initialwert `logiBUS_DO::Invalid`).
 
 ### **Daten-Ausgänge**
 
-- Keine (Der Ausgang erfolgt über den eingebetteten `QX`-Funktionsblock auf den physischen Kanal.)
+- `QO` (BOOL) – Quality Output, `AND` der `QO`-Ausgänge von `QX`, `IX` und `GreenWhiteBackground` (über `AND_QO`, `AND_BOOL_3`). Der eigentliche Ausgang erfolgt über den eingebetteten `QX`-Funktionsblock auf den physischen Kanal.
 
 ### **Adapter**
 
@@ -47,6 +50,11 @@ Die Ereignissteuerung:
 
 - Das Eingangsereignis `REQ` und das Ereignis `IX.IND` (Softkey-Interrupt) triggern beide die `OR_2`-Verarbeitung.
 - Nach Abschluss der QX-Aktualisierung signalisiert `QX.CNF` dem Hintergrundbaustein, dass eine Zustandsänderung vorliegt und der Hintergrund neu gezeichnet werden soll.
+
+Initialisierung und Qualität:
+
+- `INIT` → `QX.INIT`; `QX.INITO` → `IX.INIT`; `IX.INITO` → `GreenWhiteBackground.INIT`; `GreenWhiteBackground.INITO` → `INITO` und → `AND_QO.REQ`.
+- `QI` → `QX.QI`, `IX.QI` und `GreenWhiteBackground.QI` (kein fester `QI=TRUE` mehr an `QX` und `IX`); `QX.QO` → `AND_QO.IN1`, `IX.QO` → `AND_QO.IN2`, `GreenWhiteBackground.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 
@@ -81,4 +89,4 @@ Der Hintergrund wird bei jeder Änderung des Ausgangssignals über `QX.CNF` aktu
 
 ## Fazit
 
-Der Baustein **SoftkeyOverride_TO_QX_BG** bietet eine kompakte und wiederverwendbare Lösung für digitale Ausgänge mit manueller Übersteuerung. Durch die integrierte ODER-Logik und die Kopplung an ein Hintergrundobjekt werden sowohl die Funktionalität als auch die Anzeige zentral abgebildet. Die klare Schnittstelle mit nur einem Ereignis- und drei Dateneingängen erleichtert die Integration in übergeordnete Steuerungen. Der Baustein ist ideal für Anwendungen, bei denen ein Ausgang sowohl programmgesteuert als auch manuell bedienbar sein muss.
+Der Baustein **SoftkeyOverride_TO_QX_BG** bietet eine kompakte und wiederverwendbare Lösung für digitale Ausgänge mit manueller Übersteuerung. Durch die integrierte ODER-Logik und die Kopplung an ein Hintergrundobjekt werden sowohl die Funktionalität als auch die Anzeige zentral abgebildet. Die klare Schnittstelle mit zwei Ereignis- (`INIT`, `REQ`) und vier Dateneingängen (`QI`, `OUT`, `u16ObjId`, `Output`) erleichtert die Integration in übergeordnete Steuerungen. Der Baustein ist ideal für Anwendungen, bei denen ein Ausgang sowohl programmgesteuert als auch manuell bedienbar sein muss.

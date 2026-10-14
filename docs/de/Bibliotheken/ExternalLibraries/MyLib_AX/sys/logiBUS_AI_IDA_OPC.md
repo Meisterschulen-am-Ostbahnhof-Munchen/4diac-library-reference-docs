@@ -16,12 +16,13 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **logiBUS_AI_IDA**: `logiBUS::io::AI::logiBUS_AI_IDA` — physischer Analogeingang, Rohwert 0-4095 (12 Bit), `AnalogInput_hysteresis=DWORD#0`, `TimeDelta=DWORD#250`, `TimeRateLimit=DWORD#100`, `QI=TRUE`.
+    - **logiBUS_AI_IDA**: `logiBUS::io::AI::logiBUS_AI_IDA` — physischer Analogeingang, Rohwert 0-4095 (12 Bit), `AnalogInput_hysteresis=DWORD#0`, `TimeDelta=DWORD#250`, `TimeRateLimit=DWORD#100`, `QI` kommt vom Eingang `QI`.
     - **AD_SPLIT_2** (Typ `AD_SPLIT_3`): `adapter::events::unidirectional::AD_SPLIT_3` — verzweigt den DWORD-Adapterwert auf drei unabhängige Ausgänge (`OUT1..OUT3`).
-    - **AD_PUBLISH_RAW** (Typ `AD_PUBLISH_1`): `adapter::net::AD_PUBLISH_1` — publiziert den Rohwert (DWORD) per OPC-UA, Zieladresse `ID_RAW_WRITE`, `QI=TRUE`.
+    - **AD_PUBLISH_RAW** (Typ `AD_PUBLISH_1`): `adapter::net::AD_PUBLISH_1` — publiziert den Rohwert (DWORD) per OPC-UA, Zieladresse `ID_RAW_WRITE`, `QI` kommt vom Eingang `QI`.
     - **Q_NumericValue** (Typ `Q_NumericValue_AUDI`): `isobus::UT::Q::Q_NumericValue_AUDI` — schreibt den Rohwert in das VT-Zahlenfeld `u16ObjId_VALUEVAR`.
     - **F_AI_RAW_TO_PERCENT** (SubApp, Typ `F_AI_RAW_TO_PERCENT_AD`): `MyLib::sys::F_AI_RAW_TO_PERCENT_AD` — rechnet den Rohwert linear in Prozent um (siehe [F_AI_RAW_TO_PERCENT / F_AI_RAW_TO_PERCENT_AD](./F_AI_RAW_TO_PERCENT.md)).
-    - **AR_PUBLISH_PERCENT** (Typ `AR_PUBLISH_1`): `adapter::net::AR_PUBLISH_1` — publiziert den Prozentwert (REAL) per OPC-UA, Zieladresse `ID_PERCENT_WRITE`, `QI=TRUE`.
+    - **AR_PUBLISH_PERCENT** (Typ `AR_PUBLISH_1`): `adapter::net::AR_PUBLISH_1` — publiziert den Prozentwert (REAL) per OPC-UA, Zieladresse `ID_PERCENT_WRITE`, `QI` kommt vom Eingang `QI`.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` — verknüpft die `QO`-Ausgänge von `Q_NumericValue`, `logiBUS_AI_IDA`, `AD_PUBLISH_RAW` und `AR_PUBLISH_PERCENT` zum Ausgang `QO`.
     - **AD_TO_AUDI**: `adapter::conversion::unidirectional::AD_TO_AUDI` — wandelt den DWORD-Rohwert in UDINT für das VT-Zahlenfeld.
 - **Funktionsweise**: Der Rohwert wird über `AD_SPLIT_2` verdreifacht: ein Zweig geht direkt an die OPC-UA-Publikation des Rohwerts, ein zweiter über `AD_TO_AUDI` an das VT-Rohwert-Zahlenfeld, ein dritter über `F_AI_RAW_TO_PERCENT_AD` zur Prozent-Umrechnung und anschließenden OPC-UA-Publikation.
 
@@ -33,7 +34,8 @@
 4. `AD_SPLIT_2.OUT2` → `AD_TO_AUDI.AD_IN`; `AD_TO_AUDI.AUDI_OUT` → `Q_NumericValue.u32NewValue` (VT-Rohwert-Zweig).
 5. `AD_SPLIT_2.OUT3` → `F_AI_RAW_TO_PERCENT.RAW_IN`; `F_AI_RAW_TO_PERCENT.PERCENT_OUT` → `AR_PUBLISH_PERCENT.IN` (Prozent-OPC-UA-Zweig).
 
-6. `QI` (`BOOL`, Vorgabe `TRUE`, neu) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, neu, Quality Output – `TRUE`, wenn der VT-Schreibzugriff auf das Rohwert-Zahlenfeld erfolgreich war).
+6. `QI` (`BOOL`, Vorgabe `TRUE`) → `Q_NumericValue.QI`, `logiBUS_AI_IDA.QI`, `AD_PUBLISH_RAW.QI` und `AR_PUBLISH_PERCENT.QI`; deren `QO`-Ausgänge → `AND_QO.IN1` (`Q_NumericValue`), `IN2` (`logiBUS_AI_IDA`), `IN3` (`AD_PUBLISH_RAW`), `IN4` (`AR_PUBLISH_PERCENT`); `AND_QO.OUT` → `QO` (`BOOL`, Quality Output – `TRUE`, wenn alle vier Dienste erfolgreich waren).
+7. Initialisierungskette (Ereignis-Eingang `INIT` / Ereignis-Ausgang `INITO`, jeweils `EInit`): `INIT` → `logiBUS_AI_IDA.INIT` → `AD_PUBLISH_RAW.INIT` → `AR_PUBLISH_PERCENT.INIT` → `Q_NumericValue.INIT` (jeweils `INITO` → nächstes `INIT`); `Q_NumericValue.INITO` → `INITO` und `AND_QO.REQ`.
 
 ## Technische Besonderheiten
 

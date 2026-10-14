@@ -15,15 +15,19 @@
 ### Sub-blocks: logiBUS_IXA_BG
 
 - **Type**: SubAppType
+- **Interface (additional)**: event input `INIT`, event output `INITO` (each `EInit`), data input `QI` (`BOOL`, default `TRUE`), data output `QO` (`BOOL`).
 - **Internal FBs used**:
-    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — physical digital input, adapter output `IN`, `QI=TRUE`.
+    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — physical digital input, adapter output `IN`; `QI` comes from the subapp input `QI`.
     - **GreenWhiteBackground1_AX** (SubApp): `MyLib::sys::GreenWhiteBackground1_AX` — single-object background-color block from the Background Color family, drives the VT object background color from `DI1`.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — combines the `QO` outputs of `logiBUS_IXA` and `GreenWhiteBackground1_AX` into `QO`.
 - **Operation**: The physical input's adapter output is wired directly to the `DI1` adapter input of the background-color block, which handles the color switch of a VT object.
 
 ## Program Flow and Connections
 
 1. `Input` → `logiBUS_IXA.Input`; `u16ObjId` → `GreenWhiteBackground1_AX.u16ObjId`.
 2. `logiBUS_IXA.IN` (adapter) → `GreenWhiteBackground1_AX.DI1` (adapter).
+3. Initialization: `INIT` → `logiBUS_IXA.INIT`; `logiBUS_IXA.INITO` → `GreenWhiteBackground1_AX.INIT`; `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`.
+4. Quality: `QI` → `logiBUS_IXA.QI` and `GreenWhiteBackground1_AX.QI`; `logiBUS_IXA.QO` → `AND_QO.IN1`, `GreenWhiteBackground1_AX.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Application Scenarios
 

@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`RedWhiteBackground4_AXSC` is a **compact wrapper** around [`RedWhiteBackground4_AXS`](RedWhiteBackground4_AXS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
+`RedWhiteBackground4_AXSC` is a **compact wrapper** around [`RedWhiteBackground4_AXS`](RedWhiteBackground4_AXS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`). In addition, `INIT` → `RedWhiteBackground.INIT`, `RedWhiteBackground.INITO` → `INITO`, `QI` → `RedWhiteBackground.QI` (initial value `TRUE`) and `RedWhiteBackground.QO` → `QO` are passed through.
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 

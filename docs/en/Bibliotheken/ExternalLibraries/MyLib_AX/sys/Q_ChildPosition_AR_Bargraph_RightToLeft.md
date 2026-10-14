@@ -23,6 +23,7 @@
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service (passed on to `QPos.QI`)
 - **u16ObjId** (`UINT`): object ID of the child object (default `ID_NULL`)
 - **u16ObjIdParent** (`UINT`): object ID of the parent object (default `ID_NULL`)
 - **xScale** (`BOOL`): `FALSE` = bypass; `TRUE` (default) = scale by the DM/SKM factor for `u16ObjIdParent`
@@ -31,6 +32,7 @@
 
 ### **Data Outputs**
 
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (from `QPos.QO`)
 - **STATUS** (`STRING`): service status, passed through from the internal `Q_ChildPosition`
 - **s16OldXposition** (`INT`): old X position, passed through
 - **s16OldYposition** (`INT`): old Y position, passed through
@@ -52,6 +54,7 @@
 - `AR_R_MUL.OUT` → `SubFlip.IN`; `LengthPx` → `SubFlip.MINUEND`
 - `SubFlip.OUT` → `QPos.rPhys`
 - `INIT` → `QPos.INIT`; `QPos.INITO` → `INITO`; `QPos.CNF` → `CNF`
+- `QI` → `QPos.QI`; `QPos.QO` → `QO`
 - `u16ObjId`, `u16ObjIdParent`, `xScale` → the like-named inputs of `QPos`
 - `QPos.STATUS`, `QPos.s16OldXposition`, `QPos.s16OldYposition`, `QPos.s16result` → the like-named outputs
 

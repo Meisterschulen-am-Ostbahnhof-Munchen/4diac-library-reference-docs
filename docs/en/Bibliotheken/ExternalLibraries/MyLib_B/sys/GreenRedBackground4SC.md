@@ -12,6 +12,13 @@
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
+## Initialization and Status (INIT/INITO, QI/QO)
+
+- **Event input** `INIT` (`EInit`, Initialization Request) and **event output** `INITO` (`EInit`, Initialization Confirm)
+- **Data input** `QI` (`BOOL`, default `TRUE`, Quality Input) is forwarded to `GreenRedBackground4.QI`
+- **Data output** `QO` (`BOOL`, Quality Output): passed through from `GreenRedBackground4.QO`
+- **Initialization chain**: `INIT` → `GreenRedBackground4.INIT`, `GreenRedBackground4.INITO` → `INITO`
+
 ## Summary
 
 A pure pass-through to `GreenRedBackground4S` for the common case where the diagnostic values aren't needed.
@@ -20,4 +27,4 @@ A pure pass-through to `GreenRedBackground4S` for the common case where the diag
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

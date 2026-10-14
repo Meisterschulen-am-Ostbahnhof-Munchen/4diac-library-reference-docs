@@ -15,20 +15,21 @@ The **AX_SoftkeyOverride_TO_QXA_BG** is a generic subapplication that combines a
 
 ### **Event Inputs**
 
-None.
+- `INIT` (EInit): initialization request; starts the init chain at `QX.INIT`.
 
 ### **Event Outputs**
 
-None.
+- `INITO` (EInit): initialization confirmation; comes from `GreenWhiteBackground.INITO`, the end of the init chain.
 
 ### **Data Inputs**
 
+- `QI` (BOOL) – Quality input, enables the service (initial value: `TRUE`); passed on to `QX.QI`, `IX.QI` and `GreenWhiteBackground.QI`.
 - `u16ObjId` (UINT) – Object ID of the softkey used for manual override. Default value: `ID_NULL`.
 - `Output` (`logiBUS::io::DQ::logiBUS_DO_S`) – Desired output value sent to the QXA block. Initial value: `logiBUS_DO::Invalid`.
 
 ### **Data Outputs**
 
-None.
+- `QO` (BOOL) – Quality output, AND combination (`AND_QO`, `AND_BOOL_3`) of the `QO` outputs of `QX`, `IX` and `GreenWhiteBackground`.
 
 ### **Adapters**
 
@@ -41,6 +42,8 @@ The subapplication continuously processes the AX program signal from the `OUT` a
 - One branch (OUT1) is sent to the `QX` block (`logiBUS_QXA`) which drives the actual digital output.
 - The second branch (OUT2) is connected to the `GreenWhiteBackground1_AX` subapplication to display the current output state.
 
+Initialization and quality: `INIT` → `QX.INIT`, `QX.INITO` → `IX.INIT`, `IX.INITO` → `GreenWhiteBackground.INIT`, `GreenWhiteBackground.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `QX`, `IX` and `GreenWhiteBackground`; `QX.QO`, `IX.QO` and `GreenWhiteBackground.QO` are combined in `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`) into the output `QO`.
+
 The `Output` data input provides the value to be used by the QX block when the output is active.
 
 ## Technical Features
@@ -49,7 +52,8 @@ The `Output` data input provides the value to be used by the QX block when the o
 - Uses `AX_OR_2` to perform the logical OR operation between the program signal and the manual override.
 - Employs `AX_SPLIT_2` to fan out the combined signal.
 - Contains `GreenWhiteBackground1_AX` for visual state indication.
-- Uses `logiBUS_QXA` as the digital output driver with the quality indicator (`QI`) permanently set to `TRUE`.
+- Uses `logiBUS_QXA` as the digital output driver; its quality input `QI` (like those of `Softkey_IXA` and the background) comes from the block input `QI` instead of being fixed to `TRUE`.
+- The init chain (`INIT` → `QX` → `IX` → `GreenWhiteBackground` → `INITO`) and the AND combination of the quality outputs (`QI`/`QO`) follow the standard interface pattern of the wrapper subapps.
 
 ## State Overview
 

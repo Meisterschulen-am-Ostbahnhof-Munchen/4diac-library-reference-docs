@@ -20,16 +20,17 @@ Die SubApp besteht aus zwei internen Bausteinen:
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `Command.INIT`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `Status.INITO`, dem Ende der Init-Kette
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Kommentar |
 |------|-----|-----------|
+| `QI` | BOOL | Quality Input, Initialwert `TRUE`; wird an `Command.QI` und `Status.QI` weitergereicht |
 | `u16ObjId` | UINT | Object ID SoftKey/Hintergrund (VT) |
 | `u16ObjIdA` | UINT | Object ID AuxFunction2/Hintergrund (VT) |
 | `ID_SUBSCRIBE` | WSTRING | Remote‑Subscribe‑Adresse (Status/Farbe, ACTION=SUBSCRIBE) |
@@ -40,7 +41,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_2`) aus `Command.QO` und `Status.QO`
 
 ### **Adapter**
 
@@ -52,12 +53,14 @@ Die SubApp leitet alle Eingabedaten an die beiden internen Bausteine weiter. Der
 
 Der **Status‑Block** erhält die Objekt‑IDs (`u16ObjId`, `u16ObjIdA`), die Remote‑Subscribe‑Adresse (`ID_SUBSCRIBE`) und die lokale Publish‑Adresse (`ID_STATUS_WEB`). Er abonniert den Status des Zielmoduls (z. B. aktive Hintergrundfarbe) und setzt entsprechend die Hintergrundfarben für SoftKey und AUX in der Visualisierung. Zusätzlich veröffentlicht er den empfangenen Status auf `ID_STATUS_WEB`, sodass Web‑Clients die gleiche Hintergrundfarbe anzeigen können.
 
-Die beiden internen Bausteine arbeiten parallel und unabhängig; es besteht keine direkte Kommunikation zwischen ihnen.
+Initialisierung und Qualität: `INIT` → `Command.INIT`, `Command.INITO` → `Status.INIT`, `Status.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `Command.QI` und `Status.QI` weitergereicht; `Command.QO` → `AND_QO.IN1`, `Status.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
+
+Die beiden internen Bausteine arbeiten datenseitig parallel und unabhängig; abgesehen von der Init-Kette und der UND-Verknüpfung der Qualitätsausgänge besteht keine direkte Kommunikation zwischen ihnen.
 
 ## Technische Besonderheiten
 
 - **4‑Quellen‑Variante**: Im Unterschied zur 3‑Quellen‑Variante `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` wird hier ein zusätzlicher physischer Taster auf einem dritten Modul über `ID_SWITCH_REMOTE` mit einbezogen.
-- **Keine Ereignis‑E/A**: Der Baustein arbeitet rein datengetrieben; die internen Bausteine besitzen eigene Ereignisbehandlungen.
+- **Nur Init-Ereignisse**: Der Baustein arbeitet datengetrieben; als Ereignisse besitzt er nur `INIT`/`INITO` für die Init-Kette, die internen Bausteine besitzen eigene Ereignisbehandlungen.
 - **Wrapper‑Struktur**: Als dünner Wrapper werden zwei vorhandene Bausteine kombiniert, um die gewünschte Funktionalität zu bündeln.
 - **OPC‑UA‑Kommunikation**: Remote‑Write und Remote‑Subscribe werden über OPC‑UA realisiert; die Adressen sind als WSTRING‑Parameter konfigurierbar.
 

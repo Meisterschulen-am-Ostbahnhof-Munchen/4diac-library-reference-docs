@@ -10,6 +10,8 @@
 
 For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPic-Blocks.md).
 
+**Initialization and quality:** `INIT` → `F_MOVE.REQ`; `F_MOVE.CNF` → `PictureVT.INIT`; `PictureVT.INITO` → `ColorVT.INIT`; `ColorVT.INITO` → `INITO`. New are `QI` (`BOOL`, default `TRUE`), which goes to `PictureVT.QI` and `ColorVT.QI`, and `QO` (`BOOL`): `AND` (`AND_QO`, `AND_BOOL_2`) of `PictureVT.QO` and `ColorVT.QO`. `AND_QO.REQ` is triggered via `E_MERGE_QO` (`E_MERGE_3`: `ColorVT.INITO`, `PictureVT.CNF`, `ColorVT.CNF`).
+
 ![SwitchPicCol_5_1](SwitchPicCol_5_1.svg)
 
 ## Summary

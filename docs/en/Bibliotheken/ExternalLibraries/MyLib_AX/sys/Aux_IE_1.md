@@ -14,20 +14,22 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request; passed on to `Aux.INIT`
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirmation; comes from `Aux.INITO`
 - **IND**: fires when the configured `InputEvent` occurs
 
 ### **Data Inputs**
 
+- **QI** (BOOL): quality input, service enable (initial value `TRUE`), passed on to `Aux.QI`
 - **u16ObjId** (UINT): object ID of the AuxFunction2 (default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Auxiliary::IN::AuxiliaryState_S`): e.g. `AuxEnabled`, `AuxDisabled` (default `Invalid`)
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (BOOL): quality output, comes from `Aux.QO`
 
 ### **Adapters**
 
@@ -35,12 +37,12 @@ No adapters are used.
 
 ## Functionality
 
-The network contains exactly one instance `Aux` of type `isobus::UT::io::Auxiliary::IN::Aux_IE` with the parameter `QI = TRUE`. `u16ObjId` and `InputEvent` are routed unchanged to the like-named inputs of the instance, and its event `IND` is output directly as the `IND` of the SubApp.
+The network contains exactly one instance `Aux` of type `isobus::UT::io::Auxiliary::IN::Aux_IE`. `u16ObjId` and `InputEvent` are routed unchanged to the like-named inputs of the instance, and its event `IND` is output directly as the `IND` of the SubApp. In addition, `INIT` → `Aux.INIT`, `Aux.INITO` → `INITO`, `QI` → `Aux.QI` and `Aux.QO` → `QO` are passed through.
 
 ## Technical Details
 
 - Pure pass-through without logic or state of its own
-- `QI` is hard-wired to TRUE; the block is therefore always active
+- `QI` is no longer hard-wired to TRUE; it is passed through together with `INIT`/`INITO` and `QO` (the initial value of `QI` is `TRUE`)
 - Because `InputEvent` is a parameter, the same SubApp can be used for different kinds of events (e.g. pressing or releasing)
 
 ## Application Scenarios

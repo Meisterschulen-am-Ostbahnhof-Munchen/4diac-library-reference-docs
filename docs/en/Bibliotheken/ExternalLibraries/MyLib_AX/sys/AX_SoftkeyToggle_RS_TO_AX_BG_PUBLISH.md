@@ -14,14 +14,16 @@
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): initialization request (chain: `PUBLISH_STATE` → `GreenWhiteBackground_AX` → `ToggleState`)
 - **AUS**: hard reset to OFF, from outside as an event (e.g. one centrally read shared SoftKey). Pass-through to `ToggleState.AUS`. Leave unwired if not needed.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm (from `ToggleState.INITO`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`): quality input, TRUE enables the service (default `TRUE`)
 - **u16ObjId** (`UINT`): object ID of the on/off softkey (toggle), also carries the background colour (default `ID_NULL`)
 - **u16ObjIdA** (`UINT`): object ID of the AuxFunction2 (joystick) for the toggle, equal in rank to the SoftKey, also shows the background colour on the aux handle (default `ID_NULL`)
 - **u16ObjIdB** (`UINT`): object ID of the IO-diag test button (outputs diagnostic page), toggles with equal rank; no background colour of its own because `GreenWhiteBackground3_AX` only knows SoftKey and AUX (default `ID_NULL`)
@@ -33,7 +35,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`) of the `QO` outputs of `PUBLISH_STATE`, `GreenWhiteBackground_AX` and `ToggleState`
 
 ### **Adapters**
 
@@ -45,7 +47,8 @@ None.
 - **`ToggleState`** (SubApp `MyLib::sys::AX_SoftkeyToggle_RS_TO_AX`): generates the toggle/reset state
 - **`AX_SPLIT_3`** (`adapter::events::unidirectional::AX_SPLIT_3`): distributes the state to three targets
 - **`GreenWhiteBackground_AX`** (SubApp `MyLib::sys::GreenWhiteBackground3_AX`): green/white background colour
-- **`PUBLISH_STATE`** (`adapter::net::AX_PUBLISH_1`, `QI = TRUE`): publishes the state
+- **`PUBLISH_STATE`** (`adapter::net::AX_PUBLISH_1`): publishes the state (`QI` comes from the wrapper input `QI`)
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_3`): combines the `QO` outputs of the three inner blocks into `QO`
 
 ## Functionality
 
@@ -55,6 +58,8 @@ None.
 - `AX_SPLIT_3.OUT1` → `OUT`
 - `AX_SPLIT_3.OUT2` → `GreenWhiteBackground_AX.DI1`; `u16ObjId`, `u16ObjIdA` → `GreenWhiteBackground_AX`
 - `AX_SPLIT_3.OUT3` → `PUBLISH_STATE.IN`; `ID_STATE_WRITE` → `PUBLISH_STATE.ID`
+- Initialization: `INIT` → `PUBLISH_STATE.INIT`; `PUBLISH_STATE.INITO` → `GreenWhiteBackground_AX.INIT`; `GreenWhiteBackground_AX.INITO` → `ToggleState.INIT`; `ToggleState.INITO` → `INITO` and → `AND_QO.REQ`
+- Quality: `QI` → `PUBLISH_STATE.QI`, `GreenWhiteBackground_AX.QI`, `ToggleState.QI`; `PUBLISH_STATE.QO` → `AND_QO.IN1`, `GreenWhiteBackground_AX.QO` → `AND_QO.IN2`, `ToggleState.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

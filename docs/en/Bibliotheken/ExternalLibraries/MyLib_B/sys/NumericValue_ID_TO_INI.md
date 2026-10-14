@@ -17,19 +17,20 @@ The **NumericValue_ID_TO_INI** subapplication is a generic, reusable component t
 
 | Name | Type | Description |
 |------|------|-------------|
-| *(none)* | — | This subapp has no event inputs. All activity is triggered internally via initialization or via the internal NumericValue FB indication. |
+| `INIT` | `EInit` | Initialization request; starts the init chain at `ID.INIT`. Further activity is triggered internally via the internal NumericValue FB indication. |
 
 ### **Event Outputs**
 
 | Name | Type | Description |
 |------|------|-------------|
+| `INITO` | `EInit` | Initialization confirmation; comes from `Q_NumericValue.INITO`, the end of the init chain. |
 | `IND` | Event | Indicates that a read, write, or initialization operation has completed. Emitted either after a successful INI SET operation, after a GET operation, or after querying the VT value. |
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
-| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue.QI` |
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable service; passed through to `ID.QI`, `INI.QI` and `Q_NumericValue.QI` |
 | `KEY` | `STRING` | — | The key (name) under which the numeric value is stored in the INI file. |
 | `SECTION` | `STRING` | — | The section of the INI file where the key is located. |
 | `u16ObjId` | `UINT` | `ID_NULL` | The object ID of the numeric VT value to be read (source identifier for the VT communication). |
@@ -38,7 +39,7 @@ The **NumericValue_ID_TO_INI** subapplication is a generic, reusable component t
 
 | Name | Type | Description |
 |------|------|-------------|
-| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue.QO` |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; AND combination (`AND_QO`, `AND_BOOL_3`) of `Q_NumericValue.QO`, `ID.QO` and `INI.QO` |
 | `VALUEO` | `UDINT` | The numeric value read from the VT and stored/retrieved from the INI file. This output is updated after a GET or SET operation. |
 
 ### **Adapters**
@@ -47,7 +48,7 @@ None.
 
 ## Functionality
 
-The subapp provides a complete data path from a Virtual Terminal numeric object to persistent INI storage:
+The subapp (including the added `AND_QO` block for the combined `QO`) provides a complete data path from a Virtual Terminal numeric object to persistent INI storage:
 
 1. **VT Read**: The internal `NumericValue_ID` FB (`isobus::UT::io::NumericValue::NumericValue_ID`) reads the numeric value from the VT based on the provided `u16ObjId`. When the VT delivers the value, the FB raises its `IND` output event.
 
@@ -61,7 +62,7 @@ The subapp provides a complete data path from a Virtual Terminal numeric object 
 
 5. **Output**: The retrieved value from the INI FB (`VALUEO`) is provided on the subapp's `VALUEO` output and simultaneously sent to the `Q_NumericValue` FB for VT synchronization.
 
-**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
+**Initialization and quality ports:** The init chain is `INIT` → `ID.INIT`, `ID.INITO` → `INI.INIT`, `INI.INITO` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO` and `AND_QO.REQ` (the connection `INI.INITO` → `INI.GET` remains in addition). `QI` (data input, BOOL, default `TRUE`) is passed to `Q_NumericValue.QI`, `ID.QI` and `INI.QI`; their `QO` outputs go to `AND_QO.IN1` (`Q_NumericValue`), `IN2` (`ID`) and `IN3` (`INI`) of the block `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`), `AND_QO.OUT` → `QO` (BOOL). This lets the surrounding logic enable all three services and check their joint success.
 
 ## Technical Features
 
@@ -110,4 +111,4 @@ The main advantage of this subapp over using the individual blocks separately is
 
 ## Conclusion
 
-The **NumericValue_ID_TO_INI** subapplication is a well-structured, generic component that bridges the gap between ISOBUS Virtual Terminal numeric values and persistent INI storage. It encapsulates a complete data flow – from VT reading, through type conversion, to file storage and back-synchronization – within a single, easy-to-use interface. With only three input parameters and one event output, it is both simple to integrate and highly reusable. The automatic initialization behavior and the implicit synchronization with the VT make it particularly suitable for applications requiring persistent, consistent numeric parameters. Its design follows established standards (IEC 61499-2, IEC 61131) and leverages proven library components, ensuring reliability and maintainability in industrial automation environments.
+The **NumericValue_ID_TO_INI** subapplication is a well-structured, generic component that bridges the gap between ISOBUS Virtual Terminal numeric values and persistent INI storage. It encapsulates a complete data flow – from VT reading, through type conversion, to file storage and back-synchronization – within a single, easy-to-use interface. With only three configuration inputs (plus `QI`) and the event outputs `IND` and `INITO`, it is both simple to integrate and highly reusable. The automatic initialization behavior and the implicit synchronization with the VT make it particularly suitable for applications requiring persistent, consistent numeric parameters. Its design follows established standards (IEC 61499-2, IEC 61131) and leverages proven library components, ensuring reliability and maintainability in industrial automation environments.

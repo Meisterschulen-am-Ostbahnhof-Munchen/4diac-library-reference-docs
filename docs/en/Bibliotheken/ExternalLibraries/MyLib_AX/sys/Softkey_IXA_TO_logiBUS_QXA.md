@@ -16,14 +16,18 @@
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT softkey adapter, `QI=TRUE`.
+    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT softkey adapter.
     - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` — physical digital output.
-- **Functionality**: Direct adapter connection `Softkey_IXA.IN` → `logiBUS_QXA.OUT`, no intermediate logic.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — combines `logiBUS_QXA.QO` and `Softkey_IXA.QO` into the SubApp output `QO`.
+- **Interface**: event input `INIT`, event output `INITO`, data input `QI` (default `TRUE`, passed on to both FBs), data output `QO`.
+- **Functionality**: Direct adapter connection `Softkey_IXA.IN` → `logiBUS_QXA.OUT`, no intermediate logic (apart from the `AND_QO` combination of the quality signals).
 
 ## Program Flow and Connections
 
 1. `u16ObjId` → `Softkey_IXA.u16ObjId`; `Output` → `logiBUS_QXA.Output`.
 2. `Softkey_IXA.IN` → `logiBUS_QXA.OUT`.
+3. Initialization: `INIT` → `logiBUS_QXA.INIT`; `logiBUS_QXA.INITO` → `Softkey_IXA.INIT`; `Softkey_IXA.INITO` → `INITO` and → `AND_QO.REQ`.
+4. Quality: `QI` → `logiBUS_QXA.QI` and `Softkey_IXA.QI`; `logiBUS_QXA.QO` → `AND_QO.IN1`, `Softkey_IXA.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Application Scenarios
 

@@ -20,7 +20,8 @@
     - **ADI_SPLIT_2**: `adapter::events::unidirectional::ADI_SPLIT_2` — verzweigt `System_Tick.ADI_OUT` auf zwei Ziele, da ein Adapter-Socket nur eine Quelle annehmen kann: ein Ausgang geht (über `ADI_TO_AUDI`) an die VT-Anzeige, der andere an `ADI_PUBLISH_1` für den OPC-UA-Publish.
     - **ADI_TO_AUDI**: `adapter::conversion::unidirectional::ADI_TO_AUDI` — wandelt DINT in UDINT um, für die VT-Anzeige.
     - **Q_NumericValue_AUDI**: `isobus::UT::Q::Q_NumericValue_AUDI` — zeigt den Wert lokal auf dem VT an (`u16ObjId`).
-    - **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI=TRUE`) — veröffentlicht denselben Zählerwert per OPC-UA (`ID_WRITE`).
+    - **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI` kommt vom Eingang `QI`) — veröffentlicht denselben Zählerwert per OPC-UA (`ID_WRITE`).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — verknüpft `Q_NumericValue_AUDI.QO` und `ADI_PUBLISH_1.QO` zum Ausgang `QO`.
 - **Funktionsweise**: Der Zählerstand von `System_Tick` wird per `ADI_SPLIT_2` verzweigt: ein Zweig geht wie bei `SystemTickSender_ISO` über `ADI_TO_AUDI` an die VT-Anzeige, der andere direkt an `ADI_PUBLISH_1` für den OPC-UA-Publish — wie bei `SystemTickSender_OPC`.
 
 ## Programmablauf und Verbindungen
@@ -30,9 +31,9 @@
 3. `ADI_SPLIT_2.OUT2` → `ADI_PUBLISH_1.IN` (OPC-UA-Publish).
 4. Parameter: `u16ObjId` → `Q_NumericValue_AUDI.u16ObjId`; `ID_WRITE` → `ADI_PUBLISH_1.ID`.
 
-5. `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (neuer Ereignis-Eingang `INIT` / Ereignis-Ausgang `INITO`, jeweils `EInit`).
+5. Initialisierungskette (Ereignis-Eingang `INIT` / Ereignis-Ausgang `INITO`, jeweils `EInit`): `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `ADI_PUBLISH_1.INIT`; `ADI_PUBLISH_1.INITO` → `INITO` und `AND_QO.REQ`.
 
-6. `QI` (`BOOL`, Vorgabe `TRUE`) → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO` (`BOOL`, Quality Output – `TRUE`, wenn der VT-Schreibzugriff erfolgreich war).
+6. Qualität: `QI` (`BOOL`, Vorgabe `TRUE`) → `Q_NumericValue_AUDI.QI` und `ADI_PUBLISH_1.QI`; `Q_NumericValue_AUDI.QO` → `AND_QO.IN1`; `ADI_PUBLISH_1.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO` (`BOOL`, Quality Output – `TRUE`, wenn VT-Schreibzugriff und OPC-UA-Publish erfolgreich waren).
 
 ## Technische Besonderheiten
 

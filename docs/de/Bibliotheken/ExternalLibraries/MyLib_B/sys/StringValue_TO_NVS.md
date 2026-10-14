@@ -17,20 +17,20 @@ Die Subapp **StringValue_TO_NVS** dient dazu, einen Stringwert, der über eine O
 
 | Name   | Datentyp | Beschreibung |
 |--------|----------|--------------|
-| `INIT` | EInit    | Initialisierungsanforderung; wird an `Q_StringValue.INIT` weitergeleitet. |
+| `INIT` | EInit    | Initialisierungsanforderung; startet die Initialisierungskette (`Q_StringValue` → `StringValue_IS` → `NVS`). |
 
 ### **Ereignis-Ausgänge**
 
 | Name  | Datentyp | Beschreibung |
 |-------|----------|--------------|
-| `INITO` | EInit  | Initialisierungsbestätigung von `Q_StringValue.INITO`. |
+| `INITO` | EInit  | Initialisierungsbestätigung von `NVS.INITO` (Ende der Initialisierungskette). |
 | `IND` | Event    | Wird ausgelöst, nachdem ein Speicher- oder Lesevorgang abgeschlossen wurde (siehe Funktionsweise). |
 
 ### **Daten-Eingänge**
 
 | Name       | Typ    | Initialwert | Beschreibung |
 |------------|--------|-------------|--------------|
-| `QI`       | BOOL   | `TRUE`      | Quality Input – TRUE aktiviert den Dienst; wird an `Q_StringValue.QI` durchgereicht. |
+| `QI`       | BOOL   | `TRUE`      | Quality Input – TRUE aktiviert den Dienst; wird an `Q_StringValue.QI`, `StringValue_IS.QI` und `NVS.QI` durchgereicht. |
 | `KEY`      | STRING | –           | Name des Schlüssels, unter dem der Wert im NVS abgelegt wird. |
 | `u16ObjId` | UINT   | `ID_NULL`   | Objekt-ID, die für den Zugriff auf den Stringwert verwendet wird (z.B. bei ISO-bus). |
 
@@ -38,7 +38,7 @@ Die Subapp **StringValue_TO_NVS** dient dazu, einen Stringwert, der über eine O
 
 | Name        | Typ    | Beschreibung |
 |-------------|--------|--------------|
-| `QO`        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_StringValue.QO`. |
+| `QO`        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; UND (`AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_3`) der `QO` von `Q_StringValue`, `StringValue_IS` und `NVS`. |
 | `VALUEO`    | STRING | Liest den aktuell im NVS gespeicherten String zurück (nach einem Lesevorgang). |
 
 ### **Adapter**
@@ -58,7 +58,7 @@ Die Subapp kombiniert drei Funktionsbausteine, um folgende Abläufe zu realisier
 3. **Rückgabe des gespeicherten Werts**  
    Der Baustein `Q_StringValue` dient zur Weiterverarbeitung bzw. Quittierung des ausgelesenen Strings. Durch die Verbindung `NVS.VALUEO → Q_StringValue.pau8String` wird der zwischengespeicherte Wert verfügbar gemacht. Ein Zugriff über das `GETO`-Ereignis (das auch direkt als `IND` an der Subapp erscheint) löst die Verarbeitung in `Q_StringValue` aus.
 
-Zusätzlich wird `INIT` an `Q_StringValue.INIT` und dessen `INITO` an den Ausgang `INITO` der Subapp geführt; `QI` geht an `Q_StringValue.QI`, `Q_StringValue.QO` an `QO`.
+Zusätzlich läuft die Initialisierungskette `INIT` → `Q_StringValue.INIT`, `Q_StringValue.INITO` → `StringValue_IS.INIT`, `StringValue_IS.INITO` → `NVS.INIT`, `NVS.INITO` → `INITO` und → `AND_QO.REQ`; `QI` geht an `Q_StringValue.QI`, `StringValue_IS.QI` und `NVS.QI`; deren `QO` werden im Baustein `AND_QO` (`AND_BOOL_3`) per UND zu `QO` verknüpft.
 
 Die Ereignisverkabelung stellt sicher, dass sowohl nach einem Schreib- als auch nach einem Lesevorgang das Ausgangsereignis `IND` gesendet wird, sodass der aufrufende Baustein über den Abschluss informiert ist.
 
@@ -74,7 +74,7 @@ Die Ereignisverkabelung stellt sicher, dass sowohl nach einem Schreib- als auch 
 Da die Subapp keine expliziten Zustandsautomaten besitzt, lässt sich der Ablauf am besten über die Ereignisse und die beteiligten Baustein-Zustände beschreiben:
 
 - **Idle**: Es liegen keine anstehenden Ereignisse vor. Der NVS-Wert ist gespeichert (kein Zugriff aktiv).  
-- **Initialisieren**: Nach dem Einschalten wird der NVS initialisiert (INITO steht an); das Ereignis `INIT` der Subapp initialisiert `Q_StringValue` und wird mit `INITO` bestätigt.  
+- **Initialisieren**: Nach dem Einschalten wird der NVS initialisiert (INITO steht an); das Ereignis `INIT` der Subapp initialisiert nacheinander `Q_StringValue`, `StringValue_IS` und `NVS` und wird mit `INITO` (von `NVS.INITO`) bestätigt.  
 - **Lesen**: Nach der Initialisierung oder über einen internen Triggers wird ein Lesevorgang durchgeführt (GET). Nach Abschluss wird `GETO` erzeugt.  
 - **Schreiben**: Wenn ein neuer Stringwert über StringValue_IS empfangen wird, löst dessen `IND`-Ereignis den SET-Vorgang aus. Nach dem Schreiben wird `SETO` erzeugt.  
 - **Wert bereitstellen**: Nach einem Lesevorgang wird der Wert über `VALUEO` (und an Q_StringValue) bereitgestellt; nach einem Schreibvorgang wird der Wert ebenfalls gespeichert und bestätigt.

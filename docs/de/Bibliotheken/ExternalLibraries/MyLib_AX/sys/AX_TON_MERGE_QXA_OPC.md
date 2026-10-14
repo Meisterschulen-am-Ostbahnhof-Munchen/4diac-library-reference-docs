@@ -15,16 +15,19 @@ Der Baustein `AX_TON_MERGE_QXA_OPC` realisiert einen Kanal einer geschalteten Gr
 
 ### **Ereignis-Eingänge**
 
-Keine Ereignis‑Eingänge vorhanden. Der Baustein wird rein daten‑ und adaptergesteuert betrieben.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `SUBSCRIBE_TEST.INIT`.
+
+Die eigentliche Signalverarbeitung läuft weiterhin rein daten‑ und adaptergesteuert.
 
 ### **Ereignis-Ausgänge**
 
-Keine Ereignis‑Ausgänge vorhanden.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `PUBLISH_TEST.INITO`, dem Ende der Init-Kette.
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Quality Input, schaltet den Dienst frei; Initialwert `TRUE`; wird an `SUBSCRIBE_TEST`, `DigitalOutput` und `PUBLISH_TEST` weitergereicht |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang dieses Kanals; Initialwert `logiBUS_DO::Invalid` |
 | `PT` | `TIME` | Einschaltverzögerung gegenüber dem Master‑Toggle (z. B. `T#0ms`, `T#800ms`, `T#1600ms`); Ausschalten erfolgt immer sofort |
 | `ID_TEST_READ` | `WSTRING` | Adresse für die bestehende IO‑Test‑Subscribe (z. B. `STG5_Q0x_READ`) |
@@ -32,7 +35,9 @@ Keine Ereignis‑Ausgänge vorhanden.
 
 ### **Daten-Ausgänge**
 
-Keine Daten‑Ausgänge vorhanden.
+| Name | Typ | Beschreibung |
+|------|-----|--------------|
+| `QO` | `BOOL` | Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_3`) der `QO`-Ausgänge von `SUBSCRIBE_TEST`, `DigitalOutput` und `PUBLISH_TEST` |
 
 ### **Adapter**
 
@@ -43,6 +48,8 @@ Keine Daten‑Ausgänge vorhanden.
 ## Funktionsweise
 
 Der `MASTER`‑Socket überträgt den Toggle‑Zustand eines zentralen Masters. Dieser Zustand wird an den Timer‑Baustein `AX_TON` weitergeleitet. `AX_TON` verzögert nur das **Einschalten** um die konfigurierte Zeit `PT`; das Ausschalten geschieht unmittelbar. Das verzögerte Signal wird zusammen mit dem bestehenden IO‑Test‑Befehl des Kanals (über `AX_SUBSCRIBE_1`) in einer ODER‑Verknüpfung (`AX_OR_2`) kombiniert. Das Ergebnis wird über einen Split (`AX_SPLIT_2`) sowohl an den physischen Ausgang (`logiBUS_QXA`) als auch an die Publish‑Schnittstelle (`AX_PUBLISH_1`) gesendet. Dadurch bleibt der IO‑Test‑Befehlsweg erhalten und das verzögerte Toggle‑Signal wirkt parallel dazu.
+
+Initialisierung und Qualität: `INIT` → `SUBSCRIBE_TEST.INIT`, `SUBSCRIBE_TEST.INITO` → `DigitalOutput.INIT`, `DigitalOutput.INITO` → `PUBLISH_TEST.INIT`, `PUBLISH_TEST.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `SUBSCRIBE_TEST.QI`, `DigitalOutput.QI` und `PUBLISH_TEST.QI` weitergereicht; deren `QO`-Ausgänge werden in `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`, `IN1` bis `IN3`) zum Ausgang `QO` verknüpft.
 
 ## Technische Besonderheiten
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-514.0 -151.0 2238.4 830.0"
-     width="2238" height="830">
+     viewBox="-501.7 -151.0 2809.8 830.0"
+     width="2810" height="830">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,82 +40,98 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-514.0" y="-151.0" width="2238.4" height="830.0" fill="white"/>
-  <rect x="-507.0" y="-144.0" width="2224.4" height="816.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-507.0" y="-144.0" width="2224.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="-507.0" y1="-119.5" x2="1717.4" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-502.0" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Wie INI_IN_AND_STORE_AR2, aber MIT Override-Moeglichkeit: Socket OVERRIDE_ACTIVE
+  <rect x="-501.7" y="-151.0" width="2809.8" height="830.0" fill="white"/>
+  <rect x="-494.7" y="-144.0" width="2795.8" height="816.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-494.7" y="-144.0" width="2795.8" height="25.0" fill="white" stroke="none"/>
+  <line x1="-494.7" y1="-119.5" x2="2301.1" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-489.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Wie INI_IN_AND_STORE_AR2, aber MIT Override-Moeglichkeit: Socket OVERRIDE_ACTIVE
 (AX) erzwingt bei TRUE kontinuierlich einen konfigurierten Wert (Parameter
 INIT_VAL an LIT_Override, Default 0.0) statt des Live-VT-Werts. Bei
 OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2.</text>
   <g id="sidebars">
-    <rect x="-507.0" y="-119.0" width="120.0" height="791.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-494.7" y="-119.0" width="107.7" height="791.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-387.0" y1="-119.0" x2="-387.0" y2="672.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1662.2" y="-119.0" width="55.2" height="791.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1662.2" y1="-119.0" x2="1662.2" y2="672.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="2246.1" y="-119.0" width="55.0" height="791.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="2246.1" y1="-119.0" x2="2246.1" y2="672.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="-387.0,-33.0 845.0,-33.0 850.0,-28.0 850.0,478.5 855.0,483.5 1485.0,483.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="-387.0,-33.0 845.0,-33.0 850.0,-28.0 850.0,478.5 855.0,483.5 1485.0,483.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="-387.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,240.5 45.0,245.5 1245.0,245.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-387.0,-50.0 35.0,-50.0 40.0,-45.0 40.0,223.5 45.0,228.5 1245.0,228.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-387.0,-33.0 -235.0,-33.0 -230.0,-28.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="-387.0,-33.0 -235.0,-33.0 -230.0,-28.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="-387.0,-84.0 544.0,-84.0 549.0,-79.0 549.0,461.5 554.0,466.5 1485.0,466.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1642.2,466.5 1648.2,466.5 1652.2,462.5 1652.2,-80.0 1656.2,-84.0 1662.2,-84.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="217.2,187.5 360.2,187.5 365.2,192.5 365.2,308.5 370.2,313.5 435.0,313.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="217.2,187.5 360.2,187.5 365.2,192.5 365.2,308.5 370.2,313.5 435.0,313.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="206.6,286.5 267.6,286.5 272.6,291.5 272.6,325.5 277.6,330.5 435.0,330.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="206.6,286.5 267.6,286.5 272.6,291.5 272.6,325.5 277.6,330.5 435.0,330.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="-387.0,-16.0 -326.0,-16.0 -321.0,-11.0 -321.0,342.5 -316.0,347.5 435.0,347.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="-387.0,-16.0 -326.0,-16.0 -321.0,-11.0 -321.0,342.5 -316.0,347.5 435.0,347.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="563.4,313.5 607.4,313.5 612.4,308.5 612.4,303.5 617.4,298.5 660.0,298.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="563.4,313.5 607.4,313.5 612.4,308.5 612.4,303.5 617.4,298.5 660.0,298.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="793.8,298.5 857.8,298.5 862.8,293.5 862.8,284.5 867.8,279.5 1245.0,279.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="793.8,298.5 857.8,298.5 862.8,293.5 862.8,284.5 867.8,279.5 1245.0,279.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="793.8,315.5 954.8,315.5 959.8,320.5 959.8,353.5 964.8,358.5 1095.0,358.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="793.8,315.5 954.8,315.5 959.8,320.5 959.8,353.5 964.8,358.5 1095.0,358.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1209.0,358.5 1537.0,358.5 1542.0,353.5 1542.0,-62.0 1547.0,-67.0 1662.2,-67.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1209.0,358.5 1537.0,358.5 1542.0,353.5 1542.0,-62.0 1547.0,-67.0 1662.2,-67.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1209.0,375.5 1335.0,375.5 1340.0,380.5 1340.0,512.5 1345.0,517.5 1485.0,517.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1209.0,375.5 1335.0,375.5 1340.0,380.5 1340.0,512.5 1345.0,517.5 1485.0,517.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-387.0,-84.0 -379.8,-84.0 -375.0,-79.2 -375.0,80.5 -370.0,85.5 60.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="200.8,85.5 710.7,85.5 715.7,90.5 715.7,155.5 720.7,160.5 1245.0,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1401.5,160.5 1442.5,160.5 1447.5,165.5 1447.5,410.5 1452.5,415.5 1485.0,415.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1622.1,415.5 2221.1,415.5 2226.1,410.5 2226.1,-79.0 2231.1,-84.0 2246.1,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1622.1,415.5 1674.1,415.5 1679.1,410.5 1679.1,195.5 1684.1,190.5 1755.0,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-16.0 845.0,-16.0 850.0,-11.0 850.0,478.5 855.0,483.5 1485.0,483.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="-387.0,-16.0 845.0,-16.0 850.0,-11.0 850.0,478.5 855.0,483.5 1485.0,483.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-387.0,-50.0 35.0,-50.0 40.0,-45.0 40.0,240.5 45.0,245.5 1245.0,245.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-33.0 35.0,-33.0 40.0,-28.0 40.0,223.5 45.0,228.5 1245.0,228.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-16.0 -235.0,-16.0 -230.0,-11.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="-387.0,-16.0 -235.0,-16.0 -230.0,-11.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-387.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,461.5 45.0,466.5 1485.0,466.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-67.0 -379.8,-67.0 -375.0,-62.2 -375.0,131.5 -370.0,136.5 60.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-67.0 -85.0,-67.0 -80.0,-62.0 -80.0,189.5 -75.0,194.5 1245.0,194.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1622.1,466.5 1674.1,466.5 1679.1,461.5 1679.1,229.5 1684.1,224.5 1755.0,224.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="200.8,136.5 342.8,136.5 347.8,141.5 347.8,236.5 352.8,241.5 1755.0,241.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1401.5,194.5 1577.5,194.5 1582.5,199.5 1582.5,253.5 1587.5,258.5 1755.0,258.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1862.0,224.5 2026.0,224.5 2031.0,219.5 2031.0,-62.0 2036.0,-67.0 2246.1,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="200.8,187.5 343.8,187.5 348.8,192.5 348.8,308.5 353.8,313.5 435.0,313.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="200.8,187.5 343.8,187.5 348.8,192.5 348.8,308.5 353.8,313.5 435.0,313.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="184.3,286.5 245.3,286.5 250.3,291.5 250.3,325.5 255.3,330.5 435.0,330.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="184.3,286.5 245.3,286.5 250.3,291.5 250.3,325.5 255.3,330.5 435.0,330.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-387.0,1.0 -326.0,1.0 -321.0,6.0 -321.0,342.5 -316.0,347.5 435.0,347.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="-387.0,1.0 -326.0,1.0 -321.0,6.0 -321.0,342.5 -316.0,347.5 435.0,347.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="554.3,313.5 598.3,313.5 603.3,308.5 603.3,303.5 608.3,298.5 660.0,298.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="554.3,313.5 598.3,313.5 603.3,308.5 603.3,303.5 608.3,298.5 660.0,298.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="772.4,298.5 836.4,298.5 841.4,293.5 841.4,284.5 846.4,279.5 1245.0,279.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="772.4,298.5 836.4,298.5 841.4,293.5 841.4,284.5 846.4,279.5 1245.0,279.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="772.4,315.5 933.4,315.5 938.4,320.5 938.4,353.5 943.4,358.5 1095.0,358.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="772.4,315.5 933.4,315.5 938.4,320.5 938.4,353.5 943.4,358.5 1095.0,358.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1195.6,358.5 1523.6,358.5 1528.6,353.5 1528.6,-45.0 1533.6,-50.0 2246.1,-50.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1195.6,358.5 1523.6,358.5 1528.6,353.5 1528.6,-45.0 1533.6,-50.0 2246.1,-50.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1195.6,375.5 1321.6,375.5 1326.6,380.5 1326.6,512.5 1331.6,517.5 1485.0,517.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1195.6,375.5 1321.6,375.5 1326.6,380.5 1326.6,512.5 1331.6,517.5 1485.0,517.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="-392.0005,-89.0 -387.0005,-84.0 -392.0005,-79.0" fill="#A3B08F"/>
+    <polygon points="-392.0005,-89.0 -387.0005,-84.0 -392.0005,-79.0" fill="#63B31F"/>
     <text x="-393.0005" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">QI</text>
-    <polygon points="-392.0005,-72.0 -387.0005,-67.0 -392.0005,-62.0" fill="#BD8663"/>
+          fill="#000000" text-anchor="end">INIT</text>
+    <polygon points="2251.1255,-89.0 2246.1255,-84.0 2251.1255,-79.0" fill="#63B31F"/>
+    <text x="2252.1255" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="-392.0005,-72.0 -387.0005,-67.0 -392.0005,-62.0" fill="#A3B08F"/>
     <text x="-393.0005" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">KEY</text>
+          fill="#000000" text-anchor="end">QI</text>
     <polygon points="-392.0005,-55.0 -387.0005,-50.0 -392.0005,-45.0" fill="#BD8663"/>
     <text x="-393.0005" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">SECTION</text>
-    <polygon points="-392.0005,-38.0 -387.0005,-33.0 -392.0005,-28.0" fill="#3366FF"/>
+          fill="#000000" text-anchor="end">KEY</text>
+    <polygon points="-392.0005,-38.0 -387.0005,-33.0 -392.0005,-28.0" fill="#BD8663"/>
     <text x="-393.0005" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">SECTION</text>
+    <polygon points="-392.0005,-21.0 -387.0005,-16.0 -392.0005,-11.0" fill="#3366FF"/>
+    <text x="-393.0005" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">stObj</text>
-    <polygon points="1667.2,-89.0 1662.2,-84.0 1667.2,-79.0" fill="#A3B08F"/>
-    <text x="1668.2" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="2251.1255,-72.0 2246.1255,-67.0 2251.1255,-62.0" fill="#A3B08F"/>
+    <text x="2252.1255" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">QO</text>
-    <path d="M -397.0005 -21.0 L -394.5005 -21.0 L -394.5005 -19.333333333333332 L -392.0005 -19.333333333333332 L -392.0005 -21.0 L -387.0005 -21.0 L -387.0005 -11.0 L -392.0005 -11.0 L -392.0005 -12.666666666666666 L -394.5005 -12.666666666666666 L -394.5005 -11.0 L -397.0005 -11.0 Z" fill="#845DAF"/>
-    <text x="-400.0005" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <path d="M -397.0005 -4.0 L -394.5005 -4.0 L -394.5005 -2.333333333333333 L -392.0005 -2.333333333333333 L -392.0005 -4.0 L -387.0005 -4.0 L -387.0005 6.0 L -392.0005 6.0 L -392.0005 4.333333333333333 L -394.5005 4.333333333333333 L -394.5005 6.0 L -397.0005 6.0 Z" fill="#845DAF"/>
+    <text x="-400.0005" y="5.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">OVERRIDE_ACTIVE</text>
-    <path d="M 1662.2 -72.0 L 1667.2 -72.0 L 1667.2 -70.33333333333333 L 1669.7 -70.33333333333333 L 1669.7 -72.0 L 1672.2 -72.0 L 1672.2 -62.0 L 1669.7 -62.0 L 1669.7 -63.666666666666664 L 1667.2 -63.666666666666664 L 1667.2 -62.0 L 1662.2 -62.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="1675.2" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <path d="M 2246.1255 -55.0 L 2251.1255 -55.0 L 2251.1255 -53.333333333333336 L 2253.6255 -53.333333333333336 L 2253.6255 -55.0 L 2256.1255 -55.0 L 2256.1255 -45.0 L 2253.6255 -45.0 L 2253.6255 -46.666666666666664 L 2251.1255 -46.666666666666664 L 2251.1255 -45.0 L 2246.1255 -45.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="2259.1255" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">VALUEO</text>
   </g>
   <g id="instances">
     <g id="fb_NumericValue_PHYSA" transform="translate(60.0, 75.0)">
       <path d="M 3 0
-            L 154.2 0
-            A 3 3 0 0 1 157.2 3
-            L 157.2 35
-            A 3 3 0 0 1 154.2 38
-            L 148.2 38
-            L 148.2 52
-            L 154.2 52
-            A 3 3 0 0 1 157.2 55
-            L 157.2 120
-            A 3 3 0 0 1 154.2 123
+            L 137.75 0
+            A 3 3 0 0 1 140.75 3
+            L 140.75 35
+            A 3 3 0 0 1 137.75 38
+            L 131.75 38
+            L 131.75 52
+            L 137.75 52
+            A 3 3 0 0 1 140.75 55
+            L 140.75 120
+            A 3 3 0 0 1 137.75 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -161,8 +177,8 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
-      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="135.75,5.5 140.75,10.5 135.75,15.5" fill="#63B31F"/>
+      <text x="134.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -173,45 +189,45 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#3366FF"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">stObj</text>
-      <polygon points="152.2,56.5 157.2,61.5 152.2,66.5" fill="#A3B08F"/>
-      <text x="151.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="135.75,56.5 140.75,61.5 135.75,66.5" fill="#A3B08F"/>
+      <text x="134.75" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="152.2,73.5 157.2,78.5 152.2,83.5" fill="#BD8663"/>
-      <text x="151.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="135.75,73.5 140.75,78.5 135.75,83.5" fill="#BD8663"/>
+      <text x="134.75" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
-      <path d="M 147.2 107.5
-            L 149.7 107.5
-            L 149.7 109.16666666666667
-            L 152.2 109.16666666666667
-            L 152.2 107.5
-            L 157.2 107.5
-            L 157.2 117.5
-            L 152.2 117.5
-            L 152.2 115.83333333333333
-            L 149.7 115.83333333333333
-            L 149.7 117.5
-            L 147.2 117.5
+
+      <path d="M 130.75 107.5
+            L 133.25 107.5
+            L 133.25 109.16666666666667
+            L 135.75 109.16666666666667
+            L 135.75 107.5
+            L 140.75 107.5
+            L 140.75 117.5
+            L 135.75 117.5
+            L 135.75 115.83333333333333
+            L 133.25 115.83333333333333
+            L 133.25 117.5
+            L 130.75 117.5
             Z" fill="#845DAF"/>
-      <text x="144.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="127.75" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">rPhys</text>
       <!-- Instance Name -->
-      <text x="78.6" y="-5"
+      <text x="70.375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">NumericValue_PHYSA</text>
     </g>
     <g id="fb_LIT_Override" transform="translate(90.0, 225.0)">
       <path d="M 3 0
-            L 113.6 0
-            A 3 3 0 0 1 116.6 3
-            L 116.6 18
-            A 3 3 0 0 1 113.6 21
-            L 107.6 21
-            L 107.6 35
-            L 113.6 35
-            A 3 3 0 0 1 116.6 38
-            L 116.6 69
-            A 3 3 0 0 1 113.6 72
+            L 91.3125 0
+            A 3 3 0 0 1 94.3125 3
+            L 94.3125 18
+            A 3 3 0 0 1 91.3125 21
+            L 85.3125 21
+            L 85.3125 35
+            L 91.3125 35
+            A 3 3 0 0 1 94.3125 38
+            L 94.3125 69
+            A 3 3 0 0 1 91.3125 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -226,73 +242,73 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 14.299999999999997 20.0
-            L 28.299999999999997 20.0
-            A 1 1 0 0 1 29.299999999999997 21.0
-            L 29.299999999999997 24.0
-            L 27.799999999999997 24.0
-            L 27.799999999999997 26.666666666666668
-            L 29.299999999999997 26.666666666666668
-            L 29.299999999999997 35.0
-            A 1 1 0 0 1 28.299999999999997 36.0
-            L 14.299999999999997 36.0
-            A 1 1 0 0 1 13.299999999999997 35.0
-            L 13.299999999999997 26.666666666666668
-            L 14.799999999999997 26.666666666666668
-            L 14.799999999999997 24.0
-            L 13.299999999999997 24.0
-            L 13.299999999999997 21.0
-            A 1 1 0 0 1 14.299999999999997 20.0
+      <path d="M 13.90625 20.0
+            L 27.90625 20.0
+            A 1 1 0 0 1 28.90625 21.0
+            L 28.90625 24.0
+            L 27.40625 24.0
+            L 27.40625 26.666666666666668
+            L 28.90625 26.666666666666668
+            L 28.90625 35.0
+            A 1 1 0 0 1 27.90625 36.0
+            L 13.90625 36.0
+            A 1 1 0 0 1 12.90625 35.0
+            L 12.90625 26.666666666666668
+            L 14.40625 26.666666666666668
+            L 14.40625 24.0
+            L 12.90625 24.0
+            L 12.90625 21.0
+            A 1 1 0 0 1 13.90625 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="21.299999999999997" y="32.0"
+      <text x="20.90625" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="31.299999999999997" y="32.0"
+      <text x="30.90625" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">initval_AR</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="111.6,5.5 116.6,10.5 111.6,15.5" fill="#63B31F"/>
-      <text x="110.6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="89.3125,5.5 94.3125,10.5 89.3125,15.5" fill="#63B31F"/>
+      <text x="88.3125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#DBB418"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_VAL</text>
       <text x="-3" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">REAL#0.0</text>
-      <path d="M 106.6 56.5
-            L 109.1 56.5
-            L 109.1 58.166666666666664
-            L 111.6 58.166666666666664
-            L 111.6 56.5
-            L 116.6 56.5
-            L 116.6 66.5
-            L 111.6 66.5
-            L 111.6 64.83333333333333
-            L 109.1 64.83333333333333
-            L 109.1 66.5
-            L 106.6 66.5
+      <path d="M 84.3125 56.5
+            L 86.8125 56.5
+            L 86.8125 58.166666666666664
+            L 89.3125 58.166666666666664
+            L 89.3125 56.5
+            L 94.3125 56.5
+            L 94.3125 66.5
+            L 89.3125 66.5
+            L 89.3125 64.83333333333333
+            L 86.8125 64.83333333333333
+            L 86.8125 66.5
+            L 84.3125 66.5
             Z" fill="#845DAF"/>
-      <text x="103.6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="81.3125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <!-- Instance Name -->
-      <text x="58.3" y="-5"
+      <text x="47.15625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">LIT_Override</text>
     </g>
     <g id="fb_SEL_Override" transform="translate(435.0, 270.0)">
       <path d="M 3 0
-            L 125.39999999999998 0
-            A 3 3 0 0 1 128.39999999999998 3
-            L 128.39999999999998 18
-            A 3 3 0 0 1 125.39999999999998 21
-            L 119.39999999999998 21
-            L 119.39999999999998 35
-            L 125.39999999999998 35
-            A 3 3 0 0 1 128.39999999999998 38
-            L 128.39999999999998 86
-            A 3 3 0 0 1 125.39999999999998 89
+            L 116.3125 0
+            A 3 3 0 0 1 119.3125 3
+            L 119.3125 18
+            A 3 3 0 0 1 116.3125 21
+            L 110.3125 21
+            L 110.3125 35
+            L 116.3125 35
+            A 3 3 0 0 1 119.3125 38
+            L 119.3125 86
+            A 3 3 0 0 1 116.3125 89
             L 3 89
             A 3 3 0 0 1 0 86
             L 0 38
@@ -307,29 +323,29 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 12.999999999999993 20.0
-            L 26.999999999999993 20.0
-            A 1 1 0 0 1 27.999999999999993 21.0
-            L 27.999999999999993 24.0
-            L 26.499999999999993 24.0
-            L 26.499999999999993 26.666666666666668
-            L 27.999999999999993 26.666666666666668
-            L 27.999999999999993 35.0
-            A 1 1 0 0 1 26.999999999999993 36.0
-            L 12.999999999999993 36.0
-            A 1 1 0 0 1 11.999999999999993 35.0
-            L 11.999999999999993 26.666666666666668
-            L 13.499999999999993 26.666666666666668
-            L 13.499999999999993 24.0
-            L 11.999999999999993 24.0
-            L 11.999999999999993 21.0
-            A 1 1 0 0 1 12.999999999999993 20.0
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="19.999999999999993" y="32.0"
+      <text x="20.0" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="29.999999999999993" y="32.0"
+      <text x="30.0" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_AX_SEL_AR</text>
 
@@ -380,38 +396,38 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="81.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">G</text>
-      <path d="M 118.39999999999998 38.5
-            L 120.89999999999998 38.5
-            L 120.89999999999998 40.166666666666664
-            L 123.39999999999998 40.166666666666664
-            L 123.39999999999998 38.5
-            L 128.39999999999998 38.5
-            L 128.39999999999998 48.5
-            L 123.39999999999998 48.5
-            L 123.39999999999998 46.833333333333336
-            L 120.89999999999998 46.833333333333336
-            L 120.89999999999998 48.5
-            L 118.39999999999998 48.5
+      <path d="M 109.3125 38.5
+            L 111.8125 38.5
+            L 111.8125 40.166666666666664
+            L 114.3125 40.166666666666664
+            L 114.3125 38.5
+            L 119.3125 38.5
+            L 119.3125 48.5
+            L 114.3125 48.5
+            L 114.3125 46.833333333333336
+            L 111.8125 46.833333333333336
+            L 111.8125 48.5
+            L 109.3125 48.5
             Z" fill="#845DAF"/>
-      <text x="115.39999999999998" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="106.3125" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <!-- Instance Name -->
-      <text x="64.19999999999999" y="-5"
+      <text x="59.65625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">SEL_Override</text>
     </g>
     <g id="fb_AR_TO_AR2" transform="translate(660.0, 255.0)">
       <path d="M 3 0
-            L 130.8 0
-            A 3 3 0 0 1 133.8 3
-            L 133.8 18
-            A 3 3 0 0 1 130.8 21
-            L 124.80000000000001 21
-            L 124.80000000000001 35
-            L 130.8 35
-            A 3 3 0 0 1 133.8 38
-            L 133.8 69
-            A 3 3 0 0 1 130.8 72
+            L 109.375 0
+            A 3 3 0 0 1 112.375 3
+            L 112.375 18
+            A 3 3 0 0 1 109.375 21
+            L 103.375 21
+            L 103.375 35
+            L 109.375 35
+            A 3 3 0 0 1 112.375 38
+            L 112.375 69
+            A 3 3 0 0 1 109.375 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -426,29 +442,29 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 26.500000000000007 20.0
-            L 40.50000000000001 20.0
-            A 1 1 0 0 1 41.50000000000001 21.0
-            L 41.50000000000001 24.0
-            L 40.00000000000001 24.0
-            L 40.00000000000001 26.666666666666668
-            L 41.50000000000001 26.666666666666668
-            L 41.50000000000001 35.0
-            A 1 1 0 0 1 40.50000000000001 36.0
-            L 26.500000000000007 36.0
-            A 1 1 0 0 1 25.500000000000007 35.0
-            L 25.500000000000007 26.666666666666668
-            L 27.000000000000007 26.666666666666668
-            L 27.000000000000007 24.0
-            L 25.500000000000007 24.0
-            L 25.500000000000007 21.0
-            A 1 1 0 0 1 26.500000000000007 20.0
+      <path d="M 20.28125 20.0
+            L 34.28125 20.0
+            A 1 1 0 0 1 35.28125 21.0
+            L 35.28125 24.0
+            L 33.78125 24.0
+            L 33.78125 26.666666666666668
+            L 35.28125 26.666666666666668
+            L 35.28125 35.0
+            A 1 1 0 0 1 34.28125 36.0
+            L 20.28125 36.0
+            A 1 1 0 0 1 19.28125 35.0
+            L 19.28125 26.666666666666668
+            L 20.78125 26.666666666666668
+            L 20.78125 24.0
+            L 19.28125 24.0
+            L 19.28125 21.0
+            A 1 1 0 0 1 20.28125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="33.50000000000001" y="32.0"
+      <text x="27.28125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="43.50000000000001" y="32.0"
+      <text x="37.28125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_TO_AR2</text>
 
@@ -469,53 +485,53 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_IN</text>
-      <path d="M 123.80000000000001 38.5
-            L 126.30000000000001 38.5
-            L 126.30000000000001 40.166666666666664
-            L 128.8 40.166666666666664
-            L 128.8 38.5
-            L 133.8 38.5
-            L 133.8 48.5
-            L 128.8 48.5
-            L 128.8 46.833333333333336
-            L 126.30000000000001 46.833333333333336
-            L 126.30000000000001 48.5
-            L 123.80000000000001 48.5
+      <path d="M 102.375 38.5
+            L 104.875 38.5
+            L 104.875 40.166666666666664
+            L 107.375 40.166666666666664
+            L 107.375 38.5
+            L 112.375 38.5
+            L 112.375 48.5
+            L 107.375 48.5
+            L 107.375 46.833333333333336
+            L 104.875 46.833333333333336
+            L 104.875 48.5
+            L 102.375 48.5
             Z" fill="#845DAF"/>
-      <text x="120.80000000000001" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="99.375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AR2_BIDIR</text>
-      <path d="M 123.80000000000001 55.5
-            L 126.30000000000001 55.5
-            L 126.30000000000001 57.166666666666664
-            L 128.8 57.166666666666664
-            L 128.8 55.5
-            L 133.8 55.5
-            L 133.8 65.5
-            L 128.8 65.5
-            L 128.8 63.833333333333336
-            L 126.30000000000001 63.833333333333336
-            L 126.30000000000001 65.5
-            L 123.80000000000001 65.5
+      <path d="M 102.375 55.5
+            L 104.875 55.5
+            L 104.875 57.166666666666664
+            L 107.375 57.166666666666664
+            L 107.375 55.5
+            L 112.375 55.5
+            L 112.375 65.5
+            L 107.375 65.5
+            L 107.375 63.833333333333336
+            L 104.875 63.833333333333336
+            L 104.875 65.5
+            L 102.375 65.5
             Z" fill="#845DAF"/>
-      <text x="120.80000000000001" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="99.375" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AR_OUT</text>
       <!-- Instance Name -->
-      <text x="66.9" y="-5"
+      <text x="56.1875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_TO_AR2</text>
     </g>
     <g id="fb_INI_AR2" transform="translate(1245.0, 150.0)">
       <path d="M 3 0
-            L 156.79999999999998 0
-            A 3 3 0 0 1 159.79999999999998 3
-            L 159.79999999999998 18
-            A 3 3 0 0 1 156.79999999999998 21
-            L 150.79999999999998 21
-            L 150.79999999999998 35
-            L 156.79999999999998 35
-            A 3 3 0 0 1 159.79999999999998 38
-            L 159.79999999999998 137
-            A 3 3 0 0 1 156.79999999999998 140
+            L 153.5 0
+            A 3 3 0 0 1 156.5 3
+            L 156.5 18
+            A 3 3 0 0 1 153.5 21
+            L 147.5 21
+            L 147.5 35
+            L 153.5 35
+            A 3 3 0 0 1 156.5 38
+            L 156.5 137
+            A 3 3 0 0 1 153.5 140
             L 3 140
             A 3 3 0 0 1 0 137
             L 0 38
@@ -530,36 +546,36 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 46.69999999999999 20.0
-            L 60.69999999999999 20.0
-            A 1 1 0 0 1 61.69999999999999 21.0
-            L 61.69999999999999 24.0
-            L 60.19999999999999 24.0
-            L 60.19999999999999 26.666666666666668
-            L 61.69999999999999 26.666666666666668
-            L 61.69999999999999 35.0
-            A 1 1 0 0 1 60.69999999999999 36.0
-            L 46.69999999999999 36.0
-            A 1 1 0 0 1 45.69999999999999 35.0
-            L 45.69999999999999 26.666666666666668
-            L 47.19999999999999 26.666666666666668
-            L 47.19999999999999 24.0
-            L 45.69999999999999 24.0
-            L 45.69999999999999 21.0
-            A 1 1 0 0 1 46.69999999999999 20.0
+      <path d="M 51.625 20.0
+            L 65.625 20.0
+            A 1 1 0 0 1 66.625 21.0
+            L 66.625 24.0
+            L 65.125 24.0
+            L 65.125 26.666666666666668
+            L 66.625 26.666666666666668
+            L 66.625 35.0
+            A 1 1 0 0 1 65.625 36.0
+            L 51.625 36.0
+            A 1 1 0 0 1 50.625 35.0
+            L 50.625 26.666666666666668
+            L 52.125 26.666666666666668
+            L 52.125 24.0
+            L 50.625 24.0
+            L 50.625 21.0
+            A 1 1 0 0 1 51.625 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="53.69999999999999" y="32.0"
+      <text x="58.625" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="63.69999999999999" y="32.0"
+      <text x="68.625" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INI_AR2</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="154.79999999999998,5.5 159.79999999999998,10.5 154.79999999999998,15.5" fill="#63B31F"/>
-      <text x="153.79999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="151.5,5.5 156.5,10.5 151.5,15.5" fill="#63B31F"/>
+      <text x="150.5" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -576,13 +592,12 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <polygon points="0,107.5 5,112.5 0,117.5" fill="#DBB418"/>
       <text x="6" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">DEFAULT_VALU…</text>
-      <polygon points="154.79999999999998,39.5 159.79999999999998,44.5 154.79999999999998,49.5" fill="#A3B08F"/>
-      <text x="153.79999999999998" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="151.5,39.5 156.5,44.5 151.5,49.5" fill="#A3B08F"/>
+      <text x="150.5" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="154.79999999999998,56.5 159.79999999999998,61.5 154.79999999999998,66.5" fill="#BD8663"/>
-      <text x="153.79999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="151.5,56.5 156.5,61.5 151.5,66.5" fill="#BD8663"/>
+      <text x="150.5" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <text x="-3" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">REAL#0.0</text>
       <path d="M 0 124.5
@@ -601,22 +616,22 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <text x="13" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">VAL</text>
       <!-- Instance Name -->
-      <text x="79.89999999999999" y="-5"
+      <text x="78.25" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">INI_AR2</text>
     </g>
     <g id="fb_AR_SPLIT_2" transform="translate(1095.0, 315.0)">
       <path d="M 3 0
-            L 111.0 0
-            A 3 3 0 0 1 114.0 3
-            L 114.0 18
-            A 3 3 0 0 1 111.0 21
-            L 105.0 21
-            L 105.0 35
-            L 111.0 35
-            A 3 3 0 0 1 114.0 38
-            L 114.0 69
-            A 3 3 0 0 1 111.0 72
+            L 97.5625 0
+            A 3 3 0 0 1 100.5625 3
+            L 100.5625 18
+            A 3 3 0 0 1 97.5625 21
+            L 91.5625 21
+            L 91.5625 35
+            L 97.5625 35
+            A 3 3 0 0 1 100.5625 38
+            L 100.5625 69
+            A 3 3 0 0 1 97.5625 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -674,53 +689,53 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <path d="M 104.0 38.5
-            L 106.5 38.5
-            L 106.5 40.166666666666664
-            L 109.0 40.166666666666664
-            L 109.0 38.5
-            L 114.0 38.5
-            L 114.0 48.5
-            L 109.0 48.5
-            L 109.0 46.833333333333336
-            L 106.5 46.833333333333336
-            L 106.5 48.5
-            L 104.0 48.5
+      <path d="M 90.5625 38.5
+            L 93.0625 38.5
+            L 93.0625 40.166666666666664
+            L 95.5625 40.166666666666664
+            L 95.5625 38.5
+            L 100.5625 38.5
+            L 100.5625 48.5
+            L 95.5625 48.5
+            L 95.5625 46.833333333333336
+            L 93.0625 46.833333333333336
+            L 93.0625 48.5
+            L 90.5625 48.5
             Z" fill="#845DAF"/>
-      <text x="101.0" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="87.5625" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT1</text>
-      <path d="M 104.0 55.5
-            L 106.5 55.5
-            L 106.5 57.166666666666664
-            L 109.0 57.166666666666664
-            L 109.0 55.5
-            L 114.0 55.5
-            L 114.0 65.5
-            L 109.0 65.5
-            L 109.0 63.833333333333336
-            L 106.5 63.833333333333336
-            L 106.5 65.5
-            L 104.0 65.5
+      <path d="M 90.5625 55.5
+            L 93.0625 55.5
+            L 93.0625 57.166666666666664
+            L 95.5625 57.166666666666664
+            L 95.5625 55.5
+            L 100.5625 55.5
+            L 100.5625 65.5
+            L 95.5625 65.5
+            L 95.5625 63.833333333333336
+            L 93.0625 63.833333333333336
+            L 93.0625 65.5
+            L 90.5625 65.5
             Z" fill="#845DAF"/>
-      <text x="101.0" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="87.5625" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT2</text>
       <!-- Instance Name -->
-      <text x="57.0" y="-5"
+      <text x="50.28125" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_SPLIT_2</text>
     </g>
     <g id="fb_Q_NumericValue_PHYSA" transform="translate(1485.0, 405.0)">
       <path d="M 3 0
-            L 154.2 0
-            A 3 3 0 0 1 157.2 3
-            L 157.2 35
-            A 3 3 0 0 1 154.2 38
-            L 148.2 38
-            L 148.2 52
-            L 154.2 52
-            A 3 3 0 0 1 157.2 55
-            L 157.2 137
-            A 3 3 0 0 1 154.2 140
+            L 134.125 0
+            A 3 3 0 0 1 137.125 3
+            L 137.125 35
+            A 3 3 0 0 1 134.125 38
+            L 128.125 38
+            L 128.125 52
+            L 134.125 52
+            A 3 3 0 0 1 137.125 55
+            L 137.125 137
+            A 3 3 0 0 1 134.125 140
             L 3 140
             A 3 3 0 0 1 0 137
             L 0 55
@@ -763,11 +778,11 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
-      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,5.5 137.125,10.5 132.125,15.5" fill="#63B31F"/>
+      <text x="131.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="152.2,22.5 157.2,27.5 152.2,32.5" fill="#63B31F"/>
-      <text x="151.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,22.5 137.125,27.5 132.125,32.5" fill="#63B31F"/>
+      <text x="131.125" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -775,14 +790,14 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#3366FF"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">stObj</text>
-      <polygon points="152.2,56.5 157.2,61.5 152.2,66.5" fill="#A3B08F"/>
-      <text x="151.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,56.5 137.125,61.5 132.125,66.5" fill="#A3B08F"/>
+      <text x="131.125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="152.2,73.5 157.2,78.5 152.2,83.5" fill="#BD8663"/>
-      <text x="151.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,73.5 137.125,78.5 132.125,83.5" fill="#BD8663"/>
+      <text x="131.125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="152.2,90.5 157.2,95.5 152.2,100.5" fill="#18519E"/>
-      <text x="151.2" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,90.5 137.125,95.5 132.125,100.5" fill="#18519E"/>
+      <text x="131.125" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
       <path d="M 0 107.5
@@ -800,40 +815,116 @@ OVERRIDE_ACTIVE=FALSE (unbenutzt) identisches Verhalten wie INI_IN_AND_STORE_AR2
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">rPhys</text>
-      <path d="M 147.2 107.5
-            L 149.7 107.5
-            L 149.7 109.16666666666667
-            L 152.2 109.16666666666667
-            L 152.2 107.5
-            L 157.2 107.5
-            L 157.2 117.5
-            L 152.2 117.5
-            L 152.2 115.83333333333333
-            L 149.7 115.83333333333333
-            L 149.7 117.5
-            L 147.2 117.5
+      <path d="M 127.125 107.5
+            L 129.625 107.5
+            L 129.625 109.16666666666667
+            L 132.125 109.16666666666667
+            L 132.125 107.5
+            L 137.125 107.5
+            L 137.125 117.5
+            L 132.125 117.5
+            L 132.125 115.83333333333333
+            L 129.625 115.83333333333333
+            L 129.625 117.5
+            L 127.125 117.5
             Z" fill="#845DAF"/>
-      <text x="144.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="124.125" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">xOver</text>
-      <path d="M 147.2 124.5
-            L 149.7 124.5
-            L 149.7 126.16666666666667
-            L 152.2 126.16666666666667
-            L 152.2 124.5
-            L 157.2 124.5
-            L 157.2 134.5
-            L 152.2 134.5
-            L 152.2 132.83333333333334
-            L 149.7 132.83333333333334
-            L 149.7 134.5
-            L 147.2 134.5
+      <path d="M 127.125 124.5
+            L 129.625 124.5
+            L 129.625 126.16666666666667
+            L 132.125 126.16666666666667
+            L 132.125 124.5
+            L 137.125 124.5
+            L 137.125 134.5
+            L 132.125 134.5
+            L 132.125 132.83333333333334
+            L 129.625 132.83333333333334
+            L 129.625 134.5
+            L 127.125 134.5
             Z" fill="#845DAF"/>
-      <text x="144.2" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="124.125" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">xUnder</text>
       <!-- Instance Name -->
-      <text x="78.6" y="-5"
+      <text x="68.5625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue_PHYSA</text>
+    </g>
+    <g id="fb_AND_QO" transform="translate(1755.0, 180.0)">
+      <path d="M 3 0
+            L 104.0 0
+            A 3 3 0 0 1 107.0 3
+            L 107.0 18
+            A 3 3 0 0 1 104.0 21
+            L 98.0 21
+            L 98.0 35
+            L 104.0 35
+            A 3 3 0 0 1 107.0 38
+            L 107.0 86
+            A 3 3 0 0 1 104.0 89
+            L 3 89
+            A 3 3 0 0 1 0 86
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.0" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">Si</text>
+      <text x="30.0" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AND_BOOL_3</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">REQ</text>
+      <polygon points="102.0,5.5 107.0,10.5 102.0,15.5" fill="#63B31F"/>
+      <text x="101.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">CNF</text>
+      <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
+      <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN1</text>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
+      <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN2</text>
+      <polygon points="0,73.5 5,78.5 0,83.5" fill="#A3B08F"/>
+      <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN3</text>
+      <polygon points="102.0,39.5 107.0,44.5 102.0,49.5" fill="#A3B08F"/>
+      <text x="101.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">OUT</text>
+
+
+      <!-- Instance Name -->
+      <text x="53.5" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">AND_QO</text>
     </g>
   </g>
 </svg>

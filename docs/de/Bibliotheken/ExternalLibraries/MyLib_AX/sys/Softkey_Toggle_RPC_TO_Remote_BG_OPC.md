@@ -15,23 +15,30 @@ Die Subapp `Softkey_Toggle_RPC_TO_Remote_BG_OPC` kapselt ein schlankes RPC-Proto
 
 ### **Ereignis-Eingänge**
 
-Keine.
+| Name | Typ | Beschreibung |
+|------|-----|--------------|
+| `INIT` | `EInit` | Initialization Request |
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+| Name | Typ | Beschreibung |
+|------|-----|--------------|
+| `INITO` | `EInit` | Initialization Confirm |
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Quality Input - TRUE, um den Dienst freizugeben; Initialwert `TRUE`. |
 | `u16ObjId` | `UINT` | Objekt-ID für Softkey und Hintergrund; Initialwert `ID_NULL`. |
 | `ID_TRIGGER_CALL` | `WSTRING` | Remote-Methodenadresse (`ACTION=CALL_METHOD`) für den argumentlosen Trigger-Methodenaufruf auf Gerät B. |
 | `ID_STATE_READ` | `WSTRING` | Lokal überwachte Adresse (`BOOL`, `ACTION=READ`) für den Flipflop-Zustand, wird von Gerät B remote beschrieben. |
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Typ | Beschreibung |
+|------|-----|--------------|
+| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `SoftKey_UP_F1`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` und `GreenWhiteBackground_AX`). |
 
 ### **Adapter**
 
@@ -39,7 +46,7 @@ Keine an der Subapp-Schnittstelle. Intern wird die Adapterverbindung `STATE_SUBS
 
 ## Funktionsweise
 
-Der Baustein enthält drei funktionale Pfade:
+Der Baustein enthält drei funktionale Pfade sowie die Initialisierungs- und Status-Verdrahtung:
 
 1. **Trigger-Pfad:** Der Eingangsbaustein `SoftKey_UP_F1` (Typ `Softkey_IE`) überwacht einen Softkey auf Gerät A. Beim konfigurierten Ereignis `SK_RELEASED` (Softkey F1 losgelassen) erzeugt er am Ausgang `IND` ein Ereignis, das den Eingang `REQ` des `TRIGGER_CLIENT` (Typ `CLIENT_0`) ansteuert. Dadurch wird ein OPC-UA-Methodenaufruf an die Adresse `ID_TRIGGER_CALL` ausgelöst. Es handelt sich um einen reinen RPC-Trigger ohne Argumente und ohne Rückgabewert.
 
@@ -47,14 +54,16 @@ Der Baustein enthält drei funktionale Pfade:
 
 3. **Anzeige-Pfad:** Die SubApp `GreenWhiteBackground_AX` (Typ `GreenWhiteBackground1_AX`) wertet den abonnierten Bool-Zustand aus und steuert die Hintergrundfarbe (grün oder weiß) auf Gerät A.
 
+4. **Initialisierung und Status:** `INIT` → `SoftKey_UP_F1.INIT`, `SoftKey_UP_F1.INITO` → `TRIGGER_CLIENT.INIT`, `TRIGGER_CLIENT.INITO` → `STATE_SUBSCRIBE.INIT`, `STATE_SUBSCRIBE.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an `SoftKey_UP_F1`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` und `GreenWhiteBackground_AX` weitergegeben; deren `QO` werden im Baustein `AND_QO` (Typ `iec61131::booleanOperators::AND_BOOL_4`) per UND zu `QO` verknüpft.
+
 Der ursprüngliche Kommentar beschreibt, dass auf Gerät A kein Wertwechsel-Trick und kein `AX_T_FF` (lokaler Toggle-Funktionsbaustein) erforderlich ist. Der Flipflop-Zustand wird bereits auf Gerät B lokal überwacht und muss von Gerät A nur noch angezeigt werden. Der Aufbau folgt dem „SUB style“: Das komplette Protokoll ist im MyLib::sys-Composite enthalten, nicht in der Ressource des Geräts.
 
 ## Technische Besonderheiten
 
 - Verwendet OPC-UA-Mechanismen: `CALL_METHOD` für den Remote-Trigger und `READ` für die Zustandsüberwachung.
-- Keine Ereignis- oder Datenausgänge an der Subapp-Schnittstelle; die Subapp ist rein intern verdrahtet und wirkt direkt auf die grafische Anzeige.
-- Alle Eingänge sind als Konfigurationsparameter ausgeführt: Objekt-ID, Trigger-Adresse und State-Adresse.
-- Konstante Initialwerte: `QI=TRUE`, `InputEvent=SK_RELEASED`, `u16ObjId=ID_NULL`.
+- An der Subapp-Schnittstelle gibt es nur `INITO` und `QO` als Ausgänge; die Subapp ist ansonsten rein intern verdrahtet und wirkt direkt auf die grafische Anzeige.
+- Alle Eingänge sind als Konfigurationsparameter ausgeführt: Objekt-ID, Trigger-Adresse und State-Adresse (plus `QI`).
+- Konstante Initialwerte: `QI=TRUE` (Subapp-Eingang), `InputEvent=SK_RELEASED`, `u16ObjId=ID_NULL`.
 - Importiert Definitionen aus `isobus::UT::Q::const::IDs` und `isobus::UT::io::Softkey`.
 - Die verwendete SubApp `GreenWhiteBackground_AX` stammt aus der Bibliothek `MyLib::sys` und ist Teil des gekapselten Composite-Protokolls.
 
@@ -83,4 +92,4 @@ Durch den Softkey-Trigger wird der Flipflop auf Gerät B umgeschaltet, wodurch s
 
 ## Fazit
 
-`Softkey_Toggle_RPC_TO_Remote_BG_OPC` ist ein kompakter, wiederverwendbarer Subapp-Baustein zur Kopplung eines lokalen Bedienelements mit einem entfernten OPC-UA-Gerät. Er verbindet einen RPC-Trigger mit einer Zustandsanzeige und kapselt das gesamte Protokoll im MyLib::sys-Composite. Die klare Trennung von Trigger- und Anzeigepfad sowie die minimale Schnittstelle mit nur drei Eingängen machen den Baustein einfach konfigurierbar und gut in verschiedene Bedienpanels integrierbar.
+`Softkey_Toggle_RPC_TO_Remote_BG_OPC` ist ein kompakter, wiederverwendbarer Subapp-Baustein zur Kopplung eines lokalen Bedienelements mit einem entfernten OPC-UA-Gerät. Er verbindet einen RPC-Trigger mit einer Zustandsanzeige und kapselt das gesamte Protokoll im MyLib::sys-Composite. Die klare Trennung von Trigger- und Anzeigepfad sowie die minimale Schnittstelle mit nur drei Konfigurationseingängen (plus `QI`) machen den Baustein einfach konfigurierbar und gut in verschiedene Bedienpanels integrierbar.

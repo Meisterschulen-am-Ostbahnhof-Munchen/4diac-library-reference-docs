@@ -15,19 +15,20 @@ Der Baustein `NumericValue_ID_TO_NVS` ist eine Subapplikation (SubApp) zur gener
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `ID.INIT` und startet die Initialisierungskette
 
 ### **Ereignis-Ausgänge**
 
 | Ereignis | Typ   | Kurzbeschreibung                                    |
 |----------|-------|-----------------------------------------------------|
 | `IND`    | Event | Zeigt an, dass ein Wert aus dem NVS geladen oder gespeichert wurde. |
+| `INITO`  | EInit | Initialisierung abgeschlossen; kommt von `Q_NumericValue.INITO`, dem Ende der Kette `ID` → `NVS` → `Q_NumericValue`. |
 
 ### **Daten-Eingänge**
 
 | Name     | Typ     | Initialwert  | Beschreibung                                            |
 |----------|---------|--------------|---------------------------------------------------------|
-| `QI` | `BOOL` | `TRUE` | Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue.QI` durchgereicht |
+| `QI` | `BOOL` | `TRUE` | Quality Input – TRUE, um den Dienst freizugeben; wird an `ID.QI`, `NVS.QI` und `Q_NumericValue.QI` durchgereicht |
 | `KEY`    | STRING  | –            | Schlüsselname unter dem der Wert im NVS gespeichert wird. |
 | `u16ObjId`| UINT   | `ID_NULL`    | Objekt‑ID des numerischen Werts am ISOBUS‑Terminal.       |
 
@@ -35,7 +36,7 @@ Keine.
 
 | Name     | Typ     | Beschreibung                                      |
 |----------|---------|---------------------------------------------------|
-| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue.QO` |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; AND aus `Q_NumericValue.QO`, `ID.QO` und `NVS.QO` |
 | `VALUEO` | UDINT   | Der aktuell gelesene bzw. gespeicherte numerische Wert. |
 
 ### **Adapter**
@@ -58,7 +59,7 @@ Parallel dazu wird bei jeder Speicher‑ oder Leseoperation auch der interne `Q_
 
 Die Datenflüsse sind in der SubApp über direkte Verbindungen realisiert, wobei die externen Anschlüsse der SubApp (`KEY`, `u16ObjId`, `VALUEO`) direkt mit den internen Bausteinen verdrahtet sind.
 
-**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
+**Initialisierung und Quality-Anschlüsse:** `INIT` → `ID.INIT`, `ID.INITO` → `NVS.INIT`, `NVS.INITO` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO` (und → `AND_QO.REQ`); zusätzlich löst `NVS.INITO` weiterhin `NVS.GET` aus. `QI` (Dateneingang, BOOL, Standard `TRUE`) wird an `ID.QI`, `NVS.QI` und `Q_NumericValue.QI` weitergereicht. Der Ausgang `QO` (BOOL) ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`), die `Q_NumericValue.QO`, `ID.QO` und `NVS.QO` verknüpft. Damit lässt sich der Dienst von außen freigeben und sein Erfolg abfragen.
 
 ## Technische Besonderheiten
 

@@ -14,14 +14,15 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 - **u16ObjId** (`UINT`): Object ID SoftKey/Hintergrund (VT)
 - **u16ObjIdA** (`UINT`): Object ID AuxFunction2/Hintergrund (VT)
 - **ID_SUBSCRIBE** (`WSTRING`): Remote-Subscribe-Adresse (Status/Farbe, `ACTION=SUBSCRIBE`)
@@ -32,7 +33,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Command.QO` und `Status.QO`)
 
 ### **Adapter**
 
@@ -46,6 +47,7 @@ Alle Adapter sind vom Typ `adapter::types::unidirectional::AX`.
 
 - **`Command`** (SubApp `MyLib::sys::Softkey_Aux_Switch_Auto_TO_Remote_WRITE`, [Softkey_Aux_Switch_Auto_TO_Remote_WRITE](./Softkey_Aux_Switch_Auto_TO_Remote_WRITE.md)): bildet den Befehl aus allen Quellen und schreibt ihn remote
 - **`Status`** (SubApp `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`, [AX_SUBSCRIBE_BG3_WEB_OPC](./AX_SUBSCRIBE_BG3_WEB_OPC.md)): abonniert den Zustand, färbt den Hintergrund und publiziert ihn für den Web-Client
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Command.QO` und `Status.QO` per UND zu `QO`
 
 ## Funktionsweise
 
@@ -53,6 +55,9 @@ Alle Adapter sind vom Typ `adapter::types::unidirectional::AX`.
 - `AUTO_IN` → `Command.AUTO_IN`
 - `Command.AUTOMATIC_OUT` → `AUTOMATIC_OUT`; `Command.MANUAL_OUT` → `MANUAL_OUT`
 - `u16ObjId`, `u16ObjIdA`, `ID_SUBSCRIBE`, `ID_STATUS_WEB` → gleichnamige Eingänge von `Status`
+- Initialisierungskette: `INIT` → `Command.INIT`, `Command.INITO` → `Status.INIT`, `Status.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `Command.QI` und `Status.QI`
+- `Command.QO` → `AND_QO.IN1`, `Status.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

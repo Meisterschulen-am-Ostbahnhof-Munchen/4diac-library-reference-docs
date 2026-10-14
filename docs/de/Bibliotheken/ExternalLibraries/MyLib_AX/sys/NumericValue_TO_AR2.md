@@ -17,9 +17,9 @@
 
 ## Qualitätsanschlüsse (QI/QO)
 
-Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_NumericValue_PHYSA.QI` verbunden, `Q_NumericValue_PHYSA.QO` mit `QO`.
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` wird an `Q_NumericValue_PHYSA.QI` und `NumericValue_PHYSA.QI` weitergereicht; deren `QO`-Ausgänge werden im Baustein `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`, `Q_NumericValue_PHYSA.QO` → `IN1`, `NumericValue_PHYSA.QO` → `IN2`) zum Ausgang `QO` verknüpft.
 
-Zusätzlich besitzt der Baustein die Ereignisse `INIT` (Eingang, `EInit`, Initialisierungsanforderung) und `INITO` (Ausgang, `EInit`, Initialisierungsbestätigung): `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO`.
+Zusätzlich besitzt der Baustein die Ereignisse `INIT` (Eingang, `EInit`, Initialisierungsanforderung) und `INITO` (Ausgang, `EInit`, Initialisierungsbestätigung): Init-Kette: `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `INITO` und `AND_QO.REQ`.
 
 ## Zusammenfassung
 

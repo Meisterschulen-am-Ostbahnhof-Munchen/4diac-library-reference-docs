@@ -14,20 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: feuert, wenn der SoftKey (`SK_PRESSED`) ODER Aux (`AuxEnabled`) aktiviert wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 - **u16ObjId** (`UINT`): Object ID SoftKey
 - **u16ObjIdA** (`UINT`): Object ID AuxFunction2
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Softkey.QO` und `Aux.QO`)
 
 ### **Adapter**
 
@@ -38,12 +40,16 @@ Keine.
 - **`Softkey`** (SubApp `MyLib::sys::Softkey_IE_1`, [Softkey_IE_1](./Softkey_IE_1.md)): Parameter `InputEvent = SK_PRESSED`
 - **`Aux`** (SubApp `MyLib::sys::Aux_IE_1`, [Aux_IE_1](./Aux_IE_1.md)): Parameter `InputEvent = AuxEnabled`
 - **`MERGE`** (`iec61499::events::E_MERGE_2`): führt beide Ereignisse zusammen
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Softkey.QO` und `Aux.QO` per UND zu `QO`
 
 ## Funktionsweise
 
 - `u16ObjId` → `Softkey.u16ObjId`; `u16ObjIdA` → `Aux.u16ObjId`
 - `Softkey.IND` → `MERGE.EI1`; `Aux.IND` → `MERGE.EI2`
 - `MERGE.EO` → `IND`
+- Initialisierungskette: `INIT` → `Softkey.INIT`, `Softkey.INITO` → `Aux.INIT`, `Aux.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `Softkey.QI` und `Aux.QI`
+- `Softkey.QO` → `AND_QO.IN1`, `Aux.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

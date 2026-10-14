@@ -13,27 +13,28 @@
 
 ## Interface Structure
 
-The subapp exposes only data input variables. It does not have any event inputs, event outputs, data outputs, or adapter interfaces at its boundary; all communication is handled internally.
+The subapp exposes the events `INIT`/`INITO`, the data `QI`/`QO` and three further data input variables. It has no adapter interfaces at its boundary; the actual communication is handled internally.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the init chain at `logiBUS_QXA.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `AX_PUBLISH_1.INITO`, the end of the init chain
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| `QI` | `BOOL` | `TRUE` | Quality input, enables the service; passed on to `logiBUS_QXA`, `AX_SUBSCRIBE_1` and `AX_PUBLISH_1`. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifies the target output channel (e.g., Output_Q1..Q12). |
 | `ID_READ` | `WSTRING` | – | OPC UA subscribe key (used to receive commands or status requests). |
 | `ID_WRITE` | `WSTRING` | – | OPC UA publish key (used to send data back to the network). |
 
 ### **Data Outputs**
 
-None.
+- **`QO`** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_3`) of the `QO` outputs of `logiBUS_QXA`, `AX_SUBSCRIBE_1` and `AX_PUBLISH_1`
 
 ### **Adapters**
 
@@ -55,6 +56,8 @@ Internally, the OPC UA subscribe adapter receives events. These events are then 
 
 1. The first path goes directly to the `logiBUS_QXA` FB, which interprets the event as a control command and sets the selected output accordingly.
 2. The second path is forwarded to the OPC UA publish adapter, allowing the same event to be echoed back or used for acknowledgment/status purposes.
+
+Initialization and quality: `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `logiBUS_QXA.QI`, `AX_SUBSCRIBE_1.QI` and `AX_PUBLISH_1.QI`; their `QO` outputs go in this order to `AND_QO.IN1` to `AND_QO.IN3` (`iec61131::booleanOperators::AND_BOOL_3`), `AND_QO.OUT` → `QO`.
 
 The publish adapter can also transmit status information back to the OPC UA server, enabling read access to the current state of the output. The separation of read and write keys allows for fine‑grained access control.
 

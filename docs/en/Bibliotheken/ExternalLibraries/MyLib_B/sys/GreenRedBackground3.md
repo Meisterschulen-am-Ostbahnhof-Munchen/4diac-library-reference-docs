@@ -16,6 +16,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
+**Initialization and quality:** The SubApp has `INIT`/`INITO` and `QI`/`QO`. `INIT` → `Q_BackgroundColour_1.INIT` → `Q_BackgroundColour_2.INIT` → `Q_BackgroundColour_3.INIT` (each via `INITO`), `Q_BackgroundColour_3.INITO` → `INITO`. `QI` goes to all three instances. `QO` is the `AND` (`AND_QO`, `AND_BOOL_3`) of the three `QO` outputs; `AND_QO.REQ` is triggered via `E_MERGE_QO` (`E_MERGE_4`: `Q_BackgroundColour_3.INITO`, `Q_BackgroundColour_1.CNF`, `_2.CNF`, `_3.CNF`).
+
 ![GreenRedBackground3](GreenRedBackground3.svg)
 
 ## Summary

@@ -15,11 +15,13 @@
 ### Sub-blocks: Button_IX_TO_logiBUS_QX_BG
 
 - **Type**: SubAppType
+- **Interface (additional)**: event input `INIT`, event output `INITO` (each `EInit`), data input `QI` (`BOOL`, default `TRUE`), data output `QO` (`BOOL`).
 - **Internal FBs used**:
     - **Button_IX**: `isobus::UT::io::Button::Button_IX` — VT button.
     - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physical digital output.
     - **E_SPLIT_2**: `iec61499::events::E_SPLIT_2` — splits the button event.
     - **GreenWhiteBackground1_AX** (SubApp, actually of type `MyLib::sys::GreenWhiteBackground1C` — a compact wrapper around the test_B base variant, see [Background Color Blocks](../../MyLib_AX/sys/Background-Color-Blocks.md)): sets the status color.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — combines the `QO` outputs of `logiBUS_QX`, `Button_IX` and `GreenWhiteBackground1_AX` into `QO`.
 - **Functionality**: `Button_IX.IND` is distributed via `E_SPLIT_2` to `logiBUS_QX.REQ` and to the color block; the data value `Button_IX.IN` feeds both `logiBUS_QX.OUT` and `GreenWhiteBackground1_AX.DI`.
 
 ## Program Flow and Connections
@@ -27,6 +29,8 @@
 1. `u16ObjId` → `Button_IX.u16ObjId` and the color block instance's `.u16ObjId`; `Output` → `logiBUS_QX.Output`.
 2. `Button_IX.IND` → `E_SPLIT_2.EI` → `E_SPLIT_2.EO1` → `logiBUS_QX.REQ`, `E_SPLIT_2.EO2` → color block `.EO`.
 3. `Button_IX.IN` → `logiBUS_QX.OUT` and → color block `.DI`.
+4. Initialization: `INIT` → `logiBUS_QX.INIT`; `logiBUS_QX.INITO` → `Button_IX.INIT`; `Button_IX.INITO` → `GreenWhiteBackground1_AX.INIT`; `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`.
+5. Quality: `QI` → `.QI` of `logiBUS_QX`, `Button_IX` and `GreenWhiteBackground1_AX`; their `QO` → `AND_QO.IN1` to `AND_QO.IN3` (in this order); `AND_QO.OUT` → `QO`.
 
 ## Application Scenarios
 

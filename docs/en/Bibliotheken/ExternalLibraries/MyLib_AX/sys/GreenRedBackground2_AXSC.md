@@ -10,6 +10,8 @@
 
 `GreenRedBackground2_AXSC` is a **compact wrapper** around [`GreenRedBackground2_AXS`](GreenRedBackground2_AXS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
 
+In addition, initialization and quality are passed through: `INIT` → `GreenRedBackground.INIT`, `GreenRedBackground.INITO` → `INITO`, `QI` (initial value `TRUE`) → `GreenRedBackground.QI` and `GreenRedBackground.QO` → `QO`.
+
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
 ## Summary

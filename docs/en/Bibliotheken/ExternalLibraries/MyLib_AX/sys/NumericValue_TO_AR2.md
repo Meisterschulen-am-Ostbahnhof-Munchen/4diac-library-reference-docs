@@ -17,9 +17,9 @@
 
 ## Quality ports (QI/QO)
 
-The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is passed on to `Q_NumericValue_PHYSA.QI` and `NumericValue_PHYSA.QI`; their `QO` outputs are combined in `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`, `Q_NumericValue_PHYSA.QO` → `IN1`, `NumericValue_PHYSA.QO` → `IN2`) into the output `QO`.
 
-In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation): `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO`.
+In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation): Init chain: `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `INITO` and `AND_QO.REQ`.
 
 ## Summary
 

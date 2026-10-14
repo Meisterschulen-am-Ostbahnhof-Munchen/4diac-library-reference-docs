@@ -14,6 +14,14 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ## Schnittstelle
 
+### Ereignis-Eingänge
+
+- `INIT` (`EInit`): Initialization Request.
+
+### Ereignis-Ausgänge
+
+- `INITO` (`EInit`): Initialization Confirm.
+
 ### Eingangsvariablen
 
 - `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst.
@@ -23,23 +31,23 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ### Ausgangsvariablen
 
-- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND-Verknüpfung `AND_QO` der `QO`-Ausgänge der inneren Bausteine).
 
 ### Adapter
 
 - **Plug `VALUEO`** (`adapter::types::unidirectional::AUDI`): Wert für einen weiteren Consumer.
 - **Socket `OVERRIDE_ACTIVE`** (`adapter::types::unidirectional::AX`): bei dauerhaft TRUE wird VAL=1 (Deaktiviert) erzwungen.
 
-Der Baustein besitzt keine eigenen Ereignisanschlüsse.
+Die Ereignisse `INIT`/`INITO` werden als Kette durch die inneren Bausteine geführt (siehe Funktionsweise).
 
 ## Funktionsweise
 
-1. `ID` (`NumericValue_IDA`, `QI`=TRUE) liest das VT-Eingabefeld; `AD_TO_AUDI` wandelt in AUDI.
+1. `ID` (`NumericValue_IDA`) liest das VT-Eingabefeld; `AD_TO_AUDI` wandelt in AUDI.
 2. `SEL_Override` (`AUDI_AX_SEL_AUDI`) wählt: `IN0` = Live-VT-Wert, `IN1` = Override-Wert aus `LIT_Deaktiviert` (`initval_AUDI`, `INIT_VAL`=`UDINT#1`), Auswahl über `G` = `OVERRIDE_ACTIVE`.
-3. `AUDI_TO_AUDI2` wandelt in den bidirektionalen AUDI2-Adapter für `INI_AUDI2` (`eclipse4diac::storage::INI_AUDI2`; `QI`=TRUE, `SETM`=TRUE, `DEFAULT_VALUE`=`UDINT#0`).
+3. `AUDI_TO_AUDI2` wandelt in den bidirektionalen AUDI2-Adapter für `INI_AUDI2` (`eclipse4diac::storage::INI_AUDI2`; `SETM`=TRUE, `DEFAULT_VALUE`=`UDINT#0`).
 4. `AUDI_TO_AUDI2.AUDI_OUT` wird per `AUDI_SPLIT_2` verdoppelt: `OUT1` an `VALUEO`, `OUT2` an `Q_NumericValue_AUDI` (`u32NewValue`, VT-Anzeige).
 
-`QI` wird an `Q_NumericValue_AUDI.QI` durchgereicht, `Q_NumericValue_AUDI.QO` an `QO`.
+Initialisierung: `INIT` → `ID.INIT`; `ID.INITO` → `INI_AUDI2.INIT`; `INI_AUDI2.INITO` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` und → `AND_QO.REQ`. Qualität: `QI` → `Q_NumericValue_AUDI.QI`, `ID.QI`, `INI_AUDI2.QI`; `Q_NumericValue_AUDI.QO`, `ID.QO`, `INI_AUDI2.QO` → `AND_QO.IN1` bis `AND_QO.IN3` (in dieser Reihenfolge); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_3`).
 
 ## Technische Besonderheiten
 

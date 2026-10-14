@@ -14,20 +14,23 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request; passed on to `INI.INIT`
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirmation; comes from `INI.INITO`
 - **CNF** (confirmation): fires when a (new or initially loaded) value is available. Connect it to a `REQ` input of a target FB (e.g. `CTRL_PID_AR.REQ`) so that it takes over the fresh value immediately instead of waiting for its own next adapter trigger
 
 ### **Data Inputs**
 
+- **QI** (BOOL, initial value `TRUE`): quality input, enables the service; passed on to `INI.QI`
 - **KEY** (STRING): key name in the INI file
 - **SECTION** (STRING): section name in the INI file
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): object pool properties of the VT number variable (default: `u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0`)
 
 ### **Data Outputs**
 
+- **QO** (BOOL): quality output; comes from `INI.QO`
 - **VALUE** (REAL): persisted/loaded value as a plain REAL (no AR adapter)
 
 ### **Adapters**
@@ -40,6 +43,8 @@ The network contains two instances:
 
 - `INI` ([`MyLib::sys::INI_IN_AND_STORE_AR2`](INI_IN_AND_STORE_AR2.md)): `KEY` → `INI.KEY`, `SECTION` → `INI.SECTION`, `stObj` → `INI.stObj`. The value is available at `INI.VALUEO` (AR).
 - `AR_R_TO_REAL_1` (`adapter::conversion::unidirectional::AR_R_TO_REAL`): `INI.VALUEO` → `AR_R_TO_REAL_1.AR_IN`; `AR_R_TO_REAL_1.IN` → `VALUE` and `AR_R_TO_REAL_1.CNF` → `CNF`.
+
+Initialization and quality are passed straight through: `INIT` → `INI.INIT`, `INI.INITO` → `INITO`, `QI` → `INI.QI` and `INI.QO` → `QO`.
 
 ## Technical Details
 

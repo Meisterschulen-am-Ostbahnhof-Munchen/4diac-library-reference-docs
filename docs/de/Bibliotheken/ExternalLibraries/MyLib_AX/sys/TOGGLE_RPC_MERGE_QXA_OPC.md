@@ -1,6 +1,5 @@
 # TOGGLE_RPC_MERGE_QXA_OPC
 
-
 ![TOGGLE_RPC_MERGE_QXA_OPC_network](./TOGGLE_RPC_MERGE_QXA_OPC_network.svg)
 
 ![TOGGLE_RPC_MERGE_QXA_OPC](./TOGGLE_RPC_MERGE_QXA_OPC.svg)
@@ -15,16 +14,17 @@ Der Funktionsblock **TOGGLE_RPC_MERGE_QXA_OPC** realisiert einen „Klick-Toggle
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Quality Input – TRUE aktiviert den Dienst (Initialwert: `TRUE`) |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgangswert (Initialwert: `logiBUS_DO::Invalid`) |
 | `ID_TEST_READ` | `WSTRING` | Bestehende IO-Test-Subscribe-Adresse (z. B. `STG5_Q0x_READ`) |
 | `ID_TEST_WRITE` | `WSTRING` | Bestehende IO-Test-Publish-Adresse (z. B. `STG5_Q0x_WRITE`) – eigener Knoten, nicht `ID_TEST_READ` (sonst Selbstkopplung/Latch) |
@@ -33,7 +33,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_5`) der `QO`-Ausgänge von `TRIGGER_SERVER`, `SUBSCRIBE_TEST`, `DigitalOutput`, `PUBLISH_TEST` und `PUBLISH_STATE`. Die eigentlichen Ergebnisse werden weiterhin über die internen OPC-UA-Publish-Bausteine geliefert.
 
 ### **Adapter**
 
@@ -50,6 +50,7 @@ Keine.
    - `OUT2` → IO-Test-Rückmeldung über `PUBLISH_TEST` (Adresse `ID_TEST_WRITE`)
    - `OUT3` → Funktions-Rückmeldung über `PUBLISH_STATE` (Adresse `ID_STATE_WRITE`)
 6. **Publish**: Beide Publikationsbausteine senden den aktuellen Zustand als OPC-UA-Variable an die jeweiligen Adressen. Das Bedienmodul abonniert diese Werte für Anzeige oder Hintergrundbeleuchtung.
+7. **Initialisierung und Qualität**: `INIT` → `TRIGGER_SERVER.INIT` → `SUBSCRIBE_TEST.INIT` → `DigitalOutput.INIT` → `PUBLISH_TEST.INIT` → `PUBLISH_STATE.INIT`; `PUBLISH_STATE.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an alle fünf Bausteine verteilt (kein fest verdrahteter `QI`-Parameter mehr); deren `QO` laufen in dieser Reihenfolge auf `AND_QO.IN1` bis `AND_QO.IN5`, `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

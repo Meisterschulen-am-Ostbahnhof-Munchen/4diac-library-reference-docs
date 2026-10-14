@@ -13,26 +13,31 @@ The **AX_SUBSCRIBE_BG_OPC** subapplication is a generic, single-channel solution
 
 ## Interface Structure
 
-The subapplication exposes a minimal interface consisting of two data inputs. It has no event inputs, event outputs, data outputs, or adapter sockets at its external boundary. All internal communication is handled within the encapsulated network.
+The subapplication exposes the event input `INIT`, the event output `INITO`, the data inputs `QI`, `u16ObjId` and `ID`, and the data output `QO`. It has no adapter sockets at its external boundary. All internal communication is handled within the encapsulated network.
 
 ### **Event Inputs**
 
-None. The subapplication does not expose any event inputs at its interface level. Triggering is handled internally through the embedded subscribe function block.
+- **INIT** (`EInit`): initialization request; starts the initialization chain `AX_SUBSCRIBE_1` → `GreenWhiteBackground1_AX`.
 
 ### **Event Outputs**
 
-None. No event outputs are provided at the subapplication boundary.
+- **INITO** (`EInit`): initialization confirmation; comes from `GreenWhiteBackground1_AX.INITO`.
 
 ### **Data Inputs**
 
 | Name     | Data Type | Description                                                        |
 |----------|-----------|--------------------------------------------------------------------|
+| `QI`     | `BOOL`    | Quality input, service enable (initial value `TRUE`). |
 | `u16ObjId` | `UINT`    | Object ID of the VT background rectangle. Default value is `ID_NULL`. |
 | `ID`     | `WSTRING` | OPC-UA remote-subscribe address (the server node or subscription identifier). |
 
 ### **Data Outputs**
 
-None. The subapplication produces no direct data outputs; its result is realized through the internal adapter connection to the background-color subapplication.
+| Name | Data Type | Description |
+|------|-----------|-------------|
+| `QO` | `BOOL`    | Quality output, `AND` of the `QO` outputs of `AX_SUBSCRIBE_1` and `GreenWhiteBackground1_AX`. |
+
+The actual result is realized through the internal adapter connection to the background-color subapplication.
 
 ### **Adapters**
 
@@ -42,17 +47,19 @@ No external adapters are exposed. Internally, the OPC-UA subscription function b
 
 The subapplication performs the following operations:
 
-1. **Subscription Setup** – The internal function block `AX_SUBSCRIBE_1` (type `adapter::net::AX_SUBSCRIBE_1`) is configured with its `QI` parameter set to `TRUE`, enabling the subscription immediately upon activation.
+1. **Subscription Setup** – The internal function block `AX_SUBSCRIBE_1` (type `adapter::net::AX_SUBSCRIBE_1`) is enabled through the subapplication input `QI` (wired to `AX_SUBSCRIBE_1.QI`; it is no longer a fixed `QI=TRUE` parameter) and is initialized via `INIT` → `AX_SUBSCRIBE_1.INIT`.
 2. **Address Provision** – The external `ID` input (the OPC-UA subscribe address) is forwarded to the `ID` input of the `AX_SUBSCRIBE_1` function block.
 3. **Object Identification** – The external `u16ObjId` input is passed to the `u16ObjId` input of the embedded `GreenWhiteBackground1_AX` subapplication, identifying which VT background rectangle is to be affected.
 4. **Color Change Propagation** – The adapter connection from `AX_SUBSCRIBE_1.OUT` to `GreenWhiteBackground1_AX.DI1` transports the subscription result (e.g., a numeric value or status) to the background-color logic, which then alters the fill color of the specified VT rectangle accordingly.
+
+5. **Initialization and Quality** – `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`; `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is also passed to `GreenWhiteBackground1_AX.QI`. `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1` and `GreenWhiteBackground1_AX.QO` → `AND_QO.IN2`; the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) drives `QO`.
 
 The two data connections (`ID → AX_SUBSCRIBE_1.ID` and `u16ObjId → GreenWhiteBackground1_AX.u16ObjId`) are marked as invisible (`Visible = false`) in the diagram, reducing visual clutter in the engineering environment.
 
 ## Technical Features
 
-- **Generic Single-Channel Design** – The subapp is parameterized solely through its two data inputs, making it reusable for any OPC-UA node address and any VT rectangle object ID.
-- **Embedded Subscription Logic** – The OPC-UA subscription FB is internally instantiated with a set enable input, eliminating the need for external event wiring.
+- **Generic Single-Channel Design** – The subapp is parameterized through its data inputs `u16ObjId` and `ID` (plus the enable `QI`), making it reusable for any OPC-UA node address and any VT rectangle object ID.
+- **Embedded Subscription Logic** – The OPC-UA subscription FB is internally instantiated; its enable comes from `QI` and its initialization is sequenced by the subapp's own `INIT`/`INITO` chain.
 - **Adapter-Based Coupling** – Communication between the subscription FB and the background-color FB is performed via an adapter connection (`OUT` to `DI1`), enabling type-safe links between the internal components.
 - **Hidden Internal Wiring** – All internal connections are marked invisible to keep the subapp representation clean in the overall application diagram.
 - **Default Object ID** – The `u16ObjId` input defaults to `ID_NULL`, allowing the subapp to be instantiated before a concrete object ID is assigned.
@@ -61,7 +68,7 @@ The two data connections (`ID → AX_SUBSCRIBE_1.ID` and `u16ObjId → GreenWhit
 
 Since `AX_SUBSCRIBE_BG_OPC` is a composite subapplication rather than a stateful function block, it does not define its own explicit state machine. However, the internal `AX_SUBSCRIBE_1` FB is expected to implement the standard OPC-UA subscription states:
 
-- **Initialization** – With `QI = TRUE`, the FB begins establishing the subscription to the given OPC-UA address.
+- **Initialization** – With `QI = TRUE` and after `INIT`, the FB begins establishing the subscription to the given OPC-UA address.
 - **Subscribed** – The subscription is active and data updates are propagated through the adapter output.
 - **Error / Disconnected** – If the server is unreachable or the subscription fails, the FB signals an error condition (internally handled, not exposed externally).
 
@@ -82,11 +89,11 @@ Typical use cases for this subapplication include:
 |---------------------------------|------------------------------------------|------------------------------------------------------------------------|
 | **Integration Effort**          | Low – only two inputs need configuring    | Higher – requires manual wiring of adapter connections and parameters   |
 | **Reusability**                 | High – encapsulated as a self-contained unit | Medium – each instance must be reconnected individually              |
-| **Interface Complexity**        | Minimal (2 data inputs)                  | Multiple connections and event wiring                                  |
+| **Interface Complexity**        | Small (`INIT`/`INITO`, `QI`/`QO`, 2 data inputs) | Multiple connections and event wiring                                  |
 | **Error Handling**              | Handled internally by the subscribe FB    | Depends on the immediate FB configuration                              |
 | **Visual Clarity**              | Clean – internal wiring hidden            | Cluttered – all connections visible                                   |
 | **Flexibility**                 | Limited to one channel per instance       | More flexible when individual FBs are used in complex networks          |
 
 ## Conclusion
 
-The **AX_SUBSCRIBE_BG_OPC** subapplication provides a compact, ready-to-use building block for OPC-UA-driven background color changes in visualization screens. By encapsulating the subscription logic and the color-change logic behind a simple two-input interface, it significantly reduces engineering effort and improves the readability of application diagrams. Its generic design makes it suitable for a wide range of single-channel monitoring and status indication scenarios in industrial automation HMI environments.
+The **AX_SUBSCRIBE_BG_OPC** subapplication provides a compact, ready-to-use building block for OPC-UA-driven background color changes in visualization screens. By encapsulating the subscription logic and the color-change logic behind a simple interface (`INIT`/`INITO`, `QI`/`QO` and two data inputs), it significantly reduces engineering effort and improves the readability of application diagrams. Its generic design makes it suitable for a wide range of single-channel monitoring and status indication scenarios in industrial automation HMI environments.

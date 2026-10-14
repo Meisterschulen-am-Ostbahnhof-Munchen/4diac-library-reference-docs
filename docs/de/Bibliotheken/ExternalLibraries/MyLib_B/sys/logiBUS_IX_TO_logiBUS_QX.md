@@ -16,8 +16,9 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **logiBUS_IX**: `logiBUS::io::DI::logiBUS_IX` — physischer digitaler Eingang, feuert `IND` bei Zustandsänderung, `QI=TRUE`.
-    - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physischer digitaler Ausgang, wird über `REQ` angesteuert, `QI=TRUE`.
+    - **logiBUS_IX**: `logiBUS::io::DI::logiBUS_IX` — physischer digitaler Eingang, feuert `IND` bei Zustandsänderung.
+    - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physischer digitaler Ausgang, wird über `REQ` angesteuert.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — verknüpft die `QO` von `logiBUS_QX` und `logiBUS_IX`.
 - **Funktionsweise**: Das Eingangsereignis `IND` löst direkt `REQ` am Ausgang aus; der aktuelle Zustand wird parallel über eine Datenverbindung von `IN` nach `OUT` durchgereicht.
 
 ## Programmablauf und Verbindungen
@@ -25,6 +26,8 @@
 1. `Input` → `logiBUS_IX.Input`; `Output` → `logiBUS_QX.Output`.
 2. `logiBUS_IX.IND` → `logiBUS_QX.REQ` (Ereignisverbindung).
 3. `logiBUS_IX.IN` → `logiBUS_QX.OUT` (Datenverbindung).
+4. Initialisierung: Ereigniseingang `INIT` → `logiBUS_QX.INIT`, `logiBUS_QX.INITO` → `logiBUS_IX.INIT`, `logiBUS_IX.INITO` → Ereignisausgang `INITO` und → `AND_QO.REQ`.
+5. Qualität: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `logiBUS_QX.QI` und `logiBUS_IX.QI`; `logiBUS_QX.QO` → `AND_QO.IN1`, `logiBUS_IX.QO` → `AND_QO.IN2`; `AND_QO.OUT` → Datenausgang `QO`.
 
 ## Anwendungsszenarien
 

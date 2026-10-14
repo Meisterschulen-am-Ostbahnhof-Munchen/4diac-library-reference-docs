@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2997.4 212.0"
-     width="2997.4" height="212.0">
+     viewBox="0 0 2331.9375 212.0"
+     width="2331.9375" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1169.0, 10)">
+  <g transform="translate(916.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 253.20000000000005 0
-            A 3 3 0 0 1 256.20000000000005 3
-            L 256.20000000000005 23.0
-            A 3 3 0 0 1 253.20000000000005 26.0
-            L 246.20000000000005 26.0
-            L 246.20000000000005 66.0
-            L 253.20000000000005 66.0
-            A 3 3 0 0 1 256.20000000000005 69.0
-            L 256.20000000000005 189.0
-            A 3 3 0 0 1 253.20000000000005 192.0
+            L 221.0 0
+            A 3 3 0 0 1 224.0 3
+            L 224.0 23.0
+            A 3 3 0 0 1 221.0 26.0
+            L 214.0 26.0
+            L 214.0 66.0
+            L 221.0 66.0
+            A 3 3 0 0 1 224.0 69.0
+            L 224.0 189.0
+            A 3 3 0 0 1 221.0 192.0
             L 3 192.0
             A 3 3 0 0 1 0 189.0
             L 0 69.0
@@ -58,40 +58,48 @@
 
     <!-- Event Ports -->
 
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="217.5,11.0 222.5,16.0 217.5,21.0" fill="#63B31F"/>
+    <text x="214.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
+
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 21.000000000000014 37.0
-            L 37.000000000000014 37.0
-            A 1 1 0 0 1 38.000000000000014 38.0
-            L 38.000000000000014 41.5
-            L 36.000000000000014 41.5
-            L 36.000000000000014 44.5
-            L 38.000000000000014 44.5
-            L 38.000000000000014 54.0
-            A 1 1 0 0 1 37.000000000000014 55.0
-            L 21.000000000000014 55.0
-            A 1 1 0 0 1 20.000000000000014 54.0
-            L 20.000000000000014 44.5
-            L 22.000000000000014 44.5
-            L 22.000000000000014 41.5
-            L 20.000000000000014 41.5
-            L 20.000000000000014 38.0
-            A 1 1 0 0 1 21.000000000000014 37.0
+    <path d="M 21.0 37.0
+            L 37.0 37.0
+            A 1 1 0 0 1 38.0 38.0
+            L 38.0 41.5
+            L 36.0 41.5
+            L 36.0 44.5
+            L 38.0 44.5
+            L 38.0 54.0
+            A 1 1 0 0 1 37.0 55.0
+            L 21.0 55.0
+            A 1 1 0 0 1 20.0 54.0
+            L 20.0 44.5
+            L 22.0 44.5
+            L 22.0 41.5
+            L 20.0 41.5
+            L 20.0 38.0
+            A 1 1 0 0 1 21.0 37.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <path d="M 22.500000000000014 46.5 L 27.000000000000014 46.5 A 0.5 0.5 0 0 1 27.500000000000014 47.0 L 27.500000000000014 48.25 L 26.675000000000015 48.25 L 26.675000000000015 49.416666666666664 L 27.500000000000014 49.416666666666664 L 27.500000000000014 53.0 A 0.5 0.5 0 0 1 27.000000000000014 53.5 L 22.500000000000014 53.5 A 0.5 0.5 0 0 1 22.000000000000014 53.0 L 22.000000000000014 49.416666666666664 L 22.825000000000014 49.416666666666664 L 22.825000000000014 48.25 L 22.000000000000014 48.25 L 22.000000000000014 47.0 A 0.5 0.5 0 0 1 22.500000000000014 46.5 Z" fill="#1565C0" stroke="none"/>
-    <path d="M 31.000000000000014 46.5 L 35.500000000000014 46.5 A 0.5 0.5 0 0 1 36.000000000000014 47.0 L 36.000000000000014 48.25 L 35.17500000000001 48.25 L 35.17500000000001 49.416666666666664 L 36.000000000000014 49.416666666666664 L 36.000000000000014 53.0 A 0.5 0.5 0 0 1 35.500000000000014 53.5 L 31.000000000000014 53.5 A 0.5 0.5 0 0 1 30.500000000000014 53.0 L 30.500000000000014 49.416666666666664 L 31.325000000000014 49.416666666666664 L 31.325000000000014 48.25 L 30.500000000000014 48.25 L 30.500000000000014 47.0 A 0.5 0.5 0 0 1 31.000000000000014 46.5 Z" fill="#1565C0" stroke="none"/>
-    <line x1="27.500000000000014" y1="47.34" x2="30.500000000000014" y2="47.34"
+    <path d="M 22.5 46.5 L 27.0 46.5 A 0.5 0.5 0 0 1 27.5 47.0 L 27.5 48.25 L 26.675 48.25 L 26.675 49.416666666666664 L 27.5 49.416666666666664 L 27.5 53.0 A 0.5 0.5 0 0 1 27.0 53.5 L 22.5 53.5 A 0.5 0.5 0 0 1 22.0 53.0 L 22.0 49.416666666666664 L 22.825 49.416666666666664 L 22.825 48.25 L 22.0 48.25 L 22.0 47.0 A 0.5 0.5 0 0 1 22.5 46.5 Z" fill="#1565C0" stroke="none"/>
+    <path d="M 31.0 46.5 L 35.5 46.5 A 0.5 0.5 0 0 1 36.0 47.0 L 36.0 48.25 L 35.175 48.25 L 35.175 49.416666666666664 L 36.0 49.416666666666664 L 36.0 53.0 A 0.5 0.5 0 0 1 35.5 53.5 L 31.0 53.5 A 0.5 0.5 0 0 1 30.5 53.0 L 30.5 49.416666666666664 L 31.325 49.416666666666664 L 31.325 48.25 L 30.5 48.25 L 30.5 47.0 A 0.5 0.5 0 0 1 31.0 46.5 Z" fill="#1565C0" stroke="none"/>
+    <line x1="27.5" y1="47.34" x2="30.5" y2="47.34"
           stroke="#3DA015" stroke-width="1.2"/>
-    <line x1="27.500000000000014" y1="51.4" x2="30.500000000000014" y2="51.4"
+    <line x1="27.5" y1="51.4" x2="30.5" y2="51.4"
           stroke="#FF0000" stroke-width="1.2"/>
 
     <!-- Block Name -->
-    <text x="43.000000000000014" y="51.0"
+    <text x="43.0" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">NumericValue_TO_AR2_OPC</text>
     
-    <text x="128.10000000000002" y="66.0"
+    <text x="112.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.1</text>
 
@@ -113,42 +121,42 @@
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_WRITE</text>
 
-    <polygon points="249.70000000000005,71.0 254.70000000000005,76.0 249.70000000000005,81.0" fill="#A3B08F"/>
-    <text x="246.70000000000005" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="217.5,71.0 222.5,76.0 217.5,81.0" fill="#A3B08F"/>
+    <text x="214.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 244.70000000000005 157.0
-            L 247.20000000000005 157.0
-            L 247.20000000000005 158.66666666666666
-            L 249.70000000000005 158.66666666666666
-            L 249.70000000000005 157.0
-            L 254.70000000000005 157.0
-            L 254.70000000000005 167.0
-            L 249.70000000000005 167.0
-            L 249.70000000000005 165.33333333333334
-            L 247.20000000000005 165.33333333333334
-            L 247.20000000000005 167.0
-            L 244.70000000000005 167.0
+    <path d="M 212.5 157.0
+            L 215.0 157.0
+            L 215.0 158.66666666666666
+            L 217.5 158.66666666666666
+            L 217.5 157.0
+            L 222.5 157.0
+            L 222.5 167.0
+            L 217.5 167.0
+            L 217.5 165.33333333333334
+            L 215.0 165.33333333333334
+            L 215.0 167.0
+            L 212.5 167.0
             Z" fill="#845DAF"/>
-    <text x="241.70000000000005" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="209.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">VALUEO</text>
 
-    <path d="M 244.70000000000005 177.0
-            L 247.20000000000005 177.0
-            L 247.20000000000005 178.66666666666666
-            L 249.70000000000005 178.66666666666666
-            L 249.70000000000005 177.0
-            L 254.70000000000005 177.0
-            L 254.70000000000005 187.0
-            L 249.70000000000005 187.0
-            L 249.70000000000005 185.33333333333334
-            L 247.20000000000005 185.33333333333334
-            L 247.20000000000005 187.0
-            L 244.70000000000005 187.0
+    <path d="M 212.5 177.0
+            L 215.0 177.0
+            L 215.0 178.66666666666666
+            L 217.5 178.66666666666666
+            L 217.5 177.0
+            L 222.5 177.0
+            L 222.5 187.0
+            L 217.5 187.0
+            L 217.5 185.33333333333334
+            L 215.0 185.33333333333334
+            L 215.0 187.0
+            L 212.5 187.0
             Z" fill="#845DAF"/>
-    <text x="241.70000000000005" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="209.5" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">VALUE_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -156,6 +164,12 @@
     <!-- Horizontal Connection Lines -->
 
     <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="249.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
@@ -169,13 +183,13 @@
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Echo-Adresse (REAL, ACTION=PUBLISH) - meldet zurueck, was der Consumer gerade als aktuellen/persistierten Wert liefert – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="281.20000000000005" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="249.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
 
-    <text x="281.20000000000005" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="249.0" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR2</tspan></text>
 
-    <text x="281.20000000000005" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="249.0" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: plain-AR-Spiegel des aktuellen Werts (= AR_TO_AR2.AR_OUT), fuer externe Consumer statt eigenem lokalen OPC-UA-Self-Subscribe. Unverdrahtet lassen, wenn nicht gebraucht.</text>
   </g>
 </svg>

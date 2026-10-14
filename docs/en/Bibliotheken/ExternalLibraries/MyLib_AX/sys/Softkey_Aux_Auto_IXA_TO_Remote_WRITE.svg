@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2799.9375 192.0"
-     width="2799.9375" height="192.0">
+     viewBox="0 0 2799.9375 212.0"
+     width="2799.9375" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 294.375 66.0
             L 301.375 66.0
             A 3 3 0 0 1 304.375 69.0
-            L 304.375 169.0
-            A 3 3 0 0 1 301.375 172.0
-            L 3 172.0
-            A 3 3 0 0 1 0 169.0
+            L 304.375 189.0
+            A 3 3 0 0 1 301.375 192.0
+            L 3 192.0
+            A 3 3 0 0 1 0 189.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="297.875,11.0 302.875,16.0 297.875,21.0" fill="#63B31F"/>
+    <text x="294.875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -97,54 +105,62 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#18519E"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjIdA</text>
+          fill="#000000" dominant-baseline="middle">u16ObjId</text>
 
-    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_WRITE_REMOTE</text>
+          fill="#000000" dominant-baseline="middle">u16ObjIdA</text>
 
     <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#BD8663"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_WRITE_REMOTE</text>
+
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#BD8663"/>
+    <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_WEB_READ</text>
+
+    <polygon points="297.875,71.0 302.875,76.0 297.875,81.0" fill="#A3B08F"/>
+    <text x="294.875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 1.5 157.0
-            L 6.5 157.0
-            L 6.5 158.66666666666666
-            L 9.0 158.66666666666666
-            L 9.0 157.0
-            L 11.5 157.0
-            L 11.5 167.0
-            L 9.0 167.0
-            L 9.0 165.33333333333334
-            L 6.5 165.33333333333334
-            L 6.5 167.0
-            L 1.5 167.0
+    <path d="M 1.5 177.0
+            L 6.5 177.0
+            L 6.5 178.66666666666666
+            L 9.0 178.66666666666666
+            L 9.0 177.0
+            L 11.5 177.0
+            L 11.5 187.0
+            L 9.0 187.0
+            L 9.0 185.33333333333334
+            L 6.5 185.33333333333334
+            L 6.5 187.0
+            L 1.5 187.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="14.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="14.5" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">AUTO_IN</text>
 
-    <path d="M 292.875 157.0
-            L 295.375 157.0
-            L 295.375 158.66666666666666
-            L 297.875 158.66666666666666
-            L 297.875 157.0
-            L 302.875 157.0
-            L 302.875 167.0
-            L 297.875 167.0
-            L 297.875 165.33333333333334
-            L 295.375 165.33333333333334
-            L 295.375 167.0
-            L 292.875 167.0
+    <path d="M 292.875 177.0
+            L 295.375 177.0
+            L 295.375 178.66666666666666
+            L 297.875 178.66666666666666
+            L 297.875 177.0
+            L 302.875 177.0
+            L 302.875 187.0
+            L 297.875 187.0
+            L 297.875 185.33333333333334
+            L 295.375 185.33333333333334
+            L 295.375 187.0
+            L 292.875 187.0
             Z" fill="#845DAF"/>
-    <text x="289.875" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="289.875" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">WEB_STATE</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -153,22 +169,34 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="329.375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2 (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Write-Adresse zum Zielmodul (Befehl, ACTION=WRITE, CLIENT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2 (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Write-Adresse zum Zielmodul (Befehl, ACTION=WRITE, CLIENT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Subscribe-Adresse fuer einen Web-Client (z.B. vt-ui-mirror) auf demselben Modul, ODER-verknuepft mit SoftKey und AUX – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="-25" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="329.375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
+
+    <text x="-25" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Autonomes Kommando (z.B. Achslenkung-Mittelpunkt-Automatik), ODER-verknuepft mit SoftKey/Aux/Web – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan></text>
 
-    <text x="329.375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="329.375" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Web-Zustand (= SUBSCRIBE_WEB.OUT) nach aussen durchgereicht, damit andere Composite-Instanzen denselben Wert per Datenverbindung nutzen koennen statt selbst nochmal lokal zu abonnieren (nur 1 lokaler OPC-UA-Subscriber pro Knoten zulaessig)</text>
   </g>
 </svg>

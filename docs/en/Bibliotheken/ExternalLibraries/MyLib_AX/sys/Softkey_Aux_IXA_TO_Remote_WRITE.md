@@ -19,15 +19,17 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) — VT SoftKey Adapter (`u16ObjId`).
+- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT SoftKey Adapter (`u16ObjId`).
 
-- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`) — AUX Assignment/Joystick Adapter (`u16ObjIdA`).
+- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` — AUX Assignment/Joystick Adapter (`u16ObjIdA`).
 
-- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — Local web subscribe (`ID_WEB_READ`), e.g., from a vt-ui-mirror on the same module.
+- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` — Local web subscribe (`ID_WEB_READ`), e.g., from a vt-ui-mirror on the same module.
 
 - **OR_MERGE**: `adapter::booleanOperators::AX_OR_3` — Combines SoftKey, Aux, and Web Override using OR.
 
-- **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` (`QI=TRUE`) — Writes the combined signal to the target module using remote write (`ID_WRITE_REMOTE`).
+- **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` — Writes the combined signal to the target module using remote write (`ID_WRITE_REMOTE`).
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` — Combines the `QO` outputs of `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` and `AX_CLIENT_1_0` into the SubApp output `QO`.
+- **Interface**: event input `INIT`, event output `INITO`, data input `QI` (default `TRUE`, passed on to the four FBs), data output `QO`.
 
 
 - **How it Works**: Three independent command sources (SoftKey, Aux, local web override) are combined using `AX_OR_3` and transmitted to the target module as a single remote write command.
@@ -39,6 +41,8 @@
 2. `Softkey_IXA.IN` → `OR_MERGE.IN1`; `Aux_IXA.IN` → `OR_MERGE.IN2`; `SUBSCRIBE_WEB.OUT` → `OR_MERGE.IN3`.
 
 3. `OR_MERGE.OUT` → `AX_CLIENT_1_0.IN`.
+4. Initialization: `INIT` → `Softkey_IXA.INIT`; `Softkey_IXA.INITO` → `Aux_IXA.INIT`; `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`; `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`; `AX_CLIENT_1_0.INITO` → `INITO` and → `AND_QO.REQ`.
+5. Quality: `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI`, `SUBSCRIBE_WEB.QI` and `AX_CLIENT_1_0.QI`; their `QO` outputs → `AND_QO.IN1` to `IN4`; `AND_QO.OUT` → `QO`.
 
 ## Technical Features
 

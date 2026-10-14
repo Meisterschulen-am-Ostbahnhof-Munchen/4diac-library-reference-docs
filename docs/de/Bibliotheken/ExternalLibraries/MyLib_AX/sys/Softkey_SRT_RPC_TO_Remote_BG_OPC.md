@@ -15,16 +15,17 @@ Die SubApp **Softkey_SRT_RPC_TO_Remote_BG_OPC** verbindet physische Softkeys ein
 
 ### **Ereignis-Eingänge**
 
-Keine – die SubApp besitzt keine externen Ereigniseingänge. Die Softkey-Erkennung erfolgt über intern implementierte Funktionsblöcke.
+- **INIT** (`EInit`): Initialisierungsanforderung. Ansonsten besitzt die SubApp keine externen Ereigniseingänge; die Softkey-Erkennung erfolgt über intern implementierte Funktionsblöcke.
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `GreenWhiteBackground_AX.INITO`)
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | BOOL | Quality Input, TRUE gibt den Dienst frei (Vorgabe `TRUE`) |
 | `u16ObjId_SET` | UINT | Objekt-ID für den Softkey „Set“ (initial `ID_NULL`) |
 | `u16ObjId_RESET` | UINT | Objekt-ID für den Softkey „Reset“ |
 | `u16ObjId_TOGGLE` | UINT | Objekt-ID für den Softkey „Toggle“ (trägt auch das GreenWhiteBackground) |
@@ -35,7 +36,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_8`) aus den `QO`-Ausgängen aller acht internen Bausteine (3 × `Softkey_IE`, 3 × `CLIENT_0`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`)
 
 ### **Adapter**
 
@@ -44,6 +45,8 @@ Keine externen Adapter.
 ## Funktionsweise
 
 Die SubApp nutzt drei Instanzen des Funktionsblocks `isobus::UT::io::Softkey::Softkey_IE`, die auf das Loslassen eines Softkeys reagieren (konfiguriert über `SK_RELEASED`). Jedes Drücken eines Softkeys erzeugt ein internes Ereignis (`IND`), das einen zugeordneten `CLIENT_0`-FB (OPC-UA-Client) dazu veranlasst, die konfigurierte Methode (Set, Reset, Toggle) auf dem entfernten Gerät aufzurufen. Die dafür benötigten Methodenadressen werden über die Eingänge `ID_SET_CALL`, `ID_RESET_CALL` und `ID_TOGGLE_CALL` bereitgestellt.
+
+Initialisierung und Qualität: `INIT` durchläuft eine Kette `SoftKey_SET` → `SoftKey_RESET` → `SoftKey_TOGGLE` → `TRIGGER_SET_CLIENT` → `TRIGGER_RESET_CLIENT` → `TRIGGER_TOGGLE_CLIENT` → `STATE_SUBSCRIBE` → `GreenWhiteBackground_AX` (jeweils `INITO` → nächstes `INIT`); `GreenWhiteBackground_AX.INITO` → `INITO` (und → `AND_QO.REQ`). `QI` wird an `.QI` aller acht Bausteine verteilt; deren `QO`-Ausgänge laufen auf `AND_QO.IN1`..`IN8`, `AND_QO.OUT` → `QO`. Die Instanzen sind nicht mehr fest auf `QI=TRUE` parametriert.
 
 Parallel abonniert die SubApp über den Adapter `STATE_SUBSCRIBE` kontinuierlich den booleschen Zustand eines Flipflops auf Gerät B (Adresse aus `ID_STATE_READ`). Dieser Zustand wird an die SubApp `GreenWhiteBackground_AX` übergeben, die eine farbige Rückmeldung (grün/weiß) erzeugt – typischerweise für den Toggle-Softkey.
 

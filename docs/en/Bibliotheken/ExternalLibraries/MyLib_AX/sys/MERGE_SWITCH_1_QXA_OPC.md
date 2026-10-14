@@ -18,17 +18,18 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **SUBSCRIBE_TEST** / **SUBSCRIBE_CMD**: each `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — subscribe to the existing I/O test command (`ID_TEST_READ`) or the actual function command (`ID_READ`), respectively.
+- **SUBSCRIBE_TEST** / **SUBSCRIBE_CMD**: each `adapter::net::AX_SUBSCRIBE_1` (`QI` comes from the input `QI`) — subscribe to the existing I/O test command (`ID_TEST_READ`) or the actual function command (`ID_READ`), respectively.
 
 - **OR_MERGE**: `adapter::booleanOperators::AX_OR_2` — combines both subscribe sources using a level OR operation.
 
 - **SPLIT**: `adapter::events::unidirectional::AX_SPLIT_3` — distributes the combined signal to the physical output and two feedback channels.
 
-- **DigitalOutput**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) — physical digital output.
+- **DigitalOutput**: `logiBUS::io::DQ::logiBUS_QXA` (`QI` comes from the input `QI`) — physical digital output.
 
-- **PUBLISH_TEST** / **PUBLISH_STATE**: each `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) — report the resulting state to the existing I/O test monitoring (`ID_TEST_WRITE`) or to the actual function feedback (`ID_WRITE`, e.g., `GreenWhiteBackground` on the soft key).
+- **PUBLISH_TEST** / **PUBLISH_STATE**: each `adapter::net::AX_PUBLISH_1` (`QI` comes from the input `QI`) — report the resulting state to the existing I/O test monitoring (`ID_TEST_WRITE`) or to the actual function feedback (`ID_WRITE`, e.g., `GreenWhiteBackground` on the soft key).
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` — combines the `QO` outputs of the five service FBs into the output `QO`.
 
-- **How it Works**: Two independent remote subscribe sources are combined via `AX_OR_2` and jointly drive the physical output as well as two separate feedback channels.
+- **How it Works**: Two independent remote subscribe sources are combined via `AX_OR_2` and jointly drive the physical output as well as two separate feedback channels. The SubApp interface additionally has the events `INIT`/`INITO` and the data `QI` (BOOL, initial value `TRUE`) and `QO` (BOOL).
 
 ## Program Flow and Connections
 
@@ -39,6 +40,8 @@
 3. `OR_MERGE.OUT` → `SPLIT.IN` → `SPLIT.OUT1` → `DigitalOutput.OUT` (physical output), `SPLIT.OUT2` → `PUBLISH_TEST.IN`, `SPLIT.OUT3` → `PUBLISH_STATE.IN`.
 
 4. Parameters: `Output` → `DigitalOutput.Output`; `ID_TEST_WRITE` → `PUBLISH_TEST.ID`; `ID_WRITE` → `PUBLISH_STATE.ID`.
+5. Initialization chain: `INIT` → `SUBSCRIBE_TEST.INIT` → `SUBSCRIBE_CMD.INIT` → `DigitalOutput.INIT` → `PUBLISH_TEST.INIT` → `PUBLISH_STATE.INIT` (each `INITO` → next `INIT`); `PUBLISH_STATE.INITO` → `INITO` and `AND_QO.REQ`.
+6. Quality: `QI` → `SUBSCRIBE_TEST.QI`, `SUBSCRIBE_CMD.QI`, `DigitalOutput.QI`, `PUBLISH_TEST.QI` and `PUBLISH_STATE.QI`; their `QO` outputs → `AND_QO.IN1` to `AND_QO.IN5` (in this order); `AND_QO.OUT` → `QO`.
 
 ## Technical Features
 

@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`RedWhiteBackground1_auxSC` is a **compact wrapper** around [`RedWhiteBackground1_auxS`](RedWhiteBackground1_auxS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
+`RedWhiteBackground1_auxSC` is a **compact wrapper** around [`RedWhiteBackground1_auxS`](RedWhiteBackground1_auxS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`). In addition, `INIT` → `RedWhiteBackground.INIT`, `RedWhiteBackground.INITO` → `INITO`, `QI` → `RedWhiteBackground.QI` (initial value `TRUE`) and `RedWhiteBackground.QO` → `QO` are passed through.
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 

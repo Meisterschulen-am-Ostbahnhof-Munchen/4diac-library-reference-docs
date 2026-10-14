@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2182.6 432.0"
-     width="2182.6" height="432.0">
+     viewBox="0 0 1686.625 432.0"
+     width="1686.625" height="432.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1286.6, 10)">
+  <g transform="translate(964.4375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 345.6 0
-            A 3 3 0 0 1 348.6 3
-            L 348.6 23.0
-            A 3 3 0 0 1 345.6 26.0
-            L 338.6 26.0
-            L 338.6 66.0
-            L 345.6 66.0
-            A 3 3 0 0 1 348.6 69.0
-            L 348.6 409.0
-            A 3 3 0 0 1 345.6 412.0
+            L 309.1875 0
+            A 3 3 0 0 1 312.1875 3
+            L 312.1875 23.0
+            A 3 3 0 0 1 309.1875 26.0
+            L 302.1875 26.0
+            L 302.1875 66.0
+            L 309.1875 66.0
+            A 3 3 0 0 1 312.1875 69.0
+            L 312.1875 409.0
+            A 3 3 0 0 1 309.1875 412.0
             L 3 412.0
             A 3 3 0 0 1 0 409.0
             L 0 69.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="305.6875,11.0 310.6875,16.0 305.6875,21.0" fill="#63B31F"/>
+    <text x="302.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,7 +99,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">RampLimitFS_TO_logiBUS_QDA_PWM_OPC</text>
     
-    <text x="174.3" y="66.0"
+    <text x="156.09375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -165,8 +173,8 @@
     <text x="9.5" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_STATUS_WRITE</text>
 
-    <polygon points="342.1,71.0 347.1,76.0 342.1,81.0" fill="#A3B08F"/>
-    <text x="339.1" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="305.6875,71.0 310.6875,76.0 305.6875,81.0" fill="#A3B08F"/>
+    <text x="302.6875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
@@ -175,6 +183,12 @@
     <!-- Horizontal Connection Lines -->
 
     <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="337.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
@@ -227,7 +241,7 @@
     <text x="-25" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Status-Ruckmelde-Adresse (BOOL, ACTION=PUBLISH, nur lesend, logiBUS_QD_PWM.QO) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="373.6" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="337.1875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

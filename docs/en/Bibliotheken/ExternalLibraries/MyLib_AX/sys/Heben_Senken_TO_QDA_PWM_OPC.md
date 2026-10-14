@@ -19,7 +19,7 @@ Heben_Senken_TO_QDA_PWM_OPC is a composite subapplication that integrates two in
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialisation completed; true rendezvous confirm: `E_REND_2_INITO` fires `INITO` exactly once when both `PWM_Mux.INITO` and `DO_Toggle.INITO` (two independent physical channels) have arrived
 
 ### **Data Inputs**
 
@@ -42,7 +42,9 @@ None.
 
 ### **Data Outputs**
 
-None. The subapplication does not expose explicit output variables; physical outputs are controlled directly through the `Output_PWM` and `Output_DO` references.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_2`) of `PWM_Mux.QO` and `DO_Toggle.QO`.
+
+There are no further output variables; the physical outputs are controlled directly through the `Output_PWM` and `Output_DO` references.
 
 ### **Adapters**
 
@@ -50,7 +52,7 @@ None.
 
 ## Functionality
 
-The subapplication collects remote raise/lower commands and OR‑combines them with IO‑test signals. The internal PWM subapplication (`HebenSenken_ILOCK_QDA_PWM_OPC`) generates a single ratiometric PWM signal with a duty cycle of 25% (lower), 50% (neutral), and 75% (raise), incorporating an interlock and a protection dead time. The second internal subapplication (`DO_TOGGLE_RPC_QXA_OPC`) manages a digital output that can be toggled via an RPC method, defaulting to ON. `QI` is routed jointly to `PWM_Mux.QI` and `DO_Toggle.QI`, and the event `INIT` to `PWM_Mux.INIT` and `DO_Toggle.INIT`, so both physical channels are kept inactive together or initialised by the caller. The two modules operate independently but are combined here to provide a unified interface for a PVEA actuator with two physical channels.
+The subapplication collects remote raise/lower commands and OR‑combines them with IO‑test signals. The internal PWM subapplication (`HebenSenken_ILOCK_QDA_PWM_OPC`) generates a single ratiometric PWM signal with a duty cycle of 25% (lower), 50% (neutral), and 75% (raise), incorporating an interlock and a protection dead time. The second internal subapplication (`DO_TOGGLE_RPC_QXA_OPC`) manages a digital output that can be toggled via an RPC method, defaulting to ON. `QI` is routed jointly to `PWM_Mux.QI` and `DO_Toggle.QI`, and the event `INIT` to `PWM_Mux.INIT` and `DO_Toggle.INIT`, so both physical channels are kept inactive together or initialised by the caller. For the confirmation there are two additional blocks: `E_REND_2_INITO` (`iec61499::events::E_REND_2`, rendezvous/AND, not OR) waits for `PWM_Mux.INITO` (`EI1`) **and** `DO_Toggle.INITO` (`EI2`) and then fires `INITO` exactly once (`E_REND_2_INITO.EO` → `INITO` and `AND_QO.REQ`); `INIT` resets the rendezvous block via `E_REND_2_INITO.R`, so that every new init cycle waits for both channels again. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) combines `PWM_Mux.QO` (`IN1`) and `DO_Toggle.QO` (`IN2`) into the output `QO`. The two modules operate independently but are combined here to provide a unified interface for a PVEA actuator with two physical channels.
 
 ## Technical Features
 

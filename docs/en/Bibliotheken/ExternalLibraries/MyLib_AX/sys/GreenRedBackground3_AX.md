@@ -16,6 +16,8 @@
 
 For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`), see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
+In addition, the block has the initialization and quality interface: event input `INIT`, event output `INITO`, data input `QI` (`BOOL`, initial value `TRUE`) and data output `QO` (`BOOL`, AND of all instances). `INIT` → `Q_BackgroundColour_1.INIT`, `Q_BackgroundColour_1.INITO` → `Q_BackgroundColour_2.INIT`, `Q_BackgroundColour_2.INITO` → `Q_BackgroundColour_3.INIT`, `Q_BackgroundColour_3.INITO` → `INITO` (so the three instances are initialized one after another). `QI` is passed to `QI` of all three instances. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`), which combines `Q_BackgroundColour_1.QO`, `Q_BackgroundColour_2.QO` and `Q_BackgroundColour_3.QO`; its `REQ` is triggered by `E_MERGE_QO` (`iec61499::events::E_MERGE_4`), which merges `Q_BackgroundColour_3.INITO` and the `CNF` events of the three instances.
+
 ![GreenRedBackground3_AX](GreenRedBackground3_AX.svg)
 
 ## Summary

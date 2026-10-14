@@ -1,6 +1,5 @@
 # IX_TO_Aux_QX
 
-
 ![IX_TO_Aux_QX_network](./IX_TO_Aux_QX_network.svg)
 
 ![IX_TO_Aux_QX](./IX_TO_Aux_QX.svg)
@@ -15,20 +14,21 @@ The IX_TO_Aux_QX is an event-based subapplication designed to map digital inputs
 
 ### Event Inputs
 
-- **None**: This subapplication does not expose any event input interfaces. All event handling is performed internally.
+- **INIT** (`EInit`): initialization request; passed on to `IX.INIT`.
 
 ### Event Outputs
 
-- **None**: This subapplication does not expose any event output interfaces. The internal event flow is managed within the encapsulated network.
+- **INITO** (`EInit`): initialization confirm; comes from `QX.INITO`.
 
 ### Data Inputs
 
 - **Input** (Type: `logiBUS::io::DI::logiBUS_DI_S`): Identifies the logiBUS input signal (e.g., Input_I1 to Input_I8). The initial value is set to `Invalid`.
+- **QI** (Type: `BOOL`): Quality input - TRUE enables the service. The initial value is `TRUE`.
 - **iInpNr** (Type: `USINT`): Specifies the auxiliary array number, corresponding to the order in the pool. The first auxiliary input has an `iInpNr` of 0. The initial value is 0.
 
 ### Data Outputs
 
-- **None**: This subapplication does not provide any data output interfaces. The processed data is used internally or forwarded to connected blocks.
+- **QO** (Type: `BOOL`): Quality output - AND combination (`AND_QO`, `AND_BOOL_2`) of `QX.QO` and `IX.QO`. The processed data itself is used internally.
 
 ### Adapters
 
@@ -44,6 +44,8 @@ The IX_TO_Aux_QX subapplication encapsulates two primary function blocks: `logiB
   - The `Input` data variable is forwarded to `IX.Input`.
   - The `iInpNr` data variable is forwarded to `QX.iInpNr`.
   - The `IX.IN` output is internally connected to `QX.OUT`, although this does not expose a direct output from the subapplication.
+
+Initialization and quality: `INIT` → `IX.INIT`; `IX.INITO` → `QX.INIT`; `QX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is distributed to `IX.QI` and `QX.QI` (there is no hard-wired `QI` parameter any more); `QX.QO` → `AND_QO.IN1`, `IX.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 This structure allows the subapplication to process a logiBUS digital input and trigger an isobus auxiliary output request based on the configured input number and signal.
 

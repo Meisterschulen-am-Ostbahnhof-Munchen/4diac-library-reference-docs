@@ -15,22 +15,25 @@ Der Funktionsblock `NumericValue_ID_TO_INI` ist eine wiederverwendbare Subapplik
 
 ### **Ereignis-Eingänge**
 
-Es sind keine externen Ereignis‑Eingänge vorhanden. Die Verarbeitung wird ausschließlich über interne Ereignisse der enthaltenen Funktionsbausteine angestoßen.
+- **INIT** (`EInit`) – Initialisierungsanforderung; startet die Init-Kette bei `ID.INIT`
+
+Die weitere Verarbeitung wird über interne Ereignisse der enthaltenen Funktionsbausteine angestoßen.
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`) – Initialisierungsbestätigung; kommt von `Q_NumericValue.INITO`, dem Ende der Init-Kette
 - **IND** – Wird ausgelöst, wenn ein neuer Wert erfolgreich in der INI‑Datei gespeichert oder aus ihr geladen wurde. Dieses Ereignis signalisiert der Umgebung, dass der aktuelle Wert (VALUEO) gültig ist und verwendet werden kann.
 
 ### **Daten-Eingänge**
 
-- **QI** (BOOL) – Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue.QI` durchgereicht
+- **QI** (BOOL) – Quality Input – TRUE, um den Dienst freizugeben; wird an `ID.QI`, `INI.QI` und `Q_NumericValue.QI` durchgereicht
 - **KEY** (STRING) – Schlüsselname innerhalb der INI‑Sektion, unter dem der Wert abgelegt wird.
 - **SECTION** (STRING) – Name der INI‑Sektion, in der der Wert gespeichert wird.
 - **u16ObjId** (UINT) – Objekt‑ID des numerischen Werts auf dem ISOBUS‑Gerät. Standardmäßig auf `ID_NULL` gesetzt.
 
 ### **Daten-Ausgänge**
 
-- **QO** (BOOL) – Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue.QO`
+- **QO** (BOOL) – Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; UND-Verknüpfung (`AND_QO`, `AND_BOOL_3`) von `Q_NumericValue.QO`, `ID.QO` und `INI.QO`
 - **VALUEO** (UDINT) – Der aktuell gespeicherte, konvertierte Wert als 32‑Bit‑Unsigned‑Integer (UDINT). Dieser wird sowohl beim Speichern als auch beim Laden aktualisiert und nach außen bereitgestellt.
 
 ### **Adapter**
@@ -39,12 +42,13 @@ Es sind keine Adapter definiert. Die Kommunikation erfolgt über die oben genann
 
 ## Funktionsweise
 
-Die Subapplikation besteht aus vier Funktionsbausteinen:
+Die Subapplikation besteht aus fünf Funktionsbausteinen:
 
 - **NumericValue_ID** (`isobus::UT::io::NumericValue::NumericValue_ID`): Liest den aktuellen Wert von der angegebenen Objekt‑ID ein und gibt ihn als `DWORD` aus (Ereignis `IND`).
 - **F_DWORD_TO_UDINT** (`iec61131::conversion::F_DWORD_TO_UDINT`): Konvertiert den empfangenen `DWORD`‑Wert in einen `UDINT`‑Wert.
 - **INI** (`eclipse4diac::storage::INI`): Verwaltet den Zugriff auf die INI‑Datei. Er unterstützt das Speichern (`SET`) und Laden (`GET`) von Werten mit frei wählbarem Section/Key.
 - **Q_NumericValue** (`isobus::UT::Q::Q_NumericValue`): Schreibt einen neuen Wert an das ISOBUS‑Gerät zurück.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_3`): Verknüpft die `QO`-Ausgänge von `Q_NumericValue`, `ID` und `INI` zum Ausgang `QO`.
 
 **Ablauf beim Speichern eines neu eingelesenen Wertes:**  
 
@@ -62,7 +66,7 @@ Die Subapplikation besteht aus vier Funktionsbausteinen:
 
 Somit stellt die Subapp sicher, dass der Wert sowohl bei Änderungen als auch beim Systemstart konsistent ist.
 
-**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
+**Initialisierung und Quality-Anschlüsse:** Die Init-Kette lautet `INIT` → `ID.INIT`, `ID.INITO` → `INI.INIT`, `INI.INITO` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO` und `AND_QO.REQ` (zusätzlich bleibt `INI.INITO` → `INI.GET` bestehen). `QI` (Dateneingang, BOOL, Standard `TRUE`) wird an `Q_NumericValue.QI`, `ID.QI` und `INI.QI` weitergereicht; deren `QO`-Ausgänge gehen auf `AND_QO.IN1` (`Q_NumericValue`), `IN2` (`ID`) und `IN3` (`INI`), `AND_QO.OUT` → `QO` (BOOL). Damit lassen sich alle drei Dienste von außen freigeben und ihr gemeinsamer Erfolg abfragen.
 
 ## Technische Besonderheiten
 

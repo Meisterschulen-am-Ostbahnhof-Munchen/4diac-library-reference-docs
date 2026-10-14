@@ -12,6 +12,13 @@
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
+## Initialization and Quality
+
+- **Event input `INIT`** (`EInit`) and **event output `INITO`** (`EInit`) are passed through: `INIT` → `GreenRedBackground.INIT`; `GreenRedBackground.INITO` → `INITO`.
+- **Data input `QI`** (`BOOL`, default `TRUE`) → `GreenRedBackground.QI`; **data output `QO`** (`BOOL`) ← `GreenRedBackground.QO`.
+
+The inner SubApp instance `GreenRedBackground` is of type `GreenRedBackground1_AXS`.
+
 ## Summary
 
 A pure pass-through to `GreenRedBackground1_AXS` for the common case where the diagnostic values aren't needed.
@@ -20,4 +27,4 @@ A pure pass-through to `GreenRedBackground1_AXS` for the common case where the d
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

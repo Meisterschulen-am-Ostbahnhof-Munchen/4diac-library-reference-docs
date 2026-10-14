@@ -18,12 +18,15 @@
 - **Verwendete interne FBs**:
     - **Button_IX**: `isobus::UT::io::Button::Button_IX` — VT-Taster (Nicht-Adapter-Variante).
     - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physischer digitaler Ausgang (Nicht-Adapter-Variante).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — verknüpft `logiBUS_QX.QO` und `Button_IX.QO` zum `QO` der SubApp.
 - **Funktionsweise**: `Button_IX.IND` löst `logiBUS_QX.REQ` aus; der Datenwert `Button_IX.IN` wird direkt auf `logiBUS_QX.OUT` verdrahtet.
 
 ## Programmablauf und Verbindungen
 
 1. `u16ObjId` → `Button_IX.u16ObjId`; `Output` → `logiBUS_QX.Output`.
 2. `Button_IX.IND` → `logiBUS_QX.REQ`; `Button_IX.IN` → `logiBUS_QX.OUT`.
+3. **Initialisierung**: Ereignis-Eingang `INIT` (`EInit`) → `logiBUS_QX.INIT`; `logiBUS_QX.INITO` → `Button_IX.INIT`; `Button_IX.INITO` → Ereignis-Ausgang `INITO` (`EInit`) und → `AND_QO.REQ`.
+4. **Qualität**: Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`) → `logiBUS_QX.QI` und `Button_IX.QI`; `logiBUS_QX.QO` → `AND_QO.IN1`; `Button_IX.QO` → `AND_QO.IN2`; `AND_QO.OUT` → Datenausgang `QO` (`BOOL`).
 
 ## Anwendungsszenarien
 

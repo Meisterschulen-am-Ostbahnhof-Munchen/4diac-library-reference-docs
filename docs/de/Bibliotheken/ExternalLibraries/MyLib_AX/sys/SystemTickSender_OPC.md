@@ -17,13 +17,15 @@
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
     - **System_Tick** (SubApp, `MyLib::sys`): liefert den Zählerstand als `ADI`-Adapter (DINT).
-    - **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI=TRUE`) — veröffentlicht den Zählerstand direkt per OPC-UA (`ID_WRITE`).
+    - **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` — veröffentlicht den Zählerstand direkt per OPC-UA (`ID_WRITE`).
 - **Funktionsweise**: Der Zählerstand von `System_Tick` wird ohne Umwandlung direkt an `ADI_PUBLISH_1` weitergereicht.
 
 ## Programmablauf und Verbindungen
 
 1. `ID_WRITE` → `ADI_PUBLISH_1.ID` (Datenverbindung, ausgeblendet).
 2. `System_Tick.ADI_OUT` → `ADI_PUBLISH_1.IN`.
+3. Initialisierung: Ereigniseingang `INIT` → `ADI_PUBLISH_1.INIT`; `ADI_PUBLISH_1.INITO` → Ereignisausgang `INITO`.
+4. Qualität: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `ADI_PUBLISH_1.QI`; `ADI_PUBLISH_1.QO` → Datenausgang `QO`.
 
 ## Technische Besonderheiten
 

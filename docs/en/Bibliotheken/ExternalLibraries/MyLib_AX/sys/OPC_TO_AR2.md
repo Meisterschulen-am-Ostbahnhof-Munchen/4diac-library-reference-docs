@@ -10,6 +10,13 @@
 
 ![OPC_TO_AR2](OPC_TO_AR2.svg)
 
+## Interface and initialization
+
+- Events: `INIT` (EInit, input) and `INITO` (EInit, output, comes from `AR_PUBLISH_1.INITO`).
+- Data: `QI` (BOOL, default `TRUE`) as well as `ID_READ` and `ID_WRITE` (WSTRING) as inputs, `QO` (BOOL) as output; adapter plug `VALUEO` (`AR2`).
+- Initialization: `INIT` → `AR_SUBSCRIBE_1.INIT`, `AR_SUBSCRIBE_1.INITO` → `AR_PUBLISH_1.INIT`, `AR_PUBLISH_1.INITO` → `INITO` and → `AND_QO.REQ`.
+- Quality: `QI` → `AR_SUBSCRIBE_1.QI` and `AR_PUBLISH_1.QI` (no fixed `QI`=TRUE any more); `AR_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AR_PUBLISH_1.QO` → `AND_QO.IN2` (`AND_BOOL_2`), `AND_QO.OUT` → `QO`.
+
 ## Technical notes
 
 - `AR_PUBLISH_1` is triggered by `AR_SUBSCRIBE_1.INITO` so the boot value is published immediately, not only on the first change.

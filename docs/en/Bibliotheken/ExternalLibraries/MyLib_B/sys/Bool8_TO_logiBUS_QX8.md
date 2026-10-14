@@ -20,15 +20,19 @@ The interface consists of one event input, sixteen data inputs, and no event out
 | Event | Description |
 |-------|-------------|
 | CNF | Common trigger (confirmation) event. When this event occurs, all eight internal output FBs are requested simultaneously to apply the currently present Q_00..Q_07 values to the configured output channels. |
+| INIT | Initialization request; starts the initialization chain of the eight `logiBUS_QX` instances. |
 
 ### **Event Outputs**
 
-None.
+| Event | Description |
+|-------|-------------|
+| INITO | Initialization confirm; comes from `DigitalOutput_Q3.INITO`, the end of the chain. |
 
 ### **Data Inputs**
 
 | Data Input | Type | Initial Value | Description |
 |------------|------|---------------|-------------|
+| QI | BOOL | TRUE | Quality input - TRUE enables the service; distributed to all eight `logiBUS_QX` instances. |
 | Q_00 | BOOL | – | Logic value for channel 1 (bit position 0). |
 | Q_01 | BOOL | – | Logic value for channel 2 (bit position 1). |
 | Q_02 | BOOL | – | Logic value for channel 3 (bit position 2). |
@@ -48,7 +52,9 @@ None.
 
 ### **Data Outputs**
 
-None.
+| Data Output | Type | Description |
+|-------------|------|-------------|
+| QO | BOOL | Quality output - TRUE if the service was executed successfully (AND of the `QO` of all eight `logiBUS_QX` instances). |
 
 ### **Adapters**
 
@@ -67,7 +73,9 @@ The subapplication encapsulates eight instances of the `logiBUS::io::DQ::logiBUS
 - DigitalOutput_Q7 handles Q_06 and is configured by Output_7.
 - DigitalOutput_Q8 handles Q_07 and is configured by Output_8.
 
-All internal FBs have their QI (qualifier/init) parameter permanently set to TRUE, meaning they are always active and ready to process requests.
+All internal FBs receive `QI` from the subapplication's data input `QI` (default `TRUE`), so they are active and ready to process requests as long as `QI` is `TRUE`.
+
+Initialization and quality: `INIT` runs as a chain `DigitalOutput_Q4` → `DigitalOutput_Q7` → `DigitalOutput_Q1` → `DigitalOutput_Q5` → `DigitalOutput_Q2` → `DigitalOutput_Q6` → `DigitalOutput_Q8` → `DigitalOutput_Q3` (each `INITO` → next `INIT`); `DigitalOutput_Q3.INITO` goes to `INITO` and to `AND_QO.REQ`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_8`), which combines the `QO` of the eight instances.
 
 When the CNF event is received, it is forwarded to the REQ input of every internal FB instance. Each instance then reads the current value of its associated Q_x input and writes it to the physical logiBUS output channel referenced by its Output_x parameter.
 
@@ -79,7 +87,7 @@ Because the event broadcast happens in parallel, all eight channels are updated 
 - **Synchronized triggering:** A single distributed event (CNF) simultaneously activates all eight internal output blocks, guaranteeing that the complete output word is applied in one cycle.
 - **Configurable channel identifiers:** The Output_x inputs are of type `logiBUS_DO_S` and default to `logiBUS_DO::Invalid`, forcing the user to explicitly select the desired output channels before operation.
 - **Self-contained 8-bit group:** The subapplication encapsulates all control logic, simplifying the reuse of an 8-channel output group in different projects or contexts.
-- **No output interface:** Since the result is written directly to the logiBUS hardware, no data outputs are required.
+- **Minimal output interface:** Since the result is written directly to the logiBUS hardware, the only outputs are the quality output `QO` and the event `INITO`.
 
 ## State Overview
 

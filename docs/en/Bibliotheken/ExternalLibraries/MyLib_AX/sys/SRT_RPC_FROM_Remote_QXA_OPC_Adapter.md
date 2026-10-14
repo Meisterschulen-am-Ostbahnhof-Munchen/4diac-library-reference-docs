@@ -15,16 +15,17 @@ The **SRT_RPC_FROM_Remote_QXA_OPC_Adapter** is a subapplication (SUB-style) that
 
 ### **Event Inputs**
 
-None. The subapplication does not expose any event inputs; all triggering is handled internally via the adapter stream and method calls.
+- **INIT** (`EInit`): initialization request; goes to `TRIGGER.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm; comes from `DigitalOutput_Q1.INITO`
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality input - TRUE enables the service; goes to `TRIGGER.QI` and `DigitalOutput_Q1.QI`. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifies which physical output (Q1..Q8) is to be controlled. |
 | `ID_SET_METHOD` | `WSTRING` | – | Local method address (ACTION=CREATE_METHOD) used for the Set method call, invoked remotely by Device A via CALL_METHOD. |
 | `ID_RESET_METHOD` | `WSTRING` | – | Local method address used for the Reset method call, invoked remotely by Device A via CALL_METHOD. |
@@ -33,7 +34,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output - TRUE if the service was executed successfully (AND of `TRIGGER.QO` and `DigitalOutput_Q1.QO`)
 
 ### **Adapters**
 
@@ -43,7 +44,7 @@ The subapplication exposes no interface-level adapter ports. All adapter communi
 
 The subapplication processes an incoming bidirectional adapter stream that carries Set, Reset, and Toggle commands from a remote device (Device A). The internal flow is as follows:
 
-1. **TRIGGER** (`adapter::net::ASRT_AX_SERVER_0_CLIENT_1_0`) – receives the remote command stream over its `S_R_T` adapter port. Its data inputs are bound to the subapplication's method address variables (`ID_SET_METHOD`, `ID_RESET_METHOD`, `ID_TOGGLE_METHOD`, `ID_STATE_WRITE`) to enable remote method invocation. The block is permanently enabled via `QI = TRUE`.
+1. **TRIGGER** (`adapter::net::ASRT_AX_SERVER_0_CLIENT_1_0`) – receives the remote command stream over its `S_R_T` adapter port. Its data inputs are bound to the subapplication's method address variables (`ID_SET_METHOD`, `ID_RESET_METHOD`, `ID_TOGGLE_METHOD`, `ID_STATE_WRITE`) to enable remote method invocation. `QI` is passed on from the subapplication input `QI`.
 
 2. **SPLIT** (`adapter::events::bidirectional::ASRT_AX_AX_SPLIT`) – takes the incoming stream from `TRIGGER.S_R_T` and splits it into two parallel paths:
    - `OUT` → forwarded to the flip-flop logic
@@ -51,7 +52,9 @@ The subapplication processes an incoming bidirectional adapter stream that carri
 
 3. **FLIPFLOP** (`adapter::events::bidirectional::ASRT_AX_T_FF_SR_2`) – implements the Set/Reset/Toggle flip-flop behavior. It consumes the `OUT` path from the splitter and maintains the internal state. The current state is written back to Device A using the `ID_STATE_WRITE` remote address.
 
-4. **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`) – receives the `AX_OUT` path from the splitter and drives the physical output selected by the `Output` data input. This block is also permanently enabled (`QI = TRUE`).
+4. **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`) – receives the `AX_OUT` path from the splitter and drives the physical output selected by the `Output` data input. `QI` is passed on to it as well.
+
+Initialization and quality: `INIT` → `TRIGGER.INIT`, `TRIGGER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `INITO` and → `AND_QO.REQ`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`), which combines `TRIGGER.QO` and `DigitalOutput_Q1.QO`.
 
 The data flow ensures that the same incoming command stream simultaneously updates both the flip-flop state and the physical output, while maintaining a single bidirectional adapter connection to the remote controller.
 

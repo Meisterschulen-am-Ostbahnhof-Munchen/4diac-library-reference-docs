@@ -19,9 +19,9 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ## Quality ports (QI/QO)
 
-The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is distributed to `Q_NumericValue_PHYSA`, `NumericValue_PHYSA` and `NVS_AR2`; their `QO` outputs are combined by `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`) into `QO`.
 
-In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation): `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO`.
+In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation). Initialization: `INIT` → `Q_NumericValue_PHYSA.INIT`; `Q_NumericValue_PHYSA.INITO` → `NumericValue_PHYSA.INIT`; `NumericValue_PHYSA.INITO` → `NVS_AR2.INIT`; `NVS_AR2.INITO` → `INITO` and → `AND_QO.REQ`. Quality: `QI` → `Q_NumericValue_PHYSA.QI`, `NumericValue_PHYSA.QI`, `NVS_AR2.QI`; `Q_NumericValue_PHYSA.QO`, `NumericValue_PHYSA.QO`, `NVS_AR2.QO` → `AND_QO.IN1` to `AND_QO.IN3` (in this order); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_3`).
 
 ## Summary
 

@@ -15,26 +15,28 @@ Der Funktionsbaustein **DO_TOGGLE_RPC_QXA_OPC** realisiert einen digitalen Freig
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DigitalOutput_DO.INIT` durchgereicht
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; startet die Initialisierungskette `DO_TOGGLE_SERVER` → `AX_T_FF_INIT_DO` → `PUBLISH_STATE_DO` → `DigitalOutput_DO`
 
 Die auslösenden Toggle-Ereignisse werden weiterhin intern über den RPC-Server generiert.
 
 ### **Ereignis-Ausgänge**
 
-Keine (extern).
+- **INITO** (`EInit`): Initialisierung abgeschlossen; echtes Confirm von `DigitalOutput_DO.INITO` (Ende der Initialisierungskette)
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
-| `QI` | `BOOL` | Qualifier für den physischen Ausgang; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE`; wird an `DigitalOutput_DO.QI` durchgereicht. |
+| `QI` | `BOOL` | Qualifier für den physischen Ausgang; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE`; wird an `DO_TOGGLE_SERVER.QI`, `AX_T_FF_INIT_DO.QI`, `PUBLISH_STATE_DO.QI` und `DigitalOutput_DO.QI` durchgereicht. |
 | `Output_DO` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Freigabe-Ausgang; steuert den digitalen Output (Klick-Toggle, Default AN). |
 | `ID_DO_TOGGLE_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION=CREATE_METHOD) für den argumentlosen RPC-Trigger; wird von mehreren Aufrufern gemeinsam genutzt. |
 | `ID_DO_STATE_WRITE` | `WSTRING` | Lokale Publish-Adresse (ACTION=WRITE) für den aktuellen Freigabe-Zustand (Flipflop-Q); wird remote abonniert. |
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Typ | Beschreibung |
+|------|-----|--------------|
+| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde; UND (`AND_QO`, `AND_BOOL_4`) der `QO` von `DO_TOGGLE_SERVER`, `AX_T_FF_INIT_DO`, `PUBLISH_STATE_DO` und `DigitalOutput_DO`. |
 
 ### **Adapter**
 
@@ -47,8 +49,11 @@ Der Baustein besteht intern aus folgenden Funktionsblöcken:
 - **DO_TOGGLE_SERVER** (`iec61499::net::SERVER_0`): Ein OPC-UA-Server, der eingehende RPC-Aufrufe auf der konfigurierten Methodenadresse (`ID_DO_TOGGLE_METHOD`) empfängt. Bei jedem Trigger wird das Ereignis `IND` ausgelöst.
 - **AX_T_FF_INIT_DO** (`adapter::events::unidirectional::AX_T_FF_INIT`): Ein Flipflop mit initialem Ausgang `TRUE` (AN). Jedes `CLK`-Ereignis toggelt den Zustand.
 - **SPLIT_DO_STATE** (`adapter::events::unidirectional::AX_SPLIT_2`): Verteilt den Zustand (Q) auf zwei parallele Ausgänge (OUT1 und OUT2).
-- **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`): Schaltet den physischen Ausgang entsprechend dem Flipflop-Zustand; `QI` und `INIT` kommen von der Schnittstelle der SubApp.
+- **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`): Schaltet den physischen Ausgang entsprechend dem Flipflop-Zustand; `QI` kommt von der Schnittstelle der SubApp; `INIT` kommt als letztes Glied der Initialisierungskette von `PUBLISH_STATE_DO.INITO`, sein `INITO` wird als `INITO` ausgegeben.
 - **PUBLISH_STATE_DO** (`adapter::net::AX_PUBLISH_1`): Veröffentlicht den Zustand als OPC-UA-Write auf der Adresse `ID_DO_STATE_WRITE`.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_4`): Verknüpft die `QO`-Ausgänge von `DO_TOGGLE_SERVER`, `AX_T_FF_INIT_DO`, `PUBLISH_STATE_DO` und `DigitalOutput_DO` per UND zum Baustein-Ausgang `QO`; ausgelöst durch `DigitalOutput_DO.INITO` (`REQ`).
+
+**Initialisierung:** `INIT` → `DO_TOGGLE_SERVER.INIT`, `DO_TOGGLE_SERVER.INITO` → `AX_T_FF_INIT_DO.INIT`, `AX_T_FF_INIT_DO.INITO` → `PUBLISH_STATE_DO.INIT`, `PUBLISH_STATE_DO.INITO` → `DigitalOutput_DO.INIT`, `DigitalOutput_DO.INITO` → `INITO` und → `AND_QO.REQ`.
 
 **Ablauf:** Ein RPC-Trigger (z. B. vom OPC-Dashboard oder SoftKey) ruft die Methode auf. Der Server erzeugt ein `IND`-Ereignis, das direkt den Flipflop (CLK) taktet. Gleichzeitig wird `RSP` sofort zurückgesendet, um den Server-Thread nicht zu blockieren (siehe Technische Besonderheiten). Der Flipflop-Ausgang `Q` wechselt seinen Zustand (toggle). Über den Splitter wird dieser Zustand gleichzeitig an den physischen Ausgang und an den Publisher übergeben. Der Publisher aktualisiert den remote überwachten Wert.
 

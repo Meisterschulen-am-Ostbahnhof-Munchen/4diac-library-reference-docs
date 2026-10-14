@@ -16,30 +16,40 @@
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **RECEIVE**: `adapter::net::AR_SERVER_0_1` (parameter `QI=TRUE`) - creates the OPC-UA method and provides the received `REAL` argument on the adapter `OUT`
-    - **PUBLISH**: `adapter::net::AR_PUBLISH_1` (parameter `QI=TRUE`) - publishes the value under the local address
+    - **RECEIVE**: `adapter::net::AR_SERVER_0_1` (`QI` from outside) - creates the OPC-UA method and provides the received `REAL` argument on the adapter `OUT`
+    - **PUBLISH**: `adapter::net::AR_PUBLISH_1` (`QI` from outside) - publishes the value under the local address
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` - combines the `QO` of `RECEIVE` and `PUBLISH`
 - **Functionality**: The value from the method call is passed directly to the publisher without intermediate logic.
 
 ## Interface Structure
 
-### **Event Inputs / Event Outputs**
+### **Event Inputs**
 
-None - the SubApp has no event ports.
+- **INIT** (`EInit`): initialization request; goes to `RECEIVE.INIT`
+
+### **Event Outputs**
+
+- **INITO** (`EInit`): initialization confirm; comes from `PUBLISH.INITO`
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service; goes to `RECEIVE.QI` and `PUBLISH.QI`
 - **ID_METHOD** (`WSTRING`): Locally created OPC-UA method (`ACTION=CREATE_METHOD`, 1 `REAL` argument) - callable from another station (`AR_CLIENT_1_0`) and/or directly from the OPC dashboard
 - **ID_WRITE** (`WSTRING`): Local publish address (`REAL`, `ACTION=PUBLISH`) for the received value - typically read back by a local self-subscribe
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (AND of `RECEIVE.QO` and `PUBLISH.QO`)
 
 ## Program Flow and Connections
 
 - `ID_METHOD` → `RECEIVE.ID`
 - `ID_WRITE` → `PUBLISH.ID`
+- `INIT` → `RECEIVE.INIT`
 - `RECEIVE.INITO` → `PUBLISH.INIT` (the publisher is initialised as soon as the method has been created)
+- `PUBLISH.INITO` → `INITO` and → `AND_QO.REQ`
+- `QI` → `RECEIVE.QI` and `PUBLISH.QI`
+- `RECEIVE.QO` → `AND_QO.IN1`, `PUBLISH.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 - `RECEIVE.OUT` → `PUBLISH.IN` (adapter connection of the `REAL` value)
 
 ## Technical Details

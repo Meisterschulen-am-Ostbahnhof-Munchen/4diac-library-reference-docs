@@ -14,14 +14,15 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service
 - **u16ObjId** (`UINT`): object ID of SoftKey/background (VT)
 - **u16ObjIdA** (`UINT`): object ID of AuxFunction2/background (VT)
 - **ID_SUBSCRIBE** (`WSTRING`): remote subscribe address (status/colour, `ACTION=SUBSCRIBE`)
@@ -32,7 +33,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service executed successfully (AND of `Command.QO` and `Status.QO`)
 
 ### **Adapters**
 
@@ -46,6 +47,7 @@ All adapters are of type `adapter::types::unidirectional::AX`.
 
 - **`Command`** (SubApp `MyLib::sys::Softkey_Aux_Switch_Auto_TO_Remote_WRITE`, [Softkey_Aux_Switch_Auto_TO_Remote_WRITE](./Softkey_Aux_Switch_Auto_TO_Remote_WRITE.md)): forms the command from all sources and writes it remotely
 - **`Status`** (SubApp `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`, [AX_SUBSCRIBE_BG3_WEB_OPC](./AX_SUBSCRIBE_BG3_WEB_OPC.md)): subscribes to the state, colours the background and publishes it for the web client
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): ANDs `Command.QO` and `Status.QO` into `QO`
 
 ## Functionality
 
@@ -53,6 +55,9 @@ All adapters are of type `adapter::types::unidirectional::AX`.
 - `AUTO_IN` → `Command.AUTO_IN`
 - `Command.AUTOMATIC_OUT` → `AUTOMATIC_OUT`; `Command.MANUAL_OUT` → `MANUAL_OUT`
 - `u16ObjId`, `u16ObjIdA`, `ID_SUBSCRIBE`, `ID_STATUS_WEB` → the like-named inputs of `Status`
+- Initialization chain: `INIT` → `Command.INIT`, `Command.INITO` → `Status.INIT`, `Status.INITO` → `INITO` and → `AND_QO.REQ`
+- `QI` → `Command.QI` and `Status.QI`
+- `Command.QO` → `AND_QO.IN1`, `Status.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

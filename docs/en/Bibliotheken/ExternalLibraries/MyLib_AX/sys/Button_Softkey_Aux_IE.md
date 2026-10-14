@@ -22,27 +22,30 @@ The button **must** be non-latching (`Latchable=0` in the pool); a latching butt
     - **Softkey**: SubApp [`Softkey_IE_1`](./Softkey_IE_1.md) with `InputEvent=SK_RELEASED`
     - **Aux**: SubApp [`Aux_IE_1`](./Aux_IE_1.md) with `InputEvent=AuxDisabled_START`
     - **MERGE**: `iec61499::events::E_MERGE_3` - merges the three `IND` events
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` - combines the `QO` outputs of `Button`, `Aux` and `Softkey` into the SubApp output `QO`
 - **Imports**: `BT_RELEASED_UNLATCHED`, `AuxDisabled_START`, `SK_RELEASED`
 
 ## Interface Structure
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the chain `Button` → `Aux` → `Softkey`
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirmation; comes from `Softkey.INITO`
 - **IND**: Fires when a button (`BT_RELEASED_UNLATCHED`), softkey (`SK_RELEASED`) or aux (`AuxEnabled`) is activated
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`): quality input, service enable (initial value `TRUE`); passed on to `Button.QI`, `Aux.QI` and `Softkey.QI`
 - **u16ObjId** (`UINT`): Object ID of the softkey (`CSoftkey`, non-latching)
 - **u16ObjIdA** (`UINT`): Object ID of the `AuxFunction2`
 - **u16ObjIdB** (`UINT`): Object ID of the button (`CButton`, non-latching)
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, `AND` of the `QO` outputs of `Button`, `Aux` and `Softkey` (via `AND_QO`)
 
 ## Program Flow and Connections
 
@@ -50,6 +53,8 @@ None.
 - `u16ObjIdA` → `Aux.u16ObjId`; `Aux.IND` → `MERGE.EI2`
 - `u16ObjIdB` → `Button.u16ObjId`; `Button.IND` → `MERGE.EI3`
 - `MERGE.EO` → `IND`
+- Initialization: `INIT` → `Button.INIT`; `Button.INITO` → `Aux.INIT`; `Aux.INITO` → `Softkey.INIT`; `Softkey.INITO` → `INITO` and → `AND_QO.REQ`
+- Quality: `QI` → `Button.QI`, `Aux.QI` and `Softkey.QI`; `Button.QO` → `AND_QO.IN1`, `Aux.QO` → `AND_QO.IN2`, `Softkey.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

@@ -12,16 +12,29 @@
 
 ## Interface
 
+### Event inputs
+
+- `INIT` (`EInit`): initialization request.
+
+### Event outputs
+
+- `INITO` (`EInit`): initialization confirm.
+
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): quality input, TRUE enables the service.
 - `u16ObjId_1` (UINT, default `ID_NULL`): ObjectID of checkbox 1 (bit 0).
 - `u16ObjId_2` (UINT, default `ID_NULL`): ObjectID of checkbox 2 (bit 1).
+
+### Output variables
+
+- `QO` (BOOL): quality output, AND combination (`AND_QO`, `AND_BOOL_4`) of the `QO` outputs of the two `Checkbox_IDA_TO_AX` and the two `AX_TO_Checkbox` instances.
 
 ### Adapters
 
 - **Plug `K`** (`adapter::types::bidirectional::AD2`): bitmask to the consumer and echo back.
 
-The block has no event ports of its own.
+Initialization runs as a chain through the four sub-blocks (see below).
 
 ## How it works
 
@@ -36,6 +49,11 @@ Reverse direction (consumer → VT):
 1. The echo reported back via `K` appears at `AD_TO_AD2.AD_OUT`.
 2. `SPLIT_AD_INTO_AX` splits the DWORD into `BIT_00` and `BIT_01`.
 3. Two instances of [`AX_TO_Checkbox`](./AX_TO_Checkbox.md) write the bits to the respective checkbox.
+
+Initialization and quality:
+
+1. `INIT` → `Checkbox_IDA_TO_AX.INIT`; `Checkbox_IDA_TO_AX.INITO` → `Checkbox_IDA_TO_AX_1.INIT`; `Checkbox_IDA_TO_AX_1.INITO` → `AX_TO_Checkbox.INIT`; `AX_TO_Checkbox.INITO` → `AX_TO_Checkbox_1.INIT`; `AX_TO_Checkbox_1.INITO` → `INITO` and → `AND_QO.REQ`.
+2. `QI` → `.QI` of all four sub-blocks; their `QO` → `AND_QO.IN1` to `AND_QO.IN4` (`Checkbox_IDA_TO_AX`, `Checkbox_IDA_TO_AX_1`, `AX_TO_Checkbox`, `AX_TO_Checkbox_1`); `AND_QO.OUT` → `QO`.
 
 `u16ObjId_1` and `u16ObjId_2` each go to both the `Checkbox_IDA_TO_AX` and the `AX_TO_Checkbox` instance of the corresponding checkbox.
 

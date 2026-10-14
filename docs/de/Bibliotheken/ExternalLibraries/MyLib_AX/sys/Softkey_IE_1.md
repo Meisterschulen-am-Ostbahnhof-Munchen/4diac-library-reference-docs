@@ -14,20 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: feuert, wenn das konfigurierte `InputEvent` auftritt
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, TRUE aktiviert den Dienst
 - **u16ObjId** (UINT): Object ID des SoftKeys (Default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Softkey::SoftKeyActivationCode_S`): z. B. `SK_PRESSED`, `SK_RELEASED` (Default `Invalid`)
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (`BOOL`): Quality Output, direkt von `SoftKey.QO`
 
 ### **Adapter**
 
@@ -35,12 +37,12 @@ Es werden keine Adapter verwendet.
 
 ## Funktionsweise
 
-Das Netzwerk enthält genau eine Instanz `SoftKey` des Typs `isobus::UT::io::Softkey::Softkey_IE` mit dem Parameter `QI = TRUE`. `u16ObjId` und `InputEvent` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, und deren Ereignis `IND` wird direkt als `IND` der SubApp ausgegeben.
+Das Netzwerk enthält genau eine Instanz `SoftKey` des Typs `isobus::UT::io::Softkey::Softkey_IE` (`QI` kommt vom SubApp-Eingang `QI`). `u16ObjId` und `InputEvent` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, und deren Ereignis `IND` wird direkt als `IND` der SubApp ausgegeben. Zusätzlich gilt: `INIT` → `SoftKey.INIT`, `SoftKey.INITO` → `INITO`, `QI` → `SoftKey.QI`, `SoftKey.QO` → `QO`.
 
 ## Technische Besonderheiten
 
 - Reine Durchreichung ohne eigene Logik oder Zustand
-- `QI` ist fest auf TRUE verdrahtet; der Baustein ist also immer aktiv
+- `QI` ist als Eingang herausgeführt (Vorgabe `TRUE`) und `QO` kommt direkt von `SoftKey.QO`; unbeschaltet ist der Baustein also aktiv
 - Weil `InputEvent` ein Parameter ist, kann dieselbe SubApp für unterschiedliche Ereignisarten (z. B. Drücken oder Loslassen) verwendet werden
 
 ## Anwendungsszenarien

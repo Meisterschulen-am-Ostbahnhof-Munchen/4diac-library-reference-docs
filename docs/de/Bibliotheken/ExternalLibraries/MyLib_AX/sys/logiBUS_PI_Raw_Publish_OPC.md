@@ -14,14 +14,15 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, TRUE aktiviert den Dienst
 - **Input** (`logiBUS::io::PI::logiBUS_PI_S`, Vorgabe `logiBUS_PI::Invalid`): Identifiziert den Pulseingang `PulseInput_I1..I9`
 - **ID_HZ_WRITE** (`WSTRING`): Frequenz-Publish-Adresse (`REAL` Hz, `ACTION=PUBLISH`), lokal auf dieser Station
 - **stObjFilterTimeS** (`NumericObjectPool_S`): Object-ID + Scale/Offset/Decimals der `CNumberVariable` für die PT1-Filterzeit in Sekunden (VT-Eingabefeld)
@@ -32,7 +33,7 @@
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_4`) der `QO`-Ausgänge von `logiBUS_PI_IDA`, `AR_PUBLISH_HZ`, `INI_FilterTimeS` und `FilterTimeS`
 
 ### **Adapter**
 
@@ -40,16 +41,17 @@ Dieser Funktionsblock hat keine Adapter an der Schnittstelle; intern werden `AR`
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **logiBUS_PI_IDA**: `logiBUS::io::PI::logiBUS_PI_IDA` (`QI=TRUE`, `ImpulseDelta=100`, `TimeDelta=250`, `TimeRateLimit=100`) – Pulseingang als `AD`-Adapter
+- **logiBUS_PI_IDA**: `logiBUS::io::PI::logiBUS_PI_IDA` (`ImpulseDelta=100`, `TimeDelta=250`, `TimeRateLimit=100`) – Pulseingang als `AD`-Adapter
 - **AD_TO_AR_NUM**: `adapter::conversion::unidirectional::AD_TO_AR_NUM` – wandelt den Zählwert in `REAL`
 - **FT_DERIV_10_AR**: `OSCAT_adapter::Control::FT_DERIV_10_AR` (`Faktor=1.0`, `run=TRUE`) – Ableitung (Impulse pro Zeit = Frequenz)
 - **LIT_DerivK**: `initval_AUI` (`INIT_VAL=9`) – Konstante `K` der Ableitung
 - **FT_PT1_AR**: `OSCAT_adapter::Control::FT_PT1_AR` (`K=1.0`) – PT1-Filter
 - **Round_Hz**: `OSCAT_adapter::Mathematical::ROUND_STEP_AR` – rundet auf das Raster `RASTER_HZ`
-- **AR_PUBLISH_HZ**: [`adapter::net::AR_PUBLISH_1`](../../adapter/net/AR_PUBLISH_1.md) (`QI=TRUE`) – publiziert die Frequenz
+- **AR_PUBLISH_HZ**: [`adapter::net::AR_PUBLISH_1`](../../adapter/net/AR_PUBLISH_1.md) – publiziert die Frequenz
 - **FilterTimeS**: SubApp `MyLib::sys::NumericValue_TO_AR2_OPC` – Filterzeit aus VT-Eingabefeld bzw. OPC-UA
-- **INI_FilterTimeS**: `eclipse4diac::storage::INI_AR2` (`QI=TRUE`, `SETM=TRUE`, `KEY='FilterTimeS'`, Vorgabe `2.0`) – persistiert die Filterzeit
+- **INI_FilterTimeS**: `eclipse4diac::storage::INI_AR2` (`SETM=TRUE`, `KEY='FilterTimeS'`, Vorgabe `2.0`) – persistiert die Filterzeit
 - **ToATM**: SubApp `MyLib::sys::AR_S_TO_ATM` – wandelt Sekunden in einen `ATM`-Zeitwert
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` – verknüpft die `QO`-Ausgänge von `logiBUS_PI_IDA`, `AR_PUBLISH_HZ`, `INI_FilterTimeS` und `FilterTimeS` zu `QO`
 
 ## Programmablauf und Verbindungen
 
@@ -59,6 +61,8 @@ Dieser Funktionsblock hat keine Adapter an der Schnittstelle; intern werden `AR`
 4. Filterzeit: `FilterTimeS.VALUEO` → `INI_FilterTimeS.VAL` (Persistenz); `FilterTimeS.VALUE_OUT` → `ToATM.IN1`; `ToATM.OUT` → `FT_PT1_AR.TM`.
 5. `FT_PT1_AR.AR_OUT` → `Round_Hz.AR_IN` (`RASTER_HZ` → `Round_Hz.RASTER`) → `AR_PUBLISH_HZ.IN`.
 6. `ID_HZ_WRITE` → `AR_PUBLISH_HZ.ID`.
+7. Initialisierung: `INIT` → `logiBUS_PI_IDA.INIT`; `logiBUS_PI_IDA.INITO` → `AR_PUBLISH_HZ.INIT`; `AR_PUBLISH_HZ.INITO` → `INI_FilterTimeS.INIT`; `INI_FilterTimeS.INITO` → `FilterTimeS.INIT`; `FilterTimeS.INITO` → `INITO` und → `AND_QO.REQ`.
+8. Qualität: `QI` wird an `logiBUS_PI_IDA`, `AR_PUBLISH_HZ`, `INI_FilterTimeS` und `FilterTimeS` verteilt (kein fest verdrahteter `QI`-Parameter mehr); deren `QO` → `AND_QO.IN1` bis `AND_QO.IN4` (in dieser Reihenfolge); `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

@@ -10,7 +10,7 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
-Schnittstelle (Quality-Muster): Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, „Quality Input – TRUE to enable service“) und Datenausgang `QO` (`BOOL`, „Quality Output – TRUE if service executed successfully“) sind direkt mit dem VT-Schreibbaustein verbunden: `QI` → `Q_NumericValue_PHYSA.QI`, `Q_NumericValue_PHYSA.QO` → `QO`.
+Schnittstelle (Quality-Muster): Ereignis-Eingang `INIT` und Ereignis-Ausgang `INITO` (je `EInit`), Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, „Quality Input – TRUE to enable service“) und Datenausgang `QO` (`BOOL`, „Quality Output – TRUE if service executed successfully“). Initialisierung: `INIT` → `NumericValue_PHYSA.INIT`; `NumericValue_PHYSA.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `Q_NumericValue_PHYSA.INIT`; `Q_NumericValue_PHYSA.INITO` → `INITO` und → `AND_QO.REQ`. Qualität: `QI` → `Q_NumericValue_PHYSA.QI`, `NumericValue_PHYSA.QI`, `INI_AR.QI`; `Q_NumericValue_PHYSA.QO`, `NumericValue_PHYSA.QO`, `INI_AR.QO` → `AND_QO.IN1` bis `AND_QO.IN3` (in dieser Reihenfolge); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_3`).
 
 ![INI_IN_AND_STORE_AR](INI_IN_AND_STORE_AR.svg)
 

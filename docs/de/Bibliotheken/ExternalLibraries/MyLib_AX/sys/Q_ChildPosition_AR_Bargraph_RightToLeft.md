@@ -23,6 +23,7 @@
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Default `TRUE`): Quality Input – TRUE gibt den Dienst frei (durchgereicht an `QPos.QI`)
 - **u16ObjId** (`UINT`): Object ID des Kindobjekts (Default `ID_NULL`)
 - **u16ObjIdParent** (`UINT`): Object ID des Elternobjekts (Default `ID_NULL`)
 - **xScale** (`BOOL`): `FALSE` = Bypass; `TRUE` (Default) = Skalierung mit dem DM/SKM-Faktor für `u16ObjIdParent`
@@ -31,6 +32,7 @@
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `QPos.QO`)
 - **STATUS** (`STRING`): Service-Status, durchgereicht vom internen `Q_ChildPosition`
 - **s16OldXposition** (`INT`): alte X-Position, durchgereicht
 - **s16OldYposition** (`INT`): alte Y-Position, durchgereicht
@@ -52,6 +54,7 @@
 - `AR_R_MUL.OUT` → `SubFlip.IN`; `LengthPx` → `SubFlip.MINUEND`
 - `SubFlip.OUT` → `QPos.rPhys`
 - `INIT` → `QPos.INIT`; `QPos.INITO` → `INITO`; `QPos.CNF` → `CNF`
+- `QI` → `QPos.QI`; `QPos.QO` → `QO`
 - `u16ObjId`, `u16ObjIdParent`, `xScale` → gleichnamige Eingänge von `QPos`
 - `QPos.STATUS`, `QPos.s16OldXposition`, `QPos.s16OldYposition`, `QPos.s16result` → gleichnamige Ausgänge
 

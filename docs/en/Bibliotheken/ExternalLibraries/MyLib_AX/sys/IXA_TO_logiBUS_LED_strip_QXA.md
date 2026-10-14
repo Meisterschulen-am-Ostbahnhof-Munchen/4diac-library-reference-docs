@@ -13,27 +13,34 @@ The `IXA_TO_logiBUS_LED_strip_QXA` is a generic composite subapplication that in
 
 ## Interface Structure
 
-This subapplication exposes only data inputs; it has no event inputs, event outputs, data outputs, or adapter interfaces at its boundary. All communication between internal blocks is handled internally.
+This subapplication exposes the initialization events `INIT`/`INITO`, the status ports `QI`/`QO` and data inputs; it has no adapter interfaces at its boundary. All communication between internal blocks is handled internally.
 
 ### **Event Inputs**
 
-None.
+| Name  | Type    | Comment                |
+|-------|---------|------------------------|
+| INIT  | `EInit` | Initialization Request |
 
 ### **Event Outputs**
 
-None.
+| Name  | Type    | Comment                |
+|-------|---------|------------------------|
+| INITO | `EInit` | Initialization Confirm |
 
 ### **Data Inputs**
 
 | Name   | Type                          | Initial Value         | Comment                                      |
 |--------|-------------------------------|-----------------------|----------------------------------------------|
+| QI     | `BOOL`                        | `TRUE`                | Quality Input - TRUE enables the service.    |
 | Input  | `logiBUS::io::DI::logiBUS_DI_S` | `Invalid`             | Identify the Input Input_I1..I8              |
 | Colour | `UINT`                        | `LED_COLOURS::LED_GREEN` | This identify the Colour.                    |
 | Output | `USINT`                       | (default 0)           | Identify the Output Number of Strip          |
 
 ### **Data Outputs**
 
-None.
+| Name | Type   | Comment |
+|------|--------|---------|
+| QO   | `BOOL` | Quality Output - TRUE if the service executed successfully (AND of `LED.QO` and `BUTTON.QO`). |
 
 ### **Adapters**
 
@@ -43,8 +50,10 @@ None (externally exposed).
 
 The subapplication routes its external data inputs to two internal function blocks:
 
-- **BUTTON** (type `logiBUS::io::DI::logiBUS_IXA`): Receives the `Input` data and has its `QI` parameter set to `TRUE`.
-- **LED** (type `logiBUS::io::DO_LED::logiBUS_LED_strip_QXA`): Receives `Colour` and `Output` data and has `QI=TRUE` and `FREQ=LED_FREQ::LED_1HZ` configured.
+- **BUTTON** (type `logiBUS::io::DI::logiBUS_IXA`): Receives the `Input` data; its `QI` comes from the subapplication's `QI` input.
+- **LED** (type `logiBUS::io::DO_LED::logiBUS_LED_strip_QXA`): Receives `Colour` and `Output` data; `FREQ=LED_FREQ::LED_1HZ` is configured and `QI` comes from the subapplication's `QI` input.
+
+Initialization runs as a chain `INIT` → `LED.INIT`, `LED.INITO` → `BUTTON.INIT`, `BUTTON.INITO` → `INITO` (and additionally → `AND_QO.REQ`). `QI` is forwarded to `LED.QI` and `BUTTON.QI`; `LED.QO` and `BUTTON.QO` are ANDed by the `AND_QO` block (type `iec61131::booleanOperators::AND_BOOL_2`) into `QO`.
 
 An internal adapter connection links `BUTTON.IN` to `LED.OUT`, enabling the button to send state/event information directly to the LED controller via an adapter interface. This design decouples the event handling from the data path, allowing the LED strip to respond to button actions (e.g., toggling, blinking) while maintaining a simple parameterized configuration.
 
@@ -53,7 +62,7 @@ An internal adapter connection links `BUTTON.IN` to `LED.OUT`, enabling the butt
 - **Adapter-based communication**: The internal connection via `BUTTON.IN` → `LED.OUT` uses an adapter, providing a flexible and type-safe link between the button and the LED controller.
 - **Parameterization**: The `Colour` and `Output` data inputs allow runtime configuration of the LED color and the specific strip number.
 - **Generic input mapping**: The `Input` data input accepts any `logiBUS_DI_S` value, making the subapplication adaptable to various button/input assignments.
-- **Preconfigured internal blocks**: Both internal FBs have their `QI` set to `TRUE`, and the LED frequency is preset to 1 Hz, ensuring immediate operation upon deployment.
+- **Preconfigured internal blocks**: Both internal FBs receive `QI` from the subapplication's `QI` input (default `TRUE`), and the LED frequency is preset to 1 Hz, ensuring immediate operation upon deployment.
 
 ## State Overview
 

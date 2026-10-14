@@ -17,6 +17,14 @@ For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`)
 
 ![RedWhiteBackground2_AXS](RedWhiteBackground2_AXS.svg)
 
+## Initialization and Status (INIT/INITO, QI/QO)
+
+- **Event input** `INIT` (`EInit`, Initialization Request) and **event output** `INITO` (`EInit`, Initialization Confirm)
+- **Data input** `QI` (`BOOL`, default `TRUE`, Quality Input) is forwarded to `Q_BackgroundColour_1.QI` and `Q_BackgroundColour_2.QI`
+- **Data output** `QO` (`BOOL`, Quality Output): AND (`AND_QO`, type `iec61131::booleanOperators::AND_BOOL_2`) of the `QO` outputs of `Q_BackgroundColour_1.QO` and `Q_BackgroundColour_2.QO`
+- **Initialization chain**: `INIT` → `Q_BackgroundColour_1.INIT`, `Q_BackgroundColour_1.INITO` → `Q_BackgroundColour_2.INIT`, `Q_BackgroundColour_2.INITO` → `INITO`
+- `E_MERGE_QO` (type `iec61499::events::E_MERGE_3`) merges `Q_BackgroundColour_2.INITO`, `Q_BackgroundColour_1.CNF` and `Q_BackgroundColour_2.CNF` and triggers `AND_QO.REQ`
+
 ## Summary
 
 One of many variants in the background color block family: color pair Rot/Weiß, 2 objects, adapter selector, struct. object ID.
@@ -25,4 +33,4 @@ One of many variants in the background color block family: color pair Rot/Weiß,
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

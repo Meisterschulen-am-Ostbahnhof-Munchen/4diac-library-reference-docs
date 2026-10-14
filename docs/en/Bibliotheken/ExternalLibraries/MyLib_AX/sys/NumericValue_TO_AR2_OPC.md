@@ -23,11 +23,11 @@
 
 - Merge strategy identical to the VT/web merge already proven in `RampLimitFS_TO_logiBUS_QDA_PWM_OPC.SUB` (per the source comment).
 
-## Quality ports (QI/QO)
+## Event and quality ports (INIT/INITO, QI/QO)
 
-The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is passed to `NumericValue_PHYSA`, `AR_SUBSCRIBE_1`, `AR_PUBLISH_1` and `Q_NumericValue_PHYSA`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_4`), which combines `Q_NumericValue_PHYSA.QO`, `NumericValue_PHYSA.QO`, `AR_SUBSCRIBE_1.QO` and `AR_PUBLISH_1.QO`.
 
-The block still has no event ports of its own.
+In addition, the block has the event input `INIT` and the event output `INITO` (both `EInit`). Initialization runs as a chain: `INIT` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `AR_SUBSCRIBE_1.INIT`, `AR_SUBSCRIBE_1.INITO` → `AR_PUBLISH_1.INIT`, `AR_PUBLISH_1.INITO` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO` (and → `AND_QO.REQ`).
 
 ## Summary
 

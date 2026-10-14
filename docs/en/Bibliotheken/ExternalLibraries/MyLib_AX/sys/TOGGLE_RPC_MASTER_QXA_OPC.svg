@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1815.5 252.0"
-     width="1815.5" height="252.0">
+     viewBox="0 0 1815.5 272.0"
+     width="1815.5" height="272.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 246.375 66.0
             L 253.375 66.0
             A 3 3 0 0 1 256.375 69.0
-            L 256.375 229.0
-            A 3 3 0 0 1 253.375 232.0
-            L 3 232.0
-            A 3 3 0 0 1 0 229.0
+            L 256.375 249.0
+            A 3 3 0 0 1 253.375 252.0
+            L 3 252.0
+            A 3 3 0 0 1 0 249.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="249.875,11.0 254.875,16.0 249.875,21.0" fill="#63B31F"/>
+    <text x="246.875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -97,31 +105,23 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#BD8663"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_TRIGGER_METHOD</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_TRIGGER_METHOD</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_STATE_WRITE</text>
 
-    <!-- Adapter Ports -->
+    <polygon points="249.875,71.0 254.875,76.0 249.875,81.0" fill="#A3B08F"/>
+    <text x="246.875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
-    <path d="M 244.875 117.0
-            L 247.375 117.0
-            L 247.375 118.66666666666667
-            L 249.875 118.66666666666667
-            L 249.875 117.0
-            L 254.875 117.0
-            L 254.875 127.0
-            L 249.875 127.0
-            L 249.875 125.33333333333333
-            L 247.375 125.33333333333333
-            L 247.375 127.0
-            L 244.875 127.0
-            Z" fill="#845DAF"/>
-    <text x="241.875" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT1</text>
+    <!-- Adapter Ports -->
 
     <path d="M 244.875 137.0
             L 247.375 137.0
@@ -137,7 +137,7 @@
             L 244.875 147.0
             Z" fill="#845DAF"/>
     <text x="241.875" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT2</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT1</text>
 
     <path d="M 244.875 157.0
             L 247.375 157.0
@@ -153,7 +153,7 @@
             L 244.875 167.0
             Z" fill="#845DAF"/>
     <text x="241.875" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT3</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT2</text>
 
     <path d="M 244.875 177.0
             L 247.375 177.0
@@ -169,7 +169,7 @@
             L 244.875 187.0
             Z" fill="#845DAF"/>
     <text x="241.875" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT4</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT3</text>
 
     <path d="M 244.875 197.0
             L 247.375 197.0
@@ -185,7 +185,7 @@
             L 244.875 207.0
             Z" fill="#845DAF"/>
     <text x="241.875" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT5</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT4</text>
 
     <path d="M 244.875 217.0
             L 247.375 217.0
@@ -201,6 +201,22 @@
             L 244.875 227.0
             Z" fill="#845DAF"/>
     <text x="241.875" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT5</text>
+
+    <path d="M 244.875 237.0
+            L 247.375 237.0
+            L 247.375 238.66666666666666
+            L 249.875 238.66666666666666
+            L 249.875 237.0
+            L 254.875 237.0
+            L 254.875 247.0
+            L 249.875 247.0
+            L 249.875 245.33333333333334
+            L 247.375 245.33333333333334
+            L 247.375 247.0
+            L 244.875 247.0
+            Z" fill="#845DAF"/>
+    <text x="241.875" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT6</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -209,28 +225,40 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="281.375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den argumentlosen Toggle-Trigger, wird vom Bedienmodul per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den argumentlosen Toggle-Trigger, wird vom Bedienmodul per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (ACTION=WRITE) fuer den tatsaechlichen Toggle-Zustand - wird vom Bedienmodul remote abonniert (z.B. fuer GreenWhiteBackground) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="281.375" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 1 (z.B. AX_TON_MERGE_QXA_OPC.MASTER)</text>
+    <text x="281.375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
 
     <text x="281.375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 2</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 1 (z.B. AX_TON_MERGE_QXA_OPC.MASTER)</text>
 
     <text x="281.375" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 3</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 2</text>
 
     <text x="281.375" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 4</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 3</text>
 
     <text x="281.375" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 5</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 4</text>
 
     <text x="281.375" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 5</text>
+
+    <text x="281.375" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AX</tspan> – Toggle-Zustand fuer Kanal 6</text>
   </g>
 </svg>

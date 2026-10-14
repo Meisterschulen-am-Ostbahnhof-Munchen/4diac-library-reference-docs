@@ -20,6 +20,7 @@
     - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physischer digitaler Ausgang.
     - **E_SPLIT_2**: `iec61499::events::E_SPLIT_2` — verzweigt das Softkey-Ereignis.
     - **Farbbaustein** (kompakte Background-Variante, siehe [Background-Farbbausteine](../../MyLib_AX/sys/Background-Farbbausteine.md)): setzt die Statusfarbe.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO` von `logiBUS_QX`, `Softkey_IX` und dem Farbbaustein.
 - **Funktionsweise**: `Softkey_IX.IND` wird über `E_SPLIT_2` an `logiBUS_QX.REQ` und den Farbwechsel-Baustein verteilt; `Softkey_IX.IN` geht an `logiBUS_QX.OUT` und an den Farbbaustein.
 
 ## Programmablauf und Verbindungen
@@ -27,6 +28,8 @@
 1. `u16ObjId` → `Softkey_IX.u16ObjId` und Farbbaustein `.u16ObjId`; `Output` → `logiBUS_QX.Output`.
 2. `Softkey_IX.IND` → `E_SPLIT_2.EI` → `EO1` → `logiBUS_QX.REQ`, `EO2` → Farbbaustein `.EO`.
 3. `Softkey_IX.IN` → `logiBUS_QX.OUT` und → Farbbaustein `.DI`.
+4. Initialisierung: Ereigniseingang `INIT` → `logiBUS_QX.INIT`, `logiBUS_QX.INITO` → `Softkey_IX.INIT`, `Softkey_IX.INITO` → Farbbaustein `.INIT` (Instanz `GreenWhiteBackground1_AX`), dessen `INITO` → Ereignisausgang `INITO` und → `AND_QO.REQ`.
+5. Qualität: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `logiBUS_QX.QI`, `Softkey_IX.QI` und Farbbaustein `.QI`; `logiBUS_QX.QO` → `AND_QO.IN1`, `Softkey_IX.QO` → `AND_QO.IN2`, Farbbaustein `.QO` → `AND_QO.IN3`; `AND_QO.OUT` → Datenausgang `QO`.
 
 ## Anwendungsszenarien
 

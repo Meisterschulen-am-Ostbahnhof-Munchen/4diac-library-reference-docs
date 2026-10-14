@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2443.0 172.0"
-     width="2443.0" height="172.0">
+     viewBox="0 0 1808.9375 172.0"
+     width="1808.9375" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1673.0000000000002, 10)">
+  <g transform="translate(1208.25, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 219.6 0
-            A 3 3 0 0 1 222.6 3
-            L 222.6 23.0
-            A 3 3 0 0 1 219.6 26.0
-            L 212.6 26.0
-            L 212.6 66.0
-            L 219.6 66.0
-            A 3 3 0 0 1 222.6 69.0
-            L 222.6 149.0
-            A 3 3 0 0 1 219.6 152.0
+            L 187.6875 0
+            A 3 3 0 0 1 190.6875 3
+            L 190.6875 23.0
+            A 3 3 0 0 1 187.6875 26.0
+            L 180.6875 26.0
+            L 180.6875 66.0
+            L 187.6875 66.0
+            A 3 3 0 0 1 190.6875 69.0
+            L 190.6875 149.0
+            A 3 3 0 0 1 187.6875 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 69.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="184.1875,11.0 189.1875,16.0 184.1875,21.0" fill="#63B31F"/>
+    <text x="181.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,7 +99,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AR_TO_Q_Publish_OPC</text>
     
-    <text x="111.3" y="66.0"
+    <text x="95.34375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.2</text>
 
@@ -109,8 +117,8 @@
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_WRITE</text>
 
-    <polygon points="216.1,71.0 221.1,76.0 216.1,81.0" fill="#A3B08F"/>
-    <text x="213.1" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="184.1875,71.0 189.1875,76.0 184.1875,81.0" fill="#A3B08F"/>
+    <text x="181.1875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
@@ -137,6 +145,12 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="215.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
@@ -146,7 +160,7 @@
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Publish-Adresse (REAL, ACTION=PUBLISH), lokal oder stationsuebergreifend – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="247.6" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="215.6875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
 
     <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"

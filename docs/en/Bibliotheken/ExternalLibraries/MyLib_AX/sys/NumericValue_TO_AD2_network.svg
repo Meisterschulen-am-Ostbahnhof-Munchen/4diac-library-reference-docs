@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-31.6 -151.0 1463.2 588.0"
-     width="1463" height="588">
+     viewBox="-14.8 -151.0 1420.6 588.0"
+     width="1421" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,61 +40,74 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-31.6" y="-151.0" width="1463.2" height="588.0" fill="white"/>
-  <rect x="-24.6" y="-144.0" width="1449.2" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-24.6" y="-144.0" width="1449.2" height="25.0" fill="white" stroke="none"/>
-  <line x1="-24.6" y1="-119.5" x2="1424.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-19.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-Eingabefeld (CInputNumber) lesen und als AD2 (bidirektional, DWORD/Bitmaske)
+  <rect x="-14.8" y="-151.0" width="1420.6" height="588.0" fill="white"/>
+  <rect x="-7.8" y="-144.0" width="1406.6" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-7.8" y="-144.0" width="1406.6" height="25.0" fill="white" stroke="none"/>
+  <line x1="-7.8" y1="-119.5" x2="1398.9" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-2.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-Eingabefeld (CInputNumber) lesen und als AD2 (bidirektional, DWORD/Bitmaske)
 an einen Consumer weiterreichen (z.B. AOption_AD_DEMUX_N.K). Speichert NICHT
 selbst - der Consumer meldet die tatsaechlich uebernommene Bitmaske ueber
 denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</text>
   <g id="sidebars">
-    <rect x="-24.6" y="-119.0" width="64.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-7.8" y="-119.0" width="47.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1369.4" y="-119.0" width="55.2" height="549.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1369.4" y1="-119.0" x2="1369.4" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1343.9" y="-119.0" width="55.0" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1343.9" y1="-119.0" x2="1343.9" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-67.0 192.0,-67.0 197.0,-62.0 197.0,165.5 202.0,170.5 288.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 942.0,-67.0 947.0,-62.0 947.0,178.5 952.0,183.5 1158.0,183.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 594.0,-84.0 599.0,-79.0 599.0,161.5 604.0,166.5 1158.0,166.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1349.4,166.5 1355.4,166.5 1359.4,162.5 1359.4,-80.0 1363.4,-84.0 1369.4,-84.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="445.2,187.5 530.8,187.5 533.2,189.9 533.2,191.1 535.6,193.5 813.0,193.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="445.2,187.5 530.8,187.5 533.2,189.9 533.2,191.1 535.6,193.5 813.0,193.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-62.0 1284.8,-67.0 1369.4,-67.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-62.0 1284.8,-67.0 1369.4,-67.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="946.8,210.5 1072.8,210.5 1077.8,215.5 1077.8,263.5 1072.8,268.5 993.0,268.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="946.8,210.5 1072.8,210.5 1077.8,215.5 1077.8,263.5 1072.8,268.5 993.0,268.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,222.5 1192.6,217.5 1158.0,217.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,222.5 1192.6,217.5 1158.0,217.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 159.0,-84.0 164.0,-79.0 164.0,80.5 169.0,85.5 288.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="424.1,85.5 786.1,85.5 791.1,90.5 791.1,110.5 796.1,115.5 1158.0,115.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1323.9,115.5 1329.9,115.5 1333.9,111.5 1333.9,-80.0 1337.9,-84.0 1343.9,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1323.9,115.5 1020.9,115.5 1015.9,120.5 1015.9,125.5 1010.9,130.5 708.0,130.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 192.0,-50.0 197.0,-45.0 197.0,165.5 202.0,170.5 288.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 942.0,-50.0 947.0,-45.0 947.0,178.5 952.0,183.5 1158.0,183.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 594.0,-67.0 599.0,-62.0 599.0,161.5 604.0,166.5 1158.0,166.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 159.0,-67.0 164.0,-62.0 164.0,131.5 169.0,136.5 288.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1323.9,166.5 1016.7,166.5 1015.9,165.7 1015.9,165.3 1015.1,164.5 708.0,164.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="424.1,136.5 561.1,136.5 566.1,141.5 566.1,176.5 571.1,181.5 708.0,181.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="814.8,164.5 1074.3,164.5 1079.3,159.5 1079.3,-62.0 1084.3,-67.0 1343.9,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="424.1,187.5 509.7,187.5 512.1,189.9 512.1,191.1 514.5,193.5 813.0,193.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="424.1,187.5 509.7,187.5 512.1,189.9 512.1,191.1 514.5,193.5 813.0,193.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="925.4,193.5 1253.4,193.5 1258.4,188.5 1258.4,-45.0 1263.4,-50.0 1343.9,-50.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="925.4,193.5 1253.4,193.5 1258.4,188.5 1258.4,-45.0 1263.4,-50.0 1343.9,-50.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="925.4,210.5 1051.4,210.5 1056.4,215.5 1056.4,263.5 1051.4,268.5 993.0,268.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="925.4,210.5 1051.4,210.5 1056.4,215.5 1056.4,263.5 1051.4,268.5 993.0,268.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1104.3,268.5 1177.3,268.5 1182.3,263.5 1182.3,222.5 1177.3,217.5 1158.0,217.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1104.3,268.5 1177.3,268.5 1182.3,263.5 1182.3,222.5 1177.3,217.5 1158.0,217.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#A3B08F"/>
+    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">QI</text>
-    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#18519E"/>
+          fill="#000000" text-anchor="end">INIT</text>
+    <polygon points="1348.8755,-89.0 1343.8755,-84.0 1348.8755,-79.0" fill="#63B31F"/>
+    <text x="1349.8755" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#A3B08F"/>
     <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
+    <polygon points="35.0,-55.0 40.0,-50.0 35.0,-45.0" fill="#18519E"/>
+    <text x="34.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">u16ObjId</text>
-    <polygon points="1374.4005000000002,-89.0 1369.4005000000002,-84.0 1374.4005000000002,-79.0" fill="#A3B08F"/>
-    <text x="1375.4005000000002" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1348.8755,-72.0 1343.8755,-67.0 1348.8755,-62.0" fill="#A3B08F"/>
+    <text x="1349.8755" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">QO</text>
-    <path d="M 1369.4005000000002 -72.0 L 1374.4005000000002 -72.0 L 1374.4005000000002 -70.33333333333333 L 1376.9005000000002 -70.33333333333333 L 1376.9005000000002 -72.0 L 1379.4005000000002 -72.0 L 1379.4005000000002 -62.0 L 1376.9005000000002 -62.0 L 1376.9005000000002 -63.666666666666664 L 1374.4005000000002 -63.666666666666664 L 1374.4005000000002 -62.0 L 1369.4005000000002 -62.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="1382.4005000000002" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <path d="M 1343.8755 -55.0 L 1348.8755 -55.0 L 1348.8755 -53.333333333333336 L 1351.3755 -53.333333333333336 L 1351.3755 -55.0 L 1353.8755 -55.0 L 1353.8755 -45.0 L 1351.3755 -45.0 L 1351.3755 -46.666666666666664 L 1348.8755 -46.666666666666664 L 1348.8755 -45.0 L 1343.8755 -45.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="1356.8755" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">VALUEO</text>
   </g>
   <g id="instances">
     <g id="fb_NumericValue_IDA" transform="translate(288.0, 75.0)">
       <path d="M 3 0
-            L 154.2 0
-            A 3 3 0 0 1 157.2 3
-            L 157.2 35
-            A 3 3 0 0 1 154.2 38
-            L 148.2 38
-            L 148.2 52
-            L 154.2 52
-            A 3 3 0 0 1 157.2 55
-            L 157.2 120
-            A 3 3 0 0 1 154.2 123
+            L 133.125 0
+            A 3 3 0 0 1 136.125 3
+            L 136.125 35
+            A 3 3 0 0 1 133.125 38
+            L 127.125 38
+            L 127.125 52
+            L 133.125 52
+            A 3 3 0 0 1 136.125 55
+            L 136.125 120
+            A 3 3 0 0 1 133.125 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -140,8 +153,8 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
-      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="131.125,5.5 136.125,10.5 131.125,15.5" fill="#63B31F"/>
+      <text x="130.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -152,45 +165,45 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#18519E"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u16ObjId</text>
-      <polygon points="152.2,56.5 157.2,61.5 152.2,66.5" fill="#A3B08F"/>
-      <text x="151.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="131.125,56.5 136.125,61.5 131.125,66.5" fill="#A3B08F"/>
+      <text x="130.125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="152.2,73.5 157.2,78.5 152.2,83.5" fill="#BD8663"/>
-      <text x="151.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="131.125,73.5 136.125,78.5 131.125,83.5" fill="#BD8663"/>
+      <text x="130.125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
-      <path d="M 147.2 107.5
-            L 149.7 107.5
-            L 149.7 109.16666666666667
-            L 152.2 109.16666666666667
-            L 152.2 107.5
-            L 157.2 107.5
-            L 157.2 117.5
-            L 152.2 117.5
-            L 152.2 115.83333333333333
-            L 149.7 115.83333333333333
-            L 149.7 117.5
-            L 147.2 117.5
+
+      <path d="M 126.125 107.5
+            L 128.625 107.5
+            L 128.625 109.16666666666667
+            L 131.125 109.16666666666667
+            L 131.125 107.5
+            L 136.125 107.5
+            L 136.125 117.5
+            L 131.125 117.5
+            L 131.125 115.83333333333333
+            L 128.625 115.83333333333333
+            L 128.625 117.5
+            L 126.125 117.5
             Z" fill="#845DAF"/>
-      <text x="144.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="123.125" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IN</text>
       <!-- Instance Name -->
-      <text x="78.6" y="-5"
+      <text x="68.0625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">NumericValue_IDA</text>
     </g>
     <g id="fb_AD_TO_AD2" transform="translate(813.0, 150.0)">
       <path d="M 3 0
-            L 130.8 0
-            A 3 3 0 0 1 133.8 3
-            L 133.8 18
-            A 3 3 0 0 1 130.8 21
-            L 124.80000000000001 21
-            L 124.80000000000001 35
-            L 130.8 35
-            A 3 3 0 0 1 133.8 38
-            L 133.8 69
-            A 3 3 0 0 1 130.8 72
+            L 109.375 0
+            A 3 3 0 0 1 112.375 3
+            L 112.375 18
+            A 3 3 0 0 1 109.375 21
+            L 103.375 21
+            L 103.375 35
+            L 109.375 35
+            A 3 3 0 0 1 112.375 38
+            L 112.375 69
+            A 3 3 0 0 1 109.375 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -205,29 +218,29 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 26.500000000000007 20.0
-            L 40.50000000000001 20.0
-            A 1 1 0 0 1 41.50000000000001 21.0
-            L 41.50000000000001 24.0
-            L 40.00000000000001 24.0
-            L 40.00000000000001 26.666666666666668
-            L 41.50000000000001 26.666666666666668
-            L 41.50000000000001 35.0
-            A 1 1 0 0 1 40.50000000000001 36.0
-            L 26.500000000000007 36.0
-            A 1 1 0 0 1 25.500000000000007 35.0
-            L 25.500000000000007 26.666666666666668
-            L 27.000000000000007 26.666666666666668
-            L 27.000000000000007 24.0
-            L 25.500000000000007 24.0
-            L 25.500000000000007 21.0
-            A 1 1 0 0 1 26.500000000000007 20.0
+      <path d="M 20.28125 20.0
+            L 34.28125 20.0
+            A 1 1 0 0 1 35.28125 21.0
+            L 35.28125 24.0
+            L 33.78125 24.0
+            L 33.78125 26.666666666666668
+            L 35.28125 26.666666666666668
+            L 35.28125 35.0
+            A 1 1 0 0 1 34.28125 36.0
+            L 20.28125 36.0
+            A 1 1 0 0 1 19.28125 35.0
+            L 19.28125 26.666666666666668
+            L 20.78125 26.666666666666668
+            L 20.78125 24.0
+            L 19.28125 24.0
+            L 19.28125 21.0
+            A 1 1 0 0 1 20.28125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="33.50000000000001" y="32.0"
+      <text x="27.28125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="43.50000000000001" y="32.0"
+      <text x="37.28125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AD_TO_AD2</text>
 
@@ -248,53 +261,53 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AD_IN</text>
-      <path d="M 123.80000000000001 38.5
-            L 126.30000000000001 38.5
-            L 126.30000000000001 40.166666666666664
-            L 128.8 40.166666666666664
-            L 128.8 38.5
-            L 133.8 38.5
-            L 133.8 48.5
-            L 128.8 48.5
-            L 128.8 46.833333333333336
-            L 126.30000000000001 46.833333333333336
-            L 126.30000000000001 48.5
-            L 123.80000000000001 48.5
+      <path d="M 102.375 38.5
+            L 104.875 38.5
+            L 104.875 40.166666666666664
+            L 107.375 40.166666666666664
+            L 107.375 38.5
+            L 112.375 38.5
+            L 112.375 48.5
+            L 107.375 48.5
+            L 107.375 46.833333333333336
+            L 104.875 46.833333333333336
+            L 104.875 48.5
+            L 102.375 48.5
             Z" fill="#845DAF"/>
-      <text x="120.80000000000001" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="99.375" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AD2_BIDIR</text>
-      <path d="M 123.80000000000001 55.5
-            L 126.30000000000001 55.5
-            L 126.30000000000001 57.166666666666664
-            L 128.8 57.166666666666664
-            L 128.8 55.5
-            L 133.8 55.5
-            L 133.8 65.5
-            L 128.8 65.5
-            L 128.8 63.833333333333336
-            L 126.30000000000001 63.833333333333336
-            L 126.30000000000001 65.5
-            L 123.80000000000001 65.5
+      <path d="M 102.375 55.5
+            L 104.875 55.5
+            L 104.875 57.166666666666664
+            L 107.375 57.166666666666664
+            L 107.375 55.5
+            L 112.375 55.5
+            L 112.375 65.5
+            L 107.375 65.5
+            L 107.375 63.833333333333336
+            L 104.875 63.833333333333336
+            L 104.875 65.5
+            L 102.375 65.5
             Z" fill="#845DAF"/>
-      <text x="120.80000000000001" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="99.375" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AD_OUT</text>
       <!-- Instance Name -->
-      <text x="66.9" y="-5"
+      <text x="56.1875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AD_TO_AD2</text>
     </g>
     <g id="fb_AD_TO_AUDI" transform="translate(993.0, 225.0)">
       <path d="M 3 0
-            L 123.6 0
-            A 3 3 0 0 1 126.6 3
-            L 126.6 18
-            A 3 3 0 0 1 123.6 21
-            L 117.6 21
-            L 117.6 35
-            L 123.6 35
-            A 3 3 0 0 1 126.6 38
-            L 126.6 52
-            A 3 3 0 0 1 123.6 55
+            L 108.25 0
+            A 3 3 0 0 1 111.25 3
+            L 111.25 18
+            A 3 3 0 0 1 108.25 21
+            L 102.25 21
+            L 102.25 35
+            L 108.25 35
+            A 3 3 0 0 1 111.25 38
+            L 111.25 52
+            A 3 3 0 0 1 108.25 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -309,29 +322,29 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 19.299999999999997 20.0
-            L 33.3 20.0
-            A 1 1 0 0 1 34.3 21.0
-            L 34.3 24.0
-            L 32.8 24.0
-            L 32.8 26.666666666666668
-            L 34.3 26.666666666666668
-            L 34.3 35.0
-            A 1 1 0 0 1 33.3 36.0
-            L 19.299999999999997 36.0
-            A 1 1 0 0 1 18.299999999999997 35.0
-            L 18.299999999999997 26.666666666666668
-            L 19.799999999999997 26.666666666666668
-            L 19.799999999999997 24.0
-            L 18.299999999999997 24.0
-            L 18.299999999999997 21.0
-            A 1 1 0 0 1 19.299999999999997 20.0
+      <path d="M 17.6875 20.0
+            L 31.6875 20.0
+            A 1 1 0 0 1 32.6875 21.0
+            L 32.6875 24.0
+            L 31.1875 24.0
+            L 31.1875 26.666666666666668
+            L 32.6875 26.666666666666668
+            L 32.6875 35.0
+            A 1 1 0 0 1 31.6875 36.0
+            L 17.6875 36.0
+            A 1 1 0 0 1 16.6875 35.0
+            L 16.6875 26.666666666666668
+            L 18.1875 26.666666666666668
+            L 18.1875 24.0
+            L 16.6875 24.0
+            L 16.6875 21.0
+            A 1 1 0 0 1 17.6875 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="26.299999999999997" y="32.0"
+      <text x="24.6875" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="36.3" y="32.0"
+      <text x="34.6875" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AD_TO_AUDI</text>
 
@@ -352,38 +365,38 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AD_IN</text>
-      <path d="M 116.6 38.5
-            L 119.1 38.5
-            L 119.1 40.166666666666664
-            L 121.6 40.166666666666664
-            L 121.6 38.5
-            L 126.6 38.5
-            L 126.6 48.5
-            L 121.6 48.5
-            L 121.6 46.833333333333336
-            L 119.1 46.833333333333336
-            L 119.1 48.5
-            L 116.6 48.5
+      <path d="M 101.25 38.5
+            L 103.75 38.5
+            L 103.75 40.166666666666664
+            L 106.25 40.166666666666664
+            L 106.25 38.5
+            L 111.25 38.5
+            L 111.25 48.5
+            L 106.25 48.5
+            L 106.25 46.833333333333336
+            L 103.75 46.833333333333336
+            L 103.75 48.5
+            L 101.25 48.5
             Z" fill="#845DAF"/>
-      <text x="113.6" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="98.25" y="47.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AUDI_OUT</text>
       <!-- Instance Name -->
-      <text x="63.3" y="-5"
+      <text x="55.625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AD_TO_AUDI</text>
     </g>
     <g id="fb_Q_NumericValue_AUDI" transform="translate(1158.0, 105.0)">
       <path d="M 3 0
-            L 188.4 0
-            A 3 3 0 0 1 191.4 3
-            L 191.4 35
-            A 3 3 0 0 1 188.4 38
-            L 182.4 38
-            L 182.4 52
-            L 188.4 52
-            A 3 3 0 0 1 191.4 55
-            L 191.4 120
-            A 3 3 0 0 1 188.4 123
+            L 162.875 0
+            A 3 3 0 0 1 165.875 3
+            L 165.875 35
+            A 3 3 0 0 1 162.875 38
+            L 156.875 38
+            L 156.875 52
+            L 162.875 52
+            A 3 3 0 0 1 165.875 55
+            L 165.875 120
+            A 3 3 0 0 1 162.875 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -398,39 +411,39 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 30.10000000000001 37.0
-            L 44.10000000000001 37.0
-            A 1 1 0 0 1 45.10000000000001 38.0
-            L 45.10000000000001 41.0
-            L 43.60000000000001 41.0
-            L 43.60000000000001 43.666666666666664
-            L 45.10000000000001 43.666666666666664
-            L 45.10000000000001 52.0
-            A 1 1 0 0 1 44.10000000000001 53.0
-            L 30.10000000000001 53.0
-            A 1 1 0 0 1 29.10000000000001 52.0
-            L 29.10000000000001 43.666666666666664
-            L 30.60000000000001 43.666666666666664
-            L 30.60000000000001 41.0
-            L 29.10000000000001 41.0
-            L 29.10000000000001 38.0
-            A 1 1 0 0 1 30.10000000000001 37.0
+      <path d="M 27.375 37.0
+            L 41.375 37.0
+            A 1 1 0 0 1 42.375 38.0
+            L 42.375 41.0
+            L 40.875 41.0
+            L 40.875 43.666666666666664
+            L 42.375 43.666666666666664
+            L 42.375 52.0
+            A 1 1 0 0 1 41.375 53.0
+            L 27.375 53.0
+            A 1 1 0 0 1 26.375 52.0
+            L 26.375 43.666666666666664
+            L 27.875 43.666666666666664
+            L 27.875 41.0
+            L 26.375 41.0
+            L 26.375 38.0
+            A 1 1 0 0 1 27.375 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="37.10000000000001" y="49.0"
+      <text x="34.375" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="47.10000000000001" y="49.0"
+      <text x="44.375" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_NumericValue_…</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="186.4,5.5 191.4,10.5 186.4,15.5" fill="#63B31F"/>
-      <text x="185.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="160.875,5.5 165.875,10.5 160.875,15.5" fill="#63B31F"/>
+      <text x="159.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="186.4,22.5 191.4,27.5 186.4,32.5" fill="#63B31F"/>
-      <text x="185.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="160.875,22.5 165.875,27.5 160.875,32.5" fill="#63B31F"/>
+      <text x="159.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -438,14 +451,14 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#18519E"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u16ObjId</text>
-      <polygon points="186.4,56.5 191.4,61.5 186.4,66.5" fill="#A3B08F"/>
-      <text x="185.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="160.875,56.5 165.875,61.5 160.875,66.5" fill="#A3B08F"/>
+      <text x="159.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="186.4,73.5 191.4,78.5 186.4,83.5" fill="#BD8663"/>
-      <text x="185.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="160.875,73.5 165.875,78.5 160.875,83.5" fill="#BD8663"/>
+      <text x="159.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="186.4,90.5 191.4,95.5 186.4,100.5" fill="#18519E"/>
-      <text x="185.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="160.875,90.5 165.875,95.5 160.875,100.5" fill="#18519E"/>
+      <text x="159.875" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
       <path d="M 0 107.5
@@ -463,25 +476,98 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
       <text x="13" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <path d="M 181.4 107.5
-            L 183.9 107.5
-            L 183.9 109.16666666666667
-            L 186.4 109.16666666666667
-            L 186.4 107.5
-            L 191.4 107.5
-            L 191.4 117.5
-            L 186.4 117.5
-            L 186.4 115.83333333333333
-            L 183.9 115.83333333333333
-            L 183.9 117.5
-            L 181.4 117.5
+      <path d="M 155.875 107.5
+            L 158.375 107.5
+            L 158.375 109.16666666666667
+            L 160.875 109.16666666666667
+            L 160.875 107.5
+            L 165.875 107.5
+            L 165.875 117.5
+            L 160.875 117.5
+            L 160.875 115.83333333333333
+            L 158.375 115.83333333333333
+            L 158.375 117.5
+            L 155.875 117.5
             Z" fill="#845DAF"/>
-      <text x="178.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="152.875" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
       <!-- Instance Name -->
-      <text x="95.7" y="-5"
+      <text x="82.9375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue_AUDI</text>
+    </g>
+    <g id="fb_AND_QO" transform="translate(708.0, 120.0)">
+      <path d="M 3 0
+            L 103.75 0
+            A 3 3 0 0 1 106.75 3
+            L 106.75 18
+            A 3 3 0 0 1 103.75 21
+            L 97.75 21
+            L 97.75 35
+            L 103.75 35
+            A 3 3 0 0 1 106.75 38
+            L 106.75 69
+            A 3 3 0 0 1 103.75 72
+            L 3 72
+            A 3 3 0 0 1 0 69
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.0" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">Si</text>
+      <text x="30.0" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AND_BOOL_2</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">REQ</text>
+      <polygon points="101.75,5.5 106.75,10.5 101.75,15.5" fill="#63B31F"/>
+      <text x="100.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">CNF</text>
+      <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
+      <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN1</text>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
+      <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN2</text>
+      <polygon points="101.75,39.5 106.75,44.5 101.75,49.5" fill="#A3B08F"/>
+      <text x="100.75" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">OUT</text>
+
+
+      <!-- Instance Name -->
+      <text x="53.375" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">AND_QO</text>
     </g>
   </g>
 </svg>

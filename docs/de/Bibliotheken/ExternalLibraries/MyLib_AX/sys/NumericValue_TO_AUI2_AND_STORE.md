@@ -14,6 +14,14 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ## Schnittstelle
 
+### Ereignis-Eingänge
+
+- `INIT` (`EInit`): Initialization Request.
+
+### Ereignis-Ausgänge
+
+- `INITO` (`EInit`): Initialization Confirm.
+
 ### Eingangsvariablen
 
 - `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst.
@@ -23,22 +31,22 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ### Ausgangsvariablen
 
-- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND-Verknüpfung `AND_QO` der `QO`-Ausgänge der inneren Bausteine).
 
 ### Adapter
 
 - **Plug `VALUEO`** (`adapter::types::bidirectional::AUI2`): Wert zum Consumer und Echo zurück.
 
-Der Baustein besitzt keine eigenen Ereignisanschlüsse.
+Die Ereignisse `INIT`/`INITO` werden als Kette durch die inneren Bausteine geführt (siehe Funktionsweise).
 
 ## Funktionsweise
 
-1. `NumericValue_IDA` (`QI`=TRUE) liest das VT-Eingabefeld; `AD_TO_AUI` wandelt in AUI und liefert es an `AUI_LAST_2.IN1`.
+1. `NumericValue_IDA` liest das VT-Eingabefeld; `AD_TO_AUI` wandelt in AUI und liefert es an `AUI_LAST_2.IN1`.
 2. `AUI_LAST_2` (Last-Writer-Wins) führt zusammen: `IN1` = Live-VT-Änderung, `IN2` = INI-Wert beim Boot. Der Ausgang geht an `AUI_TO_AUI2` (Brücke zum externen Consumer), dessen bidirektionaler Ausgang an `VALUEO`.
-3. Das vom Consumer zurückgemeldete Ergebnis erscheint an `AUI_TO_AUI2.AUI_OUT` und wird per `AUI_SPLIT_2` verdoppelt: `OUT1` über `AUI_TO_AUDI` an `Q_NumericValue_AUDI` (`u32NewValue`, VT-Anzeige unter `u16ObjId`), `OUT2` an `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `QI`=TRUE, `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
+3. Das vom Consumer zurückgemeldete Ergebnis erscheint an `AUI_TO_AUI2.AUI_OUT` und wird per `AUI_SPLIT_2` verdoppelt: `OUT1` über `AUI_TO_AUDI` an `Q_NumericValue_AUDI` (`u32NewValue`, VT-Anzeige unter `u16ObjId`), `OUT2` an `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
 4. `INI_AUI.AUI_OUT` führt den geladenen Wert zu `AUI_LAST_2.IN2` zurück.
 
-`QI` wird an `Q_NumericValue_AUDI.QI` durchgereicht, `Q_NumericValue_AUDI.QO` an `QO`.
+Initialisierung: `INIT` → `NumericValue_IDA.INIT`; `NumericValue_IDA.INITO` → `INI_AUI.INIT`; `INI_AUI.INITO` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` und → `AND_QO.REQ`. Qualität: `QI` → `Q_NumericValue_AUDI.QI`, `NumericValue_IDA.QI`, `INI_AUI.QI`; `Q_NumericValue_AUDI.QO`, `NumericValue_IDA.QO`, `INI_AUI.QO` → `AND_QO.IN1` bis `AND_QO.IN3` (in dieser Reihenfolge); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_3`).
 
 ## Technische Besonderheiten
 

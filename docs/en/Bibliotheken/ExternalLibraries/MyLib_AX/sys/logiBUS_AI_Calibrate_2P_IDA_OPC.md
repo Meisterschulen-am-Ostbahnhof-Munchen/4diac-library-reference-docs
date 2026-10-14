@@ -16,6 +16,13 @@
 - **AR_CALIBRATE_2P_REF** (adapter composite): 2-point calibration (zero/span) with raw value diagnostics (`ZeroRaw`/`SpanRaw`), partial calibration fallback logic, and configurable clipping (`xClipping`).
 - **VT and OPC-UA bridges** (analogous to [`NumericValue_TO_AR2_OPC`](./NumericValue_TO_AR2_OPC.md)/[`OPC_TO_AR2`](./OPC_TO_AR2.md) and [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md)): expose `Zero`/`Span` and `ZeroRaw`/`SpanRaw` both via VT input fields/displays and via OPC-UA, and persist calibration values in an INI file.
 
+## Initialization and quality
+
+- Events: `INIT` (EInit, input) and `INITO` (EInit, output, comes from `PublishSpanRaw.INITO`).
+- Data input `QI` (BOOL, default `TRUE`) and data output `QO` (BOOL); the internal FBs (`CALIBRATE`, `INI_X_LOW`, `INI_X_HIGH`, `INI_LOW_REF`, `INI_HIGH_REF`) no longer carry a fixed `QI=TRUE`.
+- Initialization chain (each `INITO` → `INIT` of the next): `INIT` → `CALIBRATE` → `INI_X_LOW` → `INI_X_HIGH` → `INI_LOW_REF` → `INI_HIGH_REF` → `InputRaw` → `Y_OFFSET_LIT` → `Y_SCALE_LIT` → `TriggerCO` → `TriggerCS` → `PublishCal` → `PublishZeroRaw` → `PublishSpanRaw`; `PublishSpanRaw.INITO` → `INITO` and → `AND_QO.REQ`.
+- Quality: `QI` is passed on to all 13 instances of this chain; their `QO` outputs feed `AND_QO.IN1` to `IN13` in exactly this order (a single `iec61131::booleanOperators::AND_BOOL_13`; the former cascade of `AND_QO_A` (`AND_BOOL_5`) and `AND_QO` (`AND_BOOL_9`) is replaced, version 1.12); `AND_QO.OUT` → `QO`.
+
 ## Summary
 
 Complete 2-point calibration block for a physical analog input: raw-value acquisition, 2-point calibration with raw-value diagnostics, immediate partial calibration fallback, VT display/input, and OPC-UA connectivity in one composite.

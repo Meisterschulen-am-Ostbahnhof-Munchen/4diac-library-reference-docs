@@ -15,23 +15,28 @@ The **Button_Toggle_RPC_TO_Remote_BG_OPC** subapplication implements a remote to
 
 ### **Event Inputs**
 
-None. The subapplication does not expose any event inputs; all event handling is performed internally by the embedded function blocks.
+- **INIT** (`EInit`): initialization request; starts the init chain at `Button_Toggle.INIT`.
+
+The actual event handling is still performed internally by the embedded function blocks.
 
 ### **Event Outputs**
 
-None. The subapplication does not expose any event outputs.
+- **INITO** (`EInit`): initialization confirmation; comes from `GreenWhiteBackground_AX.INITO`, the end of the init chain.
+
+There are no other event outputs.
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QI` | BOOL | Quality input (initial value `TRUE`), enables the service; passed on to `Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` and `GreenWhiteBackground_AX`. |
 | `u16ObjId` | UINT | Object ID for the button and the visual background element. Initial value is `ID_NULL`. |
 | `ID_TRIGGER_CALL` | WSTRING | Remote method address (with `ACTION=CALL_METHOD`) used for the argument-less trigger method invocation on the target module. |
 | `ID_STATE_READ` | WSTRING | Locally monitored address (BOOL, with `ACTION=READ`) for the flip‑flop state, which is written remotely by the target module. |
 
 ### **Data Outputs**
 
-None. The subapplication does not expose any data outputs.
+- **QO** (BOOL): quality output, AND combination (`AND_QO`, `AND_BOOL_4`) of the `QO` outputs of `Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` and `GreenWhiteBackground_AX`.
 
 ### **Adapters**
 
@@ -41,13 +46,15 @@ None exposed at the subapplication interface. Adapter connections are entirely i
 
 The subapplication provides a complete remote toggle workflow in a single reusable package:
 
-1. **Button Input Handling** – The embedded `Button_IE` function block (type `isobus::UT::io::Button::Button_IE`) is configured with `QI=TRUE` and `InputEvent=BT_RELEASED_UNLATCHED`. It detects the physical button release on the IO‑Diag mask and generates an event on its `IND` output.
+1. **Button Input Handling** – The embedded `Button_IE` function block (type `isobus::UT::io::Button::Button_IE`) is configured with `InputEvent=BT_RELEASED_UNLATCHED` (its `QI` comes from the block input `QI`). It detects the physical button release on the IO‑Diag mask and generates an event on its `IND` output.
 
 2. **Remote Trigger Invocation** – The button release event (`Button_Toggle.IND`) is connected to the `REQ` input of the `TRIGGER_CLIENT` function block (type `iec61499::net::CLIENT_0`). `TRIGGER_CLIENT` uses the address provided via `ID_TRIGGER_CALL` to perform an OPC‑UA `CALL_METHOD` operation on the remote target module. Since the call is argument-less and return-value-less, it acts purely as an RPC trigger – no local flip‑flop (AX_T_FF) logic is executed on this module.
 
 3. **State Subscription** – The `STATE_SUBSCRIBE` function block (type `adapter::net::AX_SUBSCRIBE_1`) continuously reads the remote boolean state from the address specified by `ID_STATE_READ` (with `ACTION=READ`). Its output adapter is connected to the `DI1` input of the `GreenWhiteBackground_AX` subapplication.
 
 4. **Visual Feedback** – The `GreenWhiteBackground_AX` subapplication (type `MyLib::sys::GreenWhiteBackground1_AX`) receives the remote flip‑flop state and renders it as a green or white background on the associated IO‑Diag element, giving the operator immediate visual confirmation of the remote toggle state.
+
+5. **Initialization and Quality** – `INIT` → `Button_Toggle.INIT`, `Button_Toggle.INITO` → `TRIGGER_CLIENT.INIT`, `TRIGGER_CLIENT.INITO` → `STATE_SUBSCRIBE.INIT`, `STATE_SUBSCRIBE.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to all four blocks; their `QO` outputs (`Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`) go to `AND_QO.IN1` to `AND_QO.IN4` (`iec61131::booleanOperators::AND_BOOL_4`), whose `OUT` forms the output `QO`.
 
 The `u16ObjId` input is distributed internally to both the button (`Button_Toggle.u16ObjId`) and the background (`GreenWhiteBackground_AX.u16ObjId`), ensuring that both the input element and the visual indicator reference the same object instance.
 
@@ -98,4 +105,4 @@ Both variants share the same networking, subscription, and visualization mechani
 
 ## Conclusion
 
-The **Button_Toggle_RPC_TO_Remote_BG_OPC** subapplication provides a robust, reusable solution for remote toggle control via OPC‑UA RPC calls, triggered by physical IO‑Diag buttons. It separates the button input handling from the remote communication and visualization logic, keeping the subapplication interface minimal (three inputs) while encapsulating all complex networking inside. Its design follows the IEC 61499 standard and integrates seamlessly with standard 4diac library components, making it suitable for a wide range of industrial operator panel scenarios where a button press must toggle a remote state and provide immediate visual feedback.
+The **Button_Toggle_RPC_TO_Remote_BG_OPC** subapplication provides a robust, reusable solution for remote toggle control via OPC‑UA RPC calls, triggered by physical IO‑Diag buttons. It separates the button input handling from the remote communication and visualization logic, keeping the subapplication interface minimal (three configuration inputs plus `QI`) while encapsulating all complex networking inside. Its design follows the IEC 61499 standard and integrates seamlessly with standard 4diac library components, making it suitable for a wide range of industrial operator panel scenarios where a button press must toggle a remote state and provide immediate visual feedback.

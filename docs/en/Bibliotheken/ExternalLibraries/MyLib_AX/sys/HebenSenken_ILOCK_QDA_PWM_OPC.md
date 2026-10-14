@@ -21,23 +21,25 @@ The subapp is generic and can be reused with any PVEA actuator equipped with a r
 
 ## Interface Structure
 
-The subapplication exposes data inputs and a single event input (`INIT`). It does not provide any event outputs or adapter interfaces at its boundary; all other event and adapter communication occurs internally within the subapp network.
+The subapplication exposes data inputs, the event input `INIT` and the event output `INITO`. It does not provide any adapter interfaces at its boundary; all other event and adapter communication occurs internally within the subapp network.
 
 ### **Event Inputs**
 
-- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `PWM_Mux.INIT` (`HebenSenken_QDA_PWM`)
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; starts the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`)
 
 All other triggering is handled internally via the subscribe/publish adapter pattern.
 
 ### **Event Outputs**
 
-None. The subapp provides no event outputs.
+- **INITO** (`EInit`): initialisation completed; genuine confirm from `PWM_Mux.INITO` (end of the initialisation chain)
+
+The subapp provides no further event outputs.
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `QI` | `BOOL` | Qualifier for the physical PWM output (default `TRUE`); FALSE keeps the instance completely inactive (no hardware binding) in case the same physical channel is used differently depending on the machine variant; passed on to `PWM_Mux.QI`. |
+| `QI` | `BOOL` | Qualifier for the physical PWM output (default `TRUE`); FALSE keeps the instance completely inactive (no hardware binding) in case the same physical channel is used differently depending on the machine variant; passed on to all Subscribe/Publish blocks (`SUBSCRIBE_*`, `PUBLISH_*`) and to `PWM_Mux.QI`. |
 | `Output_PWM` | `logiBUS::io::DQ::logiBUS_DO_S` | Physical PWM output: 25/50/75% duty cycle, ratiometric. Default: `logiBUS_DO::Invalid` |
 | `DT_PROTECT` | `TIME` | Protection deadtime before direction changes. Default: `T#300ms` |
 | `ID_HEBEN_READ` | `WSTRING` | Actual function command for Raise (Subscribe). |
@@ -51,7 +53,11 @@ None. The subapp provides no event outputs.
 
 ### **Data Outputs**
 
-None. Status and feedback information are published via the internal adapter network using the configured Publish addresses (`ID_HEBEN_WRITE`, `ID_SENKEN_WRITE`, `ID_TEST_WRITE_HEBEN`, `ID_TEST_WRITE_SENKEN`).
+| Name | Type | Description |
+|------|------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully; AND (`AND_QO`, type `iec61131::booleanOperators::AND_BOOL_9`) of the `QO` of all four `SUBSCRIBE_*`, all four `PUBLISH_*` and `PWM_Mux`; triggered by `PWM_Mux.INITO` (`REQ`). |
+
+Status and feedback information are published via the internal adapter network using the configured Publish addresses (`ID_HEBEN_WRITE`, `ID_SENKEN_WRITE`, `ID_TEST_WRITE_HEBEN`, `ID_TEST_WRITE_SENKEN`).
 
 ### **Adapters**
 
@@ -82,7 +88,9 @@ The subapp processes two independent command sources and merges them into a sing
    
    The resulting analog value is converted by `AR_TO_AD_NUM` into a digital number, which drives the `logiBUS_QDA_PWM` block (`DigitalOutput_PWM`) that generates the physical PWM signal on the configured `Output_PWM` channel.
 
-6. **Feedback publishing**: The ILOCK-protected states are published back via four `AX_PUBLISH_1` adapters (`PUBLISH_STATE_HEBEN`, `PUBLISH_TEST_HEBEN`, `PUBLISH_STATE_SENKEN`, `PUBLISH_TEST_SENKEN`) to the respective feedback addresses, ensuring that external systems only see the actual (interlock-protected) commands, not the raw inputs.
+6. **Initialization and status**: `QI` is passed on to all Subscribe/Publish blocks and to `PWM_Mux`. `INIT` runs through the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`); `PWM_Mux.INITO` is output as `INITO` and also triggers `AND_QO.REQ`. `QO` is the AND (`AND_QO`) of the nine `QO` outputs.
+
+7. **Feedback publishing**: The ILOCK-protected states are published back via four `AX_PUBLISH_1` adapters (`PUBLISH_STATE_HEBEN`, `PUBLISH_TEST_HEBEN`, `PUBLISH_STATE_SENKEN`, `PUBLISH_TEST_SENKEN`) to the respective feedback addresses, ensuring that external systems only see the actual (interlock-protected) commands, not the raw inputs.
 
 ## Technical Features
 

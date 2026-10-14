@@ -14,20 +14,21 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Kette `Softkey` → `WebSub`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `WebSub.INITO`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, Freigabe des Dienstes; wird an `Softkey` und `WebSub` durchgereicht
 - **u16ObjId** (`UINT`): Object ID SoftKey
 - **ID_WEB_READ** (`WSTRING`): lokale Subscribe-Adresse für den Web-Client (vt-ui-mirror): down/up wie ein gehaltener physischer Taster
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, `AND` der `QO`-Ausgänge von `Softkey` und `WebSub` (über `AND_QO`)
 
 ### **Adapter**
 
@@ -35,15 +36,18 @@ Keine.
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **`Softkey`** (`isobus::UT::io::Softkey::Softkey_IXA`, `QI = TRUE`): liest den SoftKey-Zustand
-- **`WebSub`** (`adapter::net::AX_SUBSCRIBE_1`, `QI = TRUE`): abonniert den Web-Override
+- **`Softkey`** (`isobus::UT::io::Softkey::Softkey_IXA`): liest den SoftKey-Zustand
+- **`WebSub`** (`adapter::net::AX_SUBSCRIBE_1`): abonniert den Web-Override
 - **`OR_MERGE`** (`adapter::booleanOperators::AX_OR_2`): ODER-Verknüpfung beider Zustände
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Softkey.QO` und `WebSub.QO` zum SubApp-Ausgang `QO`
 
 ## Funktionsweise
 
 - `u16ObjId` → `Softkey.u16ObjId`; `ID_WEB_READ` → `WebSub.ID`
 - `Softkey.IN` → `OR_MERGE.IN1`; `WebSub.OUT` → `OR_MERGE.IN2`
 - `OR_MERGE.OUT` → `OUT`
+- Initialisierung: `INIT` → `Softkey.INIT`; `Softkey.INITO` → `WebSub.INIT`; `WebSub.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `Softkey.QI` und `WebSub.QI`; `Softkey.QO` → `AND_QO.IN1`, `WebSub.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

@@ -15,19 +15,20 @@ The `NumericValue_PHYS_TO_INI` subapplication provides a generic, reusable mecha
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request. The further internal processing is triggered by the embedded function blocks.
 
 ### **Event Outputs**
 
 | Name | Type | Description |
 |------|------|-------------|
+| `INITO` | EInit | Initialization confirmation (from `Q_NumericValue_PHYS.INITO`). |
 | `IND` | Event | Indicates that a value has been successfully stored in or retrieved from the INI storage. |
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |------|------|-------------|
-| `QI` | `BOOL` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue_PHYS.QI` |
+| `QI` | `BOOL` | Quality Input - TRUE to enable service; distributed to `Q_NumericValue_PHYS.QI`, `NumericValue_PHYS.QI` and `INI.QI` |
 | `KEY` | STRING | Key name under which the value is stored in the INI file. |
 | `SECTION` | STRING | Section name within the INI file used for grouping the key. |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Object-pool descriptor containing the numeric object ID, scale factor, offset, and number of decimals. Initial value: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`. |
@@ -36,7 +37,7 @@ None.
 
 | Name | Type | Description |
 |------|------|-------------|
-| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue_PHYS.QO` |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; AND of `Q_NumericValue_PHYS.QO`, `NumericValue_PHYS.QO` and `INI.QO` |
 | `VALUEO` | REAL | The current value that has been stored or retrieved from the INI storage. |
 
 ### **Adapters**
@@ -45,11 +46,13 @@ None.
 
 ## Functionality
 
-The subapplication orchestrates three internal function blocks:
+The subapplication orchestrates four internal function blocks:
 
 - `NumericValue_PHYS` – acquires a raw process value and converts it into a scaled physical `REAL` value using the parameters contained in `stObj`.
 - `INI` – stores and retrieves that `REAL` value in an INI file, addressed by `KEY` and `SECTION`.
 - `Q_NumericValue_PHYS` – a query function that reconstructs the physical representation from the stored numeric value, using the same object-pool descriptor.
+
+- `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`) – combines `Q_NumericValue_PHYS.QO` (`IN1`), `NumericValue_PHYS.QO` (`IN2`) and `INI.QO` (`IN3`) into the subapplication output `QO`.
 
 The operational sequence is as follows:
 
@@ -60,7 +63,9 @@ The operational sequence is as follows:
 
 The internal data connections ensure that the same `stObj` descriptor is used consistently by both the acquisition block (for scaling while reading) and the query block (for reverse scaling), while `KEY` and `SECTION` only reference the INI storage.
 
-**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue_PHYS.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue_PHYS.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is distributed to `Q_NumericValue_PHYS.QI`, `NumericValue_PHYS.QI` and `INI.QI`; the output `QO` (BOOL) is the AND of the `QO` outputs of these three blocks (`AND_QO`). This lets the surrounding logic enable the service and check whether it succeeded.
+
+**Initialization:** `INIT` → `NumericValue_PHYS.INIT`; `NumericValue_PHYS.INITO` → `INI.INIT`; `INI.INITO` → `Q_NumericValue_PHYS.INIT` (and internally → `INI.GET`); `Q_NumericValue_PHYS.INITO` → `INITO` and → `AND_QO.REQ`.
 
 ## Technical Features
 
@@ -79,7 +84,7 @@ The internal `INI` function block follows this state transition pattern:
 - **Operational (Set/Get)** – In this state, the block alternates between `SET` (triggered by `NumericValue_PHYS.IND`) and `GET` operations, each producing a corresponding `SETO` or `GETO` confirmation event.
 - **Fault** – If a storage access fails, the `INI` block raises an error condition; the error handling is external to this subapplication and must be monitored via the standard `QO`/`EO` signals of the INI block (not exposed at this level).
 
-The `NumericValue_PHYS` acquisition block operates independently and is enabled by its constant `QI := TRUE`; it continuously acquires and converts values as they arrive.
+The `NumericValue_PHYS` acquisition block operates independently and is enabled via the `QI` of the subapplication; it continuously acquires and converts values as they arrive.
 
 ## Application Scenarios
 

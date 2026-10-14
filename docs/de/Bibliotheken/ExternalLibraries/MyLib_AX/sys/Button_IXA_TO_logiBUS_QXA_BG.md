@@ -20,12 +20,15 @@
     - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` — physischer digitaler Ausgang.
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — verzweigt das Taster-Signal.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): setzt die VT-Hintergrundfarbe passend zum Zustand (siehe [Background-Farbbausteine](./Background-Farbbausteine.md)).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO` von `logiBUS_QXA`, `Button_IXA` und `GreenWhiteBackground1_AX`.
 - **Funktionsweise**: `Button_IXA.IN` wird über `AX_SPLIT_2` sowohl an `logiBUS_QXA.OUT` (physischer Ausgang) als auch an `GreenWhiteBackground1_AX.DI1` (Statusfarbe) verteilt.
 
 ## Programmablauf und Verbindungen
 
 1. `u16ObjId` → `Button_IXA.u16ObjId` und `GreenWhiteBackground1_AX.u16ObjId`; `Output` → `logiBUS_QXA.Output`.
 2. `Button_IXA.IN` → `AX_SPLIT_2.IN` → `AX_SPLIT_2.OUT1` → `logiBUS_QXA.OUT`, `AX_SPLIT_2.OUT2` → `GreenWhiteBackground1_AX.DI1`.
+3. Initialisierung: Ereigniseingang `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `Button_IXA.INIT`, `Button_IXA.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → Ereignisausgang `INITO` und → `AND_QO.REQ`.
+4. Qualität: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `logiBUS_QXA.QI`, `Button_IXA.QI` und `GreenWhiteBackground1_AX.QI`; `logiBUS_QXA.QO` → `AND_QO.IN1`, `Button_IXA.QO` → `AND_QO.IN2`, `GreenWhiteBackground1_AX.QO` → `AND_QO.IN3`, `AND_QO.OUT` → Datenausgang `QO`.
 
 ## Anwendungsszenarien
 

@@ -17,20 +17,22 @@ The block is particularly useful in control applications that require multiple d
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): initialization request; starts the init chain at `DigitalOutput_Q4.INIT`.
 - **CNF** (Event): Common trigger event. When this event arrives, all eight Boolean inputs are read and their corresponding digital outputs are updated in the same processing cycle.
 
 ### **Event Outputs**
 
-- None.
+- **INITO** (`EInit`): initialization confirmation; comes from `DigitalOutput_Q3.INITO`, the end of the init chain.
 
 ### **Data Inputs**
 
+- **QI** (BOOL, initial value `TRUE`): quality input, enables the service; passed on to all eight `DigitalOutput_Qx.QI`.
 - **Q_00** … **Q_07** (BOOL): These eight Boolean inputs carry the logic values that are to be written to the selected output channels.
 - **Output_1** … **Output_8** (logiBUS::io::DQ::logiBUS_DO_S): Channel selectors. Each parameter identifies the physical output channel (e.g., "Output_Q1" … "Output_Q8") to which the associated Boolean input (Q_00 → Output_1, Q_01 → Output_2, …) is routed. The value must be a valid logiBUS output identifier; setting it to `logiBUS_DO::Invalid` disables that output.
 
 ### **Data Outputs**
 
-- None.
+- **QO** (BOOL): quality output, AND combination (`AND_QO`, `AND_BOOL_8`) of the `QO` outputs of all eight `DigitalOutput_Qx`.
 
 ### **Adapters**
 
@@ -44,6 +46,8 @@ The subapplication internally instantiates eight pairs of function blocks:
 - **DigitalOutput_Q1** … **DigitalOutput_Q8** (type: logiBUS::io::DQ::logiBUS_QXA): These are the actual digital output driver blocks that communicate with the logiBUS hardware.
 
 On each `CNF` event, all eight conversion blocks receive the event and simultaneously fetch their corresponding Boolean input values. Each converted value is then passed via an adapter connection to its associated digital output block. The digital output block uses the `Output_n` parameter to determine which physical channel to write to (or to ignore the value if the output is disabled).
+
+Initialization and quality: `INIT` is chained through all eight `logiBUS_QXA` instances (`INIT` → `DigitalOutput_Q4` → `DigitalOutput_Q7` → `DigitalOutput_Q1` → `DigitalOutput_Q5` → `DigitalOutput_Q2` → `DigitalOutput_Q6` → `DigitalOutput_Q8` → `DigitalOutput_Q3`, each `INITO` → next `INIT`); `DigitalOutput_Q3.INITO` leads to `INITO` and `AND_QO.REQ`. `QI` is distributed to all eight `DigitalOutput_Qx.QI`; their `QO` outputs go to `AND_QO.IN1` to `AND_QO.IN8` (`iec61131::booleanOperators::AND_BOOL_8`), whose `OUT` forms the output `QO`.
 
 Since all conversion blocks are triggered by the same event, the entire group of outputs is updated in a single, atomic operation, ensuring temporal consistency among the eight channels.
 

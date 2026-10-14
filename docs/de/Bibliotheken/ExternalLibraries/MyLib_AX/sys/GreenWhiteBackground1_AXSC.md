@@ -12,6 +12,13 @@
 
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
+## Initialisierung und Qualität
+
+- **Ereignis-Eingang `INIT`** (`EInit`) und **Ereignis-Ausgang `INITO`** (`EInit`) werden durchgereicht: `INIT` → `GreenWhiteBackground.INIT`; `GreenWhiteBackground.INITO` → `INITO`.
+- **Dateneingang `QI`** (`BOOL`, Vorgabe `TRUE`) → `GreenWhiteBackground.QI`; **Datenausgang `QO`** (`BOOL`) ← `GreenWhiteBackground.QO`.
+
+Die innere SubApp-Instanz `GreenWhiteBackground` ist vom Typ `GreenWhiteBackground1_AXS`.
+
 ## Zusammenfassung
 
 Reine Weiterleitung an `GreenWhiteBackground1_AXS` für den Regelfall, in dem die Diagnosewerte nicht gebraucht werden.
@@ -20,4 +27,4 @@ Reine Weiterleitung an `GreenWhiteBackground1_AXS` für den Regelfall, in dem di
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

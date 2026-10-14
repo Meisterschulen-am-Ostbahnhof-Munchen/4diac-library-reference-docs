@@ -15,19 +15,20 @@ Die SubApp **NumericValue_PHYS_TO_INI** dient zum Einlesen eines numerischen Wer
 
 ### **Ereignis-Eingänge**
 
-Die SubApp besitzt keine Ereignis-Eingänge. Die interne Verarbeitung wird vollständig durch die eingebetteten Funktionsblöcke angestoßen.
+- **INIT** (`EInit`): Initialisierungsanforderung. Die weitere interne Verarbeitung wird durch die eingebetteten Funktionsblöcke angestoßen.
 
 ### **Ereignis-Ausgänge**
 
 | Name | Typ | Kommentar |
 |------|-----|-----------|
+| `INITO` | EInit | Initialisierungsbestätigung (von `Q_NumericValue_PHYS.INITO`). |
 | `IND` | Event | Wird ausgelöst, nachdem der Wert in die INI-Datei geschrieben oder aus dieser gelesen wurde. |
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Kommentar |
 |------|----------|-----------|
-| `QI` | `BOOL` | Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue_PHYS.QI` durchgereicht |
+| `QI` | `BOOL` | Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue_PHYS.QI`, `NumericValue_PHYS.QI` und `INI.QI` verteilt |
 | `KEY` | `STRING` | Schlüsselname für den INI-Eintrag. |
 | `SECTION` | `STRING` | Abschnittsname in der INI-Datei. |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Struktur mit physikalischen Parametern (z. B. Objekt-ID, Skalierung, Offset, Dezimalstellen). Initialwert: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`. |
@@ -36,7 +37,7 @@ Die SubApp besitzt keine Ereignis-Eingänge. Die interne Verarbeitung wird volls
 
 | Name | Datentyp | Kommentar |
 |------|----------|-----------|
-| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue_PHYS.QO` |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; UND aus `Q_NumericValue_PHYS.QO`, `NumericValue_PHYS.QO` und `INI.QO` |
 | `VALUEO` | `REAL` | Ausgangswert; entspricht dem Wert, der aus der INI-Datei zurückgelesen wird. |
 
 ### **Adapter**
@@ -45,7 +46,7 @@ Keine Adapter vorhanden.
 
 ## Funktionsweise
 
-Die SubApp verwendet drei interne Funktionsblöcke:
+Die SubApp verwendet vier interne Funktionsblöcke:
 
 1. **`NumericValue_PHYS`** (Typ `isobus::UT::io::NumericValue::NumericValue_PHYS`):  
    Liest den aktuellen physikalischen Wert (skaliert) und stellt ihn als REAL-Wert an seinem Ausgang `rPhys` bereit. Der Eingang `stObj` definiert die Parameter der physikalischen Umrechnung.
@@ -54,7 +55,9 @@ Die SubApp verwendet drei interne Funktionsblöcke:
    Dient zum Lesen und Schreiben von Werten in einer INI-Datei. Über die Eingänge `KEY` und `SECTION` wird der Zielort festgelegt. Der Eingang `VALUE` erhält den zu speichernden Wert, während der Ausgang `VALUEO` den aus der Datei gelesenen Wert liefert. Der Parameter `DEFAULT_VALUE` ist auf `REAL#0.0` gesetzt.
 
 3. **`Q_NumericValue_PHYS`** (Typ `isobus::UT::Q::Q_NumericValue_PHYS`):  
-   Ein Qualitätsüberwachungsblock, der die Konsistenz des physikalischen Wertes prüft. Er erhält die gleichen physikalischen Parameter (`stObj`) sowie den aus der INI gelesenen Wert (`rPhys`) und wird über das Ereignis `REQ` aktiviert. Sein Qualitätseingang `QI` wird von außen über den SubApp-Eingang `QI` versorgt, sein Ausgang `QO` ist auf den SubApp-Ausgang `QO` geführt.
+   Ein Qualitätsüberwachungsblock, der die Konsistenz des physikalischen Wertes prüft. Er erhält die gleichen physikalischen Parameter (`stObj`) sowie den aus der INI gelesenen Wert (`rPhys`) und wird über das Ereignis `REQ` aktiviert. Sein Qualitätseingang `QI` wird von außen über den SubApp-Eingang `QI` versorgt, sein Ausgang `QO` geht in `AND_QO` ein.
+4. **`AND_QO`** (Typ `iec61131::booleanOperators::AND_BOOL_3`):  
+   Verknüpft `Q_NumericValue_PHYS.QO` (`IN1`), `NumericValue_PHYS.QO` (`IN2`) und `INI.QO` (`IN3`) zum SubApp-Ausgang `QO`.
 
 **Ablauf:**
 
@@ -67,12 +70,14 @@ Die SubApp verwendet drei interne Funktionsblöcke:
 
 Die doppelte Ausgabe von `IND` (einmal nach `SETO` und einmal nach `GETO`) ermöglicht es dem Anwender, beide Schritte (Schreiben und Lesen) separat zu quittieren, sofern die Verbindungen entsprechend sichtbar geschaltet sind.
 
-**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue_PHYS.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue_PHYS.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
+**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird an `Q_NumericValue_PHYS.QI`, `NumericValue_PHYS.QI` und `INI.QI` verteilt; der Ausgang `QO` (BOOL) ist das UND der `QO`-Ausgänge dieser drei Bausteine (`AND_QO`). Damit lässt sich der Dienst von außen freigeben und sein Erfolg abfragen.
+
+**Initialisierung:** `INIT` → `NumericValue_PHYS.INIT`; `NumericValue_PHYS.INITO` → `INI.INIT`; `INI.INITO` → `Q_NumericValue_PHYS.INIT` (und intern → `INI.GET`); `Q_NumericValue_PHYS.INITO` → `INITO` und → `AND_QO.REQ`.
 
 ## Technische Besonderheiten
 
 - **Generische Konfiguration:** Die SubApp ist vollständig über die Eingänge `KEY`, `SECTION` und `stObj` parametrierbar und kann dadurch für verschiedene physikalische Größen und INI-Abschnitte eingesetzt werden.
-- **Integrierte Qualitätsprüfung:** Der Block `Q_NumericValue_PHYS` bietet eine zusätzliche Kontrollmöglichkeit, deren Qualitätsanschlüsse nach außen geführt sind: `QI` der SubApp wirkt auf `Q_NumericValue_PHYS.QI`, dessen `QO` erscheint als `QO` der SubApp.
+- **Integrierte Qualitätsprüfung:** Der Block `Q_NumericValue_PHYS` bietet eine zusätzliche Kontrollmöglichkeit, deren Qualitätsanschlüsse nach außen geführt sind: `QI` der SubApp wirkt auf `Q_NumericValue_PHYS.QI` (sowie `NumericValue_PHYS.QI` und `INI.QI`), dessen `QO` geht gemeinsam mit den `QO` der beiden anderen Bausteine über `AND_QO` in das `QO` der SubApp ein.
 - **Initialwert des INI-Blocks:** Der `DEFAULT_VALUE` ist auf `REAL#0.0` gesetzt, was sicherstellt, dass beim Lesen eines nicht existierenden Eintrags ein definierter Wert zurückgegeben wird.
 - **Verwendung von Strukturtypen:** Der Eingang `stObj` verwendet den komplexen Datentyp `NumericObjectPool_S`, der eine kompakte Bündelung aller physikalischen Parameter ermöglicht.
 - **Interne Ereignisschleife:** Durch die Verbindung `INITO` → `GET` wird direkt nach der Initialisierung ein Lesevorgang angestoßen, sodass der INI-Wert sofort nach dem Start verfügbar ist.
@@ -86,7 +91,7 @@ Die SubApp besitzt keinen expliziten Zustandsautomaten auf oberster Ebene. Ihr V
 - **Lesen:** Das Ereignis `GET` wird durch `INITO` (initial) oder durch externe Anforderungen ausgelöst. Nach Abschluss des Lesevorgangs wird `GETO` erzeugt.
 - **Warten:** Nach Ausgabe von `IND` wartet die SubApp auf das nächste Ereignis von `NumericValue_PHYS`.
 
-Eine feinere Unterteilung könnte durch die Qualitätsüberwachung des Blocks `Q_NumericValue_PHYS` vorgenommen werden, deren `QO` über den SubApp-Ausgang `QO` nach außen geführt wird.
+Eine feinere Unterteilung könnte durch die Qualitätsüberwachung des Blocks `Q_NumericValue_PHYS` vorgenommen werden, deren `QO` über das UND-Glied `AND_QO` in den SubApp-Ausgang `QO` eingeht.
 
 ## Anwendungsszenarien
 

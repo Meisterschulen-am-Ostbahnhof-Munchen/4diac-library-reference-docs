@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`GreenWhiteBackground1C` is a **compact wrapper** around [`GreenWhiteBackground1`](GreenWhiteBackground1.md) — passes `u16ObjId` and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
+`GreenWhiteBackground1C` is a **compact wrapper** around [`GreenWhiteBackground1`](GreenWhiteBackground1.md) — passes `u16ObjId` and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`). In addition, `INIT` → `GreenWhiteBackground.INIT`, `GreenWhiteBackground.INITO` → `INITO`, `QI` → `GreenWhiteBackground.QI` (initial value `TRUE`) and `GreenWhiteBackground.QO` → `QO` are passed through.
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 

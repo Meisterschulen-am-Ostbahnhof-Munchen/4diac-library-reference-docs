@@ -9,7 +9,7 @@
 
 ## Introduction
 
-The `IX_TO_logiBUS_LED_strip_QX` is a generic subapplication that connects a logiBUS pushbutton input to a blinking LED strip output. It is designed for applications where a physical button should switch an LED strip on and off in a blinking mode. The color, the used input, and the target strip can be parameterized through the subapplication interface.
+The `IX_TO_logiBUS_LED_strip_QX` is a generic subapplication that connects a logiBUS pushbutton input to a blinking LED strip output. It is designed for applications where a physical button should switch an LED strip on and off in a blinking mode. The color, the used input, and the target strip can be parameterized through the subapplication interface; initialization is exposed via `INIT`/`INITO` and the status via `QI`/`QO`.
 
 The subapplication encapsulates the event handling and data routing, so it can be reused easily in larger 4diac-ide projects.
 
@@ -17,25 +17,26 @@ The subapplication encapsulates the event handling and data routing, so it can b
 
 ### **Event Inputs**
 
-There are no event inputs.
+- `INIT` (`EInit`): Initialization Request
 
-The subapplication does not expose any event inputs. The trigger is generated internally by the encapsulated pushbutton function block.
+Apart from `INIT`, the subapplication does not expose any event inputs. The trigger is generated internally by the encapsulated pushbutton function block.
 
 ### **Event Outputs**
 
-There are no event outputs.
+- `INITO` (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE enables the service. |
 | `Input` | `logiBUS::io::DI::logiBUS_DI_S` | `logiBUS::io::DI::logiBUS_DI::Invalid` | Identifies the physical input, e.g. `Input_I1` to `Input_I8`. |
 | `Colour` | `UINT` | `LED_COLOURS::LED_GREEN` | Identifies the color of the LED strip. |
 | `Output` | `USINT` | — | Identifies the output number of the LED strip. |
 
 ### **Data Outputs**
 
-There are no data outputs.
+- `QO` (`BOOL`): Quality Output - TRUE if the service executed successfully (AND of `LED.QO` and `BUTTON.QO`, via the `AND_QO` block of type `iec61131::booleanOperators::AND_BOOL_2`).
 
 ### **Adapters**
 
@@ -57,7 +58,9 @@ The data flow is as follows:
 - The subapplication input `Output` selects the target LED strip via `LED.Output`.
 - The subapplication input `Colour` sets the color via `LED.Colour`.
 
-The internal LED block is configured with `QI = TRUE` and `FREQ = LED_FREQ::LED_1HZ`, so the selected LED strip blinks at a frequency of 1 Hz when triggered.
+Initialization runs as a chain `INIT` → `LED.INIT`, `LED.INITO` → `BUTTON.INIT`, `BUTTON.INITO` → `INITO` (and additionally → `AND_QO.REQ`). `QI` is forwarded to `LED.QI` and `BUTTON.QI`; `LED.QO` and `BUTTON.QO` are ANDed into `QO`.
+
+The internal LED block is configured with `FREQ = LED_FREQ::LED_1HZ`, so the selected LED strip blinks at a frequency of 1 Hz when triggered.
 
 ## Technical Features
 
@@ -67,9 +70,9 @@ The internal LED block is configured with `QI = TRUE` and `FREQ = LED_FREQ::LED_
 - Output selection via `USINT`.
 - Internal event connection: `BUTTON.IND -> LED.REQ`.
 - Internal data forwarding is hidden in the subapplication network.
-- Both internal blocks are enabled with `QI = TRUE`.
+- Both internal blocks receive `QI` from the subapplication's `QI` input (default `TRUE`).
 - Fixed blink frequency of 1 Hz.
-- No external event wiring required.
+- No external event wiring required apart from the optional `INIT`/`INITO` initialization chain.
 
 ## State Overview
 

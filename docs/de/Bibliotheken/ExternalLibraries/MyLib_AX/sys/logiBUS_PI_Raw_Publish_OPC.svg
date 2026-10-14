@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1959.25 232.0"
-     width="1959.25" height="232.0">
+     viewBox="0 0 2334.25 252.0"
+     width="2334.25" height="252.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 227.5 66.0
             L 234.5 66.0
             A 3 3 0 0 1 237.5 69.0
-            L 237.5 209.0
-            A 3 3 0 0 1 234.5 212.0
-            L 3 212.0
-            A 3 3 0 0 1 0 209.0
+            L 237.5 229.0
+            A 3 3 0 0 1 234.5 232.0
+            L 3 232.0
+            A 3 3 0 0 1 0 229.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="231.0,11.0 236.0,16.0 231.0,21.0" fill="#63B31F"/>
+    <text x="228.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -97,33 +105,41 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#3366FF"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#3366FF"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">Input</text>
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
-    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_HZ_WRITE</text>
 
-    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#3366FF"/>
-    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">stObjFilterTimeS</text>
-
-    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#BD8663"/>
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#3366FF"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_FILTER_TIME_READ</text>
+          fill="#000000" dominant-baseline="middle">stObjFilterTimeS</text>
 
     <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#BD8663"/>
     <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_FILTER_TIME_WRITE</text>
+          fill="#000000" dominant-baseline="middle">ID_FILTER_TIME_READ</text>
 
     <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#BD8663"/>
     <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_FILTER_TIME_WRITE</text>
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#BD8663"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">sSection</text>
 
-    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#DBB418"/>
-    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#DBB418"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">RASTER_HZ</text>
+
+    <polygon points="231.0,71.0 236.0,76.0 231.0,81.0" fill="#A3B08F"/>
+    <text x="228.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -132,25 +148,37 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="262.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Identify the Input PulseInput_I1..I9 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::PI::logiBUS_PI_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Frequenz-Publish-Adresse (REAL Hz, ACTION=PUBLISH), lokal auf dieser Station – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Identify the Input PulseInput_I1..I9 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::PI::logiBUS_PI_S</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (PT1-Filterzeit in Sekunden, VT-Eingabefeld) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Frequenz-Publish-Adresse (REAL Hz, ACTION=PUBLISH), lokal auf dieser Station – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse (REAL Sekunden, ACTION=SUBSCRIBE) fuer Web-Override der Filterzeit – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (PT1-Filterzeit in Sekunden, VT-Eingabefeld) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Echo/Re-Publish-Adresse (REAL Sekunden, ACTION=PUBLISH) der aktuellen Filterzeit – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse (REAL Sekunden, ACTION=SUBSCRIBE) fuer Web-Override der Filterzeit – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">INI settings.ini Section fuer die persistierte Filterzeit (eindeutig pro Sensor-Instanz) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Echo/Re-Publish-Adresse (REAL Sekunden, ACTION=PUBLISH) der aktuellen Filterzeit – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INI settings.ini Section fuer die persistierte Filterzeit (eindeutig pro Sensor-Instanz) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+
+    <text x="-25" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Rundungsraster (Hz) vor AR_PUBLISH_HZ - Platzhalter-Default 0.0001 (praktisch kein Runden, fuer bestehende Aufrufer unveraendert), per Parameter auf die gewuenschte Aufloesung setzen (z.B. 0.00208333 = 0.125 U/min bei SCALE=60 Hz-&gt;U/min stromabwaerts) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+
+    <text x="262.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

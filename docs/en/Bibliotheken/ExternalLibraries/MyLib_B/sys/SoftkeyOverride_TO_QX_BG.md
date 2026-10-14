@@ -17,23 +17,33 @@
 
 | Name | Type | Comment |
 |------|------|---------|
+| `INIT` | EInit | Initialization request; starts the chain `QX` → `IX` → `GreenWhiteBackground`. |
 | `REQ` | Event | Service Request; triggers evaluation and output update. |
 
 ### **Event Outputs**
 
-There are no event outputs.
+| Name | Type | Comment |
+|------|------|---------|
+| `INITO` | EInit | Initialization confirmation; comes from `GreenWhiteBackground.INITO`. |
+
+There are no other event outputs.
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| `QI` | `BOOL` | `TRUE` | Quality input, service enable; passed on to `QX`, `IX` and `GreenWhiteBackground`. |
 | `OUT` | `BOOL` | — | Output data to resource. |
 | `u16ObjId` | `UINT` | `ID_NULL` | Object ID Softkey/Button. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Selection of the physical/logical digital output. |
 
 ### **Data Outputs**
 
-There are no data outputs.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | `BOOL` | Quality output, `AND` of the `QO` outputs of `QX`, `IX` and `GreenWhiteBackground` (via `AND_QO`, `AND_BOOL_3`). |
+
+The actual output goes through the embedded `QX` block to the physical channel.
 
 ### **Adapters**
 
@@ -49,6 +59,7 @@ The subapplication implements a digital output stage with manual override capabi
 - The result of the OR operation is written to the `QX` digital output.
 - The same result is sent to an internal `GreenWhiteBackground` subapplication, so the HMI background reflects the current output state.
 - The `QX.CNF` event triggers the background update after the output has been written successfully.
+- Initialization and quality: `INIT` → `QX.INIT`; `QX.INITO` → `IX.INIT`; `IX.INITO` → `GreenWhiteBackground.INIT`; `GreenWhiteBackground.INITO` → `INITO` and → `AND_QO.REQ`. `QI` → `QX.QI`, `IX.QI` and `GreenWhiteBackground.QI` (no fixed `QI=TRUE` any more on `QX` and `IX`); `QX.QO` → `AND_QO.IN1`, `IX.QO` → `AND_QO.IN2`, `GreenWhiteBackground.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 The behavior is purely combinatorial with respect to the data values: the output is active if either the program signal `OUT` is true OR the softkey is currently pressed. There is no latching or memory.
 

@@ -14,21 +14,23 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialisierungsanforderung
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung
 - **IND**: Feuert, wenn SoftKey, AUX oder die lokale Methode aktiviert bzw. aufgerufen wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE gibt den Dienst frei
 - **u16ObjId** (`UINT`): Object-ID des SoftKeys
 - **u16ObjIdA** (`UINT`): Object-ID der AuxFunction2
 - **ID_METHOD** (`WSTRING`): Lokale Methodenadresse (`ACTION=CREATE_METHOD`) für den argumentlosen Trigger; wird vom Web-Client (`vt-ui-mirror`) und direkt vom OPC-Dashboard aufgerufen
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output – UND aus `METHOD_SERVER.QO` und `SoftkeyAux.QO`
 
 ### **Adapter**
 
@@ -37,8 +39,9 @@ Dieser Funktionsblock verwendet keine Adapter.
 ## Verwendete Funktionsbausteine (FBs)
 
 - **SoftkeyAux**: SubApp `MyLib::sys::Softkey_Aux_IE` – SoftKey oder AUX
-- **METHOD_SERVER**: `iec61499::net::SERVER_0` (`QI=TRUE`) – lokale Methode
+- **METHOD_SERVER**: `iec61499::net::SERVER_0` – lokale Methode
 - **MERGE**: `iec61499::events::E_MERGE_2` – führt die beiden Auslöser zusammen
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` – verknüpft `METHOD_SERVER.QO` und `SoftkeyAux.QO` zum `QO`
 
 ## Programmablauf und Verbindungen
 
@@ -47,6 +50,9 @@ Dieser Funktionsblock verwendet keine Adapter.
 - `METHOD_SERVER.IND` → `METHOD_SERVER.RSP` (Rückverdrahtung)
 - `MERGE.EO` → `IND`
 - `u16ObjId`, `u16ObjIdA` → `SoftkeyAux`; `ID_METHOD` → `METHOD_SERVER.ID`
+- `INIT` → `METHOD_SERVER.INIT`; `METHOD_SERVER.INITO` → `SoftkeyAux.INIT`; `SoftkeyAux.INITO` → `INITO` (und → `AND_QO.REQ`)
+- `QI` → `METHOD_SERVER.QI` und `SoftkeyAux.QI`
+- `METHOD_SERVER.QO` → `AND_QO.IN1`; `SoftkeyAux.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

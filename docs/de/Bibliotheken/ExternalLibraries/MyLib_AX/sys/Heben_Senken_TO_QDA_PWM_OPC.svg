@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2375.8 392.0"
-     width="2375.8" height="392.0">
+     viewBox="0 0 2632.625 392.0"
+     width="2632.625" height="392.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(2051.0, 10)">
+  <g transform="translate(1612.25, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 286.8 0
-            A 3 3 0 0 1 289.8 3
-            L 289.8 23.0
-            A 3 3 0 0 1 286.8 26.0
-            L 279.8 26.0
-            L 279.8 66.0
-            L 286.8 66.0
-            A 3 3 0 0 1 289.8 69.0
-            L 289.8 369.0
-            A 3 3 0 0 1 286.8 372.0
+            L 257.6875 0
+            A 3 3 0 0 1 260.6875 3
+            L 260.6875 23.0
+            A 3 3 0 0 1 257.6875 26.0
+            L 250.6875 26.0
+            L 250.6875 66.0
+            L 257.6875 66.0
+            A 3 3 0 0 1 260.6875 69.0
+            L 260.6875 369.0
+            A 3 3 0 0 1 257.6875 372.0
             L 3 372.0
             A 3 3 0 0 1 0 369.0
             L 0 69.0
@@ -61,6 +61,10 @@
     <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="254.1875,11.0 259.1875,16.0 254.1875,21.0" fill="#63B31F"/>
+    <text x="251.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -95,9 +99,9 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Heben_Senken_TO_QDA_PWM_OPC</text>
     
-    <text x="144.9" y="66.0"
+    <text x="130.34375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
-          fill="#666666" text-anchor="middle">1.6</text>
+          fill="#666666" text-anchor="middle">1.7</text>
 
     <!-- Data Ports -->
 
@@ -157,6 +161,10 @@
     <text x="9.5" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">QI</text>
 
+    <polygon points="254.1875,71.0 259.1875,76.0 254.1875,81.0" fill="#A3B08F"/>
+    <text x="251.1875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
+
     <!-- Adapter Ports -->
 
     <path d="M 1.5 357.0
@@ -183,6 +191,9 @@
 
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialisierung - vom Aufrufer sequenziert statt per Auto-Verteilung, damit QI vor der physischen Kanalbindung feststeht – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="285.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialisierung abgeschlossen - echtes Rendezvous-Confirm (E_REND_2) aus PWM_Mux.INITO UND DO_Toggle.INITO</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physischer PWM-Ausgang (linker Kanal): 25/50/75% Tastgrad, ratiometrisch – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>
@@ -225,6 +236,9 @@
 
     <text x="-25" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Qualifier fuer beide physischen Ausgaenge (PWM+Freigabe-DO) - FALSE haelt diese Instanz komplett inaktiv (keine Hardware-Bindung), fuer den Fall dass derselbe physische Kanal je nach Maschinenvariante anderweitig genutzt wird – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="285.6875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully (AND aus PWM_Mux/DO_Toggle)</text>
 
     <text x="-25" y="363.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">PWM Power 1.0 = Maximale Power, 0.0 = Aus, 0.5 = Halb - durchgereicht an PWM_Mux.PWM_POW – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>

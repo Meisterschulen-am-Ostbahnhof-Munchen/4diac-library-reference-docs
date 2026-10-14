@@ -16,15 +16,18 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **SUBSCRIBE**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — abonniert den entfernten BOOL-Wert (`ID`, z. B. `Anlage_EIN_READ`).
-    - **AX_R_TRIG**: `adapter::events::unidirectional::AX_R_TRIG` — erkennt die steigende Flanke des abonnierten Werts und feuert `EO`.
-- **Funktionsweise**: Der per OPC-UA empfangene Wert wird direkt in `AX_R_TRIG` geführt, dessen Flankenerkennung das SubApp-Ereignis `EO` auslöst.
+    - **SUBSCRIBE**: `iec61499::net::SUBSCRIBE_1` — abonniert den entfernten BOOL-Wert (`ID`, z. B. `Anlage_EIN_READ`).
+    - **E_R_TRIG**: `iec61499::events::E_R_TRIG` — erkennt die steigende Flanke des abonnierten Werts und feuert `EO`.
+- **Funktionsweise**: Seit Version 2.0 sind das rohe `SUBSCRIBE_1` und `E_R_TRIG` direkt verdrahtet (kein doppelter Flankenspeicher mehr): `SUBSCRIBE.IND` und `SUBSCRIBE.RD_1` führen direkt in `E_R_TRIG`, dessen Flankenerkennung das SubApp-Ereignis `EO` auslöst.
+- **Schnittstelle**: Ereignis-Eingang `INIT` (`EInit`), Ereignis-Ausgänge `INITO` (`EInit`) und `EO`; Dateneingänge `QI` (`BOOL`, Vorgabe `TRUE`) und `ID` (`WSTRING`); Datenausgang `QO` (`BOOL`).
 
 ## Programmablauf und Verbindungen
 
 1. `ID` → `SUBSCRIBE.ID` (Datenverbindung, ausgeblendet).
-2. `SUBSCRIBE.OUT` → `AX_R_TRIG.QI`.
-3. `AX_R_TRIG.EO` → `EO` (SubApp-Ereignisausgang).
+2. `SUBSCRIBE.IND` → `E_R_TRIG.EI`; `SUBSCRIBE.RD_1` → `E_R_TRIG.QI`.
+3. `E_R_TRIG.EO` → `EO` (SubApp-Ereignisausgang).
+4. `INIT` → `SUBSCRIBE.INIT`; `SUBSCRIBE.INITO` → `INITO`.
+5. `QI` → `SUBSCRIBE.QI`; `SUBSCRIBE.QO` → `QO`.
 
 ## Anwendungsszenarien
 

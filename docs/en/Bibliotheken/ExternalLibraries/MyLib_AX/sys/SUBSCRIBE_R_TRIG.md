@@ -18,20 +18,25 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **SUBSCRIBE**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — subscribes to the remote BOOL value (`ID`, e.g., `Anlage_EIN_READ`).
+- **SUBSCRIBE**: `iec61499::net::SUBSCRIBE_1` — subscribes to the remote BOOL value (`ID`, e.g., `Anlage_EIN_READ`).
 
-- **AX_R_TRIG**: `adapter::events::unidirectional::AX_R_TRIG` — detects the rising edge of the subscribed value and fires `EO`.
+- **E_R_TRIG**: `iec61499::events::E_R_TRIG` — detects the rising edge of the subscribed value and fires `EO`.
 
-- **How it Works**: The value received via OPC UA is directly routed to `AX_R_TRIG`, whose edge detection triggers the SubApp event `EO`.
+- **How it Works**: Since version 2.0 the raw `SUBSCRIBE_1` and `E_R_TRIG` are wired directly (no duplicate edge memory any more): `SUBSCRIBE.IND` and `SUBSCRIBE.RD_1` go directly into `E_R_TRIG`, whose edge detection triggers the SubApp event `EO`.
+
+- **Interface**: event input `INIT` (`EInit`), event outputs `INITO` (`EInit`) and `EO`; data inputs `QI` (`BOOL`, default `TRUE`) and `ID` (`WSTRING`); data output `QO` (`BOOL`).
 
 ## Program Flow and Connections
 
 1. `ID` → `SUBSCRIBE.ID` (Data connection, hidden).
 
-2. `SUBSCRIBE.OUT` → `AX_R_TRIG.QI`.
+2. `SUBSCRIBE.IND` → `E_R_TRIG.EI`; `SUBSCRIBE.RD_1` → `E_R_TRIG.QI`.
 
-3. `AX_R_TRIG.EO` → `EO` (SubApp event output).
+3. `E_R_TRIG.EO` → `EO` (SubApp event output).
 
+4. `INIT` → `SUBSCRIBE.INIT`; `SUBSCRIBE.INITO` → `INITO`.
+
+5. `QI` → `SUBSCRIBE.QI`; `SUBSCRIBE.QO` → `QO`.
 
 ## Application Scenarios
 

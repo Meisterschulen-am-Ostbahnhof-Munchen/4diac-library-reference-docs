@@ -10,6 +10,8 @@
 
 `GreenRedBackground2_AXSC` ist ein **Kompakt-Wrapper** um [`GreenRedBackground2_AXS`](GreenRedBackground2_AXS.md) — reicht `u16ObjId`s und den Selector durch, ohne die `CNF`-Ereignisausgänge und Diagnosewerte (`STATUS_n`, `u8OldColour_n`, `result_n`) nach außen zu führen.
 
+Zusätzlich werden Initialisierung und Qualität durchgereicht: `INIT` → `GreenRedBackground.INIT`, `GreenRedBackground.INITO` → `INITO`, `QI` (Initialwert `TRUE`) → `GreenRedBackground.QI` und `GreenRedBackground.QO` → `QO`.
+
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
 ## Zusammenfassung

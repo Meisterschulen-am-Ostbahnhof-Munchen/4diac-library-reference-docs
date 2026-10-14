@@ -10,16 +10,24 @@
 
 ![logiBUS_IXA_BG_OPC](logiBUS_IXA_BG_OPC.svg)
 
+## Schnittstelle
+
+- **Ereignis-Eingang**: `INIT` (`EInit`, Initialization Request)
+- **Ereignis-Ausgang**: `INITO` (`EInit`, Initialization Confirm)
+- **Daten-Eingänge**: `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input), `u16ObjId`, `Input`, `ID_WRITE`
+- **Daten-Ausgang**: `QO` (`BOOL`, Quality Output)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: logiBUS_IXA_BG_OPC
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — Adapter-basierter digitaler Eingang; Parameter `QI=TRUE`, `Input` identifiziert `Input_I1..I8`.
+    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — Adapter-basierter digitaler Eingang; `QI` vom Baustein-Eingang, `Input` identifiziert `Input_I1..I8`.
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — verzweigt das eine Adapter-Signal von `logiBUS_IXA.IN` in zwei unabhängige Ziele.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): setzt die VT-Hintergrundfarbe (Grün/Weiß) passend zum Eingangszustand.
-    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` — OPC-UA-Publish-Adapter, `QI=TRUE`.
+    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` — OPC-UA-Publish-Adapter, `QI` vom Baustein-Eingang.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO`-Ausgänge von `logiBUS_IXA`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX` per UND zum Baustein-Ausgang `QO`.
 - **Funktionsweise**: Reiner Einweg-Datenfluss vom physischen Eingang zu zwei Anzeige-/Meldewegen — kein Rückschreiben möglich, da ein digitaler Eingang nicht extern gesetzt werden kann.
 
 ## Programmablauf und Verbindungen
@@ -28,6 +36,9 @@
 2. `u16ObjId` (VT-Objekt-ID der Statusanzeige) → `GreenWhiteBackground1_AX.u16ObjId`.
 3. `ID_WRITE` (OPC-UA-Adresse) → `AX_PUBLISH_1.ID`.
 4. **Adapterkette**: `logiBUS_IXA.IN` → `AX_SPLIT_2.IN` → `AX_SPLIT_2.OUT1` → `GreenWhiteBackground1_AX.DI1` (VT-Anzeige) und `AX_SPLIT_2.OUT2` → `AX_PUBLISH_1.IN` (OPC-UA-Publish).
+5. **Initialisierungskette**: `INIT` → `logiBUS_IXA.INIT`, `logiBUS_IXA.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`.
+6. `QI` → `logiBUS_IXA.QI`, `AX_PUBLISH_1.QI` und `GreenWhiteBackground1_AX.QI`.
+7. `logiBUS_IXA.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `GreenWhiteBackground1_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

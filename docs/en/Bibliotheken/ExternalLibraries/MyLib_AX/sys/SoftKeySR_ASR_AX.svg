@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 878.75 152.0"
-     width="878.75" height="152.0">
+     viewBox="0 0 1050.125 172.0"
+     width="1050.125" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(444.9375, 10)">
+  <g transform="translate(461.75, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 174.25 0
-            A 3 3 0 0 1 177.25 3
-            L 177.25 23.0
-            A 3 3 0 0 1 174.25 26.0
-            L 167.25 26.0
-            L 167.25 66.0
-            L 174.25 66.0
-            A 3 3 0 0 1 177.25 69.0
-            L 177.25 129.0
-            A 3 3 0 0 1 174.25 132.0
-            L 3 132.0
-            A 3 3 0 0 1 0 129.0
+            L 175.375 0
+            A 3 3 0 0 1 178.375 3
+            L 178.375 23.0
+            A 3 3 0 0 1 175.375 26.0
+            L 168.375 26.0
+            L 168.375 66.0
+            L 175.375 66.0
+            A 3 3 0 0 1 178.375 69.0
+            L 178.375 149.0
+            A 3 3 0 0 1 175.375 152.0
+            L 3 152.0
+            A 3 3 0 0 1 0 149.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="171.875,11.0 176.875,16.0 171.875,21.0" fill="#63B31F"/>
+    <text x="168.875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,36 +99,44 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">SoftKeySR_ASR_AX</text>
     
-    <text x="88.625" y="66.0"
+    <text x="89.1875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#18519E"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId_SET</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId_SET</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16ObjId_RESET</text>
+
+    <polygon points="171.875,71.0 176.875,76.0 171.875,81.0" fill="#A3B08F"/>
+    <text x="168.875" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 165.75 117.0
-            L 168.25 117.0
-            L 168.25 118.66666666666667
-            L 170.75 118.66666666666667
-            L 170.75 117.0
-            L 175.75 117.0
-            L 175.75 127.0
-            L 170.75 127.0
-            L 170.75 125.33333333333333
-            L 168.25 125.33333333333333
-            L 168.25 127.0
-            L 165.75 127.0
+    <path d="M 166.875 137.0
+            L 169.375 137.0
+            L 169.375 138.66666666666666
+            L 171.875 138.66666666666666
+            L 171.875 137.0
+            L 176.875 137.0
+            L 176.875 147.0
+            L 171.875 147.0
+            L 171.875 145.33333333333334
+            L 169.375 145.33333333333334
+            L 169.375 147.0
+            L 166.875 147.0
             Z" fill="#845DAF"/>
-    <text x="162.75" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="163.875" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -129,13 +145,25 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="203.375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey Set (traegt auch das GreenWhiteBackground) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey Set (traegt auch das GreenWhiteBackground) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey Reset – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
-    <text x="202.25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="203.375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
+
+    <text x="203.375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">ASR_AX</tspan> – Set/Reset (out), Zustand (in)</text>
   </g>
 </svg>

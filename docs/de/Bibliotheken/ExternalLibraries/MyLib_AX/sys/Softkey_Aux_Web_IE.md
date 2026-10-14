@@ -24,20 +24,22 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `SoftkeyAux.INIT`
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `SoftkeyAux.INITO`
 - **IND**: Feuert, wenn SoftKey, Aux oder Web-Remote aktiviert wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst; geht an `SoftkeyAux.QI`
 - **u16ObjId** (`UINT`): Object-ID des SoftKeys
 - **u16ObjIdA** (`UINT`): Object-ID der `AuxFunction2`
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `SoftkeyAux.QO`
 
 ### **Adapter**
 
@@ -49,6 +51,8 @@ Keine.
 - `SoftkeyAux.IND` → `MERGE.EI1`
 - `WEB_IN` → `WEB_R_TRIG.QI`; `WEB_R_TRIG.EO` → `MERGE.EI2`
 - `MERGE.EO` → `IND`
+- Initialisierung: `INIT` → `SoftkeyAux.INIT`; `SoftkeyAux.INITO` → `INITO`
+- Qualität: `QI` → `SoftkeyAux.QI`; `SoftkeyAux.QO` → `QO`
 
 ## Technische Besonderheiten
 

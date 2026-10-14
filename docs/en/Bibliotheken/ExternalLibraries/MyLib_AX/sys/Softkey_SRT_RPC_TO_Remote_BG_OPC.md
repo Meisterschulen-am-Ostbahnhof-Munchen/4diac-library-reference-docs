@@ -17,16 +17,17 @@ The subapplication exposes only data inputs at its interface. All event handling
 
 ### **Event Inputs**
 
-_None._ The subapplication does not expose any event inputs. Activation is performed internally by the softkey function blocks, which react to hardware events.
+- **INIT** (`EInit`): initialization request. Apart from that, the subapplication does not expose any event inputs. Activation is performed internally by the softkey function blocks, which react to hardware events.
 
 ### **Event Outputs**
 
-_None._ No events are propagated to the outside world.
+- **INITO** (`EInit`): initialization confirmation (from `GreenWhiteBackground_AX.INITO`). No other events are propagated to the outside world.
 
 ### **Data Inputs**
 
 | Name           | Type    | Description                                                                                     |
 |----------------|---------|-------------------------------------------------------------------------------------------------|
+| `QI`             | `BOOL`  | Quality Input, TRUE enables the service (default `TRUE`).                                       |
 | `u16ObjId_SET`   | `UINT`  | Object ID of the **Set** softkey. Initial value: `ID_NULL`.                                     |
 | `u16ObjId_RESET` | `UINT`  | Object ID of the **Reset** softkey. Initial value: `ID_NULL`.                                   |
 | `u16ObjId_TOGGLE`| `UINT`  | Object ID of the **Toggle** softkey (also carries the GreenWhiteBackground indication). Initial value: `ID_NULL`. |
@@ -37,7 +38,7 @@ _None._ No events are propagated to the outside world.
 
 ### **Data Outputs**
 
-_None._ No data is returned to the caller.
+- **QO** (`BOOL`): Quality Output, AND (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_8`) of the `QO` outputs of all eight internal blocks (3 × `Softkey_IE`, 3 × `CLIENT_0`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`).
 
 ### **Adapters**
 
@@ -47,13 +48,14 @@ _None at the interface level._ Internally, an `AX_SUBSCRIBE_1` adapter is used t
 
 The subapplication implements the following end‑to‑end behavior:
 
-1. **Softkey Detection** – Three `isobus::UT::io::Softkey::Softkey_IE` instances (`SoftKey_SET`, `SoftKey_RESET`, `SoftKey_TOGGLE`) are configured with `InputEvent = SK_RELEASED` (activation on key release) and `QI = TRUE`. Each instance is associated with a distinct Object ID supplied via the `u16ObjId_*` inputs.
+1. **Softkey Detection** – Three `isobus::UT::io::Softkey::Softkey_IE` instances (`SoftKey_SET`, `SoftKey_RESET`, `SoftKey_TOGGLE`) are configured with `InputEvent = SK_RELEASED` (activation on key release); their `QI` comes from the `QI` input of the subapplication. Each instance is associated with a distinct Object ID supplied via the `u16ObjId_*` inputs.
 
-2. **Remote Method Invocation** – When a softkey is pressed, the corresponding `IND` event is routed to the `REQ` input of a dedicated `iec61499::net::CLIENT_0` function block (`TRIGGER_SET_CLIENT`, `TRIGGER_RESET_CLIENT`, `TRIGGER_TOGGLE_CLIENT`). Each client is permanently enabled (`QI = TRUE`) and holds the remote method address in its `ID` input, which is wired from the corresponding `ID_*_CALL` data input.
+2. **Remote Method Invocation** – When a softkey is pressed, the corresponding `IND` event is routed to the `REQ` input of a dedicated `iec61499::net::CLIENT_0` function block (`TRIGGER_SET_CLIENT`, `TRIGGER_RESET_CLIENT`, `TRIGGER_TOGGLE_CLIENT`). Each client is enabled via the `QI` input of the subapplication and holds the remote method address in its `ID` input, which is wired from the corresponding `ID_*_CALL` data input.
 
 3. **State Subscription** – An `adapter::net::AX_SUBSCRIBE_1` block (`STATE_SUBSCRIBE`) continuously subscribes to the OPC‑UA variable specified in `ID_STATE_READ`. Its output (an adapter interface) is connected to the `DI1` adapter socket of a `MyLib::sys::GreenWhiteBackground1_AX` subapplication.
 
-4. **Visual Indication** – The `GreenWhiteBackground1_AX` subapplication, fed with `u16ObjId_TOGGLE` and the subscribed state value, renders either a green or a white background on the Toggle softkey, reflecting the current flip‑flop state maintained on Device B.
+4. **Initialization and Quality** – `INIT` runs through a chain `SoftKey_SET` → `SoftKey_RESET` → `SoftKey_TOGGLE` → `TRIGGER_SET_CLIENT` → `TRIGGER_RESET_CLIENT` → `TRIGGER_TOGGLE_CLIENT` → `STATE_SUBSCRIBE` → `GreenWhiteBackground_AX` (each `INITO` → next `INIT`); `GreenWhiteBackground_AX.INITO` → `INITO` (and → `AND_QO.REQ`). `QI` is distributed to `.QI` of all eight blocks; their `QO` outputs feed `AND_QO.IN1`..`IN8`, and `AND_QO.OUT` → `QO`.
+5. **Visual Indication** – The `GreenWhiteBackground1_AX` subapplication, fed with `u16ObjId_TOGGLE` and the subscribed state value, renders either a green or a white background on the Toggle softkey, reflecting the current flip‑flop state maintained on Device B.
 
 ## Technical Features
 
@@ -70,7 +72,7 @@ The subapplication implements the following end‑to‑end behavior:
 The subapplication itself does not contain an explicit state machine. However, its constituent elements exhibit the following state‑oriented behavior:
 
 - **Softkey FBs** – Each `Softkey_IE` is in an _idle_ state until a hardware‑level key‑release event occurs. Upon detection, the FB generates an `IND` event and returns to the idle state.
-- **Client FBs** – Each `CLIENT_0` transitions through _request sent_ → _response received_ → _idle_ for every triggered call. With `QI = TRUE`, the clients remain operationally ready.
+- **Client FBs** – Each `CLIENT_0` transitions through _request sent_ → _response received_ → _idle_ for every triggered call. While `QI` is TRUE, the clients remain operationally ready.
 - **State variable (remote)** – The flip‑flop state on Device B is a single BOOL (binary) value. It transitions between `0` (white background) and `1` (green background) each time the Toggle method is invoked. The `STATE_SUBSCRIBE` adapter continuously tracks changes and forwards them to the background rendering component.
 
 The overall system thus implements a classic **set / reset / toggle** control paradigm with visual feedback, where the state source of truth resides on Device B.

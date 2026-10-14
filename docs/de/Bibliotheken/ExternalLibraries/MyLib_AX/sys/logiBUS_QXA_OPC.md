@@ -13,27 +13,34 @@ Der Funktionsblock (SubApp) `logiBUS_QXA_OPC` stellt einen generischen OPC-UA Re
 
 ## Schnittstellenstruktur
 
-Die SubApp besitzt ausschließlich drei Dateneingänge. Es gibt keine direkten Ereignis-Eingänge, Ereignis-Ausgänge, Daten-Ausgänge oder Adapter-Anschlüsse an der Schnittstelle. Die Ereignis- und Datenflüsse werden intern über Adapter-Verbindungen realisiert.
+Die SubApp besitzt die Ereignisse `INIT`/`INITO`, die Daten `QI`/`QO` sowie drei weitere Dateneingänge. Es gibt keine Adapter-Anschlüsse an der Schnittstelle. Die eigentlichen Ereignis- und Datenflüsse werden intern über Adapter-Verbindungen realisiert.
 
 ### **Ereignis-Eingänge**
 
-Keine direkten Ereignis-Eingänge vorhanden. Ereignisse werden über die internen Adapter (AX_SUBSCRIBE_1) empfangen.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `logiBUS_QXA.INIT`
+
+Sonst werden Ereignisse über die internen Adapter (AX_SUBSCRIBE_1) empfangen.
 
 ### **Ereignis-Ausgänge**
 
-Keine direkten Ereignis-Ausgänge vorhanden. Ereignisse werden über die internen Adapter (AX_PUBLISH_1) ausgegeben.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `AX_PUBLISH_1.INITO`, dem Ende der Init-Kette
+
+Sonst werden Ereignisse über die internen Adapter (AX_PUBLISH_1) ausgegeben.
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Initialwert | Kommentar |
 |------|-----|-------------|-----------|
+| `QI` | `BOOL` | `TRUE` | Quality Input, schaltet den Dienst frei; wird an `logiBUS_QXA`, `AX_SUBSCRIBE_1` und `AX_PUBLISH_1` weitergereicht |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifiziert den Ausgang Q1..Q12 |
 | `ID_READ` | `WSTRING` | – | OPC-UA Subscribe-Key (schreibbar) – legt die zu abonnierende OPC-UA-Variable fest |
 | `ID_WRITE` | `WSTRING` | – | OPC-UA Publish-Key (lesbar) – legt die zu beschreibende OPC-UA-Variable fest |
 
 ### **Daten-Ausgänge**
 
-Keine direkten Daten-Ausgänge vorhanden. Die verarbeiteten Daten werden über die internen Adapter und den integrierten FB `logiBUS_QXA` ausgetauscht.
+- **`QO`** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_3`) der `QO`-Ausgänge von `logiBUS_QXA`, `AX_SUBSCRIBE_1` und `AX_PUBLISH_1`
+
+Die verarbeiteten Daten werden über die internen Adapter und den integrierten FB `logiBUS_QXA` ausgetauscht.
 
 ### **Adapter**
 
@@ -60,8 +67,10 @@ Die SubApp realisiert einen bidirektionalen OPC-UA-Zugriff auf einen einzelnen l
 
 4. **Interner FB `logiBUS_QXA`**:  
    - Typ `logiBUS::io::DQ::logiBUS_QXA`  
-   - Erhält als Parameter `QI=TRUE` (aktiv) und eine leere `PARAMS`.  
+   - Erhält `QI` vom Eingang `QI` und eine leere `PARAMS`.  
    - Verknüpft den ausgewählten Ausgang (`Output`) mit der internen Logik zur Steuerung des realen DQ-Kanals.
+
+Initialisierung und Qualität: `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `logiBUS_QXA.QI`, `AX_SUBSCRIBE_1.QI` und `AX_PUBLISH_1.QI` weitergereicht; deren `QO`-Ausgänge gehen in dieser Reihenfolge auf `AND_QO.IN1` bis `AND_QO.IN3` (`iec61131::booleanOperators::AND_BOOL_3`), `AND_QO.OUT` → `QO`.
 
 Die Ereignis- und Datenflüsse sind so verschaltet, dass sowohl das Lesen (Subscribe) als auch das Schreiben (Publish) von OPC-UA-Werten auf den logiBUS-Kanal abgebildet werden. Die SubApp ist bewusst einfach gehalten und verzichtet auf Visualisierungs-Buttons oder Hintergrundfarben, da sie für Module ohne ISOBUS/VT-Anbindung gedacht ist.
 
@@ -70,7 +79,7 @@ Die Ereignis- und Datenflüsse sind so verschaltet, dass sowohl das Lesen (Subsc
 - **OPC-UA-Anbindung**: Die Kommunikation erfolgt vollständig über die Adapter `AX_SUBSCRIBE_1` und `AX_PUBLISH_1`, die für Netzwerk-Kommunikation ausgelegt sind. Dies ermöglicht eine entkoppelte Integration in OPC-UA-Systeme.
 - **Generische Kanalauswahl**: Durch die Struktur `logiBUS_DO_S` kann einer von 12 Ausgängen (Q1..Q12) ausgewählt werden. Der Initialwert `Invalid` verhindert eine versehentliche Aktivierung ohne explizite Konfiguration.
 - **Ereignis-Splitting**: Der Adapter `AX_SPLIT_2` teilt jedes eingehende Subscribe-Ereignis in zwei separate Ströme auf. Dies ermöglicht eine parallele Verarbeitung (z.B. Aktualisierung des Ausgangs und Weiterleitung an einen Publish-Kanal).
-- **Eingebettete FB-Parameter**: Der interne FB `logiBUS_QXA` wird mit festen Parametern (`QI=TRUE`) betrieben; die Dynamik wird über die Dateneingänge der SubApp gesteuert.
+- **Eingebettete FB-Parameter**: Der interne FB `logiBUS_QXA` wird nicht mehr mit festem `QI=TRUE` betrieben, sondern erhält `QI` vom Eingang `QI`; die Dynamik wird über die Dateneingänge der SubApp gesteuert.
 - **Keine grafische Anbindung**: Die SubApp ist bewusst ohne VT-Button und Hintergrundfarbe gestaltet, um Platz zu sparen und die Wiederverwendung in headless-Modulen zu erleichtern.
 
 ## Zustandsübersicht
@@ -90,4 +99,4 @@ Im Vergleich zu einem direkt mit Ereignis- und Datenanschlüssen versehenen FB b
 
 ## Fazit
 
-`logiBUS_QXA_OPC` bietet eine kompakte und flexible Lösung zur Anbindung eines logiBUS-Digitalausgangs an ein OPC-UA-System. Durch die interne Verdrahtung von Subscribe- und Publish-Adaptern wird die bidirektionale Kommunikation vereinfacht. Die minimale Schnittstellenstruktur (nur Dateneingänge) erleichtert die Integration in bestehende Steuerungslogik. Der Baustein ist ideal für Anwendungen, bei denen eine direkte OPC-UA-Anbindung ohne zusätzliche Visualisierung benötigt wird.
+`logiBUS_QXA_OPC` bietet eine kompakte und flexible Lösung zur Anbindung eines logiBUS-Digitalausgangs an ein OPC-UA-System. Durch die interne Verdrahtung von Subscribe- und Publish-Adaptern wird die bidirektionale Kommunikation vereinfacht. Die minimale Schnittstellenstruktur (Init-Ereignisse, `QI`/`QO` und drei Dateneingänge) erleichtert die Integration in bestehende Steuerungslogik. Der Baustein ist ideal für Anwendungen, bei denen eine direkte OPC-UA-Anbindung ohne zusätzliche Visualisierung benötigt wird.

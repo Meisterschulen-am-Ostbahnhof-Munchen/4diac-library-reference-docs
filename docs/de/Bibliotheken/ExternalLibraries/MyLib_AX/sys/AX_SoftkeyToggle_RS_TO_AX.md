@@ -14,14 +14,16 @@
 
 ### **Ereignis-Eingänge**
 
+- **INIT** (`EInit`): Initialisierungsanforderung
 - **AUS**: setzt den Zustand hart auf AUS zurück, von außen als Ereignis (z. B. ein zentral gelesener gemeinsamer SoftKey 'Alles Aus'); zusätzlich zum eigenen Reset-Pfad über `u16ObjId_RESET`/`u16ObjIdA_RESET`/`ID_RESET_METHOD`. Unverdrahtet lassen, wenn nicht gebraucht.
 
 ### **Ereignis-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
+- **INITO** (`EInit`): Initialisierungsbestätigung
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL): Quality Input, TRUE gibt den Dienst frei (Default `TRUE`)
 - **u16ObjId** (UINT): Object ID des SoftKeys Ein/Aus (Toggle), Default `ID_NULL`
 - **u16ObjIdA** (UINT): Object ID der AuxFunction2 (Joystick) für den Toggle, gleichberechtigt zum SoftKey
 - **u16ObjIdB** (UINT): Object ID des IO-Diag-Testbuttons (Ausgänge-Diagnoseseite), toggelt gleichberechtigt mit; `ID_NULL` lassen, wenn kein solcher Button beteiligt ist
@@ -32,7 +34,7 @@ Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (BOOL): Quality Output, UND aus `Toggle.QO` und `Reset.QO`
 
 ### **Adapter**
 
@@ -41,14 +43,17 @@ Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
 
 ## Funktionsweise
 
-Das Netzwerk enthält vier Teile:
+Das Netzwerk enthält fünf Teile:
 
 - `Toggle` (`MyLib::sys::Softkey_Aux_Method_Button_IE`): liest `u16ObjId`, `u16ObjIdA`, `u16ObjIdB` und `ID_TOGGLE_METHOD` (an `Toggle.ID_METHOD`); sein `IND` führt auf `AX_T_FF_SR.CLK` und schaltet den Zustand um.
 - `Reset` (`MyLib::sys::Softkey_Aux_Method_IE`): liest `u16ObjId_RESET` (an `Reset.u16ObjId`), `u16ObjIdA_RESET` (an `Reset.u16ObjIdA`) und `ID_RESET_METHOD`; sein `IND` führt auf `AX_T_FF_SR.R`.
 - `AX_T_FF_SR` (`adapter::events::unidirectional::AX_T_FF_SR`): Toggle-Flipflop mit Set/Reset; `AX_T_FF_SR.Q` → `OUT`.
 - `AX_R_TRIG_ForceOff` (`adapter::events::unidirectional::AX_R_TRIG`): erkennt die steigende Flanke an `FORCE_OFF` (`FORCE_OFF` → `AX_R_TRIG_ForceOff.QI`); sein `EO` führt ebenfalls auf `AX_T_FF_SR.R`.
+- `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Toggle.QO` (`IN1`) und `Reset.QO` (`IN2`) zum `QO` der SubApp.
 
 Das Ereignis `AUS` ist ein dritter, additiver Weg auf `AX_T_FF_SR.R`.
+
+Initialisierung und Qualität: `INIT` → `Toggle.INIT`; `Toggle.INITO` → `Reset.INIT`; `Reset.INITO` → `INITO` (und → `AND_QO.REQ`). `QI` wird an `Toggle.QI` und `Reset.QI` verteilt.
 
 ## Technische Besonderheiten
 

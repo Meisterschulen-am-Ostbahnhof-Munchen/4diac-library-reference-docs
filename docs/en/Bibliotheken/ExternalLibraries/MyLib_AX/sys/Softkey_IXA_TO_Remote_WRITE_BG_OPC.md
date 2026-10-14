@@ -13,20 +13,21 @@ This subapplication is designed for scenarios where the operator interface is lo
 
 ## Interface Structure
 
-The subapplication exposes only data inputs. It has no event inputs, no event outputs, no data outputs, and no adapter interfaces at the subapplication level.
+The subapplication exposes the initialization events `INIT`/`INITO`, the status ports `QI`/`QO` and data inputs. It has no adapter interfaces at the subapplication level.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
 
 | Name          | Type    | Initial Value | Comment |
 |---------------|---------|---------------|---------|
+| `QI`          | `BOOL`  | `TRUE`        | Quality Input - TRUE enables the service. |
 | `u16ObjId`    | `UINT`  | `ID_NULL`     | Object ID of the softkey / background (VT). |
 | `ID_SUBSCRIBE` | `WSTRING` | –            | Remote subscribe address (status/colour, `ACTION=SUBSCRIBE`). |
 | `ID_WRITE_REMOTE` | `WSTRING` | –          | Remote write address to the target module (command, `ACTION=WRITE`, `CLIENT`). |
@@ -34,7 +35,9 @@ None.
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully (AND of `Softkey_IXA`, `SUBSCRIBE_WEB`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` and `GreenWhiteBackground1_AX`). |
 
 ### **Adapters**
 
@@ -42,7 +45,7 @@ None.
 
 ## Functionality
 
-The internal logic of the subapplication consists of four main functional blocks:
+The internal logic of the subapplication consists of seven blocks:
 
 1. `Softkey_IXA` – reads the local softkey state based on the configured `u16ObjId`.
 2. `SUBSCRIBE_WEB` – subscribes to a local web‑based input (e.g. a mirror of the VT display) using the `ID_WEB_READ` address.
@@ -50,6 +53,9 @@ The internal logic of the subapplication consists of four main functional blocks
 4. `AX_CLIENT_1_0` – an OPC UA client that writes the merged signal to the remote device via the `ID_WRITE_REMOTE` endpoint.
 5. `AX_SUBSCRIBE_1` – an OPC UA subscriber that receives the actual state from the remote device via `ID_SUBSCRIBE`.
 6. `GreenWhiteBackground1_AX` – a subapplication that issues a `Q_BackgroundColour` command to change the softkey background colour based on the received state (green for active, white for inactive).
+7. `AND_QO` – an `iec61131::booleanOperators::AND_BOOL_5` block that ANDs the `QO` outputs of `Softkey_IXA`, `SUBSCRIBE_WEB`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` and `GreenWhiteBackground1_AX` into the subapplication output `QO`.
+
+Initialization and status: `INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` → `Softkey_IXA.QI`, `SUBSCRIBE_WEB.QI`, `AX_CLIENT_1_0.QI`, `AX_SUBSCRIBE_1.QI` and `GreenWhiteBackground1_AX.QI`; their `QO` outputs → `AND_QO.IN1`..`IN5`; `AND_QO.OUT` → `QO`.
 
 The overall data flow is:
 
@@ -65,8 +71,8 @@ The overall data flow is:
 - ✅ Optional integration with web‑based UI mirroring (`vt-ui-mirror`).
 - ✅ OR logic for merging multiple input sources.
 - ✅ Remote state feedback with background colour update.
-- ✅ No external event or data outputs – the subapplication acts as a self‑contained control unit.
-- ✅ Configurable via four input parameters only.
+- ✅ Only the initialization handshake (`INIT`/`INITO`) and the aggregated status `QO` are exposed – the subapplication acts as a self‑contained control unit.
+- ✅ Configurable via the address/object-ID inputs plus `QI`.
 
 ## State Overview
 

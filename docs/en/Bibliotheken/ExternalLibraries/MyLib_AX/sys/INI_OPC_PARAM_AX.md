@@ -18,19 +18,24 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **AX_SUBSCRIBE_1**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — subscribes to new BOOL values from the OPC UA client (`ID_READ`).
+- **AX_SUBSCRIBE_1**: `adapter::net::AX_SUBSCRIBE_1` — subscribes to new BOOL values from the OPC UA client (`ID_READ`).
 
-- **INI_AX**: `eclipse4diac::storage::INI_AX` (`QI=TRUE`, `SETM=FALSE`) — persistently stores the BOOL value in the INI file under `SECTION`/`KEY`, with `DEFAULT_VALUE` as the initial value.
+- **INI_AX**: `eclipse4diac::storage::INI_AX` (`SETM=FALSE`) — persistently stores the BOOL value in the INI file under `SECTION`/`KEY`, with `DEFAULT_VALUE` as the initial value.
 
-- **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) — publishes the current value via OPC UA (`ID_WRITE`).
+- **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` — publishes the current value via OPC UA (`ID_WRITE`).
+
+- **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — branches the output of `INI_AX` to `AX_PUBLISH_1` and `OUT`.
+
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — combines the `QO` outputs of `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` and `INI_AX` into the `QO` of the SubApp.
 
 - **Functionality**: Structurally identical to `INI_OPC_PARAM_AR`, but with `AX` adapters (`AX_SUBSCRIBE_1`/`INI_AX`/`AX_PUBLISH_1`) instead of `AR` adapters, matching the BOOL data type of `DEFAULT_VALUE`.
 
 ## Program Flow and Connections
 
-1. **Initialization Chain**: `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT` → `INI_AX.INITO` → `AX_PUBLISH_1.INIT`.
+1. **Initialization Chain**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INI_AX.INIT`; `INI_AX.INITO` → `INITO` (and → `AND_QO.REQ`). In addition, the network still contains the older connections `AX_SUBSCRIBE_1.INITO` → `INI_AX.INIT` and `INI_AX.INITO` → `AX_PUBLISH_1.INIT`.
 2. **Parameters**: `SECTION` → `INI_AX.SECTION`; `KEY` → `INI_AX.KEY`; `DEFAULT_VALUE` (BOOL) → `INI_AX.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
-3. **Adapter Chain**: `AX_SUBSCRIBE_1.OUT` → `INI_AX.AX_IN` → `INI_AX.AX_OUT` → `AX_PUBLISH_1.IN` **and** → `OUT` (plug into the SubApp interface).
+3. **Quality**: `QI` → `.QI` of `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` and `INI_AX` (no longer hard-wired `QI=TRUE`); `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
+4. **Adapter Chain**: `AX_SUBSCRIBE_1.OUT` → `INI_AX.AX_IN` → `INI_AX.AX_OUT` → `AX_SPLIT_2.IN`; `AX_SPLIT_2.OUT1` → `AX_PUBLISH_1.IN` **and** `AX_SPLIT_2.OUT2` → `OUT` (plug into the SubApp interface).
 
 ## Technical Features
 

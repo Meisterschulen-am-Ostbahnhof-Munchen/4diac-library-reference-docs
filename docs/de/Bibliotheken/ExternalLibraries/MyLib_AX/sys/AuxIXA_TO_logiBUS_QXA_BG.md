@@ -15,22 +15,29 @@ Der Subapplikationsbaustein **AuxIXA_TO_logiBUS_QXA_BG** realisiert eine AUX-Fun
 
 ### **Ereignis-Eingänge**
 
-Der Baustein besitzt keine expliziten Ereignis-Eingänge auf der obersten Ebene. Die Verarbeitung erfolgt rein daten- und adaptergesteuert.
+- **INIT** (`EInit`): Initialization Request – startet die Initialisierungskette der internen Bausteine.
 
 ### **Ereignis-Ausgänge**
 
-Es sind keine Ereignis-Ausgänge auf der obersten Ebene vorhanden. Die Ausgabe wird über den Datenausgang und die Adapterverbindungen realisiert.
+- **INITO** (`EInit`): Initialization Confirm – wird nach Abschluss der Initialisierungskette ausgegeben.
+
+Die Signalverarbeitung selbst erfolgt weiterhin daten- und adaptergesteuert.
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Initialwert | Kommentar |
 |------|----------|-------------|-----------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE, um den Dienst freizugeben |
 | `u16ObjIdA` | `UINT` | `ID_NULL` | Object ID der AUX-Funktion (z. B. ISOBUS-Objekt-ID) |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifiziert den Ausgang (Output_Q1…Q8) |
 
 ### **Daten-Ausgänge**
 
-Es sind keine direkten Daten-Ausgänge auf der obersten Ebene definiert. Die Ausgabe erfolgt über den internen Funktionsblock `DigitalOutput_Q1` und die Adapterverbindungen.
+| Name | Datentyp | Kommentar |
+|------|----------|-----------|
+| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+
+`QO` ist die UND-Verknüpfung (`AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_3`) der `QO`-Ausgänge von `DigitalOutput_Q1`, `AuxFunction2_X1` und `GreenWhiteBackground2_AX`. Die Ausgabe an den Ausgang erfolgt über den internen Funktionsblock `DigitalOutput_Q1` und die Adapterverbindungen.
 
 ### **Adapter**
 
@@ -45,6 +52,8 @@ Der Baustein nimmt eine AUX-Objekt-ID (`u16ObjIdA`) und eine Ausgangsauswahl (`O
 
 Die übergebene Objekt-ID `u16ObjIdA` wird ebenfalls an `GreenWhiteBackground2_AX` weitergeleitet, um eine konsistente Darstellung sicherzustellen. Der Ausgang `Output` wird direkt an den Digitalausgangsbaustein übergeben, welcher den tatsächlichen physischen Ausgang (Q1…Q8) des logiBUS-Systems aktiviert.
 
+Initialisierung und Status: `INIT` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `AuxFunction2_X1.INIT`, `AuxFunction2_X1.INITO` → `GreenWhiteBackground2_AX.INIT`, `GreenWhiteBackground2_AX.INITO` → `INITO` (und zusätzlich → `AND_QO.REQ`). `QI` wird an `DigitalOutput_Q1`, `AuxFunction2_X1` und `GreenWhiteBackground2_AX` weitergegeben; deren `QO` laufen auf `AND_QO.IN1`..`IN3`, `AND_QO.OUT` → `QO`.
+
 Durch die Aufteilung des Ereignisses in zwei Zweige kann sowohl die digitale Ausgabe als auch die visuelle Rückmeldung parallel erfolgen, ohne dass eine separate Logik erforderlich ist.
 
 ## Technische Besonderheiten
@@ -52,7 +61,7 @@ Durch die Aufteilung des Ereignisses in zwei Zweige kann sowohl die digitale Aus
 - **Generische Wiederverwendung**: Der Baustein ist modular aufgebaut und kann in verschiedenen Steuerungsanwendungen eingesetzt werden, bei denen eine AUX-Funktion auf einen logiBUS-Digitalausgang abgebildet werden soll.
 - **Kombination von ISOBUS und logiBUS**: Er verbindet die ISOBUS-AUX-Schnittstelle (Standard 61499-2) mit der logiBUS-Ausgangssteuerung.
 - **Visuelle Statusanzeige**: Durch die Einbindung des Bausteins `GreenWhiteBackground2_AX` wird eine farbliche Rückmeldung (grün/weiß) auf einem Bedienpanel oder einer Visualisierung ermöglicht.
-- **Parametrierung**: Der Funktionsblock `DigitalOutput_Q1` wird fest mit `QI = TRUE` betrieben und akzeptiert über eine unsichtbare `PARAMS`-Konfiguration zusätzliche Parameter.
+- **Parametrierung**: Der Funktionsblock `DigitalOutput_Q1` erhält `QI` vom `QI`-Eingang des Bausteins (Vorgabe `TRUE`) und akzeptiert über eine unsichtbare `PARAMS`-Konfiguration zusätzliche Parameter.
 - **Interner Ereignis-Splitter**: Der `AX_SPLIT_2` (adapter::events::unidirectional) verteilt das eingehende Ereignis ohne Verzögerung an zwei unabhängige Zielbausteine.
 
 ## Zustandsübersicht

@@ -15,23 +15,28 @@ Der Baustein `Button_Toggle_RPC_TO_Remote_BG_OPC` ist eine Subapplikation (SubAp
 
 ### **Ereignis-Eingänge**
 
-Der Baustein besitzt keine externen Ereignis-Eingänge. Die Ereignisauslösung erfolgt intern über den verwendeten `Button_IE`-Funktionsbaustein, der auf das Tasterereignis `BT_RELEASED_UNLATCHED` reagiert.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `Button_Toggle.INIT`.
+
+Die eigentliche Ereignisauslösung erfolgt weiterhin intern über den verwendeten `Button_IE`-Funktionsbaustein, der auf das Tasterereignis `BT_RELEASED_UNLATCHED` reagiert.
 
 ### **Ereignis-Ausgänge**
 
-Es sind keine Ereignis-Ausgänge vorhanden. Der Baustein ist als reiner Trigger konzipiert; die Ergebnisrückmeldung erfolgt über den überwachten Zustand.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `GreenWhiteBackground_AX.INITO`, dem Ende der Init-Kette.
+
+Sonst gibt es keine Ereignis-Ausgänge. Der Baustein ist als reiner Trigger konzipiert; die Ergebnisrückmeldung erfolgt über den überwachten Zustand.
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Initialwert | Kommentar |
 |------|-----|-------------|-----------|
+| `QI` | BOOL | `TRUE` | Quality Input, schaltet den Dienst frei; wird an `Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` und `GreenWhiteBackground_AX` weitergereicht. |
 | `u16ObjId` | UINT | `ID_NULL` | Objekt-ID des Tasters bzw. der Hintergrundanzeige. Wird sowohl an den Taster-Baustein als auch an die Anzeige-SubApp weitergegeben. |
 | `ID_TRIGGER_CALL` | WSTRING | – | Remote-Methodenadresse (ACTION=CALL_METHOD) für den argumentlosen Trigger-Methodenaufruf auf dem Zielmodul. |
 | `ID_STATE_READ` | WSTRING | – | Lokal überwachte Adresse (BOOL, ACTION=READ) für den Flipflop-Zustand, der vom Zielmodul remote beschrieben wird. |
 
 ### **Daten-Ausgänge**
 
-Es sind keine Daten-Ausgänge vorhanden.
+- **QO** (BOOL): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_4`) der `QO`-Ausgänge von `Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` und `GreenWhiteBackground_AX`.
 
 ### **Adapter**
 
@@ -48,6 +53,8 @@ Der Baustein kombiniert mehrere Funktionsbausteine und SubApplikationen:
 3. **Zustandsüberwachung**: Der FB `STATE_SUBSCRIBE` (Typ `adapter::net::AX_SUBSCRIBE_1`) abonniert die über `ID_STATE_READ` spezifizierte Bool-Adresse auf dem Zielmodul. Der empfangene Zustand wird über den Adapterausgang `OUT` an die SubApp `GreenWhiteBackground_AX` weitergegeben.
 
 4. **Hintergrundvisualisierung**: Die SubApp `GreenWhiteBackground_AX` (Typ `MyLib::sys::GreenWhiteBackground1_AX`) empfängt den Zustand über den Adapter `DI1` und stellt den Flipflop-Zustand farblich dar (z. B. grün für aktiv, weiß für inaktiv).
+
+5. **Initialisierung und Qualität**: `INIT` → `Button_Toggle.INIT`, `Button_Toggle.INITO` → `TRIGGER_CLIENT.INIT`, `TRIGGER_CLIENT.INITO` → `STATE_SUBSCRIBE.INIT`, `STATE_SUBSCRIBE.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an alle vier Bausteine weitergereicht; deren `QO`-Ausgänge (`Button_Toggle`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`) gehen auf `AND_QO.IN1` bis `AND_QO.IN4` (`iec61131::booleanOperators::AND_BOOL_4`), dessen `OUT` den Ausgang `QO` bildet.
 
 Die Verbindung zwischen `u16ObjId` und den internen Bausteinen stellt sicher, dass die korrekte Objekt-ID sowohl für den Taster als auch für die Anzeige verwendet wird.
 

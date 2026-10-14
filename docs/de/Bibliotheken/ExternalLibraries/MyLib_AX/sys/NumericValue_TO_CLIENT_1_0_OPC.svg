@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2527.0 172.0"
-     width="2527.0" height="172.0">
+     viewBox="0 0 1971.125 172.0"
+     width="1971.125" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1664.6000000000001, 10)">
+  <g transform="translate(1294.125, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 312.0 0
-            A 3 3 0 0 1 315.0 3
-            L 315.0 23.0
-            A 3 3 0 0 1 312.0 26.0
-            L 305.0 26.0
-            L 305.0 66.0
-            L 312.0 66.0
-            A 3 3 0 0 1 315.0 69.0
-            L 315.0 149.0
-            A 3 3 0 0 1 312.0 152.0
+            L 264.0 0
+            A 3 3 0 0 1 267.0 3
+            L 267.0 23.0
+            A 3 3 0 0 1 264.0 26.0
+            L 257.0 26.0
+            L 257.0 66.0
+            L 264.0 66.0
+            A 3 3 0 0 1 267.0 69.0
+            L 267.0 149.0
+            A 3 3 0 0 1 264.0 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 69.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="260.5,11.0 265.5,16.0 260.5,21.0" fill="#63B31F"/>
+    <text x="257.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,7 +99,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">NumericValue_TO_CLIENT_1_0_OPC</text>
     
-    <text x="157.5" y="66.0"
+    <text x="133.5" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -113,8 +121,8 @@
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_M2M_READ</text>
 
-    <polygon points="308.5,71.0 313.5,76.0 308.5,81.0" fill="#A3B08F"/>
-    <text x="305.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="260.5,71.0 265.5,76.0 260.5,81.0" fill="#A3B08F"/>
+    <text x="257.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
@@ -123,6 +131,12 @@
     <!-- Horizontal Connection Lines -->
 
     <!-- External Labels -->
+
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="292.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
@@ -136,7 +150,7 @@
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse (REAL, ACTION=SUBSCRIBE) - liefert den tatsaechlich wirksamen/bestaetigten Wert zur Anzeige auf demselben VT-Feld zurueck (unkritischer Rueckweg, reines Lesen) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="340.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="292.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

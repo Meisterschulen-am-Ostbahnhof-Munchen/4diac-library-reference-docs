@@ -10,6 +10,14 @@
 
 ![AX_LinksRechts_T_FF](AX_LinksRechts_T_FF.svg)
 
+## Interface Structure
+
+- **Event inputs**: `INIT` (initialization request)
+- **Event outputs**: `INITO` (initialization confirm)
+- **Data inputs**: `QI` (`BOOL`, default `TRUE`) — quality input
+- **Data outputs**: `QO` (`BOOL`) — quality output
+- **Adapters**: socket `IN`, plugs `Links` and `Rechts` (each `adapter::types::unidirectional::AX`)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: AX_LinksRechts_T_FF
@@ -17,7 +25,7 @@
 - **Type**: SubAppType
 - **Internal FBs used**:
     - **AX_R_TRIG**: `adapter::events::unidirectional::AX_R_TRIG` — detects the button's rising edge.
-    - **AX_T_FF_INIT**: `adapter::events::unidirectional::AX_T_FF_INIT` — toggle flip-flop with a defined initial state (`QI=TRUE`, `Q_INIT=FALSE`).
+    - **AX_T_FF_INIT**: `adapter::events::unidirectional::AX_T_FF_INIT` — toggle flip-flop with a defined initial state (`Q_INIT=FALSE`; `QI` comes from the wrapper input `QI`).
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — splits the flip-flop state.
     - **AX_NOT**: `adapter::booleanOperators::AX_NOT` — negates one of the two branches to produce the complementary signal.
 - **Functionality**: Every rising edge on `IN` toggles `AX_T_FF_INIT.Q`. The direct state feeds `Rechts` (right), the negated state feeds `Links` (left) — so `Links` and `Rechts` are always exactly complementary (per the source comment: "AX_T_FF_INIT switches the Active output to FALSE, so LEFT is then TRUE").
@@ -28,6 +36,8 @@
 2. `AX_T_FF_INIT.Q` → `AX_SPLIT_2.IN`.
 3. `AX_SPLIT_2.OUT1` → `AX_NOT.IN` → `AX_NOT.OUT` → `Links`.
 4. `AX_SPLIT_2.OUT2` → `Rechts`.
+5. `INIT` → `AX_T_FF_INIT.INIT`; `AX_T_FF_INIT.INITO` → `INITO`.
+6. `QI` → `AX_T_FF_INIT.QI`; `AX_T_FF_INIT.QO` → `QO`.
 
 ## Application Scenarios
 

@@ -19,9 +19,11 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ## Qualitätsanschlüsse (QI/QO)
 
-Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_NumericValue_PHYSA.QI` verbunden, `Q_NumericValue_PHYSA.QO` mit `QO`.
+Der Baustein besitzt den Ereigniseingang `INIT` (`EInit`, Initialization Request), den Ereignisausgang `INITO` (`EInit`, Initialization Confirm), den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde).
 
-Der Baustein besitzt weiterhin keine eigenen Ereignisanschlüsse.
+- Initialisierungskette: `INIT` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `INI_AR2.INIT`, `INI_AR2.INITO` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO` (und zusätzlich → `AND_QO.REQ`)
+- `QI` ist mit `Q_NumericValue_PHYSA.QI`, `NumericValue_PHYSA.QI` und `INI_AR2.QI` verbunden
+- `QO` ist die UND-Verknüpfung (`AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_3`) von `Q_NumericValue_PHYSA.QO`, `NumericValue_PHYSA.QO` und `INI_AR2.QO`
 
 ## Zusammenfassung
 

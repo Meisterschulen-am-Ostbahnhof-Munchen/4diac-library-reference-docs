@@ -23,6 +23,7 @@
 
 ### **Data Inputs**
 
+- **QI** (BOOL): quality input - TRUE enables the service (default `TRUE`), goes to `QPos.QI`
 - **u16ObjId** (UINT): object ID of the child object (default `ID_NULL`)
 - **u16ObjIdParent** (UINT): object ID of the parent object (default `ID_NULL`)
 - **xScale** (BOOL): FALSE = bypass; TRUE (default) = scale by the DM/SKM factor for `u16ObjIdParent`
@@ -30,6 +31,7 @@
 
 ### **Data Outputs**
 
+- **QO** (BOOL): quality output - TRUE if the service was executed successfully, comes from `QPos.QO`
 - **STATUS** (STRING): service status, passed through from the internal `Q_ChildPosition`
 - **s16OldXposition** (INT): old X position, passed through
 - **s16OldYposition** (INT): old Y position, passed through
@@ -46,7 +48,7 @@ The network consists of two SubApps:
 - `AR_R_MUL` ([`MyLib::sys::AR_R_MUL`](AR_R_MUL.md)): `rPhys` → `AR_R_MUL.IN1`, `ScalePx` → `AR_R_MUL.FACTOR`; multiplies the AR value by the factor.
 - `QPos` (`MyLib::sys::Q_ChildPosition_AR_Horizontal`): `AR_R_MUL.OUT` → `QPos.rPhys`; sets the X position of the child object via the AR adapter (Y fixed 0).
 
-The events `INIT`, `INITO` and `CNF` as well as `u16ObjId`, `u16ObjIdParent`, `xScale` and the four outputs are passed directly from/to `QPos`.
+The events `INIT`, `INITO` and `CNF` as well as `QI`, `u16ObjId`, `u16ObjIdParent`, `xScale` and the outputs `QO` and the four status outputs are passed directly from/to `QPos`.
 
 ## Technical Details
 

@@ -18,7 +18,7 @@
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialisation completed; real confirm from `ObjPtr.INITO` (end of the chain `Publish` → `ObjPtr`)
 
 ### **Data Inputs**
 
@@ -32,7 +32,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output, AND of `Publish.QO` and `ObjPtr.QO`
 
 ### **Adapters**
 
@@ -43,12 +43,15 @@ None.
 - **`AX_SPLIT_2`** (`adapter::events::unidirectional::AX_SPLIT_2`)
 - **`Publish`** (SubApp `MyLib::sys::AX_TO_QXA_BG_PUBLISH`)
 - **`ObjPtr`** (SubApp `MyLib::sys::AX_SwitchPic_2_1`)
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`)
 
 ## Functionality
 
 - `IN` → `AX_SPLIT_2.IN`
 - `AX_SPLIT_2.OUT1` → `Publish.IN`; `u16ObjId`, `u16ObjIdA`, `Output`, `ID_STATE_WRITE`, `QI` → the like-named inputs of `Publish`
-- `INIT` → `Publish.INIT`
+- `INIT` → `Publish.INIT`; `Publish.INITO` → `ObjPtr.INIT`; `ObjPtr.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `ObjPtr.QI` (in addition to `Publish.QI`)
+- `Publish.QO` → `AND_QO.IN1`; `ObjPtr.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 - `AX_SPLIT_2.OUT2` → `ObjPtr.DI1`; `Picture` → `ObjPtr.Picture`, `pictures` → `ObjPtr.pictures`
 
 ## Technical Details
@@ -56,6 +59,7 @@ None.
 - The `AX_SPLIT_2` is necessary because an adapter must not branch to two sub-blocks
 - No logic of its own, just a combination of two existing SubApps
 - Version 1.1: `QI` and `INIT` are passed on to `Publish` (`AX_TO_QXA_BG_PUBLISH` v1.1) (QI gate classic-vs-PVEA, initialisation sequenced by the caller)
+- Version 1.2: new event output `INITO`, passed on from `Publish.INITO` via `ObjPtr`; additionally `QO` as AND of `Publish.QO` and `ObjPtr.QO`
 
 ## Application Scenarios
 

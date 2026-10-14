@@ -15,20 +15,21 @@ Die SubApp `logiBUS_IXA_OPC` realisiert die OPC-UA-Veröffentlichung eines einze
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `logiBUS_IXA.INIT`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `AX_PUBLISH_1.INITO`, dem Ende der Init-Kette
 
 ### **Daten-Eingänge**
 
+- **`QI`** – Typ: `BOOL` – Quality Input, Initialwert `TRUE`; wird an `logiBUS_IXA.QI` und `AX_PUBLISH_1.QI` weitergereicht.
 - **`Input`** – Typ: `logiBUS::io::DI::logiBUS_DI_S` – Identifiziert den Eingangskanal (Input_I1..I8). Initialwert: `logiBUS_DI::Invalid`.
 - **`ID_WRITE`** – Typ: `WSTRING` – OPC-UA-Publish-Key (lesbar).
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **`QO`** – Typ: `BOOL` – Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_2`) aus `logiBUS_IXA.QO` und `AX_PUBLISH_1.QO`.
 
 ### **Adapter**
 
@@ -38,13 +39,15 @@ Keine an der Schnittstelle. Intern wird der Adapterausgang `IN` von `logiBUS_IXA
 
 Die SubApp nimmt über den Dateneingang `Input` die Daten eines logiBUS-DI-Kanals entgegen. Dieses Signal wird dem internen Baustein `logiBUS_IXA` zugeführt, der die Kanalverarbeitung übernimmt und die aufbereiteten Daten über seinen Adapterausgang `IN` bereitstellt. Dieser Ausgang ist mit dem Adaptereingang `IN` des Bausteins `AX_PUBLISH_1` verbunden. `AX_PUBLISH_1` veröffentlicht die empfangenen Daten über OPC-UA unter dem Schlüssel, der über den Eingang `ID_WRITE` gesetzt wird. Somit entsteht eine transparente Datenpipeline: logiBUS-DI → `logiBUS_IXA` → `AX_PUBLISH_1` → OPC-UA.
 
+Initialisierung und Qualität: `INIT` → `logiBUS_IXA.INIT`, `logiBUS_IXA.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `logiBUS_IXA.QI` und `AX_PUBLISH_1.QI` weitergereicht; `logiBUS_IXA.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2` (`iec61131::booleanOperators::AND_BOOL_2`), `AND_QO.OUT` → `QO`.
+
 ## Technische Besonderheiten
 
 - **Generische Ein-Kanal-Lösung** ohne VT-Hintergrundfarbe.
 - **OPC-UA-Publishing** über den Adapter `adapter::net::AX_PUBLISH_1`.
 - Der Parameter `PARAMS` von `logiBUS_IXA` ist leer und im Editor unsichtbar (`Visible=false`).
-- Die internen Bausteine `logiBUS_IXA` und `AX_PUBLISH_1` sind jeweils mit `QI=TRUE` aktiviert.
-- Die SubApp besitzt **keine Ereignis- oder Ausgangsports**, was eine reine Datenweiterleitung ohne Rückmeldung bedeutet.
+- Die internen Bausteine `logiBUS_IXA` und `AX_PUBLISH_1` erhalten ihr `QI` vom Eingang `QI` (Initialwert `TRUE`).
+- Die SubApp besitzt als Ereignisse nur `INIT`/`INITO` und als Ausgang nur `QO`; die eigentlichen Messdaten werden ausschließlich per OPC-UA publiziert, nicht über Ausgangsports.
 
 ## Zustandsübersicht
 

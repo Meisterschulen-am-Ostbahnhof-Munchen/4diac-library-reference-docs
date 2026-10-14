@@ -23,6 +23,7 @@
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL): Quality Input - TRUE aktiviert den Dienst (Default `TRUE`), geht an `QPos.QI`
 - **u16ObjId** (UINT): Object ID des Kind-Objekts (Default `ID_NULL`)
 - **u16ObjIdParent** (UINT): Object ID des Eltern-Objekts (Default `ID_NULL`)
 - **xScale** (BOOL): FALSE = Bypass; TRUE (Default) = mit dem DM/SKM-Faktor für `u16ObjIdParent` skalieren
@@ -30,6 +31,7 @@
 
 ### **Daten-Ausgänge**
 
+- **QO** (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde, kommt von `QPos.QO`
 - **STATUS** (STRING): Service-Status, durchgereicht vom internen `Q_ChildPosition`
 - **s16OldXposition** (INT): alte X-Position, durchgereicht
 - **s16OldYposition** (INT): alte Y-Position, durchgereicht
@@ -46,7 +48,7 @@ Das Netzwerk besteht aus zwei SubApps:
 - `AR_R_MUL` ([`MyLib::sys::AR_R_MUL`](AR_R_MUL.md)): `rPhys` → `AR_R_MUL.IN1`, `ScalePx` → `AR_R_MUL.FACTOR`; multipliziert den AR-Wert mit dem Faktor.
 - `QPos` (`MyLib::sys::Q_ChildPosition_AR_Horizontal`): `AR_R_MUL.OUT` → `QPos.rPhys`; setzt die X-Position des Kind-Objekts über den AR-Adapter (Y fest 0).
 
-Die Ereignisse `INIT`, `INITO` und `CNF` sowie `u16ObjId`, `u16ObjIdParent`, `xScale` und die vier Ausgänge werden direkt von bzw. nach `QPos` durchgereicht.
+Die Ereignisse `INIT`, `INITO` und `CNF` sowie `QI`, `u16ObjId`, `u16ObjIdParent`, `xScale` und die Ausgänge `QO` und die vier Statusausgänge werden direkt von bzw. nach `QPos` durchgereicht.
 
 ## Technische Besonderheiten
 
