@@ -31,6 +31,7 @@ The function block encapsulates the necessary steps of the physical conversion a
 
 | Name     | Type                                                    | Description                                                                                                                                                                                                                           |
 | -------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `QI` | BOOL | Quality input, `TRUE` enables the service (default `TRUE`) |
 | `stObj`  | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Object pool properties (object ID, scale, offset, decimal places). Default value: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`.                                                                          |
 | `lrPhys` | `LREAL`                                                 | The physical value (e.g., pressure, temperature) to be sent. Note: Before transmission, the value should be converted using `F_PHYS_LREAL_TO_RAW` if necessary; the function block performs this conversion automatically internally. |
 
@@ -38,6 +39,7 @@ The function block encapsulates the necessary steps of the physical conversion a
 
 | Name          | Type     | Description                                                      |
 | ------------- | -------- | ---------------------------------------------------------------- |
+| `QO` | BOOL | Quality output, `TRUE` if the service was executed successfully |
 | `STATUS`      | `STRING` | Status message of the service performed.                         |
 | `u32OldValue` | `UDINT`  | Original raw value of the object before the change.              |
 | `s16result`   | `INT`    | Return value (see `Q_NumericValue`).                             |
@@ -55,6 +57,8 @@ None.
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully. `QI` is passed through to `Q_NumericValue.QI`, and `Q_NumericValue.QO` is passed through to `QO`.
 
 The function block works internally with three subordinate function blocks:
 

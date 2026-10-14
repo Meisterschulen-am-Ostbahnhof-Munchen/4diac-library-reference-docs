@@ -27,12 +27,17 @@ The **Q_SelectColourMap_AUI** function block is an AUI adapter wrapper for **Q_S
 
 ### **Data Inputs**
 
-No direct data inputs — Colour Map IDs are handled via AUI adapters.
+Apart from `QI`, there are no direct data inputs — Colour Map IDs are handled via AUI adapters.
+
+| Name | Type   | Initial value | Comment                                |
+| ---- | ------ | ------------- | -------------------------------------- |
+| `QI` | `BOOL` | `TRUE`        | Quality Input - TRUE to enable service |
 
 ### **Data Outputs**
 
 | Name | Type | Comment |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 | `STATUS` | `STRING` | Service Status |
 | `s16result` | `INT` | Command return code |
 
@@ -42,6 +47,8 @@ No direct data inputs — Colour Map IDs are handled via AUI adapters.
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Input) | New Colour Map Object ID (39000–39999 for ColourMap, 45000–45999 for ColourPalette, ID_NULL / 0xFFFF for default table) |
 | `adapter::types::unidirectional::AUI` | `u16OldObjIdColourMap` | Plug (Output) | Previous Colour Map Object ID |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_SelectColourMap`. The data output `QO` (BOOL) is taken over from `Q_SelectColourMap.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Functionality
 

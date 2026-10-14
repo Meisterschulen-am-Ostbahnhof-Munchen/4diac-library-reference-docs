@@ -23,6 +23,7 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Polygon object ID
 - `xScale` (BOOL, initial value `FALSE`): `FALSE` = bypass, `u16NewWidth`/`u16NewHeight` are sent unchanged; `TRUE` = both are scaled by the DM/SKM factor for `u16ObjId`
 - `u16NewWidth` (UINT): New width in pixels
@@ -30,12 +31,15 @@ The **Q_ChangePolygonScale** is a standards-compliant function block for scaling
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational status message
 - `u16OldWidth` (UINT): Previous width
 - `u16OldHeight` (UINT): Previous height
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

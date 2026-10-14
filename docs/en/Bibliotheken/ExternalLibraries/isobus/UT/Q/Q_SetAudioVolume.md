@@ -25,15 +25,19 @@ The F.12 command addresses the VT's **audio device** directly — it does **not 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u8Volume` (USINT): Volume Value (0-100%)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operating Status Message
 - `u8OldVolume` (USINT): Previous Volume Setting
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

@@ -22,13 +22,14 @@
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object-ID und Scale/Offset/Decimals des VT-Eingabefelds; wird für Ein- und Ausgabe verwendet (der bestätigte Wert wird hier zurückgeschrieben). Vorgabe: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 1)`
 - **ID_CALL** (`WSTRING`): Remote-Methodenadresse (`ACTION=CALL_METHOD`); wird nur bei einer echten VT-Eingabe mit dem eingegebenen Wert als Argument aufgerufen
 - **ID_M2M_READ** (`WSTRING`): Remote-Subscribe-Adresse (`REAL`, `ACTION=SUBSCRIBE`); liefert den tatsächlich wirksamen Wert zur Anzeige auf demselben VT-Feld zurück (reines Lesen)
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde
 
 ### **Adapter**
 
@@ -47,6 +48,7 @@ Dieser Funktionsblock verwendet keine Adapter-Sockets/-Plugs an der Schnittstell
 2. **Rückweg**: `Subscribe.OUT` → `Display.rPhys` (bestätigter Wert → VT-Anzeige).
 3. `Subscribe.INITO` → `Call.INIT`: Der Client wird erst nach der Initialisierung des Subscribe initialisiert.
 4. `stObj` → `Input.stObj` und `Display.stObj`; `ID_CALL` → `Call.ID`; `ID_M2M_READ` → `Subscribe.ID`.
+5. `QI` → `Display.QI`; `Display.QO` → `QO`
 
 ## Technische Besonderheiten
 

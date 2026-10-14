@@ -12,20 +12,31 @@
 
 ## Interface
 
+### Event ports
+
+- **Input `INIT`** (`EInit`): initialization request - to `Q_NumericValue.INIT`.
+- **Output `INITO`** (`EInit`): initialization confirmation - from `Q_NumericValue.INITO`.
+
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable the service (to `Q_NumericValue.QI`).
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT NumberVariable behind the checkbox.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully (from `Q_NumericValue.QO`).
 
 ### Adapters
 
 - **Socket `AX_IN`** (`adapter::types::unidirectional::AX`): level to be written (0/1).
 
-The block has no event ports of its own.
+Apart from `INIT`/`INITO`, the block has no event ports of its own; writing is triggered by the adapter `AX_IN`.
 
 ## How it works
 
 1. `AX_IN` is converted into a UDINT value via `AX_TO_AD`.
 2. `Q_NumericValue` writes this value to the VT node under `u16ObjId`. According to the source comment, it is rewritten on every value change of `AX_IN`.
+3. `INIT` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO`, `QI` → `Q_NumericValue.QI`, `Q_NumericValue.QO` → `QO`.
 
 ## Technical notes
 

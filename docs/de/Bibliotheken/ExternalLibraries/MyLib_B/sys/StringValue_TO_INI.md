@@ -23,12 +23,14 @@ Keine Ereignis-Eingänge vorhanden.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Initialwert `TRUE`) – Quality Input: TRUE aktiviert den Dienst; wird an `Q_StringValue.QI` durchgereicht.
 - **KEY** (`STRING`) – Bezeichner des Schlüssels innerhalb der Sektion, unter dem der Wert gespeichert wird.
 - **SECTION** (`STRING`) – Name der Sektion in der INI‑Datei.
 - **u16ObjId** (`UINT`, Initialwert `ID_NULL`) – ISOBUS‑Objekt‑ID, unter der der String‑Wert vom Bus gelesen wird.
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`) – Quality Output: TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_StringValue.QO`.
 - **VALUEO** (`STRING`) – Ausgang, der den zuletzt gelesenen Wert aus der INI‑Datei bzw. den gerade verarbeiteten Wert bereitstellt.
 
 ### **Adapter**
@@ -50,6 +52,8 @@ Die Subapplikation kombiniert drei Funktionsblöcke:
 2. **Schreiben eines neuen Werts:** Sobald `StringValue_IS` einen neuen String‑Wert vom ISOBUS empfängt (Event `IND` von `StringValue_IS`), wird dieser über die Datenverbindung an den `INI`‑Baustein übergeben und dort durch das Event `SET` gespeichert. Nach erfolgreichem Schreiben wird das Event `SETO` von `INI` an den Ausgang `IND` weitergegeben.
 
 3. **Lesen nach einem Leseimpuls:** Der INI‑Baustein kann auch durch ein externes `GET`‑Event (das intern über die Init‑Schleife erzeugt wird) angestoßen werden. Jedes `GETO`‑Event triggert den `Q_StringValue` und gibt den gelesenen Wert über `VALUEO` aus sowie über `IND` als Ereignis.
+
+`QI` wird direkt an `Q_StringValue.QI` und `Q_StringValue.QO` direkt an `QO` durchgereicht. Die Subapp hat weiterhin keinen `INIT`/`INITO`-Ereignisanschluss; die Initialisierung des `INI`-Bausteins läuft intern.
 
 Die Parameter `KEY`, `SECTION` und `u16ObjId` werden während der Laufzeit über die Eingänge gesetzt und können so für verschiedene Anwendungen dynamisch konfiguriert werden.
 

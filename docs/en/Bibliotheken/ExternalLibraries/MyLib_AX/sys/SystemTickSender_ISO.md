@@ -32,6 +32,10 @@
 
 2. `System_Tick.ADI_OUT` → `ADI_TO_AUDI.ADI_IN` → `ADI_TO_AUDI.AUDI_OUT` → `Q_NumericValue_AUDI.u32NewValue`.
 
+3. `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (new event input `INIT` / event output `INITO`, both `EInit`).
+
+4. `QI` (`BOOL`, default `TRUE`) → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO` (`BOOL`, Quality Output - `TRUE` if the VT write succeeded).
+
 ## Technical Features
 
 - **Purely local, no OPC UA**: Unlike `SystemTickSender_ISO_OPC`, this module does not have a `ADI_PUBLISH_1` adapter.

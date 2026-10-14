@@ -23,6 +23,7 @@ The **Q_ActiveMask** is a standards-compliant function block for controlling act
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16NewMaskId` (UINT): Object ID of the new screen
 
 !!! Note: "WorkingSet Object ID fixed to 0"
@@ -36,6 +37,7 @@ Since the working set is a single object and only exists once, this limitation i
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operating status message
 - `u16OldMaskId` (UINT): Object ID of the previous screen
 - `s16result` (INT): ISO-compliant result code
@@ -48,6 +50,8 @@ Data Mask (1000–1999), Alarm Mask (2000–2999).
 ID_NULL (65535) is not a valid command target for the new active mask. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

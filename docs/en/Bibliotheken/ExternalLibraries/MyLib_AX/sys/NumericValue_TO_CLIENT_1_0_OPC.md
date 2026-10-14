@@ -22,13 +22,14 @@
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object ID and scale/offset/decimals of the VT input field; used for input and output (the confirmed value is written back here). Default: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 1)`
 - **ID_CALL** (`WSTRING`): Remote method address (`ACTION=CALL_METHOD`); called only on a genuine VT input with the entered value as argument
 - **ID_M2M_READ** (`WSTRING`): Remote subscribe address (`REAL`, `ACTION=SUBSCRIBE`); returns the actually effective value for display on the same VT field (read only)
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully
 
 ### **Adapters**
 
@@ -47,6 +48,7 @@ This function block has no adapter sockets/plugs at its interface; `AR` adapters
 2. **Return path**: `Subscribe.OUT` → `Display.rPhys` (confirmed value → VT display).
 3. `Subscribe.INITO` → `Call.INIT`: the client is initialized only after the subscribe has been initialized.
 4. `stObj` → `Input.stObj` and `Display.stObj`; `ID_CALL` → `Call.ID`; `ID_M2M_READ` → `Subscribe.ID`.
+5. `QI` → `Display.QI`; `Display.QO` → `QO`
 
 ## Technical Details
 

@@ -29,6 +29,7 @@ The function block **Q_Attribute_AUDI** implements the "Change Attribute" comman
 
 | Variable      | Type  | Description                                                                 |
 | ------------- | ----- | --------------------------------------------------------------------------- |
+| QI            | BOOL  | Quality Input - TRUE to enable service                                      |
 | u16ObjId      | UINT  | Object ID of the attribute to be changed (initial value: ID_NULL)           |
 | u8IdAttribute | USINT | Attribute ID (AID) – defines which attribute of the object is to be changed |
 
@@ -36,6 +37,7 @@ The function block **Q_Attribute_AUDI** implements the "Change Attribute" comman
 
 | Variable  | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
+| QO        | BOOL   | Quality Output - TRUE if service executed successfully       |
 | STATUS    | STRING | Status message of the executed service                       |
 | s16result | INT    | Return value of the command (error codes, see Functionality) |
 
@@ -45,6 +47,8 @@ The function block **Q_Attribute_AUDI** implements the "Change Attribute" comman
 | -------------------- | --------- | -------------------- | -------------------------------------------------------------------------- |
 | u32ValueAttribute    | Socket    | unidirectional::AUDI | New value for the attribute (32-bit, fed into the FB via the adapter)      |
 | u32OldValueAttribute | Plug      | unidirectional::AUDI | Old attribute value (32-bit, output by the function block via the adapter) |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_Attribute`. The data output `QO` (BOOL) is taken over from `Q_Attribute.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

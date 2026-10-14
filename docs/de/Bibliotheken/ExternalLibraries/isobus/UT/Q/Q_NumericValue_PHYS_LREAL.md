@@ -32,6 +32,7 @@ Der Baustein kapselt die notwendigen Schritte der physikalischen Umrechnung und 
 
 | Name     | Typ                                                     | Beschreibung                                                                                                                                                                                                               |
 | -------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `QI` | BOOL | Quality-Eingang, `TRUE` aktiviert den Dienst (Standard `TRUE`) |
 | `stObj`  | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Objekt-Pool-Eigenschaften (Objekt‑ID, Skalierung, Offset, Dezimalstellen). Standardwert: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`.                                                        |
 | `lrPhys` | `LREAL`                                                 | Der physikalische Wert (z. B. Druck, Temperatur), der gesendet werden soll. Hinweis: Vor der Übergabe sollte der Wert ggf. mit `F_PHYS_LREAL_TO_RAW` umgerechnet werden; der Baustein führt dies intern automatisch durch. |
 
@@ -39,6 +40,7 @@ Der Baustein kapselt die notwendigen Schritte der physikalischen Umrechnung und 
 
 | Name          | Typ      | Beschreibung                                                                     |
 | ------------- | -------- | -------------------------------------------------------------------------------- |
+| `QO` | BOOL | Quality-Ausgang, `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS`      | `STRING` | Statusmeldung des durchgeführten Dienstes.                                       |
 | `u32OldValue` | `UDINT`  | Alter Rohwert des Objekts vor der Änderung.                                      |
 | `s16result`   | `INT`    | Rückgabewert (siehe `Q_NumericValue`).                                           |
@@ -56,6 +58,8 @@ Keine.
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde. `QI` wird an `Q_NumericValue.QI` weitergereicht und `Q_NumericValue.QO` an `QO`.
 
 Der Baustein arbeitet intern mit drei untergeordneten Funktionsblöcken zusammen:
 

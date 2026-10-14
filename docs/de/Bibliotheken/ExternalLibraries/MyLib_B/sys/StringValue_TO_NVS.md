@@ -15,18 +15,22 @@ Die Subapp **StringValue_TO_NVS** dient dazu, einen Stringwert, der über eine O
 
 ### **Ereignis-Eingänge**
 
-Es sind keine Ereignis-Eingänge definiert.
+| Name   | Datentyp | Beschreibung |
+|--------|----------|--------------|
+| `INIT` | EInit    | Initialisierungsanforderung; wird an `Q_StringValue.INIT` weitergeleitet. |
 
 ### **Ereignis-Ausgänge**
 
 | Name  | Datentyp | Beschreibung |
 |-------|----------|--------------|
+| `INITO` | EInit  | Initialisierungsbestätigung von `Q_StringValue.INITO`. |
 | `IND` | Event    | Wird ausgelöst, nachdem ein Speicher- oder Lesevorgang abgeschlossen wurde (siehe Funktionsweise). |
 
 ### **Daten-Eingänge**
 
 | Name       | Typ    | Initialwert | Beschreibung |
 |------------|--------|-------------|--------------|
+| `QI`       | BOOL   | `TRUE`      | Quality Input – TRUE aktiviert den Dienst; wird an `Q_StringValue.QI` durchgereicht. |
 | `KEY`      | STRING | –           | Name des Schlüssels, unter dem der Wert im NVS abgelegt wird. |
 | `u16ObjId` | UINT   | `ID_NULL`   | Objekt-ID, die für den Zugriff auf den Stringwert verwendet wird (z.B. bei ISO-bus). |
 
@@ -34,6 +38,7 @@ Es sind keine Ereignis-Eingänge definiert.
 
 | Name        | Typ    | Beschreibung |
 |-------------|--------|--------------|
+| `QO`        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_StringValue.QO`. |
 | `VALUEO`    | STRING | Liest den aktuell im NVS gespeicherten String zurück (nach einem Lesevorgang). |
 
 ### **Adapter**
@@ -53,6 +58,8 @@ Die Subapp kombiniert drei Funktionsbausteine, um folgende Abläufe zu realisier
 3. **Rückgabe des gespeicherten Werts**  
    Der Baustein `Q_StringValue` dient zur Weiterverarbeitung bzw. Quittierung des ausgelesenen Strings. Durch die Verbindung `NVS.VALUEO → Q_StringValue.pau8String` wird der zwischengespeicherte Wert verfügbar gemacht. Ein Zugriff über das `GETO`-Ereignis (das auch direkt als `IND` an der Subapp erscheint) löst die Verarbeitung in `Q_StringValue` aus.
 
+Zusätzlich wird `INIT` an `Q_StringValue.INIT` und dessen `INITO` an den Ausgang `INITO` der Subapp geführt; `QI` geht an `Q_StringValue.QI`, `Q_StringValue.QO` an `QO`.
+
 Die Ereignisverkabelung stellt sicher, dass sowohl nach einem Schreib- als auch nach einem Lesevorgang das Ausgangsereignis `IND` gesendet wird, sodass der aufrufende Baustein über den Abschluss informiert ist.
 
 ## Technische Besonderheiten
@@ -67,7 +74,7 @@ Die Ereignisverkabelung stellt sicher, dass sowohl nach einem Schreib- als auch 
 Da die Subapp keine expliziten Zustandsautomaten besitzt, lässt sich der Ablauf am besten über die Ereignisse und die beteiligten Baustein-Zustände beschreiben:
 
 - **Idle**: Es liegen keine anstehenden Ereignisse vor. Der NVS-Wert ist gespeichert (kein Zugriff aktiv).  
-- **Initialisieren**: Nach dem Einschalten wird der NVS initialisiert (INITO steht an).  
+- **Initialisieren**: Nach dem Einschalten wird der NVS initialisiert (INITO steht an); das Ereignis `INIT` der Subapp initialisiert `Q_StringValue` und wird mit `INITO` bestätigt.  
 - **Lesen**: Nach der Initialisierung oder über einen internen Triggers wird ein Lesevorgang durchgeführt (GET). Nach Abschluss wird `GETO` erzeugt.  
 - **Schreiben**: Wenn ein neuer Stringwert über StringValue_IS empfangen wird, löst dessen `IND`-Ereignis den SET-Vorgang aus. Nach dem Schreiben wird `SETO` erzeugt.  
 - **Wert bereitstellen**: Nach einem Lesevorgang wird der Wert über `VALUEO` (und an Q_StringValue) bereitgestellt; nach einem Schreibvorgang wird der Wert ebenfalls gespeichert und bestätigt.

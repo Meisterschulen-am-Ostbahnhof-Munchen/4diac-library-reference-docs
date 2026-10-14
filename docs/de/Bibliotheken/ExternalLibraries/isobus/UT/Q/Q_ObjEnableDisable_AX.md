@@ -28,11 +28,16 @@ Der Funktionsblock **Q_ObjEnableDisable_AX** ist ein Composite-Baustein, der als
 
 | Name       | Typ  | Kommentar                                       |
 | ---------- | ---- | ----------------------------------------------- |
+| `QI`       | BOOL | Quality Input – TRUE aktiviert den Dienst       |
 | `u16ObjId` | UINT | Objekt-ID, die beim INIT-Ereignis gesetzt wird. |
 
 ### **Daten-Ausgänge**
 
-Keine direkten Datenausgänge; der alte Zustand wird über den Adapter-Plug `qOldAbility` ausgegeben.
+Außer `QO` keine direkten Datenausgänge; der alte Zustand wird über den Adapter-Plug `qOldAbility` ausgegeben.
+
+| Name | Typ    | Kommentar                                                           |
+| ---- | ------ | ------------------------------------------------------------------- |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ Keine direkten Datenausgänge; der alte Zustand wird über den Adapter-Plug `qOl
 | ------------- | ------------------------------------ | -------- | ------------------------------------------------------------------------------- |
 | `qAbility`    | `adapter::types::unidirectional::AX` | Socket   | Empfängt den Enable/Disable-Befehl (0 = disable, 1 = enable, 0xFF = undefined). |
 | `qOldAbility` | `adapter::types::unidirectional::AB` | Plug     | Gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung).             |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_ObjEnableDisable` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_ObjEnableDisable.QO` übernommen und ist dem Ereignis `INITO` zugeordnet.
 
 ## Gültige Objekt-IDs
 

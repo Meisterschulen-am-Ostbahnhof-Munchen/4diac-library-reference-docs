@@ -23,10 +23,12 @@ The **Q_SelectColourMap** is a standards-compliant function block for managing c
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjIdColourMap` (UINT): Color Palette Object ID or 0xFFFF for the default palette
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u16OldObjIdColourMap` (UINT): Previous color palette ID
 - `s16result` (INT): ISO-compliant result code
@@ -42,6 +44,8 @@ The **Q_SelectColourMap** is a standards-compliant function block for managing c
 **Implementation note (VTClientHelper):** `iso_is_colour_map_id` accepts only the ColourMap range. In addition, ID_NULL (65535) is swallowed by `cmd_select_colour_map_or_palette`, which answers with VT_E_NO_ERR (0) without sending any command to the VT — the documented FFFF value for restoring the default palette therefore currently does not work (known deviation).
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

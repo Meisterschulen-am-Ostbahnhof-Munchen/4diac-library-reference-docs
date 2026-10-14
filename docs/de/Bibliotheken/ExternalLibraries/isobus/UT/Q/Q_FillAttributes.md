@@ -24,6 +24,7 @@ Der **Q_FillAttributes** ist ein standardkonformer Funktionsbaustein zur Änderu
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u16ObjId` (UINT): Objekt-ID (16-bit)
 - `u8FillType` (USINT): Neuer Fülltyp
 - `u8FillColour` (USINT): Neue Füllfarbe
@@ -31,6 +32,7 @@ Der **Q_FillAttributes** ist ein standardkonformer Funktionsbaustein zur Änderu
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldFillType` (USINT): Alter Fülltyp
 - `u8OldFillColour` (USINT): Alte Füllfarbe
@@ -46,6 +48,8 @@ Der **Q_FillAttributes** ist ein standardkonformer Funktionsbaustein zur Änderu
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Objekt-ID

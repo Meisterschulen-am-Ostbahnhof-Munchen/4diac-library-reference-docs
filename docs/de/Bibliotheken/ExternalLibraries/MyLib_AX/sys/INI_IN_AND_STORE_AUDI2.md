@@ -22,13 +22,14 @@ Keine.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **KEY** (`STRING`): Schlüsselname in der INI-Datei
 - **SECTION** (`STRING`): Abschnittsname in der INI-Datei
 - **u16ObjId** (`UINT`): Object ID der VT-Zahlenvariable (Default `ID_NULL`)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde
 
 ### **Adapter**
 
@@ -50,6 +51,7 @@ Keine.
 - `AUDI_TO_AUDI2.AUDI_OUT` → `AUDI_SPLIT_2.IN`
 - `AUDI_SPLIT_2.OUT1` → `VALUEO`; `AUDI_SPLIT_2.OUT2` → `Q_NumericValue_AUDI.u32NewValue` (VT-Anzeige)
 - `KEY`, `SECTION` → `INI_AUDI2`; `u16ObjId` → `ID` und `Q_NumericValue_AUDI`
+- `QI` → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO`
 
 ## Technische Besonderheiten
 

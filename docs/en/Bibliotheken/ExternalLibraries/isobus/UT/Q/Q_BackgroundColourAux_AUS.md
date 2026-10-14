@@ -17,27 +17,29 @@ It enables interaction with the Virtual Terminal (VT) and handles the transmissi
 
 | Event | Type  | With Parameter | Description            |
 | ----- | ----- | -------------- | ---------------------- |
-| INIT  | EInit | u16ObjId       | Service Initialization |
+| INIT  | EInit | QI, u16ObjId   | Service Initialization |
 
 ### **Event Outputs**
 
-| Event | Type  | With Parameter    | Description                       |
-| ----- | ----- | ----------------- | --------------------------------- |
-| INITO | EInit | –                 | Initialization confirmed          |
-| CNF   | Event | STATUS, s16result | Confirmation of requested service |
+| Event | Type  | With Parameter        | Description                       |
+| ----- | ----- | --------------------- | --------------------------------- |
+| INITO | EInit | QO                    | Initialization confirmed          |
+| CNF   | Event | QO, STATUS, s16result | Confirmation of requested service |
 
 ### **Data Inputs**
 
-| Name     | Type | Initial Value | Description                      |
-| -------- | ---- | ------------- | -------------------------------- |
-| u16ObjId | UINT | ID_NULL       | Object ID of the affected object |
+| Name     | Type | Initial Value | Description                            |
+| -------- | ---- | ------------- | -------------------------------------- |
+| QI       | BOOL | TRUE          | Quality Input - TRUE to enable service |
+| u16ObjId | UINT | ID_NULL       | Object ID of the affected object       |
 
 ### **Data Outputs**
 
-| Name      | Type   | Description                          |
-| --------- | ------ | ------------------------------------ |
-| STATUS    | STRING | Service status (e.g., error message) |
-| s16result | INT    | Return value (see below)             |
+| Name      | Type   | Description                                            |
+| --------- | ------ | ------------------------------------------------------ |
+| QO        | BOOL   | Quality Output - TRUE if service executed successfully |
+| STATUS    | STRING | Service status (e.g., error message)                   |
+| s16result | INT    | Return value (see below)                               |
 
 ### **Adapter**
 
@@ -45,6 +47,8 @@ It enables interaction with the Virtual Terminal (VT) and handles the transmissi
 | --------- | ----------- | ---- | --------------------------------------------------- |
 | Socket    | u8Colour    | OFF  | New background color (according to ISO 11783-6 A.3) |
 | Plug      | u8OldColour | OFF  | Old background color (returned by the VT)           |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_BackgroundColourAux`. The data output `QO` (BOOL) is taken over from `Q_BackgroundColourAux.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

@@ -17,6 +17,12 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 - `SETM=TRUE`: a live change during operation is confirmed/echoed immediately, not only at boot - important since the fresh value can be reused in the same run via `VALUEO`.
 - `AR_TO_AR2` converts the plain-AR value from the VT input field into the bidirectional AR2 adapter that `INI_AR2` expects for storage.
 
+## Quality ports (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
+
+The block still has no event ports of its own.
+
 ## Summary
 
 AR2-adapter variant of the INI storage family, with an additional `VALUEO` output for a further consumer.

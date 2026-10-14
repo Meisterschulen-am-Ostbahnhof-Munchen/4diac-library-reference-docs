@@ -23,12 +23,14 @@ Es sind keine externen Ereignis‑Eingänge vorhanden. Die Verarbeitung wird aus
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL) – Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue.QI` durchgereicht
 - **KEY** (STRING) – Schlüsselname innerhalb der INI‑Sektion, unter dem der Wert abgelegt wird.
 - **SECTION** (STRING) – Name der INI‑Sektion, in der der Wert gespeichert wird.
 - **u16ObjId** (UINT) – Objekt‑ID des numerischen Werts auf dem ISOBUS‑Gerät. Standardmäßig auf `ID_NULL` gesetzt.
 
 ### **Daten-Ausgänge**
 
+- **QO** (BOOL) – Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue.QO`
 - **VALUEO** (UDINT) – Der aktuell gespeicherte, konvertierte Wert als 32‑Bit‑Unsigned‑Integer (UDINT). Dieser wird sowohl beim Speichern als auch beim Laden aktualisiert und nach außen bereitgestellt.
 
 ### **Adapter**
@@ -59,6 +61,8 @@ Die Subapplikation besteht aus vier Funktionsbausteinen:
 4. Gleichzeitig wird das `GETO`‑Ereignis auch als `IND` an den Ausgang der Subapp geleitet, sodass auch die Umgebung den geladenen Wert erhält.
 
 Somit stellt die Subapp sicher, dass der Wert sowohl bei Änderungen als auch beim Systemstart konsistent ist.
+
+**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
 
 ## Technische Besonderheiten
 

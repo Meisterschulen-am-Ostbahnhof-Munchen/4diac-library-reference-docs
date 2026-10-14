@@ -23,15 +23,19 @@ The **Q_SelectActiveWorkingSet** is a standards-compliant function block for con
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `pau8Name` (USINT[8]): ISO NAME of the new active workspace
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `pau8OldName` (USINT[8]): ISO NAME of the previous workspace
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

@@ -24,12 +24,14 @@ The **Q_ListItem** is a standards-compliant function module for managing list en
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): List object ID (16-bit)
 - `u8ListIndex` (USINT): List index (0-based, provided at `INIT`)
 - `u16NewObjId` (UINT): New object ID or 0xFFFF (empty entry)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u16OldObjId` (UINT): Previous object ID
 - `s16result` (INT): ISO-compliant result code
@@ -50,6 +52,8 @@ Input List Field (10000–10999), Output List Object (37000–37999, VT v4+), An
 ID_NULL (65535) is not a valid command target for `u16ObjId` but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
    - `INIT` with list object ID and list index

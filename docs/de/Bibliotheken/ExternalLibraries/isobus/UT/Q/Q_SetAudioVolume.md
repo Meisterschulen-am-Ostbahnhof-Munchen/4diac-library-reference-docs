@@ -26,15 +26,19 @@ Der Befehl F.12 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u8Volume` (USINT): Lautstärkewert (0-100%)
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldVolume` (USINT): Vorherige Lautstärkeeinstellung
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` ohne Parameter

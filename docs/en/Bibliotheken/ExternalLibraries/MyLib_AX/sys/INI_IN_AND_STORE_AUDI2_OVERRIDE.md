@@ -16,9 +16,14 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `KEY` (STRING): key name in the INI file.
 - `SECTION` (STRING): section name in the INI file.
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT input field.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully.
 
 ### Adapters
 
@@ -33,6 +38,8 @@ The block has no event ports of its own.
 2. `SEL_Override` (`AUDI_AX_SEL_AUDI`) selects: `IN0` = live VT value, `IN1` = override value from `LIT_Deaktiviert` (`initval_AUDI`, `INIT_VAL`=`UDINT#1`), selected via `G` = `OVERRIDE_ACTIVE`.
 3. `AUDI_TO_AUDI2` converts into the bidirectional AUDI2 adapter for `INI_AUDI2` (`eclipse4diac::storage::INI_AUDI2`; `QI`=TRUE, `SETM`=TRUE, `DEFAULT_VALUE`=`UDINT#0`).
 4. `AUDI_TO_AUDI2.AUDI_OUT` is duplicated via `AUDI_SPLIT_2`: `OUT1` to `VALUEO`, `OUT2` to `Q_NumericValue_AUDI` (`u32NewValue`, VT display).
+
+`QI` is passed through to `Q_NumericValue_AUDI.QI`, and `Q_NumericValue_AUDI.QO` to `QO`.
 
 ## Technical notes
 

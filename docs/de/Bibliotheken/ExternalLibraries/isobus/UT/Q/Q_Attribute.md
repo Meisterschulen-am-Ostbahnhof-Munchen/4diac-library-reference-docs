@@ -24,12 +24,14 @@ Der **Q_Attribute** ist ein standardkonformer Funktionsbaustein zur Änderung vo
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Objektkennung
 - `u8IdAttribute` (USINT): Attributkennung (AID)
 - `u32ValueAttribute` (UDINT): Neuer Attributwert
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u32OldValueAttribute` (UDINT): Vorheriger Attributwert
 - `s16result` (INT): ISO-konformer Ergebniscode
@@ -46,6 +48,8 @@ DataMask (1000–1999), AlarmMask (2000–2999), SoftKeyMask (4000–4999), Key 
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Objekt- und Attribut-ID

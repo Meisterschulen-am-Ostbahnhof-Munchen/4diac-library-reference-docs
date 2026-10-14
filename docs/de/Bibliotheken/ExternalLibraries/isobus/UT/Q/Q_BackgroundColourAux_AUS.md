@@ -17,27 +17,29 @@ Er ermöglicht die Interaktion mit dem Virtuellen Terminal (VT) und übernimmt d
 
 | Ereignis | Typ   | Mit Parameter | Beschreibung            |
 | -------- | ----- | ------------- | ----------------------- |
-| INIT     | EInit | u16ObjId      | Service Initialisierung |
+| INIT     | EInit | QI, u16ObjId  | Service Initialisierung |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Parameter     | Beschreibung                           |
-| -------- | ----- | ----------------- | -------------------------------------- |
-| INITO    | EInit | –                 | Initialisierung bestätigt              |
-| CNF      | Event | STATUS, s16result | Bestätigung des angeforderten Dienstes |
+| Ereignis | Typ   | Mit Parameter         | Beschreibung                           |
+| -------- | ----- | --------------------- | -------------------------------------- |
+| INITO    | EInit | QO                    | Initialisierung bestätigt              |
+| CNF      | Event | QO, STATUS, s16result | Bestätigung des angeforderten Dienstes |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ  | Initialwert | Beschreibung                      |
-| -------- | ---- | ----------- | --------------------------------- |
-| u16ObjId | UINT | ID_NULL     | Objekt-ID des betroffenen Objekts |
+| Name     | Typ  | Initialwert | Beschreibung                              |
+| -------- | ---- | ----------- | ----------------------------------------- |
+| QI       | BOOL | TRUE        | Quality Input – TRUE aktiviert den Dienst |
+| u16ObjId | UINT | ID_NULL     | Objekt-ID des betroffenen Objekts         |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Beschreibung                    |
-| --------- | ------ | ------------------------------- |
-| STATUS    | STRING | Dienststatus (z. B. Fehlertext) |
-| s16result | INT    | Rückgabewert (siehe unten)      |
+| Name      | Typ    | Beschreibung                                                        |
+| --------- | ------ | ------------------------------------------------------------------- |
+| QO        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| STATUS    | STRING | Dienststatus (z. B. Fehlertext)                                     |
+| s16result | INT    | Rückgabewert (siehe unten)                                          |
 
 ### **Adapter**
 
@@ -45,6 +47,8 @@ Er ermöglicht die Interaktion mit dem Virtuellen Terminal (VT) und übernimmt d
 | -------- | ----------- | --- | -------------------------------------------------- |
 | Socket   | u8Colour    | AUS | Neue Hintergrundfarbe (gemäß ISO 11783-6 A.3)      |
 | Plug     | u8OldColour | AUS | Alte Hintergrundfarbe (wird vom VT zurückgemeldet) |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_BackgroundColourAux` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_BackgroundColourAux.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

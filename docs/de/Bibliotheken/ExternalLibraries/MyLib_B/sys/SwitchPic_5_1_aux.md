@@ -12,6 +12,10 @@ Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./Switc
 
 ![SwitchPic_5_1_aux](SwitchPic_5_1_aux.svg)
 
+## Schnittstelle (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Standardwert `TRUE`, Quality Input) und den Datenausgang `QO` (`BOOL`, Quality Output). `QI` wird direkt an `Q_NumericValueAux.QI` und `Q_NumericValueAux.QO` direkt an `QO` durchgereicht.
+
 ## Zusammenfassung
 
 AUX-Gegenstück zu [`SwitchPic_5_1`](./SwitchPic_5_1.md).

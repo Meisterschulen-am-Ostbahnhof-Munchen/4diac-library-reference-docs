@@ -44,6 +44,8 @@
 8. **Status chain**: `E_T_FF_SR_SWITCH.Q` → `logiBUS_QD_PWM.QI` (armed/disarmed) and → `F_SEL_STATUS.G`. `logiBUS_QD_PWM.INITO`/`.QO` feed `F_SEL_OK_FAULT` (red/green based on `QO`), whose result goes through `F_SEL_STATUS` (white if disabled) to `Q_BackgroundColour_STATUS`. In addition, `AX_BOOL_TO_X_SWITCH`/`AX_PUBLISH_SWITCH` and `AX_BOOL_TO_X_STATUS`/`AX_PUBLISH_STATUS` mirror the enable state and `QO` to the web client via OPC-UA publish.
 9. **Boot sequence**: The five OPC-UA adapters are initialized in a strict chain (`AR_SUBSCRIBE_1.INITO → AR_PUBLISH_1.INIT → AX_SUBSCRIBE_SWITCH.INIT → AX_PUBLISH_SWITCH.INIT → AX_PUBLISH_STATUS.INIT`); only afterward does `AX_PUBLISH_STATUS.INITO` fire `E_T_FF_SR_SWITCH.INIT`, so the first published enable state is not dropped by an adapter that is not yet ready.
 
+10. **QI/QO pass-through**: `QI` (`BOOL`, default `TRUE`, new) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, new, quality output of the VT number-field write service). This `QO` is independent of the `logiBUS_QD_PWM.QO` used in the status chain.
+
 ## Technical Details
 
 - **Value range**: Consistently uses the SAE J1939/ISO 11783 fieldbus convention `VALID_SIGNAL_W` (0-64255) internally, not percent — avoids rounding errors and stays consistent with `RampLimitFS`.

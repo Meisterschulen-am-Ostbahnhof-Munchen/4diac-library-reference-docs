@@ -24,6 +24,7 @@ Der **Q_ChildPosition** ist ein standardkonformer Funktionsbaustein zur absolute
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Child-Objekt-ID
 - `u16ObjIdParent` (UINT): Parent-Objekt-ID
 - `xScale` (BOOL): Bei TRUE werden die Werte `s16Xposition`/`s16Yposition` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjIdParent` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
@@ -32,6 +33,7 @@ Der **Q_ChildPosition** ist ein standardkonformer Funktionsbaustein zur absolute
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `s16OldXposition` (INT): Vorherige X-Position
 - `s16OldYposition` (INT): Vorherige Y-Position
@@ -52,6 +54,8 @@ WorkingSet (B.1), Data Mask (B.2), Alarm Mask (B.3), **Container (B.4)**, Key (B
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Child- und Parent-Objekt-ID

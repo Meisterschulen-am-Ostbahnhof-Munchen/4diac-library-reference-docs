@@ -12,6 +12,12 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ![NVS_IN_AND_STORE_AIS](NVS_IN_AND_STORE_AIS.svg)
 
+## Qualitätsanschlüsse (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_StringValue_AIS.QI` verbunden, `Q_StringValue_AIS.QO` mit `QO`.
+
+Zusätzlich besitzt der Baustein die Ereignisse `INIT` (Eingang, `EInit`, Initialisierungsanforderung) und `INITO` (Ausgang, `EInit`, Initialisierungsbestätigung): `INIT` → `Q_StringValue_AIS.INIT`, `Q_StringValue_AIS.INITO` → `INITO`.
+
 ## Zusammenfassung
 
 NVS-Pendant zu `INI_IN_AND_STORE_AIS`.

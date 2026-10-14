@@ -14,7 +14,12 @@
 
 ### Eingangsvariablen
 
+- `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst.
 - `u16ObjId` (UINT, Default `ID_NULL`): ObjectID des VT-Eingabefelds.
+
+### Ausgangsvariablen
+
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
 
 ### Adapter
 
@@ -27,6 +32,8 @@ Der Baustein besitzt keine eigenen Ereignisanschlüsse.
 1. `NumericValue_IDA` (`QI`=TRUE) liest das VT-Eingabefeld; `AD_TO_AUI` wandelt in AUI.
 2. `AUI_TO_AUI2` wandelt in den bidirektionalen AUI2-Adapter, der an `VALUEO` ausgegeben wird.
 3. Das vom Consumer zurückgemeldete Echo erscheint an `AUI_TO_AUI2.AUI_OUT`, wird per `AUI_TO_AUDI` in UDINT gewandelt und von `Q_NumericValue_AUDI` (`u32NewValue`) unter `u16ObjId` auf das VT-Feld geschrieben.
+
+`QI` wird an `Q_NumericValue_AUDI.QI` durchgereicht, `Q_NumericValue_AUDI.QO` an `QO`.
 
 ## Technische Besonderheiten
 

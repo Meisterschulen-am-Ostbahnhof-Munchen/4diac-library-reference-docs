@@ -29,15 +29,17 @@ Der Funktionsblock **Q_Attribute_AUDI** implementiert das Kommando „Change Att
 
 | Variable      | Typ   | Beschreibung                                                                     |
 | ------------- | ----- | -------------------------------------------------------------------------------- |
+| QI            | BOOL  | Quality Input – TRUE aktiviert den Dienst                                        |
 | u16ObjId      | UINT  | Objekt-ID des zu ändernden Attributs (Initialwert: ID_NULL)                      |
 | u8IdAttribute | USINT | Attribut-ID (AID) – definiert, welches Attribut des Objekts geändert werden soll |
 
 ### **Daten-Ausgänge**
 
-| Variable  | Typ    | Beschreibung                                                  |
-| --------- | ------ | ------------------------------------------------------------- |
-| STATUS    | STRING | Statusmeldung des ausgeführten Dienstes                       |
-| s16result | INT    | Rückgabewert des Kommandos (Fehlercodes siehe Funktionsweise) |
+| Variable  | Typ    | Beschreibung                                                        |
+| --------- | ------ | ------------------------------------------------------------------- |
+| QO        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| STATUS    | STRING | Statusmeldung des ausgeführten Dienstes                             |
+| s16result | INT    | Rückgabewert des Kommandos (Fehlercodes siehe Funktionsweise)       |
 
 ### **Adapter**
 
@@ -45,6 +47,8 @@ Der Funktionsblock **Q_Attribute_AUDI** implementiert das Kommando „Change Att
 | -------------------- | -------- | -------------------- | --------------------------------------------------------------------------------- |
 | u32ValueAttribute    | Socket   | unidirectional::AUDI | Neuer Wert für das Attribut (32-Bit, wird über den Adapter in den FB eingespeist) |
 | u32OldValueAttribute | Plug     | unidirectional::AUDI | Alter Wert des Attributs (32-Bit, wird vom FB über den Adapter ausgegeben)        |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_Attribute` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_Attribute.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

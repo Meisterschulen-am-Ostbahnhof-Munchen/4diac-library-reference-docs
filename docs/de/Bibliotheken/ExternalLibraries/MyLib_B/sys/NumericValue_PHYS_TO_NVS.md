@@ -15,14 +15,16 @@ Die SubApp `NumericValue_PHYS_TO_NVS` bietet eine generische Lösung zum Einlese
 
 ### **Ereignis-Eingänge**
 
-Keine vorhanden.
+- **INIT** (EInit): Initialisierungsanforderung („Initialization Request“). Wird an `Q_NumericValue_PHYS.INIT` durchgereicht.
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (EInit): Initialisierungsbestätigung („Initialization Confirm“). Kommt von `Q_NumericValue_PHYS.INITO`.
 - **IND** (Event): Wird ausgelöst, wenn ein Speichervorgang oder ein Lesevorgang abgeschlossen ist. Konkret wird dieser Ausgang über `NVS.SETO` (nach erfolgreichem Speichern) und über `NVS.GETO` (nach erfolgreichem Laden) aktiviert.
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL): Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue_PHYS.QI` durchgereicht
 - **KEY** (STRING): Schlüsselname, unter dem der Wert im NVS abgelegt wird.
 - **stObj** (Typ: `logiBUS::utils::conversion::phys::NumericObjectPool_S`): Struktur, die die Parameter für die physikalische Umrechnung enthält:
   - `u16ObjId` (Objektidentifikation, Standard: `ID_NULL`)
@@ -32,6 +34,7 @@ Keine vorhanden.
 
 ### **Daten-Ausgänge**
 
+- **QO** (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue_PHYS.QO`
 - **VALUEO** (REAL): Der aktuell geladene oder gespeicherte Wert als `REAL`. Dieser Wert entspricht der intern abgelegten, skalierten Größe.
 
 ### **Adapter**
@@ -44,16 +47,20 @@ Die SubApp besteht aus drei internen Funktionsblöcken:
 
 - **`NumericValue_PHYS`** – liest einen physikalischen Wert (z. B. von einem Sensor) und konvertiert ihn in einen skalierten Prozesswert.
 - **`NVS`** – verwaltet den nichtflüchtigen Speicher (ESP32 NVS) und ermöglicht das Speichern (SET) und Laden (GET) von Werten.
-- **`Q_NumericValue_PHYS`** – dient zur Rückkonvertierung des gespeicherten Wertes in die ursprüngliche physikalische Einheit (wird intern genutzt, aber nicht nach außen geführt).
+- **`Q_NumericValue_PHYS`** – dient zur Rückkonvertierung des gespeicherten Wertes in die ursprüngliche physikalische Einheit (erhält `INIT` und `QI` von außen; sein `INITO` und `QO` sind auf die SubApp-Ausgänge `INITO` und `QO` geführt).
 
 Der Ablauf ist wie folgt:
 
-1. **Initialisierung**: Beim Start der SubApp wird der NVS-Baustein initialisiert (`INIT`). Nach erfolgreicher Initialisierung (`INITO`) wird automatisch ein `GET` ausgelöst, um den unter `KEY` gespeicherten Wert zu laden.
+1. **Initialisierung**: Das SubApp-Ereignis `INIT` wird an `Q_NumericValue_PHYS.INIT` weitergereicht, dessen `INITO` erscheint als `INITO` der SubApp. Unabhängig davon löst die Initialisierung des NVS-Bausteins (`NVS.INITO`) automatisch ein `GET` aus, um den unter `KEY` gespeicherten Wert zu laden.
 2. **Laden**: Der geladene Wert (`NVS.VALUEO`) wird direkt an den Ausgang `VALUEO` gelegt und parallel an `Q_NumericValue_PHYS` übergeben, um ggf. eine Rückumrechnung vorzunehmen.
 3. **Speichern**: Wird vom Baustein `NumericValue_PHYS` ein neuer Wert erzeugt (Ausgang `IND`), so wird dessen skaliertes Ergebnis (`rPhys`) an `NVS.VALUE` übergeben und mit `SET` im NVS gespeichert. Nach erfolgreichem Speichern signalisiert `SETO` den Abschluss.
 4. **Ausgabe**: Sowohl nach dem Laden als auch nach dem Speichern wird der Ausgang `IND` der SubApp aktiviert. Dadurch kann eine übergeordnete Steuerung den Vorgang synchron verfolgen.
 
 Die SubApp unterstützt damit sowohl das Schreiben als auch das Lesen eines persistenten, skalierten Werts.
+
+**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue_PHYS.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue_PHYS.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
+
+**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird an `Q_NumericValue_PHYS.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt von `Q_NumericValue_PHYS.QO`.
 
 ## Technische Besonderheiten
 

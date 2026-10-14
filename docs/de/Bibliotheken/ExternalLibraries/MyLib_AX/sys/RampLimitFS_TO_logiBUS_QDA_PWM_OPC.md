@@ -44,6 +44,8 @@
 8. **Statuskette**: `E_T_FF_SR_SWITCH.Q` → `logiBUS_QD_PWM.QI` (scharf/unscharf) und → `F_SEL_STATUS.G`. `logiBUS_QD_PWM.INITO`/`.QO` speisen `F_SEL_OK_FAULT` (Rot/Grün nach `QO`), dessen Ergebnis über `F_SEL_STATUS` (Weiß, falls deaktiviert) an `Q_BackgroundColour_STATUS` geht. Zusätzlich spiegeln `AX_BOOL_TO_X_SWITCH`/`AX_PUBLISH_SWITCH` und `AX_BOOL_TO_X_STATUS`/`AX_PUBLISH_STATUS` Enable-Zustand und `QO` per OPC-UA-Publish an den Web-Client.
 9. **Boot-Reihenfolge**: Die fünf OPC-UA-Adapter werden strikt verkettet initialisiert (`AR_SUBSCRIBE_1.INITO → AR_PUBLISH_1.INIT → AX_SUBSCRIBE_SWITCH.INIT → AX_PUBLISH_SWITCH.INIT → AX_PUBLISH_STATUS.INIT`); erst danach feuert `AX_PUBLISH_STATUS.INITO` das `E_T_FF_SR_SWITCH.INIT`, damit der erste publizierte Enable-Zustand nicht von einem noch nicht bereiten Adapter verworfen wird.
 
+10. **QI/QO-Durchreichung**: `QI` (`BOOL`, Vorgabe `TRUE`, neu) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, neu, Quality Output des VT-Zahlenfeld-Schreibdienstes). Dieses `QO` ist unabhängig vom `logiBUS_QD_PWM.QO` der Statuskette.
+
 ## Technische Besonderheiten
 
 - **Wertebereich**: Intern durchgängig SAE-J1939/ISO-11783-Fieldbus-Konvention `VALID_SIGNAL_W` (0-64255), nicht Prozent — vermeidet Rundungsfehler und ist konsistent mit `RampLimitFS`.

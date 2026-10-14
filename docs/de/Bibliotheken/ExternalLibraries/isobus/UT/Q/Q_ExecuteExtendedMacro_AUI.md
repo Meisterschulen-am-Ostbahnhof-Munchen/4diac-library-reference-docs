@@ -27,12 +27,17 @@ Der **Q_ExecuteExtendedMacro_AUI** ist ein AUI‑Adapter‑Wrapper für den Baus
 
 ### **Daten-Eingänge**
 
-Keine direkten Dateneingänge vorhanden – die Extended‑Makro‑ID wird über den AUI‑Adapter‑Socket empfangen.
+Außer `QI` gibt es keine direkten Dateneingänge – die Extended‑Makro‑ID wird über den AUI‑Adapter‑Socket empfangen.
+
+| Name | Typ    | Initialwert | Kommentar                                 |
+| ---- | ------ | ----------- | ----------------------------------------- |
+| `QI` | `BOOL` | `TRUE`      | Quality Input – TRUE aktiviert den Dienst |
 
 ### **Daten-Ausgänge**
 
 | Name | Typ | Kommentar |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS` | `STRING` | Dienststatus |
 | `s16result` | `INT` | Rückgabewert des Befehls |
 
@@ -41,6 +46,8 @@ Keine direkten Dateneingänge vorhanden – die Extended‑Makro‑ID wird über
 | Typ | Name | Richtung | Kommentar |
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16ObjId` | Socket (Eingang) | Object-ID des Extended-Makros (1–999) |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_ExecuteExtendedMacro` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_ExecuteExtendedMacro.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Funktionsweise
 

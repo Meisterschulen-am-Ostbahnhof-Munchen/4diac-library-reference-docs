@@ -8,6 +8,8 @@
 
 `Q_BackgroundColour_EnableOk` leitet aus 2 Bools (Kanal aktiviert + Hardware-QO) eine 3-Farben-VT-Hintergrundfarbe ab: Weiss = deaktiviert, Gruen = aktiviert und QO TRUE, Rot = aktiviert und QO FALSE (Stoerung). Generisch fuer jeden Kanal mit Enable-Schalter + Status-LED (PWM, PI, ...). Die reine Auswahllogik ist mittlerweile in [`Select_EnableOk`](./Select_EnableOk.md) ausgelagert; dieser Baustein instanziiert sie nur noch mit den 3 Farben als Parameter und haengt `Q_BackgroundColour` dran.
 
+**Quality-Anschlüsse:** Der Baustein besitzt zusätzlich das Ereignis `INIT` (Eingang) und `INITO` (Ausgang) sowie den Dateneingang `QI` (BOOL, Standard `TRUE`, „Quality Input – TRUE, um den Dienst freizugeben“) und den Datenausgang `QO` (BOOL, „Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde“). `INIT` wird an `Q_BackgroundColour.INIT` weitergereicht, `Q_BackgroundColour.INITO` an `INITO`; `QI` ist mit `Q_BackgroundColour.QI` und `Q_BackgroundColour.QO` mit `QO` verbunden.
+
 ![Q_BackgroundColour_EnableOk](Q_BackgroundColour_EnableOk.svg)
 
 ## Verwendete Funktionsbausteine (FBs)

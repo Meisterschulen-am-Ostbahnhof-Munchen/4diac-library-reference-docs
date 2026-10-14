@@ -27,6 +27,7 @@ Keine.
 
 | Name     | Typ     | Initialwert  | Beschreibung                                            |
 |----------|---------|--------------|---------------------------------------------------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input – TRUE, um den Dienst freizugeben; wird an `Q_NumericValue.QI` durchgereicht |
 | `KEY`    | STRING  | –            | Schlüsselname unter dem der Wert im NVS gespeichert wird. |
 | `u16ObjId`| UINT   | `ID_NULL`    | Objekt‑ID des numerischen Werts am ISOBUS‑Terminal.       |
 
@@ -34,6 +35,7 @@ Keine.
 
 | Name     | Typ     | Beschreibung                                      |
 |----------|---------|---------------------------------------------------|
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue.QO` |
 | `VALUEO` | UDINT   | Der aktuell gelesene bzw. gespeicherte numerische Wert. |
 
 ### **Adapter**
@@ -55,6 +57,8 @@ Der Baustein arbeitet in zwei Hauptphasen:
 Parallel dazu wird bei jeder Speicher‑ oder Leseoperation auch der interne `Q_NumericValue`‑FB mit dem aktuellen Wert und der Objekt‑ID versorgt, sodass der Wert auch am Terminal angezeigt bzw. aktualisiert wird.
 
 Die Datenflüsse sind in der SubApp über direkte Verbindungen realisiert, wobei die externen Anschlüsse der SubApp (`KEY`, `u16ObjId`, `VALUEO`) direkt mit den internen Bausteinen verdrahtet sind.
+
+**Quality-Anschlüsse:** `QI` (Dateneingang, BOOL, Standard `TRUE`) wird direkt an `Q_NumericValue.QI` weitergereicht, der Ausgang `QO` (BOOL) kommt direkt von `Q_NumericValue.QO`. Damit lässt sich der Schreibdienst zum Terminal von außen freigeben und sein Erfolg abfragen.
 
 ## Technische Besonderheiten
 

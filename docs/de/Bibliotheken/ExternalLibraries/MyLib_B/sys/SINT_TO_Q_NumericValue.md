@@ -17,22 +17,28 @@ Der Funktionsblock **SINT_TO_Q_NumericValue** ist eine wiederverwendbare Subappl
 
 | Name | Datentyp | Beschreibung |
 |------|----------|--------------|
+| `INIT` | EInit | Initialisierungsanforderung; wird an `Q_NumericValue.INIT` weitergeleitet. |
 | `CNF` | Event | Externer Trigger, der die Verarbeitung startet. Beim Eintreten wird der Wert `NewValue` konvertiert und an das Zahlenfeld übertragen. |
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+| Name | Datentyp | Beschreibung |
+|------|----------|--------------|
+| `INITO` | EInit | Initialisierungsbestätigung von `Q_NumericValue.INITO`. |
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Beschreibung |
 |------|----------|--------------|
+| `QI` | BOOL | Quality Input – TRUE aktiviert den Dienst (Standardwert `TRUE`); wird an `Q_NumericValue.QI` durchgereicht. |
 | `u16ObjId` | UINT | Objekt-ID des Ziel-Zahlenfeldes. Standardwert ist `ID_NULL`, kann aber über diesen Eingang überschrieben werden. |
 | `NewValue` | SINT | Der anzuzeigende Wert, der vor der Übertragung nach UINT konvertiert wird. |
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Datentyp | Beschreibung |
+|------|----------|--------------|
+| `QO` | BOOL | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_NumericValue.QO`. |
 
 ### **Adapter**
 
@@ -40,7 +46,7 @@ Keine.
 
 ## Funktionsweise
 
-Die Subapplikation arbeitet ereignisgesteuert. Ein externes Ereignis am Eingang `CNF` löst die Verarbeitung aus:
+Die Subapplikation arbeitet ereignisgesteuert. Das Ereignis `INIT` wird an `Q_NumericValue.INIT` weitergereicht, dessen `INITO` erscheint am Ausgang `INITO`. `QI` wird an `Q_NumericValue.QI` und `Q_NumericValue.QO` an `QO` durchgereicht. Ein externes Ereignis am Eingang `CNF` löst die Verarbeitung aus:
 
 1. Das Ereignis wird an den Funktionsblock `F_SINT_TO_UINT` (aus der Bibliothek `iec61131::conversion`) weitergeleitet.
 2. Gleichzeitig wird der aktuelle Wert von `NewValue` als Eingang `IN` an den Konvertierungsbaustein übergeben.
@@ -62,7 +68,7 @@ Somit wird der SINT-Wert in ein geeignetes Format umgewandelt und auf dem virtue
 
 Die Subapp besitzt keinen expliziten Zustandsautomaten, da sie rein ereignisgesteuert arbeitet. Der Ablauf ist sequenziell:
 
-- **Idle:** Warten auf ein Ereignis an `CNF`.
+- **Idle:** Warten auf ein Ereignis an `CNF` (nach der Initialisierung über `INIT`/`INITO`).
 - **Konvertierung:** `NewValue` wird von SINT nach UINT konvertiert.
 - **Ausgabe:** `Q_NumericValue` wird mit dem konvertierten Wert und der Objekt-ID angesteuert.
 

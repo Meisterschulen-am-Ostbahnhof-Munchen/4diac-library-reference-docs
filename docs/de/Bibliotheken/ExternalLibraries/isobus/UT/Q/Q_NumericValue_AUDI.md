@@ -12,20 +12,22 @@ Der `Q_NumericValue_AUDI` ist ein spezieller ISOBUS-Funktionsbaustein, der es er
 
 ### **Ereignis-Eingänge**
 
-- **INIT**: `EInit` - Initialisiert den Dienst mit der `u16ObjId`.
+- **INIT**: `EInit` - Initialisiert den Dienst mit der `u16ObjId`. Verknüpft mit `QI`.
 
 ### **Ereignis-Ausgänge**
 
-- **INITO**: `EInit` - Bestätigt die Initialisierung.
-- **CNF**: `Event` - Bestätigt die Ausführung des Dienstes.
+- **INITO**: `EInit` - Bestätigt die Initialisierung. Verknüpft mit `QO`.
+- **CNF**: `Event` - Bestätigt die Ausführung des Dienstes. Verknüpft mit `QO`.
   - Mit Variablen `STATUS` und `s16result` verknüpft.
 
 ### **Input-Variablen**
 
+- **QI**: `BOOL` - Quality Input – TRUE aktiviert den Dienst. Initialwert TRUE.
 - **u16ObjId**: `UINT` - Die Objekt-ID des numerischen Eingabefeldes am ISOBUS-Terminal (Standard: `ID_NULL`).
 
 ### **Output-Variablen**
 
+- **QO**: `BOOL` - Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
 - **STATUS**: `STRING` - Statusmeldung des Dienstes (z.B. "OK", "Error").
 - **s16result**: `INT` - Rückgabewert des Dienstes (Fehlercodes gemäß ISO 11783-6).
 
@@ -33,6 +35,8 @@ Der `Q_NumericValue_AUDI` ist ein spezieller ISOBUS-Funktionsbaustein, der es er
 
 - **u32OldValue** (Plug): `AUDI` - Der alte/aktuelle Wert des Objekts.
 - **u32NewValue** (Socket): `AUDI` - Der neue Wert, der an das ISOBUS-Terminal gesendet werden soll.
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_NumericValue` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_NumericValue.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

@@ -10,6 +10,8 @@
 
 Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muster)](./INI-NVS-Speicherbausteine.md).
 
+Schnittstelle (Quality-Muster): Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, „Quality Input – TRUE to enable service“) und Datenausgang `QO` (`BOOL`, „Quality Output – TRUE if service executed successfully“) sind direkt mit dem VT-Schreibbaustein verbunden: `QI` → `Q_NumericValue_PHYSA.QI`, `Q_NumericValue_PHYSA.QO` → `QO`.
+
 ![INI_IN_AND_STORE_AR](INI_IN_AND_STORE_AR.svg)
 
 ## Zusammenfassung

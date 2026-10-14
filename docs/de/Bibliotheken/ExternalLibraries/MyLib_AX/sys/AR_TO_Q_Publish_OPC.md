@@ -24,10 +24,11 @@ Keine.
 
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Objekt-Pool-Eigenschaften der VT-Zahlenvariable (`u16ObjId`, Skalierung, Offset, Nachkommastellen), z. B. `FBs::const::DefaultPool_Numeric::NumberVariable_X_N`
 - **ID_WRITE** (`WSTRING`): Publish-Adresse (REAL, `ACTION=PUBLISH`), lokal oder stationsübergreifend
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE, um den Dienst (VT-Anzeige) freizugeben
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `Q_NumericValue.QO`)
 
 ### **Adapter**
 
@@ -45,6 +46,7 @@ Keine.
 - `AR_IN` → `RateLimit_Anzeige.I`; `RateLimit_Anzeige.Q` → `AR_SPLIT_2.IN`
 - `AR_SPLIT_2.OUT1` → `Q_NumericValue.rPhys` (VT-Anzeige); `stObj` → `Q_NumericValue.stObj`
 - `AR_SPLIT_2.OUT2` → `AR_PUBLISH.IN`; `ID_WRITE` → `AR_PUBLISH.ID`
+- `QI` → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (der Publish-Zweig `AR_PUBLISH` bleibt mit `QI = TRUE` fest freigegeben)
 
 ## Technische Besonderheiten
 

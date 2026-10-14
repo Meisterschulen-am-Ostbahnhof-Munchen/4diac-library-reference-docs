@@ -24,15 +24,19 @@ Der **Q_SelectActiveWorkingSet** ist ein standardkonformer Funktionsbaustein zur
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `pau8Name` (USINT[8]): ISO-NAME des neuen aktiven Arbeitsbereichs
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `pau8OldName` (USINT[8]): ISO-NAME des vorherigen Arbeitsbereichs
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` ohne Parameter

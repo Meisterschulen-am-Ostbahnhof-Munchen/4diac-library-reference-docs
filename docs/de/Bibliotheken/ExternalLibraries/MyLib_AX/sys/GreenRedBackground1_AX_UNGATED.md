@@ -14,18 +14,21 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden – Ereignisse kommen über den Adapter-Socket*
+- **INIT** (`EInit`): Initialisierungsanforderung – an `Q_BackgroundColour.INIT`; weitere Ereignisse kommen über den Adapter-Socket
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `Q_BackgroundColour.INITO`)
 - **CNF**: Ausführungsbestätigung (von `Q_BackgroundColour.CNF`)
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE, um den Dienst freizugeben
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID des Softkeys/Buttons
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `Q_BackgroundColour.QO`)
 - **STATUS_1** (`STRING`): Dienststatus
 - **u8OldColour_1** (`USINT`): Alter Farbwert des Objekts
 - **result_1** (`INT`): Rückgabewert (siehe `Q_BackgroundColour`)
@@ -46,6 +49,7 @@
 2. `AX_SEL.OUT` → `Q_BackgroundColour.u8Colour`; `AX_SEL.CNF` → `Q_BackgroundColour.REQ`.
 3. `u16ObjId` → `Q_BackgroundColour.u16ObjId`.
 4. `Q_BackgroundColour.CNF` → `CNF`; `STATUS`, `u8OldColour`, `s16result` → `STATUS_1`, `u8OldColour_1`, `result_1`.
+5. `INIT` → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → `INITO`; `QI` → `Q_BackgroundColour.QI`; `Q_BackgroundColour.QO` → `QO`.
 
 ## Anwendungsszenarien
 

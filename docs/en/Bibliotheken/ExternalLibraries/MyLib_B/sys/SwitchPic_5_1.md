@@ -12,6 +12,10 @@ For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPi
 
 ![SwitchPic_5_1](SwitchPic_5_1.svg)
 
+## Interface (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input) and the data output `QO` (`BOOL`, Quality Output). `QI` is passed through directly to `Q_NumericValue.QI`, and `Q_NumericValue.QO` directly to `QO`.
+
 ## Summary
 
 Variant "1" (regular object only) of the 5-state picture switch — the 5-state counterpart to [`SwitchPic_2_1`](./SwitchPic_2_1.md).

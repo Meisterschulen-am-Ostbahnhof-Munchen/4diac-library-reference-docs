@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](../../MyLib_AX/sys/INI-NVS-Storage-Blocks.md).
 
+**Quality ports:** The block additionally has the data input `QI` (BOOL, default `TRUE`, "Quality Input - TRUE to enable service") and the data output `QO` (BOOL, "Quality Output - TRUE if service executed successfully"). `QI` is connected to `Q_NumericValue.QI` and `Q_NumericValue.QO` to `QO`.
+
 ![NVS_IN_AND_STORE_UDINT](NVS_IN_AND_STORE_UDINT.svg)
 
 ## Summary

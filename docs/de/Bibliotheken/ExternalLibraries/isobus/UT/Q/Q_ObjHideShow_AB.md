@@ -14,9 +14,9 @@ Der Funktionsblock **Q_ObjHideShow_AB** dient als Wrapper für den Baustein `Q_O
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | mit Variablen | Kommentar                                        |
-| -------- | ------------- | ------------------------------------------------ |
-| `INIT`   | `u16ObjId`    | Service Initialization; Objekt-ID wird übergeben |
+| Ereignis | mit Variablen    | Kommentar                                        |
+| -------- | ---------------- | ------------------------------------------------ |
+| `INIT`   | `QI`, `u16ObjId` | Service Initialization; Objekt-ID wird übergeben |
 
 ### **Ereignis-Ausgänge**
 
@@ -26,13 +26,18 @@ Der Funktionsblock **Q_ObjHideShow_AB** dient als Wrapper für den Baustein `Q_O
 
 ### **Daten-Eingänge**
 
-| Name       | Typ  | Kommentar             |
-| ---------- | ---- | --------------------- |
-| `u16ObjId` | UINT | Objekt-ID (Object ID) |
+| Name       | Typ  | Kommentar                                 |
+| ---------- | ---- | ----------------------------------------- |
+| `QI`       | BOOL | Quality Input – TRUE aktiviert den Dienst |
+| `u16ObjId` | UINT | Objekt-ID (Object ID)                     |
 
 ### **Daten-Ausgänge**
 
-Keine expliziten Datenausgänge auf FB-Ebene. Die Ausgangsdaten werden über den Adapter `qOldVisible` bereitgestellt.
+Auf FB-Ebene gibt es außer `QO` keine expliziten Datenausgänge. Die übrigen Ausgangsdaten werden über den Adapter `qOldVisible` bereitgestellt.
+
+| Name | Typ    | Kommentar                                                           |
+| ---- | ------ | ------------------------------------------------------------------- |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ Keine expliziten Datenausgänge auf FB-Ebene. Die Ausgangsdaten werden über den
 | ---------------- | ------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
 | Socket (Eingang) | `qVisible`    | `adapter::types::unidirectional::AB` | Sollwert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt                       |
 | Plug (Ausgang)   | `qOldVisible` | `adapter::types::unidirectional::AB` | Alter Wert der Sichtbarkeit: 0 = versteckt, 1 = angezeigt, 0xFF = undefiniert |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_ObjHideShow` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_ObjHideShow.QO` übernommen und ist dem Ereignis `INITO` zugeordnet.
 
 ## Gültige Objekt-IDs
 

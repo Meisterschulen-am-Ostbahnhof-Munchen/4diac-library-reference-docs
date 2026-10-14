@@ -16,9 +16,14 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ### Eingangsvariablen
 
+- `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst.
 - `KEY` (STRING): Schlüsselname in der INI-Datei.
 - `SECTION` (STRING): Abschnittsname in der INI-Datei.
 - `u16ObjId` (UINT, Default `ID_NULL`): ObjectID des VT-Eingabefelds.
+
+### Ausgangsvariablen
+
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
 
 ### Adapter
 
@@ -32,6 +37,8 @@ Der Baustein besitzt keine eigenen Ereignisanschlüsse.
 2. `AUI_LAST_2` (Last-Writer-Wins) führt zusammen: `IN1` = Live-VT-Änderung, `IN2` = INI-Wert beim Boot. Der Ausgang geht an `AUI_TO_AUI2` (Brücke zum externen Consumer), dessen bidirektionaler Ausgang an `VALUEO`.
 3. Das vom Consumer zurückgemeldete Ergebnis erscheint an `AUI_TO_AUI2.AUI_OUT` und wird per `AUI_SPLIT_2` verdoppelt: `OUT1` über `AUI_TO_AUDI` an `Q_NumericValue_AUDI` (`u32NewValue`, VT-Anzeige unter `u16ObjId`), `OUT2` an `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `QI`=TRUE, `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
 4. `INI_AUI.AUI_OUT` führt den geladenen Wert zu `AUI_LAST_2.IN2` zurück.
+
+`QI` wird an `Q_NumericValue_AUDI.QI` durchgereicht, `Q_NumericValue_AUDI.QO` an `QO`.
 
 ## Technische Besonderheiten
 

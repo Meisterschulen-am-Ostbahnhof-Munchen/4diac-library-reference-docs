@@ -15,19 +15,22 @@ The **StringValue_TO_NVS** subapplication provides a generic solution for readin
 
 ### **Event Inputs**
 
-The subapplication does not expose any event inputs. Initialization and data flow are handled internally.
+- **INIT** (EInit): Initialization request; forwarded to `Q_StringValue.INIT`.
 
 ### **Event Outputs**
 
+- **INITO** (EInit): Initialization confirm from `Q_StringValue.INITO`.
 - **IND** (Event): Emitted after a read or write operation completes, indicating that a new value has been stored or retrieved.
 
 ### **Data Inputs**
 
+- **QI** (BOOL): Quality Input - TRUE to enable service (initial value `TRUE`); passed through to `Q_StringValue.QI`.
 - **KEY** (STRING): The key name under which the value is stored in the NVS.
 - **u16ObjId** (UINT): The object identifier for the String-VT value. Defaults to `ID_NULL`.
 
 ### **Data Outputs**
 
+- **QO** (BOOL): Quality Output - TRUE if the service executed successfully; taken from `Q_StringValue.QO`.
 - **VALUEO** (STRING): The current string value that has been read from the NVS or acquired from the input.
 
 ### **Adapters**
@@ -36,7 +39,7 @@ The subapplication does not expose any adapter interfaces.
 
 ## Functionality
 
-The subapplication operates as follows:
+The subapplication operates as follows. In addition, `INIT` is routed to `Q_StringValue.INIT` and its `INITO` to the `INITO` output; `QI` goes to `Q_StringValue.QI` and `Q_StringValue.QO` to `QO`.
 
 1. **Initialization**: On startup, the internal `NVS` function block performs its initialization. The resulting `INITO` event is immediately routed to the `GET` event of the same block, causing the currently stored value to be read from the NVS.
 2. **Value acquisition**: The `StringValue_IS` function block acquires a String-VT value based on the provided `u16ObjId`. When a new value is available, its `IND` output event triggers the `NVS.SET` event.

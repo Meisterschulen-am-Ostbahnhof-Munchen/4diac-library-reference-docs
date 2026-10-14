@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 3175.2080078125 552.0"
-     width="3175.2080078125" height="552.0">
+     viewBox="0 0 4173.4 552.0"
+     width="4173.4" height="552.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(2166.087890625, 10)">
+  <g transform="translate(2849.0, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 276.1875 0
-            A 3 3 0 0 1 279.1875 3
-            L 279.1875 23.0
-            A 3 3 0 0 1 276.1875 26.0
-            L 269.1875 26.0
-            L 269.1875 66.0
-            L 276.1875 66.0
-            A 3 3 0 0 1 279.1875 69.0
-            L 279.1875 529.0
-            A 3 3 0 0 1 276.1875 532.0
+            L 320.40000000000003 0
+            A 3 3 0 0 1 323.40000000000003 3
+            L 323.40000000000003 23.0
+            A 3 3 0 0 1 320.40000000000003 26.0
+            L 313.40000000000003 26.0
+            L 313.40000000000003 66.0
+            L 320.40000000000003 66.0
+            A 3 3 0 0 1 323.40000000000003 69.0
+            L 323.40000000000003 529.0
+            A 3 3 0 0 1 320.40000000000003 532.0
             L 3 532.0
             A 3 3 0 0 1 0 529.0
             L 0 69.0
@@ -91,7 +91,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">logiBUS_AI_Calibrate_2P_IDA_OPC</text>
     
-    <text x="139.59375" y="66.0"
+    <text x="161.70000000000002" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -187,20 +187,20 @@
 
     <!-- Adapter Ports -->
 
-    <path d="M 267.6875 517.0
-            L 270.1875 517.0
-            L 270.1875 518.6666666666666
-            L 272.6875 518.6666666666666
-            L 272.6875 517.0
-            L 277.6875 517.0
-            L 277.6875 527.0
-            L 272.6875 527.0
-            L 272.6875 525.3333333333334
-            L 270.1875 525.3333333333334
-            L 270.1875 527.0
-            L 267.6875 527.0
+    <path d="M 311.90000000000003 517.0
+            L 314.40000000000003 517.0
+            L 314.40000000000003 518.6666666666666
+            L 316.90000000000003 518.6666666666666
+            L 316.90000000000003 517.0
+            L 321.90000000000003 517.0
+            L 321.90000000000003 527.0
+            L 316.90000000000003 527.0
+            L 316.90000000000003 525.3333333333334
+            L 314.40000000000003 525.3333333333334
+            L 314.40000000000003 527.0
+            L 311.90000000000003 527.0
             Z" fill="#845DAF"/>
-    <text x="264.6875" y="523.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="308.90000000000003" y="523.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CAL_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -275,7 +275,7 @@
     <text x="-25" y="497.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Erstinbetriebnahme-Standardwert HIGH_REF (INI_HIGH_REF.DEFAULT_VALUE), bevor der Bediener selbst kalibriert - z.B. 250.0 fuer Druck (0-250bar), 100.0 fuer Fuellband-Winkel (Prozent) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
 
-    <text x="304.1875" y="523.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="348.40000000000003" y="523.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Kalibrierter Wert, lokal (= CALIBRATE.Y) - fuer Weiterverarbeitung auf derselben Station ohne OPC-UA-Roundtrip</text>
   </g>
 </svg>

@@ -19,16 +19,18 @@ This subapp decouples the scaling logic (performed by `NumericValue_PHYS`) from 
 
 | Event   | Description                                                                 |
 |---------|-----------------------------------------------------------------------------|
+| `INITO` | Initialization confirm (EInit). Comes from `Q_NumericValue_PHYS.INITO`. |
 | `IND`   | Indicates that a storage or retrieval operation has been completed. This event is emitted after a successful `SET` or `GET` operation from the internal NVS block. |
 
 ### **Event Inputs**
 
-*None.*
+- **INIT** (EInit): Initialization request. Passed on to `Q_NumericValue_PHYS.INIT`.
 
 ### **Data Inputs**
 
 | Name     | Type                                                   | Description                                                                 |
 |----------|--------------------------------------------------------|-----------------------------------------------------------------------------|
+| `QI` | `BOOL` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue_PHYS.QI` |
 | `KEY`    | `STRING`                                               | The unique identifier (key name) under which the value is stored in NVS.    |
 | `stObj`  | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Scaling and formatting parameters (object ID, scaling factor, offset, decimals). Default: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`. |
 
@@ -36,6 +38,7 @@ This subapp decouples the scaling logic (performed by `NumericValue_PHYS`) from 
 
 | Name     | Type   | Description                                                    |
 |----------|--------|----------------------------------------------------------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue_PHYS.QO` |
 | `VALUEO` | `REAL` | The current value stored in NVS (read back after initialization or after a write operation). |
 
 ### **Adapters**
@@ -50,16 +53,21 @@ The subapp operates internally with three main components:
 
 2. **`NVS`** – A non‑volatile storage block that handles `SET`, `GET`, and `INIT` operations. It is initialized with `QI = TRUE` and a default value of `0.0`.
 
-3. **`Q_NumericValue_PHYS`** – A query block that reconstructs the physical value from the stored data, making it available for further processing.
+3. **`Q_NumericValue_PHYS`** – A query block that reconstructs the physical value from the stored data, making it available for further processing. It receives `INIT` and `QI` from outside; its `INITO` and `QO` are routed to the subapp outputs `INITO` and `QO`.
 
 **Data flow:**
 
 - The scaled physical value (`rPhys`) from `NumericValue_PHYS` is fed to the `VALUE` input of `NVS`.
 - The event `IND` from `NumericValue_PHYS` triggers the `SET` operation of `NVS`, storing the current value under `KEY`.
 - Upon successful `SETO` (or `GETO`), the subapp emits an `IND` event to inform the outside world.
-- During initialization (`INITO`), the NVS block performs a `GET` operation, retrieving the previously stored value. This value is then output via `VALUEO` and also passed to `Q_NumericValue_PHYS` for scaling/interpretation.
+- The subapp event `INIT` is forwarded to `Q_NumericValue_PHYS.INIT`, whose `INITO` is emitted as the subapp's `INITO`. `QI` is passed to `Q_NumericValue_PHYS.QI`, and its `QO` is output as the subapp's `QO`.
+- Independently, after the NVS block's initialization (`NVS.INITO`), it performs a `GET` operation, retrieving the previously stored value. This value is then output via `VALUEO` and also passed to `Q_NumericValue_PHYS` for scaling/interpretation.
 
 The subapp therefore keeps the stored value up‑to‑date whenever a new physical reading is available and also allows the stored value to be read back after a restart.
+
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue_PHYS.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue_PHYS.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
+
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed to `Q_NumericValue_PHYS.QI`, and the output `QO` (BOOL) comes from `Q_NumericValue_PHYS.QO`.
 
 ## Technical Features
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-1926.3 -151.0 5949.2 1261.0"
-     width="5949" height="1261">
+     viewBox="-1943.6 -151.0 6020.4 1261.0"
+     width="6020" height="1261">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,173 +40,183 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-1926.3" y="-151.0" width="5949.2" height="1261.0" fill="white"/>
-  <rect x="-1919.3" y="-144.0" width="5935.2" height="1247.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-1919.3" y="-144.0" width="5935.2" height="25.0" fill="white" stroke="none"/>
-  <line x1="-1919.3" y1="-119.5" x2="4015.9" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-1914.3" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Ein PWM-Kanal (0-100% Duty): VT-Zahlenfeld+Balkengrafik+6 Ramp-Tasten,
+  <rect x="-1943.6" y="-151.0" width="6020.4" height="1261.0" fill="white"/>
+  <rect x="-1936.6" y="-144.0" width="6006.4" height="1247.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-1936.6" y="-144.0" width="6006.4" height="25.0" fill="white" stroke="none"/>
+  <line x1="-1936.6" y1="-119.5" x2="4069.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-1931.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Ein PWM-Kanal (0-100% Duty): VT-Zahlenfeld+Balkengrafik+6 Ramp-Tasten,
 physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
   <g id="sidebars">
-    <rect x="-1919.3" y="-119.0" width="119.3" height="1222.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-1936.6" y="-119.0" width="136.6" height="1222.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-1800.0" y1="-119.0" x2="-1800.0" y2="1103.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="4048.4" y="-119.0" width="21.4" height="1222.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="4048.4" y1="-119.0" x2="4048.4" y2="1103.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="277.5,344.5 346.5,344.5 351.5,349.5 351.5,365.5 356.5,370.5 390.0,370.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="537.3,370.5 660.0,370.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="790.4,370.5 865.4,370.5 870.4,365.5 870.4,105.5 875.4,100.5 1065.0,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1159.0,100.5 1258.0,100.5 1263.0,95.5 1263.0,90.5 1268.0,85.5 1320.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1159.0,117.5 1231.0,117.5 1236.0,122.5 1236.0,605.5 1241.0,610.5 1260.0,610.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="190.2,625.5 1275.2,625.5 1280.2,630.5 1280.2,875.5 1285.2,880.5 2925.0,880.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3040.1,880.5 3047.3,880.5 3052.1,875.7 3052.1,690.5 3047.1,685.5 53.0,685.5 48.0,680.5 48.0,495.3 52.8,490.5 60.0,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="190.9,490.5 2034.9,490.5 2039.9,495.5 2039.9,590.5 2044.9,595.5 3900.0,595.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="4015.9,595.5 4023.1,595.5 4027.9,590.7 4027.9,495.5 4022.9,490.5 3893.0,490.5 3888.0,485.5 3888.0,390.3 3892.8,385.5 3900.0,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="432.8,640.5 564.2,640.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.0,640.5 780.0,640.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="931.9,640.5 956.9,640.5 961.9,635.5 961.9,570.5 966.9,565.5 1005.0,565.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1099.0,565.5 1291.0,565.5 1296.0,560.5 1296.0,107.5 1301.0,102.5 1320.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1099.0,582.5 1153.0,582.5 1158.0,587.5 1158.0,622.5 1163.0,627.5 1260.0,627.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1361.9,610.5 1515.0,610.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1590.4,610.5 1812.4,610.5 1817.4,615.5 1817.4,664.5 1822.4,669.5 1950.0,669.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1324.6,447.5 1417.6,447.5 1422.6,442.5 1422.6,285.5 1427.6,280.5 3090.0,280.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1324.6,447.5 1523.6,447.5 1528.6,442.5 1528.6,180.5 1533.6,175.5 3364.2,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3220.5,280.5 3380.5,280.5 3385.5,285.5 3385.5,590.5 3390.5,595.5 3648.5,595.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3220.5,280.5 3262.5,280.5 3267.5,275.5 3267.5,180.5 3272.5,175.5 3364.2,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3220.5,280.5 3540.5,280.5 3545.5,285.5 3545.5,380.5 3550.5,385.5 3649.7,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,567.5 2107.5,567.5 2112.5,562.5 2112.5,390.5 2117.5,385.5 2147.9,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2224.7,385.5 2370.0,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2653.8,385.5 2718.8,385.5 2723.8,390.5 2723.8,395.5 2728.8,400.5 2805.0,400.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,567.5 2107.5,567.5 2112.5,572.5 2112.5,650.5 2117.5,655.5 2130.0,655.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,567.5 2107.5,567.5 2112.5,572.5 2112.5,860.5 2117.5,865.5 2130.0,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2942.6,400.5 2996.6,400.5 3001.6,395.5 3001.6,302.5 3006.6,297.5 3090.0,297.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2260.4,655.5 2314.4,655.5 2319.4,660.5 2319.4,667.5 2324.4,672.5 2400.0,672.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2280.9,865.5 2382.1,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2524.9,865.5 2610.0,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2453.8,385.5 2583.4,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,550.5 1889.8,550.5 1892.6,547.7 1892.6,546.3 1889.8,543.5 1178.0,543.5 1173.0,538.5 1173.0,486.3 1177.8,481.5 1185.0,481.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,567.5 1950.0,567.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,584.5 1950.0,584.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,601.5 1950.0,601.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,618.5 1950.0,618.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,635.5 1950.0,635.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1880.6,652.5 1950.0,652.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="422.0,490.5 753.0,490.5 758.0,485.5 758.0,452.5 763.0,447.5 1185.0,447.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="422.0,507.5 794.0,507.5 799.0,502.5 799.0,469.5 804.0,464.5 1185.0,464.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="4015.9,385.5 4023.1,385.5 4027.9,390.3 4027.9,402.5 4022.9,407.5 1178.0,407.5 1173.0,412.5 1173.0,425.7 1177.8,430.5 1185.0,430.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-84.0 -1728.0,-84.0 -1723.0,-79.0 -1723.0,407.5 -1718.0,412.5 150.0,412.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-84.0 35.0,-84.0 40.0,-79.0 40.0,701.5 45.0,706.5 2400.0,706.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-50.0 -1565.0,-50.0 -1560.0,-45.0 -1560.0,204.5 -1555.0,209.5 3364.2,209.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1324.6,532.5 1575.6,532.5 1580.6,527.5 1580.6,336.5 1585.6,331.5 3090.0,331.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1324.6,532.5 1548.6,532.5 1553.6,527.5 1553.6,231.5 1558.6,226.5 3364.2,226.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3220.5,331.5 3297.5,331.5 3302.5,326.5 3302.5,248.5 3307.5,243.5 3364.2,243.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,86.0 35.0,86.0 40.0,91.0 40.0,377.5 45.0,382.5 3090.0,382.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="-1800.0,86.0 35.0,86.0 40.0,91.0 40.0,377.5 45.0,382.5 3090.0,382.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="-1800.0,103.0 -1648.0,103.0 -1643.0,108.0 -1643.0,688.5 -1638.0,693.5 60.0,693.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,120.0 35.0,120.0 40.0,125.0 40.0,943.5 45.0,948.5 2925.0,948.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,137.0 -1648.0,137.0 -1643.0,142.0 -1643.0,553.5 -1638.0,558.5 60.0,558.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,154.0 35.0,154.0 40.0,159.0 40.0,658.5 45.0,663.5 3900.0,663.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,171.0 35.0,171.0 40.0,176.0 40.0,448.5 45.0,453.5 3900.0,453.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1324.6,532.5 2506.6,532.5 2511.6,537.5 2511.6,624.5 2516.6,629.5 3648.5,629.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="3220.5,331.5 3416.5,331.5 3421.5,336.5 3421.5,414.5 3426.5,419.5 3649.7,419.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="277.5,412.5 348.3,412.5 351.5,409.3 351.5,407.7 354.7,404.5 390.0,404.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="537.3,404.5 660.0,404.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="790.4,404.5 1095.4,404.5 1100.4,409.5 1100.4,656.5 1105.4,661.5 1515.0,661.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="432.8,674.5 564.2,674.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.0,674.5 780.0,674.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="931.9,674.5 960.3,674.5 961.9,676.1 961.9,676.9 963.5,678.5 1515.0,678.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1388.4,136.5 1435.4,136.5 1440.4,141.5 1440.4,639.5 1445.4,644.5 1515.0,644.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1590.4,644.5 1763.4,644.5 1768.4,649.5 1768.4,698.5 1773.4,703.5 1950.0,703.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,703.5 2107.5,703.5 2112.5,698.5 2112.5,424.5 2117.5,419.5 2147.9,419.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2224.7,419.5 2370.0,419.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2653.8,419.5 2718.8,419.5 2723.8,424.5 2723.8,429.5 2728.8,434.5 2805.0,434.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,703.5 2107.5,703.5 2112.5,698.5 2112.5,694.5 2117.5,689.5 2130.0,689.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2082.5,703.5 2107.5,703.5 2112.5,708.5 2112.5,894.5 2117.5,899.5 2130.0,899.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2942.6,434.5 3014.6,434.5 3019.6,429.5 3019.6,370.5 3024.6,365.5 3090.0,365.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2260.4,689.5 2314.4,689.5 2319.4,694.5 2319.4,718.5 2324.4,723.5 2400.0,723.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2280.9,899.5 2382.1,899.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2524.9,899.5 2610.0,899.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="2453.8,419.5 2583.4,419.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-67.0 -1201.0,-67.0 -1196.0,-62.0 -1196.0,681.5 -1191.0,686.5 1695.0,686.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-16.0 -1201.0,-16.0 -1196.0,-11.0 -1196.0,698.5 -1191.0,703.5 1695.0,703.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,35.0 -1201.0,35.0 -1196.0,40.0 -1196.0,715.5 -1191.0,720.5 1695.0,720.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,52.0 -1201.0,52.0 -1196.0,57.0 -1196.0,732.5 -1191.0,737.5 1695.0,737.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,18.0 -1201.0,18.0 -1196.0,23.0 -1196.0,749.5 -1191.0,754.5 1695.0,754.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,1.0 -1201.0,1.0 -1196.0,6.0 -1196.0,766.5 -1191.0,771.5 1695.0,771.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,69.0 -1201.0,69.0 -1196.0,74.0 -1196.0,783.5 -1191.0,788.5 1695.0,788.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-1800.0,-33.0 -1066.0,-33.0 -1061.0,-28.0 -1061.0,527.5 -1056.0,532.5 1185.0,532.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="190.2,710.5 262.2,710.5 267.2,705.5 267.2,696.5 272.2,691.5 315.0,691.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="190.2,710.5 262.2,710.5 267.2,705.5 267.2,696.5 272.2,691.5 315.0,691.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="190.9,575.5 262.9,575.5 267.9,570.5 267.9,545.5 272.9,540.5 318.8,540.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="190.9,575.5 262.9,575.5 267.9,570.5 267.9,545.5 272.9,540.5 318.8,540.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="2727.8,916.5 2776.8,916.5 2781.8,921.5 2781.8,960.5 2786.8,965.5 2925.0,965.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="2727.8,916.5 2776.8,916.5 2781.8,921.5 2781.8,960.5 2786.8,965.5 2925.0,965.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="3767.9,646.5 3816.9,646.5 3821.9,651.5 3821.9,675.5 3826.9,680.5 3900.0,680.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="3767.9,646.5 3816.9,646.5 3821.9,651.5 3821.9,675.5 3826.9,680.5 3900.0,680.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="3769.1,436.5 3818.1,436.5 3823.1,441.5 3823.1,465.5 3828.1,470.5 3900.0,470.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="3769.1,436.5 3818.1,436.5 3823.1,441.5 3823.1,465.5 3828.1,470.5 3900.0,470.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="300.0,344.5 369.0,344.5 374.0,349.5 374.0,365.5 379.0,370.5 390.0,370.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="547.2,370.5 660.0,370.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="810.0,370.5 885.0,370.5 890.0,365.5 890.0,105.5 895.0,100.5 1065.0,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1171.8,100.5 1270.8,100.5 1275.8,95.5 1275.8,90.5 1280.8,85.5 1320.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1171.8,117.5 1243.8,117.5 1248.8,122.5 1248.8,606.0 1253.3,610.5 1260.0,610.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="202.8,625.5 1287.8,625.5 1292.8,630.5 1292.8,875.5 1297.8,880.5 2925.0,880.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3053.4,880.5 3060.6,880.5 3065.4,875.7 3065.4,690.5 3060.4,685.5 53.0,685.5 48.0,680.5 48.0,495.3 52.8,490.5 60.0,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="202.8,490.5 2046.8,490.5 2051.8,495.5 2051.8,590.5 2056.8,595.5 3900.0,595.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="4028.4,595.5 4035.6,595.5 4040.4,590.7 4040.4,495.5 4035.4,490.5 3893.0,490.5 3888.0,485.5 3888.0,390.3 3892.8,385.5 3900.0,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="443.4,640.5 568.4,640.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="725.6,640.5 780.0,640.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="937.2,640.5 962.2,640.5 967.2,635.5 967.2,570.5 972.2,565.5 1005.0,565.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1111.8,565.5 1303.8,565.5 1308.8,560.5 1308.8,107.0 1313.3,102.5 1320.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1111.8,582.5 1165.8,582.5 1170.8,587.5 1170.8,622.5 1175.8,627.5 1260.0,627.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1366.8,610.5 1515.0,610.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1593.0,610.5 1815.0,610.5 1820.0,615.5 1820.0,664.5 1825.0,669.5 1950.0,669.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1342.2,447.5 1435.2,447.5 1440.2,442.5 1440.2,285.5 1445.2,280.5 3090.0,280.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1342.2,447.5 1541.2,447.5 1546.2,442.5 1546.2,197.5 1551.2,192.5 3375.8,192.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3232.8,280.5 3392.8,280.5 3397.8,285.5 3397.8,590.5 3402.8,595.5 3651.2,595.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3232.8,280.5 3274.8,280.5 3279.8,275.5 3279.8,197.5 3284.8,192.5 3375.8,192.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3232.8,280.5 3552.8,280.5 3557.8,285.5 3557.8,380.5 3562.8,385.5 3651.2,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,567.5 2113.2,567.5 2118.2,562.5 2118.2,390.5 2123.2,385.5 2154.2,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2232.2,385.5 2370.0,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2667.2,385.5 2732.2,385.5 2737.2,390.5 2737.2,395.5 2742.2,400.5 2805.0,400.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,567.5 2113.2,567.5 2118.2,572.5 2118.2,650.8 2122.9,655.5 2130.0,655.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,567.5 2113.2,567.5 2118.2,572.5 2118.2,860.8 2122.9,865.5 2130.0,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2955.0,400.5 3009.0,400.5 3014.0,395.5 3014.0,302.5 3019.0,297.5 3090.0,297.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2280.0,655.5 2334.0,655.5 2339.0,660.5 2339.0,667.5 2344.0,672.5 2400.0,672.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2287.2,865.5 2383.4,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2540.6,865.5 2610.0,865.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2455.2,385.5 2589.2,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,550.5 1914.4,550.5 1917.2,547.7 1917.2,546.3 1914.4,543.5 1178.0,543.5 1173.0,538.5 1173.0,486.3 1177.8,481.5 1185.0,481.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,567.5 1950.0,567.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,584.5 1950.0,584.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,601.5 1950.0,601.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,618.5 1950.0,618.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,635.5 1950.0,635.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1905.2,652.5 1950.0,652.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="435.2,490.5 766.2,490.5 771.2,485.5 771.2,452.5 776.2,447.5 1185.0,447.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="435.2,507.5 807.2,507.5 812.2,502.5 812.2,469.5 817.2,464.5 1185.0,464.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="4028.4,385.5 4035.6,385.5 4040.4,390.3 4040.4,402.5 4035.4,407.5 1178.0,407.5 1173.0,412.5 1173.0,425.7 1177.8,430.5 1185.0,430.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-67.0 -1728.0,-67.0 -1723.0,-62.0 -1723.0,407.5 -1718.0,412.5 150.0,412.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,718.5 45.0,723.5 2400.0,723.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-33.0 -1565.0,-33.0 -1560.0,-28.0 -1560.0,238.5 -1555.0,243.5 3375.8,243.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1342.2,532.5 1593.2,532.5 1598.2,527.5 1598.2,336.5 1603.2,331.5 3090.0,331.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1342.2,532.5 1566.2,532.5 1571.2,527.5 1571.2,265.5 1576.2,260.5 3375.8,260.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3232.8,331.5 3309.8,331.5 3314.8,326.5 3314.8,282.5 3319.8,277.5 3375.8,277.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,103.0 35.0,103.0 40.0,108.0 40.0,377.5 45.0,382.5 3090.0,382.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="-1800.0,103.0 35.0,103.0 40.0,108.0 40.0,377.5 45.0,382.5 3090.0,382.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="-1800.0,120.0 -1648.0,120.0 -1643.0,125.0 -1643.0,688.5 -1638.0,693.5 60.0,693.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,137.0 35.0,137.0 40.0,142.0 40.0,943.5 45.0,948.5 2925.0,948.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,154.0 -1648.0,154.0 -1643.0,159.0 -1643.0,553.5 -1638.0,558.5 60.0,558.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,171.0 35.0,171.0 40.0,176.0 40.0,658.5 45.0,663.5 3900.0,663.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,188.0 35.0,188.0 40.0,193.0 40.0,448.5 45.0,453.5 3900.0,453.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1342.2,532.5 2524.2,532.5 2529.2,537.5 2529.2,624.5 2534.2,629.5 3651.2,629.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="3232.8,331.5 3428.8,331.5 3433.8,336.5 3433.8,414.5 3438.8,419.5 3651.2,419.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="300.0,412.5 370.8,412.5 374.0,409.3 374.0,407.7 377.2,404.5 390.0,404.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="547.2,404.5 660.0,404.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="810.0,404.5 1115.0,404.5 1120.0,409.5 1120.0,656.5 1125.0,661.5 1515.0,661.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="443.4,674.5 568.4,674.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="725.6,674.5 780.0,674.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="937.2,674.5 965.6,674.5 967.2,676.1 967.2,676.9 968.8,678.5 1515.0,678.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1390.8,136.5 1437.8,136.5 1442.8,141.5 1442.8,639.5 1447.8,644.5 1515.0,644.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1593.0,644.5 1766.0,644.5 1771.0,649.5 1771.0,698.5 1776.0,703.5 1950.0,703.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,703.5 2113.2,703.5 2118.2,698.5 2118.2,424.5 2123.2,419.5 2154.2,419.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2232.2,419.5 2370.0,419.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2667.2,419.5 2732.2,419.5 2737.2,424.5 2737.2,429.5 2742.2,434.5 2805.0,434.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,703.5 2113.2,703.5 2118.2,698.5 2118.2,694.2 2122.9,689.5 2130.0,689.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2088.2,703.5 2113.2,703.5 2118.2,708.5 2118.2,894.8 2122.9,899.5 2130.0,899.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2955.0,434.5 3027.0,434.5 3032.0,429.5 3032.0,370.5 3037.0,365.5 3090.0,365.5" fill="none" stroke="#82A3A9" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2280.0,689.5 2334.0,689.5 2339.0,694.5 2339.0,735.5 2344.0,740.5 2400.0,740.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2287.2,899.5 2383.4,899.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2540.6,899.5 2610.0,899.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2455.2,419.5 2589.2,419.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-50.0 -1201.0,-50.0 -1196.0,-45.0 -1196.0,681.5 -1191.0,686.5 1695.0,686.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,1.0 -1201.0,1.0 -1196.0,6.0 -1196.0,698.5 -1191.0,703.5 1695.0,703.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,52.0 -1201.0,52.0 -1196.0,57.0 -1196.0,715.5 -1191.0,720.5 1695.0,720.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,69.0 -1201.0,69.0 -1196.0,74.0 -1196.0,732.5 -1191.0,737.5 1695.0,737.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,35.0 -1201.0,35.0 -1196.0,40.0 -1196.0,749.5 -1191.0,754.5 1695.0,754.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,18.0 -1201.0,18.0 -1196.0,23.0 -1196.0,766.5 -1191.0,771.5 1695.0,771.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,86.0 -1201.0,86.0 -1196.0,91.0 -1196.0,783.5 -1191.0,788.5 1695.0,788.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-16.0 -1066.0,-16.0 -1061.0,-11.0 -1061.0,527.5 -1056.0,532.5 1185.0,532.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-1800.0,-84.0 295.0,-84.0 300.0,-79.0 300.0,701.5 305.0,706.5 2400.0,706.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="2581.4,706.5 3309.9,706.5 3314.9,701.5 3314.9,-79.0 3319.9,-84.0 4048.4,-84.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="202.8,710.5 274.8,710.5 279.8,705.5 279.8,696.5 284.8,691.5 315.0,691.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="202.8,710.5 274.8,710.5 279.8,705.5 279.8,696.5 284.8,691.5 315.0,691.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="202.8,575.5 274.8,575.5 279.8,570.5 279.8,545.5 284.8,540.5 321.2,540.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="202.8,575.5 274.8,575.5 279.8,570.5 279.8,545.5 284.8,540.5 321.2,540.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="2738.4,916.5 2787.4,916.5 2792.4,921.5 2792.4,960.5 2797.4,965.5 2925.0,965.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="2738.4,916.5 2787.4,916.5 2792.4,921.5 2792.4,960.5 2797.4,965.5 2925.0,965.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="3779.6,646.5 3828.6,646.5 3833.6,651.5 3833.6,675.5 3838.6,680.5 3900.0,680.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="3779.6,646.5 3828.6,646.5 3833.6,651.5 3833.6,675.5 3838.6,680.5 3900.0,680.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="3779.6,436.5 3828.6,436.5 3833.6,441.5 3833.6,465.5 3838.6,470.5 3900.0,470.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="3779.6,436.5 3828.6,436.5 3833.6,441.5 3833.6,465.5 3838.6,470.5 3900.0,470.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="-1805.0004999999999,-89.0 -1800.0004999999999,-84.0 -1805.0004999999999,-79.0" fill="#18519E"/>
+    <polygon points="-1805.0004999999999,-89.0 -1800.0004999999999,-84.0 -1805.0004999999999,-79.0" fill="#A3B08F"/>
     <text x="-1806.0004999999999" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_VALUEVAR</text>
+          fill="#000000" text-anchor="end">QI</text>
     <polygon points="-1805.0004999999999,-72.0 -1800.0004999999999,-67.0 -1805.0004999999999,-62.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_SWITCH</text>
+          fill="#000000" text-anchor="end">u16ObjId_VALUEVAR</text>
     <polygon points="-1805.0004999999999,-55.0 -1800.0004999999999,-50.0 -1805.0004999999999,-45.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_STATUS</text>
-    <polygon points="-1805.0004999999999,-38.0 -1800.0004999999999,-33.0 -1805.0004999999999,-28.0" fill="#A3B08F"/>
+          fill="#000000" text-anchor="end">u16ObjId_SWITCH</text>
+    <polygon points="-1805.0004999999999,-38.0 -1800.0004999999999,-33.0 -1805.0004999999999,-28.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">bDefaultEnabled</text>
-    <polygon points="-1805.0004999999999,-21.0 -1800.0004999999999,-16.0 -1805.0004999999999,-11.0" fill="#18519E"/>
+          fill="#000000" text-anchor="end">u16ObjId_STATUS</text>
+    <polygon points="-1805.0004999999999,-21.0 -1800.0004999999999,-16.0 -1805.0004999999999,-11.0" fill="#A3B08F"/>
     <text x="-1806.0004999999999" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_ZERO</text>
+          fill="#000000" text-anchor="end">bDefaultEnabled</text>
     <polygon points="-1805.0004999999999,-4.0 -1800.0004999999999,1.0 -1805.0004999999999,6.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="5.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_DOWN_FAST</text>
+          fill="#000000" text-anchor="end">u16ObjId_ZERO</text>
     <polygon points="-1805.0004999999999,13.0 -1800.0004999999999,18.0 -1805.0004999999999,23.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="22.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_DOWN_SLOW</text>
+          fill="#000000" text-anchor="end">u16ObjId_DOWN_FAST</text>
     <polygon points="-1805.0004999999999,30.0 -1800.0004999999999,35.0 -1805.0004999999999,40.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="39.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_UP_SLOW</text>
+          fill="#000000" text-anchor="end">u16ObjId_DOWN_SLOW</text>
     <polygon points="-1805.0004999999999,47.0 -1800.0004999999999,52.0 -1805.0004999999999,57.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="56.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_UP_FAST</text>
+          fill="#000000" text-anchor="end">u16ObjId_UP_SLOW</text>
     <polygon points="-1805.0004999999999,64.0 -1800.0004999999999,69.0 -1805.0004999999999,74.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="73.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">u16ObjId_FULL</text>
-    <polygon points="-1805.0004999999999,81.0 -1800.0004999999999,86.0 -1805.0004999999999,91.0" fill="#3366FF"/>
+          fill="#000000" text-anchor="end">u16ObjId_UP_FAST</text>
+    <polygon points="-1805.0004999999999,81.0 -1800.0004999999999,86.0 -1805.0004999999999,91.0" fill="#18519E"/>
     <text x="-1806.0004999999999" y="90.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">Output</text>
-    <polygon points="-1805.0004999999999,98.0 -1800.0004999999999,103.0 -1805.0004999999999,108.0" fill="#BD8663"/>
+          fill="#000000" text-anchor="end">u16ObjId_FULL</text>
+    <polygon points="-1805.0004999999999,98.0 -1800.0004999999999,103.0 -1805.0004999999999,108.0" fill="#3366FF"/>
     <text x="-1806.0004999999999" y="107.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">ID_READ</text>
+          fill="#000000" text-anchor="end">Output</text>
     <polygon points="-1805.0004999999999,115.0 -1800.0004999999999,120.0 -1805.0004999999999,125.0" fill="#BD8663"/>
     <text x="-1806.0004999999999" y="124.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">ID_WRITE</text>
+          fill="#000000" text-anchor="end">ID_READ</text>
     <polygon points="-1805.0004999999999,132.0 -1800.0004999999999,137.0 -1805.0004999999999,142.0" fill="#BD8663"/>
     <text x="-1806.0004999999999" y="141.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">ID_SWITCH_READ</text>
+          fill="#000000" text-anchor="end">ID_WRITE</text>
     <polygon points="-1805.0004999999999,149.0 -1800.0004999999999,154.0 -1805.0004999999999,159.0" fill="#BD8663"/>
     <text x="-1806.0004999999999" y="158.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">ID_SWITCH_WRITE</text>
+          fill="#000000" text-anchor="end">ID_SWITCH_READ</text>
     <polygon points="-1805.0004999999999,166.0 -1800.0004999999999,171.0 -1805.0004999999999,176.0" fill="#BD8663"/>
     <text x="-1806.0004999999999" y="175.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">ID_SWITCH_WRITE</text>
+    <polygon points="-1805.0004999999999,183.0 -1800.0004999999999,188.0 -1805.0004999999999,193.0" fill="#BD8663"/>
+    <text x="-1806.0004999999999" y="192.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">ID_STATUS_WRITE</text>
+    <polygon points="4053.4,-89.0 4048.4,-84.0 4053.4,-79.0" fill="#A3B08F"/>
+    <text x="4054.4" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
   </g>
   <g id="instances">
     <g id="fb_NumericValue_Duty" transform="translate(150.0, 300.0)">
       <path d="M 3 0
-            L 124.5 0
-            A 3 3 0 0 1 127.5 3
-            L 127.5 52
-            A 3 3 0 0 1 124.5 55
-            L 118.5 55
-            L 118.5 69
-            L 124.5 69
-            A 3 3 0 0 1 127.5 72
-            L 127.5 120
-            A 3 3 0 0 1 124.5 123
+            L 147.0 0
+            A 3 3 0 0 1 150.0 3
+            L 150.0 52
+            A 3 3 0 0 1 147.0 55
+            L 141.0 55
+            L 141.0 69
+            L 147.0 69
+            A 3 3 0 0 1 150.0 72
+            L 150.0 120
+            A 3 3 0 0 1 147.0 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 72
@@ -252,14 +262,14 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="122.5,5.5 127.5,10.5 122.5,15.5" fill="#63B31F"/>
-      <text x="121.5" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,5.5 150.0,10.5 145.0,15.5" fill="#63B31F"/>
+      <text x="144.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="122.5,22.5 127.5,27.5 122.5,32.5" fill="#63B31F"/>
-      <text x="121.5" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,22.5 150.0,27.5 145.0,32.5" fill="#63B31F"/>
+      <text x="144.0" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="122.5,39.5 127.5,44.5 122.5,49.5" fill="#63B31F"/>
-      <text x="121.5" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,39.5 150.0,44.5 145.0,49.5" fill="#63B31F"/>
+      <text x="144.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#A3B08F"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -270,34 +280,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,107.5 5,112.5 0,117.5" fill="#18519E"/>
       <text x="6" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u16ObjId</text>
-      <polygon points="122.5,73.5 127.5,78.5 122.5,83.5" fill="#A3B08F"/>
-      <text x="121.5" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,73.5 150.0,78.5 145.0,83.5" fill="#A3B08F"/>
+      <text x="144.0" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="122.5,90.5 127.5,95.5 122.5,100.5" fill="#BD8663"/>
-      <text x="121.5" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,90.5 150.0,95.5 145.0,100.5" fill="#BD8663"/>
+      <text x="144.0" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="122.5,107.5 127.5,112.5 122.5,117.5" fill="#82A3A9"/>
-      <text x="121.5" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,107.5 150.0,112.5 145.0,117.5" fill="#82A3A9"/>
+      <text x="144.0" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IN</text>
       <text x="-3" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
 
       <!-- Instance Name -->
-      <text x="63.75" y="-5"
+      <text x="75.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">NumericValue_Duty</text>
     </g>
     <g id="fb_F_DWORD_TO_UDINT_VT" transform="translate(390.0, 360.0)">
       <path d="M 3 0
-            L 144.3125 0
-            A 3 3 0 0 1 147.3125 3
-            L 147.3125 18
-            A 3 3 0 0 1 144.3125 21
-            L 138.3125 21
-            L 138.3125 35
-            L 144.3125 35
-            A 3 3 0 0 1 147.3125 38
-            L 147.3125 52
-            A 3 3 0 0 1 144.3125 55
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 18
+            A 3 3 0 0 1 154.2 21
+            L 148.2 21
+            L 148.2 35
+            L 154.2 35
+            A 3 3 0 0 1 157.2 38
+            L 157.2 52
+            A 3 3 0 0 1 154.2 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -340,34 +350,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="142.3125,5.5 147.3125,10.5 142.3125,15.5" fill="#63B31F"/>
-      <text x="141.3125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#82A3A9"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="142.3125,39.5 147.3125,44.5 142.3125,49.5" fill="#18519E"/>
-      <text x="141.3125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,39.5 157.2,44.5 152.2,49.5" fill="#18519E"/>
+      <text x="151.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="73.65625" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_DWORD_TO_UDINT_VT</text>
     </g>
     <g id="fb_F_UDINT_TO_DINT_VT" transform="translate(660.0, 360.0)">
       <path d="M 3 0
-            L 127.4375 0
-            A 3 3 0 0 1 130.4375 3
-            L 130.4375 18
-            A 3 3 0 0 1 127.4375 21
-            L 121.4375 21
-            L 121.4375 35
-            L 127.4375 35
-            A 3 3 0 0 1 130.4375 38
-            L 130.4375 52
-            A 3 3 0 0 1 127.4375 55
+            L 147.0 0
+            A 3 3 0 0 1 150.0 3
+            L 150.0 18
+            A 3 3 0 0 1 147.0 21
+            L 141.0 21
+            L 141.0 35
+            L 147.0 35
+            A 3 3 0 0 1 150.0 38
+            L 150.0 52
+            A 3 3 0 0 1 147.0 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -410,34 +420,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="125.4375,5.5 130.4375,10.5 125.4375,15.5" fill="#63B31F"/>
-      <text x="124.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,5.5 150.0,10.5 145.0,15.5" fill="#63B31F"/>
+      <text x="144.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="125.4375,39.5 130.4375,44.5 125.4375,49.5" fill="#18519E"/>
-      <text x="124.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,39.5 150.0,44.5 145.0,49.5" fill="#18519E"/>
+      <text x="144.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="65.21875" y="-5"
+      <text x="75.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_UDINT_TO_DINT_VT</text>
     </g>
     <g id="fb_AR_SUBSCRIBE_1" transform="translate(60.0, 615.0)">
       <path d="M 3 0
-            L 127.1875 0
-            A 3 3 0 0 1 130.1875 3
-            L 130.1875 35
-            A 3 3 0 0 1 127.1875 38
-            L 121.1875 38
-            L 121.1875 52
-            L 127.1875 52
-            A 3 3 0 0 1 130.1875 55
-            L 130.1875 103
-            A 3 3 0 0 1 127.1875 106
+            L 139.8 0
+            A 3 3 0 0 1 142.8 3
+            L 142.8 35
+            A 3 3 0 0 1 139.8 38
+            L 133.8 38
+            L 133.8 52
+            L 139.8 52
+            A 3 3 0 0 1 142.8 55
+            L 142.8 103
+            A 3 3 0 0 1 139.8 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -452,29 +462,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 13.000000000000007 37.0
+            L 27.000000000000007 37.0
+            A 1 1 0 0 1 28.000000000000007 38.0
+            L 28.000000000000007 41.0
+            L 26.500000000000007 41.0
+            L 26.500000000000007 43.666666666666664
+            L 28.000000000000007 43.666666666666664
+            L 28.000000000000007 52.0
+            A 1 1 0 0 1 27.000000000000007 53.0
+            L 13.000000000000007 53.0
+            A 1 1 0 0 1 12.000000000000007 52.0
+            L 12.000000000000007 43.666666666666664
+            L 13.500000000000007 43.666666666666664
+            L 13.500000000000007 41.0
+            L 12.000000000000007 41.0
+            L 12.000000000000007 38.0
+            A 1 1 0 0 1 13.000000000000007 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="20.000000000000007" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="49.0"
+      <text x="30.000000000000007" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_SUBSCRIBE_1</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -483,11 +493,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">RSP</text>
-      <polygon points="125.1875,5.5 130.1875,10.5 125.1875,15.5" fill="#63B31F"/>
-      <text x="124.1875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,5.5 142.8,10.5 137.8,15.5" fill="#63B31F"/>
+      <text x="136.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="125.1875,22.5 130.1875,27.5 125.1875,32.5" fill="#63B31F"/>
-      <text x="124.1875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,22.5 142.8,27.5 137.8,32.5" fill="#63B31F"/>
+      <text x="136.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -495,45 +505,45 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="125.1875,56.5 130.1875,61.5 125.1875,66.5" fill="#A3B08F"/>
-      <text x="124.1875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,56.5 142.8,61.5 137.8,66.5" fill="#A3B08F"/>
+      <text x="136.8" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="125.1875,73.5 130.1875,78.5 125.1875,83.5" fill="#BD8663"/>
-      <text x="124.1875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,73.5 142.8,78.5 137.8,83.5" fill="#BD8663"/>
+      <text x="136.8" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
-      <path d="M 120.1875 90.5
-            L 122.6875 90.5
-            L 122.6875 92.16666666666667
-            L 125.1875 92.16666666666667
-            L 125.1875 90.5
-            L 130.1875 90.5
-            L 130.1875 100.5
-            L 125.1875 100.5
-            L 125.1875 98.83333333333333
-            L 122.6875 98.83333333333333
-            L 122.6875 100.5
-            L 120.1875 100.5
+      <path d="M 132.8 90.5
+            L 135.3 90.5
+            L 135.3 92.16666666666667
+            L 137.8 92.16666666666667
+            L 137.8 90.5
+            L 142.8 90.5
+            L 142.8 100.5
+            L 137.8 100.5
+            L 137.8 98.83333333333333
+            L 135.3 98.83333333333333
+            L 135.3 100.5
+            L 132.8 100.5
             Z" fill="#845DAF"/>
-      <text x="117.1875" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="129.8" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <!-- Instance Name -->
-      <text x="65.09375" y="-5"
+      <text x="71.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_SUBSCRIBE_1</text>
     </g>
     <g id="fb_AR_R_TO_REAL_SUB" transform="translate(315.0, 630.0)">
       <path d="M 3 0
-            L 114.8125 0
-            A 3 3 0 0 1 117.8125 3
-            L 117.8125 18
-            A 3 3 0 0 1 114.8125 21
-            L 108.8125 21
-            L 108.8125 35
-            L 114.8125 35
-            A 3 3 0 0 1 117.8125 38
-            L 117.8125 69
-            A 3 3 0 0 1 114.8125 72
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 18
+            A 3 3 0 0 1 125.39999999999998 21
+            L 119.39999999999998 21
+            L 119.39999999999998 35
+            L 125.39999999999998 35
+            A 3 3 0 0 1 128.39999999999998 38
+            L 128.39999999999998 69
+            A 3 3 0 0 1 125.39999999999998 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -548,36 +558,36 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 12.999999999999993 20.0
+            L 26.999999999999993 20.0
+            A 1 1 0 0 1 27.999999999999993 21.0
+            L 27.999999999999993 24.0
+            L 26.499999999999993 24.0
+            L 26.499999999999993 26.666666666666668
+            L 27.999999999999993 26.666666666666668
+            L 27.999999999999993 35.0
+            A 1 1 0 0 1 26.999999999999993 36.0
+            L 12.999999999999993 36.0
+            A 1 1 0 0 1 11.999999999999993 35.0
+            L 11.999999999999993 26.666666666666668
+            L 13.499999999999993 26.666666666666668
+            L 13.499999999999993 24.0
+            L 11.999999999999993 24.0
+            L 11.999999999999993 21.0
+            A 1 1 0 0 1 12.999999999999993 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="19.999999999999993" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="32.0"
+      <text x="29.999999999999993" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_R_TO_REAL</text>
-      <polygon points="112.8125,5.5 117.8125,10.5 112.8125,15.5" fill="#63B31F"/>
-      <text x="111.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,5.5 128.39999999999998,10.5 123.39999999999998,15.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="112.8125,39.5 117.8125,44.5 112.8125,49.5" fill="#DBB418"/>
-      <text x="111.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,39.5 128.39999999999998,44.5 123.39999999999998,49.5" fill="#DBB418"/>
+      <text x="122.39999999999998" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IN</text>
 
       <path d="M 0 56.5
@@ -596,22 +606,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="13" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_IN</text>
       <!-- Instance Name -->
-      <text x="58.90625" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_R_TO_REAL_SUB</text>
     </g>
-    <g id="fb_F_PERCENT_TO_FRACTION_SUB" transform="translate(564.2, 630.0)">
+    <g id="fb_F_PERCENT_TO_FRACTION_SUB" transform="translate(568.4, 630.0)">
       <path d="M 3 0
-            L 145.8125 0
-            A 3 3 0 0 1 148.8125 3
-            L 148.8125 18
-            A 3 3 0 0 1 145.8125 21
-            L 139.8125 21
-            L 139.8125 35
-            L 145.8125 35
-            A 3 3 0 0 1 148.8125 38
-            L 148.8125 52
-            A 3 3 0 0 1 145.8125 55
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 18
+            A 3 3 0 0 1 154.2 21
+            L 148.2 21
+            L 148.2 35
+            L 154.2 35
+            A 3 3 0 0 1 157.2 38
+            L 157.2 52
+            A 3 3 0 0 1 154.2 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -654,34 +664,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="143.8125,5.5 148.8125,10.5 143.8125,15.5" fill="#63B31F"/>
-      <text x="142.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#DBB418"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">rPercent</text>
-      <polygon points="143.8125,39.5 148.8125,44.5 143.8125,49.5" fill="#DBB418"/>
-      <text x="142.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,39.5 157.2,44.5 152.2,49.5" fill="#DBB418"/>
+      <text x="151.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">rFraction</text>
 
 
       <!-- Instance Name -->
-      <text x="74.40625" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_PERCENT_TO_FRACTION_SUB</text>
     </g>
     <g id="fb_RampLimitFS" transform="translate(1950.0, 540.0)">
       <path d="M 3 0
-            L 129.5 0
-            A 3 3 0 0 1 132.5 3
-            L 132.5 137
-            A 3 3 0 0 1 129.5 140
-            L 123.5 140
-            L 123.5 154
-            L 129.5 154
-            A 3 3 0 0 1 132.5 157
-            L 132.5 239
-            A 3 3 0 0 1 129.5 242
+            L 135.2 0
+            A 3 3 0 0 1 138.2 3
+            L 138.2 137
+            A 3 3 0 0 1 135.2 140
+            L 129.2 140
+            L 129.2 154
+            L 135.2 154
+            A 3 3 0 0 1 138.2 157
+            L 138.2 239
+            A 3 3 0 0 1 135.2 242
             L 3 242
             A 3 3 0 0 1 0 239
             L 0 157
@@ -696,29 +706,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 22.4375 139.0
-            L 36.4375 139.0
-            A 1 1 0 0 1 37.4375 140.0
-            L 37.4375 143.0
-            L 35.9375 143.0
-            L 35.9375 145.66666666666666
-            L 37.4375 145.66666666666666
-            L 37.4375 154.0
-            A 1 1 0 0 1 36.4375 155.0
-            L 22.4375 155.0
-            A 1 1 0 0 1 21.4375 154.0
-            L 21.4375 145.66666666666666
-            L 22.9375 145.66666666666666
-            L 22.9375 143.0
-            L 21.4375 143.0
-            L 21.4375 140.0
-            A 1 1 0 0 1 22.4375 139.0
+      <path d="M 21.499999999999993 139.0
+            L 35.49999999999999 139.0
+            A 1 1 0 0 1 36.49999999999999 140.0
+            L 36.49999999999999 143.0
+            L 34.99999999999999 143.0
+            L 34.99999999999999 145.66666666666666
+            L 36.49999999999999 145.66666666666666
+            L 36.49999999999999 154.0
+            A 1 1 0 0 1 35.49999999999999 155.0
+            L 21.499999999999993 155.0
+            A 1 1 0 0 1 20.499999999999993 154.0
+            L 20.499999999999993 145.66666666666666
+            L 21.999999999999993 145.66666666666666
+            L 21.999999999999993 143.0
+            L 20.499999999999993 143.0
+            L 20.499999999999993 140.0
+            A 1 1 0 0 1 21.499999999999993 139.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="29.4375" y="151.0"
+      <text x="28.499999999999993" y="151.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">B</text>
-      <text x="39.4375" y="151.0"
+      <text x="38.49999999999999" y="151.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">RampLimitFS</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -745,11 +755,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,124.5 5,129.5 0,134.5" fill="#63B31F"/>
       <text x="6" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">LOAD</text>
-      <polygon points="127.5,5.5 132.5,10.5 127.5,15.5" fill="#63B31F"/>
-      <text x="126.5" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
+      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="127.5,22.5 132.5,27.5 127.5,32.5" fill="#63B31F"/>
-      <text x="126.5" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="133.2,22.5 138.2,27.5 133.2,32.5" fill="#63B31F"/>
+      <text x="132.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,158.5 5,163.5 0,168.5" fill="#18519E"/>
       <text x="6" y="167.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -766,14 +776,14 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,226.5 5,231.5 0,236.5" fill="#18519E"/>
       <text x="6" y="235.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">VAL_FULL</text>
-      <polygon points="127.5,158.5 132.5,163.5 127.5,168.5" fill="#18519E"/>
-      <text x="126.5" y="167.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="133.2,158.5 138.2,163.5 133.2,168.5" fill="#18519E"/>
+      <text x="132.2" y="167.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
-      <polygon points="127.5,175.5 132.5,180.5 127.5,185.5" fill="#A3B08F"/>
-      <text x="126.5" y="184.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="133.2,175.5 138.2,180.5 133.2,185.5" fill="#A3B08F"/>
+      <text x="132.2" y="184.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">qAtZero</text>
-      <polygon points="127.5,192.5 132.5,197.5 127.5,202.5" fill="#A3B08F"/>
-      <text x="126.5" y="201.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="133.2,192.5 138.2,197.5 133.2,202.5" fill="#A3B08F"/>
+      <text x="132.2" y="201.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">qAtFull</text>
       <text x="-3" y="184.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">DINT#0</text>
       <text x="-3" y="201.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">DINT#643</text>
@@ -781,22 +791,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="-3" y="235.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">DINT#64255</text>
 
       <!-- Instance Name -->
-      <text x="66.25" y="-5"
+      <text x="69.1" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">RampLimitFS</text>
     </g>
-    <g id="fb_F_MUL_TO_PWM13BIT" transform="translate(2147.9, 375.0)">
+    <g id="fb_F_MUL_TO_PWM13BIT" transform="translate(2154.2, 375.0)">
       <path d="M 3 0
-            L 73.75 0
-            A 3 3 0 0 1 76.75 3
-            L 76.75 18
-            A 3 3 0 0 1 73.75 21
-            L 67.75 21
-            L 67.75 35
-            L 73.75 35
-            A 3 3 0 0 1 76.75 38
-            L 76.75 69
-            A 3 3 0 0 1 73.75 72
+            L 75.0 0
+            A 3 3 0 0 1 78.0 3
+            L 78.0 18
+            A 3 3 0 0 1 75.0 21
+            L 69.0 21
+            L 69.0 35
+            L 75.0 35
+            A 3 3 0 0 1 78.0 38
+            L 78.0 69
+            A 3 3 0 0 1 75.0 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -839,8 +849,8 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="71.75,5.5 76.75,10.5 71.75,15.5" fill="#63B31F"/>
-      <text x="70.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,5.5 78.0,10.5 73.0,15.5" fill="#63B31F"/>
+      <text x="72.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -848,28 +858,28 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN2</text>
-      <polygon points="71.75,39.5 76.75,44.5 71.75,49.5" fill="#18519E"/>
-      <text x="70.75" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,39.5 78.0,44.5 73.0,49.5" fill="#18519E"/>
+      <text x="72.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">DINT#8191</text>
 
       <!-- Instance Name -->
-      <text x="38.375" y="-5"
+      <text x="39.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_MUL_TO_PWM13BIT</text>
     </g>
-    <g id="fb_F_DIV_TO_PWM13BIT" transform="translate(2583.4, 375.0)">
+    <g id="fb_F_DIV_TO_PWM13BIT" transform="translate(2589.2, 375.0)">
       <path d="M 3 0
-            L 67.4375 0
-            A 3 3 0 0 1 70.4375 3
-            L 70.4375 18
-            A 3 3 0 0 1 67.4375 21
-            L 61.4375 21
-            L 61.4375 35
-            L 67.4375 35
-            A 3 3 0 0 1 70.4375 38
-            L 70.4375 69
-            A 3 3 0 0 1 67.4375 72
+            L 75.0 0
+            A 3 3 0 0 1 78.0 3
+            L 78.0 18
+            A 3 3 0 0 1 75.0 21
+            L 69.0 21
+            L 69.0 35
+            L 75.0 35
+            A 3 3 0 0 1 78.0 38
+            L 78.0 69
+            A 3 3 0 0 1 75.0 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -912,8 +922,8 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="65.4375,5.5 70.4375,10.5 65.4375,15.5" fill="#63B31F"/>
-      <text x="64.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,5.5 78.0,10.5 73.0,15.5" fill="#63B31F"/>
+      <text x="72.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -921,28 +931,28 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN2</text>
-      <polygon points="65.4375,39.5 70.4375,44.5 65.4375,49.5" fill="#18519E"/>
-      <text x="64.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,39.5 78.0,44.5 73.0,49.5" fill="#18519E"/>
+      <text x="72.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">DINT#64255</text>
 
       <!-- Instance Name -->
-      <text x="35.21875" y="-5"
+      <text x="39.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_DIV_TO_PWM13BIT</text>
     </g>
     <g id="fb_F_DINT_TO_DWORD_OUT" transform="translate(2805.0, 390.0)">
       <path d="M 3 0
-            L 134.5625 0
-            A 3 3 0 0 1 137.5625 3
-            L 137.5625 18
-            A 3 3 0 0 1 134.5625 21
-            L 128.5625 21
-            L 128.5625 35
-            L 134.5625 35
-            A 3 3 0 0 1 137.5625 38
-            L 137.5625 52
-            A 3 3 0 0 1 134.5625 55
+            L 147.0 0
+            A 3 3 0 0 1 150.0 3
+            L 150.0 18
+            A 3 3 0 0 1 147.0 21
+            L 141.0 21
+            L 141.0 35
+            L 147.0 35
+            A 3 3 0 0 1 150.0 38
+            L 150.0 52
+            A 3 3 0 0 1 147.0 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -985,34 +995,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="132.5625,5.5 137.5625,10.5 132.5625,15.5" fill="#63B31F"/>
-      <text x="131.5625" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,5.5 150.0,10.5 145.0,15.5" fill="#63B31F"/>
+      <text x="144.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="132.5625,39.5 137.5625,44.5 132.5625,49.5" fill="#82A3A9"/>
-      <text x="131.5625" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,39.5 150.0,44.5 145.0,49.5" fill="#82A3A9"/>
+      <text x="144.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="68.78125" y="-5"
+      <text x="75.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_DINT_TO_DWORD_OUT</text>
     </g>
     <g id="fb_logiBUS_QD_PWM" transform="translate(3090.0, 270.0)">
       <path d="M 3 0
-            L 127.5 0
-            A 3 3 0 0 1 130.5 3
-            L 130.5 35
-            A 3 3 0 0 1 127.5 38
-            L 121.5 38
-            L 121.5 52
-            L 127.5 52
-            A 3 3 0 0 1 130.5 55
-            L 130.5 120
-            A 3 3 0 0 1 127.5 123
+            L 139.8 0
+            A 3 3 0 0 1 142.8 3
+            L 142.8 35
+            A 3 3 0 0 1 139.8 38
+            L 133.8 38
+            L 133.8 52
+            L 139.8 52
+            A 3 3 0 0 1 142.8 55
+            L 142.8 120
+            A 3 3 0 0 1 139.8 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -1027,29 +1037,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 13.000000000000007 37.0
+            L 27.000000000000007 37.0
+            A 1 1 0 0 1 28.000000000000007 38.0
+            L 28.000000000000007 41.0
+            L 26.500000000000007 41.0
+            L 26.500000000000007 43.666666666666664
+            L 28.000000000000007 43.666666666666664
+            L 28.000000000000007 52.0
+            A 1 1 0 0 1 27.000000000000007 53.0
+            L 13.000000000000007 53.0
+            A 1 1 0 0 1 12.000000000000007 52.0
+            L 12.000000000000007 43.666666666666664
+            L 13.500000000000007 43.666666666666664
+            L 13.500000000000007 41.0
+            L 12.000000000000007 41.0
+            L 12.000000000000007 38.0
+            A 1 1 0 0 1 13.000000000000007 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="20.000000000000007" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="30.0" y="49.0"
+      <text x="30.000000000000007" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">logiBUS_QD_PWM</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -1058,11 +1068,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="125.5,5.5 130.5,10.5 125.5,15.5" fill="#63B31F"/>
-      <text x="124.5" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,5.5 142.8,10.5 137.8,15.5" fill="#63B31F"/>
+      <text x="136.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="125.5,22.5 130.5,27.5 125.5,32.5" fill="#63B31F"/>
-      <text x="124.5" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,22.5 142.8,27.5 137.8,32.5" fill="#63B31F"/>
+      <text x="136.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -1076,31 +1086,31 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,107.5 5,112.5 0,117.5" fill="#3366FF"/>
       <text x="6" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Output</text>
-      <polygon points="125.5,56.5 130.5,61.5 125.5,66.5" fill="#A3B08F"/>
-      <text x="124.5" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,56.5 142.8,61.5 137.8,66.5" fill="#A3B08F"/>
+      <text x="136.8" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="125.5,73.5 130.5,78.5 125.5,83.5" fill="#BD8663"/>
-      <text x="124.5" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,73.5 142.8,78.5 137.8,83.5" fill="#BD8663"/>
+      <text x="136.8" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
 
 
       <!-- Instance Name -->
-      <text x="65.25" y="-5"
+      <text x="71.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">logiBUS_QD_PWM</text>
     </g>
     <g id="fb_F_DINT_TO_UDINT_DISP" transform="translate(2130.0, 645.0)">
       <path d="M 3 0
-            L 127.4375 0
-            A 3 3 0 0 1 130.4375 3
-            L 130.4375 18
-            A 3 3 0 0 1 127.4375 21
-            L 121.4375 21
-            L 121.4375 35
-            L 127.4375 35
-            A 3 3 0 0 1 130.4375 38
-            L 130.4375 52
-            A 3 3 0 0 1 127.4375 55
+            L 147.0 0
+            A 3 3 0 0 1 150.0 3
+            L 150.0 18
+            A 3 3 0 0 1 147.0 21
+            L 141.0 21
+            L 141.0 35
+            L 147.0 35
+            A 3 3 0 0 1 150.0 38
+            L 150.0 52
+            A 3 3 0 0 1 147.0 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -1143,36 +1153,36 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="125.4375,5.5 130.4375,10.5 125.4375,15.5" fill="#63B31F"/>
-      <text x="124.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,5.5 150.0,10.5 145.0,15.5" fill="#63B31F"/>
+      <text x="144.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="125.4375,39.5 130.4375,44.5 125.4375,49.5" fill="#18519E"/>
-      <text x="124.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="145.0,39.5 150.0,44.5 145.0,49.5" fill="#18519E"/>
+      <text x="144.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="65.21875" y="-5"
+      <text x="75.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_DINT_TO_UDINT_DISP</text>
     </g>
     <g id="fb_Q_NumericValue" transform="translate(2400.0, 645.0)">
       <path d="M 3 0
-            L 152.875 0
-            A 3 3 0 0 1 155.875 3
-            L 155.875 35
-            A 3 3 0 0 1 152.875 38
-            L 146.875 38
-            L 146.875 52
-            L 152.875 52
-            A 3 3 0 0 1 155.875 55
-            L 155.875 103
-            A 3 3 0 0 1 152.875 106
-            L 3 106
-            A 3 3 0 0 1 0 103
+            L 178.4 0
+            A 3 3 0 0 1 181.4 3
+            L 181.4 35
+            A 3 3 0 0 1 178.4 38
+            L 172.4 38
+            L 172.4 52
+            L 178.4 52
+            A 3 3 0 0 1 181.4 55
+            L 181.4 120
+            A 3 3 0 0 1 178.4 123
+            L 3 123
+            A 3 3 0 0 1 0 120
             L 0 55
             A 3 3 0 0 1 3 52
             L 9 52
@@ -1185,29 +1195,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 28.75 37.0
-            L 42.75 37.0
-            A 1 1 0 0 1 43.75 38.0
-            L 43.75 41.0
-            L 42.25 41.0
-            L 42.25 43.666666666666664
-            L 43.75 43.666666666666664
-            L 43.75 52.0
-            A 1 1 0 0 1 42.75 53.0
-            L 28.75 53.0
-            A 1 1 0 0 1 27.75 52.0
-            L 27.75 43.666666666666664
-            L 29.25 43.666666666666664
-            L 29.25 41.0
-            L 27.75 41.0
-            L 27.75 38.0
-            A 1 1 0 0 1 28.75 37.0
+      <path d="M 32.300000000000004 37.0
+            L 46.300000000000004 37.0
+            A 1 1 0 0 1 47.300000000000004 38.0
+            L 47.300000000000004 41.0
+            L 45.800000000000004 41.0
+            L 45.800000000000004 43.666666666666664
+            L 47.300000000000004 43.666666666666664
+            L 47.300000000000004 52.0
+            A 1 1 0 0 1 46.300000000000004 53.0
+            L 32.300000000000004 53.0
+            A 1 1 0 0 1 31.300000000000004 52.0
+            L 31.300000000000004 43.666666666666664
+            L 32.800000000000004 43.666666666666664
+            L 32.800000000000004 41.0
+            L 31.300000000000004 41.0
+            L 31.300000000000004 38.0
+            A 1 1 0 0 1 32.300000000000004 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="35.75" y="49.0"
+      <text x="39.300000000000004" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="45.75" y="49.0"
+      <text x="49.300000000000004" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_NumericValue</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -1216,46 +1226,52 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="150.875,5.5 155.875,10.5 150.875,15.5" fill="#63B31F"/>
-      <text x="149.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="176.4,5.5 181.4,10.5 176.4,15.5" fill="#63B31F"/>
+      <text x="175.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="150.875,22.5 155.875,27.5 150.875,32.5" fill="#63B31F"/>
-      <text x="149.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="176.4,22.5 181.4,27.5 176.4,32.5" fill="#63B31F"/>
+      <text x="175.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000">u16ObjId</text>
+            fill="#000000">QI</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#18519E"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">u16ObjId</text>
+      <polygon points="0,90.5 5,95.5 0,100.5" fill="#18519E"/>
+      <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <polygon points="150.875,56.5 155.875,61.5 150.875,66.5" fill="#BD8663"/>
-      <text x="149.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="176.4,56.5 181.4,61.5 176.4,66.5" fill="#A3B08F"/>
+      <text x="175.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">QO</text>
+      <polygon points="176.4,73.5 181.4,78.5 176.4,83.5" fill="#BD8663"/>
+      <text x="175.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="150.875,73.5 155.875,78.5 150.875,83.5" fill="#18519E"/>
-      <text x="149.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="176.4,90.5 181.4,95.5 176.4,100.5" fill="#18519E"/>
+      <text x="175.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
-      <polygon points="150.875,90.5 155.875,95.5 150.875,100.5" fill="#18519E"/>
-      <text x="149.875" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="176.4,107.5 181.4,112.5 176.4,117.5" fill="#18519E"/>
+      <text x="175.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
 
       <!-- Instance Name -->
-      <text x="77.9375" y="-5"
+      <text x="90.7" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue</text>
     </g>
-    <g id="fb_F_FRACTION_TO_PERCENT_PUB" transform="translate(2382.1, 855.0)">
+    <g id="fb_F_FRACTION_TO_PERCENT_PUB" transform="translate(2383.4, 855.0)">
       <path d="M 3 0
-            L 139.8125 0
-            A 3 3 0 0 1 142.8125 3
-            L 142.8125 18
-            A 3 3 0 0 1 139.8125 21
-            L 133.8125 21
-            L 133.8125 35
-            L 139.8125 35
-            A 3 3 0 0 1 142.8125 38
-            L 142.8125 52
-            A 3 3 0 0 1 139.8125 55
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 18
+            A 3 3 0 0 1 154.2 21
+            L 148.2 21
+            L 148.2 35
+            L 154.2 35
+            A 3 3 0 0 1 157.2 38
+            L 157.2 52
+            A 3 3 0 0 1 154.2 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -1298,34 +1314,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="137.8125,5.5 142.8125,10.5 137.8125,15.5" fill="#63B31F"/>
-      <text x="136.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#DBB418"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">rFraction</text>
-      <polygon points="137.8125,39.5 142.8125,44.5 137.8125,49.5" fill="#DBB418"/>
-      <text x="136.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,39.5 157.2,44.5 152.2,49.5" fill="#DBB418"/>
+      <text x="151.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">rPercent</text>
 
 
       <!-- Instance Name -->
-      <text x="71.40625" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_FRACTION_TO_PERCENT_PUB</text>
     </g>
     <g id="fb_AR_REAL_TO_R_PUB" transform="translate(2610.0, 855.0)">
       <path d="M 3 0
-            L 114.8125 0
-            A 3 3 0 0 1 117.8125 3
-            L 117.8125 18
-            A 3 3 0 0 1 114.8125 21
-            L 108.8125 21
-            L 108.8125 35
-            L 114.8125 35
-            A 3 3 0 0 1 117.8125 38
-            L 117.8125 69
-            A 3 3 0 0 1 114.8125 72
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 18
+            A 3 3 0 0 1 125.39999999999998 21
+            L 119.39999999999998 21
+            L 119.39999999999998 35
+            L 125.39999999999998 35
+            A 3 3 0 0 1 128.39999999999998 38
+            L 128.39999999999998 69
+            A 3 3 0 0 1 125.39999999999998 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -1340,29 +1356,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 12.999999999999993 20.0
+            L 26.999999999999993 20.0
+            A 1 1 0 0 1 27.999999999999993 21.0
+            L 27.999999999999993 24.0
+            L 26.499999999999993 24.0
+            L 26.499999999999993 26.666666666666668
+            L 27.999999999999993 26.666666666666668
+            L 27.999999999999993 35.0
+            A 1 1 0 0 1 26.999999999999993 36.0
+            L 12.999999999999993 36.0
+            A 1 1 0 0 1 11.999999999999993 35.0
+            L 11.999999999999993 26.666666666666668
+            L 13.499999999999993 26.666666666666668
+            L 13.499999999999993 24.0
+            L 11.999999999999993 24.0
+            L 11.999999999999993 21.0
+            A 1 1 0 0 1 12.999999999999993 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="19.999999999999993" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="32.0"
+      <text x="29.999999999999993" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_REAL_TO_R</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -1372,38 +1388,38 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">OUT</text>
 
-      <path d="M 107.8125 56.5
-            L 110.3125 56.5
-            L 110.3125 58.166666666666664
-            L 112.8125 58.166666666666664
-            L 112.8125 56.5
-            L 117.8125 56.5
-            L 117.8125 66.5
-            L 112.8125 66.5
-            L 112.8125 64.83333333333333
-            L 110.3125 64.83333333333333
-            L 110.3125 66.5
-            L 107.8125 66.5
+      <path d="M 118.39999999999998 56.5
+            L 120.89999999999998 56.5
+            L 120.89999999999998 58.166666666666664
+            L 123.39999999999998 58.166666666666664
+            L 123.39999999999998 56.5
+            L 128.39999999999998 56.5
+            L 128.39999999999998 66.5
+            L 123.39999999999998 66.5
+            L 123.39999999999998 64.83333333333333
+            L 120.89999999999998 64.83333333333333
+            L 120.89999999999998 66.5
+            L 118.39999999999998 66.5
             Z" fill="#845DAF"/>
-      <text x="104.8125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="115.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AR_OUT</text>
       <!-- Instance Name -->
-      <text x="58.90625" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_REAL_TO_R_PUB</text>
     </g>
     <g id="fb_AR_PUBLISH_1" transform="translate(2925.0, 870.0)">
       <path d="M 3 0
-            L 112.125 0
-            A 3 3 0 0 1 115.125 3
-            L 115.125 35
-            A 3 3 0 0 1 112.125 38
-            L 106.125 38
-            L 106.125 52
-            L 112.125 52
-            A 3 3 0 0 1 115.125 55
-            L 115.125 103
-            A 3 3 0 0 1 112.125 106
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 35
+            A 3 3 0 0 1 125.39999999999998 38
+            L 119.39999999999998 38
+            L 119.39999999999998 52
+            L 125.39999999999998 52
+            A 3 3 0 0 1 128.39999999999998 55
+            L 128.39999999999998 103
+            A 3 3 0 0 1 125.39999999999998 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -1418,39 +1434,39 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 12.999999999999993 37.0
+            L 26.999999999999993 37.0
+            A 1 1 0 0 1 27.999999999999993 38.0
+            L 27.999999999999993 41.0
+            L 26.499999999999993 41.0
+            L 26.499999999999993 43.666666666666664
+            L 27.999999999999993 43.666666666666664
+            L 27.999999999999993 52.0
+            A 1 1 0 0 1 26.999999999999993 53.0
+            L 12.999999999999993 53.0
+            A 1 1 0 0 1 11.999999999999993 52.0
+            L 11.999999999999993 43.666666666666664
+            L 13.499999999999993 43.666666666666664
+            L 13.499999999999993 41.0
+            L 11.999999999999993 41.0
+            L 11.999999999999993 38.0
+            A 1 1 0 0 1 12.999999999999993 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="19.999999999999993" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="49.0"
+      <text x="29.999999999999993" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR_PUBLISH_1</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="110.125,5.5 115.125,10.5 110.125,15.5" fill="#63B31F"/>
-      <text x="109.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,5.5 128.39999999999998,10.5 123.39999999999998,15.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="110.125,22.5 115.125,27.5 110.125,32.5" fill="#63B31F"/>
-      <text x="109.125" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,22.5 128.39999999999998,27.5 123.39999999999998,32.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -1458,11 +1474,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="110.125,56.5 115.125,61.5 110.125,66.5" fill="#A3B08F"/>
-      <text x="109.125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,56.5 128.39999999999998,61.5 123.39999999999998,66.5" fill="#A3B08F"/>
+      <text x="122.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="110.125,73.5 115.125,78.5 110.125,83.5" fill="#BD8663"/>
-      <text x="109.125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,73.5 128.39999999999998,78.5 123.39999999999998,83.5" fill="#BD8663"/>
+      <text x="122.39999999999998" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <path d="M 0 90.5
@@ -1481,22 +1497,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
       <!-- Instance Name -->
-      <text x="57.5625" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AR_PUBLISH_1</text>
     </g>
     <g id="fb_E_RS_PV" transform="translate(1320.0, 75.0)">
       <path d="M 3 0
-            L 65.375 0
-            A 3 3 0 0 1 68.375 3
-            L 68.375 35
-            A 3 3 0 0 1 65.375 38
-            L 59.375 38
-            L 59.375 52
-            L 65.375 52
-            A 3 3 0 0 1 68.375 55
-            L 68.375 69
-            A 3 3 0 0 1 65.375 72
+            L 67.8 0
+            A 3 3 0 0 1 70.8 3
+            L 70.8 35
+            A 3 3 0 0 1 67.8 38
+            L 61.8 38
+            L 61.8 52
+            L 67.8 52
+            A 3 3 0 0 1 70.8 55
+            L 70.8 69
+            A 3 3 0 0 1 67.8 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 55
@@ -1542,31 +1558,31 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">S</text>
-      <polygon points="63.375,5.5 68.375,10.5 63.375,15.5" fill="#63B31F"/>
-      <text x="62.375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="65.8,5.5 70.8,10.5 65.8,15.5" fill="#63B31F"/>
+      <text x="64.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO</text>
-      <polygon points="63.375,56.5 68.375,61.5 63.375,66.5" fill="#A3B08F"/>
-      <text x="62.375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="65.8,56.5 70.8,61.5 65.8,66.5" fill="#A3B08F"/>
+      <text x="64.8" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">Q</text>
 
 
       <!-- Instance Name -->
-      <text x="34.1875" y="-5"
+      <text x="35.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_RS_PV</text>
     </g>
     <g id="fb_F_SEL_PV" transform="translate(1515.0, 600.0)">
       <path d="M 3 0
-            L 72.4375 0
-            A 3 3 0 0 1 75.4375 3
-            L 75.4375 18
-            A 3 3 0 0 1 72.4375 21
-            L 66.4375 21
-            L 66.4375 35
-            L 72.4375 35
-            A 3 3 0 0 1 75.4375 38
-            L 75.4375 86
-            A 3 3 0 0 1 72.4375 89
+            L 75.0 0
+            A 3 3 0 0 1 78.0 3
+            L 78.0 18
+            A 3 3 0 0 1 75.0 21
+            L 69.0 21
+            L 69.0 35
+            L 75.0 35
+            A 3 3 0 0 1 78.0 38
+            L 78.0 86
+            A 3 3 0 0 1 75.0 89
             L 3 89
             A 3 3 0 0 1 0 86
             L 0 38
@@ -1609,8 +1625,8 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="70.4375,5.5 75.4375,10.5 70.4375,15.5" fill="#63B31F"/>
-      <text x="69.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,5.5 78.0,10.5 73.0,15.5" fill="#63B31F"/>
+      <text x="72.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -1621,28 +1637,28 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#3366FF"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN1</text>
-      <polygon points="70.4375,39.5 75.4375,44.5 70.4375,49.5" fill="#3366FF"/>
-      <text x="69.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="73.0,39.5 78.0,44.5 73.0,49.5" fill="#3366FF"/>
+      <text x="72.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="37.71875" y="-5"
+      <text x="39.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_SEL_PV</text>
     </g>
     <g id="fb_F_MOVE" transform="translate(2370.0, 375.0)">
       <path d="M 3 0
-            L 80.8125 0
-            A 3 3 0 0 1 83.8125 3
-            L 83.8125 18
-            A 3 3 0 0 1 80.8125 21
-            L 74.8125 21
-            L 74.8125 35
-            L 80.8125 35
-            A 3 3 0 0 1 83.8125 38
-            L 83.8125 52
-            A 3 3 0 0 1 80.8125 55
+            L 82.19999999999999 0
+            A 3 3 0 0 1 85.19999999999999 3
+            L 85.19999999999999 18
+            A 3 3 0 0 1 82.19999999999999 21
+            L 76.19999999999999 21
+            L 76.19999999999999 35
+            L 82.19999999999999 35
+            A 3 3 0 0 1 85.19999999999999 38
+            L 85.19999999999999 52
+            A 3 3 0 0 1 82.19999999999999 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -1657,62 +1673,62 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 12.999999999999996 20.0
+            L 26.999999999999996 20.0
+            A 1 1 0 0 1 27.999999999999996 21.0
+            L 27.999999999999996 24.0
+            L 26.499999999999996 24.0
+            L 26.499999999999996 26.666666666666668
+            L 27.999999999999996 26.666666666666668
+            L 27.999999999999996 35.0
+            A 1 1 0 0 1 26.999999999999996 36.0
+            L 12.999999999999996 36.0
+            A 1 1 0 0 1 11.999999999999996 35.0
+            L 11.999999999999996 26.666666666666668
+            L 13.499999999999996 26.666666666666668
+            L 13.499999999999996 24.0
+            L 11.999999999999996 24.0
+            L 11.999999999999996 21.0
+            A 1 1 0 0 1 12.999999999999996 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="19.999999999999996" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="30.0" y="32.0"
+      <text x="29.999999999999996" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">F_MOVE</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="78.8125,5.5 83.8125,10.5 78.8125,15.5" fill="#63B31F"/>
-      <text x="77.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="80.19999999999999,5.5 85.19999999999999,10.5 80.19999999999999,15.5" fill="#63B31F"/>
+      <text x="79.19999999999999" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#3366FF"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="78.8125,39.5 83.8125,44.5 78.8125,49.5" fill="#3366FF"/>
-      <text x="77.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="80.19999999999999,39.5 85.19999999999999,44.5 80.19999999999999,49.5" fill="#3366FF"/>
+      <text x="79.19999999999999" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="41.90625" y="-5"
+      <text x="42.599999999999994" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_MOVE</text>
     </g>
     <g id="fb_E_SPLIT_VT" transform="translate(1065.0, 90.0)">
       <path d="M 3 0
-            L 91.0 0
-            A 3 3 0 0 1 94.0 3
-            L 94.0 35
-            A 3 3 0 0 1 91.0 38
-            L 85.0 38
-            L 85.0 52
-            L 91.0 52
-            A 3 3 0 0 1 94.0 55
-            L 94.0 52
-            A 3 3 0 0 1 91.0 55
+            L 103.8 0
+            A 3 3 0 0 1 106.8 3
+            L 106.8 35
+            A 3 3 0 0 1 103.8 38
+            L 97.8 38
+            L 97.8 52
+            L 103.8 52
+            A 3 3 0 0 1 106.8 55
+            L 106.8 52
+            A 3 3 0 0 1 103.8 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 55
@@ -1755,32 +1771,32 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI</text>
-      <polygon points="89.0,5.5 94.0,10.5 89.0,15.5" fill="#63B31F"/>
-      <text x="88.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="101.8,5.5 106.8,10.5 101.8,15.5" fill="#63B31F"/>
+      <text x="100.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO1</text>
-      <polygon points="89.0,22.5 94.0,27.5 89.0,32.5" fill="#63B31F"/>
-      <text x="88.0" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="101.8,22.5 106.8,27.5 101.8,32.5" fill="#63B31F"/>
+      <text x="100.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO2</text>
 
 
 
       <!-- Instance Name -->
-      <text x="47.0" y="-5"
+      <text x="53.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_SPLIT_VT</text>
     </g>
     <g id="fb_E_SPLIT_WEB" transform="translate(1005.0, 555.0)">
       <path d="M 3 0
-            L 91.0 0
-            A 3 3 0 0 1 94.0 3
-            L 94.0 35
-            A 3 3 0 0 1 91.0 38
-            L 85.0 38
-            L 85.0 52
-            L 91.0 52
-            A 3 3 0 0 1 94.0 55
-            L 94.0 52
-            A 3 3 0 0 1 91.0 55
+            L 103.8 0
+            A 3 3 0 0 1 106.8 3
+            L 106.8 35
+            A 3 3 0 0 1 103.8 38
+            L 97.8 38
+            L 97.8 52
+            L 103.8 52
+            A 3 3 0 0 1 106.8 55
+            L 106.8 52
+            A 3 3 0 0 1 103.8 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 55
@@ -1823,32 +1839,32 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI</text>
-      <polygon points="89.0,5.5 94.0,10.5 89.0,15.5" fill="#63B31F"/>
-      <text x="88.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="101.8,5.5 106.8,10.5 101.8,15.5" fill="#63B31F"/>
+      <text x="100.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO1</text>
-      <polygon points="89.0,22.5 94.0,27.5 89.0,32.5" fill="#63B31F"/>
-      <text x="88.0" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="101.8,22.5 106.8,27.5 101.8,32.5" fill="#63B31F"/>
+      <text x="100.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO2</text>
 
 
 
       <!-- Instance Name -->
-      <text x="47.0" y="-5"
+      <text x="53.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_SPLIT_WEB</text>
     </g>
     <g id="fb_E_MERGE_SEL" transform="translate(1260.0, 600.0)">
       <path d="M 3 0
-            L 98.9375 0
-            A 3 3 0 0 1 101.9375 3
-            L 101.9375 35
-            A 3 3 0 0 1 98.9375 38
-            L 92.9375 38
-            L 92.9375 52
-            L 98.9375 52
-            A 3 3 0 0 1 101.9375 55
-            L 101.9375 52
-            A 3 3 0 0 1 98.9375 55
+            L 103.8 0
+            A 3 3 0 0 1 106.8 3
+            L 106.8 35
+            A 3 3 0 0 1 103.8 38
+            L 97.8 38
+            L 97.8 52
+            L 103.8 52
+            A 3 3 0 0 1 106.8 55
+            L 106.8 52
+            A 3 3 0 0 1 103.8 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 55
@@ -1894,29 +1910,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI2</text>
-      <polygon points="96.9375,5.5 101.9375,10.5 96.9375,15.5" fill="#63B31F"/>
-      <text x="95.9375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="101.8,5.5 106.8,10.5 101.8,15.5" fill="#63B31F"/>
+      <text x="100.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO</text>
 
 
 
       <!-- Instance Name -->
-      <text x="50.96875" y="-5"
+      <text x="53.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_MERGE_SEL</text>
     </g>
     <g id="fb_E_T_FF_SR_SWITCH" transform="translate(1185.0, 420.0)">
       <path d="M 3 0
-            L 136.625 0
-            A 3 3 0 0 1 139.625 3
-            L 139.625 69
-            A 3 3 0 0 1 136.625 72
-            L 130.625 72
-            L 130.625 86
-            L 136.625 86
-            A 3 3 0 0 1 139.625 89
-            L 139.625 120
-            A 3 3 0 0 1 136.625 123
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 69
+            A 3 3 0 0 1 154.2 72
+            L 148.2 72
+            L 148.2 86
+            L 154.2 86
+            A 3 3 0 0 1 157.2 89
+            L 157.2 120
+            A 3 3 0 0 1 154.2 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 89
@@ -1968,11 +1984,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#63B31F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">CLK</text>
-      <polygon points="134.625,5.5 139.625,10.5 134.625,15.5" fill="#63B31F"/>
-      <text x="133.625" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="134.625,22.5 139.625,27.5 134.625,32.5" fill="#63B31F"/>
-      <text x="133.625" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,22.5 157.2,27.5 152.2,32.5" fill="#63B31F"/>
+      <text x="151.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO</text>
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#A3B08F"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -1980,31 +1996,31 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,107.5 5,112.5 0,117.5" fill="#A3B08F"/>
       <text x="6" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_INIT</text>
-      <polygon points="134.625,90.5 139.625,95.5 134.625,100.5" fill="#A3B08F"/>
-      <text x="133.625" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,90.5 157.2,95.5 152.2,100.5" fill="#A3B08F"/>
+      <text x="151.2" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="134.625,107.5 139.625,112.5 134.625,117.5" fill="#A3B08F"/>
-      <text x="133.625" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,107.5 157.2,112.5 152.2,117.5" fill="#A3B08F"/>
+      <text x="151.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">Q</text>
       <text x="-3" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
 
       <!-- Instance Name -->
-      <text x="69.8125" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_T_FF_SR_SWITCH</text>
     </g>
     <g id="fb_AX_SUBSCRIBE_SWITCH" transform="translate(60.0, 480.0)">
       <path d="M 3 0
-            L 127.9375 0
-            A 3 3 0 0 1 130.9375 3
-            L 130.9375 35
-            A 3 3 0 0 1 127.9375 38
-            L 121.9375 38
-            L 121.9375 52
-            L 127.9375 52
-            A 3 3 0 0 1 130.9375 55
-            L 130.9375 103
-            A 3 3 0 0 1 127.9375 106
+            L 139.8 0
+            A 3 3 0 0 1 142.8 3
+            L 142.8 35
+            A 3 3 0 0 1 139.8 38
+            L 133.8 38
+            L 133.8 52
+            L 139.8 52
+            A 3 3 0 0 1 142.8 55
+            L 142.8 103
+            A 3 3 0 0 1 139.8 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -2019,29 +2035,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 13.000000000000007 37.0
+            L 27.000000000000007 37.0
+            A 1 1 0 0 1 28.000000000000007 38.0
+            L 28.000000000000007 41.0
+            L 26.500000000000007 41.0
+            L 26.500000000000007 43.666666666666664
+            L 28.000000000000007 43.666666666666664
+            L 28.000000000000007 52.0
+            A 1 1 0 0 1 27.000000000000007 53.0
+            L 13.000000000000007 53.0
+            A 1 1 0 0 1 12.000000000000007 52.0
+            L 12.000000000000007 43.666666666666664
+            L 13.500000000000007 43.666666666666664
+            L 13.500000000000007 41.0
+            L 12.000000000000007 41.0
+            L 12.000000000000007 38.0
+            A 1 1 0 0 1 13.000000000000007 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="20.000000000000007" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="49.0"
+      <text x="30.000000000000007" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_SUBSCRIBE_1</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -2050,11 +2066,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">RSP</text>
-      <polygon points="125.9375,5.5 130.9375,10.5 125.9375,15.5" fill="#63B31F"/>
-      <text x="124.9375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,5.5 142.8,10.5 137.8,15.5" fill="#63B31F"/>
+      <text x="136.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="125.9375,22.5 130.9375,27.5 125.9375,32.5" fill="#63B31F"/>
-      <text x="124.9375" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,22.5 142.8,27.5 137.8,32.5" fill="#63B31F"/>
+      <text x="136.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -2062,45 +2078,45 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="125.9375,56.5 130.9375,61.5 125.9375,66.5" fill="#A3B08F"/>
-      <text x="124.9375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,56.5 142.8,61.5 137.8,66.5" fill="#A3B08F"/>
+      <text x="136.8" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="125.9375,73.5 130.9375,78.5 125.9375,83.5" fill="#BD8663"/>
-      <text x="124.9375" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="137.8,73.5 142.8,78.5 137.8,83.5" fill="#BD8663"/>
+      <text x="136.8" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
-      <path d="M 120.9375 90.5
-            L 123.4375 90.5
-            L 123.4375 92.16666666666667
-            L 125.9375 92.16666666666667
-            L 125.9375 90.5
-            L 130.9375 90.5
-            L 130.9375 100.5
-            L 125.9375 100.5
-            L 125.9375 98.83333333333333
-            L 123.4375 98.83333333333333
-            L 123.4375 100.5
-            L 120.9375 100.5
+      <path d="M 132.8 90.5
+            L 135.3 90.5
+            L 135.3 92.16666666666667
+            L 137.8 92.16666666666667
+            L 137.8 90.5
+            L 142.8 90.5
+            L 142.8 100.5
+            L 137.8 100.5
+            L 137.8 98.83333333333333
+            L 135.3 98.83333333333333
+            L 135.3 100.5
+            L 132.8 100.5
             Z" fill="#845DAF"/>
-      <text x="117.9375" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="129.8" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <!-- Instance Name -->
-      <text x="65.46875" y="-5"
+      <text x="71.4" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_SUBSCRIBE_SWITCH</text>
     </g>
-    <g id="fb_AX_RF_TRIG_SWITCH" transform="translate(318.8, 480.0)">
+    <g id="fb_AX_RF_TRIG_SWITCH" transform="translate(321.2, 480.0)">
       <path d="M 3 0
-            L 100.125 0
-            A 3 3 0 0 1 103.125 3
-            L 103.125 35
-            A 3 3 0 0 1 100.125 38
-            L 94.125 38
-            L 94.125 52
-            L 100.125 52
-            A 3 3 0 0 1 103.125 55
-            L 103.125 69
-            A 3 3 0 0 1 100.125 72
+            L 111.0 0
+            A 3 3 0 0 1 114.0 3
+            L 114.0 35
+            A 3 3 0 0 1 111.0 38
+            L 105.0 38
+            L 105.0 52
+            L 111.0 52
+            A 3 3 0 0 1 114.0 55
+            L 114.0 69
+            A 3 3 0 0 1 111.0 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 55
@@ -2140,11 +2156,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="30.0" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_RF_TRIG</text>
-      <polygon points="98.125,5.5 103.125,10.5 98.125,15.5" fill="#63B31F"/>
-      <text x="97.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="109.0,5.5 114.0,10.5 109.0,15.5" fill="#63B31F"/>
+      <text x="108.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">ER</text>
-      <polygon points="98.125,22.5 103.125,27.5 98.125,32.5" fill="#63B31F"/>
-      <text x="97.125" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="109.0,22.5 114.0,27.5 109.0,32.5" fill="#63B31F"/>
+      <text x="108.0" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EF</text>
 
 
@@ -2164,22 +2180,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="13" y="64.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">QI</text>
       <!-- Instance Name -->
-      <text x="51.5625" y="-5"
+      <text x="57.0" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_RF_TRIG_SWITCH</text>
     </g>
-    <g id="fb_AX_BOOL_TO_X_SWITCH" transform="translate(3648.5, 585.0)">
+    <g id="fb_AX_BOOL_TO_X_SWITCH" transform="translate(3651.2, 585.0)">
       <path d="M 3 0
-            L 116.4375 0
-            A 3 3 0 0 1 119.4375 3
-            L 119.4375 18
-            A 3 3 0 0 1 116.4375 21
-            L 110.4375 21
-            L 110.4375 35
-            L 116.4375 35
-            A 3 3 0 0 1 119.4375 38
-            L 119.4375 69
-            A 3 3 0 0 1 116.4375 72
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 18
+            A 3 3 0 0 1 125.39999999999998 21
+            L 119.39999999999998 21
+            L 119.39999999999998 35
+            L 125.39999999999998 35
+            A 3 3 0 0 1 128.39999999999998 38
+            L 128.39999999999998 69
+            A 3 3 0 0 1 125.39999999999998 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -2194,29 +2210,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 12.999999999999993 20.0
+            L 26.999999999999993 20.0
+            A 1 1 0 0 1 27.999999999999993 21.0
+            L 27.999999999999993 24.0
+            L 26.499999999999993 24.0
+            L 26.499999999999993 26.666666666666668
+            L 27.999999999999993 26.666666666666668
+            L 27.999999999999993 35.0
+            A 1 1 0 0 1 26.999999999999993 36.0
+            L 12.999999999999993 36.0
+            A 1 1 0 0 1 11.999999999999993 35.0
+            L 11.999999999999993 26.666666666666668
+            L 13.499999999999993 26.666666666666668
+            L 13.499999999999993 24.0
+            L 11.999999999999993 24.0
+            L 11.999999999999993 21.0
+            A 1 1 0 0 1 12.999999999999993 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="19.999999999999993" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="32.0"
+      <text x="29.999999999999993" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_BOOL_TO_X</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -2226,38 +2242,38 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">OUT</text>
 
-      <path d="M 109.4375 56.5
-            L 111.9375 56.5
-            L 111.9375 58.166666666666664
-            L 114.4375 58.166666666666664
-            L 114.4375 56.5
-            L 119.4375 56.5
-            L 119.4375 66.5
-            L 114.4375 66.5
-            L 114.4375 64.83333333333333
-            L 111.9375 64.83333333333333
-            L 111.9375 66.5
-            L 109.4375 66.5
+      <path d="M 118.39999999999998 56.5
+            L 120.89999999999998 56.5
+            L 120.89999999999998 58.166666666666664
+            L 123.39999999999998 58.166666666666664
+            L 123.39999999999998 56.5
+            L 128.39999999999998 56.5
+            L 128.39999999999998 66.5
+            L 123.39999999999998 66.5
+            L 123.39999999999998 64.83333333333333
+            L 120.89999999999998 64.83333333333333
+            L 120.89999999999998 66.5
+            L 118.39999999999998 66.5
             Z" fill="#845DAF"/>
-      <text x="106.4375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="115.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AX_OUT</text>
       <!-- Instance Name -->
-      <text x="59.71875" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_BOOL_TO_X_SWITCH</text>
     </g>
     <g id="fb_AX_PUBLISH_SWITCH" transform="translate(3900.0, 585.0)">
       <path d="M 3 0
-            L 112.875 0
-            A 3 3 0 0 1 115.875 3
-            L 115.875 35
-            A 3 3 0 0 1 112.875 38
-            L 106.875 38
-            L 106.875 52
-            L 112.875 52
-            A 3 3 0 0 1 115.875 55
-            L 115.875 103
-            A 3 3 0 0 1 112.875 106
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 35
+            A 3 3 0 0 1 125.39999999999998 38
+            L 119.39999999999998 38
+            L 119.39999999999998 52
+            L 125.39999999999998 52
+            A 3 3 0 0 1 128.39999999999998 55
+            L 128.39999999999998 103
+            A 3 3 0 0 1 125.39999999999998 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -2272,39 +2288,39 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 12.999999999999993 37.0
+            L 26.999999999999993 37.0
+            A 1 1 0 0 1 27.999999999999993 38.0
+            L 27.999999999999993 41.0
+            L 26.499999999999993 41.0
+            L 26.499999999999993 43.666666666666664
+            L 27.999999999999993 43.666666666666664
+            L 27.999999999999993 52.0
+            A 1 1 0 0 1 26.999999999999993 53.0
+            L 12.999999999999993 53.0
+            A 1 1 0 0 1 11.999999999999993 52.0
+            L 11.999999999999993 43.666666666666664
+            L 13.499999999999993 43.666666666666664
+            L 13.499999999999993 41.0
+            L 11.999999999999993 41.0
+            L 11.999999999999993 38.0
+            A 1 1 0 0 1 12.999999999999993 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="19.999999999999993" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="49.0"
+      <text x="29.999999999999993" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_PUBLISH_1</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="110.875,5.5 115.875,10.5 110.875,15.5" fill="#63B31F"/>
-      <text x="109.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,5.5 128.39999999999998,10.5 123.39999999999998,15.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="110.875,22.5 115.875,27.5 110.875,32.5" fill="#63B31F"/>
-      <text x="109.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,22.5 128.39999999999998,27.5 123.39999999999998,32.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -2312,11 +2328,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="110.875,56.5 115.875,61.5 110.875,66.5" fill="#A3B08F"/>
-      <text x="109.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,56.5 128.39999999999998,61.5 123.39999999999998,66.5" fill="#A3B08F"/>
+      <text x="122.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="110.875,73.5 115.875,78.5 110.875,83.5" fill="#BD8663"/>
-      <text x="109.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,73.5 128.39999999999998,78.5 123.39999999999998,83.5" fill="#BD8663"/>
+      <text x="122.39999999999998" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <path d="M 0 90.5
@@ -2335,22 +2351,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
       <!-- Instance Name -->
-      <text x="57.9375" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_PUBLISH_SWITCH</text>
     </g>
-    <g id="fb_AX_BOOL_TO_X_STATUS" transform="translate(3649.7, 375.0)">
+    <g id="fb_AX_BOOL_TO_X_STATUS" transform="translate(3651.2, 375.0)">
       <path d="M 3 0
-            L 116.4375 0
-            A 3 3 0 0 1 119.4375 3
-            L 119.4375 18
-            A 3 3 0 0 1 116.4375 21
-            L 110.4375 21
-            L 110.4375 35
-            L 116.4375 35
-            A 3 3 0 0 1 119.4375 38
-            L 119.4375 69
-            A 3 3 0 0 1 116.4375 72
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 18
+            A 3 3 0 0 1 125.39999999999998 21
+            L 119.39999999999998 21
+            L 119.39999999999998 35
+            L 125.39999999999998 35
+            A 3 3 0 0 1 128.39999999999998 38
+            L 128.39999999999998 69
+            A 3 3 0 0 1 125.39999999999998 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -2365,29 +2381,29 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 12.999999999999993 20.0
+            L 26.999999999999993 20.0
+            A 1 1 0 0 1 27.999999999999993 21.0
+            L 27.999999999999993 24.0
+            L 26.499999999999993 24.0
+            L 26.499999999999993 26.666666666666668
+            L 27.999999999999993 26.666666666666668
+            L 27.999999999999993 35.0
+            A 1 1 0 0 1 26.999999999999993 36.0
+            L 12.999999999999993 36.0
+            A 1 1 0 0 1 11.999999999999993 35.0
+            L 11.999999999999993 26.666666666666668
+            L 13.499999999999993 26.666666666666668
+            L 13.499999999999993 24.0
+            L 11.999999999999993 24.0
+            L 11.999999999999993 21.0
+            A 1 1 0 0 1 12.999999999999993 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="32.0"
+      <text x="19.999999999999993" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="32.0"
+      <text x="29.999999999999993" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_BOOL_TO_X</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -2397,38 +2413,38 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">OUT</text>
 
-      <path d="M 109.4375 56.5
-            L 111.9375 56.5
-            L 111.9375 58.166666666666664
-            L 114.4375 58.166666666666664
-            L 114.4375 56.5
-            L 119.4375 56.5
-            L 119.4375 66.5
-            L 114.4375 66.5
-            L 114.4375 64.83333333333333
-            L 111.9375 64.83333333333333
-            L 111.9375 66.5
-            L 109.4375 66.5
+      <path d="M 118.39999999999998 56.5
+            L 120.89999999999998 56.5
+            L 120.89999999999998 58.166666666666664
+            L 123.39999999999998 58.166666666666664
+            L 123.39999999999998 56.5
+            L 128.39999999999998 56.5
+            L 128.39999999999998 66.5
+            L 123.39999999999998 66.5
+            L 123.39999999999998 64.83333333333333
+            L 120.89999999999998 64.83333333333333
+            L 120.89999999999998 66.5
+            L 118.39999999999998 66.5
             Z" fill="#845DAF"/>
-      <text x="106.4375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="115.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">AX_OUT</text>
       <!-- Instance Name -->
-      <text x="59.71875" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_BOOL_TO_X_STATUS</text>
     </g>
     <g id="fb_AX_PUBLISH_STATUS" transform="translate(3900.0, 375.0)">
       <path d="M 3 0
-            L 112.875 0
-            A 3 3 0 0 1 115.875 3
-            L 115.875 35
-            A 3 3 0 0 1 112.875 38
-            L 106.875 38
-            L 106.875 52
-            L 112.875 52
-            A 3 3 0 0 1 115.875 55
-            L 115.875 103
-            A 3 3 0 0 1 112.875 106
+            L 125.39999999999998 0
+            A 3 3 0 0 1 128.39999999999998 3
+            L 128.39999999999998 35
+            A 3 3 0 0 1 125.39999999999998 38
+            L 119.39999999999998 38
+            L 119.39999999999998 52
+            L 125.39999999999998 52
+            A 3 3 0 0 1 128.39999999999998 55
+            L 128.39999999999998 103
+            A 3 3 0 0 1 125.39999999999998 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -2443,39 +2459,39 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 37.0
-            L 27.0 37.0
-            A 1 1 0 0 1 28.0 38.0
-            L 28.0 41.0
-            L 26.5 41.0
-            L 26.5 43.666666666666664
-            L 28.0 43.666666666666664
-            L 28.0 52.0
-            A 1 1 0 0 1 27.0 53.0
-            L 13.0 53.0
-            A 1 1 0 0 1 12.0 52.0
-            L 12.0 43.666666666666664
-            L 13.5 43.666666666666664
-            L 13.5 41.0
-            L 12.0 41.0
-            L 12.0 38.0
-            A 1 1 0 0 1 13.0 37.0
+      <path d="M 12.999999999999993 37.0
+            L 26.999999999999993 37.0
+            A 1 1 0 0 1 27.999999999999993 38.0
+            L 27.999999999999993 41.0
+            L 26.499999999999993 41.0
+            L 26.499999999999993 43.666666666666664
+            L 27.999999999999993 43.666666666666664
+            L 27.999999999999993 52.0
+            A 1 1 0 0 1 26.999999999999993 53.0
+            L 12.999999999999993 53.0
+            A 1 1 0 0 1 11.999999999999993 52.0
+            L 11.999999999999993 43.666666666666664
+            L 13.499999999999993 43.666666666666664
+            L 13.499999999999993 41.0
+            L 11.999999999999993 41.0
+            L 11.999999999999993 38.0
+            A 1 1 0 0 1 12.999999999999993 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="20.0" y="49.0"
+      <text x="19.999999999999993" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="30.0" y="49.0"
+      <text x="29.999999999999993" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_PUBLISH_1</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT</text>
-      <polygon points="110.875,5.5 115.875,10.5 110.875,15.5" fill="#63B31F"/>
-      <text x="109.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,5.5 128.39999999999998,10.5 123.39999999999998,15.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="110.875,22.5 115.875,27.5 110.875,32.5" fill="#63B31F"/>
-      <text x="109.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,22.5 128.39999999999998,27.5 123.39999999999998,32.5" fill="#63B31F"/>
+      <text x="122.39999999999998" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -2483,11 +2499,11 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#BD8663"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">ID</text>
-      <polygon points="110.875,56.5 115.875,61.5 110.875,66.5" fill="#A3B08F"/>
-      <text x="109.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,56.5 128.39999999999998,61.5 123.39999999999998,66.5" fill="#A3B08F"/>
+      <text x="122.39999999999998" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="110.875,73.5 115.875,78.5 110.875,83.5" fill="#BD8663"/>
-      <text x="109.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="123.39999999999998,73.5 128.39999999999998,78.5 123.39999999999998,83.5" fill="#BD8663"/>
+      <text x="122.39999999999998" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
       <path d="M 0 90.5
@@ -2506,22 +2522,22 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
       <!-- Instance Name -->
-      <text x="57.9375" y="-5"
+      <text x="64.19999999999999" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_PUBLISH_STATUS</text>
     </g>
     <g id="fb_F_PWM_PERCENT_TO_RAW" transform="translate(780.0, 630.0)">
       <path d="M 3 0
-            L 148.9375 0
-            A 3 3 0 0 1 151.9375 3
-            L 151.9375 18
-            A 3 3 0 0 1 148.9375 21
-            L 142.9375 21
-            L 142.9375 35
-            L 148.9375 35
-            A 3 3 0 0 1 151.9375 38
-            L 151.9375 52
-            A 3 3 0 0 1 148.9375 55
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 18
+            A 3 3 0 0 1 154.2 21
+            L 148.2 21
+            L 148.2 35
+            L 154.2 35
+            A 3 3 0 0 1 157.2 38
+            L 157.2 52
+            A 3 3 0 0 1 154.2 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -2567,34 +2583,34 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="146.9375,5.5 151.9375,10.5 146.9375,15.5" fill="#63B31F"/>
-      <text x="145.9375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#DBB418"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="146.9375,39.5 151.9375,44.5 146.9375,49.5" fill="#18519E"/>
-      <text x="145.9375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,39.5 157.2,44.5 152.2,49.5" fill="#18519E"/>
+      <text x="151.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="75.96875" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_PWM_PERCENT_TO_RAW</text>
     </g>
     <g id="fb_F_PWM_RAW_TO_PERCENT" transform="translate(2130.0, 855.0)">
       <path d="M 3 0
-            L 147.9375 0
-            A 3 3 0 0 1 150.9375 3
-            L 150.9375 18
-            A 3 3 0 0 1 147.9375 21
-            L 141.9375 21
-            L 141.9375 35
-            L 147.9375 35
-            A 3 3 0 0 1 150.9375 38
-            L 150.9375 52
-            A 3 3 0 0 1 147.9375 55
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 18
+            A 3 3 0 0 1 154.2 21
+            L 148.2 21
+            L 148.2 35
+            L 154.2 35
+            A 3 3 0 0 1 157.2 38
+            L 157.2 52
+            A 3 3 0 0 1 154.2 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -2640,116 +2656,128 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="145.9375,5.5 150.9375,10.5 145.9375,15.5" fill="#63B31F"/>
-      <text x="144.9375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="145.9375,39.5 150.9375,44.5 145.9375,49.5" fill="#DBB418"/>
-      <text x="144.9375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,39.5 157.2,44.5 152.2,49.5" fill="#DBB418"/>
+      <text x="151.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="75.46875" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_PWM_RAW_TO_PERCENT</text>
     </g>
-    <g id="fb_Q_BackgroundColour_EnableOk_STATUS" transform="translate(3364.2, 165.0)">
+    <g id="fb_Q_BackgroundColour_EnableOk_STATUS" transform="translate(3375.8, 165.0)">
       <path d="M 3 0
-            L 138.4375 0
-            A 3 3 0 0 1 141.4375 3
-            L 141.4375 18
-            A 3 3 0 0 1 138.4375 21
-            L 132.4375 21
-            L 132.4375 35
-            L 138.4375 35
-            A 3 3 0 0 1 141.4375 38
-            L 141.4375 86
-            A 3 3 0 0 1 138.4375 89
-            L 3 89
-            A 3 3 0 0 1 0 86
-            L 0 38
-            A 3 3 0 0 1 3 35
-            L 9 35
-            L 9 21
-            L 3 21
-            A 3 3 0 0 1 0 18
+            L 154.2 0
+            A 3 3 0 0 1 157.2 3
+            L 157.2 35
+            A 3 3 0 0 1 154.2 38
+            L 148.2 38
+            L 148.2 52
+            L 154.2 52
+            A 3 3 0 0 1 157.2 55
+            L 157.2 120
+            A 3 3 0 0 1 154.2 123
+            L 3 123
+            A 3 3 0 0 1 0 120
+            L 0 55
+            A 3 3 0 0 1 3 52
+            L 9 52
+            L 9 38
+            L 3 38
+            A 3 3 0 0 1 0 35
             L 0 3
             A 3 3 0 0 1 3 0
             Z"
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 13.0 20.0
-            L 27.0 20.0
-            A 1 1 0 0 1 28.0 21.0
-            L 28.0 24.0
-            L 26.5 24.0
-            L 26.5 26.666666666666668
-            L 28.0 26.666666666666668
-            L 28.0 35.0
-            A 1 1 0 0 1 27.0 36.0
-            L 13.0 36.0
-            A 1 1 0 0 1 12.0 35.0
-            L 12.0 26.666666666666668
-            L 13.5 26.666666666666668
-            L 13.5 24.0
-            L 12.0 24.0
-            L 12.0 21.0
-            A 1 1 0 0 1 13.0 20.0
+      <path d="M 13.0 37.0
+            L 27.0 37.0
+            A 1 1 0 0 1 28.0 38.0
+            L 28.0 41.0
+            L 26.5 41.0
+            L 26.5 43.666666666666664
+            L 28.0 43.666666666666664
+            L 28.0 52.0
+            A 1 1 0 0 1 27.0 53.0
+            L 13.0 53.0
+            A 1 1 0 0 1 12.0 52.0
+            L 12.0 43.666666666666664
+            L 13.5 43.666666666666664
+            L 13.5 41.0
+            L 12.0 41.0
+            L 12.0 38.0
+            A 1 1 0 0 1 13.0 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <path d="M 13.5 27.5 L 18.0 27.5 A 0.5 0.5 0 0 1 18.5 28.0 L 18.5 29.25 L 17.675 29.25 L 17.675 30.416666666666668 L 18.5 30.416666666666668 L 18.5 34.0 A 0.5 0.5 0 0 1 18.0 34.5 L 13.5 34.5 A 0.5 0.5 0 0 1 13.0 34.0 L 13.0 30.416666666666668 L 13.825 30.416666666666668 L 13.825 29.25 L 13.0 29.25 L 13.0 28.0 A 0.5 0.5 0 0 1 13.5 27.5 Z" fill="#1565C0" stroke="none"/>
-      <path d="M 22.0 27.5 L 26.5 27.5 A 0.5 0.5 0 0 1 27.0 28.0 L 27.0 29.25 L 26.175 29.25 L 26.175 30.416666666666668 L 27.0 30.416666666666668 L 27.0 34.0 A 0.5 0.5 0 0 1 26.5 34.5 L 22.0 34.5 A 0.5 0.5 0 0 1 21.5 34.0 L 21.5 30.416666666666668 L 22.325 30.416666666666668 L 22.325 29.25 L 21.5 29.25 L 21.5 28.0 A 0.5 0.5 0 0 1 22.0 27.5 Z" fill="#1565C0" stroke="none"/>
-      <line x1="18.5" y1="28.34" x2="21.5" y2="28.34"
+      <path d="M 13.5 44.5 L 18.0 44.5 A 0.5 0.5 0 0 1 18.5 45.0 L 18.5 46.25 L 17.675 46.25 L 17.675 47.416666666666664 L 18.5 47.416666666666664 L 18.5 51.0 A 0.5 0.5 0 0 1 18.0 51.5 L 13.5 51.5 A 0.5 0.5 0 0 1 13.0 51.0 L 13.0 47.416666666666664 L 13.825 47.416666666666664 L 13.825 46.25 L 13.0 46.25 L 13.0 45.0 A 0.5 0.5 0 0 1 13.5 44.5 Z" fill="#1565C0" stroke="none"/>
+      <path d="M 22.0 44.5 L 26.5 44.5 A 0.5 0.5 0 0 1 27.0 45.0 L 27.0 46.25 L 26.175 46.25 L 26.175 47.416666666666664 L 27.0 47.416666666666664 L 27.0 51.0 A 0.5 0.5 0 0 1 26.5 51.5 L 22.0 51.5 A 0.5 0.5 0 0 1 21.5 51.0 L 21.5 47.416666666666664 L 22.325 47.416666666666664 L 22.325 46.25 L 21.5 46.25 L 21.5 45.0 A 0.5 0.5 0 0 1 22.0 44.5 Z" fill="#1565C0" stroke="none"/>
+      <line x1="18.5" y1="45.34" x2="21.5" y2="45.34"
             stroke="#3DA015" stroke-width="1.2"/>
-      <line x1="18.5" y1="32.4" x2="21.5" y2="32.4"
+      <line x1="18.5" y1="49.4" x2="21.5" y2="49.4"
             stroke="#FF0000" stroke-width="1.2"/>
-      <text x="30.0" y="32.0"
+      <text x="30.0" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_BackgroundCol…</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">INIT</text>
+      <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
+      <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="136.4375,5.5 141.4375,10.5 136.4375,15.5" fill="#63B31F"/>
-      <text x="135.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
+      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">INITO</text>
+      <polygon points="152.2,22.5 157.2,27.5 152.2,32.5" fill="#63B31F"/>
+      <text x="151.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="0,39.5 5,44.5 0,49.5" fill="#18519E"/>
-      <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000">u16ObjId</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000">bEnable</text>
-      <polygon points="0,73.5 5,78.5 0,83.5" fill="#A3B08F"/>
+            fill="#000000">QI</text>
+      <polygon points="0,73.5 5,78.5 0,83.5" fill="#18519E"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">u16ObjId</text>
+      <polygon points="0,90.5 5,95.5 0,100.5" fill="#A3B08F"/>
+      <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">bEnable</text>
+      <polygon points="0,107.5 5,112.5 0,117.5" fill="#A3B08F"/>
+      <text x="6" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">bOk</text>
-      <polygon points="136.4375,39.5 141.4375,44.5 136.4375,49.5" fill="#BD8663"/>
-      <text x="135.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,56.5 157.2,61.5 152.2,66.5" fill="#A3B08F"/>
+      <text x="151.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">QO</text>
+      <polygon points="152.2,73.5 157.2,78.5 152.2,83.5" fill="#BD8663"/>
+      <text x="151.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="136.4375,56.5 141.4375,61.5 136.4375,66.5" fill="#18519E"/>
-      <text x="135.4375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="152.2,90.5 157.2,95.5 152.2,100.5" fill="#18519E"/>
+      <text x="151.2" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
 
       <!-- Instance Name -->
-      <text x="70.71875" y="-5"
+      <text x="78.6" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_BackgroundColour_EnableOk_STATUS</text>
     </g>
     <g id="fb_Ramp6Buttons" transform="translate(1695.0, 540.0)">
       <path d="M 3 0
-            L 182.5625 0
-            A 3 3 0 0 1 185.5625 3
-            L 185.5625 120
-            A 3 3 0 0 1 182.5625 123
-            L 176.5625 123
-            L 176.5625 137
-            L 182.5625 137
-            A 3 3 0 0 1 185.5625 140
-            L 185.5625 256
-            A 3 3 0 0 1 182.5625 259
+            L 207.2 0
+            A 3 3 0 0 1 210.2 3
+            L 210.2 120
+            A 3 3 0 0 1 207.2 123
+            L 201.2 123
+            L 201.2 137
+            L 207.2 137
+            A 3 3 0 0 1 210.2 140
+            L 210.2 256
+            A 3 3 0 0 1 207.2 259
             L 3 259
             A 3 3 0 0 1 0 256
             L 0 140
@@ -2764,54 +2792,54 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 46.96875 122.0
-            L 60.96875 122.0
-            A 1 1 0 0 1 61.96875 123.0
-            L 61.96875 126.0
-            L 60.46875 126.0
-            L 60.46875 128.66666666666666
-            L 61.96875 128.66666666666666
-            L 61.96875 137.0
-            A 1 1 0 0 1 60.96875 138.0
-            L 46.96875 138.0
-            A 1 1 0 0 1 45.96875 137.0
-            L 45.96875 128.66666666666666
-            L 47.46875 128.66666666666666
-            L 47.46875 126.0
-            L 45.96875 126.0
-            L 45.96875 123.0
-            A 1 1 0 0 1 46.96875 122.0
+      <path d="M 53.9 122.0
+            L 67.9 122.0
+            A 1 1 0 0 1 68.9 123.0
+            L 68.9 126.0
+            L 67.4 126.0
+            L 67.4 128.66666666666666
+            L 68.9 128.66666666666666
+            L 68.9 137.0
+            A 1 1 0 0 1 67.9 138.0
+            L 53.9 138.0
+            A 1 1 0 0 1 52.9 137.0
+            L 52.9 128.66666666666666
+            L 54.4 128.66666666666666
+            L 54.4 126.0
+            L 52.9 126.0
+            L 52.9 123.0
+            A 1 1 0 0 1 53.9 122.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <path d="M 47.46875 129.5 L 51.96875 129.5 A 0.5 0.5 0 0 1 52.46875 130.0 L 52.46875 131.25 L 51.64375 131.25 L 51.64375 132.41666666666666 L 52.46875 132.41666666666666 L 52.46875 136.0 A 0.5 0.5 0 0 1 51.96875 136.5 L 47.46875 136.5 A 0.5 0.5 0 0 1 46.96875 136.0 L 46.96875 132.41666666666666 L 47.79375 132.41666666666666 L 47.79375 131.25 L 46.96875 131.25 L 46.96875 130.0 A 0.5 0.5 0 0 1 47.46875 129.5 Z" fill="#1565C0" stroke="none"/>
-      <path d="M 55.96875 129.5 L 60.46875 129.5 A 0.5 0.5 0 0 1 60.96875 130.0 L 60.96875 131.25 L 60.14375 131.25 L 60.14375 132.41666666666666 L 60.96875 132.41666666666666 L 60.96875 136.0 A 0.5 0.5 0 0 1 60.46875 136.5 L 55.96875 136.5 A 0.5 0.5 0 0 1 55.46875 136.0 L 55.46875 132.41666666666666 L 56.29375 132.41666666666666 L 56.29375 131.25 L 55.46875 131.25 L 55.46875 130.0 A 0.5 0.5 0 0 1 55.96875 129.5 Z" fill="#1565C0" stroke="none"/>
-      <line x1="52.46875" y1="130.34" x2="55.46875" y2="130.34"
+      <path d="M 54.4 129.5 L 58.9 129.5 A 0.5 0.5 0 0 1 59.4 130.0 L 59.4 131.25 L 58.574999999999996 131.25 L 58.574999999999996 132.41666666666666 L 59.4 132.41666666666666 L 59.4 136.0 A 0.5 0.5 0 0 1 58.9 136.5 L 54.4 136.5 A 0.5 0.5 0 0 1 53.9 136.0 L 53.9 132.41666666666666 L 54.725 132.41666666666666 L 54.725 131.25 L 53.9 131.25 L 53.9 130.0 A 0.5 0.5 0 0 1 54.4 129.5 Z" fill="#1565C0" stroke="none"/>
+      <path d="M 62.9 129.5 L 67.4 129.5 A 0.5 0.5 0 0 1 67.9 130.0 L 67.9 131.25 L 67.075 131.25 L 67.075 132.41666666666666 L 67.9 132.41666666666666 L 67.9 136.0 A 0.5 0.5 0 0 1 67.4 136.5 L 62.9 136.5 A 0.5 0.5 0 0 1 62.4 136.0 L 62.4 132.41666666666666 L 63.225 132.41666666666666 L 63.225 131.25 L 62.4 131.25 L 62.4 130.0 A 0.5 0.5 0 0 1 62.9 129.5 Z" fill="#1565C0" stroke="none"/>
+      <line x1="59.4" y1="130.34" x2="62.4" y2="130.34"
             stroke="#3DA015" stroke-width="1.2"/>
-      <line x1="52.46875" y1="134.4" x2="55.46875" y2="134.4"
+      <line x1="59.4" y1="134.4" x2="62.4" y2="134.4"
             stroke="#FF0000" stroke-width="1.2"/>
-      <text x="63.96875" y="134.0"
+      <text x="70.9" y="134.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Ramp6Buttons</text>
-      <polygon points="180.5625,5.5 185.5625,10.5 180.5625,15.5" fill="#63B31F"/>
-      <text x="179.5625" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,5.5 210.2,10.5 205.2,15.5" fill="#63B31F"/>
+      <text x="204.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_SWITCH</text>
-      <polygon points="180.5625,22.5 185.5625,27.5 180.5625,32.5" fill="#63B31F"/>
-      <text x="179.5625" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,22.5 210.2,27.5 205.2,32.5" fill="#63B31F"/>
+      <text x="204.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_ZERO</text>
-      <polygon points="180.5625,39.5 185.5625,44.5 180.5625,49.5" fill="#63B31F"/>
-      <text x="179.5625" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,39.5 210.2,44.5 205.2,49.5" fill="#63B31F"/>
+      <text x="204.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_UP_SLOW</text>
-      <polygon points="180.5625,56.5 185.5625,61.5 180.5625,66.5" fill="#63B31F"/>
-      <text x="179.5625" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,56.5 210.2,61.5 205.2,66.5" fill="#63B31F"/>
+      <text x="204.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_UP_FAST</text>
-      <polygon points="180.5625,73.5 185.5625,78.5 180.5625,83.5" fill="#63B31F"/>
-      <text x="179.5625" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,73.5 210.2,78.5 205.2,83.5" fill="#63B31F"/>
+      <text x="204.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_DOWN_SLO…</text>
-      <polygon points="180.5625,90.5 185.5625,95.5 180.5625,100.5" fill="#63B31F"/>
-      <text x="179.5625" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,90.5 210.2,95.5 205.2,100.5" fill="#63B31F"/>
+      <text x="204.2" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_DOWN_FAS…</text>
-      <polygon points="180.5625,107.5 185.5625,112.5 180.5625,117.5" fill="#63B31F"/>
-      <text x="179.5625" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="205.2,107.5 210.2,112.5 205.2,117.5" fill="#63B31F"/>
+      <text x="204.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IND_FULL</text>
       <polygon points="0,141.5 5,146.5 0,151.5" fill="#18519E"/>
       <text x="6" y="150.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -2837,7 +2865,7 @@ physischer PWM-Ausgang, OPC-UA Publish/Subscribe (generisch, ein Kanal)</text>
 
 
       <!-- Instance Name -->
-      <text x="92.78125" y="-5"
+      <text x="105.1" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Ramp6Buttons</text>
     </g>

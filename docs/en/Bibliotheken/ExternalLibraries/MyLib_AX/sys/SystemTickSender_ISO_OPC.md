@@ -41,6 +41,10 @@
 
 4. Parameters: `u16ObjId` → `Q_NumericValue_AUDI.u16ObjId`; `ID_WRITE` → `ADI_PUBLISH_1.ID`.
 
+5. `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (new event input `INIT` / event output `INITO`, both `EInit`).
+
+6. `QI` (`BOOL`, default `TRUE`) → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO` (`BOOL`, Quality Output - `TRUE` if the VT write succeeded).
+
 
 ## Technical Features
 

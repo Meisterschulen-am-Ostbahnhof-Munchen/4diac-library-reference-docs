@@ -12,6 +12,12 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ![NVS_IN_AND_STORE_AUDI](NVS_IN_AND_STORE_AUDI.svg)
 
+## Quality ports (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_AUDI.QI`, and `Q_NumericValue_AUDI.QO` to `QO`.
+
+The block still has no event ports of its own.
+
 ## Summary
 
 NVS counterpart to `INI_IN_AND_STORE_AUDI`.

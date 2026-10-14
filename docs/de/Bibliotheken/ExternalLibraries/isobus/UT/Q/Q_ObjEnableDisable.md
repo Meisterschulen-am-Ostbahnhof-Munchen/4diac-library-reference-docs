@@ -24,11 +24,13 @@ Der **Q_ObjEnableDisable** ist ein standardkonformer Funktionsbaustein zur Aktiv
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u16ObjId` (UINT): Objekt-ID (16-bit)
 - `qAbility` (BOOL): Aktivierungsstatus (TRUE=aktivieren, FALSE=deaktivieren)
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `qOldAbility` (BOOL): Vorheriger Aktivierungsstatus
 - `s16result` (INT): ISO-konformer Ergebniscode
@@ -41,6 +43,8 @@ Button (6000–6999), Input Boolean Field (7000–7999), Input String Field (800
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein. Jede ID außerhalb dieser Bereiche ist ungültig.
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Zielobjekt-ID

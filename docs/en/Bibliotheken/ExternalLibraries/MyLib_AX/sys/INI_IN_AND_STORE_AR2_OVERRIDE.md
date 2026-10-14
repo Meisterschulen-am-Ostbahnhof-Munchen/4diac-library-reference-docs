@@ -16,9 +16,14 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `KEY` (STRING): key name in the INI file.
 - `SECTION` (STRING): section name in the INI file.
 - `stObj` (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): VT object with `u16ObjId`, `r32Scale`, `i32Offset`, `u8Decimals` (default `u16ObjId := ID_NULL`, `r32Scale := 1.0`, `i32Offset := 0`, `u8Decimals := 0`).
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully.
 
 ### Adapters
 
@@ -33,6 +38,8 @@ The block has no event ports of its own.
 2. `SEL_Override` (`AR_AX_SEL_AR`) selects: `IN0` = live VT value, `IN1` = override value from `LIT_Override` (`initval_AR`, `INIT_VAL`=`REAL#0.0`), selected via `G` = `OVERRIDE_ACTIVE`.
 3. `AR_TO_AR2` converts into the bidirectional AR2 adapter for `INI_AR2` (`eclipse4diac::storage::INI_AR2`; `QI`=TRUE, `SETM`=TRUE, `DEFAULT_VALUE`=`REAL#0.0`; `KEY`/`SECTION` from outside).
 4. `AR_TO_AR2.AR_OUT` is duplicated via `AR_SPLIT_2`: `OUT1` to `VALUEO`, `OUT2` to `Q_NumericValue_PHYSA` (VT display, `stObj`).
+
+`QI` is passed through to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
 
 ## Technical notes
 

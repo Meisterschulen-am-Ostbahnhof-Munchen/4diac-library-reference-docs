@@ -29,12 +29,14 @@ The function block **Q_NumericValue_PHYSA_LREAL** serves as a command for changi
 
 | Name  | Type                                                  | Comment                                                                                                                                                 |
 | ----- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| QI    | BOOL                                                  | Quality Input - TRUE to enable service                                                                                                                  |
 | stObj | logiBUS::utils::conversion::phys::NumericObjectPool_S | Properties of the object pool (ObjID, scale, offset, decimal places). Initial: (u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0). |
 
 ### **Data Outputs**
 
 | Name      | Type   | Comment                                                                 |
 | --------- | ------ | ----------------------------------------------------------------------- |
+| QO        | BOOL   | Quality Output - TRUE if service executed successfully                  |
 | STATUS    | STRING | Service status message.                                                 |
 | s16result | INT    | Return value – see Q_NumericValue (result of the value change request). |
 
@@ -52,6 +54,8 @@ The function block **Q_NumericValue_PHYSA_LREAL** serves as a command for changi
 | ------ | ------------------- | ------------------------------------------------------------------- |
 | xOver  | AX (unidirectional) | Signals that the physical value exceeds the upper ISOBUS limit.     |
 | xUnder | AX (unidirectional) | Signals that the physical value falls below the lower ISOBUS limit. |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_NumericValue_PHYS_LREAL`. The data output `QO` (BOOL) is taken over from `Q_NumericValue_PHYS_LREAL.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

@@ -55,23 +55,31 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
     <line x1="1369.4" y1="-119.0" x2="1369.4" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 192.0,-84.0 197.0,-79.0 197.0,165.5 202.0,170.5 288.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 942.0,-84.0 947.0,-79.0 947.0,161.5 952.0,166.5 1158.0,166.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 192.0,-67.0 197.0,-62.0 197.0,165.5 202.0,170.5 288.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 942.0,-67.0 947.0,-62.0 947.0,178.5 952.0,183.5 1158.0,183.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 594.0,-84.0 599.0,-79.0 599.0,161.5 604.0,166.5 1158.0,166.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1349.4,166.5 1355.4,166.5 1359.4,162.5 1359.4,-80.0 1363.4,-84.0 1369.4,-84.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="445.2,187.5 530.8,187.5 533.2,189.9 533.2,191.1 535.6,193.5 813.0,193.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="445.2,187.5 530.8,187.5 533.2,189.9 533.2,191.1 535.6,193.5 813.0,193.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-79.0 1284.8,-84.0 1369.4,-84.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-79.0 1284.8,-84.0 1369.4,-84.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-62.0 1284.8,-67.0 1369.4,-67.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="946.8,193.5 1274.8,193.5 1279.8,188.5 1279.8,-62.0 1284.8,-67.0 1369.4,-67.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="946.8,210.5 1072.8,210.5 1077.8,215.5 1077.8,263.5 1072.8,268.5 993.0,268.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="946.8,210.5 1072.8,210.5 1077.8,215.5 1077.8,263.5 1072.8,268.5 993.0,268.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,205.5 1192.6,200.5 1158.0,200.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,205.5 1192.6,200.5 1158.0,200.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,222.5 1192.6,217.5 1158.0,217.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1119.6,268.5 1192.6,268.5 1197.6,263.5 1197.6,222.5 1192.6,217.5 1158.0,217.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#18519E"/>
+    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#A3B08F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
+    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#18519E"/>
+    <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">u16ObjId</text>
-    <path d="M 1369.4005000000002 -89.0 L 1374.4005000000002 -89.0 L 1374.4005000000002 -87.33333333333333 L 1376.9005000000002 -87.33333333333333 L 1376.9005000000002 -89.0 L 1379.4005000000002 -89.0 L 1379.4005000000002 -79.0 L 1376.9005000000002 -79.0 L 1376.9005000000002 -80.66666666666667 L 1374.4005000000002 -80.66666666666667 L 1374.4005000000002 -79.0 L 1369.4005000000002 -79.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="1382.4005000000002" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1374.4005000000002,-89.0 1369.4005000000002,-84.0 1374.4005000000002,-79.0" fill="#A3B08F"/>
+    <text x="1375.4005000000002" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
+    <path d="M 1369.4005000000002 -72.0 L 1374.4005000000002 -72.0 L 1374.4005000000002 -70.33333333333333 L 1376.9005000000002 -70.33333333333333 L 1376.9005000000002 -72.0 L 1379.4005000000002 -72.0 L 1379.4005000000002 -62.0 L 1376.9005000000002 -62.0 L 1376.9005000000002 -63.666666666666664 L 1374.4005000000002 -63.666666666666664 L 1374.4005000000002 -62.0 L 1369.4005000000002 -62.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="1382.4005000000002" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">VALUEO</text>
   </g>
   <g id="instances">
@@ -374,10 +382,10 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
             L 182.4 52
             L 188.4 52
             A 3 3 0 0 1 191.4 55
-            L 191.4 103
-            A 3 3 0 0 1 188.4 106
-            L 3 106
-            A 3 3 0 0 1 0 103
+            L 191.4 120
+            A 3 3 0 0 1 188.4 123
+            L 3 123
+            A 3 3 0 0 1 0 120
             L 0 55
             A 3 3 0 0 1 3 52
             L 9 52
@@ -424,45 +432,51 @@ denselben AD2-Plug zurueck, das Echo wird auf das VT-Feld zurueckgeschrieben.</t
       <polygon points="186.4,22.5 191.4,27.5 186.4,32.5" fill="#63B31F"/>
       <text x="185.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">QI</text>
+      <polygon points="0,73.5 5,78.5 0,83.5" fill="#18519E"/>
+      <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u16ObjId</text>
-      <polygon points="186.4,56.5 191.4,61.5 186.4,66.5" fill="#BD8663"/>
+      <polygon points="186.4,56.5 191.4,61.5 186.4,66.5" fill="#A3B08F"/>
       <text x="185.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="186.4,73.5 191.4,78.5 186.4,83.5" fill="#18519E"/>
+            fill="#000000" text-anchor="end">QO</text>
+      <polygon points="186.4,73.5 191.4,78.5 186.4,83.5" fill="#BD8663"/>
       <text x="185.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">STATUS</text>
+      <polygon points="186.4,90.5 191.4,95.5 186.4,100.5" fill="#18519E"/>
+      <text x="185.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
-      <path d="M 0 90.5
-            L 5.0 90.5
-            L 5.0 92.16666666666667
-            L 7.5 92.16666666666667
-            L 7.5 90.5
-            L 10 90.5
-            L 10 100.5
-            L 7.5 100.5
-            L 7.5 98.83333333333333
-            L 5.0 98.83333333333333
-            L 5.0 100.5
-            L 0 100.5
+      <path d="M 0 107.5
+            L 5.0 107.5
+            L 5.0 109.16666666666667
+            L 7.5 109.16666666666667
+            L 7.5 107.5
+            L 10 107.5
+            L 10 117.5
+            L 7.5 117.5
+            L 7.5 115.83333333333333
+            L 5.0 115.83333333333333
+            L 5.0 117.5
+            L 0 117.5
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-      <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="13" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <path d="M 181.4 90.5
-            L 183.9 90.5
-            L 183.9 92.16666666666667
-            L 186.4 92.16666666666667
-            L 186.4 90.5
-            L 191.4 90.5
-            L 191.4 100.5
-            L 186.4 100.5
-            L 186.4 98.83333333333333
-            L 183.9 98.83333333333333
-            L 183.9 100.5
-            L 181.4 100.5
+      <path d="M 181.4 107.5
+            L 183.9 107.5
+            L 183.9 109.16666666666667
+            L 186.4 109.16666666666667
+            L 186.4 107.5
+            L 191.4 107.5
+            L 191.4 117.5
+            L 186.4 117.5
+            L 186.4 115.83333333333333
+            L 183.9 115.83333333333333
+            L 183.9 117.5
+            L 181.4 117.5
             Z" fill="#845DAF"/>
-      <text x="178.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="178.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
       <!-- Instance Name -->
       <text x="95.7" y="-5"

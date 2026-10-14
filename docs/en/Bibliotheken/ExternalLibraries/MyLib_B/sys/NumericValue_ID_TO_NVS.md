@@ -27,6 +27,7 @@ None.
 
 | Name      | Type     | Initial Value | Comment                            |
 |-----------|----------|---------------|------------------------------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue.QI` |
 | `KEY`     | `STRING` | —             | Key name used in the NVS storage.  |
 | `u16ObjId`| `UINT`   | `ID_NULL`     | Object ID of the numeric value to be processed. |
 
@@ -34,6 +35,7 @@ None.
 
 | Name      | Type     | Comment                                            |
 |-----------|----------|-----------------------------------------------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue.QO` |
 | `VALUEO`  | `UDINT`  | Numeric value that is currently stored in the NVS.  |
 
 ### **Adapters**
@@ -59,6 +61,8 @@ The internal event flow works as follows:
 - After conversion, the `CNF` event triggers the NVS block to perform a `SET` operation.
 - A completed SET operation is reported on `SETO`, which is propagated to the subapplication output `IND`.
 - On initialization, the NVS block performs a GET operation automatically after its `INITO` event. The retrieved value is then assigned to `VALUEO` and also passed to the internal `Q_NumericValue` block.
+
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
 
 ## Technical Features
 

@@ -33,6 +33,8 @@
 4. `AD_SPLIT_2.OUT2` → `AD_TO_AUDI.AD_IN`; `AD_TO_AUDI.AUDI_OUT` → `Q_NumericValue.u32NewValue` (VT-Rohwert-Zweig).
 5. `AD_SPLIT_2.OUT3` → `F_AI_RAW_TO_PERCENT.RAW_IN`; `F_AI_RAW_TO_PERCENT.PERCENT_OUT` → `AR_PUBLISH_PERCENT.IN` (Prozent-OPC-UA-Zweig).
 
+6. `QI` (`BOOL`, Vorgabe `TRUE`, neu) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, neu, Quality Output – `TRUE`, wenn der VT-Schreibzugriff auf das Rohwert-Zahlenfeld erfolgreich war).
+
 ## Technische Besonderheiten
 
 - Rohwert-Bereich 0-4095 (12 Bit) — siehe hierzu die verifizierte AI-Hardwaredokumentation.

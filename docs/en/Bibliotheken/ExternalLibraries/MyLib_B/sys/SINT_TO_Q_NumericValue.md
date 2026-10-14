@@ -17,22 +17,28 @@ The **SINT_TO_Q_NumericValue** subapplication provides a generic and reusable so
 
 | Event    | Description                                                                 |
 |----------|-----------------------------------------------------------------------------|
+| `INIT`   | Initialization request; forwarded to `Q_NumericValue.INIT`.                 |
 | `CNF`    | Triggers the conversion and subsequent update of the numeric display field. |
 
 ### **Event Outputs**
 
-None.
+| Event    | Description                                                                 |
+|----------|-----------------------------------------------------------------------------|
+| `INITO`  | Initialization confirm from `Q_NumericValue.INITO`.                         |
 
 ### **Data Inputs**
 
 | Data Name  | Type  | Initial Value | Description                                                                 |
 |------------|-------|---------------|-----------------------------------------------------------------------------|
+| `QI`       | BOOL  | `TRUE`        | Quality Input - TRUE to enable service; passed through to `Q_NumericValue.QI`. |
 | `u16ObjId` | UINT  | `ID_NULL`     | Object ID of the target Q_NumericValue element on the visualization screen.|
 | `NewValue` | SINT  | –             | Signed 8‑bit value to be converted and displayed.                           |
 
 ### **Data Outputs**
 
-None.
+| Data Name | Type | Description |
+|-----------|------|-------------|
+| `QO`      | BOOL | Quality Output - TRUE if the service executed successfully; taken from `Q_NumericValue.QO`. |
 
 ### **Adapters**
 
@@ -40,7 +46,7 @@ None.
 
 ## Functionality
 
-Upon receiving an event at the `CNF` input, the subapplication performs the following operations internally:
+The `INIT` event is forwarded to `Q_NumericValue.INIT`, and its `INITO` is output at `INITO`. `QI` is passed through to `Q_NumericValue.QI`, and `Q_NumericValue.QO` is passed through to `QO`. Upon receiving an event at the `CNF` input, the subapplication performs the following operations internally:
 
 1. The value on `NewValue` (SINT) is passed to the conversion function block **F_SINT_TO_UINT** (IEC 61131‑3 compliant) via the `IN` input.
 2. The conversion block produces the corresponding unsigned 32‑bit representation on its `OUT` output.

@@ -34,6 +34,7 @@ Der Baustein kapselt drei Unterbausteine:
 
 | Name    | Typ                                                     | Kommentar                                                                                       |
 | ------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `QI` | BOOL | Quality-Eingang, `TRUE` aktiviert den Dienst (Standard `TRUE`) |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Struktur mit Objekt‑ID, Skalierung, Offset und Dezimalstellen (Initialwert: ID_NULL, 1.0, 0, 0) |
 | `rPhys` | REAL                                                    | Physikalischer Wert, der gesetzt werden soll (z.B. Temperatur, Druck)                           |
 
@@ -41,6 +42,7 @@ Der Baustein kapselt drei Unterbausteine:
 
 | Name          | Typ    | Kommentar                                                                                   |
 | ------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `QO` | BOOL | Quality-Ausgang, `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS`      | STRING | Statusmeldung des Dienstes (z.B. Fehler‑ oder Erfolgsmeldung)                               |
 | `u32OldValue` | UDINT  | Alter Rohwert des ISOBUS‑Objekts vor der Änderung                                           |
 | `s16result`   | INT    | Rückgabewert der Schreiboperation (siehe `Q_NumericValue`)                                  |
@@ -58,6 +60,8 @@ Keine Adapter vorhanden.
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde. `QI` wird an `Q_NumericValue.QI` weitergereicht und `Q_NumericValue.QO` an `QO`.
 
 Die Verarbeitung erfolgt in zwei getrennten Abläufen:
 

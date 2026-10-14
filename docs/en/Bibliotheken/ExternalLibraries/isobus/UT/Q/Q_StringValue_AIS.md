@@ -27,22 +27,26 @@ The function block **Q_StringValue_AIS** implements the "Command Change String V
 
 ### **Data Inputs**
 
-| Name     | Type | Initial Value | Comment                              |
-| -------- | ---- | ------------- | ------------------------------------ |
-| u16ObjId | UINT | ID_NULL       | Object ID of the value to be changed |
+| Name     | Type | Initial Value | Comment                                |
+| -------- | ---- | ------------- | -------------------------------------- |
+| QI       | BOOL | TRUE          | Quality Input - TRUE to enable service |
+| u16ObjId | UINT | ID_NULL       | Object ID of the value to be changed   |
 
 ### **Data Outputs**
 
-| Name      | Type   | Comment                                        |
-| --------- | ------ | ---------------------------------------------- |
-| STATUS    | STRING | Service status (e.g., "IDLE", "BUSY", "ERROR") |
-| s16result | INT    | Return value (see service description)         |
+| Name      | Type   | Comment                                                |
+| --------- | ------ | ------------------------------------------------------ |
+| QO        | BOOL   | Quality Output - TRUE if service executed successfully |
+| STATUS    | STRING | Service status (e.g., "IDLE", "BUSY", "ERROR")         |
+| s16result | INT    | Return value (see service description)                 |
 
 ### **Adapter**
 
 | Name       | Type                                | Comment                      |
 | ---------- | ----------------------------------- | ---------------------------- |
 | pau8String | adapter::types::unidirectional::AIS | Returns the new string value |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_StringValue`. The data output `QO` (BOOL) is taken over from `Q_StringValue.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

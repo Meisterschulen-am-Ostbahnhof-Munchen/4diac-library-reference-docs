@@ -26,6 +26,7 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u8NumOfRepit` (USINT): Wiederholungen (1-255)
 - `u16Frequency` (UINT): Frequenz in Hz
 - `u16OnTimeMs` (UINT): Einschaltdauer in ms
@@ -33,6 +34,7 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldNumOfRepit` (USINT): Vorherige Wiederholungen
 - `u16OldFrequency` (UINT): Vorherige Frequenz
@@ -41,6 +43,8 @@ Der Befehl F.10 adressiert direkt das **Audiogerät** des VT — er referenziert
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` ohne Parameter

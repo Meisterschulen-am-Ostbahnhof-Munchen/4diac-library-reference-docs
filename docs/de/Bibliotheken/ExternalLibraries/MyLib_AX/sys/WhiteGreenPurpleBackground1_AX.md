@@ -32,18 +32,23 @@ Verwendet wird er z. B. für Vorbedingungs-Badges (Säge/Bänder/Zapfwelle) bei 
 
 ### **Ereignis-Eingänge**
 
-Keine – Ereignisse kommen über die Adapter `DI1` und `DI2`.
+- **INIT** (`EInit`): Initialisierungsanforderung (→ `Q_BackgroundColour.INIT`)
+
+Weitere Ereignisse kommen über die Adapter `DI1` und `DI2`.
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `Q_BackgroundColour.INITO`)
 - **CNF**: Ausführungsbestätigung (von `Q_BackgroundColour.CNF`)
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – `TRUE` aktiviert den Dienst (→ `Q_BackgroundColour.QI`)
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID Softkey/Button/OutputText
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde (von `Q_BackgroundColour.QO`)
 - **STATUS_1** (`STRING`): Dienststatus (von `Q_BackgroundColour.STATUS`)
 - **result_1** (`INT`): Rückgabewert (von `Q_BackgroundColour.s16result`)
 
@@ -60,6 +65,8 @@ Keine – Ereignisse kommen über die Adapter `DI1` und `DI2`.
 - `F_SEL_Condition.OUT` → `F_SEL_Override.IN0`; `initval_AUS.OUT` → `F_SEL_Override.IN1`
 - `F_SEL_Override.OUT` → `Q_BackgroundColour.u8Colour`
 - `u16ObjId` → `Q_BackgroundColour.u16ObjId`
+- `INIT` → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → `INITO`
+- `QI` → `Q_BackgroundColour.QI`; `Q_BackgroundColour.QO` → `QO`
 - `Q_BackgroundColour.u8OldColour` → `u8OldColour_1`; `.STATUS` → `STATUS_1`; `.s16result` → `result_1`; `.CNF` → `CNF`
 
 ## Technische Besonderheiten

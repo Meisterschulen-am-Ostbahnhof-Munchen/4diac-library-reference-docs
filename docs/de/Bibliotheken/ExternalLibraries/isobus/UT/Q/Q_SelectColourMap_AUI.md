@@ -27,12 +27,17 @@ Der **Q_SelectColourMap_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein 
 
 ### **Daten-Eingänge**
 
-Keine direkten Dateneingänge vorhanden – die Farbpaletten-IDs werden über die AUI-Adapter übertragen.
+Außer `QI` gibt es keine direkten Dateneingänge – die Farbpaletten-IDs werden über die AUI-Adapter übertragen.
+
+| Name | Typ    | Initialwert | Kommentar                                 |
+| ---- | ------ | ----------- | ----------------------------------------- |
+| `QI` | `BOOL` | `TRUE`      | Quality Input – TRUE aktiviert den Dienst |
 
 ### **Daten-Ausgänge**
 
 | Name | Typ | Kommentar |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS` | `STRING` | Dienststatus |
 | `s16result` | `INT` | Rückgabewert des Befehls |
 
@@ -42,6 +47,8 @@ Keine direkten Dateneingänge vorhanden – die Farbpaletten-IDs werden über di
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16ObjIdColourMap` | Socket (Eingang) | Neue Farbpaletten-Object-ID (39000–39999 für ColourMap, 45000–45999 für ColourPalette, ID_NULL / 0xFFFF für Standard-Farbtabelle) |
 | `adapter::types::unidirectional::AUI` | `u16OldObjIdColourMap` | Plug (Ausgang) | Bisherige Farbpaletten-Object-ID |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_SelectColourMap` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_SelectColourMap.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Funktionsweise
 

@@ -32,6 +32,7 @@ The function block encapsulates three sub-functions:
 
 | Name    | Type                                                    | Comment                                                                                         |
 | ------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `QI` | BOOL | Quality input, `TRUE` enables the service (default `TRUE`) |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Structure with object ID, scale, offset, and decimal places (initial value: ID_NULL, 1.0, 0, 0) |
 | `rPhys` | REAL                                                    | Physical value to be set (e.g., temperature, pressure)                                          |
 
@@ -39,6 +40,7 @@ The function block encapsulates three sub-functions:
 
 | Name          | Type   | Comment                                                                          |
 | ------------- | ------ | -------------------------------------------------------------------------------- |
+| `QO` | BOOL | Quality output, `TRUE` if the service was executed successfully |
 | `STATUS`      | STRING | Service status message (e.g., error or success message)                          |
 | `u32OldValue` | UDINT  | Original raw value of the ISOBUS object before the change                        |
 | `s16result`   | INT    | Return value of the write operation (see `Q_NumericValue`)                       |
@@ -56,6 +58,8 @@ No adapters available.
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully. `QI` is passed through to `Q_NumericValue.QI`, and `Q_NumericValue.QO` is passed through to `QO`.
 
 Processing occurs in two separate steps:
 

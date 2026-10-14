@@ -21,11 +21,13 @@ The **Q_NumericValueAux** is a standards-compliant function block for numeric va
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `u32NewValue` (UDINT): New Numeric Value (32-bit unsigned)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational Status Message
 - `u32OldValue` (UDINT): Previous numeric value
 - `s16result` (INT): ISO-compliant result code
@@ -38,6 +40,8 @@ Input Boolean Field (7000–7999), Input Number Field (9000–9999), Input List 
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

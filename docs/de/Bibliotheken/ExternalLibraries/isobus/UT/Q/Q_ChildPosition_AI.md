@@ -14,37 +14,39 @@ Der Funktionsblock `Q_ChildPosition_AI` dient zur Steuerung der Position eines K
 
 ### **Ereignis-Eingänge**
 
-| Name  | Typ   | Kommentar                                   |
-|-------|-------|---------------------------------------------|
-| INIT  | EInit | Service-Initialisierung                     |
+| Name | Typ   | Kommentar               |
+|------|-------|-------------------------|
+| INIT | EInit | Service-Initialisierung |
 
 Das INIT‑Ereignis initialisiert den internen Baustein und übernimmt die Parameter `u16ObjId`, `u16ObjIdParent` und `xScale`.
 
 ### **Ereignis-Ausgänge**
 
-| Name  | Typ   | Kommentar                                           |
-|-------|-------|-----------------------------------------------------|
-| INITO | EInit | Initialisierungsbestätigung                        |
-| CNF   | Event | Bestätigung des angeforderten Dienstes              |
+| Name  | Typ   | Kommentar                              |
+|-------|-------|----------------------------------------|
+| INITO | EInit | Initialisierungsbestätigung            |
+| CNF   | Event | Bestätigung des angeforderten Dienstes |
 
 Das CNF‑Ereignis wird nach jeder erfolgreichen Positionsänderung ausgelöst und liefert die Ergebnisse (STATUS, alte Positionen, Rückgabewert).
 
 ### **Daten-Eingänge**
 
-| Name                     | Typ  | Kommentar                                                                        |
-|--------------------------|------|----------------------------------------------------------------------------------|
-| `u16ObjId`               | UINT | Objektidentifikator, Standardwert `ID_NULL`                                      |
-| `u16ObjIdParent`         | UINT | Identifikator des Elternobjekts, Standardwert `ID_NULL`                          |
-| `xScale`                 | BOOL | Skalierungsflag: `FALSE` (Standard) = unverändert durchreichen, `TRUE` = Skalierung mit dem DM/SKM‑Faktor des Elternobjekts |
+| Name             | Typ  | Kommentar                                                                                                                   |
+|------------------|------|-----------------------------------------------------------------------------------------------------------------------------|
+| `QI`             | BOOL | Quality Input – TRUE aktiviert den Dienst                                                                                   |
+| `u16ObjId`       | UINT | Objektidentifikator, Standardwert `ID_NULL`                                                                                 |
+| `u16ObjIdParent` | UINT | Identifikator des Elternobjekts, Standardwert `ID_NULL`                                                                     |
+| `xScale`         | BOOL | Skalierungsflag: `FALSE` (Standard) = unverändert durchreichen, `TRUE` = Skalierung mit dem DM/SKM‑Faktor des Elternobjekts |
 
 ### **Daten-Ausgänge**
 
-| Name               | Typ     | Kommentar                                        |
-|--------------------|---------|--------------------------------------------------|
-| `STATUS`           | STRING  | Dienststatus; wird direkt vom internen `Q_ChildPosition` übernommen |
-| `s16OldXposition`  | INT     | Vorherige X‑Position (Passthrough)               |
-| `s16OldYposition`  | INT     | Vorherige Y‑Position (Passthrough)               |
-| `s16result`        | INT     | Rückgabewert des Dienstes (Passthrough)          |
+| Name              | Typ    | Kommentar                                                           |
+|-------------------|--------|---------------------------------------------------------------------|
+| `QO`              | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| `STATUS`          | STRING | Dienststatus; wird direkt vom internen `Q_ChildPosition` übernommen |
+| `s16OldXposition` | INT    | Vorherige X‑Position (Passthrough)                                  |
+| `s16OldYposition` | INT    | Vorherige Y‑Position (Passthrough)                                  |
+| `s16result`       | INT    | Rückgabewert des Dienstes (Passthrough)                             |
 
 ### **Adapter**
 
@@ -52,6 +54,8 @@ Das CNF‑Ereignis wird nach jeder erfolgreichen Positionsänderung ausgelöst u
 |---------------|------------------------------------|-----------------------------------------------------------------|
 | `s16Xposition` | `adapter::types::unidirectional::AI` | Neue X‑Position relativ zur oberen linken Ecke des Elternobjekts |
 | `s16Yposition` | `adapter::types::unidirectional::AI` | Neue Y‑Position relativ zur oberen linken Ecke des Elternobjekts |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Inner` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Inner.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Funktionsweise
 

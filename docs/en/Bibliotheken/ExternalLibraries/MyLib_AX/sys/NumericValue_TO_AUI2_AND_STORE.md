@@ -16,9 +16,14 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `KEY` (STRING): key name in the INI file.
 - `SECTION` (STRING): section name in the INI file.
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT input field.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully.
 
 ### Adapters
 
@@ -32,6 +37,8 @@ The block has no event ports of its own.
 2. `AUI_LAST_2` (last writer wins) merges: `IN1` = live VT change, `IN2` = INI value at boot. Its output goes to `AUI_TO_AUI2` (bridge to the external consumer), whose bidirectional output goes to `VALUEO`.
 3. The result reported back by the consumer appears at `AUI_TO_AUI2.AUI_OUT` and is duplicated via `AUI_SPLIT_2`: `OUT1` via `AUI_TO_AUDI` to `Q_NumericValue_AUDI` (`u32NewValue`, VT display under `u16ObjId`), `OUT2` to `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `QI`=TRUE, `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
 4. `INI_AUI.AUI_OUT` feeds the loaded value back to `AUI_LAST_2.IN2`.
+
+`QI` is passed through to `Q_NumericValue_AUDI.QI`, and `Q_NumericValue_AUDI.QO` to `QO`.
 
 ## Technical notes
 

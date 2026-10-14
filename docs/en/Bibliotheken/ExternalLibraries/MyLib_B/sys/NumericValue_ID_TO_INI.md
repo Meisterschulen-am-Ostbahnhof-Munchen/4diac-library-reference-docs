@@ -29,6 +29,7 @@ The **NumericValue_ID_TO_INI** subapplication is a generic, reusable component t
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue.QI` |
 | `KEY` | `STRING` | — | The key (name) under which the numeric value is stored in the INI file. |
 | `SECTION` | `STRING` | — | The section of the INI file where the key is located. |
 | `u16ObjId` | `UINT` | `ID_NULL` | The object ID of the numeric VT value to be read (source identifier for the VT communication). |
@@ -37,6 +38,7 @@ The **NumericValue_ID_TO_INI** subapplication is a generic, reusable component t
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue.QO` |
 | `VALUEO` | `UDINT` | The numeric value read from the VT and stored/retrieved from the INI file. This output is updated after a GET or SET operation. |
 
 ### **Adapters**
@@ -58,6 +60,8 @@ The subapp provides a complete data path from a Virtual Terminal numeric object 
    - The `GETO` event also propagates directly to the subapp's `IND` output, informing the external application that the read-back is complete.
 
 5. **Output**: The retrieved value from the INI FB (`VALUEO`) is provided on the subapp's `VALUEO` output and simultaneously sent to the `Q_NumericValue` FB for VT synchronization.
+
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
 
 ## Technical Features
 

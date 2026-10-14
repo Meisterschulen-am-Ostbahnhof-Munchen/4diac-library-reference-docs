@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1433.9375 152.0"
-     width="1433.9375" height="152.0">
+     viewBox="0 0 2443.0 172.0"
+     width="2443.0" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1208.25, 10)">
+  <g transform="translate(1673.0000000000002, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 187.6875 0
-            A 3 3 0 0 1 190.6875 3
-            L 190.6875 23.0
-            A 3 3 0 0 1 187.6875 26.0
-            L 180.6875 26.0
-            L 180.6875 66.0
-            L 187.6875 66.0
-            A 3 3 0 0 1 190.6875 69.0
-            L 190.6875 129.0
-            A 3 3 0 0 1 187.6875 132.0
-            L 3 132.0
-            A 3 3 0 0 1 0 129.0
+            L 219.6 0
+            A 3 3 0 0 1 222.6 3
+            L 222.6 23.0
+            A 3 3 0 0 1 219.6 26.0
+            L 212.6 26.0
+            L 212.6 66.0
+            L 219.6 66.0
+            A 3 3 0 0 1 222.6 69.0
+            L 222.6 149.0
+            A 3 3 0 0 1 219.6 152.0
+            L 3 152.0
+            A 3 3 0 0 1 0 149.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -91,36 +91,44 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AR_TO_Q_Publish_OPC</text>
     
-    <text x="95.34375" y="66.0"
+    <text x="111.3" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.2</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#3366FF"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#3366FF"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">stObj</text>
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
-    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_WRITE</text>
+
+    <polygon points="216.1,71.0 221.1,76.0 216.1,81.0" fill="#A3B08F"/>
+    <text x="213.1" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 1.5 117.0
-            L 6.5 117.0
-            L 6.5 118.66666666666667
-            L 9.0 118.66666666666667
-            L 9.0 117.0
-            L 11.5 117.0
-            L 11.5 127.0
-            L 9.0 127.0
-            L 9.0 125.33333333333333
-            L 6.5 125.33333333333333
-            L 6.5 127.0
-            L 1.5 127.0
+    <path d="M 1.5 137.0
+            L 6.5 137.0
+            L 6.5 138.66666666666666
+            L 9.0 138.66666666666666
+            L 9.0 137.0
+            L 11.5 137.0
+            L 11.5 147.0
+            L 9.0 147.0
+            L 9.0 145.33333333333334
+            L 6.5 145.33333333333334
+            L 6.5 147.0
+            L 1.5 147.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="14.5" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="14.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">AR_IN</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -130,12 +138,18 @@
     <!-- External Labels -->
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object pool properties der VT-Zahlenvariable (u16ObjId, scale, offset, decimals) - z.B. FBs::const::DefaultPool_Numeric::NumberVariable_X_N – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object pool properties der VT-Zahlenvariable (u16ObjId, scale, offset, decimals) - z.B. FBs::const::DefaultPool_Numeric::NumberVariable_X_N – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+
+    <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Publish-Adresse (REAL, ACTION=PUBLISH), lokal oder stationsuebergreifend – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="-25" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="247.6" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
+
+    <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physikalischer Wert (bereits skaliert) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>
   </g>
 </svg>

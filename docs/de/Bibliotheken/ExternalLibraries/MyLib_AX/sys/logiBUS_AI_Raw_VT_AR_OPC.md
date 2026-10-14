@@ -22,13 +22,14 @@ Keine.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – `TRUE` aktiviert den VT-Schreibdienst (→ `Q_NumericValue_RAW.QI`)
 - **Input** (`logiBUS::io::AI::logiBUS_AI_S`): Auswahl des Eingangs `AnalogInput_I1`..`I8` (Default `logiBUS_AI::Invalid`)
 - **u16ObjId_RAWVAR** (`UINT`): Object ID der `CNumberVariable` (Rohwert 0..4095, unkalibriert, reine Diagnose-Anzeige)
 - **ID_RAW_WRITE** (`WSTRING`): Rohwert-Rückmelde-Adresse (`REAL` 0..4095, `ACTION=PUBLISH`)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output – `TRUE`, wenn der VT-Schreibzugriff erfolgreich war (von `Q_NumericValue_RAW.QO`)
 
 ### **Adapter**
 
@@ -49,6 +50,7 @@ Keine.
 - `Input` → `logiBUS_AI_IDA.Input`
 - `logiBUS_AI_IDA.IN` → `AD_TO_AUDI.AD_IN` → `AUDI_SPLIT_2.IN`
 - `AUDI_SPLIT_2.OUT1` → `Q_NumericValue_RAW.u32NewValue` (VT-Anzeige); `u16ObjId_RAWVAR` → `Q_NumericValue_RAW.u16ObjId`
+- `QI` → `Q_NumericValue_RAW.QI`; `Q_NumericValue_RAW.QO` → `QO`
 - `AUDI_SPLIT_2.OUT2` → `AUDI_TO_AR.AUDI_IN` → `AR_SPLIT_2_Raw.IN`
 - `AR_SPLIT_2_Raw.OUT1` → `AR_OUT`
 - `AR_SPLIT_2_Raw.OUT2` → `AR_PUBLISH_RAW.IN`; `ID_RAW_WRITE` → `AR_PUBLISH_RAW.ID`

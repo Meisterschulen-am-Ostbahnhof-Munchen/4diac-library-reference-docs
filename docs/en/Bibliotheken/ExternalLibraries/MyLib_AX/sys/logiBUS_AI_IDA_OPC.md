@@ -33,6 +33,8 @@
 4. `AD_SPLIT_2.OUT2` → `AD_TO_AUDI.AD_IN`; `AD_TO_AUDI.AUDI_OUT` → `Q_NumericValue.u32NewValue` (VT raw-value branch).
 5. `AD_SPLIT_2.OUT3` → `F_AI_RAW_TO_PERCENT.RAW_IN`; `F_AI_RAW_TO_PERCENT.PERCENT_OUT` → `AR_PUBLISH_PERCENT.IN` (percent OPC-UA branch).
 
+6. `QI` (`BOOL`, default `TRUE`, new) → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (`BOOL`, new, Quality Output - `TRUE` if the VT write to the raw-value number field succeeded).
+
 ## Technical Details
 
 - Raw value range 0-4095 (12-bit) — see the verified AI hardware documentation for details.

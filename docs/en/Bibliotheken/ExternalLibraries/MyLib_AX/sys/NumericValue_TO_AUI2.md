@@ -14,7 +14,12 @@
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT input field.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully.
 
 ### Adapters
 
@@ -27,6 +32,8 @@ The block has no event ports of its own.
 1. `NumericValue_IDA` (`QI`=TRUE) reads the VT input field; `AD_TO_AUI` converts to AUI.
 2. `AUI_TO_AUI2` converts into the bidirectional AUI2 adapter, which is output on `VALUEO`.
 3. The echo reported back by the consumer appears at `AUI_TO_AUI2.AUI_OUT`, is converted to UDINT via `AUI_TO_AUDI`, and written to the VT field under `u16ObjId` by `Q_NumericValue_AUDI` (`u32NewValue`).
+
+`QI` is passed through to `Q_NumericValue_AUDI.QI`, and `Q_NumericValue_AUDI.QO` to `QO`.
 
 ## Technical notes
 

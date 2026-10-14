@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 901.75 172.0"
-     width="901.75" height="172.0">
+     viewBox="0 0 1317.4 192.0"
+     width="1317.4" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(327.0625, 10)">
+  <g transform="translate(413.0, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 280.5625 0
-            A 3 3 0 0 1 283.5625 3
-            L 283.5625 43.0
-            A 3 3 0 0 1 280.5625 46.0
-            L 273.5625 46.0
-            L 273.5625 86.0
-            L 280.5625 86.0
-            A 3 3 0 0 1 283.5625 89.0
-            L 283.5625 149.0
-            A 3 3 0 0 1 280.5625 152.0
-            L 3 152.0
-            A 3 3 0 0 1 0 149.0
+            L 340.0 0
+            A 3 3 0 0 1 343.0 3
+            L 343.0 43.0
+            A 3 3 0 0 1 340.0 46.0
+            L 333.0 46.0
+            L 333.0 86.0
+            L 340.0 86.0
+            A 3 3 0 0 1 343.0 89.0
+            L 343.0 169.0
+            A 3 3 0 0 1 340.0 172.0
+            L 3 172.0
+            A 3 3 0 0 1 0 169.0
             L 0 89.0
             A 3 3 0 0 1 3 86.0
             L 10 86.0
@@ -62,98 +62,106 @@
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
 
-    <polygon points="277.0625,11.0 282.0625,16.0 277.0625,21.0" fill="#63B31F"/>
-    <text x="274.0625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="336.5,11.0 341.5,16.0 336.5,21.0" fill="#63B31F"/>
+    <text x="333.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
-    <polygon points="277.0625,31.0 282.0625,36.0 277.0625,41.0" fill="#63B31F"/>
-    <text x="274.0625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="336.5,31.0 341.5,36.0 336.5,41.0" fill="#63B31F"/>
+    <text x="333.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
-    <path d="M 73.1875 57.0
-            L 89.1875 57.0
-            A 1 1 0 0 1 90.1875 58.0
-            L 90.1875 61.5
-            L 88.1875 61.5
-            L 88.1875 64.5
-            L 90.1875 64.5
-            L 90.1875 74.0
-            A 1 1 0 0 1 89.1875 75.0
-            L 73.1875 75.0
-            A 1 1 0 0 1 72.1875 74.0
-            L 72.1875 64.5
-            L 74.1875 64.5
-            L 74.1875 61.5
-            L 72.1875 61.5
-            L 72.1875 58.0
-            A 1 1 0 0 1 73.1875 57.0
+    <path d="M 89.6 57.0
+            L 105.6 57.0
+            A 1 1 0 0 1 106.6 58.0
+            L 106.6 61.5
+            L 104.6 61.5
+            L 104.6 64.5
+            L 106.6 64.5
+            L 106.6 74.0
+            A 1 1 0 0 1 105.6 75.0
+            L 89.6 75.0
+            A 1 1 0 0 1 88.6 74.0
+            L 88.6 64.5
+            L 90.6 64.5
+            L 90.6 61.5
+            L 88.6 61.5
+            L 88.6 58.0
+            A 1 1 0 0 1 89.6 57.0
             Z"
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-    <text x="81.1875" y="71.0"
+    <text x="97.6" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
           fill="#000000" text-anchor="middle">C</text>
 
     <!-- Block Name -->
-    <text x="95.1875" y="71.0"
+    <text x="111.6" y="71.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">Q_SoftKeyMask_AUI</text>
     
-    <text x="141.78125" y="86.0"
+    <text x="171.5" y="86.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#A3B08F"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u8MaskType</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u8MaskType</text>
+
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#18519E"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16DataMaskId</text>
 
-    <polygon points="277.0625,91.0 282.0625,96.0 277.0625,101.0" fill="#BD8663"/>
-    <text x="274.0625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="336.5,91.0 341.5,96.0 336.5,101.0" fill="#A3B08F"/>
+    <text x="333.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
+
+    <polygon points="336.5,111.0 341.5,116.0 336.5,121.0" fill="#BD8663"/>
+    <text x="333.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
 
-    <polygon points="277.0625,111.0 282.0625,116.0 277.0625,121.0" fill="#18519E"/>
-    <text x="274.0625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="336.5,131.0 341.5,136.0 336.5,141.0" fill="#18519E"/>
+    <text x="333.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">s16result</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 1.5 137.0
-            L 6.5 137.0
-            L 6.5 138.66666666666666
-            L 9.0 138.66666666666666
-            L 9.0 137.0
-            L 11.5 137.0
-            L 11.5 147.0
-            L 9.0 147.0
-            L 9.0 145.33333333333334
-            L 6.5 145.33333333333334
-            L 6.5 147.0
-            L 1.5 147.0
+    <path d="M 1.5 157.0
+            L 6.5 157.0
+            L 6.5 158.66666666666666
+            L 9.0 158.66666666666666
+            L 9.0 157.0
+            L 11.5 157.0
+            L 11.5 167.0
+            L 9.0 167.0
+            L 9.0 165.33333333333334
+            L 6.5 165.33333333333334
+            L 6.5 167.0
+            L 1.5 167.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="14.5" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="14.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16SoftKeyMaskId</text>
 
-    <path d="M 272.0625 137.0
-            L 274.5625 137.0
-            L 274.5625 138.66666666666666
-            L 277.0625 138.66666666666666
-            L 277.0625 137.0
-            L 282.0625 137.0
-            L 282.0625 147.0
-            L 277.0625 147.0
-            L 277.0625 145.33333333333334
-            L 274.5625 145.33333333333334
-            L 274.5625 147.0
-            L 272.0625 147.0
+    <path d="M 331.5 157.0
+            L 334.0 157.0
+            L 334.0 158.66666666666666
+            L 336.5 158.66666666666666
+            L 336.5 157.0
+            L 341.5 157.0
+            L 341.5 167.0
+            L 336.5 167.0
+            L 336.5 165.33333333333334
+            L 334.0 165.33333333333334
+            L 334.0 167.0
+            L 331.5 167.0
             Z" fill="#845DAF"/>
-    <text x="269.0625" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="328.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">u16OldSoftKeyMaskId</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -173,19 +181,40 @@
     <line x1="-10.0" y1="16.0" x2="-10.0" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="288.5625" y="31.0" width="10" height="10"
+    <rect x="-15" y="131.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <rect x="288.5625" y="91.0" width="10" height="10"
-          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
-
-    <line x1="293.5625" y1="36.0" x2="293.5625" y2="96.0"
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
-    <rect x="288.5625" y="111.0" width="10" height="10"
+    <rect x="348.0" y="11.0" width="10" height="10"
           fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
 
-    <line x1="293.5625" y1="36.0" x2="293.5625" y2="116.0"
+    <rect x="348.0" y="91.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="353.0" y1="16.0" x2="353.0" y2="96.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="362.0" y="31.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="362.0" y="91.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="367.0" y1="36.0" x2="367.0" y2="96.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="362.0" y="111.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="367.0" y1="36.0" x2="367.0" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="362.0" y="131.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="367.0" y1="36.0" x2="367.0" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- Horizontal Connection Lines -->
@@ -199,13 +228,22 @@
     <line x1="0" y1="116.0" x2="-20" y2="116.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="283.5625" y1="36.0" x2="303.5625" y2="36.0"
+    <line x1="0" y1="136.0" x2="-20" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="283.5625" y1="96.0" x2="303.5625" y2="96.0"
+    <line x1="343.0" y1="16.0" x2="363.0" y2="16.0"
           stroke="#000000" stroke-width="1"/>
 
-    <line x1="283.5625" y1="116.0" x2="303.5625" y2="116.0"
+    <line x1="343.0" y1="36.0" x2="377.0" y2="36.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="343.0" y1="96.0" x2="377.0" y2="96.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="343.0" y1="116.0" x2="377.0" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="343.0" y1="136.0" x2="377.0" y2="136.0"
           stroke="#000000" stroke-width="1"/>
 
     <!-- External Labels -->
@@ -213,28 +251,34 @@
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
-    <text x="308.5625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="382.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
 
-    <text x="308.5625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="382.0" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Requested Service</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Mask Type (1: DataMask, 2: AlarmMask) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Mask Type (1: DataMask, 2: AlarmMask) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+
+    <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID of data/alarm mask – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
-    <text x="308.5625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="382.0" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
+
+    <text x="382.0" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
 
-    <text x="308.5625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="382.0" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – retval see description</text>
 
-    <text x="-25" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="-25" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">New soft key mask ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan></text>
 
-    <text x="308.5625" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="382.0" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AUI</tspan> – Old soft key mask ID</text>
   </g>
 </svg>

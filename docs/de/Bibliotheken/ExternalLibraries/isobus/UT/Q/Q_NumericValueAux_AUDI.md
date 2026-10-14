@@ -27,16 +27,18 @@ Der Funktionsblock realisiert das Kommando **Change Numeric Value** gemäß ISO 
 
 ### **Daten-Eingänge**
 
-| Variable   | Typ  | Kommentar | Initialwert |
-| ---------- | ---- | --------- | ----------- |
-| `u16ObjId` | UINT | Objekt‑ID | `ID_NULL`   |
+| Variable   | Typ  | Kommentar                                 | Initialwert |
+| ---------- | ---- | ----------------------------------------- | ----------- |
+| `QI`       | BOOL | Quality Input – TRUE aktiviert den Dienst | `TRUE`      |
+| `u16ObjId` | UINT | Objekt‑ID                                 | `ID_NULL`   |
 
 ### **Daten-Ausgänge**
 
-| Variable    | Typ    | Kommentar                         |
-| ----------- | ------ | --------------------------------- |
-| `STATUS`    | STRING | Dienst‑Status                     |
-| `s16result` | INT    | Rückgabewert (siehe Beschreibung) |
+| Variable    | Typ    | Kommentar                                                           |
+| ----------- | ------ | ------------------------------------------------------------------- |
+| `QO`        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| `STATUS`    | STRING | Dienst‑Status                                                       |
+| `s16result` | INT    | Rückgabewert (siehe Beschreibung)                                   |
 
 ### **Adapter**
 
@@ -44,6 +46,8 @@ Der Funktionsblock realisiert das Kommando **Change Numeric Value** gemäß ISO 
 | ------------- | -------- | -------------------------------------- | ----------------- |
 | `u32OldValue` | Plug     | `adapter::types::unidirectional::AUDI` | Alter Wert der ID |
 | `u32NewValue` | Socket   | `adapter::types::unidirectional::AUDI` | Neuer Wert der ID |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_NumericValueAux` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_NumericValueAux.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

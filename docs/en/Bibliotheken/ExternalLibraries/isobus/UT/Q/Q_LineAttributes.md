@@ -23,6 +23,7 @@ The **Q_LineAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `xScale` (BOOL, default `FALSE`): `FALSE` = bypass, `u8LineWidth` is sent through unchanged; `TRUE` = scale it by the DM/SKM factor for `u16ObjId`
 - `u8LineColour` (USINT): New line color
@@ -31,6 +32,7 @@ The **Q_LineAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldLineColour` (USINT): Old line color
 - `u8OldLineWidth` (USINT): Old line width
@@ -46,6 +48,8 @@ The **Q_LineAttributes** is a standards-compliant function module for modifying 
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

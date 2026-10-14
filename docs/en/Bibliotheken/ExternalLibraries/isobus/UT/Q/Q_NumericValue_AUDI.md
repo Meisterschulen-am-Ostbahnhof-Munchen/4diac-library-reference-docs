@@ -11,20 +11,22 @@ The `Q_NumericValue_AUDI` is a special ISOBUS function block that allows numeric
 
 ### **Event Inputs**
 
-- **INIT**: `EInit` - Initializes the service with `u16ObjId`.
+- **INIT**: `EInit` - Initializes the service with `u16ObjId`. Associated with `QI`.
 
 ### **Event Outputs**
 
-- **INITO**: `EInit` - Confirms initialization.
-- **CNF**: `Event` - Confirms service execution.
+- **INITO**: `EInit` - Confirms initialization. Associated with `QO`.
+- **CNF**: `Event` - Confirms service execution. Associated with `QO`.
 - Linked to variables `STATUS` and `s16result`.
 
 ### **Input Variables**
 
+- **QI**: `BOOL` - Quality Input - TRUE to enable service. Initial value TRUE.
 - **u16ObjId**: `UINT` - The object ID of the numeric input field on the ISOBUS terminal (default: `ID_NULL`).
 
 ### **Output Variables**
 
+- **QO**: `BOOL` - Quality Output - TRUE if service executed successfully.
 - **STATUS**: `STRING` - Service status message (e.g., "OK", "Error").
 - **s16result**: `INT` - Service return value (error codes according to ISO 11783-6).
 
@@ -32,6 +34,8 @@ The `Q_NumericValue_AUDI` is a special ISOBUS function block that allows numeric
 
 - **u32OldValue** (Plug): `AUDI` - The old/current value of the object.
 - **u32NewValue** (Socket): `AUDI` - The new value to be sent to the ISOBUS terminal.
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_NumericValue`. The data output `QO` (BOOL) is taken over from `Q_NumericValue.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

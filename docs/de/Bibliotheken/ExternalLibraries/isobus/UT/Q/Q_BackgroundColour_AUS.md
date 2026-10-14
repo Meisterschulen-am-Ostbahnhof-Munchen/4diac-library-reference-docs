@@ -15,29 +15,31 @@ Der Baustein wird über einen Socket mit der neuen Farbe versorgt und gibt über
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ   | Kommentar               | Mit Variablen |
-| ------ | ----- | ----------------------- | ------------- |
-| `INIT` | EInit | Service Initialisierung | `u16ObjId`    |
+| Name   | Typ   | Kommentar               | Mit Variablen    |
+| ------ | ----- | ----------------------- | ---------------- |
+| `INIT` | EInit | Service Initialisierung | `QI`, `u16ObjId` |
 
 ### **Ereignis-Ausgänge**
 
-| Name    | Typ   | Kommentar                              | Mit Variablen         |
-| ------- | ----- | -------------------------------------- | --------------------- |
-| `INITO` | EInit | Initialisierungsbestätigung            | –                     |
-| `CNF`   | Event | Bestätigung des angeforderten Dienstes | `STATUS`, `s16result` |
+| Name    | Typ   | Kommentar                              | Mit Variablen               |
+| ------- | ----- | -------------------------------------- | --------------------------- |
+| `INITO` | EInit | Initialisierungsbestätigung            | `QO`                        |
+| `CNF`   | Event | Bestätigung des angeforderten Dienstes | `QO`, `STATUS`, `s16result` |
 
 ### **Daten-Eingänge**
 
-| Name       | Datentyp | Initialwert | Kommentar                          |
-| ---------- | -------- | ----------- | ---------------------------------- |
-| `u16ObjId` | UINT     | `ID_NULL`   | Objekt-ID des zu ändernden Objekts |
+| Name       | Datentyp | Initialwert | Kommentar                                 |
+| ---------- | -------- | ----------- | ----------------------------------------- |
+| `QI`       | BOOL     | `TRUE`      | Quality Input – TRUE aktiviert den Dienst |
+| `u16ObjId` | UINT     | `ID_NULL`   | Objekt-ID des zu ändernden Objekts        |
 
 ### **Daten-Ausgänge**
 
-| Name        | Datentyp | Kommentar                                       |
-| ----------- | -------- | ----------------------------------------------- |
-| `STATUS`    | STRING   | Dienststatus (z. B. Fehlertext oder „OK“)       |
-| `s16result` | INT      | Rückgabewert (siehe Beschreibung – Fehlercodes) |
+| Name        | Datentyp | Kommentar                                                           |
+| ----------- | -------- | ------------------------------------------------------------------- |
+| `QO`        | BOOL     | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| `STATUS`    | STRING   | Dienststatus (z. B. Fehlertext oder „OK“)                           |
+| `s16result` | INT      | Rückgabewert (siehe Beschreibung – Fehlercodes)                     |
 
 ### **Adapter**
 
@@ -50,6 +52,8 @@ Der Baustein wird über einen Socket mit der neuen Farbe versorgt und gibt über
   Typ: `adapter::types::unidirectional::AUS`
   Gibt die vorherige Hintergrundfarbe zurück, nachdem der Änderungsbefehl ausgeführt wurde.
   Das Ereignis `E1` signalisiert, dass der Wert gültig ist, der Datenwert `D1` enthält die alte Farbe.
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_BackgroundColour` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_BackgroundColour.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

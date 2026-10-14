@@ -12,6 +12,12 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ![NVS_IN_AND_STORE_AUDI](NVS_IN_AND_STORE_AUDI.svg)
 
+## Qualitätsanschlüsse (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_NumericValue_AUDI.QI` verbunden, `Q_NumericValue_AUDI.QO` mit `QO`.
+
+Der Baustein besitzt weiterhin keine eigenen Ereignisanschlüsse.
+
 ## Zusammenfassung
 
 NVS-Pendant zu `INI_IN_AND_STORE_AUDI`.

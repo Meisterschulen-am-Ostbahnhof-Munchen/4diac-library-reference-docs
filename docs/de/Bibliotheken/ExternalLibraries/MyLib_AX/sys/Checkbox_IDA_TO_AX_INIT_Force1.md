@@ -14,19 +14,20 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialisierungsanforderung – an `Writer.INIT`
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialisierungsbestätigung – von `Writer.INITO`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE, um den Dienst freizugeben (an `Writer.QI`)
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID der VT-Checkbox-NumberVariable (dasselbe Objekt für Lesen und Force1-Schreiben)
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `Writer.QO`)
 
 ### **Adapter**
 
@@ -41,6 +42,8 @@
 
 - `u16ObjId` → `Reader.u16ObjId` und `Writer.u16ObjId`
 - `Writer.INITO` → `Writer.REQ`: Beim Start wird einmalig der Wert 1 geschrieben.
+- `INIT` → `Writer.INIT`; `Writer.INITO` → `INITO`
+- `QI` → `Writer.QI`; `Writer.QO` → `QO`
 - `Reader.PERMIT_OUT` → `PERMIT_OUT`
 
 ## Technische Besonderheiten

@@ -12,6 +12,12 @@ Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) sieh
 
 ![RedWhiteBackground1_aux_AX](RedWhiteBackground1_aux_AX.svg)
 
+## Schnittstelle: Initialisierung und Qualität
+
+- **INIT** (Ereignis-Eingang, `EInit`) → `Q_BackgroundColourAux.INIT`; `Q_BackgroundColourAux.INITO` → **INITO** (Ereignis-Ausgang, `EInit`).
+- **QI** (Daten-Eingang, `BOOL`, Vorgabe `TRUE`): Quality Input – `TRUE` aktiviert den Dienst; durchgereicht an `Q_BackgroundColourAux.QI`.
+- **QO** (Daten-Ausgang, `BOOL`): Quality Output – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde; kommt von `Q_BackgroundColourAux.QO`.
+
 ## Zusammenfassung
 
 Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Rot/Weiß, 1 Objekt, Adapter-Selector.
@@ -20,4 +26,4 @@ Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Rot/Wei
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

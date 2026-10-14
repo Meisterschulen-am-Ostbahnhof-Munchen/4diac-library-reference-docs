@@ -29,14 +29,16 @@ Der Funktionsblock `Q_NumericValue_PHYSA` dient als **Wrapper** für den Baustei
 
 | Name    | Typ                                                     | Beschreibung                                                                                                                                                                                                            |
 | ------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `QI`    | `BOOL`                                                  | Quality Input – TRUE aktiviert den Dienst                                                                                                                                                                               |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Objektpool-Eigenschaften: `u16ObjId` (Objekt-ID), `r32Scale` (Skalierung), `i32Offset` (Offset), `u8Decimals` (Dezimalstellen). Standardwert: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)` |
 
 ### **Daten-Ausgänge**
 
-| Name        | Typ      | Beschreibung                                            |
-| ----------- | -------- | ------------------------------------------------------- |
-| `STATUS`    | `STRING` | Statusmeldung des Dienstes                              |
-| `s16result` | `INT`    | Rückgabewert (siehe Dokumentation von `Q_NumericValue`) |
+| Name        | Typ      | Beschreibung                                                        |
+| ----------- | -------- | ------------------------------------------------------------------- |
+| `QO`        | `BOOL`   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| `STATUS`    | `STRING` | Statusmeldung des Dienstes                                          |
+| `s16result` | `INT`    | Rückgabewert (siehe Dokumentation von `Q_NumericValue`)             |
 
 ### **Adapter**
 
@@ -45,6 +47,8 @@ Der Funktionsblock `Q_NumericValue_PHYSA` dient als **Wrapper** für den Baustei
 | `adapter::types::unidirectional::AR` | `rPhys`  | Socket (Eingang) | Empfängt den physikalischen `REAL`-Wert zur Verarbeitung                              |
 | `adapter::types::unidirectional::AX` | `xOver`  | Plug (Ausgang)   | Signalisiert, dass der physikalische Wert den oberen ISOBUS-Grenzwert überschreitet   |
 | `adapter::types::unidirectional::AX` | `xUnder` | Plug (Ausgang)   | Signalisiert, dass der physikalische Wert den unteren ISOBUS-Grenzwert unterschreitet |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_NumericValue_PHYS` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_NumericValue_PHYS.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

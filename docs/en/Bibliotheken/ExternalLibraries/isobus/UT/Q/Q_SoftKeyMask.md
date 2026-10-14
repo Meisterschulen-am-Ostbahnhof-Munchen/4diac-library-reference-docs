@@ -23,12 +23,14 @@ The **Q_SoftKeyMask** is a standards-compliant function block for managing softk
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u8MaskType` (USINT): Screen Type (1=Data, 2=Alarm)
 - `u16DataMaskId` (UINT): Object ID of the Active Screen
 - `u16SoftKeyMaskId` (UINT): Object ID of the New Softkey Screen
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldMaskType` (USINT): Previous screen type
 - `u16OldDataMaskId` (UINT): Previous data mask ID
@@ -36,6 +38,8 @@ The **Q_SoftKeyMask** is a standards-compliant function block for managing softk
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

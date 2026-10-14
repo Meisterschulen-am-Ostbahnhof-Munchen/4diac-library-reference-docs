@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 619.74609375 172.0"
-     width="619.74609375" height="172.0">
+     viewBox="0 0 1250.2 192.0"
+     width="1250.2" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(356.75, 10)">
+  <g transform="translate(480.20000000000005, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 207.87109375 0
-            A 3 3 0 0 1 210.87109375 3
-            L 210.87109375 23.0
-            A 3 3 0 0 1 207.87109375 26.0
-            L 200.87109375 26.0
-            L 200.87109375 66.0
-            L 207.87109375 66.0
-            A 3 3 0 0 1 210.87109375 69.0
-            L 210.87109375 149.0
-            A 3 3 0 0 1 207.87109375 152.0
-            L 3 152.0
-            A 3 3 0 0 1 0 149.0
+            L 219.6 0
+            A 3 3 0 0 1 222.6 3
+            L 222.6 23.0
+            A 3 3 0 0 1 219.6 26.0
+            L 212.6 26.0
+            L 212.6 66.0
+            L 219.6 66.0
+            A 3 3 0 0 1 222.6 69.0
+            L 222.6 169.0
+            A 3 3 0 0 1 219.6 172.0
+            L 3 172.0
+            A 3 3 0 0 1 0 169.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -91,40 +91,48 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">INI_IN_AND_STORE_AR</text>
     
-    <text x="105.435546875" y="66.0"
+    <text x="111.3" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#BD8663"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">KEY</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">KEY</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">SECTION</text>
 
-    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#3366FF"/>
-    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#3366FF"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">stObj</text>
+
+    <polygon points="216.1,71.0 221.1,76.0 216.1,81.0" fill="#A3B08F"/>
+    <text x="213.1" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 199.37109375 137.0
-            L 201.87109375 137.0
-            L 201.87109375 138.66666666666666
-            L 204.37109375 138.66666666666666
-            L 204.37109375 137.0
-            L 209.37109375 137.0
-            L 209.37109375 147.0
-            L 204.37109375 147.0
-            L 204.37109375 145.33333333333334
-            L 201.87109375 145.33333333333334
-            L 201.87109375 147.0
-            L 199.37109375 147.0
+    <path d="M 211.1 157.0
+            L 213.6 157.0
+            L 213.6 158.66666666666666
+            L 216.1 158.66666666666666
+            L 216.1 157.0
+            L 221.1 157.0
+            L 221.1 167.0
+            L 216.1 167.0
+            L 216.1 165.33333333333334
+            L 213.6 165.33333333333334
+            L 213.6 167.0
+            L 211.1 167.0
             Z" fill="#845DAF"/>
-    <text x="196.37109375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="208.1" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">VALUEO</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -134,15 +142,21 @@
     <!-- External Labels -->
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Key name. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Section name. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Key name. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Section name. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+
+    <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
-    <text x="235.87109375" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="247.6" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
+
+    <text x="247.6" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>
   </g>
 </svg>

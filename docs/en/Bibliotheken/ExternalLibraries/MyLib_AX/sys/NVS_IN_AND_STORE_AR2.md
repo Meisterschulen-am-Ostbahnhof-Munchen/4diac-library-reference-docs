@@ -17,6 +17,12 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 - `SETM=TRUE`, same reasoning as [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md): live changes are confirmed immediately, not only at the next boot.
 - No `SECTION` parameter, since NVS keys are flat (no INI-section concept).
 
+## Quality ports (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is connected to `Q_NumericValue_PHYSA.QI`, and `Q_NumericValue_PHYSA.QO` to `QO`.
+
+In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation): `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO`.
+
 ## Summary
 
 AR2-adapter variant of the NVS storage family (ESP32 flash instead of an INI file), with an additional `VALUEO` output.

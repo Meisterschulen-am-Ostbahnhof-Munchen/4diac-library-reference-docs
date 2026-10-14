@@ -27,16 +27,18 @@ The Q_Priority_AUS function block is used to change the priority of an alarm mas
 
 ### **Data Inputs**
 
-| Name     | Type | Description                 | Initial Value |
-| -------- | ---- | --------------------------- | ------------- |
-| u16ObjId | UINT | Object ID of the alarm mask | ID_NULL       |
+| Name     | Type | Description                            | Initial Value |
+| -------- | ---- | -------------------------------------- | ------------- |
+| QI       | BOOL | Quality Input - TRUE to enable service | TRUE          |
+| u16ObjId | UINT | Object ID of the alarm mask            | ID_NULL       |
 
 ### **Data Outputs**
 
-| Name      | Type   | Description                                     |
-| --------- | ------ | ----------------------------------------------- |
-| STATUS    | STRING | Service status (e.g., error or success message) |
-| s16result | INT    | Return value as described (see Functionality)   |
+| Name      | Type   | Description                                            |
+| --------- | ------ | ------------------------------------------------------ |
+| QO        | BOOL   | Quality Output - TRUE if service executed successfully |
+| STATUS    | STRING | Service status (e.g., error or success message)        |
+| s16result | INT    | Return value as described (see Functionality)          |
 
 ### **Adapter**
 
@@ -44,6 +46,8 @@ The Q_Priority_AUS function block is used to change the priority of an alarm mas
 | ------------- | -------------------- | --------- | --------------------------------------- |
 | u8Priority    | OFF (unidirectional) | Socket    | New priority (sent via the adapter)     |
 | u8OldPriority | OFF (unidirectional) | Plug      | Old priority (received via the adapter) |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_Priority`. The data output `QO` (BOOL) is taken over from `Q_Priority.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

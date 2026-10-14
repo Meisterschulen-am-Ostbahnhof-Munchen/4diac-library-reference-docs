@@ -14,19 +14,20 @@
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): initialization request - to `Writer.INIT`
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): initialization confirmation - from `Writer.INITO`
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service (to `Writer.QI`)
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of the VT checkbox NumberVariable (the same object for reading and the Force1 write)
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (from `Writer.QO`)
 
 ### **Adapters**
 
@@ -41,6 +42,8 @@
 
 - `u16ObjId` → `Reader.u16ObjId` and `Writer.u16ObjId`
 - `Writer.INITO` → `Writer.REQ`: the value 1 is written once at start.
+- `INIT` → `Writer.INIT`; `Writer.INITO` → `INITO`
+- `QI` → `Writer.QI`; `Writer.QO` → `QO`
 - `Reader.PERMIT_OUT` → `PERMIT_OUT`
 
 ## Technical Details

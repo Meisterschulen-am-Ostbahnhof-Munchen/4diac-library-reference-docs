@@ -23,6 +23,7 @@ The **Q_FontAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `u8FontColour` (USINT): New font color
 - `u8FontSize` (USINT): New font size
@@ -31,6 +32,7 @@ The **Q_FontAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldFontColour` (USINT): Old font color
 - `u8OldFontSize` (USINT): Old font size
@@ -47,6 +49,8 @@ The **Q_FontAttributes** is a standards-compliant function module for modifying 
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

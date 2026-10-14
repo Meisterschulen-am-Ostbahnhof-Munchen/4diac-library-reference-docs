@@ -29,6 +29,7 @@ The StringValue_TO_INI subapplication is a generic IEC 61499 component that read
 
 | Data | Type | Description |
 |------|------|-------------|
+| QI | BOOL | Quality Input - TRUE to enable service (initial value TRUE); passed through to Q_StringValue.QI. |
 | KEY | STRING | The key name under which the value is stored in the INI file. |
 | SECTION | STRING | The section name in the INI file where the key resides. |
 | u16ObjId | UINT | The object identifier of the string object within the ISOBUS Virtual Terminal. Initialized to ID_NULL. |
@@ -37,6 +38,7 @@ The StringValue_TO_INI subapplication is a generic IEC 61499 component that read
 
 | Data | Type | Description |
 |------|------|-------------|
+| QO | BOOL | Quality Output - TRUE if the service executed successfully; taken from Q_StringValue.QO. |
 | VALUEO | STRING | The string value read from the INI storage after a GET operation. |
 
 ### **Adapters**
@@ -52,6 +54,8 @@ The StringValue_TO_INI subapplication combines three functional building blocks 
 2. **Store in INI**: The internal INI FB stores the received string value under the KEY within the SECTION of the INI storage. This allows the value to be persisted and retrieved later.
 
 3. **Retrieve and Queue**: On initialization, the subapplication automatically performs a GET operation to read the stored value. This value is then output via VALUEO and also forwarded to the internal Q_StringValue queue for further processing.
+
+QI is passed through directly to Q_StringValue.QI, and Q_StringValue.QO is passed through directly to QO. The subapplication still has no INIT/INITO event pins; the INI FB is initialized internally.
 
 The event flow is as follows:
 

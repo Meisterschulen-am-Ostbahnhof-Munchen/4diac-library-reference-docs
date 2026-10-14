@@ -10,6 +10,8 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](./INI-NVS-Storage-Blocks.md).
 
+Interface (quality pattern): the data input `QI` (`BOOL`, default `TRUE`, "Quality Input - TRUE to enable service") and the data output `QO` (`BOOL`, "Quality Output - TRUE if service executed successfully") are connected directly to the VT write block: `QI` → `Q_NumericValue_PHYSA.QI`, `Q_NumericValue_PHYSA.QO` → `QO`.
+
 ![INI_IN_AND_STORE_AR](INI_IN_AND_STORE_AR.svg)
 
 ## Summary

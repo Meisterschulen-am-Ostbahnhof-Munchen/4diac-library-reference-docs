@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-458.6 -151.0 2187.2 820.0"
-     width="2187" height="820">
+     viewBox="-458.6 -151.0 2187.2 828.0"
+     width="2187" height="828">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,8 +40,8 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-458.6" y="-151.0" width="2187.2" height="820.0" fill="white"/>
-  <rect x="-451.6" y="-144.0" width="2173.2" height="806.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-458.6" y="-151.0" width="2187.2" height="828.0" fill="white"/>
+  <rect x="-451.6" y="-144.0" width="2173.2" height="814.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
   <rect x="-451.6" y="-144.0" width="2173.2" height="25.0" fill="white" stroke="none"/>
   <line x1="-451.6" y1="-119.5" x2="1721.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="-446.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">INI Laden und Speichern von AUI2-Daten (reine Ganzzahl 0-N, kein Scale/Decimals) mit
@@ -49,16 +49,18 @@ zusaetzlichem VALUEO (AUI, plain) fuer einen weiteren Consumer - analog
 INI_IN_AND_STORE_AUDI2, aber ueber den bidirektionalen AUI2-Adapter (UINT)
 statt AUDI2 (UDINT), z.B. fuer K eines AOption_AUI_DEMUX_N.</text>
   <g id="sidebars">
-    <rect x="-451.6" y="-119.0" width="64.6" height="781.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="-387.0" y1="-119.0" x2="-387.0" y2="662.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1666.4" y="-119.0" width="55.2" height="781.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1666.4" y1="-119.0" x2="1666.4" y2="662.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="-451.6" y="-119.0" width="64.6" height="789.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="-387.0" y1="-119.0" x2="-387.0" y2="670.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1666.4" y="-119.0" width="55.2" height="789.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1666.4" y1="-119.0" x2="1666.4" y2="670.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="-387.0,-84.0 35.0,-84.0 40.0,-79.0 40.0,240.5 45.0,245.5 1155.0,245.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-387.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,223.5 45.0,228.5 1155.0,228.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-387.0,-50.0 -235.0,-50.0 -230.0,-45.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-387.0,-50.0 845.0,-50.0 850.0,-45.0 850.0,476.5 855.0,481.5 1455.0,481.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,240.5 45.0,245.5 1155.0,245.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-50.0 35.0,-50.0 40.0,-45.0 40.0,223.5 45.0,228.5 1155.0,228.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-33.0 -235.0,-33.0 -230.0,-28.0 -230.0,165.5 -225.0,170.5 60.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-33.0 845.0,-33.0 850.0,-28.0 850.0,493.5 855.0,498.5 1455.0,498.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="-387.0,-84.0 529.0,-84.0 534.0,-79.0 534.0,476.5 539.0,481.5 1455.0,481.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1646.4,481.5 1652.4,481.5 1656.4,477.5 1656.4,-80.0 1660.4,-84.0 1666.4,-84.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="217.2,187.5 242.2,187.5 247.2,192.5 247.2,263.5 252.2,268.5 270.0,268.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="217.2,187.5 242.2,187.5 247.2,192.5 247.2,263.5 252.2,268.5 270.0,268.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="389.4,268.5 472.4,268.5 477.4,273.5 477.4,338.5 482.4,343.5 690.0,343.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
@@ -67,25 +69,31 @@ statt AUDI2 (UDINT), z.B. fuer K eines AOption_AUI_DEMUX_N.</text>
     <polyline points="838.2,343.5 934.2,343.5 939.2,338.5 939.2,284.5 944.2,279.5 1155.0,279.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="838.2,360.5 999.2,360.5 1004.2,365.5 1004.2,368.5 1009.2,373.5 1065.0,373.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="838.2,360.5 999.2,360.5 1004.2,365.5 1004.2,368.5 1009.2,373.5 1065.0,373.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1186.2,373.5 1514.2,373.5 1519.2,368.5 1519.2,-79.0 1524.2,-84.0 1666.4,-84.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1186.2,373.5 1514.2,373.5 1519.2,368.5 1519.2,-79.0 1524.2,-84.0 1666.4,-84.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1186.2,373.5 1514.2,373.5 1519.2,368.5 1519.2,-62.0 1524.2,-67.0 1666.4,-67.0" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1186.2,373.5 1514.2,373.5 1519.2,368.5 1519.2,-62.0 1524.2,-67.0 1666.4,-67.0" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="1186.2,390.5 1312.2,390.5 1317.2,395.5 1317.2,518.5 1312.2,523.5 1230.0,523.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="1186.2,390.5 1312.2,390.5 1317.2,395.5 1317.2,518.5 1312.2,523.5 1230.0,523.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="1363.8,523.5 1438.6,523.5 1441.8,520.3 1441.8,518.7 1445.0,515.5 1455.0,515.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="1363.8,523.5 1438.6,523.5 1441.8,520.3 1441.8,518.7 1445.0,515.5 1455.0,515.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="1363.8,523.5 1438.2,523.5 1441.8,527.1 1441.8,528.9 1445.4,532.5 1455.0,532.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="1363.8,523.5 1438.2,523.5 1441.8,527.1 1441.8,528.9 1445.4,532.5 1455.0,532.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="-392.0005,-89.0 -387.0005,-84.0 -392.0005,-79.0" fill="#BD8663"/>
+    <polygon points="-392.0005,-89.0 -387.0005,-84.0 -392.0005,-79.0" fill="#A3B08F"/>
     <text x="-393.0005" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">KEY</text>
+          fill="#000000" text-anchor="end">QI</text>
     <polygon points="-392.0005,-72.0 -387.0005,-67.0 -392.0005,-62.0" fill="#BD8663"/>
     <text x="-393.0005" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">SECTION</text>
-    <polygon points="-392.0005,-55.0 -387.0005,-50.0 -392.0005,-45.0" fill="#18519E"/>
+          fill="#000000" text-anchor="end">KEY</text>
+    <polygon points="-392.0005,-55.0 -387.0005,-50.0 -392.0005,-45.0" fill="#BD8663"/>
     <text x="-393.0005" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">SECTION</text>
+    <polygon points="-392.0005,-38.0 -387.0005,-33.0 -392.0005,-28.0" fill="#18519E"/>
+    <text x="-393.0005" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">u16ObjId</text>
-    <path d="M 1666.4 -89.0 L 1671.4 -89.0 L 1671.4 -87.33333333333333 L 1673.9 -87.33333333333333 L 1673.9 -89.0 L 1676.4 -89.0 L 1676.4 -79.0 L 1673.9 -79.0 L 1673.9 -80.66666666666667 L 1671.4 -80.66666666666667 L 1671.4 -79.0 L 1666.4 -79.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="1679.4" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1671.4,-89.0 1666.4,-84.0 1671.4,-79.0" fill="#A3B08F"/>
+    <text x="1672.4" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
+    <path d="M 1666.4 -72.0 L 1671.4 -72.0 L 1671.4 -70.33333333333333 L 1673.9 -70.33333333333333 L 1673.9 -72.0 L 1676.4 -72.0 L 1676.4 -62.0 L 1673.9 -62.0 L 1673.9 -63.666666666666664 L 1671.4 -63.666666666666664 L 1671.4 -62.0 L 1666.4 -62.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="1679.4" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">VALUEO</text>
   </g>
   <g id="instances">
@@ -682,10 +690,10 @@ statt AUDI2 (UDINT), z.B. fuer K eines AOption_AUI_DEMUX_N.</text>
             L 182.4 52
             L 188.4 52
             A 3 3 0 0 1 191.4 55
-            L 191.4 103
-            A 3 3 0 0 1 188.4 106
-            L 3 106
-            A 3 3 0 0 1 0 103
+            L 191.4 120
+            A 3 3 0 0 1 188.4 123
+            L 3 123
+            A 3 3 0 0 1 0 120
             L 0 55
             A 3 3 0 0 1 3 52
             L 9 52
@@ -732,45 +740,51 @@ statt AUDI2 (UDINT), z.B. fuer K eines AOption_AUI_DEMUX_N.</text>
       <polygon points="186.4,22.5 191.4,27.5 186.4,32.5" fill="#63B31F"/>
       <text x="185.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="0,56.5 5,61.5 0,66.5" fill="#18519E"/>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">QI</text>
+      <polygon points="0,73.5 5,78.5 0,83.5" fill="#18519E"/>
+      <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u16ObjId</text>
-      <polygon points="186.4,56.5 191.4,61.5 186.4,66.5" fill="#BD8663"/>
+      <polygon points="186.4,56.5 191.4,61.5 186.4,66.5" fill="#A3B08F"/>
       <text x="185.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="186.4,73.5 191.4,78.5 186.4,83.5" fill="#18519E"/>
+            fill="#000000" text-anchor="end">QO</text>
+      <polygon points="186.4,73.5 191.4,78.5 186.4,83.5" fill="#BD8663"/>
       <text x="185.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">STATUS</text>
+      <polygon points="186.4,90.5 191.4,95.5 186.4,100.5" fill="#18519E"/>
+      <text x="185.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
-      <path d="M 0 90.5
-            L 5.0 90.5
-            L 5.0 92.16666666666667
-            L 7.5 92.16666666666667
-            L 7.5 90.5
-            L 10 90.5
-            L 10 100.5
-            L 7.5 100.5
-            L 7.5 98.83333333333333
-            L 5.0 98.83333333333333
-            L 5.0 100.5
-            L 0 100.5
+      <path d="M 0 107.5
+            L 5.0 107.5
+            L 5.0 109.16666666666667
+            L 7.5 109.16666666666667
+            L 7.5 107.5
+            L 10 107.5
+            L 10 117.5
+            L 7.5 117.5
+            L 7.5 115.83333333333333
+            L 5.0 115.83333333333333
+            L 5.0 117.5
+            L 0 117.5
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-      <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="13" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <path d="M 181.4 90.5
-            L 183.9 90.5
-            L 183.9 92.16666666666667
-            L 186.4 92.16666666666667
-            L 186.4 90.5
-            L 191.4 90.5
-            L 191.4 100.5
-            L 186.4 100.5
-            L 186.4 98.83333333333333
-            L 183.9 98.83333333333333
-            L 183.9 100.5
-            L 181.4 100.5
+      <path d="M 181.4 107.5
+            L 183.9 107.5
+            L 183.9 109.16666666666667
+            L 186.4 109.16666666666667
+            L 186.4 107.5
+            L 191.4 107.5
+            L 191.4 117.5
+            L 186.4 117.5
+            L 186.4 115.83333333333333
+            L 183.9 115.83333333333333
+            L 183.9 117.5
+            L 181.4 117.5
             Z" fill="#845DAF"/>
-      <text x="178.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <text x="178.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
       <!-- Instance Name -->
       <text x="95.7" y="-5"

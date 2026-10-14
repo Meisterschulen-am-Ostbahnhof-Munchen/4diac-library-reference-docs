@@ -24,6 +24,7 @@ Der **Q_GraphicsContext** ist ein standardkonformer Funktionsbaustein zur Steuer
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u16ObjId` (UINT): Grafik-Kontext Objekt-ID (16-bit)
 - `u8SubCommandID` (USINT): Sub-Befehls-ID (8-bit)
 - `u8ParaList` (USINT[5]): Parameterliste (5 Byte Array)
@@ -31,6 +32,7 @@ Der **Q_GraphicsContext** ist ein standardkonformer Funktionsbaustein zur Steuer
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldSubCommandID` (USINT): Vorherige Sub-Befehls-ID
 - `u8OldParaList` (USINT[5]): Vorherige Parameterliste
@@ -38,6 +40,8 @@ Der **Q_GraphicsContext** ist ein standardkonformer Funktionsbaustein zur Steuer
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Grafik-Kontext Objekt-ID

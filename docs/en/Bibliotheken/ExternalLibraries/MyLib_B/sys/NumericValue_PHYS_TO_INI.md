@@ -27,6 +27,7 @@ None.
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QI` | `BOOL` | Quality Input - TRUE to enable service; passed through to `Q_NumericValue_PHYS.QI` |
 | `KEY` | STRING | Key name under which the value is stored in the INI file. |
 | `SECTION` | STRING | Section name within the INI file used for grouping the key. |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Object-pool descriptor containing the numeric object ID, scale factor, offset, and number of decimals. Initial value: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)`. |
@@ -35,6 +36,7 @@ None.
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; comes from `Q_NumericValue_PHYS.QO` |
 | `VALUEO` | REAL | The current value that has been stored or retrieved from the INI storage. |
 
 ### **Adapters**
@@ -57,6 +59,8 @@ The operational sequence is as follows:
 4. On every `GETO`, the retrieved value is forwarded to the query block `Q_NumericValue_PHYS` for further conversion, and simultaneously made available as `VALUEO`.
 
 The internal data connections ensure that the same `stObj` descriptor is used consistently by both the acquisition block (for scaling while reading) and the query block (for reverse scaling), while `KEY` and `SECTION` only reference the INI storage.
+
+**Quality ports:** `QI` (data input, BOOL, default `TRUE`) is passed straight to `Q_NumericValue_PHYS.QI`, and the output `QO` (BOOL) comes straight from `Q_NumericValue_PHYS.QO`. This lets the surrounding logic enable the write service to the terminal and check whether it succeeded.
 
 ## Technical Features
 

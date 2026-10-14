@@ -17,6 +17,12 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 - `SETM=TRUE`: eine Live-Aenderung waehrend des laufenden Betriebs wird sofort bestaetigt/zurueckgemeldet, nicht nur beim Boot - wichtig, da der frische Wert im selben Lauf ueber `VALUEO` weiterverwendet werden kann.
 - `AR_TO_AR2` wandelt den plain-AR-Wert des VT-Eingabefelds in den bidirektionalen AR2-Adapter, den `INI_AR2` fuer die Speicherung erwartet.
 
+## Qualitätsanschlüsse (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_NumericValue_PHYSA.QI` verbunden, `Q_NumericValue_PHYSA.QO` mit `QO`.
+
+Der Baustein besitzt weiterhin keine eigenen Ereignisanschlüsse.
+
 ## Zusammenfassung
 
 AR2-Adapter-Variante der INI-Speicherfamilie, mit zusaetzlichem `VALUEO`-Ausgang fuer einen weiteren Consumer.

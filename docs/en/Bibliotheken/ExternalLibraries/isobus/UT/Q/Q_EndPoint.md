@@ -23,6 +23,7 @@ The **Q_EndPoint** is a standards-compliant function block for controlling line 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Line Object ID
 - `xScale` (BOOL, initial value `FALSE`): `FALSE` = bypass, `u16Width`/`u16Height` are sent unchanged; `TRUE` = both are scaled by the DM/SKM factor for `u16ObjId`
 - `u16Width` (UINT): New X End Position (0-65535 pixels)
@@ -31,6 +32,7 @@ The **Q_EndPoint** is a standards-compliant function block for controlling line 
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operating Status Message
 - `u16OldWidth` (UINT): Previous X-End Position
 - `u16OldHeight` (UINT): Previous Y-End Position
@@ -45,6 +47,8 @@ Output Line (13000–13999).
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

@@ -23,6 +23,7 @@ The **Q_GraphicsContext** is a standards-compliant function block for controllin
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Graphics context object ID (16-bit)
 - `u8SubCommandID` (USINT): Subcommand ID (8-bit)
 - `u8ParaList` (USINT[5]): Parameter list (5-byte array)
@@ -30,6 +31,7 @@ The **Q_GraphicsContext** is a standards-compliant function block for controllin
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operating status message
 - `u8OldSubCommandID` (USINT): Previous subcommand ID
 - `u8OldParaList` (USINT[5]): Previous parameter list
@@ -37,6 +39,8 @@ The **Q_GraphicsContext** is a standards-compliant function block for controllin
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

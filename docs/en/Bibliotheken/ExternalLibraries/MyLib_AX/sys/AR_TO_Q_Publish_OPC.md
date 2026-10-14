@@ -24,10 +24,11 @@ None.
 
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): object pool properties of the VT number variable (`u16ObjId`, scale, offset, decimals), e.g. `FBs::const::DefaultPool_Numeric::NumberVariable_X_N`
 - **ID_WRITE** (`WSTRING`): publish address (REAL, `ACTION=PUBLISH`), local or cross-station
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service (VT display)
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (from `Q_NumericValue.QO`)
 
 ### **Adapters**
 
@@ -45,6 +46,7 @@ None.
 - `AR_IN` → `RateLimit_Anzeige.I`; `RateLimit_Anzeige.Q` → `AR_SPLIT_2.IN`
 - `AR_SPLIT_2.OUT1` → `Q_NumericValue.rPhys` (VT display); `stObj` → `Q_NumericValue.stObj`
 - `AR_SPLIT_2.OUT2` → `AR_PUBLISH.IN`; `ID_WRITE` → `AR_PUBLISH.ID`
+- `QI` → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO` (the publish branch `AR_PUBLISH` stays permanently enabled with `QI = TRUE`)
 
 ## Technical Details
 

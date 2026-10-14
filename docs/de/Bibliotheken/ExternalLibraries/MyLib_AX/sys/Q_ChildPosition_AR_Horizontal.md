@@ -23,12 +23,14 @@
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID des Child-Objekts
 - **u16ObjIdParent** (`UINT`, Vorgabe `ID_NULL`): Object-ID des Parent-Objekts
 - **xScale** (`BOOL`, Vorgabe `FALSE`): `FALSE` = Bypass, X-/Y-Position werden unverändert gesendet; `TRUE` = Skalierung mit dem DM/SKM-Faktor für `u16ObjIdParent`
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde
 - **STATUS** (`STRING`): Dienststatus (Durchreichung vom inneren `Q_ChildPosition`)
 - **s16OldXposition** (`INT`): Alte X-Position (Durchreichung)
 - **s16OldYposition** (`INT`): Alte Y-Position (Durchreichung)
@@ -50,6 +52,7 @@
 2. `initval_AI.OUT` → `Q_ChildPosition_AI.s16Yposition` (konstant 0).
 3. `INIT` → `initval_AI.INIT`; `initval_AI.INITO` → `Q_ChildPosition_AI.INIT`; `Q_ChildPosition_AI.INITO` → `INITO`; `Q_ChildPosition_AI.CNF` → `CNF`.
 4. `u16ObjId`, `u16ObjIdParent`, `xScale` → `Q_ChildPosition_AI`; Statusausgänge von dort nach außen.
+5. `QI` → `Q_ChildPosition_AI.QI`; `Q_ChildPosition_AI.QO` → `QO`
 
 ## Technische Besonderheiten
 

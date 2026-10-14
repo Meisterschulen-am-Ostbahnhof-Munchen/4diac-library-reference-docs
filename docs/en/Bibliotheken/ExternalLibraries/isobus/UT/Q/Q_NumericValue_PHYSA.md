@@ -29,14 +29,16 @@ The function block `Q_NumericValue_PHYSA` serves as a wrapper for the function b
 
 | Name    | Type                                                    | Description                                                                                                                                                                                                         |
 | ------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `QI`    | `BOOL`                                                  | Quality Input - TRUE to enable service                                                                                                                                                                              |
 | `stObj` | `logiBUS::utils::conversion::phys::NumericObjectPool_S` | Object pool properties: `u16ObjId` (Object ID), `r32Scale` (Scaling), `i32Offset` (Offset), `u8Decimals` (Decimal places). Default value: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0)` |
 
 ### **Data Outputs**
 
-| Name        | Type     | Description                                           |
-| ----------- | -------- | ----------------------------------------------------- |
-| `STATUS`    | `STRING` | Service status message                                |
-| `s16result` | `INT`    | Return value (see documentation for `Q_NumericValue`) |
+| Name        | Type     | Description                                            |
+| ----------- | -------- | ------------------------------------------------------ |
+| `QO`        | `BOOL`   | Quality Output - TRUE if service executed successfully |
+| `STATUS`    | `STRING` | Service status message                                 |
+| `s16result` | `INT`    | Return value (see documentation for `Q_NumericValue`)  |
 
 ### **Adapter**
 
@@ -45,6 +47,8 @@ The function block `Q_NumericValue_PHYSA` serves as a wrapper for the function b
 | `adapter::types::unidirectional::AR` | `rPhys`  | Socket (Input) | Receives the physical value `REAL` for processing                  |
 | `adapter::types::unidirectional::AX` | `xOver`  | Plug (Output)  | Signals that the physical value exceeds the upper ISOBUS limit     |
 | `adapter::types::unidirectional::AX` | `xUnder` | Plug (Output)  | Signals that the physical value falls below the lower ISOBUS limit |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_NumericValue_PHYS`. The data output `QO` (BOOL) is taken over from `Q_NumericValue_PHYS.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

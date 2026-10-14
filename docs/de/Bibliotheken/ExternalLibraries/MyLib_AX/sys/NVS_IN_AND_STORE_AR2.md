@@ -17,6 +17,12 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 - `SETM=TRUE`, gleiche Begruendung wie bei [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md): Live-Aenderungen werden sofort bestaetigt, nicht erst beim naechsten Boot.
 - Kein `SECTION`-Parameter, da NVS-Keys flach organisiert sind (kein INI-Abschnittskonzept).
 
+## Qualitätsanschlüsse (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` ist mit `Q_NumericValue_PHYSA.QI` verbunden, `Q_NumericValue_PHYSA.QO` mit `QO`.
+
+Zusätzlich besitzt der Baustein die Ereignisse `INIT` (Eingang, `EInit`, Initialisierungsanforderung) und `INITO` (Ausgang, `EInit`, Initialisierungsbestätigung): `INIT` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO`.
+
 ## Zusammenfassung
 
 AR2-Adapter-Variante der NVS-Speicherfamilie (ESP32-Flash statt INI-Datei), mit zusaetzlichem `VALUEO`-Ausgang.

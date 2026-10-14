@@ -12,20 +12,31 @@
 
 ## Schnittstelle
 
+### Ereignisanschlüsse
+
+- **Eingang `INIT`** (`EInit`): Initialisierungsanforderung – an `Q_NumericValue.INIT`.
+- **Ausgang `INITO`** (`EInit`): Initialisierungsbestätigung – von `Q_NumericValue.INITO`.
+
 ### Eingangsvariablen
 
+- `QI` (BOOL, Default `TRUE`): Quality Input – TRUE, um den Dienst freizugeben (an `Q_NumericValue.QI`).
 - `u16ObjId` (UINT, Default `ID_NULL`): ObjectID der VT-NumberVariable hinter der Checkbox.
+
+### Ausgangsvariablen
+
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `Q_NumericValue.QO`).
 
 ### Adapter
 
 - **Socket `AX_IN`** (`adapter::types::unidirectional::AX`): zu schreibender Pegel (0/1).
 
-Der Baustein besitzt keine eigenen Ereignisanschlüsse.
+Außer `INIT`/`INITO` besitzt der Baustein keine eigenen Ereignisanschlüsse; das Schreiben wird durch den Adapter `AX_IN` ausgelöst.
 
 ## Funktionsweise
 
 1. `AX_IN` wird über `AX_TO_AD` in einen UDINT-Wert gewandelt.
 2. `Q_NumericValue` schreibt diesen Wert unter `u16ObjId` auf den VT-Knoten. Laut Quellcode-Kommentar wird bei jeder Wertänderung von `AX_IN` neu geschrieben.
+3. `INIT` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO`, `QI` → `Q_NumericValue.QI`, `Q_NumericValue.QO` → `QO`.
 
 ## Technische Besonderheiten
 

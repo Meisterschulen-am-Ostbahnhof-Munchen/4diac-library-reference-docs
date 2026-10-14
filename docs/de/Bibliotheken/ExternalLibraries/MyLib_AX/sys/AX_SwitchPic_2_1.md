@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`AX_SwitchPic_2_1` schaltet das Ziel eines VT-**ObjectPointers** (Bild) zwischen zwei Zuständen um. Der Selektor kommt als **AX-Adapter** statt als `BOOL`-Eingangsvariable (AX-Pendant zu `MyLib::sys::SwitchPic_2_1`): Bei jedem Update von `DI1` wird die per `DI1.D1` gewählte Ziel-Object-ID (`pictures.down` bei `TRUE`, `pictures.up` bei `FALSE`) auf den ObjectPointer `Picture` geschrieben. Ein externer Trigger ist nicht nötig, da das eigene `E1`/`D1` von `DI1` direkt speist.
+`AX_SwitchPic_2_1` schaltet das Ziel eines VT-**ObjectPointers** (Bild) zwischen zwei Zuständen um. Der Selektor kommt als **AX-Adapter** statt als `BOOL`-Eingangsvariable (AX-Pendant zu `MyLib::sys::SwitchPic_2_1`): Bei jedem Update von `DI1` wird die per `DI1.D1` gewählte Ziel-Object-ID (`pictures.down` bei `TRUE`, `pictures.up` bei `FALSE`) auf den ObjectPointer `Picture` geschrieben. Ein externer Trigger ist nicht nötig, da das eigene `E1`/`D1` von `DI1` direkt speist. Die Initialisierung läuft über `INIT`/`INITO` des inneren `Q_NumericValue` (Quality-Muster mit `QI`/`QO`).
 
 ![AX_SwitchPic_2_1](AX_SwitchPic_2_1.svg)
 
@@ -14,20 +14,21 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden – Ereignisse kommen über den Adapter-Socket*
+- **INIT** (`EInit`): Initialisierungsanforderung – an `Q_NumericValue.INIT`; weitere Ereignisse kommen über den Adapter-Socket
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialisierungsbestätigung – von `Q_NumericValue.INITO`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE, um den Dienst freizugeben (an `Q_NumericValue.QI`)
 - **Picture** (`UINT`): Object-ID des ObjectPointers, in den geschrieben wird
 - **pictures** (`isobus::UT::Q::types::s2x1ObjectIDs`): Die beiden Ziel-Object-IDs (`up`, `down`); Vorbelegung: beide `ID_NULL`
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (von `Q_NumericValue.QO`)
 
 ### **Adapter**
 
@@ -35,7 +36,6 @@
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **INIT**: `iec61131::booleanOperators::INIT` – löst beim Start einmalig aus (`INITO` ist auf `REQ` zurückgeführt)
 - **F_MOVE**: `iec61131::selection::F_MOVE` (`DataType=isobus::UT::Q::types::s2x1ObjectIDs`) – kopiert `pictures` auf `OUT.up.u16ObjId`/`OUT.down.u16ObjId`
 - **AX_X_TO_BOOL**: `adapter::conversion::unidirectional::AX_X_TO_BOOL` – wandelt den AX-Selektor in Ereignis `CNF` und Wert `IN` (`BOOL`)
 - **F_MUX_2**: `iec61131::selection::F_SEL` – wählt `IN0` (`up`) bei `G=FALSE`, `IN1` (`down`) bei `G=TRUE`
@@ -43,10 +43,11 @@
 
 ## Programmablauf und Verbindungen
 
-1. `INIT.CNF` → `F_MOVE.REQ`; `F_MOVE.CNF` → `F_MUX_2.REQ` (Initialisierung der Ziel-Object-IDs).
+1. `INIT` → `Q_NumericValue.INIT`; `Q_NumericValue.INITO` → `INITO` und → `F_MOVE.REQ`; `F_MOVE.CNF` → `F_MUX_2.REQ` (Initialisierung der Ziel-Object-IDs).
 2. `DI1` → `AX_X_TO_BOOL.AX_IN`; `AX_X_TO_BOOL.CNF` → `F_MUX_2.REQ`, `AX_X_TO_BOOL.IN` → `F_MUX_2.G`.
 3. `F_MOVE.OUT.up.u16ObjId` → `F_MUX_2.IN0`; `F_MOVE.OUT.down.u16ObjId` → `F_MUX_2.IN1`.
 4. `F_MUX_2.CNF` → `Q_NumericValue.REQ`; `F_MUX_2.OUT` → `Q_NumericValue.u32NewValue`; `Picture` → `Q_NumericValue.u16ObjId`.
+5. `QI` → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO`.
 
 ## Technische Besonderheiten
 

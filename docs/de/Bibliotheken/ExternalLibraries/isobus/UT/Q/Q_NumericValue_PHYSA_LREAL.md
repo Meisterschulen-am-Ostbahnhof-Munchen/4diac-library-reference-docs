@@ -29,12 +29,14 @@ Der Funktionsblock **Q_NumericValue_PHYSA_LREAL** dient als Kommando zum Ändern
 
 | Name  | Typ                                                   | Kommentar                                                                                                                                                    |
 | ----- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| QI    | BOOL                                                  | Quality Input – TRUE aktiviert den Dienst                                                                                                                    |
 | stObj | logiBUS::utils::conversion::phys::NumericObjectPool_S | Eigenschaften des Objektpools (ObjID, Skalierung, Offset, Dezimalstellen). Initial: (u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0). |
 
 ### **Daten-Ausgänge**
 
 | Name      | Typ    | Kommentar                                                                |
 | --------- | ------ | ------------------------------------------------------------------------ |
+| QO        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde      |
 | STATUS    | STRING | Statusmeldung des Dienstes.                                              |
 | s16result | INT    | Rückgabewert – siehe Q_NumericValue (Ergebnis der Wertänderungsanfrage). |
 
@@ -52,6 +54,8 @@ Der Funktionsblock **Q_NumericValue_PHYSA_LREAL** dient als Kommando zum Ändern
 | ------ | ------------------- | ---------------------------------------------------------------------------------- |
 | xOver  | AX (unidirectional) | Signalisiert, dass der physikalische Wert die obere ISOBUS-Grenze überschreitet.   |
 | xUnder | AX (unidirectional) | Signalisiert, dass der physikalische Wert die untere ISOBUS-Grenze unterschreitet. |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_NumericValue_PHYS_LREAL` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_NumericValue_PHYS_LREAL.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

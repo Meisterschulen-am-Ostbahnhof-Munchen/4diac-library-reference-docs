@@ -26,6 +26,10 @@
 1. `u16ObjId` → `Q_NumericValue_AUDI.u16ObjId` (Datenverbindung, ausgeblendet).
 2. `System_Tick.ADI_OUT` → `ADI_TO_AUDI.ADI_IN` → `ADI_TO_AUDI.AUDI_OUT` → `Q_NumericValue_AUDI.u32NewValue`.
 
+3. `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (neuer Ereignis-Eingang `INIT` / Ereignis-Ausgang `INITO`, jeweils `EInit`).
+
+4. `QI` (`BOOL`, Vorgabe `TRUE`) → `Q_NumericValue_AUDI.QI`; `Q_NumericValue_AUDI.QO` → `QO` (`BOOL`, Quality Output – `TRUE`, wenn der VT-Schreibzugriff erfolgreich war).
+
 ## Technische Besonderheiten
 
 - **Rein lokal, kein OPC-UA**: Im Gegensatz zu `SystemTickSender_ISO_OPC` besitzt dieser Baustein keinen `ADI_PUBLISH_1`-Adapter.
