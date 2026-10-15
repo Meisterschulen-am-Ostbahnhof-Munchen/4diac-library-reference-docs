@@ -14,21 +14,23 @@
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirmation
 - **IND**: Fires when the softkey, AUX or the local method is activated/called
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`): Object ID of the softkey
 - **u16ObjIdA** (`UINT`): Object ID of the AuxFunction2
 - **ID_METHOD** (`WSTRING`): Local method address (`ACTION=CREATE_METHOD`) for the argument-less trigger; called by the web client (`vt-ui-mirror`) and directly by the OPC dashboard
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - AND of `METHOD_SERVER.QO` and `SoftkeyAux.QO`
 
 ### **Adapters**
 
@@ -37,8 +39,9 @@ This function block uses no adapters.
 ## Function Blocks (FBs) Used
 
 - **SoftkeyAux**: SubApp `MyLib::sys::Softkey_Aux_IE` - softkey or AUX
-- **METHOD_SERVER**: `iec61499::net::SERVER_0` (`QI=TRUE`) - local method
+- **METHOD_SERVER**: `iec61499::net::SERVER_0` - local method
 - **MERGE**: `iec61499::events::E_MERGE_2` - merges the two triggers
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` - combines `METHOD_SERVER.QO` and `SoftkeyAux.QO` into `QO`
 
 ## Program Flow and Connections
 
@@ -47,6 +50,9 @@ This function block uses no adapters.
 - `METHOD_SERVER.IND` → `METHOD_SERVER.RSP` (feedback wiring)
 - `MERGE.EO` → `IND`
 - `u16ObjId`, `u16ObjIdA` → `SoftkeyAux`; `ID_METHOD` → `METHOD_SERVER.ID`
+- `INIT` → `METHOD_SERVER.INIT`; `METHOD_SERVER.INITO` → `SoftkeyAux.INIT`; `SoftkeyAux.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `METHOD_SERVER.QI` and `SoftkeyAux.QI`
+- `METHOD_SERVER.QO` → `AND_QO.IN1`; `SoftkeyAux.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

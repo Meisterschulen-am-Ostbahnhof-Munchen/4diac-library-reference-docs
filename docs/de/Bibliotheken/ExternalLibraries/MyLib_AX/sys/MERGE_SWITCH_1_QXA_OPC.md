@@ -16,12 +16,13 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **SUBSCRIBE_TEST** / **SUBSCRIBE_CMD**: je `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — abonnieren das bestehende IO-Test-Kommando (`ID_TEST_READ`) bzw. das echte Funktions-Kommando (`ID_READ`).
+    - **SUBSCRIBE_TEST** / **SUBSCRIBE_CMD**: je `adapter::net::AX_SUBSCRIBE_1` (`QI` kommt vom Eingang `QI`) — abonnieren das bestehende IO-Test-Kommando (`ID_TEST_READ`) bzw. das echte Funktions-Kommando (`ID_READ`).
     - **OR_MERGE**: `adapter::booleanOperators::AX_OR_2` — führt beide Subscribe-Quellen per Pegel-ODER zusammen.
     - **SPLIT**: `adapter::events::unidirectional::AX_SPLIT_3` — verteilt das zusammengeführte Signal auf den physischen Ausgang und zwei Rückmelde-Kanäle.
-    - **DigitalOutput**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) — physischer digitaler Ausgang.
-    - **PUBLISH_TEST** / **PUBLISH_STATE**: je `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) — melden den resultierenden Zustand an die bestehende IO-Test-Überwachung (`ID_TEST_WRITE`) bzw. an die echte Funktions-Rückmeldung (`ID_WRITE`, z. B. `GreenWhiteBackground` am SoftKey).
-- **Funktionsweise**: Zwei unabhängige Remote-Subscribe-Quellen werden per `AX_OR_2` zusammengeführt und treiben gemeinsam den physischen Ausgang sowie zwei getrennte Rückmeldekanäle.
+    - **DigitalOutput**: `logiBUS::io::DQ::logiBUS_QXA` (`QI` kommt vom Eingang `QI`) — physischer digitaler Ausgang.
+    - **PUBLISH_TEST** / **PUBLISH_STATE**: je `adapter::net::AX_PUBLISH_1` (`QI` kommt vom Eingang `QI`) — melden den resultierenden Zustand an die bestehende IO-Test-Überwachung (`ID_TEST_WRITE`) bzw. an die echte Funktions-Rückmeldung (`ID_WRITE`, z. B. `GreenWhiteBackground` am SoftKey).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` — verknüpft die `QO`-Ausgänge der fünf Dienst-FBs zum Ausgang `QO`.
+- **Funktionsweise**: Zwei unabhängige Remote-Subscribe-Quellen werden per `AX_OR_2` zusammengeführt und treiben gemeinsam den physischen Ausgang sowie zwei getrennte Rückmeldekanäle. Die SubApp-Schnittstelle besitzt außerdem die Ereignisse `INIT`/`INITO` und die Daten `QI` (BOOL, Initialwert `TRUE`) und `QO` (BOOL).
 
 ## Programmablauf und Verbindungen
 
@@ -29,6 +30,8 @@
 2. `SUBSCRIBE_TEST.OUT` → `OR_MERGE.IN1`; `SUBSCRIBE_CMD.OUT` → `OR_MERGE.IN2`.
 3. `OR_MERGE.OUT` → `SPLIT.IN` → `SPLIT.OUT1` → `DigitalOutput.OUT` (physischer Ausgang), `SPLIT.OUT2` → `PUBLISH_TEST.IN`, `SPLIT.OUT3` → `PUBLISH_STATE.IN`.
 4. Parameter: `Output` → `DigitalOutput.Output`; `ID_TEST_WRITE` → `PUBLISH_TEST.ID`; `ID_WRITE` → `PUBLISH_STATE.ID`.
+5. Initialisierungskette: `INIT` → `SUBSCRIBE_TEST.INIT` → `SUBSCRIBE_CMD.INIT` → `DigitalOutput.INIT` → `PUBLISH_TEST.INIT` → `PUBLISH_STATE.INIT` (jeweils `INITO` → nächstes `INIT`); `PUBLISH_STATE.INITO` → `INITO` und `AND_QO.REQ`.
+6. Qualität: `QI` → `SUBSCRIBE_TEST.QI`, `SUBSCRIBE_CMD.QI`, `DigitalOutput.QI`, `PUBLISH_TEST.QI` und `PUBLISH_STATE.QI`; deren `QO`-Ausgänge → `AND_QO.IN1` bis `AND_QO.IN5` (in dieser Reihenfolge); `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

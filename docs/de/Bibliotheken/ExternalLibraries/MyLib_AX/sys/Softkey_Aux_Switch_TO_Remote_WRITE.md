@@ -15,27 +15,30 @@ Der Funktionsbaustein `Softkey_Aux_Switch_TO_Remote_WRITE` ist eine Subapp, die 
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Kette `Softkey_IXA` → `Aux_IXA` → `SUBSCRIBE_WEB` → `SUBSCRIBE_SWITCH` → `AX_CLIENT_1_0`.
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `AX_CLIENT_1_0.INITO`.
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Kommentar |
 |------|-----|-----------|
+| `QI` | `BOOL` | Quality Input, Freigabe des Dienstes (Vorgabe `TRUE`); wird an alle fünf internen FBs weitergereicht |
 | `u16ObjId` | `UINT` | Object ID SoftKey (VT) |
 | `u16ObjIdA` | `UINT` | Object ID AuxFunction2 (VT) |
 | `ID_WRITE_REMOTE` | `WSTRING` | Remote‑Write‑Adresse zum Zielmodul (Befehl, ACTION=WRITE, CLIENT) |
 | `ID_WEB_READ` | `WSTRING` | Lokale Subscribe‑Adresse für einen Web‑Client (z. B. vt‑ui‑mirror) auf demselben Modul, ODER‑verknüpft mit SoftKey und AUX |
 | `ID_SWITCH_REMOTE` | `WSTRING` | Remote‑Subscribe‑Adresse eines zusätzlichen physischen Tasters auf einem **anderen** Modul (z. B. STG4_I2_REMOTE), ODER‑verknüpft mit SoftKey/AUX/Web |
 
-Alle Eingänge sind als `InputVars` definiert; es gibt keine Daten‑Ausgänge.
+Alle Eingänge sind als `InputVars` definiert; der einzige Daten‑Ausgang ist `QO`.
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Typ | Kommentar |
+|------|-----|-----------|
+| `QO` | `BOOL` | Quality Output, `AND` der `QO`-Ausgänge von `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB`, `SUBSCRIBE_SWITCH` und `AX_CLIENT_1_0` (über `AND_QO`, `AND_BOOL_5`) |
 
 ### **Adapter**
 
@@ -51,6 +54,8 @@ Die Subapp kombiniert vier boolesche Zustände logisch ODER:
 4. **Remote‑Taster** – über `ID_SWITCH_REMOTE` wird ein zusätzlicher physischer Taster auf einem anderen Modul per Remote‑Subscription gelesen (intern über `SUBSCRIBE_SWITCH`).
 
 Alle vier Signale werden im Baustein `AX_OR_4` zusammengeführt. Das Ergebnis dient als Eingang für den OPC‑UA‑Client `AX_CLIENT_1_0`, der das Kommando (als Write‑Request) an die in `ID_WRITE_REMOTE` spezifizierte Zieladresse sendet. Die gesamte Verarbeitung erfolgt asynchron; es gibt keine Rückmeldung über den Erfolg des Schreibvorgangs.
+
+**Initialisierung und Qualität:** `INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `Aux_IXA.INIT`, `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `SUBSCRIBE_SWITCH.INIT`, `SUBSCRIBE_SWITCH.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `INITO` und → `AND_QO.REQ`. `QI` geht an alle fünf FBs; deren `QO`-Ausgänge laufen auf `AND_QO.IN1` bis `IN5`, `AND_QO.OUT` → `QO`. Die internen FBs tragen kein festes `QI=TRUE` mehr.
 
 ## Technische Besonderheiten
 

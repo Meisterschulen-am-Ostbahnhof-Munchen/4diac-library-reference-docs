@@ -23,6 +23,7 @@ The **Q_ChangeObjectLabel** is a standards-compliant function block for changing
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Target Object Identifier
 - `u16ObIdStringVar` (UINT): Text Variable Object ID (max. 32 characters)
 - `u8FontType` (USINT): Font (for text labeling)
@@ -30,6 +31,7 @@ The **Q_ChangeObjectLabel** is a standards-compliant function block for changing
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operating status message
 - `u16OldObIdStringVar` (UINT): Previous text variable ID
 - `u8OldFontType` (USINT): Previous font
@@ -47,6 +49,8 @@ The F.50 command addresses, in bytes 2,3, the **Object ID of the object to label
 ID_NULL (65535) is not a valid command target but deactivates the FB when sent via `INIT`.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

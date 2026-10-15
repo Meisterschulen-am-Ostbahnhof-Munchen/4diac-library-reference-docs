@@ -21,12 +21,19 @@ The **Q_ESC** is a standards-compliant function block for termination control in
 - `INITO`: Initialization Confirmation
 - `CNF`: Abort Confirmation (with status)
 
+### **Data Inputs**
+
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
+
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational Status Message
 - `s16result` (INT): ISO-compliant Result Code
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

@@ -12,6 +12,12 @@ For the general pattern (selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`)
 
 ![RedWhiteBackground1_AX](RedWhiteBackground1_AX.svg)
 
+## Interface: Initialization and Quality
+
+- **INIT** (event input, `EInit`) → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → **INITO** (event output, `EInit`).
+- **QI** (data input, `BOOL`, default `TRUE`): Quality Input - `TRUE` enables the service; passed through to `Q_BackgroundColour.QI`.
+- **QO** (data output, `BOOL`): Quality Output - `TRUE` if the service executed successfully; comes from `Q_BackgroundColour.QO`.
+
 ## Summary
 
 One of many variants in the background color block family: color pair Rot/Weiß, 1 object, adapter selector.
@@ -20,4 +26,4 @@ One of many variants in the background color block family: color pair Rot/Weiß,
 
 ### 🌐 Related topic subpages on ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

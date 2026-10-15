@@ -16,19 +16,20 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; goes to `NumericValue_IDA.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm; comes from `NumericValue_IDA.INITO`
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`): quality input - TRUE enables the service (default `TRUE`); goes to `NumericValue_IDA.QI`
 - **u16ObjId** (`UINT`): object ID of the number variable that the VT checkbox (InputBoolean) uses as its value store (default `ID_NULL`)
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output - TRUE if the service was executed successfully (comes from `NumericValue_IDA.QO`)
 
 ### **Adapters**
 
@@ -36,13 +37,15 @@ None.
 
 ## Function Blocks (FBs) Used
 
-- **`NumericValue_IDA`** (`isobus::UT::io::NumericValue::NumericValue_IDA`): parameter `QI = TRUE`, delivers the value of the number variable as an `AD` adapter
+- **`NumericValue_IDA`** (`isobus::UT::io::NumericValue::NumericValue_IDA`): delivers the value of the number variable as an `AD` adapter
 - **`AD_TO_AX`** (`adapter::conversion::unidirectional::AD_TO_AX`): converts the value to an `AX` level
 
 ## Functionality
 
 - `u16ObjId` → `NumericValue_IDA.u16ObjId`
 - `NumericValue_IDA.IN` → `AD_TO_AX.AD_IN`
+- `INIT` → `NumericValue_IDA.INIT`, `NumericValue_IDA.INITO` → `INITO`
+- `QI` → `NumericValue_IDA.QI`, `NumericValue_IDA.QO` → `QO`
 - `AD_TO_AX.AX_OUT` → `PERMIT_OUT`
 
 ## Technical Details

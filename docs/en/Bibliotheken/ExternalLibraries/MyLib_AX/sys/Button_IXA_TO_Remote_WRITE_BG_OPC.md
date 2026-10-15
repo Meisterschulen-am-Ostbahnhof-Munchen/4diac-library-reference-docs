@@ -19,27 +19,30 @@ It is intended for outputs on modules that do not have their own VT connection, 
 
 ## Interface Structure
 
-The subapplication exposes only data inputs; it has no event inputs, event outputs, or external adapters. All internal communication is handled through data and adapter connections inside the subapplication.
+The subapplication exposes the event input `INIT`, the event output `INITO`, the data inputs `QI`, `u16ObjId`, `ID_SUBSCRIBE` and `ID_WRITE_REMOTE`, and the data output `QO`; it has no external adapters. All internal communication is handled through data and adapter connections inside the subapplication.
 
 ### **Event Inputs**
 
-None.
+- `INIT` (EInit): initialization request; starts the chain `Button_IXA` → `AX_CLIENT_1_0` → `AX_SUBSCRIBE_1` → `GreenWhiteBackground1_AX`
 
 ### **Event Outputs**
 
-None.
+- `INITO` (EInit): initialization confirmation; comes from `GreenWhiteBackground1_AX.INITO`
 
 ### **Data Inputs**
 
 | Name           | Type    | Initial Value | Comment                                                                 |
 |----------------|---------|---------------|-------------------------------------------------------------------------|
+| `QI`           | BOOL    | `TRUE`        | Quality input, service enable                                           |
 | `u16ObjId`     | UINT    | `ID_NULL`     | Object ID of the button and background (VT)                         |
 | `ID_SUBSCRIBE` | WSTRING | –             | Remote‑subscribe address for status/colour (ACTION=SUBSCRIBE)        |
 | `ID_WRITE_REMOTE` | WSTRING | –          | Remote‑write address to the target module (ACTION=WRITE, CLIENT)    |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | BOOL | Quality output, `AND` of the `QO` outputs of `Button_IXA`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` and `GreenWhiteBackground1_AX` (via `AND_QO`) |
 
 ### **Adapters**
 
@@ -54,7 +57,9 @@ The subapplication works as follows:
 3. **Remote Subscribe** – The `AX_SUBSCRIBE_1` block subscribes to a remote status/colour signal using the address given in `ID_SUBSCRIBE`. The subscribed data is passed via an adapter connection to the `GreenWhiteBackground1_AX` subapplication, which determines the appropriate VT background colour.
 4. **Background Update** – The `GreenWhiteBackground1_AX` subapplication uses the received status (e.g., on/off, alarm) and the object ID to set the background colour of the same VT object that contains the button.
 
-All three data inputs (`u16ObjId`, `ID_SUBSCRIBE`, `ID_WRITE_REMOTE`) are distributed internally to the respective blocks, ensuring full decoupling between the button input, remote write, and remote subscribe paths.
+The data inputs `u16ObjId`, `ID_SUBSCRIBE`, `ID_WRITE_REMOTE` are distributed internally to the respective blocks, ensuring full decoupling between the button input, remote write, and remote subscribe paths.
+
+1. **Initialization and Quality** – `INIT` → `Button_IXA.INIT`, `Button_IXA.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` goes to `Button_IXA.QI`, `AX_CLIENT_1_0.QI`, `AX_SUBSCRIBE_1.QI` and `GreenWhiteBackground1_AX.QI`; their four `QO` outputs feed `AND_QO.IN1` to `IN4` (`iec61131::booleanOperators::AND_BOOL_4`), and `AND_QO.OUT` drives `QO`.
 
 ## Technical Features
 
@@ -62,7 +67,7 @@ All three data inputs (`u16ObjId`, `ID_SUBSCRIBE`, `ID_WRITE_REMOTE`) are distri
 - **Integrated OPC‑UA Client and Subscriber** – Employs `AX_CLIENT_1_0` and `AX_SUBSCRIBE_1` adapters, which provide standardised OPC‑UA connectivity.
 - **Built‑in Button Handling** – Uses the `Button_IXA` block, which encapsulates VT button state detection.
 - **Background Colour Logic** – Delegates colour computation to the reusable `GreenWhiteBackground1_AX` subapplication, promoting modularity.
-- **Fixed Operational Parameters** – The internal function blocks are initialised with `QI = TRUE` to enable continuous operation.
+- **Pass-through enable** – The internal function blocks are no longer fixed to `QI = TRUE`; they receive the subapplication input `QI` (initial value `TRUE`), and `QO` is the `AND` of all four internal `QO` outputs.
 - **Input Types** – `u16ObjId` is a 16‑bit unsigned integer, while the two address inputs are wide strings, accommodating full OPC‑UA address strings.
 
 ## State Overview
@@ -90,4 +95,4 @@ In contrast to blocks that handle local output directly, this subapplication is 
 
 ## Conclusion
 
-The **Button_IXA_TO_Remote_WRITE_BG_OPC** subapplication provides a compact, reusable, and generic solution for controlling remote outputs via a VT button while visualising their status through a background colour. By combining an OPC‑UA client for write operations, an OPC‑UA subscriber for status updates, and a dedicated background‑colour subapplication, it delivers a complete remote‑control and status‑indication package. Its simple interface (three data inputs) and clearly separated internal components make it easy to integrate into larger automation projects.
+The **Button_IXA_TO_Remote_WRITE_BG_OPC** subapplication provides a compact, reusable, and generic solution for controlling remote outputs via a VT button while visualising their status through a background colour. By combining an OPC‑UA client for write operations, an OPC‑UA subscriber for status updates, and a dedicated background‑colour subapplication, it delivers a complete remote‑control and status‑indication package. Its simple interface (`INIT`/`INITO`, `QI`/`QO` and three data inputs) and clearly separated internal components make it easy to integrate into larger automation projects.

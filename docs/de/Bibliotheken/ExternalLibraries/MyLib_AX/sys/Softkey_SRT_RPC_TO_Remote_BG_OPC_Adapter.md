@@ -1,6 +1,5 @@
 # Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter
 
-
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter_network](./Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter_network.svg)
 
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter](./Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter.svg)
@@ -15,16 +14,17 @@ Der Funktionsblock `Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter` ist eine Subapplik
 
 ### **Ereignis-Eingänge**
 
-Keine vorhanden.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Keine vorhanden.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
 | Name            | Typ      | Beschreibung                                                                 |
 |-----------------|----------|------------------------------------------------------------------------------|
+| `QI`            | BOOL     | Quality Input – TRUE aktiviert den Dienst (Standard: `TRUE`).                |
 | `u16ObjId_SET`  | UINT     | Object ID für den SoftKey "Set" (Standard: `ID_NULL`).                       |
 | `u16ObjId_RESET`| UINT     | Object ID für den SoftKey "Reset" (Standard: `ID_NULL`).                     |
 | `u16ObjId_TOGGLE`| UINT    | Object ID für den SoftKey "Toggle" (inkl. Green‑White‑Background) (Standard: `ID_NULL`). |
@@ -35,7 +35,7 @@ Keine vorhanden.
 
 ### **Daten-Ausgänge**
 
-Keine vorhanden.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_2`) der `QO`-Ausgänge von `TRIGGER` und `SoftKeySRT_ASRT_AX`
 
 ### **Adapter**
 
@@ -43,7 +43,7 @@ Keine externen Adapter an der SubApp‑Schnittstelle. Die Verdrahtung zu den int
 
 ## Funktionsweise
 
-Die SubApp integriert zwei interne Bausteine:
+Die SubApp integriert zwei interne Bausteine sowie `AND_QO` (`AND_BOOL_2`), das die `QO`-Ausgänge von `TRIGGER` und `SoftKeySRT_ASRT_AX` zu `QO` verknüpft. Initialisierung: `INIT` → `TRIGGER.INIT`; `TRIGGER.INITO` → `SoftKeySRT_ASRT_AX.INIT`; `SoftKeySRT_ASRT_AX.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an `TRIGGER.QI` und `SoftKeySRT_ASRT_AX.QI` verteilt.
 
 1. **`SoftKeySRT_ASRT_AX`** (SubApp vom Typ `MyLib::sys::SoftKeySRT_ASRT_AX`):  
    Bündelt die HMI‑Logik für die drei SoftKeys (Set, Reset, Toggle) und das Green‑White‑Background. Sie stellt über einen **ASRT_AX‑Plug** eine standardisierte Schnittstelle nach außen bereit.

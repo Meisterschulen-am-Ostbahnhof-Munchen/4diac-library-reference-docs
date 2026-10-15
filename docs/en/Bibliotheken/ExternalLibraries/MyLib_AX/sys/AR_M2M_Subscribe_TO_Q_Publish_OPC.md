@@ -14,21 +14,22 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request; passed on to `AR_SUBSCRIBE_M2M.INIT`
 
 ### **Event Outputs**
 
-The function block has no direct event outputs.
+- **INITO** (`EInit`): initialization confirmation; comes from `Publish.INITO`
 
 ### **Data Inputs**
 
+- **QI** (BOOL, initial value `TRUE`): quality input, enables the service; passed on to `AR_SUBSCRIBE_M2M.QI` and `Publish.QI`
 - **ID_M2M_READ** (WSTRING): remote subscribe address of the finished physical value (REAL), e.g. `FBs::Ventilsteuerung::Ventilsteuerung_STG1::RemoteSubStrings::AUFNAHME_GESCHWINDIGKEIT_KMH_M2M`
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): object pool properties of the VT number variable (`u16ObjId`, scale, offset, decimals), e.g. `FBs::const::DefaultPool_Numeric::NumberVariable_X_N`
 - **ID_WRITE** (WSTRING): local publish address (REAL, physical value) for web mirror, dashboard and self-subscribe of further local consumers
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (BOOL): quality output, AND combination (`AND_QO`) of the `QO` outputs of `AR_SUBSCRIBE_M2M` and `Publish`
 
 ### **Adapters**
 
@@ -36,13 +37,17 @@ The function block has no direct data outputs.
 
 ## Functionality
 
-The network consists of three parts:
+The network consists of four parts:
 
-- `AR_SUBSCRIBE_M2M` (`adapter::net::AR_SUBSCRIBE_1`, parameter `QI = TRUE`): subscribes to the address `ID_M2M_READ` (`ID_M2M_READ` → `AR_SUBSCRIBE_M2M.ID`) and outputs the value as an AR adapter.
+- `AR_SUBSCRIBE_M2M` (`adapter::net::AR_SUBSCRIBE_1`, `QI` comes from the input `QI`): subscribes to the address `ID_M2M_READ` (`ID_M2M_READ` → `AR_SUBSCRIBE_M2M.ID`) and outputs the value as an AR adapter.
 - `AR_SPLIT_2_Value` (`adapter::events::unidirectional::AR_SPLIT_2`): distributes the subscribed value to two destinations (`AR_SUBSCRIBE_M2M.OUT` → `AR_SPLIT_2_Value.IN`).
 - `Publish` (`MyLib::sys::AR_TO_Q_Publish_OPC`): displays the value on the VT and publishes it locally (`AR_SPLIT_2_Value.OUT1` → `Publish.AR_IN`, `stObj` → `Publish.stObj`, `ID_WRITE` → `Publish.ID_WRITE`).
 
+- `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`): combines `AR_SUBSCRIBE_M2M.QO` and `Publish.QO` into the output `QO`.
+
 `AR_SPLIT_2_Value.OUT2` is routed to the plug `VALUE_OUT`.
+
+Initialization and quality: `INIT` → `AR_SUBSCRIBE_M2M.INIT`, `AR_SUBSCRIBE_M2M.INITO` → `Publish.INIT`, `Publish.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `AR_SUBSCRIBE_M2M.QI` and `Publish.QI`; `AR_SUBSCRIBE_M2M.QO` → `AND_QO.IN1`, `Publish.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 ## Technical Details
 

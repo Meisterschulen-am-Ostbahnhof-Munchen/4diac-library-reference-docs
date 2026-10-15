@@ -14,9 +14,9 @@ Der Funktionsblock **Q_ObjHideShow_AX** dient als Adapter-Wrapper für den beste
 
 ### **Ereignis-Eingänge**
 
-| Name   | Typ   | Kommentar              | Mit Variable |
-| ------ | ----- | ---------------------- | ------------ |
-| `INIT` | EInit | Service Initialization | `u16ObjId`   |
+| Name   | Typ   | Kommentar              | Mit Variable     |
+| ------ | ----- | ---------------------- | ---------------- |
+| `INIT` | EInit | Service Initialization | `QI`, `u16ObjId` |
 
 ### **Ereignis-Ausgänge**
 
@@ -26,13 +26,18 @@ Der Funktionsblock **Q_ObjHideShow_AX** dient als Adapter-Wrapper für den beste
 
 ### **Daten-Eingänge**
 
-| Name       | Typ  | Kommentar             |
-| ---------- | ---- | --------------------- |
-| `u16ObjId` | UINT | Objekt‑Identifikation |
+| Name       | Typ  | Kommentar                                 |
+| ---------- | ---- | ----------------------------------------- |
+| `QI`       | BOOL | Quality Input – TRUE aktiviert den Dienst |
+| `u16ObjId` | UINT | Objekt‑Identifikation                     |
 
 ### **Daten-Ausgänge**
 
-Der Baustein besitzt keine eigenen Datenausgänge. Der alte Sichtbarkeitswert wird über den Plug‑Adapter `qOldVisible` ausgegeben.
+Der Baustein besitzt außer `QO` keine eigenen Datenausgänge. Der alte Sichtbarkeitswert wird über den Plug‑Adapter `qOldVisible` ausgegeben.
+
+| Name | Typ    | Kommentar                                                           |
+| ---- | ------ | ------------------------------------------------------------------- |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ Der Baustein besitzt keine eigenen Datenausgänge. Der alte Sichtbarkeitswert wi
 | -------- | ------------- | -------------------- | ------------------------------------------------------------ |
 | Socket   | `qVisible`    | `unidirectional::AX` | Eingabe des neuen Sichtbarkeitswerts (0 = hidden, 1 = shown) |
 | Plug     | `qOldVisible` | `unidirectional::AB` | Ausgabe des bisherigen Sichtbarkeitswerts (0/1/0xFF)         |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_ObjHideShow` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_ObjHideShow.QO` übernommen und ist dem Ereignis `INITO` zugeordnet.
 
 ## Gültige Objekt-IDs
 

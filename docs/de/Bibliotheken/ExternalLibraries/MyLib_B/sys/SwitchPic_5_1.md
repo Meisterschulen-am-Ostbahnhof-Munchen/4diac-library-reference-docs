@@ -12,6 +12,10 @@ Allgemeines Muster siehe [SwitchPic(Col)-Bausteine (gemeinsames Muster)](./Switc
 
 ![SwitchPic_5_1](SwitchPic_5_1.svg)
 
+## Schnittstelle (QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Standardwert `TRUE`, Quality Input) und den Datenausgang `QO` (`BOOL`, Quality Output). `QI` wird direkt an `Q_NumericValue.QI` und `Q_NumericValue.QO` direkt an `QO` durchgereicht.
+
 ## Zusammenfassung
 
 Variante "1" (nur normales Objekt) der 5-Zustände-Bildumschaltung — das 5-Zustände-Gegenstück zu [`SwitchPic_2_1`](./SwitchPic_2_1.md).

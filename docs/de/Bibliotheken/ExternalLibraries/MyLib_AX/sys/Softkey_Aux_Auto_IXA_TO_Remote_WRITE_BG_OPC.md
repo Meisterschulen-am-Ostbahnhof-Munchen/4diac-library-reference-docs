@@ -19,14 +19,17 @@ Der Baustein ist eine Kopie von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, die al
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden – Ereignisse kommen über den Adapter-Socket*
+- **INIT** (`EInit`): Initialisierungsanforderung
+
+Die Nutzereignisse kommen weiterhin über den Adapter-Socket.
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `Status.INITO`)
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE gibt den Dienst frei
 - **u16ObjId** (`UINT`): Object-ID SoftKey/Hintergrund (VT)
 - **u16ObjIdA** (`UINT`): Object-ID AuxFunction2/Hintergrund (VT)
 - **ID_SUBSCRIBE** (`WSTRING`): Remote-Subscribe-Adresse (Status/Farbe, `ACTION=SUBSCRIBE`)
@@ -36,7 +39,7 @@ Der Baustein ist eine Kopie von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, die al
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output – UND aus `Command.QO` und `Status.QO`
 
 ### **Adapter**
 
@@ -47,6 +50,7 @@ Der Baustein ist eine Kopie von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, die al
 
 - **Command**: SubApp `MyLib::sys::Softkey_Aux_Auto_IXA_TO_Remote_WRITE`
 - **Status**: SubApp `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Command.QO` und `Status.QO` zum `QO`
 
 ## Programmablauf und Verbindungen
 
@@ -55,6 +59,9 @@ Der Baustein ist eine Kopie von `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`, die al
 - `ID_SUBSCRIBE`, `ID_STATUS_WEB` → `Status`
 - `AUTO_IN` → `Command.AUTO_IN`
 - `Command.WEB_STATE` → `WEB_STATE`
+- `INIT` → `Command.INIT`; `Command.INITO` → `Status.INIT`; `Status.INITO` → `INITO` (und → `AND_QO.REQ`)
+- `QI` → `Command.QI` und `Status.QI`
+- `Command.QO` → `AND_QO.IN1`; `Status.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 `Command` und `Status` sind nicht direkt miteinander verbunden; die Rückmeldung läuft über den Remote-Subscribe.
 

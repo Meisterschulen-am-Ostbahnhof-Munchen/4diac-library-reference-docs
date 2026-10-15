@@ -23,10 +23,12 @@ The **Q_ExecuteMacro** is a standards-compliant function block for executing mac
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Macro object ID (max. value 255)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational status message
 - `s16result` (INT): ISO-compliant result code
 
@@ -37,6 +39,8 @@ The **Q_ExecuteMacro** is a standards-compliant function block for executing mac
 ID_NULL (65535) is not a valid command target but deactivates the FB when sent via `INIT`.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

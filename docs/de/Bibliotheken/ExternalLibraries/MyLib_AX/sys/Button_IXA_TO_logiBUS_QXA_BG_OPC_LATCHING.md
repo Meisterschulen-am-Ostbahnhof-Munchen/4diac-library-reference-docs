@@ -15,15 +15,17 @@
 ### Sub-Bausteine: Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING
 
 - **Typ**: SubAppType
+- **Schnittstelle (zusätzlich)**: Ereignis-Eingang `INIT`, Ereignis-Ausgang `INITO` (je `EInit`), Daten-Eingang `QI` (`BOOL`, Vorgabe `TRUE`), Daten-Ausgang `QO` (`BOOL`).
 - **Verwendete interne FBs**:
-    - **Button_IXA**: `isobus::UT::io::Button::Button_IXA` (`QI=TRUE`) — VT-Taster, `u16ObjId` identifiziert die VT-Taste.
+    - **Button_IXA**: `isobus::UT::io::Button::Button_IXA` (`QI` vom Wrapper-Eingang) — VT-Taster, `u16ObjId` identifiziert die VT-Taste.
     - **AX_ASR_RF_TRIG_BT** / **AX_ASR_RF_TRIG_OPC**: je `adapter::events::unidirectional::AX_ASR_RF_TRIG` — wandeln steigende/fallende Flanke der VT-Taste bzw. des OPC-UA-Subscribe-Werts in ein Set/Reset-Ereignispaar (ASR) um.
     - **ASR_MERGE_2**: `adapter::events::unidirectional::ASR_MERGE_2` — führt die beiden ASR-Quellen (Button, OPC-UA) zusammen.
     - **ASR_AX_SR**: `adapter::events::unidirectional::ASR_AX_SR` — Set/Reset-Latch, das aus dem zusammengeführten ASR-Signal den gelatchten Ausgangszustand bildet (Last-Wins).
     - **AX_SPLIT_3**: `adapter::events::unidirectional::AX_SPLIT_3` — verteilt den Latch-Ausgang auf drei Ziele.
-    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) — physischer digitaler Ausgang.
+    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI` vom Wrapper-Eingang) — physischer digitaler Ausgang.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): VT-Hintergrundfarbe passend zum Ausgangszustand.
-    - **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: je `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` (`QI=TRUE`) — OPC-UA-Lese-/Schreibzugriff.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` — verknüpft die `QO`-Ausgänge von `logiBUS_QXA`, `Button_IXA`, `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX` zu `QO`.
+    - **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: je `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` (`QI` vom Wrapper-Eingang) — OPC-UA-Lese-/Schreibzugriff.
 - **Funktionsweise**: Beide Schaltquellen (VT-Taster, OPC-UA-Kommando) werden je über `AX_ASR_RF_TRIG` in Set/Reset-Ereignisse gewandelt, per `ASR_MERGE_2` zusammengeführt und in `ASR_AX_SR` gelatcht — der Latch-Zustand speist gleichzeitig Hardware, VT-Statusfarbe und OPC-UA-Echo.
 
 ## Programmablauf und Verbindungen
@@ -32,8 +34,9 @@
 2. `AX_SUBSCRIBE_1.OUT` → `AX_ASR_RF_TRIG_OPC.QI` → `AX_ASR_RF_TRIG_OPC.Q` → `ASR_MERGE_2.IN1`.
 3. `ASR_MERGE_2.OUT` → `ASR_AX_SR.S_R` (Set/Reset-Eingang des Latch).
 4. `ASR_AX_SR.Q` → `AX_SPLIT_3.IN` → `AX_SPLIT_3.OUT1` → `logiBUS_QXA.OUT`, `AX_SPLIT_3.OUT2` → `GreenWhiteBackground1_AX.DI1`, `AX_SPLIT_3.OUT3` → `AX_PUBLISH_1.IN`.
-5. Initialisierung: `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (ausgeblendete Verbindung).
+5. Initialisierung: `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (ausgeblendete Verbindung). Die Kette läuft von außen: `INIT` → `logiBUS_QXA.INIT`; `logiBUS_QXA.INITO` → `Button_IXA.INIT`; `Button_IXA.INITO` → `AX_SUBSCRIBE_1.INIT`; `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`; `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`.
 6. Parameter: `u16ObjId` → `Button_IXA.u16ObjId` und `GreenWhiteBackground1_AX.u16ObjId`; `Output` → `logiBUS_QXA.Output`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
+7. Qualität: `QI` → `.QI` von `logiBUS_QXA`, `Button_IXA`, `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX`; deren `QO` → `AND_QO.IN1` bis `AND_QO.IN5` (in dieser Reihenfolge); `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

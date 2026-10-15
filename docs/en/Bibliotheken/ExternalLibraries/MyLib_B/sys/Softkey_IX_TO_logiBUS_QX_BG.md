@@ -20,6 +20,7 @@
     - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physical digital output.
     - **E_SPLIT_2**: `iec61499::events::E_SPLIT_2` — splits the softkey event.
     - **Color block** (compact background variant, see [Background Color Blocks](../../MyLib_AX/sys/Background-Color-Blocks.md)): sets the status color.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — combines the `QO` of `logiBUS_QX`, `Softkey_IX` and the color block.
 - **Functionality**: `Softkey_IX.IND` is distributed via `E_SPLIT_2` to `logiBUS_QX.REQ` and the color block; `Softkey_IX.IN` feeds `logiBUS_QX.OUT` and the color block.
 
 ## Program Flow and Connections
@@ -27,6 +28,8 @@
 1. `u16ObjId` → `Softkey_IX.u16ObjId` and the color block's `.u16ObjId`; `Output` → `logiBUS_QX.Output`.
 2. `Softkey_IX.IND` → `E_SPLIT_2.EI` → `EO1` → `logiBUS_QX.REQ`, `EO2` → color block `.EO`.
 3. `Softkey_IX.IN` → `logiBUS_QX.OUT` and → color block `.DI`.
+4. Initialization: event input `INIT` → `logiBUS_QX.INIT`, `logiBUS_QX.INITO` → `Softkey_IX.INIT`, `Softkey_IX.INITO` → color block `.INIT` (instance `GreenWhiteBackground1_AX`), whose `INITO` → event output `INITO` and → `AND_QO.REQ`.
+5. Quality: data input `QI` (`BOOL`, default `TRUE`) → `logiBUS_QX.QI`, `Softkey_IX.QI` and color block `.QI`; `logiBUS_QX.QO` → `AND_QO.IN1`, `Softkey_IX.QO` → `AND_QO.IN2`, color block `.QO` → `AND_QO.IN3`; `AND_QO.OUT` → data output `QO`.
 
 ## Application Scenarios
 

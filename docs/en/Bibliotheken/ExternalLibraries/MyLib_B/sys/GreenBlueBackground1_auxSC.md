@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`GreenBlueBackground1_auxSC` is a **compact wrapper** around [`GreenBlueBackground1_auxS`](GreenBlueBackground1_auxS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
+`GreenBlueBackground1_auxSC` is a **compact wrapper** around [`GreenBlueBackground1_auxS`](GreenBlueBackground1_auxS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`). In addition, `INIT` → `GreenBlueBackground.INIT`, `GreenBlueBackground.INITO` → `INITO`, `QI` → `GreenBlueBackground.QI` (initial value `TRUE`) and `GreenBlueBackground.QO` → `QO` are passed through.
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 

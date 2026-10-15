@@ -16,10 +16,15 @@
 - **AE_EVENT_TO_E** (`adapter::conversion::unidirectional::AE_EVENT_TO_E`): wandelt den SoftKey-Event in ein AE-Adapter-Ereignis.
 - **GreenWhiteBackground_AX** (SubApp, Typ `MyLib::sys::GreenWhiteBackground1_AX`): Statusfarbe direkt auf demselben Objekt.
 - **SPLIT** (`adapter::events::bidirectional::AE_TO_AE_AX_SPLIT`): verzweigt den bidirektionalen `AE_AX`-Verkehr auf den externen Plug `OUT` und intern auf das Background-Element.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft die `QO`-Ausgänge der inneren Bausteine zu `QO`.
 
 ## Programmablauf und Verbindungen
 
 `SoftKey_UP_F1.IND` -> `AE_EVENT_TO_E.REQ` -> `SPLIT.IN` -> `OUT` (nach aussen) und `SPLIT.AX_OUT` -> `GreenWhiteBackground_AX.DI1` (Zustandsanzeige).
+
+## Initialisierung und Qualität
+
+Schnittstelle (Quality-Muster): Ereignis-Eingang `INIT` und Ereignis-Ausgang `INITO` (je `EInit`), Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`) und Datenausgang `QO` (`BOOL`). Initialisierung: `INIT` → `SoftKey_UP_F1.INIT`; `SoftKey_UP_F1.INITO` → `GreenWhiteBackground_AX.INIT`; `GreenWhiteBackground_AX.INITO` → `INITO` und → `AND_QO.REQ`. Qualität: `QI` → `SoftKey_UP_F1.QI`, `GreenWhiteBackground_AX.QI`; `SoftKey_UP_F1.QO`, `GreenWhiteBackground_AX.QO` → `AND_QO.IN1` bis `AND_QO.IN2` (in dieser Reihenfolge); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_2`).
 
 ## Zusammenfassung
 

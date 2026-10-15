@@ -16,13 +16,17 @@ The block replaces `logiBUS_AI_Calibrate_Remote_IDA_OPC`: the calibration itself
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): initialization request; starts the chain `ValueDisplay` → `TriggerCO` → `TriggerCS` → `RawDisplay` → `MinRawDisplay` → `MaxRawDisplay` → `ZeroRef` → `SpanRef`
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): initialization confirmation; comes from `SpanRef.INITO`
 
 ### **Data Inputs**
+
+Enable:
+
+- **QI** (`BOOL`, default `TRUE`): quality input, service enable; passed on to all eight instances (`ValueDisplay`, `TriggerCO`, `TriggerCS`, `RawDisplay`, `MinRawDisplay`, `MaxRawDisplay`, `ZeroRef`, `SpanRef`)
 
 Calibrated value:
 
@@ -56,7 +60,7 @@ Reference values (optional):
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): quality output, `AND` of the `QO` outputs of all eight instances (via `AND_QO`, `AND_BOOL_8`)
 
 ### **Adapters**
 
@@ -68,6 +72,7 @@ Reference values (optional):
 - **RawDisplay**, **MinRawDisplay**, **MaxRawDisplay**: same SubApp for the raw value and the raw values of the calibration points
 - **TriggerCO**, **TriggerCS**: SubApp [`MyLib::sys::Button_CLIENT_Method_IE`](./Button_CLIENT_Method_IE.md) (`InputEvent=BT_PRESSED_LATCHED`)
 - **ZeroRef**, **SpanRef**: SubApp `MyLib::sys::NumericValue_TO_AR2_OPC` - reference value input fields
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_8` - combines the eight `QO` outputs into the SubApp output `QO`
 
 ## Program Flow and Connections
 
@@ -78,6 +83,8 @@ Reference values (optional):
 - `ID_MAXRAW_M2M_READ`, `stObjMaxRaw`, `ID_MAXRAW_WRITE` → `MaxRawDisplay`
 - `stObjZero`, `ID_ZERO_READ`, `ID_ZERO_WRITE` → `ZeroRef`
 - `stObjSpan`, `ID_SPAN_READ`, `ID_SPAN_WRITE` → `SpanRef`
+- Initialization: `INIT` → `ValueDisplay.INIT` → `TriggerCO.INIT` → `TriggerCS.INIT` → `RawDisplay.INIT` → `MinRawDisplay.INIT` → `MaxRawDisplay.INIT` → `ZeroRef.INIT` → `SpanRef.INIT` (each via `INITO`); `SpanRef.INITO` → `INITO` and → `AND_QO.REQ`
+- Quality: `QI` → `.QI` of the eight instances; `ValueDisplay.QO` → `AND_QO.IN1`, `TriggerCO.QO` → `IN2`, `TriggerCS.QO` → `IN3`, `RawDisplay.QO` → `IN4`, `MinRawDisplay.QO` → `IN5`, `MaxRawDisplay.QO` → `IN6`, `ZeroRef.QO` → `IN7`, `SpanRef.QO` → `IN8`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

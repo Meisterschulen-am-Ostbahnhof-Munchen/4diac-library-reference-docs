@@ -10,6 +10,14 @@
 
 ![AX_LinksRechts_T_FF](AX_LinksRechts_T_FF.svg)
 
+## Schnittstellenstruktur
+
+- **Ereignis-Eingänge**: `INIT` (Initialization Request)
+- **Ereignis-Ausgänge**: `INITO` (Initialization Confirm)
+- **Daten-Eingänge**: `QI` (`BOOL`, Default `TRUE`) — Quality Input
+- **Daten-Ausgänge**: `QO` (`BOOL`) — Quality Output
+- **Adapter**: Socket `IN`, Plugs `Links` und `Rechts` (jeweils `adapter::types::unidirectional::AX`)
+
 ## Verwendete Funktionsbausteine (FBs)
 
 ### Sub-Bausteine: AX_LinksRechts_T_FF
@@ -17,7 +25,7 @@
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
     - **AX_R_TRIG**: `adapter::events::unidirectional::AX_R_TRIG` — erkennt die steigende Flanke des Tasters.
-    - **AX_T_FF_INIT**: `adapter::events::unidirectional::AX_T_FF_INIT` — Toggle-Flipflop mit definiertem Startzustand (`QI=TRUE`, `Q_INIT=FALSE`).
+    - **AX_T_FF_INIT**: `adapter::events::unidirectional::AX_T_FF_INIT` — Toggle-Flipflop mit definiertem Startzustand (`Q_INIT=FALSE`; `QI` kommt vom Wrapper-Eingang `QI`).
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — verzweigt den Flipflop-Zustand.
     - **AX_NOT**: `adapter::booleanOperators::AX_NOT` — negiert einen der beiden Zweige für das komplementäre Signal.
 - **Funktionsweise**: Jede steigende Flanke an `IN` togglet `AX_T_FF_INIT.Q`. Der direkte Zustand geht an `Rechts`, der negierte Zustand an `Links` — dadurch sind `Links` und `Rechts` immer exakt komplementär (siehe Kommentar im Quellcode: "der AX_T_FF_INIT schaltet den Ausgang Aktiv auf FALSE, somit ist LINKS dann TRUE").
@@ -28,6 +36,8 @@
 2. `AX_T_FF_INIT.Q` → `AX_SPLIT_2.IN`.
 3. `AX_SPLIT_2.OUT1` → `AX_NOT.IN` → `AX_NOT.OUT` → `Links`.
 4. `AX_SPLIT_2.OUT2` → `Rechts`.
+5. `INIT` → `AX_T_FF_INIT.INIT`; `AX_T_FF_INIT.INITO` → `INITO`.
+6. `QI` → `AX_T_FF_INIT.QI`; `AX_T_FF_INIT.QO` → `QO`.
 
 ## Anwendungsszenarien
 

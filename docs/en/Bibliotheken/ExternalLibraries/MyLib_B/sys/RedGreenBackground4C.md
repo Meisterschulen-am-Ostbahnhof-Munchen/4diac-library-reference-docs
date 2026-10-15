@@ -12,6 +12,8 @@
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
+In addition, the wrapper exposes the initialization and quality interface: event input `INIT`, event output `INITO`, data input `QI` (`BOOL`, initial value `TRUE`) and data output `QO` (`BOOL`). They are passed 1:1 through to the inner instance `RedGreenBackground4`: `INIT` → `RedGreenBackground4.INIT`, `RedGreenBackground4.INITO` → `INITO`, `QI` → `RedGreenBackground4.QI`, `RedGreenBackground4.QO` → `QO`.
+
 ## Summary
 
 A pure pass-through to `RedGreenBackground4` for the common case where the diagnostic values aren't needed.

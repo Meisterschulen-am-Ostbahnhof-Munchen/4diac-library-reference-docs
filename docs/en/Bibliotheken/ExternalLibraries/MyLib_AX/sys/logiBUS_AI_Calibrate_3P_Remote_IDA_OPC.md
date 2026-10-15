@@ -14,14 +14,15 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request; starts the initialization chain (first link `Q_NumericValue_RAW.INIT`)
 
 ### **Event Outputs**
 
-The function block has no direct event outputs.
+- **INITO** (`EInit`): initialization confirm; comes from `Button_C_MAX.INITO`, the end of the chain
 
 ### **Data Inputs**
 
+- **QI** (BOOL): quality input - TRUE enables the service (default `TRUE`); distributed to all 21 inner instances
 - **u16ObjId_RAWVAR** (UINT): object ID of the CNumberVariable for the raw value (0-4095, uncalibrated, pure diagnostic display)
 - **stObjCal** (`NumericObjectPool_S`): object ID + scale/offset/decimals of the CNumberVariable for the calibrated value (own, independent variable)
 - **u16ObjId_C_MIN**, **u16ObjId_C_MID**, **u16ObjId_C_MAX** (UINT): object IDs of the buttons `C_MIN`, `C_MID`, `C_MAX` (move to the position, then press)
@@ -36,7 +37,7 @@ The function block has no direct event outputs.
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (BOOL): quality output - TRUE if the service was executed successfully (AND of the `QO` of all 21 inner instances, see section Functionality)
 
 ### **Adapters**
 
@@ -46,9 +47,9 @@ The function block has no direct data outputs.
 
 ## Functionality
 
-**Raw value**: `AD_SUBSCRIBE_RAW` (`adapter::net::AD_SUBSCRIBE_1`, `QI = TRUE`, address `ID_RAW_REMOTE_READ`) → `AD_TO_AUDI` → `AUDI_SPLIT_2`. `OUT1` → `Q_NumericValue_RAW.u32NewValue` (`Q_NumericValue_AUDI`, raw value display on `u16ObjId_RAWVAR`); `OUT2` → `AUDI_TO_AR` → `CALIBRATE.X`.
+**Raw value**: `AD_SUBSCRIBE_RAW` (`adapter::net::AD_SUBSCRIBE_1`, `QI` from outside, address `ID_RAW_REMOTE_READ`) → `AD_TO_AUDI` → `AUDI_SPLIT_2`. `OUT1` → `Q_NumericValue_RAW.u32NewValue` (`Q_NumericValue_AUDI`, raw value display on `u16ObjId_RAWVAR`); `OUT2` → `AUDI_TO_AR` → `CALIBRATE.X`.
 
-**Calibration**: `CALIBRATE` (`adapter::Engineering::measurements::AR_CALIBRATE_3P_REF`, `QI = TRUE`, `xClipping = FALSE`) maps the raw value `X` via the three points to `Y`. `Y_MIN`/`Y_MID`/`Y_MAX` come from `MIN_REF_LIT`/`MID_REF_LIT`/`MAX_REF_LIT` (each [`MyLib::sys::NumericValue_TO_AR2_OPC`](NumericValue_TO_AR2_OPC.md); VT input field and OPC-UA, last writer wins).
+**Calibration**: `CALIBRATE` (`adapter::Engineering::measurements::AR_CALIBRATE_3P_REF`, `xClipping = FALSE`, `QI` from outside) maps the raw value `X` via the three points to `Y`. `Y_MIN`/`Y_MID`/`Y_MAX` come from `MIN_REF_LIT`/`MID_REF_LIT`/`MAX_REF_LIT` (each [`MyLib::sys::NumericValue_TO_AR2_OPC`](NumericValue_TO_AR2_OPC.md); VT input field and OPC-UA, last writer wins).
 
 **Result**: `CALIBRATE.Y` → `AR_SPLIT_2` (`AR_SPLIT_3`): `OUT1` → `AR_PUBLISH_CAL` (`AR_PUBLISH_1`, address `ID_CAL_WRITE`), `OUT2` → `Q_NumericValue_CAL.rPhys` (`Q_NumericValue_PHYSA`, display with `stObjCal`), `OUT3` → `CAL_OUT`. `MID_REF_LIT.VALUE_OUT` → `MIDREF_OUT` and `MAX_REF_LIT.VALUE_OUT` → `MAXREF_OUT`.
 
@@ -56,12 +57,14 @@ The function block has no direct data outputs.
 
 **Persistence**: `CALIBRATE.X_MIN`/`X_MID`/`X_MAX` and `MIN_REF`/`MID_REF`/`MAX_REF` each go to one `INI_AR2` instance (`INI_X_MIN`, `INI_X_MID`, `INI_X_MAX`, `INI_MIN_REF`, `INI_MID_REF`, `INI_MAX_REF`; `SETM = TRUE`, `SECTION` from `sSection`, `KEY` = name). The defaults are `X_MIN`/`X_MID`/`X_MAX` = `REAL#0.0` as well as `MIN_REF = REAL#-100.0`, `MID_REF = REAL#50.0`, `MAX_REF = REAL#100.0`.
 
-**Initialisation**: `AD_SUBSCRIBE_RAW.INITO` → `AR_PUBLISH_CAL.INIT` → `AX_SUBSCRIBE_MIN.INIT` → `AX_SUBSCRIBE_MID.INIT` → `AX_SUBSCRIBE_MAX.INIT` → `SERVER_MID_TRIGGER.INIT`.
+**Initialisation**: `INIT` runs as one single chain (each `INITO` → next `INIT`) through `Q_NumericValue_RAW` → `Q_NumericValue_CAL` → `MIN_REF_LIT` → `MID_REF_LIT` → `MAX_REF_LIT` → `CALIBRATE` → `INI_X_MIN` → `INI_X_MID` → `INI_X_MAX` → `INI_MIN_REF` → `INI_MID_REF` → `INI_MAX_REF` → `AD_SUBSCRIBE_RAW` → `AR_PUBLISH_CAL` → `AX_SUBSCRIBE_MIN` → `AX_SUBSCRIBE_MID` → `AX_SUBSCRIBE_MAX` → `SERVER_MID_TRIGGER` → `Button_C_MIN` → `Button_C_MID` → `Button_C_MAX`; `Button_C_MAX.INITO` goes to the event output `INITO` and to `AND_QO.REQ`.
+
+**Quality**: `QI` is passed to all 21 instances of the chain. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_21`), which combines the `QO` of these 21 instances in a single block (`IN1`..`IN21`: `Q_NumericValue_RAW`, `Q_NumericValue_CAL`, `MIN_REF_LIT`, `MID_REF_LIT`, `MAX_REF_LIT`, `CALIBRATE`, `INI_X_MIN`, `INI_X_MID`, `INI_X_MAX`, `INI_MIN_REF`, `INI_MID_REF`, `INI_MAX_REF`, `AD_SUBSCRIBE_RAW`, `AR_PUBLISH_CAL`, `AX_SUBSCRIBE_MIN`, `AX_SUBSCRIBE_MID`, `AX_SUBSCRIBE_MAX`, `SERVER_MID_TRIGGER`, `Button_C_MIN`, `Button_C_MID`, `Button_C_MAX`). In addition there is `E_MERGE_QO` (`E_MERGE_3`), which merges `Q_NumericValue_CAL.INITO` and the `CNF` events of `Q_NumericValue_RAW` and `Q_NumericValue_CAL`; its output `EO` triggers `AND_QO.REQ`, so `QO` is re-evaluated on every new `Q_NumericValue_RAW`/`Q_NumericValue_CAL` value (`CNF`) (up to v1.6 `EO` was not connected).
 
 ## Technical Details
 
 - The defaults of `X_MID`/`X_MAX` are deliberately `0.0`: with `0.5`/`1.0` the calibrated flags `xMidCal`/`xMaxCal` of `AR_CALIBRATE_3P_REF` latched to TRUE at every restart although MID/MAX were never calibrated (fix in version 1.6)
-- `CALIBRATE` has an `INIT`/`QI`/`QO` enable pattern; without `QI = TRUE` the block stays in state START and `REQ` never runs (version 1.5)
+- `CALIBRATE` has an `INIT`/`QI`/`QO` enable pattern; without `QI = TRUE` the block stays in state START and `REQ` never runs (version 1.5); here `QI` comes from the SubApp input `QI` (default `TRUE`) instead of a fixed parameter
 - `MIDREF_OUT`/`MAXREF_OUT` are fed from `VALUE_OUT`, not from the bidirectional `VALUEO`: an `AR_SPLIT_2` directly on an AR2 plug would be a type error (version 1.2)
 - The optional plugs `CAL_OUT`/`MIDREF_OUT`/`MAXREF_OUT` allow external consumers to read the already calibrated value via adapter instead of subscribing to the same OPC-UA node locally again (FORTE: 'Cannot add another one'); leave unwired if not needed (e.g. slope compensation channel)
 - The merge chains for `C_MIN`/`C_MID`/`C_MAX` are a single `E_MERGE_3`/`E_MERGE_4` each instead of several `E_MERGE_2` (OR is associative, functionally identical); `C_MIN`/`C_MID`/`C_MAX` of `CALIBRATE` are pure event inputs

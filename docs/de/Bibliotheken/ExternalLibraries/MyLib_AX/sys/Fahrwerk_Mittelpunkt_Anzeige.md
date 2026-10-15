@@ -28,10 +28,14 @@ Sie ist für Fälle gedacht, in denen die eigentliche Automatik (`AUTO_LINKS`/`A
 
 ### **Ereignis-Eingänge / Ereignis-Ausgänge**
 
-Keine – Ereignisse laufen über den Adapter.
+- **INIT** (`EInit`, Eingang): Initialisierungsanforderung; wird an `STATUS_CENTER_BG.INIT` durchgereicht
+- **INITO** (`EInit`, Ausgang): Initialisierungsbestätigung; kommt von `STATUS_CENTER_BG.INITO`
+
+Die Laufzeit-Ereignisse laufen weiterhin über den Adapter.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, Freigabe des Dienstes; wird an `STATUS_CENTER_BG.QI` durchgereicht
 - **WINDOW_MIN** (`REAL`, Vorgabe `-2.0`): Untere Fenstergrenze (%), ab wann „links ausgelenkt" gilt – muss zum `WINDOW_MIN` der zugehörigen `Fahrwerk_Mittelpunkt_Automatik`-Instanz passen
 - **WINDOW_MAX** (`REAL`, Vorgabe `2.0`): Obere Fenstergrenze (%), ab wann „rechts ausgelenkt" gilt – siehe `WINDOW_MIN`
 - **u16ObjId_Status_Center** (`UINT`): Object-ID des `Status_Center`-Buttons (`Achslenkung_Status_Center` bzw. `Hangausgleich_Status_Center`, „><"-Indikator)
@@ -39,7 +43,7 @@ Keine – Ereignisse laufen über den Adapter.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, kommt von `STATUS_CENTER_BG.QO`
 
 ### **Adapter**
 
@@ -54,6 +58,8 @@ Keine.
 - `CENTER_CMP.CENTERED` → `STATUS_CENTER_BG.DI1`
 - `u16ObjId_Status_Center` → `STATUS_CENTER_BG.u16ObjId`
 - `stObjBargraphSplit` → `SplitBar.stObj`
+- Initialisierung: `INIT` → `STATUS_CENTER_BG.INIT`; `STATUS_CENTER_BG.INITO` → `INITO`
+- Qualität: `QI` → `STATUS_CENTER_BG.QI`; `STATUS_CENTER_BG.QO` → `QO`
 
 ## Technische Besonderheiten
 

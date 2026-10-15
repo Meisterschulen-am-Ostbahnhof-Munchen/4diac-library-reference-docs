@@ -14,14 +14,15 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-The function block has no direct event outputs.
+- **INITO** (`EInit`): initialization confirm
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): quality input, TRUE enables the service
 - **u16ObjId** (UINT): object ID of the SoftKey (VT), default `ID_NULL`
 - **u16ObjIdA** (UINT): object ID of the AuxFunction2 (VT), default `ID_NULL`
 - **ID_WRITE_REMOTE** (WSTRING): remote write address to the target module (command, `ACTION=WRITE`, CLIENT)
@@ -30,7 +31,7 @@ The function block has no direct event outputs.
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_5`) of the `QO` outputs of `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB`, `SUBSCRIBE_SWITCH` and `AX_CLIENT_1_0`
 
 ### **Adapters**
 
@@ -42,11 +43,13 @@ The function block has no direct data outputs.
 
 The network works in two OR stages:
 
-1. **Manual sources**: `Softkey_IXA` (`isobus::UT::io::Softkey::Softkey_IXA`, `QI = TRUE`, `u16ObjId`) → `OR_Manual.IN1`, `Aux_IXA` (`isobus::UT::io::Auxiliary::IN::Aux_IXA`, `QI = TRUE`, `u16ObjIdA`) → `OR_Manual.IN2`, `SUBSCRIBE_WEB` (`AX_SUBSCRIBE_1`, address `ID_WEB_READ`) → `OR_Manual.IN3`, `SUBSCRIBE_SWITCH` (`AX_SUBSCRIBE_1`, address `ID_SWITCH_REMOTE`) → `OR_Manual.IN4`. `OR_Manual` is an `AX_OR_4`.
+1. **Manual sources**: `Softkey_IXA` (`isobus::UT::io::Softkey::Softkey_IXA`, `u16ObjId`) → `OR_Manual.IN1`, `Aux_IXA` (`isobus::UT::io::Auxiliary::IN::Aux_IXA`, `u16ObjIdA`) → `OR_Manual.IN2`, `SUBSCRIBE_WEB` (`AX_SUBSCRIBE_1`, address `ID_WEB_READ`) → `OR_Manual.IN3`, `SUBSCRIBE_SWITCH` (`AX_SUBSCRIBE_1`, address `ID_SWITCH_REMOTE`) → `OR_Manual.IN4`. `OR_Manual` is an `AX_OR_4`.
 2. `OR_Manual.OUT` → `AX_SPLIT_2_Manual`: `OUT1` → `OR_Automatik.IN1`, `OUT2` → `MANUAL_OUT`.
 3. **Automation**: `AUTO_IN` → `OR_Automatik.IN2`. `OR_Automatik` is an `AX_OR_2`.
 4. `OR_Automatik.OUT` → `AX_SPLIT_2_CmdOut`: `OUT1` → `AUTOMATIC_OUT`, `OUT2` → `AX_CLIENT_1_0.IN`.
-5. `AX_CLIENT_1_0` (`adapter::net::AX_CLIENT_1_0`, `QI = TRUE`) writes the command via OPC-UA to the address `ID_WRITE_REMOTE`.
+5. `AX_CLIENT_1_0` (`adapter::net::AX_CLIENT_1_0`) writes the command via OPC-UA to the address `ID_WRITE_REMOTE`.
+6. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_5`) combines the `QO` outputs of `Softkey_IXA` (`IN1`), `Aux_IXA` (`IN2`), `SUBSCRIBE_WEB` (`IN3`), `SUBSCRIBE_SWITCH` (`IN4`) and `AX_CLIENT_1_0` (`IN5`) into `QO`.
+7. Initialization: `INIT` → `Softkey_IXA.INIT` → `Aux_IXA.INIT` → `SUBSCRIBE_WEB.INIT` → `SUBSCRIBE_SWITCH.INIT` → `AX_CLIENT_1_0.INIT`; `AX_CLIENT_1_0.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is distributed to all five blocks.
 
 ## Technical Details
 

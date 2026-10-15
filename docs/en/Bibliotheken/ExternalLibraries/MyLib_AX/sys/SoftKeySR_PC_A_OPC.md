@@ -16,6 +16,14 @@
 - **TRIGGER_SET_CLIENT / TRIGGER_RESET_CLIENT** (`iec61499::net::CLIENT_0`): each calls its own argument-less remote method on device B (`ID_SET_CALL`/`ID_RESET_CALL`).
 - **STATE_SUBSCRIBE** (`adapter::net::AX_SUBSCRIBE_1`): subscribes to the flip-flop state under `ID_STATE_READ`.
 - **GreenWhiteBackground_AX** (SubApp, type `MyLib::sys::GreenWhiteBackground1_AX`): displays the state at the set softkey.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_6`): combines the `QO` outputs of the six blocks above into the SubApp output `QO`.
+
+## Initialization and quality
+
+- Events: `INIT` (EInit, input) and `INITO` (EInit, output, comes from `GreenWhiteBackground_AX.INITO`).
+- Data input `QI` (BOOL, default `TRUE`) and data output `QO` (BOOL); the internal FBs no longer carry a fixed `QI=TRUE`.
+- Initialization chain: `INIT` → `SoftKey_SET.INIT` → `SoftKey_RESET.INIT` → `TRIGGER_SET_CLIENT.INIT` → `TRIGGER_RESET_CLIENT.INIT` → `STATE_SUBSCRIBE.INIT` → `GreenWhiteBackground_AX.INIT` (each via `INITO`); `GreenWhiteBackground_AX.INITO` → `INITO` and → `AND_QO.REQ`.
+- Quality: `QI` → `.QI` of all six blocks; their `QO` outputs → `AND_QO.IN1` to `IN6` (`SoftKey_SET`, `SoftKey_RESET`, `TRIGGER_SET_CLIENT`, `TRIGGER_RESET_CLIENT`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`); `AND_QO.OUT` → `QO`.
 
 ## Summary
 

@@ -12,6 +12,10 @@ For the general pattern, see [SwitchPic(Col) Blocks (shared pattern)](./SwitchPi
 
 ![SwitchPic_2_1_aux](SwitchPic_2_1_aux.svg)
 
+## Interface (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input) and the data output `QO` (`BOOL`, Quality Output). `QI` is passed through directly to `Q_NumericValueAux.QI`, and `Q_NumericValueAux.QO` directly to `QO`.
+
 ## Summary
 
 AUX counterpart to [`SwitchPic_2_1`](./SwitchPic_2_1.md): same 2-state logic, but for an AUX object instead of a regular VT object.

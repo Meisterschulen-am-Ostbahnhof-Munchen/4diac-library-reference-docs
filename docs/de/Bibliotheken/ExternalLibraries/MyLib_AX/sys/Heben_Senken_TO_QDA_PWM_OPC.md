@@ -15,11 +15,11 @@ Die SubApp `Heben_Senken_TO_QDA_PWM_OPC` ist ein generischer Baustein zur Steuer
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `PWM_Mux.INIT` und `DO_Toggle.INIT` durchgereicht
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DO_Toggle.INIT` durchgereicht; `DO_Toggle.INITO` startet `PWM_Mux.INIT` (sequenzielle Kette)
 
 ### **Ereignis-Ausgänge**
 
-Keine Ereignis-Ausgänge vorhanden.
+- **INITO** (`EInit`): Initialisierung abgeschlossen; sequenzielles Confirm: `DO_Toggle` zuerst, dann `PWM_Mux`; `INITO` kommt von `PWM_Mux.INITO` (kein Rendezvous nötig, beide sind reine physische Ausgangskanäle)
 
 ### **Daten-Eingänge**
 
@@ -42,7 +42,7 @@ Keine Ereignis-Ausgänge vorhanden.
 
 ### **Daten-Ausgänge**
 
-Keine externen Daten-Ausgänge vorhanden.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_2`) aus `PWM_Mux.QO` und `DO_Toggle.QO`
 
 ### **Adapter**
 
@@ -64,7 +64,9 @@ Die SubApp ist eine Zusammensetzung aus zwei internen SubApps:
    - Der Ausgang ist initial AN und kann über die RPC-Methode `ID_DO_TOGGLE_METHOD` umgeschaltet werden.  
    - Der aktuelle Zustand wird über `ID_DO_STATE_WRITE` publiziert.
 
-`QI` wird gemeinsam an `PWM_Mux.QI` und `DO_Toggle.QI` geführt, das Ereignis `INIT` an `PWM_Mux.INIT` und `DO_Toggle.INIT`; beide physischen Kanäle werden also gemeinsam inaktiv gehalten bzw. vom Aufrufer initialisiert.
+`QI` wird gemeinsam an `PWM_Mux.QI` und `DO_Toggle.QI` geführt, das Ereignis `INIT` an `DO_Toggle.INIT`; `DO_Toggle.INITO` löst `PWM_Mux.INIT` aus. Beide physischen Kanäle werden also gemeinsam inaktiv gehalten bzw. nacheinander vom Aufrufer initialisiert.
+
+Die Bestätigung ist sequenziell (kein `E_REND_2`-Baustein): `PWM_Mux.INITO` → `INITO` und `AND_QO.REQ`. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) verknüpft `PWM_Mux.QO` (`IN1`) und `DO_Toggle.QO` (`IN2`) zum Ausgang `QO`.
 
 Die beiden Teile sind in der Schnittstelle vollständig gekapselt; extern ist nur die Parameterisierung und die Kommunikationsadressen sichtbar.
 

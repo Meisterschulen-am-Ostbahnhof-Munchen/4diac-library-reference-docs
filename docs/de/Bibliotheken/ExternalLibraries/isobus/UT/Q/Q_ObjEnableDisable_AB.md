@@ -28,11 +28,16 @@ Der Funktionsblock `Q_ObjEnableDisable_AB` dient als Wrapper, der die Steuerung 
 
 | Name       | Typ  | Beschreibung                                         |
 | ---------- | ---- | ---------------------------------------------------- |
+| `QI`       | BOOL | Quality Input – TRUE aktiviert den Dienst            |
 | `u16ObjId` | UINT | Eindeutige Identifikation des zu steuernden Objekts. |
 
 ### **Daten-Ausgänge**
 
-Keine eigenen Datenausgänge – die Ausgangsdaten werden über den Adapter-Plug bereitgestellt.
+Außer `QO` keine eigenen Datenausgänge – die übrigen Ausgangsdaten werden über den Adapter-Plug bereitgestellt.
+
+| Name | Typ    | Kommentar                                                           |
+| ---- | ------ | ------------------------------------------------------------------- |
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ Keine eigenen Datenausgänge – die Ausgangsdaten werden über den Adapter-Plug
 | ---------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Socket** `qAbility`  | Eingang  | Unidirektionaler AB-Adapter: empfängt den Befehl (BYTE). `0` = deaktivieren, `1` = aktivieren, `0xFF` = undefiniert. |
 | **Plug** `qOldAbility` | Ausgang  | Unidirektionaler AB-Adapter: gibt den vorherigen Zustand des Objekts zurück (gleiche Codierung).                     |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_ObjEnableDisable` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_ObjEnableDisable.QO` übernommen und ist dem Ereignis `INITO` zugeordnet.
 
 ## Gültige Objekt-IDs
 

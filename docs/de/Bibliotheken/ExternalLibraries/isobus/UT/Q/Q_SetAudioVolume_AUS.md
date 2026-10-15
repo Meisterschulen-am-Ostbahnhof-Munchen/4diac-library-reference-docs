@@ -14,19 +14,24 @@ Der Funktionsblock Q_SetAudioVolume_AUS ist ein zusammengesetzter Baustein (Comp
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (EInit): Dienstinitialisierung. Löst die Initialisierung des internen Bausteins aus.
+- **INIT** (EInit): Dienstinitialisierung. Löst die Initialisierung des internen Bausteins aus. Verknüpft mit `QI`.
 
 ### **Ereignis-Ausgänge**
 
-- **INITO** (EInit): Bestätigung der erfolgreichen Initialisierung.
-- **CNF** (Event): Bestätigung des angeforderten Dienstes. Wird nach dem Setzen der Lautstärke ausgegeben. Enthält die Ausgabedaten STATUS und s16result.
+- **INITO** (EInit): Bestätigung der erfolgreichen Initialisierung. Verknüpft mit `QO`.
+- **CNF** (Event): Bestätigung des angeforderten Dienstes. Wird nach dem Setzen der Lautstärke ausgegeben. Enthält die Ausgabedaten STATUS und s16result. Verknüpft mit `QO`.
 
 ### **Daten-Eingänge**
 
-Der FB besitzt keine direkten Daten-Eingänge. Die Eingabe der Lautstärke erfolgt über den Adapter u8Volume.
+Der FB besitzt außer `QI` keine direkten Daten-Eingänge. Die Eingabe der Lautstärke erfolgt über den Adapter u8Volume.
+
+| Name | Typ    | Initialwert | Kommentar                                 |
+| ---- | ------ | ----------- | ----------------------------------------- |
+| `QI` | `BOOL` | `TRUE`      | Quality Input – TRUE aktiviert den Dienst |
 
 ### **Daten-Ausgänge**
 
+- **QO** (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde.
 - **STATUS** (STRING): Service-Statusmeldung.
 - **s16result** (INT): Rückgabewert des Befehls. Mögliche Werte:
   - 0 (VT_E_NO_ERR): Erfolg.
@@ -41,6 +46,8 @@ Der FB besitzt keine direkten Daten-Eingänge. Die Eingabe der Lautstärke erfol
 
 - **u8Volume** (Socket): Unidirektionaler Adapter vom Typ AUS. Empfängt die gewünschte Lautstärke als Wert zwischen 0 und 100 %.
 - **u8OldVolume** (Plug): Unidirektionaler Adapter vom Typ AUS. Gibt die vor dem Befehl gültige Lautstärke (0–100 %) aus.
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_SetAudioVolume` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_SetAudioVolume.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Funktionsweise
 

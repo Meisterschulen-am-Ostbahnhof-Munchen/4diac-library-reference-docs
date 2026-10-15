@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 275.8 132.0"
-     width="275.8" height="132.0">
+     viewBox="0 0 260.0 132.0"
+     width="260.0" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(93.80000000000001, 10)">
+  <g transform="translate(80.9375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 144.0 0
-            A 3 3 0 0 1 147.0 3
-            L 147.0 23.0
-            A 3 3 0 0 1 144.0 26.0
-            L 137.0 26.0
-            L 137.0 66.0
-            L 144.0 66.0
-            A 3 3 0 0 1 147.0 69.0
-            L 147.0 109.0
-            A 3 3 0 0 1 144.0 112.0
+            L 141.0625 0
+            A 3 3 0 0 1 144.0625 3
+            L 144.0625 23.0
+            A 3 3 0 0 1 141.0625 26.0
+            L 134.0625 26.0
+            L 134.0625 66.0
+            L 141.0625 66.0
+            A 3 3 0 0 1 144.0625 69.0
+            L 144.0625 109.0
+            A 3 3 0 0 1 141.0625 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -91,7 +91,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">DummyGroup</text>
     
-    <text x="73.5" y="66.0"
+    <text x="72.03125" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -113,7 +113,7 @@
             L 1.5 107.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">OPTION</text>
+          fill="#000000" dominant-baseline="middle">AOption_IN</text>
 
     <!-- Event-Data Association Connectors and Lines -->
 

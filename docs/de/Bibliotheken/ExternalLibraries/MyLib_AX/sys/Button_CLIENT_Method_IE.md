@@ -14,21 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, TRUE aktiviert den Dienst
 - **u16ObjId** (`UINT`): Object-ID des Buttons
 - **InputEvent** (`isobus::UT::io::Button::ButtonActivationCode_S`): Welche Button-Aktivierung den Methodenaufruf auslöst (z. B. `BT_PRESSED_LATCHED`, `BT_RELEASED_UNLATCHED`)
 - **ID_CALL** (`WSTRING`): Remote-Methodenadresse (`ACTION=CALL_METHOD`); ruft die entsprechende `ID_..._METHOD`-Adresse (`ACTION=CREATE_METHOD`) auf der Zielstation auf
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`) der `QO`-Ausgänge von `Button` und `CLIENT`
 
 ### **Adapter**
 
@@ -36,14 +37,17 @@ Dieser Funktionsblock verwendet keine Adapter.
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **Button**: [`isobus::UT::io::Button::Button_IE`](../../isobus/UT/io/Button/Button_IE.md) (`QI=TRUE`)
-- **CLIENT**: [`iec61499::net::CLIENT_0`](../../../StandardLibraries/net/CLIENT_0.md) (`QI=TRUE`)
+- **Button**: [`isobus::UT::io::Button::Button_IE`](../../isobus/UT/io/Button/Button_IE.md) (`QI` vom Wrapper-Eingang)
+- **CLIENT**: [`iec61499::net::CLIENT_0`](../../../StandardLibraries/net/CLIENT_0.md) (`QI` vom Wrapper-Eingang)
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` – verknüpft `Button.QO` und `CLIENT.QO` zu `QO`
 
 ## Programmablauf und Verbindungen
 
 - `u16ObjId` → `Button.u16ObjId`; `InputEvent` → `Button.InputEvent`
 - `Button.IND` → `CLIENT.REQ`
 - `ID_CALL` → `CLIENT.ID`
+- Initialisierung: `INIT` → `Button.INIT`; `Button.INITO` → `CLIENT.INIT`; `CLIENT.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `Button.QI` und `CLIENT.QI`; `Button.QO` → `AND_QO.IN1`; `CLIENT.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 Bei jeder Button-Aktivierung gemäß `InputEvent` wird somit der Methodenaufruf `CLIENT_0` angestoßen.
 

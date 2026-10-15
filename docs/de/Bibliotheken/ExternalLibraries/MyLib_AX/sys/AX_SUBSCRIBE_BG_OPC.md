@@ -13,26 +13,29 @@ Der Funktionsblock **AX_SUBSCRIBE_BG_OPC** ist eine Subapplikation, die eine OPC
 
 ## Schnittstellenstruktur
 
-Die Subapp besitzt ausschließlich zwei Dateneingänge und keine Ereignis- oder Datenausgänge sowie keine externen Adapter. Die Verbindungen zu internen Bausteinen erfolgen über die eingebettete Netzwerkstruktur.
+Die Subapp besitzt den Ereigniseingang `INIT`, den Ereignisausgang `INITO`, die Dateneingänge `QI`, `u16ObjId` und `ID` sowie den Datenausgang `QO`; externe Adapter gibt es nicht. Die Verbindungen zu internen Bausteinen erfolgen über die eingebettete Netzwerkstruktur.
 
 ### **Ereignis-Eingänge**
 
-Keine vorhanden.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Initialisierungskette `AX_SUBSCRIBE_1` → `GreenWhiteBackground1_AX`.
 
 ### **Ereignis-Ausgänge**
 
-Keine vorhanden.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `GreenWhiteBackground1_AX.INITO`.
 
 ### **Daten-Eingänge**
 
 | Name      | Typ     | Kommentar                                  |
 |-----------|---------|--------------------------------------------|
+| `QI`      | `BOOL`  | Quality Input, Freigabe des Dienstes (Initialwert `TRUE`) |
 | `u16ObjId`| `UINT`  | Objekt-ID des Hintergrund-Rechtecks (VT)   |
 | `ID`      | `WSTRING`| OPC-UA-Remote-Subscribe-Adresse            |
 
 ### **Daten-Ausgänge**
 
-Keine vorhanden.
+| Name | Typ    | Kommentar |
+|------|--------|-----------|
+| `QO` | `BOOL` | Quality Output, `AND` der `QO`-Ausgänge von `AX_SUBSCRIBE_1` und `GreenWhiteBackground1_AX` |
 
 ### **Adapter**
 
@@ -40,21 +43,25 @@ Extern sind keine Adapter angelegt. Innerhalb der Subapp wird ein Adapter vom Ty
 
 ## Funktionsweise
 
-Die Subapp kombiniert zwei interne Komponenten:
+Die Subapp kombiniert drei interne Komponenten:
 
 1. **AX_SUBSCRIBE_1** – ein Adapter, der eine OPC-UA-Remote-Subscription abwickelt. Über den Dateneingang `ID` wird die OPC-UA-Adresse (z.B. eine Node-ID) bereitgestellt. Der Adapter empfängt fortlaufend Wertänderungen von dieser Adresse und stellt sie an seinem Ausgangs-Adapter `OUT` bereit.
 
 2. **GreenWhiteBackground1_AX** – eine weitere Subapp, die die Hintergrundfarbe eines Visualisierungsobjekts (VT) steuert. Sie erhält über `u16ObjId` die Objekt-ID des Rechtecks und über den Adaptereingang `DI1` die empfangenen Datenwerte. Abhängig vom Wert wechselt sie zwischen einer grünen und einer weißen Hintergrundfarbe.
 
+3. **AND_QO** – ein `iec61131::booleanOperators::AND_BOOL_2`, der die `QO`-Ausgänge von `AX_SUBSCRIBE_1` und `GreenWhiteBackground1_AX` zum SubApp-Ausgang `QO` verknüpft.
+
 Durch die interne Verdrahtung wird der vom OPC-UA-Adapter gelieferte Wert direkt an die Hintergrundsteuerung weitergeleitet. Somit reagiert das Visualisierungselement unmittelbar auf Änderungen des OPC-UA-Datenpunkts.
+
+**Initialisierung und Qualität:** `INIT` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an `AX_SUBSCRIBE_1.QI` und `GreenWhiteBackground1_AX.QI` weitergereicht (kein fester `QI=TRUE` mehr im Subscribe-Baustein); `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `GreenWhiteBackground1_AX.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 
 - **OPC-UA-Integration**: Verwendet den Adapter `AX_SUBSCRIBE_1`, der für das Abonnement von OPC-UA-Variablen optimiert ist.
-- **Wiederverwendbarkeit**: Die Subapp ist vollständig parametrierbar über die Eingänge `u16ObjId` und `ID` und kann ohne Änderung der internen Logik in unterschiedlichen Visualisierungsprojekten eingesetzt werden.
+- **Wiederverwendbarkeit**: Die Subapp ist vollständig parametrierbar über die Eingänge `QI`, `u16ObjId` und `ID` und kann ohne Änderung der internen Logik in unterschiedlichen Visualisierungsprojekten eingesetzt werden.
 - **Standardkonformität**: Basierend auf IEC 61499-2, gekennzeichnet durch das `<Identification>`-Tag.
 - **Kompatibilität**: Einbettung in eine Bibliothek `MyLib::sys`; verweist auf das Const `isobus::UT::Q::const::IDs::ID_NULL` als Initialwert für `u16ObjId`.
-- **Keine externen Ereignisse**: Reine Daten- und Adapterbasierte Verarbeitung ohne ereignisgesteuerte Schnittstellen.
+- **INIT/INITO**: Die Initialisierung wird durch die Subapp gereicht (`INIT` → `AX_SUBSCRIBE_1` → `GreenWhiteBackground1_AX` → `INITO`); im laufenden Betrieb erfolgt die Verarbeitung rein daten- und adapterbasiert.
 
 ## Zustandsübersicht
 

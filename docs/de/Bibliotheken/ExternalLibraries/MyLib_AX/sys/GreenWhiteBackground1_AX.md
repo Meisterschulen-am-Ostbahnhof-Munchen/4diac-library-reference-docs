@@ -10,6 +10,8 @@
 
 Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
+Quality-Muster: Die SubApp besitzt den Ereigniseingang `INIT`, den Ereignisausgang `INITO`, den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, „Quality Input – TRUE to enable service“) und den Datenausgang `QO` (`BOOL`, „Quality Output – TRUE if service executed successfully“). Sie werden direkt an `Q_BackgroundColour` durchgereicht: `INIT` → `Q_BackgroundColour.INIT`, `Q_BackgroundColour.INITO` → `INITO`, `QI` → `Q_BackgroundColour.QI`, `Q_BackgroundColour.QO` → `QO`.
+
 ![GreenWhiteBackground1_AX](GreenWhiteBackground1_AX.svg)
 
 ## Zusammenfassung

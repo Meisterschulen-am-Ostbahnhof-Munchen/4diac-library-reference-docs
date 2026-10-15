@@ -14,20 +14,24 @@
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): initialization request (to `Attribute_IDA.INIT`)
 - **REQ**: Service request (to `GetAttribute.REQ`)
 
 ### **Event Outputs**
 
-*No direct event outputs - the response arrives via the adapter plug*
+- **INITO** (`EInit`): initialization confirmation (from `Attribute_IDA.INITO`)
+
+The response itself arrives via the adapter plug.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): quality input, service enable (to `Attribute_IDA.QI`)
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID
 - **u8AID** (`USINT`): Attribute ID of the object
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): quality output (from `Attribute_IDA.QO`)
 
 ### **Adapters**
 
@@ -36,7 +40,7 @@
 ## Function Blocks (FBs) Used
 
 - **GetAttribute**: `isobus::UT::I::I_GetAttribute` - sends the command *GetAttribute*
-- **Attribute_IDA**: `isobus::UT::io::Attribute::Attribute_IDA` (`QI=TRUE`, `PARAMS=''`) - receives the response asynchronously as an adapter
+- **Attribute_IDA**: `isobus::UT::io::Attribute::Attribute_IDA` (`PARAMS=''`, `QI` comes from the SubApp interface) - receives the response asynchronously as an adapter
 
 ## Program Flow and Connections
 
@@ -44,6 +48,8 @@
 - `u16ObjId` → `GetAttribute.u16ObjId` and `Attribute_IDA.u16ObjId`
 - `u8AID` → `GetAttribute.u8AID` and `Attribute_IDA.u8AID`
 - `Attribute_IDA.IN` → `IN`
+- `INIT` → `Attribute_IDA.INIT`; `Attribute_IDA.INITO` → `INITO`
+- `QI` → `Attribute_IDA.QI`; `Attribute_IDA.QO` → `QO`
 
 ## Technical Details
 

@@ -17,6 +17,7 @@ The **SR_TO_QX_TRIG_EO** subapplication combines a set/reset latch (E_SR) with a
 
 | Name   | Description                                                                 |
 |--------|-----------------------------------------------------------------------------|
+| `INIT` | Initialization Request (`EInit`); passed on to `QX.INIT`.                   |
 | `SET`  | Event input that sets the internal latch, driving the output Q to `TRUE`.   |
 | `RESET`| Event input that resets the internal latch, driving the output Q to `FALSE`.|
 
@@ -24,17 +25,21 @@ The **SR_TO_QX_TRIG_EO** subapplication combines a set/reset latch (E_SR) with a
 
 | Name | Description                                                                                     |
 |------|-------------------------------------------------------------------------------------------------|
+| `INITO`| Initialization Confirm (`EInit`); passed through from `QX.INITO`.                              |
 | `EO1`| Echo event emitted on the rising edge of the latch output (transition `FALSE` → `TRUE`).        |
 
 ### **Data Inputs**
 
 | Name     | Type                        | Initial Value            | Description                                                        |
 |----------|-----------------------------|--------------------------|--------------------------------------------------------------------|
+| `QI`     | `BOOL`                      | `TRUE`                   | Quality Input - TRUE enables the service; passed on to `QX.QI`.    |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid`    | Identifies the physical digital output to be driven (Output_Q1…Q8).|
 
 ### **Data Outputs**
 
-None.
+| Name | Type   | Description |
+|------|--------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully; passed through from `QX.QO`. |
 
 ### **Adapters**
 
@@ -47,6 +52,8 @@ The subapplication implements a classic latch-and-drive pattern:
 1. On `SET`, the internal E_SR latch is set (`Q = TRUE`). On `RESET`, the latch is cleared (`Q = FALSE`).  
 2. After every latch update (whether SET or RESET), the `Q` value is transferred to the logiBUS_QX digital output block, which writes the value to the physical output specified by the `Output` data input.  
 3. The same `Q` signal is also fed to a rising-edge detector (E_R_TRIG). When `Q` changes from `FALSE` to `TRUE`, the detector fires the `EO1` event output.
+
+`INIT` is passed on to `QX.INIT`, `QX.INITO` is output as `INITO`, `QI` is forwarded to `QX.QI` and `QX.QO` is output as `QO`.
 
 Thus, `EO1` acts as an acknowledgment that the latch has been turned on, while the physical output is refreshed on every state change.
 

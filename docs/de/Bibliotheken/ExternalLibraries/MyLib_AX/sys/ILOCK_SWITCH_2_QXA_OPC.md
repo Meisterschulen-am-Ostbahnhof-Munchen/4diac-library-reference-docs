@@ -21,21 +21,21 @@ Er ist speziell für Anlagen konzipiert, bei denen die Bedienung über ein zentr
 
 ## Schnittstellenstruktur
 
-Die Subapplikation besitzt je einen Ereignis-Eingang `INIT` und einen Ereignis-Ausgang `INITO`, keine Adapter an der Subapplikationsgrenze und ansonsten **Daten-Eingänge** (InputVars). Die interne Steuerung erfolgt über diese Datenwerte und asynchrone Kommunikation (über die intern eingebetteten Subscribe/Publish-Bausteine).
+Die Subapplikation besitzt je einen Ereignis-Eingang `INIT` und einen Ereignis-Ausgang `INITO`, keine Adapter an der Subapplikationsgrenze, **Daten-Eingänge** (InputVars) und den Daten-Ausgang `QO`. Die interne Steuerung erfolgt über diese Datenwerte und asynchrone Kommunikation (über die intern eingebetteten Subscribe/Publish-Bausteine).
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DigitalOutput_UP.INIT` und `DigitalOutput_DOWN.INIT` durchgereicht. Der Aufrufer muss `INIT` selbst auslösen (z. B. ohne Verzögerung für unverändertes Sofort-Verhalten oder verzögert, wenn auf einen INI-Wert gewartet werden muss).
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; startet die Initialisierungskette durch alle inneren Instanzen (`SUBSCRIBE_TEST_UP` → `SUBSCRIBE_CMD_UP` → `SUBSCRIBE_TEST_DOWN` → `SUBSCRIBE_CMD_DOWN` → `PUBLISH_TEST_UP` → `PUBLISH_STATE_UP` → `PUBLISH_TEST_DOWN` → `PUBLISH_STATE_DOWN` → `DigitalOutput_UP` → `DigitalOutput_DOWN`); die physischen Ausgänge werden also zuletzt initialisiert. Der Aufrufer muss `INIT` selbst auslösen (z. B. ohne Verzögerung für unverändertes Sofort-Verhalten oder verzögert, wenn auf einen INI-Wert gewartet werden muss).
 
 ### **Ereignis-Ausgänge**
 
-- **INITO** (`EInit`): Initialisierung bestätigt (von `DigitalOutput_UP.INITO`); für Aufrufer, die eine echte Confirm-Kette brauchen (z. B. hinter einem `Option::AOption`-Adapter). Rein additiv, unverdrahtet harmlos.
+- **INITO** (`EInit`): Initialisierung bestätigt (von `DigitalOutput_DOWN.INITO`, dem Ende der Kette); für Aufrufer, die eine echte Confirm-Kette brauchen (z. B. hinter einem `Option::AOption`-Adapter). Rein additiv, unverdrahtet harmlos.
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Kommentar |
 |------|----------|-----------|
-| `QI` | `BOOL` | Qualifier für die physischen Ausgänge; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE` |
+| `QI` | `BOOL` | Qualifier für die physischen Ausgänge; FALSE hält die Instanz komplett inaktiv (keine Hardware-Bindung), Default `TRUE`; wird an alle Subscribe-, Publish- und DigitalOutput-Instanzen verteilt |
 | `Output_UP` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang Richtung UP/Links. Initialwert: `logiBUS_DO::Invalid` |
 | `Output_DOWN` | `logiBUS::io::DQ::logiBUS_DO_S` | Physischer Ausgang Richtung DOWN/Rechts. Initialwert: `logiBUS_DO::Invalid` |
 | `DT_PROTECT` | `TIME` | Schutz-Totzeit vor Richtungswechsel. Initialwert: `T#300ms` |
@@ -50,7 +50,7 @@ Die Subapplikation besitzt je einen Ereignis-Eingang `INIT` und einen Ereignis-A
 
 ### **Daten-Ausgänge**
 
-Keine (nicht vorhanden).
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND aller Subscribe-/Publish-/DigitalOutput-Instanzen).
 
 ### **Adapter**
 
@@ -67,6 +67,8 @@ Der Ausgang des Interlocks wird über einen Splitter (`AX_SPLIT_3`) an drei Stel
 1. An den physischen logiBUS-Kanal (`logiBUS_QXA`), der den tatsächlichen Ausgang steuert.
 2. An einen Publish-Baustein für die **IO-Test-Rückmeldung** (`PUBLISH_TEST_UP` bzw. `PUBLISH_TEST_DOWN`), damit das IO-Test-System den realen Zustand erhält.
 3. An einen Publish-Baustein für die **Funktions-Rückmeldung** (`PUBLISH_STATE_UP` bzw. `PUBLISH_STATE_DOWN`), z. B. für die Anzeige „GreenWhiteBackground“ am SoftKey.
+
+Initialisierung und Qualität: `INIT` läuft als Kette `SUBSCRIBE_TEST_UP` → `SUBSCRIBE_CMD_UP` → `SUBSCRIBE_TEST_DOWN` → `SUBSCRIBE_CMD_DOWN` → `PUBLISH_TEST_UP` → `PUBLISH_STATE_UP` → `PUBLISH_TEST_DOWN` → `PUBLISH_STATE_DOWN` → `DigitalOutput_UP` → `DigitalOutput_DOWN` (jeweils `INITO` → nächstes `INIT`); `DigitalOutput_DOWN.INITO` geht an `INITO` und an `AND_QO.REQ`. `QI` wird an alle acht Subscribe-/Publish-Instanzen und an beide `DigitalOutput`-Instanzen verteilt. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_10`), die die `QO` dieser zehn Instanzen verknüpft.
 
 Die Rückmeldungen werden also immer von dem tatsächlichen, verriegelten Zustand abgeleitet. Dadurch bleiben IO-Test und Funktionssteuerung konsistent und es kann nicht zu Fehlinterpretationen kommen.
 

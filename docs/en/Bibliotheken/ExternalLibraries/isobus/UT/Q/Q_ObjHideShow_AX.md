@@ -14,9 +14,9 @@ The function block **Q_ObjHideShow_AX** serves as an adapter wrapper for the exi
 
 ### **Event Inputs**
 
-| Name   | Type  | Comment                | With Variable |
-| ------ | ----- | ---------------------- | ------------- |
-| `INIT` | EInit | Service Initialization | `u16ObjId`    |
+| Name   | Type  | Comment                | With Variable    |
+| ------ | ----- | ---------------------- | ---------------- |
+| `INIT` | EInit | Service Initialization | `QI`, `u16ObjId` |
 
 ### **Event Outputs**
 
@@ -26,13 +26,18 @@ The function block **Q_ObjHideShow_AX** serves as an adapter wrapper for the exi
 
 ### **Data Inputs**
 
-| Name       | Type | Comment               |
-| ---------- | ---- | --------------------- |
-| `u16ObjId` | UINT | Object Identification |
+| Name       | Type | Comment                                |
+| ---------- | ---- | -------------------------------------- |
+| `QI`       | BOOL | Quality Input - TRUE to enable service |
+| `u16ObjId` | UINT | Object Identification                  |
 
 ### **Data Outputs**
 
-This function block does not have its own data outputs. The old visibility value is output via the plug adapter `qOldVisible`.
+Apart from `QO`, this function block does not have its own data outputs. The old visibility value is output via the plug adapter `qOldVisible`.
+
+| Name | Type   | Comment                                                |
+| ---- | ------ | ------------------------------------------------------ |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ This function block does not have its own data outputs. The old visibility value
 | --------- | ------------- | -------------------- | --------------------------------------------------------- |
 | Socket    | `qVisible`    | `unidirectional::AX` | Input of the new visibility value (0 = hidden, 1 = shown) |
 | Plug      | `qOldVisible` | `unidirectional::AB` | Output of the previous visibility value (0/1/0xFF)        |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_ObjHideShow`. The data output `QO` (BOOL) is taken over from `Q_ObjHideShow.QO` and is associated with the event `INITO`.
 
 ## Valid Object IDs
 

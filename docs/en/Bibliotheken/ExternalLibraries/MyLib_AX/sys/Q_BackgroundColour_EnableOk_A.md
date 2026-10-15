@@ -24,20 +24,24 @@
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): Initialization request (to `Q_BackgroundColour.INIT`)
 - **REQ**: Re-evaluate - fired by the caller once per possible change of `bEnable` or `bOk` (switch toggled or fresh `QO` arrived); both values are supplied together
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): Initialization confirmation (from `Q_BackgroundColour.INITO`)
 - **CNF**: Colour sent (passthrough of `Q_BackgroundColour.CNF`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`): Object ID of the status display (`CButton`, background colour only, no text) - set once via parameter at instantiation
 - **bEnable** (`BOOL`): Channel enabled (e.g. enable flip-flop `Q`)
 - **bOk** (`BOOL`): Hardware confirms active (e.g. `logiBUS_..._IDA.QO`) - only relevant if `bEnable=TRUE`
 
 ### **Data Outputs**
 
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully
 - **STATUS** (`STRING`): Service status (passthrough of `Q_BackgroundColour.STATUS`)
 - **s16result** (`INT`): Return value (passthrough of `Q_BackgroundColour.s16result`)
 
@@ -48,6 +52,8 @@
 - `Select_EnableOk_Colour.value` → `Q_BackgroundColour.u8Colour`
 - `u16ObjId` → `Q_BackgroundColour.u16ObjId`
 - `Q_BackgroundColour.STATUS` → `STATUS`; `Q_BackgroundColour.s16result` → `s16result`
+- `INIT` → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → `INITO`
+- `QI` → `Q_BackgroundColour.QI`; `Q_BackgroundColour.QO` → `QO`
 
 ## Technical Details
 

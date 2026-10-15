@@ -23,6 +23,7 @@ The **Q_ChangePolygonPoint** is a standards-compliant function block for modifyi
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Polygon Object ID
 - `xScale` (BOOL): If TRUE, `u16NewXValue`/`u16NewYValue` are scaled by the DM/SKM factor for `u16ObjId` before sending; if FALSE (default) they are passed through unchanged.
 - `u8PointIndex` (USINT): Point Index (0-based)
@@ -31,6 +32,7 @@ The **Q_ChangePolygonPoint** is a standards-compliant function block for modifyi
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational status message
 - `u8OldPointIndex` (USINT): Previous point index
 - `u16OldXValue` (UINT): Previous X-coordinate
@@ -38,6 +40,8 @@ The **Q_ChangePolygonPoint** is a standards-compliant function block for modifyi
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

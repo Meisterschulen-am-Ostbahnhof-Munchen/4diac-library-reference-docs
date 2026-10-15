@@ -15,19 +15,22 @@ The **StringValue_TO_NVS** subapplication provides a generic solution for readin
 
 ### **Event Inputs**
 
-The subapplication does not expose any event inputs. Initialization and data flow are handled internally.
+- **INIT** (EInit): Initialization request; starts the initialization chain (`Q_StringValue` → `StringValue_IS` → `NVS`).
 
 ### **Event Outputs**
 
+- **INITO** (EInit): Initialization confirm from `NVS.INITO` (end of the initialization chain).
 - **IND** (Event): Emitted after a read or write operation completes, indicating that a new value has been stored or retrieved.
 
 ### **Data Inputs**
 
+- **QI** (BOOL): Quality Input - TRUE to enable service (initial value `TRUE`); passed through to `Q_StringValue.QI`, `StringValue_IS.QI` and `NVS.QI`.
 - **KEY** (STRING): The key name under which the value is stored in the NVS.
 - **u16ObjId** (UINT): The object identifier for the String-VT value. Defaults to `ID_NULL`.
 
 ### **Data Outputs**
 
+- **QO** (BOOL): Quality Output - TRUE if the service executed successfully; AND (`AND_QO`, type `iec61131::booleanOperators::AND_BOOL_3`) of the `QO` of `Q_StringValue`, `StringValue_IS` and `NVS`.
 - **VALUEO** (STRING): The current string value that has been read from the NVS or acquired from the input.
 
 ### **Adapters**
@@ -36,7 +39,7 @@ The subapplication does not expose any adapter interfaces.
 
 ## Functionality
 
-The subapplication operates as follows:
+The subapplication operates as follows. In addition, the initialization chain runs `INIT` → `Q_StringValue.INIT`, `Q_StringValue.INITO` → `StringValue_IS.INIT`, `StringValue_IS.INITO` → `NVS.INIT`, `NVS.INITO` → `INITO` and → `AND_QO.REQ`; `QI` goes to `Q_StringValue.QI`, `StringValue_IS.QI` and `NVS.QI`, and their `QO` outputs are ANDed by the `AND_QO` block (`AND_BOOL_3`) into `QO`.
 
 1. **Initialization**: On startup, the internal `NVS` function block performs its initialization. The resulting `INITO` event is immediately routed to the `GET` event of the same block, causing the currently stored value to be read from the NVS.
 2. **Value acquisition**: The `StringValue_IS` function block acquires a String-VT value based on the provided `u16ObjId`. When a new value is available, its `IND` output event triggers the `NVS.SET` event.

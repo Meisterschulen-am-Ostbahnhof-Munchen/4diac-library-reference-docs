@@ -14,20 +14,22 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: fires when the button **or** the local method is activated/called
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service
 - **u16ObjId** (`UINT`): object ID of the button
 - **ID_METHOD** (`WSTRING`): local method address (`ACTION=CREATE_METHOD`) for the argument-less trigger; called by the web client/dashboard and via `CLIENT_0` from another station
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service executed successfully (AND of `Button.QO` and `METHOD_SERVER.QO`)
 
 ### **Adapters**
 
@@ -35,9 +37,10 @@ None.
 
 ## Function Blocks (FBs) Used
 
-- **`Button`** (`isobus::UT::io::Button::Button_IE`): parameters `QI = TRUE`, `InputEvent = BT_PRESSED_LATCHED`
-- **`METHOD_SERVER`** (`iec61499::net::SERVER_0`): parameter `QI = TRUE`, provides the local method
+- **`Button`** (`isobus::UT::io::Button::Button_IE`): parameter `InputEvent = BT_PRESSED_LATCHED`, `QI` from the block input
+- **`METHOD_SERVER`** (`iec61499::net::SERVER_0`): `QI` from the block input, provides the local method
 - **`MERGE`** (`iec61499::events::E_MERGE_2`): merges both triggers
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): ANDs `Button.QO` and `METHOD_SERVER.QO` into `QO`
 
 ## Functionality
 
@@ -46,6 +49,9 @@ None.
 - `METHOD_SERVER.IND` → `MERGE.EI2`
 - `METHOD_SERVER.IND` → `METHOD_SERVER.RSP` (immediate response)
 - `MERGE.EO` → `IND`
+- Initialization chain: `INIT` → `Button.INIT`, `Button.INITO` → `METHOD_SERVER.INIT`, `METHOD_SERVER.INITO` → `INITO` and → `AND_QO.REQ`
+- `QI` → `Button.QI` and `METHOD_SERVER.QI`
+- `Button.QO` → `AND_QO.IN1`, `METHOD_SERVER.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

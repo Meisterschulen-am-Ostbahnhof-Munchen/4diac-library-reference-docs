@@ -18,6 +18,10 @@
 - **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`): physischer Ausgang.
 - **STATE_CLIENT** (`adapter::net::AX_CLIENT_1_0`): schreibt den Zustand aktiv auf Geraet A unter `ID_STATE_WRITE`.
 
+## Initialisierung und Qualität
+
+Die SubApp besitzt den Ereigniseingang `INIT`, den Ereignisausgang `INITO` (je `EInit`), den Dateneingang `QI` (`BOOL`, Default `TRUE`) und den Datenausgang `QO` (`BOOL`). Die Initialisierung läuft als Kette: `INIT` → `TRIGGER_SET_SERVER.INIT`, `TRIGGER_SET_SERVER.INITO` → `TRIGGER_RESET_SERVER.INIT`, `TRIGGER_RESET_SERVER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `STATE_CLIENT.INIT`, `STATE_CLIENT.INITO` → `INITO` (und → `AND_QO.REQ`). `QI` geht an `TRIGGER_SET_SERVER`, `TRIGGER_RESET_SERVER`, `DigitalOutput_Q1` und `STATE_CLIENT`. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_4`), die die `QO` dieser vier Instanzen verknüpft.
+
 ## Zusammenfassung
 
 Geraet-B-Seite: empfaengt Set/Reset per RPC, haelt die reine SR-Flipflop-Logik und meldet den Zustand aktiv zurueck.

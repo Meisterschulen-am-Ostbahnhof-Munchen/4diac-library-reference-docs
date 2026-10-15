@@ -25,6 +25,7 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u8NumOfRepit` (USINT): Repetitions (1-255)
 - `u16Frequency` (UINT): Frequency in Hz
 - `u16OnTimeMs` (UINT): On-time in ms
@@ -32,6 +33,7 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operating status message
 - `u8OldNumOfRepit` (USINT): Previous repetitions
 - `u16OldFrequency` (UINT): Previous frequency
@@ -40,6 +42,8 @@ The F.10 command addresses the VT's **audio device** directly — it does **not 
 - `s16result` (INT): ISO-compliant result code
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

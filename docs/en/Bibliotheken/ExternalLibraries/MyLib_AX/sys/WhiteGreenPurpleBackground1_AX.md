@@ -32,18 +32,23 @@ It is used, for example, for precondition badges (saw/belts/PTO) of the pick-up 
 
 ### **Event Inputs**
 
-None - events arrive via the adapters `DI1` and `DI2`.
+- **INIT** (`EInit`): Initialization request (→ `Q_BackgroundColour.INIT`)
+
+Further events arrive via the adapters `DI1` and `DI2`.
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): Initialization confirmation (from `Q_BackgroundColour.INITO`)
 - **CNF**: Execution confirmation (from `Q_BackgroundColour.CNF`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - `TRUE` enables the service (→ `Q_BackgroundColour.QI`)
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of softkey/button/output text
 
 ### **Data Outputs**
 
+- **QO** (`BOOL`): Quality Output - `TRUE` if the service executed successfully (from `Q_BackgroundColour.QO`)
 - **STATUS_1** (`STRING`): Service status (from `Q_BackgroundColour.STATUS`)
 - **result_1** (`INT`): Return value (from `Q_BackgroundColour.s16result`)
 
@@ -60,6 +65,8 @@ None - events arrive via the adapters `DI1` and `DI2`.
 - `F_SEL_Condition.OUT` → `F_SEL_Override.IN0`; `initval_AUS.OUT` → `F_SEL_Override.IN1`
 - `F_SEL_Override.OUT` → `Q_BackgroundColour.u8Colour`
 - `u16ObjId` → `Q_BackgroundColour.u16ObjId`
+- `INIT` → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → `INITO`
+- `QI` → `Q_BackgroundColour.QI`; `Q_BackgroundColour.QO` → `QO`
 - `Q_BackgroundColour.u8OldColour` → `u8OldColour_1`; `.STATUS` → `STATUS_1`; `.s16result` → `result_1`; `.CNF` → `CNF`
 
 ## Technical Details

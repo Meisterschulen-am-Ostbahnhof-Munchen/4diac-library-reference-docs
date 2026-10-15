@@ -14,20 +14,21 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request; goes to `logiBUS_AI_IDA.INIT`
 
 ### **Event Outputs**
 
-The function block has no direct event outputs.
+- **INITO** (`EInit`): initialization confirm; comes from `AD_PUBLISH_RAW.INITO`
 
 ### **Data Inputs**
 
+- **QI** (BOOL): quality input - TRUE enables the service (default `TRUE`); goes to `logiBUS_AI_IDA.QI` and `AD_PUBLISH_RAW.QI`
 - **Input** (`logiBUS::io::AI::logiBUS_AI_S`): selection of the analog input `AnalogInput_I1`..`I8` (default `logiBUS_AI::Invalid`)
 - **ID_RAW_WRITE** (WSTRING): publish address of the raw value (DWORD 0-4095, `ACTION=PUBLISH`), local on this station
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (BOOL): quality output - TRUE if the service was executed successfully (AND of `logiBUS_AI_IDA.QO` and `AD_PUBLISH_RAW.QO`)
 
 ### **Adapters**
 
@@ -35,15 +36,18 @@ No adapters are used.
 
 ## Functionality
 
-The network consists of two blocks:
+The network consists of three blocks (two function blocks plus the combination `AND_QO`):
 
-- `logiBUS_AI_IDA` (`logiBUS::io::AI::logiBUS_AI_IDA`, `QI = TRUE`): reads the selected analog input (`Input` → `logiBUS_AI_IDA.Input`). Parameterised are `AnalogInput_hysteresis = DWORD#50`, `TimeDelta = DWORD#250` and `TimeRateLimit = DWORD#100`.
-- `AD_PUBLISH_RAW` (`adapter::net::AD_PUBLISH_1`, `QI = TRUE`): `logiBUS_AI_IDA.IN` → `AD_PUBLISH_RAW.IN`; publishes the raw value to the address `ID_RAW_WRITE` (`ID_RAW_WRITE` → `AD_PUBLISH_RAW.ID`).
+- `logiBUS_AI_IDA` (`logiBUS::io::AI::logiBUS_AI_IDA`, `QI` from outside): reads the selected analog input (`Input` → `logiBUS_AI_IDA.Input`). Parameterised are `AnalogInput_hysteresis = DWORD#50`, `TimeDelta = DWORD#250` and `TimeRateLimit = DWORD#100`.
+- `AD_PUBLISH_RAW` (`adapter::net::AD_PUBLISH_1`, `QI` from outside): `logiBUS_AI_IDA.IN` → `AD_PUBLISH_RAW.IN`; publishes the raw value to the address `ID_RAW_WRITE` (`ID_RAW_WRITE` → `AD_PUBLISH_RAW.ID`).
+- `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`): combines `logiBUS_AI_IDA.QO` (`IN1`) and `AD_PUBLISH_RAW.QO` (`IN2`) into the output `QO`; `REQ` comes from `AD_PUBLISH_RAW.INITO`.
+
+Initialization: `INIT` → `logiBUS_AI_IDA.INIT`, `logiBUS_AI_IDA.INITO` → `AD_PUBLISH_RAW.INIT`, `AD_PUBLISH_RAW.INITO` → `INITO` (and → `AND_QO.REQ`).
 
 ## Technical Details
 
 - Raw value half of `logiBUS_AI_Calibrate_3P_IDA_OPC`: calibration does not take place here but on the station with a VT connection
-- No event, data or adapter ports apart from the two input variables
+- No further ports apart from `INIT`/`INITO`, `QI`/`QO` and the two input variables `Input` and `ID_RAW_WRITE`; no adapters
 - The behaviour of the raw value input (hysteresis, `TimeDelta`, `TimeRateLimit`) is set through the parameters of `logiBUS_AI_IDA`
 
 ## Application Scenarios

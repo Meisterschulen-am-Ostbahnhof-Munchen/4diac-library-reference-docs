@@ -19,14 +19,17 @@ The block is a copy of `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` that uses `Softk
 
 ### **Event Inputs**
 
-*No direct event inputs - events arrive via the adapter socket*
+- **INIT** (`EInit`): initialization request
+
+The user events still arrive via the adapter socket.
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): initialization confirmation (from `Status.INITO`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`): Object ID softkey/background (VT)
 - **u16ObjIdA** (`UINT`): Object ID AuxFunction2/background (VT)
 - **ID_SUBSCRIBE** (`WSTRING`): Remote subscribe address (status/color, `ACTION=SUBSCRIBE`)
@@ -36,7 +39,7 @@ The block is a copy of `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` that uses `Softk
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - AND of `Command.QO` and `Status.QO`
 
 ### **Adapters**
 
@@ -47,6 +50,7 @@ The block is a copy of `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` that uses `Softk
 
 - **Command**: SubApp `MyLib::sys::Softkey_Aux_Auto_IXA_TO_Remote_WRITE`
 - **Status**: SubApp `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `Command.QO` and `Status.QO` into `QO`
 
 ## Program Flow and Connections
 
@@ -55,6 +59,9 @@ The block is a copy of `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` that uses `Softk
 - `ID_SUBSCRIBE`, `ID_STATUS_WEB` → `Status`
 - `AUTO_IN` → `Command.AUTO_IN`
 - `Command.WEB_STATE` → `WEB_STATE`
+- `INIT` → `Command.INIT`; `Command.INITO` → `Status.INIT`; `Status.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Command.QI` and `Status.QI`
+- `Command.QO` → `AND_QO.IN1`; `Status.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 `Command` and `Status` are not directly connected to each other; the feedback runs via the remote subscribe.
 

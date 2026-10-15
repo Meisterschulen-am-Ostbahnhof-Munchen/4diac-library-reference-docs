@@ -16,28 +16,33 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne Bausteine**:
-    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` (`QI=TRUE`) – digitaler Eingang; `Input` identifiziert `Input_I1..I8`
+    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` – digitaler Eingang; `Input` identifiziert `Input_I1..I8`
     - **AX_SPLIT_2_UNGATED**: `adapter::events::unidirectional::AX_SPLIT_2_UNGATED` – verzweigt den Eingangszustand in den Plug `OUT` und in den zweiten Zweig
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` – verzweigt den zweiten Zweig in VT-Anzeige und Publish
     - **GreenWhiteBackground1_AX**: SubApp [`MyLib::sys::GreenWhiteBackground1_AX`](./GreenWhiteBackground1_AX.md) – setzt die Hintergrundfarbe (Grün/Weiß)
-    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) – OPC-UA-Publish
+    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` – OPC-UA-Publish
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` – verknüpft die `QO`-Ausgänge von `logiBUS_IXA`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX` zum SubApp-Ausgang `QO`
 - **Importe**: `ID_NULL`, `logiBUS_DI`, `logiBUS_DI_S`
 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge / Ereignis-Ausgänge**
 
-Keine – Ereignisse laufen über den Adapter.
+- **INIT** (`EInit`, Eingang): Initialisierungsanforderung; wird an `logiBUS_IXA.INIT` durchgereicht
+- **INITO** (`EInit`, Ausgang): Initialisierungsbestätigung; kommt von `GreenWhiteBackground1_AX.INITO`
+
+Die Laufzeit-Ereignisse laufen weiterhin über den Adapter.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, Freigabe des Dienstes; wird an `logiBUS_IXA`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX` weitergereicht
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID des Hintergrund-Rechtecks (VT); `ID_NULL` = noch kein VT-Objekt
 - **Input** (`logiBUS::io::DI::logiBUS_DI_S`, Vorgabe `logiBUS_DI::Invalid`): Identifiziert den Eingang `Input_I1..I8`
 - **ID_WRITE** (`WSTRING`): OPC-UA-Publish-Schlüssel (lesbar)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, `AND` der `QO`-Ausgänge von `logiBUS_IXA`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX` (über `AND_QO`)
 
 ### **Adapter**
 
@@ -51,6 +56,8 @@ Keine.
 - `AX_SPLIT_2_UNGATED.OUT2` → `AX_SPLIT_2.IN`
 - `AX_SPLIT_2.OUT1` → `GreenWhiteBackground1_AX.DI1`; `u16ObjId` → `GreenWhiteBackground1_AX.u16ObjId`
 - `AX_SPLIT_2.OUT2` → `AX_PUBLISH_1.IN`; `ID_WRITE` → `AX_PUBLISH_1.ID`
+- Initialisierung: `INIT` → `logiBUS_IXA.INIT`; `logiBUS_IXA.INITO` → `AX_PUBLISH_1.INIT` (zusätzlich zu `logiBUS_IXA.INITO` → `logiBUS_IXA.REQ`); `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`; `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `logiBUS_IXA.QI`, `AX_PUBLISH_1.QI` und `GreenWhiteBackground1_AX.QI`; deren `QO`-Ausgänge → `AND_QO.IN1` (`logiBUS_IXA`), `IN2` (`AX_PUBLISH_1`), `IN3` (`GreenWhiteBackground1_AX`); `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

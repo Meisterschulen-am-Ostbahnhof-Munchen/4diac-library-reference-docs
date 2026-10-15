@@ -15,20 +15,21 @@ The subapplication is generic: the softkey object IDs and the output selector ar
 
 ## Interface Structure
 
-The subapplication exposes only data inputs. There are no event inputs, event outputs, data outputs, or adapter sockets/plugs at the subapplication boundary.
+The subapplication exposes the initialization events `INIT`/`INITO`, the quality ports `QI`/`QO` and the configuration data inputs. There are no adapter sockets/plugs at the subapplication boundary.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the initialization chain of the inner blocks.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm; comes from `GreenWhiteBackground_AX.INITO`, the last link of the chain.
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |---|---|---|---|
+| `QI` | `BOOL` | `TRUE` | Quality input - TRUE enables the service; distributed to all inner blocks |
 | `u16ObjId_SET` | `UINT` | `ID_NULL` | Object ID of the SET softkey |
 | `u16ObjId_RESET` | `UINT` | `ID_NULL` | Object ID of the RESET softkey |
 | `u16ObjId_TOGGLE` | `UINT` | `ID_NULL` | Object ID of the TOGGLE softkey, also used for the green/white background |
@@ -36,7 +37,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output - TRUE if the service was executed successfully (AND of the `QO` of all five inner instances).
 
 ### **Adapters**
 
@@ -44,7 +45,7 @@ No adapter interface is exposed by the subapplication. All adapter connections a
 
 ## Functionality
 
-The subapplication contains three `Softkey_IE` instances named `SoftKey_SET`, `SoftKey_RESET`, and `SoftKey_TOGGLE`. Each is configured with `QI = TRUE` and `InputEvent = SK_RELEASED`, so a softkey action is triggered when the assigned softkey is released.
+The subapplication contains three `Softkey_IE` instances named `SoftKey_SET`, `SoftKey_RESET`, and `SoftKey_TOGGLE`. Each is configured with `InputEvent = SK_RELEASED` (its `QI` comes from the subapplication input `QI`), so a softkey action is triggered when the assigned softkey is released.
 
 The internal event flow is:
 
@@ -65,6 +66,8 @@ The flip-flop output `Q` is then passed to `AX_SPLIT_2`, which duplicates the si
 
 The same `u16ObjId_TOGGLE` value is also connected to the background subapplication. Therefore, the TOGGLE softkey is used both to toggle the QXA output and to provide the associated visual background feedback.
 
+Initialization and quality: `INIT` → `SoftKey_SET.INIT`, `SoftKey_SET.INITO` → `SoftKey_RESET.INIT`, `SoftKey_RESET.INITO` → `SoftKey_TOGGLE.INIT`, `SoftKey_TOGGLE.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `GreenWhiteBackground_AX.INIT` and `GreenWhiteBackground_AX.INITO` → `INITO`. `QI` is passed to `SoftKey_SET`, `SoftKey_RESET`, `SoftKey_TOGGLE`, `DigitalOutput_Q1` and `GreenWhiteBackground_AX`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_5`), which combines the `QO` of these five instances; its `REQ` is triggered by `GreenWhiteBackground_AX.INITO`.
+
 The internal wiring is fully encapsulated. From the outside, the application only requires the three softkey object IDs and the desired QXA output selector.
 
 ## Technical Features
@@ -73,8 +76,8 @@ The internal wiring is fully encapsulated. From the outside, the application onl
 - Uses `SK_RELEASED` as the softkey activation behaviour.
 - Generic object IDs are used with default value `ID_NULL`, so they can be assigned per integration.
 - Generic output selector is used with default value `logiBUS_DO::Invalid`.
-- Internal `QI` inputs of the softkey FBs are set to `TRUE`, so the subapplication is ready to operate when integrated.
-- No external events are required; operation is controlled through softkey events internally mapped to the flip-flop logic.
+- `QI` is no longer hard-wired to `TRUE` inside; it is passed from the subapplication input `QI` (default `TRUE`) to all inner blocks, so the subapplication is ready to operate when integrated.
+- Initialization runs sequentially through the chain from `INIT` to `INITO`; operation is otherwise controlled through softkey events internally mapped to the flip-flop logic.
 - The same state is propagated to both the QXA digital output and the green/white background subapplication.
 
 ## State Overview

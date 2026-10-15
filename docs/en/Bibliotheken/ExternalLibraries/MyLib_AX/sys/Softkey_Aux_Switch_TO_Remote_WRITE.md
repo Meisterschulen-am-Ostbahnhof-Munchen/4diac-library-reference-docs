@@ -22,20 +22,21 @@ This block does **not** provide status feedback or background colour highlightin
 
 ## Interface Structure
 
-The subapplication has no event inputs, event outputs, data outputs, or exposed adapters. Its interface consists solely of five data inputs, which are described below.
+The subapplication has the event input `INIT`, the event output `INITO`, six data inputs (`QI` plus the five described below) and the data output `QO`. It exposes no adapters.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the chain `Softkey_IXA` → `Aux_IXA` → `SUBSCRIBE_WEB` → `SUBSCRIBE_SWITCH` → `AX_CLIENT_1_0`.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `AX_CLIENT_1_0.INITO`.
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality input, service enable; passed on to all five internal FBs |
 | `u16ObjId` | `UINT` | `ID_NULL` | Object ID of the SoftKey (VT) | 
 | `u16ObjIdA` | `UINT` | `ID_NULL` | Object ID of the AuxFunction2 (VT) |
 | `ID_WRITE_REMOTE` | `WSTRING` | – | OPC‑UA address of the remote target module for the write command (ACTION=WRITE, CLIENT) |
@@ -44,7 +45,9 @@ None.
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| `QO` | `BOOL` | Quality output, `AND` of the `QO` outputs of `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB`, `SUBSCRIBE_SWITCH` and `AX_CLIENT_1_0` (via `AND_QO`, `AND_BOOL_5`) |
 
 ### **Adapters**
 
@@ -67,6 +70,8 @@ The data flow is as follows:
 2. The four boolean signals are fed into `AX_OR_4`, which produces a `TRUE` if any of the four is active.
 3. The OR result is passed to `AX_CLIENT_1_0`, which sends an OPC‑UA write request to the configured remote address.
 
+Initialization and quality: `INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `Aux_IXA.INIT`, `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `SUBSCRIBE_SWITCH.INIT`, `SUBSCRIBE_SWITCH.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `INITO` and → `AND_QO.REQ`. `QI` goes to all five FBs; their `QO` outputs feed `AND_QO.IN1` to `IN5`, and `AND_QO.OUT` drives `QO`.
+
 This design ensures that all commands from different inputs are combined into a single write operation, avoiding multiple writers that might conflict with each other. The subapplication is intended for use cases where a command must be triggered from multiple physical or logical locations but only one data point is written to the target.
 
 ## Technical Features
@@ -76,7 +81,7 @@ This design ensures that all commands from different inputs are combined into a 
 - **Remote Subscription** – Uses `AX_SUBSCRIBE_1` adapters for both the web override and the remote switch, enabling cross‑module communication.
 - **No Status Feedback** – The subapplication only sends commands; it does not receive or process status information from the target. For feedback, a separate subscription block must be used.
 - **Configurable Object IDs** – Both VT object IDs (`u16ObjId` and `u16ObjIdA`) are passed through to the internal SoftKey and Aux blocks, allowing flexible mapping to ISO‑bus objects.
-- **Initialisation** – The internal FB instances are initialised with `QI = TRUE` by default.
+- **Initialisation** – The internal FB instances are no longer fixed to `QI = TRUE`; they receive the subapplication input `QI` (initial value `TRUE`) and are initialised sequentially via `INIT`/`INITO`.
 
 ## State Overview
 

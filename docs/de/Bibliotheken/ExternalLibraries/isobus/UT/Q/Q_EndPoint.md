@@ -24,6 +24,7 @@ Der **Q_EndPoint** ist ein standardkonformer Funktionsbaustein zur Steuerung von
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Linienobjekt-ID
 - `xScale` (BOOL, Initialwert `FALSE`): `FALSE` = Bypass, `u16Width`/`u16Height` werden unverändert gesendet; `TRUE` = beide werden mit dem DM/SKM-Faktor für `u16ObjId` skaliert
 - `u16Width` (UINT): Neue X-Endposition (0-65535 Pixel)
@@ -32,6 +33,7 @@ Der **Q_EndPoint** ist ein standardkonformer Funktionsbaustein zur Steuerung von
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u16OldWidth` (UINT): Vorherige X-Endposition
 - `u16OldHeight` (UINT): Vorherige Y-Endposition
@@ -46,6 +48,8 @@ Output Line (13000–13999).
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Linienobjekt-ID

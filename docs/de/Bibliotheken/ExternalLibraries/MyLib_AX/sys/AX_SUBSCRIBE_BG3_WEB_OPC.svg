@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1515.466796875 172.0"
-     width="1515.466796875" height="172.0">
+     viewBox="0 0 1946.5625 192.0"
+     width="1946.5625" height="192.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1217.466796875, 10)">
+  <g transform="translate(1287.625, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 260.0 0
-            A 3 3 0 0 1 263.0 3
-            L 263.0 23.0
-            A 3 3 0 0 1 260.0 26.0
-            L 253.0 26.0
-            L 253.0 66.0
-            L 260.0 66.0
-            A 3 3 0 0 1 263.0 69.0
-            L 263.0 149.0
-            A 3 3 0 0 1 260.0 152.0
-            L 3 152.0
-            A 3 3 0 0 1 0 149.0
+            L 245.9375 0
+            A 3 3 0 0 1 248.9375 3
+            L 248.9375 23.0
+            A 3 3 0 0 1 245.9375 26.0
+            L 238.9375 26.0
+            L 238.9375 66.0
+            L 245.9375 66.0
+            A 3 3 0 0 1 248.9375 69.0
+            L 248.9375 169.0
+            A 3 3 0 0 1 245.9375 172.0
+            L 3 172.0
+            A 3 3 0 0 1 0 169.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="242.4375,11.0 247.4375,16.0 242.4375,21.0" fill="#63B31F"/>
+    <text x="239.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,27 +99,35 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">AX_SUBSCRIBE_BG3_WEB_OPC</text>
     
-    <text x="131.5" y="66.0"
+    <text x="124.46875" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#18519E"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjIdA</text>
+          fill="#000000" dominant-baseline="middle">u16ObjId</text>
 
-    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_SUBSCRIBE</text>
+          fill="#000000" dominant-baseline="middle">u16ObjIdA</text>
 
     <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#BD8663"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_SUBSCRIBE</text>
+
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#BD8663"/>
+    <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_STATUS_WEB</text>
+
+    <polygon points="242.4375,71.0 247.4375,76.0 242.4375,81.0" fill="#A3B08F"/>
+    <text x="239.4375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -120,16 +136,28 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="273.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey/Hintergrund (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2/Hintergrund (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID SoftKey/Hintergrund (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse (Status/Farbe, ACTION=SUBSCRIBE) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID AuxFunction2/Hintergrund (VT) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse (Status/Farbe, ACTION=SUBSCRIBE) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (auf diesem Modul) fuer den vom Zielmodul zurueckgemeldeten Zustand - damit ein Web-Client (z.B. vt-ui-mirror) dieselbe Hintergrundfarbe wie das echte VT zeigen kann – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="273.9375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

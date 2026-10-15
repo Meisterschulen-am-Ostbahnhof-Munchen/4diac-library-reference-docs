@@ -24,6 +24,7 @@ Der **Q_ActiveMask** ist ein standardkonformer Funktionsbaustein zur Steuerung a
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16NewMaskId` (UINT): Objekt-ID der neuen Maske
 
 !!! note "WorkingSet Object ID fest auf 0"
@@ -36,6 +37,7 @@ Der **Q_ActiveMask** ist ein standardkonformer Funktionsbaustein zur Steuerung a
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u16OldMaskId` (UINT): Objekt-ID der vorherigen Maske
 - `s16result` (INT): ISO-konformer Ergebniscode
@@ -48,6 +50,8 @@ Data Mask (1000–1999), Alarm Mask (2000–2999).
 ID_NULL (65535) ist kein gültiges Kommandoziel für die neue aktive Maske. Jede ID außerhalb dieser Bereiche ist ungültig.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT`-Event startet den Baustein

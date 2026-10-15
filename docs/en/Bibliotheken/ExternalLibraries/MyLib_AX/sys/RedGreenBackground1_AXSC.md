@@ -10,6 +10,8 @@
 
 `RedGreenBackground1_AXSC` is a **compact wrapper** around [`RedGreenBackground1_AXS`](RedGreenBackground1_AXS.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
 
+In addition, initialization and quality are passed through: `INIT` → `RedGreenBackground.INIT`, `RedGreenBackground.INITO` → `INITO`, `QI` (initial value `TRUE`) → `RedGreenBackground.QI` and `RedGreenBackground.QO` → `QO`.
+
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 
 ## Summary

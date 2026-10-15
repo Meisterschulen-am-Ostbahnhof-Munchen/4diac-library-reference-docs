@@ -14,14 +14,15 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL, Vorgabe `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 - **Input** (`logiBUS::io::PI::logiBUS_PI_S`): Auswahl des Puls-Eingangs `PulseInput_I1`..`I9` (Default `logiBUS_PI::Invalid`)
 - **ID_HZ_WRITE** (WSTRING): Frequenz-Publish-Adresse (REAL Hz, `ACTION=PUBLISH`), lokal; nur Dashboard/Diagnose, keine andere Station soll sie remote abonnieren (Scope LOC)
 - **stObjFilterTimeS** (`NumericObjectPool_S`): Object ID + Skalierung/Offset/Dezimalstellen der CNumberVariable für die PT1-Filterzeit in Sekunden (VT-Eingabefeld); Default `u8Decimals := 1`
@@ -37,7 +38,7 @@ Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND der `QO` von `logiBUS_PI_IDA`, `AR_PUBLISH_HZ`, `AR_PUBLISH_Speed`, `INI_FilterTimeS`, `INI_DerivK`, `FilterTimeS` und `DerivK`; Baustein `AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_7`)
 
 ### **Adapter**
 
@@ -45,16 +46,18 @@ Es werden keine Adapter verwendet.
 
 ## Funktionsweise
 
-**Messkette (Frequenz)**: `logiBUS_PI_IDA` (`logiBUS::io::PI::logiBUS_PI_IDA`, `QI = TRUE`, `ImpulseDelta = DWORD#50`, `TimeDelta = DWORD#250`, `TimeRateLimit = DWORD#50`) → `AD_TO_AR_NUM` → `FT_DERIV_10_AR` (`OSCAT_adapter::Control`, `Faktor = 1.0`, `run = TRUE`) → `FT_PT1_AR` (`K = 1.0`) → `AR_SPLIT_2`.
+**Messkette (Frequenz)**: `logiBUS_PI_IDA` (`logiBUS::io::PI::logiBUS_PI_IDA`, `QI` vom Baustein-Eingang, `ImpulseDelta = DWORD#50`, `TimeDelta = DWORD#250`, `TimeRateLimit = DWORD#50`) → `AD_TO_AR_NUM` → `FT_DERIV_10_AR` (`OSCAT_adapter::Control`, `Faktor = 1.0`, `run = TRUE`) → `FT_PT1_AR` (`K = 1.0`) → `AR_SPLIT_2`.
 
 **Zwei Ausgabewege** aus `AR_SPLIT_2`:
 
-- `OUT1` → `AR_PUBLISH_HZ` (`AR_PUBLISH_1`, `QI = TRUE`): publiziert die Frequenz in Hz an `ID_HZ_WRITE` (lokal, ungerundet).
-- `OUT2` → `AR_MUL.IN1` (`AR_MUL_2`), `LIT_Scale.OUT` → `AR_MUL.IN2` (`LIT_Scale` ist ein `initval_AR` mit `INIT_VAL` aus `SCALE`) → `Round_Final` (`OSCAT_adapter::Mathematical::ROUND_STEP_AR`, `RASTER`) → `AR_PUBLISH_Speed` (`AR_PUBLISH_1`, `QI = TRUE`): publiziert den umgerechneten, auf `RASTER` gerundeten Endwert an `ID_WRITE`.
+- `OUT1` → `AR_PUBLISH_HZ` (`AR_PUBLISH_1`, `QI` vom Baustein-Eingang): publiziert die Frequenz in Hz an `ID_HZ_WRITE` (lokal, ungerundet).
+- `OUT2` → `AR_MUL.IN1` (`AR_MUL_2`), `LIT_Scale.OUT` → `AR_MUL.IN2` (`LIT_Scale` ist ein `initval_AR` mit `INIT_VAL` aus `SCALE`) → `Round_Final` (`OSCAT_adapter::Mathematical::ROUND_STEP_AR`, `RASTER`) → `AR_PUBLISH_Speed` (`AR_PUBLISH_1`, `QI` vom Baustein-Eingang): publiziert den umgerechneten, auf `RASTER` gerundeten Endwert an `ID_WRITE`.
 
-**Einstellbare PT1-Filterzeit**: `FilterTimeS` ([`MyLib::sys::NumericValue_TO_AR2_OPC`](NumericValue_TO_AR2_OPC.md); `stObjFilterTimeS`, `ID_FILTER_TIME_READ`, `ID_FILTER_TIME_WRITE`) liefert die Filterzeit in Sekunden. `FilterTimeS.VALUEO` ↔ `INI_FilterTimeS.VAL` (`eclipse4diac::storage::INI_AR2`, `QI = TRUE`, `SETM = TRUE`, `KEY = 'FilterTimeS'`, `DEFAULT_VALUE = REAL#2.0`, `SECTION` aus `sSection`) persistiert sie. `FilterTimeS.VALUE_OUT` → `ToATM.IN1` ([`MyLib::sys::AR_S_TO_ATM`](AR_S_TO_ATM.md)), `ToATM.OUT` → `FT_PT1_AR.TM`.
+**Einstellbare PT1-Filterzeit**: `FilterTimeS` ([`MyLib::sys::NumericValue_TO_AR2_OPC`](NumericValue_TO_AR2_OPC.md); `stObjFilterTimeS`, `ID_FILTER_TIME_READ`, `ID_FILTER_TIME_WRITE`) liefert die Filterzeit in Sekunden. `FilterTimeS.VALUEO` ↔ `INI_FilterTimeS.VAL` (`eclipse4diac::storage::INI_AR2`, `QI` vom Baustein-Eingang, `SETM = TRUE`, `KEY = 'FilterTimeS'`, `DEFAULT_VALUE = REAL#2.0`, `SECTION` aus `sSection`) persistiert sie. `FilterTimeS.VALUE_OUT` → `ToATM.IN1` ([`MyLib::sys::AR_S_TO_ATM`](AR_S_TO_ATM.md)), `ToATM.OUT` → `FT_PT1_AR.TM`.
 
 **Einstellbare Ableitungs-Fensterbreite**: `DerivK` (`NumericValue_TO_AR2_OPC`; `stObjDerivK`, `ID_DERIV_K_READ`, `ID_DERIV_K_WRITE`) liefert `K`. `DerivK.VALUEO` ↔ `INI_DerivK.VAL` (`INI_AR2`, `KEY = 'DerivK'`, `DEFAULT_VALUE = REAL#9.0`, `SECTION` aus `sSection`) persistiert den Wert. `DerivK.VALUE_OUT` → `ToAUI.AR_IN` (`AR_TO_AUI`), `ToAUI.AUI_OUT` → `FT_DERIV_10_AR.K`.
+
+**Initialisierung und Status**: Die Initialisierungskette lautet `INIT` → `logiBUS_PI_IDA.INIT`, `logiBUS_PI_IDA.INITO` → `AR_PUBLISH_HZ.INIT`, `AR_PUBLISH_HZ.INITO` → `AR_PUBLISH_Speed.INIT`, `AR_PUBLISH_Speed.INITO` → `INI_FilterTimeS.INIT`, `INI_FilterTimeS.INITO` → `INI_DerivK.INIT`, `INI_DerivK.INITO` → `FilterTimeS.INIT`, `FilterTimeS.INITO` → `DerivK.INIT`, `DerivK.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an `logiBUS_PI_IDA`, `AR_PUBLISH_HZ`, `AR_PUBLISH_Speed`, `INI_FilterTimeS`, `INI_DerivK`, `FilterTimeS` und `DerivK` weitergegeben; deren `QO` → `AND_QO.IN1`..`IN7`, `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

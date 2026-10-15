@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2690.125 512.0"
-     width="2690.125" height="512.0">
+     viewBox="0 0 2690.125 532.0"
+     width="2690.125" height="532.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 311.625 66.0
             L 318.625 66.0
             A 3 3 0 0 1 321.625 69.0
-            L 321.625 489.0
-            A 3 3 0 0 1 318.625 492.0
-            L 3 492.0
-            A 3 3 0 0 1 0 489.0
+            L 321.625 509.0
+            A 3 3 0 0 1 318.625 512.0
+            L 3 512.0
+            A 3 3 0 0 1 0 509.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="315.125,11.0 320.125,16.0 315.125,21.0" fill="#63B31F"/>
+    <text x="312.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -97,95 +105,87 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#BD8663"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_CAL_M2M_READ</text>
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#3366FF"/>
-    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#3366FF"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">stObjCal</text>
 
-    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
-    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_WRITE</text>
-
-    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#18519E"/>
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#BD8663"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId_C_MIN</text>
+          fill="#000000" dominant-baseline="middle">ID_WRITE</text>
 
     <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#18519E"/>
     <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId_C_MID</text>
+          fill="#000000" dominant-baseline="middle">u16ObjId_C_MIN</text>
 
     <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#18519E"/>
     <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId_C_MAX</text>
+          fill="#000000" dominant-baseline="middle">u16ObjId_C_MID</text>
 
-    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#BD8663"/>
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#18519E"/>
     <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MIN_CALL</text>
+          fill="#000000" dominant-baseline="middle">u16ObjId_C_MAX</text>
 
     <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#BD8663"/>
     <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MID_CALL</text>
+          fill="#000000" dominant-baseline="middle">ID_MIN_CALL</text>
 
     <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#BD8663"/>
     <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MAX_CALL</text>
+          fill="#000000" dominant-baseline="middle">ID_MID_CALL</text>
 
-    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#3366FF"/>
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#BD8663"/>
     <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">stObjMinRef</text>
+          fill="#000000" dominant-baseline="middle">ID_MAX_CALL</text>
 
     <polygon points="1.5,271.0 6.5,276.0 1.5,281.0" fill="#3366FF"/>
     <text x="9.5" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">stObjMidRef</text>
+          fill="#000000" dominant-baseline="middle">stObjMinRef</text>
 
     <polygon points="1.5,291.0 6.5,296.0 1.5,301.0" fill="#3366FF"/>
     <text x="9.5" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">stObjMaxRef</text>
+          fill="#000000" dominant-baseline="middle">stObjMidRef</text>
 
-    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#BD8663"/>
+    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#3366FF"/>
     <text x="9.5" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MINREF_READ</text>
+          fill="#000000" dominant-baseline="middle">stObjMaxRef</text>
 
     <polygon points="1.5,331.0 6.5,336.0 1.5,341.0" fill="#BD8663"/>
     <text x="9.5" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MINREF_WRITE</text>
+          fill="#000000" dominant-baseline="middle">ID_MINREF_READ</text>
 
     <polygon points="1.5,351.0 6.5,356.0 1.5,361.0" fill="#BD8663"/>
     <text x="9.5" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MIDREF_READ</text>
+          fill="#000000" dominant-baseline="middle">ID_MINREF_WRITE</text>
 
     <polygon points="1.5,371.0 6.5,376.0 1.5,381.0" fill="#BD8663"/>
     <text x="9.5" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MIDREF_WRITE</text>
+          fill="#000000" dominant-baseline="middle">ID_MIDREF_READ</text>
 
     <polygon points="1.5,391.0 6.5,396.0 1.5,401.0" fill="#BD8663"/>
     <text x="9.5" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_MAXREF_READ</text>
+          fill="#000000" dominant-baseline="middle">ID_MIDREF_WRITE</text>
 
     <polygon points="1.5,411.0 6.5,416.0 1.5,421.0" fill="#BD8663"/>
     <text x="9.5" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_MAXREF_READ</text>
+
+    <polygon points="1.5,431.0 6.5,436.0 1.5,441.0" fill="#BD8663"/>
+    <text x="9.5" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_MAXREF_WRITE</text>
 
-    <!-- Adapter Ports -->
+    <polygon points="315.125,71.0 320.125,76.0 315.125,81.0" fill="#A3B08F"/>
+    <text x="312.125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
-    <path d="M 310.125 437.0
-            L 312.625 437.0
-            L 312.625 438.6666666666667
-            L 315.125 438.6666666666667
-            L 315.125 437.0
-            L 320.125 437.0
-            L 320.125 447.0
-            L 315.125 447.0
-            L 315.125 445.3333333333333
-            L 312.625 445.3333333333333
-            L 312.625 447.0
-            L 310.125 447.0
-            Z" fill="#845DAF"/>
-    <text x="307.125" y="443.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">CAL_OUT</text>
+    <!-- Adapter Ports -->
 
     <path d="M 310.125 457.0
             L 312.625 457.0
@@ -201,7 +201,7 @@
             L 310.125 467.0
             Z" fill="#845DAF"/>
     <text x="307.125" y="463.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">MIDREF_OUT</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">CAL_OUT</text>
 
     <path d="M 310.125 477.0
             L 312.625 477.0
@@ -217,6 +217,22 @@
             L 310.125 487.0
             Z" fill="#845DAF"/>
     <text x="307.125" y="483.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">MIDREF_OUT</text>
+
+    <path d="M 310.125 497.0
+            L 312.625 497.0
+            L 312.625 498.6666666666667
+            L 315.125 498.6666666666667
+            L 315.125 497.0
+            L 320.125 497.0
+            L 320.125 507.0
+            L 315.125 507.0
+            L 315.125 505.3333333333333
+            L 312.625 505.3333333333333
+            L 312.625 507.0
+            L 310.125 507.0
+            Z" fill="#845DAF"/>
+    <text x="307.125" y="503.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">MAXREF_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -225,67 +241,79 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="346.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse des bereits kalibrierten physikalischen Werts (REAL) - Gegenstueck zu ID_CAL_WRITE auf der Sensor-Station (logiBUS_AI_Calibrate_3P_IDA_OPC) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (kalibrierter Wert) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Subscribe-Adresse des bereits kalibrierten physikalischen Werts (REAL) - Gegenstueck zu ID_CAL_WRITE auf der Sensor-Station (logiBUS_AI_Calibrate_3P_IDA_OPC) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Re-Publish-Adresse (REAL, ACTION=PUBLISH) fuer weitere lokale Konsumenten auf dieser Station – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (kalibrierter Wert) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MIN' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Re-Publish-Adresse (REAL, ACTION=PUBLISH) fuer weitere lokale Konsumenten auf dieser Station – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MID' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MIN' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MAX' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MID' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MIN-Trigger - ruft ID_MIN_METHOD direkt auf der Sensor-Station auf (logiBUS_AI_Calibrate_3P_IDA_OPC) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID Taste 'C_MAX' - physisch hier auf der VT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MID-Trigger - ruft ID_MID_TRIGGER_METHOD direkt auf der Sensor-Station auf – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MIN-Trigger - ruft ID_MIN_METHOD direkt auf der Sensor-Station auf (logiBUS_AI_Calibrate_3P_IDA_OPC) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MAX-Trigger - ruft ID_MAX_METHOD direkt auf der Sensor-Station auf – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MID-Trigger - ruft ID_MID_TRIGGER_METHOD direkt auf der Sensor-Station auf – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MIN_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Methodenadresse (ACTION=CALL_METHOD) fuer den C_MAX-Trigger - ruft ID_MAX_METHOD direkt auf der Sensor-Station auf – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MID_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MIN_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
     <text x="-25" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MAX_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MID_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
     <text x="-25" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MIN_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID + Scale/Offset/Decimals CNumberVariable (MAX_REF-Referenzwert, VT-Eingabefeld hier auf dieser Station) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::utils::conversion::phys::NumericObjectPool_S</tspan></text>
 
     <text x="-25" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (REAL, ACTION=PUBLISH) des MIN_REF-Referenzwerts - wird von der Sensor-Station remote abonniert (deren ID_MINREF_READ) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MIN_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MID_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (REAL, ACTION=PUBLISH) des MIN_REF-Referenzwerts - wird von der Sensor-Station remote abonniert (deren ID_MINREF_READ) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (REAL, ACTION=PUBLISH) des MID_REF-Referenzwerts - wird von der Sensor-Station remote abonniert (deren ID_MIDREF_READ) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MID_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MAX_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (REAL, ACTION=PUBLISH) des MID_REF-Referenzwerts - wird von der Sensor-Station remote abonniert (deren ID_MIDREF_READ) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Optionale Subscribe-Adresse falls MAX_REF extern (Dashboard) ueberschrieben werden soll - unbenutzt zulaessig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Publish-Adresse (REAL, ACTION=PUBLISH) des MAX_REF-Referenzwerts - wird von der Sensor-Station remote abonniert (deren ID_MAXREF_READ) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
-    <text x="346.625" y="443.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: kalibrierter Wert (plain-AR-Spiegel des Remote-Subscribe) fuer externe lokale Consumer, statt eigenem lokalen OPC-UA-Self-Subscribe. Unverdrahtet lassen, wenn nicht gebraucht.</text>
+    <text x="346.625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
 
     <text x="346.625" y="463.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: live MID_REF-Referenzwert (= MID_REF_LIT.VALUE_OUT) fuer externe Consumer. Unverdrahtet lassen, wenn nicht gebraucht.</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: kalibrierter Wert (plain-AR-Spiegel des Remote-Subscribe) fuer externe lokale Consumer, statt eigenem lokalen OPC-UA-Self-Subscribe. Unverdrahtet lassen, wenn nicht gebraucht.</text>
 
     <text x="346.625" y="483.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: live MID_REF-Referenzwert (= MID_REF_LIT.VALUE_OUT) fuer externe Consumer. Unverdrahtet lassen, wenn nicht gebraucht.</text>
+
+    <text x="346.625" y="503.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan> – Optional: live MAX_REF-Referenzwert (= MAX_REF_LIT.VALUE_OUT) fuer externe Consumer. Unverdrahtet lassen, wenn nicht gebraucht.</text>
   </g>
 </svg>

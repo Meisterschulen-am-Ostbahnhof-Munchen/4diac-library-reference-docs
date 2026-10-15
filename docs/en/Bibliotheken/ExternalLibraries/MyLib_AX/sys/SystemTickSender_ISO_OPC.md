@@ -26,7 +26,8 @@
 
 - **Q_NumericValue_AUDI**: `isobus::UT::Q::Q_NumericValue_AUDI` — displays the value locally on the VT (`u16ObjId`).
 
-- **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI=TRUE`) — publishes the same counter value via OPC UA (`ID_WRITE`).
+- **ADI_PUBLISH_1**: `adapter::net::ADI_PUBLISH_1` (`QI` comes from the input `QI`) — publishes the same counter value via OPC UA (`ID_WRITE`).
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — combines `Q_NumericValue_AUDI.QO` and `ADI_PUBLISH_1.QO` into the output `QO`.
 
 - **Functionality**: The counter value from `System_Tick` is branched via `ADI_SPLIT_2`: one branch goes to the VT display via `ADI_TO_AUDI`, as with `SystemTickSender_ISO`, the other goes directly to `ADI_PUBLISH_1` for OPC UA publishing — as with `SystemTickSender_OPC`.
 
@@ -40,6 +41,10 @@
 3. `ADI_SPLIT_2.OUT2` → `ADI_PUBLISH_1.IN` (OPC UA publish).
 
 4. Parameters: `u16ObjId` → `Q_NumericValue_AUDI.u16ObjId`; `ID_WRITE` → `ADI_PUBLISH_1.ID`.
+
+5. Initialization chain (event input `INIT` / event output `INITO`, both `EInit`): `INIT` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `ADI_PUBLISH_1.INIT`; `ADI_PUBLISH_1.INITO` → `INITO` and `AND_QO.REQ`.
+
+6. Quality: `QI` (`BOOL`, default `TRUE`) → `Q_NumericValue_AUDI.QI` and `ADI_PUBLISH_1.QI`; `Q_NumericValue_AUDI.QO` → `AND_QO.IN1`; `ADI_PUBLISH_1.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO` (`BOOL`, Quality Output - `TRUE` if the VT write and the OPC UA publish succeeded).
 
 
 ## Technical Features

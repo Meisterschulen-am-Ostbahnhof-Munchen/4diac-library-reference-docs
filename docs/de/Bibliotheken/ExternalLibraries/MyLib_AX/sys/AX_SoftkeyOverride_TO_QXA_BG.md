@@ -15,20 +15,21 @@ Der Funktionsbaustein `AX_SoftkeyOverride_TO_QXA_BG` ist eine wiederverwendbare 
 
 ### **Ereignis-Eingänge**
 
-Es sind keine Ereignis-Eingänge vorhanden.
+- `INIT` (EInit): Initialisierungsanforderung; startet die Init-Kette bei `QX.INIT`.
 
 ### **Ereignis-Ausgänge**
 
-Es sind keine Ereignis-Ausgänge vorhanden.
+- `INITO` (EInit): Initialisierungsbestätigung; kommt von `GreenWhiteBackground.INITO`, dem Ende der Init-Kette.
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL): Quality Input, schaltet den Dienst frei (Initialwert: `TRUE`); wird an `QX.QI`, `IX.QI` und `GreenWhiteBackground.QI` weitergereicht.
 - `u16ObjId` (UINT): Objekt-ID der Softkey-Taste bzw. des Buttons (Initialwert: `ID_NULL`).
 - `Output` (logiBUS::io::DQ::logiBUS_DO_S): Ausgangswert, der an den digitalen Ausgang übergeben wird (Initialwert: `logiBUS_DO::Invalid`).
 
 ### **Daten-Ausgänge**
 
-Es sind keine Daten-Ausgänge vorhanden.
+- `QO` (BOOL): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_3`) der `QO`-Ausgänge von `QX`, `IX` und `GreenWhiteBackground`.
 
 ### **Adapter**
 
@@ -43,6 +44,8 @@ Das Ergebnis der Verknüpfung wird anschließend über `AX_SPLIT_2` in zwei Pfad
 - **Pfad 1** (OUT1) steuert den Ausgangsbaustein `logiBUS_QXA` an, der das digitale Signal auf dem QXA-Port setzt. Der Datenwert `Output` wird dabei als Ausgangswert übergeben.
 - **Pfad 2** (OUT2) speist den Hintergrundbaustein `GreenWhiteBackground1_AX`, der den Ausgangszustand visuell darstellt (z. B. Mit Farbe oder Text) und ebenfalls die Objekt-ID `u16ObjId` erhält.
 
+Initialisierung und Qualität: `INIT` → `QX.INIT`, `QX.INITO` → `IX.INIT`, `IX.INITO` → `GreenWhiteBackground.INIT`, `GreenWhiteBackground.INITO` → `INITO` und `AND_QO.REQ`. `QI` wird an `QX`, `IX` und `GreenWhiteBackground` weitergereicht; `QX.QO`, `IX.QO` und `GreenWhiteBackground.QO` werden im Baustein `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`) zum Ausgang `QO` verknüpft.
+
 Durch diese Struktur wird eine einfache Handbedienung ermöglicht: Solange die Taste gedrückt ist oder das Programm-Signal aktiv ist, ist der Ausgang aktiv.
 
 ## Technische Besonderheiten
@@ -50,6 +53,7 @@ Durch diese Struktur wird eine einfache Handbedienung ermöglicht: Solange die T
 - Verwendung von AX-Adapter-basierten Bausteinen (`AX_OR_2`, `AX_SPLIT_2`) zur Verarbeitung unidirektionaler AX-Signale – typisch für zyklische Signalverarbeitung ohne Event-Synchronisation.
 - Der Baustein ist generisch und kann durch die Parameter `u16ObjId` und `Output` an verschiedene Anwendungen angepasst werden.
 - Die Aufteilung des AX-Signals über `AX_SPLIT_2` ermöglicht die parallele Ausgabe an den eigentlichen Ausgang und an die Visualisierung (Hintergrund).
+- Die Init-Kette (`INIT` → `QX` → `IX` → `GreenWhiteBackground` → `INITO`) und die UND-Verknüpfung der Qualitätsausgänge (`QI`/`QO`) folgen dem Standard-Schnittstellenmuster der Wrapper-Subapps.
 - Die Subapp ist modular aufgebaut und kann in übergeordnete Projekte als wiederverwendbare Komponente eingebunden werden.
 
 ## Zustandsübersicht

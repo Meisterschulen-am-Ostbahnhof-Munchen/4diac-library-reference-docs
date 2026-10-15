@@ -23,11 +23,13 @@ The **Q_ObjEnableDisable** is a standards-compliant function block for enabling/
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `qAbility` (BOOL): Activation Status (TRUE=activate, FALSE=deactivate)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `qOldAbility` (BOOL): Previous activation status
 - `s16result` (INT): ISO-compliant result code
@@ -40,6 +42,8 @@ Button (6000–6999), Input Boolean Field (7000–7999), Input String Field (800
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

@@ -1,6 +1,5 @@
 # IXA_TO_Aux_QXA
 
-
 ![IXA_TO_Aux_QXA_network](./IXA_TO_Aux_QXA_network.svg)
 
 ![IXA_TO_Aux_QXA](./IXA_TO_Aux_QXA.svg)
@@ -17,22 +16,23 @@ By encapsulating the internal conversion logic (from the logiBUS domain to the I
 
 ### **Event Inputs**
 
-The subapp has no event inputs. All data flow is purely continuous (non-event-triggered).
+- **INIT** (`EInit`): initialization request; passed on to `IX.INIT`. The data path itself is purely continuous (not event-triggered).
 
 ### **Event Outputs**
 
-The subapp has no event outputs.
+- **INITO** (`EInit`): initialization confirm; comes from `QX.INITO`.
 
 ### **Data Inputs**
 
 | Name      | Type                              | Initial Value | Description                                                                                       |
 |-----------|-----------------------------------|---------------|---------------------------------------------------------------------------------------------------|
 | `Input`   | `logiBUS::io::DI::logiBUS_DI_S`   | `Invalid`     | Identifies the physical logiBUS digital input (e.g., `Input_I1` .. `Input_I8`) to be read.        |
+| `QI`      | `BOOL`                            | `TRUE`        | Quality input - TRUE enables the service.                                                         |
 | `iInpNr`  | `USINT`                           | `0`           | Number of the auxiliary array entry; corresponds to the position in the pool. The first aux input in the pool is `iInpNr = 0`, the second is `1`, etc. |
 
 ### **Data Outputs**
 
-The subapp has no data outputs. Results are propagated internally via adapter connections.
+- **QO** (`BOOL`): quality output - AND combination (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_2`) of `QX.QO` and `IX.QO`. The signal itself is propagated internally via adapter connections.
 
 ### **Adapters**
 
@@ -43,11 +43,11 @@ The subapp does not expose adapters at its interface. Internally, an adapter con
 The subapp performs the following tasks:
 
 1. Receives a digital input identifier (`Input`) of type `logiBUS_DI_S` and an auxiliary index (`iInpNr`).
-2. Internally instantiates a `logiBUS_IXA` function block, which reads and processes the specified logiBUS digital input. This block is enabled via the `QI` parameter set to `TRUE`, and its `PARAMS` parameter is deliberately left empty (visible attribute hidden).
+2. Internally instantiates a `logiBUS_IXA` function block, which reads and processes the specified logiBUS digital input. This block is enabled via the subapp input `QI` (default `TRUE`), and its `PARAMS` parameter is deliberately left empty (visible attribute hidden).
 3. The processed input signal is forwarded through an adapter connection (`IX.IN` → `QX.OUT`) to an instantiated `Aux_QXA` function block from the ISOBUS utility library.
 4. The `Aux_QXA` block maps the incoming adapter data to the auxiliary output position specified by `iInpNr`, thereby activating the corresponding ISOBUS auxiliary function.
 
-The combination of both internal FBs with `QI = TRUE` ensures that the entire chain is active as soon as valid input data is available.
+Initialization runs as a chain: `INIT` → `IX.INIT`; `IX.INITO` → `QX.INIT`; `QX.INITO` → `INITO` and → `AND_QO.REQ`. Quality: `QI` → `IX.QI` and `QX.QI`; `QX.QO` → `AND_QO.IN1`, `IX.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`. With `QI = TRUE` (default), the entire chain is active as soon as valid input data is available.
 
 ## Technical Features
 
@@ -55,7 +55,7 @@ The combination of both internal FBs with `QI = TRUE` ensures that the entire ch
 - **Generic input selection**: The `Input` parameter allows selecting any of the physical inputs `I1`..`I8`, making the subapp reusable for different wiring configurations without modification.
 - **Pool-position mapping**: The `iInpNr` parameter maps the selected input to a dedicated position in the ISOBUS auxiliary output pool.
 - **Hidden internal parameters**: The `PARAMS` parameter of the `logiBUS_IXA` block is hidden in the graphical representation (`Visible = false`), reducing clutter in the network editor.
-- **Default-enabled operation**: Both internal function blocks are pre-enabled with `QI = TRUE`, requiring no additional start-up sequencing.
+- **Default-enabled operation**: Both internal function blocks receive `QI` from the subapp input `QI` (default `TRUE`), so they are enabled by default; there is no hard-wired `QI` parameter any more. Start-up sequencing is done via the `INIT`/`INITO` chain.
 - **Standard-conformant types**: Uses types defined according to IEC 61499-2, with the overall subapp packaged for reuse in different projects.
 
 ## State Overview
@@ -64,7 +64,7 @@ The subapp does not implement an explicit state machine. Its operational behavio
 
 - **Idle / invalid input**: If `Input` is set to `Invalid` (as per its initial value), the `logiBUS_IXA` block will not deliver valid data, and the auxiliary output remains inactive.
 - **Active input**: When a valid input identifier (`Input_I1`..`Input_I8`) is applied, the `logiBUS_IXA` block processes the signal and forwards it via the adapter to `Aux_QXA`.
-- **Enabled output**: With `QI = TRUE` on `Aux_QXA` and a valid adapter data stream, the auxiliary output position (`iInpNr`) is continuously updated to reflect the state of the selected logiBUS input.
+- **Enabled output**: With `QI = TRUE` (default) on `Aux_QXA` and a valid adapter data stream, the auxiliary output position (`iInpNr`) is continuously updated to reflect the state of the selected logiBUS input.
 
 Users should ensure that the `Input` value matches an actual, configured logiBUS input; otherwise, the output remains inactive.
 
@@ -80,7 +80,7 @@ Compared to a direct hard-wired connection between a logiBUS input module and an
 
 - **Protocol abstraction**: The user does not need to interact with raw adapter types or internal FB configurations.
 - **Reusability**: Extracted from a larger exercise project (previously part of `Uebung_003c_sub_AX`), it can be dropped into any 4diac project with minimal effort.
-- **Clarity**: The two-parameter interface (`Input`, `iInpNr`) is far simpler than manually wiring internal FBs and checking adapter compatibility.
+- **Clarity**: The two-parameter interface (`Input`, `iInpNr`, plus the usual `QI`/`QO` and `INIT`/`INITO` ports) is far simpler than manually wiring internal FBs and checking adapter compatibility.
 - **Limitation**: It provides a one-way signal path (input → output) without bidirectional feedback. Applications requiring status readback from the ISOBUS side would need a different, more elaborate subapp.
 
 ## Conclusion

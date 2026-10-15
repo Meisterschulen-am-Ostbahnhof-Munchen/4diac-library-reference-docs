@@ -16,23 +16,33 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service; passed through to `NumericValue_PHYSA`, `INI_AR2` and `Q_NumericValue_PHYSA`.
 - `KEY` (STRING): key name in the INI file.
 - `SECTION` (STRING): section name in the INI file.
 - `stObj` (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): VT object with `u16ObjId`, `r32Scale`, `i32Offset`, `u8Decimals` (default `u16ObjId := ID_NULL`, `r32Scale := 1.0`, `i32Offset := 0`, `u8Decimals := 0`).
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully; `AND` of the `QO` outputs of `Q_NumericValue_PHYSA`, `NumericValue_PHYSA` and `INI_AR2` (via `AND_QO`).
 
 ### Adapters
 
 - **Plug `VALUEO`** (`adapter::types::unidirectional::AR`): value for a further consumer.
 - **Socket `OVERRIDE_ACTIVE`** (`adapter::types::unidirectional::AX`): when continuously TRUE, the override value is forced.
 
-The block has no event ports of its own.
+### Events
+
+- `INIT` (EInit, input): initialization request; starts the chain `NumericValue_PHYSA` → `INI_AR2` → `Q_NumericValue_PHYSA`.
+- `INITO` (EInit, output): initialization confirmation; comes from `Q_NumericValue_PHYSA.INITO`.
 
 ## How it works
 
-1. `NumericValue_PHYSA` (`QI`=TRUE) reads the VT input field as a physical value (`rPhys`).
+1. `NumericValue_PHYSA` reads the VT input field as a physical value (`rPhys`).
 2. `SEL_Override` (`AR_AX_SEL_AR`) selects: `IN0` = live VT value, `IN1` = override value from `LIT_Override` (`initval_AR`, `INIT_VAL`=`REAL#0.0`), selected via `G` = `OVERRIDE_ACTIVE`.
-3. `AR_TO_AR2` converts into the bidirectional AR2 adapter for `INI_AR2` (`eclipse4diac::storage::INI_AR2`; `QI`=TRUE, `SETM`=TRUE, `DEFAULT_VALUE`=`REAL#0.0`; `KEY`/`SECTION` from outside).
+3. `AR_TO_AR2` converts into the bidirectional AR2 adapter for `INI_AR2` (`eclipse4diac::storage::INI_AR2`; `SETM`=TRUE, `DEFAULT_VALUE`=`REAL#0.0`; `KEY`/`SECTION` from outside).
 4. `AR_TO_AR2.AR_OUT` is duplicated via `AR_SPLIT_2`: `OUT1` to `VALUEO`, `OUT2` to `Q_NumericValue_PHYSA` (VT display, `stObj`).
+
+`QI` is passed through to `NumericValue_PHYSA.QI`, `INI_AR2.QI` and `Q_NumericValue_PHYSA.QI` (no fixed `QI`=TRUE any more). Initialization runs as the chain `INIT` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `INI_AR2.INIT`, `INI_AR2.INITO` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO` and → `AND_QO.REQ`. `QO` is the `AND` (`AND_QO`, `AND_BOOL_3`) of the `QO` outputs of `Q_NumericValue_PHYSA`, `NumericValue_PHYSA` and `INI_AR2`.
 
 ## Technical notes
 

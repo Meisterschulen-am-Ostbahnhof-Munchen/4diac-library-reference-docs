@@ -12,6 +12,8 @@
 
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](../../MyLib_AX/sys/Background-Farbbausteine.md).
 
+Zusätzlich führt der Wrapper die Schnittstelle für Initialisierung und Qualität nach außen: Ereigniseingang `INIT`, Ereignisausgang `INITO`, Dateneingang `QI` (`BOOL`, Initialwert `TRUE`) und Datenausgang `QO` (`BOOL`). Sie sind 1:1 an die innere Instanz `RedGreenBackground4` durchgeschleift: `INIT` → `RedGreenBackground4.INIT`, `RedGreenBackground4.INITO` → `INITO`, `QI` → `RedGreenBackground4.QI`, `RedGreenBackground4.QO` → `QO`.
+
 ## Zusammenfassung
 
 Reine Weiterleitung an `RedGreenBackground4` für den Regelfall, in dem die Diagnosewerte nicht gebraucht werden.

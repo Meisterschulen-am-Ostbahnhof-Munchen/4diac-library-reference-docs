@@ -27,12 +27,17 @@ The **Q_ExecuteMacro_AUI** function block is an AUI adapter wrapper for **Q_Exec
 
 ### **Data Inputs**
 
-No direct data inputs — macro Object ID is received via the AUI adapter socket.
+Apart from `QI`, there are no direct data inputs — macro Object ID is received via the AUI adapter socket.
+
+| Name | Type   | Initial value | Comment                                |
+| ---- | ------ | ------------- | -------------------------------------- |
+| `QI` | `BOOL` | `TRUE`        | Quality Input - TRUE to enable service |
 
 ### **Data Outputs**
 
 | Name | Type | Comment |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 | `STATUS` | `STRING` | Service Status |
 | `s16result` | `INT` | Command return code |
 
@@ -41,6 +46,8 @@ No direct data inputs — macro Object ID is received via the AUI adapter socket
 | Type | Name | Direction | Comment |
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16ObjId` | Socket (Input) | Object ID of macro to execute (1–255) |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_ExecuteMacro`. The data output `QO` (BOOL) is taken over from `Q_ExecuteMacro.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Functionality
 

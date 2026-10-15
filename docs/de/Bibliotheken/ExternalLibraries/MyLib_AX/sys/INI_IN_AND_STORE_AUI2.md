@@ -16,21 +16,31 @@ Allgemeines Muster siehe [INI_IN_AND_STORE / NVS_IN_AND_STORE (gemeinsames Muste
 
 ### Eingangsvariablen
 
+- `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst.
 - `KEY` (STRING): Schlüsselname in der INI-Datei.
 - `SECTION` (STRING): Abschnittsname in der INI-Datei.
 - `u16ObjId` (UINT, Default `ID_NULL`): ObjectID des VT-Eingabefelds.
+
+### Ausgangsvariablen
+
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Q_NumericValue_AUDI.QO`, `ID.QO` und `INI_AUI2.QO`).
 
 ### Adapter
 
 - **Plug `VALUEO`** (`adapter::types::unidirectional::AUI`): Wert für einen weiteren Consumer.
 
-Der Baustein besitzt keine eigenen Ereignisanschlüsse.
+### Ereignisse
+
+- Eingang `INIT` (`EInit`): Initialization Request
+- Ausgang `INITO` (`EInit`): Initialization Confirm
 
 ## Funktionsweise
 
-1. `ID` (`NumericValue_IDA`, `QI`=TRUE) liest das VT-Eingabefeld; `AD_TO_AUI` wandelt in AUI.
-2. `AUI_TO_AUI2` wandelt in den bidirektionalen AUI2-Adapter für `INI_AUI2` (`eclipse4diac::storage::INI_AUI2`; `QI`=TRUE, `SETM`=TRUE, `DEFAULT_VALUE`=`UINT#0`).
+1. `ID` (`NumericValue_IDA`) liest das VT-Eingabefeld; `AD_TO_AUI` wandelt in AUI.
+2. `AUI_TO_AUI2` wandelt in den bidirektionalen AUI2-Adapter für `INI_AUI2` (`eclipse4diac::storage::INI_AUI2`; `SETM`=TRUE, `DEFAULT_VALUE`=`UINT#0`).
 3. `AUI_TO_AUI2.AUI_OUT` wird per `AUI_SPLIT_2` verdoppelt: `OUT1` an `VALUEO`, `OUT2` über `AUI_TO_AUDI` an `Q_NumericValue_AUDI` (`u32NewValue`, VT-Anzeige).
+
+`QI` wird an `ID.QI`, `INI_AUI2.QI` und `Q_NumericValue_AUDI.QI` durchgereicht. Die Initialisierungskette lautet `INIT` → `ID.INIT`, `ID.INITO` → `INI_AUI2.INIT`, `INI_AUI2.INITO` → `Q_NumericValue_AUDI.INIT`, `Q_NumericValue_AUDI.INITO` → `INITO` (und zusätzlich → `AND_QO.REQ`). `QO` ist die UND-Verknüpfung (`AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_3`) von `Q_NumericValue_AUDI.QO`, `ID.QO` und `INI_AUI2.QO`.
 
 ## Technische Besonderheiten
 

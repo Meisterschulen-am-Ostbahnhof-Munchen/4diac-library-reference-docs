@@ -15,26 +15,27 @@ This subapplication is designed for multi-channel use cases where one softkey sh
 
 ## Interface Structure
 
-The subapplication exposes two WSTRING data inputs and six unidirectional AX adapter plugs. It has no explicit event inputs, event outputs, data outputs, or sockets.
+The subapplication exposes the data input `QI`, two WSTRING data inputs, the data output `QO` and six unidirectional AX adapter plugs. Apart from `INIT`/`INITO` it has no event inputs or outputs and no sockets.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation (from `PUBLISH_STATE.INITO`)
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |---|---|---|
+| `QI` | BOOL | Quality Input, TRUE enables the service (default `TRUE`); distributed to `TRIGGER_SERVER.QI` and `PUBLISH_STATE.QI`. |
 | `ID_TRIGGER_METHOD` | WSTRING | Local OPC UA method address (`ACTION=CREATE_METHOD`) used as the argumentless toggle trigger. It is called remotely by the operator panel via `CALL_METHOD`. |
 | `ID_STATE_WRITE` | WSTRING | Local OPC UA publish address (`ACTION=WRITE`) for the actual toggle state. It can be subscribed by remote operator panels, e.g. for a GreenWhite background indication. |
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output, AND of `TRIGGER_SERVER.QO` and `PUBLISH_STATE.QO` (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_2`)
 
 ### **Adapters**
 
@@ -60,6 +61,7 @@ The subapplication provides a click-toggle behaviour:
 5. Six of the branches are connected to the `OUT1` .. `OUT6` adapter plugs and can be wired to sibling subapplications.
 6. The seventh branch is connected to `PUBLISH_STATE`, which publishes the state under the configured OPC UA address `ID_STATE_WRITE`.
 7. `TRIGGER_SERVER.IND` is directly connected to `TRIGGER_SERVER.RSP`, ensuring that the OPC UA server response is sent immediately and that the server thread is not blocked.
+8. Initialization and quality: `INIT` → `TRIGGER_SERVER.INIT`; `TRIGGER_SERVER.INITO` → `PUBLISH_STATE.INIT`; `PUBLISH_STATE.INITO` → `INITO` (and → `AND_QO.REQ`). `QI` → `TRIGGER_SERVER.QI` and `PUBLISH_STATE.QI`; `TRIGGER_SERVER.QO` → `AND_QO.IN1`, `PUBLISH_STATE.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 This allows the toggle state to be used both locally in the automation network and remotely for HMI display purposes.
 
@@ -69,6 +71,7 @@ This allows the toggle state to be used both locally in the automation network a
 - Uses `adapter::events::unidirectional::AX_T_FF` as the central toggle flip-flop.
 - Uses `adapter::events::unidirectional::AX_SPLIT_7` to distribute one toggle state to seven outputs.
 - Uses `adapter::net::AX_PUBLISH_1` to publish the current toggle state to OPC UA.
+- Uses `iec61131::booleanOperators::AND_BOOL_2` (`AND_QO`) to combine the `QO` outputs of the server and the publisher.
 - `TRIGGER_SERVER.IND` is wired directly to `TRIGGER_SERVER.RSP` to avoid blocking the OPC UA server thread.
 - Supports up to six 1:1 adapter connections to sibling subapplications.
 - The data input connections are marked as not visible in the internal network to keep the design compact.

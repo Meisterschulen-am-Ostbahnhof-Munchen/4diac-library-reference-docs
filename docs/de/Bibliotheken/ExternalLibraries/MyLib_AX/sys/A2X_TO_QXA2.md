@@ -15,22 +15,29 @@ Der Funktionsbaustein **A2X_TO_QXA2** ist eine Subapplikation (Composite) zur En
 
 ### **Ereignis-Eingänge**
 
-Keine.
+| Name   | Typ     | Kommentar              |
+|--------|---------|------------------------|
+| `INIT` | `EInit` | Initialization Request |
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+| Name    | Typ     | Kommentar            |
+|---------|---------|----------------------|
+| `INITO` | `EInit` | Initialization Confirm |
 
 ### **Daten-Eingänge**
 
 | Name        | Typ                         | Initialwert | Kommentar                          |
 |-------------|-----------------------------|-------------|-----------------------------------|
+| `QI`          | `BOOL`                      | `TRUE`      | Quality Input - TRUE, um den Dienst freizugeben |
 | `Output_UP`   | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Physischer Ausgang für forward/up   |
 | `Output_DOWN` | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Physischer Ausgang für backward/down |
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Typ    | Kommentar                                              |
+|------|--------|--------------------------------------------------------|
+| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 
 ### **Adapter**
 
@@ -46,13 +53,14 @@ Im Inneren wird das A2X-Signal zunächst dem Funktionsbaustein `UNBUNDLE` (Typ `
 
 Anschließend werden diese beiden Signale über Adapterverbindungen an die beiden logiBUS_QXA-Ausgangsbausteine `DigitalOutput_UP` und `DigitalOutput_DOWN` übergeben. Die QXA-Bausteine wandeln die digitalen Signale in physische Ausgangswerte um. Die Sollwerte für diese Ausgänge werden über die Daten-Eingänge `Output_UP` und `Output_DOWN` von außen vorgegeben und mit den jeweiligen `Output`-Eingängen der QXA-Bausteine verbunden. Damit steuern die externen Vorgaben die tatsächlichen Ausgangszustände der logiBUS-Digitalausgänge.
 
-Die Verbindungsstruktur ist rein datenflussorientiert – es existiert keine Ereignissteuerung. Die gesamte Logik ist in der Composite-Ebene gekapselt und benötigt keine zusätzlichen Ressourcen-Ressourcen.
+Die Initialisierung wird durch die Ereigniskette `INIT` → `DigitalOutput_UP.INIT`, `DigitalOutput_UP.INITO` → `DigitalOutput_DOWN.INIT`, `DigitalOutput_DOWN.INITO` → `INITO` durchgereicht. `QI` wird an die `QI`-Eingänge beider QXA-Bausteine weitergegeben. Die `QO`-Ausgänge beider QXA-Bausteine werden im Baustein `AND_QO` (Typ `iec61131::booleanOperators::AND_BOOL_2`) per UND verknüpft und als `QO` ausgegeben; der Baustein `AND_QO` wird durch `DigitalOutput_DOWN.INITO` über `REQ` ausgelöst. Die Signalverarbeitung selbst (A2X → Ausgänge) erfolgt weiterhin rein datenflussorientiert über Adapterverbindungen. Die gesamte Logik ist in der Composite-Ebene gekapselt und benötigt keine zusätzlichen Ressourcen-Ressourcen.
 
 ## Technische Besonderheiten
 
 - **Composite-Stil:** Die Entbündelung und die physische Ausgangsansteuerung sind als Subapplikation realisiert und können somit in verschiedenen Ressourcen oder Geräten wiederverwendet werden.
-- **Verwendung von logiBUS_QXA:** Die Ausgangsbausteine sind vom Typ `logiBUS::io::DQ::logiBUS_QXA` und besitzen den Parameter `QI = TRUE`, wodurch die Ausgänge dauerhaft aktiviert sind.
-- **Keine Ereignisverarbeitung:** Der Baustein arbeitet rein signal- bzw. datengetrieben, was die Einbindung in zyklische oder ereignisgesteuerte Umgebungen vereinfacht.
+- **Verwendung von logiBUS_QXA:** Die Ausgangsbausteine sind vom Typ `logiBUS::io::DQ::logiBUS_QXA` und erhalten ihren `QI`-Eingang vom `QI`-Eingang der Subapplikation (Initialwert `TRUE`).
+- **Nur Initialisierungsereignisse:** Außer `INIT`/`INITO` gibt es keine Ereignisse; die Signalverarbeitung arbeitet rein signal- bzw. datengetrieben, was die Einbindung in zyklische oder ereignisgesteuerte Umgebungen vereinfacht.
+- **Durchgereichter Status:** `QO` ist die UND-Verknüpfung (`AND_QO`) der `QO`-Ausgänge von `DigitalOutput_UP` und `DigitalOutput_DOWN`.
 - **Daten-Eingänge als Sollwerte:** `Output_UP` und `Output_DOWN` sind als Strukturvariablen vom Typ `logiBUS_DO_S` definiert und standardmäßig auf `Invalid` gesetzt, was eine explizite Initialisierung durch die Anwendung erfordert.
 
 ## Zustandsübersicht

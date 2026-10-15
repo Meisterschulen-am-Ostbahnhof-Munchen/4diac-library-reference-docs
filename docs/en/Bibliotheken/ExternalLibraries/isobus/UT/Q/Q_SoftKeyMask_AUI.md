@@ -29,6 +29,7 @@ The **Q_SoftKeyMask_AUI** function block is an AUI adapter wrapper for **Q_SoftK
 
 | Name | Type | Comment |
 |---|---|---|
+| `QI` | `BOOL` | Quality Input - TRUE to enable service |
 | `u8MaskType` | `USINT` | Mask Type (1: DataMask, 2: AlarmMask) |
 | `u16DataMaskId` | `UINT` | Object ID of target Data/AlarmMask |
 
@@ -36,6 +37,7 @@ The **Q_SoftKeyMask_AUI** function block is an AUI adapter wrapper for **Q_SoftK
 
 | Name | Type | Comment |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 | `STATUS` | `STRING` | Service Status |
 | `s16result` | `INT` | Command return code |
 
@@ -45,6 +47,8 @@ The **Q_SoftKeyMask_AUI** function block is an AUI adapter wrapper for **Q_SoftK
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16SoftKeyMaskId` | Socket (Input) | New soft key mask Object ID |
 | `adapter::types::unidirectional::AUI` | `u16OldSoftKeyMaskId` | Plug (Output) | Previous soft key mask Object ID |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_SoftKeyMask`. The data output `QO` (BOOL) is taken over from `Q_SoftKeyMask.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Functionality
 

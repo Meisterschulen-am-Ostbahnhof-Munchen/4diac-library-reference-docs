@@ -16,30 +16,40 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **RECEIVE**: `adapter::net::AR_SERVER_0_1` (Parameter `QI=TRUE`) – erzeugt die OPC-UA-Methode und liefert das empfangene `REAL`-Argument am Adapter `OUT`
-    - **PUBLISH**: `adapter::net::AR_PUBLISH_1` (Parameter `QI=TRUE`) – publiziert den Wert unter der lokalen Adresse
+    - **RECEIVE**: `adapter::net::AR_SERVER_0_1` (`QI` von außen) – erzeugt die OPC-UA-Methode und liefert das empfangene `REAL`-Argument am Adapter `OUT`
+    - **PUBLISH**: `adapter::net::AR_PUBLISH_1` (`QI` von außen) – publiziert den Wert unter der lokalen Adresse
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` – verknüpft die `QO` von `RECEIVE` und `PUBLISH`
 - **Funktionsweise**: Der Wert aus dem Methodenaufruf wird ohne Zwischenlogik direkt an den Publisher weitergegeben.
 
 ## Schnittstellenstruktur
 
-### **Ereignis-Eingänge / Ereignis-Ausgänge**
+### **Ereignis-Eingänge**
 
-Keine – die SubApp hat keine Ereignis-Ports.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `RECEIVE.INIT`
+
+### **Ereignis-Ausgänge**
+
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `PUBLISH.INITO`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst; geht an `RECEIVE.QI` und `PUBLISH.QI`
 - **ID_METHOD** (`WSTRING`): Lokal erzeugte OPC-UA-Methode (`ACTION=CREATE_METHOD`, 1 `REAL`-Argument) – von einer anderen Station (`AR_CLIENT_1_0`) und/oder direkt vom OPC-Dashboard aufrufbar
 - **ID_WRITE** (`WSTRING`): Lokale Publish-Adresse (`REAL`, `ACTION=PUBLISH`) für den empfangenen Wert – typischerweise von einem lokalen Self-Subscribe gegengelesen
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND aus `RECEIVE.QO` und `PUBLISH.QO`)
 
 ## Programmablauf und Verbindungen
 
 - `ID_METHOD` → `RECEIVE.ID`
 - `ID_WRITE` → `PUBLISH.ID`
+- `INIT` → `RECEIVE.INIT`
 - `RECEIVE.INITO` → `PUBLISH.INIT` (Der Publisher wird initialisiert, sobald die Methode angelegt ist)
+- `PUBLISH.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `RECEIVE.QI` und `PUBLISH.QI`
+- `RECEIVE.QO` → `AND_QO.IN1`, `PUBLISH.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 - `RECEIVE.OUT` → `PUBLISH.IN` (Adapterverbindung des `REAL`-Wertes)
 
 ## Technische Besonderheiten

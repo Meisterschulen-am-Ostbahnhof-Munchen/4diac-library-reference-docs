@@ -19,22 +19,25 @@ Der Baustein dient für Ausgänge, die sowohl echt bedient (SoftKey/AUX/Web/Dash
 - **Typ**: SubAppType
 - **Verwendete interne Bausteine**:
     - **SoftkeyAuxMethod**: SubApp [`MyLib::sys::Softkey_Aux_Method_IE`](./Softkey_Aux_Method_IE.md) – SoftKey, AUX oder lokale Methode
-    - **Button_IE_B**: `isobus::UT::io::Button::Button_IE` (`QI=TRUE`, `InputEvent=BT_RELEASED_UNLATCHED`) – weiterer Button
+    - **Button_IE_B**: `isobus::UT::io::Button::Button_IE` (`InputEvent=BT_RELEASED_UNLATCHED`) – weiterer Button
     - **MERGE**: `iec61499::events::E_MERGE_2` – führt beide `IND`-Ereignisse zusammen
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` – verknüpft die `QO` von `Button_IE_B` und `SoftkeyAuxMethod`
 - **Importe**: `ID_NULL`, `BT_RELEASED_UNLATCHED`
 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `Button_IE_B.INIT`
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `SoftkeyAuxMethod.INITO`
 - **IND**: Feuert, wenn SoftKey, AUX, die lokale Methode oder der zusätzliche Button aktiviert bzw. aufgerufen wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst; geht an `Button_IE_B` und `SoftkeyAuxMethod`
 - **u16ObjId** (`UINT`): Object-ID des SoftKeys
 - **u16ObjIdA** (`UINT`): Object-ID der `AuxFunction2`
 - **u16ObjIdB** (`UINT`, Vorgabe `ID_NULL`): Object-ID eines weiteren Buttons (z. B. IO-Diag-Testbutton auf der Ausgänge-Diagnoseseite; kann auch ein regulärer Button sein), gleichberechtigt zu SoftKey/AUX/Methode
@@ -42,7 +45,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND der `QO` von `Button_IE_B` und `SoftkeyAuxMethod`)
 
 ## Programmablauf und Verbindungen
 
@@ -50,6 +53,8 @@ Keine.
 - `u16ObjIdB` → `Button_IE_B.u16ObjId`
 - `SoftkeyAuxMethod.IND` → `MERGE.EI1`; `Button_IE_B.IND` → `MERGE.EI2`
 - `MERGE.EO` → `IND`
+- Initialisierung: `INIT` → `Button_IE_B.INIT`, `Button_IE_B.INITO` → `SoftkeyAuxMethod.INIT`, `SoftkeyAuxMethod.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `Button_IE_B.QI` und `SoftkeyAuxMethod.QI`; `Button_IE_B.QO` → `AND_QO.IN1`, `SoftkeyAuxMethod.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

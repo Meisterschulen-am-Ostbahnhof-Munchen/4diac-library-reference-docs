@@ -14,21 +14,24 @@
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-*No direct event outputs - events run via the adapter plug*
+- **INITO** (`EInit`): initialization confirmation
+
+Apart from `INITO` there are no event outputs - user events run via the adapter plug.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of the softkey (VT)
 - **u16ObjIdA** (`UINT`, default `ID_NULL`): Object ID of the AuxFunction2 (VT)
 - **ID** (`WSTRING`): Local subscribe address for a web client (e.g. `vt-ui-mirror`) on the same module, ORed with softkey and AUX
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - AND of `Softkey_IXA.QO`, `Aux_IXA.QO` and `SUBSCRIBE_WEB.QO`
 
 ### **Adapters**
 
@@ -36,10 +39,11 @@
 
 ## Function Blocks (FBs) Used
 
-- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`)
-- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`)
-- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`)
+- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA`
+- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA`
+- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1`
 - **OR_MERGE**: `adapter::booleanOperators::AX_OR_3`
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3`
 
 ## Program Flow and Connections
 
@@ -48,11 +52,14 @@
 - `Aux_IXA.IN` → `OR_MERGE.IN2`
 - `SUBSCRIBE_WEB.OUT` → `OR_MERGE.IN3`
 - `OR_MERGE.OUT` → `OUT`
+- `INIT` → `Softkey_IXA.INIT`; `Softkey_IXA.INITO` → `Aux_IXA.INIT`; `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`; `SUBSCRIBE_WEB.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI` and `SUBSCRIBE_WEB.QI`
+- `Softkey_IXA.QO` → `AND_QO.IN1`; `Aux_IXA.QO` → `AND_QO.IN2`; `SUBSCRIBE_WEB.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 
 - Continuous level instead of an edge: `OUT` stays `TRUE` as long as at least one source is active.
-- No remote write and no event output.
+- No remote write and no user event output (only `INITO`).
 
 ## Application Scenarios
 

@@ -24,6 +24,7 @@ Der **Q_Size** ist ein standardkonformer Funktionsbaustein zur Größenänderung
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u16ObjId` (UINT): Objekt-ID (16-bit)
 - `xScale` (BOOL): Bei TRUE werden die Werte `u16Width`/`u16Height` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjId` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
 - `u16Width` (UINT): Neue Breite in Pixeln
@@ -31,6 +32,7 @@ Der **Q_Size** ist ein standardkonformer Funktionsbaustein zur Größenänderung
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u16OldWidth` (UINT): Vorherige Breite
 - `u16OldHeight` (UINT): Vorherige Höhe
@@ -44,6 +46,8 @@ Container (3000–3999), Button (6000–6999), Input Boolean Field (7000–7999)
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Zielobjekt-ID

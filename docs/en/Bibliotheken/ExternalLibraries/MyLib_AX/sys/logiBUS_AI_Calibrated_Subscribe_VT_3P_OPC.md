@@ -16,13 +16,15 @@ The physical VT elements stay where the VT is: the keys **C_MIN**/**C_MID**/**C_
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
+
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service
 
 Calibrated value:
 
@@ -52,7 +54,7 @@ Raw value displays (pure diagnostics):
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - TRUE if the service executed successfully (AND of the `QO` of `ValueDisplay`, `TriggerMIN`, `TriggerMID`, `TriggerMAX`, `RawDisplay`, `MinRawDisplay`, `MidRawDisplay` and `MaxRawDisplay`)
 
 ### **Adapters**
 
@@ -63,6 +65,7 @@ Raw value displays (pure diagnostics):
 - **ValueDisplay**: SubApp [`MyLib::sys::AR_M2M_Subscribe_TO_Q_Publish_OPC`](./AR_M2M_Subscribe_TO_Q_Publish_OPC.md) - calibrated value
 - **RawDisplay**, **MinRawDisplay**, **MidRawDisplay**, **MaxRawDisplay**: the same SubApp for the raw value and the raw values of the three calibration points
 - **TriggerMIN**, **TriggerMID**, **TriggerMAX**: SubApp [`MyLib::sys::Button_CLIENT_Method_IE`](./Button_CLIENT_Method_IE.md) (`InputEvent=BT_PRESSED_LATCHED`) - key → remote method call (`ID_CALL`)
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_8` - ANDs the `QO` outputs of the eight inner SubApps into the block output `QO`
 - **Imports**: `ID_NULL`, `BT_PRESSED_LATCHED`, `NumericObjectPool_S`
 
 ## Program Flow and Connections
@@ -73,6 +76,9 @@ Raw value displays (pure diagnostics):
 - `ID_MINRAW_M2M_READ`, `stObjMinRaw`, `ID_MINRAW_WRITE` → `MinRawDisplay`
 - `ID_MIDRAW_M2M_READ`, `stObjMidRaw`, `ID_MIDRAW_WRITE` → `MidRawDisplay`
 - `ID_MAXRAW_M2M_READ`, `stObjMaxRaw`, `ID_MAXRAW_WRITE` → `MaxRawDisplay`
+- Initialization chain: `INIT` → `ValueDisplay.INIT`, `ValueDisplay.INITO` → `TriggerMIN.INIT`, `TriggerMIN.INITO` → `TriggerMID.INIT`, `TriggerMID.INITO` → `TriggerMAX.INIT`, `TriggerMAX.INITO` → `RawDisplay.INIT`, `RawDisplay.INITO` → `MinRawDisplay.INIT`, `MinRawDisplay.INITO` → `MidRawDisplay.INIT`, `MidRawDisplay.INITO` → `MaxRawDisplay.INIT`, `MaxRawDisplay.INITO` → `INITO` and → `AND_QO.REQ`
+- `QI` → `QI` of all eight inner SubApps
+- `ValueDisplay.QO`, `TriggerMIN.QO`, `TriggerMID.QO`, `TriggerMAX.QO`, `RawDisplay.QO`, `MinRawDisplay.QO`, `MidRawDisplay.QO`, `MaxRawDisplay.QO` → `AND_QO.IN1`..`IN8`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

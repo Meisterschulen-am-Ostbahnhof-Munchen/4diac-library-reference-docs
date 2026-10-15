@@ -1,6 +1,5 @@
 # TOGGLE_RPC_MERGE_QXA_OPC
 
-
 ![TOGGLE_RPC_MERGE_QXA_OPC_network](./TOGGLE_RPC_MERGE_QXA_OPC_network.svg)
 
 ![TOGGLE_RPC_MERGE_QXA_OPC](./TOGGLE_RPC_MERGE_QXA_OPC.svg)
@@ -13,20 +12,21 @@ TOGGLE_RPC_MERGE_QXA_OPC is a composite subapplication designed for single‑act
 
 ## Interface Structure
 
-The subapplication exposes only data inputs – no event interface or adapters are present at the subapp level. All event and adapter connections are internal.
+The subapplication exposes data inputs plus the quality/initialization ports (`QI`, `QO`, `INIT`, `INITO`); no adapters are present at the subapp level. All other event and adapter connections are internal.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm
 
 ### **Data Inputs**
 
 | Name | Type | Description |
 |------|------|-------------|
+| `QI` | `BOOL` | Quality input - TRUE enables the service (initial value: `TRUE`) |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Physical output value to be applied (initialized to `logiBUS_DO::Invalid`). Internal connection to the physical output FB. |
 | `ID_TEST_READ` | `WSTRING` | Subscription address for the existing IO‑test command (e.g., `STG5_Q0x_READ`). |
 | `ID_TEST_WRITE` | `WSTRING` | Publish address for the IO‑test feedback. Must be a separate node from `ID_TEST_READ` to avoid self‑feedback/latch. |
@@ -35,7 +35,7 @@ None.
 
 ### **Data Outputs**
 
-None – the subapplication does not expose output data variables; all results are delivered through the internal OPC‑UA publish mechanisms.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_5`) of the `QO` outputs of `TRIGGER_SERVER`, `SUBSCRIBE_TEST`, `DigitalOutput`, `PUBLISH_TEST` and `PUBLISH_STATE`. The actual results are still delivered through the internal OPC-UA publish blocks.
 
 ### **Adapters**
 
@@ -61,6 +61,8 @@ The subapplication implements a **click‑toggle** behaviour:
   1. `DigitalOutput` – drives the physical logiBUS channel.
   2. `PUBLISH_TEST` – writes to the IO‑test feedback node (address from `ID_TEST_WRITE`).
   3. `PUBLISH_STATE` – writes to the functional feedback node (address from `ID_STATE_WRITE`).
+
+Initialization and quality: `INIT` → `TRIGGER_SERVER.INIT` → `SUBSCRIBE_TEST.INIT` → `DigitalOutput.INIT` → `PUBLISH_TEST.INIT` → `PUBLISH_STATE.INIT`; `PUBLISH_STATE.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is distributed to all five blocks (no hard-wired `QI` parameter any more); their `QO` outputs feed `AND_QO.IN1` to `AND_QO.IN5` in this order, `AND_QO.OUT` → `QO`.
 
 The use of **separate write nodes** for feedback avoids the self‑latch problem that would occur if the same OPC‑UA node were used for both command and feedback. The toggle state is **not actively written back** to the panel via a client; instead, it is locally published and remotely subscribed – a pattern consistent with all other functions in the project.
 

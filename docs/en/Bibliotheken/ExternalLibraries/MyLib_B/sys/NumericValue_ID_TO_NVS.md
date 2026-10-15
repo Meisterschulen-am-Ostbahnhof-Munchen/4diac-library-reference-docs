@@ -15,18 +15,20 @@ NumericValue_ID_TO_NVS is a generic IEC 61499 subapplication that reads a numeri
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; goes to `ID.INIT` and starts the initialization chain
 
 ### **Event Outputs**
 
 | Event   | Comment                                                                 |
 |---------|-------------------------------------------------------------------------|
 | `IND`   | Indicates that either a SET or GET operation on the NVS has been completed. |
+| `INITO` | Initialization confirm; comes from `Q_NumericValue.INITO`, the end of the chain `ID` → `NVS` → `Q_NumericValue`. |
 
 ### **Data Inputs**
 
 | Name      | Type     | Initial Value | Comment                            |
 |-----------|----------|---------------|------------------------------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE to enable service; passed through to `ID.QI`, `NVS.QI` and `Q_NumericValue.QI` |
 | `KEY`     | `STRING` | —             | Key name used in the NVS storage.  |
 | `u16ObjId`| `UINT`   | `ID_NULL`     | Object ID of the numeric value to be processed. |
 
@@ -34,6 +36,7 @@ None.
 
 | Name      | Type     | Comment                                            |
 |-----------|----------|-----------------------------------------------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully; AND of `Q_NumericValue.QO`, `ID.QO` and `NVS.QO` |
 | `VALUEO`  | `UDINT`  | Numeric value that is currently stored in the NVS.  |
 
 ### **Adapters**
@@ -59,6 +62,8 @@ The internal event flow works as follows:
 - After conversion, the `CNF` event triggers the NVS block to perform a `SET` operation.
 - A completed SET operation is reported on `SETO`, which is propagated to the subapplication output `IND`.
 - On initialization, the NVS block performs a GET operation automatically after its `INITO` event. The retrieved value is then assigned to `VALUEO` and also passed to the internal `Q_NumericValue` block.
+
+**Initialization and quality ports:** `INIT` → `ID.INIT`, `ID.INITO` → `NVS.INIT`, `NVS.INITO` → `Q_NumericValue.INIT`, `Q_NumericValue.INITO` → `INITO` (and → `AND_QO.REQ`); in addition `NVS.INITO` still triggers `NVS.GET`. `QI` (data input, BOOL, default `TRUE`) is passed on to `ID.QI`, `NVS.QI` and `Q_NumericValue.QI`. The output `QO` (BOOL) is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`), which combines `Q_NumericValue.QO`, `ID.QO` and `NVS.QO`. This lets the surrounding logic enable the service and check whether it succeeded.
 
 ## Technical Features
 

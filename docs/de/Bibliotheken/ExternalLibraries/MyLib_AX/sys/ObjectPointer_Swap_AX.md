@@ -14,19 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialisierungsanforderung (an `Q_NumericValue.INIT`)
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `Q_NumericValue.INITO`)
 - **CNF**: Execution Confirmation, durchgereicht von `Q_NumericValue.CNF`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **u16ObjId_Pointer** (UINT): Object ID des ObjectPointers (CPointer), dessen Ziel geschaltet wird (Default `ID_NULL`)
 - **u16ObjId_Show** (UINT): Object ID, die bei `DI1 = TRUE` unter dem Pointer angezeigt wird (Default `ID_NULL`)
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde
 - **STATUS_1** (STRING): Service-Status von `Q_NumericValue`
 - **u32OldValue_1** (UDINT): alter Wert der ID
 - **result_1** (INT): Rückgabewert (siehe `Q_NumericValue`)
@@ -43,6 +46,8 @@ Das Netzwerk besteht aus zwei Bausteinen:
 - `Q_NumericValue` (`isobus::UT::Q::Q_NumericValue`): `AX_SEL.OUT` → `u32NewValue`, `u16ObjId_Pointer` → `u16ObjId`, ausgelöst durch `AX_SEL.CNF` → `Q_NumericValue.REQ`. `Q_NumericValue.CNF` → `CNF`; `STATUS`, `u32OldValue` und `s16result` werden als `STATUS_1`, `u32OldValue_1` und `result_1` ausgegeben.
 
 Ändert sich `DI1`, wird so der neue Zielwert (`u16ObjId_Show` oder `ID_NULL`) als numerischer Wert an den ObjectPointer geschrieben.
+
+Zusätzlich gilt: `INIT` → `Q_NumericValue.INIT`; `Q_NumericValue.INITO` → `INITO`; `QI` → `Q_NumericValue.QI`; `Q_NumericValue.QO` → `QO`.
 
 ## Technische Besonderheiten
 

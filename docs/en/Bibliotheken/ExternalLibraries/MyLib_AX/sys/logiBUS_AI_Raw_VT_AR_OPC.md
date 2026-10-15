@@ -14,21 +14,22 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation (from `Q_NumericValue_RAW.INITO`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - `TRUE` enables the services (→ `Q_NumericValue_RAW.QI`, `logiBUS_AI_IDA.QI` and `AR_PUBLISH_RAW.QI`)
 - **Input** (`logiBUS::io::AI::logiBUS_AI_S`): selection of the input `AnalogInput_I1`..`I8` (default `logiBUS_AI::Invalid`)
 - **u16ObjId_RAWVAR** (`UINT`): object ID of the `CNumberVariable` (raw value 0..4095, uncalibrated, pure diagnostic display)
 - **ID_RAW_WRITE** (`WSTRING`): raw value feedback address (`REAL` 0..4095, `ACTION=PUBLISH`)
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - `TRUE` if all services succeeded (AND of `Q_NumericValue_RAW.QO`, `logiBUS_AI_IDA.QO` and `AR_PUBLISH_RAW.QO`)
 
 ### **Adapters**
 
@@ -36,19 +37,23 @@ None.
 
 ## Function Blocks (FBs) Used
 
-- **`logiBUS_AI_IDA`** (`logiBUS::io::AI::logiBUS_AI_IDA`): parameters `QI = TRUE`, `AnalogInput_hysteresis = DWORD#50`, `TimeDelta = DWORD#250`, `TimeRateLimit = DWORD#100`
+- **`logiBUS_AI_IDA`** (`logiBUS::io::AI::logiBUS_AI_IDA`): parameters `AnalogInput_hysteresis = DWORD#50`, `TimeDelta = DWORD#250`, `TimeRateLimit = DWORD#100`
 - **`AD_TO_AUDI`** (`adapter::conversion::unidirectional::AD_TO_AUDI`)
 - **`AUDI_SPLIT_2`** (`adapter::events::unidirectional::AUDI_SPLIT_2`)
 - **`Q_NumericValue_RAW`** (`isobus::UT::Q::Q_NumericValue_AUDI`): VT raw value display
 - **`AUDI_TO_AR`** (`adapter::conversion::unidirectional::AUDI_TO_AR`)
 - **`AR_SPLIT_2_Raw`** (`adapter::events::unidirectional::AR_SPLIT_2`)
-- **`AR_PUBLISH_RAW`** (`adapter::net::AR_PUBLISH_1`, `QI = TRUE`): OPC-UA publish
+- **`AR_PUBLISH_RAW`** (`adapter::net::AR_PUBLISH_1`): OPC-UA publish
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_3`): combines the `QO` outputs of `Q_NumericValue_RAW`, `logiBUS_AI_IDA` and `AR_PUBLISH_RAW`
 
 ## Functionality
 
 - `Input` → `logiBUS_AI_IDA.Input`
 - `logiBUS_AI_IDA.IN` → `AD_TO_AUDI.AD_IN` → `AUDI_SPLIT_2.IN`
 - `AUDI_SPLIT_2.OUT1` → `Q_NumericValue_RAW.u32NewValue` (VT display); `u16ObjId_RAWVAR` → `Q_NumericValue_RAW.u16ObjId`
+- `INIT` → `logiBUS_AI_IDA.INIT`; `logiBUS_AI_IDA.INITO` → `AR_PUBLISH_RAW.INIT`; `AR_PUBLISH_RAW.INITO` → `Q_NumericValue_RAW.INIT`; `Q_NumericValue_RAW.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Q_NumericValue_RAW.QI`, `logiBUS_AI_IDA.QI` and `AR_PUBLISH_RAW.QI`
+- `Q_NumericValue_RAW.QO` → `AND_QO.IN1`; `logiBUS_AI_IDA.QO` → `AND_QO.IN2`; `AR_PUBLISH_RAW.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 - `AUDI_SPLIT_2.OUT2` → `AUDI_TO_AR.AUDI_IN` → `AR_SPLIT_2_Raw.IN`
 - `AR_SPLIT_2_Raw.OUT1` → `AR_OUT`
 - `AR_SPLIT_2_Raw.OUT2` → `AR_PUBLISH_RAW.IN`; `ID_RAW_WRITE` → `AR_PUBLISH_RAW.ID`

@@ -11,6 +11,13 @@
 
 ![AX_SUBSCRIBE_BG3_WEB_OPC](AX_SUBSCRIBE_BG3_WEB_OPC.svg)
 
+## Interface
+
+- **Event input**: `INIT` (`EInit`, Initialization Request)
+- **Event output**: `INITO` (`EInit`, Initialization Confirm)
+- **Data inputs**: `QI` (`BOOL`, initial value `TRUE`, Quality Input), `u16ObjId`, `u16ObjIdA`, `ID_SUBSCRIBE`, `ID_STATUS_WEB`
+- **Data output**: `QO` (`BOOL`, Quality Output)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-Blocks: AX_SUBSCRIBE_BG3_WEB_OPC
@@ -18,13 +25,15 @@
 - **Type**: SubAppType
 - **Internal FBs Used**:
 
-- **AX_SUBSCRIBE_1**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) — Remote subscription of the status/color (`ID_SUBSCRIBE`).
+- **AX_SUBSCRIBE_1**: `adapter::net::AX_SUBSCRIBE_1` (`QI` from the block input `QI`) — Remote subscription of the status/color (`ID_SUBSCRIBE`).
 
 - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — Branches the received signal to the VT display and the local web republish.
 
-- **GreenWhiteBackground3_AX** (SubApp, `MyLib::sys`): Synchronously colors both a SoftKey (`u16ObjId`) and an AuxFunction2 (`u16ObjIdA`).
+- **GreenWhiteBackground3_AX** (SubApp, `MyLib::sys`): Synchronously colors both a SoftKey (`u16ObjId`) and an AuxFunction2 (`u16ObjIdA`); it has its own `INIT`/`INITO` and `QI`/`QO`.
 
-- **STATUS_WEB_PUBLISH**: `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) — Republishes the received state to this module's local OPC UA server (`ID_STATUS_WEB`).
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — ANDs the `QO` outputs of `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` and `GreenWhiteBackground3_AX` into the block output `QO`.
+
+- **STATUS_WEB_PUBLISH**: `adapter::net::AX_PUBLISH_1` (`QI` from the block input `QI`) — Republishes the received state to this module's local OPC UA server (`ID_STATUS_WEB`).
 
 - **How it works**: The state received via remote subscribe is simultaneously passed to the VT background color and the local web republish server via `AX_SPLIT_2`.
 
@@ -34,6 +43,12 @@
 1. `u16ObjId` → `GreenWhiteBackground3_AX.u16ObjId`; `u16ObjIdA` → `GreenWhiteBackground3_AX.u16ObjIdA`; `ID_SUBSCRIBE` → `AX_SUBSCRIBE_1.ID`; `ID_STATUS_WEB` → `STATUS_WEB_PUBLISH.ID` (Data connections, hidden).
 
 2. `AX_SUBSCRIBE_1.OUT` → `AX_SPLIT_2.IN` → `AX_SPLIT_2.OUT1` → `GreenWhiteBackground3_AX.DI1` (VT display), `AX_SPLIT_2.OUT2` → `STATUS_WEB_PUBLISH.IN` (Web Republish).
+
+3. Initialization chain: `INIT` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `STATUS_WEB_PUBLISH.INIT`, `STATUS_WEB_PUBLISH.INITO` → `GreenWhiteBackground3_AX.INIT`, `GreenWhiteBackground3_AX.INITO` → `INITO`; additionally `GreenWhiteBackground3_AX.INITO` → `AND_QO.REQ`.
+
+4. `QI` → `AX_SUBSCRIBE_1.QI`, `STATUS_WEB_PUBLISH.QI` and `GreenWhiteBackground3_AX.QI`.
+
+5. `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `STATUS_WEB_PUBLISH.QO` → `AND_QO.IN2`, `GreenWhiteBackground3_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technical Features
 

@@ -14,20 +14,23 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialisierungsanforderung; wird an `INI.INIT` weitergereicht
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `INI.INITO`
 - **CNF** (Confirmation): feuert, wenn ein (neuer oder initial geladener) Wert vorliegt. An einen `REQ`-Eingang eines Ziel-FB anschließen (z. B. `CTRL_PID_AR.REQ`), damit dieser den frischen Wert sofort übernimmt, statt auf den nächsten eigenen Adapter-Trigger zu warten
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL, Initialwert `TRUE`): Quality Input, schaltet den Dienst frei; wird an `INI.QI` weitergereicht
 - **KEY** (STRING): Schlüsselname in der INI-Datei
 - **SECTION** (STRING): Sektionsname in der INI-Datei
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object-Pool-Eigenschaften der VT-Zahlenvariable (Default: `u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 0`)
 
 ### **Daten-Ausgänge**
 
+- **QO** (BOOL): Quality Output; kommt von `INI.QO`
 - **VALUE** (REAL): persistierter/geladener Wert als einfaches REAL (kein AR-Adapter)
 
 ### **Adapter**
@@ -40,6 +43,8 @@ Das Netzwerk enthält zwei Instanzen:
 
 - `INI` ([`MyLib::sys::INI_IN_AND_STORE_AR2`](INI_IN_AND_STORE_AR2.md)): `KEY` → `INI.KEY`, `SECTION` → `INI.SECTION`, `stObj` → `INI.stObj`. Der Wert steht an `INI.VALUEO` (AR) bereit.
 - `AR_R_TO_REAL_1` (`adapter::conversion::unidirectional::AR_R_TO_REAL`): `INI.VALUEO` → `AR_R_TO_REAL_1.AR_IN`; `AR_R_TO_REAL_1.IN` → `VALUE` und `AR_R_TO_REAL_1.CNF` → `CNF`.
+
+Initialisierung und Qualität werden direkt durchgereicht: `INIT` → `INI.INIT`, `INI.INITO` → `INITO`, `QI` → `INI.QI` und `INI.QO` → `QO`.
 
 ## Technische Besonderheiten
 

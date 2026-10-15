@@ -15,16 +15,17 @@ Die Subapplikation **AX_SoftkeySR_TO_QXA_BG** ermöglicht die Steuerung eines di
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Initialisierungskette der inneren Bausteine.
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `GreenWhiteBackground_AX.INITO`, dem letzten Glied der Kette.
 
 ### **Daten-Eingänge**
 
 | Name          | Typ                                  | Initialwert | Kommentar                                                        |
 |---------------|--------------------------------------|-------------|------------------------------------------------------------------|
+| `QI`             | `BOOL`                               | `TRUE`      | Quality Input - TRUE aktiviert den Dienst; wird an alle inneren Bausteine verteilt. |
 | `u16ObjId_SET`   | `UINT`                               | `ID_NULL`   | Objekt-ID des Softkeys für die SET-Funktion.                     |
 | `u16ObjId_RESET` | `UINT`                               | `ID_NULL`   | Objekt-ID des Softkeys für die RESET-Funktion.                   |
 | `u16ObjId_TOGGLE`| `UINT`                               | `ID_NULL`   | Objekt-ID des Softkeys für die TOGGLE-Funktion (auch für Hintergrund). |
@@ -32,7 +33,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND der `QO` aller fünf inneren Instanzen).
 
 ### **Adapter**
 
@@ -51,10 +52,13 @@ Der Ausgang `Q` wird über den Adapter `AX_SPLIT_2` auf zwei Pfade aufgeteilt:
 1. **Digitaler Ausgang** (`logiBUS_QXA`): Der Wert wird an den über `Output` spezifizierten Kanal weitergegeben.
 2. **Hintergrund-Submodul** (`GreenWhiteBackground1_AX`): Dieses erhält zusätzlich die Objekt-ID des TOGGLE-Softkeys, um bei jedem Toggle den Hintergrundzustand (z. B. grün/weiß) zu wechseln.
 
+Initialisierung und Qualität: `INIT` → `SoftKey_SET.INIT`, `SoftKey_SET.INITO` → `SoftKey_RESET.INIT`, `SoftKey_RESET.INITO` → `SoftKey_TOGGLE.INIT`, `SoftKey_TOGGLE.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `GreenWhiteBackground_AX.INIT` und `GreenWhiteBackground_AX.INITO` → `INITO`. `QI` geht an `SoftKey_SET`, `SoftKey_RESET`, `SoftKey_TOGGLE`, `DigitalOutput_Q1` und `GreenWhiteBackground_AX`. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_5`), die die `QO` dieser fünf Instanzen verknüpft; ihr `REQ` wird von `GreenWhiteBackground_AX.INITO` ausgelöst.
+
 Die Verbindungen zwischen den Bausteinen sind in der SubApp fest verdrahtet, sodass die gesamte Logik durch die externen Parameter konfiguriert werden kann.
 
 ## Technische Besonderheiten
 
+- **QI/INIT/INITO/QO:** `QI` ist nicht mehr intern fest auf `TRUE` gesetzt, sondern wird von außen an alle inneren Bausteine durchgereicht; die Initialisierung läuft nacheinander durch die Kette von `INIT` bis `INITO`.
 - **Generische Konfiguration:** Die Objekt-IDs und der Ausgangskanal sind als generische Eingänge definiert. Standardmäßig sind sie auf `ID_NULL` bzw. `Invalid` gesetzt, wodurch die SubApp ohne Anpassung keine aktive Funktion besitzt. Erst durch Zuweisung gültiger Werte wird die Steuerung aktiv.
 - **Wiederverwendbarkeit:** Die SubApp ist aus einem Übungsprojekt ausgelagert und kann in verschiedenen Anwendungen eingesetzt werden, ohne Änderungen an der internen Logik vorzunehmen.
 - **Verwendete Typen:** Die Eingänge nutzen `UINT` und den spezifischen Typ `logiBUS_DO_S` aus der logiBUS-Bibliothek. Intern werden Adapter und Funktionsbausteine aus den Bibliotheken `isobus` und `adapter` verwendet.

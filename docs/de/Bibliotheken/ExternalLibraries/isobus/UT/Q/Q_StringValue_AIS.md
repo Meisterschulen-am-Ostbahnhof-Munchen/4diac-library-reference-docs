@@ -27,22 +27,26 @@ Der Funktionsbaustein **Q_StringValue_AIS** realisiert den Dienst "Command Chang
 
 ### **Daten-Eingänge**
 
-| Name     | Typ  | Initialwert | Kommentar                        |
-| -------- | ---- | ----------- | -------------------------------- |
-| u16ObjId | UINT | ID_NULL     | Objekt-ID des zu ändernden Werts |
+| Name     | Typ  | Initialwert | Kommentar                                 |
+| -------- | ---- | ----------- | ----------------------------------------- |
+| QI       | BOOL | TRUE        | Quality Input – TRUE aktiviert den Dienst |
+| u16ObjId | UINT | ID_NULL     | Objekt-ID des zu ändernden Werts          |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Kommentar                                      |
-| --------- | ------ | ---------------------------------------------- |
-| STATUS    | STRING | Dienst-Status (z. B. "IDLE", "BUSY", "ERROR")  |
-| s16result | INT    | Rückgabewert (siehe Beschreibung des Dienstes) |
+| Name      | Typ    | Kommentar                                                           |
+| --------- | ------ | ------------------------------------------------------------------- |
+| QO        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| STATUS    | STRING | Dienst-Status (z. B. "IDLE", "BUSY", "ERROR")                       |
+| s16result | INT    | Rückgabewert (siehe Beschreibung des Dienstes)                      |
 
 ### **Adapter**
 
 | Name       | Typ                                 | Kommentar                     |
 | ---------- | ----------------------------------- | ----------------------------- |
 | pau8String | adapter::types::unidirectional::AIS | Liefert den neuen String-Wert |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_StringValue` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_StringValue.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

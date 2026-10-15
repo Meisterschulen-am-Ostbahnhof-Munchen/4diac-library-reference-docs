@@ -23,11 +23,13 @@ The **Q_ObjHideShow** is a standards-compliant function block for controlling th
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Container Object ID (16-bit)
 - `qVisible` (BOOL): Visibility Status (TRUE=show, FALSE=hide)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `qOldVisible` (BOOL): Previous visibility status
 - `s16result` (INT): ISO-compliant result code
@@ -40,6 +42,8 @@ Container (3000–3999).
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`. Any ID outside this range is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

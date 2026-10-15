@@ -11,31 +11,32 @@
 
 Die Subapp **IX_TO_logiBUS_LED_strip_QX** verbindet einen Taster-Eingang vom Typ `logiBUS_IX` mit einem LED-Streifen-Baustein vom Typ `logiBUS_LED_strip_QX`. Sie wird eingesetzt, um einen LED-Streifen über einen Taster blinkend zu schalten. Dabei können die Farbe, der verwendete Taster-Eingang und die Nummer des LED-Streifens über die Dateneingänge der Subapp vorgegeben werden.
 
-Die Subapp ist als generische, wiederverwendbare Einheit ausgelegt. Die eigentliche Steuerlogik ist intern verdrahtet; nach außen hin sind ausschließlich die Parametriereingänge sichtbar.
+Die Subapp ist als generische, wiederverwendbare Einheit ausgelegt. Die eigentliche Steuerlogik ist intern verdrahtet; nach außen hin sind die Parametriereingänge, die Initialisierungs-Ereignisse `INIT`/`INITO` und die Status-Anschlüsse `QI`/`QO` sichtbar.
 
 ## Schnittstellenstruktur
 
-Die Subapp besitzt keine Ereignis-Schnittstellen und keine Datenausgänge. Sie arbeitet rein datengetrieben und kapselt die interne Ereignisverarbeitung vollständig.
+Die Subapp besitzt außer den Initialisierungs-Ereignissen `INIT`/`INITO` keine Ereignis-Schnittstellen. Sie arbeitet rein datengetrieben und kapselt die interne Ereignisverarbeitung vollständig.
 
 ### **Ereignis-Eingänge**
 
-- Keine
+- `INIT` (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-- Keine
+- `INITO` (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Initialwert | Beschreibung |
 |------|-----|-------------|--------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE aktiviert den Dienst |
 | `Input` | `logiBUS::io::DI::logiBUS_DI_S` | `Invalid` | Identifiziert den verwendeten Eingang `Input_I1` bis `Input_I8` |
 | `Colour` | `UINT` | `LED_COLOURS::LED_GREEN` | Bestimmt die Farbe des LED-Streifens |
 | `Output` | `USINT` | – | Bestimmt die Nummer des anzusteuernden LED-Streifens |
 
 ### **Daten-Ausgänge**
 
-- Keine
+- `QO` (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `LED.QO` und `BUTTON.QO`, Baustein `AND_QO` vom Typ `iec61131::booleanOperators::AND_BOOL_2`)
 
 ### **Adapter**
 
@@ -48,7 +49,7 @@ Die Subapp setzt sich aus zwei internen Funktionsbausteinen zusammen:
 - `BUTTON` vom Typ `logiBUS_IX`
 - `LED` vom Typ `logiBUS_LED_strip_QX`
 
-Der externe Eingang `Input` wird an den Dateneingang `BUTTON.Input` weitergeführt. Dadurch wird festgelegt, welcher physische Eingang des Taster-Moduls überwacht wird. Der interne Baustein `BUTTON` ist mit `QI = TRUE` aktiviert und wartet auf eine Änderung des Eingangssignals.
+Der externe Eingang `Input` wird an den Dateneingang `BUTTON.Input` weitergeführt. Dadurch wird festgelegt, welcher physische Eingang des Taster-Moduls überwacht wird. Der interne Baustein `BUTTON` wird über `QI` (vom `QI`-Eingang der Subapp) aktiviert und wartet auf eine Änderung des Eingangssignals.
 
 Wird der Taster betätigt oder losgelassen, erzeugt `BUTTON` das Ereignis `IND`. Dieses Ereignis ist direkt mit dem Ereigniseingang `REQ` des LED-Bausteins verbunden. Zeitgleich wird der aktuelle Eingangszustand von `BUTTON.IN` an den Dateneingang `LED.OUT` übergeben.
 
@@ -58,12 +59,14 @@ Der LED-Baustein wird durch das Ereignis `REQ` verarbeitet. Er verwendet:
 - `Colour` zur Bestimmung der Farbe
 - den übergebenen Wert an `OUT` als Schaltsignal
 
+Die Initialisierung läuft als Kette `INIT` → `LED.INIT`, `LED.INITO` → `BUTTON.INIT`, `BUTTON.INITO` → `INITO` (und zusätzlich → `AND_QO.REQ`). `QI` wird an `LED.QI` und `BUTTON.QI` weitergegeben; `LED.QO` und `BUTTON.QO` werden per UND zu `QO` verknüpft.
+
 Der Parameter `FREQ` des LED-Bausteins ist intern auf `LED_FREQ::LED_1HZ` gesetzt. Dadurch blinkt der ausgewählte LED-Streifen mit 1 Hz, wenn der Tasterzustand aktiv ist. Ist der Tasterzustand inaktiv, wird der LED-Streifen ausgeschaltet.
 
 ## Technische Besonderheiten
 
-- Die Subapp besitzt keine eigenen Ereignis-Ein- oder -Ausgänge.
-- Sie besitzt keine Datenausgänge und keine Adapter.
+- Die Subapp besitzt außer `INIT`/`INITO` keine eigenen Ereignis-Ein- oder -Ausgänge.
+- Sie besitzt keine Adapter.
 - Alle Verbindungen zwischen `BUTTON` und `LED` sind intern verdrahtet.
 - Die Eingänge `Input`, `Colour` und `Output` werden direkt auf die internen Funktionsbausteine durchgeschleift.
 - Die Blinkfrequenz ist nicht als externer Eingang verfügbar, sondern als Parameter des internen LED-Bausteins hinterlegt. Aktuell ist `LED_1HZ` eingestellt.
@@ -94,7 +97,7 @@ Im Vergleich zu einer direkten Verbindung eines `logiBUS_IX` mit einem `logiBUS_
 
 Gegenüber einem einfachen LED-Ausgangsbaustein ohne Blinkfunktion ermöglicht der interne LED-Streifen-Baustein eine fest eingestellte Blinkfrequenz. Zusätzlich können Farbe und Streifennummer flexibel parametriert werden.
 
-Ein wesentlicher Unterschied zu vollständigen Funktionsbausteinen mit eigenen Ereignissen besteht darin, dass die Subapp keine Rückmeldung nach außen gibt. Sie ist daher vor allem für einfache, autarke Taster-Leuchtanzeigen geeignet.
+Ein wesentlicher Unterschied zu vollständigen Funktionsbausteinen mit eigenen Ereignissen besteht darin, dass die Subapp außer der Initialisierungsbestätigung `INITO` und dem Status `QO` keine Rückmeldung nach außen gibt. Sie ist daher vor allem für einfache, autarke Taster-Leuchtanzeigen geeignet.
 
 ## Fazit
 

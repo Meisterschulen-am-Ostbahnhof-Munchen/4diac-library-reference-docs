@@ -16,23 +16,28 @@ Der Funktionsblock **Q_ActiveMask_AUI** ist ein AUI‑Adapter‑Wrapper für den
 
 | Name  | Typ   | Kommentar |
 |-------|-------|-----------|
-| `INIT` | `EInit` | Service‑Initialisierung |
+| `INIT` | `EInit` | Service‑Initialisierung (mit `QI`) |
 
 ### **Ereignis-Ausgänge**
 
 | Name  | Typ     | Kommentar |
 |-------|---------|-----------|
-| `INITO` | `EInit` | Bestätigung der Initialisierung |
-| `CNF`   | `Event` | Bestätigung des angeforderten Dienstes |
+| `INITO` | `EInit` | Bestätigung der Initialisierung (mit `QO`) |
+| `CNF`   | `Event` | Bestätigung des angeforderten Dienstes (mit `QO`, `STATUS`, `s16result`) |
 
 ### **Daten-Eingänge**
 
-Keine direkten Dateneingänge vorhanden – alle Eingangsdaten werden über die AUI‑Adapter‑Sockets bereitgestellt.
+| Name | Typ | Kommentar |
+|------|-----|-----------|
+| `QI` | `BOOL` | Quality-Eingang, `TRUE` aktiviert den Dienst (Standard `TRUE`) |
+
+Alle übrigen Eingangsdaten werden über die AUI‑Adapter‑Sockets bereitgestellt.
 
 ### **Daten-Ausgänge**
 
 | Name       | Typ     | Kommentar |
 |------------|---------|-----------|
+| `QO`       | `BOOL`  | Quality-Ausgang, `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS`   | `STRING`| Dienststatus |
 | `s16result`| `INT`   | Rückgabewert (siehe Beschreibung) |
 
@@ -48,11 +53,11 @@ Keine direkten Dateneingänge vorhanden – alle Eingangsdaten werden über die 
 Der Baustein verbindet intern den eigentlichen Funktionsblock `Q_ActiveMask` (*isobus::UT::Q::Q_ActiveMask*) mit den Adapter‑Schnittstellen.  
 Beim Eintreffen eines Ereignisses am Socket `u16NewMaskId.E1` wird das Ereignis `REQ` des internen FBs ausgelöst, wodurch der Befehl zum Ändern der aktiven Maske initiiert wird. Der interne FB verarbeitet den Befehl und sendet anschließend über `CNF` eine Bestätigung zurück, die über den Plug `u16OldMaskId.E1` an den verbundenen Empfänger weitergegeben wird.  
 Die Nutzdaten (Masken‑IDs) werden über die Datenkanäle `D1` der AUI‑Adapter übertragen – `u16NewMaskId.D1` liefert die neue ID an den internen FB, während `u16OldMaskId.D1` die aktuelle (oder alte) ID ausgibt.  
-Zusätzlich werden die Ergebnis‑Ausgänge `STATUS` und `s16result` direkt an die äußeren Ausgangsvariablen durchgeschliffen.
+Zusätzlich werden `INIT` an `Q_ActiveMask.INIT` und `Q_ActiveMask.INITO` an `INITO` geführt; `QI` wird an `Q_ActiveMask.QI` und `Q_ActiveMask.QO` an `QO` durchgereicht. Die Ergebnis‑Ausgänge `STATUS` und `s16result` werden direkt an die äußeren Ausgangsvariablen durchgeschliffen.
 
 ## Technische Besonderheiten
 
-- **Adapter‑Wrapper:** Der Baustein besitzt keine eigenen Daten‑Eingänge; sämtliche Eingabedaten werden ausschließlich über die AUI‑Sockets empfangen.
+- **Adapter‑Wrapper:** Der Baustein besitzt neben dem Quality-Eingang `QI` keine eigenen Daten‑Eingänge; sämtliche Nutzdaten werden ausschließlich über die AUI‑Sockets empfangen.
 - **Unidirektionale AUI‑Kommunikation:** Die verwendeten Adapter sind unidirektional – die Daten fließen nur in eine Richtung, was die Schnittstelle einfach und robust macht.
 - **ISOBUS‑Konformität:** Der FB ist gemäß ISO 11783‑6 (Teil 6 – Anzeige und Bedienung) als Befehl zum Wechseln der aktiven Maske spezifiziert.
 - **Keine Zustandsautomaten‑Logik im Wrapper:** Der Wrapper selbst enthält keine eigene Zustandsverwaltung, sondern delegiert alle Aktionen an den inneren FB `Q_ActiveMask`.

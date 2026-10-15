@@ -8,7 +8,7 @@
 
 ## Introduction
 
-`GreenWhiteBackground2_AXC` is a **compact wrapper** around [`GreenWhiteBackground2_AX`](GreenWhiteBackground2_AX.md) — passes `u16ObjId` and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
+`GreenWhiteBackground2_AXC` is a **compact wrapper** around [`GreenWhiteBackground2_AX`](GreenWhiteBackground2_AX.md) — passes `u16ObjId` and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`). In addition, `INIT` → `GreenWhiteBackground2.INIT`, `GreenWhiteBackground2.INITO` → `INITO`, `QI` → `GreenWhiteBackground2.QI` (initial value `TRUE`) and `GreenWhiteBackground2.QO` → `QO` are passed through.
 
 For the shared pattern, see [Background Color Blocks (shared pattern)](./Background-Color-Blocks.md).
 

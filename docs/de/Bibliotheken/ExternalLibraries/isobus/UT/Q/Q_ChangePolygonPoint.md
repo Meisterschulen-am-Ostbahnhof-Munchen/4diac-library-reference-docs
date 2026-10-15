@@ -24,6 +24,7 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Polygon-Objekt-ID
 - `xScale` (BOOL): Bei TRUE werden die Werte `u16NewXValue`/`u16NewYValue` vor dem Senden mit dem DM/SKM-Faktor für `u16ObjId` skaliert; bei FALSE (Standard) werden sie unverändert durchgereicht.
 - `u8PointIndex` (USINT): Punktindex (0-basiert)
@@ -32,6 +33,7 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldPointIndex` (USINT): Vorheriger Punktindex
 - `u16OldXValue` (UINT): Vorherige X-Koordinate
@@ -39,6 +41,8 @@ Der **Q_ChangePolygonPoint** ist ein standardkonformer Funktionsbaustein zur Mod
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Polygon-Objekt-ID

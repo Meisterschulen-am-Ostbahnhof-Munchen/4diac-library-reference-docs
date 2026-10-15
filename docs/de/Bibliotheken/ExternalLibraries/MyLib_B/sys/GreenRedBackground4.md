@@ -19,6 +19,13 @@ Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) sieh
 
 ![GreenRedBackground4](GreenRedBackground4.svg)
 
+## Initialisierung und Qualität
+
+- **Ereignis-Eingang `INIT`** (`EInit`) und **Ereignis-Ausgang `INITO`** (`EInit`): die Initialisierung wird durch die `Q_BackgroundColour`-Instanzen gekettet: `INIT` → `Q_BackgroundColour_1.INIT`; `Q_BackgroundColour_1.INITO` → `Q_BackgroundColour_2.INIT`; `Q_BackgroundColour_2.INITO` → `Q_BackgroundColour_3.INIT`; `Q_BackgroundColour_3.INITO` → `Q_BackgroundColour_4.INIT`; `Q_BackgroundColour_4.INITO` → `INITO`.
+- **Dateneingang `QI`** (`BOOL`, Vorgabe `TRUE`) wird an `.QI` aller Instanzen verteilt (`Q_BackgroundColour_1`, `Q_BackgroundColour_2`, `Q_BackgroundColour_3`, `Q_BackgroundColour_4`).
+- **Datenausgang `QO`** (`BOOL`): UND aller Instanzen über `AND_QO` (`iec61131::booleanOperators::AND_BOOL_4`): `Q_BackgroundColour_1.QO` → `AND_QO.IN1`, `Q_BackgroundColour_2.QO` → `AND_QO.IN2`, `Q_BackgroundColour_3.QO` → `AND_QO.IN3`, `Q_BackgroundColour_4.QO` → `AND_QO.IN4`; `AND_QO.OUT` → `QO`.
+- `E_MERGE_QO_A` (`iec61499::events::E_MERGE_4`) vereint `Q_BackgroundColour_4.INITO` und die `CNF`-Ereignisse der Instanzen 1 bis 3; `E_MERGE_QO` (`iec61499::events::E_MERGE_2`) vereint dessen Ausgang `E_MERGE_QO_A.EO` mit `Q_BackgroundColour_4.CNF` und löst damit `AND_QO.REQ` aus.
+
 ## Zusammenfassung
 
 Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Grün/Rot, 4 Objekte, BOOL-Selector.
@@ -27,4 +34,4 @@ Eine von vielen Varianten der Background-Farbbausteine-Familie: Farbpaar Grün/R
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

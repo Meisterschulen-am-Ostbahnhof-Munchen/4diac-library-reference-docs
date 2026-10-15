@@ -14,21 +14,22 @@
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object ID and scale/offset/decimals of the VT input field; used for input and output (the confirmed value is written back here). Default: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 1)`
 - **ID_CALL** (`WSTRING`): Remote method address (`ACTION=CALL_METHOD`); called only on a genuine VT input with the entered value as argument
 - **ID_M2M_READ** (`WSTRING`): Remote subscribe address (`REAL`, `ACTION=SUBSCRIBE`); returns the actually effective value for display on the same VT field (read only)
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (AND of `Display.QO`, `Input.QO`, `Call.QO` and `Subscribe.QO`)
 
 ### **Adapters**
 
@@ -36,17 +37,19 @@ This function block has no adapter sockets/plugs at its interface; `AR` adapters
 
 ## Function Blocks (FBs) Used
 
-- **Input**: `isobus::UT::io::NumericValue::NumericValue_PHYSA` (`QI=TRUE`) - provides the entered physical value (`rPhys`) on commit
-- **Call**: `adapter::net::AR_CLIENT_1_0_UNGATED` (`QI=TRUE`) - calls the remote method with the value as argument
-- **Subscribe**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI=TRUE`) - subscribes to the confirmed value
+- **Input**: `isobus::UT::io::NumericValue::NumericValue_PHYSA` (`QI` from the block input) - provides the entered physical value (`rPhys`) on commit
+- **Call**: `adapter::net::AR_CLIENT_1_0_UNGATED` (`QI` from the block input) - calls the remote method with the value as argument
+- **Subscribe**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI` from the block input) - subscribes to the confirmed value
 - **Display**: `isobus::UT::Q::Q_NumericValue_PHYSA` - writes the value to the VT field
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` - ANDs the `QO` outputs of `Display`, `Input`, `Call` and `Subscribe`
 
 ## Program Flow and Connections
 
 1. **Forward path**: `Input.rPhys` → `Call.IN` (input → method call).
 2. **Return path**: `Subscribe.OUT` → `Display.rPhys` (confirmed value → VT display).
-3. `Subscribe.INITO` → `Call.INIT`: the client is initialized only after the subscribe has been initialized.
+3. Initialization chain: `INIT` → `Input.INIT`, `Input.INITO` → `Subscribe.INIT`, `Subscribe.INITO` → `Call.INIT` (the client is initialized only after the subscribe has been initialized), `Call.INITO` → `Display.INIT`, `Display.INITO` → `INITO` and → `AND_QO.REQ`.
 4. `stObj` → `Input.stObj` and `Display.stObj`; `ID_CALL` → `Call.ID`; `ID_M2M_READ` → `Subscribe.ID`.
+5. `QI` → `Display.QI`, `Input.QI`, `Call.QI` and `Subscribe.QI`; `Display.QO` → `AND_QO.IN1`, `Input.QO` → `AND_QO.IN2`, `Call.QO` → `AND_QO.IN3`, `Subscribe.QO` → `AND_QO.IN4`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

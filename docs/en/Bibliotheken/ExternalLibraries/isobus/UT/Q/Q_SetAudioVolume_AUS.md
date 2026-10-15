@@ -14,19 +14,24 @@ The Q_SetAudioVolume_AUS function block is a composite function block (FB) that 
 
 ### **Event Inputs**
 
-- **INIT** (EInit): Service initialization. Triggers the initialization of the internal function block.
+- **INIT** (EInit): Service initialization. Triggers the initialization of the internal function block. Associated with `QI`.
 
 ### **Event Outputs**
 
-- **INITO** (EInit): Confirmation of successful initialization.
-- **CNF** (Event): Confirmation of the requested service. Outputted after setting the volume. Contains the output data STATUS and s16result.
+- **INITO** (EInit): Confirmation of successful initialization. Associated with `QO`.
+- **CNF** (Event): Confirmation of the requested service. Outputted after setting the volume. Contains the output data STATUS and s16result. Associated with `QO`.
 
 ### **Data Inputs**
 
-The FB has no direct data inputs. Volume input is via the u8Volume adapter.
+Apart from `QI`, the FB has no direct data inputs. Volume input is via the u8Volume adapter.
+
+| Name | Type   | Initial value | Comment                                |
+| ---- | ------ | ------------- | -------------------------------------- |
+| `QI` | `BOOL` | `TRUE`        | Quality Input - TRUE to enable service |
 
 ### **Data Outputs**
 
+- **QO** (BOOL): Quality Output - TRUE if service executed successfully.
 - **STATUS** (STRING): Service status message.
 - **s16result** (INT): Command return value. Possible values:
 - 0 (VT_E_NO_ERR): Success.
@@ -41,6 +46,8 @@ The FB has no direct data inputs. Volume input is via the u8Volume adapter.
 
 - **u8Volume** (Socket): Unidirectional adapter of type OFF. Receives the desired volume as a value between 0 and 100%.
 - **u8OldVolume** (Plug): Unidirectional adapter of type OFF. Outputs the volume level (0–100%) valid before the command.
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_SetAudioVolume`. The data output `QO` (BOOL) is taken over from `Q_SetAudioVolume.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Functionality
 

@@ -15,20 +15,21 @@ The subapp contains the actual flip-flop logic based on the `AX_T_FF_SR` adapter
 
 ## Interface Structure
 
-The subapplication exposes only data inputs at its boundary; it has no event inputs, no event outputs, no data outputs, and no external adapters.
+The subapplication exposes the events `INIT`/`INITO`, the data `QI`/`QO` and the data inputs for output and addresses at its boundary; it has no external adapters.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the init chain at `TRIGGER_SET_SERVER.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `STATE_CLIENT.INITO`, the end of the init chain
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality input; passed on to all five service FBs (three `SERVER_0`, `DigitalOutput_Q1`, `STATE_CLIENT`). |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifies the target digital output (Output_Q1..Q8). |
 | `ID_SET_METHOD` | `WSTRING` | — | Local method address (ACTION=CREATE_METHOD) for the Set method, invoked by device A via CALL_METHOD. |
 | `ID_RESET_METHOD` | `WSTRING` | — | Local method address (ACTION=CREATE_METHOD) for the Reset method, invoked by device A via CALL_METHOD. |
@@ -37,7 +38,7 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_5`) of the `QO` outputs of the three `SERVER_0` instances, of `DigitalOutput_Q1` and of `STATE_CLIENT`
 
 ### **Adapters**
 
@@ -60,7 +61,8 @@ The subapp implements a complete remote-controlled SR/T flip-flop with output fe
    - **OUT1** → `DigitalOutput_Q1` (`logiBUS_QXA`) — switches the physical digital output on the logiBUS device.
    - **OUT2** → `STATE_CLIENT` (`AX_CLIENT_1_0`) — sends the new state back to device A via an OPC-UA write operation at the address specified by `ID_STATE_WRITE`.
 
-5. **Configuration inputs**: All method addresses and the output channel are configured via the subapp's data inputs, making the block reusable for different method IDs and output channels without modifying the internal structure.
+5. **Initialization and quality**: `INIT` is chained: `INIT` → `TRIGGER_SET_SERVER` → `TRIGGER_RESET_SERVER` → `TRIGGER_TOGGLE_SERVER` → `DigitalOutput_Q1` → `STATE_CLIENT` (each `INITO` → next `INIT`); `STATE_CLIENT.INITO` → `INITO` and `AND_QO.REQ`. `QI` goes to all five FBs; their `QO` outputs go in this order to `AND_QO.IN1` to `AND_QO.IN5` (`iec61131::booleanOperators::AND_BOOL_5`), `AND_QO.OUT` → `QO`.
+6. **Configuration inputs**: All method addresses and the output channel are configured via the subapp's data inputs, making the block reusable for different method IDs and output channels without modifying the internal structure.
 
 ## Technical Features
 

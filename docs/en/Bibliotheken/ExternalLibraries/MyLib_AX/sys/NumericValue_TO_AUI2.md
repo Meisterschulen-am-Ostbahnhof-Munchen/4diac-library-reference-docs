@@ -14,19 +14,31 @@
 
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT input field.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully (AND of `Q_NumericValue_AUDI.QO` and `NumericValue_IDA.QO`).
 
 ### Adapters
 
 - **Plug `VALUEO`** (`adapter::types::bidirectional::AUI2`): value to the consumer and echo back.
 
-The block has no event ports of its own.
+### Events
+
+- **INIT** (event input, `EInit`): initialization request
+- **INITO** (event output, `EInit`): initialization confirmation
 
 ## How it works
 
-1. `NumericValue_IDA` (`QI`=TRUE) reads the VT input field; `AD_TO_AUI` converts to AUI.
+1. `NumericValue_IDA` reads the VT input field; `AD_TO_AUI` converts to AUI.
 2. `AUI_TO_AUI2` converts into the bidirectional AUI2 adapter, which is output on `VALUEO`.
 3. The echo reported back by the consumer appears at `AUI_TO_AUI2.AUI_OUT`, is converted to UDINT via `AUI_TO_AUDI`, and written to the VT field under `u16ObjId` by `Q_NumericValue_AUDI` (`u32NewValue`).
+
+`QI` is distributed to `Q_NumericValue_AUDI.QI` and `NumericValue_IDA.QI`; `Q_NumericValue_AUDI.QO` and `NumericValue_IDA.QO` are combined into `QO` via `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`).
+
+Initialization: `INIT` → `NumericValue_IDA.INIT`; `NumericValue_IDA.INITO` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` (and → `AND_QO.REQ`).
 
 ## Technical notes
 

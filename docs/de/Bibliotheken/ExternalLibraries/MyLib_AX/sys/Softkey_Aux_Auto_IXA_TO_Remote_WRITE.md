@@ -18,22 +18,30 @@ Es gibt weiterhin genau **einen** Publisher pro Kanal auf `ID_WRITE_REMOTE`, auc
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) – SoftKey-Pegel
-    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`) – AUX-Pegel
-    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) – lokaler Subscribe für einen Web-Client
+    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` – SoftKey-Pegel
+    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` – AUX-Pegel
+    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` – lokaler Subscribe für einen Web-Client
     - **SPLIT_WEB**: `adapter::events::unidirectional::AX_SPLIT_2` – verteilt den Web-Zustand auf `OR_MERGE` und `WEB_STATE`
     - **OR_MERGE**: `adapter::booleanOperators::AX_OR_4` – ODER-Verknüpfung der vier Quellen
-    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` (`QI=TRUE`) – Remote-Write an das Zielmodul
+    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` – Remote-Write an das Zielmodul
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` – verknüpft die `QO` von `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` und `AX_CLIENT_1_0`
 - **Import**: `ID_NULL`
 
 ## Schnittstellenstruktur
 
-### **Ereignis-Eingänge / Ereignis-Ausgänge**
+### **Ereignis-Eingänge**
 
-Keine – Ereignisse laufen über die Adapter.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `Softkey_IXA.INIT`
+
+### **Ereignis-Ausgänge**
+
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `AX_CLIENT_1_0.INITO`, dem Ende der Kette
+
+Die Schaltereignisse selbst laufen weiterhin über die Adapter.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst; geht an `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` und `AX_CLIENT_1_0`
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID SoftKey (VT)
 - **u16ObjIdA** (`UINT`, Vorgabe `ID_NULL`): Object-ID `AuxFunction2` (VT)
 - **ID_WRITE_REMOTE** (`WSTRING`): Remote-Write-Adresse zum Zielmodul (Befehl, `ACTION=WRITE`, `CLIENT`)
@@ -41,7 +49,7 @@ Keine – Ereignisse laufen über die Adapter.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND der `QO` von `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` und `AX_CLIENT_1_0`)
 
 ### **Adapter**
 
@@ -56,6 +64,8 @@ Keine.
 - `SPLIT_WEB.OUT1` → `OR_MERGE.IN3`; `SPLIT_WEB.OUT2` → `WEB_STATE`
 - `AUTO_IN` → `OR_MERGE.IN4`
 - `OR_MERGE.OUT` → `AX_CLIENT_1_0.IN`; `ID_WRITE_REMOTE` → `AX_CLIENT_1_0.ID`
+- Initialisierung: `INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `Aux_IXA.INIT`, `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI`, `SUBSCRIBE_WEB.QI` und `AX_CLIENT_1_0.QI`; deren `QO` → `AND_QO.IN1`..`IN4`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

@@ -23,6 +23,7 @@ The **Q_ChildPosition** is a standards-compliant function block for the absolute
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Child object ID
 - `u16ObjIdParent` (UINT): Parent object ID
 - `xScale` (BOOL): If TRUE, `s16Xposition`/`s16Yposition` are scaled by the DM/SKM factor for `u16ObjIdParent` before sending; if FALSE (default) they are passed through unchanged.
@@ -31,6 +32,7 @@ The **Q_ChildPosition** is a standards-compliant function block for the absolute
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational status message
 - `s16OldXposition` (INT): Previous X-position
 - `s16OldYposition` (INT): Previous Y-position
@@ -51,6 +53,8 @@ WorkingSet (B.1), Data Mask (B.2), Alarm Mask (B.3), **Container (B.4)**, Key (B
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

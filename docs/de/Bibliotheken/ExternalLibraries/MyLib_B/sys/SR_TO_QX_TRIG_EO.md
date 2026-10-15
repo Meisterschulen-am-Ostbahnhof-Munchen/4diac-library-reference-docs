@@ -17,6 +17,7 @@ Der Funktionsblock **SR_TO_QX_TRIG_EO** ist eine generische Subapplikation, die 
 
 | Name | Beschreibung |
 |------|-------------|
+| `INIT` | Initialization Request (`EInit`); wird an `QX.INIT` durchgereicht. |
 | `SET` | Setzt den internen Latch-Zustand auf `TRUE` und löst damit die Ausgabe am QX aus. |
 | `RESET` | Setzt den internen Latch-Zustand auf `FALSE` und deaktiviert den Ausgang. |
 
@@ -24,17 +25,21 @@ Der Funktionsblock **SR_TO_QX_TRIG_EO** ist eine generische Subapplikation, die 
 
 | Name | Beschreibung |
 |------|-------------|
+| `INITO` | Initialization Confirm (`EInit`); durchgereicht von `QX.INITO`. |
 | `EO1` | Wird ausgelöst, wenn der Latch-Zustand von `FALSE` auf `TRUE` wechselt (steigende Flanke). |
 
 ### **Daten-Eingänge**
 
 | Name | Datentyp | Beschreibung |
 |------|----------|-------------|
+| `QI` | `BOOL` | Quality Input - TRUE, um den Dienst freizugeben. Initialwert: `TRUE`; wird an `QX.QI` durchgereicht. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Identifiziert den physischen Ausgang (z. B. `Output_Q1` bis `Output_Q8`). Initialwert: `logiBUS_DO::Invalid`. |
 
 ### **Daten-Ausgänge**
 
-Keine.
+| Name | Datentyp | Beschreibung |
+|------|----------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde; durchgereicht von `QX.QO`. |
 
 ### **Adapter**
 
@@ -58,7 +63,7 @@ Der Ablauf:
 
 - Die Subapplikation nutzt die parametrisierbare Datenstruktur `logiBUS_DO_S`, um den Zielausgang flexibel zu wählen. Der Initialwert verhindert eine ungewollte Ausgabe.
 - Die Verbindung zwischen `E_SR.EO` und `E_SWITCH.EI` (intern `E_R_TRIG`) ist so ausgelegt, dass die Flankenerkennung nur bei Zustandsänderungen des Latches ausgewertet wird – nicht bei jedem Clock.
-- Der Ausgangsbaustein `QX` ist mit `QI = TRUE` fest konfiguriert, was bedeutet, dass der Ausgang immer aktiv schaltet.
+- Der Ausgangsbaustein `QX` erhält `QI` vom `QI`-Eingang der Subapplikation (Initialwert `TRUE`); `INIT` wird an `QX.INIT` und `QX.INITO` an `INITO` durchgereicht, `QX.QO` an `QO`.
 - Durch die Auslagerung als Subapplikation wird eine Wiederverwendung in verschiedenen Projekten ermöglicht, ohne den internen Aufbau erneut erstellen zu müssen.
 
 ## Zustandsübersicht

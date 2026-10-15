@@ -23,12 +23,14 @@ The **Q_Attribute** is a standards-compliant function block for modifying VT obj
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Object Identifier
 - `u8IdAttribute` (USINT): Attribute Identifier (AID)
 - `u32ValueAttribute` (UDINT): New Attribute Value
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operational status message
 - `u32OldValueAttribute` (UDINT): Previous attribute value
 - `s16result` (INT): ISO-compliant result code
@@ -45,6 +47,8 @@ Data Mask (1000–1999), Alarm Mask (2000–2999), Soft Key Mask (4000–4999), 
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

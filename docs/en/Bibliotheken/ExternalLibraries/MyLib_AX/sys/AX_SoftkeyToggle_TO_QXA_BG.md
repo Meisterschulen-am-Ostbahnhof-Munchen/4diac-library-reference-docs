@@ -21,26 +21,29 @@ The internal network combines:
 
 ## Interface Structure
 
-The subapplication exposes only two data inputs. It has no event inputs, no event outputs, no data outputs, and no public adapter endpoints.
+The subapplication exposes the event input `INIT`, the event output `INITO`, the data inputs `QI`, `u16ObjId` and `Output`, and the data output `QO`. It has no public adapter endpoints.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the chain `Softkey_IE` → `logiBUS_QXA` → `GreenWhiteBackground_AX`.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `GreenWhiteBackground_AX.INITO`.
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| `QI` | `BOOL` | `TRUE` | Quality input, service enable; passed on to `Softkey_IE`, `logiBUS_QXA` and `GreenWhiteBackground_AX`. |
 | `u16ObjId` | `UINT` | `ID_NULL` | Object ID of the softkey to be used. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Identifies the QXA output channel (`Output_Q1` ... `Output_Q8`). |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | `BOOL` | Quality output, `AND` of the `QO` outputs of `Softkey_IE`, `logiBUS_QXA` and `GreenWhiteBackground_AX` (via `AND_QO`). |
 
 ### **Adapters**
 
@@ -52,7 +55,7 @@ The subapplication does not expose any adapter sockets or plugs. Internally, uni
 
 ## Functionality
 
-The subapplication is triggered by a softkey release. `Softkey_IE` is configured with `QI = TRUE` and `InputEvent = SK_RELEASED`; it monitors the object ID given by `u16ObjId`. When the configured softkey is released, `Softkey_IE` emits the `IND` event. This event clocks the `AX_T_FF` toggle flip-flop. Each clock pulse changes the state of the toggle. The current toggle state is output on the adapter `Q`.
+The subapplication is triggered by a softkey release. `Softkey_IE` is configured with `InputEvent = SK_RELEASED` (its `QI` comes from the subapplication input `QI`); it monitors the object ID given by `u16ObjId`. When the configured softkey is released, `Softkey_IE` emits the `IND` event. This event clocks the `AX_T_FF` toggle flip-flop. Each clock pulse changes the state of the toggle. The current toggle state is output on the adapter `Q`.
 
 `AX_SPLIT_2` forwards the same toggle state to two consumers:
 
@@ -61,17 +64,19 @@ The subapplication is triggered by a softkey release. `Softkey_IE` is configured
 
 Thus, a single key release toggles the actual output and keeps the HMI background in sync.
 
+**Initialization and quality:** `INIT` → `Softkey_IE.INIT`, `Softkey_IE.INITO` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` goes to `Softkey_IE.QI`, `logiBUS_QXA.QI` and `GreenWhiteBackground_AX.QI`; their `QO` outputs are combined via `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`) into `QO`.
+
 ## Technical Features
 
 - Composite `SubAppType` reusable as a library element.
 - Generic softkey identification via `u16ObjId`.
 - Generic QXA output selection via `Output`.
-- Internal event handling: no external event inputs required.
-- Hard-coded `QI = TRUE` on `Softkey_IE`; the input is always enabled.
+- Internal event handling: the only external events are `INIT`/`INITO`; the clock events are handled internally.
+- `QI` is no longer hard-coded to `TRUE` on `Softkey_IE`; it is passed through from the subapplication input `QI` (initial value `TRUE`).
 - Key-release detection using `SK_RELEASED`, so the toggle reacts on release, not on press.
 - `AX_T_FF` provides the bistable toggle memory.
 - `AX_SPLIT_2` provides a clean one-to-two adapter state distribution.
-- `logiBUS_QXA` is enabled with `QI = TRUE` and drives the selected output.
+- `logiBUS_QXA` is enabled by the passed-through `QI` and drives the selected output.
 - `GreenWhiteBackground_AX` receives the same state to show the HMI background.
 - Internal data connections are marked invisible in the 4diac diagram for readability.
 
@@ -85,7 +90,7 @@ The main state is the internal toggle state of `AX_T_FF`.
 | Configured softkey released | `Softkey_IE.IND` → `AX_T_FF.CLK` | Toggle state changes from `0` to `1` or from `1` to `0`. |
 | Toggle state updated | `AX_T_FF.Q` → `AX_SPLIT_2.IN` | Both QXA output and background receive the new state. |
 
-The subapplication does not define an explicit reset input or initial state in the XML; the startup behavior depends on the default/reset behavior of `AX_T_FF`.
+Apart from `INIT`, the subapplication does not define an explicit reset input or initial state in the XML; the startup behavior depends on the default/reset behavior of `AX_T_FF`.
 
 ## Application Scenarios
 

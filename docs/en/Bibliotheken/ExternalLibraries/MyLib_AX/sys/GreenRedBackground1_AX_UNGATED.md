@@ -14,18 +14,21 @@
 
 ### **Event Inputs**
 
-*No direct event inputs - events arrive via the adapter socket*
+- **INIT** (`EInit`): initialization request - to `Q_BackgroundColour.INIT`; further events arrive via the adapter socket
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirmation (from `Q_BackgroundColour.INITO`)
 - **CNF**: Execution confirmation (from `Q_BackgroundColour.CNF`)
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of the softkey/button
 
 ### **Data Outputs**
 
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (from `Q_BackgroundColour.QO`)
 - **STATUS_1** (`STRING`): Service status
 - **u8OldColour_1** (`USINT`): Old color value of the object
 - **result_1** (`INT`): Return value (see `Q_BackgroundColour`)
@@ -46,6 +49,7 @@
 2. `AX_SEL.OUT` → `Q_BackgroundColour.u8Colour`; `AX_SEL.CNF` → `Q_BackgroundColour.REQ`.
 3. `u16ObjId` → `Q_BackgroundColour.u16ObjId`.
 4. `Q_BackgroundColour.CNF` → `CNF`; `STATUS`, `u8OldColour`, `s16result` → `STATUS_1`, `u8OldColour_1`, `result_1`.
+5. `INIT` → `Q_BackgroundColour.INIT`; `Q_BackgroundColour.INITO` → `INITO`; `QI` → `Q_BackgroundColour.QI`; `Q_BackgroundColour.QO` → `QO`.
 
 ## Application Scenarios
 

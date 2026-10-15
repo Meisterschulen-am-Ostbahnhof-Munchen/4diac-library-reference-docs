@@ -23,11 +23,13 @@ The **Q_StringValue** is a standards-compliant function block for dynamic text u
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Text Object ID (16-bit)
 - `pau8String` (STRING): New Text Value (null-terminated)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational Status Message
 - `pau8OldString` (STRING): Previous text value
 - `s16result` (INT): ISO-compliant result code
@@ -42,6 +44,8 @@ Input String Field (8000–8999), Output String Field (11000–11999), String Va
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

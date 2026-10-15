@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1287.125 192.0"
-     width="1287.125" height="192.0">
+     viewBox="0 0 1662.125 212.0"
+     width="1662.125" height="212.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 309.4375 66.0
             L 316.4375 66.0
             A 3 3 0 0 1 319.4375 69.0
-            L 319.4375 169.0
-            A 3 3 0 0 1 316.4375 172.0
-            L 3 172.0
-            A 3 3 0 0 1 0 169.0
+            L 319.4375 189.0
+            A 3 3 0 0 1 316.4375 192.0
+            L 3 192.0
+            A 3 3 0 0 1 0 189.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="312.9375,11.0 317.9375,16.0 312.9375,21.0" fill="#63B31F"/>
+    <text x="309.9375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -97,25 +105,33 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#3366FF"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">Output</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#BD8663"/>
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#3366FF"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_SET_METHOD</text>
+          fill="#000000" dominant-baseline="middle">Output</text>
 
     <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#BD8663"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_RESET_METHOD</text>
+          fill="#000000" dominant-baseline="middle">ID_SET_METHOD</text>
 
     <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#BD8663"/>
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ID_TOGGLE_METHOD</text>
+          fill="#000000" dominant-baseline="middle">ID_RESET_METHOD</text>
 
     <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#BD8663"/>
     <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ID_TOGGLE_METHOD</text>
+
+    <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#BD8663"/>
+    <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">ID_STATE_WRITE</text>
+
+    <polygon points="312.9375,71.0 317.9375,76.0 312.9375,81.0" fill="#A3B08F"/>
+    <text x="309.9375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -124,19 +140,31 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="344.4375" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Identify the Output Output_Q1..Q8 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Set-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Identify the Output Output_Q1..Q8 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Reset-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Set-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Toggle-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Reset-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
 
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lokale Methodenadresse (ACTION=CREATE_METHOD) fuer den Toggle-Methodenaufruf, wird von Geraet A per CALL_METHOD aufgerufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="-25" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Remote-Ziel-Adresse (BOOL, ACTION=WRITE) fuer den Flipflop-Zustand auf Geraet A – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">WSTRING</tspan></text>
+
+    <text x="344.4375" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

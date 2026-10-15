@@ -21,26 +21,29 @@ The button **must** be non-latching (`Latchable=0` in the pool). A latching butt
     - **Button**: SubApp [`Button_IE_1`](./Button_IE_1.md) with `InputEvent=BT_RELEASED_UNLATCHED`
     - **Aux**: SubApp [`Aux_IE_1`](./Aux_IE_1.md) with `InputEvent=AuxDisabled_START`
     - **MERGE**: `iec61499::events::E_MERGE_2` - merges both `IND` events
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` - combines `Button.QO` and `Aux.QO` into `QO`
 - **Imports**: `BT_RELEASED_UNLATCHED` (`ButtonActivationCode`), `AuxDisabled_START` (`AuxiliaryState`)
 
 ## Interface Structure
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialisation request
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialisation confirmation
 - **IND**: Fires when the button (`BT_RELEASED_UNLATCHED`) or the aux assignment (`AuxEnabled`) is activated
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`): Object ID of the button (`CButton`, non-latching)
 - **u16ObjIdA** (`UINT`): Object ID of the `AuxFunction2`
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - AND of `Button.QO` and `Aux.QO`
 
 ## Program Flow and Connections
 
@@ -49,6 +52,9 @@ None.
 - `Button.IND` → `MERGE.EI1`
 - `Aux.IND` → `MERGE.EI2`
 - `MERGE.EO` → `IND`
+- `INIT` → `Button.INIT`; `Button.INITO` → `Aux.INIT`; `Aux.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Button.QI` and `QI` → `Aux.QI`
+- `Button.QO` → `AND_QO.IN1`; `Aux.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

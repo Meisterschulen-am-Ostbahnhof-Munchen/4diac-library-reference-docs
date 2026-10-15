@@ -27,16 +27,18 @@ Der Funktionsblock Q_Priority_AUS dient zur Änderung der Priorität einer Alarm
 
 ### **Daten-Eingänge**
 
-| Name     | Typ  | Beschreibung             | Initialwert |
-| -------- | ---- | ------------------------ | ----------- |
-| u16ObjId | UINT | Objekt-ID der Alarmmaske | ID_NULL     |
+| Name     | Typ  | Beschreibung                              | Initialwert |
+| -------- | ---- | ----------------------------------------- | ----------- |
+| QI       | BOOL | Quality Input – TRUE aktiviert den Dienst | TRUE        |
+| u16ObjId | UINT | Objekt-ID der Alarmmaske                  | ID_NULL     |
 
 ### **Daten-Ausgänge**
 
-| Name      | Typ    | Beschreibung                                            |
-| --------- | ------ | ------------------------------------------------------- |
-| STATUS    | STRING | Status des Dienstes (z. B. Fehler- oder Erfolgsmeldung) |
-| s16result | INT    | Rückgabewert gemäß Beschreibung (siehe Funktionsweise)  |
+| Name      | Typ    | Beschreibung                                                        |
+| --------- | ------ | ------------------------------------------------------------------- |
+| QO        | BOOL   | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
+| STATUS    | STRING | Status des Dienstes (z. B. Fehler- oder Erfolgsmeldung)             |
+| s16result | INT    | Rückgabewert gemäß Beschreibung (siehe Funktionsweise)              |
 
 ### **Adapter**
 
@@ -44,6 +46,8 @@ Der Funktionsblock Q_Priority_AUS dient zur Änderung der Priorität einer Alarm
 | ------------- | -------------------- | -------- | ------------------------------------------------ |
 | u8Priority    | AUS (unidirectional) | Socket   | Neue Priorität (wird über den Adapter gesendet)  |
 | u8OldPriority | AUS (unidirectional) | Plug     | Alte Priorität (wird über den Adapter empfangen) |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_Priority` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_Priority.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Gültige Objekt-IDs
 

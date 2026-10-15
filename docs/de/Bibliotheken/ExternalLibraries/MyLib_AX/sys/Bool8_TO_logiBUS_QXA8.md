@@ -15,14 +15,16 @@ Der Baustein **Bool8_TO_logiBUS_QXA8** ist eine Subapplikation zur Ansteuerung v
 
 ### **Ereignis-Eingänge**
 
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `DigitalOutput_Q4.INIT`.
 - **CNF** (Event): Dieses Ereignis löst die Übernahme aller acht Eingangswerte und deren Übertragung auf die konfigurierten Ausgänge aus.
 
 ### **Ereignis-Ausgänge**
 
-- Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `DigitalOutput_Q3.INITO`, dem Ende der Init-Kette.
 
 ### **Daten-Eingänge**
 
+- **QI** (BOOL, Initialwert `TRUE`): Quality Input, schaltet den Dienst frei; wird an alle acht `DigitalOutput_Qx.QI` weitergereicht.
 - **Q_00** (BOOL): Binärwert für Ausgang 1.
 - **Q_01** (BOOL): Binärwert für Ausgang 2.
 - **Q_02** (BOOL): Binärwert für Ausgang 3.
@@ -42,7 +44,7 @@ Der Baustein **Bool8_TO_logiBUS_QXA8** ist eine Subapplikation zur Ansteuerung v
 
 ### **Daten-Ausgänge**
 
-- Keine.
+- **QO** (BOOL): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_8`) der `QO`-Ausgänge aller acht `DigitalOutput_Qx`.
 
 ### **Adapter**
 
@@ -51,6 +53,8 @@ An der Subapp-Schnittstelle sind keine Adapterports definiert. Intern werden jed
 ## Funktionsweise
 
 Die Subapplikation enthält acht Instanzen des Funktionsblocks `logiBUS::io::DQ::logiBUS_QXA` (jeweils für einen Ausgang) sowie acht Konverter `adapter::conversion::unidirectional::AX_BOOL_TO_X`. Beim Eintreten des Ereignisses `CNF` werden alle acht Bool-Werte parallel über die Konverter in Adapterdaten umgewandelt und an die zugehörigen `logiBUS_QXA`-Bausteine weitergeleitet. Diese setzen die digitalen Ausgänge entsprechend dem konfigurierten Kanal (über die `Output_x`-Variablen) auf den jeweiligen Binärzustand. Die Auswahl der Zielkanäle erfolgt über die Dateneingänge `Output_1` bis `Output_8`, die als logiBUS-Kanal-Identifikatoren dienen.
+
+Initialisierung und Qualität: `INIT` wird durch alle acht `logiBUS_QXA`-Instanzen gekettet (`INIT` → `DigitalOutput_Q4` → `DigitalOutput_Q7` → `DigitalOutput_Q1` → `DigitalOutput_Q5` → `DigitalOutput_Q2` → `DigitalOutput_Q6` → `DigitalOutput_Q8` → `DigitalOutput_Q3`, jeweils `INITO` → nächstes `INIT`); `DigitalOutput_Q3.INITO` führt zu `INITO` und `AND_QO.REQ`. `QI` wird an alle acht `DigitalOutput_Qx.QI` verteilt; deren `QO`-Ausgänge gehen auf `AND_QO.IN1` bis `AND_QO.IN8` (`iec61131::booleanOperators::AND_BOOL_8`), dessen `OUT` den Ausgang `QO` bildet.
 
 ## Technische Besonderheiten
 

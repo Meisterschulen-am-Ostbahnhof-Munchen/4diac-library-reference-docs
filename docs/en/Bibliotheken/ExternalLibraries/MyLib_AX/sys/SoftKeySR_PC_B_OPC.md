@@ -18,6 +18,10 @@
 - **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`): physical output.
 - **STATE_CLIENT** (`adapter::net::AX_CLIENT_1_0`): actively writes the state to device A under `ID_STATE_WRITE`.
 
+## Initialization and quality
+
+The SubApp has the event input `INIT`, the event output `INITO` (both `EInit`), the data input `QI` (`BOOL`, default `TRUE`) and the data output `QO` (`BOOL`). Initialization runs as a chain: `INIT` → `TRIGGER_SET_SERVER.INIT`, `TRIGGER_SET_SERVER.INITO` → `TRIGGER_RESET_SERVER.INIT`, `TRIGGER_RESET_SERVER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `STATE_CLIENT.INIT`, `STATE_CLIENT.INITO` → `INITO` (and → `AND_QO.REQ`). `QI` is passed to `TRIGGER_SET_SERVER`, `TRIGGER_RESET_SERVER`, `DigitalOutput_Q1` and `STATE_CLIENT`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_4`), which combines the `QO` of these four instances.
+
 ## Summary
 
 Device-B side: receives set/reset via RPC, holds the pure SR flip-flop logic, and actively reports the state back.

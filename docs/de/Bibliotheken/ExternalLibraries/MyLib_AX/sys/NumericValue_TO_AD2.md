@@ -14,19 +14,29 @@
 
 ### Eingangsvariablen
 
+- `QI` (BOOL, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst; wird an `NumericValue_IDA` und `Q_NumericValue_AUDI` durchgereicht.
 - `u16ObjId` (UINT, Default `ID_NULL`): ObjectID des VT-Eingabefelds.
+
+### Ausgangsvariablen
+
+- `QO` (BOOL): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde; `AND` der `QO`-Ausgänge von `Q_NumericValue_AUDI` und `NumericValue_IDA` (über `AND_QO`).
 
 ### Adapter
 
 - **Plug `VALUEO`** (`adapter::types::bidirectional::AD2`): Bitmaske zum Consumer und Echo zurück.
 
-Der Baustein besitzt keine eigenen Ereignisanschlüsse.
+### Ereignisse
+
+- `INIT` (EInit, Eingang): Initialisierungsanforderung; startet die Kette `NumericValue_IDA` → `Q_NumericValue_AUDI`.
+- `INITO` (EInit, Ausgang): Initialisierungsbestätigung; kommt von `Q_NumericValue_AUDI.INITO`.
 
 ## Funktionsweise
 
-1. `NumericValue_IDA` (`QI`=TRUE) liest das VT-Eingabefeld.
+1. `NumericValue_IDA` liest das VT-Eingabefeld.
 2. `AD_TO_AD2` wandelt den Wert in den bidirektionalen AD2-Adapter, der an `VALUEO` ausgegeben wird.
 3. Das vom Consumer zurückgemeldete Echo erscheint an `AD_TO_AD2.AD_OUT`, wird per `AD_TO_AUDI` in UDINT gewandelt und von `Q_NumericValue_AUDI` (`u32NewValue`) unter `u16ObjId` auf das VT-Feld geschrieben.
+
+`QI` wird an `NumericValue_IDA.QI` und `Q_NumericValue_AUDI.QI` durchgereicht (kein fester `QI`=TRUE mehr). Die Initialisierung läuft als Kette `INIT` → `NumericValue_IDA.INIT`, `NumericValue_IDA.INITO` → `Q_NumericValue_AUDI.INIT`, `Q_NumericValue_AUDI.INITO` → `INITO` und → `AND_QO.REQ`. `QO` ist das `AND` (`AND_QO`, `AND_BOOL_2`) der `QO`-Ausgänge von `Q_NumericValue_AUDI` und `NumericValue_IDA`.
 
 ## Technische Besonderheiten
 

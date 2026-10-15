@@ -1,6 +1,5 @@
 # IX_TO_Aux_QX
 
-
 ![IX_TO_Aux_QX_network](./IX_TO_Aux_QX_network.svg)
 
 ![IX_TO_Aux_QX](./IX_TO_Aux_QX.svg)
@@ -15,22 +14,23 @@ Die SubApp `IX_TO_Aux_QX` dient als generische, ereignisbasierte Brücke zwische
 
 ### **Ereignis-Eingänge**
 
-Keine Ereignis-Eingänge an der SubApp-Schnittstelle vorhanden.
+- **INIT** (`EInit`): Initialization Request; wird an `IX.INIT` weitergegeben.
 
 ### **Ereignis-Ausgänge**
 
-Keine Ereignis-Ausgänge an der SubApp-Schnittstelle vorhanden.
+- **INITO** (`EInit`): Initialization Confirm; kommt von `QX.INITO`.
 
 ### **Daten-Eingänge**
 
 | Name     | Typ                           | Kommentar                                                                 |
 | -------- | ----------------------------- | ------------------------------------------------------------------------- |
 | `Input`  | `logiBUS::io::DI::logiBUS_DI_S` | Identifiziert den logiBUS-Eingang (I1..I8). Default: `Invalid`           |
+| `QI`     | `BOOL`                        | Quality Input – TRUE aktiviert den Dienst. Default: `TRUE`               |
 | `iInpNr` | `USINT`                       | Nummer des Auxiliary-Arrays – entspricht der Reihenfolge im Pool (0 = erster Aux-Input) |
 
 ### **Daten-Ausgänge**
 
-Keine Daten-Ausgänge an der SubApp-Schnittstelle vorhanden.
+- **QO** (`BOOL`): Quality Output – UND-Verknüpfung (`AND_QO`, `AND_BOOL_2`) von `QX.QO` und `IX.QO`.
 
 ### **Adapter**
 
@@ -42,7 +42,7 @@ Die SubApp instanziiert intern zwei Funktionsblöcke: `IX` (Typ `logiBUS::io::DI
 
 - **Ereigniskette:** Das Ereignis `IND` des `IX`-Blocks wird direkt mit dem Eingang `REQ` von `QX` verbunden. Dadurch wird bei jedem neuen Eingangssignal des logiBUS-Moduls ein Ausgabeereignis im `QX` ausgelöst.
 - **Datenpfad:** Der Datenwert `IN` von `IX` (der den aktuellen Zustand des logiBUS-Eingangs liefert) wird an den Daten-Eingang `OUT` von `QX` weitergegeben. Zusätzlich wird der SubApp-Parameter `iInpNr` direkt an `QX.iInpNr` angeschlossen, sodass die Zuordnung des Auxiliary-Outputs festgelegt wird.
-- **Steuerparameter:** Beide internen Blöcke sind mit `QI = TRUE` initialisiert und arbeiten damit im aktivierten Modus.
+- **Initialisierung und Qualität:** `INIT` → `IX.INIT`; `IX.INITO` → `QX.INIT`; `QX.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an `IX.QI` und `QX.QI` verteilt (kein fest verdrahteter `QI`-Parameter mehr); `QX.QO` → `AND_QO.IN1`, `IX.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 Somit verarbeitet die SubApp ein eingehendes logiBUS-Signal (z. B. von einem digitalen Eingang) und setzt es in einen ISOBUS-Auxiliary-Output um. Die Übertragung erfolgt streng ereignisgetrieben, was eine synchrone Reaktion ohne zusätzliche Polling-Logik ermöglicht.
 

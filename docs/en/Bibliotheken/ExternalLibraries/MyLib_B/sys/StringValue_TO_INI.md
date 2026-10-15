@@ -1,6 +1,5 @@
 # StringValue_TO_INI
 
-
 ![StringValue_TO_INI_network](./StringValue_TO_INI_network.svg)
 
 ![StringValue_TO_INI](./StringValue_TO_INI.svg)
@@ -17,18 +16,20 @@ The StringValue_TO_INI subapplication is a generic IEC 61499 component that read
 
 | Event | Description |
 |-------|-------------|
-| (None) | The subapplication has no event inputs. It is driven by its internal initialization and the incoming VT data. |
+| INIT | Initialization request (EInit); starts the initialization chain `StringValue_IS` → `INI` → `Q_StringValue`. |
 
 ### **Event Outputs**
 
 | Event | Description |
 |-------|-------------|
+| INITO | Initialization confirm (EInit); comes from `Q_StringValue.INITO` (end of the chain). |
 | IND | Indicates that a SET or GET operation on the INI storage has completed successfully. |
 
 ### **Data Inputs**
 
 | Data | Type | Description |
 |------|------|-------------|
+| QI | BOOL | Quality Input - TRUE to enable service (initial value TRUE); distributed to StringValue_IS.QI, INI.QI and Q_StringValue.QI. |
 | KEY | STRING | The key name under which the value is stored in the INI file. |
 | SECTION | STRING | The section name in the INI file where the key resides. |
 | u16ObjId | UINT | The object identifier of the string object within the ISOBUS Virtual Terminal. Initialized to ID_NULL. |
@@ -37,6 +38,7 @@ The StringValue_TO_INI subapplication is a generic IEC 61499 component that read
 
 | Data | Type | Description |
 |------|------|-------------|
+| QO | BOOL | Quality Output - TRUE if the service executed successfully; AND combination (`AND_QO`, `AND_BOOL_3`) of Q_StringValue.QO, StringValue_IS.QO and INI.QO. |
 | VALUEO | STRING | The string value read from the INI storage after a GET operation. |
 
 ### **Adapters**
@@ -45,13 +47,15 @@ None.
 
 ## Functionality
 
-The StringValue_TO_INI subapplication combines three functional building blocks to perform the following operations:
+The StringValue_TO_INI subapplication combines three functional building blocks (plus an AND block `AND_QO`, `iec61131::booleanOperators::AND_BOOL_3`, for the quality output) to perform the following operations:
 
 1. **Read from VT**: The internal StringValue_IS FB reads a string value from the ISOBUS VT object specified by u16ObjId. When this value is available, it triggers the INI SET operation.
 
 2. **Store in INI**: The internal INI FB stores the received string value under the KEY within the SECTION of the INI storage. This allows the value to be persisted and retrieved later.
 
 3. **Retrieve and Queue**: On initialization, the subapplication automatically performs a GET operation to read the stored value. This value is then output via VALUEO and also forwarded to the internal Q_StringValue queue for further processing.
+
+Initialization: `INIT` → `StringValue_IS.INIT`; `StringValue_IS.INITO` → `INI.INIT`; `INI.INITO` → `Q_StringValue.INIT`; `Q_StringValue.INITO` → `INITO` and → `AND_QO.REQ`. Quality: `QI` is distributed to `StringValue_IS.QI` and `INI.QI` (and `Q_StringValue.QI`); `Q_StringValue.QO` → `AND_QO.IN1`, `StringValue_IS.QO` → `AND_QO.IN2`, `INI.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`. The internal `GET` trigger after `INI.INITO` is unchanged.
 
 The event flow is as follows:
 

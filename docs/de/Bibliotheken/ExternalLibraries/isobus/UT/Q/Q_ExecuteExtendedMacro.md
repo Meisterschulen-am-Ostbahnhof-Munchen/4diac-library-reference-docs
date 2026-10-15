@@ -24,10 +24,12 @@ Der **Q_ExecuteExtendedMacro** ist ein standardkonformer Funktionsbaustein zur A
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Makro-Objekt-ID (16-bit)
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `s16result` (INT): ISO-konformer Ergebniscode
 
@@ -38,6 +40,8 @@ Der **Q_ExecuteExtendedMacro** ist ein standardkonformer Funktionsbaustein zur A
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Makro-Objekt-ID

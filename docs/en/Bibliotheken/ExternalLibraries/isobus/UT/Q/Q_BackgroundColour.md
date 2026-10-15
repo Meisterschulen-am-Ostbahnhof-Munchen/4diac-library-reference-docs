@@ -25,11 +25,13 @@ The **Q_BackgroundColour** is a standards-compliant function block for controlli
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE to enable service (associated with `INIT` and `REQ`)
 - `u16ObjId` (UINT): Object Identifier
 - `u8Colour` (USINT): New Color Value (ISO 11783-6 palette)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality Output - TRUE if service executed successfully (associated with `INITO` and `CNF`)
 - `STATUS` (STRING): Operating status message
 - `u8OldColour` (USINT): Previous color value
 - `s16result` (INT): ISO-compliant result code
@@ -42,6 +44,8 @@ WorkingSet (0), Data Mask (1000–1999), Alarm Mask (2000–2999), Soft Key Mask
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+`QI` (default `TRUE`) is taken over with the `INIT` and `REQ` events and enables the service; `QO` is output with `INITO` and `CNF` and indicates whether the service executed successfully.
 
 1. **Initialization**:
 

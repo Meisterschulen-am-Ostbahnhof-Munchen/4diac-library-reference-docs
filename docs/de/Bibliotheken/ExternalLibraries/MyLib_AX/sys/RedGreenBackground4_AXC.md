@@ -10,6 +10,8 @@
 
 `RedGreenBackground4_AXC` ist ein **Kompakt-Wrapper** um [`RedGreenBackground4_AX`](RedGreenBackground4_AX.md) — reicht `u16ObjId` und den Selector durch, ohne die `CNF`-Ereignisausgänge und Diagnosewerte (`STATUS_n`, `u8OldColour_n`, `result_n`) nach außen zu führen.
 
+Schnittstelle (Quality-Muster): Der Wrapper besitzt zusätzlich den Ereignis-Eingang `INIT` und den Ereignis-Ausgang `INITO` (je `EInit`) sowie den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`) und den Datenausgang `QO` (`BOOL`). Sie sind direkt an die innere Instanz `RedGreenBackground4` durchgeschleift: `INIT` → `RedGreenBackground4.INIT`, `RedGreenBackground4.INITO` → `INITO`, `QI` → `RedGreenBackground4.QI`, `RedGreenBackground4.QO` → `QO`.
+
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
 ## Zusammenfassung

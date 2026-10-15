@@ -27,16 +27,18 @@ This function block implements the **Change Numeric Value** command according to
 
 ### **Data Inputs**
 
-| Variable   | Type | Comment   | Initial Value |
-| ---------- | ---- | --------- | ------------- |
-| `u16ObjId` | UINT | Object ID | `ID_NULL`     |
+| Variable   | Type | Comment                                | Initial Value |
+| ---------- | ---- | -------------------------------------- | ------------- |
+| `QI`       | BOOL | Quality Input - TRUE to enable service | `TRUE`        |
+| `u16ObjId` | UINT | Object ID                              | `ID_NULL`     |
 
 ### **Data Outputs**
 
-| Variable    | Type   | Comment                        |
-| ----------- | ------ | ------------------------------ |
-| `STATUS`    | STRING | Service Status                 |
-| `s16result` | INT    | Return Value (see description) |
+| Variable    | Type   | Comment                                                |
+| ----------- | ------ | ------------------------------------------------------ |
+| `QO`        | BOOL   | Quality Output - TRUE if service executed successfully |
+| `STATUS`    | STRING | Service Status                                         |
+| `s16result` | INT    | Return Value (see description)                         |
 
 ### **Adapters**
 
@@ -44,6 +46,8 @@ This function block implements the **Change Numeric Value** command according to
 | ------------- | --------- | -------------------------------------- | --------------- |
 | `u32OldValue` | Plug      | `adapter::types::unidirectional::AUDI` | Old Value of ID |
 | `u32NewValue` | Socket    | `adapter::types::unidirectional::AUDI` | New ID Value    |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_NumericValueAux`. The data output `QO` (BOOL) is taken over from `Q_NumericValueAux.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Valid Object IDs
 

@@ -29,6 +29,7 @@ Der **Q_SoftKeyMask_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein **Q_
 
 | Name | Typ | Kommentar |
 |---|---|---|
+| `QI` | `BOOL` | Quality Input – TRUE aktiviert den Dienst |
 | `u8MaskType` | `USINT` | Maskentyp (1: DataMask, 2: AlarmMask) |
 | `u16DataMaskId` | `UINT` | Object-ID der zugehörigen Data/AlarmMask |
 
@@ -36,6 +37,7 @@ Der **Q_SoftKeyMask_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein **Q_
 
 | Name | Typ | Kommentar |
 |---|---|---|
+| `QO` | `BOOL` | Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde |
 | `STATUS` | `STRING` | Dienststatus |
 | `s16result` | `INT` | Rückgabewert des Befehls |
 
@@ -45,6 +47,8 @@ Der **Q_SoftKeyMask_AUI** ist ein AUI‑Adapter‑Wrapper für den Baustein **Q_
 |---|---|---|---|
 | `adapter::types::unidirectional::AUI` | `u16SoftKeyMaskId` | Socket (Eingang) | Neue Softkey-Masken-ID |
 | `adapter::types::unidirectional::AUI` | `u16OldSoftKeyMaskId` | Plug (Ausgang) | Bisherige Softkey-Masken-ID |
+
+**Qualitätssignale QI/QO:** Der Dateneingang `QI` (BOOL, Initialwert `TRUE`) ist dem Ereignis `INIT` zugeordnet und wird an `QI` des internen Bausteins `Q_SoftKeyMask` durchgereicht. Der Datenausgang `QO` (BOOL) wird von `Q_SoftKeyMask.QO` übernommen und ist den Ereignissen `INITO` und `CNF` zugeordnet.
 
 ## Funktionsweise
 

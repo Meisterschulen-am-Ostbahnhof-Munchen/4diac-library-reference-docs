@@ -17,28 +17,36 @@ The protocol logic is encapsulated inside the `MyLib::sys` composite subapplicat
 
 ## Interface Structure
 
-The subapplication exposes only data inputs. It has no externally visible event inputs, event outputs, data outputs, or adapter interfaces.
+The subapplication exposes the initialization events `INIT`/`INITO`, the status ports `QI`/`QO` and data inputs. It has no externally visible adapter interfaces.
 
 ### **Event Inputs**
 
-None.  
-All event generation is handled internally by the softkey input block.
+| Name | Type | Description |
+|------|------|-------------|
+| `INIT` | `EInit` | Initialization Request |
+
+All other event generation is handled internally by the softkey input block.
 
 ### **Event Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| `INITO` | `EInit` | Initialization Confirm |
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
+| `QI` | `BOOL` | `TRUE` | Quality Input - TRUE enables the service. |
 | `u16ObjId` | `UINT` | `ID_NULL` | Object ID used for the softkey and the background element. |
 | `ID_TRIGGER_CALL` | `WSTRING` | – | Remote OPC UA method address with `ACTION=CALL_METHOD`. Used for the argument-less trigger method call on device B. |
 | `ID_STATE_READ` | `WSTRING` | – | Locally monitored OPC UA address for the flip-flop state. The address is of type `BOOL` and uses `ACTION=READ`. It is written remotely by device B. |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully (AND of `SoftKey_UP_F1`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` and `GreenWhiteBackground_AX`). |
 
 ### **Adapters**
 
@@ -47,15 +55,17 @@ Internally, the adapter output `STATE_SUBSCRIBE.OUT` is connected to the adapter
 
 ## Functionality
 
-The subapplication performs two main tasks: triggering a remote OPC UA method call and visualizing the remote flip-flop state.
+The subapplication performs two main tasks, triggering a remote OPC UA method call and visualizing the remote flip-flop state, plus the initialization and status wiring.
 
-1. `SoftKey_UP_F1`, an instance of `isobus::UT::io::Softkey::Softkey_IE`, is configured with `QI = TRUE` and `InputEvent = SK_RELEASED`.  
+1. `SoftKey_UP_F1`, an instance of `isobus::UT::io::Softkey::Softkey_IE`, is configured with `InputEvent = SK_RELEASED` and receives `QI` from the subapplication's `QI` input.  
 2. When the F1 softkey is released, the internal event output `IND` of `SoftKey_UP_F1` is emitted.  
 3. This event is connected to the `REQ` input of `TRIGGER_CLIENT`, an instance of `iec61499::net::CLIENT_0`.  
 4. `TRIGGER_CLIENT` uses the `ID_TRIGGER_CALL` address to execute the remote OPC UA method on device B. The method has no arguments and no return value, so a single event-triggered request is sufficient.  
 5. In parallel, `STATE_SUBSCRIBE`, an instance of `adapter::net::AX_SUBSCRIBE_1`, monitors the `ID_STATE_READ` address and provides the current flip-flop state through its adapter output `OUT`.  
 6. This adapter output is connected to `GreenWhiteBackground_AX.DI1`.  
 7. `GreenWhiteBackground_AX` uses `u16ObjId` to address the correct background element and displays the state as green or white.
+
+8. Initialization and status: `INIT` → `SoftKey_UP_F1.INIT`, `SoftKey_UP_F1.INITO` → `TRIGGER_CLIENT.INIT`, `TRIGGER_CLIENT.INITO` → `STATE_SUBSCRIBE.INIT`, `STATE_SUBSCRIBE.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is forwarded to `SoftKey_UP_F1`, `TRIGGER_CLIENT`, `STATE_SUBSCRIBE` and `GreenWhiteBackground_AX`; their `QO` outputs are ANDed by the `AND_QO` block (type `iec61131::booleanOperators::AND_BOOL_4`) into `QO`.
 
 The result is a clean remote toggle operation: the user presses F1, device B toggles its internal flip-flop, and device A displays the new state.
 
@@ -66,9 +76,9 @@ The result is a clean remote toggle operation: the user presses F1, device B tog
 - Uses `iec61499::net::CLIENT_0` for the OPC UA remote method call.
 - Uses `adapter::net::AX_SUBSCRIBE_1` for adapter-based state subscription.
 - Uses `MyLib::sys::GreenWhiteBackground1_AX` for green/white state visualization.
-- Configuration is done through data inputs only; no external event wiring is necessary.
+- Configuration is done through data inputs; apart from the optional `INIT`/`INITO` chain no external event wiring is necessary.
 - No internal state machine is required.
-- All internal blocks are enabled with `QI = TRUE`.
+- All internal blocks receive `QI` from the subapplication's `QI` input (default `TRUE`).
 - The remote method call is a pure RPC trigger and does not require writing alternating values to a tag.
 - The protocol and communication details are contained inside the composite subapplication, making it reusable across resources.
 

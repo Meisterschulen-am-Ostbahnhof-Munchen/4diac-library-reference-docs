@@ -16,19 +16,20 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `NumericValue_IDA.INIT`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `NumericValue_IDA.INITO`
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`): Quality Input - TRUE aktiviert den Dienst (Default `TRUE`); geht an `NumericValue_IDA.QI`
 - **u16ObjId** (`UINT`): Object ID der Zahlenvariable, die die VT-Checkbox (InputBoolean) als Wertspeicher nutzt (Default `ID_NULL`)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (kommt von `NumericValue_IDA.QO`)
 
 ### **Adapter**
 
@@ -36,13 +37,15 @@ Keine.
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **`NumericValue_IDA`** (`isobus::UT::io::NumericValue::NumericValue_IDA`): Parameter `QI = TRUE`, liefert den Wert der Zahlenvariable als `AD`-Adapter
+- **`NumericValue_IDA`** (`isobus::UT::io::NumericValue::NumericValue_IDA`): liefert den Wert der Zahlenvariable als `AD`-Adapter
 - **`AD_TO_AX`** (`adapter::conversion::unidirectional::AD_TO_AX`): wandelt den Wert in einen `AX`-Pegel
 
 ## Funktionsweise
 
 - `u16ObjId` → `NumericValue_IDA.u16ObjId`
 - `NumericValue_IDA.IN` → `AD_TO_AX.AD_IN`
+- `INIT` → `NumericValue_IDA.INIT`, `NumericValue_IDA.INITO` → `INITO`
+- `QI` → `NumericValue_IDA.QI`, `NumericValue_IDA.QO` → `QO`
 - `AD_TO_AX.AX_OUT` → `PERMIT_OUT`
 
 ## Technische Besonderheiten

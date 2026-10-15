@@ -16,13 +16,15 @@ Die physischen VT-Elemente bleiben dort, wo die VT ist: Die Tasten **C_MIN**/**C
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
+
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 
 Kalibrierter Wert:
 
@@ -52,7 +54,7 @@ Rohwert-Anzeigen (reine Diagnose):
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND der `QO` von `ValueDisplay`, `TriggerMIN`, `TriggerMID`, `TriggerMAX`, `RawDisplay`, `MinRawDisplay`, `MidRawDisplay` und `MaxRawDisplay`)
 
 ### **Adapter**
 
@@ -63,6 +65,7 @@ Rohwert-Anzeigen (reine Diagnose):
 - **ValueDisplay**: SubApp [`MyLib::sys::AR_M2M_Subscribe_TO_Q_Publish_OPC`](./AR_M2M_Subscribe_TO_Q_Publish_OPC.md) – kalibrierter Wert
 - **RawDisplay**, **MinRawDisplay**, **MidRawDisplay**, **MaxRawDisplay**: dieselbe SubApp für den Rohwert und die Rohwerte der drei Kalibrierpunkte
 - **TriggerMIN**, **TriggerMID**, **TriggerMAX**: SubApp [`MyLib::sys::Button_CLIENT_Method_IE`](./Button_CLIENT_Method_IE.md) (`InputEvent=BT_PRESSED_LATCHED`) – Taste → Remote-Methodenaufruf (`ID_CALL`)
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_8` – verknüpft die `QO`-Ausgänge der acht inneren SubApps per UND zum Baustein-Ausgang `QO`
 - **Importe**: `ID_NULL`, `BT_PRESSED_LATCHED`, `NumericObjectPool_S`
 
 ## Programmablauf und Verbindungen
@@ -73,6 +76,9 @@ Rohwert-Anzeigen (reine Diagnose):
 - `ID_MINRAW_M2M_READ`, `stObjMinRaw`, `ID_MINRAW_WRITE` → `MinRawDisplay`
 - `ID_MIDRAW_M2M_READ`, `stObjMidRaw`, `ID_MIDRAW_WRITE` → `MidRawDisplay`
 - `ID_MAXRAW_M2M_READ`, `stObjMaxRaw`, `ID_MAXRAW_WRITE` → `MaxRawDisplay`
+- Initialisierungskette: `INIT` → `ValueDisplay.INIT`, `ValueDisplay.INITO` → `TriggerMIN.INIT`, `TriggerMIN.INITO` → `TriggerMID.INIT`, `TriggerMID.INITO` → `TriggerMAX.INIT`, `TriggerMAX.INITO` → `RawDisplay.INIT`, `RawDisplay.INITO` → `MinRawDisplay.INIT`, `MinRawDisplay.INITO` → `MidRawDisplay.INIT`, `MidRawDisplay.INITO` → `MaxRawDisplay.INIT`, `MaxRawDisplay.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `QI` aller acht inneren SubApps
+- `ValueDisplay.QO`, `TriggerMIN.QO`, `TriggerMID.QO`, `TriggerMAX.QO`, `RawDisplay.QO`, `MinRawDisplay.QO`, `MidRawDisplay.QO`, `MaxRawDisplay.QO` → `AND_QO.IN1`..`IN8`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

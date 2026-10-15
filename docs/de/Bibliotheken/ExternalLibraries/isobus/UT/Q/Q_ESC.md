@@ -22,12 +22,19 @@ Der **Q_ESC** ist ein standardkonformer Funktionsbaustein zur Abbruchsteuerung i
 - `INITO`: Initialisierungsbestätigung
 - `CNF`: Abbruchbestätigung (mit Status)
 
+### **Daten-Eingänge**
+
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
+
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `s16result` (INT): ISO-konformer Ergebniscode
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` ohne Parameter

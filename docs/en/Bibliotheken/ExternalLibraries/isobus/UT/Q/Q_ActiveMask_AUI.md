@@ -18,23 +18,28 @@ This wrapper is designed for applications that already use the unidirectional AU
 
 | Event   | Type  | Comment                    |
 |---------|-------|----------------------------|
-| `INIT`  | EInit | Service Initialization     |
+| `INIT`  | EInit | Service Initialization (with `QI`) |
 
 ### **Event Outputs**
 
 | Event | Type   | With Variables         | Comment                        |
 |-------|--------|------------------------|--------------------------------|
-| `INITO` | EInit | –                      | Initialization Confirm        |
-| `CNF`  | Event  | `STATUS`, `s16result`  | Confirmation of Requested Service |
+| `INITO` | EInit | `QO`                   | Initialization Confirm        |
+| `CNF`  | Event  | `QO`, `STATUS`, `s16result` | Confirmation of Requested Service |
 
-### **Data Inputs
+### **Data Inputs**
 
-*None – all data is exchanged via the adapters.*
+| Data Name | Type | Comment |
+|-----------|------|---------|
+| `QI`      | BOOL | Quality input, `TRUE` enables the service (default `TRUE`) |
+
+All other input data is exchanged via the adapters.
 
 ### **Data Outputs**
 
 | Data Name  | Type   | Comment |
 |------------|--------|---------|
+| `QO`       | BOOL   | Quality output, `TRUE` if the service was executed successfully |
 | `STATUS`   | STRING | Service Status |
 | `s16result`| INT    | Retval – see description in the core block |
 
@@ -51,7 +56,7 @@ The adapter data (D1) carries a 16‑bit unsigned integer (UINT) representing th
 
 The block acts as a bridge between an AUI adapter network and the internal `Q_ActiveMask` function block. When the **u16NewMaskId** socket receives a new value via its `E1` event, the wrapper internally issues a `REQ` to the `Q_ActiveMask` block, supplying the new mask ID. After processing, the `Q_ActiveMask` block produces a `CNF` event, which is propagated to the output as `CNF`, together with the `STATUS` and `s16result` values. Additionally, the old mask ID is sent back through the **u16OldMaskId** plug using its `E1` event, and the corresponding data value is transferred.
 
-Initialization is handled by the `INIT` event, which is forwarded to the internal block, and `INITO` is generated once the initialization completes.
+Initialization is handled by the `INIT` event, which is forwarded to the internal block, and `INITO` is generated once the initialization completes. `QI` is passed through to `Q_ActiveMask.QI`, and `Q_ActiveMask.QO` is passed through to `QO`.
 
 This wrapper does not implement the service logic itself; it relies entirely on the `Q_ActiveMask` function block for the actual ISO 11783‑6 command (Part 6, F.34). The wrapper only adapts the data flow to and from the AUI interfaces.
 

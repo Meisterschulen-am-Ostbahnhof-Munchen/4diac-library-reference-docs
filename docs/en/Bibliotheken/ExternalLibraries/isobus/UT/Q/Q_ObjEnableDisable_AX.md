@@ -26,13 +26,18 @@ The function block **Q_ObjEnableDisable_AX** is a composite function block that 
 
 ### **Data Inputs**
 
-| Name       | Type | Comment                              |
-| ---------- | ---- | ------------------------------------ |
-| `u16ObjId` | UINT | Object ID set during the INIT event. |
+| Name       | Type | Comment                                |
+| ---------- | ---- | -------------------------------------- |
+| `QI`       | BOOL | Quality Input - TRUE to enable service |
+| `u16ObjId` | UINT | Object ID set during the INIT event.   |
 
 ### **Data Outputs**
 
-No direct data outputs; the previous state is output via the adapter plug `qOldAbility`.
+Apart from `QO`, there are no direct data outputs; the previous state is output via the adapter plug `qOldAbility`.
+
+| Name | Type   | Comment                                                |
+| ---- | ------ | ------------------------------------------------------ |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ No direct data outputs; the previous state is output via the adapter plug `qOldA
 | ------------- | ------------------------------------ | --------- | -------------------------------------------------------------------------------- |
 | `qAbility`    | `adapter::types::unidirectional::AX` | Socket    | Receives the Enable/Disable command (0 = disable, 1 = enable, 0xFF = undefined). |
 | `qOldAbility` | `adapter::types::unidirectional::AB` | Plug      | Returns the object's previous state (same encoding).                             |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_ObjEnableDisable`. The data output `QO` (BOOL) is taken over from `Q_ObjEnableDisable.QO` and is associated with the event `INITO`.
 
 ## Valid Object IDs
 

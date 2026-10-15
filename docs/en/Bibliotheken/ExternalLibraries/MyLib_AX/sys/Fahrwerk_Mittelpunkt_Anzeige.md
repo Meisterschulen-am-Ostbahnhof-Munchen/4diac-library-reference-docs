@@ -28,10 +28,14 @@ It is intended for cases where the actual automation (`AUTO_LINKS`/`AUTO_RECHTS`
 
 ### **Event Inputs / Event Outputs**
 
-None - events travel via the adapter.
+- **INIT** (`EInit`, input): initialization request; passed on to `STATUS_CENTER_BG.INIT`
+- **INITO** (`EInit`, output): initialization confirmation; comes from `STATUS_CENTER_BG.INITO`
+
+The runtime events still travel via the adapter.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): quality input, service enable; passed on to `STATUS_CENTER_BG.QI`
 - **WINDOW_MIN** (`REAL`, default `-2.0`): Lower window limit (%) from which "deflected left" applies - must match the `WINDOW_MIN` of the associated `Fahrwerk_Mittelpunkt_Automatik` instance
 - **WINDOW_MAX** (`REAL`, default `2.0`): Upper window limit (%) from which "deflected right" applies - see `WINDOW_MIN`
 - **u16ObjId_Status_Center** (`UINT`): Object ID of the `Status_Center` button (`Achslenkung_Status_Center` or `Hangausgleich_Status_Center`, "><" indicator)
@@ -39,7 +43,7 @@ None - events travel via the adapter.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, comes from `STATUS_CENTER_BG.QO`
 
 ### **Adapters**
 
@@ -54,6 +58,8 @@ None.
 - `CENTER_CMP.CENTERED` → `STATUS_CENTER_BG.DI1`
 - `u16ObjId_Status_Center` → `STATUS_CENTER_BG.u16ObjId`
 - `stObjBargraphSplit` → `SplitBar.stObj`
+- Initialization: `INIT` → `STATUS_CENTER_BG.INIT`; `STATUS_CENTER_BG.INITO` → `INITO`
+- Quality: `QI` → `STATUS_CENTER_BG.QI`; `STATUS_CENTER_BG.QO` → `QO`
 
 ## Technical Details
 

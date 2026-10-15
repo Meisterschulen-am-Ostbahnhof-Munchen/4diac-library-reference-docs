@@ -24,12 +24,14 @@ Der **Q_LockUnlockMask** ist ein standardkonformer Funktionsbaustein zur Steueru
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standard `TRUE`): Quality-Eingang – `TRUE` aktiviert den Dienst
 - `u16MaskId` (UINT): Masken-Objekt-ID (bei `INIT` übergeben)
 - `u8LockCmd` (USINT): Sperrbefehl (0=Entsperren, 1=Sperren)
 - `u16LockTimeoutMs` (UINT): Timeout in ms (0=kein Timeout)
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality-Ausgang – `TRUE`, wenn der Dienst erfolgreich ausgeführt wurde
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldLockCmd` (USINT): Vorheriger Sperrzustand
 - `u16OldLockTimeoutMs` (UINT): Vorheriger Timeout
@@ -48,6 +50,8 @@ Dieser Baustein erfordert Instanz-Eindeutigkeit bezüglich **u16MaskId**. Es dar
 ID_NULL (65535) ist kein gültiges Kommandoziel — das Kommando wird vom VT mit einem Fehlercode beantwortet (die Maske muss der aktuell sichtbaren Maske entsprechen).
 
 ## Funktionsweise
+
+**Quality-Handling (QI/QO):** Der Eingang `QI` (BOOL, Standard `TRUE`) ist mit den Ereignissen `INIT` und `REQ` verknüpft; `TRUE` aktiviert den Dienst. Der Ausgang `QO` (BOOL) ist mit `INITO` und `CNF` verknüpft und zeigt mit `TRUE` an, dass der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit `u16MaskId`

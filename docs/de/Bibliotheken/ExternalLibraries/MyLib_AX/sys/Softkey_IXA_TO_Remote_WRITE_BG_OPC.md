@@ -13,20 +13,21 @@ Dieser Baustein realisiert eine Fernbedienungs‑Funktion für einen SoftKey, de
 
 ## Schnittstellenstruktur
 
-Die SubApp besitzt ausschließlich Dateneingänge. Es gibt keine Ereignisse, Datenausgänge oder Adapter als externe Schnittstellen.
+Die SubApp besitzt die Initialisierungs-Ereignisse `INIT`/`INITO`, die Status-Anschlüsse `QI`/`QO` und Dateneingänge. Es gibt keine Adapter als externe Schnittstellen.
 
 ### **Ereignis-Eingänge**  
 
-Keine.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**  
 
-Keine.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
 | Name          | Datentyp | Beschreibung                                                                                     |
 |---------------|----------|--------------------------------------------------------------------------------------------------|
+| `QI`          | BOOL     | Quality Input - TRUE, um den Dienst freizugeben. Initialwert: `TRUE`                             |
 | `u16ObjId`    | UINT     | Object‑ID des SoftKeys bzw. des Hintergrund‑Objekts (VT). Initialwert: `ID_NULL`                 |
 | `ID_SUBSCRIBE`| WSTRING  | Remote‑Subscribe‑Adresse (Status/Farbe, ACTION=SUBSCRIBE)                                        |
 | `ID_WRITE_REMOTE`| WSTRING| Remote‑Write‑Adresse zum Zielmodul (Befehl, ACTION=WRITE, CLIENT)                                |
@@ -34,7 +35,9 @@ Keine.
 
 ### **Daten-Ausgänge**  
 
-Keine.
+| Name | Datentyp | Beschreibung |
+|------|----------|--------------|
+| `QO` | BOOL     | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Softkey_IXA`, `SUBSCRIBE_WEB`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` und `GreenWhiteBackground1_AX`) |
 
 ### **Adapter**  
 
@@ -56,11 +59,17 @@ Die SubApp besteht aus mehreren Funktionsblöcken, die über Adapterverbindungen
 
 6. **GreenWhiteBackground1_AX** (SubApp vom Typ `MyLib::sys::GreenWhiteBackground1_AX`): Erhält den Status vom Subscribe‑Ausgang an ihrem Eingang `DI1` und setzt die VT‑Hintergrundfarbe des SoftKeys entsprechend: grün für aktiv, weiß für inaktiv.
 
+7. **AND_QO** (Typ `iec61131::booleanOperators::AND_BOOL_5`): Verknüpft die `QO`-Ausgänge von `Softkey_IXA`, `SUBSCRIBE_WEB`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` und `GreenWhiteBackground1_AX` per UND zum SubApp-Ausgang `QO`.
+
 Die Adapter­verbindungen gewährleisten den Datenfluss:  
 `Softkey_IXA.IN` → `OR_MERGE.IN1`,  
 `SUBSCRIBE_WEB.OUT` → `OR_MERGE.IN2`,  
 `OR_MERGE.OUT` → `AX_CLIENT_1_0.IN`,  
 `AX_SUBSCRIBE_1.OUT` → `GreenWhiteBackground1_AX.DI1`.
+
+Initialisierung und Status:  
+`INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`.  
+`QI` → `Softkey_IXA.QI`, `SUBSCRIBE_WEB.QI`, `AX_CLIENT_1_0.QI`, `AX_SUBSCRIBE_1.QI` und `GreenWhiteBackground1_AX.QI`; deren `QO` → `AND_QO.IN1`..`IN5`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

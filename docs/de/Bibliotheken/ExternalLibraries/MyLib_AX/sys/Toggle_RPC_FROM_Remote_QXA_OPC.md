@@ -15,21 +15,22 @@ Der Baustein `Toggle_RPC_FROM_Remote_QXA_OPC` ist eine Subapplikation, die auf e
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- `INIT` (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- `INITO` (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- `QI` (Typ: `BOOL`): Quality Input - TRUE, um den Dienst freizugeben. Initialwert: `TRUE`.
 - `Output` (Typ: `logiBUS::io::DQ::logiBUS_DO_S`): Identifiziert den digitalen Ausgang (Q1–Q8) des angeschlossenen logiBUS-Moduls. Initialwert: `logiBUS_DO::Invalid`.
 - `ID_TRIGGER_METHOD` (Typ: `WSTRING`): Lokale Methodenadresse (ACTION=CREATE_METHOD) für den argumentlosen Trigger-Aufruf, der von Gerät A per `CALL_METHOD` ausgeführt wird.
 - `ID_STATE_WRITE` (Typ: `WSTRING`): Remote-Zieladresse (BOOL, ACTION=WRITE) für das Zurückschreiben des Flip-Flop-Zustands an Gerät A.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- `QO` (Typ: `BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `TRIGGER_SERVER.QO`, `DigitalOutput_Q1.QO` und `STATE_CLIENT.QO`).
 
 ### **Adapter**
 
@@ -50,6 +51,12 @@ Die Daten-Eingänge der Subapplikation werden direkt an die entsprechenden Funkt
 - `Output` → `DigitalOutput_Q1.Output`  
 - `ID_TRIGGER_METHOD` → `TRIGGER_SERVER.ID`  
 - `ID_STATE_WRITE` → `STATE_CLIENT.ID`
+
+Initialisierung und Status:
+
+- `INIT` → `TRIGGER_SERVER.INIT`, `TRIGGER_SERVER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `STATE_CLIENT.INIT`, `STATE_CLIENT.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `TRIGGER_SERVER.QI`, `DigitalOutput_Q1.QI` und `STATE_CLIENT.QI`
+- `TRIGGER_SERVER.QO` → `AND_QO.IN1`, `DigitalOutput_Q1.QO` → `AND_QO.IN2`, `STATE_CLIENT.QO` → `AND_QO.IN3` (Baustein `AND_QO`, Typ `iec61131::booleanOperators::AND_BOOL_3`); `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

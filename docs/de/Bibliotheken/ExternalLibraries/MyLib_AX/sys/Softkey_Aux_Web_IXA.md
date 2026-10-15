@@ -14,21 +14,24 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialisierungsanforderung
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden – Ereignisse laufen über den Adapter-Plug*
+- **INITO** (`EInit`): Initialisierungsbestätigung
+
+Außer `INITO` gibt es keine Ereignis-Ausgänge – Nutzereignisse laufen über den Adapter-Plug.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE gibt den Dienst frei
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID des SoftKeys (VT)
 - **u16ObjIdA** (`UINT`, Vorgabe `ID_NULL`): Object-ID der AuxFunction2 (VT)
 - **ID** (`WSTRING`): Lokale Subscribe-Adresse für einen Web-Client (z. B. `vt-ui-mirror`) auf demselben Modul, ODER-verknüpft mit SoftKey und AUX
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output – UND aus `Softkey_IXA.QO`, `Aux_IXA.QO` und `SUBSCRIBE_WEB.QO`
 
 ### **Adapter**
 
@@ -36,10 +39,11 @@
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`)
-- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`)
-- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`)
+- **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA`
+- **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA`
+- **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1`
 - **OR_MERGE**: `adapter::booleanOperators::AX_OR_3`
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3`
 
 ## Programmablauf und Verbindungen
 
@@ -48,11 +52,14 @@
 - `Aux_IXA.IN` → `OR_MERGE.IN2`
 - `SUBSCRIBE_WEB.OUT` → `OR_MERGE.IN3`
 - `OR_MERGE.OUT` → `OUT`
+- `INIT` → `Softkey_IXA.INIT`; `Softkey_IXA.INITO` → `Aux_IXA.INIT`; `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`; `SUBSCRIBE_WEB.INITO` → `INITO` (und → `AND_QO.REQ`)
+- `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI` und `SUBSCRIBE_WEB.QI`
+- `Softkey_IXA.QO` → `AND_QO.IN1`; `Aux_IXA.QO` → `AND_QO.IN2`; `SUBSCRIBE_WEB.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 
 - Kontinuierlicher Pegel statt Flanke: `OUT` bleibt `TRUE`, solange mindestens eine Quelle aktiv ist.
-- Kein Remote-Write und kein Ereignis-Ausgang.
+- Kein Remote-Write und kein Nutzereignis-Ausgang (nur `INITO`).
 
 ## Anwendungsszenarien
 

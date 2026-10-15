@@ -18,22 +18,30 @@ There is still exactly **one** publisher per channel on `ID_WRITE_REMOTE`, even 
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) - SoftKey level
-    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` (`QI=TRUE`) - AUX level
-    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` (`QI=TRUE`) - local subscribe for a web client
+    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` - SoftKey level
+    - **Aux_IXA**: `isobus::UT::io::Auxiliary::IN::Aux_IXA` - AUX level
+    - **SUBSCRIBE_WEB**: `adapter::net::AX_SUBSCRIBE_1` - local subscribe for a web client
     - **SPLIT_WEB**: `adapter::events::unidirectional::AX_SPLIT_2` - distributes the web state to `OR_MERGE` and `WEB_STATE`
     - **OR_MERGE**: `adapter::booleanOperators::AX_OR_4` - OR combination of the four sources
-    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` (`QI=TRUE`) - remote write to the target module
+    - **AX_CLIENT_1_0**: `adapter::net::AX_CLIENT_1_0` - remote write to the target module
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` - combines the `QO` of `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` and `AX_CLIENT_1_0`
 - **Import**: `ID_NULL`
 
 ## Interface Structure
 
-### **Event Inputs / Event Outputs**
+### **Event Inputs**
 
-None - events travel via the adapters.
+- **INIT** (`EInit`): initialization request; goes to `Softkey_IXA.INIT`
+
+### **Event Outputs**
+
+- **INITO** (`EInit`): initialization confirm; comes from `AX_CLIENT_1_0.INITO`, the end of the chain
+
+The switching events themselves still travel via the adapters.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service; goes to `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` and `AX_CLIENT_1_0`
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of the SoftKey (VT)
 - **u16ObjIdA** (`UINT`, default `ID_NULL`): Object ID of the `AuxFunction2` (VT)
 - **ID_WRITE_REMOTE** (`WSTRING`): Remote write address to the target module (command, `ACTION=WRITE`, `CLIENT`)
@@ -41,7 +49,7 @@ None - events travel via the adapters.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (AND of the `QO` of `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB` and `AX_CLIENT_1_0`)
 
 ### **Adapters**
 
@@ -56,6 +64,8 @@ None.
 - `SPLIT_WEB.OUT1` → `OR_MERGE.IN3`; `SPLIT_WEB.OUT2` → `WEB_STATE`
 - `AUTO_IN` → `OR_MERGE.IN4`
 - `OR_MERGE.OUT` → `AX_CLIENT_1_0.IN`; `ID_WRITE_REMOTE` → `AX_CLIENT_1_0.ID`
+- Initialization: `INIT` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `Aux_IXA.INIT`, `Aux_IXA.INITO` → `SUBSCRIBE_WEB.INIT`, `SUBSCRIBE_WEB.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `INITO` and → `AND_QO.REQ`
+- Quality: `QI` → `Softkey_IXA.QI`, `Aux_IXA.QI`, `SUBSCRIBE_WEB.QI` and `AX_CLIENT_1_0.QI`; their `QO` → `AND_QO.IN1`..`IN4`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 

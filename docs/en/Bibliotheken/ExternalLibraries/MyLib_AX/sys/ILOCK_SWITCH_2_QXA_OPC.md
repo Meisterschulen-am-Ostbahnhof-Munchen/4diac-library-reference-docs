@@ -15,15 +15,15 @@ The ILOCK_SWITCH_2_QXA_OPC subapplication implements a 2-direction double-acting
 
 ### **Event Inputs**
 
-- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `DigitalOutput_UP.INIT` and `DigitalOutput_DOWN.INIT`. The caller must trigger `INIT` itself (e.g. without delay for unchanged immediate behaviour, or delayed if an INI value has to be awaited).
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; starts the initialisation chain through all inner instances (`SUBSCRIBE_TEST_UP` → `SUBSCRIBE_CMD_UP` → `SUBSCRIBE_TEST_DOWN` → `SUBSCRIBE_CMD_DOWN` → `PUBLISH_TEST_UP` → `PUBLISH_STATE_UP` → `PUBLISH_TEST_DOWN` → `PUBLISH_STATE_DOWN` → `DigitalOutput_UP` → `DigitalOutput_DOWN`); the physical outputs are therefore initialised last. The caller must trigger `INIT` itself (e.g. without delay for unchanged immediate behaviour, or delayed if an INI value has to be awaited).
 
 ### **Event Outputs**
 
-- **INITO** (`EInit`): initialisation confirmed (from `DigitalOutput_UP.INITO`); for callers that need a real confirm chain (e.g. behind an `Option::AOption` adapter). Purely additive, harmless if left unwired.
+- **INITO** (`EInit`): initialisation confirmed (from `DigitalOutput_DOWN.INITO`, the end of the chain); for callers that need a real confirm chain (e.g. behind an `Option::AOption` adapter). Purely additive, harmless if left unwired.
 
 ### **Data Inputs**
 
-- **QI** (BOOL): Qualifier for the physical outputs; FALSE keeps the instance completely inactive (no hardware binding). Default `TRUE`.
+- **QI** (BOOL): Qualifier for the physical outputs; FALSE keeps the instance completely inactive (no hardware binding). Default `TRUE`. Distributed to all subscribe, publish and DigitalOutput instances.
 - **Output_UP** (logiBUS::io::DQ::logiBUS_DO_S): Physical output channel for the UP/Left direction. Initial value: `logiBUS_DO::Invalid`.
 - **Output_DOWN** (logiBUS::io::DQ::logiBUS_DO_S): Physical output channel for the DOWN/Right direction. Initial value: `logiBUS_DO::Invalid`.
 - **DT_PROTECT** (TIME): Protection dead time before a direction change is allowed. Default: `T#300ms`.
@@ -38,7 +38,7 @@ The ILOCK_SWITCH_2_QXA_OPC subapplication implements a 2-direction double-acting
 
 ### **Data Outputs**
 
-None.
+- **QO** (BOOL): Quality Output - TRUE if the service was executed successfully (AND of all subscribe/publish/DigitalOutput instances).
 
 ### **Adapters**
 
@@ -59,6 +59,8 @@ The interlocked output for each direction is distributed via an `AX_SPLIT_3` blo
 - **IO-test feedback**: Publishes the actual state to the existing IO-test publish address (`ID_TEST_WRITE_*`).
 - **Function feedback**: Publishes the actual state to the real function feedback address (`ID_WRITE_*`, e.g., for SoftKey background indication).
 
+Initialisation and quality: `INIT` runs as a chain `SUBSCRIBE_TEST_UP` → `SUBSCRIBE_CMD_UP` → `SUBSCRIBE_TEST_DOWN` → `SUBSCRIBE_CMD_DOWN` → `PUBLISH_TEST_UP` → `PUBLISH_STATE_UP` → `PUBLISH_TEST_DOWN` → `PUBLISH_STATE_DOWN` → `DigitalOutput_UP` → `DigitalOutput_DOWN` (each `INITO` → next `INIT`); `DigitalOutput_DOWN.INITO` goes to `INITO` and to `AND_QO.REQ`. `QI` is distributed to all eight subscribe/publish instances and to both `DigitalOutput` instances. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_10`), which combines the `QO` of these ten instances.
+
 The `E_TimeOut` block is connected to the interlock's timeout event to trigger and manage the protection timer logic.
 
 ## Technical Features
@@ -69,6 +71,7 @@ The `E_TimeOut` block is connected to the interlock's timeout event to trigger a
 - Remote subscribe (`AX_SUBSCRIBE_1`) and publish (`AX_PUBLISH_1`) capabilities for integration into distributed control networks.
 - Signal fan-out via `AX_SPLIT_3` to drive the physical output, IO-test monitoring, and function feedback simultaneously.
 - Fully generic design for any "digital DW" actuator, with all addresses parameterized via WSTRING inputs.
+- Quality output `QO` as the AND of the ten inner `QO` outputs.
 - Only `INIT`/`INITO` as events at the interface level; all other logic is driven internally by the subscribed data.
 
 ## State Overview

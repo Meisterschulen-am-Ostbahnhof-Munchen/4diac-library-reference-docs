@@ -14,14 +14,15 @@
 
 ### **Event Inputs**
 
-*No direct event inputs*
+- **INIT** (`EInit`): initialization request; starts the initialization chain (`AR_SUBSCRIBE_Hz` → `Publish`)
 
 ### **Event Outputs**
 
-*No direct event outputs*
+- **INITO** (`EInit`): initialization confirmation; comes from `Publish.INITO` after the chain has completed
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`): quality input, service enable (initial value `TRUE`), passed on to `AR_SUBSCRIBE_Hz.QI` and `Publish.QI`
 - **ID_HZ_REMOTE** (`WSTRING`): Remote subscribe address of the published frequency (Hz), e.g. `FBs::Ventilsteuerung::Ventilsteuerung_STG1::RemoteSubStrings::AUFNAHME_GESCHWINDIGKEIT_HZ_REMOTE`
 - **SCALE** (`REAL`): Scale factor Hz → physical unit (e.g. `3.6/53` for km/h, `60.0` for rpm at 1 pulse/revolution)
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object pool properties of the VT numeric variable (`u16ObjId`, `scale`, `offset`, `decimals`), e.g. `FBs::const::DefaultPool_Numeric::NumberVariable_X_N`
@@ -29,7 +30,7 @@
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): quality output, `AND` of the `QO` outputs of `AR_SUBSCRIBE_Hz` and `Publish` (via `AND_QO`)
 
 ### **Adapters**
 
@@ -37,11 +38,12 @@
 
 ## Function Blocks (FBs) Used
 
-- **AR_SUBSCRIBE_Hz**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI=TRUE`), subscribes to the remote address `ID_HZ_REMOTE`
+- **AR_SUBSCRIBE_Hz**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI` comes from the SubApp interface), subscribes to the remote address `ID_HZ_REMOTE`
 - **LIT_Scale**: `adapter::types::unidirectional::AR::initval::initval_AR`, provides `SCALE` as an AR value
 - **AR_SPLIT_2_HzRaw**: [`adapter::events::unidirectional::AR_SPLIT_2`](../../adapter/events/unidirectional/REAL/AR_SPLIT_2.md), branches the raw value
 - **AR_MUL**: [`adapter::iec61131::arithmetic::AR_MUL_2`](../../adapter/iec61131-3/arithmetic/AR_MUL_2.md), multiplies the raw value by `SCALE`
 - **Publish**: SubApp `MyLib::sys::AR_TO_Q_Publish_OPC`, shows the value on the VT (`stObj`) and publishes it via OPC-UA (`ID_WRITE`)
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2`, combines the `QO` outputs of `AR_SUBSCRIBE_Hz` and `Publish` into the SubApp output `QO`
 
 ## Program Flow and Connections
 
@@ -50,11 +52,14 @@
 3. `AR_SPLIT_2_HzRaw.OUT2` → `AR_MUL.IN1`; `SCALE` → `LIT_Scale.INIT_VAL`, `LIT_Scale.OUT` → `AR_MUL.IN2`.
 4. `AR_MUL.OUT` → `Publish.AR_IN`.
 5. `stObj` → `Publish.stObj`, `ID_WRITE` → `Publish.ID_WRITE`.
+6. Initialization: `INIT` → `AR_SUBSCRIBE_Hz.INIT`; `AR_SUBSCRIBE_Hz.INITO` → `Publish.INIT`; `Publish.INITO` → `INITO` and → `AND_QO.REQ`.
+7. Quality: `QI` → `AR_SUBSCRIBE_Hz.QI` and `Publish.QI`; `AR_SUBSCRIBE_Hz.QO` → `AND_QO.IN1`, `Publish.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Technical Details
 
 - **`HZ_RAW_OUT` (version 1.1)**: The optional plug mirrors the raw value (Hz) for a diagnostic display without needing a second, independent remote subscribe of the same node (FORTE reports `Cannot add another one` on a duplicate self-subscribe).
-- Pure wiring of existing blocks, no logic of its own.
+- **INIT/INITO and QI/QO**: initialization is passed through the chain `INIT` → `AR_SUBSCRIBE_Hz` → `Publish` → `INITO`; `QO` is the `AND` of the `QO` outputs of both blocks.
+- Pure wiring of existing blocks; apart from the `AND_QO` combination, no logic of its own.
 
 ## Application Scenarios
 

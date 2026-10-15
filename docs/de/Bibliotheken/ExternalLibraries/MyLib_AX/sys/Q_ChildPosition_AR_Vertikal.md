@@ -23,12 +23,14 @@
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **u16ObjId** (UINT): Object ID des Kind-Objekts (Default `ID_NULL`)
 - **u16ObjIdParent** (UINT): Object ID des Eltern-Objekts (Default `ID_NULL`)
 - **xScale** (BOOL): FALSE (Default) = Bypass, X/Y-Position unverändert senden; TRUE = mit dem DM/SKM-Faktor für `u16ObjIdParent` skalieren
 
 ### **Daten-Ausgänge**
 
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde
 - **STATUS** (STRING): Service-Status, durchgereicht vom internen `Q_ChildPosition`
 - **s16OldXposition** (INT): alte X-Position, durchgereicht
 - **s16OldYposition** (INT): alte Y-Position, durchgereicht
@@ -47,6 +49,8 @@ Das Netzwerk besteht aus drei Bausteinen:
 - `Q_ChildPosition_AI` (`isobus::UT::Q::Q_ChildPosition_AI`): `initval_AI.OUT` → `s16Xposition`, `AR_TO_AI.AI_OUT` → `s16Yposition`.
 
 Initialisierung: `INIT` → `initval_AI.INIT`, `initval_AI.INITO` → `Q_ChildPosition_AI.INIT`, `Q_ChildPosition_AI.INITO` → `INITO`. `Q_ChildPosition_AI.CNF` → `CNF`. `u16ObjId`, `u16ObjIdParent`, `xScale` und die vier Ausgänge gehen direkt von bzw. nach `Q_ChildPosition_AI`.
+
+`QI` wird an `Q_ChildPosition_AI.QI` durchgereicht, `Q_ChildPosition_AI.QO` an `QO`.
 
 ## Technische Besonderheiten
 

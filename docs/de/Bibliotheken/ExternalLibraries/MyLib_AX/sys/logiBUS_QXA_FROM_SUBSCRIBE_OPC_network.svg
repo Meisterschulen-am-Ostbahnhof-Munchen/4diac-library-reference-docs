@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-7.6 -151.0 1166.6 588.0"
-     width="1167" height="588">
+     viewBox="-19.6 -151.0 1561.9 588.0"
+     width="1562" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,35 +40,58 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-7.6" y="-151.0" width="1166.6" height="588.0" fill="white"/>
-  <rect x="-0.6" y="-144.0" width="1152.6" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-0.6" y="-144.0" width="1152.6" height="25.0" fill="white" stroke="none"/>
-  <line x1="-0.6" y1="-119.5" x2="1152.0" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="4.4" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Digitaler Ausgang, gesteuert von einem lokal ueberwachten OPC-UA-Knoten (von
+  <rect x="-19.6" y="-151.0" width="1561.9" height="588.0" fill="white"/>
+  <rect x="-12.6" y="-144.0" width="1547.9" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-12.6" y="-144.0" width="1547.9" height="25.0" fill="white" stroke="none"/>
+  <line x1="-12.6" y1="-119.5" x2="1535.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-7.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Digitaler Ausgang, gesteuert von einem lokal ueberwachten OPC-UA-Knoten (von
 einem ANDEREN Geraet per CLIENT_1_0 remote beschrieben) - 'SUB style': das
 Protokoll (AX_SUBSCRIBE_1) steckt IM Baustein selbst, nicht in der Resource des
 Geraets</text>
   <g id="sidebars">
-    <rect x="-0.6" y="-119.0" width="40.6" height="549.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="-12.6" y="-119.0" width="40.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="28.0" y1="-119.0" x2="28.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1501.7" y="-119.0" width="33.5" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1501.7" y1="-119.0" x2="1501.7" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 254.0,-84.0 259.0,-79.0 259.0,210.5 264.0,215.5 863.2,215.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 254.0,-84.0 259.0,-79.0 259.0,210.5 264.0,215.5 863.2,215.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 245.0,-67.0 250.0,-62.0 250.0,148.5 255.0,153.5 518.2,153.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="649.2,170.5 794.2,170.5 799.2,175.5 799.2,227.5 804.2,232.5 863.2,232.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="649.2,170.5 794.2,170.5 799.2,175.5 799.2,227.5 804.2,232.5 863.2,232.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="28.0,-84.0 35.2,-84.0 40.0,-79.2 40.0,110.5 45.0,115.5 329.0,115.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="459.9,115.5 556.9,115.5 561.9,120.5 561.9,155.5 566.9,160.5 674.0,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="785.6,160.5 1333.6,160.5 1338.6,155.5 1338.6,-79.0 1343.6,-84.0 1501.7,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="785.6,160.5 847.6,160.5 852.6,155.5 852.6,90.5 857.6,85.5 929.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="28.0,-50.0 242.0,-50.0 247.0,-45.0 247.0,240.5 252.0,245.5 674.0,245.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="28.0,-50.0 242.0,-50.0 247.0,-45.0 247.0,240.5 252.0,245.5 674.0,245.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="28.0,-33.0 233.0,-33.0 238.0,-28.0 238.0,178.5 243.0,183.5 329.0,183.5" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="28.0,-67.0 35.2,-67.0 40.0,-62.2 40.0,161.5 45.0,166.5 329.0,166.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="28.0,-67.0 35.2,-67.0 40.0,-62.2 40.0,206.5 45.0,211.5 674.0,211.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="459.9,166.5 593.9,166.5 598.9,161.5 598.9,124.5 603.9,119.5 929.0,119.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="785.6,211.5 865.6,211.5 870.6,206.5 870.6,141.5 875.6,136.5 929.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1035.8,119.5 1476.7,119.5 1481.7,114.5 1481.7,-62.0 1486.7,-67.0 1501.7,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="459.9,200.5 604.9,200.5 609.9,205.5 609.9,257.5 614.9,262.5 674.0,262.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="459.9,200.5 604.9,200.5 609.9,205.5 609.9,257.5 614.9,262.5 674.0,262.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#3366FF"/>
-    <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="23.0,-89.0 28.0,-84.0 23.0,-79.0" fill="#63B31F"/>
+    <text x="22.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">INIT</text>
+    <polygon points="1506.7495,-89.0 1501.7495,-84.0 1506.7495,-79.0" fill="#63B31F"/>
+    <text x="1507.7495" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">INITO</text>
+    <polygon points="23.0,-72.0 28.0,-67.0 23.0,-62.0" fill="#A3B08F"/>
+    <text x="22.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="end">QI</text>
+    <polygon points="23.0,-55.0 28.0,-50.0 23.0,-45.0" fill="#3366FF"/>
+    <text x="22.0" y="-45.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">Output</text>
-    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#BD8663"/>
-    <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="23.0,-38.0 28.0,-33.0 23.0,-28.0" fill="#BD8663"/>
+    <text x="22.0" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">ID</text>
+    <polygon points="1506.7495,-72.0 1501.7495,-67.0 1506.7495,-62.0" fill="#A3B08F"/>
+    <text x="1507.7495" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+          fill="#000000" text-anchor="start">QO</text>
   </g>
   <g id="instances">
-    <g id="fb_AX_SUBSCRIBE_1" transform="translate(518.2, 75.0)">
+    <g id="fb_AX_SUBSCRIBE_1" transform="translate(329.0, 105.0)">
       <path d="M 3 0
             L 127.9375 0
             A 3 3 0 0 1 130.9375 3
@@ -143,7 +166,7 @@ Geraets</text>
       <polygon points="125.9375,73.5 130.9375,78.5 125.9375,83.5" fill="#BD8663"/>
       <text x="124.9375" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
       <path d="M 120.9375 90.5
             L 123.4375 90.5
             L 123.4375 92.16666666666667
@@ -164,7 +187,7 @@ Geraets</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_SUBSCRIBE_1</text>
     </g>
-    <g id="fb_logiBUS_QXA" transform="translate(863.2, 120.0)">
+    <g id="fb_logiBUS_QXA" transform="translate(674.0, 150.0)">
       <path d="M 3 0
             L 108.5625 0
             A 3 3 0 0 1 111.5625 3
@@ -239,7 +262,7 @@ Geraets</text>
       <polygon points="106.5625,73.5 111.5625,78.5 106.5625,83.5" fill="#BD8663"/>
       <text x="105.5625" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">TRUE</text>
+
       <path d="M 0 107.5
             L 5.0 107.5
             L 5.0 109.16666666666667
@@ -259,6 +282,79 @@ Geraets</text>
       <text x="55.78125" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">logiBUS_QXA</text>
+    </g>
+    <g id="fb_AND_QO" transform="translate(929.0, 75.0)">
+      <path d="M 3 0
+            L 103.75 0
+            A 3 3 0 0 1 106.75 3
+            L 106.75 18
+            A 3 3 0 0 1 103.75 21
+            L 97.75 21
+            L 97.75 35
+            L 103.75 35
+            A 3 3 0 0 1 106.75 38
+            L 106.75 69
+            A 3 3 0 0 1 103.75 72
+            L 3 72
+            A 3 3 0 0 1 0 69
+            L 0 38
+            A 3 3 0 0 1 3 35
+            L 9 35
+            L 9 21
+            L 3 21
+            A 3 3 0 0 1 0 18
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+            fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+            stroke-linejoin="round" filter="url(#dropShadow)"/>
+      <!-- Name Section -->
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
+            Z"
+            fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+      <text x="20.0" y="32.0"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
+            fill="#000000" text-anchor="middle">Si</text>
+      <text x="30.0" y="32.0"
+            font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">AND_BOOL_2</text>
+      <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
+      <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">REQ</text>
+      <polygon points="101.75,5.5 106.75,10.5 101.75,15.5" fill="#63B31F"/>
+      <text x="100.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">CNF</text>
+      <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
+      <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN1</text>
+      <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
+      <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000">IN2</text>
+      <polygon points="101.75,39.5 106.75,44.5 101.75,49.5" fill="#A3B08F"/>
+      <text x="100.75" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="end">OUT</text>
+
+
+      <!-- Instance Name -->
+      <text x="53.375" y="-5"
+            font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+            fill="#000000" text-anchor="middle">AND_QO</text>
     </g>
   </g>
 </svg>

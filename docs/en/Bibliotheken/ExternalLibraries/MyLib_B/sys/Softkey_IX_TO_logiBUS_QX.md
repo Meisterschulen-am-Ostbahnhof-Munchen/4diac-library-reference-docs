@@ -18,12 +18,15 @@
 - **Internal FBs used**:
     - **Softkey_IX**: `isobus::UT::io::Softkey::Softkey_IX` — VT softkey (non-adapter variant).
     - **logiBUS_QX**: `logiBUS::io::DQ::logiBUS_QX` — physical digital output.
-- **Functionality**: `Softkey_IX.IND` triggers `logiBUS_QX.REQ`; `Softkey_IX.IN` is wired directly to `logiBUS_QX.OUT`.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` — combines `logiBUS_QX.QO` and `Softkey_IX.QO` into the output `QO`.
+- **Functionality**: `Softkey_IX.IND` triggers `logiBUS_QX.REQ`; `Softkey_IX.IN` is wired directly to `logiBUS_QX.OUT`. The SubApp interface additionally has the events `INIT`/`INITO` as well as `QI` (BOOL, initial value `TRUE`) and `QO` (BOOL).
 
 ## Program Flow and Connections
 
 1. `u16ObjId` → `Softkey_IX.u16ObjId`; `Output` → `logiBUS_QX.Output`.
 2. `Softkey_IX.IND` → `logiBUS_QX.REQ`; `Softkey_IX.IN` → `logiBUS_QX.OUT`.
+3. Initialization chain: `INIT` → `logiBUS_QX.INIT`, `logiBUS_QX.INITO` → `Softkey_IX.INIT`, `Softkey_IX.INITO` → `INITO` and `AND_QO.REQ`.
+4. Quality: `QI` → `logiBUS_QX.QI` and `Softkey_IX.QI`; `logiBUS_QX.QO` → `AND_QO.IN1`; `Softkey_IX.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Application Scenarios
 

@@ -15,6 +15,10 @@
 - **logiBUS_IXA** (`logiBUS::io::DI::logiBUS_IXA`): physical digital input, identified via `Input_I1..I8`.
 - **AX_CLIENT_1_0** (`adapter::net::AX_CLIENT_1_0`): actively writes the adapter value to the remote target address `ID` (including the target device's `opc.tcp://` endpoint).
 
+## Initialization and quality
+
+The block has the event input `INIT`, the event output `INITO` (both `EInit`), the data input `QI` (`BOOL`, default `TRUE`) and the data output `QO` (`BOOL`). `INIT` → `logiBUS_IXA.INIT`, `logiBUS_IXA.INITO` → `AX_CLIENT_1_0.INIT` (and → `logiBUS_IXA.REQ`), `AX_CLIENT_1_0.INITO` → `INITO` and → `AND_QO.REQ`. `QI` is passed to `logiBUS_IXA` and `AX_CLIENT_1_0`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`), which combines `logiBUS_IXA.QO` and `AX_CLIENT_1_0.QO`.
+
 ## Summary
 
 Single-block bridge from a physical digital input to an active remote write on another device - counterpart to [`logiBUS_QXA_FROM_SUBSCRIBE_OPC`](./logiBUS_QXA_FROM_SUBSCRIBE_OPC.md) on the receiving side.

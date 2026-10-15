@@ -13,20 +13,21 @@ Die SubApp `SRT_RPC_FROM_Remote_QXA_OPC` dient als RPC-basierte Fernsteuerung f�
 
 ## Schnittstellenstruktur
 
-Die SubApp besitzt ausschließlich Daten‑Eingänge, keine externen Ereignis‑ oder Adapter‑Schnittstellen. Die Kommunikation erfolgt intern über OPC‑UA‑RPC‑Trigger, die in den SERVER_0‑Blöcken erzeugt werden.
+Die SubApp besitzt die Ereignisse `INIT`/`INITO`, die Daten `QI`/`QO` sowie die Daten‑Eingänge für Ausgang und Adressen, aber keine externen Adapter‑Schnittstellen. Die Kommunikation erfolgt intern über OPC‑UA‑RPC‑Trigger, die in den SERVER_0‑Blöcken erzeugt werden.
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `TRIGGER_SET_SERVER.INIT`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `STATE_CLIENT.INITO`, dem Ende der Init-Kette
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Quality Input, Initialwert `TRUE`; wird an alle fünf Dienst-FBs (drei `SERVER_0`, `DigitalOutput_Q1`, `STATE_CLIENT`) weitergereicht |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Identifiziert den Digitalausgang (z.B. Q1..Q8). Initialwert: `logiBUS_DO::Invalid` |
 | `ID_SET_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION=CREATE_METHOD) für den Set‑Methodenaufruf |
 | `ID_RESET_METHOD` | `WSTRING` | Lokale Methodenadresse für den Reset‑Methodenaufruf |
@@ -35,7 +36,7 @@ Keine.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_5`) der `QO`-Ausgänge der drei `SERVER_0`-Instanzen, von `DigitalOutput_Q1` und von `STATE_CLIENT`
 
 ### **Adapter**
 
@@ -51,6 +52,7 @@ Die SubApp realisiert eine vollständige Fernsteuerkette:
    - **Pfad 1** → `DigitalOutput_Q1` (logiBUS_QXA) steuert den physischen Digitalausgang.
    - **Pfad 2** → `STATE_CLIENT` (AX_CLIENT_1_0) übernimmt den Zustand und schreibt ihn aktiv an die in `ID_STATE_WRITE` hinterlegte Remote‑Adresse (Gerät A).
 4. **Rückmeldung**: Die `RSP`‑Ereignisse der drei SERVER_0‑Blöcke sind direkt mit den jeweiligen `IND`‑Ereignissen verbunden, sodass die Methodenbestätigung sofort erfolgt und keine Wartezeit entsteht.
+5. **Initialisierung und Qualität**: `INIT` wird gekettet: `INIT` → `TRIGGER_SET_SERVER` → `TRIGGER_RESET_SERVER` → `TRIGGER_TOGGLE_SERVER` → `DigitalOutput_Q1` → `STATE_CLIENT` (jeweils `INITO` → nächstes `INIT`); `STATE_CLIENT.INITO` → `INITO` und `AND_QO.REQ`. `QI` geht an alle fünf FBs; deren `QO`-Ausgänge gehen in dieser Reihenfolge auf `AND_QO.IN1` bis `AND_QO.IN5` (`iec61131::booleanOperators::AND_BOOL_5`), `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

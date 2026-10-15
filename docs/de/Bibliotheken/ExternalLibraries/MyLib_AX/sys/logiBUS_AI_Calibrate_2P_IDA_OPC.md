@@ -16,6 +16,13 @@
 - **AR_CALIBRATE_2P_REF** (Adapter-Composite): 2-Punkt-Kalibrierung (Nullpunkt/Spanne) mit Rohwert-Diagnose (`ZeroRaw`/`SpanRaw`), Teilkalibrierungs-Ausweichlogik und konfigurierbarem Clipping (`xClipping`).
 - **VT- und OPC-UA-Brücken** (analog zu [`NumericValue_TO_AR2_OPC`](./NumericValue_TO_AR2_OPC.md)/[`OPC_TO_AR2`](./OPC_TO_AR2.md) und [`INI_IN_AND_STORE_AR2`](./INI_IN_AND_STORE_AR2.md)): stellen `Zero`/`Span` und `ZeroRaw`/`SpanRaw` sowohl über VT-Eingabefelder/Anzeigen als auch über OPC-UA bereit und persistieren die Kalibrierwerte per INI-Datei.
 
+## Initialisierung und Qualität
+
+- Ereignisse: `INIT` (EInit, Eingang) und `INITO` (EInit, Ausgang, kommt von `PublishSpanRaw.INITO`).
+- Dateneingang `QI` (BOOL, Vorgabe `TRUE`) und Datenausgang `QO` (BOOL); die internen FBs (`CALIBRATE`, `INI_X_LOW`, `INI_X_HIGH`, `INI_LOW_REF`, `INI_HIGH_REF`) tragen kein festes `QI=TRUE` mehr.
+- Initialisierungskette (jeweils `INITO` → `INIT` des nächsten): `INIT` → `CALIBRATE` → `INI_X_LOW` → `INI_X_HIGH` → `INI_LOW_REF` → `INI_HIGH_REF` → `InputRaw` → `Y_OFFSET_LIT` → `Y_SCALE_LIT` → `TriggerCO` → `TriggerCS` → `PublishCal` → `PublishZeroRaw` → `PublishSpanRaw`; `PublishSpanRaw.INITO` → `INITO` und → `AND_QO.REQ`.
+- Qualität: `QI` wird an alle 13 Instanzen dieser Kette weitergereicht; deren `QO`-Ausgänge laufen in genau dieser Reihenfolge auf `AND_QO.IN1` bis `IN13` (ein einzelner `iec61131::booleanOperators::AND_BOOL_13`; die frühere Kaskade aus `AND_QO_A` (`AND_BOOL_5`) und `AND_QO` (`AND_BOOL_9`) ist ersetzt, Version 1.12); `AND_QO.OUT` → `QO`.
+
 ## Zusammenfassung
 
 Kompletter 2-Punkt-Kalibrier-Baustein für einen physischen Analogeingang: Rohwert-Erfassung, 2-Punkt-Kalibrierung mit Rohwert-Diagnose, sofort wirksamer Teilkalibrierung, VT-Anzeige/-Eingabe und OPC-UA-Anbindung in einem Composite.

@@ -23,6 +23,12 @@
 
 - Merge-Strategie identisch zum bereits bestehenden VT/Web-Merge in `RampLimitFS_TO_logiBUS_QDA_PWM_OPC.SUB` (laut Quellcode-Kommentar).
 
+## Ereignis- und Qualitätsanschlüsse (INIT/INITO, QI/QO)
+
+Der Baustein besitzt den Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input - TRUE aktiviert den Dienst) und den Datenausgang `QO` (`BOOL`, Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde). `QI` geht an `NumericValue_PHYSA`, `AR_SUBSCRIBE_1`, `AR_PUBLISH_1` und `Q_NumericValue_PHYSA`. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_4`), die `Q_NumericValue_PHYSA.QO`, `NumericValue_PHYSA.QO`, `AR_SUBSCRIBE_1.QO` und `AR_PUBLISH_1.QO` verknüpft.
+
+Zusätzlich besitzt der Baustein den Ereigniseingang `INIT` und den Ereignisausgang `INITO` (je `EInit`). Die Initialisierung läuft als Kette: `INIT` → `NumericValue_PHYSA.INIT`, `NumericValue_PHYSA.INITO` → `AR_SUBSCRIBE_1.INIT`, `AR_SUBSCRIBE_1.INITO` → `AR_PUBLISH_1.INIT`, `AR_PUBLISH_1.INITO` → `Q_NumericValue_PHYSA.INIT`, `Q_NumericValue_PHYSA.INITO` → `INITO` (und → `AND_QO.REQ`).
+
 ## Zusammenfassung
 
 VT- und OPC-UA-Eingabe fuer denselben AR2-Consumer, mit Last-Writer-Wins-Merge und beidseitiger Echo-Rueckmeldung.

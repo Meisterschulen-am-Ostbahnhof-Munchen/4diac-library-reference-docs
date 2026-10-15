@@ -12,6 +12,12 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ![NVS_IN_AND_STORE_AIS](NVS_IN_AND_STORE_AIS.svg)
 
+## Quality ports (QI/QO)
+
+The block has the data input `QI` (`BOOL`, default `TRUE`, Quality Input - TRUE enables the service) and the data output `QO` (`BOOL`, Quality Output - TRUE if the service was executed successfully). `QI` is passed to `Q_StringValue_AIS`, `NVS_AIS` and `StringValue_AIS`. `QO` is the output of the instance `AND_QO` (`iec61131::booleanOperators::AND_BOOL_3`), which combines `Q_StringValue_AIS.QO`, `NVS_AIS.QO` and `StringValue_AIS.QO`.
+
+In addition, the block has the events `INIT` (input, `EInit`, initialization request) and `INITO` (output, `EInit`, initialization confirmation): `INIT` → `Q_StringValue_AIS.INIT`, `Q_StringValue_AIS.INITO` → `NVS_AIS.INIT`, `NVS_AIS.INITO` → `StringValue_AIS.INIT`, `StringValue_AIS.INITO` → `INITO` (and → `AND_QO.REQ`).
+
 ## Summary
 
 NVS counterpart to `INI_IN_AND_STORE_AIS`.

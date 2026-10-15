@@ -14,24 +14,39 @@ For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared patter
 
 ## Interface
 
+### Event inputs
+
+- `INIT` (`EInit`): initialization request.
+
+### Event outputs
+
+- `INITO` (`EInit`): initialization confirm.
+
 ### Input variables
 
+- `QI` (BOOL, default `TRUE`): Quality Input - TRUE enables the service.
 - `KEY` (STRING): key name in the INI file.
 - `SECTION` (STRING): section name in the INI file.
 - `u16ObjId` (UINT, default `ID_NULL`): ObjectID of the VT input field.
+
+### Output variables
+
+- `QO` (BOOL): Quality Output - TRUE if the service was executed successfully (AND combination `AND_QO` of the `QO` outputs of the inner blocks).
 
 ### Adapters
 
 - **Plug `VALUEO`** (`adapter::types::bidirectional::AUI2`): value to the consumer and echo back.
 
-The block has no event ports of its own.
+The events `INIT`/`INITO` are passed as a chain through the inner blocks (see How it works).
 
 ## How it works
 
-1. `NumericValue_IDA` (`QI`=TRUE) reads the VT input field; `AD_TO_AUI` converts to AUI and feeds `AUI_LAST_2.IN1`.
+1. `NumericValue_IDA` reads the VT input field; `AD_TO_AUI` converts to AUI and feeds `AUI_LAST_2.IN1`.
 2. `AUI_LAST_2` (last writer wins) merges: `IN1` = live VT change, `IN2` = INI value at boot. Its output goes to `AUI_TO_AUI2` (bridge to the external consumer), whose bidirectional output goes to `VALUEO`.
-3. The result reported back by the consumer appears at `AUI_TO_AUI2.AUI_OUT` and is duplicated via `AUI_SPLIT_2`: `OUT1` via `AUI_TO_AUDI` to `Q_NumericValue_AUDI` (`u32NewValue`, VT display under `u16ObjId`), `OUT2` to `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `QI`=TRUE, `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
+3. The result reported back by the consumer appears at `AUI_TO_AUI2.AUI_OUT` and is duplicated via `AUI_SPLIT_2`: `OUT1` via `AUI_TO_AUDI` to `Q_NumericValue_AUDI` (`u32NewValue`, VT display under `u16ObjId`), `OUT2` to `INI_AUI` (`eclipse4diac::storage::INI_AUI`, `AUI_IN`; `SETM`=FALSE, `DEFAULT_VALUE`=`UINT#0`).
 4. `INI_AUI.AUI_OUT` feeds the loaded value back to `AUI_LAST_2.IN2`.
+
+Initialization: `INIT` → `NumericValue_IDA.INIT`; `NumericValue_IDA.INITO` → `INI_AUI.INIT`; `INI_AUI.INITO` → `Q_NumericValue_AUDI.INIT`; `Q_NumericValue_AUDI.INITO` → `INITO` and → `AND_QO.REQ`. Quality: `QI` → `Q_NumericValue_AUDI.QI`, `NumericValue_IDA.QI`, `INI_AUI.QI`; `Q_NumericValue_AUDI.QO`, `NumericValue_IDA.QO`, `INI_AUI.QO` → `AND_QO.IN1` to `AND_QO.IN3` (in this order); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_3`).
 
 ## Technical notes
 

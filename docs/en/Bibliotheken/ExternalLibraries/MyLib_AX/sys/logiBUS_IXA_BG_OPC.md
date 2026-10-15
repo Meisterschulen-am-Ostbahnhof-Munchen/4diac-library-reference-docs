@@ -10,16 +10,24 @@
 
 ![logiBUS_IXA_BG_OPC](logiBUS_IXA_BG_OPC.svg)
 
+## Interface
+
+- **Event input**: `INIT` (`EInit`, Initialization Request)
+- **Event output**: `INITO` (`EInit`, Initialization Confirm)
+- **Data inputs**: `QI` (`BOOL`, default `TRUE`, Quality Input), `u16ObjId`, `Input`, `ID_WRITE`
+- **Data output**: `QO` (`BOOL`, Quality Output)
+
 ## Function Blocks (FBs) Used
 
 ### Sub-blocks: logiBUS_IXA_BG_OPC
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — adapter-based digital input; parameter `QI=TRUE`, `Input` identifies `Input_I1..I8`.
+    - **logiBUS_IXA**: `logiBUS::io::DI::logiBUS_IXA` — adapter-based digital input; `QI` from the block input, `Input` identifies `Input_I1..I8`.
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — splits the single adapter signal from `logiBUS_IXA.IN` into two independent destinations.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): sets the VT background color (green/white) to match the input state.
-    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` — OPC-UA publish adapter, `QI=TRUE`.
+    - **AX_PUBLISH_1**: `adapter::net::AX_PUBLISH_1` — OPC-UA publish adapter, `QI` from the block input.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — ANDs the `QO` outputs of `logiBUS_IXA`, `AX_PUBLISH_1` and `GreenWhiteBackground1_AX` into the block output `QO`.
 - **Functionality**: Purely one-way data flow from the physical input to two display/reporting paths — no write-back possible, since a digital input cannot be set externally.
 
 ## Program Flow and Connections
@@ -28,6 +36,9 @@
 2. `u16ObjId` (VT object ID of the status display) → `GreenWhiteBackground1_AX.u16ObjId`.
 3. `ID_WRITE` (OPC-UA address) → `AX_PUBLISH_1.ID`.
 4. **Adapter chain**: `logiBUS_IXA.IN` → `AX_SPLIT_2.IN` → `AX_SPLIT_2.OUT1` → `GreenWhiteBackground1_AX.DI1` (VT display) and `AX_SPLIT_2.OUT2` → `AX_PUBLISH_1.IN` (OPC-UA publish).
+5. **Initialization chain**: `INIT` → `logiBUS_IXA.INIT`, `logiBUS_IXA.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` and → `AND_QO.REQ`.
+6. `QI` → `logiBUS_IXA.QI`, `AX_PUBLISH_1.QI` and `GreenWhiteBackground1_AX.QI`.
+7. `logiBUS_IXA.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `GreenWhiteBackground1_AX.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technical Details
 

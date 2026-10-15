@@ -24,6 +24,7 @@ Der **Q_ChangeObjectLabel** ist ein standardkonformer Funktionsbaustein zur Änd
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Zielobjekt-Kennung
 - `u16ObIdStringVar` (UINT): Textvariablen-Objekt-ID (max. 32 Zeichen)
 - `u8FontType` (USINT): Schriftart (bei Textbeschriftung)
@@ -31,6 +32,7 @@ Der **Q_ChangeObjectLabel** ist ein standardkonformer Funktionsbaustein zur Änd
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u16OldObIdStringVar` (UINT): Vorherige Textvariablen-ID
 - `u8OldFontType` (USINT): Vorherige Schriftart
@@ -48,6 +50,8 @@ Der Befehl F.50 adressiert in Bytes 2,3 die **Objekt-ID des zu beschriftenden Ob
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Zielobjekt-ID

@@ -10,6 +10,10 @@
 
 For the general pattern, see [INI_IN_AND_STORE / NVS_IN_AND_STORE (shared pattern)](../../MyLib_AX/sys/INI-NVS-Storage-Blocks.md).
 
+**Quality ports:** The block additionally has the data input `QI` (BOOL, default `TRUE`, "Quality Input - TRUE to enable service") and the data output `QO` (BOOL, "Quality Output - TRUE if service executed successfully"). `QI` is connected to `Q_NumericValue.QI`, `InputNumber_I1.QI` and `INI.QI`; `QO` is the AND (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_3`) of `Q_NumericValue.QO`, `InputNumber_I1.QO` and `INI.QO`.
+
+In addition, the block has the events `INIT` (input, `EInit`) and `INITO` (output, `EInit`); initialization is chained: `INIT` → `InputNumber_I1.INIT`; `InputNumber_I1.INITO` → `INI.INIT`; `INI.INITO` → `Q_NumericValue.INIT`; `Q_NumericValue.INITO` → `INITO` (and → `AND_QO.REQ`).
+
 ![INI_IN_AND_STORE_UDINT](INI_IN_AND_STORE_UDINT.svg)
 
 ## Summary

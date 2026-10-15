@@ -23,6 +23,7 @@ The **Q_Size** is a standards-compliant function block for resizing objects in V
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `xScale` (BOOL): If TRUE, `u16Width`/`u16Height` are scaled by the DM/SKM factor for `u16ObjId` before sending; if FALSE (default) they are passed through unchanged.
 - `u16Width` (UINT): New width in pixels
@@ -30,6 +31,7 @@ The **Q_Size** is a standards-compliant function block for resizing objects in V
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u16OldWidth` (UINT): Previous width
 - `u16OldHeight` (UINT): Previous height
@@ -43,6 +45,8 @@ Container (3000–3999), Button (6000–6999), Input Boolean Field (7000–7999)
 ID_NULL (65535) is not a command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

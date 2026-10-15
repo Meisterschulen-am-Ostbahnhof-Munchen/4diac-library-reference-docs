@@ -14,6 +14,9 @@
 
 - **SoftKeySR_ASR_AX** (SubApp, type `MyLib::sys::SoftKeySR_ASR_AX`): 2 softkeys + status display, bundled behind an `ASR_AX` plug.
 - **TRIGGER** (`adapter::net::ASR_AX_CLIENT_0_SUBSCRIBE_1`): bundles 2 method calls (`ID_SET_CALL`/`ID_RESET_CALL`) and the state subscription (`ID_STATE_READ`) behind a single `ASR_AX` socket.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `TRIGGER.QO` and `SoftKeySR_ASR_AX.QO` into the output `QO`.
+
+**Initialization and quality:** The SubApp has the events `INIT`/`INITO` as well as `QI` (BOOL, initial value `TRUE`) and `QO` (BOOL). Init chain: `INIT` → `TRIGGER.INIT`, `TRIGGER.INITO` → `SoftKeySR_ASR_AX.INIT`, `SoftKeySR_ASR_AX.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `TRIGGER.QI` and `SoftKeySR_ASR_AX.QI`; `TRIGGER.QO` → `AND_QO.IN1`, `SoftKeySR_ASR_AX.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 ## Summary
 

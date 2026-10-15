@@ -14,14 +14,16 @@
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): initialisation request
 - **AUS**: hard-resets the state to OFF from outside as an event (e.g. a centrally read common SoftKey 'All off'); in addition to the block's own reset path via `u16ObjId_RESET`/`u16ObjIdA_RESET`/`ID_RESET_METHOD`. Leave unwired if not needed.
 
 ### **Event Outputs**
 
-The function block has no direct event outputs.
+- **INITO** (`EInit`): initialisation confirmation
 
 ### **Data Inputs**
 
+- **QI** (BOOL): Quality Input, TRUE enables the service (default `TRUE`)
 - **u16ObjId** (UINT): object ID of the SoftKey on/off (toggle), default `ID_NULL`
 - **u16ObjIdA** (UINT): object ID of the AuxFunction2 (joystick) for the toggle, equal in rank to the SoftKey
 - **u16ObjIdB** (UINT): object ID of the IO diagnostics test button (outputs diagnostics page), toggles with equal rank; leave `ID_NULL` if no such button is involved
@@ -32,7 +34,7 @@ The function block has no direct event outputs.
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (BOOL): Quality Output, AND of `Toggle.QO` and `Reset.QO`
 
 ### **Adapters**
 
@@ -41,14 +43,17 @@ The function block has no direct data outputs.
 
 ## Functionality
 
-The network contains four parts:
+The network contains five parts:
 
 - `Toggle` (`MyLib::sys::Softkey_Aux_Method_Button_IE`): reads `u16ObjId`, `u16ObjIdA`, `u16ObjIdB` and `ID_TOGGLE_METHOD` (to `Toggle.ID_METHOD`); its `IND` goes to `AX_T_FF_SR.CLK` and toggles the state.
 - `Reset` (`MyLib::sys::Softkey_Aux_Method_IE`): reads `u16ObjId_RESET` (to `Reset.u16ObjId`), `u16ObjIdA_RESET` (to `Reset.u16ObjIdA`) and `ID_RESET_METHOD`; its `IND` goes to `AX_T_FF_SR.R`.
 - `AX_T_FF_SR` (`adapter::events::unidirectional::AX_T_FF_SR`): toggle flip-flop with set/reset; `AX_T_FF_SR.Q` → `OUT`.
 - `AX_R_TRIG_ForceOff` (`adapter::events::unidirectional::AX_R_TRIG`): detects the rising edge on `FORCE_OFF` (`FORCE_OFF` → `AX_R_TRIG_ForceOff.QI`); its `EO` also goes to `AX_T_FF_SR.R`.
+- `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`): combines `Toggle.QO` (`IN1`) and `Reset.QO` (`IN2`) into the `QO` of the SubApp.
 
 The event `AUS` is a third, additive path to `AX_T_FF_SR.R`.
+
+Initialisation and quality: `INIT` → `Toggle.INIT`; `Toggle.INITO` → `Reset.INIT`; `Reset.INITO` → `INITO` (and → `AND_QO.REQ`). `QI` is distributed to `Toggle.QI` and `Reset.QI`.
 
 ## Technical Details
 

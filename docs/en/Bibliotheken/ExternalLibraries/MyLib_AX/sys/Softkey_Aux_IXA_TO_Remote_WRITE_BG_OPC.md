@@ -9,7 +9,7 @@
 `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` reads a VT softkey OR an AUX assignment (joystick) OR a local web override and writes the result to a target module via remote OPC UA write. Additionally, the VT background color (softkey AND AUX) is set using a remote subscribe from the target module. This is intended for functions without a local physical output, where the control interface is located on one module (e.g., STG1), but the actuator is on a different module without its own VT connection.
 
 
-``Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`` reads a VT softkey OR an AUX assignment (joystick) OR a local web override and writes the result to a target module via remote OPC UA write. Since version 1.2, the function block is a thin-walled wrapper that places two independently reusable sub-blocks side by side: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (command) and [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (status). The external interface remains unchanged.
+``Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`` reads a VT softkey OR an AUX assignment (joystick) OR a local web override and writes the result to a target module via remote OPC UA write. Since version 1.2, the function block is a thin-walled wrapper that places two independently reusable sub-blocks side by side: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (command) and [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (status). The external interface initially remained unchanged; the wrapper has since gained the events `INIT`/`INITO` as well as `QI` (BOOL, initial value `TRUE`) and `QO` (BOOL).
 
 ![Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC](Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.svg)
 
@@ -23,8 +23,9 @@
 - **Command** (SubApp, `MyLib::sys::Softkey_Aux_IXA_TO_Remote_WRITE`): SoftKey OR Aux OR local web override → Remote write to the target module.
 
 - **Status** (SubApp, `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`): Remote Subscribe → Background color on SoftKey AND Aux + local web republish.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `Command.QO` and `Status.QO` into the output `QO`.
 
-- **Functionality**: Both sub-components run independently; they only share the same `u16ObjId`/`u16ObjIdA` values so that the command and status display operate on the same VT object.
+- **Functionality**: Both sub-components run independently as far as data is concerned (only the init chain and the quality combination connect them); they only share the same `u16ObjId`/`u16ObjIdA` values so that the command and status display operate on the same VT object.
 
 ## Program Flow and Connections
 
@@ -34,7 +35,9 @@
 
 3. `ID_SUBSCRIBE` → `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` → `Status.ID_STATUS_WEB`.
 
-4. There is no direct SubApp connection between `Command` and `Status`—both sub-apps are completely independent and communicate only indirectly via the target module (commands write to it, status updates are subscribed to from it). Locally, their paths can still become connected if `ID_WEB_READ` and `ID_STATUS_WEB` are accidentally configured to alias the same OPC UA node (see the feedback-loop note below).
+4. Apart from the init chain (item 5), there is no direct SubApp connection between `Command` and `Status`—both sub-apps are completely independent and communicate only indirectly via the target module (commands write to it, status updates are subscribed to from it). Locally, their paths can still become connected if `ID_WEB_READ` and `ID_STATUS_WEB` are accidentally configured to alias the same OPC UA node (see the feedback-loop note below).
+5. Initialization: `INIT` → `Command.INIT`; `Command.INITO` → `Status.INIT`; `Status.INITO` → `INITO` and `AND_QO.REQ`.
+6. Quality: `QI` → `Command.QI` and `Status.QI`; `Command.QO` → `AND_QO.IN1`; `Status.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 
 ## Technical Features

@@ -14,20 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: feuert, wenn das konfigurierte `InputEvent` auftritt
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Default `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 - **u16ObjId** (UINT): Object ID des Buttons (Default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Button::ButtonActivationCode_S`): z. B. `BT_PRESSED_LATCHED`, `BT_RELEASED_UNLATCHED` (Default `Invalid`)
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (durchgereicht von `Button.QO`)
 
 ### **Adapter**
 
@@ -35,12 +37,12 @@ Es werden keine Adapter verwendet.
 
 ## Funktionsweise
 
-Das Netzwerk enthält genau eine Instanz `Button` des Typs `isobus::UT::io::Button::Button_IE` mit dem Parameter `QI = TRUE`. `u16ObjId` und `InputEvent` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, und deren Ereignis `IND` wird direkt als `IND` der SubApp ausgegeben.
+Das Netzwerk enthält genau eine Instanz `Button` des Typs `isobus::UT::io::Button::Button_IE`. `u16ObjId`, `InputEvent` und `QI` werden unverändert auf die gleichnamigen Eingänge der Instanz geführt, `INIT` → `Button.INIT`; deren Ereignisse `IND` und `INITO` sowie der Ausgang `QO` werden direkt als `IND`, `INITO` und `QO` der SubApp ausgegeben.
 
 ## Technische Besonderheiten
 
 - Reine Durchreichung ohne eigene Logik oder Zustand
-- `QI` ist fest auf TRUE verdrahtet; der Baustein ist also immer aktiv
+- `QI` wird von außen an den inneren Baustein durchgereicht (Vorgabe `TRUE`)
 - Weil `InputEvent` ein Parameter ist, kann dieselbe SubApp für unterschiedliche Ereignisarten (z. B. Drücken oder Loslassen) verwendet werden
 
 ## Anwendungsszenarien

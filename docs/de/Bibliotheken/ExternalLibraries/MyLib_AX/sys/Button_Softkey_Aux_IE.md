@@ -22,27 +22,30 @@ Der Button **muss** non-latching sein (`Latchable=0` im Pool); ein latchender Bu
     - **Softkey**: SubApp [`Softkey_IE_1`](./Softkey_IE_1.md) mit `InputEvent=SK_RELEASED`
     - **Aux**: SubApp [`Aux_IE_1`](./Aux_IE_1.md) mit `InputEvent=AuxDisabled_START`
     - **MERGE**: `iec61499::events::E_MERGE_3` – führt die drei `IND`-Ereignisse zusammen
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` – verknüpft die `QO`-Ausgänge von `Button`, `Aux` und `Softkey` zum SubApp-Ausgang `QO`
 - **Importe**: `BT_RELEASED_UNLATCHED`, `AuxDisabled_START`, `SK_RELEASED`
 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Kette `Button` → `Aux` → `Softkey`
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `Softkey.INITO`
 - **IND**: Feuert, wenn Button (`BT_RELEASED_UNLATCHED`), Softkey (`SK_RELEASED`) oder Aux (`AuxEnabled`) aktiviert wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`): Quality Input, Freigabe des Dienstes (Initialwert `TRUE`); wird an `Button.QI`, `Aux.QI` und `Softkey.QI` weitergereicht
 - **u16ObjId** (`UINT`): Objekt-ID des Softkeys (`CSoftkey`, non-latching)
 - **u16ObjIdA** (`UINT`): Objekt-ID der `AuxFunction2`
 - **u16ObjIdB** (`UINT`): Objekt-ID des Buttons (`CButton`, non-latching)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, `AND` der `QO`-Ausgänge von `Button`, `Aux` und `Softkey` (über `AND_QO`)
 
 ## Programmablauf und Verbindungen
 
@@ -50,6 +53,8 @@ Keine.
 - `u16ObjIdA` → `Aux.u16ObjId`; `Aux.IND` → `MERGE.EI2`
 - `u16ObjIdB` → `Button.u16ObjId`; `Button.IND` → `MERGE.EI3`
 - `MERGE.EO` → `IND`
+- Initialisierung: `INIT` → `Button.INIT`; `Button.INITO` → `Aux.INIT`; `Aux.INITO` → `Softkey.INIT`; `Softkey.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `Button.QI`, `Aux.QI` und `Softkey.QI`; `Button.QO` → `AND_QO.IN1`, `Aux.QO` → `AND_QO.IN2`, `Softkey.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

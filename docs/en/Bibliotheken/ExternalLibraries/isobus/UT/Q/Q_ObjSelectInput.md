@@ -23,11 +23,13 @@ The **Q_ObjSelectInput** is a standards-compliant function block for the program
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Input Object ID (16-bit)
 - `u8Option` (USINT): Selection Option (0x00 or 0xFF)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldOption` (USINT): Previous selection option
 - `s16result` (INT): ISO-compliant result code
@@ -40,6 +42,8 @@ Key (5000–5999), Button (6000–6999), Input Boolean Field (7000–7999), Inpu
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`. Any ID outside these ranges is invalid for commanding.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

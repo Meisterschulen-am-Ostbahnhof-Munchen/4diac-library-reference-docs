@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 804.2646484375 112.0"
-     width="804.2646484375" height="112.0">
+     viewBox="0 0 1561.0 132.0"
+     width="1561.0" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,22 +28,22 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(575.7763671875, 10)">
+  <g transform="translate(782.6000000000001, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 190.48828125 0
-            A 3 3 0 0 1 193.48828125 3
-            L 193.48828125 23.0
-            A 3 3 0 0 1 190.48828125 26.0
-            L 183.48828125 26.0
-            L 183.48828125 66.0
-            L 190.48828125 66.0
-            A 3 3 0 0 1 193.48828125 69.0
-            L 193.48828125 89.0
-            A 3 3 0 0 1 190.48828125 92.0
-            L 3 92.0
-            A 3 3 0 0 1 0 89.0
+            L 228.0 0
+            A 3 3 0 0 1 231.0 3
+            L 231.0 23.0
+            A 3 3 0 0 1 228.0 26.0
+            L 221.0 26.0
+            L 221.0 66.0
+            L 228.0 66.0
+            A 3 3 0 0 1 231.0 69.0
+            L 231.0 109.0
+            A 3 3 0 0 1 228.0 112.0
+            L 3 112.0
+            A 3 3 0 0 1 0 109.0
             L 0 69.0
             A 3 3 0 0 1 3 66.0
             L 10 66.0
@@ -57,6 +57,14 @@
           stroke-linejoin="round" filter="url(#dropShadow)"/>
 
     <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="224.5,11.0 229.5,16.0 224.5,21.0" fill="#63B31F"/>
+    <text x="221.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -91,15 +99,23 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">SystemTickSender_ISO</text>
     
-    <text x="96.744140625" y="66.0"
+    <text x="115.5" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#18519E"/>
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#A3B08F"/>
     <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16ObjId</text>
+
+    <polygon points="224.5,71.0 229.5,76.0 224.5,81.0" fill="#A3B08F"/>
+    <text x="221.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -108,7 +124,19 @@
 
     <!-- External Labels -->
 
+    <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialization Request – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="256.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID VT-Zahlenausgabefeld (OutputNumberField), zeigt den Tick-Zaehlerstand an – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="256.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
   </g>
 </svg>

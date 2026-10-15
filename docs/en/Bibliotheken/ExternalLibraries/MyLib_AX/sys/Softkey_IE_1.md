@@ -14,20 +14,22 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirm
 - **IND**: fires when the configured `InputEvent` occurs
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): quality input, TRUE enables the service
 - **u16ObjId** (UINT): object ID of the SoftKey (default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Softkey::SoftKeyActivationCode_S`): e.g. `SK_PRESSED`, `SK_RELEASED` (default `Invalid`)
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (`BOOL`): quality output, taken directly from `SoftKey.QO`
 
 ### **Adapters**
 
@@ -35,12 +37,12 @@ No adapters are used.
 
 ## Functionality
 
-The network contains exactly one instance `SoftKey` of type `isobus::UT::io::Softkey::Softkey_IE` with the parameter `QI = TRUE`. `u16ObjId` and `InputEvent` are routed unchanged to the like-named inputs of the instance, and its event `IND` is output directly as the `IND` of the SubApp.
+The network contains exactly one instance `SoftKey` of type `isobus::UT::io::Softkey::Softkey_IE` (`QI` comes from the subapp input `QI`). `u16ObjId` and `InputEvent` are routed unchanged to the like-named inputs of the instance, and its event `IND` is output directly as the `IND` of the SubApp.
 
 ## Technical Details
 
 - Pure pass-through without logic or state of its own
-- `QI` is hard-wired to TRUE; the block is therefore always active
+- `QI` is exposed as an input (default `TRUE`) and `QO` comes directly from `SoftKey.QO`; left unwired, the block is therefore active
 - Because `InputEvent` is a parameter, the same SubApp can be used for different kinds of events (e.g. pressing or releasing)
 
 ## Application Scenarios

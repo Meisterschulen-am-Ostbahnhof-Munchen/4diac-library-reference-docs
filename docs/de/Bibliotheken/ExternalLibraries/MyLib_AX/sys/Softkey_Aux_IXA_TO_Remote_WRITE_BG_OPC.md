@@ -8,7 +8,7 @@
 
 `Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC` liest einen VT-SoftKey ODER eine AUX-Zuweisung (Joystick) ODER einen lokalen Web-Override und schreibt das Ergebnis per Remote-OPC-UA-Write an ein Zielmodul — zusätzlich wird die VT-Hintergrundfarbe (SoftKey UND AUX) aus einem Remote-Subscribe des Zielmoduls gespeist. Gedacht für Funktionen ohne lokalen physischen Ausgang, bei denen die Bedienung auf einem Modul (z. B. STG1) sitzt, der Aktor aber auf einem anderen Modul ohne eigene VT-Anbindung.
 
-Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenständig wiederverwendbare Teilbausteine nebeneinanderstellt: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (Kommando) und [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (Status). Die externe Schnittstelle blieb dabei unverändert.
+Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenständig wiederverwendbare Teilbausteine nebeneinanderstellt: [`Softkey_Aux_IXA_TO_Remote_WRITE`](./Softkey_Aux_IXA_TO_Remote_WRITE.md) (Kommando) und [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md) (Status). Die externe Schnittstelle blieb dabei zunächst unverändert; inzwischen besitzt der Wrapper zusätzlich die Ereignisse `INIT`/`INITO` sowie `QI` (BOOL, Initialwert `TRUE`) und `QO` (BOOL).
 
 ![Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC](Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.svg)
 
@@ -20,14 +20,17 @@ Seit Version 1.2 ist der Baustein ein dünnwandiger Wrapper, der zwei eigenstän
 - **Verwendete interne FBs**:
     - **Command** (SubApp, `MyLib::sys::Softkey_Aux_IXA_TO_Remote_WRITE`): SoftKey ODER Aux ODER lokaler Web-Override → Remote-Write an das Zielmodul.
     - **Status** (SubApp, `MyLib::sys::AX_SUBSCRIBE_BG3_WEB_OPC`): Remote-Subscribe → Hintergrundfarbe auf SoftKey UND Aux + lokaler Web-Republish.
-- **Funktionsweise**: Beide Teilbausteine laufen unabhängig nebeneinander; sie teilen sich lediglich dieselben `u16ObjId`/`u16ObjIdA`-Werte, damit Kommando und Statusanzeige auf demselben VT-Objekt wirken.
+    - **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Command.QO` und `Status.QO` zum Ausgang `QO`.
+- **Funktionsweise**: Beide Teilbausteine laufen datenseitig unabhängig nebeneinander (nur die Init-Kette und die Qualitätsverknüpfung verbinden sie); sie teilen sich lediglich dieselben `u16ObjId`/`u16ObjIdA`-Werte, damit Kommando und Statusanzeige auf demselben VT-Objekt wirken.
 
 ## Programmablauf und Verbindungen
 
 1. `u16ObjId` → `Command.u16ObjId` und `Status.u16ObjId`; `u16ObjIdA` → `Command.u16ObjIdA` und `Status.u16ObjIdA` (Datenverbindungen, ausgeblendet).
 2. `ID_WRITE_REMOTE` → `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` → `Command.ID_WEB_READ`.
 3. `ID_SUBSCRIBE` → `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` → `Status.ID_STATUS_WEB`.
-4. Es gibt keine direkte SubApp-Verbindung zwischen `Command` und `Status` — beide SubApps sind vollständig eigenständig und kommunizieren nur indirekt über das Zielmodul (Command schreibt dorthin, Status abonniert von dort). Lokal können ihre Pfade dennoch verknüpft sein, wenn `ID_WEB_READ` und `ID_STATUS_WEB` versehentlich auf denselben OPC-UA-Knoten konfiguriert werden (siehe Feedback-Loop-Hinweis unten).
+4. Abgesehen von der Init-Kette (Punkt 5) gibt es keine direkte SubApp-Verbindung zwischen `Command` und `Status` — beide SubApps sind vollständig eigenständig und kommunizieren nur indirekt über das Zielmodul (Command schreibt dorthin, Status abonniert von dort). Lokal können ihre Pfade dennoch verknüpft sein, wenn `ID_WEB_READ` und `ID_STATUS_WEB` versehentlich auf denselben OPC-UA-Knoten konfiguriert werden (siehe Feedback-Loop-Hinweis unten).
+5. Initialisierung: `INIT` → `Command.INIT`; `Command.INITO` → `Status.INIT`; `Status.INITO` → `INITO` und `AND_QO.REQ`.
+6. Qualität: `QI` → `Command.QI` und `Status.QI`; `Command.QO` → `AND_QO.IN1`; `Status.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

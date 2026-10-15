@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1389.0 232.0"
-     width="1389.0" height="232.0">
+     viewBox="0 0 1389.0 252.0"
+     width="1389.0" height="252.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -40,10 +40,10 @@
             L 305.3125 86.0
             L 312.3125 86.0
             A 3 3 0 0 1 315.3125 89.0
-            L 315.3125 209.0
-            A 3 3 0 0 1 312.3125 212.0
-            L 3 212.0
-            A 3 3 0 0 1 0 209.0
+            L 315.3125 229.0
+            A 3 3 0 0 1 312.3125 232.0
+            L 3 232.0
+            A 3 3 0 0 1 0 229.0
             L 0 89.0
             A 3 3 0 0 1 3 86.0
             L 10 86.0
@@ -109,58 +109,66 @@
 
     <!-- Data Ports -->
 
-    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#18519E"/>
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#A3B08F"/>
     <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">u16ObjId</text>
+          fill="#000000" dominant-baseline="middle">QI</text>
 
     <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#18519E"/>
     <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">u16ObjId</text>
+
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#18519E"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">u16ObjIdParent</text>
 
-    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#A3B08F"/>
-    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">xScale</text>
-
-    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#DBB418"/>
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#A3B08F"/>
     <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">ScalePx</text>
+          fill="#000000" dominant-baseline="middle">xScale</text>
 
     <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#DBB418"/>
     <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ScalePx</text>
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#DBB418"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">LengthPx</text>
 
-    <polygon points="308.8125,91.0 313.8125,96.0 308.8125,101.0" fill="#BD8663"/>
+    <polygon points="308.8125,91.0 313.8125,96.0 308.8125,101.0" fill="#A3B08F"/>
     <text x="305.8125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
 
-    <polygon points="308.8125,111.0 313.8125,116.0 308.8125,121.0" fill="#18519E"/>
+    <polygon points="308.8125,111.0 313.8125,116.0 308.8125,121.0" fill="#BD8663"/>
     <text x="305.8125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">s16OldXposition</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
 
     <polygon points="308.8125,131.0 313.8125,136.0 308.8125,141.0" fill="#18519E"/>
     <text x="305.8125" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">s16OldYposition</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">s16OldXposition</text>
 
     <polygon points="308.8125,151.0 313.8125,156.0 308.8125,161.0" fill="#18519E"/>
     <text x="305.8125" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">s16OldYposition</text>
+
+    <polygon points="308.8125,171.0 313.8125,176.0 308.8125,181.0" fill="#18519E"/>
+    <text x="305.8125" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">s16result</text>
 
     <!-- Adapter Ports -->
 
-    <path d="M 1.5 197.0
-            L 6.5 197.0
-            L 6.5 198.66666666666666
-            L 9.0 198.66666666666666
-            L 9.0 197.0
-            L 11.5 197.0
-            L 11.5 207.0
-            L 9.0 207.0
-            L 9.0 205.33333333333334
-            L 6.5 205.33333333333334
-            L 6.5 207.0
-            L 1.5 207.0
+    <path d="M 1.5 217.0
+            L 6.5 217.0
+            L 6.5 218.66666666666666
+            L 9.0 218.66666666666666
+            L 9.0 217.0
+            L 11.5 217.0
+            L 11.5 227.0
+            L 9.0 227.0
+            L 9.0 225.33333333333334
+            L 6.5 225.33333333333334
+            L 6.5 227.0
+            L 1.5 227.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
-    <text x="14.5" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="14.5" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">rPhys</text>
 
     <!-- Event-Data Association Connectors and Lines -->
@@ -179,33 +187,39 @@
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of Requested Service</text>
 
     <text x="-25" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Quality Input - TRUE to enable service – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Parent object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">FALSE = bypass. TRUE (default) = scale by DM/SKM factor for u16ObjIdParent. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Parent object ID – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
 
     <text x="-25" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">Pixel pro Werteinheit (Multiplikationsfaktor) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">FALSE = bypass. TRUE (default) = scale by DM/SKM factor for u16ObjIdParent. – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
 
     <text x="-25" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Pixel pro Werteinheit (Multiplikationsfaktor) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+
+    <text x="-25" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Gesamtlaenge des Bargraphs in Pixeln (zur Spiegelung) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
 
     <text x="340.3125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status - passthrough from the internal Q_ChildPosition</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully</text>
 
     <text x="340.3125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – Old X position - passthrough from the internal Q_ChildPosition</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status - passthrough from the internal Q_ChildPosition</text>
 
     <text x="340.3125" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – Old Y position - passthrough from the internal Q_ChildPosition</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – Old X position - passthrough from the internal Q_ChildPosition</text>
 
     <text x="340.3125" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – Old Y position - passthrough from the internal Q_ChildPosition</text>
+
+    <text x="340.3125" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">INT</tspan> – retval - passthrough from the internal Q_ChildPosition, see Q_ChildPosition</text>
 
-    <text x="-25" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+    <text x="-25" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physical REAL value input (skaliert, gespiegelt und auf X-Position abgebildet) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AR</tspan></text>
   </g>
 </svg>

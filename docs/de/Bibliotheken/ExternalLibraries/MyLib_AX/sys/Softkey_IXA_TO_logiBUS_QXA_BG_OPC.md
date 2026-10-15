@@ -16,14 +16,15 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` (`QI=TRUE`) — VT-SoftKey, `u16ObjId` identifiziert den SoftKey.
+    - **Softkey_IXA**: `isobus::UT::io::Softkey::Softkey_IXA` — VT-SoftKey, `u16ObjId` identifiziert den SoftKey.
     - **AX_ASR_RF_TRIG_BT** / **AX_ASR_RF_TRIG_OPC**: je `adapter::events::unidirectional::AX_ASR_RF_TRIG` — wandeln steigende/fallende Flanke des SoftKeys bzw. des OPC-UA-Subscribe-Werts in ein Set/Reset-Ereignispaar (ASR).
     - **ASR_MERGE_2**: `adapter::events::unidirectional::ASR_MERGE_2` — führt die beiden ASR-Quellen (SoftKey, OPC-UA) zusammen.
     - **ASR_AX_SR**: `adapter::events::unidirectional::ASR_AX_SR` — Set/Reset-Latch, bildet aus dem zusammengeführten ASR-Signal den gelatchten Ausgangszustand.
     - **AX_SPLIT_3**: `adapter::events::unidirectional::AX_SPLIT_3` — verteilt den Latch-Ausgang auf drei Ziele.
-    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) — physischer digitaler Ausgang.
+    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` — physischer digitaler Ausgang.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): VT-Hintergrundfarbe passend zum Ausgangszustand.
-    - **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: je `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` (`QI=TRUE`) — OPC-UA-Lese-/Schreibzugriff.
+    - **AX_SUBSCRIBE_1** / **AX_PUBLISH_1**: je `adapter::net::AX_SUBSCRIBE_1`/`AX_PUBLISH_1` — OPC-UA-Lese-/Schreibzugriff.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` — verknüpft die `QO` von `logiBUS_QXA`, `Softkey_IXA`, `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `GreenWhiteBackground1_AX`.
 - **Funktionsweise**: Identisch zur Latching-Struktur von `Button_IXA_TO_logiBUS_QXA_BG_OPC_LATCHING`, jedoch mit `Softkey_IXA` statt `Button_IXA` als lokale Bedienquelle.
 
 ## Programmablauf und Verbindungen
@@ -32,8 +33,9 @@
 2. `AX_SUBSCRIBE_1.OUT` → `AX_ASR_RF_TRIG_OPC.QI` → `AX_ASR_RF_TRIG_OPC.Q` → `ASR_MERGE_2.IN1`.
 3. `ASR_MERGE_2.OUT` → `ASR_AX_SR.S_R`.
 4. `ASR_AX_SR.Q` → `AX_SPLIT_3.IN` → `AX_SPLIT_3.OUT1` → `logiBUS_QXA.OUT`, `AX_SPLIT_3.OUT2` → `GreenWhiteBackground1_AX.DI1`, `AX_SPLIT_3.OUT3` → `AX_PUBLISH_1.IN`.
-5. Initialisierung: `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (ausgeblendete Verbindung).
+5. Initialisierung: Ereigniseingang `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `AX_PUBLISH_1.INIT` (ausgeblendete Verbindung), `AX_PUBLISH_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → Ereignisausgang `INITO` und → `AND_QO.REQ`.
 6. Parameter: `u16ObjId` → `Softkey_IXA.u16ObjId` und `GreenWhiteBackground1_AX.u16ObjId`; `Output` → `logiBUS_QXA.Output`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
+7. Qualität: Dateneingang `QI` (`BOOL`, Default `TRUE`) → `logiBUS_QXA.QI`, `Softkey_IXA.QI`, `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `GreenWhiteBackground1_AX.QI`; deren `QO` → `AND_QO.IN1`..`IN5`; `AND_QO.OUT` → Datenausgang `QO`.
 
 ## Technische Besonderheiten
 

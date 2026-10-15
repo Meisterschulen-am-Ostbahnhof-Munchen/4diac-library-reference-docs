@@ -10,6 +10,8 @@
 
 Allgemeines Muster (Selector → `AX_SEL`/`F_SEL` → `Q_BackgroundColour`) siehe [Background-Farbbausteine (gemeinsames Muster)](../../MyLib_AX/sys/Background-Farbbausteine.md).
 
+**Quality-Anschlüsse:** Der Baustein besitzt zusätzlich das Ereignis `INIT` (Eingang) und `INITO` (Ausgang) sowie den Dateneingang `QI` (BOOL, Standard `TRUE`, „Quality Input – TRUE, um den Dienst freizugeben“) und den Datenausgang `QO` (BOOL, „Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde“). `INIT` wird an `Q_BackgroundColourAux.INIT` weitergereicht, `Q_BackgroundColourAux.INITO` an `INITO`; `QI` ist mit `Q_BackgroundColourAux.QI` und `Q_BackgroundColourAux.QO` mit `QO` verbunden.
+
 ![GreenRedBackground1_aux](GreenRedBackground1_aux.svg)
 
 ## Zusammenfassung

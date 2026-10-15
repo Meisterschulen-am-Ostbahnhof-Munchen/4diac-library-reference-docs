@@ -14,13 +14,17 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Init-Kette bei `CALIBRATE.INIT`
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `PublishMaxRaw.INITO`, dem Ende der Init-Kette
 
 ### **Daten-Eingänge**
+
+Allgemein:
+
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, schaltet den Dienst frei; wird an alle 18 Dienst-Instanzen (siehe `AND_QO`) weitergereicht
 
 Eingang und Anzeige:
 
@@ -52,7 +56,7 @@ OPC-UA-Ausgänge:
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung aller 18 `QO`-Quellen in einem einzigen Baustein `AND_QO` (`iec61131::booleanOperators::AND_BOOL_18`)
 
 ### **Adapter**
 
@@ -61,7 +65,7 @@ Dieser Funktionsblock hat keine Adapter an der Schnittstelle; intern werden `AR`
 ## Verwendete Funktionsbausteine (FBs)
 
 - **InputRaw**: SubApp `MyLib::sys::logiBUS_AI_Raw_VT_AR_OPC` – liest den Analogeingang, zeigt den Rohwert an und publiziert ihn
-- **CALIBRATE**: `adapter::Engineering::measurements::AR_CALIBRATE_3P_REF` (`QI=TRUE`, `xClipping=FALSE`) – 3-Punkt-Kalibrierung
+- **CALIBRATE**: `adapter::Engineering::measurements::AR_CALIBRATE_3P_REF` (`xClipping=FALSE`, `QI` kommt vom Eingang `QI`) – 3-Punkt-Kalibrierung
 - **MIN_REF_LIT**, **MID_REF_LIT**, **MAX_REF_LIT**: SubApp `MyLib::sys::NumericValue_TO_AR2_OPC` – Referenzwerte aus VT-Eingabefeld bzw. OPC-UA
 - **TriggerMIN**, **TriggerMID**, **TriggerMAX**: SubApp `MyLib::sys::Button_Method_IE` – Taste ODER lokale Methode → `IND`
 - **INI_X_MIN**, **INI_X_MID**, **INI_X_MAX**: `eclipse4diac::storage::INI_AR2` (Schlüssel `X_MIN`/`X_MID`/`X_MAX`, Vorgabe `0.0`)
@@ -69,7 +73,9 @@ Dieser Funktionsblock hat keine Adapter an der Schnittstelle; intern werden `AR`
 - **TapMinRaw**, **TapMidRaw**, **TapMaxRaw**: `adapter::events::bidirectional::AR2_SPLIT_FWD_REV`
 - **PublishCal**, **PublishMinRaw**, **PublishMidRaw**, **PublishMaxRaw**: SubApp `MyLib::sys::AR_TO_Q_Publish_OPC` – VT-Anzeige und OPC-UA-Publish
 
-Alle `INI_AR2` verwenden `QI=TRUE` und `SETM=TRUE`; `sSection` ist ihre gemeinsame `SECTION`.
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_18` – verknüpft die `QO`-Ausgänge aller 18 Dienst-Instanzen (`CALIBRATE`, 6× `INI_AR2`, `InputRaw`, 3× `*_REF_LIT`, 3× `Trigger*`, `PublishCal`, 3× `Publish*Raw`) zum Ausgang `QO` (früher eine Kaskade aus mehreren kleineren UND-Bausteinen)
+
+Alle `INI_AR2` verwenden `SETM=TRUE`; ihr `QI` kommt vom Eingang `QI`; `sSection` ist ihre gemeinsame `SECTION`.
 
 ## Programmablauf und Verbindungen
 
@@ -79,6 +85,8 @@ Alle `INI_AR2` verwenden `QI=TRUE` und `SETM=TRUE`; `sSection` ist ihre gemeinsa
 4. Gespeicherte Rohwerte: `CALIBRATE.X_MIN`/`X_MID`/`X_MAX` → `TapMinRaw.IN`/`TapMidRaw.IN`/`TapMaxRaw.IN`; deren `OUT` → `INI_X_MIN.VAL`/`INI_X_MID.VAL`/`INI_X_MAX.VAL`; `REV_OUT` → `PublishMinRaw`/`PublishMidRaw`/`PublishMaxRaw.AR_IN`.
 5. Referenzwerte (Persistenz): `CALIBRATE.MIN_REF`/`MID_REF`/`MAX_REF` → `INI_MIN_REF.VAL`/`INI_MID_REF.VAL`/`INI_MAX_REF.VAL`.
 6. Kalibrierter Wert: `CALIBRATE.Y` → `PublishCal.AR_IN`.
+7. Initialisierungskette: `INIT` → `CALIBRATE` → `INI_X_MIN` → `INI_X_MID` → `INI_X_MAX` → `INI_MIN_REF` → `INI_MID_REF` → `INI_MAX_REF` → `InputRaw` → `MIN_REF_LIT` → `MID_REF_LIT` → `MAX_REF_LIT` → `TriggerMIN` → `TriggerMID` → `TriggerMAX` → `PublishCal` → `PublishMinRaw` → `PublishMidRaw` → `PublishMaxRaw` (jeweils `INITO` → nächstes `INIT`); `PublishMaxRaw.INITO` → `INITO` und `AND_QO.REQ`.
+8. Qualität: `QI` → `.QI` aller 18 Instanzen; `CALIBRATE.QO` → `AND_QO.IN1`; `INI_X_MIN`/`INI_X_MID`/`INI_X_MAX.QO` → `IN2`/`IN3`/`IN4`; `INI_MIN_REF`/`INI_MID_REF`/`INI_MAX_REF.QO` → `IN5`/`IN6`/`IN7`; `InputRaw.QO` → `IN8`; `MIN_REF_LIT`/`MID_REF_LIT`/`MAX_REF_LIT.QO` → `IN9`/`IN10`/`IN11`; `TriggerMIN`/`TriggerMID`/`TriggerMAX.QO` → `IN12`/`IN13`/`IN14`; `PublishCal.QO` → `IN15`; `PublishMinRaw`/`PublishMidRaw`/`PublishMaxRaw.QO` → `IN16`/`IN17`/`IN18`; `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 

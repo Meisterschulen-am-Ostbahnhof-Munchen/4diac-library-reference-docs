@@ -14,20 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: feuert, wenn der Button **oder** die lokale Methode aktiviert bzw. aufgerufen wird
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE, um den Dienst freizugeben
 - **u16ObjId** (`UINT`): Object ID des Buttons
 - **ID_METHOD** (`WSTRING`): lokale Methodenadresse (`ACTION=CREATE_METHOD`) für den argumentlosen Trigger; wird vom Web-Client/Dashboard und per `CLIENT_0` von einer anderen Station aufgerufen
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Button.QO` und `METHOD_SERVER.QO`)
 
 ### **Adapter**
 
@@ -35,9 +37,10 @@ Keine.
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **`Button`** (`isobus::UT::io::Button::Button_IE`): Parameter `QI = TRUE`, `InputEvent = BT_PRESSED_LATCHED`
-- **`METHOD_SERVER`** (`iec61499::net::SERVER_0`): Parameter `QI = TRUE`, stellt die lokale Methode bereit
+- **`Button`** (`isobus::UT::io::Button::Button_IE`): Parameter `InputEvent = BT_PRESSED_LATCHED`, `QI` vom Baustein-Eingang
+- **`METHOD_SERVER`** (`iec61499::net::SERVER_0`): `QI` vom Baustein-Eingang, stellt die lokale Methode bereit
 - **`MERGE`** (`iec61499::events::E_MERGE_2`): führt beide Auslöser zusammen
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): verknüpft `Button.QO` und `METHOD_SERVER.QO` per UND zu `QO`
 
 ## Funktionsweise
 
@@ -46,6 +49,9 @@ Keine.
 - `METHOD_SERVER.IND` → `MERGE.EI2`
 - `METHOD_SERVER.IND` → `METHOD_SERVER.RSP` (sofortige Antwort)
 - `MERGE.EO` → `IND`
+- Initialisierungskette: `INIT` → `Button.INIT`, `Button.INITO` → `METHOD_SERVER.INIT`, `METHOD_SERVER.INITO` → `INITO` und → `AND_QO.REQ`
+- `QI` → `Button.QI` und `METHOD_SERVER.QI`
+- `Button.QO` → `AND_QO.IN1`, `METHOD_SERVER.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

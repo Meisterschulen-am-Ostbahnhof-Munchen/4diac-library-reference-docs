@@ -14,37 +14,39 @@ The **Q_ChildPosition_AI** function block implements a command to change the pos
 
 ### **Event Inputs**
 
-| Event   | Type  | Comment                                                                    |
-|---------|-------|----------------------------------------------------------------------------|
-| INIT    | EInit | Service Initialization – triggers the initialization of the inner block.   |
+| Event | Type  | Comment                                                                  |
+|-------|-------|--------------------------------------------------------------------------|
+| INIT  | EInit | Service Initialization – triggers the initialization of the inner block. |
 
 The `INIT` event is associated with the data inputs `u16ObjId`, `u16ObjIdParent`, and `xScale`.
 
 ### **Event Outputs**
 
-| Event | Type  | Comment                                                        |
-|-------|-------|----------------------------------------------------------------|
-| INITO | EInit | Initialization Confirm – acknowledged after `INIT` completes.  |
-| CNF   | Event | Confirmation of the requested position-change service.          |
+| Event | Type  | Comment                                                       |
+|-------|-------|---------------------------------------------------------------|
+| INITO | EInit | Initialization Confirm – acknowledged after `INIT` completes. |
+| CNF   | Event | Confirmation of the requested position-change service.        |
 
 The `CNF` event is associated with the data outputs `STATUS`, `s16OldXposition`, `s16OldYposition`, and `s16result`.
 
 ### **Data Inputs**
 
-| Name           | Type  | Comment                                                                                              |
-|----------------|-------|------------------------------------------------------------------------------------------------------|
-| u16ObjId       | UINT  | Object ID of the child object whose position is to be changed. Defaults to `ID_NULL`.                |
-| u16ObjIdParent | UINT  | Object ID of the parent object (reference coordinate system). Defaults to `ID_NULL`.                 |
-| xScale         | BOOL  | If FALSE (default), the X/Y positions are passed through unchanged. If TRUE, they are scaled by the DM/SKM factor of the parent object. |
+| Name           | Type | Comment                                                                                                                                 |
+|----------------|------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| QI             | BOOL | Quality Input - TRUE to enable service                                                                                                  |
+| u16ObjId       | UINT | Object ID of the child object whose position is to be changed. Defaults to `ID_NULL`.                                                   |
+| u16ObjIdParent | UINT | Object ID of the parent object (reference coordinate system). Defaults to `ID_NULL`.                                                    |
+| xScale         | BOOL | If FALSE (default), the X/Y positions are passed through unchanged. If TRUE, they are scaled by the DM/SKM factor of the parent object. |
 
 ### **Data Outputs**
 
-| Name              | Type   | Comment                                                                 |
-|-------------------|--------|-------------------------------------------------------------------------|
-| STATUS            | STRING | Service status – passthrough from the internal `Q_ChildPosition`.       |
-| s16OldXposition   | INT    | Previous X position of the child object – passthrough from the inner block. |
-| s16OldYposition   | INT    | Previous Y position of the child object – passthrough from the inner block. |
-| s16result         | INT    | Return value – passthrough from the internal `Q_ChildPosition`.        |
+| Name            | Type   | Comment                                                                     |
+|-----------------|--------|-----------------------------------------------------------------------------|
+| QO              | BOOL   | Quality Output - TRUE if service executed successfully                      |
+| STATUS          | STRING | Service status – passthrough from the internal `Q_ChildPosition`.           |
+| s16OldXposition | INT    | Previous X position of the child object – passthrough from the inner block. |
+| s16OldYposition | INT    | Previous Y position of the child object – passthrough from the inner block. |
+| s16result       | INT    | Return value – passthrough from the internal `Q_ChildPosition`.             |
 
 ### **Adapters**
 
@@ -54,6 +56,8 @@ The `CNF` event is associated with the data outputs `STATUS`, `s16OldXposition`,
 | s16Yposition   | adapter::types::unidirectional::AI| New Y position relative to the top-left corner of the parent object.    |
 
 Both adapters are unidirectional inputs (sockets). Each provides one event (`E1`) and one data value (`D1`). The adapter's event triggers the position update.
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Inner`. The data output `QO` (BOOL) is taken over from `Inner.QO` and is associated with the events `INITO` and `CNF`.
 
 ## Functionality
 

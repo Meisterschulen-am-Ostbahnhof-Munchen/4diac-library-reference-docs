@@ -14,6 +14,14 @@
 
 - **AX_SUBSCRIBE_1** (`adapter::net::AX_SUBSCRIBE_1`): subscribes to the locally-monitored address `ID` (BOOL, written remotely).
 - **logiBUS_QXA** (`logiBUS::io::DQ::logiBUS_QXA`): physical digital output, identified via `Output_Q1..Q8`.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_2`): combines `AX_SUBSCRIBE_1.QO` and `logiBUS_QXA.QO` into the SubApp output `QO`.
+
+## Initialization and quality
+
+- Events: `INIT` (EInit, input) and `INITO` (EInit, output, comes from `logiBUS_QXA.INITO`).
+- Data input `QI` (BOOL, default `TRUE`) and data output `QO` (BOOL); `AX_SUBSCRIBE_1` and `logiBUS_QXA` no longer carry a fixed `QI=TRUE`.
+- Initialization: `INIT` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `INITO` and → `AND_QO.REQ`.
+- Quality: `QI` → `AX_SUBSCRIBE_1.QI` and `logiBUS_QXA.QI`; `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `logiBUS_QXA.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`.
 
 ## Summary
 

@@ -23,12 +23,14 @@ The **Q_LockUnlockMask** is a standards-compliant function block for controlling
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16MaskId` (UINT): Mask Object ID (provided at `INIT`)
 - `u8LockCmd` (USINT): Lock Command (0=Unlock, 1=Lock)
 - `u16LockTimeoutMs` (UINT): Timeout in ms (0 = no timeout)
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldLockCmd` (USINT): Previous lock state
 - `u16OldLockTimeoutMs` (UINT): Previous timeout
@@ -47,6 +49,8 @@ This block requires instance uniqueness regarding **u16MaskId**. Only one instan
 ID_NULL (65535) is not a valid command target — the command is answered by the VT with an error code (the mask must match the currently visible mask).
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
    - `INIT` with `u16MaskId`

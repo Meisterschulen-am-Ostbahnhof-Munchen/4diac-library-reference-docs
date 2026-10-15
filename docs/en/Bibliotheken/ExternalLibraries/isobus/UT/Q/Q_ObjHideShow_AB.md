@@ -14,9 +14,9 @@ The function block **Q_ObjHideShow_AB** serves as a wrapper for the function blo
 
 ### **Event Inputs**
 
-| Event  | with variables | Comment                                     |
-| ------ | -------------- | ------------------------------------------- |
-| `INIT` | `u16ObjId`     | Service Initialization; Object ID is passed |
+| Event  | with variables   | Comment                                     |
+| ------ | ---------------- | ------------------------------------------- |
+| `INIT` | `QI`, `u16ObjId` | Service Initialization; Object ID is passed |
 
 ### **Event Outputs**
 
@@ -26,13 +26,18 @@ The function block **Q_ObjHideShow_AB** serves as a wrapper for the function blo
 
 ### **Data Inputs**
 
-| Name       | Type | Comment   |
-| ---------- | ---- | --------- |
-| `u16ObjId` | UINT | Object ID |
+| Name       | Type | Comment                                |
+| ---------- | ---- | -------------------------------------- |
+| `QI`       | BOOL | Quality Input - TRUE to enable service |
+| `u16ObjId` | UINT | Object ID                              |
 
 ### **Data Outputs**
 
-No explicit data outputs at the FB level. The output data is provided via the adapter `qOldVisible`.
+Apart from `QO`, there are no explicit data outputs at the FB level. The remaining output data is provided via the adapter `qOldVisible`.
+
+| Name | Type   | Comment                                                |
+| ---- | ------ | ------------------------------------------------------ |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 
 ### **Adapters**
 
@@ -40,6 +45,8 @@ No explicit data outputs at the FB level. The output data is provided via the ad
 | -------------- | ------------- | ------------------------------------ | ---------------------------------------------------------------------- |
 | Socket (Input) | `qVisible`    | `adapter::types::unidirectional::AB` | Target Visibility: 0 = hidden, 1 = displayed                           |
 | Plug (Output)  | `qOldVisible` | `adapter::types::unidirectional::AB` | Previous Visibility Value: 0 = hidden, 1 = displayed, 0xFF = undefined |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_ObjHideShow`. The data output `QO` (BOOL) is taken over from `Q_ObjHideShow.QO` and is associated with the event `INITO`.
 
 ## Valid Object IDs
 

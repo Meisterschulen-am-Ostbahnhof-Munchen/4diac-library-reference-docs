@@ -26,11 +26,13 @@ Der **Q_BackgroundColour** ist ein standardkonformer Funktionsbaustein zur Steue
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL, Standardwert `TRUE`): Quality Input – TRUE aktiviert den Dienst (mit `INIT` und `REQ` verknüpft)
 - `u16ObjId` (UINT): Objektkennung
 - `u8Colour` (USINT): Neuer Farbwert (ISO 11783-6 Palette)
 
 ### **Daten-Ausgänge**
 
+- `QO` (BOOL): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (mit `INITO` und `CNF` verknüpft)
 - `STATUS` (STRING): Betriebsstatusmeldung
 - `u8OldColour` (USINT): Vorheriger Farbwert
 - `s16result` (INT): ISO-konformer Ergebniscode
@@ -43,6 +45,8 @@ WorkingSet (0), Data Mask (1000–1999), Alarm Mask (2000–2999), Soft Key Mask
 ID_NULL (65535) ist kein gültiges Kommandoziel, deaktiviert aber bei `INIT` den Baustein.
 
 ## Funktionsweise
+
+`QI` (Standardwert `TRUE`) wird mit den Ereignissen `INIT` und `REQ` übernommen und aktiviert den Dienst; `QO` wird mit `INITO` und `CNF` ausgegeben und zeigt an, ob der Dienst erfolgreich ausgeführt wurde.
 
 1. **Initialisierung**:
    - `INIT` mit Objekt-ID

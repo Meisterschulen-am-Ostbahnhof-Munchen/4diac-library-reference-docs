@@ -16,13 +16,17 @@ Der Baustein ersetzt `logiBUS_AI_Calibrate_Remote_IDA_OPC`: Die Kalibrierung sel
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialisierungsanforderung; startet die Kette `ValueDisplay` → `TriggerCO` → `TriggerCS` → `RawDisplay` → `MinRawDisplay` → `MaxRawDisplay` → `ZeroRef` → `SpanRef`
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialisierungsbestätigung; kommt von `SpanRef.INITO`
 
 ### **Daten-Eingänge**
+
+Freigabe:
+
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, Freigabe des Dienstes; wird an alle acht Instanzen (`ValueDisplay`, `TriggerCO`, `TriggerCS`, `RawDisplay`, `MinRawDisplay`, `MaxRawDisplay`, `ZeroRef`, `SpanRef`) weitergereicht
 
 Kalibrierter Wert:
 
@@ -56,7 +60,7 @@ Referenzwerte (optional):
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output, `AND` der `QO`-Ausgänge aller acht Instanzen (über `AND_QO`, `AND_BOOL_8`)
 
 ### **Adapter**
 
@@ -68,6 +72,7 @@ Referenzwerte (optional):
 - **RawDisplay**, **MinRawDisplay**, **MaxRawDisplay**: dieselbe SubApp für Rohwert und Rohwerte der Kalibrierpunkte
 - **TriggerCO**, **TriggerCS**: SubApp [`MyLib::sys::Button_CLIENT_Method_IE`](./Button_CLIENT_Method_IE.md) (`InputEvent=BT_PRESSED_LATCHED`)
 - **ZeroRef**, **SpanRef**: SubApp `MyLib::sys::NumericValue_TO_AR2_OPC` – Referenzwert-Eingabefelder
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_8` – verknüpft die acht `QO`-Ausgänge zum SubApp-Ausgang `QO`
 
 ## Programmablauf und Verbindungen
 
@@ -78,6 +83,8 @@ Referenzwerte (optional):
 - `ID_MAXRAW_M2M_READ`, `stObjMaxRaw`, `ID_MAXRAW_WRITE` → `MaxRawDisplay`
 - `stObjZero`, `ID_ZERO_READ`, `ID_ZERO_WRITE` → `ZeroRef`
 - `stObjSpan`, `ID_SPAN_READ`, `ID_SPAN_WRITE` → `SpanRef`
+- Initialisierung: `INIT` → `ValueDisplay.INIT` → `TriggerCO.INIT` → `TriggerCS.INIT` → `RawDisplay.INIT` → `MinRawDisplay.INIT` → `MaxRawDisplay.INIT` → `ZeroRef.INIT` → `SpanRef.INIT` (jeweils über `INITO`); `SpanRef.INITO` → `INITO` und → `AND_QO.REQ`
+- Qualität: `QI` → `.QI` der acht Instanzen; `ValueDisplay.QO` → `AND_QO.IN1`, `TriggerCO.QO` → `IN2`, `TriggerCS.QO` → `IN3`, `RawDisplay.QO` → `IN4`, `MinRawDisplay.QO` → `IN5`, `MaxRawDisplay.QO` → `IN6`, `ZeroRef.QO` → `IN7`, `SpanRef.QO` → `IN8`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

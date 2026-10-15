@@ -14,20 +14,22 @@
 
 ### **Event Inputs**
 
-The function block has no direct event inputs.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): Initialization Confirm
 - **IND**: fires when the configured `InputEvent` occurs
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service
 - **u16ObjId** (UINT): object ID of the button (default `ID_NULL`)
 - **InputEvent** (`isobus::UT::io::Button::ButtonActivationCode_S`): e.g. `BT_PRESSED_LATCHED`, `BT_RELEASED_UNLATCHED` (default `Invalid`)
 
 ### **Data Outputs**
 
-The function block has no direct data outputs.
+- **QO** (`BOOL`): Quality Output - TRUE if the service executed successfully (passed through from `Button.QO`)
 
 ### **Adapters**
 
@@ -35,12 +37,12 @@ No adapters are used.
 
 ## Functionality
 
-The network contains exactly one instance `Button` of type `isobus::UT::io::Button::Button_IE` with the parameter `QI = TRUE`. `u16ObjId` and `InputEvent` are routed unchanged to the like-named inputs of the instance, and its event `IND` is output directly as the `IND` of the SubApp.
+The network contains exactly one instance `Button` of type `isobus::UT::io::Button::Button_IE`. `u16ObjId`, `InputEvent` and `QI` are routed unchanged to the like-named inputs of the instance, `INIT` → `Button.INIT`; its events `IND` and `INITO` and its output `QO` are output directly as `IND`, `INITO` and `QO` of the SubApp.
 
 ## Technical Details
 
 - Pure pass-through without logic or state of its own
-- `QI` is hard-wired to TRUE; the block is therefore always active
+- `QI` is passed through from outside to the inner block (default `TRUE`)
 - Because `InputEvent` is a parameter, the same SubApp can be used for different kinds of events (e.g. pressing or releasing)
 
 ## Application Scenarios

@@ -28,11 +28,16 @@ The function block `Q_ObjEnableDisable_AB` serves as a wrapper that enables the 
 
 | Name       | Type | Description                                       |
 | ---------- | ---- | ------------------------------------------------- |
+| `QI`       | BOOL | Quality Input - TRUE to enable service            |
 | `u16ObjId` | UINT | Unique identifier of the object to be controlled. |
 
 ### **Data Outputs**
 
-No dedicated data outputs – output data is provided via the adapter plug.
+Apart from `QO`, there are no dedicated data outputs – the remaining output data is provided via the adapter plug.
+
+| Name | Type   | Comment                                                |
+| ---- | ------ | ------------------------------------------------------ |
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully |
 
 ### **Adapter**
 
@@ -40,6 +45,8 @@ No dedicated data outputs – output data is provided via the adapter plug.
 | ---------------------- | --------- | -------------------------------------------------------------------------------------------------------- |
 | **Socket** `qAbility`  | Input     | Unidirectional AB adapter: receives the command (BYTE). `0` = disable, `1` = enable, `0xFF` = undefined. |
 | **Plug** `qOldAbility` | Output    | Unidirectional AB adapter: returns the previous state of the object (same encoding).                     |
+
+**Quality signals QI/QO:** The data input `QI` (BOOL, initial value `TRUE`) is associated with the event `INIT` and is passed through to `QI` of the internal block `Q_ObjEnableDisable`. The data output `QO` (BOOL) is taken over from `Q_ObjEnableDisable.QO` and is associated with the event `INITO`.
 
 ## Valid Object IDs
 

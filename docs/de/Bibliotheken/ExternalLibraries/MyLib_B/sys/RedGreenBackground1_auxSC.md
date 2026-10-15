@@ -8,7 +8,7 @@
 
 ## Einleitung
 
-`RedGreenBackground1_auxSC` ist ein **Kompakt-Wrapper** um [`RedGreenBackground1_auxS`](RedGreenBackground1_auxS.md) — reicht `u16ObjId`s und den Selector durch, ohne die `CNF`-Ereignisausgänge und Diagnosewerte (`STATUS_n`, `u8OldColour_n`, `result_n`) nach außen zu führen.
+`RedGreenBackground1_auxSC` ist ein **Kompakt-Wrapper** um [`RedGreenBackground1_auxS`](RedGreenBackground1_auxS.md) — reicht `u16ObjId`s und den Selector durch, ohne die `CNF`-Ereignisausgänge und Diagnosewerte (`STATUS_n`, `u8OldColour_n`, `result_n`) nach außen zu führen. Zusätzlich werden `INIT` → `RedGreenBackground.INIT`, `RedGreenBackground.INITO` → `INITO`, `QI` → `RedGreenBackground.QI` (Initialwert `TRUE`) und `RedGreenBackground.QO` → `QO` durchgereicht.
 
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](../../MyLib_AX/sys/Background-Farbbausteine.md).
 

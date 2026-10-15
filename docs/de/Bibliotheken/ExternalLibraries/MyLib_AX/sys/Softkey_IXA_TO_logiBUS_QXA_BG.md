@@ -20,12 +20,15 @@
     - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` — physischer digitaler Ausgang.
     - **AX_SPLIT_2**: `adapter::events::unidirectional::AX_SPLIT_2` — verzweigt das Softkey-Signal.
     - **GreenWhiteBackground1_AX** (SubApp, `MyLib::sys`): setzt die VT-Statusfarbe (siehe [Background-Farbbausteine](./Background-Farbbausteine.md)).
-- **Funktionsweise**: `Softkey_IXA.IN` wird über `AX_SPLIT_2` sowohl an `logiBUS_QXA.OUT` als auch an `GreenWhiteBackground1_AX.DI1` verteilt.
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft `logiBUS_QXA.QO`, `Softkey_IXA.QO` und `GreenWhiteBackground1_AX.QO` zum Ausgang `QO`.
+- **Funktionsweise**: `Softkey_IXA.IN` wird über `AX_SPLIT_2` sowohl an `logiBUS_QXA.OUT` als auch an `GreenWhiteBackground1_AX.DI1` verteilt. Die SubApp-Schnittstelle besitzt außerdem die Ereignisse `INIT`/`INITO` sowie `QI` (BOOL, Initialwert `TRUE`) und `QO` (BOOL).
 
 ## Programmablauf und Verbindungen
 
 1. `u16ObjId` → `Softkey_IXA.u16ObjId` und `GreenWhiteBackground1_AX.u16ObjId`; `Output` → `logiBUS_QXA.Output`.
 2. `Softkey_IXA.IN` → `AX_SPLIT_2.IN` → `AX_SPLIT_2.OUT1` → `logiBUS_QXA.OUT`, `AX_SPLIT_2.OUT2` → `GreenWhiteBackground1_AX.DI1`.
+3. Initialisierungskette: `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `Softkey_IXA.INIT`, `Softkey_IXA.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` und `AND_QO.REQ`.
+4. Qualität: `QI` → `logiBUS_QXA.QI`, `Softkey_IXA.QI` und `GreenWhiteBackground1_AX.QI`; deren `QO`-Ausgänge → `AND_QO.IN1` bis `AND_QO.IN3` (in dieser Reihenfolge); `AND_QO.OUT` → `QO`.
 
 ## Anwendungsszenarien
 

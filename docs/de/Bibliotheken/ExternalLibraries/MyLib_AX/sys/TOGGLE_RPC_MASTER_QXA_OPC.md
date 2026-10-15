@@ -17,22 +17,23 @@ Die SubApp ist speziell für Anwendungen konzipiert, bei denen ein einzelner Sof
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- **INIT** (`EInit`): Initialisierungsanforderung
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- **INITO** (`EInit`): Initialisierungsbestätigung (von `PUBLISH_STATE.INITO`)
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Kommentar |
 |------|-----|-----------|
+| `QI` | `BOOL` | Quality Input, TRUE gibt den Dienst frei (Vorgabe `TRUE`); wird an `TRIGGER_SERVER.QI` und `PUBLISH_STATE.QI` verteilt. |
 | `ID_TRIGGER_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION=CREATE_METHOD) für den argumentlosen Toggle-Trigger, wird vom Bedienmodul per `CALL_METHOD` aufgerufen. |
 | `ID_STATE_WRITE` | `WSTRING` | Lokale Publish-Adresse (ACTION=WRITE) für den tatsächlichen Toggle-Zustand – wird vom Bedienmodul remote abonniert (z.B. für `GreenWhiteBackground`). |
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output, UND aus `TRIGGER_SERVER.QO` und `PUBLISH_STATE.QO` (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_2`)
 
 ### **Adapter**
 
@@ -53,18 +54,21 @@ Die SubApp realisiert einen Remote-Toggle mit OPC-UA. Intern sind folgende Funkt
 - **`AX_T_FF`** (`adapter::events::unidirectional::AX_T_FF`): Ein Toggle-Flip-Flop, das bei jedem ankommenden Ereignis seinen Ausgangszustand `Q` umschaltet.
 - **`AX_SPLIT_7`** (`adapter::events::unidirectional::AX_SPLIT_7`): Verteilt den Zustand `Q` auf sieben unidirektionale Adapter-Ausgänge.
 - **`AX_PUBLISH_1`** (`adapter::net::AX_PUBLISH_1`): Ein OPC-UA-Publisher, der den Zustand auf die unter `ID_STATE_WRITE` vorgegebene Adresse schreibt.
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): Verknüpft `TRIGGER_SERVER.QO` und `PUBLISH_STATE.QO` zum `QO` der SubApp.
 
 **Ablauf:**  
 Wird die Methode per `CALL_METHOD` aufgerufen, erzeugt der Server ein `IND`-Ereignis. Dieses Ereignis taktet das Toggle-Flip-Flop (`CLK`), wodurch sich dessen Ausgang `Q` (binär 0/1) ändert. Gleichzeitig wird das `IND`-Ereignis direkt zurück auf `RSP` gelegt, um die Anfrage sofort zu quittieren und den OPC-UA-Server nicht zu blockieren. Der aktuelle Zustand wird über den Split auf die sieben Ausgänge verteilt: Sechs davon werden auf die externen Plugs `OUT1`…`OUT6` geführt, der siebte (`OUT7`) geht an den Publisher, der den Zustand als `WRITE`-Operation auf der OPC-UA-Adresse veröffentlicht. Dadurch kann ein Bedienmodul den Zustand abonnieren und z.B. die Hintergrundfarbe eines Softkeys ändern.
 
-Die SubApp hat **keine** eigene Ereignis-Eingänge oder -Ausgänge; sie wird ausschließlich über den OPC-UA-Methodenaufruf gesteuert.
+Außer `INIT`/`INITO` hat die SubApp **keine** Ereignis-Eingänge oder -Ausgänge; im Betrieb wird sie ausschließlich über den OPC-UA-Methodenaufruf gesteuert.
+
+Initialisierung und Qualität: `INIT` → `TRIGGER_SERVER.INIT`; `TRIGGER_SERVER.INITO` → `PUBLISH_STATE.INIT`; `PUBLISH_STATE.INITO` → `INITO` (und → `AND_QO.REQ`). `QI` → `TRIGGER_SERVER.QI` und `PUBLISH_STATE.QI`; `TRIGGER_SERVER.QO` → `AND_QO.IN1`, `PUBLISH_STATE.QO` → `AND_QO.IN2`, `AND_QO.OUT` → `QO`.
 
 ## Technische Besonderheiten
 
 - **Direkte RSP-Verdrahtung:** Das Ereignis `IND` wird nicht nur an das Flip-Flop, sondern auch direkt an `RSP` gelegt. Dadurch wird die OPC-UA-Anfrage sofort beantwortet, ohne auf weitere Bausteine zu warten. Frühere Versionen ließen dies aus, was den OPC-UA-Server bis zu 4 Sekunden blockieren konnte (globaler `serviceMutex` in open62541) und jede Statusmeldung im gesamten Projekt verzögerte.
 - **1:1-Adapterverbindungen:** Da IEC 61499-Adapterverbindungen strikt 1:1 sind, kann ein einzelner Adapter-Plug nicht mehrere Sockets gleichzeitig versorgen. Deshalb besitzt die SubApp sechs separate `OUT`-Plugs (`AX_SPLIT_7`), sodass bis zu sechs unabhängige Kanäle angeschlossen werden können.
 - **Kein eigener physischer Ausgang:** Der Toggle-Zustand wird nur als Software-Signal über die Adapter weitergegeben. Für einen einzelnen Kanal mit eigenem Ausgang ist der Baustein `TOGGLE_RPC_MERGE_QXA_OPC` vorgesehen.
-- **Innere Parameter:** `QI` der Server- und Publisher-Bausteine sind fest auf `TRUE` gesetzt, sodass sie sofort nach dem Start aktiv sind.
+- **QI-Verteilung:** `QI` der Server- und Publisher-Bausteine ist nicht mehr fest auf `TRUE` gesetzt, sondern wird vom `QI`-Eingang der SubApp (Vorgabe `TRUE`) gespeist.
 
 ## Zustandsübersicht
 

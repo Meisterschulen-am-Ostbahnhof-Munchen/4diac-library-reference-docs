@@ -13,20 +13,21 @@ Der Funktionsblock `SRT_RPC_FROM_Remote_QXA_OPC_Adapter` ist eine SubApp (SubApp
 
 ## Schnittstellenstruktur
 
-Die SubApp besitzt ausschließlich **Daten‑Eingänge**; es sind weder Ereignis‑Eingänge noch Ereignis‑Ausgänge oder Adapter‑Schnittstellen nach außen vorhanden. Die Eingänge werden innerhalb der SubApp an die internen Funktionsblöcke weitergeleitet.
+Die SubApp besitzt die Initialisierungs-Ereignisse `INIT`/`INITO`, die Qualitäts-Ports `QI`/`QO` und die übrigen **Daten‑Eingänge**; Adapter‑Schnittstellen nach außen sind nicht vorhanden. Die Eingänge werden innerhalb der SubApp an die internen Funktionsblöcke weitergeleitet.
 
 ### **Ereignis-Eingänge**
 
-- Keine
+- **INIT** (`EInit`): Initialisierungsanforderung; geht an `TRIGGER.INIT`
 
 ### **Ereignis-Ausgänge**
 
-- Keine
+- **INITO** (`EInit`): Initialisierung abgeschlossen; kommt von `DigitalOutput_Q1.INITO`
 
 ### **Daten-Eingänge**
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
+| `QI` | `BOOL` | Quality Input - TRUE aktiviert den Dienst; geht an `TRIGGER.QI` und `DigitalOutput_Q1.QI`. Initialwert: `TRUE`. |
 | `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Identifiziert den gewünschten digitalen Ausgang (Q1..Q8). Initialwert: `logiBUS_DO::Invalid`. |
 | `ID_SET_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION = `CREATE_METHOD`) für den Set‑Methodenaufruf. Wird von einem entfernten Gerät per `CALL_METHOD` angesprochen. |
 | `ID_RESET_METHOD` | `WSTRING` | Lokale Methodenadresse (ACTION = `CREATE_METHOD`) für den Reset‑Methodenaufruf. |
@@ -35,7 +36,7 @@ Die SubApp besitzt ausschließlich **Daten‑Eingänge**; es sind weder Ereignis
 
 ### **Daten-Ausgänge**
 
-- Keine
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND aus `TRIGGER.QO` und `DigitalOutput_Q1.QO`)
 
 ### **Adapter**
 
@@ -59,7 +60,9 @@ Die SubApp realisiert einen Fernzugriff auf einen digitalen Ausgang eines andere
 4. **`DigitalOutput_Q1`** – Baustein vom Typ `logiBUS::io::DQ::logiBUS_QXA`.  
    Steuert den realen digitalen Ausgang auf Grundlage des empfangenen Signals. Der Eingang `Output` (aus den SubApp‑Eingängen) bestimmt dabei, welcher Ausgang (Q1..Q8) aktiviert wird.
 
-Die Datenverbindungen verdrahten die externen Eingänge mit dem `TRIGGER`‑Baustein, während die Adapterverbindungen die Signalweiterleitung zwischen den internen Blöcken sicherstellen. Die Konstante `QI = TRUE` an `TRIGGER` und `DigitalOutput_Q1` aktiviert die jeweilige Verarbeitung permanent.
+Die Datenverbindungen verdrahten die externen Eingänge mit dem `TRIGGER`‑Baustein, während die Adapterverbindungen die Signalweiterleitung zwischen den internen Blöcken sicherstellen. `QI` wird an `TRIGGER` und `DigitalOutput_Q1` durchgereicht (statt einer festen Konstante `TRUE`).
+
+Initialisierung und Qualität: `INIT` → `TRIGGER.INIT`, `TRIGGER.INITO` → `DigitalOutput_Q1.INIT`, `DigitalOutput_Q1.INITO` → `INITO` und → `AND_QO.REQ`. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`), die `TRIGGER.QO` und `DigitalOutput_Q1.QO` verknüpft.
 
 ## Technische Besonderheiten
 

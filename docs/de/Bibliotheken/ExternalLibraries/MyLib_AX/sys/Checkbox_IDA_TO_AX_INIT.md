@@ -18,25 +18,33 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **NumericValue_IDA**: `isobus::UT::io::NumericValue::NumericValue_IDA` (`QI=TRUE`) – liest den Rohwert per ObjectID
+    - **NumericValue_IDA**: `isobus::UT::io::NumericValue::NumericValue_IDA` – liest den Rohwert per ObjectID
     - **AD_TO_AX**: `adapter::conversion::unidirectional::AD_TO_AX` – wandelt den `DWORD`-Wert in ein `AX`-Signal (Wert `<> 0`)
     - **AX_RF_TRIG**: `adapter::events::unidirectional::AX_RF_TRIG` – erkennt steigende (`ER`) und fallende (`EF`) Flanke
-    - **AX_SR_SYM_INIT**: `adapter::events::unidirectional::AX_SR_SYM_INIT` (`QI=TRUE`, `Q_INIT=TRUE`) – Flipflop mit definiertem Initialwert
+    - **AX_SR_SYM_INIT**: `adapter::events::unidirectional::AX_SR_SYM_INIT` (`Q_INIT=TRUE`) – Flipflop mit definiertem Initialwert
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_2` – verknüpft `NumericValue_IDA.QO` und `AX_SR_SYM_INIT.QO` zum `QO`
 - **Import**: `isobus::UT::Q::const::IDs::ID_NULL` (Initialwert von `u16ObjId`)
 
 ## Schnittstellenstruktur
 
-### **Ereignis-Eingänge / Ereignis-Ausgänge**
+### **Ereignis-Eingänge**
 
-Keine – Ereignisse laufen über die Adapter.
+- **INIT** (`EInit`): Initialisierungsanforderung
+
+### **Ereignis-Ausgänge**
+
+- **INITO** (`EInit`): Initialisierungsbestätigung
+
+Die Nutzereignisse laufen weiterhin über die Adapter.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE gibt den Dienst frei
 - **u16ObjId** (`UINT`, Initialwert `ID_NULL`): Objekt-ID der VT-Checkbox bzw. der von ihr referenzierten NumberVariable
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output – UND aus `NumericValue_IDA.QO` und `AX_SR_SYM_INIT.QO`
 
 ### **Adapter**
 
@@ -50,6 +58,9 @@ Keine.
 - `AX_RF_TRIG.ER` → `AX_SR_SYM_INIT.S` (Checkbox gesetzt)
 - `AX_RF_TRIG.EF` → `AX_SR_SYM_INIT.R` (Checkbox gelöscht)
 - `AX_SR_SYM_INIT.Q` → `PERMIT_OUT`
+- `INIT` → `NumericValue_IDA.INIT`; `NumericValue_IDA.INITO` → `AX_SR_SYM_INIT.INIT`; `AX_SR_SYM_INIT.INITO` → `INITO` (und → `AND_QO.REQ`)
+- `QI` → `NumericValue_IDA.QI` und `QI` → `AX_SR_SYM_INIT.QI`
+- `NumericValue_IDA.QO` → `AND_QO.IN1`; `AX_SR_SYM_INIT.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

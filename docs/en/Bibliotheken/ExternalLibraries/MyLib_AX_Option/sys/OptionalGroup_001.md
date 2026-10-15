@@ -15,7 +15,7 @@
 ### Sub-blocks: OptionalGroup_001
 
 - **Type**: SubAppType
-- **Interface**: socket `OPTION` of type `Option::AOption`.
+- **Interface**: socket `AOption_IN` of type `Option::AOption`.
 - **Internal FBs used**:
     - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`, converts the adapter into `INIT_REQ`/`QI_OUT`/`INIT_CNF`.
     - **DigitalInput_I1**: `logiBUS::io::DI::logiBUS_IXA`, parameter `Input = Input_I1`.
@@ -23,7 +23,7 @@
 
 ## Program Flow and Connections
 
-- `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
 - Init chain: `AOption_X_TO_EVENT.INIT_REQ` -> `DigitalInput_I1.INIT`; `DigitalInput_I1.INITO` -> `DigitalOutput_Q1.INIT`; `DigitalOutput_Q1.INITO` -> `AOption_X_TO_EVENT.INIT_CNF`
 - `AOption_X_TO_EVENT.QI_OUT` -> `DigitalInput_I1.QI` and `DigitalOutput_Q1.QI`
 - Adapter connection `DigitalInput_I1.IN` -> `DigitalOutput_Q1.OUT`: the input is routed through to the output.

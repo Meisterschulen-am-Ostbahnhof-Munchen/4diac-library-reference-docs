@@ -18,15 +18,19 @@ Der Funktionsblock **Bool8_TO_logiBUS_QX8** ist eine wiederverwendbare Subapplik
 | Name  | Typ     | Kommentar                         |
 |-------|---------|-----------------------------------|
 | `CNF` | Event   | Gemeinsamer Trigger für alle Ausgänge |
+| `INIT` | EInit | Initialisierungsanforderung; startet die Initialisierungskette der acht `logiBUS_QX`-Instanzen |
 
 ### **Ereignis-Ausgänge**
 
-Keine (keine Ereignis‑Ausgänge vorhanden).
+| Name | Typ | Kommentar |
+|------|-----|-----------|
+| `INITO` | EInit | Initialisierung abgeschlossen; kommt von `DigitalOutput_Q3.INITO`, dem Ende der Kette |
 
 ### **Daten-Eingänge**
 
 | Name       | Typ                           | Kommentar                                      |
 |------------|-------------------------------|------------------------------------------------|
+| `QI`       | BOOL                          | Quality Input - TRUE aktiviert den Dienst (Default `TRUE`); wird an alle acht `logiBUS_QX`-Instanzen verteilt |
 | `Q_00`     | BOOL                          | Binärwert für Ausgangskanal 1                   |
 | `Q_01`     | BOOL                          | Binärwert für Ausgangskanal 2                   |
 | `Q_02`     | BOOL                          | Binärwert für Ausgangskanal 3                   |
@@ -46,7 +50,9 @@ Keine (keine Ereignis‑Ausgänge vorhanden).
 
 ### **Daten-Ausgänge**
 
-Keine (keine Daten‑Ausgänge vorhanden).
+| Name | Typ | Kommentar |
+|------|-----|-----------|
+| `QO` | BOOL | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (AND der `QO` aller acht `logiBUS_QX`-Instanzen) |
 
 ### **Adapter**
 
@@ -56,16 +62,18 @@ Keine.
 
 Die Subapplikation enthält acht interne Instanzen des Funktionsblocks `logiBUS::io::DQ::logiBUS_QX`. Jede Instanz ist fest mit einem der acht Eingangssignale (`Q_00` … `Q_07`) verbunden und erhält über die zugehörige Adressvariable (`Output_1` … `Output_8`) die Zieladresse des logiBUS‑Ausgangs.
 
-Der gemeinsame Ereigniseingang `CNF` ist mit dem `REQ`‑Eingang aller acht QX‑Bausteine verbunden. Solange `QI` der internen Bausteine auf `TRUE` gesetzt ist (im Netzwerk fest verdrahtet), wird bei jedem ankommenden `CNF`‑Event der aktuelle Zustand der Bool‑Eingänge parallel an die jeweiligen logiBUS‑Ausgänge übertragen.
+Der gemeinsame Ereigniseingang `CNF` ist mit dem `REQ`‑Eingang aller acht QX‑Bausteine verbunden. Solange `QI` (Dateneingang der SubApp, Default `TRUE`, an alle internen Bausteine verteilt) auf `TRUE` steht, wird bei jedem ankommenden `CNF`‑Event der aktuelle Zustand der Bool‑Eingänge parallel an die jeweiligen logiBUS‑Ausgänge übertragen.
 
 Die Konfiguration der Ausgangsadressen erfolgt über die Eingänge `Output_1` … `Output_8`. Diese sind vom Typ `logiBUS_DO_S` und müssen vor der ersten Nutzung mit gültigen logiBUS‑Adressen belegt werden (initial stehen sie auf `Invalid`).
+
+Initialisierung und Qualität: `INIT` läuft als Kette `DigitalOutput_Q4` → `DigitalOutput_Q7` → `DigitalOutput_Q1` → `DigitalOutput_Q5` → `DigitalOutput_Q2` → `DigitalOutput_Q6` → `DigitalOutput_Q8` → `DigitalOutput_Q3` (jeweils `INITO` → nächstes `INIT`); `DigitalOutput_Q3.INITO` geht an `INITO` und an `AND_QO.REQ`. `QO` ist der Ausgang der Instanz `AND_QO` (`iec61131::booleanOperators::AND_BOOL_8`), die die `QO` der acht Instanzen verknüpft.
 
 ## Technische Besonderheiten
 
 - **Generische 8‑Bit‑Ausgangsgruppe:** Durch die Parametrierung der Ausgangsadressen ist der Baustein nicht an eine feste Hardware gebunden und kann für beliebige logiBUS‑Ausgangskanäle wiederverwendet werden.
 - **Gemeinsame Triggerung:** Ein einziges `CNF`‑Event synchronisiert die Ausgabe aller acht Kanäle – keine zeitlichen Versätze.
-- **Interne Verdrahtung:** Die internen QX‑Bausteine sind mit `QI = TRUE` fest aktiviert; die Steuerung der Ausgabe erfolgt ausschließlich über die Bool‑Eingänge und das Event.
-- **Keine Rückmeldung:** Es gibt keine Ausgangs‑ oder Ereignisausgänge, d.h. die Subapplikation ist rein „send‑oriented“.
+- **Interne Verdrahtung:** `QI` ist nicht mehr intern fest auf `TRUE` gesetzt, sondern wird von außen an alle acht QX‑Bausteine durchgereicht; die Steuerung der Ausgabe erfolgt über die Bool‑Eingänge und das Event.
+- **Rückmeldung nur über Qualität und Initialisierung:** Es gibt keine Daten‑Ausgänge außer `QO` und keinen Ereignis‑Ausgang außer `INITO`; die Subapplikation ist ansonsten rein „send‑oriented“.
 - **Wiederverwendung:** Durch die losgelöste Adressverwaltung eignet sich der Baustein für modulare Automatisierungskonzepte.
 
 ## Zustandsübersicht

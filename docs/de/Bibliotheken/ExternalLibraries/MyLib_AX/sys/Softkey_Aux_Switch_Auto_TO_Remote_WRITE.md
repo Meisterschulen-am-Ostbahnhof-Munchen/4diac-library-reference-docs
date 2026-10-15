@@ -14,14 +14,15 @@
 
 ### **Ereignis-Eingänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Eingänge.
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input, TRUE aktiviert den Dienst
 - **u16ObjId** (UINT): Object ID des SoftKeys (VT), Default `ID_NULL`
 - **u16ObjIdA** (UINT): Object ID der AuxFunction2 (VT), Default `ID_NULL`
 - **ID_WRITE_REMOTE** (WSTRING): Remote-Write-Adresse zum Zielmodul (Befehl, `ACTION=WRITE`, CLIENT)
@@ -30,7 +31,7 @@ Der Funktionsblock verfügt über keine direkten Ereignis-Ausgänge.
 
 ### **Daten-Ausgänge**
 
-Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
+- **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_5`) der `QO`-Ausgänge von `Softkey_IXA`, `Aux_IXA`, `SUBSCRIBE_WEB`, `SUBSCRIBE_SWITCH` und `AX_CLIENT_1_0`
 
 ### **Adapter**
 
@@ -42,11 +43,13 @@ Der Funktionsblock verfügt über keine direkten Daten-Ausgänge.
 
 Das Netzwerk arbeitet in zwei ODER-Stufen:
 
-1. **Manuelle Quellen**: `Softkey_IXA` (`isobus::UT::io::Softkey::Softkey_IXA`, `QI = TRUE`, `u16ObjId`) → `OR_Manual.IN1`, `Aux_IXA` (`isobus::UT::io::Auxiliary::IN::Aux_IXA`, `QI = TRUE`, `u16ObjIdA`) → `OR_Manual.IN2`, `SUBSCRIBE_WEB` (`AX_SUBSCRIBE_1`, Adresse `ID_WEB_READ`) → `OR_Manual.IN3`, `SUBSCRIBE_SWITCH` (`AX_SUBSCRIBE_1`, Adresse `ID_SWITCH_REMOTE`) → `OR_Manual.IN4`. `OR_Manual` ist ein `AX_OR_4`.
+1. **Manuelle Quellen**: `Softkey_IXA` (`isobus::UT::io::Softkey::Softkey_IXA`, `u16ObjId`) → `OR_Manual.IN1`, `Aux_IXA` (`isobus::UT::io::Auxiliary::IN::Aux_IXA`, `u16ObjIdA`) → `OR_Manual.IN2`, `SUBSCRIBE_WEB` (`AX_SUBSCRIBE_1`, Adresse `ID_WEB_READ`) → `OR_Manual.IN3`, `SUBSCRIBE_SWITCH` (`AX_SUBSCRIBE_1`, Adresse `ID_SWITCH_REMOTE`) → `OR_Manual.IN4`. `OR_Manual` ist ein `AX_OR_4`.
 2. `OR_Manual.OUT` → `AX_SPLIT_2_Manual`: `OUT1` → `OR_Automatik.IN1`, `OUT2` → `MANUAL_OUT`.
 3. **Automatik**: `AUTO_IN` → `OR_Automatik.IN2`. `OR_Automatik` ist ein `AX_OR_2`.
 4. `OR_Automatik.OUT` → `AX_SPLIT_2_CmdOut`: `OUT1` → `AUTOMATIC_OUT`, `OUT2` → `AX_CLIENT_1_0.IN`.
-5. `AX_CLIENT_1_0` (`adapter::net::AX_CLIENT_1_0`, `QI = TRUE`) schreibt den Befehl per OPC-UA an die Adresse `ID_WRITE_REMOTE`.
+5. `AX_CLIENT_1_0` (`adapter::net::AX_CLIENT_1_0`) schreibt den Befehl per OPC-UA an die Adresse `ID_WRITE_REMOTE`.
+6. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_5`) verknüpft die `QO`-Ausgänge von `Softkey_IXA` (`IN1`), `Aux_IXA` (`IN2`), `SUBSCRIBE_WEB` (`IN3`), `SUBSCRIBE_SWITCH` (`IN4`) und `AX_CLIENT_1_0` (`IN5`) zu `QO`.
+7. Initialisierung: `INIT` → `Softkey_IXA.INIT` → `Aux_IXA.INIT` → `SUBSCRIBE_WEB.INIT` → `SUBSCRIBE_SWITCH.INIT` → `AX_CLIENT_1_0.INIT`; `AX_CLIENT_1_0.INITO` → `INITO` und → `AND_QO.REQ`. `QI` wird an alle fünf Bausteine verteilt.
 
 ## Technische Besonderheiten
 

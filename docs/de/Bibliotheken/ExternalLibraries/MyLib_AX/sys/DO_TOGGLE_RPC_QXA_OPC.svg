@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2073.4 172.0"
-     width="2073.4" height="172.0">
+     viewBox="0 0 2506.5625 172.0"
+     width="2506.5625" height="172.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(1799.0, 10)">
+  <g transform="translate(1342.875, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 236.4 0
-            A 3 3 0 0 1 239.4 3
-            L 239.4 23.0
-            A 3 3 0 0 1 236.4 26.0
-            L 229.4 26.0
-            L 229.4 66.0
-            L 236.4 66.0
-            A 3 3 0 0 1 239.4 69.0
-            L 239.4 149.0
-            A 3 3 0 0 1 236.4 152.0
+            L 219.0 0
+            A 3 3 0 0 1 222.0 3
+            L 222.0 23.0
+            A 3 3 0 0 1 219.0 26.0
+            L 212.0 26.0
+            L 212.0 66.0
+            L 219.0 66.0
+            A 3 3 0 0 1 222.0 69.0
+            L 222.0 149.0
+            A 3 3 0 0 1 219.0 152.0
             L 3 152.0
             A 3 3 0 0 1 0 149.0
             L 0 69.0
@@ -61,6 +61,10 @@
     <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
     <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="215.5,11.0 220.5,16.0 215.5,21.0" fill="#63B31F"/>
+    <text x="212.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
 
     <!-- Name Section -->
     <!-- FB Type Icon -->
@@ -95,9 +99,9 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">DO_TOGGLE_RPC_QXA_OPC</text>
     
-    <text x="119.7" y="66.0"
+    <text x="111.0" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
-          fill="#666666" text-anchor="middle">1.2</text>
+          fill="#666666" text-anchor="middle">1.3</text>
 
     <!-- Data Ports -->
 
@@ -117,6 +121,10 @@
     <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" dominant-baseline="middle">QI</text>
 
+    <polygon points="215.5,71.0 220.5,76.0 215.5,81.0" fill="#A3B08F"/>
+    <text x="212.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
+
 
     <!-- Event-Data Association Connectors and Lines -->
 
@@ -126,6 +134,9 @@
 
     <text x="-25" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialisierung - vom Aufrufer sequenziert statt per Auto-Verteilung, damit QI vor der physischen Kanalbindung feststeht – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="247.0" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialisierung abgeschlossen - echtes Confirm von DigitalOutput_DO.INITO</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physischer Freigabe-Ausgang: Klick-Toggle, Default AN – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>
@@ -138,5 +149,8 @@
 
     <text x="-25" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Qualifier fuer den physischen Ausgang - FALSE haelt diese Instanz komplett inaktiv (keine Hardware-Bindung), fuer den Fall dass derselbe physische Kanal je nach Maschinenvariante anderweitig genutzt wird – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="247.0" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Quality Output - TRUE if service executed successfully (AND aus DO_TOGGLE_SERVER/AX_T_FF_INIT_DO/PUBLISH_STATE_DO/DigitalOutput_DO)</text>
   </g>
 </svg>

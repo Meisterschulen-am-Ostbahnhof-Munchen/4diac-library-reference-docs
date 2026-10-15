@@ -16,6 +16,11 @@
 - **ASRT_3EVENTS_TO_SRT** (`adapter::conversion::unidirectional::ASRT_3EVENTS_TO_SRT`): wandelt die 3 SoftKey-Events in ein ASRT-Adapter-Ereignistripel.
 - **SPLIT** (`adapter::events::bidirectional::ASRT_TO_ASRT_AX_SPLIT`): verzweigt den bidirektionalen `ASRT_AX`-Verkehr auf `OUT` und auf das Background-Element.
 - **GreenWhiteBackground_AX** (SubApp, Typ `MyLib::sys::GreenWhiteBackground1_AX`): Statusfarbe am Toggle-SoftKey.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_4`): verknüpft die `QO`-Ausgänge der inneren Bausteine zu `QO`.
+
+## Initialisierung und Qualität
+
+Schnittstelle (Quality-Muster): Ereignis-Eingang `INIT` und Ereignis-Ausgang `INITO` (je `EInit`), Dateneingang `QI` (`BOOL`, Vorgabe `TRUE`) und Datenausgang `QO` (`BOOL`). Initialisierung: `INIT` → `SoftKey_SET.INIT`; `SoftKey_SET.INITO` → `SoftKey_RESET.INIT`; `SoftKey_RESET.INITO` → `SoftKey_TOGGLE.INIT`; `SoftKey_TOGGLE.INITO` → `GreenWhiteBackground_AX.INIT`; `GreenWhiteBackground_AX.INITO` → `INITO` und → `AND_QO.REQ`. Qualität: `QI` → `SoftKey_SET.QI`, `SoftKey_RESET.QI`, `SoftKey_TOGGLE.QI`, `GreenWhiteBackground_AX.QI`; `SoftKey_SET.QO`, `SoftKey_RESET.QO`, `SoftKey_TOGGLE.QO`, `GreenWhiteBackground_AX.QO` → `AND_QO.IN1` bis `AND_QO.IN4` (in dieser Reihenfolge); `AND_QO.OUT` → `QO` (`AND_QO`: `iec61131::booleanOperators::AND_BOOL_4`).
 
 ## Zusammenfassung
 

@@ -10,6 +10,8 @@
 
 `RedWhiteBackground3SC` is a **compact wrapper** around [`RedWhiteBackground3S`](RedWhiteBackground3S.md) — passes `u16ObjId`s and the selector straight through, without exposing the `CNF` event outputs and diagnostic values (`STATUS_n`, `u8OldColour_n`, `result_n`).
 
+In addition, initialization and quality are passed through: `INIT` → `RedWhiteBackground3.INIT`, `RedWhiteBackground3.INITO` → `INITO`, `QI` (initial value `TRUE`) → `RedWhiteBackground3.QI` and `RedWhiteBackground3.QO` → `QO`.
+
 For the shared pattern, see [Background Color Blocks (shared pattern)](../../MyLib_AX/sys/Background-Color-Blocks.md).
 
 ## Summary

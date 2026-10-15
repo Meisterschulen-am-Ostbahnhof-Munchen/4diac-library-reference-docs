@@ -10,6 +10,8 @@
 
 `GreenBlueBackground1_AXSC` ist ein **Kompakt-Wrapper** um [`GreenBlueBackground1_AXS`](GreenBlueBackground1_AXS.md) — reicht `u16ObjId`s und den Selector durch, ohne die `CNF`-Ereignisausgänge und Diagnosewerte (`STATUS_n`, `u8OldColour_n`, `result_n`) nach außen zu führen.
 
+Zusätzlich werden Initialisierung und Qualität durchgereicht: `INIT` → `GreenBlueBackground.INIT`, `GreenBlueBackground.INITO` → `INITO`, `QI` (Initialwert `TRUE`) → `GreenBlueBackground.QI` und `GreenBlueBackground.QO` → `QO`.
+
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](./Background-Farbbausteine.md).
 
 ## Zusammenfassung

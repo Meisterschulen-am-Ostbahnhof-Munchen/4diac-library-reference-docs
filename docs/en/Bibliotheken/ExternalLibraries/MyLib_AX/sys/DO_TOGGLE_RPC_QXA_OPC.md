@@ -13,30 +13,32 @@ The **DO_TOGGLE_RPC_QXA_OPC** subapplication implements a digital enable output 
 
 ## Interface Structure
 
-The subapplication exposes only input variables; all events, adapters, and data processing are encapsulated internally.
+The subapplication exposes the initialisation events `INIT`/`INITO`, the input variables and the output `QO`; all other events, adapters, and data processing are encapsulated internally.
 
 ### **Event Inputs**
 
-- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `DigitalOutput_DO.INIT`
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; starts the initialisation chain `DO_TOGGLE_SERVER` → `AX_T_FF_INIT_DO` → `DigitalOutput_DO` → `PUBLISH_STATE_DO`
 
 The toggle events themselves are still generated internally via the embedded OPC UA server (SERVER_0) and the internal event connections.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialisation completed; genuine confirm from `PUBLISH_STATE_DO.INITO` (end of the initialisation chain)
 
 ### **Data Inputs
 
 | Name | Type | Initial Value | Description |
 |------|------|---------------|-------------|
-| `QI` | `BOOL` | `TRUE` | Qualifier for the physical output; FALSE keeps the instance completely inactive (no hardware binding); passed on to `DigitalOutput_DO.QI`. |
+| `QI` | `BOOL` | `TRUE` | Qualifier for the physical output; FALSE keeps the instance completely inactive (no hardware binding); passed on to `DO_TOGGLE_SERVER.QI`, `AX_T_FF_INIT_DO.QI`, `PUBLISH_STATE_DO.QI` and `DigitalOutput_DO.QI`. |
 | `Output_DO` | `logiBUS::io::DQ::logiBUS_DO_S` | `logiBUS_DO::Invalid` | Configuration/description of the physical enable output channel. Drives the digital output as a click-toggle with default state **ON**. |
 | `ID_DO_TOGGLE_METHOD` | `WSTRING` | – | OPC UA method node address (ACTION=CREATE_METHOD) for the argumentless toggle trigger. This address is shared by all callers; every caller clocks the same flip-flop. |
 | `ID_DO_STATE_WRITE` | `WSTRING` | – | OPC UA variable node address (ACTION=WRITE) used to publish the actual enable state (`AX_T_FF_INIT.Q`). This address is subscribed by remote clients. |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service executed successfully; AND (`AND_QO`, `AND_BOOL_4`) of the `QO` of `DO_TOGGLE_SERVER`, `AX_T_FF_INIT_DO`, `PUBLISH_STATE_DO` and `DigitalOutput_DO`. |
 
 ### **Adapters**
 
@@ -44,7 +46,7 @@ None exposed at the subapplication interface.
 
 ## Functionality
 
-The subapplication is built around five internal function blocks:
+The subapplication is built around five internal function blocks plus the AND block `AND_QO`:
 
 1. **DO_TOGGLE_SERVER** (`iec61499::net::SERVER_0`) – an OPC UA server endpoint that listens for the method call addressed by `ID_DO_TOGGLE_METHOD`. The incoming request event (`IND`) is forwarded directly to the clock input of the toggle flip-flop and – without any processing – immediately back to the server (`RSP`).
 
@@ -52,9 +54,13 @@ The subapplication is built around five internal function blocks:
 
 3. **SPLIT_DO_STATE** (`adapter::events::unidirectional::AX_SPLIT_2`) – fans out the flip-flop output to two identical copies.
 
-4. **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`) – the physical digital output driver; receives `OUT1` from the split and applies it to the channel configured by `Output_DO`; `QI` and `INIT` come from the subapplication interface.
+4. **DigitalOutput_DO** (`logiBUS::io::DQ::logiBUS_QXA`) – the physical digital output driver; receives `OUT1` from the split and applies it to the channel configured by `Output_DO`; `QI` comes from the subapplication interface; `INIT` comes from `AX_T_FF_INIT_DO.INITO`, and its `INITO` starts `PUBLISH_STATE_DO.INIT`.
 
-5. **PUBLISH_STATE_DO** (`adapter::net::AX_PUBLISH_1`) – publishes `OUT2` as the current enable state to the OPC UA variable addressed by `ID_DO_STATE_WRITE`.
+5. **PUBLISH_STATE_DO** (`adapter::net::AX_PUBLISH_1`) – publishes `OUT2` as the current enable state to the OPC UA variable addressed by `ID_DO_STATE_WRITE`; `INIT` comes from `DigitalOutput_DO.INITO`, and its `INITO` is output as `INITO` (last link of the initialisation chain).
+
+6. **AND_QO** (`iec61131::booleanOperators::AND_BOOL_4`) – ANDs the `QO` outputs of `DO_TOGGLE_SERVER`, `AX_T_FF_INIT_DO`, `PUBLISH_STATE_DO` and `DigitalOutput_DO` into the block output `QO`; triggered by `PUBLISH_STATE_DO.INITO` (`REQ`).
+
+Initialisation chain: `INIT` → `DO_TOGGLE_SERVER.INIT`, `DO_TOGGLE_SERVER.INITO` → `AX_T_FF_INIT_DO.INIT`, `AX_T_FF_INIT_DO.INITO` → `DigitalOutput_DO.INIT`, `DigitalOutput_DO.INITO` → `PUBLISH_STATE_DO.INIT`, `PUBLISH_STATE_DO.INITO` → `INITO` and → `AND_QO.REQ`.
 
 The event chain for a single toggle request is:
 

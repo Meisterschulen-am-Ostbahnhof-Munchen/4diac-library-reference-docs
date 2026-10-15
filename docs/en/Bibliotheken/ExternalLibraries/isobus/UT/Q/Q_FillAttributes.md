@@ -23,6 +23,7 @@ The **Q_FillAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Inputs**
 
+- `QI` (BOOL, default `TRUE`): Quality input – `TRUE` enables the service
 - `u16ObjId` (UINT): Object ID (16-bit)
 - `u8FillType` (USINT): New fill type
 - `u8FillColour` (USINT): New fill color
@@ -30,6 +31,7 @@ The **Q_FillAttributes** is a standards-compliant function module for modifying 
 
 ### **Data Outputs**
 
+- `QO` (BOOL): Quality output – `TRUE` if the service was executed successfully
 - `STATUS` (STRING): Operational status message
 - `u8OldFillType` (USINT): Old fill type
 - `u8OldFillColour` (USINT): Old fill color
@@ -45,6 +47,8 @@ The **Q_FillAttributes** is a standards-compliant function module for modifying 
 ID_NULL (65535) is not a valid command target but deactivates the FB when used with `INIT`.
 
 ## Functionality
+
+**Quality handling (QI/QO):** The input `QI` (BOOL, default `TRUE`) is associated with the events `INIT` and `REQ`; `TRUE` enables the service. The output `QO` (BOOL) is associated with `INITO` and `CNF` and indicates with `TRUE` that the service was executed successfully.
 
 1. **Initialization**:
 

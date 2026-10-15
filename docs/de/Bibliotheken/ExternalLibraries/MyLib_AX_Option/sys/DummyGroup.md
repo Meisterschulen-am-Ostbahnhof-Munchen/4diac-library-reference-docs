@@ -15,13 +15,13 @@
 ### Sub-Bausteine: DummyGroup
 
 - **Typ**: SubAppType
-- **Schnittstelle**: Socket `OPTION` vom Typ `Option::AOption`.
+- **Schnittstelle**: Socket `AOption_IN` vom Typ `Option::AOption`.
 - **Verwendete interne FBs**:
     - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`.
 
 ## Programmablauf und Verbindungen
 
-- `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
 - `AOption_X_TO_EVENT.INIT_REQ` -> `AOption_X_TO_EVENT.INIT_CNF` (Selbstquittung)
 
 `QI_OUT` bleibt unbenutzt.

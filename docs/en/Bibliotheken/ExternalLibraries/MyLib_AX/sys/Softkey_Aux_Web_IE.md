@@ -24,20 +24,22 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; goes to `SoftkeyAux.INIT`
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirm; comes from `SoftkeyAux.INITO`
 - **IND**: Fires when SoftKey, Aux or web remote is activated
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service; goes to `SoftkeyAux.QI`
 - **u16ObjId** (`UINT`): Object ID of the SoftKey
 - **u16ObjIdA** (`UINT`): Object ID of the `AuxFunction2`
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully; comes from `SoftkeyAux.QO`
 
 ### **Adapters**
 
@@ -49,6 +51,8 @@ None.
 - `SoftkeyAux.IND` → `MERGE.EI1`
 - `WEB_IN` → `WEB_R_TRIG.QI`; `WEB_R_TRIG.EO` → `MERGE.EI2`
 - `MERGE.EO` → `IND`
+- Initialization: `INIT` → `SoftkeyAux.INIT`; `SoftkeyAux.INITO` → `INITO`
+- Quality: `QI` → `SoftkeyAux.QI`; `SoftkeyAux.QO` → `QO`
 
 ## Technical Details
 

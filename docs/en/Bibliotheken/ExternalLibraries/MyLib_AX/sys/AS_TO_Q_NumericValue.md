@@ -13,25 +13,28 @@
 
 ## Interface Structure
 
-The subapplication exposes a minimal interface, consisting of one data input and one adapter socket. It has no event inputs, event outputs, or data outputs.
+The subapplication exposes a minimal interface: the initialization events `INIT`/`INITO`, the quality signals `QI`/`QO`, one further data input and one adapter socket.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request - passed through to `Q_NumericValue_AUDI.INIT`.
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation - comes from `Q_NumericValue_AUDI.INITO`.
 
 ### **Data Inputs**
 
 | Name       | Type | Initial Value | Comment                |
 |------------|------|---------------|------------------------|
+| `QI`       | BOOL | `TRUE`        | Quality Input - TRUE to enable the service. |
 | `u16ObjId` | UINT | `ID_NULL`     | Object ID for the VT numeric field (target). |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Comment |
+|------|------|---------|
+| `QO` | BOOL | Quality Output - TRUE if the service was executed successfully (from `Q_NumericValue_AUDI.QO`). |
 
 ### **Adapters**
 
@@ -48,6 +51,8 @@ The subapplication performs a unidirectional data conversion and transfer:
 3. The converted AUDI value is then fed into `Q_NumericValue_AUDI` as `u32NewValue`.
 4. Simultaneously, the `u16ObjId` input is passed directly to `Q_NumericValue_AUDI` to define which VT numeric field should be updated.
 
+In addition, initialization and the quality signals are passed through: `INIT` → `Q_NumericValue_AUDI.INIT`, `Q_NumericValue_AUDI.INITO` → `INITO`, `QI` → `Q_NumericValue_AUDI.QI` and `Q_NumericValue_AUDI.QO` → `QO`.
+
 In essence, the block bridges an AS signaling network with a VT display, making the object ID externally configurable without changing internal wiring.
 
 ## Technical Features
@@ -55,7 +60,8 @@ In essence, the block bridges an AS signaling network with a VT display, making 
 - **Generic Object ID**: The `u16ObjId` input is fully parametrizable, allowing the same subapplication to control different VT fields without duplication.
 - **Reusability**: Designed for reuse across multiple projects or instances; it was extracted from a larger exercise for modularity.
 - **Leverages Standard Library Blocks**: Utilizes `isobus::UT::Q::Q_NumericValue_AUDI` and `adapter::conversion::unidirectional::AS_TO_AUDI`, ensuring compatibility with IEC 61499‑2 and the 4diac IDE.
-- **Simple Wiring**: Only one adapter input and one data input are required; no internal logic or state variables are exposed.
+- **Simple Wiring**: Only one adapter input and one data input are required (`QI` defaults to `TRUE`, `INIT` is optional); no internal logic or state variables are exposed.
+- **Quality Pattern**: `QI` (default `TRUE`) enables the service, `QO` reports the success of the inner `Q_NumericValue_AUDI`.
 
 ## State Overview
 

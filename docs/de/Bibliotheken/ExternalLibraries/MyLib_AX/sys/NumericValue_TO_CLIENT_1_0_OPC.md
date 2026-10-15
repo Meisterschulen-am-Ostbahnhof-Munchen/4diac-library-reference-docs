@@ -14,21 +14,22 @@
 
 ### **Ereignis-Eingänge**
 
-*Keine direkten Ereignis-Eingänge vorhanden*
+- **INIT** (`EInit`): Initialization Request
 
 ### **Ereignis-Ausgänge**
 
-*Keine direkten Ereignis-Ausgänge vorhanden*
+- **INITO** (`EInit`): Initialization Confirm
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input - TRUE aktiviert den Dienst
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): Object-ID und Scale/Offset/Decimals des VT-Eingabefelds; wird für Ein- und Ausgabe verwendet (der bestätigte Wert wird hier zurückgeschrieben). Vorgabe: `(u16ObjId := ID_NULL, r32Scale := 1.0, i32Offset := 0, u8Decimals := 1)`
 - **ID_CALL** (`WSTRING`): Remote-Methodenadresse (`ACTION=CALL_METHOD`); wird nur bei einer echten VT-Eingabe mit dem eingegebenen Wert als Argument aufgerufen
 - **ID_M2M_READ** (`WSTRING`): Remote-Subscribe-Adresse (`REAL`, `ACTION=SUBSCRIBE`); liefert den tatsächlich wirksamen Wert zur Anzeige auf demselben VT-Feld zurück (reines Lesen)
 
 ### **Daten-Ausgänge**
 
-*Keine Daten-Ausgänge vorhanden*
+- **QO** (`BOOL`): Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND von `Display.QO`, `Input.QO`, `Call.QO` und `Subscribe.QO`)
 
 ### **Adapter**
 
@@ -36,17 +37,19 @@ Dieser Funktionsblock verwendet keine Adapter-Sockets/-Plugs an der Schnittstell
 
 ## Verwendete Funktionsbausteine (FBs)
 
-- **Input**: `isobus::UT::io::NumericValue::NumericValue_PHYSA` (`QI=TRUE`) – liefert den eingegebenen physikalischen Wert (`rPhys`) beim Commit
-- **Call**: `adapter::net::AR_CLIENT_1_0_UNGATED` (`QI=TRUE`) – ruft die Remote-Methode mit dem Wert als Argument auf
-- **Subscribe**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI=TRUE`) – abonniert den bestätigten Wert
+- **Input**: `isobus::UT::io::NumericValue::NumericValue_PHYSA` (`QI` vom Baustein-Eingang) – liefert den eingegebenen physikalischen Wert (`rPhys`) beim Commit
+- **Call**: `adapter::net::AR_CLIENT_1_0_UNGATED` (`QI` vom Baustein-Eingang) – ruft die Remote-Methode mit dem Wert als Argument auf
+- **Subscribe**: [`adapter::net::AR_SUBSCRIBE_1`](../../adapter/net/AR_SUBSCRIBE_1.md) (`QI` vom Baustein-Eingang) – abonniert den bestätigten Wert
 - **Display**: `isobus::UT::Q::Q_NumericValue_PHYSA` – schreibt den Wert auf das VT-Feld
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` – verknüpft die `QO`-Ausgänge von `Display`, `Input`, `Call` und `Subscribe` per UND
 
 ## Programmablauf und Verbindungen
 
 1. **Hinweg**: `Input.rPhys` → `Call.IN` (Eingabe → Methodenaufruf).
 2. **Rückweg**: `Subscribe.OUT` → `Display.rPhys` (bestätigter Wert → VT-Anzeige).
-3. `Subscribe.INITO` → `Call.INIT`: Der Client wird erst nach der Initialisierung des Subscribe initialisiert.
+3. Initialisierungskette: `INIT` → `Input.INIT`, `Input.INITO` → `Subscribe.INIT`, `Subscribe.INITO` → `Call.INIT` (der Client wird erst nach der Initialisierung des Subscribe initialisiert), `Call.INITO` → `Display.INIT`, `Display.INITO` → `INITO` und → `AND_QO.REQ`.
 4. `stObj` → `Input.stObj` und `Display.stObj`; `ID_CALL` → `Call.ID`; `ID_M2M_READ` → `Subscribe.ID`.
+5. `QI` → `Display.QI`, `Input.QI`, `Call.QI` und `Subscribe.QI`; `Display.QO` → `AND_QO.IN1`, `Input.QO` → `AND_QO.IN2`, `Call.QO` → `AND_QO.IN3`, `Subscribe.QO` → `AND_QO.IN4`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

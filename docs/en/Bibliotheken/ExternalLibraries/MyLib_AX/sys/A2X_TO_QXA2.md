@@ -15,16 +15,21 @@ The **A2X_TO_QXA2** subapplication (composite type) acts as a bundling/unbundlin
 
 ### **Event Inputs**
 
-None.
+| Name   | Type    | Comment                |
+|--------|---------|------------------------|
+| `INIT` | `EInit` | Initialization Request |
 
 ### **Event Outputs**
 
-None.
+| Name    | Type    | Comment                |
+|---------|---------|------------------------|
+| `INITO` | `EInit` | Initialization Confirm |
 
 ### **Data Inputs**
 
 | Name       | Type                                   | Initial Value | Comment                                   |
 |------------|----------------------------------------|---------------|-------------------------------------------|
+| `QI`          | `BOOL`                                 | `TRUE`        | Quality Input - TRUE to enable service.   |
 | `Output_UP`   | `logiBUS::io::DQ::logiBUS_DO_S`        | `Invalid`     | Physical output for forward/up direction. |
 | `Output_DOWN` | `logiBUS::io::DQ::logiBUS_DO_S`        | `Invalid`     | Physical output for backward/down direction. |
 
@@ -32,7 +37,9 @@ These data inputs are directly connected to the `Output` parameter of the intern
 
 ### **Data Outputs**
 
-None.
+| Name | Type   | Comment                                                  |
+|------|--------|----------------------------------------------------------|
+| `QO` | `BOOL` | Quality Output - TRUE if service executed successfully.  |
 
 ### **Adapters**
 
@@ -46,12 +53,15 @@ The subapplication receives a bundled A2X adapter signal (`IN`). Internally, thi
 
 The internal data connections directly assign the subapplication data inputs to the respective QXA block's `Output` parameter, while the adapter connections carry the signal flow from the input through the unbundler and to the two QXA outputs.
 
+Initialization is passed through the event chain `INIT` → `DigitalOutput_UP.INIT`, `DigitalOutput_UP.INITO` → `DigitalOutput_DOWN.INIT`, `DigitalOutput_DOWN.INITO` → `INITO`. `QI` is forwarded to the `QI` inputs of both QXA blocks. The `QO` outputs of both QXA blocks are combined by the `AND_QO` block (type `iec61131::booleanOperators::AND_BOOL_2`) and output as `QO`; `AND_QO` is triggered via `REQ` by `DigitalOutput_DOWN.INITO`.
+
 ## Technical Features
 
 - **Composite encapsulation**: All unbundling and output-driving logic is contained within the subapplication, simplifying the upper-level resource design.
 - **Modularity**: The subapplication can be reused wherever a single A2X input must control two separate physical outputs (e.g., a forward/reverse motor drive).
-- **No events**: The block operates purely on data and adapter connections; there are no event inputs or outputs, which keeps the interface simple and suitable for cyclic or continuous processing.
-- **Parameterization**: The QXA function blocks have their `QI` parameter preset to `TRUE`, meaning they are always enabled.
+- **Initialization events only**: Apart from `INIT`/`INITO` there are no events; signal processing operates purely on data and adapter connections, which keeps the interface simple and suitable for cyclic or continuous processing.
+- **Aggregated status**: `QO` is the AND (`AND_QO`) of the `QO` outputs of `DigitalOutput_UP` and `DigitalOutput_DOWN`.
+- **Parameterization**: The QXA function blocks receive their `QI` input from the subapplication's `QI` input (initial value `TRUE`).
 - **Type compatibility**: Uses standard 4diac adapter types (`adapter::types::unidirectional::A2X` and `adapter::conversion::unidirectional::A2X_2X_TO_2AX`) and logicBUS I/O types.
 
 ## State Overview
@@ -73,4 +83,4 @@ Compared to a direct wiring of the A2X signal to two QXA outputs, this subapplic
 
 ## Conclusion
 
-The `A2X_TO_QXA2` subapplication provides a clear, reusable solution for splitting a bundled A2X signal into two physical logicBUS digital outputs. Its composite nature keeps the device resource clean and promotes system modularity. With no events and straightforward data/adapter connections, it integrates easily into control applications that require directional output separation.
+The `A2X_TO_QXA2` subapplication provides a clear, reusable solution for splitting a bundled A2X signal into two physical logicBUS digital outputs. Its composite nature keeps the device resource clean and promotes system modularity. With only initialization events and straightforward data/adapter connections, it integrates easily into control applications that require directional output separation.

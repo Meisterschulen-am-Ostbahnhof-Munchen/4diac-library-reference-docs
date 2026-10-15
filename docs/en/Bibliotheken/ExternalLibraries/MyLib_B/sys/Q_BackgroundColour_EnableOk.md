@@ -8,6 +8,8 @@
 
 `Q_BackgroundColour_EnableOk` derives a 3-color VT background color from 2 bools (channel enabled + hardware QO): white = disabled, green = enabled and QO TRUE, red = enabled and QO FALSE (fault). Generic for any channel with an enable switch + status LED (PWM, PI, ...). The pure selection logic now lives in [`Select_EnableOk`](./Select_EnableOk.md); this block just instantiates it with the 3 colors as parameters and attaches `Q_BackgroundColour`.
 
+**Quality ports:** The block additionally has the event `INIT` (input) and `INITO` (output), the data input `QI` (BOOL, default `TRUE`, "Quality Input - TRUE to enable service") and the data output `QO` (BOOL, "Quality Output - TRUE if service executed successfully"). `INIT` is passed on to `Q_BackgroundColour.INIT`, `Q_BackgroundColour.INITO` is passed to `INITO`; `QI` is connected to `Q_BackgroundColour.QI` and `Q_BackgroundColour.QO` to `QO`.
+
 ![Q_BackgroundColour_EnableOk](Q_BackgroundColour_EnableOk.svg)
 
 ## Function blocks used

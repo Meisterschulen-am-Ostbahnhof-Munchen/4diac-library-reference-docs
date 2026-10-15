@@ -23,12 +23,14 @@
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE enables the service
 - **u16ObjId** (`UINT`, default `ID_NULL`): Object ID of the child object
 - **u16ObjIdParent** (`UINT`, default `ID_NULL`): Object ID of the parent object
 - **xScale** (`BOOL`, default `FALSE`): `FALSE` = bypass, X/Y position are sent unchanged; `TRUE` = scale by the DM/SKM factor for `u16ObjIdParent`
 
 ### **Data Outputs**
 
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully
 - **STATUS** (`STRING`): Service status (passthrough from the inner `Q_ChildPosition`)
 - **s16OldXposition** (`INT`): Old X position (passthrough)
 - **s16OldYposition** (`INT`): Old Y position (passthrough)
@@ -50,6 +52,7 @@
 2. `initval_AI.OUT` → `Q_ChildPosition_AI.s16Yposition` (constant 0).
 3. `INIT` → `initval_AI.INIT`; `initval_AI.INITO` → `Q_ChildPosition_AI.INIT`; `Q_ChildPosition_AI.INITO` → `INITO`; `Q_ChildPosition_AI.CNF` → `CNF`.
 4. `u16ObjId`, `u16ObjIdParent`, `xScale` → `Q_ChildPosition_AI`; status outputs from there to the outside.
+5. `QI` → `Q_ChildPosition_AI.QI`; `Q_ChildPosition_AI.QO` → `QO`
 
 ## Technical Details
 

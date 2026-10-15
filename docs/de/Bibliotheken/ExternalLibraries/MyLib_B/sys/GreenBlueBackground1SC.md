@@ -12,6 +12,13 @@
 
 Details zum gemeinsamen Muster siehe [Background-Farbbausteine (gemeinsames Muster)](../../MyLib_AX/sys/Background-Farbbausteine.md).
 
+## Initialisierung und Status (INIT/INITO, QI/QO)
+
+- **Ereignis-Eingang** `INIT` (`EInit`, Initialization Request) und **Ereignis-Ausgang** `INITO` (`EInit`, Initialization Confirm)
+- **Daten-Eingang** `QI` (`BOOL`, Vorgabe `TRUE`, Quality Input) wird an `GreenBlueBackground.QI` weitergegeben
+- **Daten-Ausgang** `QO` (`BOOL`, Quality Output): durchgereicht von `GreenBlueBackground.QO`
+- **Initialisierungskette**: `INIT` → `GreenBlueBackground.INIT`, `GreenBlueBackground.INITO` → `INITO`
+
 ## Zusammenfassung
 
 Reine Weiterleitung an `GreenBlueBackground1S` für den Regelfall, in dem die Diagnosewerte nicht gebraucht werden.
@@ -20,4 +27,4 @@ Reine Weiterleitung an `GreenBlueBackground1S` für den Regelfall, in dem die Di
 
 ### 🌐 Passende Themen-Unterseiten auf ms-muc-docs.de
 
-* [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)
+- [🌐 Eclipse 4diac IDE & Farb-Referenz auf ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

@@ -13,26 +13,29 @@ The logiBUS_IXA_OPC subapplication provides a generic single-channel logiBUS dig
 
 ## Interface Structure
 
-The subapplication exposes two data inputs and no event or output interfaces. All data processing and publishing logic is encapsulated internally within the subapp network.
+The subapplication exposes the events `INIT`/`INITO`, the data `QI`/`QO` and two further data inputs. All data processing and publishing logic is encapsulated internally within the subapp network.
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request; starts the init chain at `logiBUS_IXA.INIT`
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirmation; comes from `AX_PUBLISH_1.INITO`, the end of the init chain
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| QI | BOOL | TRUE | Quality input; passed on to `logiBUS_IXA.QI` and `AX_PUBLISH_1.QI` |
 | Input | logiBUS::io::DI::logiBUS_DI_S | logiBUS_DI::Invalid | Identifies the logiBUS digital input channel (Input_I1..I8) |
 | ID_WRITE | WSTRING | — | OPC-UA publish key (readable) |
 
 ### **Data Outputs**
 
-None. The digital input state is published externally via the OPC-UA mechanism rather than through direct output variables.
+- **QO** (BOOL): quality output, AND combination (`AND_QO`, `AND_BOOL_2`) of `logiBUS_IXA.QO` and `AX_PUBLISH_1.QO`.
+
+The digital input state itself is published externally via the OPC-UA mechanism rather than through output variables.
 
 ### **Adapters**
 
@@ -42,6 +45,8 @@ No adapters are exposed on the subapplication interface. Internally, the adapter
 
 The subapplication accepts a selected logiBUS digital input channel (specified via the Input variable of type logiBUS_DI_S, allowing selection from Input_I1 through Input_I8) and routes it to the internal logiBUS_IXA function block. This block processes the raw digital input data. The processed result is then passed via an internal adapter connection to the AX_PUBLISH_1 adapter, which publishes the data to an OPC-UA server. The ID_WRITE parameter supplies a readable publish key used by the OPC-UA publisher to identify the published data item.
 
+Initialization and quality: `INIT` → `logiBUS_IXA.INIT`, `logiBUS_IXA.INITO` → `AX_PUBLISH_1.INIT`, `AX_PUBLISH_1.INITO` → `INITO` and `AND_QO.REQ`. `QI` is passed on to `logiBUS_IXA.QI` and `AX_PUBLISH_1.QI`; `logiBUS_IXA.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2` (`iec61131::booleanOperators::AND_BOOL_2`), `AND_QO.OUT` → `QO`.
+
 ## Technical Features
 
 - Single-channel logiBUS digital input handling with support for Input_I1 to Input_I8.
@@ -49,7 +54,7 @@ The subapplication accepts a selected logiBUS digital input channel (specified v
 - Generic design for modules without ISOBUS/VT connectivity (no VT background color handling).
 - Configurable OPC-UA publish key via the WSTRING ID_WRITE parameter.
 - Initial input state set to logiBUS_DI::Invalid, ensuring undefined states are explicitly handled.
-- Internal enable signal (QI) set to TRUE on both the logiBUS_IXA and AX_PUBLISH_1 blocks, ensuring continuous operation.
+- The internal enable signals (QI) of the logiBUS_IXA and AX_PUBLISH_1 blocks come from the block input `QI` (initial value TRUE).
 
 ## State Overview
 

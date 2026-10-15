@@ -17,23 +17,29 @@ Softkey_T_FF_ILOCK_TO_QX_BG is a generic subapplication that implements a digita
 
 | Name   | Description                                  |
 |--------|----------------------------------------------|
+| INIT   | Initialization request (`EInit`)             |
 | SET    | Sets the internal flip-flop output to TRUE   |
 | RESET  | Resets the internal flip-flop output to FALSE|
 
 ### **Event Outputs**
 
-None.
+| Name   | Description                                  |
+|--------|----------------------------------------------|
+| INITO  | Initialization confirmation (`EInit`, from `GreenWhiteBackground.INITO`) |
 
 ### **Data Inputs**
 
 | Name     | Type                          | Initial Value          | Description                                   |
 |----------|-------------------------------|------------------------|-----------------------------------------------|
+| QI       | BOOL                          | TRUE                   | Quality Input, TRUE enables the service       |
 | u16ObjId | UINT                          | ID_NULL                | Object ID of the softkey/button               |
 | Output   | logiBUS::io::DQ::logiBUS_DO_S | logiBUS_DO::Invalid    | Digital output configuration (type/address)   |
 
 ### **Data Outputs**
 
-None.
+| Name | Type | Description |
+|------|------|-------------|
+| QO   | BOOL | Quality Output, AND of `QX.QO`, `IE.QO` and `GreenWhiteBackground.QO` (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_3`) |
 
 ### **Adapters**
 
@@ -51,6 +57,7 @@ The subapplication combines a softkey input event handler, a Set/Reset flip-flop
 3. The external event inputs `SET` and `RESET` are connected directly to the `S` and `R` inputs of the E_SR flip-flop. They take precedence over the key events and can be used to lock the output to a defined state or to override the toggle.
 4. The flip-flop output `Q` drives the `QX` function block, which writes the digital output (e.g., logiBUS output module). The value `Output` (data input) defines the output module and channel configuration.
 5. The `GreenWhiteBackground` subapplication is triggered after every completed output write (`QX.CNF`) and receives both the object ID and the current state `Q` as `DI1`, so the background color indicates the output state (green = active, white = inactive).
+6. `QI` is distributed to `QX.QI`, `IE.QI` and `GreenWhiteBackground.QI` (no longer hard-wired to `TRUE`). Initialization is chained: `INIT` → `QX.INIT`; `QX.INITO` → `IE.INIT`; `IE.INITO` → `GreenWhiteBackground.INIT`; `GreenWhiteBackground.INITO` → `INITO` (and → `AND_QO.REQ`). `QX.QO` → `AND_QO.IN1`; `IE.QO` → `AND_QO.IN2`; `GreenWhiteBackground.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
 
 ## Technical Features
 

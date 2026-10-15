@@ -14,20 +14,21 @@
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialisation request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialisation confirmation
 
 ### **Data Inputs**
 
 - **stObj** (`logiBUS::utils::conversion::phys::NumericObjectPool_S`): object pool properties of the VT number variable (`u16ObjId`, scale, offset, decimals), e.g. `FBs::const::DefaultPool_Numeric::NumberVariable_X_N`
 - **ID_WRITE** (`WSTRING`): publish address (REAL, `ACTION=PUBLISH`), local or cross-station
+- **QI** (`BOOL`, default `TRUE`): Quality Input - TRUE to enable the service (VT display and publish)
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): Quality Output - TRUE if the service was executed successfully (AND of `Q_NumericValue.QO` and `AR_PUBLISH.QO`)
 
 ### **Adapters**
 
@@ -38,13 +39,17 @@ None.
 - **`RateLimit_Anzeige`** (`adapter::events::unidirectional::AR_D_FF_TMIN`, `Tmin = T#500ms`): limits the update rate
 - **`AR_SPLIT_2`** (`adapter::events::unidirectional::AR_SPLIT_2`): distributes the value to two targets
 - **`Q_NumericValue`** (`isobus::UT::Q::Q_NumericValue_PHYSA`): writes the physical value into the VT number variable
-- **`AR_PUBLISH`** (`adapter::net::AR_PUBLISH_1`, `QI = TRUE`): publishes the value via OPC-UA
+- **`AR_PUBLISH`** (`adapter::net::AR_PUBLISH_1`): publishes the value via OPC-UA
+- **`AND_QO`** (`iec61131::booleanOperators::AND_BOOL_2`): combines the `QO` outputs of `Q_NumericValue` and `AR_PUBLISH` into the `QO` of the SubApp
 
 ## Functionality
 
 - `AR_IN` → `RateLimit_Anzeige.I`; `RateLimit_Anzeige.Q` → `AR_SPLIT_2.IN`
 - `AR_SPLIT_2.OUT1` → `Q_NumericValue.rPhys` (VT display); `stObj` → `Q_NumericValue.stObj`
 - `AR_SPLIT_2.OUT2` → `AR_PUBLISH.IN`; `ID_WRITE` → `AR_PUBLISH.ID`
+- `INIT` → `Q_NumericValue.INIT`; `Q_NumericValue.INITO` → `AR_PUBLISH.INIT`; `AR_PUBLISH.INITO` → `INITO` (and → `AND_QO.REQ`)
+- `QI` → `Q_NumericValue.QI` and `QI` → `AR_PUBLISH.QI`
+- `Q_NumericValue.QO` → `AND_QO.IN1`; `AR_PUBLISH.QO` → `AND_QO.IN2`; `AND_QO.OUT` → `QO`
 
 ## Technical Details
 
@@ -57,7 +62,7 @@ None.
 
 ## Summary
 
-`AR_TO_Q_Publish_OPC` bundles rate limiting, splitting, VT display and OPC-UA publish of an `AR` value in one SubApp.
+`AR_TO_Q_Publish_OPC` bundles rate limiting, splitting, VT display and OPC-UA publish of an `AR` value in one SubApp; `INIT`/`INITO` are chained through both services, `QO` is the AND of both services.
 
 ---
 

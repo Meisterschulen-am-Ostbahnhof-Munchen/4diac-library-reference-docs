@@ -13,25 +13,26 @@ Die Subapp `Button_IXA_TO_Remote_WRITE_BG_OPC` dient zum Lesen eines VT-Buttons 
 
 ## Schnittstellenstruktur
 
-Die Subapp besitzt eine reine Datenschnittstelle nach außen. Es sind keine Ereignisse, Datenausgänge oder Adapter nach außen geführt.
+Die Subapp besitzt nach außen den Ereigniseingang `INIT`, den Ereignisausgang `INITO`, die Dateneingänge `QI`, `u16ObjId`, `ID_SUBSCRIBE` und `ID_WRITE_REMOTE` sowie den Datenausgang `QO`. Es sind keine Adapter nach außen geführt.
 
 ### **Ereignis-Eingänge**
 
-Keine.
+- `INIT` (EInit): Initialisierungsanforderung; startet die Kette `Button_IXA` → `AX_CLIENT_1_0` → `AX_SUBSCRIBE_1` → `GreenWhiteBackground1_AX`
 
 ### **Ereignis-Ausgänge**
 
-Keine.
+- `INITO` (EInit): Initialisierungsbestätigung; kommt von `GreenWhiteBackground1_AX.INITO`
 
 ### **Daten-Eingänge**
 
+- `QI` (BOOL): Quality Input, Freigabe des Dienstes. Initialwert: `TRUE`
 - `u16ObjId` (UINT): Objekt-ID des Buttons/Hintergrunds (VT). Initialwert: `ID_NULL`
 - `ID_SUBSCRIBE` (WSTRING): Remote-Subscribe-Adresse für Status/Farbe (ACTION=SUBSCRIBE)
 - `ID_WRITE_REMOTE` (WSTRING): Remote-Write-Adresse zum Zielmodul für den Befehl (ACTION=WRITE, CLIENT)
 
 ### **Daten-Ausgänge**
 
-Keine.
+- `QO` (BOOL): Quality Output, `AND` der `QO`-Ausgänge von `Button_IXA`, `AX_CLIENT_1_0`, `AX_SUBSCRIBE_1` und `GreenWhiteBackground1_AX` (über `AND_QO`)
 
 ### **Adapter**
 
@@ -45,13 +46,16 @@ Parallel empfängt der `AX_SUBSCRIBE_1`-Adapter über die in `ID_SUBSCRIBE` ange
 
 Die `u16ObjId` wird sowohl an den `Button_IXA` als auch an die Subapp `GreenWhiteBackground1_AX` geleitet, um sicherzustellen, dass sich beide auf dasselbe Objekt beziehen.
 
+**Initialisierung und Qualität:** `INIT` → `Button_IXA.INIT`, `Button_IXA.INITO` → `AX_CLIENT_1_0.INIT`, `AX_CLIENT_1_0.INITO` → `AX_SUBSCRIBE_1.INIT`, `AX_SUBSCRIBE_1.INITO` → `GreenWhiteBackground1_AX.INIT`, `GreenWhiteBackground1_AX.INITO` → `INITO` und → `AND_QO.REQ`. `QI` geht an `Button_IXA.QI`, `AX_CLIENT_1_0.QI`, `AX_SUBSCRIBE_1.QI` und `GreenWhiteBackground1_AX.QI`; deren vier `QO`-Ausgänge laufen auf `AND_QO.IN1` bis `IN4` (`iec61131::booleanOperators::AND_BOOL_4`), `AND_QO.OUT` → `QO`.
+
 ## Technische Besonderheiten
 
 - Verwendung von OPC-UA-Adaptern (`adapter::net::AX_CLIENT_1_0` und `adapter::net::AX_SUBSCRIBE_1`)
 - Kombination von Remote-Write (Befehl) und Remote-Subscribe (Status/Farbe)
 - Generische Konfiguration über Objekt-ID und Adressen als Eingänge
-- Keine eigenen Ereignisse; die Subapp arbeitet rein daten- und adaptergesteuert
-- Der Parameter `QI` der internen FBs ist auf `TRUE` gesetzt und muss bei Bedarf angepasst werden
+- Nach außen nur `INIT`/`INITO` als Ereignisse; im Betrieb arbeitet die Subapp rein daten- und adaptergesteuert
+- `QI` der internen FBs ist nicht mehr fest auf `TRUE` gesetzt, sondern wird vom SubApp-Eingang `QI` (Initialwert `TRUE`) durchgereicht
+- `QO` ist das `AND` der `QO`-Ausgänge aller vier internen Bausteine
 
 ## Zustandsübersicht
 

@@ -16,16 +16,19 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` (`QI=TRUE`) — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
-    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`QI=TRUE`, `SETM=FALSE`) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` als Startwert.
-    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` (`QI=TRUE`) — veröffentlicht den aktuellen Wert per OPC-UA (`ID_WRITE`).
+    - **AX_SUBSCRIBE_1**: `adapter::net::AR_SUBSCRIBE_1` — abonniert neue Werte vom OPC-UA-Client (`ID_READ`).
+    - **INI_AR**: `eclipse4diac::storage::INI_AR` (`SETM=FALSE`) — speichert den Wert remanent in der INI-Datei unter `SECTION`/`KEY`, mit `DEFAULT_VALUE` als Startwert.
+    - **AX_PUBLISH_1**: `adapter::net::AR_PUBLISH_1` — veröffentlicht den aktuellen Wert per OPC-UA (`ID_WRITE`).
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_3` — verknüpft die `QO`-Ausgänge von `AX_SUBSCRIBE_1`, `AX_PUBLISH_1` und `INI_AR` zum SubApp-Ausgang `QO`.
+- **Schnittstelle**: Ereigniseingang `INIT`, Ereignisausgang `INITO`, Dateneingang `QI` (Initialwert `TRUE`, an alle drei FBs durchgereicht) und Datenausgang `QO` (`AND` der drei `QO`-Ausgänge).
 - **Funktionsweise**: Ein per OPC-UA empfangener Wert wird an `INI_AR` weitergereicht, dort gespeichert, und der (neu empfangene oder beim Start geladene) Wert wird per `AX_PUBLISH_1` erneut veröffentlicht.
 
 ## Programmablauf und Verbindungen
 
-1. **Initialisierungskette**: `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT` → `INI_AR.INITO` → `AX_PUBLISH_1.INIT`.
-2. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
-3. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` (neuer Wert vom Client) → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` (gespeicherter/aktueller Wert zurück an den Client).
+1. **Initialisierungskette**: `INIT` → `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` → `INI_AR.INIT`; `INI_AR.INITO` → `AX_PUBLISH_1.INIT`; `AX_PUBLISH_1.INITO` → `INITO` und → `AND_QO.REQ`.
+2. **Qualität**: `QI` → `AX_SUBSCRIBE_1.QI`, `AX_PUBLISH_1.QI` und `INI_AR.QI`; `AX_SUBSCRIBE_1.QO` → `AND_QO.IN1`, `AX_PUBLISH_1.QO` → `AND_QO.IN2`, `INI_AR.QO` → `AND_QO.IN3`; `AND_QO.OUT` → `QO`.
+3. **Parameter**: `SECTION` → `INI_AR.SECTION`; `KEY` → `INI_AR.KEY`; `DEFAULT_VALUE` → `INI_AR.DEFAULT_VALUE`; `ID_READ` → `AX_SUBSCRIBE_1.ID`; `ID_WRITE` → `AX_PUBLISH_1.ID`.
+4. **Adapterkette**: `AX_SUBSCRIBE_1.OUT` → `INI_AR.AR_IN` (neuer Wert vom Client) → `INI_AR.AR_OUT` → `AX_PUBLISH_1.IN` (gespeicherter/aktueller Wert zurück an den Client).
 
 ## Technische Besonderheiten
 

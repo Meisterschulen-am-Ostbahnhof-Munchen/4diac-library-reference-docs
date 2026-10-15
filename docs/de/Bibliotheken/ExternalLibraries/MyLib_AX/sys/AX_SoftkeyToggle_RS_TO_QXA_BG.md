@@ -25,19 +25,27 @@ Generisch für jeden Ein/Aus-Ausgang, der von einer globalen Sammel-AUS-Taste mi
 - **Verwendete interne Bausteine**:
     - **ToggleState**: SubApp [`MyLib::sys::AX_SoftkeyToggle_RS_TO_AX`](./AX_SoftkeyToggle_RS_TO_AX.md) – Toggle-/Reset-Zustand (inkl. `FORCE_OFF`)
     - **AX_SPLIT_3**: `adapter::events::unidirectional::AX_SPLIT_3` – verteilt den Zustand auf drei Verbraucher
-    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI=TRUE`) – physischer Ausgang
+    - **logiBUS_QXA**: `logiBUS::io::DQ::logiBUS_QXA` (`QI` vom Baustein-Eingang `QI`) – physischer Ausgang
     - **GreenWhiteBackground_AX**: SubApp [`MyLib::sys::GreenWhiteBackground4_AX`](./GreenWhiteBackground4_AX.md) – Hintergrundfarbe für SoftKey, AUX und Testbutton
-    - **PUBLISH_STATE**: `adapter::net::AX_PUBLISH_1` (`QI=TRUE`) – lokaler State-Publish
+    - **PUBLISH_STATE**: `adapter::net::AX_PUBLISH_1` (`QI` vom Baustein-Eingang `QI`) – lokaler State-Publish
+    - **AND_QO**: `iec61131::booleanOperators::AND_BOOL_4` – verknüpft die `QO`-Ausgänge von `logiBUS_QXA`, `PUBLISH_STATE`, `GreenWhiteBackground_AX` und `ToggleState` per UND zum Baustein-Ausgang `QO`
 - **Importe**: `ID_NULL`, `logiBUS_DO`, `logiBUS_DO_S`
 
 ## Schnittstellenstruktur
 
-### **Ereignis-Eingänge / Ereignis-Ausgänge**
+### **Ereignis-Eingänge**
 
-Keine – Ereignisse laufen über die Adapter.
+- **INIT** (`EInit`): Initialization Request
+
+### **Ereignis-Ausgänge**
+
+- **INITO** (`EInit`): Initialization Confirm
+
+Die Signalverarbeitung (Toggle/Reset) läuft weiterhin über die Adapter.
 
 ### **Daten-Eingänge**
 
+- **QI** (`BOOL`, Vorgabe `TRUE`): Quality Input – TRUE, um den Dienst freizugeben
 - **u16ObjId** (`UINT`, Vorgabe `ID_NULL`): Object-ID Softkey Ein/Aus (Toggle), trägt auch die Hintergrundfarbe
 - **u16ObjIdA** (`UINT`, Vorgabe `ID_NULL`): Object-ID `AuxFunction2` (Joystick) für den Toggle – gleichberechtigt zum SoftKey, zeigt die Hintergrundfarbe am Aux-Handle mit
 - **u16ObjIdB** (`UINT`, Vorgabe `ID_NULL`): Object-ID IO-Diag-Testbutton (Ausgänge-Diagnoseseite) – toggelt gleichberechtigt mit, zeigt die Hintergrundfarbe gemeinsam mit SoftKey und AUX
@@ -50,7 +58,7 @@ Keine – Ereignisse laufen über die Adapter.
 
 ### **Daten-Ausgänge**
 
-Keine.
+- **QO** (`BOOL`): Quality Output – TRUE, wenn der Dienst erfolgreich ausgeführt wurde (UND der `QO` der inneren Bausteine)
 
 ### **Adapter**
 
@@ -64,6 +72,9 @@ Keine.
 - `AX_SPLIT_3.OUT1` → `logiBUS_QXA.OUT` (`Output` → `logiBUS_QXA.Output`)
 - `AX_SPLIT_3.OUT2` → `GreenWhiteBackground_AX.DI1` (`u16ObjId`, `u16ObjIdA`, `u16ObjIdB` → gleichnamige Eingänge)
 - `AX_SPLIT_3.OUT3` → `PUBLISH_STATE.IN` (`ID_STATE_WRITE` → `PUBLISH_STATE.ID`)
+- Initialisierungskette: `INIT` → `logiBUS_QXA.INIT`, `logiBUS_QXA.INITO` → `PUBLISH_STATE.INIT`, `PUBLISH_STATE.INITO` → `GreenWhiteBackground_AX.INIT`, `GreenWhiteBackground_AX.INITO` → `ToggleState.INIT`, `ToggleState.INITO` → `INITO`; zusätzlich `ToggleState.INITO` → `AND_QO.REQ`
+- `QI` → `logiBUS_QXA.QI`, `PUBLISH_STATE.QI`, `GreenWhiteBackground_AX.QI` und `ToggleState.QI`
+- `logiBUS_QXA.QO` → `AND_QO.IN1`, `PUBLISH_STATE.QO` → `AND_QO.IN2`, `GreenWhiteBackground_AX.QO` → `AND_QO.IN3`, `ToggleState.QO` → `AND_QO.IN4`; `AND_QO.OUT` → `QO`
 
 ## Technische Besonderheiten
 

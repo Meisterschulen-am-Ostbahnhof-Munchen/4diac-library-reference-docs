@@ -14,16 +14,19 @@
 
 ### **Event Inputs**
 
+- **INIT** (`EInit`): initialization request
 - **FORCE_ON**: Switches the automatic hard ON (e.g. from a superordinate automatic or a method call). Runs via `AX_E_PERMIT_2` and is therefore `PERMIT`-filtered. Leave unconnected if not needed.
 - **FORCE_OFF**: Switches the automatic hard OFF (e.g. by a collision protection). Leave unconnected if not needed.
 - **AUS**: Hard reset to manual/OFF from outside as an event (e.g. a centrally read common softkey), in addition to the block's own `u16ObjId_RESET`/`u16ObjIdA_RESET`/`ID_RESET_METHOD` path. Leave unconnected if not needed.
 
 ### **Event Outputs**
 
+- **INITO** (`EInit`): initialization confirm
 - **AUTOMATIK_SET_FROM_VT**: Fires only on a click (button/softkey/aux, `PERMIT`-filtered) that switches the automatic from OFF to ON. A click that switches the automatic off does not fire this event. It is a genuine display click event, not a state level or republish.
 
 ### **Data Inputs**
 
+- **QI** (`BOOL`, default `TRUE`): quality input, TRUE enables the service
 - **u16ObjId_Automatik_Toggle** (`UINT`, default `ID_NULL`): Object ID of the VT softkey (automatic/manual toggle)
 - **u16ObjIdA_Automatik_Toggle** (`UINT`, default `ID_NULL`): Object ID of the AuxFunction2 (joystick), equivalent to the VT button; optional
 - **u16ObjIdB_Automatik_Toggle** (`UINT`): Object ID of the VT button (automatic/manual toggle)
@@ -35,7 +38,7 @@
 
 ### **Data Outputs**
 
-*No data outputs*
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`) of the `QO` outputs of `E_T_FF_Automatik`, `AX_PUBLISH_Automatik`, `Background_Automatik`, `Reset` and `Button_Softkey_Aux_Automatik_Toggle`
 
 ### **Adapters**
 
@@ -47,15 +50,16 @@
 
 - **Button_Softkey_Aux_Automatik_Toggle**: SubApp `MyLib::sys::Button_Softkey_Aux_IE` - merges button, softkey and aux into one `IND`
 - **Reset**: SubApp `MyLib::sys::Softkey_Aux_Method_IE` - reset via softkey, aux or method call
-- **E_T_FF_Automatik**: [`AX_T_FF_SR_SYM_INIT`](../../adapter/events/unidirectional/BOOL/AX_T_FF_SR_SYM_INIT.md) (`QI=TRUE`) - stores the automatic state, start value `bDefaultAutomatik`
+- **E_T_FF_Automatik**: [`AX_T_FF_SR_SYM_INIT`](../../adapter/events/unidirectional/BOOL/AX_T_FF_SR_SYM_INIT.md) (`QI` from the wrapper input) - stores the automatic state, start value `bDefaultAutomatik`
 - **AX_E_PERMIT_2**: [`AX_E_PERMIT_2`](../../adapter/events/unidirectional/BOOL/AX_E_PERMIT_2.md) - lets `FORCE_ON` and the click through only when `PERMIT=TRUE`
 - **AX_SPLIT_2**: distributes `PERMIT` to `AX_E_PERMIT_2` and `E_F_TRIG`
 - **E_F_TRIG**: [`AX_F_TRIG`](../../adapter/events/unidirectional/BOOL/AX_F_TRIG.md) - falling edge on `PERMIT`
 - **E_SWITCH**: [`AX_E_SWITCH`](../../adapter/events/unidirectional/BOOL/AX_E_SWITCH.md) - filters the click by the state before the click
 - **AX_SPLIT_4_Automatik**: [`AX_SPLIT_5`](../../adapter/events/unidirectional/BOOL/AX_SPLIT_5.md) - distributes the state to five targets
 - **AX_NOT_Man**: [`AX_NOT_INIT`](../../adapter/booleanOperators/AX_NOT_INIT.md) - inverse for `AX_MAN`
-- **AX_PUBLISH_Automatik**: [`AX_PUBLISH_1`](../../adapter/net/AX_PUBLISH_1.md) (`QI=TRUE`) - publishes the state under `ID_AUTOMATIK_STATE_WRITE`
+- **AX_PUBLISH_Automatik**: [`AX_PUBLISH_1`](../../adapter/net/AX_PUBLISH_1.md) (`QI` from the wrapper input) - publishes the state under `ID_AUTOMATIK_STATE_WRITE`
 - **Background_Automatik**: [`GreenWhiteBackground4_AX`](./GreenWhiteBackground4_AX.md) - colors button and AUX green/white
+- **AND_QO**: `iec61131::booleanOperators::AND_BOOL_5` - combines the `QO` outputs of the five blocks `E_T_FF_Automatik`, `AX_PUBLISH_Automatik`, `Background_Automatik`, `Reset` and `Button_Softkey_Aux_Automatik_Toggle` into `QO`
 
 ## Program Flow and Connections
 
@@ -67,6 +71,8 @@
 4. `Reset.IND`, `AUS`, `FORCE_OFF` and `E_F_TRIG.EO` → `E_T_FF_Automatik.R`.
 5. `PERMIT` → `AX_SPLIT_2` → `AX_E_PERMIT_2.PERMIT` and `E_F_TRIG.QI`.
 6. `E_T_FF_Automatik.Q` → `AX_SPLIT_4_Automatik`: `OUT1` → `AUTOMATIK`, `OUT2` → `AX_NOT_Man` → `AX_MAN`, `OUT3` → `AX_PUBLISH_Automatik`, `OUT4` → `Background_Automatik.DI1`, `OUT5` → `E_SWITCH.G`.
+7. Initialization chain: `INIT` → `E_T_FF_Automatik.INIT` → `AX_PUBLISH_Automatik.INIT` → `Background_Automatik.INIT` → `Reset.INIT` → `Button_Softkey_Aux_Automatik_Toggle.INIT`; `Button_Softkey_Aux_Automatik_Toggle.INITO` → `INITO` and → `AND_QO.REQ`.
+8. Quality: `QI` → `.QI` of `E_T_FF_Automatik`, `AX_PUBLISH_Automatik`, `Background_Automatik`, `Reset` and `Button_Softkey_Aux_Automatik_Toggle`; their `QO` → `AND_QO.IN1` to `AND_QO.IN5` (in that order); `AND_QO.OUT` → `QO`.
 
 ## Technical Details
 

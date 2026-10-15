@@ -1,6 +1,5 @@
 # Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter
 
-
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter_network](./Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter_network.svg)
 
 ![Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter](./Softkey_SRT_RPC_TO_Remote_BG_OPC_Adapter.svg)
@@ -17,16 +16,17 @@ This subapplication separates the HMI interaction from the OPC‑UA trigger mech
 
 ### **Event Inputs**
 
-None.
+- **INIT** (`EInit`): initialization request
 
 ### **Event Outputs**
 
-None.
+- **INITO** (`EInit`): initialization confirm
 
 ### **Data Inputs**
 
 | Name | Type | Initial Value | Comment |
 |------|------|---------------|---------|
+| `QI` | BOOL | `TRUE` | Quality input - TRUE enables the service. |
 | `u16ObjId_SET` | UINT | `ID_NULL` | Object ID for the SoftKey Set function. |
 | `u16ObjId_RESET` | UINT | `ID_NULL` | Object ID for the SoftKey Reset function. |
 | `u16ObjId_TOGGLE` | UINT | `ID_NULL` | Object ID for the SoftKey Toggle function (also carries the GreenWhiteBackground state). |
@@ -37,14 +37,14 @@ None.
 
 ### **Data Outputs**
 
-None.
+- **QO** (`BOOL`): quality output, AND combination (`AND_QO`, `AND_BOOL_2`) of the `QO` outputs of `TRIGGER` and `SoftKeySRT_ASRT_AX`
 
 ### **Adapters**
 
 The subapplication contains two internal components connected via an adapter link:
 
-* **SoftKeySRT_ASRT_AX** (type `MyLib::sys::SoftKeySRT_ASRT_AX`) – provides the HMI/SoftKey logic and exposes a plug.
-* **TRIGGER** (type `adapter::net::ASRT_AX_CLIENT_0_SUBSCRIBE_1`) – provides the OPC‑UA client/subscription functionality and exposes a socket.
+- **SoftKeySRT_ASRT_AX** (type `MyLib::sys::SoftKeySRT_ASRT_AX`) – provides the HMI/SoftKey logic and exposes a plug.
+- **TRIGGER** (type `adapter::net::ASRT_AX_CLIENT_0_SUBSCRIBE_1`) – provides the OPC‑UA client/subscription functionality and exposes a socket.
 
 The adapter connection is established between `SoftKeySRT_ASRT_AX.OUT` (plug) and `TRIGGER.S_R_T` (socket).
 
@@ -59,19 +59,19 @@ The subapplication implements a remote SoftKey control loop with the following d
 
 ## Technical Features
 
-* **Modular architecture** – Separation of HMI handling (SoftKeySRT_ASRT_AX) and OPC‑UA communication (TRIGGER) improves reusability and testability.
-* **Protocol encapsulation** – The communication protocol resides within the `MyLib::sys` composite library, not in the device resource, enabling easier maintenance and versioning.
-* **Parameterized addresses** – All remote end‑points are configured via WSTRING inputs, allowing flexible deployment without modifying the internal network.
-* **Initialization support** – Object IDs are initialized to `ID_NULL` (imported from `isobus::UT::Q::const::IDs`), ensuring a well‑defined startup state.
-* **Explicit trigger configuration** – The `TRIGGER` FB has `QI` parameter set to `TRUE`, enabling the OPC‑UA subscription client immediately upon activation.
+- **Modular architecture** – Separation of HMI handling (SoftKeySRT_ASRT_AX) and OPC‑UA communication (TRIGGER) improves reusability and testability.
+- **Protocol encapsulation** – The communication protocol resides within the `MyLib::sys` composite library, not in the device resource, enabling easier maintenance and versioning.
+- **Parameterized addresses** – All remote end‑points are configured via WSTRING inputs, allowing flexible deployment without modifying the internal network.
+- **Initialization support** – Object IDs are initialized to `ID_NULL` (imported from `isobus::UT::Q::const::IDs`), ensuring a well‑defined startup state.
+- **Quality wiring** – `QI` (default `TRUE`) is passed to the `TRIGGER` FB and to `SoftKeySRT_ASRT_AX` (there is no hard-wired `QI` parameter any more); the `QO` outputs of both are combined by `AND_QO` (`AND_BOOL_2`) into `QO`. Initialization runs as `INIT` → `TRIGGER.INIT`; `TRIGGER.INITO` → `SoftKeySRT_ASRT_AX.INIT`; `SoftKeySRT_ASRT_AX.INITO` → `INITO` and → `AND_QO.REQ`.
 
 ## State Overview
 
 The subapplication itself does not maintain an explicit state machine; the state logic is contained in the embedded `SoftKeySRT_ASRT_AX` subapplication. The overall system reflects three operational states:
 
-* **Idle** – No SoftKey pressed, flip‑flop state unknown/initial.
-* **Set / Reset** – Corresponding remote method called on Device B, state updated via `ID_STATE_READ`.
-* **Toggle** – Remote toggle method executed; the GreenWhiteBackground indicator reflects the new flip‑flop state.
+- **Idle** – No SoftKey pressed, flip‑flop state unknown/initial.
+- **Set / Reset** – Corresponding remote method called on Device B, state updated via `ID_STATE_READ`.
+- **Toggle** – Remote toggle method executed; the GreenWhiteBackground indicator reflects the new flip‑flop state.
 
 The flip‑flop state is continuously readable via the locally monitored `ID_STATE_READ` address.
 
@@ -79,19 +79,19 @@ The flip‑flop state is continuously readable via the locally monitored `ID_STA
 
 This subapplication is suited for:
 
-* **Distributed HMI panels** – Controlling remote actuators or logic from a central operator station.
-* **OPC‑UA based machine control** – When the actual SoftKey logic resides on a different device than the HMI.
-* **Reusable SoftKey libraries** – Where the same HMI pattern is applied to multiple remote targets by changing the object IDs and method addresses.
-* **Complex automation cells** – Such as station‑based production lines where station 11 (Device A) supervises station functions on Device B.
+- **Distributed HMI panels** – Controlling remote actuators or logic from a central operator station.
+- **OPC‑UA based machine control** – When the actual SoftKey logic resides on a different device than the HMI.
+- **Reusable SoftKey libraries** – Where the same HMI pattern is applied to multiple remote targets by changing the object IDs and method addresses.
+- **Complex automation cells** – Such as station‑based production lines where station 11 (Device A) supervises station functions on Device B.
 
 ## Comparison with Similar Blocks
 
 Compared to the simpler `Softkey_SRT_RPC_TO_Remote_BG_OPC` (where HMI and OPC‑UA trigger are combined), this adapter variant:
 
-* **Separates concerns** – HMI processing and OPC‑UA subscription are individually replaceable.
-* **Reduces resource footprint** – Bundles three CLIENT_0 instances and one AX_SUBSCRIBE_1 into a single ASRT_AX socket, simplifying wiring.
-* **Improves maintainability** – The protocol logic lives in the `MyLib::sys` composite, making it easier to update without touching device resources.
-* **Enables plug‑and‑play** – The ASRT_AX adapter pattern allows rapid exchange of either the HMI or the communication layer.
+- **Separates concerns** – HMI processing and OPC‑UA subscription are individually replaceable.
+- **Reduces resource footprint** – Bundles three CLIENT_0 instances and one AX_SUBSCRIBE_1 into a single ASRT_AX socket, simplifying wiring.
+- **Improves maintainability** – The protocol logic lives in the `MyLib::sys` composite, making it easier to update without touching device resources.
+- **Enables plug‑and‑play** – The ASRT_AX adapter pattern allows rapid exchange of either the HMI or the communication layer.
 
 ## Conclusion
 
