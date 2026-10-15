@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-202.8 -151.0 1673.9 972.0"
-     width="1674" height="972">
+     viewBox="-202.8 -151.0 1706.9 972.0"
+     width="1707" height="972">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,10 +40,10 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-202.8" y="-151.0" width="1673.9" height="972.0" fill="white"/>
-  <rect x="-195.8" y="-144.0" width="1659.9" height="958.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-195.8" y="-144.0" width="1659.9" height="25.0" fill="white" stroke="none"/>
-  <line x1="-195.8" y1="-119.5" x2="1464.1" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="-202.8" y="-151.0" width="1706.9" height="972.0" fill="white"/>
+  <rect x="-195.8" y="-144.0" width="1692.9" height="958.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-195.8" y="-144.0" width="1692.9" height="25.0" fill="white" stroke="none"/>
+  <line x1="-195.8" y1="-119.5" x2="1497.1" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="-190.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">VT-SoftKey lesen ODER AUX-Zuweisung (Joystick) lesen ODER lokaler Web-Override
 (z.B. vt-ui-mirror auf demselben Modul) + Remote-OPC-UA-Write an Zielmodul
 (generisch, ein Kanal, ohne Status-Feedback) - Option-Lib-Variante von
@@ -51,7 +51,7 @@ Softkey_Aux_IXA_TO_Remote_WRITE: alle 4 Bausteine mit eigenem QI (Softkey_IXA,
 Aux_IXA, SUBSCRIBE_WEB, AX_CLIENT_1_0) werden von einem einzigen
 Option::AOption-Socket sequenziell initialisiert und gated (echtes
 INIT_REQ/INIT_CNF statt bloss einem QI-Bool, Franz: 'muss ein AOption Adapter
-sein'). PLUG1 reicht die Aktivierung an eine nachgeschaltete Gruppe weiter
+sein'). AOption_OUT reicht die Aktivierung an eine nachgeschaltete Gruppe weiter
 (Daisy-Chain, analog MyLib_AX_Option::sys::OptionalGroup_001a/Franz: 'ich
 zeige dir wie man 2 Dinge die zusammenhaengen machen kann') - fuer
 Softkey_Aux_IXA_TO_Remote_WRITE_BG_Option_OPC, wo die Status-Haelfte
@@ -60,7 +60,7 @@ dieselbe Option teilen (z.B. Bunker_Klappen_Auf -&gt; Bunker_Klappen_Zu).</text>
   <g id="sidebars">
     <rect x="-195.8" y="-119.0" width="108.8" height="933.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-87.0" y1="-119.0" x2="-87.0" y2="814.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1420.1" y="-119.0" width="43.9" height="933.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1420.1" y="-119.0" width="76.9" height="933.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1420.1" y1="-119.0" x2="1420.1" y2="814.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
@@ -107,10 +107,10 @@ dieselbe Option teilen (z.B. Bunker_Klappen_Auf -&gt; Bunker_Klappen_Zu).</text>
           fill="#000000" text-anchor="end">ID_WEB_READ</text>
     <path d="M -97.00049999999999 -21.0 L -94.50049999999999 -21.0 L -94.50049999999999 -19.333333333333332 L -92.00049999999999 -19.333333333333332 L -92.00049999999999 -21.0 L -87.00049999999999 -21.0 L -87.00049999999999 -11.0 L -92.00049999999999 -11.0 L -92.00049999999999 -12.666666666666666 L -94.50049999999999 -12.666666666666666 L -94.50049999999999 -11.0 L -97.00049999999999 -11.0 Z" fill="#845DAF"/>
     <text x="-100.00049999999999" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="end">OPTION</text>
+          fill="#000000" text-anchor="end">AOption_IN</text>
     <path d="M 1420.125 -89.0 L 1425.125 -89.0 L 1425.125 -87.33333333333333 L 1427.625 -87.33333333333333 L 1427.625 -89.0 L 1430.125 -89.0 L 1430.125 -79.0 L 1427.625 -79.0 L 1427.625 -80.66666666666667 L 1425.125 -80.66666666666667 L 1425.125 -79.0 L 1420.125 -79.0 Z" fill="none" stroke="#845DAF" stroke-width="1"/>
     <text x="1433.125" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-          fill="#000000" text-anchor="start">PLUG1</text>
+          fill="#000000" text-anchor="start">AOption_OUT</text>
   </g>
   <g id="instances">
     <g id="fb_Softkey_IXA" transform="translate(450.0, 75.0)">

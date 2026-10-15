@@ -15,7 +15,7 @@
 ### Sub-Bausteine: OptionalGroup_001b
 
 - **Typ**: SubAppType
-- **Schnittstelle**: Socket `OPTION` vom Typ `Option::AOption`.
+- **Schnittstelle**: Socket `AOption_IN` vom Typ `Option::AOption`.
 - **Verwendete interne FBs**:
     - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`, setzt den Adapter in `INIT_REQ`/`QI_OUT`/`INIT_CNF` um.
     - **DigitalInput_I1**: `logiBUS::io::DI::logiBUS_IXA`, Parameter `Input = Input_I1`.
@@ -23,19 +23,19 @@
 
 ## Programmablauf und Verbindungen
 
-- `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
 - Init-Kette: `AOption_X_TO_EVENT.INIT_REQ` -> `DigitalInput_I1.INIT`; `DigitalInput_I1.INITO` -> `DigitalOutput_Q1.INIT`; `DigitalOutput_Q1.INITO` -> `AOption_X_TO_EVENT.INIT_CNF`
 - `AOption_X_TO_EVENT.QI_OUT` -> `DigitalInput_I1.QI` und `DigitalOutput_Q1.QI`
 - Adapterverbindung `DigitalInput_I1.IN` -> `DigitalOutput_Q1.OUT`: der Eingang wird auf den Ausgang durchgeschaltet.
 
 ## Technische Besonderheiten
 
-- Baugleich zu [`OptionalGroup_001a`](OptionalGroup_001a.md), aber ohne Plug `PLUG1`.
+- Baugleich zu [`OptionalGroup_001a`](OptionalGroup_001a.md), aber ohne Plug `AOption_OUT`.
 - Die Initialisierung (Eingang, dann Ausgang) wird erst dann an den Socket quittiert, wenn beide Bausteine fertig sind.
 
 ## Anwendungsszenarien
 
-- Wird typischerweise an `PLUG1` einer vorgeschalteten [`OptionalGroup_001a`](OptionalGroup_001a.md) angehängt, damit beide Gruppen nacheinander (erst a, dann b) aktiviert werden, bevor der ursprüngliche Aufrufer seine Bestätigung erhält.
+- Wird typischerweise an `AOption_OUT` einer vorgeschalteten [`OptionalGroup_001a`](OptionalGroup_001a.md) angehängt, damit beide Gruppen nacheinander (erst a, dann b) aktiviert werden, bevor der ursprüngliche Aufrufer seine Bestätigung erhält.
 
 ## Zusammenfassung
 

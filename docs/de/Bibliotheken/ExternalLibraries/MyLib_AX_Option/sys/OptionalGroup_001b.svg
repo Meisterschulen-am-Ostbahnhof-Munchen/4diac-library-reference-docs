@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 343.0 132.0"
-     width="343.0" height="132.0">
+     viewBox="0 0 297.1875 132.0"
+     width="297.1875" height="132.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -28,20 +28,20 @@
       </feMerge>
     </filter>
   </defs>
-  <g transform="translate(93.80000000000001, 10)">
+  <g transform="translate(80.9375, 10)">
 
     <!-- Block Outline -->
     <path d="M 3 0
-            L 211.20000000000002 0
-            A 3 3 0 0 1 214.20000000000002 3
-            L 214.20000000000002 23.0
-            A 3 3 0 0 1 211.20000000000002 26.0
-            L 204.20000000000002 26.0
-            L 204.20000000000002 66.0
-            L 211.20000000000002 66.0
-            A 3 3 0 0 1 214.20000000000002 69.0
-            L 214.20000000000002 109.0
-            A 3 3 0 0 1 211.20000000000002 112.0
+            L 178.25 0
+            A 3 3 0 0 1 181.25 3
+            L 181.25 23.0
+            A 3 3 0 0 1 178.25 26.0
+            L 171.25 26.0
+            L 171.25 66.0
+            L 178.25 66.0
+            A 3 3 0 0 1 181.25 69.0
+            L 181.25 109.0
+            A 3 3 0 0 1 178.25 112.0
             L 3 112.0
             A 3 3 0 0 1 0 109.0
             L 0 69.0
@@ -91,7 +91,7 @@
           font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" font-style="italic">OptionalGroup_001b</text>
     
-    <text x="107.10000000000001" y="66.0"
+    <text x="90.625" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
           fill="#666666" text-anchor="middle">1.0</text>
 
@@ -113,7 +113,7 @@
             L 1.5 107.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
     <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">OPTION</text>
+          fill="#000000" dominant-baseline="middle">AOption_IN</text>
 
     <!-- Event-Data Association Connectors and Lines -->
 

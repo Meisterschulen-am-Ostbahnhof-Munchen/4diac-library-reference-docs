@@ -14,21 +14,16 @@
 
 ### **Event Inputs**
 
-| Event | Type | Comment |
-|-------|------|---------|
-| `INIT` | EInit | Initialization request (to `Status.INIT`). |
+None (initialization runs via the adapter `AOption_IN`).
 
 ### **Event Outputs**
 
-| Event | Type | Comment |
-|-------|------|---------|
-| `INITO` | EInit | Initialization confirm (from `Status.INITO`). |
+None.
 
 ### **Data Inputs**
 
 | Variable | Type | Default | Comment |
 |----------|------|---------|---------|
-| `QI` | BOOL | `TRUE` | Quality input, goes to `Status.QI`. |
 | `u16ObjId` | UINT | | Object ID SoftKey/background (VT). |
 | `u16ObjIdA` | UINT | | Object ID AuxFunction2/background (VT). |
 | `ID_SUBSCRIBE` | WSTRING | | Remote subscribe address (status/colour, `ACTION=SUBSCRIBE`). |
@@ -38,16 +33,14 @@
 
 ### **Data Outputs**
 
-| Variable | Type | Comment |
-|----------|------|---------|
-| `QO` | BOOL | Quality output (from `Status.QO`). |
+None.
 
 ### **Adapters**
 
 | Adapter | Type | Direction | Comment |
 |---------|------|-----------|---------|
-| `OPTION` | `Option::AOption` | Socket | Drives `INIT`/`QI` of `Command` AND `Status` sequentially; connect e.g. to `AOption_AUI_DEMUX_N.OUTx` or the `PLUG1` of an upstream instance. |
-| `PLUG1` | `Option::AOption` | Plug | Passes the activation on to a downstream instance (daisy chain, e.g. a second instance sharing the same option); leave unused if nothing follows. |
+| `AOption_IN` | `Option::AOption` | Socket | Drives `INIT`/`QI` of `Command` AND `Status` sequentially; connect e.g. to `AOption_AUI_DEMUX_N.OUTx` or the `AOption_OUT` of an upstream instance. |
+| `AOption_OUT` | `Option::AOption` | Plug | Passes the activation on to a downstream instance (daisy chain, e.g. a second instance sharing the same option); leave unused if nothing follows. |
 
 ## Function Blocks (FBs) Used
 
@@ -60,26 +53,25 @@
 
 ## Program Flow and Connections
 
-1. Adapter chain: `OPTION` -> `Command.OPTION`; `Command.PLUG1` -> `Status.OPTION`; `Status.PLUG1` -> `PLUG1`. The option thus activates the command side first, then the status side, then a downstream instance.
-2. Events: `INIT` -> `Status.INIT`; `Status.INITO` -> `INITO`.
-3. `u16ObjId` -> `Command.u16ObjId` and `Status.u16ObjId`; `u16ObjIdA` -> `Command.u16ObjIdA` and `Status.u16ObjIdA`.
-4. `ID_WRITE_REMOTE` -> `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` -> `Command.ID_WEB_READ`; `ID_SUBSCRIBE` -> `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` -> `Status.ID_STATUS_WEB`.
-5. `QI` -> `Status.QI`; `Status.QO` -> `QO`.
+1. Adapter chain: `AOption_IN` -> `Command.AOption_IN`; `Command.AOption_OUT` -> `Status.AOption_IN`; `Status.AOption_OUT` -> `AOption_OUT`. The option thus activates the command side first, then the status side, then a downstream instance.
+2. `u16ObjId` -> `Command.u16ObjId` and `Status.u16ObjId`; `u16ObjIdA` -> `Command.u16ObjIdA` and `Status.u16ObjIdA`.
+3. `ID_WRITE_REMOTE` -> `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` -> `Command.ID_WEB_READ`; `ID_SUBSCRIBE` -> `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` -> `Status.ID_STATUS_WEB`.
+4. The block has no event or `QI`/`QO` connections of its own; activation and acknowledgment run exclusively via the adapters `AOption_IN`/`AOption_OUT`.
 
 ## Technical Features
 
 - **Command and Status are both option-gated:** All blocks with a real `QI` can be switched off via the `AOption` socket.
-- **Sequential chain instead of socket split:** `Command.PLUG1` -> `Status.OPTION` (strictly 1:1), analogous to the daisy-chain style of [`OptionalGroup_001a`](../../MyLib_AX_Option/sys/OptionalGroup_001a.md). The block's own `PLUG1` passes the chain on to further instances sharing the same option.
+- **Sequential chain instead of socket split:** `Command.AOption_OUT` -> `Status.AOption_IN` (strictly 1:1), analogous to the daisy-chain style of [`OptionalGroup_001a`](../../MyLib_AX_Option/sys/OptionalGroup_001a.md). The block's own `AOption_OUT` passes the chain on to further instances sharing the same option.
 - As in the original: `ID_WEB_READ` (from `Command`) and `ID_STATUS_WEB` (from `Status`) must point to different local OPC-UA nodes, otherwise feedback arises (see [`Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`](./Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.md)).
 
 ## Application Scenarios
 
 - Optional operator station with SoftKey and Aux assignment for a remote actuator including coloured status display, active only when the option is selected.
-- Several instances sharing the same option, chained via `PLUG1`.
+- Several instances sharing the same option, chained via `AOption_OUT`.
 
 ## Summary
 
-`Softkey_Aux_IXA_TO_Remote_WRITE_BG_Option_OPC` bundles the command and status sides of a remote channel behind a shared `AOption` socket and passes the activation on via `PLUG1`.
+`Softkey_Aux_IXA_TO_Remote_WRITE_BG_Option_OPC` bundles the command and status sides of a remote channel behind a shared `AOption` socket and passes the activation on via `AOption_OUT`.
 
 ---
 

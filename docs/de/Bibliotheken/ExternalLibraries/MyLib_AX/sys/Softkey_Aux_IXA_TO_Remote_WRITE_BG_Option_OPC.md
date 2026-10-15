@@ -14,21 +14,16 @@
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INIT` | EInit | Initialization Request (an `Status.INIT`). |
+Keine vorhanden (die Initialisierung läuft über den Adapter `AOption_IN`).
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INITO` | EInit | Initialization Confirm (von `Status.INITO`). |
+Keine vorhanden.
 
 ### **Daten-Eingänge**
 
 | Variable | Typ | Vorgabe | Kommentar |
 |----------|-----|---------|-----------|
-| `QI` | BOOL | `TRUE` | Quality Input, geht an `Status.QI`. |
 | `u16ObjId` | UINT | | Object ID SoftKey/Hintergrund (VT). |
 | `u16ObjIdA` | UINT | | Object ID AuxFunction2/Hintergrund (VT). |
 | `ID_SUBSCRIBE` | WSTRING | | Remote-Subscribe-Adresse (Status/Farbe, `ACTION=SUBSCRIBE`). |
@@ -38,16 +33,14 @@
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `QO` | BOOL | Quality Output (von `Status.QO`). |
+Keine vorhanden.
 
 ### **Adapter**
 
 | Adapter | Typ | Richtung | Kommentar |
 |---------|-----|----------|-----------|
-| `OPTION` | `Option::AOption` | Socket | Treibt `INIT`/`QI` von `Command` UND `Status` sequenziell; anschließen z. B. an `AOption_AUI_DEMUX_N.OUTx` oder das `PLUG1` einer vorgeschalteten Instanz. |
-| `PLUG1` | `Option::AOption` | Plug | Reicht die Aktivierung an eine nachgeschaltete Instanz weiter (Daisy-Chain, z. B. eine zweite Instanz mit derselben Option); unbenutzt lassen, wenn nichts folgt. |
+| `AOption_IN` | `Option::AOption` | Socket | Treibt `INIT`/`QI` von `Command` UND `Status` sequenziell; anschließen z. B. an `AOption_AUI_DEMUX_N.OUTx` oder das `AOption_OUT` einer vorgeschalteten Instanz. |
+| `AOption_OUT` | `Option::AOption` | Plug | Reicht die Aktivierung an eine nachgeschaltete Instanz weiter (Daisy-Chain, z. B. eine zweite Instanz mit derselben Option); unbenutzt lassen, wenn nichts folgt. |
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -60,26 +53,25 @@
 
 ## Programmablauf und Verbindungen
 
-1. Adapterkette: `OPTION` -> `Command.OPTION`; `Command.PLUG1` -> `Status.OPTION`; `Status.PLUG1` -> `PLUG1`. Die Option aktiviert damit zuerst die Kommando-Seite, dann die Status-Seite, anschließend eine nachgeschaltete Instanz.
-2. Ereignisse: `INIT` -> `Status.INIT`; `Status.INITO` -> `INITO`.
-3. `u16ObjId` -> `Command.u16ObjId` und `Status.u16ObjId`; `u16ObjIdA` -> `Command.u16ObjIdA` und `Status.u16ObjIdA`.
-4. `ID_WRITE_REMOTE` -> `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` -> `Command.ID_WEB_READ`; `ID_SUBSCRIBE` -> `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` -> `Status.ID_STATUS_WEB`.
-5. `QI` -> `Status.QI`; `Status.QO` -> `QO`.
+1. Adapterkette: `AOption_IN` -> `Command.AOption_IN`; `Command.AOption_OUT` -> `Status.AOption_IN`; `Status.AOption_OUT` -> `AOption_OUT`. Die Option aktiviert damit zuerst die Kommando-Seite, dann die Status-Seite, anschließend eine nachgeschaltete Instanz.
+2. `u16ObjId` -> `Command.u16ObjId` und `Status.u16ObjId`; `u16ObjIdA` -> `Command.u16ObjIdA` und `Status.u16ObjIdA`.
+3. `ID_WRITE_REMOTE` -> `Command.ID_WRITE_REMOTE`; `ID_WEB_READ` -> `Command.ID_WEB_READ`; `ID_SUBSCRIBE` -> `Status.ID_SUBSCRIBE`; `ID_STATUS_WEB` -> `Status.ID_STATUS_WEB`.
+4. Der Baustein hat keine eigenen Ereignis- und `QI`/`QO`-Anschlüsse; Aktivierung und Bestätigung laufen ausschließlich über die Adapter `AOption_IN`/`AOption_OUT`.
 
 ## Technische Besonderheiten
 
 - **Command und Status sind beide Option-gated:** Alle Bausteine mit echtem `QI` sind über den `AOption`-Socket abschaltbar.
-- **Sequenzielle Kette statt Socket-Split:** `Command.PLUG1` -> `Status.OPTION` (strikt 1:1), analog zum Daisy-Chain-Stil von [`OptionalGroup_001a`](../../MyLib_AX_Option/sys/OptionalGroup_001a.md). Der eigene `PLUG1` gibt die Kette an weitere Instanzen weiter, die dieselbe Option teilen.
+- **Sequenzielle Kette statt Socket-Split:** `Command.AOption_OUT` -> `Status.AOption_IN` (strikt 1:1), analog zum Daisy-Chain-Stil von [`OptionalGroup_001a`](../../MyLib_AX_Option/sys/OptionalGroup_001a.md). Der eigene `AOption_OUT` gibt die Kette an weitere Instanzen weiter, die dieselbe Option teilen.
 - Wie im Original gilt: `ID_WEB_READ` (von `Command`) und `ID_STATUS_WEB` (von `Status`) müssen auf unterschiedliche lokale OPC-UA-Knoten zeigen, sonst entsteht eine Rückkopplung (siehe [`Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC`](./Softkey_Aux_IXA_TO_Remote_WRITE_BG_OPC.md)).
 
 ## Anwendungsszenarien
 
 - Optionale Bedienstelle mit SoftKey und Aux-Zuweisung für einen entfernten Aktor samt farbiger Statusanzeige, die nur bei ausgewählter Option aktiv ist.
-- Mehrere Instanzen, die dieselbe Option teilen und per `PLUG1` verkettet werden.
+- Mehrere Instanzen, die dieselbe Option teilen und per `AOption_OUT` verkettet werden.
 
 ## Zusammenfassung
 
-`Softkey_Aux_IXA_TO_Remote_WRITE_BG_Option_OPC` bündelt Kommando- und Status-Seite eines Remote-Kanals hinter einem gemeinsamen `AOption`-Socket und reicht die Aktivierung per `PLUG1` weiter.
+`Softkey_Aux_IXA_TO_Remote_WRITE_BG_Option_OPC` bündelt Kommando- und Status-Seite eines Remote-Kanals hinter einem gemeinsamen `AOption`-Socket und reicht die Aktivierung per `AOption_OUT` weiter.
 
 ---
 

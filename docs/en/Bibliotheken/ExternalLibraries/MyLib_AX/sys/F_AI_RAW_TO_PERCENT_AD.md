@@ -8,7 +8,7 @@
 
 `F_AI_RAW_TO_PERCENT_AD` is the fully adapter-based alternative to [`F_AI_RAW_TO_PERCENT`](./F_AI_RAW_TO_PERCENT.md): the same raw analog value (0-4095) is converted linearly to percent via AD/AR adapters instead of regular data connections — identical result, different wiring style.
 
-> **⚠️ Important note from the block's own comment:** `AD_TO_AR`/`F_DWORD_TO_REAL` would be **wrong** here — that's a bit-reinterpretation (IEEE754 cast), not a numeric conversion (see `forte_real.cpp`, `CIEC_REAL::setValue`, `case e_DWORD: setValueSimple`). The correct path is `AD_TO_AUDI` (bit-reinterpretation DWORD→UDINT, valid here, same bit width/representation) followed by `AUDI_TO_AR` (internally uses `F_UDINT_TO_REAL`, a real numeric conversion). Details in [Numeric vs. bitwise: the FORTE conversion trap](../../../../Bibliotheken/ExternalLibraries/adapter/conversion/unidirectional/Numeric_vs_Bitwise.md).
+> **⚠️ Important note from the block's own comment:** `AD_TO_AR`/`F_DWORD_TO_REAL` would be **wrong** here — that's a bit-reinterpretation (IEEE754 cast), not a numeric conversion (see `forte_real.cpp`, `CIEC_REAL::setValue`, `case e_DWORD: setValueSimple`). The correct path is the numeric conversion [`AD_TO_AR_NUM`](../../adapter/conversion/unidirectional/AD_AR/AD_TO_AR_NUM.md) (DWORD→UDINT by bit-reinterpretation, valid here, same bit width/representation; then `F_UDINT_TO_REAL`, a real numeric conversion). Details in [Numeric vs. bitwise: the FORTE conversion trap](../../../../Bibliotheken/ExternalLibraries/adapter/conversion/unidirectional/Numeric_vs_Bitwise.md).
 
 ![F_AI_RAW_TO_PERCENT_AD](F_AI_RAW_TO_PERCENT_AD.svg)
 
@@ -18,15 +18,14 @@
 
 - **Type**: SubAppType
 - **Internal FBs used**:
-    - **AD_TO_AUDI**: `adapter::conversion::unidirectional::AD_TO_AUDI` — bit-reinterpretation DWORD adapter→UDINT adapter.
-    - **AUDI_TO_AR**: `adapter::conversion::unidirectional::AUDI_TO_AR` — a real numeric cast UDINT adapter→REAL adapter.
+    - **AD_TO_AR_NUM**: `adapter::conversion::unidirectional::AD_TO_AR_NUM` — numeric conversion DWORD adapter→REAL adapter via UDINT, see [`AD_TO_AR_NUM`](../../adapter/conversion/unidirectional/AD_AR/AD_TO_AR_NUM.md).
     - **INITVAL_SCALE**: `adapter::types::unidirectional::AR::initval::initval_AR` — supplies the constant `REAL#0.0244200244` (= 100/4095) as an adapter.
     - **AR_MUL_PERCENT**: `adapter::iec61131::arithmetic::AR_MUL_2` — multiplies two REAL adapters.
-- **Functionality**: `RAW_IN` (AD adapter, 0-4095) → `AD_TO_AUDI` → `AUDI_TO_AR` → multiplied by the constant → `PERCENT_OUT` (AR adapter, 0.0-100.0).
+- **Functionality**: `RAW_IN` (AD adapter, 0-4095) → `AD_TO_AR_NUM` → multiplied by the constant → `PERCENT_OUT` (AR adapter, 0.0-100.0).
 
 ## Program Flow and Connections
 
-1. `RAW_IN` → `AD_TO_AUDI.AD_IN` → `AD_TO_AUDI.AUDI_OUT` → `AUDI_TO_AR.AUDI_IN` → `AUDI_TO_AR.AR_OUT` → `AR_MUL_PERCENT.IN1`.
+1. `RAW_IN` → `AD_TO_AR_NUM.AD_IN`; `AD_TO_AR_NUM.AR_OUT` → `AR_MUL_PERCENT.IN1`.
 2. `INITVAL_SCALE.OUT` (constant 0.0244200244) → `AR_MUL_PERCENT.IN2`.
 3. `AR_MUL_PERCENT.OUT` → `PERCENT_OUT`.
 

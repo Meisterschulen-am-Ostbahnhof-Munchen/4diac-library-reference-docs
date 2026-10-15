@@ -129,7 +129,7 @@
             L 1.5 167.0
             Z" fill="none" stroke="#845DAF" stroke-width="1"/>
     <text x="14.5" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle">OPTION</text>
+          fill="#000000" dominant-baseline="middle">AOption_IN</text>
 
     <path d="M 304.625 157.0
             L 307.125 157.0
@@ -145,7 +145,7 @@
             L 304.625 167.0
             Z" fill="#845DAF"/>
     <text x="301.625" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" text-anchor="end" dominant-baseline="middle">PLUG1</text>
+          fill="#000000" text-anchor="end" dominant-baseline="middle">AOption_OUT</text>
 
     <!-- Event-Data Association Connectors and Lines -->
 

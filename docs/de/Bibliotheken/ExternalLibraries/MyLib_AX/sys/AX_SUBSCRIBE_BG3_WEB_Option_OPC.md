@@ -6,7 +6,7 @@
 
 ## Einleitung
 
-`AX_SUBSCRIBE_BG3_WEB_Option_OPC` ist die Option-Lib-Variante von [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md): OPC-UA-Remote-Subscribe mit VT-Hintergrundfarbe auf SoftKey UND AuxFunction2 sowie lokalem Web-Republish. `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` und `GreenWhiteBackground3_AX` (hat seit dem QI/QO-Rollout echtes `QI`/`QO`) werden hier vom Adapter-Socket [`Option::AOption`](../../Option/AOption.md) initialisiert und gated: Subscribe/Publish sequenziell, `GreenWhiteBackground3_AX` parallel dazu; `E_REND_2_INITO` wartet auf beide Zweige (siehe Technische Besonderheiten). Der Plug `PLUG1` reicht die Aktivierung an eine nachgeschaltete Gruppe weiter (Daisy-Chain).
+`AX_SUBSCRIBE_BG3_WEB_Option_OPC` ist die Option-Lib-Variante von [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md): OPC-UA-Remote-Subscribe mit VT-Hintergrundfarbe auf SoftKey UND AuxFunction2 sowie lokalem Web-Republish. `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` und `GreenWhiteBackground3_AX` (hat seit dem QI/QO-Rollout echtes `QI`/`QO`) werden hier vom Adapter-Socket [`Option::AOption`](../../Option/AOption.md) initialisiert und gated: alle drei sequenziell in der Reihenfolge `AX_SUBSCRIBE_1` -> `GreenWhiteBackground3_AX` -> `STATUS_WEB_PUBLISH`. Der Plug `AOption_OUT` reicht die Aktivierung an eine nachgeschaltete Gruppe weiter (Daisy-Chain).
 
 ![AX_SUBSCRIBE_BG3_WEB_Option_OPC](AX_SUBSCRIBE_BG3_WEB_Option_OPC.svg)
 
@@ -14,21 +14,16 @@
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INIT` | EInit | Initialization Request (nicht intern verdrahtet; die Initialisierung läuft über den Socket `OPTION`). |
+Keine vorhanden (die Initialisierung läuft über den Adapter `AOption_IN`).
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ | Kommentar |
-|----------|-----|-----------|
-| `INITO` | EInit | Initialization Confirm (von `AOption_EVENT_TO_X.INIT_CNF`, also nach dem Rendezvous beider Zweige). |
+Keine vorhanden.
 
 ### **Daten-Eingänge**
 
 | Variable | Typ | Vorgabe | Kommentar |
 |----------|-----|---------|-----------|
-| `QI` | BOOL | `TRUE` | Quality Input (nicht intern verdrahtet; `GreenWhiteBackground3_AX.QI` kommt über `AOption_X_TO_EVENT.QI_OUT`). |
 | `u16ObjId` | UINT | `ID_NULL` | Objekt-ID SoftKey/Hintergrund (VT). |
 | `u16ObjIdA` | UINT | `ID_NULL` | Objekt-ID AuxFunction2/Hintergrund (VT). |
 | `ID_SUBSCRIBE` | WSTRING | | Remote-Subscribe-Adresse (Status/Farbe, `ACTION=SUBSCRIBE`). |
@@ -36,16 +31,14 @@
 
 ### **Daten-Ausgänge**
 
-| Variable | Typ | Kommentar |
-|----------|-----|-----------|
-| `QO` | BOOL | Quality Output (von `GreenWhiteBackground3_AX.QO`). |
+Keine vorhanden.
 
 ### **Adapter**
 
 | Adapter | Typ | Richtung | Kommentar |
 |---------|-----|----------|-----------|
-| `OPTION` | `Option::AOption` | Socket | Treibt `INIT`/`QI` von `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` und `GreenWhiteBackground3_AX`; typischerweise vom `PLUG1` von [`Softkey_Aux_IXA_TO_Remote_WRITE_Option`](./Softkey_Aux_IXA_TO_Remote_WRITE_Option.md) gespeist. |
-| `PLUG1` | `Option::AOption` | Plug | Reicht die Aktivierung an eine nachgeschaltete Gruppe weiter (Daisy-Chain); unbenutzt lassen, wenn nichts folgt. |
+| `AOption_IN` | `Option::AOption` | Socket | Treibt `INIT`/`QI` von `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` und `GreenWhiteBackground3_AX`; typischerweise vom `AOption_OUT` von [`Softkey_Aux_IXA_TO_Remote_WRITE_Option`](./Softkey_Aux_IXA_TO_Remote_WRITE_Option.md) gespeist. |
+| `AOption_OUT` | `Option::AOption` | Plug | Reicht die Aktivierung an eine nachgeschaltete Gruppe weiter (Daisy-Chain); unbenutzt lassen, wenn nichts folgt. |
 
 ## Verwendete Funktionsbausteine (FBs)
 
@@ -53,29 +46,28 @@
 
 - **Typ**: SubAppType
 - **Verwendete interne FBs**:
-    - **AOption_X_TO_EVENT** (`Option::conversion::AOption_X_TO_EVENT`): setzt den Socket `OPTION` in `INIT_REQ`/`QI_OUT` um, siehe [`AOption_X_TO_EVENT`](../../Option/conversion/AOption_X_TO_EVENT.md).
+    - **AOption_X_TO_EVENT** (`Option::conversion::AOption_X_TO_EVENT`): setzt den Socket `AOption_IN` in `INIT_REQ`/`QI_OUT` um, siehe [`AOption_X_TO_EVENT`](../../Option/conversion/AOption_X_TO_EVENT.md).
     - **AX_SUBSCRIBE_1** (`adapter::net::AX_SUBSCRIBE_1`): OPC-UA-Subscribe auf `ID_SUBSCRIBE`.
     - **AX_SPLIT_2** (`adapter::events::unidirectional::AX_SPLIT_2`): verteilt den Subscribe-Wert auf zwei Zweige.
-    - **GreenWhiteBackground3_AX** (SubApp `MyLib::sys::GreenWhiteBackground3_AX`): setzt die Hintergrundfarbe auf SoftKey und AuxFunction2; wird vom Option-Socket parallel zu Subscribe/Publish initialisiert und gated.
-    - **E_REND_2_INITO** (`iec61499::events::E_REND_2`): Rendezvous; wartet auf `STATUS_WEB_PUBLISH.INITO` UND `GreenWhiteBackground3_AX.INITO`, bevor der Abschluss der Option-Kette feuert; wird von `AOption_X_TO_EVENT.INIT_REQ` für jeden neuen Umschaltvorgang zurückgesetzt.
+    - **GreenWhiteBackground3_AX** (SubApp `MyLib::sys::GreenWhiteBackground3_AX`): setzt die Hintergrundfarbe auf SoftKey und AuxFunction2; wird vom Option-Socket nach `AX_SUBSCRIBE_1` und vor `STATUS_WEB_PUBLISH` sequenziell initialisiert und gated.
     - **STATUS_WEB_PUBLISH** (`adapter::net::AX_PUBLISH_1`): lokaler Publish des Status auf `ID_STATUS_WEB`.
-    - **AOption_EVENT_TO_X** (`Option::conversion::AOption_EVENT_TO_X`): gibt die Aktivierung an `PLUG1` weiter.
+    - **AOption_EVENT_TO_X** (`Option::conversion::AOption_EVENT_TO_X`): gibt die Aktivierung an `AOption_OUT` weiter.
 
 ## Programmablauf und Verbindungen
 
-1. Option-Kette: `AOption_X_TO_EVENT.INIT_REQ` -> `AX_SUBSCRIBE_1.INIT`, `GreenWhiteBackground3_AX.INIT` und `E_REND_2_INITO.R`; `AX_SUBSCRIBE_1.INITO` -> `STATUS_WEB_PUBLISH.INIT`; `STATUS_WEB_PUBLISH.INITO` -> `E_REND_2_INITO.EI1`; `GreenWhiteBackground3_AX.INITO` -> `E_REND_2_INITO.EI2`; `E_REND_2_INITO.EO` -> `AOption_EVENT_TO_X.INIT_REQ`; `AOption_EVENT_TO_X.INIT_CNF` -> `AOption_X_TO_EVENT.INIT_CNF` und -> `INITO`.
+1. Option-Kette: `AOption_X_TO_EVENT.INIT_REQ` -> `AX_SUBSCRIBE_1.INIT`; `AX_SUBSCRIBE_1.INITO` -> `GreenWhiteBackground3_AX.INIT`; `GreenWhiteBackground3_AX.INITO` -> `STATUS_WEB_PUBLISH.INIT`; `STATUS_WEB_PUBLISH.INITO` -> `AOption_EVENT_TO_X.INIT_REQ`; `AOption_EVENT_TO_X.INIT_CNF` -> `AOption_X_TO_EVENT.INIT_CNF`.
 2. `AOption_X_TO_EVENT.QI_OUT` -> `AX_SUBSCRIBE_1.QI`, `STATUS_WEB_PUBLISH.QI`, `GreenWhiteBackground3_AX.QI` und `AOption_EVENT_TO_X.QI_OUT`.
-3. Adapter: `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`; `AOption_EVENT_TO_X.AOption_OUT` -> `PLUG1`.
+3. Adapter: `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`; `AOption_EVENT_TO_X.AOption_OUT` -> `AOption_OUT`.
 4. Daten: `AX_SUBSCRIBE_1.OUT` -> `AX_SPLIT_2.IN`; `AX_SPLIT_2.OUT1` -> `GreenWhiteBackground3_AX.DI1`; `AX_SPLIT_2.OUT2` -> `STATUS_WEB_PUBLISH.IN`.
 5. Parameter: `ID_SUBSCRIBE` -> `AX_SUBSCRIBE_1.ID`; `ID_STATUS_WEB` -> `STATUS_WEB_PUBLISH.ID`; `u16ObjId`/`u16ObjIdA` -> `GreenWhiteBackground3_AX.u16ObjId`/`u16ObjIdA`.
-6. Schnittstelle: `AOption_EVENT_TO_X.INIT_CNF` -> `INITO`, `GreenWhiteBackground3_AX.QO` -> `QO`. Die Schnittstellen-Eingänge `INIT` und `QI` sind intern nicht verdrahtet.
+6. Der Baustein hat keine Ereignis- und keine `QI`/`QO`-Schnittstelle; Aktivierung und Bestätigung laufen ausschließlich über die Adapter `AOption_IN`/`AOption_OUT`.
 
 ## Technische Besonderheiten
 
 - **Alle drei Bausteine gated:** `AX_SUBSCRIBE_1`, `STATUS_WEB_PUBLISH` und `GreenWhiteBackground3_AX` hängen am Option-Socket (Version 1.1; `GreenWhiteBackground3_AX` hat seit dem QI/QO-Rollout echtes `QI`/`QO`, die frühere Annahme ohne Gating war veraltet).
-- **Parallele Initialisierung mit Rendezvous:** `GreenWhiteBackground3_AX.INIT` wird parallel statt sequenziell nach `STATUS_WEB_PUBLISH` ausgelöst; `E_REND_2_INITO` wartet auf beide Zweige, sonst verliert der erste eintreffende Remote-Wert das Rennen gegen die eigene `Q_BackgroundColour`-Initialisierung.
-- **Option-Initialisierung statt `INIT`:** Der Schnittstellen-Eingang `INIT` ist intern nicht verdrahtet; die Initialisierung läuft über den `INIT_REQ`/`INIT_CNF`-Handshake der Option-Kette, `INITO` wird aus `AOption_EVENT_TO_X.INIT_CNF` gespeist.
-- **Daisy-Chain:** `PLUG1` erlaubt, weitere Instanzen oder Gruppen an dieselbe Option zu hängen.
+- **Sequenzielle Initialisierung:** Die Option-Kette initialisiert nacheinander `AX_SUBSCRIBE_1`, `GreenWhiteBackground3_AX` und `STATUS_WEB_PUBLISH`; erst nach `STATUS_WEB_PUBLISH.INITO` feuert `AOption_EVENT_TO_X.INIT_REQ`.
+- **Option-Initialisierung statt `INIT`/`QI`:** Der Baustein hat keine eigenen `INIT`/`INITO`/`QI`/`QO`-Anschlüsse; die Initialisierung läuft über den `INIT_REQ`/`INIT_CNF`-Handshake der Option-Kette, die Bestätigung geht über `AOption_EVENT_TO_X.INIT_CNF` zurück an `AOption_X_TO_EVENT`.
+- **Daisy-Chain:** `AOption_OUT` erlaubt, weitere Instanzen oder Gruppen an dieselbe Option zu hängen.
 - Das Gegenstück ohne Option ist [`AX_SUBSCRIBE_BG3_WEB_OPC`](./AX_SUBSCRIBE_BG3_WEB_OPC.md).
 
 ## Anwendungsszenarien
@@ -84,7 +76,7 @@
 
 ## Zusammenfassung
 
-`AX_SUBSCRIBE_BG3_WEB_Option_OPC` kombiniert Remote-Subscribe, Hintergrundfarbe auf SoftKey und Aux sowie lokalen Web-Republish und gated Subscribe, Publish und Hintergrundfarbe über einen `AOption`-Socket mit Weiterreichung per `PLUG1`.
+`AX_SUBSCRIBE_BG3_WEB_Option_OPC` kombiniert Remote-Subscribe, Hintergrundfarbe auf SoftKey und Aux sowie lokalen Web-Republish und gated Subscribe, Publish und Hintergrundfarbe über einen `AOption`-Socket mit Weiterreichung per `AOption_OUT`.
 
 ---
 

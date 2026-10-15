@@ -15,13 +15,13 @@
 ### Sub-blocks: DummyGroup
 
 - **Type**: SubAppType
-- **Interface**: socket `OPTION` of type `Option::AOption`.
+- **Interface**: socket `AOption_IN` of type `Option::AOption`.
 - **Internal FBs used**:
     - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`.
 
 ## Program Flow and Connections
 
-- `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
 - `AOption_X_TO_EVENT.INIT_REQ` -> `AOption_X_TO_EVENT.INIT_CNF` (self-acknowledgement)
 
 `QI_OUT` remains unused.

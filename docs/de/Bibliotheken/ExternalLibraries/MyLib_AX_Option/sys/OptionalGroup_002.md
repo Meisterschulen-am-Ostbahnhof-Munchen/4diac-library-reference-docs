@@ -15,7 +15,7 @@
 ### Sub-Bausteine: OptionalGroup_002
 
 - **Typ**: SubAppType
-- **Schnittstelle**: Socket `OPTION` vom Typ `Option::AOption`.
+- **Schnittstelle**: Socket `AOption_IN` vom Typ `Option::AOption`.
 - **Verwendete interne FBs**:
     - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`, setzt den Adapter in `INIT_REQ`/`QI_OUT`/`INIT_CNF` um.
     - **DigitalInput_I2**: `logiBUS::io::DI::logiBUS_IXA`, Parameter `Input = Input_I2`.
@@ -23,7 +23,7 @@
 
 ## Programmablauf und Verbindungen
 
-- `OPTION` -> `AOption_X_TO_EVENT.AOption_IN`
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
 - Init-Kette: `AOption_X_TO_EVENT.INIT_REQ` -> `DigitalInput_I2.INIT`; `DigitalInput_I2.INITO` -> `DigitalOutput_Q2.INIT`; `DigitalOutput_Q2.INITO` -> `AOption_X_TO_EVENT.INIT_CNF`
 - `AOption_X_TO_EVENT.QI_OUT` -> `DigitalInput_I2.QI` und `DigitalOutput_Q2.QI`
 - Adapterverbindung `DigitalInput_I2.IN` -> `DigitalOutput_Q2.OUT`: der Eingang wird auf den Ausgang durchgeschaltet.
