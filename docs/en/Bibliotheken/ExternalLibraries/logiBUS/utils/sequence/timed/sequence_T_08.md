@@ -32,7 +32,7 @@ The function block `sequence_T_08` is a time-controlled sequencer with eight out
 - `STATE_NR` (Type `SINT`): Outputs the current state number. `0` corresponds to state `START`, `1` to `8` correspond to the active states `State_01` to `State_08`.
 - `DO_S1` to `DO_S8` (Type `BOOL`): The physical output signals of the sequence. Each output is set to `TRUE` when the corresponding state is active; otherwise, it is `FALSE`.
 
-### **Adapter**
+### **Adapter Ports**
 
 - `timeOut` (Type `iec61499::events::ATimeOut`): A plug-in adapter that provides the timer. The function block (FB) uses the interface to start a timer (`timeOut.START`) and wait for its expiration (`timeOut.TimeOut`). The respective time duration is transmitted via `timeOut.DT`.
 

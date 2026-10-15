@@ -32,7 +32,7 @@ Der Funktionsblock `sequence_T_08` ist ein zeitgesteuerter Sequenzer mit acht Au
 -   `STATE_NR` (Typ `SINT`): Gibt die aktuelle Zustandsnummer aus. `0` entspricht dem `START`-Zustand, `1` bis `8` entsprechen den aktiven Zuständen `State_01` bis `State_08`.
 -   `DO_S1` bis `DO_S8` (Typ `BOOL`): Die physischen Ausgangssignale der Sequenz. Jeder Ausgang wird auf `TRUE` gesetzt, wenn der entsprechende Zustand aktiv ist, andernfalls ist er `FALSE`.
 
-### **Adapter**
+### **Adapter-Anschlüsse**
 
 -   `timeOut` (Typ `iec61499::events::ATimeOut`): Ein Steckadapter, der die Zeitsteuerung bereitstellt. Der FB nutzt die Schnittstelle, um einen Timer zu starten (`timeOut.START`) und auf dessen Ablauf zu warten (`timeOut.TimeOut`). Die jeweilige Zeitdauer wird über `timeOut.DT` übergeben.
 

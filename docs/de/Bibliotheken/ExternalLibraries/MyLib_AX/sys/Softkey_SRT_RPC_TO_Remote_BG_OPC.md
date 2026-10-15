@@ -38,7 +38,7 @@ Die SubApp **Softkey_SRT_RPC_TO_Remote_BG_OPC** verbindet physische Softkeys ein
 
 - **QO** (`BOOL`): Quality Output, UND (`AND_QO`, `iec61131::booleanOperators::AND_BOOL_8`) aus den `QO`-Ausgängen aller acht internen Bausteine (3 × `Softkey_IE`, 3 × `CLIENT_0`, `STATE_SUBSCRIBE`, `GreenWhiteBackground_AX`)
 
-### **Adapter**
+### **Adapter-Anschlüsse**
 
 Keine externen Adapter.
 

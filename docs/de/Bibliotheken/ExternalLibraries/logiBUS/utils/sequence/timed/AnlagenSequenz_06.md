@@ -93,7 +93,7 @@ vorgeordneten Motoren berücksichtigt.
     oder `_NACHLAUF`.
 -   **`DO_M1` .. `DO_M6`** (BOOL): Laufbefehl je Motor.
 
-### **Adapter**
+### **Adapter-Anschlüsse**
 
 -   **`timeOut`** (Plug, Typ: `iec61499::events::ATimeOut`): Standardisierter TimeOut-Adapter für
     die Zeitsteuerung der Vor- und Nachlauf-Schritte, analog zur Nutzung in `sequence_T_04`.

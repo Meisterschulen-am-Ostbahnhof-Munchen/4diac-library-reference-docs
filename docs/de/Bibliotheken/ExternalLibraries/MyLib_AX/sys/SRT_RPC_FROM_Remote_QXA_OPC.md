@@ -38,7 +38,7 @@ Die SubApp besitzt die Ereignisse `INIT`/`INITO`, die Daten `QI`/`QO` sowie die 
 
 - **QO** (`BOOL`): Quality Output, UND-Verknüpfung (`AND_QO`, `AND_BOOL_5`) der `QO`-Ausgänge der drei `SERVER_0`-Instanzen, von `DigitalOutput_Q1` und von `STATE_CLIENT`
 
-### **Adapter**
+### **Adapter-Anschlüsse**
 
 Keine externen Adapter – die SubApp verwendet intern Adapterverbindungen für den Datenaustausch zwischen den Funktionsblöcken.
 

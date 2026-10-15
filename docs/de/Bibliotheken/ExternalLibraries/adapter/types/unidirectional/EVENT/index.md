@@ -1,12 +1,6 @@
 # EVENT
 
-
-
-```{toctree}
-:maxdepth: 1
-
-AE
-ASR
-ASRT
-EVENT_Adapter_Uni
-```
+- [AE](AE.md)
+- [ASR](ASR.md)
+- [ASRT](ASRT.md)
+- [EVENT_Adapter_Uni](EVENT_Adapter_Uni.md)
