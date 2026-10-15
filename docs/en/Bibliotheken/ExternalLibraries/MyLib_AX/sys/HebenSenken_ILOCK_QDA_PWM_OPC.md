@@ -25,7 +25,7 @@ The subapplication exposes data inputs, the event input `INIT` and the event out
 
 ### **Event Inputs**
 
-- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; starts the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`)
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; starts the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`)
 
 All other triggering is handled internally via the subscribe/publish adapter pattern.
 
@@ -88,7 +88,7 @@ The subapp processes two independent command sources and merges them into a sing
    
    The resulting analog value is converted by `AR_TO_AD_NUM` into a digital number, which drives the `logiBUS_QDA_PWM` block (`DigitalOutput_PWM`) that generates the physical PWM signal on the configured `Output_PWM` channel.
 
-6. **Initialization and status**: `QI` is passed on to all Subscribe/Publish blocks and to `PWM_Mux`. `INIT` runs through the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`); `PWM_Mux.INITO` is output as `INITO` and also triggers `AND_QO.REQ`. `QO` is the AND (`AND_QO`) of the nine `QO` outputs.
+6. **Initialization and status**: `QI` is passed on to all Subscribe/Publish blocks and to `PWM_Mux`. `INIT` runs through the initialisation chain `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`); `PWM_Mux.INITO` is output as `INITO` and also triggers `AND_QO.REQ`. `QO` is the AND (`AND_QO`) of the nine `QO` outputs.
 
 7. **Feedback publishing**: The ILOCK-protected states are published back via four `AX_PUBLISH_1` adapters (`PUBLISH_STATE_HEBEN`, `PUBLISH_TEST_HEBEN`, `PUBLISH_STATE_SENKEN`, `PUBLISH_TEST_SENKEN`) to the respective feedback addresses, ensuring that external systems only see the actual (interlock-protected) commands, not the raw inputs.
 

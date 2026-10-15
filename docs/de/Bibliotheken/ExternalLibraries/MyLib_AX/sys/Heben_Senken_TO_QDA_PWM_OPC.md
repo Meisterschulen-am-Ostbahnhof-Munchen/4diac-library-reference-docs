@@ -15,11 +15,11 @@ Die SubApp `Heben_Senken_TO_QDA_PWM_OPC` ist ein generischer Baustein zur Steuer
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `PWM_Mux.INIT` und `DO_Toggle.INIT` durchgereicht
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; wird an `DO_Toggle.INIT` durchgereicht; `DO_Toggle.INITO` startet `PWM_Mux.INIT` (sequenzielle Kette)
 
 ### **Ereignis-Ausgänge**
 
-- **INITO** (`EInit`): Initialisierung abgeschlossen; echtes Rendezvous-Confirm: `E_REND_2_INITO` feuert `INITO` genau einmal, wenn sowohl `PWM_Mux.INITO` als auch `DO_Toggle.INITO` (zwei unabhängige physische Kanäle) eingetroffen sind
+- **INITO** (`EInit`): Initialisierung abgeschlossen; sequenzielles Confirm: `DO_Toggle` zuerst, dann `PWM_Mux`; `INITO` kommt von `PWM_Mux.INITO` (kein Rendezvous nötig, beide sind reine physische Ausgangskanäle)
 
 ### **Daten-Eingänge**
 
@@ -64,9 +64,9 @@ Die SubApp ist eine Zusammensetzung aus zwei internen SubApps:
    - Der Ausgang ist initial AN und kann über die RPC-Methode `ID_DO_TOGGLE_METHOD` umgeschaltet werden.  
    - Der aktuelle Zustand wird über `ID_DO_STATE_WRITE` publiziert.
 
-`QI` wird gemeinsam an `PWM_Mux.QI` und `DO_Toggle.QI` geführt, das Ereignis `INIT` an `PWM_Mux.INIT` und `DO_Toggle.INIT`; beide physischen Kanäle werden also gemeinsam inaktiv gehalten bzw. vom Aufrufer initialisiert.
+`QI` wird gemeinsam an `PWM_Mux.QI` und `DO_Toggle.QI` geführt, das Ereignis `INIT` an `DO_Toggle.INIT`; `DO_Toggle.INITO` löst `PWM_Mux.INIT` aus. Beide physischen Kanäle werden also gemeinsam inaktiv gehalten bzw. nacheinander vom Aufrufer initialisiert.
 
-Für die Bestätigung gibt es zusätzlich zwei Bausteine: `E_REND_2_INITO` (`iec61499::events::E_REND_2`, Rendezvous/UND, nicht ODER) wartet auf `PWM_Mux.INITO` (`EI1`) **und** `DO_Toggle.INITO` (`EI2`) und feuert dann `INITO` genau einmal (`E_REND_2_INITO.EO` → `INITO` und `AND_QO.REQ`); `INIT` setzt den Rendezvous-Baustein über `E_REND_2_INITO.R` zurück, damit jeder neue Init-Zyklus wieder auf beide Kanäle wartet. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) verknüpft `PWM_Mux.QO` (`IN1`) und `DO_Toggle.QO` (`IN2`) zum Ausgang `QO`.
+Die Bestätigung ist sequenziell (kein `E_REND_2`-Baustein): `PWM_Mux.INITO` → `INITO` und `AND_QO.REQ`. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) verknüpft `PWM_Mux.QO` (`IN1`) und `DO_Toggle.QO` (`IN2`) zum Ausgang `QO`.
 
 Die beiden Teile sind in der Schnittstelle vollständig gekapselt; extern ist nur die Parameterisierung und die Kommunikationsadressen sichtbar.
 

@@ -17,7 +17,7 @@ Die SubApp ist generisch für jeden Aktor mit ratiometrischem 3-Stufen-PWM-Kanal
 
 ### **Ereignis-Eingänge**
 
-- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; startet die Initialisierungskette `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`)
+- **INIT** (`EInit`): Initialisierung; vom Aufrufer sequenziert statt per Auto-Verteilung, damit `QI` vor der physischen Kanalbindung feststeht; startet die Initialisierungskette `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`)
 
 Alle übrigen Ereignisse werden ausschließlich über die internen Adapter (Subscribe/Publish) mit den angeschlossenen Kommunikationskanälen ausgetauscht.
 
@@ -76,7 +76,7 @@ Die SubApp besitzt keine öffentlichen Adapter-Schnittstellen. Alle Kommunikatio
    - **Korrekturfaktor:** `FACTOR = 1.17619` (entspricht 1/0.8502) – kompensiert die Nichtlinearität der PVEA-Ansteuerung.
    - **Skalierung auf 13-Bit-PWM:** `FACTOR = 81.91` (8191/100) – skaliert den Prozentwert auf den vollen Wertebereich des QDA-Ausgangs.
 
-8. **Digitaler PWM-Ausgang:** Der resultierende Analogwert wird über `AR_TO_AD_NUM` in einen numerischen Wert für den `logiBUS_QDA_PWM`-Baustein gewandelt, der den physischen Ausgang `Output_PWM` entsprechend setzt. `QI` der SubApp wird an alle Subscribe-/Publish-Bausteine und an `PWM_Mux` durchgereicht. `INIT` durchläuft die Initialisierungskette `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`); `PWM_Mux.INITO` wird als `INITO` ausgegeben und löst zugleich `AND_QO.REQ` aus. `QO` ist die UND-Verknüpfung (`AND_QO`) der neun `QO`-Ausgänge.
+8. **Digitaler PWM-Ausgang:** Der resultierende Analogwert wird über `AR_TO_AD_NUM` in einen numerischen Wert für den `logiBUS_QDA_PWM`-Baustein gewandelt, der den physischen Ausgang `Output_PWM` entsprechend setzt. `QI` der SubApp wird an alle Subscribe-/Publish-Bausteine und an `PWM_Mux` durchgereicht. `INIT` durchläuft die Initialisierungskette `SUBSCRIBE_HEBEN` → `SUBSCRIBE_TEST_HEBEN` → `SUBSCRIBE_SENKEN` → `SUBSCRIBE_TEST_SENKEN` → `PUBLISH_STATE_HEBEN` → `PUBLISH_TEST_HEBEN` → `PUBLISH_TEST_SENKEN` → `PUBLISH_STATE_SENKEN` → `PWM_Mux` (`HebenSenken_QDA_PWM`); `PWM_Mux.INITO` wird als `INITO` ausgegeben und löst zugleich `AND_QO.REQ` aus. `QO` ist die UND-Verknüpfung (`AND_QO`) der neun `QO`-Ausgänge.
 
 ## Technische Besonderheiten
 

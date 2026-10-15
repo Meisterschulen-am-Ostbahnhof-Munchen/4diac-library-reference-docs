@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 2632.625 392.0"
-     width="2632.625" height="392.0">
+     viewBox="0 0 2906.125 392.0"
+     width="2906.125" height="392.0">
   <style>
     @font-face {
       font-family: "TGL";
@@ -101,7 +101,7 @@
     
     <text x="130.34375" y="66.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
-          fill="#666666" text-anchor="middle">1.7</text>
+          fill="#666666" text-anchor="middle">1.8</text>
 
     <!-- Data Ports -->
 
@@ -193,7 +193,7 @@
           fill="#000000" text-anchor="end" dominant-baseline="middle">Initialisierung - vom Aufrufer sequenziert statt per Auto-Verteilung, damit QI vor der physischen Kanalbindung feststeht – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
 
     <text x="285.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
-          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialisierung abgeschlossen - echtes Rendezvous-Confirm (E_REND_2) aus PWM_Mux.INITO UND DO_Toggle.INITO</text>
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialisierung abgeschlossen - sequenzielles Confirm: DO_Toggle zuerst, dann PWM_Mux (kein Rendezvous noetig, beide sind reine physische Ausgangskanaele)</text>
 
     <text x="-25" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
           fill="#000000" text-anchor="end" dominant-baseline="middle">Physischer PWM-Ausgang (linker Kanal): 25/50/75% Tastgrad, ratiometrisch – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>

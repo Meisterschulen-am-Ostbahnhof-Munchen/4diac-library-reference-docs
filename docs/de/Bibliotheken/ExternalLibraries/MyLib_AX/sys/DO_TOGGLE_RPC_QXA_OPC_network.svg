@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-281.8 -151.0 2217.4 676.0"
-     width="2217" height="676">
+     viewBox="-281.8 -151.0 2667.4 676.0"
+     width="2667" height="676">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,10 +40,10 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-281.8" y="-151.0" width="2217.4" height="676.0" fill="white"/>
-  <rect x="-274.8" y="-144.0" width="2203.4" height="662.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-274.8" y="-144.0" width="2203.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="-274.8" y1="-119.5" x2="1928.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="-281.8" y="-151.0" width="2667.4" height="676.0" fill="white"/>
+  <rect x="-274.8" y="-144.0" width="2653.4" height="662.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-274.8" y="-144.0" width="2653.4" height="25.0" fill="white" stroke="none"/>
+  <line x1="-274.8" y1="-119.5" x2="2378.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="-269.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Digitaler Freigabe-Ausgang als Klick-Toggle (AX_T_FF_INIT, Default AN):
 CREATE_METHOD-Server nimmt einen argumentlosen RPC-Trigger von mehreren
 gleichberechtigten Aufrufern entgegen (z.B. STG1-SoftKey-Relay UND
@@ -55,18 +55,18 @@ Mehrfach-Bedienung.</text>
   <g id="sidebars">
     <rect x="-274.8" y="-119.0" width="130.9" height="637.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-143.9" y1="-119.0" x2="-143.9" y2="518.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1895.2" y="-119.0" width="33.5" height="637.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1895.2" y1="-119.0" x2="1895.2" y2="518.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="2345.2" y="-119.0" width="33.5" height="637.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="2345.2" y1="-119.0" x2="2345.2" y2="518.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
     <polyline points="399.1,192.5 504.1,192.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="399.1,192.5 406.3,192.5 411.1,197.3 411.1,211.5 406.1,216.5 295.2,216.5 290.2,211.5 290.2,197.3 295.0,192.5 302.2,192.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-143.9,-84.0 -81.9,-84.0 -76.9,-79.0 -76.9,170.5 -71.9,175.5 302.2,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="399.1,175.5 504.1,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="613.9,175.5 769.9,175.5 774.9,180.5 774.9,290.5 779.9,295.5 954.1,295.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1070.0,295.5 1077.2,295.5 1082.0,290.7 1082.0,195.5 1077.0,190.5 977.1,190.5 972.1,185.5 972.1,90.3 976.9,85.5 984.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1095.7,85.5 1525.7,85.5 1530.7,80.5 1530.7,-79.0 1535.7,-84.0 1895.2,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1095.7,85.5 1202.7,85.5 1207.7,90.5 1207.7,260.5 1212.7,265.5 1329.1,265.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="613.9,175.5 649.9,175.5 654.9,170.5 654.9,90.5 659.9,85.5 984.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1070.0,295.5 1500.0,295.5 1505.0,290.5 1505.0,-79.0 1510.0,-84.0 2345.2,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1070.0,295.5 1177.0,295.5 1182.0,290.5 1182.0,195.5 1187.0,190.5 1779.1,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1095.7,85.5 1254.7,85.5 1259.7,90.5 1259.7,237.5 1254.7,242.5 947.1,242.5 942.1,247.5 942.1,290.7 946.9,295.5 954.1,295.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-143.9,-67.0 888.1,-67.0 893.1,-62.0 893.1,165.5 898.1,170.5 984.1,170.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="-143.9,-67.0 888.1,-67.0 893.1,-62.0 893.1,165.5 898.1,170.5 984.1,170.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="-143.9,-16.0 888.1,-16.0 893.1,-11.0 893.1,131.5 898.1,136.5 984.1,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
@@ -75,24 +75,24 @@ Mehrfach-Bedienung.</text>
     <polyline points="-143.9,-16.0 -81.9,-16.0 -76.9,-11.0 -76.9,221.5 -71.9,226.5 302.2,226.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-143.9,-16.0 19.1,-16.0 24.1,-11.0 24.1,221.5 29.1,226.5 504.1,226.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-143.9,-16.0 244.1,-16.0 249.1,-11.0 249.1,341.5 254.1,346.5 954.1,346.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="399.1,226.5 686.1,226.5 691.1,231.5 691.1,294.5 696.1,299.5 1329.1,299.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="613.9,226.5 784.9,226.5 789.9,231.5 789.9,311.5 794.9,316.5 1329.1,316.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1070.0,346.5 1189.0,346.5 1194.0,341.5 1194.0,338.5 1199.0,333.5 1329.1,333.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1095.7,136.5 1202.7,136.5 1207.7,141.5 1207.7,345.5 1212.7,350.5 1329.1,350.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1436.2,299.5 1870.2,299.5 1875.2,294.5 1875.2,-62.0 1880.2,-67.0 1895.2,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="399.1,226.5 690.3,226.5 691.1,225.7 691.1,225.3 691.9,224.5 1779.1,224.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="613.9,226.5 784.9,226.5 789.9,231.5 789.9,236.5 794.9,241.5 1779.1,241.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1070.0,346.5 1189.0,346.5 1194.0,341.5 1194.0,263.5 1199.0,258.5 1779.1,258.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1095.7,136.5 1202.7,136.5 1207.7,141.5 1207.7,270.5 1212.7,275.5 1779.1,275.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1886.2,224.5 2320.2,224.5 2325.2,219.5 2325.2,-62.0 2330.2,-67.0 2345.2,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="613.9,260.5 698.9,260.5 703.9,255.5 703.9,243.5 708.9,238.5 744.1,238.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="613.9,260.5 698.9,260.5 703.9,255.5 703.9,243.5 708.9,238.5 744.1,238.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="845.4,238.5 930.4,238.5 935.4,233.5 935.4,192.5 940.4,187.5 984.1,187.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="845.4,238.5 930.4,238.5 935.4,233.5 935.4,192.5 940.4,187.5 984.1,187.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="845.4,255.5 925.4,255.5 930.4,260.5 930.4,375.5 935.4,380.5 954.1,380.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="845.4,255.5 925.4,255.5 930.4,260.5 930.4,375.5 935.4,380.5 954.1,380.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="845.4,238.5 870.4,238.5 875.4,233.5 875.4,192.5 880.4,187.5 984.1,187.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="845.4,238.5 870.4,238.5 875.4,233.5 875.4,192.5 880.4,187.5 984.1,187.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="845.4,255.5 870.4,255.5 875.4,260.5 875.4,375.5 880.4,380.5 954.1,380.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="845.4,255.5 870.4,255.5 875.4,260.5 875.4,375.5 880.4,380.5 954.1,380.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="-148.875,-89.0 -143.875,-84.0 -148.875,-79.0" fill="#63B31F"/>
     <text x="-149.875" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">INIT</text>
-    <polygon points="1900.1875,-89.0 1895.1875,-84.0 1900.1875,-79.0" fill="#63B31F"/>
-    <text x="1901.1875" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="2350.1875,-89.0 2345.1875,-84.0 2350.1875,-79.0" fill="#63B31F"/>
+    <text x="2351.1875" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">INITO</text>
     <polygon points="-148.875,-72.0 -143.875,-67.0 -148.875,-62.0" fill="#3366FF"/>
     <text x="-149.875" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -106,8 +106,8 @@ Mehrfach-Bedienung.</text>
     <polygon points="-148.875,-21.0 -143.875,-16.0 -148.875,-11.0" fill="#A3B08F"/>
     <text x="-149.875" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">QI</text>
-    <polygon points="1900.1875,-72.0 1895.1875,-67.0 1900.1875,-62.0" fill="#A3B08F"/>
-    <text x="1901.1875" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="2350.1875,-72.0 2345.1875,-67.0 2350.1875,-62.0" fill="#A3B08F"/>
+    <text x="2351.1875" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">QO</text>
   </g>
   <g id="instances">
@@ -576,7 +576,7 @@ Mehrfach-Bedienung.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">DigitalOutput_DO</text>
     </g>
-    <g id="fb_AND_QO" transform="translate(1329.1, 255.0)">
+    <g id="fb_AND_QO" transform="translate(1779.1, 180.0)">
       <path d="M 3 0
             L 104.0625 0
             A 3 3 0 0 1 107.0625 3

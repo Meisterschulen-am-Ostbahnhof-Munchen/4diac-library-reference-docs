@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-42.6 -151.0 1408.4 888.0"
-     width="1408" height="888">
+     viewBox="-42.6 -151.0 1894.4 888.0"
+     width="1894" height="888">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,10 +40,10 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-42.6" y="-151.0" width="1408.4" height="888.0" fill="white"/>
-  <rect x="-35.6" y="-144.0" width="1394.4" height="874.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-35.6" y="-144.0" width="1394.4" height="25.0" fill="white" stroke="none"/>
-  <line x1="-35.6" y1="-119.5" x2="1358.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="-42.6" y="-151.0" width="1894.4" height="888.0" fill="white"/>
+  <rect x="-35.6" y="-144.0" width="1880.4" height="874.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-35.6" y="-144.0" width="1880.4" height="25.0" fill="white" stroke="none"/>
+  <line x1="-35.6" y1="-119.5" x2="1844.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="-30.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Waehlt per 2 AX-Booleans (HEBEN/SENKEN) zwischen 3 ratiometrischen PWM-Stufen
 (Danfoss PVEA: 25%=Senken, 50%=Neutral, 75%=Heben, Lastteiler-korrigiert) und
 gibt sie auf einen physischen PWM-Ausgang aus. Reiner
@@ -57,16 +57,16 @@ undefiniertes Verhalten.</text>
   <g id="sidebars">
     <rect x="-35.6" y="-119.0" width="75.6" height="849.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="730.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1325.2" y="-119.0" width="33.5" height="849.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1325.2" y1="-119.0" x2="1325.2" y2="730.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1811.2" y="-119.0" width="33.5" height="849.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1811.2" y1="-119.0" x2="1811.2" y2="730.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 599.0,-84.0 604.0,-79.0 604.0,485.5 609.0,490.5 1168.0,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1305.2,490.5 1311.2,490.5 1315.2,486.5 1315.2,-80.0 1319.2,-84.0 1325.2,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 647.0,-84.0 652.0,-79.0 652.0,485.5 657.0,490.5 1168.0,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1305.2,490.5 1736.2,490.5 1741.2,485.5 1741.2,-79.0 1746.2,-84.0 1811.2,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-67.0 1072.0,-67.0 1077.0,-62.0 1077.0,570.5 1082.0,575.5 1168.0,575.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="40.0,-67.0 1072.0,-67.0 1077.0,-62.0 1077.0,570.5 1082.0,575.5 1168.0,575.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
     <polyline points="40.0,-16.0 1072.0,-16.0 1077.0,-11.0 1077.0,536.5 1082.0,541.5 1168.0,541.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1305.2,541.5 1311.2,541.5 1315.2,537.5 1315.2,-63.0 1319.2,-67.0 1325.2,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1305.2,541.5 1786.2,541.5 1791.2,536.5 1791.2,-62.0 1796.2,-67.0 1811.2,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-50.0 332.0,-50.0 337.0,-45.0 337.0,474.5 342.0,479.5 553.0,479.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,-33.0 332.0,-33.0 337.0,-28.0 337.0,491.5 342.0,496.5 553.0,496.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="40.0,1.0 173.0,1.0 178.0,6.0 178.0,278.5 183.0,283.5 523.0,283.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
@@ -98,8 +98,8 @@ undefiniertes Verhalten.</text>
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
     <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">INIT</text>
-    <polygon points="1330.2495,-89.0 1325.2495,-84.0 1330.2495,-79.0" fill="#63B31F"/>
-    <text x="1331.2495" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1816.2495,-89.0 1811.2495,-84.0 1816.2495,-79.0" fill="#63B31F"/>
+    <text x="1817.2495" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">INITO</text>
     <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#3366FF"/>
     <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -113,8 +113,8 @@ undefiniertes Verhalten.</text>
     <polygon points="35.0,-21.0 40.0,-16.0 35.0,-11.0" fill="#A3B08F"/>
     <text x="34.0" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">QI</text>
-    <polygon points="1330.2495,-72.0 1325.2495,-67.0 1330.2495,-62.0" fill="#A3B08F"/>
-    <text x="1331.2495" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1816.2495,-72.0 1811.2495,-67.0 1816.2495,-62.0" fill="#A3B08F"/>
+    <text x="1817.2495" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">QO</text>
     <path d="M 30.0 -4.0 L 32.5 -4.0 L 32.5 -2.333333333333333 L 35.0 -2.333333333333333 L 35.0 -4.0 L 40.0 -4.0 L 40.0 6.0 L 35.0 6.0 L 35.0 4.333333333333333 L 32.5 4.333333333333333 L 32.5 6.0 L 30.0 6.0 Z" fill="#845DAF"/>
     <text x="27.0" y="5.2" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"

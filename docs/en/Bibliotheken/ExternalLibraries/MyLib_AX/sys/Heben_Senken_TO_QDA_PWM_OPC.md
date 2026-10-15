@@ -15,11 +15,11 @@ Heben_Senken_TO_QDA_PWM_OPC is a composite subapplication that integrates two in
 
 ### **Event Inputs**
 
-- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `PWM_Mux.INIT` and `DO_Toggle.INIT`
+- **INIT** (`EInit`): initialisation; sequenced by the caller instead of automatic distribution, so that `QI` is settled before the physical channel is bound; passed on to `DO_Toggle.INIT`; `DO_Toggle.INITO` starts `PWM_Mux.INIT` (sequential chain)
 
 ### **Event Outputs**
 
-- **INITO** (`EInit`): initialisation completed; true rendezvous confirm: `E_REND_2_INITO` fires `INITO` exactly once when both `PWM_Mux.INITO` and `DO_Toggle.INITO` (two independent physical channels) have arrived
+- **INITO** (`EInit`): initialisation completed; sequential confirm: `DO_Toggle` first, then `PWM_Mux`; `INITO` comes from `PWM_Mux.INITO` (no rendezvous needed, both are plain physical output channels)
 
 ### **Data Inputs**
 
@@ -52,7 +52,7 @@ None.
 
 ## Functionality
 
-The subapplication collects remote raise/lower commands and OR‑combines them with IO‑test signals. The internal PWM subapplication (`HebenSenken_ILOCK_QDA_PWM_OPC`) generates a single ratiometric PWM signal with a duty cycle of 25% (lower), 50% (neutral), and 75% (raise), incorporating an interlock and a protection dead time. The second internal subapplication (`DO_TOGGLE_RPC_QXA_OPC`) manages a digital output that can be toggled via an RPC method, defaulting to ON. `QI` is routed jointly to `PWM_Mux.QI` and `DO_Toggle.QI`, and the event `INIT` to `PWM_Mux.INIT` and `DO_Toggle.INIT`, so both physical channels are kept inactive together or initialised by the caller. For the confirmation there are two additional blocks: `E_REND_2_INITO` (`iec61499::events::E_REND_2`, rendezvous/AND, not OR) waits for `PWM_Mux.INITO` (`EI1`) **and** `DO_Toggle.INITO` (`EI2`) and then fires `INITO` exactly once (`E_REND_2_INITO.EO` → `INITO` and `AND_QO.REQ`); `INIT` resets the rendezvous block via `E_REND_2_INITO.R`, so that every new init cycle waits for both channels again. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) combines `PWM_Mux.QO` (`IN1`) and `DO_Toggle.QO` (`IN2`) into the output `QO`. The two modules operate independently but are combined here to provide a unified interface for a PVEA actuator with two physical channels.
+The subapplication collects remote raise/lower commands and OR‑combines them with IO‑test signals. The internal PWM subapplication (`HebenSenken_ILOCK_QDA_PWM_OPC`) generates a single ratiometric PWM signal with a duty cycle of 25% (lower), 50% (neutral), and 75% (raise), incorporating an interlock and a protection dead time. The second internal subapplication (`DO_TOGGLE_RPC_QXA_OPC`) manages a digital output that can be toggled via an RPC method, defaulting to ON. `QI` is routed jointly to `PWM_Mux.QI` and `DO_Toggle.QI`, and the event `INIT` to `DO_Toggle.INIT`; `DO_Toggle.INITO` triggers `PWM_Mux.INIT`, so both physical channels are kept inactive together or initialised one after the other by the caller. The confirmation is sequential (no `E_REND_2` block): `PWM_Mux.INITO` → `INITO` and `AND_QO.REQ`. `AND_QO` (`iec61131::booleanOperators::AND_BOOL_2`) combines `PWM_Mux.QO` (`IN1`) and `DO_Toggle.QO` (`IN2`) into the output `QO`. The two modules operate independently but are combined here to provide a unified interface for a PVEA actuator with two physical channels.
 
 ## Technical Features
 
