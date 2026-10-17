@@ -14,7 +14,7 @@
 |---|---|---|---|
 | `REQ` | `Event (event input)` | `With` = `sMgr` | Execution request. |
 | `CNF` | `Event (event output)` | `With` = (unnamed variable) | Confirmation; delivers the return value. |
-| `sMgr` | `WSTRING (input variable)` | - | MGR_ID of the station, e.g. `logiBUS::stations::Computers::C_12` |
+| `sMgr` | `WSTRING (input variable)` | - | MGR_ID of the station in the format `host:port`, e.g. `"192.168.1.12:61499"`. This is the value of a station constant (`logiBUS::stations::Computers::C_12` has the value `"192.168.1.12:61499"`). |
 | (unnamed) | `WSTRING (output variable)` | - | Return value `F_MGR_TO_OPC` (empty output name). |
 
 ## Program Flow and Connections
@@ -45,7 +45,7 @@ END_FUNCTION
 Call and result:
 
 ```
-MyLib_OPC::F_MGR_TO_OPC('192.168.1.12:61499')  ->  opc.tcp://192.168.1.12:4840
+MyLib_OPC::F_MGR_TO_OPC("192.168.1.12:61499")  ->  opc.tcp://192.168.1.12:4840
 ```
 
 ## Usage

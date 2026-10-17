@@ -14,7 +14,7 @@
 |---|---|---|---|
 | `REQ` | `Event (Ereigniseingang)` | `With` = `sMgr` | Anforderung zur Ausführung. |
 | `CNF` | `Event (Ereignisausgang)` | `With` = (unbenannte Variable) | Bestätigung; liefert den Rückgabewert. |
-| `sMgr` | `WSTRING (Eingangsvariable)` | - | MGR_ID der Station, z.B. `logiBUS::stations::Computers::C_12` |
+| `sMgr` | `WSTRING (Eingangsvariable)` | - | MGR_ID der Station im Format `host:port`, z. B. `"192.168.1.12:61499"`. Das ist der Wert einer Stationskonstante (`logiBUS::stations::Computers::C_12` hat den Wert `"192.168.1.12:61499"`). |
 | (unbenannt) | `WSTRING (Ausgangsvariable)` | - | Rückgabewert `F_MGR_TO_OPC` (leerer Ausgangsname). |
 
 ## Programmablauf und Verbindungen
@@ -45,7 +45,7 @@ END_FUNCTION
 Aufruf und Ergebnis:
 
 ```
-MyLib_OPC::F_MGR_TO_OPC('192.168.1.12:61499')  ->  opc.tcp://192.168.1.12:4840
+MyLib_OPC::F_MGR_TO_OPC("192.168.1.12:61499")  ->  opc.tcp://192.168.1.12:4840
 ```
 
 ## Anwendung
