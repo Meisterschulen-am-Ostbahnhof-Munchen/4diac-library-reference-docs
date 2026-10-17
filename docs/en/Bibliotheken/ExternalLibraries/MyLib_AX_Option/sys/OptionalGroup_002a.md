@@ -1,0 +1,50 @@
+# OptionalGroup_002a
+
+![OptionalGroup_002a_network](./OptionalGroup_002a_network.svg)
+
+* * * * * * * * * *
+
+## Introduction
+
+`OptionalGroup_002a` is a SubApp (library `MyLib_AX_Option`): option group 2a. Like [`OptionalGroup_001b`](OptionalGroup_001b.md), its digital input `Input_I2` and digital output `Output_Q2` (logiBUS) are enabled via the option adapter. In addition, the group passes the activation on through the plug `AOption_OUT` to a downstream group - for sequential activation of several groups (first 2a, then the downstream group).
+
+![OptionalGroup_002a](OptionalGroup_002a.svg)
+
+## Used Function Blocks (FBs)
+
+### Sub-blocks: OptionalGroup_002a
+
+- **Type**: SubAppType
+- **Interface**: socket `AOption_IN` of type `Option::AOption` (adapter input) and plug `AOption_OUT` of type `Option::AOption` (adapter output).
+- **Internal FBs used**:
+    - **AOption_X_TO_EVENT**: `Option::conversion::AOption_X_TO_EVENT`, converts the adapter at the socket into `INIT_REQ`/`QI_OUT`/`INIT_CNF`.
+    - **DigitalInput_I2**: `logiBUS::io::DI::logiBUS_IXA`, parameter `Input = Input_I2`.
+    - **DigitalOutput_Q2**: `logiBUS::io::DQ::logiBUS_QXA`, parameter `Output = Output_Q2`.
+    - **AOption_EVENT_TO_X**: `Option::conversion::AOption_EVENT_TO_X`, converts `INIT_REQ`/`QI_OUT` into the adapter at the plug `AOption_OUT` and reports `INIT_CNF` back.
+
+## Program Flow and Connections
+
+- `AOption_IN` -> `AOption_X_TO_EVENT.AOption_IN`
+- Init chain: `AOption_X_TO_EVENT.INIT_REQ` -> `DigitalInput_I2.INIT`; `DigitalInput_I2.INITO` -> `DigitalOutput_Q2.INIT`; `DigitalOutput_Q2.INITO` -> `AOption_EVENT_TO_X.INIT_REQ`; `AOption_EVENT_TO_X.INIT_CNF` -> `AOption_X_TO_EVENT.INIT_CNF`
+- `AOption_X_TO_EVENT.QI_OUT` -> `DigitalInput_I2.QI`, `DigitalOutput_Q2.QI` and `AOption_EVENT_TO_X.QI_OUT`
+- `AOption_EVENT_TO_X.AOption_OUT` -> `AOption_OUT`
+- Adapter connection `DigitalInput_I2.IN` -> `DigitalOutput_Q2.OUT`: the input is routed through to the output.
+
+## Technical Features
+
+- `AOption_OUT` is only triggered once `DigitalOutput_Q2` itself is initialized (`DigitalOutput_Q2.INITO` -> `AOption_EVENT_TO_X.INIT_REQ`).
+- Its `INIT_CNF` is reported back to the own socket `AOption_IN` of the group. The calling DEMUX therefore only sees the group as done once the entire chain (including downstream groups at `AOption_OUT`) has acknowledged.
+- The `QI` of the group is passed on to input, output and the plug `AOption_OUT`.
+
+## Application Scenarios
+
+- First link of a daisy chain: `AOption_OUT` is connected to the socket of a downstream group such as [`OptionalGroup_001b`](OptionalGroup_001b.md), so both groups are activated one after the other (first a, then b).
+
+## Summary
+
+`OptionalGroup_002a` bundles `Input_I2` and `Output_Q2` into an option group switchable via `AOption` and passes the activation on to the next group via `AOption_OUT`.
+
+## 🛠️ Related Exercises
+
+- [Uebung_094b3f_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Uebungen_doc/Uebung_094b3f_AX/)
+
