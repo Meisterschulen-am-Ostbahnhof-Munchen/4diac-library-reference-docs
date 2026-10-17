@@ -38,25 +38,29 @@ Keine vorhanden.
 
 ## Funktionsweise
 
-Das interne Netzwerk enthält einen FB `OR_QI` vom Typ `iec61131::booleanOperators::OR_BOOL_2`.
+Das interne Netzwerk enthält drei FBs: `E_MUX_2` (`iec61499::events::E_MUX_2`), `OR_QI` (`iec61131::booleanOperators::OR_BOOL_2`) und `E_DEMUX_2` (`iec61499::events::E_DEMUX_2`).
 
 Ereignisse:
 
-- `IN1.INIT_REQ` -> `OR_QI.REQ` und `IN2.INIT_REQ` -> `OR_QI.REQ`
+- `IN1.INIT_REQ` -> `E_MUX_2.EI1` (`K = 0`) und `IN2.INIT_REQ` -> `E_MUX_2.EI2` (`K = 1`)
+- `E_MUX_2.EO` -> `OR_QI.REQ`
 - `OR_QI.CNF` -> `OUT.INIT_REQ`
-- `IN1.INIT_REQ` -> `IN1.INIT_CNF` und `IN2.INIT_REQ` -> `IN2.INIT_CNF`
+- `OUT.INIT_CNF` -> `E_DEMUX_2.EI`
+- `E_DEMUX_2.EO1` -> `IN1.INIT_CNF` und `E_DEMUX_2.EO2` -> `IN2.INIT_CNF`
 
 Daten:
 
 - `IN1.QI_OUT` -> `OR_QI.IN1`, `IN2.QI_OUT` -> `OR_QI.IN2`
 - `OR_QI.OUT` -> `OUT.QI_OUT`
+- `E_MUX_2.K` -> `E_DEMUX_2.K`
 
-Jede Anforderung an `IN1` oder `IN2` stößt die ODER-Verknüpfung an. Deren Ergebnis wird als `INIT_REQ` mit `QI_OUT` an `OUT` weitergegeben.
+`E_MUX_2` merkt sich in `K`, über welchen Socket die Anforderung kam, und stößt erst danach die ODER-Verknüpfung an. Deren Ergebnis geht als `INIT_REQ` mit `QI_OUT` an `OUT`. Die Bestätigung `OUT.INIT_CNF` leitet `E_DEMUX_2` anhand von `K` an genau den Socket zurück, der angefragt hat.
 
 ## Technische Besonderheiten
 
-- **Sofortige Bestätigung:** `INIT_CNF` der Eingänge wird direkt aus dem eigenen `INIT_REQ` erzeugt und wartet nicht auf `OUT.INIT_CNF`. Ein aufrufender DEMUX oder ein [`AOption_T_2`](../splitting/AOption_T_2.md) sieht den Eingang also schon als bestätigt, bevor die nachgeschaltete Gruppe fertig initialisiert ist.
-- **Kein Merker:** Der Baustein speichert nichts; maßgeblich sind die aktuellen `QI_OUT`-Werte der beiden Sockets.
+- **Bestätigung erst nach OUT:** Ein Eingang wird erst bestätigt, wenn die Gruppe am `OUT` fertig ist. Ein vorgeschalteter DEMUX oder [`AOption_T_2`](../splitting/AOption_T_2.md) sieht die Kette also erst als fertig, wenn sie es tatsächlich ist.
+- **Reihenfolge per Verdrahtung:** Weil `OR_QI` über `E_MUX_2.EO` angestoßen wird, ist `K` immer gesetzt, bevor `OUT.INIT_REQ` rausgeht.
+- **Nur eine offene Anforderung:** `K` fasst genau einen Absender. Kommt die zweite Anforderung, bevor `OUT.INIT_CNF` zurück ist, geht die Zuordnung verloren. Hinter einem DEMUX (Break-before-Make) passiert das nicht; für unabhängige Quellen bräuchte es einen BasicFB mit ECC.
 - **Ein DEMUX-Ausgang nur einmal:** Soll derselbe Ausgang zusätzlich eine eigene Gruppe speisen, wird vorher ein [`AOption_T_2`](../splitting/AOption_T_2.md) eingesetzt.
 
 ## Anwendungsszenarien
@@ -65,7 +69,7 @@ Jede Anforderung an `IN1` oder `IN2` stößt die ODER-Verknüpfung an. Deren Erg
 
 ## Zusammenfassung
 
-`AOption_OR_2` führt zwei `AOption`-Anforderungen mit einem `OR_BOOL_2` zu einer zusammen: `OUT` ist aktiv, wenn `IN1` oder `IN2` aktiv ist.
+`AOption_OR_2` führt zwei `AOption`-Anforderungen zu einer zusammen (`OUT` aktiv, wenn `IN1` oder `IN2` aktiv ist) und gibt die Bestätigung über `E_MUX_2`/`E_DEMUX_2` an den anfragenden Socket zurück.
 
 ## 🛠️ Zugehörige Übungen
 
