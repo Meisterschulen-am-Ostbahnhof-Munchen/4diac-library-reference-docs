@@ -36,6 +36,8 @@ F_MGR_TO_OPC := CONCAT("opc.tcp://", LEFT(sMgr, FIND(sMgr, ":")), "4840");
 END_FUNCTION
 ```
 
+Note: The source comment `// MGR_ID der Station, z.B. logiBUS::stations::Computers::C_12` names the station constant. `sMgr` receives its value in the format `host:port` (here `"192.168.1.12:61499"`); a hierarchical name without a colon would not give a valid endpoint.
+
 1. `FIND(sMgr, ":")` returns the position of the first colon.
 2. `LEFT(sMgr, ...)` cuts the text up to and including this colon (`192.168.1.12:`); the MGR port `61499` is dropped.
 3. `CONCAT` joins `opc.tcp://`, this part and the fixed OPC-UA port `4840`.
