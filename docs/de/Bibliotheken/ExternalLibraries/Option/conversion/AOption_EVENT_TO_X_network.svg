@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-31.6 -151.0 1255.2 588.0"
-     width="1255" height="588">
+     viewBox="-19.1 -151.0 1229.8 588.0"
+     width="1230" height="588">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,21 +40,21 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-31.6" y="-151.0" width="1255.2" height="588.0" fill="white"/>
-  <rect x="-24.6" y="-144.0" width="1241.2" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-24.6" y="-144.0" width="1241.2" height="25.0" fill="white" stroke="none"/>
-  <line x1="-24.6" y1="-119.5" x2="1216.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-19.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Composite FB for convert EVENT to AOption (Fan-Out, haelt den PLUG)</text>
+  <rect x="-19.1" y="-151.0" width="1229.8" height="588.0" fill="white"/>
+  <rect x="-12.1" y="-144.0" width="1215.8" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-12.1" y="-144.0" width="1215.8" height="25.0" fill="white" stroke="none"/>
+  <line x1="-12.1" y1="-119.5" x2="1203.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-7.1" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Composite FB for convert EVENT to AOption (Fan-Out, haelt den PLUG)</text>
   <g id="sidebars">
-    <rect x="-24.6" y="-119.0" width="64.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-12.1" y="-119.0" width="52.1" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="64.6" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="51.8" height="549.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 217.0,-84.0 222.0,-79.0 222.0,80.5 227.0,85.5 395.4,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="533.6,85.5 1044.6,85.5 1049.6,80.5 1049.6,-79.0 1054.6,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 154.0,-67.0 159.0,-62.0 159.0,114.5 164.0,119.5 395.4,119.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 217.0,-84.0 222.0,-79.0 222.0,80.5 227.0,85.5 408.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="520.9,85.5 1031.9,85.5 1036.9,80.5 1036.9,-79.0 1041.9,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 154.0,-67.0 159.0,-62.0 159.0,114.5 164.0,119.5 408.1,119.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
@@ -68,18 +68,18 @@
           fill="#000000" text-anchor="end">QI_OUT</text>
   </g>
   <g id="instances">
-    <g id="fb_AOption_OUT" transform="translate(395.4, 75.0)">
+    <g id="fb_AOption_OUT" transform="translate(408.1, 75.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -94,36 +94,36 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_REQ</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -131,7 +131,7 @@
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AOption_OUT</text>
     </g>

@@ -48,19 +48,19 @@
   <g id="sidebars">
   </g>
   <g id="connections">
-    <polyline points="365.7,85.5 390.7,85.5 395.7,90.5 395.7,95.5 400.7,100.5 593.8,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="365.7,160.5 390.7,160.5 395.7,155.5 395.7,122.5 400.7,117.5 593.8,117.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.1,100.5 863.8,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.1,117.5 738.1,117.5 743.1,122.5 743.1,170.5 748.1,175.5 866.3,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="365.7,119.5 390.7,119.5 395.7,124.5 395.7,146.5 400.7,151.5 593.8,151.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="365.7,194.5 390.7,194.5 395.7,189.5 395.7,173.5 400.7,168.5 593.8,168.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.1,151.5 738.1,151.5 743.1,146.5 743.1,139.5 748.1,134.5 863.8,134.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="713.1,168.5 738.1,168.5 743.1,173.5 743.1,204.5 748.1,209.5 866.3,209.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="364.5,85.5 389.5,85.5 394.5,90.5 394.5,95.5 399.5,100.5 592.6,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="364.5,160.5 389.5,160.5 394.5,155.5 394.5,122.5 399.5,117.5 592.6,117.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="711.8,100.5 862.6,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="711.8,117.5 736.8,117.5 741.8,122.5 741.8,170.5 746.8,175.5 865.1,175.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="364.5,119.5 389.5,119.5 394.5,124.5 394.5,146.5 399.5,151.5 592.6,151.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="364.5,194.5 389.5,194.5 394.5,189.5 394.5,173.5 399.5,168.5 592.6,168.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="711.8,151.5 736.8,151.5 741.8,146.5 741.8,139.5 746.8,134.5 862.6,134.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="711.8,168.5 736.8,168.5 741.8,173.5 741.8,204.5 746.8,209.5 865.1,209.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
   </g>
   <g id="instances">
-    <g id="fb_A2X2_OUT" transform="translate(593.8, 90.0)">
+    <g id="fb_A2X2_OUT" transform="translate(592.6, 90.0)">
       <path d="M 3 0
             L 116.25 0
             A 3 3 0 0 1 119.25 3
@@ -142,7 +142,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">A2X2_OUT</text>
     </g>
-    <g id="fb_REQ_UP" transform="translate(863.8, 90.0)">
+    <g id="fb_REQ_UP" transform="translate(862.6, 90.0)">
       <path d="M 3 0
             L 53.875 0
             A 3 3 0 0 1 56.875 3
@@ -206,7 +206,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">REQ_UP</text>
     </g>
-    <g id="fb_REQ_DOWN" transform="translate(866.3, 165.0)">
+    <g id="fb_REQ_DOWN" transform="translate(865.1, 165.0)">
       <path d="M 3 0
             L 53.875 0
             A 3 3 0 0 1 56.875 3
@@ -270,7 +270,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">REQ_DOWN</text>
     </g>
-    <g id="fb_IND_UP" transform="translate(308.8, 75.0)">
+    <g id="fb_IND_UP" transform="translate(307.6, 75.0)">
       <path d="M 3 0
             L 53.875 0
             A 3 3 0 0 1 56.875 3
@@ -334,7 +334,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">IND_UP</text>
     </g>
-    <g id="fb_IND_DOWN" transform="translate(308.9, 150.0)">
+    <g id="fb_IND_DOWN" transform="translate(307.6, 150.0)">
       <path d="M 3 0
             L 53.875 0
             A 3 3 0 0 1 56.875 3

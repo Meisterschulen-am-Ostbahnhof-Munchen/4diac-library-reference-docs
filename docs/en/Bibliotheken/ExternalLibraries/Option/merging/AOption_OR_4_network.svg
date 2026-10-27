@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="53.0 -93.0 1142.2 752.0"
-     width="1142" height="752">
+     viewBox="53.0 -93.0 1126.0 752.0"
+     width="1126" height="752">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,47 +40,47 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="53.0" y="-93.0" width="1142.2" height="752.0" fill="white"/>
-  <rect x="60.0" y="-86.0" width="1128.2" height="738.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="60.0" y="-86.0" width="1128.2" height="25.0" fill="white" stroke="none"/>
-  <line x1="60.0" y1="-61.5" x2="1188.2" y2="-61.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="53.0" y="-93.0" width="1126.0" height="752.0" fill="white"/>
+  <rect x="60.0" y="-86.0" width="1112.0" height="738.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="60.0" y="-86.0" width="1112.0" height="25.0" fill="white" stroke="none"/>
+  <line x1="60.0" y1="-61.5" x2="1172.0" y2="-61.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="65.0" y="-69.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Options-Fan-In: 4 AOption-Sockets IN1/IN2/IN3/IN4 auf 1 Plug OUT, QI_OUT = IN1 ODER IN2 ODER IN3 ODER IN4. OUT.INIT_CNF geht per E_MUX_4/E_DEMUX_4 an den anfragenden Socket zurueck.</text>
   <g id="sidebars">
   </g>
   <g id="connections">
-    <polyline points="916.8,145.5 1050.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1188.2,145.5 1195.4,145.5 1200.2,140.7 1200.2,62.5 1195.2,57.5 263.0,57.5 258.0,62.5 258.0,140.7 262.8,145.5 270.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="376.8,145.5 430.8,145.5 435.8,140.5 435.8,90.5 440.8,85.5 495.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="376.8,162.5 430.8,162.5 435.8,167.5 435.8,230.5 440.8,235.5 495.0,235.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="376.8,179.5 410.8,179.5 415.8,184.5 415.8,380.5 420.8,385.5 495.0,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="376.8,196.5 401.8,196.5 406.8,201.5 406.8,485.5 411.8,490.5 495.0,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,85.5 640.4,85.5 645.2,80.7 645.2,41.5 640.2,36.5 -18.0,36.5 -23.0,41.5 -23.0,140.5 -18.0,145.5 60.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,235.5 640.4,235.5 645.2,240.3 645.2,299.5 640.2,304.5 -19.0,304.5 -24.0,299.5 -24.0,167.5 -19.0,162.5 60.0,162.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,385.5 640.4,385.5 645.2,390.3 645.2,443.5 640.2,448.5 2.0,448.5 -3.0,443.5 -3.0,184.5 2.0,179.5 60.0,179.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,490.5 640.4,490.5 645.2,495.3 645.2,548.5 640.2,553.5 23.0,553.5 18.0,548.5 18.0,201.5 23.0,196.5 60.0,196.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="152.4,145.5 810.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,119.5 719.2,119.5 724.2,124.5 724.2,174.5 729.2,179.5 810.0,179.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,269.5 719.2,269.5 724.2,264.5 724.2,201.5 729.2,196.5 810.0,196.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,419.5 733.2,419.5 738.2,414.5 738.2,218.5 743.2,213.5 810.0,213.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="633.2,524.5 751.2,524.5 756.2,519.5 756.2,235.5 761.2,230.5 810.0,230.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="916.8,179.5 1050.0,179.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="152.4,230.5 270.0,230.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="914.3,145.5 1054.6,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="1167.4,145.5 1174.6,145.5 1179.4,140.7 1179.4,62.5 1174.4,57.5 267.6,57.5 262.6,62.5 262.6,140.7 267.4,145.5 274.6,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="378.0,145.5 432.0,145.5 437.0,140.5 437.0,90.5 442.0,85.5 499.6,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="378.0,162.5 432.0,162.5 437.0,167.5 437.0,230.5 442.0,235.5 499.6,235.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="378.0,179.5 412.0,179.5 417.0,184.5 417.0,380.5 422.0,385.5 499.6,385.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="378.0,196.5 403.0,196.5 408.0,201.5 408.0,485.5 413.0,490.5 499.6,490.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,85.5 619.6,85.5 624.4,80.7 624.4,41.5 619.4,36.5 -13.4,36.5 -18.4,41.5 -18.4,140.5 -13.4,145.5 64.6,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,235.5 619.6,235.5 624.4,240.3 624.4,299.5 619.4,304.5 -14.4,304.5 -19.4,299.5 -19.4,167.5 -14.4,162.5 64.6,162.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,385.5 619.6,385.5 624.4,390.3 624.4,443.5 619.4,448.5 6.6,448.5 1.6,443.5 1.6,184.5 6.6,179.5 64.6,179.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,490.5 619.6,490.5 624.4,495.3 624.4,548.5 619.4,553.5 27.6,553.5 22.6,548.5 22.6,201.5 27.6,196.5 64.6,196.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="153.0,145.5 814.6,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,119.5 698.4,119.5 703.4,124.5 703.4,174.5 708.4,179.5 814.6,179.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,269.5 698.4,269.5 703.4,264.5 703.4,201.5 708.4,196.5 814.6,196.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,419.5 712.4,419.5 717.4,414.5 717.4,218.5 722.4,213.5 814.6,213.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="612.4,524.5 730.4,524.5 735.4,519.5 735.4,235.5 740.4,230.5 814.6,230.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="914.3,179.5 1054.6,179.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="153.0,230.5 274.6,230.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
   </g>
   <g id="instances">
-    <g id="fb_OUT" transform="translate(1050.0, 135.0)">
+    <g id="fb_OUT" transform="translate(1054.6, 135.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -95,36 +95,36 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_REQ</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -132,22 +132,22 @@
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">OUT</text>
     </g>
-    <g id="fb_IN1" transform="translate(495.0, 75.0)">
+    <g id="fb_IN1" transform="translate(499.6, 75.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -162,59 +162,59 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_CNF</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_REQ</text>
-      <polygon points="133.2,39.5 138.2,44.5 133.2,49.5" fill="#A3B08F"/>
-      <text x="132.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,39.5 112.8125,44.5 107.8125,49.5" fill="#A3B08F"/>
+      <text x="106.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QI_OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">IN1</text>
     </g>
-    <g id="fb_IN2" transform="translate(495.0, 225.0)">
+    <g id="fb_IN2" transform="translate(499.6, 225.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -229,59 +229,59 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_CNF</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_REQ</text>
-      <polygon points="133.2,39.5 138.2,44.5 133.2,49.5" fill="#A3B08F"/>
-      <text x="132.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,39.5 112.8125,44.5 107.8125,49.5" fill="#A3B08F"/>
+      <text x="106.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QI_OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">IN2</text>
     </g>
-    <g id="fb_IN3" transform="translate(495.0, 375.0)">
+    <g id="fb_IN3" transform="translate(499.6, 375.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -296,59 +296,59 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_CNF</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_REQ</text>
-      <polygon points="133.2,39.5 138.2,44.5 133.2,49.5" fill="#A3B08F"/>
-      <text x="132.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,39.5 112.8125,44.5 107.8125,49.5" fill="#A3B08F"/>
+      <text x="106.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QI_OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">IN3</text>
     </g>
-    <g id="fb_IN4" transform="translate(495.0, 480.0)">
+    <g id="fb_IN4" transform="translate(499.6, 480.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 52
-            A 3 3 0 0 1 135.2 55
+            L 109.8125 0
+            A 3 3 0 0 1 112.8125 3
+            L 112.8125 18
+            A 3 3 0 0 1 109.8125 21
+            L 103.8125 21
+            L 103.8125 35
+            L 109.8125 35
+            A 3 3 0 0 1 112.8125 38
+            L 112.8125 52
+            A 3 3 0 0 1 109.8125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -363,59 +363,59 @@
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 35.89999999999999 20.0
-            L 49.89999999999999 20.0
-            A 1 1 0 0 1 50.89999999999999 21.0
-            L 50.89999999999999 24.0
-            L 49.39999999999999 24.0
-            L 49.39999999999999 26.666666666666668
-            L 50.89999999999999 26.666666666666668
-            L 50.89999999999999 35.0
-            A 1 1 0 0 1 49.89999999999999 36.0
-            L 35.89999999999999 36.0
-            A 1 1 0 0 1 34.89999999999999 35.0
-            L 34.89999999999999 26.666666666666668
-            L 36.39999999999999 26.666666666666668
-            L 36.39999999999999 24.0
-            L 34.89999999999999 24.0
-            L 34.89999999999999 21.0
-            A 1 1 0 0 1 35.89999999999999 20.0
+      <path d="M 28.78125 20.0
+            L 42.78125 20.0
+            A 1 1 0 0 1 43.78125 21.0
+            L 43.78125 24.0
+            L 42.28125 24.0
+            L 42.28125 26.666666666666668
+            L 43.78125 26.666666666666668
+            L 43.78125 35.0
+            A 1 1 0 0 1 42.78125 36.0
+            L 28.78125 36.0
+            A 1 1 0 0 1 27.78125 35.0
+            L 27.78125 26.666666666666668
+            L 29.28125 26.666666666666668
+            L 29.28125 24.0
+            L 27.78125 24.0
+            L 27.78125 21.0
+            A 1 1 0 0 1 28.78125 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="42.89999999999999" y="32.0"
+      <text x="35.78125" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">A</text>
-      <text x="52.89999999999999" y="32.0"
+      <text x="45.78125" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AOption</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">INIT_CNF</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,5.5 112.8125,10.5 107.8125,15.5" fill="#63B31F"/>
+      <text x="106.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INIT_REQ</text>
-      <polygon points="133.2,39.5 138.2,44.5 133.2,49.5" fill="#A3B08F"/>
-      <text x="132.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="107.8125,39.5 112.8125,44.5 107.8125,49.5" fill="#A3B08F"/>
+      <text x="106.8125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QI_OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="56.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">IN4</text>
     </g>
-    <g id="fb_OR_QI" transform="translate(810.0, 135.0)">
+    <g id="fb_OR_QI" transform="translate(814.6, 135.0)">
       <path d="M 3 0
-            L 103.8 0
-            A 3 3 0 0 1 106.8 3
-            L 106.8 18
-            A 3 3 0 0 1 103.8 21
-            L 97.8 21
-            L 97.8 35
-            L 103.8 35
-            A 3 3 0 0 1 106.8 38
-            L 106.8 103
-            A 3 3 0 0 1 103.8 106
+            L 96.75 0
+            A 3 3 0 0 1 99.75 3
+            L 99.75 18
+            A 3 3 0 0 1 96.75 21
+            L 90.75 21
+            L 90.75 35
+            L 96.75 35
+            A 3 3 0 0 1 99.75 38
+            L 99.75 103
+            A 3 3 0 0 1 96.75 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 38
@@ -458,8 +458,8 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="101.8,5.5 106.8,10.5 101.8,15.5" fill="#63B31F"/>
-      <text x="100.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="94.75,5.5 99.75,10.5 94.75,15.5" fill="#63B31F"/>
+      <text x="93.75" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -473,28 +473,28 @@
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#A3B08F"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN4</text>
-      <polygon points="101.8,39.5 106.8,44.5 101.8,49.5" fill="#A3B08F"/>
-      <text x="100.8" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="94.75,39.5 99.75,44.5 94.75,49.5" fill="#A3B08F"/>
+      <text x="93.75" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="53.4" y="-5"
+      <text x="49.875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">OR_QI</text>
     </g>
-    <g id="fb_E_MUX_4" transform="translate(60.0, 135.0)">
+    <g id="fb_E_MUX_4" transform="translate(64.6, 135.0)">
       <path d="M 3 0
-            L 89.4 0
-            A 3 3 0 0 1 92.4 3
-            L 92.4 69
-            A 3 3 0 0 1 89.4 72
-            L 83.4 72
-            L 83.4 86
-            L 89.4 86
-            A 3 3 0 0 1 92.4 89
-            L 92.4 103
-            A 3 3 0 0 1 89.4 106
+            L 85.4375 0
+            A 3 3 0 0 1 88.4375 3
+            L 88.4375 69
+            A 3 3 0 0 1 85.4375 72
+            L 79.4375 72
+            L 79.4375 86
+            L 85.4375 86
+            A 3 3 0 0 1 88.4375 89
+            L 88.4375 103
+            A 3 3 0 0 1 85.4375 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 89
@@ -546,31 +546,31 @@
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#63B31F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI4</text>
-      <polygon points="87.4,5.5 92.4,10.5 87.4,15.5" fill="#63B31F"/>
-      <text x="86.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="83.4375,5.5 88.4375,10.5 83.4375,15.5" fill="#63B31F"/>
+      <text x="82.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO</text>
-      <polygon points="87.4,90.5 92.4,95.5 87.4,100.5" fill="#18519E"/>
-      <text x="86.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="83.4375,90.5 88.4375,95.5 83.4375,100.5" fill="#18519E"/>
+      <text x="82.4375" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">K</text>
 
 
       <!-- Instance Name -->
-      <text x="46.2" y="-5"
+      <text x="44.21875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_MUX_4</text>
     </g>
-    <g id="fb_E_DEMUX_4" transform="translate(270.0, 135.0)">
+    <g id="fb_E_DEMUX_4" transform="translate(274.6, 135.0)">
       <path d="M 3 0
-            L 103.8 0
-            A 3 3 0 0 1 106.8 3
-            L 106.8 69
-            A 3 3 0 0 1 103.8 72
-            L 97.8 72
-            L 97.8 86
-            L 103.8 86
-            A 3 3 0 0 1 106.8 89
-            L 106.8 103
-            A 3 3 0 0 1 103.8 106
+            L 100.375 0
+            A 3 3 0 0 1 103.375 3
+            L 103.375 69
+            A 3 3 0 0 1 100.375 72
+            L 94.375 72
+            L 94.375 86
+            L 100.375 86
+            A 3 3 0 0 1 103.375 89
+            L 103.375 103
+            A 3 3 0 0 1 100.375 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 89
@@ -613,17 +613,17 @@
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI</text>
-      <polygon points="101.8,5.5 106.8,10.5 101.8,15.5" fill="#63B31F"/>
-      <text x="100.8" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="98.375,5.5 103.375,10.5 98.375,15.5" fill="#63B31F"/>
+      <text x="97.375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO1</text>
-      <polygon points="101.8,22.5 106.8,27.5 101.8,32.5" fill="#63B31F"/>
-      <text x="100.8" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="98.375,22.5 103.375,27.5 98.375,32.5" fill="#63B31F"/>
+      <text x="97.375" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO2</text>
-      <polygon points="101.8,39.5 106.8,44.5 101.8,49.5" fill="#63B31F"/>
-      <text x="100.8" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="98.375,39.5 103.375,44.5 98.375,49.5" fill="#63B31F"/>
+      <text x="97.375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO3</text>
-      <polygon points="101.8,56.5 106.8,61.5 101.8,66.5" fill="#63B31F"/>
-      <text x="100.8" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="98.375,56.5 103.375,61.5 98.375,66.5" fill="#63B31F"/>
+      <text x="97.375" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">EO4</text>
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#18519E"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -631,7 +631,7 @@
 
 
       <!-- Instance Name -->
-      <text x="53.4" y="-5"
+      <text x="51.6875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">E_DEMUX_4</text>
     </g>

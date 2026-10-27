@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="76.0 -93.0 1228.9 656.0"
-     width="1229" height="656">
+     viewBox="53.0 -93.0 1251.9 656.0"
+     width="1252" height="656">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,11 +40,11 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="76.0" y="-93.0" width="1228.9" height="656.0" fill="white"/>
-  <rect x="83.0" y="-86.0" width="1214.9" height="642.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="83.0" y="-86.0" width="1214.9" height="25.0" fill="white" stroke="none"/>
-  <line x1="83.0" y1="-61.5" x2="1297.9" y2="-61.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="88.0" y="-69.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Delayed event propagation (ASR2 Adapter, Set und Reset je unabhaengig
+  <rect x="53.0" y="-93.0" width="1251.9" height="656.0" fill="white"/>
+  <rect x="60.0" y="-86.0" width="1237.9" height="642.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="60.0" y="-86.0" width="1237.9" height="25.0" fill="white" stroke="none"/>
+  <line x1="60.0" y1="-61.5" x2="1297.9" y2="-61.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="65.0" y="-69.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Delayed event propagation (ASR2 Adapter, Set und Reset je unabhaengig
 verzoegert)</text>
   <g id="sidebars">
   </g>

@@ -266,9 +266,7 @@ AUDI_AUI_MUX_6. Schaltet per Event-Input (EI1..EI6) zwischen val1..val6 um.</tex
       <text x="30.0" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AUDI_AUI_MUX_6</text>
-      <polygon points="121.125,5.5 126.125,10.5 121.125,15.5" fill="#63B31F"/>
-      <text x="120.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000" text-anchor="end">CNF</text>
+
 
 
       <path d="M 0 38.5

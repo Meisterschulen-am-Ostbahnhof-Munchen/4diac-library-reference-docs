@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-10.0 -151.0 1240.8 622.0"
-     width="1241" height="622">
+     viewBox="0.7 -151.0 1210.9 622.0"
+     width="1211" height="622">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,34 +40,34 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-10.0" y="-151.0" width="1240.8" height="622.0" fill="white"/>
-  <rect x="-3.0" y="-144.0" width="1226.8" height="608.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-3.0" y="-144.0" width="1226.8" height="25.0" fill="white" stroke="none"/>
-  <line x1="-3.0" y1="-119.5" x2="1223.8" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="2.0" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Command change numeric value — accepts physical REAL value via AR adapter (wraps
+  <rect x="0.7" y="-151.0" width="1210.9" height="622.0" fill="white"/>
+  <rect x="7.7" y="-144.0" width="1196.9" height="608.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="7.7" y="-144.0" width="1196.9" height="25.0" fill="white" stroke="none"/>
+  <line x1="7.7" y1="-119.5" x2="1204.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="12.7" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Command change numeric value — accepts physical REAL value via AR adapter (wraps
 Q_NumericValue_PHYS)</text>
   <g id="sidebars">
-    <rect x="-3.0" y="-119.0" width="43.0" height="583.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="7.7" y="-119.0" width="32.3" height="583.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="464.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="71.8" height="583.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="52.6" height="583.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="464.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="40.0,-84.0 231.0,-84.0 236.0,-79.0 236.0,80.5 241.0,85.5 452.8,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="219.2,172.5 262.2,172.5 267.2,167.5 267.2,107.5 272.2,102.5 452.8,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,85.5 831.0,85.5 836.0,80.5 836.0,-79.0 841.0,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,102.5 869.0,102.5 874.0,97.5 874.0,-62.0 879.0,-67.0 1152.0,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,102.5 777.0,102.5 782.0,107.5 782.0,212.5 787.0,217.5 972.8,217.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,102.5 777.0,102.5 782.0,107.5 782.0,287.5 787.0,292.5 972.8,292.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-50.0 181.0,-50.0 186.0,-45.0 186.0,148.5 191.0,153.5 452.8,153.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="40.0,-50.0 181.0,-50.0 186.0,-45.0 186.0,148.5 191.0,153.5 452.8,153.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="219.2,206.5 382.2,206.5 387.2,201.5 387.2,175.5 392.2,170.5 452.8,170.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,153.5 905.0,153.5 910.0,148.5 910.0,-28.0 915.0,-33.0 1152.0,-33.0" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,187.5 991.0,187.5 996.0,182.5 996.0,-11.0 1001.0,-16.0 1152.0,-16.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,204.5 905.0,204.5 910.0,209.5 910.0,246.5 915.0,251.5 972.8,251.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,221.5 742.0,221.5 747.0,226.5 747.0,321.5 752.0,326.5 972.8,326.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 241.4,-67.0 246.4,-62.0 246.4,131.5 251.4,136.5 452.8,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="610.0,136.5 876.0,136.5 881.0,131.5 881.0,-45.0 886.0,-50.0 1152.0,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 231.0,-84.0 236.0,-79.0 236.0,80.5 241.0,85.5 452.6,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="218.7,172.5 261.7,172.5 266.7,167.5 266.7,107.5 271.7,102.5 452.6,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,85.5 810.7,85.5 815.7,80.5 815.7,-79.0 820.7,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,102.5 848.7,102.5 853.7,97.5 853.7,-62.0 858.7,-67.0 1152.0,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,102.5 756.7,102.5 761.7,107.5 761.7,212.5 766.7,217.5 972.6,217.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,102.5 756.7,102.5 761.7,107.5 761.7,287.5 766.7,292.5 972.6,292.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 181.0,-50.0 186.0,-45.0 186.0,148.5 191.0,153.5 452.6,153.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 181.0,-50.0 186.0,-45.0 186.0,148.5 191.0,153.5 452.6,153.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="218.7,206.5 381.7,206.5 386.7,201.5 386.7,175.5 391.7,170.5 452.6,170.5" fill="none" stroke="#DBB418" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,153.5 884.7,153.5 889.7,148.5 889.7,-28.0 894.7,-33.0 1152.0,-33.0" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,187.5 970.7,187.5 975.7,182.5 975.7,-11.0 980.7,-16.0 1152.0,-16.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,204.5 884.7,204.5 889.7,209.5 889.7,246.5 894.7,251.5 972.6,251.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,221.5 721.7,221.5 726.7,226.5 726.7,321.5 731.7,326.5 972.6,326.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 241.3,-67.0 246.3,-62.0 246.3,131.5 251.3,136.5 452.6,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="589.7,136.5 865.8,136.5 870.8,131.5 870.8,-45.0 875.8,-50.0 1152.0,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
@@ -96,18 +96,18 @@ Q_NumericValue_PHYS)</text>
           fill="#000000" text-anchor="start">s16result</text>
   </g>
   <g id="instances">
-    <g id="fb_xOver" transform="translate(972.8, 207.0)">
+    <g id="fb_xOver" transform="translate(972.6, 207.0)">
       <path d="M 3 0
-            L 53.4 0
-            A 3 3 0 0 1 56.4 3
-            L 56.4 18
-            A 3 3 0 0 1 53.4 21
-            L 47.4 21
-            L 47.4 35
-            L 53.4 35
-            A 3 3 0 0 1 56.4 38
-            L 56.4 52
-            A 3 3 0 0 1 53.4 55
+            L 53.875 0
+            A 3 3 0 0 1 56.875 3
+            L 56.875 18
+            A 3 3 0 0 1 53.875 21
+            L 47.875 21
+            L 47.875 35
+            L 53.875 35
+            A 3 3 0 0 1 56.875 38
+            L 56.875 52
+            A 3 3 0 0 1 53.875 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -156,22 +156,22 @@ Q_NumericValue_PHYS)</text>
 
 
       <!-- Instance Name -->
-      <text x="28.2" y="-5"
+      <text x="28.4375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">xOver</text>
     </g>
-    <g id="fb_xUnder" transform="translate(972.8, 282.0)">
+    <g id="fb_xUnder" transform="translate(972.6, 282.0)">
       <path d="M 3 0
-            L 53.4 0
-            A 3 3 0 0 1 56.4 3
-            L 56.4 18
-            A 3 3 0 0 1 53.4 21
-            L 47.4 21
-            L 47.4 35
-            L 53.4 35
-            A 3 3 0 0 1 56.4 38
-            L 56.4 52
-            A 3 3 0 0 1 53.4 55
+            L 53.875 0
+            A 3 3 0 0 1 56.875 3
+            L 56.875 18
+            A 3 3 0 0 1 53.875 21
+            L 47.875 21
+            L 47.875 35
+            L 53.875 35
+            A 3 3 0 0 1 56.875 38
+            L 56.875 52
+            A 3 3 0 0 1 53.875 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -220,22 +220,22 @@ Q_NumericValue_PHYS)</text>
 
 
       <!-- Instance Name -->
-      <text x="28.2" y="-5"
+      <text x="28.4375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">xUnder</text>
     </g>
-    <g id="fb_rPhys" transform="translate(162.8, 162.0)">
+    <g id="fb_rPhys" transform="translate(162.6, 162.0)">
       <path d="M 3 0
-            L 53.4 0
-            A 3 3 0 0 1 56.4 3
-            L 56.4 18
-            A 3 3 0 0 1 53.4 21
-            L 47.4 21
-            L 47.4 35
-            L 53.4 35
-            A 3 3 0 0 1 56.4 38
-            L 56.4 52
-            A 3 3 0 0 1 53.4 55
+            L 53.125 0
+            A 3 3 0 0 1 56.125 3
+            L 56.125 18
+            A 3 3 0 0 1 53.125 21
+            L 47.125 21
+            L 47.125 35
+            L 53.125 35
+            A 3 3 0 0 1 56.125 38
+            L 56.125 52
+            A 3 3 0 0 1 53.125 55
             L 3 55
             A 3 3 0 0 1 0 52
             L 0 38
@@ -275,31 +275,31 @@ Q_NumericValue_PHYS)</text>
       <text x="30.0" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AR</text>
-      <polygon points="51.4,5.5 56.4,10.5 51.4,15.5" fill="#63B31F"/>
-      <text x="50.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="51.125,5.5 56.125,10.5 51.125,15.5" fill="#63B31F"/>
+      <text x="50.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">E1</text>
-      <polygon points="51.4,39.5 56.4,44.5 51.4,49.5" fill="#DBB418"/>
-      <text x="50.4" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="51.125,39.5 56.125,44.5 51.125,49.5" fill="#DBB418"/>
+      <text x="50.125" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">D1</text>
 
 
       <!-- Instance Name -->
-      <text x="28.2" y="-5"
+      <text x="28.0625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">rPhys</text>
     </g>
-    <g id="fb_Q_NumericValue_PHYS" transform="translate(452.8, 75.0)">
+    <g id="fb_Q_NumericValue_PHYS" transform="translate(452.6, 75.0)">
       <path d="M 3 0
-            L 154.2 0
-            A 3 3 0 0 1 157.2 3
-            L 157.2 35
-            A 3 3 0 0 1 154.2 38
-            L 148.2 38
-            L 148.2 52
-            L 154.2 52
-            A 3 3 0 0 1 157.2 55
-            L 157.2 154
-            A 3 3 0 0 1 154.2 157
+            L 134.125 0
+            A 3 3 0 0 1 137.125 3
+            L 137.125 35
+            A 3 3 0 0 1 134.125 38
+            L 128.125 38
+            L 128.125 52
+            L 134.125 52
+            A 3 3 0 0 1 137.125 55
+            L 137.125 154
+            A 3 3 0 0 1 134.125 157
             L 3 157
             A 3 3 0 0 1 0 154
             L 0 55
@@ -345,11 +345,11 @@ Q_NumericValue_PHYS)</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="152.2,5.5 157.2,10.5 152.2,15.5" fill="#63B31F"/>
-      <text x="151.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,5.5 137.125,10.5 132.125,15.5" fill="#63B31F"/>
+      <text x="131.125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="152.2,22.5 157.2,27.5 152.2,32.5" fill="#63B31F"/>
-      <text x="151.2" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,22.5 137.125,27.5 132.125,32.5" fill="#63B31F"/>
+      <text x="131.125" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -360,28 +360,28 @@ Q_NumericValue_PHYS)</text>
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#DBB418"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">rPhys</text>
-      <polygon points="152.2,56.5 157.2,61.5 152.2,66.5" fill="#A3B08F"/>
-      <text x="151.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,56.5 137.125,61.5 132.125,66.5" fill="#A3B08F"/>
+      <text x="131.125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="152.2,73.5 157.2,78.5 152.2,83.5" fill="#BD8663"/>
-      <text x="151.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,73.5 137.125,78.5 132.125,83.5" fill="#BD8663"/>
+      <text x="131.125" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="152.2,90.5 157.2,95.5 152.2,100.5" fill="#18519E"/>
-      <text x="151.2" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,90.5 137.125,95.5 132.125,100.5" fill="#18519E"/>
+      <text x="131.125" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
-      <polygon points="152.2,107.5 157.2,112.5 152.2,117.5" fill="#18519E"/>
-      <text x="151.2" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,107.5 137.125,112.5 132.125,117.5" fill="#18519E"/>
+      <text x="131.125" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
-      <polygon points="152.2,124.5 157.2,129.5 152.2,134.5" fill="#A3B08F"/>
-      <text x="151.2" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,124.5 137.125,129.5 132.125,134.5" fill="#A3B08F"/>
+      <text x="131.125" y="133.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">xOver</text>
-      <polygon points="152.2,141.5 157.2,146.5 152.2,151.5" fill="#A3B08F"/>
-      <text x="151.2" y="150.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="132.125,141.5 137.125,146.5 132.125,151.5" fill="#A3B08F"/>
+      <text x="131.125" y="150.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">xUnder</text>
 
 
       <!-- Instance Name -->
-      <text x="78.6" y="-5"
+      <text x="68.5625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue_PHYS</text>
     </g>

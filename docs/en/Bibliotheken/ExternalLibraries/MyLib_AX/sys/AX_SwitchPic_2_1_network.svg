@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-415.6 -151.0 1676.0 657.0"
-     width="1676" height="657">
+     viewBox="-398.9 -151.0 1624.3 657.0"
+     width="1624" height="657">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,36 +40,36 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-415.6" y="-151.0" width="1676.0" height="657.0" fill="white"/>
-  <rect x="-408.6" y="-144.0" width="1662.0" height="643.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-408.6" y="-144.0" width="1662.0" height="25.0" fill="white" stroke="none"/>
-  <line x1="-408.6" y1="-119.5" x2="1253.4" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-403.6" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Bild/ObjectPointer-Ziel umschalten VT; 2 Zustaende, Selector als AX-Adapter
+  <rect x="-398.9" y="-151.0" width="1624.3" height="657.0" fill="white"/>
+  <rect x="-391.9" y="-144.0" width="1610.3" height="643.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-391.9" y="-144.0" width="1610.3" height="25.0" fill="white" stroke="none"/>
+  <line x1="-391.9" y1="-119.5" x2="1218.4" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-386.9" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Bild/ObjectPointer-Ziel umschalten VT; 2 Zustaende, Selector als AX-Adapter
 statt BOOL-InputVar (AX-Pendant zu MyLib::sys::SwitchPic_2_1) - schreibt bei
 jedem Update von DI1 das per DI1.D1 ausgewaehlte Ziel-Object-ID (pictures.down
 wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
   <g id="sidebars">
-    <rect x="-408.6" y="-119.0" width="69.6" height="618.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-391.9" y="-119.0" width="52.9" height="618.0" fill="#EEF5FF" stroke="none"/>
     <line x1="-339.0" y1="-119.0" x2="-339.0" y2="499.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1210.4" y="-119.0" width="43.0" height="618.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1210.4" y1="-119.0" x2="1210.4" y2="499.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1184.9" y="-119.0" width="33.5" height="618.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1184.9" y1="-119.0" x2="1184.9" y2="499.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="438.0,190.5 499.0,190.5 504.0,185.5 504.0,107.5 509.0,102.5 840.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="213.2,145.5 238.2,145.5 243.2,150.5 243.2,185.5 248.2,190.5 360.0,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="188.4,310.5 269.4,310.5 274.4,305.5 274.4,195.5 279.4,190.5 360.0,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="435.4,190.5 496.4,190.5 501.4,185.5 501.4,107.5 506.4,102.5 840.0,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="197.2,145.5 222.2,145.5 227.2,150.5 227.2,185.5 232.2,190.5 360.0,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="179.4,310.5 260.4,310.5 265.4,305.5 265.4,195.5 270.4,190.5 360.0,190.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-339.0,-84.0 -94.0,-84.0 -89.0,-79.0 -89.0,80.5 -84.0,85.5 840.0,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1021.4,85.5 1185.4,85.5 1190.4,80.5 1190.4,-79.0 1195.4,-84.0 1210.4,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1021.4,85.5 1028.6,85.5 1033.4,80.7 1033.4,53.5 1028.4,48.5 68.0,48.5 63.0,53.5 63.0,140.7 67.8,145.5 75.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="995.9,85.5 1159.9,85.5 1164.9,80.5 1164.9,-79.0 1169.9,-84.0 1184.9,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="995.9,85.5 1003.1,85.5 1007.9,80.7 1007.9,53.5 1002.9,48.5 68.0,48.5 63.0,53.5 63.0,140.7 67.8,145.5 75.0,145.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-339.0,-50.0 276.0,-50.0 281.0,-45.0 281.0,148.5 286.0,153.5 840.0,153.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-339.0,-33.0 -220.0,-33.0 -215.0,-28.0 -215.0,174.5 -210.0,179.5 75.0,179.5" fill="none" stroke="#3366FF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="-339.0,-33.0 -220.0,-33.0 -215.0,-28.0 -215.0,174.5 -210.0,179.5 75.0,179.5" fill="none" stroke="#CCD8FF" stroke-width="1" stroke-linejoin="round"/>
-    <polyline points="438.0,224.5 539.0,224.5 544.0,219.5 544.0,175.5 549.0,170.5 840.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="213.2,196.5 296.2,196.5 301.2,201.5 301.2,236.5 306.2,241.5 360.0,241.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="213.2,213.5 275.2,213.5 280.2,218.5 280.2,253.5 285.2,258.5 360.0,258.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="188.4,344.5 309.4,344.5 314.4,339.5 314.4,229.5 319.4,224.5 360.0,224.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="435.4,224.5 536.4,224.5 541.4,219.5 541.4,175.5 546.4,170.5 840.0,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="197.2,196.5 280.2,196.5 285.2,201.5 285.2,236.5 290.2,241.5 360.0,241.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="197.2,213.5 259.2,213.5 264.2,218.5 264.2,253.5 269.2,258.5 360.0,258.5" fill="none" stroke="#3366FF" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="179.4,344.5 300.4,344.5 305.4,339.5 305.4,229.5 310.4,224.5 360.0,224.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-339.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,131.5 45.0,136.5 840.0,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="1021.4,136.5 1185.4,136.5 1190.4,131.5 1190.4,-62.0 1195.4,-67.0 1210.4,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="995.9,136.5 1159.9,136.5 1164.9,131.5 1164.9,-62.0 1169.9,-67.0 1184.9,-67.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
     <polyline points="-339.0,-16.0 -276.0,-16.0 -271.0,-11.0 -271.0,356.5 -266.0,361.5 60.0,361.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
     <polyline points="-339.0,-16.0 -276.0,-16.0 -271.0,-11.0 -271.0,356.5 -266.0,361.5 60.0,361.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
@@ -77,8 +77,8 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
     <polygon points="-344.0005,-89.0 -339.0005,-84.0 -344.0005,-79.0" fill="#63B31F"/>
     <text x="-345.0005" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">INIT</text>
-    <polygon points="1215.4005,-89.0 1210.4005,-84.0 1215.4005,-79.0" fill="#63B31F"/>
-    <text x="1216.4005" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1189.8755,-89.0 1184.8755,-84.0 1189.8755,-79.0" fill="#63B31F"/>
+    <text x="1190.8755" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">INITO</text>
     <polygon points="-344.0005,-72.0 -339.0005,-67.0 -344.0005,-62.0" fill="#A3B08F"/>
     <text x="-345.0005" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -89,8 +89,8 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
     <polygon points="-344.0005,-38.0 -339.0005,-33.0 -344.0005,-28.0" fill="#3366FF"/>
     <text x="-345.0005" y="-28.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">pictures</text>
-    <polygon points="1215.4005,-72.0 1210.4005,-67.0 1215.4005,-62.0" fill="#A3B08F"/>
-    <text x="1216.4005" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1189.8755,-72.0 1184.8755,-67.0 1189.8755,-62.0" fill="#A3B08F"/>
+    <text x="1190.8755" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">QO</text>
     <path d="M -349.0005 -21.0 L -346.5005 -21.0 L -346.5005 -19.333333333333332 L -344.0005 -19.333333333333332 L -344.0005 -21.0 L -339.0005 -21.0 L -339.0005 -11.0 L -344.0005 -11.0 L -344.0005 -12.666666666666666 L -346.5005 -12.666666666666666 L -346.5005 -11.0 L -349.0005 -11.0 Z" fill="#845DAF"/>
     <text x="-352.0005" y="-11.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -99,16 +99,16 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
   <g id="instances">
     <g id="fb_Q_NumericValue" transform="translate(840.0, 75.0)">
       <path d="M 3 0
-            L 178.4 0
-            A 3 3 0 0 1 181.4 3
-            L 181.4 35
-            A 3 3 0 0 1 178.4 38
-            L 172.4 38
-            L 172.4 52
-            L 178.4 52
-            A 3 3 0 0 1 181.4 55
-            L 181.4 120
-            A 3 3 0 0 1 178.4 123
+            L 152.875 0
+            A 3 3 0 0 1 155.875 3
+            L 155.875 35
+            A 3 3 0 0 1 152.875 38
+            L 146.875 38
+            L 146.875 52
+            L 152.875 52
+            A 3 3 0 0 1 155.875 55
+            L 155.875 120
+            A 3 3 0 0 1 152.875 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -123,29 +123,29 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 32.300000000000004 37.0
-            L 46.300000000000004 37.0
-            A 1 1 0 0 1 47.300000000000004 38.0
-            L 47.300000000000004 41.0
-            L 45.800000000000004 41.0
-            L 45.800000000000004 43.666666666666664
-            L 47.300000000000004 43.666666666666664
-            L 47.300000000000004 52.0
-            A 1 1 0 0 1 46.300000000000004 53.0
-            L 32.300000000000004 53.0
-            A 1 1 0 0 1 31.300000000000004 52.0
-            L 31.300000000000004 43.666666666666664
-            L 32.800000000000004 43.666666666666664
-            L 32.800000000000004 41.0
-            L 31.300000000000004 41.0
-            L 31.300000000000004 38.0
-            A 1 1 0 0 1 32.300000000000004 37.0
+      <path d="M 28.75 37.0
+            L 42.75 37.0
+            A 1 1 0 0 1 43.75 38.0
+            L 43.75 41.0
+            L 42.25 41.0
+            L 42.25 43.666666666666664
+            L 43.75 43.666666666666664
+            L 43.75 52.0
+            A 1 1 0 0 1 42.75 53.0
+            L 28.75 53.0
+            A 1 1 0 0 1 27.75 52.0
+            L 27.75 43.666666666666664
+            L 29.25 43.666666666666664
+            L 29.25 41.0
+            L 27.75 41.0
+            L 27.75 38.0
+            A 1 1 0 0 1 28.75 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="39.300000000000004" y="49.0"
+      <text x="35.75" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="49.300000000000004" y="49.0"
+      <text x="45.75" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_NumericValue</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -154,11 +154,11 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="176.4,5.5 181.4,10.5 176.4,15.5" fill="#63B31F"/>
-      <text x="175.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,5.5 155.875,10.5 150.875,15.5" fill="#63B31F"/>
+      <text x="149.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="176.4,22.5 181.4,27.5 176.4,32.5" fill="#63B31F"/>
-      <text x="175.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,22.5 155.875,27.5 150.875,32.5" fill="#63B31F"/>
+      <text x="149.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -169,37 +169,37 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#18519E"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <polygon points="176.4,56.5 181.4,61.5 176.4,66.5" fill="#A3B08F"/>
-      <text x="175.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,56.5 155.875,61.5 150.875,66.5" fill="#A3B08F"/>
+      <text x="149.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="176.4,73.5 181.4,78.5 176.4,83.5" fill="#BD8663"/>
-      <text x="175.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,73.5 155.875,78.5 150.875,83.5" fill="#BD8663"/>
+      <text x="149.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="176.4,90.5 181.4,95.5 176.4,100.5" fill="#18519E"/>
-      <text x="175.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,90.5 155.875,95.5 150.875,100.5" fill="#18519E"/>
+      <text x="149.875" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
-      <polygon points="176.4,107.5 181.4,112.5 176.4,117.5" fill="#18519E"/>
-      <text x="175.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,107.5 155.875,112.5 150.875,117.5" fill="#18519E"/>
+      <text x="149.875" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
 
       <!-- Instance Name -->
-      <text x="90.7" y="-5"
+      <text x="77.9375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue</text>
     </g>
     <g id="fb_F_MOVE" transform="translate(75.0, 135.0)">
       <path d="M 3 0
-            L 135.2 0
-            A 3 3 0 0 1 138.2 3
-            L 138.2 18
-            A 3 3 0 0 1 135.2 21
-            L 129.2 21
-            L 129.2 35
-            L 135.2 35
-            A 3 3 0 0 1 138.2 38
-            L 138.2 86
-            A 3 3 0 0 1 135.2 89
+            L 119.1875 0
+            A 3 3 0 0 1 122.1875 3
+            L 122.1875 18
+            A 3 3 0 0 1 119.1875 21
+            L 113.1875 21
+            L 113.1875 35
+            L 119.1875 35
+            A 3 3 0 0 1 122.1875 38
+            L 122.1875 86
+            A 3 3 0 0 1 119.1875 89
             L 3 89
             A 3 3 0 0 1 0 86
             L 0 38
@@ -214,65 +214,65 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 39.5 20.0
-            L 53.5 20.0
-            A 1 1 0 0 1 54.5 21.0
-            L 54.5 24.0
-            L 53.0 24.0
-            L 53.0 26.666666666666668
-            L 54.5 26.666666666666668
-            L 54.5 35.0
-            A 1 1 0 0 1 53.5 36.0
-            L 39.5 36.0
-            A 1 1 0 0 1 38.5 35.0
-            L 38.5 26.666666666666668
-            L 40.0 26.666666666666668
-            L 40.0 24.0
-            L 38.5 24.0
-            L 38.5 21.0
-            A 1 1 0 0 1 39.5 20.0
+      <path d="M 32.1875 20.0
+            L 46.1875 20.0
+            A 1 1 0 0 1 47.1875 21.0
+            L 47.1875 24.0
+            L 45.6875 24.0
+            L 45.6875 26.666666666666668
+            L 47.1875 26.666666666666668
+            L 47.1875 35.0
+            A 1 1 0 0 1 46.1875 36.0
+            L 32.1875 36.0
+            A 1 1 0 0 1 31.1875 35.0
+            L 31.1875 26.666666666666668
+            L 32.6875 26.666666666666668
+            L 32.6875 24.0
+            L 31.1875 24.0
+            L 31.1875 21.0
+            A 1 1 0 0 1 32.1875 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="46.5" y="32.0"
+      <text x="39.1875" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="56.5" y="32.0"
+      <text x="49.1875" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">F_MOVE</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="133.2,5.5 138.2,10.5 133.2,15.5" fill="#63B31F"/>
-      <text x="132.2" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="117.1875,5.5 122.1875,10.5 117.1875,15.5" fill="#63B31F"/>
+      <text x="116.1875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#3366FF"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN</text>
-      <polygon points="133.2,39.5 138.2,44.5 133.2,49.5" fill="#3366FF"/>
-      <text x="132.2" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="117.1875,39.5 122.1875,44.5 117.1875,49.5" fill="#3366FF"/>
+      <text x="116.1875" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
-      <polygon points="133.2,56.5 138.2,61.5 133.2,66.5" fill="#3366FF"/>
-      <text x="132.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">OUT.up.u16Ob…</text>
-      <polygon points="133.2,73.5 138.2,78.5 133.2,83.5" fill="#3366FF"/>
-      <text x="132.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">OUT.down.u16…</text>
+      <polygon points="117.1875,56.5 122.1875,61.5 117.1875,66.5" fill="#3366FF"/>
+      <text x="116.2" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">OUT.up.u16Ob…</text>
+      <polygon points="117.1875,73.5 122.1875,78.5 117.1875,83.5" fill="#3366FF"/>
+      <text x="116.2" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">OUT.down.u16…</text>
 
       <!-- Instance Name -->
-      <text x="69.1" y="-5"
+      <text x="61.09375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_MOVE</text>
     </g>
     <g id="fb_F_MUX_2" transform="translate(360.0, 180.0)">
       <path d="M 3 0
-            L 75.0 0
-            A 3 3 0 0 1 78.0 3
-            L 78.0 18
-            A 3 3 0 0 1 75.0 21
-            L 69.0 21
-            L 69.0 35
-            L 75.0 35
-            A 3 3 0 0 1 78.0 38
-            L 78.0 86
-            A 3 3 0 0 1 75.0 89
+            L 72.4375 0
+            A 3 3 0 0 1 75.4375 3
+            L 75.4375 18
+            A 3 3 0 0 1 72.4375 21
+            L 66.4375 21
+            L 66.4375 35
+            L 72.4375 35
+            A 3 3 0 0 1 75.4375 38
+            L 75.4375 86
+            A 3 3 0 0 1 72.4375 89
             L 3 89
             A 3 3 0 0 1 0 86
             L 0 38
@@ -315,8 +315,8 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
       <text x="6" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="73.0,5.5 78.0,10.5 73.0,15.5" fill="#63B31F"/>
-      <text x="72.0" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="70.4375,5.5 75.4375,10.5 70.4375,15.5" fill="#63B31F"/>
+      <text x="69.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,39.5 5,44.5 0,49.5" fill="#A3B08F"/>
       <text x="6" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -327,28 +327,28 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#3366FF"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN1</text>
-      <polygon points="73.0,39.5 78.0,44.5 73.0,49.5" fill="#3366FF"/>
-      <text x="72.0" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="70.4375,39.5 75.4375,44.5 70.4375,49.5" fill="#3366FF"/>
+      <text x="69.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
 
 
       <!-- Instance Name -->
-      <text x="39.0" y="-5"
+      <text x="37.71875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_MUX_2</text>
     </g>
     <g id="fb_AX_X_TO_BOOL" transform="translate(60.0, 300.0)">
       <path d="M 3 0
-            L 125.39999999999998 0
-            A 3 3 0 0 1 128.39999999999998 3
-            L 128.39999999999998 18
-            A 3 3 0 0 1 125.39999999999998 21
-            L 119.39999999999998 21
-            L 119.39999999999998 35
-            L 125.39999999999998 35
-            A 3 3 0 0 1 128.39999999999998 38
-            L 128.39999999999998 69
-            A 3 3 0 0 1 125.39999999999998 72
+            L 116.4375 0
+            A 3 3 0 0 1 119.4375 3
+            L 119.4375 18
+            A 3 3 0 0 1 116.4375 21
+            L 110.4375 21
+            L 110.4375 35
+            L 116.4375 35
+            A 3 3 0 0 1 119.4375 38
+            L 119.4375 69
+            A 3 3 0 0 1 116.4375 72
             L 3 72
             A 3 3 0 0 1 0 69
             L 0 38
@@ -363,36 +363,36 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 12.999999999999993 20.0
-            L 26.999999999999993 20.0
-            A 1 1 0 0 1 27.999999999999993 21.0
-            L 27.999999999999993 24.0
-            L 26.499999999999993 24.0
-            L 26.499999999999993 26.666666666666668
-            L 27.999999999999993 26.666666666666668
-            L 27.999999999999993 35.0
-            A 1 1 0 0 1 26.999999999999993 36.0
-            L 12.999999999999993 36.0
-            A 1 1 0 0 1 11.999999999999993 35.0
-            L 11.999999999999993 26.666666666666668
-            L 13.499999999999993 26.666666666666668
-            L 13.499999999999993 24.0
-            L 11.999999999999993 24.0
-            L 11.999999999999993 21.0
-            A 1 1 0 0 1 12.999999999999993 20.0
+      <path d="M 13.0 20.0
+            L 27.0 20.0
+            A 1 1 0 0 1 28.0 21.0
+            L 28.0 24.0
+            L 26.5 24.0
+            L 26.5 26.666666666666668
+            L 28.0 26.666666666666668
+            L 28.0 35.0
+            A 1 1 0 0 1 27.0 36.0
+            L 13.0 36.0
+            A 1 1 0 0 1 12.0 35.0
+            L 12.0 26.666666666666668
+            L 13.5 26.666666666666668
+            L 13.5 24.0
+            L 12.0 24.0
+            L 12.0 21.0
+            A 1 1 0 0 1 13.0 20.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="19.999999999999993" y="32.0"
+      <text x="20.0" y="32.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="29.999999999999993" y="32.0"
+      <text x="30.0" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_X_TO_BOOL</text>
-      <polygon points="123.39999999999998,5.5 128.39999999999998,10.5 123.39999999999998,15.5" fill="#63B31F"/>
-      <text x="122.39999999999998" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="114.4375,5.5 119.4375,10.5 114.4375,15.5" fill="#63B31F"/>
+      <text x="113.4375" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
-      <polygon points="123.39999999999998,39.5 128.39999999999998,44.5 123.39999999999998,49.5" fill="#A3B08F"/>
-      <text x="122.39999999999998" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="114.4375,39.5 119.4375,44.5 114.4375,49.5" fill="#A3B08F"/>
+      <text x="113.4375" y="48.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">IN</text>
 
       <path d="M 0 56.5
@@ -411,7 +411,7 @@ wenn TRUE, pictures.up wenn FALSE) auf den ObjectPointer Picture.</text>
       <text x="13" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_IN</text>
       <!-- Instance Name -->
-      <text x="64.19999999999999" y="-5"
+      <text x="59.71875" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_X_TO_BOOL</text>
     </g>

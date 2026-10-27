@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-94.2 -151.0 1353.8 660.0"
-     width="1354" height="660">
+     viewBox="-60.9 -151.0 1298.1 660.0"
+     width="1298" height="660">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,11 +40,11 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-94.2" y="-151.0" width="1353.8" height="660.0" fill="white"/>
-  <rect x="-87.2" y="-144.0" width="1339.8" height="646.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-87.2" y="-144.0" width="1339.8" height="25.0" fill="white" stroke="none"/>
-  <line x1="-87.2" y1="-119.5" x2="1252.6" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-82.2" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Schaltet einen ObjectPointer (CPointer) bei DI1=TRUE auf u16ObjId_Show um, bei
+  <rect x="-60.9" y="-151.0" width="1298.1" height="660.0" fill="white"/>
+  <rect x="-53.9" y="-144.0" width="1284.1" height="646.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-53.9" y="-144.0" width="1284.1" height="25.0" fill="white" stroke="none"/>
+  <line x1="-53.9" y1="-119.5" x2="1230.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-48.9" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Schaltet einen ObjectPointer (CPointer) bei DI1=TRUE auf u16ObjId_Show um, bei
 FALSE auf ID_NULL (nichts sichtbar). ISO 11783-6 F.22 'Change Numeric Value'
 (Q_NumericValue) - ObjectPointer liegt explizit in dessen gueltigem
 Object-ID-Bereich (27000-27999). NICHT F.38 'Change Attribute' (Q_Attribute)
@@ -52,26 +52,26 @@ verwenden - AID_OP_PTR.VALUE ist dort read-only. Muster:
 ms-train/4diac_training1
 Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text>
   <g id="sidebars">
-    <rect x="-87.2" y="-119.0" width="127.2" height="621.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="-53.9" y="-119.0" width="93.9" height="621.0" fill="#EEF5FF" stroke="none"/>
     <line x1="40.0" y1="-119.0" x2="40.0" y2="502.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1152.0" y="-119.0" width="100.6" height="621.0" fill="#EEF5FF" stroke="none"/>
+    <rect x="1152.0" y="-119.0" width="78.2" height="621.0" fill="#EEF5FF" stroke="none"/>
     <line x1="1152.0" y1="-119.0" x2="1152.0" y2="502.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="946.7,102.5 1085.7,102.5 1090.7,97.5 1090.7,-62.0 1095.7,-67.0 1152.0,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="581.5,279.5 608.5,279.5 613.5,274.5 613.5,107.5 618.5,102.5 765.3,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-84.0 397.6,-84.0 402.6,-79.0 402.6,80.5 407.6,85.5 765.3,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="946.7,85.5 1044.3,85.5 1049.3,80.5 1049.3,-79.0 1054.3,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-50.0 628.0,-50.0 633.0,-45.0 633.0,148.5 638.0,153.5 765.3,153.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-33.0 245.0,-33.0 250.0,-28.0 250.0,342.5 255.0,347.5 496.3,347.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="946.7,170.5 1080.7,170.5 1085.7,165.5 1085.7,-11.0 1090.7,-16.0 1152.0,-16.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="946.7,153.5 1083.7,153.5 1088.7,148.5 1088.7,-28.0 1093.7,-33.0 1152.0,-33.0" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="946.7,187.5 1080.7,187.5 1085.7,182.5 1085.7,6.0 1090.7,1.0 1152.0,1.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="581.5,330.5 637.5,330.5 642.5,325.5 642.5,175.5 647.5,170.5 765.3,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-67.0 397.6,-67.0 402.6,-62.0 402.6,131.5 407.6,136.5 765.3,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="946.7,136.5 1044.3,136.5 1049.3,131.5 1049.3,-45.0 1054.3,-50.0 1152.0,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="40.0,-16.0 134.0,-16.0 139.0,-11.0 139.0,359.5 144.0,364.5 496.3,364.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
-    <polyline points="40.0,-16.0 134.0,-16.0 139.0,-11.0 139.0,359.5 144.0,364.5 496.3,364.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
+    <polyline points="933.9,102.5 1072.9,102.5 1077.9,97.5 1077.9,-62.0 1082.9,-67.0 1152.0,-67.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="591.9,279.5 618.9,279.5 623.9,274.5 623.9,107.5 628.9,102.5 778.1,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 404.0,-84.0 409.0,-79.0 409.0,80.5 414.0,85.5 778.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="933.9,85.5 1038.0,85.5 1043.0,80.5 1043.0,-79.0 1048.0,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-50.0 628.0,-50.0 633.0,-45.0 633.0,148.5 638.0,153.5 778.1,153.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-33.0 245.0,-33.0 250.0,-28.0 250.0,342.5 255.0,347.5 509.1,347.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="933.9,170.5 1067.9,170.5 1072.9,165.5 1072.9,-11.0 1077.9,-16.0 1152.0,-16.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="933.9,153.5 1070.9,153.5 1075.9,148.5 1075.9,-28.0 1080.9,-33.0 1152.0,-33.0" fill="none" stroke="#BD8663" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="933.9,187.5 1067.9,187.5 1072.9,182.5 1072.9,6.0 1077.9,1.0 1152.0,1.0" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="591.9,330.5 647.9,330.5 652.9,325.5 652.9,175.5 657.9,170.5 778.1,170.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 404.0,-67.0 409.0,-62.0 409.0,131.5 414.0,136.5 778.1,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="933.9,136.5 1038.0,136.5 1043.0,131.5 1043.0,-45.0 1048.0,-50.0 1152.0,-50.0" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-16.0 134.0,-16.0 139.0,-11.0 139.0,359.5 144.0,364.5 509.1,364.5" fill="none" stroke="#845DAF" stroke-width="3" stroke-linejoin="round"/>
+    <polyline points="40.0,-16.0 134.0,-16.0 139.0,-11.0 139.0,359.5 144.0,364.5 509.1,364.5" fill="none" stroke="#DED4EA" stroke-width="1" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
     <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
@@ -109,18 +109,18 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
           fill="#000000" text-anchor="end">DI1</text>
   </g>
   <g id="instances">
-    <g id="fb_Q_NumericValue" transform="translate(765.3, 75.0)">
+    <g id="fb_Q_NumericValue" transform="translate(778.1, 75.0)">
       <path d="M 3 0
-            L 178.4 0
-            A 3 3 0 0 1 181.4 3
-            L 181.4 35
-            A 3 3 0 0 1 178.4 38
-            L 172.4 38
-            L 172.4 52
-            L 178.4 52
-            A 3 3 0 0 1 181.4 55
-            L 181.4 120
-            A 3 3 0 0 1 178.4 123
+            L 152.875 0
+            A 3 3 0 0 1 155.875 3
+            L 155.875 35
+            A 3 3 0 0 1 152.875 38
+            L 146.875 38
+            L 146.875 52
+            L 152.875 52
+            A 3 3 0 0 1 155.875 55
+            L 155.875 120
+            A 3 3 0 0 1 152.875 123
             L 3 123
             A 3 3 0 0 1 0 120
             L 0 55
@@ -135,29 +135,29 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 32.300000000000004 37.0
-            L 46.300000000000004 37.0
-            A 1 1 0 0 1 47.300000000000004 38.0
-            L 47.300000000000004 41.0
-            L 45.800000000000004 41.0
-            L 45.800000000000004 43.666666666666664
-            L 47.300000000000004 43.666666666666664
-            L 47.300000000000004 52.0
-            A 1 1 0 0 1 46.300000000000004 53.0
-            L 32.300000000000004 53.0
-            A 1 1 0 0 1 31.300000000000004 52.0
-            L 31.300000000000004 43.666666666666664
-            L 32.800000000000004 43.666666666666664
-            L 32.800000000000004 41.0
-            L 31.300000000000004 41.0
-            L 31.300000000000004 38.0
-            A 1 1 0 0 1 32.300000000000004 37.0
+      <path d="M 28.75 37.0
+            L 42.75 37.0
+            A 1 1 0 0 1 43.75 38.0
+            L 43.75 41.0
+            L 42.25 41.0
+            L 42.25 43.666666666666664
+            L 43.75 43.666666666666664
+            L 43.75 52.0
+            A 1 1 0 0 1 42.75 53.0
+            L 28.75 53.0
+            A 1 1 0 0 1 27.75 52.0
+            L 27.75 43.666666666666664
+            L 29.25 43.666666666666664
+            L 29.25 41.0
+            L 27.75 41.0
+            L 27.75 38.0
+            A 1 1 0 0 1 28.75 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="39.300000000000004" y="49.0"
+      <text x="35.75" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">Si</text>
-      <text x="49.300000000000004" y="49.0"
+      <text x="45.75" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">Q_NumericValue</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -166,11 +166,11 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">REQ</text>
-      <polygon points="176.4,5.5 181.4,10.5 176.4,15.5" fill="#63B31F"/>
-      <text x="175.4" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,5.5 155.875,10.5 150.875,15.5" fill="#63B31F"/>
+      <text x="149.875" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">INITO</text>
-      <polygon points="176.4,22.5 181.4,27.5 176.4,32.5" fill="#63B31F"/>
-      <text x="175.4" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,22.5 155.875,27.5 150.875,32.5" fill="#63B31F"/>
+      <text x="149.875" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#A3B08F"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -181,37 +181,37 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
       <polygon points="0,90.5 5,95.5 0,100.5" fill="#18519E"/>
       <text x="6" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">u32NewValue</text>
-      <polygon points="176.4,56.5 181.4,61.5 176.4,66.5" fill="#A3B08F"/>
-      <text x="175.4" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,56.5 155.875,61.5 150.875,66.5" fill="#A3B08F"/>
+      <text x="149.875" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">QO</text>
-      <polygon points="176.4,73.5 181.4,78.5 176.4,83.5" fill="#BD8663"/>
-      <text x="175.4" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,73.5 155.875,78.5 150.875,83.5" fill="#BD8663"/>
+      <text x="149.875" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">STATUS</text>
-      <polygon points="176.4,90.5 181.4,95.5 176.4,100.5" fill="#18519E"/>
-      <text x="175.4" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,90.5 155.875,95.5 150.875,100.5" fill="#18519E"/>
+      <text x="149.875" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">u32OldValue</text>
-      <polygon points="176.4,107.5 181.4,112.5 176.4,117.5" fill="#18519E"/>
-      <text x="175.4" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="150.875,107.5 155.875,112.5 150.875,117.5" fill="#18519E"/>
+      <text x="149.875" y="116.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">s16result</text>
 
 
       <!-- Instance Name -->
-      <text x="90.7" y="-5"
+      <text x="77.9375" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Q_NumericValue</text>
     </g>
-    <g id="fb_AX_SEL" transform="translate(496.3, 269.0)">
+    <g id="fb_AX_SEL" transform="translate(509.1, 269.0)">
       <path d="M 3 0
-            L 82.19999999999999 0
-            A 3 3 0 0 1 85.19999999999999 3
-            L 85.19999999999999 35
-            A 3 3 0 0 1 82.19999999999999 38
-            L 76.19999999999999 38
-            L 76.19999999999999 52
-            L 82.19999999999999 52
-            A 3 3 0 0 1 85.19999999999999 55
-            L 85.19999999999999 103
-            A 3 3 0 0 1 82.19999999999999 106
+            L 79.8125 0
+            A 3 3 0 0 1 82.8125 3
+            L 82.8125 35
+            A 3 3 0 0 1 79.8125 38
+            L 73.8125 38
+            L 73.8125 52
+            L 79.8125 52
+            A 3 3 0 0 1 82.8125 55
+            L 82.8125 103
+            A 3 3 0 0 1 79.8125 106
             L 3 106
             A 3 3 0 0 1 0 103
             L 0 55
@@ -226,29 +226,29 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
             fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
             stroke-linejoin="round" filter="url(#dropShadow)"/>
       <!-- Name Section -->
-      <path d="M 12.999999999999996 37.0
-            L 26.999999999999996 37.0
-            A 1 1 0 0 1 27.999999999999996 38.0
-            L 27.999999999999996 41.0
-            L 26.499999999999996 41.0
-            L 26.499999999999996 43.666666666666664
-            L 27.999999999999996 43.666666666666664
-            L 27.999999999999996 52.0
-            A 1 1 0 0 1 26.999999999999996 53.0
-            L 12.999999999999996 53.0
-            A 1 1 0 0 1 11.999999999999996 52.0
-            L 11.999999999999996 43.666666666666664
-            L 13.499999999999996 43.666666666666664
-            L 13.499999999999996 41.0
-            L 11.999999999999996 41.0
-            L 11.999999999999996 38.0
-            A 1 1 0 0 1 12.999999999999996 37.0
+      <path d="M 13.0 37.0
+            L 27.0 37.0
+            A 1 1 0 0 1 28.0 38.0
+            L 28.0 41.0
+            L 26.5 41.0
+            L 26.5 43.666666666666664
+            L 28.0 43.666666666666664
+            L 28.0 52.0
+            A 1 1 0 0 1 27.0 53.0
+            L 13.0 53.0
+            A 1 1 0 0 1 12.0 52.0
+            L 12.0 43.666666666666664
+            L 13.5 43.666666666666664
+            L 13.5 41.0
+            L 12.0 41.0
+            L 12.0 38.0
+            A 1 1 0 0 1 13.0 37.0
             Z"
             fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
-      <text x="19.999999999999996" y="49.0"
+      <text x="20.0" y="49.0"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="10" font-weight="bold"
             fill="#000000" text-anchor="middle">C</text>
-      <text x="29.999999999999996" y="49.0"
+      <text x="30.0" y="49.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AX_SEL</text>
       <polygon points="0,5.5 5,10.5 0,15.5" fill="#63B31F"/>
@@ -257,8 +257,8 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
       <polygon points="0,22.5 5,27.5 0,32.5" fill="#63B31F"/>
       <text x="6" y="31.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">EI1</text>
-      <polygon points="80.19999999999999,5.5 85.19999999999999,10.5 80.19999999999999,15.5" fill="#63B31F"/>
-      <text x="79.19999999999999" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="77.8125,5.5 82.8125,10.5 77.8125,15.5" fill="#63B31F"/>
+      <text x="76.8125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">CNF</text>
       <polygon points="0,56.5 5,61.5 0,66.5" fill="#3366FF"/>
       <text x="6" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
@@ -266,8 +266,8 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
       <polygon points="0,73.5 5,78.5 0,83.5" fill="#3366FF"/>
       <text x="6" y="82.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">IN1</text>
-      <polygon points="80.19999999999999,56.5 85.19999999999999,61.5 80.19999999999999,66.5" fill="#3366FF"/>
-      <text x="79.19999999999999" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+      <polygon points="77.8125,56.5 82.8125,61.5 77.8125,66.5" fill="#3366FF"/>
+      <text x="76.8125" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="end">OUT</text>
       <text x="-3" y="65.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" fill="#000000" text-anchor="end">ID_NULL</text>
       <path d="M 0 90.5
@@ -286,7 +286,7 @@ Ventilsteuerung/4diacIDE-workspace/test_B/Uebungen/Uebung_015.SUB (Franz).</text
       <text x="13" y="99.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">G</text>
       <!-- Instance Name -->
-      <text x="42.599999999999994" y="-5"
+      <text x="41.40625" y="-5"
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">AX_SEL</text>
     </g>
