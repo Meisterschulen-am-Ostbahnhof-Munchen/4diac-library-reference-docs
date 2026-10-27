@@ -53,6 +53,7 @@ Der Funktionsblock **AE_AX_SERVER_0_CLIENT_1_0** ist ein Composite-Funktionsbloc
 - **Pufferung mit D-Flipflop**: Der über den Adapter gemeldete Rückmeldewert wird über ein internes `iec61499::events::E_D_FF` stabilisiert, bevor er per `CLIENT_1_0` verschickt wird.
 - **Sequentielle Initialisierung**: `SERVER_0_1` wird vor `STATE_CLIENT` initialisiert (Composite-FBTypes verketten `INIT`/`INITO` seriell durch jede Instanz).
 - **Kapselung**: Nach außen ist nur noch die AE_AX-Adapter-Schnittstelle sichtbar; `SERVER_0`s `IND` und `CLIENT_1_0`s `REQ`/`SD_1` bleiben intern.
+- **Hinweis `IND` → `RSP`**: An dem enthaltenen `SERVER_0` ist `IND` → `RSP` nicht verdrahtet (Stand 2026-10-18). Das ist die Lücke aus der Regel unter [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): Ohne `RSP` kann jeder Methodenaufruf bis zu 4 s lang alle OPC-UA-Publishes der Station aufhalten.
 
 ## Zustandsübersicht
 

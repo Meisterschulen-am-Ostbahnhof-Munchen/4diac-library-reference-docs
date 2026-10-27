@@ -69,6 +69,7 @@
 - Die optionalen Plugs `CAL_OUT`/`MIDREF_OUT`/`MAXREF_OUT` erlauben externen Konsumenten, den bereits kalibrierten Wert per Adapter zu lesen, statt denselben OPC-UA-Knoten lokal nochmals zu abonnieren (FORTE: 'Cannot add another one'); unverdrahtet lassen, wenn nicht gebraucht (z. B. Hangausgleich-Kanal)
 - Die Merge-Ketten für `C_MIN`/`C_MID`/`C_MAX` sind je ein einziger `E_MERGE_3`/`E_MERGE_4` statt mehrerer `E_MERGE_2` (ODER ist assoziativ, funktional identisch); `C_MIN`/`C_MID`/`C_MAX` von `CALIBRATE` sind reine EventInputs
 - Remote-Trigger lösen bei **jeder** Flanke aus (steigend und fallend), da der Web-Client bei jedem Klick den invertierten letzten Wert schreibt
+- **`IND` → `RSP`**: `SERVER_MID_TRIGGER` hat die Selbstschleife `IND` → `RSP`; die Weiterleitung `IND` → `E_MERGE_MID.EI4` bleibt daneben bestehen. Regel siehe [SERVER_0](../../../StandardLibraries/net/SERVER_0.md).
 
 ## Anwendungsszenarien
 

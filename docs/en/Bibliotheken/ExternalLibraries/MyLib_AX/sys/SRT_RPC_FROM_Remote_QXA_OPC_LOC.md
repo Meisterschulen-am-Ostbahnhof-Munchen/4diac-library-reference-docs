@@ -1,0 +1,85 @@
+# SRT_RPC_FROM_Remote_QXA_OPC_LOC
+
+![SRT_RPC_FROM_Remote_QXA_OPC_LOC_network](./SRT_RPC_FROM_Remote_QXA_OPC_LOC_network.svg)
+
+* * * * * * * * * *
+
+## Introduction
+
+`SRT_RPC_FROM_Remote_QXA_OPC_LOC` is the local variant of [`SRT_RPC_FROM_Remote_QXA_OPC`](./SRT_RPC_FROM_Remote_QXA_OPC.md): instead of writing the state remotely via an `AX_CLIENT_1_0`, it is written locally via `AX_PUBLISH_1` (single device, methods via `localhost`, no endpoint). The SubApp receives triggers via three separate `SERVER_0` method calls (set, reset, toggle), uses them to control a set/reset/toggle flip-flop (`AX_T_FF_SR`), switches the digital output `DigitalOutput_Q1` and publishes the new state locally at `ID_STATE_WRITE`.
+
+![SRT_RPC_FROM_Remote_QXA_OPC_LOC](SRT_RPC_FROM_Remote_QXA_OPC_LOC.svg)
+
+## Interface Structure
+
+### **Event Inputs**
+
+- `INIT` (`EInit`): Initialization Request
+
+### **Event Outputs**
+
+- `INITO` (`EInit`): Initialization Confirm
+
+### **Data Inputs**
+
+| Name | Type | Description |
+|------|-----|--------------|
+| `QI` | `BOOL` | Quality Input - TRUE to enable the service. Initial value `TRUE`. |
+| `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | Identifies the output `Output_Q1..Q8`. Initial value `logiBUS_DO::Invalid`. |
+| `ID_SET_METHOD` | `WSTRING` | Local method address (`ACTION=CREATE_METHOD`) for the Set method call, called by device A via `CALL_METHOD`. |
+| `ID_RESET_METHOD` | `WSTRING` | Local method address (`ACTION=CREATE_METHOD`) for the Reset method call, called by device A via `CALL_METHOD`. |
+| `ID_TOGGLE_METHOD` | `WSTRING` | Local method address (`ACTION=CREATE_METHOD`) for the Toggle method call, called by device A via `CALL_METHOD`. |
+| `ID_STATE_WRITE` | `WSTRING` | Local node address (`BOOL`, `ACTION=WRITE`) for the state. |
+
+### **Data Outputs**
+
+| Name | Type | Description |
+|------|-----|--------------|
+| `QO` | `BOOL` | Quality Output - TRUE if the service was executed successfully. |
+
+### **Adapters**
+
+None.
+
+## Function Blocks (FBs) Used
+
+- **TRIGGER_SET_SERVER / TRIGGER_RESET_SERVER / TRIGGER_TOGGLE_SERVER** (`iec61499::net::SERVER_0`): each receives its own method call (`ID_SET_METHOD` / `ID_RESET_METHOD` / `ID_TOGGLE_METHOD`).
+- **AX_T_FF_SR** (`adapter::events::unidirectional::AX_T_FF_SR`): flip-flop with the inputs `S`, `R` and `CLK` (toggle).
+- **AX_SPLIT_2** (`adapter::events::unidirectional::AX_SPLIT_2`): branches the state `Q` to the physical output and the local publish.
+- **DigitalOutput_Q1** (`logiBUS::io::DQ::logiBUS_QXA`): physical output.
+- **STATE_PUBLISH** (`adapter::net::AX_PUBLISH_1`): writes the state locally at `ID_STATE_WRITE`.
+- **AND_QO** (`iec61131::booleanOperators::AND_BOOL_5`): combines the `QO` of the three servers, of `DigitalOutput_Q1` and of `STATE_PUBLISH`.
+
+## Program Flow and Connections
+
+1. Flip-flop control: `TRIGGER_SET_SERVER.IND` → `AX_T_FF_SR.S`; `TRIGGER_RESET_SERVER.IND` → `AX_T_FF_SR.R`; `TRIGGER_TOGGLE_SERVER.IND` → `AX_T_FF_SR.CLK`.
+2. Response: `TRIGGER_SET_SERVER.IND` → `TRIGGER_SET_SERVER.RSP`; `TRIGGER_RESET_SERVER.IND` → `TRIGGER_RESET_SERVER.RSP`; `TRIGGER_TOGGLE_SERVER.IND` → `TRIGGER_TOGGLE_SERVER.RSP`.
+3. Initialization chain: `INIT` → `TRIGGER_SET_SERVER.INIT`; `TRIGGER_SET_SERVER.INITO` → `TRIGGER_RESET_SERVER.INIT`; `TRIGGER_RESET_SERVER.INITO` → `TRIGGER_TOGGLE_SERVER.INIT`; `TRIGGER_TOGGLE_SERVER.INITO` → `DigitalOutput_Q1.INIT`; `DigitalOutput_Q1.INITO` → `STATE_PUBLISH.INIT`; `STATE_PUBLISH.INITO` → `INITO` and → `AND_QO.REQ`.
+4. State: `AX_T_FF_SR.Q` → `AX_SPLIT_2.IN`; `AX_SPLIT_2.OUT1` → `DigitalOutput_Q1.OUT`; `AX_SPLIT_2.OUT2` → `STATE_PUBLISH.IN`.
+5. Data: `Output` → `DigitalOutput_Q1.Output`; `ID_SET_METHOD` → `TRIGGER_SET_SERVER.ID`; `ID_RESET_METHOD` → `TRIGGER_RESET_SERVER.ID`; `ID_TOGGLE_METHOD` → `TRIGGER_TOGGLE_SERVER.ID`; `ID_STATE_WRITE` → `STATE_PUBLISH.ID`.
+6. Qualifier: `QI` → `TRIGGER_SET_SERVER.QI`, `TRIGGER_RESET_SERVER.QI`, `TRIGGER_TOGGLE_SERVER.QI`, `DigitalOutput_Q1.QI` and `STATE_PUBLISH.QI`.
+7. Quality evaluation: `TRIGGER_SET_SERVER.QO` → `AND_QO.IN1`; `TRIGGER_RESET_SERVER.QO` → `AND_QO.IN2`; `TRIGGER_TOGGLE_SERVER.QO` → `AND_QO.IN3`; `DigitalOutput_Q1.QO` → `AND_QO.IN4`; `STATE_PUBLISH.QO` → `AND_QO.IN5`; `AND_QO.OUT` → `QO`.
+
+## Technical Features
+
+- Compared with the remote variant, `STATE_PUBLISH` (`AX_PUBLISH_1`) replaces `STATE_CLIENT` (`AX_CLIENT_1_0`); the initialization chain, the method servers and the flip-flop logic are unchanged.
+- The `RSP` events of the three servers are connected directly to the respective `IND` events.
+
+## Application Scenarios
+
+- Local exercise on a single device: set, reset and toggle are triggered by OPC UA method calls (`localhost`), the state is published locally.
+- Test setup of the method chain without a second device, as counterpart to [`SRT_RPC_FROM_Remote_QXA_OPC`](./SRT_RPC_FROM_Remote_QXA_OPC.md).
+
+## Summary
+
+`SRT_RPC_FROM_Remote_QXA_OPC_LOC` controls a set/reset/toggle flip-flop via three method calls, switches `DigitalOutput_Q1` and publishes the state locally via `AX_PUBLISH_1`.
+
+## 🛠️ Related Exercises
+
+- [Uebung_OPC_L04_AX](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/4diac-exercises-docs/en/latest/Uebungen/test_AX/Meins/OPC_UA_Lokal/Uebung_OPC_L04_AX/)
+
+---
+
+### 🌐 Related topic subpages on ms-muc-docs.de
+
+- [🌐 Eclipse 4diac IDE & color reference on ms-muc-docs.de](https://www.ms-muc-docs.de/iec-61499/eclipse-4diac/)

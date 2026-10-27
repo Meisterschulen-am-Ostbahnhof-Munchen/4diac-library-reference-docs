@@ -53,6 +53,14 @@ Der SERVER_0 Block verwaltet die Verbindung.
 - **Indication (IND)**: Client hat angefragt
 - **Response (RSP)**: Server antwortet
 
+## Wichtig: `IND` mit `RSP` verbinden
+
+Jeder `SERVER_0` braucht `IND` → `RSP` direkt am eigenen Baustein. Ohne `RSP` wartet FORTE in `onServerMethodCall` bis zu 4 s und hält dabei die globale Service-Sperre von open62541. In dieser Zeit stocken **alle** OPC-UA-Publishes der Station, nicht nur die der Methode. Die Reaktion der Anwendung hängt als zweite, unabhängige Verbindung am selben `IND`; `RSP` wird nie verzögert.
+
+- `SERVER.IND` → `SERVER.RSP`: Selbstschleife direkt am Baustein, nicht über Anwendungslogik.
+- `SERVER.IND` → Reaktion der Anwendung: zweite, unabhängige Verbindung am selben `IND`.
+- Bei Methoden mit Rückgabewert (z. B. `SERVER_1_2`) wird `RSP` erst nach der Berechnung ausgelöst. Die Berechnung muss deshalb sofort fertig sein und darf nicht auf ein weiteres Ereignis warten.
+
 ## Anwendungsszenarien
 
 - Ereignis-Synchronisation
