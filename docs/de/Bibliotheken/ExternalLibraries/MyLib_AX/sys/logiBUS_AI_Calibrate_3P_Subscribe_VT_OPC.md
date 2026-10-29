@@ -34,7 +34,7 @@
 
 ### **Daten-Ausgänge**
 
-- **QO** (`BOOL`): Quality Output – TRUE, wenn alle Dienste erfolgreich waren (UND aus `AND_QO_A.OUT` und `ValueDisplay.QO`)
+- **QO** (`BOOL`): Quality Output – zusammengefasster Status der beteiligten Funktionsbausteine (UND aus `AND_QO_A.OUT` und `ValueDisplay.QO`). `QO` = TRUE bestätigt **nicht**, dass die Methodenaufrufe erfolgreich waren; die Ausführung der Anfrage bestätigt `CLIENT_0.CNF`, das dieser Wrapper nicht nach außen führt
 
 ### **Adapter**
 

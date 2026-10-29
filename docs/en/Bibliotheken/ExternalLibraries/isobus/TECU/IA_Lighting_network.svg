@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="6.8 -151.0 1436.0 4110.0"
-     width="1436" height="4110">
+     viewBox="6.8 -151.0 1465.4 4110.0"
+     width="1465" height="4110">
   <style>
     @font-face {
       font-family: "TGL 0-17_std";
@@ -40,10 +40,10 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="6.8" y="-151.0" width="1436.0" height="4110.0" fill="white"/>
-  <rect x="13.8" y="-144.0" width="1422.0" height="4096.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="13.8" y="-144.0" width="1422.0" height="25.0" fill="white" stroke="none"/>
-  <line x1="13.8" y1="-119.5" x2="1435.7" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <rect x="6.8" y="-151.0" width="1465.4" height="4110.0" fill="white"/>
+  <rect x="13.8" y="-144.0" width="1451.4" height="4096.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="13.8" y="-144.0" width="1451.4" height="25.0" fill="white" stroke="none"/>
+  <line x1="13.8" y1="-119.5" x2="1465.2" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
   <text x="18.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">ISOBUS Adapter for Lighting Data (LD)</text>
   <g id="sidebars">
     <rect x="13.8" y="-119.0" width="26.2" height="4071.0" fill="#EEF5FF" stroke="none"/>

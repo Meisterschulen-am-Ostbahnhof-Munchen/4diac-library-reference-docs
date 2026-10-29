@@ -55,21 +55,21 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
   <g id="sidebars">
   </g>
   <g id="connections">
-    <polyline points="288.9,100.5 402.4,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="541.2,100.5 627.2,100.5 632.2,95.5 632.2,90.5 637.2,85.5 747.4,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="541.2,100.5 635.2,100.5 640.2,105.5 640.2,155.5 645.2,160.5 747.4,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="852.2,85.5 943.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="852.2,160.5 943.1,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="288.9,134.5 402.4,134.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="541.2,134.5 627.2,134.5 632.2,129.5 632.2,124.5 637.2,119.5 747.4,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="541.2,151.5 635.2,151.5 640.2,156.5 640.2,189.5 645.2,194.5 747.4,194.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="852.2,119.5 943.1,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="852.2,194.5 943.1,194.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="288.5,100.5 402.1,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="540.8,100.5 626.8,100.5 631.8,95.5 631.8,90.5 636.8,85.5 747.1,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="540.8,100.5 634.8,100.5 639.8,105.5 639.8,155.5 644.8,160.5 747.1,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="851.8,85.5 942.8,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="851.8,160.5 942.8,160.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="288.5,134.5 402.1,134.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="540.8,134.5 626.8,134.5 631.8,129.5 631.8,124.5 636.8,119.5 747.1,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="540.8,151.5 634.8,151.5 639.8,156.5 639.8,189.5 644.8,194.5 747.1,194.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="851.8,119.5 942.8,119.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="851.8,194.5 942.8,194.5" fill="none" stroke="#18519E" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
   </g>
   <g id="instances">
-    <g id="fb_NEG_MAG" transform="translate(943.1, 75.0)">
+    <g id="fb_NEG_MAG" transform="translate(942.8, 75.0)">
       <path d="M 3 0
             L 48.4375 0
             A 3 3 0 0 1 51.4375 3
@@ -133,7 +133,7 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">NEG_MAG</text>
     </g>
-    <g id="fb_POS_MAG" transform="translate(943.1, 150.0)">
+    <g id="fb_POS_MAG" transform="translate(942.8, 150.0)">
       <path d="M 3 0
             L 48.4375 0
             A 3 3 0 0 1 51.4375 3
@@ -197,7 +197,7 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">POS_MAG</text>
     </g>
-    <g id="fb_Y" transform="translate(237.4, 90.0)">
+    <g id="fb_Y" transform="translate(237.1, 90.0)">
       <path d="M 3 0
             L 48.4375 0
             A 3 3 0 0 1 51.4375 3
@@ -261,7 +261,7 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">Y</text>
     </g>
-    <g id="fb_SPLIT" transform="translate(402.4, 90.0)">
+    <g id="fb_SPLIT" transform="translate(402.1, 90.0)">
       <path d="M 3 0
             L 135.75 0
             A 3 3 0 0 1 138.75 3
@@ -334,7 +334,7 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">SPLIT</text>
     </g>
-    <g id="fb_DEDUP_NEG" transform="translate(747.4, 75.0)">
+    <g id="fb_DEDUP_NEG" transform="translate(747.1, 75.0)">
       <path d="M 3 0
             L 101.75 0
             A 3 3 0 0 1 104.75 3
@@ -404,7 +404,7 @@ dank je einem E_D_FF_ANY (generischer Standardbaustein) pro Ausgang.</text>
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">DEDUP_NEG</text>
     </g>
-    <g id="fb_DEDUP_POS" transform="translate(747.4, 150.0)">
+    <g id="fb_DEDUP_POS" transform="translate(747.1, 150.0)">
       <path d="M 3 0
             L 101.75 0
             A 3 3 0 0 1 104.75 3

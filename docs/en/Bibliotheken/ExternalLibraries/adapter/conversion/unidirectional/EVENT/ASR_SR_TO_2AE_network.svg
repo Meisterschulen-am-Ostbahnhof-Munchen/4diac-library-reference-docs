@@ -48,13 +48,13 @@
   <g id="sidebars">
   </g>
   <g id="connections">
-    <polyline points="356.3,115.5 572.3,115.5 577.3,110.5 577.3,90.5 582.3,85.5 877.9,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="356.3,132.5 572.3,132.5 577.3,137.5 577.3,200.5 582.3,205.5 882.8,205.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="353.9,115.5 569.9,115.5 574.9,110.5 574.9,90.5 579.9,85.5 875.4,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="353.9,132.5 569.9,132.5 574.9,137.5 574.9,200.5 579.9,205.5 880.3,205.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
   </g>
   <g id="instances">
-    <g id="fb_SET_OUT" transform="translate(877.9, 75.0)">
+    <g id="fb_SET_OUT" transform="translate(875.4, 75.0)">
       <path d="M 3 0
             L 53.3125 0
             A 3 3 0 0 1 56.3125 3
@@ -116,7 +116,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">SET_OUT</text>
     </g>
-    <g id="fb_RESET_OUT" transform="translate(882.8, 195.0)">
+    <g id="fb_RESET_OUT" transform="translate(880.3, 195.0)">
       <path d="M 3 0
             L 53.3125 0
             A 3 3 0 0 1 56.3125 3
@@ -178,7 +178,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">RESET_OUT</text>
     </g>
-    <g id="fb_ASR_IN" transform="translate(292.9, 105.0)">
+    <g id="fb_ASR_IN" transform="translate(290.4, 105.0)">
       <path d="M 3 0
             L 60.4375 0
             A 3 3 0 0 1 63.4375 3

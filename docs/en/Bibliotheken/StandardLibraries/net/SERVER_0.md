@@ -54,6 +54,14 @@ No user data (SD_x, RD_x) is transmitted during this process.
 - **Indication (IND)**: Client has requested
 - **Response (RSP)**: Server responding
 
+## Important: Connect `IND` to `RSP`
+
+Every `SERVER_0` needs `IND` → `RSP` directly on its own block. Without `RSP`, FORTE waits in `onServerMethodCall` for up to 4 s and holds open62541's global service lock meanwhile. During that time **all** OPC-UA publishes of the station stall, not only the one of the method. The application's reaction hangs on a second, independent connection from the same `IND`; `RSP` is never delayed.
+
+- `SERVER.IND` → `SERVER.RSP`: self-loop directly on the block, not through application logic.
+- `SERVER.IND` → application reaction: a second, independent connection from the same `IND`.
+- For methods with a return value (e.g. `SERVER_1_2`), `RSP` is only triggered after the calculation. The calculation must therefore be finished immediately and must not wait for another event.
+
 ## Application Scenarios
 
 - Event synchronization

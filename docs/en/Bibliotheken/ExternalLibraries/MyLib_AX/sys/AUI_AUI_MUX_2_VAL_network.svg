@@ -214,9 +214,7 @@
       <text x="30.0" y="32.0"
             font-family="'TGL 0-16_std', 'TGL 0-16', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000">AUI_AUI_MUX_2</text>
-      <polygon points="113.3125,5.5 118.3125,10.5 113.3125,15.5" fill="#63B31F"/>
-      <text x="112.3125" y="14.7" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
-            fill="#000000" text-anchor="end">CNF</text>
+
 
 
       <path d="M 0 38.5

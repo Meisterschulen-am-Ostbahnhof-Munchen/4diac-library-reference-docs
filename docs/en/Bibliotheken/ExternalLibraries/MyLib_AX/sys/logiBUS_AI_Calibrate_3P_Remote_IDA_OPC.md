@@ -69,6 +69,7 @@
 - The optional plugs `CAL_OUT`/`MIDREF_OUT`/`MAXREF_OUT` allow external consumers to read the already calibrated value via adapter instead of subscribing to the same OPC-UA node locally again (FORTE: 'Cannot add another one'); leave unwired if not needed (e.g. slope compensation channel)
 - The merge chains for `C_MIN`/`C_MID`/`C_MAX` are a single `E_MERGE_3`/`E_MERGE_4` each instead of several `E_MERGE_2` (OR is associative, functionally identical); `C_MIN`/`C_MID`/`C_MAX` of `CALIBRATE` are pure event inputs
 - Remote triggers fire on **every** edge (rising and falling), since the web client writes the inverted last value on each click
+- **`IND` → `RSP`**: `SERVER_MID_TRIGGER` has the self-loop `IND` → `RSP`; the forwarding `IND` → `E_MERGE_MID.EI4` remains alongside it. Rule see [SERVER_0](../../../StandardLibraries/net/SERVER_0.md).
 
 ## Application Scenarios
 
