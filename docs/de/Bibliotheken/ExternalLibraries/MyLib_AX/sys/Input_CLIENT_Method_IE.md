@@ -33,7 +33,7 @@
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
-| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde. |
+| `QO` | `BOOL` | Quality Output - Zusammengefasster Status der beteiligten Funktionsbausteine (`Taster.QO` UND `CLIENT.QO`, also der Verbindungsstatus von `CLIENT_0`). `QO` = TRUE bestätigt **nicht**, dass der Methodenaufruf erfolgreich war; die Ausführung der Anfrage bestätigt `CLIENT_0.CNF`, das hier nicht nach außen geführt wird. |
 
 ### **Adapter**
 

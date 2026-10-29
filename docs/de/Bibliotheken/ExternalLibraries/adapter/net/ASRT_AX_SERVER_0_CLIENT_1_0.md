@@ -57,7 +57,7 @@ Der Funktionsblock **ASRT_AX_SERVER_0_CLIENT_1_0** ist ein Composite-Funktionsbl
 - **Pufferung mit D-Flipflop**: Der über den Adapter gemeldete Rückmeldewert wird über ein internes `iec61499::events::E_D_FF` stabilisiert, bevor er per `CLIENT_1_0` verschickt wird.
 - **Sequentielle Initialisierung**: `SET_SERVER` → `RESET_SERVER` → `TOGGLE_SERVER` → `STATE_CLIENT` (Composite-FBTypes verketten `INIT`/`INITO` seriell durch jede Instanz).
 - **Kapselung**: Nach außen ist nur noch die ASRT_AX-Adapter-Schnittstelle sichtbar.
-- **Hinweis `IND` → `RSP`**: An dem enthaltenen `SERVER_0` ist `IND` → `RSP` nicht verdrahtet (Stand 2026-10-18). Das ist die Lücke aus der Regel unter [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): Ohne `RSP` kann jeder Methodenaufruf bis zu 4 s lang alle OPC-UA-Publishes der Station aufhalten.
+- **Hinweis `IND` → `RSP`**: An allen drei enthaltenen `SERVER_0`-Instanzen (`SET_SERVER`, `RESET_SERVER`, `TOGGLE_SERVER`) ist `IND` → `RSP` nicht verdrahtet (Stand 2026-10-18). Das ist die Lücke aus der Regel unter [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): Ohne `RSP` kann jeder Methodenaufruf bis zu 4 s lang alle OPC-UA-Publishes der Station aufhalten. Die Änderung wirkt erst, wenn das ELF neu gebaut und neu auf das Gerät gebracht wird.
 
 ## Zustandsübersicht
 

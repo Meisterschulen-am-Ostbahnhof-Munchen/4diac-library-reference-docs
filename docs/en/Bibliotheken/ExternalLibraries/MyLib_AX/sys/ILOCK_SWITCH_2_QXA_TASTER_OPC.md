@@ -18,7 +18,7 @@
 
 ### **Event Outputs**
 
-- `INITO` (`EInit`): Initialization confirmed (from `DigitalOutput_UP.INITO`) - for callers that need a real confirm chain (e.g. behind an `Option::AOption` adapter).
+- `INITO` (`EInit`): Initialization confirmed (from `DigitalOutput_DOWN.INITO`) - for callers that need a real confirm chain (e.g. behind an `Option::AOption` adapter).
 
 ### **Data Inputs**
 

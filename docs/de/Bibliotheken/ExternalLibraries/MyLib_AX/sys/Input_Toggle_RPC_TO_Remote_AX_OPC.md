@@ -33,7 +33,7 @@
 
 | Name | Typ | Beschreibung |
 |------|-----|--------------|
-| `QO` | `BOOL` | Quality Output - TRUE, wenn der Dienst erfolgreich ausgeführt wurde. |
+| `QO` | `BOOL` | Quality Output - Zusammengefasster Status der beteiligten Funktionsbausteine (`TRIGGER_INPUT.QO`, `TRIGGER_CLIENT.QO` und `STATE_SUBSCRIBE.QO`, UND-verknüpft). `QO` = TRUE bestätigt **nicht**, dass der Methodenaufruf erfolgreich war; die Ausführung der Anfrage bestätigt `CLIENT_0.CNF`, das dieser Wrapper nicht nach außen führt. |
 
 ### **Adapter**
 

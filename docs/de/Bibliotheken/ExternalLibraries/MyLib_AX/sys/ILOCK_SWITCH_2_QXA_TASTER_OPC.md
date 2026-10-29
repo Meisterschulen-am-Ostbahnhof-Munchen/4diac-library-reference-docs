@@ -18,7 +18,7 @@
 
 ### **Ereignis-Ausgänge**
 
-- `INITO` (`EInit`): Initialisierung bestätigt (von `DigitalOutput_UP.INITO`) - für Aufrufer, die eine echte Confirm-Kette brauchen (z. B. hinter einem `Option::AOption`-Adapter).
+- `INITO` (`EInit`): Initialisierung bestätigt (von `DigitalOutput_DOWN.INITO`) - für Aufrufer, die eine echte Confirm-Kette brauchen (z. B. hinter einem `Option::AOption`-Adapter).
 
 ### **Daten-Eingänge**
 

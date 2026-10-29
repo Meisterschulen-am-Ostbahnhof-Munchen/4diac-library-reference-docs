@@ -33,7 +33,7 @@
 
 | Name | Type | Description |
 |------|-----|--------------|
-| `QO` | `BOOL` | Quality Output - TRUE if the service was executed successfully. |
+| `QO` | `BOOL` | Quality Output - Combined status of the participating function blocks (`Taster.QO` AND `CLIENT.QO`, i.e. the connection status of `CLIENT_0`). `QO` = TRUE does **not** confirm that the method call succeeded; `CLIENT_0.CNF` confirms that the request was executed, but it is not exposed here. |
 
 ### **Adapters**
 

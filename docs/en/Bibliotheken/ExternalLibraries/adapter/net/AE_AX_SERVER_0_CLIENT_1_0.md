@@ -53,7 +53,7 @@ The **AE_AX_SERVER_0_CLIENT_1_0** function block is a composite function block t
 - **Buffering with D flip-flop**: The feedback value reported via the adapter is stabilized via an internal `iec61499::events::E_D_FF` before being sent via `CLIENT_1_0`.
 - **Sequential initialization**: `SERVER_0_1` is initialized before `STATE_CLIENT` (composite FBTypes chain `INIT`/`INITO` serially through each instance).
 - **Encapsulation**: Only the AE_AX adapter interface is visible externally; `SERVER_0`'s `IND` and `CLIENT_1_0`'s `REQ`/`SD_1` remain internal.
-- **Note `IND` → `RSP`**: `IND` → `RSP` is not wired on the contained `SERVER_0` (as of 2026-10-18). This is the gap described by the rule at [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): without `RSP`, every method call can hold up all OPC-UA publishes of the station for up to 4 s.
+- **Note `IND` → `RSP`**: `IND` → `RSP` is not wired on the contained `SERVER_0` (as of 2026-10-18). This is the gap described by the rule at [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): without `RSP`, every method call can hold up all OPC-UA publishes of the station for up to 4 s. After wiring `IND` → `RSP`, the composed implementation must be rebuilt and deployed so that it runs from the updated definition and no longer from the old ELF.
 
 ## State Overview
 

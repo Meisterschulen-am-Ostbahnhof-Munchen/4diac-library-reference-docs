@@ -33,7 +33,7 @@
 
 | Name | Type | Description |
 |------|-----|--------------|
-| `QO` | `BOOL` | Quality Output - TRUE if the service was executed successfully. |
+| `QO` | `BOOL` | Quality Output - Combined status of the participating function blocks (`TRIGGER_INPUT.QO`, `TRIGGER_CLIENT.QO` and `STATE_SUBSCRIBE.QO`, ANDed). `QO` = TRUE does **not** confirm that the method call succeeded; `CLIENT_0.CNF` confirms that the request was executed, but this wrapper does not expose it. |
 
 ### **Adapters**
 

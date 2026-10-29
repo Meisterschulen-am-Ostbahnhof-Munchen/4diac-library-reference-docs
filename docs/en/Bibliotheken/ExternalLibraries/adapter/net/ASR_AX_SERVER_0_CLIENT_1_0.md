@@ -55,7 +55,7 @@ The **ASR_AX_SERVER_0_CLIENT_1_0** function block is a composite function block 
 - **Buffering with D flip-flop**: The feedback value reported via the adapter is stabilized via an internal `iec61499::events::E_D_FF` before being sent via `CLIENT_1_0`.
 - **Sequential initialization**: `SET_SERVER` → `RESET_SERVER` → `STATE_CLIENT` (composite FBTypes chain `INIT`/`INITO` serially through each instance).
 - **Encapsulation**: Only the ASR_AX adapter interface is visible externally.
-- **Note `IND` → `RSP`**: `IND` → `RSP` is not wired on the contained `SERVER_0` (as of 2026-10-18). This is the gap described by the rule at [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): without `RSP`, every method call can hold up all OPC-UA publishes of the station for up to 4 s.
+- **Note `IND` → `RSP`**: `IND` → `RSP` is not wired on both contained `SERVER_0` instances (`SET_SERVER`, `RESET_SERVER`) (as of 2026-10-18). This is the gap described by the rule at [SERVER_0](../../../StandardLibraries/net/SERVER_0.md): without `RSP`, every method call can hold up all OPC-UA publishes of the station for up to 4 s. The change takes effect only once the ELF is rebuilt and redeployed to the device.
 
 ## State Overview
 
