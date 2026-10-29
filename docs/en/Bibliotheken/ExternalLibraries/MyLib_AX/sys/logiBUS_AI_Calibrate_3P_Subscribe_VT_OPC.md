@@ -34,7 +34,7 @@
 
 ### **Data Outputs**
 
-- **QO** (`BOOL`): Quality Output - TRUE if all services succeeded (AND of `AND_QO_A.OUT` and `ValueDisplay.QO`)
+- **QO** (`BOOL`): Quality Output - combined status of the participating function blocks (AND of `AND_QO_A.OUT` and `ValueDisplay.QO`). `QO` = TRUE does **not** confirm that the method calls succeeded; `CLIENT_0.CNF` confirms that the request was executed, but this wrapper does not expose it
 
 ### **Adapters**
 
