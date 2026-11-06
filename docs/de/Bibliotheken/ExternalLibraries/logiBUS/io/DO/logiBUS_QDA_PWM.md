@@ -25,6 +25,7 @@ Der Funktionsblock **logiBUS_QDA_PWM** ist ein Composite-Baustein zur Ansteuerun
 | -------- | ----- | ---------------------------------------- |
 | INITO    | EInit | Bestätigung der Initialisierung          |
 | CNF      | Event | Bestätigung eines angeforderten Dienstes |
+| RAMPO    | Event | Rampe beendet, Wert erreicht (mit `QO`)  |
 
 ### **Daten-Eingänge**
 
@@ -33,6 +34,8 @@ Der Funktionsblock **logiBUS_QDA_PWM** ist ein Composite-Baustein zur Ansteuerun
 | QI       | BOOL                          | Eingangs-Qualifier (Initialisierung freigeben)                            |
 | PARAMS   | STRING                        | Service-Parameter (z. B. Adressierung, Konfiguration)                     |
 | Output   | logiBUS::io::DQ::logiBUS_DO_S | Identifikation des Ausgangs (z. B. Output_Q1..Q8); Initialwert: *Invalid* |
+| FREQ     | UDINT                         | PWM-Frequenz in Hz, gelesen bei INIT; Initialwert `400`                   |
+| RAMP     | TIME                          | Rampenzeit zum neuen Wert, gelesen bei INIT; Initialwert `T#0ms` (Sprung) |
 
 ### **Daten-Ausgänge**
 
@@ -52,12 +55,39 @@ Der Funktionsblock **logiBUS_QDA_PWM** ist ein Composite-Baustein zur Ansteuerun
 Der Funktionsblock ist als Composite realisiert und enthält eine interne Instanz des Bausteins `logiBUS::io::DQ::logiBUS_QD_PWM` (hier als *QX* bezeichnet). Die Logik lässt sich wie folgt beschreiben:
 
 1. **Initialisierung:**
-   Ein INIT-Ereignis am Eingang löst die Initialisierung des internen Bausteins aus. Dabei werden die Daten-Eingänge *QI*, *PARAMS* und *Output* an den internen Baustein weitergeleitet. Nach erfolgreicher Initialisierung wird das Ereignis *INITO* ausgegeben, zusammen mit den Ausgangsdaten *QO* und *STATUS*.
+   Ein INIT-Ereignis am Eingang löst die Initialisierung des internen Bausteins aus. Dabei werden die Daten-Eingänge *QI*, *PARAMS*, *Output*, *FREQ* und *RAMP* an den internen Baustein weitergeleitet. Nach erfolgreicher Initialisierung wird das Ereignis *INITO* ausgegeben, zusammen mit den Ausgangsdaten *QO* und *STATUS*.
 
 2. **Triggerung über Adapter:**
    Der Adapter *OUT* nimmt von außen ein Ereignis *E1* und einen Datenwert *D1* entgegen. Das Ereignis wird als *REQ* (Request) an den internen Baustein weitergegeben, die Daten *D1* als *OUT*-Wert. Der interne Baustein verarbeitet diese Anforderung und quittiert mit dem Ereignis *CNF*, das über den Ausgang *CNF* nach außen geleitet wird. Die zugehörigen Ausgangsdaten *QO* und *STATUS* werden aktualisiert.
 
 Damit ermöglicht der Baustein eine saubere Trennung von Initialisierung und zyklischer Ausgabe: Die Konfiguration erfolgt einmalig über INIT, die eigentliche PWM-Ausgabe wird über den Adapter getriggert.
+
+## Frequenz und Rampe (ab Version 1.2)
+
+- **`FREQ`** (UDINT, in Hz, Standard `400`): PWM-Frequenz, wird nur bei `INIT` gelesen. Eine neue Frequenz braucht ein neues `INIT`. Ausgänge mit gleicher Frequenz teilen sich einen LEDC-Timer. Es gibt 4 Timer, auch das LED-Blinken belegt einen.
+- **`RAMP`** (TIME, Standard `T#0ms`): Übergangszeit zum neuen Wert als Hardware-Rampe, blockiert nicht. `T#0ms` ist ein Sprung. Im Composite wird `RAMP` nur bei `INIT` übernommen; die Rampenzeit gilt dann für jeden neuen Wert, der über den Adapter kommt.
+- **`RAMPO`** (Ereignis-Ausgang, mit `QO`): Der Wert ist erreicht. Das ist das Ende der Rampe, bei `T#0ms` direkt nach dem Sprung. Nach `INIT` kommt kein `RAMPO`.
+- Der Tastgrad bleibt `0` bis `8191` (13 Bit).
+- Quelle dieser Aussagen: Kommentare in der Bausteinbeschreibung (`.fbt`) und `PWM_KONZEPT.md`; das Verhalten der Firmware ist dort beschrieben und hier nicht geprüft.
+
+### Hinweise zu den Leistungsstufen
+
+Die Firmware prüft die Frequenz nicht gegen die Leistungsstufe des Boards. Die folgenden Grenzen sind nur ein Hinweis (Quelle: Kommentar zu `FREQ` im Baustein und `PWM_KONZEPT.md`):
+
+| Leistungsstufe | Hinweis |
+|---|---|
+| APIXON 15 PWR Q1 (BTH50030) | höchstens 100 Hz |
+| BTS7030, BTT6030, BTH6070 | für Ventile 100 bis 200 Hz |
+| Trainer20 | ohne Leistungsstufe |
+
+Welches Board welche Leistungsstufe trägt, steht noch nicht fest und ist hier nicht dokumentiert.
+
+## Änderung gegenüber Version 1.1
+
+- **Neu:** Eingänge `FREQ` und `RAMP`, Ereignis `RAMPO`.
+- **Verhaltensänderung:** Der Standardwert von `RAMP` ist `T#0ms` (Sprung). Bisher ging jeder neue Wert als feste Rampe über 500 ms an den Ausgang. Bestehende Programme springen deshalb jetzt auf den neuen Wert. Wer das weiche Anfahren behalten will, setzt `RAMP = T#500ms`.
+- **Voraussetzung:** Die ELF `logiBUS_io-3.1.0` (`-xtensa.elf` für S3, `-riscv32.elf` für P4/S31) braucht eine Firmware mit den neuen Host-Symbolen `elf_isr_ledc_fade_end`, `ledc_cb_register`, `ledc_fade_stop`, `ledc_get_duty`, `ledc_timer_pause`, `lroundf` und `powf`; auf P4/S31 zusätzlich `ledc_fill_multi_fade_param_list` und `ledc_set_multi_fade` (Host-Tabellen: LOGIBUS `3142a703`). Auf älterer Firmware lädt die ELF nicht, das Laden bricht wegen des fehlenden Symbols ab. `FORTE_ABI` bleibt `6`, daran ist der Unterschied nicht zu erkennen. Firmware und ELF immer zusammen ausliefern. (Angabe aus der Entwicklung, nicht an der Firmware geprüft.)
+- **Stand:** Noch nicht auf Hardware getestet.
 
 ## Technische Besonderheiten
 

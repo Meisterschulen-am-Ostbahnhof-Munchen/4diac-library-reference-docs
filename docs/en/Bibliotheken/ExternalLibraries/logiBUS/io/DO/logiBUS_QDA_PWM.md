@@ -25,6 +25,7 @@ The **logiBUS_QDA_PWM** function block is a composite block for controlling a PW
 | ----- | ----- | -------------------------------------- |
 | INITO | EInit | Initialization Acknowledgement         |
 | CNF   | Event | Acknowledgement of a requested service |
+| RAMPO | Event | Ramp finished, value reached (with `QO`) |
 
 ### **Data Inputs**
 
@@ -33,6 +34,8 @@ The **logiBUS_QDA_PWM** function block is a composite block for controlling a PW
 | QI       | BOOL                          | Input Qualifier (Enable Initialization)                               |
 | PARAMS   | STRING                        | Service Parameter (e.g., Addressing, Configuration)                   |
 | Output   | logiBUS::io::DQ::logiBUS_DO_S | Output Identification (e.g., Output_Q1..Q8); Initial Value: *Invalid* |
+| FREQ     | UDINT                         | PWM frequency in Hz, read at INIT; initial value `400`                |
+| RAMP     | TIME                          | Ramp time to the new value, read at INIT; initial value `T#0ms` (jump) |
 
 ### **Data Outputs**
 
@@ -53,13 +56,40 @@ The function block is implemented as a composite and contains an internal instan
 
 1. **Initialization:**
 
-An INIT event at the input triggers the initialization of the internal function block. The data inputs *QI*, *PARAMS*, and *Output* are then forwarded to the internal function block. After successful initialization, the event *INITO* is output, along with the output data *QO* and *STATUS*.
+An INIT event at the input triggers the initialization of the internal function block. The data inputs *QI*, *PARAMS*, *Output*, *FREQ*, and *RAMP* are then forwarded to the internal function block. After successful initialization, the event *INITO* is output, along with the output data *QO* and *STATUS*.
 
 1. **Triggering via Adapter:**
 
 The adapter *OUT* receives an external event *E1* and a data value *D1*. The event is forwarded to the internal function block as a *REQ* (Request), and the data *D1* as an *OUT* value. The internal function block processes this request and acknowledges it with the event *CNF*, which is then output to the external system via the *CNF* output. The associated output data *QO* and *STATUS* are updated.
 
 This function block allows for a clean separation of initialization and cyclic output: Configuration is performed once via INIT, while the actual PWM output is triggered by the adapter.
+
+## Frequency and ramp (from version 1.2)
+
+- **`FREQ`** (UDINT, in Hz, default `400`): PWM frequency, read at `INIT` only. A new frequency needs a new `INIT`. Outputs with the same frequency share one LEDC timer. There are 4 timers, and LED blinking also uses one.
+- **`RAMP`** (TIME, default `T#0ms`): transition time to the new value as a hardware ramp, does not block. `T#0ms` is a jump. In the composite, `RAMP` is taken over at `INIT` only; the ramp time then applies to every new value that arrives through the adapter.
+- **`RAMPO`** (event output, with `QO`): the value is reached. This is the end of the ramp, directly after the jump with `T#0ms`. No `RAMPO` follows `INIT`.
+- The duty cycle stays `0` to `8191` (13 bit).
+- Source of these statements: comments in the block description (`.fbt`) and `PWM_KONZEPT.md`; the firmware behavior is described there and was not verified here.
+
+### Notes on the power stages
+
+The firmware does not check the frequency against the power stage of the board. The following limits are only a hint (source: the comment of `FREQ` in the block and `PWM_KONZEPT.md`):
+
+| Power stage | Hint |
+|---|---|
+| APIXON 15 PWR Q1 (BTH50030) | at most 100 Hz |
+| BTS7030, BTT6030, BTH6070 | for valves 100 to 200 Hz |
+| Trainer20 | without power stage |
+
+Which board carries which power stage is not yet decided and is not documented here.
+
+## Changes compared to version 1.1
+
+- **New:** inputs `FREQ` and `RAMP`, event `RAMPO`.
+- **Behavior change:** the default of `RAMP` is `T#0ms` (jump). Until now every new value was applied as a fixed 500 ms ramp. Existing programs therefore now jump to the new value. To keep the soft start, set `RAMP = T#500ms`.
+- **Requirement:** The ELF `logiBUS_io-3.1.0` (`-xtensa.elf` for S3, `-riscv32.elf` for P4/S31) needs firmware with the new host symbols `elf_isr_ledc_fade_end`, `ledc_cb_register`, `ledc_fade_stop`, `ledc_get_duty`, `ledc_timer_pause`, `lroundf` and `powf`; on P4/S31 additionally `ledc_fill_multi_fade_param_list` and `ledc_set_multi_fade` (host tables: LOGIBUS `3142a703`). On older firmware the ELF does not load; loading aborts because of the missing symbol. `FORTE_ABI` stays `6`, so the difference cannot be seen from it. Always deliver firmware and ELF together. (Statement from development, not verified against the firmware.)
+- **Status:** not yet tested on hardware.
 
 ## Technical Features
 
