@@ -46,7 +46,7 @@ The internal structure of E_PERMIT_INVERT consists of two standard blocks:
 - `F_NOT_BOOL_INIT`  
 - `E_PERMIT`
 
-The `PERMIT` input is connected to `F_NOT_BOOL_INIT.IN`. The inverted result is then connected to `E_PERMIT.PERMIT`. The incoming event `EI` is connected directly to `E_PERMIT.EI`, and the output event `E_PERMIT.EO` is forwarded as `EO`.
+The `PERMIT` input is connected to `F_NOT_BOOL_INIT.IN`. The inverted result is then connected to `E_PERMIT.PERMIT`. The incoming event `EI` is connected to `F_NOT_BOOL_INIT.REQ`, and only its `CNF` is connected to `E_PERMIT.EI`, so the inversion is recomputed for every event before `E_PERMIT` evaluates it. The output event `E_PERMIT.EO` is forwarded as `EO`.
 
 This means:
 
@@ -64,6 +64,7 @@ This means:
 - Provides a single Boolean control input and a single event input/output pair.
 - Does not expose any data outputs.
 - Behaves as a pure event gate: no output event is generated without an input event.
+- Event path: `EI` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_PERMIT.EI`, `E_PERMIT.EO` → `EO`.
 - Suitable for event-driven control applications.
 
 ## State Overview
