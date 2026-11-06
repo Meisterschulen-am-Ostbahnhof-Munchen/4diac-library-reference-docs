@@ -2,41 +2,36 @@
 
 ![A2X_LAST_2](A2X_LAST_2.svg)
 
-![A2X_LAST_2_ecc](./A2X_LAST_2_ecc.svg)
-
 ## Introduction
 
-The A2X_LAST_2 function block merges two A2X adapter signals (**IN1**, **IN2**) into one shared output (**OUT**). Unlike the single-channel [`AX_LAST_2`](AX_LAST_2.md), A2X carries two independent channels (**UP** and **DOWN**), which are therefore also merged independently by last-writer-wins: whichever socket last wrote on UP wins for UP; whichever last wrote on DOWN wins for DOWN - regardless of what happens on the other channel.
+The function block `A2X_LAST_2` merges 2 identical `A2X` adapter signals (**IN1** to **IN2**) into one common output (**OUT**) following the **last writer wins** principle, separately for the channels UP and DOWN: on each channel the socket that sent an event last wins, and its value is passed to OUT immediately.
 
 ## Interface Structure
 
 ### **Adapters**
 
-**Input adapters (Sockets):**
+**Input adapters (sockets):**
 
-- **IN1**: A2X adapter (unidirectional) - first signal source (UP + DOWN)
-- **IN2**: A2X adapter (unidirectional) - second signal source (UP + DOWN)
+- **IN1**: A2X adapter (unidirectional)
+- **IN2**: A2X adapter (unidirectional)
 
-**Output adapter (Plug):**
+**Output adapter (plug):**
 
-- **OUT**: A2X adapter (unidirectional) - merged signal (UP + DOWN)
+- **OUT**: A2X adapter (unidirectional), merged signal
 
-## How it works
+## Functionality
 
-The block is implemented as a Basic FB with a 5-state ECC (START, PASS1_UP, PASS2_UP, PASS1_DOWN, PASS2_DOWN) that serves both channels through the same ECC - since only one event is processed per FB invocation, UP and DOWN processing never collide. When an event arrives at IN1.UP or IN2.UP, that UP value is copied to OUT.UP and OUT.E_UP is fired. Symmetrically, an event at IN1.DOWN/IN2.DOWN copies the DOWN value to OUT.DOWN and fires OUT.E_DOWN. The two channels therefore have independent "winners" - IN1 might currently dominate the UP channel while IN2 dominates the DOWN channel.
+The socket with the last event wins, separately for UP and DOWN: the two channels run independently. OUT takes over the value of the winner immediately and sends the event, even if the value stays the same.
 
-## Technical Details
+## Technical Features
 
-- Two independent last-writer-wins merges (UP and DOWN) in one block
-- Extends the generic single-channel LAST_2 pattern to the 2-channel A2X adapter type
-- One shared ECC for both channels, since only one event is processed per invocation - no state conflict possible
-- No signal delay: the value is passed through in the same cycle the triggering event arrives
+- Generic function block without ECC (`GenericClassName` = `GEN_A2X_LAST`); the behavior is implemented in the firmware (FORTE), the type description contains no algorithm. Up to version 1.0, `A2X_LAST_2` was a basic FB with an ECC; version 1.1 is generic, the interface stays the same.
+- Interface: sockets `IN1` and `IN2`, plug `OUT`.
+- All sizes `A2X_LAST_2` to `A2X_LAST_9` have the same function and differ only in the number of sockets.
+- Status: according to development, `AD_LAST_3` is tested on hardware (Trainer20, ESP32-S31); the other types and sizes are not.
 
 ## Application Scenarios
 
-- Merging two equally-valid A2X signal sources (e.g. two operator stations for an up/down control) into one downstream adapter path
-- Arbitrating between two independent up/down sources where UP and DOWN may come from different origins
-
-## ⚖️ Comparison with Similar Blocks
-
-A2X_LAST_2 is the two-channel variant of the generic [`AX_LAST_2`](AX_LAST_2.md) pattern, applied to the A2X adapter type with its two independent UP/DOWN channels. For mixed operation between a data adapter and a pure event adapter, use [`AX_AE_MERGE`](AX_AE_MERGE.md) instead.
+- Merging equivalent signal sources into one downstream adapter path, for example a manual and an automatic setpoint source.
+- Arbitration between several operator stations that may write the same value.
+- Simplifying networks that would otherwise wire `F_SEL`/`E_RS` inline.
