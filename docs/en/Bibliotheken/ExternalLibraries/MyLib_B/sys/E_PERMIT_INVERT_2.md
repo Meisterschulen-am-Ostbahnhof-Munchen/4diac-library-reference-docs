@@ -54,6 +54,10 @@ The behavior is as follows:
 
 Each event channel is independent. EI1 only controls EO1, and EI2 only controls EO2. Both channels share the same inverted permission condition.
 
+The event paths also pass through the negation: the inputs `EI1`, `EI2` first go into `E_MUX_2`. It records in its output `K` which channel fired and starts `F_NOT_BOOL_INIT.REQ`. After `F_NOT_BOOL_INIT.CNF`, `E_DEMUX_2` outputs the event again on the channel that fired it, using `K`, and `E_PERMIT_2` decides. This way the negation is recalculated before every permission check, even if `PERMIT` has changed since the last event.
+
+Event path per channel `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_2` → `E_PERMIT_2.EIk` → `EOk`.
+
 ## Technical Features
 
 - Reusable subapplication defined as an IEC 61499 SubAppType.
@@ -64,6 +68,8 @@ Each event channel is independent. EI1 only controls EO1, and EI2 only controls 
 - Provides active-low event gating behavior.
 - Encapsulates the inverter plus event gate logic into a single application component.
 - The gate does not queue or store events. Events arriving while the gate is closed are discarded.
+- Internally there are also `E_MUX_2` and `E_DEMUX_2`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
+- A change of `PERMIT` alone produces no output event.
 
 ## State Overview
 

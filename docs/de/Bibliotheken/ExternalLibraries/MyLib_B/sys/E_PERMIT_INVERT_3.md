@@ -67,6 +67,10 @@ Die folgende Wahrheitstabelle verdeutlicht das Verhalten für einen der drei Kan
 | `FALSE`           | `TRUE`                  | eintreffend    | wird durchgeschaltet |
 | `TRUE`            | `FALSE`                 | eintreffend    | wird blockiert |
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2`, `EI3` laufen zuerst in `E_MUX_3`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_3` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_3` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_3` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_3` → `E_PERMIT_3.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Die SubApp kapselt die Kombination aus Negation und Ereignisfreigabe in einem einzigen wiederverwendbaren Typ.
@@ -74,6 +78,8 @@ Die folgende Wahrheitstabelle verdeutlicht das Verhalten für einen der drei Kan
 - Der Baustein `F_NOT_BOOL_INIT` ist eine initialisierbare Negation. In dieser Konfiguration wird kein Initialwert gesetzt; das Verhalten entspricht einer einfachen Negation des Eingangssignals.
 - Die SubApp besitzt drei voneinander unabhängige Kanäle, sodass gleichzeitig mehrere Ereignispfade mit derselben Freigabebedingung gesteuert werden können.
 - Da es sich um eine SubApplikation handelt, ist die innere Struktur in der 4diac-IDE sichtbar und kann bei Bedarf erweitert oder angepasst werden.
+- Intern sitzen zusätzlich `E_MUX_3` und `E_DEMUX_3`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
 
 ## Zustandsübersicht
 

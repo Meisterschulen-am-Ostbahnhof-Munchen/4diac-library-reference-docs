@@ -62,6 +62,10 @@ Dadurch gilt:
   Interner Freigabewert = `FALSE`  
   Ereignisse werden blockiert und es wird kein Ereignisausgang aktiviert.
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2` laufen zuerst in `E_MUX_2`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_2` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_2` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_2` → `E_PERMIT_2.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Es handelt sich um eine Subapplikation, nicht um einen direkt implementierten Funktionsblock.
@@ -69,6 +73,8 @@ Dadurch gilt:
 - Die beiden Ereigniskanäle sind getrennt geführt, werden aber gemeinsam über ein einziges Freigabesignal gesteuert.
 - Der Baustein besitzt keine Datenausgänge und kein eigenes internes Zustandsgedächtnis.
 - Durch die Integration der Negation in die Subapplikation wird eine extern sichtbare Freigabelogik mit invertierter Bedeutung erreicht.
+- Intern sitzen zusätzlich `E_MUX_2` und `E_DEMUX_2`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
 
 ## Zustandsübersicht
 

@@ -65,6 +65,10 @@ Die resultierende Logik:
 
 Eine Änderung des `PERMIT`-Signals allein erzeugt keine Ereignisse. Es wird ausschließlich entschieden, ob ein ankommendes Ereignis an den jeweiligen Ausgang weitergegeben wird oder nicht.
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2`, `EI3`, `EI4` laufen zuerst in `E_MUX_4`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_4` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_4` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_4` → `E_PERMIT_4.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Die Subapplikation realisiert eine Low-aktive Freigabelogik: `FALSE` bedeutet „freigegeben“, `TRUE` bedeutet „gesperrt“.
@@ -72,6 +76,8 @@ Eine Änderung des `PERMIT`-Signals allein erzeugt keine Ereignisse. Es wird aus
 - Es sind keine Adapter und keine Datenausgänge vorhanden.
 - Die Subapplikation besitzt keine eigene Ereignisverarbeitung; sie ist rein durchschaltend und ereignisgetrieben.
 - Die interne Logik reagiert nicht auf steigende oder fallende Flanken von `PERMIT`, sondern wertet den aktuellen Booleschen Wert nur dann aus, wenn ein Ereignis an `EI1` bis `EI4` eintrifft.
+- Intern sitzen zusätzlich `E_MUX_4` und `E_DEMUX_4`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
 
 ## Zustandsübersicht
 

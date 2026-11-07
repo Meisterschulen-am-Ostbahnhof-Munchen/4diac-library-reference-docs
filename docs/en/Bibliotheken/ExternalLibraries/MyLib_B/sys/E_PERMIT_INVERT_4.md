@@ -69,6 +69,10 @@ For each channel `x`:
 
 The gate does not buffer events. If the gate is closed, the incoming event is discarded.
 
+The event paths also pass through the negation: the inputs `EI1`, `EI2`, `EI3`, `EI4` first go into `E_MUX_4`. It records in its output `K` which channel fired and starts `F_NOT_BOOL_INIT.REQ`. After `F_NOT_BOOL_INIT.CNF`, `E_DEMUX_4` outputs the event again on the channel that fired it, using `K`, and `E_PERMIT_4` decides. This way the negation is recalculated before every permission check, even if `PERMIT` has changed since the last event.
+
+Event path per channel `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_4` → `E_PERMIT_4.EIk` → `EOk`.
+
 ## Technical Features
 
 - Four-channel event gating in a single reusable subapplication.
@@ -78,6 +82,8 @@ The gate does not buffer events. If the gate is closed, the incoming event is di
 - No data outputs or additional data transformation.
 - Built from standard blocks: `E_PERMIT_4` and `F_NOT_BOOL_INIT`.
 - No adapters required for integration.
+- Internally there are also `E_MUX_4` and `E_DEMUX_4`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
+- A change of `PERMIT` alone produces no output event.
 
 ## State Overview
 
