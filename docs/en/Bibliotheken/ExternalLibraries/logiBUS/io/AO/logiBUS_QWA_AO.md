@@ -10,7 +10,7 @@
 
 The function block `logiBUS_QWA_AO` is a composite around `logiBUS_QW_AO`. It receives the voltage in mV through an adapter (socket `OUT`, type `AW`, in `D1`).
 
-**Requirement:** an RC filter must be present on the board or on an add-on board. The block is not meant for the power outputs.
+**Requirement:** an RC filter must be present on the board or on an add-on board. The block is not meant for the power outputs. The cutoff frequency of the filter must be well below the pulse frequency of 10 MHz. Ripple and settling time depend on the cutoff frequency and the load; the block gives no requirements for this, the dimensioning is part of the board.
 
 ## Interface Structure
 

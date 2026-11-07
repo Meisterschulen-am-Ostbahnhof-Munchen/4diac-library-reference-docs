@@ -34,7 +34,7 @@ The function block `logiBUS_QD_SDM_G` is a sigma-delta output like `logiBUS_QD_S
 | PARAMS | STRING | Service parameters |
 | OUT | DWORD | Brightness (0..8191), converted with GAMMA |
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifies the output Output_Q1..Q8; initial value `logiBUS_DO::Invalid` |
-| GAMMA | REAL | Gamma of the brightness curve, read at INIT: pulse density from (OUT / 8191)^GAMMA. `1.0` = linear, `2.2` = sRGB (initial value). Invalid values (≤ 0, not finite) run linear like `1.0`. |
+| GAMMA | REAL | Gamma of the brightness curve, read at INIT: pulse density from (OUT / 8191)^GAMMA. `1.0` = linear, `2.2` = approximation of sRGB (initial value). Invalid values (≤ 0, not finite) run linear like `1.0`. |
 
 ### **Data Outputs**
 

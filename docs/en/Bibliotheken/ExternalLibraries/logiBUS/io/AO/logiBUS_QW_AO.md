@@ -8,7 +8,7 @@
 
 The function block `logiBUS_QW_AO` is an output service interface for an **analog voltage** over the sigma-delta modulator and an RC low pass. `OUT` (`WORD`) is the wanted voltage in mV after the low pass, the pulse density runs at 10 MHz.
 
-**Requirement:** an RC filter must be present on the board or on an add-on board. The block is not meant for the power outputs.
+**Requirement:** an RC filter must be present on the board or on an add-on board. The block is not meant for the power outputs. The cutoff frequency of the filter must be well below the pulse frequency of 10 MHz. Ripple and settling time depend on the cutoff frequency and the load; the block gives no requirements for this, the dimensioning is part of the board.
 
 ## Interface Structure
 
@@ -32,7 +32,7 @@ The function block `logiBUS_QW_AO` is an output service interface for an **analo
 |---|---|---|
 | QI | BOOL | Event input qualifier |
 | PARAMS | STRING | Service parameters |
-| OUT | WORD | Voltage in mV after the RC low pass: VDD_IO / 256 · density + VDD_IO / 2, with VDD_IO taken as 3300 mV. Range 0..3287 mV in 256 steps (about 13 mV). Higher values are limited, `STATUS` says so. |
+| OUT | WORD | Voltage in mV after the RC low pass: VDD_IO / 256 · density + VDD_IO / 2, with VDD_IO taken as 3300 mV and the density being the signed pulse density −128..127 (derived from the range 0..3287 mV, the comment does not name it). Range 0..3287 mV in 256 steps (about 13 mV). Higher values are limited, `STATUS` says so. |
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifies the output Output_Q1..Q8; initial value `logiBUS_DO::Invalid` |
 
 ### **Data Outputs**

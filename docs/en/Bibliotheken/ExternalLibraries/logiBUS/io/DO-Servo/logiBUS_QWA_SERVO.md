@@ -10,7 +10,7 @@
 
 The function block `logiBUS_QWA_SERVO` is a composite around `logiBUS_QW_SERVO`. It receives the position through an adapter (socket `OUT`, type `AW`, in `D1`) and passes `FREQ`, `PULSE_MIN` and `PULSE_MAX` on at INIT.
 
-**Signal level:** the servo needs a logic level signal. On boards with a power stage, take the signal before the power stage.
+**Signal level:** the servo needs a logic level signal. On boards with a power stage, take the signal before the power stage. If the 3.3 V level is not enough for the servo (check the servo's data sheet), use a suitable level shifter.
 
 ## Interface Structure
 
@@ -54,7 +54,7 @@ The function block `logiBUS_QWA_SERVO` is a composite around `logiBUS_QW_SERVO`.
 
 ## Functionality
 
-The composite forwards `INIT` with `QI`, `PARAMS`, `Output`, `FREQ`, `PULSE_MIN` and `PULSE_MAX` to the internal `logiBUS_QW_SERVO` (`QX`). Event `E1` and value `D1` of the adapter `OUT` go to `QX` as `REQ` and `OUT`; `CNF` of `QX` is passed outward.
+The composite forwards `INIT` with `QI`, `PARAMS`, `Output`, `FREQ`, `PULSE_MIN` and `PULSE_MAX` to the internal `logiBUS_QW_SERVO` (`QX`). Event `E1` and value `D1` of the adapter `OUT` go to `QX` as `REQ` and `OUT`; `CNF` of `QX` is passed outward. Both pulse widths must fit into the period `1/FREQ`: at `FREQ` = 1000 it is 1000 µs, so the initial value `T#2000us` for `PULSE_MAX` is too long there.
 
 ## Change compared to version 3.2.0
 
@@ -68,13 +68,13 @@ Up to `logiBUS_io` 3.2.0 the servo ran on the LEDC, fixed at 250 Hz and 800 to 2
 | Servo | `FREQ` | `PULSE_MIN` | `PULSE_MAX` | Note |
 |---|---|---|---|---|
 | Initial values of the block | 50 | `T#1000us` | `T#2000us` | measured with an oscilloscope (Franz, 2026-11-06): 50 Hz, 0 % = 1.0 ms, 50 % = 1.5 ms, 100 % = 2.0 ms |
-| 9 g servo, 180° ([hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)) | 50 | `T#500us` | `T#2500us` | manufacturer data 0.5 to 2.5 ms for 0 to 180°; travels 90° in each direction with it (tested) |
+| 9 g servo, 180° ([hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)) | 50 | `T#500us` | `T#2500us` | manufacturer data 0.5 to 2.5 ms for 0 to 180°; travels 90° in each direction with it (tested). The tested model is Amazon B0H3BC3PSS; with other 9 g servos check the specified range first, pulses that are too large drive against the stop |
 | Blue Bird BMS-L530MG (car servo) | 250 | `T#1100us` | `T#1900us` | example from the comment of the block |
 | Values up to 3.2.0 | 250 | `T#800us` | `T#2180us` | fixed in the driver, no longer the initial value |
 
 ## Operating notes
 
-- If a servo drives against the mechanical stop with too large a range, it hums and gets warm. Then increase `PULSE_MIN` and decrease `PULSE_MAX`, each limit on its own (details on the [hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)).
+- If a servo drives against the mechanical stop with too large a range, it hums and gets warm. Then increase `PULSE_MIN` and decrease `PULSE_MAX`, each limit on its own; with reversed direction (`PULSE_MAX` below `PULSE_MIN`), increase the smaller pulse width and decrease the larger one (details on the [hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)).
 - Supply the servo from a source of its own, not from the 3.3 V regulator of the ESP, with a common ground (details on the [hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)).
 
 ## Technical Features
@@ -83,7 +83,7 @@ Up to `logiBUS_io` 3.2.0 the servo ran on the LEDC, fixed at 250 Hz and 800 to 2
 - `FREQ`, `PULSE_MIN` and `PULSE_MAX` are read at `INIT` only.
 - Pulse width resolution 1 µs.
 - `OUT` is `WORD` (0..`0xFAFF`), not the full 16-bit range.
-- Source: comments in the `.fbt` of `logiBUS_io-3.3.0`; the firmware behavior is described there and was not verified on hardware here.
+- Source: comments in the `.fbt` of `logiBUS_io-3.3.0`. Only the initial values were measured with an oscilloscope (50 Hz, 1.0 / 1.5 / 2.0 ms, Franz, 2026-11-06); the remaining behavior is taken from the comments and was not verified on hardware here.
 
 ## Comparison
 

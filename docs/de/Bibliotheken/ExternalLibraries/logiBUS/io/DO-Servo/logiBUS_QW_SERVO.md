@@ -8,7 +8,7 @@
 
 Der Funktionsblock `logiBUS_QW_SERVO` ist ein Ausgabeservice-Interface für einen **Servoausgang**: Er gibt Impulse im Takt `FREQ` aus, deren Breite zwischen `PULSE_MIN` und `PULSE_MAX` liegt. Der Baustein läuft ab `logiBUS_io` 3.3.0 auf dem MCPWM.
 
-**Signalpegel:** Der Servo braucht ein Logikpegel-Signal. Bei Boards mit Leistungsstufe wird das Signal vor der Leistungsstufe abgegriffen.
+**Signalpegel:** Der Servo braucht ein Logikpegel-Signal. Bei Boards mit Leistungsstufe wird das Signal vor der Leistungsstufe abgegriffen. Reicht der 3,3-V-Pegel dem Servo nicht (Datenblatt des Servos prüfen), wird ein passender Pegelwandler verwendet.
 
 ## Schnittstellenstruktur
 
@@ -47,7 +47,7 @@ Der Funktionsblock `logiBUS_QW_SERVO` ist ein Ausgabeservice-Interface für eine
 
 ## Funktionsweise
 
-Bei `INIT` werden Ausgang, `FREQ`, `PULSE_MIN` und `PULSE_MAX` übernommen. Jedes `REQ` setzt die Position `OUT`: `0` ergibt einen Impuls von `PULSE_MIN`, `0xFAFF` einen von `PULSE_MAX`, dazwischen wird linear interpoliert. Werte über `0xFAFF` behalten den letzten Impuls. `CNF` bestätigt.
+Bei `INIT` werden Ausgang, `FREQ`, `PULSE_MIN` und `PULSE_MAX` übernommen. Jedes `REQ` setzt die Position `OUT`: `0` ergibt einen Impuls von `PULSE_MIN`, `0xFAFF` einen von `PULSE_MAX`, dazwischen wird linear interpoliert. Werte über `0xFAFF` behalten den letzten Impuls. `CNF` bestätigt. Beide Impulsbreiten müssen in die Periode `1/FREQ` passen: Bei `FREQ` = 1000 beträgt sie 1000 µs, der Initialwert `T#2000us` für `PULSE_MAX` ist dort zu lang.
 
 ## Änderung gegenüber Version 3.2.0
 
@@ -61,13 +61,13 @@ Bis `logiBUS_io` 3.2.0 lief der Servo auf dem LEDC, fest mit 250 Hz und 800 bis 
 | Servo | `FREQ` | `PULSE_MIN` | `PULSE_MAX` | Hinweis |
 |---|---|---|---|---|
 | Initialwerte des Bausteins | 50 | `T#1000us` | `T#2000us` | am Oszilloskop gemessen (Franz, 2026-11-06): 50 Hz, 0 % = 1,0 ms, 50 % = 1,5 ms, 100 % = 2,0 ms |
-| 9-g-Servo, 180° ([Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)) | 50 | `T#500us` | `T#2500us` | Herstellerangabe 0,5 bis 2,5 ms für 0 bis 180°; fährt damit 90° in jede Richtung (getestet) |
+| 9-g-Servo, 180° ([Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)) | 50 | `T#500us` | `T#2500us` | Herstellerangabe 0,5 bis 2,5 ms für 0 bis 180°; fährt damit 90° in jede Richtung (getestet). Getestet ist das Modell Amazon B0H3BC3PSS; bei anderen 9-g-Servos erst den angegebenen Bereich prüfen, zu große Impulse fahren gegen den Anschlag |
 | Blue Bird BMS-L530MG (Autoservo) | 250 | `T#1100us` | `T#1900us` | Beispiel aus dem Kommentar des Bausteins |
 | Werte bis 3.2.0 | 250 | `T#800us` | `T#2180us` | fest im Treiber, nicht mehr Initialwert |
 
 ## Hinweise zum Betrieb
 
-- Fährt ein Servo mit zu großer Spanne gegen den mechanischen Anschlag, brummt er und wird warm. Dann `PULSE_MIN` erhöhen und `PULSE_MAX` verringern, jede Grenze für sich (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
+- Fährt ein Servo mit zu großer Spanne gegen den mechanischen Anschlag, brummt er und wird warm. Dann `PULSE_MIN` erhöhen und `PULSE_MAX` verringern, jede Grenze für sich; bei umgekehrter Richtung (`PULSE_MAX` kleiner als `PULSE_MIN`) die kleinere Impulsbreite erhöhen und die größere verringern (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
 - Versorgung des Servos aus einer eigenen Quelle, nicht aus dem 3,3-V-Regler des ESP, mit gemeinsamer Masse (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
 
 ## Technische Besonderheiten
@@ -76,7 +76,7 @@ Bis `logiBUS_io` 3.2.0 lief der Servo auf dem LEDC, fest mit 250 Hz und 800 bis 
 - `FREQ`, `PULSE_MIN` und `PULSE_MAX` werden nur bei `INIT` gelesen.
 - Auflösung der Impulsbreite 1 µs.
 - `OUT` ist `WORD` (0..`0xFAFF`), nicht der volle 16-Bit-Bereich.
-- Quelle: Kommentare der `.fbt` in `logiBUS_io-3.3.0`; das Verhalten der Firmware ist dort beschrieben und hier nicht auf der Hardware geprüft.
+- Quelle: Kommentare der `.fbt` in `logiBUS_io-3.3.0`. Am Oszilloskop gemessen sind nur die Initialwerte (50 Hz, 1,0 / 1,5 / 2,0 ms, Franz, 2026-11-06); das übrige Verhalten ist aus den Kommentaren übernommen und hier nicht auf der Hardware geprüft.
 
 ## Vergleich
 

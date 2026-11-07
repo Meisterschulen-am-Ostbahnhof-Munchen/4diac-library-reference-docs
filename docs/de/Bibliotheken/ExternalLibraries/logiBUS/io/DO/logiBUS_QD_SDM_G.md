@@ -34,7 +34,7 @@ Der Funktionsblock `logiBUS_QD_SDM_G` ist wie `logiBUS_QD_SDM` ein Sigma-Delta-A
 | PARAMS | STRING | Service-Parameter |
 | OUT | DWORD | Helligkeit (0..8191), mit GAMMA umgerechnet |
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifiziert den Ausgang Output_Q1..Q8; Initialwert `logiBUS_DO::Invalid` |
-| GAMMA | REAL | Gamma der Helligkeitskurve, gelesen bei INIT: Pulsdichte aus (OUT / 8191)^GAMMA. `1.0` = linear, `2.2` = sRGB (Initialwert). Ungültige Werte (≤ 0, nicht endlich) laufen linear wie `1.0`. |
+| GAMMA | REAL | Gamma der Helligkeitskurve, gelesen bei INIT: Pulsdichte aus (OUT / 8191)^GAMMA. `1.0` = linear, `2.2` = Näherung an sRGB (Initialwert). Ungültige Werte (≤ 0, nicht endlich) laufen linear wie `1.0`. |
 
 ### **Daten-Ausgänge**
 

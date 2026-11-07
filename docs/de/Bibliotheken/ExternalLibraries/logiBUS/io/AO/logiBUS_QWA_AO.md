@@ -10,7 +10,7 @@
 
 Der Funktionsblock `logiBUS_QWA_AO` ist ein Composite um `logiBUS_QW_AO`. Er bekommt die Spannung in mV über einen Adapter (Socket `OUT`, Typ `AW`, in `D1`).
 
-**Voraussetzung:** Auf dem Board oder einer Zusatzplatine muss ein RC-Filter vorhanden sein. Der Baustein ist nicht für die Leistungsausgänge gedacht.
+**Voraussetzung:** Auf dem Board oder einer Zusatzplatine muss ein RC-Filter vorhanden sein. Der Baustein ist nicht für die Leistungsausgänge gedacht. Die Grenzfrequenz des Filters muss deutlich unter der Pulsfrequenz von 10 MHz liegen. Restwelligkeit und Einschwingzeit hängen von Grenzfrequenz und Last ab; der Baustein macht dazu keine Vorgaben, die Dimensionierung gehört zum Board.
 
 ## Schnittstellenstruktur
 

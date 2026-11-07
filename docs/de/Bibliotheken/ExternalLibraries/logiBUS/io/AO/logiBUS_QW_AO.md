@@ -8,7 +8,7 @@
 
 Der Funktionsblock `logiBUS_QW_AO` ist ein Ausgabeservice-Interface für eine **Analogspannung** über den Sigma-Delta-Modulator und einen RC-Tiefpass. `OUT` (`WORD`) ist die gewünschte Spannung in mV nach dem Tiefpass, die Pulsdichte läuft mit 10 MHz.
 
-**Voraussetzung:** Auf dem Board oder einer Zusatzplatine muss ein RC-Filter vorhanden sein. Der Baustein ist nicht für die Leistungsausgänge gedacht.
+**Voraussetzung:** Auf dem Board oder einer Zusatzplatine muss ein RC-Filter vorhanden sein. Der Baustein ist nicht für die Leistungsausgänge gedacht. Die Grenzfrequenz des Filters muss deutlich unter der Pulsfrequenz von 10 MHz liegen. Restwelligkeit und Einschwingzeit hängen von Grenzfrequenz und Last ab; der Baustein macht dazu keine Vorgaben, die Dimensionierung gehört zum Board.
 
 ## Schnittstellenstruktur
 
@@ -32,7 +32,7 @@ Der Funktionsblock `logiBUS_QW_AO` ist ein Ausgabeservice-Interface für eine **
 |---|---|---|
 | QI | BOOL | Ereignis-Eingangsqualifizierer |
 | PARAMS | STRING | Service-Parameter |
-| OUT | WORD | Spannung in mV nach dem RC-Tiefpass: VDD_IO / 256 · Dichte + VDD_IO / 2, wobei VDD_IO mit 3300 mV angenommen wird. Bereich 0..3287 mV in 256 Stufen (etwa 13 mV). Höhere Werte werden begrenzt, `STATUS` meldet das. |
+| OUT | WORD | Spannung in mV nach dem RC-Tiefpass: VDD_IO / 256 · Dichte + VDD_IO / 2, wobei VDD_IO mit 3300 mV angenommen wird und die Dichte die vorzeichenbehaftete Pulsdichte −128..127 ist (aus dem Bereich 0..3287 mV abgeleitet, der Kommentar nennt sie nicht). Bereich 0..3287 mV in 256 Stufen (etwa 13 mV). Höhere Werte werden begrenzt, `STATUS` meldet das. |
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifiziert den Ausgang Output_Q1..Q8; Initialwert `logiBUS_DO::Invalid` |
 
 ### **Daten-Ausgänge**
