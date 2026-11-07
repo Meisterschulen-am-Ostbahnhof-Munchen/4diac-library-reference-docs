@@ -57,7 +57,7 @@ Das Composite leitet `INIT` mit `QI`, `PARAMS`, `Output`, `FMIN` und `FMAX` an d
 
 Der Frequenzausgang läuft auf dem MCPWM mit einem eigenen Timer je Ausgang und belegt keinen LEDC-Timer (Quelle: `PWM_KONZEPT.md`). Der Timer ist 16 Bit breit. `FMIN` legt seine Auflösung fest, ungefähr `FMIN` · 65536. Je höher `FREQ` über `FMIN` liegt, desto gröber sind die Schritte: Die Schrittweite ist etwa `FREQ`² / Auflösung. Mit dem Initialwert `FMIN` = 10 Hz nennt der Kommentar des Bausteins als Beispiel eine Auflösung von 640 kHz, eine Schrittweite von 1,6 Hz bei 1 kHz und 156 Hz bei 10 kHz.
 
-`FMAX` begrenzt die Frequenz nach oben, aber nie über das, was der Chip mit der Auflösung aus `FMIN` erzeugen kann (die Hälfte der Auflösung). Frequenzen außerhalb von `FMIN` bis `FMAX` werden begrenzt, und `STATUS` meldet es.
+`FMAX` begrenzt die Frequenz nach oben, aber nie über das, was der Chip mit der Auflösung aus `FMIN` erzeugen kann (die Hälfte der Auflösung). Frequenzen außerhalb von `FMIN` bis `FMAX` werden begrenzt, und `STATUS` meldet es. `FREQ = 0` ist ein Sonderwert und bedeutet „Ausgang aus“; der Kommentar des Bausteins nennt `0` getrennt von der Begrenzung. Ob `0` den `STATUS` verändert oder auf `FMIN` angehoben wird, steht dort nicht und ist hier nicht geprüft.
 
 ## Leistungsstufen
 

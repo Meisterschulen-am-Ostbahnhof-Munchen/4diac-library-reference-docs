@@ -57,7 +57,7 @@ The composite forwards `INIT` with `QI`, `PARAMS`, `Output`, `FMIN` and `FMAX` t
 
 The frequency output runs on the MCPWM with a timer of its own per output and does not use an LEDC timer (source: `PWM_KONZEPT.md`). The timer is 16 bit wide. `FMIN` sets its resolution, roughly `FMIN` · 65536. The higher `FREQ` is above `FMIN`, the coarser the steps: the step size is about `FREQ`² / resolution. With the initial value `FMIN` = 10 Hz, the comment of the block gives as an example a resolution of 640 kHz, a step of 1.6 Hz at 1 kHz and 156 Hz at 10 kHz.
 
-`FMAX` limits the frequency upward, but never beyond what the chip can produce with the resolution from `FMIN` (half the resolution). Frequencies outside `FMIN` to `FMAX` are limited, and `STATUS` says so.
+`FMAX` limits the frequency upward, but never beyond what the chip can produce with the resolution from `FMIN` (half the resolution). Frequencies outside `FMIN` to `FMAX` are limited, and `STATUS` says so. `FREQ = 0` is a special value meaning "output off"; the comment of the block names `0` separately from the limiting. Whether `0` changes `STATUS` or is raised to `FMIN` is not stated there and was not verified here.
 
 ## Power stages
 
