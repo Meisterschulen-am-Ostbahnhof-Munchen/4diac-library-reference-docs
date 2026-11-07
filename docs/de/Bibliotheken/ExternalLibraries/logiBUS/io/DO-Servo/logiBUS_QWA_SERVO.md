@@ -74,7 +74,7 @@ Bis `logiBUS_io` 3.2.0 lief der Servo auf dem LEDC, fest mit 250 Hz und 800 bis 
 
 ## Hinweise zum Betrieb
 
-- Fährt ein Servo mit zu großer Spanne gegen den mechanischen Anschlag, brummt er und wird warm. Dann `PULSE_MIN` und `PULSE_MAX` symmetrisch um 1,5 ms zurücknehmen.
+- Fährt ein Servo mit zu großer Spanne gegen den mechanischen Anschlag, brummt er und wird warm. Dann `PULSE_MIN` erhöhen und `PULSE_MAX` verringern, jede Grenze für sich (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
 - Versorgung des Servos aus einer eigenen Quelle, nicht aus dem 3,3-V-Regler des ESP, mit gemeinsamer Masse (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
 
 ## Technische Besonderheiten

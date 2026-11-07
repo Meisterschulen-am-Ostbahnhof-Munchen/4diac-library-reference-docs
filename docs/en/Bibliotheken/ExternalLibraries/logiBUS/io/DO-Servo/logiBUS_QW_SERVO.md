@@ -67,7 +67,7 @@ Up to `logiBUS_io` 3.2.0 the servo ran on the LEDC, fixed at 250 Hz and 800 to 2
 
 ## Operating notes
 
-- If a servo drives against the mechanical stop with too large a range, it hums and gets warm. Then reduce `PULSE_MIN` and `PULSE_MAX` symmetrically around 1.5 ms.
+- If a servo drives against the mechanical stop with too large a range, it hums and gets warm. Then increase `PULSE_MIN` and decrease `PULSE_MAX`, each limit on its own (details on the [hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)).
 - Supply the servo from a source of its own, not from the 3.3 V regulator of the ESP, with a common ground (details on the [hardware page](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/en/latest/hw/logiBUS/Servos/)).
 
 ## Technical Features
