@@ -66,7 +66,7 @@ Der Tastgrad wird auf ganze Zahlen gerundet. Die Werte der Tabelle sind nachgere
 | `GAMMA` | Bedeutung |
 |---|---|
 | 1.0 | keine Korrektur, wie der Baustein ohne `_G` |
-| 2.2 | sRGB-Standard, Initialwert |
+| 2.2 | Näherung an sRGB, Initialwert |
 | 2.6, 2.8 | Werte aus den Espressif-Beispielen, für viele LEDs gleichmäßiger |
 | andere | für Lampen oder Lasten mit eigener Kennlinie; am besten an einer LED ausprobieren |
 

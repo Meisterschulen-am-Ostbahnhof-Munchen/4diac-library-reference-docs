@@ -59,7 +59,7 @@ The duty cycle is rounded to integers. The values in the table were calculated, 
 | `GAMMA` | Meaning |
 |---|---|
 | 1.0 | no correction, like the block without `_G` |
-| 2.2 | sRGB standard, initial value |
+| 2.2 | approximation of sRGB, initial value |
 | 2.6, 2.8 | values from the Espressif examples, more even on many LEDs |
 | others | for lamps or loads with their own characteristic; best tried out on an LED |
 
