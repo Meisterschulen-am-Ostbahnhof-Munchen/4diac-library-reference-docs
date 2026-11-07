@@ -8,94 +8,90 @@
 
 ## Einleitung
 
-Der **logiBUS_QWA_SERVO** ist ein Composite-Funktionsblock (CFB) für die Ausgabe von Servo-Steuerworten über einen logiBUS. Er kapselt die Initialisierung, Parametrierung und Ausgabe auf Basis eines internen Bausteins (`logiBUS_QW_SERVO`) und stellt eine standardisierte Schnittstelle zur Verfügung. Entwickelt unter der Eclipse Public License 2.0 (Copyright 2026 HR Agrartechnik GmbH).  
-*Kommentar aus der XML: „Composite FB for servo word output data“.*
+Der Funktionsblock `logiBUS_QWA_SERVO` ist ein Composite um `logiBUS_QW_SERVO`. Er bekommt die Position über einen Adapter (Socket `OUT`, Typ `AW`, in `D1`) und leitet `FREQ`, `PULSE_MIN` und `PULSE_MAX` bei INIT weiter.
+
+**Signalpegel:** Der Servo braucht ein Logikpegel-Signal. Bei Boards mit Leistungsstufe wird das Signal vor der Leistungsstufe abgegriffen.
 
 ## Schnittstellenstruktur
 
 ### **Ereignis-Eingänge**
 
-| Ereignis | Typ   | Mit Variablen            | Beschreibung            |
-| -------- | ----- | ------------------------ | ----------------------- |
-| `INIT`   | EInit | `QI`, `PARAMS`, `Output` | Service Initialisierung |
+| Ereignis | Typ | Verknüpft mit / Kommentar |
+|---|---|---|
+| INIT | EInit | Service-Initialisierung; verknüpft mit QI, PARAMS, Output, FREQ, PULSE_MIN, PULSE_MAX |
+| *kein weiterer Ereignis-Eingang* | | *Neue Werte kommen über den Adapter* |
 
 ### **Ereignis-Ausgänge**
 
-| Ereignis | Typ   | Mit Variablen  | Beschreibung                           |
-| -------- | ----- | -------------- | -------------------------------------- |
-| `INITO`  | EInit | `QO`, `STATUS` | Bestätigung der Initialisierung        |
-| `CNF`    | Event | `QO`, `STATUS` | Bestätigung einer angeforderten Aktion |
+| Ereignis | Typ | Verknüpft mit / Kommentar |
+|---|---|---|
+| INITO | EInit | Initialisierungsbestätigung; verknüpft mit QO, STATUS |
+| CNF | Event | Bestätigung der angeforderten Service-Operation; verknüpft mit QO, STATUS |
 
 ### **Daten-Eingänge**
 
-| Name     | Typ                             | Initialwert | Beschreibung                                          |
-| -------- | ------------------------------- | ----------- | ----------------------------------------------------- |
-| `QI`     | `BOOL`                          | –           | Ereignis-Eingangsqualifizierer                        |
-| `PARAMS` | `STRING`                        | –           | Service-Parameter (z. B. Bus‑Konfiguration)           |
-| `Output` | `logiBUS::io::DQ::logiBUS_DO_S` | `Invalid`   | Identifiziert den Ausgang (`Output_Q1` … `Output_Q8`) |
+| Variable | Typ | Kommentar |
+|---|---|---|
+| QI | BOOL | Ereignis-Eingangsqualifizierer |
+| PARAMS | STRING | Service-Parameter |
+| Output | logiBUS::io::DQ::logiBUS_DO_S | Identifiziert den Ausgang Output_Q1..Q8; Initialwert `logiBUS_DO::Invalid` |
+| FREQ | UDINT | Wiederholrate des Servoimpulses in Hz, gelesen bei INIT; Initialwert `50` (ein Impuls alle 20 ms). Servos mit gleicher `FREQ` teilen sich einen MCPWM-Timer. |
+| PULSE_MIN | TIME | Impulsbreite für `OUT` = 0, gelesen bei INIT (Auflösung 1 µs); Initialwert `T#1000us`. Ist `PULSE_MAX` kleiner als `PULSE_MIN`, kehrt sich die Richtung um. |
+| PULSE_MAX | TIME | Impulsbreite für `OUT` = `0xFAFF` (100 %), gelesen bei INIT (Auflösung 1 µs); Initialwert `T#2000us`. |
 
 ### **Daten-Ausgänge**
 
-| Name     | Typ      | Beschreibung                     |
-| -------- | -------- | -------------------------------- |
-| `QO`     | `BOOL`   | Ereignis-Ausgangsqualifizierer   |
-| `STATUS` | `STRING` | Statusmeldung (Fehler, OK, etc.) |
+| Variable | Typ | Kommentar |
+|---|---|---|
+| QO | BOOL | Ereignis-Ausgangsqualifizierer |
+| STATUS | STRING | Service-Status |
 
 ### **Adapter**
 
-| Adapter | Typ                                  | Richtung | Beschreibung                              |
-| ------- | ------------------------------------ | -------- | ----------------------------------------- |
-| `OUT`   | `adapter::types::unidirectional::AW` | Socket   | Ausgangsdaten zur Ressource (Wortausgabe) |
+| Typ | Name | Richtung | Kommentar |
+|---|---|---|---|
+| adapter::types::unidirectional::AW | OUT | Socket | Empfängt Ereignis (E1) und Position 0..0xFAFF (D1) |
 
 ## Funktionsweise
 
-Der Baustein arbeitet als Composite:  
+Das Composite leitet `INIT` mit `QI`, `PARAMS`, `Output`, `FREQ`, `PULSE_MIN` und `PULSE_MAX` an den internen `logiBUS_QW_SERVO` (`QX`) weiter. Ereignis `E1` und Wert `D1` des Adapters `OUT` gehen als `REQ` und `OUT` an `QX`; `CNF` von `QX` geht nach außen.
 
-1. **Initialisierung** (`INIT`):  
-   - Qualifizierer `QI`, Parameterstring `PARAMS` und der gewünschte Ausgang (`Output`) werden übergeben.  
-   - Der interne FB `logiBUS_QW_SERVO` wird initialisiert; nach erfolgreicher Initialisierung wird `INITO` gesendet.  
-2. **Ausführung** (über Adapter `OUT`):  
-   - Das Ereignis `OUT.E1` wird vom Adapter empfangen und an den internen FB als `REQ` weitergeleitet.  
-   - Gleichzeitig werden die Daten über `OUT.D1` an den internen FB (`QX.OUT`) übergeben.  
-3. **Rückmeldung**:  
-   - Der interne FB signalisiert Abschluss über `CNF`, das an den externen Ausgang `CNF` weitergereicht wird.  
-   - Status und Qualifizierer werden über `QO` und `STATUS` ausgegeben.
+## Änderung gegenüber Version 3.2.0
 
-Die eigentliche Ansteuerung der Servo-Hardware erfolgt über den Adapter `OUT`, der mit der Ressource verbunden wird.
+Bis `logiBUS_io` 3.2.0 lief der Servo auf dem LEDC, fest mit 250 Hz und 800 bis 2180 µs. Seit 3.3.0 läuft er auf dem MCPWM mit den Parametern `FREQ`, `PULSE_MIN` und `PULSE_MAX` und den Initialwerten 50 Hz und 1000 bis 2000 µs (`logiBUS_QW_SERVO` Version 1.2, `logiBUS_QWA_SERVO` Version 1.1).
+
+!!! warning "Bestehende Anwendungen"
+    Anwendungen, die auf die alten festen Werte gebaut sind, steuern mit den neuen Initialwerten einen kleineren Weg an. Bei einem 9-g-Servo waren es nur noch etwa ±35° statt vorher etwa ±80°. Passende Werte für `FREQ`, `PULSE_MIN` und `PULSE_MAX` stehen in der Tabelle unten und beim jeweiligen Servo.
+
+## Werte für gängige Servos
+
+| Servo | `FREQ` | `PULSE_MIN` | `PULSE_MAX` | Hinweis |
+|---|---|---|---|---|
+| Initialwerte des Bausteins | 50 | `T#1000us` | `T#2000us` | am Oszilloskop gemessen (Franz, 2026-11-06): 50 Hz, 0 % = 1,0 ms, 50 % = 1,5 ms, 100 % = 2,0 ms |
+| 9-g-Servo, 180° ([Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)) | 50 | `T#500us` | `T#2500us` | Herstellerangabe 0,5 bis 2,5 ms für 0 bis 180°; fährt damit 90° in jede Richtung (getestet) |
+| Blue Bird BMS-L530MG (Autoservo) | 250 | `T#1100us` | `T#1900us` | Beispiel aus dem Kommentar des Bausteins |
+| Werte bis 3.2.0 | 250 | `T#800us` | `T#2180us` | fest im Treiber, nicht mehr Initialwert |
+
+## Hinweise zum Betrieb
+
+- Fährt ein Servo mit zu großer Spanne gegen den mechanischen Anschlag, brummt er und wird warm. Dann `PULSE_MIN` und `PULSE_MAX` symmetrisch um 1,5 ms zurücknehmen.
+- Versorgung des Servos aus einer eigenen Quelle, nicht aus dem 3,3-V-Regler des ESP, mit gemeinsamer Masse (Details auf der [Hardware-Seite](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/visual-programming-languages-docs/de/latest/hw/logiBUS/Servos/)).
 
 ## Technische Besonderheiten
 
-- **Composite‑Design**: Kapselt die komplexe Initialisierungs‑ und Ablaufsteuerung des Servo‑Wortausgangs.  
-- **Adapter‑Schnittstelle**: Der unidirektionale Adapter `AW` ermöglicht eine flexible Anbindung an verschiedene physische Ausgangskanäle.  
-- **Ausgangsauswahl**: Über den Eingang `Output` kann zwischen acht verschiedenen Ausgängen (`Q1`…`Q8`) gewählt werden; der Initialwert `Invalid` verhindert ungewollte Aktionen vor der Konfiguration.  
-- **Fehlerbehandlung**: Statusinformationen werden über `STATUS` bereitgestellt; Event‑Sequenzen garantieren eine korrekte Ablaufsteuerung.  
-- **Lizenz**: Eclipse Public License 2.0 (EPL‑2.0) – freie Nutzung und Weiterentwicklung unter den Lizenzbedingungen.
+- Läuft auf dem MCPWM; Servos mit gleicher `FREQ` teilen sich einen Timer.
+- `FREQ`, `PULSE_MIN` und `PULSE_MAX` werden nur bei `INIT` gelesen.
+- Auflösung der Impulsbreite 1 µs.
+- `OUT` ist `WORD` (0..`0xFAFF`), nicht der volle 16-Bit-Bereich.
+- Quelle: Kommentare der `.fbt` in `logiBUS_io-3.3.0`; das Verhalten der Firmware ist dort beschrieben und hier nicht auf der Hardware geprüft.
 
-## Zustandsübersicht
+## Vergleich
 
-Der FB besitzt keine explizit modellierte Zustandsmaschine, jedoch ergibt sich aus den Ereignis‑Abläufen folgende implizite Zustandslogik:
-
-| Zustand        | Auslöser                                   | Reaktion                                                                 |
-| -------------- | ------------------------------------------ | ------------------------------------------------------------------------ |
-| **Idle**       | –                                          | Warten auf `INIT`                                                        |
-| **Initialize** | `INIT` empfangen                           | Interner FB wird gestartet                                               |
-| **Ready**      | `INITO` gesendet                           | Bereit für Anforderungen über den Adapter                                |
-| **Busy**       | `OUT.E1` empfangen                         | Aktion wird ausgeführt (`REQ` läuft)                                     |
-| **Done**       | `CNF` gesendet                             | Aktion abgeschlossen, zurück zu **Ready**                                |
-| **Error**      | Fehler während Initialisierung oder Aktion | `STATUS` enthält Fehlerbeschreibung; evtl. erneute Initialisierung nötig |
+| Baustein | Unterschied |
+|---|---|
+| `logiBUS_QD_PWM` | PWM-Ausgang mit 13 Bit und Rampe; kein Servoimpuls mit festem Zeitfenster |
 
 ## Anwendungsszenarien
 
-- **Landwirtschaftliche Maschinen**: Ansteuerung von Servoantrieben (z. B. für Klappen, Ventile, Aktuatoren) über einen logiBUS‑Fieldbus.  
-- **Modularer Ausgangsbaustein**: Einsatz in verteilten Steuerungen, bei denen mehrere Servo‑Ausgänge je nach Maschinenkonfiguration parametriert werden müssen.  
-- **Parametrierbare Konfiguration**: Über `PARAMS` können Bus‑Adresse, Protokoll‑Einstellungen oder Zeitverhalten definiert werden.
-
-## Vergleich mit ähnlichen Bausteinen
-
-- **logiBUS_QW_SERVO** (interner FB): Realisiert die direkte Wortausgabe und Bus‑Kommunikation, während `logiBUS_QWA_SERVO` eine höhere Abstraktionsebene mit konsolidierten Ein‑/Ausgängen bietet.  
-- **logiBUS_DO_S‑Familie**: Andere Bausteine dieser Familie adressieren einzelne diskrete Ausgänge (z. B. logiBUS_DO) – der hier beschriebene FB ist speziell für Servo‑Wortdaten und mehrere simultane Ausgänge ausgelegt.  
-- **Generische Wort‑Ausgangs‑FBs**: Im Vergleich zu standardisierten `W`‑Typ‑Bausteinen bietet dieser FB eine an den Servo‑Anwendungsfall angepasste Schnittstelle (z. B. `logiBUS_DO_S`‑Typ).
-
-## Fazit
-
-Der `logiBUS_QWA_SERVO` ist ein gut strukturierter Composite‑Funktionsblock, der die Ansteuerung von Servo‑Wortausgängen auf einem logiBUS vereinfacht. Durch die Trennung von Initialisierung, Ausführung und Fehlerrückmeldung sowie die Verwendung eines Adapters für die Hardwareschnittstelle eignet er sich hervorragend für modulare Automatisierungslösungen in der Landtechnik und ähnlichen Industrien. Die Lizenzierung unter EPL‑2.0 ermöglicht uneingeschränkte Nutzung und Anpassung.
+- Servoansteuerung (Modellbau-Servo, Klappe, Ventilstellung) aus der 4diac-Anwendung.
+- Autoservos mit 250 Hz durch passende Werte für `FREQ`, `PULSE_MIN` und `PULSE_MAX`.
