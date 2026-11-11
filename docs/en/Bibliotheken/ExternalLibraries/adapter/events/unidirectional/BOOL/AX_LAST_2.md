@@ -2,42 +2,36 @@
 
 ![AX_LAST_2](AX_LAST_2.svg)
 
-![AX_LAST_2_ecc](./AX_LAST_2_ecc.svg)
-
 ## Introduction
 
-The AX_LAST_2 function block merges two same-type Boolean (BOOL)adapter signals (**IN1**, **IN2**) into one shared output (**OUT**), using a **last-writer-wins** rule: whichever of the two sockets last wrote an event wins, and its data value is passed through to OUT immediately and unchanged. This is explicitly not a naive merge (e.g. averaging or OR-ing) - it is pure arbitration by write order.
+The function block `AX_LAST_2` merges 2 identical `BOOL` adapter signals (**IN1** to **IN2**) into one common output (**OUT**) following the **last writer wins** principle: the socket that sent an event last wins, and its value is passed to OUT immediately. This is pure arbitration by order in time, not a combination of the values.
 
 ## Interface Structure
 
 ### **Adapters**
 
-**Input adapters (Sockets):**
+**Input adapters (sockets):**
 
-- **IN1**: Boolean (BOOL)adapter (unidirectional) - first signal source
-- **IN2**: Boolean (BOOL)adapter (unidirectional) - second signal source
+- **IN1**: BOOL adapter (unidirectional)
+- **IN2**: BOOL adapter (unidirectional)
 
-**Output adapter (Plug):**
+**Output adapter (plug):**
 
-- **OUT**: Boolean (BOOL)adapter (unidirectional) - merged signal
+- **OUT**: BOOL adapter (unidirectional), merged signal
 
-## How it works
+## Functionality
 
-The block is implemented as a simple Basic FB with a 3-state ECC (START, PASS1, PASS2). When an event arrives at IN1, the ECC moves to PASS1: IN1's current data value is copied to OUT and the adapter event is fired on OUT. When an event arrives at IN2, the same happens symmetrically via PASS2. After each pass-through the ECC immediately returns to START, ready for the next event from either input.
+The socket with the last event wins. OUT takes over its value immediately and sends the adapter event, even if the value stays the same. There is no fixed priority, only the order in time.
 
-## Technical Details
+## Technical Features
 
-- Last-writer-wins semantics instead of a naive data combination
-- Simple Basic FB (3-state ECC), no extra buffering needed
-- No signal delay: the value is passed through in the same cycle the triggering event arrives
-- Both inputs are equal - there is no fixed priority other than write order
+- Generic function block without ECC (`GenericClassName` = `GEN_AX_LAST`); the behavior is implemented in the firmware (FORTE), the type description contains no algorithm. Up to version 1.0, `AX_LAST_2` was a basic FB with an ECC; version 1.1 is generic, the interface stays the same.
+- Interface: sockets `IN1` and `IN2`, plug `OUT`.
+- All sizes `AX_LAST_2` to `AX_LAST_9` have the same function and differ only in the number of sockets.
+- Status: according to development, `AD_LAST_3` is tested on hardware (Trainer20, ESP32-S31); the other types and sizes are not.
 
 ## Application Scenarios
 
-- Merging two equally-valid Boolean (BOOL)signal sources into one downstream adapter path (e.g. two redundant sensors, or a manual and an automatic setpoint source)
-- Arbitrating between two operator stations that may both write the same Boolean (BOOL)value
-- Simplifying networks that would otherwise need an inline `F_SEL`/`E_RS` construct
-
-## ⚖️ Comparison with Similar Blocks
-
-AX_LAST_2 is the inverse of [`AX_SPLIT_2`](AX_SPLIT_2.md): AX_SPLIT_2 distributes 1 input to 2 outputs, AX_LAST_2 merges 2 inputs into 1 output. For mixed operation between a data adapter and a pure event adapter (e.g. AX + AE), use [`AX_AE_MERGE`](AX_AE_MERGE.md) instead, which merges only the event without altering the data value.
+- Merging equivalent signal sources into one downstream adapter path, for example a manual and an automatic setpoint source.
+- Arbitration between several operator stations that may write the same value.
+- Simplifying networks that would otherwise wire `F_SEL`/`E_RS` inline.

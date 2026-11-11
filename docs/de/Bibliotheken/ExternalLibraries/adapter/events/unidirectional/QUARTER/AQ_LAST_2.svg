@@ -81,7 +81,7 @@
           fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
     <text x="29.0" y="51.0"
           font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
-          fill="#000000" text-anchor="middle">B</text>
+          fill="#000000" text-anchor="middle">Si</text>
 
     <!-- Block Name -->
     <text x="43.0" y="51.0"
