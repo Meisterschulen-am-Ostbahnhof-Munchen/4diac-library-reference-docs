@@ -75,6 +75,7 @@ Ereignispfad je Kanal `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NOT
 - Durch die Integration der Negation in die Subapplikation wird eine extern sichtbare Freigabelogik mit invertierter Bedeutung erreicht.
 - Intern sitzen zusätzlich `E_MUX_2` und `E_DEMUX_2`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
 - Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_2` und `E_DEMUX_2`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_2` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_2`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_2.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -87,7 +88,7 @@ Da die Subapplikation kein eigenes Speicherverhalten besitzt, ist die folgende T
 
 ## Anwendungsszenarien
 
-- Einsatz in Steuerungen, bei denen die Freigabe durch ein Low-aktives Signal erfolgt, zum Beispiel Sicherheitskontakte oder Schutztüren.
+- Einsatz in Steuerungen, bei denen die Freigabe durch ein Low-aktives Signal erfolgt. Nicht als Schutzfunktion für Sicherheitskontakte oder Schutztüren (siehe Hinweis bei den Technischen Besonderheiten).
 - Zweikanalige Ereignisweiterleitung mit einer gemeinsamen Sperrbedingung.
 - Ersatz für eine externe Verdrahtung von `F_NOT_BOOL_INIT` und `E_PERMIT_2`, wodurch die Applikation übersichtlicher wird.
 

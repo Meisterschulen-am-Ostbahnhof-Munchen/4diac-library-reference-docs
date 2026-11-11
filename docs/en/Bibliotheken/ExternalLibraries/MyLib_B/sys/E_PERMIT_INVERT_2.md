@@ -70,6 +70,7 @@ Event path per channel `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NO
 - The gate does not queue or store events. Events arriving while the gate is closed are discarded.
 - Internally there are also `E_MUX_2` and `E_DEMUX_2`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
 - A change of `PERMIT` alone produces no output event.
+- **Note:** The channel assignment runs through `K` between `E_MUX_2` and `E_DEMUX_2`. If several channels are triggered in the same event chain, FORTE processes the events one after another from a queue, and `K` may be overwritten before `E_DEMUX_2` reads it. Events are then output on the wrong channel or lost. The same is possible for events from different sources (not verified in the code). The block is therefore **not a protective function** for safety contacts, guard doors or emergency stop. The variant [`AX_E_PERMIT_INVERT_2`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_2.md) without `E_MUX`/`E_DEMUX` is available without this restriction.
 
 ## State Overview
 
@@ -89,7 +90,7 @@ E_PERMIT_INVERT_2 is useful in control applications where the available permissi
 - Using a "fault active" or "blocked" signal as the event gate. Events are only passed when the fault signal is FALSE.
 - Gating two independent event streams with a single active-low release condition.
 - Integrating inverted enable logic into a reusable subapplication to avoid adding a separate inverter block in the calling application.
-- Implementing safety-oriented event suppression where a TRUE signal must prevent event propagation.
+- Event suppression where a TRUE signal prevents event propagation. Not a protective function for safety contacts (see the note under Technical Features).
 
 ## Comparison with Similar Blocks
 

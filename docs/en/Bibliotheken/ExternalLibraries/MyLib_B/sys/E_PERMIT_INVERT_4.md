@@ -84,6 +84,7 @@ Event path per channel `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NO
 - No adapters required for integration.
 - Internally there are also `E_MUX_4` and `E_DEMUX_4`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
 - A change of `PERMIT` alone produces no output event.
+- **Note:** The channel assignment runs through `K` between `E_MUX_4` and `E_DEMUX_4`. If several channels are triggered in the same event chain, FORTE processes the events one after another from a queue, and `K` may be overwritten before `E_DEMUX_4` reads it. Events are then output on the wrong channel or lost. The same is possible for events from different sources (not verified in the code). The block is therefore **not a protective function** for safety contacts, guard doors or emergency stop. The variant [`AX_E_PERMIT_INVERT_4`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_4.md) without `E_MUX`/`E_DEMUX` is available without this restriction.
 
 ## State Overview
 
@@ -102,7 +103,7 @@ This subapplication is suitable whenever an event stream should be allowed while
 
 - Passing alarm or notification events only when the process is not in an error state.
 - Blocking event outputs during maintenance or startup phases, where the control signal is `TRUE`.
-- Implementing fail-safe enable logic in which `FALSE` means “normal operation” and `TRUE` means “inhibit”.
+- Enable logic in which `FALSE` means “normal operation” and `TRUE` means “inhibit”. Not a protective function (see the note under Technical Features).
 - Combining multiple permission-dependent event channels into one compact component.
 
 ## Comparison with Similar Blocks

@@ -78,6 +78,7 @@ Ereignispfad je Kanal `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NOT
 - Die interne Logik reagiert nicht auf steigende oder fallende Flanken von `PERMIT`, sondern wertet den aktuellen Booleschen Wert nur dann aus, wenn ein Ereignis an `EI1` bis `EI4` eintrifft.
 - Intern sitzen zusätzlich `E_MUX_4` und `E_DEMUX_4`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
 - Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_4` und `E_DEMUX_4`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_4` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_4`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_4.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -92,7 +93,7 @@ Damit ergibt sich ein einfaches, stateless Gate-Verhalten auf Basis des aktuelle
 
 - Einsatz als „Sperr-Gate“, wenn Ereignisse nur dann verarbeitet werden sollen, wenn ein bestimmtes Sperrsignal nicht aktiv ist.
 - Verwendung in Steuerungslogiken, in denen ein Signal eine Aktion blockiert, aber nicht explizit freigibt.
-- Einbindung in Sicherheits- oder Überwachungskonzepte, bei denen Ereignisse nur im nicht gesperrten Zustand weitergeleitet werden dürfen.
+- Einbindung in Überwachungskonzepte, bei denen Ereignisse nur im nicht gesperrten Zustand weitergeleitet werden dürfen. Keine Schutzfunktion (siehe Hinweis bei den Technischen Besonderheiten).
 - Kapselung einer invertierten Freigabelogik für vier unabhängige Ereigniskanäle in einer wiederverwendbaren Subapplikation.
 
 ## Vergleich mit ähnlichen Bausteinen

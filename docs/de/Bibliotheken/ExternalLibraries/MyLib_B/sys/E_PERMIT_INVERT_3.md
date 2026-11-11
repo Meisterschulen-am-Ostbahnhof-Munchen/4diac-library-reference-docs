@@ -81,6 +81,7 @@ Ereignispfad je Kanal `k`: `EIk` → `E_MUX_3` → `F_NOT_BOOL_INIT.REQ`, `F_NOT
 - Da es sich um eine SubApplikation handelt, ist die innere Struktur in der 4diac-IDE sichtbar und kann bei Bedarf erweitert oder angepasst werden.
 - Intern sitzen zusätzlich `E_MUX_3` und `E_DEMUX_3`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
 - Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_3` und `E_DEMUX_3`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_3` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_3`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_3.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -95,10 +96,10 @@ Diese Zustände gelten für alle drei Kanäle gleichermaßen.
 
 ## Anwendungsszenarien
 
-- **Sicherheitslogik**: Ein Ereignis soll nur dann verarbeitet werden, wenn ein Sicherheitssignal *inaktiv* ist. Beispiel: `PERMIT` ist `TRUE`, wenn eine Schutzhaube geöffnet ist; die Ereignisse sollen dann gesperrt werden.
+- **Sperrsignal**: Ein Ereignis soll nur dann verarbeitet werden, wenn ein Sperrsignal *inaktiv* ist. Beispiel: `PERMIT` ist `TRUE`, wenn eine Haube geöffnet ist; die Ereignisse sollen dann gesperrt werden. Keine Schutzfunktion (siehe Hinweis bei den Technischen Besonderheiten).
 - **Betriebsartenumschaltung**: Wenn ein Signal wie „Handbetrieb“ aktiv ist (`TRUE`), sollen automatische Verarbeitungs-Events blockiert werden. Bei „Automatik“ (`FALSE`) werden die Events durchgelassen.
 - **Mehrkanalige Freigabe**: Gleichzeitige Steuerung von drei unabhängigen Ereignispfaden mit einer einzigen, invertierten Freigabebedingung.
-- **NOT-AUS-Verknüpfung**: Bei aktivem NOT-AUS (`PERMIT = TRUE`) werden alle prozessrelevanten Events unterdrückt; erst bei zurückgesetztem NOT-AUS (`PERMIT = FALSE`) werden die Events wieder zugelassen.
+- **Meldung „gesperrt“**: Bei aktivem Sperrsignal (`PERMIT = TRUE`) werden die Events unterdrückt; erst bei zurückgesetztem Signal (`PERMIT = FALSE`) werden sie wieder zugelassen. Ein NOT-AUS gehört nicht hierher.
 
 ## Vergleich mit ähnlichen Bausteinen
 
