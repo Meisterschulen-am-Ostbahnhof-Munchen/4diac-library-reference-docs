@@ -47,8 +47,9 @@ Keine vorhanden.
 
 ## Funktionsweise
 
-Die SubApp besteht intern aus zwei Funktionsbausteinen:
+Die SubApp besteht intern aus vier Funktionsbausteinen:
 
+- `E_MUX_3` und `E_DEMUX_3` – führen die Ereignisse `EI1` bis `EI3` durch die Negation und geben sie wieder auf dem auslösenden Kanal aus (siehe unten).
 - `F_NOT_BOOL_INIT` – negiert den booleschen Eingang `PERMIT`.
 - `E_PERMIT_3` – ein 3-Kanal-Event-Freigabebaustein, der die eingehenden Ereignisse nur dann an die Ausgänge weiterleitet, wenn sein Freigabeeingang `PERMIT` den Wert `TRUE` hat.
 
@@ -57,7 +58,7 @@ Der Datenfluss ist wie folgt:
 1. Der boolesche Wert von `PERMIT` wird an den Eingang `IN` des Bausteins `F_NOT_BOOL_INIT` übergeben.
 2. `F_NOT_BOOL_INIT` invertiert diesen Wert und liefert das Ergebnis an seinem Ausgang `OUT`.
 3. Das invertierte Signal wird an den Freigabeeingang `PERMIT` von `E_PERMIT_3` angeschlossen.
-4. Die Ereignisse an `EI1`, `EI2` und `EI3` werden intern mit den entsprechenden Eingängen von `E_PERMIT_3` verbunden.
+4. Die Ereignisse an `EI1`, `EI2` und `EI3` laufen über `E_MUX_3`, `F_NOT_BOOL_INIT` und `E_DEMUX_3` auf die entsprechenden Eingänge von `E_PERMIT_3`.
 5. Abhängig vom negierten Freigabesignal werden die Ereignisse an `EO1`, `EO2` und `EO3` weitergeleitet oder blockiert.
 
 Die folgende Wahrheitstabelle verdeutlicht das Verhalten für einen der drei Kanäle (beispielhaft für Kanal 1):
@@ -67,13 +68,20 @@ Die folgende Wahrheitstabelle verdeutlicht das Verhalten für einen der drei Kan
 | `FALSE`           | `TRUE`                  | eintreffend    | wird durchgeschaltet |
 | `TRUE`            | `FALSE`                 | eintreffend    | wird blockiert |
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2`, `EI3` laufen zuerst in `E_MUX_3`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_3` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_3` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_3` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_3` → `E_PERMIT_3.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Die SubApp kapselt die Kombination aus Negation und Ereignisfreigabe in einem einzigen wiederverwendbaren Typ.
-- Es werden keine eigenen Algorithmen oder internen Zustände definiert; die Logik wird vollständig durch die beiden Standardbausteine realisiert.
+- Es werden keine eigenen Algorithmen oder internen Zustände definiert; die Logik wird vollständig durch die vier Standardbausteine realisiert.
 - Der Baustein `F_NOT_BOOL_INIT` ist eine initialisierbare Negation. In dieser Konfiguration wird kein Initialwert gesetzt; das Verhalten entspricht einer einfachen Negation des Eingangssignals.
 - Die SubApp besitzt drei voneinander unabhängige Kanäle, sodass gleichzeitig mehrere Ereignispfade mit derselben Freigabebedingung gesteuert werden können.
 - Da es sich um eine SubApplikation handelt, ist die innere Struktur in der 4diac-IDE sichtbar und kann bei Bedarf erweitert oder angepasst werden.
+- Intern sitzen zusätzlich `E_MUX_3` und `E_DEMUX_3`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_3` und `E_DEMUX_3`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_3` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_3`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_3.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -88,10 +96,10 @@ Diese Zustände gelten für alle drei Kanäle gleichermaßen.
 
 ## Anwendungsszenarien
 
-- **Sicherheitslogik**: Ein Ereignis soll nur dann verarbeitet werden, wenn ein Sicherheitssignal *inaktiv* ist. Beispiel: `PERMIT` ist `TRUE`, wenn eine Schutzhaube geöffnet ist; die Ereignisse sollen dann gesperrt werden.
+- **Sperrsignal**: Ein Ereignis soll nur dann verarbeitet werden, wenn ein Sperrsignal *inaktiv* ist. Beispiel: `PERMIT` ist `TRUE`, wenn eine Haube geöffnet ist; die Ereignisse sollen dann gesperrt werden. Keine Schutzfunktion (siehe Hinweis bei den Technischen Besonderheiten).
 - **Betriebsartenumschaltung**: Wenn ein Signal wie „Handbetrieb“ aktiv ist (`TRUE`), sollen automatische Verarbeitungs-Events blockiert werden. Bei „Automatik“ (`FALSE`) werden die Events durchgelassen.
 - **Mehrkanalige Freigabe**: Gleichzeitige Steuerung von drei unabhängigen Ereignispfaden mit einer einzigen, invertierten Freigabebedingung.
-- **NOT-AUS-Verknüpfung**: Bei aktivem NOT-AUS (`PERMIT = TRUE`) werden alle prozessrelevanten Events unterdrückt; erst bei zurückgesetztem NOT-AUS (`PERMIT = FALSE`) werden die Events wieder zugelassen.
+- **Meldung „gesperrt“**: Bei aktivem Sperrsignal (`PERMIT = TRUE`) werden die Events unterdrückt; erst bei zurückgesetztem Signal (`PERMIT = FALSE`) werden sie wieder zugelassen. Ein NOT-AUS gehört nicht hierher.
 
 ## Vergleich mit ähnlichen Bausteinen
 

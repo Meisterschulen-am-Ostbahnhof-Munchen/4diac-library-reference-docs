@@ -47,11 +47,11 @@ Keine.
 
 ## Funktionsweise
 
-Intern besteht die Subapplikation aus zwei verbundenen Bausteinen:
+Intern besteht die Subapplikation aus vier verbundenen Bausteinen (`E_MUX_4`, `F_NOT_BOOL_INIT`, `E_DEMUX_4` und `E_PERMIT_4`):
 
 - `PERMIT` wird an den Eingang `IN` des Bausteins `F_NOT_BOOL_INIT` geführt.
 - Der Ausgang `OUT` von `F_NOT_BOOL_INIT` ist mit dem Freigabeeingang `PERMIT` des Bausteins `E_PERMIT_4` verbunden.
-- Die Ereignisse `EI1` bis `EI4` werden direkt auf die entsprechenden Ereigniseingänge von `E_PERMIT_4` geführt.
+- Die Ereignisse `EI1` bis `EI4` laufen über `E_MUX_4`, `F_NOT_BOOL_INIT` und `E_DEMUX_4` auf die entsprechenden Ereigniseingänge von `E_PERMIT_4` (siehe unten).
 - Die Ereignisausgänge von `E_PERMIT_4` sind direkt mit `EO1` bis `EO4` verbunden.
 
 `E_PERMIT_4` lässt ein Ereignis nur dann passieren, wenn sein `PERMIT`-Eingang den Wert `TRUE` hat. Da `F_NOT_BOOL_INIT` das externe `PERMIT`-Signal invertiert, ist die interne Freigabe nur dann `TRUE`, wenn das externe `PERMIT` den Wert `FALSE` besitzt.
@@ -65,6 +65,10 @@ Die resultierende Logik:
 
 Eine Änderung des `PERMIT`-Signals allein erzeugt keine Ereignisse. Es wird ausschließlich entschieden, ob ein ankommendes Ereignis an den jeweiligen Ausgang weitergegeben wird oder nicht.
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2`, `EI3`, `EI4` laufen zuerst in `E_MUX_4`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_4` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_4` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_4` → `E_PERMIT_4.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Die Subapplikation realisiert eine Low-aktive Freigabelogik: `FALSE` bedeutet „freigegeben“, `TRUE` bedeutet „gesperrt“.
@@ -72,6 +76,9 @@ Eine Änderung des `PERMIT`-Signals allein erzeugt keine Ereignisse. Es wird aus
 - Es sind keine Adapter und keine Datenausgänge vorhanden.
 - Die Subapplikation besitzt keine eigene Ereignisverarbeitung; sie ist rein durchschaltend und ereignisgetrieben.
 - Die interne Logik reagiert nicht auf steigende oder fallende Flanken von `PERMIT`, sondern wertet den aktuellen Booleschen Wert nur dann aus, wenn ein Ereignis an `EI1` bis `EI4` eintrifft.
+- Intern sitzen zusätzlich `E_MUX_4` und `E_DEMUX_4`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_4` und `E_DEMUX_4`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_4` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_4`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_4.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -86,7 +93,7 @@ Damit ergibt sich ein einfaches, stateless Gate-Verhalten auf Basis des aktuelle
 
 - Einsatz als „Sperr-Gate“, wenn Ereignisse nur dann verarbeitet werden sollen, wenn ein bestimmtes Sperrsignal nicht aktiv ist.
 - Verwendung in Steuerungslogiken, in denen ein Signal eine Aktion blockiert, aber nicht explizit freigibt.
-- Einbindung in Sicherheits- oder Überwachungskonzepte, bei denen Ereignisse nur im nicht gesperrten Zustand weitergeleitet werden dürfen.
+- Einbindung in Überwachungskonzepte, bei denen Ereignisse nur im nicht gesperrten Zustand weitergeleitet werden dürfen. Keine Schutzfunktion (siehe Hinweis bei den Technischen Besonderheiten).
 - Kapselung einer invertierten Freigabelogik für vier unabhängige Ereigniskanäle in einer wiederverwendbaren Subapplikation.
 
 ## Vergleich mit ähnlichen Bausteinen

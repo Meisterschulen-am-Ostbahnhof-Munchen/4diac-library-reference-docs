@@ -62,13 +62,20 @@ Dadurch gilt:
   Interner Freigabewert = `FALSE`  
   Ereignisse werden blockiert und es wird kein Ereignisausgang aktiviert.
 
+Auch die Ereigniswege gehen durch die Negation: Die Eingänge `EI1`, `EI2` laufen zuerst in `E_MUX_2`. Dieser merkt sich im Ausgang `K`, welcher Kanal ausgelöst hat, und startet `F_NOT_BOOL_INIT.REQ`. Nach `F_NOT_BOOL_INIT.CNF` gibt `E_DEMUX_2` das Ereignis über `K` wieder auf dem Kanal aus, der es ausgelöst hat, und `E_PERMIT_2` entscheidet. So wird die Negation vor jeder Freigabeprüfung neu berechnet, auch wenn `PERMIT` sich seit dem letzten Ereignis geändert hat.
+
+Ereignispfad je Kanal `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_2` → `E_PERMIT_2.EIk` → `EOk`.
+
 ## Technische Besonderheiten
 
 - Es handelt sich um eine Subapplikation, nicht um einen direkt implementierten Funktionsblock.
-- Der Baustein verwendet `F_NOT_BOOL_INIT` aus der IEC-61131-Bibliothek und `E_PERMIT_2` aus der IEC-61499-Ereignisbibliothek.
-- Die beiden Ereigniskanäle sind getrennt geführt, werden aber gemeinsam über ein einziges Freigabesignal gesteuert.
+- Der Baustein verwendet `F_NOT_BOOL_INIT` aus der IEC-61131-Bibliothek sowie `E_MUX_2`, `E_DEMUX_2` und `E_PERMIT_2` aus der IEC-61499-Ereignisbibliothek.
+- Die beiden Ereigniskanäle sind logisch getrennt, laufen aber gemeinsam über `E_MUX_2`/`E_DEMUX_2` und `F_NOT_BOOL_INIT` und werden über ein einziges Freigabesignal gesteuert.
 - Der Baustein besitzt keine Datenausgänge und kein eigenes internes Zustandsgedächtnis.
 - Durch die Integration der Negation in die Subapplikation wird eine extern sichtbare Freigabelogik mit invertierter Bedeutung erreicht.
+- Intern sitzen zusätzlich `E_MUX_2` und `E_DEMUX_2`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.
+- Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
+- **Hinweis:** Die Kanalzuordnung läuft über `K` zwischen `E_MUX_2` und `E_DEMUX_2`. Werden mehrere Kanäle in derselben Ereigniskette ausgelöst, arbeitet FORTE die Ereignisse nacheinander aus einer Warteschlange ab, und `K` kann überschrieben sein, bevor `E_DEMUX_2` es liest. Dann werden Ereignisse auf dem falschen Kanal ausgegeben oder gehen verloren. Bei Ereignissen aus verschiedenen Quellen ist das ebenfalls möglich (nicht am Code geprüft). Der Baustein ist deshalb **keine Schutzfunktion** für Sicherheitskontakte, Schutztüren oder NOT-AUS. Ohne diese Einschränkung steht die Variante [`AX_E_PERMIT_INVERT_2`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_2.md) ohne `E_MUX`/`E_DEMUX` zur Verfügung.
 
 ## Zustandsübersicht
 
@@ -81,7 +88,7 @@ Da die Subapplikation kein eigenes Speicherverhalten besitzt, ist die folgende T
 
 ## Anwendungsszenarien
 
-- Einsatz in Steuerungen, bei denen die Freigabe durch ein Low-aktives Signal erfolgt, zum Beispiel Sicherheitskontakte oder Schutztüren.
+- Einsatz in Steuerungen, bei denen die Freigabe durch ein Low-aktives Signal erfolgt. Nicht als Schutzfunktion für Sicherheitskontakte oder Schutztüren (siehe Hinweis bei den Technischen Besonderheiten).
 - Zweikanalige Ereignisweiterleitung mit einer gemeinsamen Sperrbedingung.
 - Ersatz für eine externe Verdrahtung von `F_NOT_BOOL_INIT` und `E_PERMIT_2`, wodurch die Applikation übersichtlicher wird.
 

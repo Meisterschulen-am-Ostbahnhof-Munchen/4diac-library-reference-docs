@@ -55,7 +55,7 @@ None.
 
 1. The Boolean input `PERMIT` is negated by `F_NOT_BOOL_INIT`.
 2. The negated value is connected to the `PERMIT` input of `E_PERMIT_4`.
-3. Each event input `EIx` is connected to the corresponding event input of `E_PERMIT_4`.
+3. Each event input `EIx` reaches the corresponding event input of `E_PERMIT_4` via `E_MUX_4`, `F_NOT_BOOL_INIT` and `E_DEMUX_4` (see below).
 4. The corresponding event output `EOx` is emitted only when the internal `E_PERMIT_4.PERMIT` value is `TRUE`.
 
 The effective enable condition is:
@@ -69,6 +69,10 @@ For each channel `x`:
 
 The gate does not buffer events. If the gate is closed, the incoming event is discarded.
 
+The event paths also pass through the negation: the inputs `EI1`, `EI2`, `EI3`, `EI4` first go into `E_MUX_4`. It records in its output `K` which channel fired and starts `F_NOT_BOOL_INIT.REQ`. After `F_NOT_BOOL_INIT.CNF`, `E_DEMUX_4` outputs the event again on the channel that fired it, using `K`, and `E_PERMIT_4` decides. This way the negation is recalculated before every permission check, even if `PERMIT` has changed since the last event.
+
+Event path per channel `k`: `EIk` → `E_MUX_4` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_4` → `E_PERMIT_4.EIk` → `EOk`.
+
 ## Technical Features
 
 - Four-channel event gating in a single reusable subapplication.
@@ -78,6 +82,9 @@ The gate does not buffer events. If the gate is closed, the incoming event is di
 - No data outputs or additional data transformation.
 - Built from standard blocks: `E_PERMIT_4` and `F_NOT_BOOL_INIT`.
 - No adapters required for integration.
+- Internally there are also `E_MUX_4` and `E_DEMUX_4`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
+- A change of `PERMIT` alone produces no output event.
+- **Note:** The channel assignment runs through `K` between `E_MUX_4` and `E_DEMUX_4`. If several channels are triggered in the same event chain, FORTE processes the events one after another from a queue, and `K` may be overwritten before `E_DEMUX_4` reads it. Events are then output on the wrong channel or lost. The same is possible for events from different sources (not verified in the code). The block is therefore **not a protective function** for safety contacts, guard doors or emergency stop. The variant [`AX_E_PERMIT_INVERT_4`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_4.md) without `E_MUX`/`E_DEMUX` is available without this restriction.
 
 ## State Overview
 
@@ -96,7 +103,7 @@ This subapplication is suitable whenever an event stream should be allowed while
 
 - Passing alarm or notification events only when the process is not in an error state.
 - Blocking event outputs during maintenance or startup phases, where the control signal is `TRUE`.
-- Implementing fail-safe enable logic in which `FALSE` means “normal operation” and `TRUE` means “inhibit”.
+- Enable logic in which `FALSE` means “normal operation” and `TRUE` means “inhibit”. Not a protective function (see the note under Technical Features).
 - Combining multiple permission-dependent event channels into one compact component.
 
 ## Comparison with Similar Blocks

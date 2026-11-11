@@ -54,6 +54,10 @@ Inside E_PERMIT_3, an event arriving on EI1, EI2, or EI3 is forwarded to the cor
 
 No data values are consumed or produced by the subapp; it purely controls event propagation.
 
+The event paths also pass through the negation: the inputs `EI1`, `EI2`, `EI3` first go into `E_MUX_3`. It records in its output `K` which channel fired and starts `F_NOT_BOOL_INIT.REQ`. After `F_NOT_BOOL_INIT.CNF`, `E_DEMUX_3` outputs the event again on the channel that fired it, using `K`, and `E_PERMIT_3` decides. This way the negation is recalculated before every permission check, even if `PERMIT` has changed since the last event.
+
+Event path per channel `k`: `EIk` → `E_MUX_3` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_DEMUX_3` → `E_PERMIT_3.EIk` → `EOk`.
+
 ## Technical Features
 
 - Reusable composite design built from standard IEC 61131 and IEC 61499 function blocks.
@@ -62,6 +66,9 @@ No data values are consumed or produced by the subapp; it purely controls event 
 - F_NOT_BOOL_INIT provides a deterministic boolean negation with a defined initial output state, which avoids undefined behavior during cold start.
 - Easy to integrate into larger 4diac-ide applications due to its simple interface.
 - No data outputs or adapters reduce wiring complexity.
+- Internally there are also `E_MUX_3` and `E_DEMUX_3`; they hold the channel (`K`) so that the negation is recalculated before every permission check.
+- A change of `PERMIT` alone produces no output event.
+- **Note:** The channel assignment runs through `K` between `E_MUX_3` and `E_DEMUX_3`. If several channels are triggered in the same event chain, FORTE processes the events one after another from a queue, and `K` may be overwritten before `E_DEMUX_3` reads it. Events are then output on the wrong channel or lost. The same is possible for events from different sources (not verified in the code). The block is therefore **not a protective function** for safety contacts, guard doors or emergency stop. The variant [`AX_E_PERMIT_INVERT_3`](../../MyLib_AX/sys/AX_E_PERMIT_INVERT_3.md) without `E_MUX`/`E_DEMUX` is available without this restriction.
 
 ## State Overview
 
@@ -76,10 +83,10 @@ There is no event-driven state retention; each incoming event is either forwarde
 
 ## Application Scenarios
 
-- **Safety and emergency-stop logic:** Event processing is permitted only while a safety signal is inactive, e.g. when a stop button is not pressed.
-- **Interlock circuits:** Machine event handling is disabled while a guard door is open or a warning condition is active.
+- **Inhibit signal:** Event processing is permitted only while an inhibit signal is inactive, e.g. while a cover is closed. Not a protective function (see the note under Technical Features).
+- **Warning conditions:** Event handling is disabled while a warning condition is active.
 - **Supervisory enable/disable:** A central control signal blocks or releases event-driven activities for three parallel subsystems at once.
-- **Fail-safe event gating:** In designs where events must be suppressed whenever an alarm flag is set, the inverted permit semantics fit naturally.
+- **Event gating on alarm:** Where events are to be suppressed whenever an alarm flag is set, the inverted permit semantics fit naturally. Not a safety function.
 
 ## Comparison with Similar Blocks
 
