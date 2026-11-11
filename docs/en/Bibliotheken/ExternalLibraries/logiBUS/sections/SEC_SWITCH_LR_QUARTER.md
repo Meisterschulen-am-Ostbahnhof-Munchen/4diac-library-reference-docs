@@ -62,7 +62,7 @@ None.
 - **`ALL_ON` and `ALL_OFF`:** `ALL_ON` sets both counters to 0 (all free). `ALL_OFF` sets `LEFT_OFF` = `N` and `RIGHT_OFF` = 0 (all blocked).
 - **`QI`:** `QI` is wired only to `INIT` and `REQ`. Keys, `ALL_ON` and `ALL_OFF` act in the active state without `QI`. `REQ` with `QI` = FALSE changes nothing and answers with `CNF`, `QO` = FALSE.
 - **Before initialization:** `REQ`, keys, `ALL_ON` and `ALL_OFF` before `INIT+` or after `INIT-` stay without reaction.
-- **Calculation (`CALC`):** The counters are limited to `N`, `ACTIVE` = `N` − `LEFT_OFF` − `RIGHT_OFF`. The mask is calculated from `ACTIVE` and `LEFT_OFF` without a loop. Free is `01`, blocked is `00`, sections above `N` are `11` (not present).
+- **Calculation (`CALC`):** The counters are limited to `N`, `ACTIVE` = `N` − `LEFT_OFF` − `RIGHT_OFF`. The mask is calculated from `ACTIVE` and `LEFT_OFF` in a loop over all sections. Free is `01`, blocked is `00`, sections above `N` are `11` (not present).
 
 ### Example
 

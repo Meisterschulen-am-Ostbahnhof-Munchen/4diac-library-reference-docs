@@ -62,7 +62,7 @@ Keine.
 - **`ALL_ON` und `ALL_OFF`:** `ALL_ON` setzt beide Zähler auf 0 (alle frei). `ALL_OFF` setzt `LEFT_OFF` = `N` und `RIGHT_OFF` = 0 (alle gesperrt).
 - **`QI`:** `QI` ist nur an `INIT` und `REQ` verdrahtet. Tasten, `ALL_ON` und `ALL_OFF` wirken im aktiven Zustand ohne `QI`. `REQ` mit `QI` = FALSE ändert nichts und antwortet mit `CNF`, `QO` = FALSE.
 - **Vor der Initialisierung:** `REQ`, Tasten, `ALL_ON` und `ALL_OFF` vor `INIT+` oder nach `INIT-` bleiben ohne Reaktion.
-- **Berechnung (`CALC`):** Die Zähler werden auf `N` begrenzt, `ACTIVE` = `N` − `LEFT_OFF` − `RIGHT_OFF`. Die Maske wird ohne Schleife aus `ACTIVE` und `LEFT_OFF` berechnet. Frei ist `01`, gesperrt `00`, Sections oberhalb von `N` sind `11` (nicht vorhanden).
+- **Berechnung (`CALC`):** Die Zähler werden auf `N` begrenzt, `ACTIVE` = `N` − `LEFT_OFF` − `RIGHT_OFF`. Die Maske wird in einer Schleife über alle Sections aus `ACTIVE` und `LEFT_OFF` berechnet. Frei ist `01`, gesperrt `00`, Sections oberhalb von `N` sind `11` (nicht vorhanden).
 
 ### Beispiel
 

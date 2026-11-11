@@ -61,4 +61,4 @@ Section s liegt im Condensed Work State in Wort `(s-1) DIV 16`, Bits `2*((s-1) M
 
 ## Fazit
 
-`SEC_MASK_QUARTER_CMD` wendet eine BIT-Maske auf einen Sollwert-Condensed-Work-State an und erhält dabei die Bedeutung der 2-Bit-Werte.
+`SEC_MASK_QUARTER_CMD` wendet eine BIT-Maske auf einen Sollwert-Condensed-Work-State an und erzwingt für gesperrte Sections den Zustand `00` (aus). Freie Sections bleiben unverändert.

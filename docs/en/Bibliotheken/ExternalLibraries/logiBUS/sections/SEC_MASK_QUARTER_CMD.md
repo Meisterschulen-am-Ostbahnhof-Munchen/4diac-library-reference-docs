@@ -61,4 +61,4 @@ Section s is in the condensed work state in word `(s-1) DIV 16`, bits `2*((s-1) 
 
 ## Conclusion
 
-`SEC_MASK_QUARTER_CMD` applies a BIT mask to a setpoint condensed work state and preserves the meaning of the 2-bit values.
+`SEC_MASK_QUARTER_CMD` applies a BIT mask to a setpoint condensed work state and forces blocked sections to `00` (off). Free sections stay unchanged.
