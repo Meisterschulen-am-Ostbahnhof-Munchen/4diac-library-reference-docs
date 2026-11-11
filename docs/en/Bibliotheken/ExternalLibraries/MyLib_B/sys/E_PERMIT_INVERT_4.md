@@ -55,7 +55,7 @@ None.
 
 1. The Boolean input `PERMIT` is negated by `F_NOT_BOOL_INIT`.
 2. The negated value is connected to the `PERMIT` input of `E_PERMIT_4`.
-3. Each event input `EIx` is connected to the corresponding event input of `E_PERMIT_4`.
+3. Each event input `EIx` reaches the corresponding event input of `E_PERMIT_4` via `E_MUX_4`, `F_NOT_BOOL_INIT` and `E_DEMUX_4` (see below).
 4. The corresponding event output `EOx` is emitted only when the internal `E_PERMIT_4.PERMIT` value is `TRUE`.
 
 The effective enable condition is:

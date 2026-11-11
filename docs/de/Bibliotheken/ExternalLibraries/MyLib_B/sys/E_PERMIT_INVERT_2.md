@@ -69,8 +69,8 @@ Ereignispfad je Kanal `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NOT
 ## Technische Besonderheiten
 
 - Es handelt sich um eine Subapplikation, nicht um einen direkt implementierten Funktionsblock.
-- Der Baustein verwendet `F_NOT_BOOL_INIT` aus der IEC-61131-Bibliothek und `E_PERMIT_2` aus der IEC-61499-Ereignisbibliothek.
-- Die beiden Ereigniskanäle sind getrennt geführt, werden aber gemeinsam über ein einziges Freigabesignal gesteuert.
+- Der Baustein verwendet `F_NOT_BOOL_INIT` aus der IEC-61131-Bibliothek sowie `E_MUX_2`, `E_DEMUX_2` und `E_PERMIT_2` aus der IEC-61499-Ereignisbibliothek.
+- Die beiden Ereigniskanäle sind logisch getrennt, laufen aber gemeinsam über `E_MUX_2`/`E_DEMUX_2` und `F_NOT_BOOL_INIT` und werden über ein einziges Freigabesignal gesteuert.
 - Der Baustein besitzt keine Datenausgänge und kein eigenes internes Zustandsgedächtnis.
 - Durch die Integration der Negation in die Subapplikation wird eine extern sichtbare Freigabelogik mit invertierter Bedeutung erreicht.
 - Intern sitzen zusätzlich `E_MUX_2` und `E_DEMUX_2`; sie halten den Kanal (`K`) fest, damit die Negation vor jeder Freigabeprüfung neu berechnet wird.

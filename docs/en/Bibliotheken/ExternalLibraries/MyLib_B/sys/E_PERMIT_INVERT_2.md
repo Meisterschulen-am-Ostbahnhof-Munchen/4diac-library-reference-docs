@@ -64,7 +64,7 @@ Event path per channel `k`: `EIk` → `E_MUX_2` → `F_NOT_BOOL_INIT.REQ`, `F_NO
 - Two event input channels and two event output channels.
 - One common BOOL permission input.
 - No data outputs and no adapters.
-- Internally uses the standard function blocks F_NOT_BOOL_INIT and E_PERMIT_2.
+- Internally uses the standard function blocks F_NOT_BOOL_INIT, E_MUX_2, E_DEMUX_2 and E_PERMIT_2.
 - Provides active-low event gating behavior.
 - Encapsulates the inverter plus event gate logic into a single application component.
 - The gate does not queue or store events. Events arriving while the gate is closed are discarded.

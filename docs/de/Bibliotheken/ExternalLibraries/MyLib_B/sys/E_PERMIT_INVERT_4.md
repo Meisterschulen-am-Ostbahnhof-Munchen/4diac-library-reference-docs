@@ -47,11 +47,11 @@ Keine.
 
 ## Funktionsweise
 
-Intern besteht die Subapplikation aus zwei verbundenen Bausteinen:
+Intern besteht die Subapplikation aus vier verbundenen Bausteinen (`E_MUX_4`, `F_NOT_BOOL_INIT`, `E_DEMUX_4` und `E_PERMIT_4`):
 
 - `PERMIT` wird an den Eingang `IN` des Bausteins `F_NOT_BOOL_INIT` geführt.
 - Der Ausgang `OUT` von `F_NOT_BOOL_INIT` ist mit dem Freigabeeingang `PERMIT` des Bausteins `E_PERMIT_4` verbunden.
-- Die Ereignisse `EI1` bis `EI4` werden direkt auf die entsprechenden Ereigniseingänge von `E_PERMIT_4` geführt.
+- Die Ereignisse `EI1` bis `EI4` laufen über `E_MUX_4`, `F_NOT_BOOL_INIT` und `E_DEMUX_4` auf die entsprechenden Ereigniseingänge von `E_PERMIT_4` (siehe unten).
 - Die Ereignisausgänge von `E_PERMIT_4` sind direkt mit `EO1` bis `EO4` verbunden.
 
 `E_PERMIT_4` lässt ein Ereignis nur dann passieren, wenn sein `PERMIT`-Eingang den Wert `TRUE` hat. Da `F_NOT_BOOL_INIT` das externe `PERMIT`-Signal invertiert, ist die interne Freigabe nur dann `TRUE`, wenn das externe `PERMIT` den Wert `FALSE` besitzt.

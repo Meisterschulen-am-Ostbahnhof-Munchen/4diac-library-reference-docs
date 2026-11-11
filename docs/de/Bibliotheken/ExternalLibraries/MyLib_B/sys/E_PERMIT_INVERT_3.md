@@ -47,8 +47,9 @@ Keine vorhanden.
 
 ## Funktionsweise
 
-Die SubApp besteht intern aus zwei Funktionsbausteinen:
+Die SubApp besteht intern aus vier Funktionsbausteinen:
 
+- `E_MUX_3` und `E_DEMUX_3` – führen die Ereignisse `EI1` bis `EI3` durch die Negation und geben sie wieder auf dem auslösenden Kanal aus (siehe unten).
 - `F_NOT_BOOL_INIT` – negiert den booleschen Eingang `PERMIT`.
 - `E_PERMIT_3` – ein 3-Kanal-Event-Freigabebaustein, der die eingehenden Ereignisse nur dann an die Ausgänge weiterleitet, wenn sein Freigabeeingang `PERMIT` den Wert `TRUE` hat.
 
@@ -57,7 +58,7 @@ Der Datenfluss ist wie folgt:
 1. Der boolesche Wert von `PERMIT` wird an den Eingang `IN` des Bausteins `F_NOT_BOOL_INIT` übergeben.
 2. `F_NOT_BOOL_INIT` invertiert diesen Wert und liefert das Ergebnis an seinem Ausgang `OUT`.
 3. Das invertierte Signal wird an den Freigabeeingang `PERMIT` von `E_PERMIT_3` angeschlossen.
-4. Die Ereignisse an `EI1`, `EI2` und `EI3` werden intern mit den entsprechenden Eingängen von `E_PERMIT_3` verbunden.
+4. Die Ereignisse an `EI1`, `EI2` und `EI3` laufen über `E_MUX_3`, `F_NOT_BOOL_INIT` und `E_DEMUX_3` auf die entsprechenden Eingänge von `E_PERMIT_3`.
 5. Abhängig vom negierten Freigabesignal werden die Ereignisse an `EO1`, `EO2` und `EO3` weitergeleitet oder blockiert.
 
 Die folgende Wahrheitstabelle verdeutlicht das Verhalten für einen der drei Kanäle (beispielhaft für Kanal 1):
@@ -74,7 +75,7 @@ Ereignispfad je Kanal `k`: `EIk` → `E_MUX_3` → `F_NOT_BOOL_INIT.REQ`, `F_NOT
 ## Technische Besonderheiten
 
 - Die SubApp kapselt die Kombination aus Negation und Ereignisfreigabe in einem einzigen wiederverwendbaren Typ.
-- Es werden keine eigenen Algorithmen oder internen Zustände definiert; die Logik wird vollständig durch die beiden Standardbausteine realisiert.
+- Es werden keine eigenen Algorithmen oder internen Zustände definiert; die Logik wird vollständig durch die vier Standardbausteine realisiert.
 - Der Baustein `F_NOT_BOOL_INIT` ist eine initialisierbare Negation. In dieser Konfiguration wird kein Initialwert gesetzt; das Verhalten entspricht einer einfachen Negation des Eingangssignals.
 - Die SubApp besitzt drei voneinander unabhängige Kanäle, sodass gleichzeitig mehrere Ereignispfade mit derselben Freigabebedingung gesteuert werden können.
 - Da es sich um eine SubApplikation handelt, ist die innere Struktur in der 4diac-IDE sichtbar und kann bei Bedarf erweitert oder angepasst werden.
