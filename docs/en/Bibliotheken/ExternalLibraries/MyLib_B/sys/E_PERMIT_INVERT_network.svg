@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-88.8 -151.0 1194.3 588.0"
+     viewBox="-13.8 -151.0 1194.3 588.0"
      width="1194" height="588">
   <style>
     @font-face {
@@ -40,36 +40,37 @@
       </feMerge>
     </filter>
   </defs>
-  <rect x="-88.8" y="-151.0" width="1194.3" height="588.0" fill="white"/>
-  <rect x="-81.8" y="-144.0" width="1180.3" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
-  <rect x="-81.8" y="-144.0" width="1180.3" height="25.0" fill="white" stroke="none"/>
-  <line x1="-81.8" y1="-119.5" x2="1098.5" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
-  <text x="-76.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Invertiertes Event-Freigabe-Gate (F_NOT_BOOL_INIT + E_PERMIT)</text>
+  <rect x="-13.8" y="-151.0" width="1194.3" height="588.0" fill="white"/>
+  <rect x="-6.8" y="-144.0" width="1180.3" height="574.0" fill="none" stroke="#A0A0A0" stroke-width="2"/>
+  <rect x="-6.8" y="-144.0" width="1180.3" height="25.0" fill="white" stroke="none"/>
+  <line x1="-6.8" y1="-119.5" x2="1173.5" y2="-119.5" stroke="#A0A0A0" stroke-width="1"/>
+  <text x="-1.8" y="-127.3" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12" font-weight="bold" fill="#333333">Invertiertes Event-Freigabe-Gate (F_NOT_BOOL_INIT + E_PERMIT)</text>
   <g id="sidebars">
-    <rect x="-81.8" y="-119.0" width="46.8" height="549.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="-35.0" y1="-119.0" x2="-35.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
-    <rect x="1077.0" y="-119.0" width="21.5" height="549.0" fill="#EEF5FF" stroke="none"/>
-    <line x1="1077.0" y1="-119.0" x2="1077.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="-6.8" y="-119.0" width="46.8" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="40.0" y1="-119.0" x2="40.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
+    <rect x="1152.0" y="-119.0" width="21.5" height="549.0" fill="#EEF5FF" stroke="none"/>
+    <line x1="1152.0" y1="-119.0" x2="1152.0" y2="430.0" stroke="#A0A0A0" stroke-width="0.5"/>
   </g>
   <g id="connections">
-    <polyline points="-35.0,-84.0 35.0,-84.0 40.0,-79.0 40.0,80.5 45.0,85.5 594.3,85.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="687.7,85.5 757.7,85.5 762.7,80.5 762.7,-79.0 767.7,-84.0 1077.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="-35.0,-67.0 35.0,-67.0 40.0,-62.0 40.0,131.5 45.0,136.5 354.3,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
-    <polyline points="485.1,136.5 555.1,136.5 560.1,131.5 560.1,124.5 565.1,119.5 594.3,119.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-84.0 246.0,-84.0 251.0,-79.0 251.0,97.5 256.0,102.5 532.8,102.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="866.2,100.5 936.2,100.5 941.2,95.5 941.2,-79.0 946.2,-84.0 1152.0,-84.0" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="663.6,102.5 708.8,102.5 709.6,101.7 709.6,101.3 710.4,100.5 772.8,100.5" fill="none" stroke="#63B31F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="40.0,-67.0 110.0,-67.0 115.0,-62.0 115.0,131.5 120.0,136.5 532.8,136.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
+    <polyline points="663.6,136.5 737.8,136.5 738.6,135.7 738.6,135.3 739.4,134.5 772.8,134.5" fill="none" stroke="#A3B08F" stroke-width="1.5" stroke-linejoin="round"/>
   </g>
   <g id="interface_ports">
-    <polygon points="-40.0,-89.0 -35.0,-84.0 -40.0,-79.0" fill="#63B31F"/>
-    <text x="-41.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="35.0,-89.0 40.0,-84.0 35.0,-79.0" fill="#63B31F"/>
+    <text x="34.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">EI</text>
-    <polygon points="1082.0,-89.0 1077.0,-84.0 1082.0,-79.0" fill="#63B31F"/>
-    <text x="1083.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="1157.0,-89.0 1152.0,-84.0 1157.0,-79.0" fill="#63B31F"/>
+    <text x="1158.0" y="-79.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="start">EO</text>
-    <polygon points="-40.0,-72.0 -35.0,-67.0 -40.0,-62.0" fill="#A3B08F"/>
-    <text x="-41.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
+    <polygon points="35.0,-72.0 40.0,-67.0 35.0,-62.0" fill="#A3B08F"/>
+    <text x="34.0" y="-62.8" font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
           fill="#000000" text-anchor="end">PERMIT</text>
   </g>
   <g id="instances">
-    <g id="fb_F_NOT_BOOL_INIT" transform="translate(354.3, 75.0)">
+    <g id="fb_F_NOT_BOOL_INIT" transform="translate(532.8, 75.0)">
       <path d="M 3 0
             L 127.8125 0
             A 3 3 0 0 1 130.8125 3
@@ -145,7 +146,7 @@
             font-family="'TGL 0-17_std', 'TGL 0-17', 'Times New Roman', Times, serif" font-size="12"
             fill="#000000" text-anchor="middle">F_NOT_BOOL_INIT</text>
     </g>
-    <g id="fb_E_PERMIT" transform="translate(594.3, 75.0)">
+    <g id="fb_E_PERMIT" transform="translate(772.8, 90.0)">
       <path d="M 3 0
             L 90.375 0
             A 3 3 0 0 1 93.375 3

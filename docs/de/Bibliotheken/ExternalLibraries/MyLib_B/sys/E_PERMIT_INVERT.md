@@ -46,7 +46,7 @@ Die Subapplikation besteht intern aus zwei Bausteinen:
 - `F_NOT_BOOL_INIT` zur booleschen Negation
 - `E_PERMIT` zur ereignisbasierten Freigabe
 
-Der externe Eingang `PERMIT` wird an den Eingang `IN` des Negationsbausteins geführt. Dessen Ausgang `OUT` ist mit dem Freigabeeingang `PERMIT` des internen `E_PERMIT` verbunden. Ein Ereignis an `EI` wird direkt an den Ereigniseingang von `E_PERMIT` weitergeleitet.
+Der externe Eingang `PERMIT` wird an den Eingang `IN` des Negationsbausteins geführt. Dessen Ausgang `OUT` ist mit dem Freigabeeingang `PERMIT` des internen `E_PERMIT` verbunden. Ein Ereignis an `EI` geht zuerst an `F_NOT_BOOL_INIT.REQ`; erst dessen `CNF` ist mit `E_PERMIT.EI` verbunden. Die Negation wird dadurch bei jedem Ereignis neu berechnet, bevor `E_PERMIT` es auswertet.
 
 Dadurch gilt:
 
@@ -60,6 +60,7 @@ Die Negation ist vollständig in der Subapplikation gekapselt. Die Umgebung sieh
 - `E_PERMIT_INVERT` ist als `SubAppType` mit einem internen Netzwerk modelliert.
 - Die Negation wird durch den IEC-61131-Baustein `F_NOT_BOOL_INIT` ausgeführt.
 - Das interne `E_PERMIT` bewertet die Freigabe erst beim Eintreffen eines Ereignisses an `EI`.
+- Der Ereignispfad ist `EI` → `F_NOT_BOOL_INIT.REQ`, `F_NOT_BOOL_INIT.CNF` → `E_PERMIT.EI`, `E_PERMIT.EO` → `EO`.
 - Eine Änderung von `PERMIT` allein erzeugt kein Ausgangsereignis.
 - Der Baustein besitzt keine Datenausgänge und keine Adapter.
 - Die Freigabelogik ist in einem einzigen wiederverwendbaren Baustein gekapselt.
