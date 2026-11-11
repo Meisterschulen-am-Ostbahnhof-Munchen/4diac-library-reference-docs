@@ -36,7 +36,7 @@ Der Funktionsblock `logiBUS_QW_SERVO` ist ein Ausgabeservice-Interface für eine
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifiziert den Ausgang Output_Q1..Q8; Initialwert `logiBUS_DO::Invalid` |
 | FREQ | UDINT | Wiederholrate des Servoimpulses in Hz, gelesen bei INIT; Initialwert `50` (ein Impuls alle 20 ms). Servos mit gleicher `FREQ` teilen sich einen MCPWM-Timer. |
 | PULSE_MIN | TIME | Impulsbreite für `OUT` = 0, gelesen bei INIT (Auflösung 1 µs); Initialwert `T#1000us`. Ist `PULSE_MAX` kleiner als `PULSE_MIN`, kehrt sich die Richtung um. |
-| PULSE_MAX | TIME | Impulsbreite für `OUT` = `0xFAFF` (100 %), gelesen bei INIT (Auflösung 1 µs); Initialwert `T#2000us`. |
+| PULSE_MAX | TIME | Impulsbreite für `OUT` = `0xFAFF` (100 %), gelesen bei INIT (Auflösung 1 µs); Initialwert `T#2000us`. Beide Impulsbreiten müssen kürzer sein als die Periode `1 / FREQ` (bei `FREQ = 1000` also unter 1000 µs). |
 
 ### **Daten-Ausgänge**
 

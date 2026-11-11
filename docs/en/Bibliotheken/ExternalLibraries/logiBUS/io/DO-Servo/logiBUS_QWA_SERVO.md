@@ -37,7 +37,7 @@ The function block `logiBUS_QWA_SERVO` is a composite around `logiBUS_QW_SERVO`.
 | Output | logiBUS::io::DQ::logiBUS_DO_S | Identifies the output Output_Q1..Q8; initial value `logiBUS_DO::Invalid` |
 | FREQ | UDINT | Repetition rate of the servo pulse in Hz, read at INIT; initial value `50` (one pulse every 20 ms). Servos with the same `FREQ` share an MCPWM timer. |
 | PULSE_MIN | TIME | Pulse width for `OUT` = 0, read at INIT (resolution 1 µs); initial value `T#1000us`. If `PULSE_MAX` is below `PULSE_MIN`, the direction is reversed. |
-| PULSE_MAX | TIME | Pulse width for `OUT` = `0xFAFF` (100 %), read at INIT (resolution 1 µs); initial value `T#2000us`. |
+| PULSE_MAX | TIME | Pulse width for `OUT` = `0xFAFF` (100 %), read at INIT (resolution 1 µs); initial value `T#2000us`. Both pulse widths must be shorter than the period `1 / FREQ` (at `FREQ = 1000` that is below 1000 µs). |
 
 ### **Data Outputs**
 
