@@ -12,9 +12,9 @@ The function block `logiBUS_QD_PWM` is an output service interface function bloc
 ### **Event Inputs**
 
 - **INIT**: Service Initialization
-- Linked to: QI, PARAMS, Output
+- Linked to: QI, PARAMS, Output, FREQ, RAMP
 - **REQ**: Service Request
-- Linked to: QI, OUT
+- Linked to: QI, OUT, RAMP
 
 ### **Event Outputs**
 
@@ -22,6 +22,8 @@ The function block `logiBUS_QD_PWM` is an output service interface function bloc
 - Linked to: QO, STATUS
 - **CNF**: Acknowledgement of Requested Service Operation
 - Linked to: QO, STATUS
+- **RAMPO**: Ramp finished, value reached (directly after the jump with `RAMP = T#0ms`, not after INIT)
+- Linked to: QO
 
 ### **Data Inputs**
 
@@ -30,6 +32,8 @@ The function block `logiBUS_QD_PWM` is an output service interface function bloc
 - **OUT** (DWORD): Output Data for the Resource (13-bit raw PWM value `0` to `8191`, corresponding to `0 %` to `100 %` duty cycle, $2^{13} = 8192$ states)
 - **Output** (logiBUS_DO_S): Identifies the output Output_Q1..Q8
 - Initial Value: `logiBUS_DO::Invalid`
+- **FREQ** (UDINT): PWM frequency in Hz, read at INIT. Initial value: `400`
+- **RAMP** (TIME): transition time to the new value (hardware ramp), read at INIT and REQ. Initial value: `T#0ms` (jump)
 
 ### **Data Outputs**
 
@@ -43,6 +47,33 @@ No adapter interfaces available.
 ## Functionality
 
 This function block enables PWM control of outputs via the logiBUS system. During initialization (INIT), the service parameters are configured and the specific output is identified. PWM data (`OUT`, 13-bit value `0` to `8191` inside a DWORD variable) can be sent to the configured output via a REQ request. The block acknowledges both initialization and service requests via the corresponding output events.
+
+## Frequency and ramp (from version 1.2)
+
+- **`FREQ`** (UDINT, in Hz, default `400`): PWM frequency, read at `INIT` only. A new frequency needs a new `INIT`. Outputs with the same frequency share one LEDC timer. There are 4 timers, and LED blinking also uses one.
+- **`RAMP`** (TIME, default `T#0ms`): transition time to the new value as a hardware ramp, does not block. `T#0ms` is a jump. `RAMP` is read at `INIT` and at `REQ`.
+- **`RAMPO`** (event output, with `QO`): the value is reached. This is the end of the ramp, directly after the jump with `T#0ms`. No `RAMPO` follows `INIT`.
+- The duty cycle stays `0` to `8191` (13 bit).
+- Source of these statements: comments in the block description (`.fbt`) and `PWM_KONZEPT.md`; the firmware behavior is described there and was not verified here.
+
+### Notes on the power stages
+
+The firmware does not check the frequency against the power stage of the board. The following limits are only a hint (source: the comment of `FREQ` in the block and `PWM_KONZEPT.md`):
+
+| Power stage | Hint |
+|---|---|
+| APIXON 15 PWR Q1 (BTH50030) | at most 100 Hz |
+| BTS7030, BTT6030, BTH6070 | for valves 100 to 200 Hz |
+| Trainer20 | without power stage |
+
+Which board carries which power stage is not yet decided and is not documented here.
+
+## Changes compared to version 1.1
+
+- **New:** inputs `FREQ` and `RAMP`, event `RAMPO`.
+- **Behavior change:** the default of `RAMP` is `T#0ms` (jump). Until now every new value was applied as a fixed 500 ms ramp. Existing programs therefore now jump to the new value. To keep the soft start, set `RAMP = T#500ms`.
+- **Requirement:** The ELF `logiBUS_io-3.1.0` (`-xtensa.elf` for S3, `-riscv32.elf` for P4/S31) needs firmware with the new host symbols `elf_isr_ledc_fade_end`, `ledc_cb_register`, `ledc_fade_stop`, `ledc_get_duty`, `ledc_timer_pause`, `lroundf` and `powf`; on P4/S31 additionally `ledc_fill_multi_fade_param_list` and `ledc_set_multi_fade` (host tables: LOGIBUS `3142a703`). On older firmware the ELF does not load; loading aborts because of the missing symbol. `FORTE_ABI` stays `6`, so the difference cannot be seen from it. Always deliver firmware and ELF together. (Statement from development, not verified against the firmware.)
+- **Status:** not yet tested on hardware.
 
 ## Technical Features
 
