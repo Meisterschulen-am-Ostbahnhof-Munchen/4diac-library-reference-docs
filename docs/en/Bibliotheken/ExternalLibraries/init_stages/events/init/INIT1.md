@@ -48,13 +48,15 @@ Pure event connections in the inner FB network:
 ## Usage
 
 1. Place `INIT1` directly next to the target that is to be initialized in this stage.
-2. Connect `INIT1O` to the `INIT` of the target. Nothing has to be wired through the hierarchy.
+2. Connect `INIT1O` to the `INIT` of the target. In resources and SubApps, nothing has to be wired through the hierarchy (exception: composite FBs, see below).
 3. In `EMB_RES`, add an `E_TRIG` with `EVENTTYPE` `'E1Init'` to the chain of stages (see [`init_stages`](../../index.md)).
 
 ## Technical Details
 
 - Composite function block without data and without internal state.
-- The event type `E1Init` is independent; only an `E_TRIG` with this `EVENTTYPE` triggers the input.
+- An `E_TRIG` with `EVENTTYPE` `'E1Init'` triggers unconnected `INIT1` inputs. A compatible event output can also trigger a connected `INIT1` input directly.
+- The `E_TRIG` must be in the same resource as the target. It reaches SubApps of any depth, but not the inside of composite FBs: there, bring the `INIT1` input out at the composite interface.
+- The order of the stages results from the chain of `E_TRIG` blocks: the `E_TRIG` of this stage must be at the right place in the chain, otherwise the stage runs in the wrong order (see [`init_stages`](../../index.md)).
 - A stage counts as done when all its inputs have been triggered, not when the targets have finished initializing.
 - See also [`INIT`](INIT.md) (standard stage, `EInit`).
 

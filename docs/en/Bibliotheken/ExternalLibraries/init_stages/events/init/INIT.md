@@ -67,7 +67,7 @@ The function block has **no internal states**. It is a pure pass-through block t
 
 ## Comparison with Similar Function Blocks
 
-- **E_TRIG (Input Trigger)**: `E_TRIG` generates an output event only on a rising or falling edge of a connected Boolean input. `INIT`, on the other hand, reacts directly to an event and does not require a data value.
+- **E_TRIG**: on a `REQ` event, `E_TRIG` triggers all unconnected event inputs whose name matches the data value `EVENTTYPE`. `INIT` is the counterpart: it passes the triggered event (`EInit`) on directly and needs no data value.
 - **E_PERMIT (Enable)**: `E_PERMIT` allows events to pass only if a Boolean enable input is set. `INIT` has no such condition.
 - **E_DELAY (Delay)**: `E_DELAY` delays events for a specific period of time. `INIT` operates without delay.
 

@@ -67,7 +67,7 @@ Der Funktionsblock besitzt **keine internen Zustände**. Er ist ein reiner Durch
 
 ## Vergleich mit ähnlichen Bausteinen
 
-- **E_TRIG (Eingangstrigger)**: `E_TRIG` erzeugt ein Ausgangsereignis nur bei einer steigenden oder fallenden Flanke eines angeschlossenen booleschen Eingangs. `INIT` hingegen reagiert direkt auf ein Ereignis und benötigt keinen Datenwert.
+- **E_TRIG**: `E_TRIG` löst auf ein `REQ`-Ereignis hin alle unverbundenen Ereigniseingänge aus, deren Name dem Datenwert `EVENTTYPE` entspricht. `INIT` ist das Gegenstück dazu: Es reicht das ausgelöste Ereignis (`EInit`) direkt weiter und braucht keinen Datenwert.
 - **E_PERMIT (Freigabe)**: `E_PERMIT` lässt Ereignisse nur passieren, wenn ein boolescher Freigabeeingang gesetzt ist. `INIT` besitzt keine solche Bedingung.
 - **E_DELAY (Verzögerung)**: `E_DELAY` hält Ereignisse für eine bestimmte Zeit zurück. `INIT` arbeitet ohne Verzögerung.
 
