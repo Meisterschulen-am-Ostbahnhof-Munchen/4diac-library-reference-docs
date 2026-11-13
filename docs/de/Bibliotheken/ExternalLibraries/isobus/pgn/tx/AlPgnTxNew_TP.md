@@ -4,7 +4,7 @@
 
 ## Einleitung
 
-Der Funktionsbaustein **AlPgnTxNew_TP** dient der Übertragung von Daten über den ISOBUS/CAN-Bus basierend auf Parameter Group Numbers (PGN). Er ermöglicht die Registrierung einer spezifischen PGN und das anschließende versenden von Datenpaketen, wann immer ein lokales Anforderungsereignis (REQ) auftritt. Der Baustein ist Teil des Pakets `isobus::pgn::tx` und ist speziell für die Handhabung von Transportprotokollen oder generischen PGN-Übertragungen ausgelegt.
+Der Funktionsbaustein **AlPgnTxNew_TP** dient der Übertragung von Daten über den ISOBUS/CAN-Bus basierend auf Parameter Group Numbers (PGN). Er ermöglicht die Registrierung einer spezifischen PGN und das anschließende versenden von Datenpaketen, wann immer ein lokales Anforderungsereignis (REQ) auftritt. Der Baustein ist Teil des Pakets `isobus::pgn::tx` und ist für Nachrichten mit **mehr als 8 Datenbyte** gedacht, die über das ISO-Transportprotokoll (TP) gesendet werden, bis zu 1785 Byte. Für bis zu 8 Byte gibt es [`AlPgnTxNew8B`](AlPgnTxNew8B.md).
 
 ![AlPgnTxNew_TP](AlPgnTxNew_TP.svg)
 
@@ -28,7 +28,7 @@ Der Funktionsbaustein **AlPgnTxNew_TP** dient der Übertragung von Daten über d
 
 -   **u32Pgn** (Type: `UDINT`): Die zu sendende Parameter Group Number (PGN). Der Bereich liegt zwischen 0 und 0x3FFFF.
 -   **NmDestin** (Type: `isobus::pgn::ISONETEVENT_T`): Definiert den Kommunikationspartner bzw. das Ziel im Netzwerk (Network Management Destination).
--   **u16DaSize** (Type: `UINT`): Die Länge der Daten für diese PGN in Bytes (typischerweise 0 bis 8 für Standard-CAN, kann aber je nach Protokoll variieren).
+-   **u16DaSize** (Type: `UINT`): Die **tatsächlich gesendete Länge** der PGN in Bytes, höchstens 1785. Sie wird beim `install` festgelegt und nicht aus der Größe des Arrays `Data` genommen. Ist `Data` kürzer, werden die fehlenden Bytes mit `16#FF` aufgefüllt, ein längeres Array wird abgeschnitten. Mit `u16DaSize` = 0 wird eine PGN ohne Datenbyte gesendet, es entsteht kein TP.
 -   **u8Priority** (Type: `USINT`): Die Standardpriorität dieser PGN (0 bis 7), wobei 0 die höchste Priorität darstellt. Standardwert ist 7.
 
 ### **Daten-Ausgänge**
@@ -39,7 +39,7 @@ Der Funktionsbaustein **AlPgnTxNew_TP** dient der Übertragung von Daten über d
 
 ### **InOut-Variablen**
 
--   **Data** (Type: `BYTE`, ArraySize: `*`): Ein Zeiger auf den Datenpuffer (Byte-Array variabler Größe). Hier werden die zu sendenden Nutzdaten abgelegt. Durch die Deklaration als `InOut` wird eine effiziente Speicherverwaltung ohne unnötige Kopieroperationen ermöglicht.
+-   **Data** (Type: `BYTE`, ArraySize: `*`): Der Datenpuffer (Byte-Array variabler Größe, `ARRAY[*] OF BYTE`). Hier werden die zu sendenden Nutzdaten abgelegt. Die gesendete Länge bestimmt `u16DaSize`, nicht die Größe des Arrays. Durch die Deklaration als `InOut` wird eine effiziente Speicherverwaltung ohne unnötige Kopieroperationen ermöglicht.
 
 ### **Adapter**
 
@@ -62,9 +62,26 @@ Der Baustein arbeitet in zwei wesentlichen Phasen:
 
 ## Technische Besonderheiten
 
--   **Variable Array-Größe:** Der `Data`-Eingang ist als `InOut`-Variable mit `ArraySize="*"` definiert. Dies bedeutet, dass der Baustein mit Datenpuffern unterschiedlicher Größe arbeiten kann, was ihn flexibel für verschiedene PGN-Typen macht.
+-   **Variable Array-Größe:** Der `Data`-Eingang ist als `InOut`-Variable mit `ArraySize="*"` definiert. Der Baustein arbeitet mit Datenpuffern unterschiedlicher Größe. Welche Länge gesendet wird, bestimmt aber allein `u16DaSize`.
+-   **Grenze 1785 Byte:** Über diesen Baustein lassen sich höchstens 1785 Byte senden (255 Pakete zu je 7 Byte). Das erweiterte Transportprotokoll (ETP) für größere Mengen steht dem Baustein nicht zur Verfügung.
+-   **Antwortet nicht auf Requests:** Der Baustein sendet nur auf das Ereignis `REQ`. Ein eintreffendes Request for PGN beantwortet er nicht. Siehe [Request for PGN, Antwort und Transportprotokoll](https://meisterschulen-am-ostbahnhof-munchen-docs.readthedocs.io/projects/isobus-other-docs/de/latest/Request-Antwort-und-Transportprotokoll/).
 -   **Fehlertrennung:** Der Baustein unterscheidet explizit zwischen Fehlern bei der PGN-Einrichtung (`pgnERR`) und Fehlern bei der Laufzeit-Datenübertragung (`dataERR`). Dies erleichtert das Debugging erheblich.
 -   **ISOBUS-Typen:** Der Baustein importiert spezifische ISOBUS-Datentypen (`isobus::pgn::ISONETEVENT_T`), was eine enge Integration in entsprechende ISOBUS-Stacks voraussetzt.
+
+## Wann `AlPgnTxNew_TP`, wann `AlPgnTxNew8B`?
+
+| | `AlPgnTxNew8B` | `AlPgnTxNew_TP` |
+| --- | --- | --- |
+| Datenlänge | 0 bis 8 Byte | über 8 Byte, bis 1785 Byte |
+| Übertragung | ein CAN-Rahmen | Transportprotokoll in mehreren Rahmen |
+| Ziel `NmDestin` global | Rundsendung | **BAM** (ohne Rückmeldung) |
+| Ziel `NmDestin` ein Gerät | gezielt | **RTS/CTS** (der Empfänger steuert und bestätigt) |
+| `Data` | feste 8 Byte | `ARRAY[*] OF BYTE`, Länge aus `u16DaSize` |
+
+Der Baustein wählt BAM oder RTS/CTS selbst nach dem Ziel. Wer nicht mehr als 8 Byte sendet, nimmt `AlPgnTxNew8B`.
+
+!!! warning "Bisher kein Empfänger für mehr als 8 Byte"
+    Die Firmware nimmt TP-Nachrichten an, die bisherigen Empfangsbausteine (`AlPgnRxNew8B` und Verwandte) geben der Anwendung aber nur 8 Byte weiter. Ein Empfangsbaustein für längere PGNs (`AlPgnRxNew_TP`, bis 1785 Byte) ist in Arbeit und noch nicht getestet. Zwei Boards mit den Bausteinen dieser Bibliothek können deshalb heute noch keine Nachricht über 8 Byte austauschen.
 
 ## Zustandsübersicht
 
@@ -82,7 +99,7 @@ Der Baustein besitzt intern implizite Zustände, die durch die Verfügbarkeit ei
 
 ## ⚖️ Vergleich mit ähnlichen Bausteinen
 
--   **AlPgnTx vs. AlPgnTxNew_TP:** Während ältere oder einfachere Versionen eventuell nur statische PGNs unterstützen, deutet der Zusatz "New_TP" auf eine überarbeitete Version hin, die möglicherweise Transportprotokolle (TP) besser unterstützt oder eine modernere Speicherverwaltung (via `InOut` Variablen) nutzt.
+-   **[`AlPgnTxNew8B`](AlPgnTxNew8B.md):** Sendet bis 8 Byte in einem CAN-Rahmen. `AlPgnTxNew_TP` ist die Variante für mehr als 8 Byte über das Transportprotokoll (siehe Tabelle oben).
 -   **Standard CAN_WRITE:** Im Vergleich zu einem generischen `CAN_WRITE`-Baustein abstrahiert `AlPgnTxNew_TP` die Komplexität der PGN-Verwaltung (Priorität, Datenlänge, Handle-Management) und ist spezifischer auf das J1939/ISOBUS-Protokoll zugeschnitten.
 
 ## 🛠️ Zugehörige Übungen
