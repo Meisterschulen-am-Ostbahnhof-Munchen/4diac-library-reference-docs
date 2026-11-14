@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 296.0 292.0"
+     width="296.0" height="292.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(50.9375, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 191.125 0
+            A 3 3 0 0 1 194.125 3
+            L 194.125 23.0
+            A 3 3 0 0 1 191.125 26.0
+            L 184.125 26.0
+            L 184.125 66.0
+            L 191.125 66.0
+            A 3 3 0 0 1 194.125 69.0
+            L 194.125 269.0
+            A 3 3 0 0 1 191.125 272.0
+            L 3 272.0
+            A 3 3 0 0 1 0 269.0
+            L 0 69.0
+            A 3 3 0 0 1 3 66.0
+            L 10 66.0
+            L 10 26.0
+            L 3 26.0
+            A 3 3 0 0 1 0 23.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 21.0 37.0
+            L 37.0 37.0
+            A 1 1 0 0 1 38.0 38.0
+            L 38.0 41.5
+            L 36.0 41.5
+            L 36.0 44.5
+            L 38.0 44.5
+            L 38.0 54.0
+            A 1 1 0 0 1 37.0 55.0
+            L 21.0 55.0
+            A 1 1 0 0 1 20.0 54.0
+            L 20.0 44.5
+            L 22.0 44.5
+            L 22.0 41.5
+            L 20.0 41.5
+            L 20.0 38.0
+            A 1 1 0 0 1 21.0 37.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <text x="29.0" y="51.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
+          fill="#000000" text-anchor="middle">Si</text>
+
+    <!-- Block Name -->
+    <text x="43.0" y="51.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">AQ_SPLIT_9_UNGATED</text>
+    
+    <text x="97.0625" y="66.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <!-- Adapter Ports -->
+
+    <path d="M 1.5 97.0
+            L 6.5 97.0
+            L 6.5 98.66666666666667
+            L 9.0 98.66666666666667
+            L 9.0 97.0
+            L 11.5 97.0
+            L 11.5 107.0
+            L 9.0 107.0
+            L 9.0 105.33333333333333
+            L 6.5 105.33333333333333
+            L 6.5 107.0
+            L 1.5 107.0
+            Z" fill="none" stroke="#845DAF" stroke-width="1"/>
+    <text x="14.5" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">IN</text>
+
+    <path d="M 182.625 97.0
+            L 185.125 97.0
+            L 185.125 98.66666666666667
+            L 187.625 98.66666666666667
+            L 187.625 97.0
+            L 192.625 97.0
+            L 192.625 107.0
+            L 187.625 107.0
+            L 187.625 105.33333333333333
+            L 185.125 105.33333333333333
+            L 185.125 107.0
+            L 182.625 107.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT1</text>
+
+    <path d="M 182.625 117.0
+            L 185.125 117.0
+            L 185.125 118.66666666666667
+            L 187.625 118.66666666666667
+            L 187.625 117.0
+            L 192.625 117.0
+            L 192.625 127.0
+            L 187.625 127.0
+            L 187.625 125.33333333333333
+            L 185.125 125.33333333333333
+            L 185.125 127.0
+            L 182.625 127.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT2</text>
+
+    <path d="M 182.625 137.0
+            L 185.125 137.0
+            L 185.125 138.66666666666666
+            L 187.625 138.66666666666666
+            L 187.625 137.0
+            L 192.625 137.0
+            L 192.625 147.0
+            L 187.625 147.0
+            L 187.625 145.33333333333334
+            L 185.125 145.33333333333334
+            L 185.125 147.0
+            L 182.625 147.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT3</text>
+
+    <path d="M 182.625 157.0
+            L 185.125 157.0
+            L 185.125 158.66666666666666
+            L 187.625 158.66666666666666
+            L 187.625 157.0
+            L 192.625 157.0
+            L 192.625 167.0
+            L 187.625 167.0
+            L 187.625 165.33333333333334
+            L 185.125 165.33333333333334
+            L 185.125 167.0
+            L 182.625 167.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT4</text>
+
+    <path d="M 182.625 177.0
+            L 185.125 177.0
+            L 185.125 178.66666666666666
+            L 187.625 178.66666666666666
+            L 187.625 177.0
+            L 192.625 177.0
+            L 192.625 187.0
+            L 187.625 187.0
+            L 187.625 185.33333333333334
+            L 185.125 185.33333333333334
+            L 185.125 187.0
+            L 182.625 187.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT5</text>
+
+    <path d="M 182.625 197.0
+            L 185.125 197.0
+            L 185.125 198.66666666666666
+            L 187.625 198.66666666666666
+            L 187.625 197.0
+            L 192.625 197.0
+            L 192.625 207.0
+            L 187.625 207.0
+            L 187.625 205.33333333333334
+            L 185.125 205.33333333333334
+            L 185.125 207.0
+            L 182.625 207.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT6</text>
+
+    <path d="M 182.625 217.0
+            L 185.125 217.0
+            L 185.125 218.66666666666666
+            L 187.625 218.66666666666666
+            L 187.625 217.0
+            L 192.625 217.0
+            L 192.625 227.0
+            L 187.625 227.0
+            L 187.625 225.33333333333334
+            L 185.125 225.33333333333334
+            L 185.125 227.0
+            L 182.625 227.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT7</text>
+
+    <path d="M 182.625 237.0
+            L 185.125 237.0
+            L 185.125 238.66666666666666
+            L 187.625 238.66666666666666
+            L 187.625 237.0
+            L 192.625 237.0
+            L 192.625 247.0
+            L 187.625 247.0
+            L 187.625 245.33333333333334
+            L 185.125 245.33333333333334
+            L 185.125 247.0
+            L 182.625 247.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT8</text>
+
+    <path d="M 182.625 257.0
+            L 185.125 257.0
+            L 185.125 258.6666666666667
+            L 187.625 258.6666666666667
+            L 187.625 257.0
+            L 192.625 257.0
+            L 192.625 267.0
+            L 187.625 267.0
+            L 187.625 265.3333333333333
+            L 185.125 265.3333333333333
+            L 185.125 267.0
+            L 182.625 267.0
+            Z" fill="#845DAF"/>
+    <text x="179.625" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OUT9</text>
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <!-- Horizontal Connection Lines -->
+
+    <!-- External Labels -->
+
+    <text x="-25" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="103.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="123.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="143.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="163.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="183.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="203.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="223.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="243.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+
+    <text x="219.125" y="263.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">AQ</tspan></text>
+  </g>
+</svg>
