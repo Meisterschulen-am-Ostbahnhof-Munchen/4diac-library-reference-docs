@@ -27,9 +27,9 @@ The function block `AlPgnTxNew8B` is used to send data over a CAN network accord
 
 - **`u32Pgn`** (UDINT): The Parameter Group Number (PGN) to be installed. Valid range: 0 to 0x3FFFF (decimal 262143).
 - **`NmDestin`** (isobus::pgn::ISONETEVENT_T): Defines the communication partner (e.g., broadcast, specific address).
-- **`u16DaSize`** (UINT): The data length of the PGN in bytes. Valid range: 0 to 8.
-- **`u8Priority`** (USINT): The priority of the message on the CAN bus. Range: 0 (highest) to 7 (lowest). Default value: 7.
-- **`Data`** (isobus::pgn::CAN_MSG): The data to be sent, structured as a CAN message.
+- **`u16DaSize`** (UINT): The data length of the PGN in bytes. Valid range: 0 to 8. When sending, only this value counts. `Data.u16DaSize` is ignored: always as many bytes are sent as set here, even if `Data.u16DaSize` is larger or smaller (missing bytes come from `Data.data`, default `16#FF`). With this block the length cannot be changed at runtime; for variable lengths use the block [`AlPgnTxNew_TP`](AlPgnTxNew_TP.md).
+- **`u8Priority`** (USINT): The priority of the message on the CAN bus. Range: 0 (highest) to 7 (lowest). Default value: 7. When sending, only this value counts, `Data.u8Priority` is ignored.
+- **`Data`** (isobus::pgn::CAN_MSG): The data to be sent, structured as a CAN message. Only the bytes `data[0..7]` of `Data` are sent. `Data.u16DaSize` and `Data.u8Priority` are ignored, the inputs `u16DaSize` and `u8Priority` of the block apply.
 
 ### **Data Outputs**
 

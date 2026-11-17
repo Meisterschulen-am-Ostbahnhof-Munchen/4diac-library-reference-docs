@@ -28,8 +28,8 @@ Der Funktionsblock `AlPgnRxNew8Bcylc_REQ` dient zur zyklischen Anforderung von D
 
 -   **u32Pgn** (UDINT): Die zu empfangende Parameter Group Number (PGN). Gültiger Bereich: 0 bis 0x3FFFF.
 -   **NmSource** (isobus::pgn::ISONETEVENT_T): Definiert den Kommunikationspartner (z.B. eine bestimmte Node-Adresse).
--   **u16DaSize** (UINT): Die zu erwartende Datenlänge der PGN in Bytes (0..8).
--   **u8Priority** (USINT): Die Standard-Priorität für diese PGN (0..7, wobei 0 die höchste Priorität ist). Initialwert: 7.
+-   **u16DaSize** (UINT): Die zu erwartende Datenlänge der PGN in Bytes (0..8). Das ist die Länge, die bei `install` angemeldet wird. Die tatsächlich empfangene Länge steht in `Data.u16DaSize`.
+-   **u8Priority** (USINT): Die Standard-Priorität für diese PGN (0..7, wobei 0 die höchste Priorität ist). Initialwert: 7. Die empfangene Priorität steht in `Data.u8Priority`.
 -   **u16DefRepRate** (UINT): Das erwartete zyklische Sendeintervall der Quell-PGN in Millisekunden (0 ... 0xFDFF ms).
 -   **u16CtrlTime** (UINT): Die Kontrollzeit in Millisekunden (0 ... 0xFDFF ms), nach deren Überschreitung ohne Empfang ein `TIMEOUT`-Ereignis generiert wird.
 
@@ -41,7 +41,7 @@ Der Funktionsblock `AlPgnRxNew8Bcylc_REQ` dient zur zyklischen Anforderung von D
 -   **bTimeout** (BOOL): Statusflag für einen aufgetretenen Timeout. `TRUE` = Timeout ist eingetreten, `FALSE` = kein Timeout. Initialwert: `FALSE`.
 -   **s32TimeStamp_timeout** (DINT): Zeitstempel in Millisekunden, zu dem der Timeout erkannt wurde.
 -   **s32TimeStamp** (DINT): Zeitstempel in Millisekunden des zuletzt empfangenen gültigen Datensatzes. Initialwert: -1.
--   **Data** (isobus::pgn::CAN_MSG): Puffer, der die empfangenen CAN-Nachrichtendaten enthält.
+-   **Data** (isobus::pgn::CAN_MSG): Puffer, der die empfangenen CAN-Nachrichtendaten enthält. `Data.u16DaSize` und `Data.u8Priority` sind Ausgaben: die tatsächlich empfangene Byteanzahl und die empfangene Priorität.
 
 ### **Adapter**
 

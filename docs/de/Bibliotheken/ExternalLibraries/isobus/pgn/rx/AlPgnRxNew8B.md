@@ -13,7 +13,7 @@ Der Funktionsblock `AlPgnRxNew8B` dient dem Empfang von Daten über ein CAN-Netz
 ### **Ereignis-Eingänge**
 
 -   **`INIT`**: Startet die Initialisierung des Funktionsblocks. Bestätigung erfolgt über `INITO`.
--   **`install`**: Löst die Installation einer neuen zu empfangenden PGN (Transmit PGN, TX) aus. Erwartet die zugehörigen Parameter `u32Pgn`, `NmSource`, `u16DaSize` und `u8Priority`. Die Bestätigung oder das Ergebnis wird über `installO` gemeldet.
+-   **`install`**: Löst die Installation einer neuen zu empfangenden PGN (Receive PGN, RX) aus. Erwartet die zugehörigen Parameter `u32Pgn`, `NmSource`, `u16DaSize` und `u8Priority`. Die Bestätigung oder das Ergebnis wird über `installO` gemeldet.
 
 ### **Ereignis-Ausgänge**
 
@@ -27,8 +27,8 @@ Der Funktionsblock `AlPgnRxNew8B` dient dem Empfang von Daten über ein CAN-Netz
 
 -   **`u32Pgn`** (UDINT): Die zu installierende oder zu überwachende Parameter Group Number (PGN). Gültiger Bereich: 0 bis 0x3FFFF.
 -   **`NmSource`** (isobus::pgn::ISONETEVENT_T): Definiert den Kommunikationspartner (z.B. eine bestimmte Node-Adresse oder einen Broadcast).
--   **`u16DaSize`** (UINT): Die zu erwartende Datenlänge der PGN in Bytes (0..8).
--   **`u8Priority`** (USINT): Die Standard-Priorität dieser PGN (0..7), wobei 0 die höchste Priorität darstellt. Initialwert ist 7 (niedrigste Priorität).
+-   **`u16DaSize`** (UINT): Die zu erwartende Datenlänge der PGN in Bytes (0..8). Das ist die Länge, die bei `install` angemeldet wird. Die tatsächlich empfangene Länge steht in `Data.u16DaSize`.
+-   **`u8Priority`** (USINT): Die Standard-Priorität dieser PGN (0..7), wobei 0 die höchste Priorität darstellt. Initialwert ist 7 (niedrigste Priorität). Die empfangene Priorität steht in `Data.u8Priority`.
 
 ### **Daten-Ausgänge**
 
@@ -36,7 +36,7 @@ Der Funktionsblock `AlPgnRxNew8B` dient dem Empfang von Daten über ein CAN-Netz
 -   **`dataERRC`** (INT): Fehlercode, der bei Auslösen des `dataERR`-Ereignisses gesetzt wird.
 -   **`pgnERRC`** (INT): Fehlercode, der bei Auslösen des `pgnERR`-Ereignisses gesetzt wird.
 -   **`s32TimeStamp`** (DINT): Zeitstempel der empfangenen Nachricht in Millisekunden. Initialwert ist -1.
--   **`Data`** (isobus::pgn::CAN_MSG): Der Puffer, der die empfangenen CAN-Nachrichtendaten enthält.
+-   **`Data`** (isobus::pgn::CAN_MSG): Der Puffer, der die empfangenen CAN-Nachrichtendaten enthält. `Data.u16DaSize` und `Data.u8Priority` sind Ausgaben: die tatsächlich empfangene Byteanzahl und die empfangene Priorität.
 
 ### **Adapter**
 

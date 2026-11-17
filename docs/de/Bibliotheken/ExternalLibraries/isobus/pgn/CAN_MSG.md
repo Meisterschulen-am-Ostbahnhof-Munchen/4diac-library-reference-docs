@@ -34,8 +34,8 @@ Da es sich bei `CAN_MSG` um einen Datentyp und nicht um einen Funktionsblock han
 
 Der `CAN_MSG`-Typ ist eine passive Datenstruktur. Er kapselt die für eine CAN-Nachricht relevanten Informationen:
 
-1.  **Priorität (`u8Priority`)**: Definiert die Arbitrierungspriorität auf dem CAN-Bus. Ein niedrigerer numerischer Wert entspricht einer höheren Priorität.
-2.  **Datenlänge (`u16DaSize`)**: Gibt die tatsächliche Anzahl der genutzten Bytes im Datenpuffer an (0 bis 8).
+1.  **Priorität (`u8Priority`)**: Definiert die Arbitrierungspriorität auf dem CAN-Bus. Ein niedrigerer numerischer Wert entspricht einer höheren Priorität. Beim Senden mit den Bausteinen `AlPgnTxNew8B` (und Varianten) wird dieses Feld ignoriert, es gilt der Eingang `u8Priority` des Bausteins. Beim Empfang ist es eine Ausgabe: die empfangene Priorität.
+2.  **Datenlänge (`u16DaSize`)**: Beim Empfang gibt sie die tatsächlich empfangene Anzahl Bytes an (0 bis 8). Beim Senden mit den Bausteinen `AlPgnTxNew8B` (und Varianten) wird sie ignoriert, es gilt der Eingang `u16DaSize` des Bausteins. Aus dem Puffer werden nur die Bytes gesendet; eine empfangene Nachricht lässt sich so direkt weitersenden.
 3.  **Datenpuffer (`data`)**: Ein Array von 8 Bytes, das die Nutzdaten der Nachricht speichert. Nicht genutzte Bytes sind mit einem Standardwert initialisiert.
 
 Diese Struktur kann als Eingabe- oder Ausgabedatentyp für Funktionsblöcke verwendet werden, die CAN-Nachrichten senden, empfangen, verarbeiten oder loggen.

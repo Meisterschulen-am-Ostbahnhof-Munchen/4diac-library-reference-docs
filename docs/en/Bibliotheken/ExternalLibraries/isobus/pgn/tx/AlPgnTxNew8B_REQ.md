@@ -26,8 +26,8 @@ The function block `AlPgnTxNew8B_REQ` is used to configure and control the trans
 
 - **u32Pgn** (UDINT): The parameter group number (PGN) to be installed. Valid range: 0 to 0x3FFFF (decimal 262143).
 - **NmDestin** (isobus::pgn::ISONETEVENT_T): Defines the communication partner (destination address) for the PGN. The exact type is defined by the ISOBUS library.
-- **u16DaSize** (UINT): The length of the payload for this PGN in bytes. Valid range: 0 to 8.
-- **u8Priority** (USINT): The default priority for this PGN. Valid range: 0 (highest) to 7 (lowest). Initial value: 7.
+- **u16DaSize** (UINT): The length of the payload for this PGN in bytes. Valid range: 0 to 8. When sending, only this value counts. `Data.u16DaSize` is ignored: always as many bytes are sent as set here, even if `Data.u16DaSize` is larger or smaller (missing bytes come from `Data.data`, default `16#FF`). With this block the length cannot be changed at runtime; for variable lengths use the block [`AlPgnTxNew_TP`](AlPgnTxNew_TP.md).
+- **u8Priority** (USINT): The default priority for this PGN. Valid range: 0 (highest) to 7 (lowest). Initial value: 7. When sending, only this value counts, `Data.u8Priority` is ignored.
 
 ### **Data Outputs**
 
