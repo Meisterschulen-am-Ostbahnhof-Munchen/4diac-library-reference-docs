@@ -29,10 +29,10 @@ Der Funktionsblock `AlPgnTxNew8Bcycl` dient der zyklischen Übertragung von Date
 
 -   **u32Pgn** (UDINT): Die zu sendende Parameter Group Number (PGN). Gültiger Bereich: 0 bis 0x3FFFF.
 -   **NmDestin** (isobus::pgn::ISONETEVENT_T): Definiert den Kommunikationspartner (Zieladresse) für die Nachricht.
--   **u16DaSize** (UINT): Die Länge der zu sendenden Daten in Bytes. Gültiger Bereich: 0 bis 8.
--   **u8Priority** (USINT): Die Priorität der Nachricht auf dem CAN-Bus (0=höchste, 7=niedrigste). Standardwert: 7.
+-   **u16DaSize** (UINT): Die Länge der zu sendenden Daten in Bytes. Gültiger Bereich: 0 bis 8. Beim Senden gilt allein dieser Wert. `Data.u16DaSize` wird ignoriert: Es gehen immer so viele Bytes raus, wie hier eingestellt sind, auch wenn `Data.u16DaSize` größer oder kleiner ist (fehlende Bytes kommen aus `Data.data`, Vorgabe `16#FF`). Die Länge lässt sich mit diesem Baustein zur Laufzeit nicht ändern; für variable Längen den Baustein [`AlPgnTxNew_TP`](AlPgnTxNew_TP.md) verwenden.
+-   **u8Priority** (USINT): Die Priorität der Nachricht auf dem CAN-Bus (0=höchste, 7=niedrigste). Standardwert: 7. Beim Senden gilt allein dieser Wert, `Data.u8Priority` wird ignoriert.
 -   **u16DefRepRate** (UINT): Das zyklische Sendeintervall in Millisekunden (0 ... 0xFDFF ms). Ein Wert von 0 deaktiviert die zyklische Übertragung. Standardwert: 0.
--   **Data** (isobus::pgn::CAN_MSG): Die Nutzdaten, die als PGN gesendet werden sollen.
+-   **Data** (isobus::pgn::CAN_MSG): Die Nutzdaten, die als PGN gesendet werden sollen. Aus `Data` werden nur die Bytes `data[0..7]` gesendet. `Data.u16DaSize` und `Data.u8Priority` werden ignoriert, es gelten die Eingänge `u16DaSize` und `u8Priority` des Bausteins.
 
 ### **Daten-Ausgänge**
 

@@ -28,8 +28,8 @@ The function block `AlPgnRxNew8B_REQ` is used to request data via an ISOBUS netw
 
 - **u32Pgn** (UDINT): The parameter Group Number (PGN) in the range 0 to 0x3FFFF.
 - **NmSource** (isobus::pgn::ISONETEVENT_T): Defines the communication partner in the network.
-- **u16DaSize** (UINT): The expected data length of the PGN (0-8 bytes).
-- **u8Priority** (USINT): The default priority of this PGN (0..7, where 0 is the highest priority). Initial value is 7.
+- **u16DaSize** (UINT): The expected data length of the PGN (0-8 bytes). This is the length registered at `install`. The length actually received is in `Data.u16DaSize`.
+- **u8Priority** (USINT): The default priority of this PGN (0..7, where 0 is the highest priority). Initial value is 7. The priority received is in `Data.u8Priority`.
 
 ### **Data Outputs**
 
@@ -37,7 +37,7 @@ The function block `AlPgnRxNew8B_REQ` is used to request data via an ISOBUS netw
 - **dataERRC** (INT): Error code set when the `dataERR` event is triggered.
 - **pgnERRC** (INT): Error code set when the `pgnERR` event is triggered.
 - **s32TimeStamp** (DINT): Timestamp of the received message in milliseconds. Initial value is -1.
-- **Data** (isobus::pgn::CAN_MSG): The buffer containing the received CAN message data.
+- **Data** (isobus::pgn::CAN_MSG): The buffer containing the received CAN message data. `Data.u16DaSize` and `Data.u8Priority` are outputs: the number of bytes actually received and the priority received.
 
 ### **Adapter**
 

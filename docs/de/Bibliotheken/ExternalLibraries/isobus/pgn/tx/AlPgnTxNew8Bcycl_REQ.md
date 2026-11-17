@@ -27,8 +27,8 @@ Der Funktionsblock `AlPgnTxNew8Bcycl_REQ` dient zur zyklischen Übertragung von 
 
 -   **u32Pgn** (UDINT): Die zu verwendende Parameter Group Number (PGN). Gültiger Bereich: 0 bis 0x3FFFF.
 -   **NmDestin** (isobus::pgn::ISONETEVENT_T): Definiert den Kommunikationspartner (Zieladresse) für die Übertragung.
--   **u16DaSize** (UINT): Die Länge der zu übertragenden Nutzdaten in Bytes. Maximal 8 Bytes (0..8).
--   **u8Priority** (USINT): Die Priorität der Nachricht auf dem Bus (0..7), wobei 0 die höchste Priorität ist. Standardwert: 7 (niedrigste).
+-   **u16DaSize** (UINT): Die Länge der zu übertragenden Nutzdaten in Bytes. Maximal 8 Bytes (0..8). Beim Senden gilt allein dieser Wert. `Data.u16DaSize` wird ignoriert: Es gehen immer so viele Bytes raus, wie hier eingestellt sind, auch wenn `Data.u16DaSize` größer oder kleiner ist (fehlende Bytes kommen aus `Data.data`, Vorgabe `16#FF`). Die Länge lässt sich mit diesem Baustein zur Laufzeit nicht ändern; für variable Längen den Baustein [`AlPgnTxNew_TP`](AlPgnTxNew_TP.md) verwenden.
+-   **u8Priority** (USINT): Die Priorität der Nachricht auf dem Bus (0..7), wobei 0 die höchste Priorität ist. Standardwert: 7 (niedrigste). Beim Senden gilt allein dieser Wert, `Data.u8Priority` wird ignoriert.
 -   **u16DefRepRate** (UINT): Das zyklische Sendeintervall in Millisekunden (0 ... 0xFDFF ms). Ein Wert von 0 deaktiviert die zyklische Übertragung. Standardwert: 0.
 
 ### **Daten-Ausgänge**

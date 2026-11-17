@@ -13,7 +13,7 @@ The function block `AlPgnRxNew8B` is used to receive data via a CAN network acco
 
 - **`INIT`**: Starts the initialization of the function block. Acknowledgement is provided via `INITO`.
 
-![AlPgnRxNew8B](AlPgnRxNew8B.svg) * **`install`**: Triggers the installation of a new PGN to be received (Transmit PGN, TX). It expects the associated parameters `u32Pgn`, `NmSource`, `u16DaSize`, and `u8Priority`. Confirmation or the result is reported via `installO`.
+![AlPgnRxNew8B](AlPgnRxNew8B.svg) * **`install`**: Triggers the installation of a new PGN to be received (Receive PGN, RX). It expects the associated parameters `u32Pgn`, `NmSource`, `u16DaSize`, and `u8Priority`. Confirmation or the result is reported via `installO`.
 
 ### **Event Outputs**
 
@@ -27,8 +27,8 @@ The function block `AlPgnRxNew8B` is used to receive data via a CAN network acco
 
 - **`u32Pgn`** (UDINT): The Parameter Group Number (PGN) to be installed or monitored. Valid range: 0 to 0x3FFFF.
 - **`NmSource`** (isobus::pgn::ISONETEVENT_T): Defines the communication partner (e.g., a specific node address or a broadcast).
-- **`u16DaSize`** (UINT): The expected data length of the PGN in bytes (0-8).
-- **`u8Priority`** (USINT): The default priority of this PGN (0-7), where 0 represents the highest priority. The initial value is 7 (lowest priority).
+- **`u16DaSize`** (UINT): The expected data length of the PGN in bytes (0-8). This is the length registered at `install`. The length actually received is in `Data.u16DaSize`.
+- **`u8Priority`** (USINT): The default priority of this PGN (0-7), where 0 represents the highest priority. The initial value is 7 (lowest priority). The priority received is in `Data.u8Priority`.
 -
 
 ### **Data Outputs**

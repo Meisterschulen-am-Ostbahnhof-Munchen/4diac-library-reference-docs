@@ -28,9 +28,9 @@ Der Funktionsblock `AlPgnTxNew8B` dient zum Senden von Daten über ein CAN-Netzw
 
 -   **`u32Pgn`** (UDINT): Die zu installierende Parameter Group Number (PGN). Gültiger Bereich: 0 bis 0x3FFFF (dezimal 262143).
 -   **`NmDestin`** (isobus::pgn::ISONETEVENT_T): Definiert den Kommunikationspartner (z.B. Broadcast, spezifische Adresse).
--   **`u16DaSize`** (UINT): Die Datenlänge der PGN in Bytes. Gültiger Bereich: 0 bis 8.
--   **`u8Priority`** (USINT): Die Priorität der Nachricht auf dem CAN-Bus. Bereich: 0 (höchste) bis 7 (niedrigste). Standardwert: 7.
--   **`Data`** (isobus::pgn::CAN_MSG): Die zu sendenden Daten, strukturiert als CAN-Nachricht.
+-   **`u16DaSize`** (UINT): Die Datenlänge der PGN in Bytes. Gültiger Bereich: 0 bis 8. Beim Senden gilt allein dieser Wert. `Data.u16DaSize` wird ignoriert: Es gehen immer so viele Bytes raus, wie hier eingestellt sind, auch wenn `Data.u16DaSize` größer oder kleiner ist (fehlende Bytes kommen aus `Data.data`, Vorgabe `16#FF`). Die Länge lässt sich mit diesem Baustein zur Laufzeit nicht ändern; für variable Längen den Baustein [`AlPgnTxNew_TP`](AlPgnTxNew_TP.md) verwenden.
+-   **`u8Priority`** (USINT): Die Priorität der Nachricht auf dem CAN-Bus. Bereich: 0 (höchste) bis 7 (niedrigste). Standardwert: 7. Beim Senden gilt allein dieser Wert, `Data.u8Priority` wird ignoriert.
+-   **`Data`** (isobus::pgn::CAN_MSG): Die zu sendenden Daten, strukturiert als CAN-Nachricht. Aus `Data` werden nur die Bytes `data[0..7]` gesendet. `Data.u16DaSize` und `Data.u8Priority` werden ignoriert, es gelten die Eingänge `u16DaSize` und `u8Priority` des Bausteins.
 
 ### **Daten-Ausgänge**
 

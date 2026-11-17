@@ -26,8 +26,8 @@ The function block `AlPgnRxNew8Bcylc_REQ` is used for the cyclical request of da
 
 - **u32Pgn** (UDINT): The parameter group number (PGN) to be received. Valid range: 0 to 0x3FFFF.
 - **NmSource** (isobus::pgn::ISONETEVENT_T): Defines the communication partner (e.g., a specific node address).
-- **u16DaSize** (UINT): The expected data size of the PGN in bytes (0..8).
-- **u8Priority** (USINT): The default priority for this PGN (0..7, where 0 is the highest priority). Initial value: 7.
+- **u16DaSize** (UINT): The expected data size of the PGN in bytes (0..8). This is the length registered at `install`. The length actually received is in `Data.u16DaSize`.
+- **u8Priority** (USINT): The default priority for this PGN (0..7, where 0 is the highest priority). Initial value: 7. The priority received is in `Data.u8Priority`.
 - **u16DefRepRate** (UINT): The expected cyclic transmission interval of the source PGN in milliseconds (0 ... 0xFDFF ms).
 - **u16CtrlTime** (UINT): The control time in milliseconds (0 ... 0xFDFF ms), after which a `TIMEOUT` event is generated if no data is received.
 
@@ -39,7 +39,7 @@ The function block `AlPgnRxNew8Bcylc_REQ` is used for the cyclical request of da
 - **bTimeout** (BOOL): Status flag for a timeout. `TRUE` = timeout occurred, `FALSE` = no timeout. Initial value: `FALSE`.
 - **s32TimeStamp_timeout** (DINT): Timestamp in milliseconds at which the timeout was detected.
 - **s32TimeStamp** (DINT): Timestamp in milliseconds of the last received valid data record. Initial value: -1.
-- **Data** (isobus::pgn::CAN_MSG): Buffer containing the received CAN message data.
+- **Data** (isobus::pgn::CAN_MSG): Buffer containing the received CAN message data. `Data.u16DaSize` and `Data.u8Priority` are outputs: the number of bytes actually received and the priority received.
 
 ### **Adapter**
 

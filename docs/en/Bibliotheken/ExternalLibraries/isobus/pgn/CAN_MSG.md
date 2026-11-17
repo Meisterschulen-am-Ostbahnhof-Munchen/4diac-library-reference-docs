@@ -34,8 +34,8 @@ Since `CAN_MSG` is a data type and not a function block, there are no event or a
 
 The `CAN_MSG` type is a passive data structure. It encapsulates the information relevant for a CAN message:
 
-1. **Priority (`u8Priority`)**: Defines the arbitration priority on the CAN bus. A lower numerical value corresponds to a higher priority.
-2. **Data Length (`u16DaSize`)**: Specifies the actual number of bytes used in the data buffer (0 to 8). 3. **Data Buffer (`data`)**: An 8-byte array that stores the message payload. Unused bytes are initialized with a default value.
+1. **Priority (`u8Priority`)**: Defines the arbitration priority on the CAN bus. A lower numerical value corresponds to a higher priority. When sending with the blocks `AlPgnTxNew8B` (and variants) this field is ignored, the input `u8Priority` of the block applies. When receiving it is an output: the priority received.
+2. **Data Length (`u16DaSize`)**: When receiving, it states the number of bytes actually received (0 to 8). When sending with the blocks `AlPgnTxNew8B` (and variants) it is ignored, the input `u16DaSize` of the block applies. Only the bytes of the buffer are sent; a received message can therefore be sent on directly. 3. **Data Buffer (`data`)**: An 8-byte array that stores the message payload. Unused bytes are initialized with a default value.
 
 This structure can be used as an input or output data type for function blocks that send, receive, process, or log CAN messages.
 
