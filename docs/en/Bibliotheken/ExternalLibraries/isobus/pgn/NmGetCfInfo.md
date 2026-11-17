@@ -21,15 +21,15 @@ The function block `NmGetCfInfo` is used within an ISOBUS network to retrieve in
 
 ### **Data Inputs**
 
-- **u8CanIdx (Type: USINT, Initial Value: ISO_CAN_NODE::INVALID)**: Identifies the CAN node used (CAN controller index).
-- **member (Type: SINT, Initial Value: ISOUSERHOME_e::notdef)**: Defines the membership or role of the requesting participant in the network.
-- **address (Type: isobus::pgn::NAMEFIELD_T)**: The address of the other network participant for whom information is to be retrieved.
-- **mask (Type: isobus::pgn::NAMEFIELD_T)**: A bitmask that specifies which parts of the address should be considered during the search. Only set bits (1) are evaluated.
+- **u8CanIdx (Type: USINT, Initial Value: ISO_CAN_NODE::INVALID)**: Filter on the CAN node (CAN controller index). `INVALID` means all CAN nodes.
+- **member (Type: SINT, Initial Value: ISOUSERHOME_e::notdef)**: Filter on the kind of participant (internal or external, see `eMemberRefer`). `notdef` means all.
+- **address (Type: isobus::pgn::NAMEFIELD_T)**: Filter value for the ISOBUS name (NAME) of the participants. Only the bits that are set in `mask` are compared. It is not an address for which information is retrieved.
+- **mask (Type: isobus::pgn::NAMEFIELD_T)**: Bit mask for `address`. Only set bits (1) are compared. With the default value (all bits 0) every participant matches.
 
 ### **Data Outputs**
 
-- **bwaitingForRSP (Type: BOOL)**: Indicates whether the function block is currently waiting for a response (`RSP`) to a sent indication.
-- **sNetEv (Type: isobus::pgn::ISONETEVENT_T)**: Contains details of the network event that occurred (e.g., error or status).
+- **bwaitingForRSP (Type: BOOL)**: `TRUE` from the `IND` until the application answers with `RSP`. While it is `TRUE`, the block outputs no further `IND`.
+- **sNetEv (Type: isobus::pgn::ISONETEVENT_T)**: The network event concerning the participant (see section "Network Events"), including `eNetEvent` and `eMemberRefer`.
 - **sCfInfo (Type: isobus::pgn::CF_INFO_T)**: The retrieved information about the found communication partner (CF = Communication Function).
 - **sNameField (Type: isobus::pgn::NAMEFIELD_T)**: The ISOBUS name of the detected communication partner.
 
@@ -39,22 +39,41 @@ This function block does not use any adapter interfaces.
 
 ## Functionality
 
-1. **Initialization**: The block is configured by triggering the `INIT` event. The passed parameters (`u8CanIdx`, `member`, `address`, `mask`) define the context and target of the query. After successful initialization, `INITO` is output.
-2. **Query and Indication**: After initialization, the module begins searching for suitable communication partners in the network based on the `address` and `mask` events. If a participant is found, the module triggers the `IND` event and makes the found information available in the data outputs `sCfInfo` and `sNameField`. Simultaneously, `bwaitingForRSP` is set to `TRUE`.
-3. **Response Processing**: The higher-level application acknowledges receipt of the indication by sending the `RSP` event. The function block then reverts from `bwaitingForRSP` to `FALSE`. This handshake mechanism ensures secure transmission.
+1. **Initialization**: With `INIT` the block takes over the filters (`u8CanIdx`, `member`, `address`, `mask`). It then outputs all already known participants that match the filter once more as event `MemberActive` (replay from a cache in the driver). So the application also sees participants that were on the network before the start. `INITO` follows.
+2. **Notification (`IND`)**: The block does not search by itself. The stack reports every change on the network, and the block passes on the reports that match the filter. Each report triggers `IND`, with `sNetEv`, `sCfInfo` and `sNameField`, and sets `bwaitingForRSP` to `TRUE`. This applies to new participants as well as to log-offs, address conflicts and timeouts.
+3. **Acknowledgement (`RSP`)**: The application has to acknowledge every `IND` with `RSP` (connect output `IND` to input `RSP`). The block then sets `bwaitingForRSP` to `FALSE` and, if reports are waiting, outputs the next one. **Without `RSP` no further `IND` comes.** All following reports, including log-offs, stay in a queue inside the block, so the application never sees logged-off participants disappear.
 
 ## Technical Features
 
-- The function block implements a request-response protocol (`IND`/`RSP`) for reliable communication.
+- The function block works with the `IND`/`RSP` pattern: every report has to be acknowledged before the next one comes.
 - The use of a bit-based `mask` enables flexible search queries, e.g., for participants of a specific device class.
 - The data types (`ISONETEVENT_T`, `CF_INFO_T`, `NAMEFIELD_T`) are specific to ISOBUS PGN communication and contain structured information according to the ISO 11783 standard.
 -
+
+## Network Events
+
+`sNetEv.eNetEvent` states what happened. `IND` reports every one of these changes, not only new participants, so the application has to evaluate `eNetEvent`.
+
+| Value | Event | Meaning |
+| ---: | --- | --- |
+| 0 | `MemberActive` | Participant is active (new on the network, or replay after `INIT`). |
+| 1 | `MemberAddressConflict` | Participant has lost an address conflict. |
+| 2 | `MemberInactive` | Participant is no longer active: logged off, timeout or could not claim an address. |
+| 3 | `MemberNewAddress` | The own participant has claimed a new address after a conflict. |
+| 4 | `MemberAddressViolation` | The own participant was violated: an external message arrived with the same source address. |
+
+## Notes on Operation
+
+- **`RSP` is mandatory.** Without `RSP` the block stays in "Waiting for RSP" (see above).
+- **Reports even before `INIT`:** The block registers with the driver when it is created. An `IND` can therefore come before `INIT`, then still unfiltered (with the default values of the filters).
+- **Duplicate reports are possible:** Together with the replay at `INIT`, the same participant can arrive several times as `MemberActive`. The application has to cope with that.
+
 
 ## Status Overview
 
 1. **Inactive**: Before initialization.
 2. **Initialized**: After `INITO`. The function block is ready for operation and can process requests.
-3. **Waiting for RSP**: After `IND` is triggered. The function block waits for confirmation (`RSP`) from the application before performing further actions.
+3. **Waiting for RSP**: After `IND` is triggered. Further reports are collected in a queue and output only after `RSP`.
 
 ## Application Scenarios
 
@@ -67,6 +86,12 @@ This function block does not use any adapter interfaces.
 Unlike simple read or query modules, `NmGetCfInfo` is specifically designed for querying ISOBUS-specific network information. It offers more context (through `member`, `address`, `mask`) and structured result data (`CF_INFO_T`) than a generic communication module. Modules like `E_SWITCH` or `E_DEMUX` only forward events, while `NmGetCfInfo` performs active network communication and protocol handling.
 
 Modules like `E_SWITCH` or `E_DEMUX` only forward events, while `NmGetCfInfo` performs active network communication and protocol execution.
+
+## Cross-References
+
+- **Communication blocks** (for example [`SERVER_0`](../../../StandardLibraries/net/SERVER_0.md) and [`SUBSCRIBE_0`](../../../StandardLibraries/net/SUBSCRIBE_0.md) of the library `net`, also the AX adapter blocks for them): They also have the pair `IND`/`RSP`. The difference: with the subscriber `RSP` has no effect, nothing is sent. With the server `RSP` sends the response. With `NmGetCfInfo`, on the other hand, `RSP` controls the flow, it releases the next report.
+- **Queue blocks** (library FIFO, for example `FIFO_UINT`): `NmGetCfInfo` also buffers the reports internally in a queue following the "first in, first out" principle. The buffer is built into the block, but it passes on the next report only after `RSP`.
+
 
 ## 🛠️ Related exercises
 
@@ -91,4 +116,4 @@ Modules like `E_SWITCH` or `E_DEMUX` only forward events, while `NmGetCfInfo` pe
 
 ## Conclusion
 
-The `NmGetCfInfo` function block is a An essential tool for managing ISOBUS networks, it abstracts the complex protocol communication required to detect network participants into an easy-to-use, event-driven interface. Its ability to search for participants and return detailed information makes it valuable for robust and intelligent agricultural control systems.
+The `NmGetCfInfo` function block is an essential tool for managing ISOBUS networks. It abstracts the complex protocol communication required to detect network participants into an easy-to-use, event-driven interface. It reports not only new but also logged-off participants and address changes, filtered by NAME, CAN node and kind of participant. This makes it valuable for robust and intelligent agricultural control systems.
