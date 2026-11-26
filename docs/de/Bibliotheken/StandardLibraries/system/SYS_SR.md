@@ -37,4 +37,34 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Ablaufsteuerung (ECC)
+
+-   **START** (Aktion: keine Aktion)
+-   **SET** (Aktion: `SET` → sendet Ereignis `EO`)
+-   **RESET** (Aktion: `RESET` → sendet Ereignis `EO`)
+
+**Übergänge**
+
+-   START → SET, wenn `S`
+-   SET → RESET, wenn `R`
+-   RESET → SET, wenn `S`
+
+### Algorithmen
+
+**SET**: SET algorithm
+
+```iecst
+Q := TRUE;
+```
+
+**RESET**: RESET algorithm
+
+```iecst
+Q := FALSE;
+```
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`SYS_SR.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

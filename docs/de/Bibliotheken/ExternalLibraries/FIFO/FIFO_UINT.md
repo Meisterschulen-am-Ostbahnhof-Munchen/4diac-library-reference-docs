@@ -50,4 +50,84 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Ablaufsteuerung (ECC)
+
+-   **START** (Aktion: keine Aktion)
+-   **S_INIT** (Aktion: `INIT_ALG` → sendet Ereignis `INITO`)
+-   **S_RST** (Aktion: `RST` → sendet Ereignis `RSTO`)
+-   **S_PUSH** (Aktion: `PUSH` → sendet Ereignis `PUSHO`)
+-   **S_PROCESSED** (Aktion: `PROCESSED_ALG`)
+-   **S_DELIVER** (Aktion: `DELIVER` → sendet Ereignis `DATA`)
+
+**Übergänge**
+
+-   START → S_INIT, wenn `INIT`
+-   START → S_RST, wenn `RST`
+-   START → S_PUSH, wenn `PUSH`
+-   START → S_PROCESSED, wenn `PROCESSED[DELIVERING]`
+-   S_INIT → START, wenn `1`
+-   S_RST → START, wenn `1`
+-   S_PUSH → S_DELIVER, wenn `OK AND NOT DELIVERING AND N>0`
+-   S_PUSH → START, wenn `1`
+-   S_PROCESSED → S_DELIVER, wenn `N>0`
+-   S_PROCESSED → START, wenn `1`
+-   S_DELIVER → START, wenn `1`
+
+### Algorithmen
+
+**INIT_ALG**: Queue leeren und QI/QO durchreichen
+
+```iecst
+PTR := 0;
+OUTPTR := 0;
+N := 0;
+DELIVERING := FALSE;
+OUT := 0;
+OK := FALSE;
+QO := QI AND CAPACITY > 0;
+```
+
+**RST**: Queue und Liefer-Sperre leeren - RST setzt die ganze Kette zurueck, der Konsument muss mit zurueckgesetzt werden
+
+```iecst
+PTR := 0;
+OUTPTR := 0;
+N := 0;
+DELIVERING := FALSE;
+OUT := 0;
+OK := FALSE;
+```
+
+**PUSH**: Wert anhaengen, falls Platz vorhanden
+
+```iecst
+IF NOT QO OR N >= CAPACITY THEN
+    OK := FALSE;
+ELSE
+    OK := TRUE;
+    BUF[PTR] := IN;
+    PTR := (PTR + 1) MOD CAPACITY;
+    N := N + 1;
+END_IF;
+```
+
+**PROCESSED_ALG**: Liefer-Sperre aufheben - DATA fuer den naechsten Wert folgt ueber die Transition nach S_DELIVER, falls die Queue noch Elemente enthaelt
+
+```iecst
+DELIVERING := FALSE;
+```
+
+**DELIVER**: Vordersten Wert entnehmen und liefern
+
+```iecst
+OUT := BUF[OUTPTR];
+OUTPTR := (OUTPTR + 1) MOD CAPACITY;
+N := N - 1;
+DELIVERING := TRUE;
+```
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`FIFO_UINT.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

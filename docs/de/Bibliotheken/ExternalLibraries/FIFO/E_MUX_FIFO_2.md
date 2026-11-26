@@ -49,4 +49,100 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Ablaufsteuerung (ECC)
+
+-   **START** (Aktion: keine Aktion)
+-   **S_INIT** (Aktion: `INIT_ALG` → sendet Ereignis `INITO`)
+-   **S_RST** (Aktion: `RST` → sendet Ereignis `RSTO`)
+-   **S_EI1** (Aktion: `SEL_K0`, `PUSH` → sendet Ereignis `PUSHO`)
+-   **S_EI2** (Aktion: `SEL_K1`, `PUSH` → sendet Ereignis `PUSHO`)
+-   **S_PROCESSED** (Aktion: `PROCESSED_ALG`)
+-   **S_DELIVER** (Aktion: `DELIVER` → sendet Ereignis `DATA`)
+
+**Übergänge**
+
+-   START → S_INIT, wenn `INIT`
+-   START → S_RST, wenn `RST`
+-   START → S_EI1, wenn `EI1`
+-   START → S_EI2, wenn `EI2`
+-   START → S_PROCESSED, wenn `PROCESSED[DELIVERING]`
+-   S_INIT → START, wenn `1`
+-   S_RST → START, wenn `1`
+-   S_EI1 → S_DELIVER, wenn `OK AND NOT DELIVERING AND N>0`
+-   S_EI1 → START, wenn `1`
+-   S_EI2 → S_DELIVER, wenn `OK AND NOT DELIVERING AND N>0`
+-   S_EI2 → START, wenn `1`
+-   S_PROCESSED → S_DELIVER, wenn `N>0`
+-   S_PROCESSED → START, wenn `1`
+-   S_DELIVER → START, wenn `1`
+
+### Algorithmen
+
+**INIT_ALG**: Queue leeren und QI/QO durchreichen
+
+```iecst
+PTR := 0;
+OUTPTR := 0;
+N := 0;
+DELIVERING := FALSE;
+K := 0;
+OK := FALSE;
+QO := QI AND CAPACITY > 0;
+```
+
+**RST**: Queue und Liefer-Sperre leeren - RST setzt die ganze Kette zurueck, der Konsument muss mit zurueckgesetzt werden
+
+```iecst
+PTR := 0;
+OUTPTR := 0;
+N := 0;
+DELIVERING := FALSE;
+K := 0;
+OK := FALSE;
+```
+
+**SEL_K0**: Kanal 1
+
+```iecst
+KIN := 0;
+```
+
+**SEL_K1**: Kanal 2
+
+```iecst
+KIN := 1;
+```
+
+**PUSH**: Kanal anhaengen, falls Platz vorhanden
+
+```iecst
+IF NOT QO OR N >= CAPACITY THEN
+    OK := FALSE;
+ELSE
+    OK := TRUE;
+    BUF[PTR] := KIN;
+    PTR := (PTR + 1) MOD CAPACITY;
+    N := N + 1;
+END_IF;
+```
+
+**PROCESSED_ALG**: Liefer-Sperre aufheben - DATA fuer den naechsten Wert folgt ueber die Transition nach S_DELIVER, falls die Queue noch Elemente enthaelt
+
+```iecst
+DELIVERING := FALSE;
+```
+
+**DELIVER**: Vordersten Kanal entnehmen und liefern
+
+```iecst
+K := BUF[OUTPTR];
+OUTPTR := (OUTPTR + 1) MOD CAPACITY;
+N := N - 1;
+DELIVERING := TRUE;
+```
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`E_MUX_FIFO_2.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

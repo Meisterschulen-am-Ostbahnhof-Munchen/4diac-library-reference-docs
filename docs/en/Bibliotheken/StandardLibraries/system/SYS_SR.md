@@ -37,4 +37,34 @@ None.
 
 None.
 
+## Operation (from the source)
+
+This description is derived from the type definition and shows states, transitions and algorithms. It has not been tested on hardware.
+
+### Execution control chart (ECC)
+
+-   **START** (Action: no action)
+-   **SET** (Action: `SET` → sends event `EO`)
+-   **RESET** (Action: `RESET` → sends event `EO`)
+
+**Transitions**
+
+-   START → SET, when `S`
+-   SET → RESET, when `R`
+-   RESET → SET, when `S`
+
+### Algorithms
+
+**SET**: SET algorithm
+
+```iecst
+Q := TRUE;
+```
+
+**RESET**: RESET algorithm
+
+```iecst
+Q := FALSE;
+```
+
 Note: This page was generated from the type definition (`SYS_SR.fbt`) and only shows the interface. A detailed description of the behavior is still missing.

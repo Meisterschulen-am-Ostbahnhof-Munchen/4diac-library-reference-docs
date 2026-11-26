@@ -43,4 +43,12 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Interne Bausteine
+
+-   **MSG**: Instanz von `isobus::UT::dialog::DLG_MessageBox`
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`DLG_Toast.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

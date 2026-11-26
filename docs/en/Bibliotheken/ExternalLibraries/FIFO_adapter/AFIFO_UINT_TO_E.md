@@ -38,4 +38,30 @@ None.
 
 None.
 
+## Operation (from the source)
+
+This description is derived from the type definition and shows states, transitions and algorithms. It has not been tested on hardware.
+
+### Execution control chart (ECC)
+
+-   **START** (Action: no action)
+-   **S_DATA** (Action: `COPY` → sends event `DATA`)
+-   **S_PROCESSED** (Action: sends event `IN_DATA.PROCESSED`)
+
+**Transitions**
+
+-   START → S_DATA, when `IN_DATA.DATA`
+-   S_DATA → START, when `1`
+-   START → S_PROCESSED, when `PROCESSED`
+-   S_PROCESSED → START, when `1`
+
+### Algorithms
+
+**COPY**: Wert und Fuellstand vom Adapter uebernehmen
+
+```iecst
+OUT := IN_DATA.OUT;
+N := IN_DATA.N;
+```
+
 Note: This page was generated from the type definition (`AFIFO_UINT_TO_E.fbt`) and only shows the interface. A detailed description of the behavior is still missing.

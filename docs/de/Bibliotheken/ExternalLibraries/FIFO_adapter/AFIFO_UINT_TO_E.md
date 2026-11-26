@@ -38,4 +38,30 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Ablaufsteuerung (ECC)
+
+-   **START** (Aktion: keine Aktion)
+-   **S_DATA** (Aktion: `COPY` → sendet Ereignis `DATA`)
+-   **S_PROCESSED** (Aktion: sendet Ereignis `IN_DATA.PROCESSED`)
+
+**Übergänge**
+
+-   START → S_DATA, wenn `IN_DATA.DATA`
+-   S_DATA → START, wenn `1`
+-   START → S_PROCESSED, wenn `PROCESSED`
+-   S_PROCESSED → START, wenn `1`
+
+### Algorithmen
+
+**COPY**: Wert und Fuellstand vom Adapter uebernehmen
+
+```iecst
+OUT := IN_DATA.OUT;
+N := IN_DATA.N;
+```
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`AFIFO_UINT_TO_E.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

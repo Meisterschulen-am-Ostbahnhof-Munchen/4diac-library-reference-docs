@@ -48,4 +48,40 @@ Keine.
 
 Keine.
 
+## Funktionsweise (aus der Quelle)
+
+Diese Beschreibung ist aus der Typdefinition abgeleitet und gibt Zustände, Übergänge und Algorithmen wieder. Sie wurde nicht auf Hardware getestet.
+
+### Interne Bausteine
+
+-   **CTRL**: Instanz von `isobus::UT::dialog::DLG_CTRL`
+-   **QN_COVER**: Instanz von `isobus::UT::Q::Q_NumericValue`
+-   **QN_ICON**: Instanz von `isobus::UT::Q::Q_NumericValue`
+-   **QN_TITLE**: Instanz von `isobus::UT::Q::Q_NumericValue`
+-   **QN_TEXT**: Instanz von `isobus::UT::Q::Q_NumericValue`
+-   **QN_BUTTONS**: Instanz von `isobus::UT::Q::Q_NumericValue`
+-   **QF_TITLE**: Instanz von `isobus::UT::Q::Q_FillAttributes`
+-   **QH_SHOW**: Instanz von `isobus::UT::Q::Q_ObjHideShow`
+-   **QH_HIDE**: Instanz von `isobus::UT::Q::Q_ObjHideShow`
+-   **FOCUS**: Instanz von `iec61499::events::E_DEMUX_8`
+-   **QS_OK**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_CANCEL**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_ABORT**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_RETRY**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_IGNORE**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_YES**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **QS_NO**: Instanz von `isobus::UT::Q::Q_ObjSelectInput`
+-   **FOCUS_DONE**: Instanz von `iec61499::events::E_MUX_8`
+-   **AUDIO_SW**: Instanz von `iec61499::events::E_SWITCH`
+-   **Q_AUDIO**: Instanz von `isobus::UT::Q::Q_CtrlAudioSignal`
+-   **AUDIO_DONE**: Instanz von `iec61499::events::E_MERGE`
+-   **TIMER**: Instanz von `iec61499::events::E_DELAY`
+-   **BTN_OK**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_CANCEL**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_ABORT**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_RETRY**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_IGNORE**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_YES**: Instanz von `isobus::UT::io::Button::Button_IE`
+-   **BTN_NO**: Instanz von `isobus::UT::io::Button::Button_IE`
+
 Hinweis: Diese Seite wurde aus der Typdefinition (`DLG_MessageBox.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.

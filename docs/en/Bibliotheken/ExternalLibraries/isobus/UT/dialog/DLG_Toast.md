@@ -43,4 +43,12 @@ None.
 
 None.
 
+## Operation (from the source)
+
+This description is derived from the type definition and shows states, transitions and algorithms. It has not been tested on hardware.
+
+### Internal blocks
+
+-   **MSG**: instance of `isobus::UT::dialog::DLG_MessageBox`
+
 Note: This page was generated from the type definition (`DLG_Toast.fbt`) and only shows the interface. A detailed description of the behavior is still missing.
