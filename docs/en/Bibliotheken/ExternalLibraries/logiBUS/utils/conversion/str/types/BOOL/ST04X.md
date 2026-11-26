@@ -1,5 +1,7 @@
 # ST04X
 
+![ST04X](./ST04X.svg)
+
 * * * * * * * * * *
 
 ## Introduction

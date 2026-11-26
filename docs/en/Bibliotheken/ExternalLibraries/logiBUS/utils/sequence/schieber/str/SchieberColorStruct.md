@@ -1,5 +1,7 @@
 # SliderColorStruct
 
+![SchieberColorStruct](./SchieberColorStruct.svg)
+
 * * * * * * * * * *
 
 ## Introduction

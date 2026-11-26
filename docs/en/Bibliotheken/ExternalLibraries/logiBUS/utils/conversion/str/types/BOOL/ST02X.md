@@ -1,5 +1,7 @@
 # ST02X
 
+![ST02X](./ST02X.svg)
+
 *(No image available for this data type.)*
 
 * * * * * * * * * *

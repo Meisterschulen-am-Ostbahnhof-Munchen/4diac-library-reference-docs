@@ -1,5 +1,7 @@
 # AuxiliaryState_S
 
+![AuxiliaryState_S](./AuxiliaryState_S.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

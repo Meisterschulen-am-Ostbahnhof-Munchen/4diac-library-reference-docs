@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 905.75 552.0"
+     width="905.75" height="552.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(354.1875, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 240.125 0
+            A 3 3 0 0 1 243.125 3
+            L 243.125 263.0
+            A 3 3 0 0 1 240.125 266.0
+            L 233.125 266.0
+            L 233.125 306.0
+            L 240.125 306.0
+            A 3 3 0 0 1 243.125 309.0
+            L 243.125 529.0
+            A 3 3 0 0 1 240.125 532.0
+            L 3 532.0
+            A 3 3 0 0 1 0 529.0
+            L 0 309.0
+            A 3 3 0 0 1 3 306.0
+            L 10 306.0
+            L 10 266.0
+            L 3 266.0
+            A 3 3 0 0 1 0 263.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="1.5,31.0 6.5,36.0 1.5,41.0" fill="#63B31F"/>
+    <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">SHOW</text>
+
+    <polygon points="1.5,51.0 6.5,56.0 1.5,61.0" fill="#63B31F"/>
+    <text x="9.5" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">CLOSE</text>
+
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#63B31F"/>
+    <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">SHOWN</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#63B31F"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">HIDDEN</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#63B31F"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TMO</text>
+
+    <polygon points="1.5,131.0 6.5,136.0 1.5,141.0" fill="#63B31F"/>
+    <text x="9.5" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_OK</text>
+
+    <polygon points="1.5,151.0 6.5,156.0 1.5,161.0" fill="#63B31F"/>
+    <text x="9.5" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_CANCEL</text>
+
+    <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#63B31F"/>
+    <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_ABORT</text>
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#63B31F"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_RETRY</text>
+
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#63B31F"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_IGNORE</text>
+
+    <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#63B31F"/>
+    <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_YES</text>
+
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#63B31F"/>
+    <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">B_NO</text>
+
+    <polygon points="236.625,11.0 241.625,16.0 236.625,21.0" fill="#63B31F"/>
+    <text x="233.625" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
+
+    <polygon points="236.625,31.0 241.625,36.0 236.625,41.0" fill="#63B31F"/>
+    <text x="233.625" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">SHOWO</text>
+
+    <polygon points="236.625,51.0 241.625,56.0 236.625,61.0" fill="#63B31F"/>
+    <text x="233.625" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">HIDEO</text>
+
+    <polygon points="236.625,71.0 241.625,76.0 236.625,81.0" fill="#63B31F"/>
+    <text x="233.625" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">START_T</text>
+
+    <polygon points="236.625,91.0 241.625,96.0 236.625,101.0" fill="#63B31F"/>
+    <text x="233.625" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">STOP_T</text>
+
+    <polygon points="236.625,111.0 241.625,116.0 236.625,121.0" fill="#63B31F"/>
+    <text x="233.625" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 80.34375 277.0
+            L 96.34375 277.0
+            A 1 1 0 0 1 97.34375 278.0
+            L 97.34375 281.5
+            L 95.34375 281.5
+            L 95.34375 284.5
+            L 97.34375 284.5
+            L 97.34375 294.0
+            A 1 1 0 0 1 96.34375 295.0
+            L 80.34375 295.0
+            A 1 1 0 0 1 79.34375 294.0
+            L 79.34375 284.5
+            L 81.34375 284.5
+            L 81.34375 281.5
+            L 79.34375 281.5
+            L 79.34375 278.0
+            A 1 1 0 0 1 80.34375 277.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <text x="88.34375" y="291.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
+          fill="#000000" text-anchor="middle">B</text>
+
+    <!-- Block Name -->
+    <text x="102.34375" y="291.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">DLG_CTRL</text>
+    
+    <text x="121.5625" y="306.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#A3B08F"/>
+    <text x="9.5" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,331.0 6.5,336.0 1.5,341.0" fill="#18519E"/>
+    <text x="9.5" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TEXT_ID</text>
+
+    <polygon points="1.5,351.0 6.5,356.0 1.5,361.0" fill="#18519E"/>
+    <text x="9.5" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TITLE_ID</text>
+
+    <polygon points="1.5,371.0 6.5,376.0 1.5,381.0" fill="#18519E"/>
+    <text x="9.5" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">ICON</text>
+
+    <polygon points="1.5,391.0 6.5,396.0 1.5,401.0" fill="#18519E"/>
+    <text x="9.5" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">BUTTONS</text>
+
+    <polygon points="1.5,411.0 6.5,416.0 1.5,421.0" fill="#18519E"/>
+    <text x="9.5" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">DEFAULT_BUTTON</text>
+
+    <polygon points="1.5,431.0 6.5,436.0 1.5,441.0" fill="#A3B08F"/>
+    <text x="9.5" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">MODAL</text>
+
+    <polygon points="1.5,451.0 6.5,456.0 1.5,461.0" fill="#3366FF"/>
+    <text x="9.5" y="457.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TIMEOUT</text>
+
+    <polygon points="1.5,471.0 6.5,476.0 1.5,481.0" fill="#A3B08F"/>
+    <text x="9.5" y="477.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">AUDIO</text>
+
+    <polygon points="236.625,311.0 241.625,316.0 236.625,321.0" fill="#A3B08F"/>
+    <text x="233.625" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
+
+    <polygon points="236.625,331.0 241.625,336.0 236.625,341.0" fill="#18519E"/>
+    <text x="233.625" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">RESULT</text>
+
+    <polygon points="236.625,351.0 241.625,356.0 236.625,361.0" fill="#18519E"/>
+    <text x="233.625" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">COVER_ID</text>
+
+    <polygon points="236.625,371.0 241.625,376.0 236.625,381.0" fill="#18519E"/>
+    <text x="233.625" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ICON_ID</text>
+
+    <polygon points="236.625,391.0 241.625,396.0 236.625,401.0" fill="#18519E"/>
+    <text x="233.625" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TITLE_ID_O</text>
+
+    <polygon points="236.625,411.0 241.625,416.0 236.625,421.0" fill="#18519E"/>
+    <text x="233.625" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TEXT_ID_O</text>
+
+    <polygon points="236.625,431.0 241.625,436.0 236.625,441.0" fill="#18519E"/>
+    <text x="233.625" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">BUTTONS_ID</text>
+
+    <polygon points="236.625,451.0 241.625,456.0 236.625,461.0" fill="#18519E"/>
+    <text x="233.625" y="457.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TITLE_COLOUR</text>
+
+    <polygon points="236.625,471.0 241.625,476.0 236.625,481.0" fill="#18519E"/>
+    <text x="233.625" y="477.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">FOCUS_K</text>
+
+    <polygon points="236.625,491.0 241.625,496.0 236.625,501.0" fill="#A3B08F"/>
+    <text x="233.625" y="497.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">AUDIO_O</text>
+
+    <polygon points="236.625,511.0 241.625,516.0 236.625,521.0" fill="#3366FF"/>
+    <text x="233.625" y="517.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">TIMEOUT_O</text>
+
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <rect x="-15" y="11.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="31.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="351.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="356.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="371.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="376.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="391.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="396.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="411.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="416.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="431.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="436.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="451.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="456.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="471.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="476.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="248.125" y="11.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="248.125" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="253.125" y1="16.0" x2="253.125" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="31.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="351.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="356.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="371.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="376.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="391.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="396.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="411.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="416.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="431.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="436.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="451.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="456.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="471.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="476.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="262.125" y="491.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="267.125" y1="36.0" x2="267.125" y2="496.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="276.125" y="71.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="276.125" y="511.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="281.125" y1="76.0" x2="281.125" y2="516.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="290.125" y="111.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="290.125" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="295.125" y1="116.0" x2="295.125" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="290.125" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="295.125" y1="116.0" x2="295.125" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- Horizontal Connection Lines -->
+
+    <line x1="0" y1="16.0" x2="-20" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="36.0" x2="-34" y2="36.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="316.0" x2="-20" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="336.0" x2="-34" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="356.0" x2="-34" y2="356.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="376.0" x2="-34" y2="376.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="396.0" x2="-34" y2="396.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="416.0" x2="-34" y2="416.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="436.0" x2="-34" y2="436.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="456.0" x2="-34" y2="456.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="476.0" x2="-34" y2="476.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="16.0" x2="263.125" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="36.0" x2="277.125" y2="36.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="76.0" x2="291.125" y2="76.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="116.0" x2="305.125" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="316.0" x2="305.125" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="356.0" x2="277.125" y2="356.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="376.0" x2="277.125" y2="376.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="396.0" x2="277.125" y2="396.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="416.0" x2="277.125" y2="416.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="436.0" x2="277.125" y2="436.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="456.0" x2="277.125" y2="456.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="476.0" x2="277.125" y2="476.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="496.0" x2="277.125" y2="496.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="516.0" x2="291.125" y2="516.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="243.125" y1="336.0" x2="305.125" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- External Labels -->
+
+    <text x="-39" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Initialisierung – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Dialog zeigen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Dialog vom Programm schliessen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Anzeige-Kette fertig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Ausblenden fertig – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Zeit abgelaufen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="137.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button OK losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="157.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button Cancel losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button Abort losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button Retry losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button Ignore losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button Yes losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-39" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Button No losgelassen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="310.125" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialisierung fertig</text>
+
+    <text x="310.125" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Anzeige-Kette starten</text>
+
+    <text x="310.125" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Dialog ausblenden</text>
+
+    <text x="310.125" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Timeout starten</text>
+
+    <text x="310.125" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Timeout stoppen</text>
+
+    <text x="310.125" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Dialog beendet</text>
+
+    <text x="-39" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Freigabe – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="-39" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OutputString Meldungstext – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-39" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">OutputString Titel, NULL = Standard je Icon – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan></text>
+
+    <text x="-39" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DLG_ICON_* – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+
+    <text x="-39" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">DLG_BTN_* – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+
+    <text x="-39" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Fokus auf Taste 1..3 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan></text>
+
+    <text x="-39" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Maske abdecken – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="-39" y="457.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">T#0s = kein Timeout – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+
+    <text x="-39" y="477.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Ton beim Oeffnen – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="310.125" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Qualitaet</text>
+
+    <text x="310.125" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan> – DLG_RES_*</text>
+
+    <text x="310.125" y="357.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan> – Ziel ObjectPointer_Dlg_Cover</text>
+
+    <text x="310.125" y="377.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan> – Ziel ObjectPointer_Dlg_Icon</text>
+
+    <text x="310.125" y="397.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan> – Ziel ObjectPointer_Dlg_Title</text>
+
+    <text x="310.125" y="417.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan> – Ziel ObjectPointer_Dlg_Text</text>
+
+    <text x="310.125" y="437.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan> – Ziel ObjectPointer_Dlg_Buttons</text>
+
+    <text x="310.125" y="457.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">USINT</tspan> – VT-Farbindex Titelzeile</text>
+
+    <text x="310.125" y="477.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UINT</tspan> – Fokus-Button 0..6, 7 = keiner</text>
+
+    <text x="310.125" y="497.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Ton ja/nein</text>
+
+    <text x="310.125" y="517.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan> – Timeout</text>
+  </g>
+</svg>

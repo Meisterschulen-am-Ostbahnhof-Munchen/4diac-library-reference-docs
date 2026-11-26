@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261 364" width="261" height="364">
+<style>@font-face { font-family: 'TGL 0-17_std'; src: local('TGL 0-17_std'), url('../../../../../../../../_static/fonts/TGL-0-17_std.ttf') format('truetype'); }
+text { font-family: 'TGL 0-17_std', 'TGL 0-17', TGL, 'Times New Roman', Times, serif; font-size: 12px; fill: #000; }</style>
+<rect x="2" y="2" width="257" height="360" fill="#ffffff" stroke="#000" stroke-width="1"/>
+<rect x="2" y="2" width="257" height="30" fill="#e8eef7" stroke="#000" stroke-width="1"/>
+<text x="130" y="15" text-anchor="middle" font-weight="bold">ST16X</text>
+<text x="130" y="27" text-anchor="middle" font-style="italic" font-size="10">logiBUS::utils::conversion::types</text>
+<rect x="12" y="38" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="46">X_00 : BOOL</text>
+<rect x="12" y="58" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="66">X_01 : BOOL</text>
+<rect x="12" y="78" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="86">X_02 : BOOL</text>
+<rect x="12" y="98" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="106">X_03 : BOOL</text>
+<rect x="12" y="118" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="126">X_04 : BOOL</text>
+<rect x="12" y="138" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="146">X_05 : BOOL</text>
+<rect x="12" y="158" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="166">X_06 : BOOL</text>
+<rect x="12" y="178" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="186">X_07 : BOOL</text>
+<rect x="12" y="198" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="206">X_08 : BOOL</text>
+<rect x="12" y="218" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="226">X_09 : BOOL</text>
+<rect x="12" y="238" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="246">B_10 : BOOL</text>
+<rect x="12" y="258" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="266">B_11 : BOOL</text>
+<rect x="12" y="278" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="286">B_12 : BOOL</text>
+<rect x="12" y="298" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="306">B_13 : BOOL</text>
+<rect x="12" y="318" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="326">B_14 : BOOL</text>
+<rect x="12" y="338" width="8" height="8" fill="#A3B08F" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="346">B_15 : BOOL</text>
+</svg>

@@ -1,5 +1,7 @@
 # logiBUS_PI_S
 
+![logiBUS_PI_S](./logiBUS_PI_S.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

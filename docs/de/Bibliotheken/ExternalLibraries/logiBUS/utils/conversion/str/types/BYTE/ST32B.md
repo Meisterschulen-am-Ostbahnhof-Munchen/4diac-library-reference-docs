@@ -1,5 +1,7 @@
 # ST32B
 
+![ST32B](./ST32B.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

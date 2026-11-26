@@ -1,5 +1,7 @@
 # Funk_DI_S
 
+![Funk_DI_S](./Funk_DI_S.svg)
+
 Funk_DI Struct
 
 ## Structure

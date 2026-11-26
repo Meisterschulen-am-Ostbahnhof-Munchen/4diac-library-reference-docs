@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261 124" width="261" height="124">
+<style>@font-face { font-family: 'TGL 0-17_std'; src: local('TGL 0-17_std'), url('../../../../../../../../_static/fonts/TGL-0-17_std.ttf') format('truetype'); }
+text { font-family: 'TGL 0-17_std', 'TGL 0-17', TGL, 'Times New Roman', Times, serif; font-size: 12px; fill: #000; }</style>
+<rect x="2" y="2" width="257" height="120" fill="#ffffff" stroke="#000" stroke-width="1"/>
+<rect x="2" y="2" width="257" height="30" fill="#e8eef7" stroke="#000" stroke-width="1"/>
+<text x="130" y="15" text-anchor="middle" font-weight="bold">ST04B</text>
+<text x="130" y="27" text-anchor="middle" font-style="italic" font-size="10">logiBUS::utils::conversion::types</text>
+<rect x="12" y="38" width="8" height="8" fill="#82A3A9" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="46">B_00 : BYTE</text>
+<rect x="12" y="58" width="8" height="8" fill="#82A3A9" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="66">B_01 : BYTE</text>
+<rect x="12" y="78" width="8" height="8" fill="#82A3A9" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="86">B_02 : BYTE</text>
+<rect x="12" y="98" width="8" height="8" fill="#82A3A9" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="106">B_03 : BYTE</text>
+</svg>

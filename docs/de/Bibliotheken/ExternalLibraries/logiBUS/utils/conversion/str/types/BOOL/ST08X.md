@@ -1,5 +1,7 @@
 # ST08X
 
+![ST08X](./ST08X.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

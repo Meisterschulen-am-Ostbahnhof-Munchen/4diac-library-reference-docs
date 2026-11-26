@@ -109,3 +109,13 @@ Der Baustein besitzt intern implizite Zustände, die durch die Verfügbarkeit ei
 ## Fazit
 
 Der **AlPgnTxNew_TP** ist ein spezialisierter und robuster Funktionsbaustein für das Senden von Nachrichten in ISOBUS-Netzwerken. Durch die Trennung von Konfiguration (`install`) und Übertragung (`REQ`) sowie die Nutzung von Referenz-Datenpuffern (`InOut`) eignet er sich hervorragend für ressourceneffiziente Steuerungsanwendungen, die eine präzise Kontrolle über PGN-Parameter erfordern.
+
+## Extended Transport Protocol (ETP)
+
+!!! warning "Stand: noch nicht getestet"
+    Die folgenden Angaben stammen von der Firmware-Entwicklung (LOGIBUS-Commit `24534469`, forte-Commit `8d02d14f7`), ich konnte sie nicht prüfen. Auf Hardware ist nichts getestet.
+
+- Ist `u16DaSize` größer als 1785, sendet der Baustein automatisch per ETP, bis 65535 Byte. Senden per ETP ging in LOGIBUS schon vorher.
+- ETP geht nur an ein bestimmtes Ziel (`NmDestin`), nicht an global.
+- PGNs von `0x1F000` bis `0x1FFFF` mit mehr als 8 Byte gehen als NMEA Fast Packet (höchstens 223 Byte), nicht als ETP. Für ETP eignen sich Proprietary A2 (`0x1EF00`) oder Proprietary A (`0xEF00`).
+- Der Empfang großer Nachrichten steht bei [`AlPgnRxNew_TP`](../rx/AlPgnRxNew_TP.md).

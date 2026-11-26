@@ -1,5 +1,7 @@
 # ST16X
 
+![ST16X](./ST16X.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

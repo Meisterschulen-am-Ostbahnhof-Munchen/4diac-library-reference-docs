@@ -1,5 +1,7 @@
 # ST32B
 
+![ST32B](./ST32B.svg)
+
 * * * * * * * * * *
 The data type `ST32B` is a structured data type within the 4diac IDE, designed for the aggregation of 32 individual bytes. It serves as a template for data structures that require a fixed length of 32 bytes and allow direct access to individual bytes. This type is registered in the 4diac IDE under the package `logiBUS::utils::conversion::types`.
 Since `ST32B` is a structured data type and not a function block, it does not have external event or data interfaces in the conventional sense. Instead, it defines an internal structure of elements that can be accessed in a program.

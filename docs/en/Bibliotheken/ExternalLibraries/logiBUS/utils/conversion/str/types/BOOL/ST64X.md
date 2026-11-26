@@ -1,5 +1,7 @@
 # ST64X
 
+![ST64X](./ST64X.svg)
+
 *(No image available because this is a data type and not a function block.)*
 
 * * * * * * * * * *

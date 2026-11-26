@@ -1,5 +1,7 @@
 # SlideStruct
 
+![SchieberStruct](./SchieberStruct.svg)
+
 * * * * * * * * * *
 
 ## Introduction

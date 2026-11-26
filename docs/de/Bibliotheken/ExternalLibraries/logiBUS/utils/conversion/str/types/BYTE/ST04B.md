@@ -1,5 +1,7 @@
 # ST04B
 
+![ST04B](./ST04B.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

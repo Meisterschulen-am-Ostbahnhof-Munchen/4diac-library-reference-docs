@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 2879.875 372.0"
+     width="2879.875" height="372.0">
+  <style>
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-17_std"), local("TGL 0-17"), local("TGL 0-17 alt"), url("../../../../../_static/fonts/TGL-0-17_std.ttf") format("truetype");
+      font-style: normal;
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: "TGL";
+      src: local("TGL 0-16_std"), local("TGL 0-16"), url("../../../../../_static/fonts/TGL-0-16_std.ttf") format("truetype");
+      font-style: italic;
+      font-weight: normal;
+    }
+  </style>
+  <defs>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(1888.625, 10)">
+
+    <!-- Block Outline -->
+    <path d="M 3 0
+            L 183.6875 0
+            A 3 3 0 0 1 186.6875 3
+            L 186.6875 123.0
+            A 3 3 0 0 1 183.6875 126.0
+            L 176.6875 126.0
+            L 176.6875 166.0
+            L 183.6875 166.0
+            A 3 3 0 0 1 186.6875 169.0
+            L 186.6875 349.0
+            A 3 3 0 0 1 183.6875 352.0
+            L 3 352.0
+            A 3 3 0 0 1 0 349.0
+            L 0 169.0
+            A 3 3 0 0 1 3 166.0
+            L 10 166.0
+            L 10 126.0
+            L 3 126.0
+            A 3 3 0 0 1 0 123.0
+            L 0 3
+            A 3 3 0 0 1 3 0
+            Z"
+          fill="#FFFFFF" stroke="#A0A0A0" stroke-width="1.5"
+          stroke-linejoin="round" filter="url(#dropShadow)"/>
+
+    <!-- Event Ports -->
+
+    <polygon points="1.5,11.0 6.5,16.0 1.5,21.0" fill="#63B31F"/>
+    <text x="9.5" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">INIT</text>
+
+    <polygon points="1.5,31.0 6.5,36.0 1.5,41.0" fill="#63B31F"/>
+    <text x="9.5" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">TOGGLE</text>
+
+    <polygon points="1.5,51.0 6.5,56.0 1.5,61.0" fill="#63B31F"/>
+    <text x="9.5" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">DIM_START</text>
+
+    <polygon points="1.5,71.0 6.5,76.0 1.5,81.0" fill="#63B31F"/>
+    <text x="9.5" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">DIM_STOP</text>
+
+    <polygon points="1.5,91.0 6.5,96.0 1.5,101.0" fill="#63B31F"/>
+    <text x="9.5" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">SWITCH_ON</text>
+
+    <polygon points="1.5,111.0 6.5,116.0 1.5,121.0" fill="#63B31F"/>
+    <text x="9.5" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">SWITCH_OFF</text>
+
+    <polygon points="180.1875,11.0 185.1875,16.0 180.1875,21.0" fill="#63B31F"/>
+    <text x="177.1875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">INITO</text>
+
+    <polygon points="180.1875,31.0 185.1875,36.0 180.1875,41.0" fill="#63B31F"/>
+    <text x="177.1875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">CNF</text>
+
+    <polygon points="180.1875,51.0 185.1875,56.0 180.1875,61.0" fill="#63B31F"/>
+    <text x="177.1875" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">RAMPO</text>
+
+    <!-- Name Section -->
+    <!-- FB Type Icon -->
+    <path d="M 21.0 137.0
+            L 37.0 137.0
+            A 1 1 0 0 1 38.0 138.0
+            L 38.0 141.5
+            L 36.0 141.5
+            L 36.0 144.5
+            L 38.0 144.5
+            L 38.0 154.0
+            A 1 1 0 0 1 37.0 155.0
+            L 21.0 155.0
+            A 1 1 0 0 1 20.0 154.0
+            L 20.0 144.5
+            L 22.0 144.5
+            L 22.0 141.5
+            L 20.0 141.5
+            L 20.0 138.0
+            A 1 1 0 0 1 21.0 137.0
+            Z"
+          fill="#87CEEB" stroke="#1565C0" stroke-width="1"/>
+    <text x="29.0" y="151.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12" font-weight="bold"
+          fill="#000000" text-anchor="middle">Si</text>
+
+    <!-- Block Name -->
+    <text x="43.0" y="151.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" font-style="italic">logiBUS_QD_DIMMER</text>
+    
+    <text x="93.34375" y="166.0"
+          font-family="TGL, 'Times New Roman', Times, serif" font-size="12"
+          fill="#666666" text-anchor="middle">1.0</text>
+
+    <!-- Data Ports -->
+
+    <polygon points="1.5,171.0 6.5,176.0 1.5,181.0" fill="#A3B08F"/>
+    <text x="9.5" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">QI</text>
+
+    <polygon points="1.5,191.0 6.5,196.0 1.5,201.0" fill="#BD8663"/>
+    <text x="9.5" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">PARAMS</text>
+
+    <polygon points="1.5,211.0 6.5,216.0 1.5,221.0" fill="#3366FF"/>
+    <text x="9.5" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">Output</text>
+
+    <polygon points="1.5,231.0 6.5,236.0 1.5,241.0" fill="#18519E"/>
+    <text x="9.5" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">FREQ</text>
+
+    <polygon points="1.5,251.0 6.5,256.0 1.5,261.0" fill="#3366FF"/>
+    <text x="9.5" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">DIM_TIME</text>
+
+    <polygon points="1.5,271.0 6.5,276.0 1.5,281.0" fill="#DBB418"/>
+    <text x="9.5" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">LEVEL_MIN</text>
+
+    <polygon points="1.5,291.0 6.5,296.0 1.5,301.0" fill="#DBB418"/>
+    <text x="9.5" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">LEVEL_MAX</text>
+
+    <polygon points="1.5,311.0 6.5,316.0 1.5,321.0" fill="#DBB418"/>
+    <text x="9.5" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">START</text>
+
+    <polygon points="1.5,331.0 6.5,336.0 1.5,341.0" fill="#3366FF"/>
+    <text x="9.5" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle">SOFT</text>
+
+    <polygon points="180.1875,171.0 185.1875,176.0 180.1875,181.0" fill="#A3B08F"/>
+    <text x="177.1875" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">QO</text>
+
+    <polygon points="180.1875,191.0 185.1875,196.0 180.1875,201.0" fill="#BD8663"/>
+    <text x="177.1875" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">STATUS</text>
+
+    <polygon points="180.1875,211.0 185.1875,216.0 180.1875,221.0" fill="#A3B08F"/>
+    <text x="177.1875" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">ON_STATE</text>
+
+    <polygon points="180.1875,231.0 185.1875,236.0 180.1875,241.0" fill="#DBB418"/>
+    <text x="177.1875" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">LEVEL</text>
+
+
+    <!-- Event-Data Association Connectors and Lines -->
+
+    <rect x="-15" y="11.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="191.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="196.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="211.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="231.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-15" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-10.0" y1="16.0" x2="-10.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="31.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-29" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-24.0" y1="36.0" x2="-24.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="51.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-43" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-38.0" y1="56.0" x2="-38.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="71.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-57" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-52.0" y1="76.0" x2="-52.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="91.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-71" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-66.0" y1="96.0" x2="-66.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="111.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="251.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="271.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="291.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="311.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="-85" y="331.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="-80.0" y1="116.0" x2="-80.0" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="191.6875" y="11.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="191.6875" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="196.6875" y1="16.0" x2="196.6875" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="191.6875" y="191.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="196.6875" y1="16.0" x2="196.6875" y2="196.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="191.6875" y="211.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="196.6875" y1="16.0" x2="196.6875" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="191.6875" y="231.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="196.6875" y1="16.0" x2="196.6875" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="205.6875" y="31.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="205.6875" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="210.6875" y1="36.0" x2="210.6875" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="205.6875" y="191.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="210.6875" y1="36.0" x2="210.6875" y2="196.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="205.6875" y="211.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="210.6875" y1="36.0" x2="210.6875" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="205.6875" y="231.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="210.6875" y1="36.0" x2="210.6875" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="219.6875" y="51.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <rect x="219.6875" y="171.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="224.6875" y1="56.0" x2="224.6875" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="219.6875" y="211.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="224.6875" y1="56.0" x2="224.6875" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <rect x="219.6875" y="231.0" width="10" height="10"
+          fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+
+    <line x1="224.6875" y1="56.0" x2="224.6875" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- Horizontal Connection Lines -->
+
+    <line x1="0" y1="16.0" x2="-20" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="36.0" x2="-34" y2="36.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="56.0" x2="-48" y2="56.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="76.0" x2="-62" y2="76.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="96.0" x2="-76" y2="96.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="116.0" x2="-90" y2="116.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="176.0" x2="-90" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="196.0" x2="-20" y2="196.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="216.0" x2="-20" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="236.0" x2="-20" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="256.0" x2="-90" y2="256.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="276.0" x2="-90" y2="276.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="296.0" x2="-90" y2="296.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="316.0" x2="-90" y2="316.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="0" y1="336.0" x2="-90" y2="336.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="16.0" x2="206.6875" y2="16.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="36.0" x2="220.6875" y2="36.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="56.0" x2="234.6875" y2="56.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="176.0" x2="234.6875" y2="176.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="196.0" x2="220.6875" y2="196.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="216.0" x2="234.6875" y2="216.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <line x1="186.6875" y1="236.0" x2="234.6875" y2="236.0"
+          stroke="#000000" stroke-width="1"/>
+
+    <!-- External Labels -->
+
+    <text x="-95" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Service Initialization – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-95" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Short press (BUTTON_SINGLE_CLICK of logiBUS_IE): off -&gt; on with the stored brightness (first time START), on -&gt; off; ramp time SOFT – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-95" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Long press begins (BUTTON_LONG_PRESS_START): dim stepless towards LEVEL_MAX or LEVEL_MIN. Every long press changes the direction, the first one after switching on dims down; at the end it dims the other way. From off: on and dim up – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-95" y="77.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Long press ends (BUTTON_LONG_PRESS_UP): stop dimming, the brightness stays and is stored – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-95" y="97.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Switch on directly with the stored brightness (nothing happens if already on) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="-95" y="117.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Switch off directly, e.g. central off (nothing happens if already off) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan></text>
+
+    <text x="239.6875" y="17.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Initialization Confirm</text>
+
+    <text x="239.6875" y="37.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Confirmation of TOGGLE, DIM_START, DIM_STOP, SWITCH_ON, SWITCH_OFF</text>
+
+    <text x="239.6875" y="57.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">Event</tspan> – Ramp finished: LEVEL_MIN or LEVEL_MAX reached while dimming, or switching on/off finished. Not after DIM_STOP</text>
+
+    <text x="-95" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Event Input Qualifier – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan></text>
+
+    <text x="-95" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Service Parameters – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan></text>
+
+    <text x="-95" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Identify the Output Output_Q1..Q8 – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">logiBUS::io::DQ::logiBUS_DO_S</tspan></text>
+
+    <text x="-95" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">PWM frequency in Hz, read at INIT. Outputs with the same frequency share an LEDC timer (4 timers, LED blinking uses one). Power stage limits, not checked: APIXON 15 PWR Q1 (BTH50030) max. 100 Hz; BTS7030/BTT6030/BTH6070 for valves 100..200 Hz; Trainer20 without power stage – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">UDINT</tspan></text>
+
+    <text x="-95" y="257.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Time for the whole range LEVEL_MIN..LEVEL_MAX while dimming; a shorter rest takes proportionally less time, so the speed is always the same – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+
+    <text x="-95" y="277.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Lowest brightness for dimming in % (0..100) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+
+    <text x="-95" y="297.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Highest brightness for dimming in % (0..100) – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+
+    <text x="-95" y="317.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Brightness in % for the first switching on, before anything is stored – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan></text>
+
+    <text x="-95" y="337.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" text-anchor="end" dominant-baseline="middle">Ramp time for switching on and off (TOGGLE, SWITCH_ON, SWITCH_OFF). T#0ms = jump – <tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">TIME</tspan></text>
+
+    <text x="239.6875" y="177.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – Event Output Qualifier</text>
+
+    <text x="239.6875" y="197.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">STRING</tspan> – Service Status</text>
+
+    <text x="239.6875" y="217.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">BOOL</tspan> – TRUE = on, FALSE as soon as switching off begins</text>
+
+    <text x="239.6875" y="237.0" font-family="TGL, 'Times New Roman', Times, serif" font-size="14"
+          fill="#000000" dominant-baseline="middle"><tspan font-family="TGL, 'Times New Roman', Times, serif" font-style="italic" dominant-baseline="middle">REAL</tspan> – Brightness in %: on CNF the target of switching on/off or the stopped brightness, on RAMPO the brightness reached</text>
+  </g>
+</svg>
