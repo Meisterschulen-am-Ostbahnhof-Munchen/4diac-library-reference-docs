@@ -110,3 +110,13 @@ The function block has internally implicit states defined by the availability of
 ## Conclusion
 
 The **AlPgnTxNew_TP** is a specialized and robust function block for sending messages in ISOBUS networks. By separating configuration (`install`) and transmission (`REQ`) and utilizing reference data buffers (`InOut`), it is ideally suited for resource-efficient control applications that require precise control over PGN parameters.
+
+## Extended Transport Protocol (ETP)
+
+!!! warning "State: not yet tested"
+    The following statements come from the firmware development (LOGIBUS commit `24534469`, forte commit `8d02d14f7`), I could not check them. Nothing has been tested on hardware.
+
+- If `u16DaSize` is larger than 1785, the block sends automatically via ETP, up to 65535 bytes. Sending via ETP already worked in LOGIBUS before.
+- ETP only goes to a specific destination (`NmDestin`), not to global.
+- PGNs from `0x1F000` to `0x1FFFF` with more than 8 bytes go as NMEA Fast Packet (at most 223 bytes), not as ETP. For ETP use Proprietary A2 (`0x1EF00`) or Proprietary A (`0xEF00`).
+- Reception of large messages is described at [`AlPgnRxNew_TP`](../rx/AlPgnRxNew_TP.md).
