@@ -1,5 +1,7 @@
 # ST64X
 
+![ST64X](./ST64X.svg)
+
 *(Kein Bild vorhanden, da dies ein Datentyp und kein Funktionsblock ist.)*
 
 * * * * * * * * * *

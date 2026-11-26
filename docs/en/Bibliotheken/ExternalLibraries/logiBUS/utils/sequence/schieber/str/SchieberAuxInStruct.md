@@ -1,5 +1,7 @@
 # SliderAuxInStruct
 
+![SchieberAuxInStruct](./SchieberAuxInStruct.svg)
+
 * * * * * * * * * *
 
 ## Introduction

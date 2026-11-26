@@ -1,5 +1,7 @@
 # s3ObjectIDs
 
+![s3ObjectIDs](./s3ObjectIDs.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

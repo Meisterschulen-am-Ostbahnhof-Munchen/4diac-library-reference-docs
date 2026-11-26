@@ -1,5 +1,7 @@
 # ButtonActivationCode_S
 
+![ButtonActivationCode_S](./ButtonActivationCode_S.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

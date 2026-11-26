@@ -1,5 +1,7 @@
 # logiBUS_DI_Events_S_Dual
 
+![logiBUS_DI_Events_S_Dual](./logiBUS_DI_Events_S_Dual.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

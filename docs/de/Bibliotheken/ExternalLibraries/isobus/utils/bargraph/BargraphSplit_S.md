@@ -1,5 +1,7 @@
 # BargraphSplit_S
 
+![BargraphSplit_S](./BargraphSplit_S.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

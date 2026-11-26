@@ -1,5 +1,7 @@
 # DataPanel_MI_DO_S
 
+![DataPanel_MI_DO_S](./DataPanel_MI_DO_S.svg)
+
 DataPanel Modules with medium IO density DO Struct
 
 ## Structure

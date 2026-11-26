@@ -1,5 +1,7 @@
 # ST32X
 
+![ST32X](./ST32X.svg)
+
 *(Kein Bild vorhanden, da dies ein Datentyp und kein Funktionsblock ist.)*
 
 * * * * * * * * * *

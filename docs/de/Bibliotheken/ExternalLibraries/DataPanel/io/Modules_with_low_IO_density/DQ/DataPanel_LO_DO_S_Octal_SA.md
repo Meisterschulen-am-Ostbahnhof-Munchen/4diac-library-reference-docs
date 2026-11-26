@@ -1,5 +1,7 @@
 # DataPanel_LO_DO_S_Octal_SA
 
+![DataPanel_LO_DO_S_Octal_SA](./DataPanel_LO_DO_S_Octal_SA.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,5 +1,7 @@
 # DataPanel_MI_DI_S_Octal_SA
 
+![DataPanel_MI_DI_S_Octal_SA](./DataPanel_MI_DI_S_Octal_SA.svg)
+
 * * * * * * * * * *
 
 ## Introduction

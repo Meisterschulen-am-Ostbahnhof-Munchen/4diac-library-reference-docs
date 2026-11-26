@@ -1,5 +1,7 @@
 # logiBUS_DO_S_Dual
 
+![logiBUS_DO_S_Dual](./logiBUS_DO_S_Dual.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,5 +1,7 @@
 # logiBUS_DI_S
 
+![logiBUS_DI_S](./logiBUS_DI_S.svg)
+
 * * * * * * * * * *
 
 ## Introduction

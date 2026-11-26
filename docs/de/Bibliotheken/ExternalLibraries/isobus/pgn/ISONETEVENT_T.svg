@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 164" width="248" height="164">
+<style>@font-face { font-family: 'TGL 0-17_std'; src: local('TGL 0-17_std'), url('../../../../_static/fonts/TGL-0-17_std.ttf') format('truetype'); }
+text { font-family: 'TGL 0-17_std', 'TGL 0-17', TGL, 'Times New Roman', Times, serif; font-size: 12px; fill: #000; }</style>
+<rect x="2" y="2" width="244" height="160" fill="#ffffff" stroke="#000" stroke-width="1"/>
+<rect x="2" y="2" width="244" height="30" fill="#e8eef7" stroke="#000" stroke-width="1"/>
+<text x="124" y="15" text-anchor="middle" font-weight="bold">ISONETEVENT_T</text>
+<text x="124" y="27" text-anchor="middle" font-style="italic" font-size="10">isobus::pgn</text>
+<rect x="12" y="38" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="46">eNetEvent : USINT</text>
+<rect x="12" y="58" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="66">eMemberRefer : SINT</text>
+<rect x="12" y="78" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="86">s16OwnCfHnd : INT</text>
+<rect x="12" y="98" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="106">s16Handle : INT</text>
+<rect x="12" y="118" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="126">u8SAMember : USINT</text>
+<rect x="12" y="138" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="146">cfName : isobus::pgn::CF_NAME_T</text>
+</svg>

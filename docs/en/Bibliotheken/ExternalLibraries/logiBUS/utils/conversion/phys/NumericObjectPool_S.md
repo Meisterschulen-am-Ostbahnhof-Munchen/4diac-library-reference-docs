@@ -1,5 +1,7 @@
 # NumericObjectPool_S
 
+![NumericObjectPool_S](./NumericObjectPool_S.svg)
+
 * * * * * * * * * *
 
 ## Introduction

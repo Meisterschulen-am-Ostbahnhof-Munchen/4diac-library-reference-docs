@@ -1,5 +1,7 @@
 # logiBUS_2_CAN_DI_S_Octal
 
+![logiBUS_2_CAN_DI_S_Octal](./logiBUS_2_CAN_DI_S_Octal.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

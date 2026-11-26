@@ -1,5 +1,7 @@
 # logiBUS_DI_S_Octal
 
+![logiBUS_DI_S_Octal](./logiBUS_DI_S_Octal.svg)
+
 * * * * * * * * * *
 
 ## Introduction

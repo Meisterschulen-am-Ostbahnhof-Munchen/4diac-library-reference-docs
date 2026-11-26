@@ -1,5 +1,7 @@
 # DataPanel_MI_DI_S_Dual_SA
 
+![DataPanel_MI_DI_S_Dual_SA](./DataPanel_MI_DI_S_Dual_SA.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

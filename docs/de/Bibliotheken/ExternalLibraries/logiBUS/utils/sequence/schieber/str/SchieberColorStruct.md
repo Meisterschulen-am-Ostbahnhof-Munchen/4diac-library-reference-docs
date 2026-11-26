@@ -1,5 +1,7 @@
 # SchieberColorStruct
 
+![SchieberColorStruct](./SchieberColorStruct.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

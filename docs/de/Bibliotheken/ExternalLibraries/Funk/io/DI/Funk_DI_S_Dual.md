@@ -1,5 +1,7 @@
 # Funk_DI_S_Dual
 
+![Funk_DI_S_Dual](./Funk_DI_S_Dual.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

@@ -1,5 +1,7 @@
 # logiBUS_AI_S_Dual
 
+![logiBUS_AI_S_Dual](./logiBUS_AI_S_Dual.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

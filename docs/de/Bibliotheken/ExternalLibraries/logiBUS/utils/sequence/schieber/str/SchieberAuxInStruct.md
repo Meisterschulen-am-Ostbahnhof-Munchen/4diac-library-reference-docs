@@ -1,5 +1,7 @@
 # SchieberAuxInStruct
 
+![SchieberAuxInStruct](./SchieberAuxInStruct.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

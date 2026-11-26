@@ -1,5 +1,7 @@
 # SchieberStruct
 
+![SchieberStruct](./SchieberStruct.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

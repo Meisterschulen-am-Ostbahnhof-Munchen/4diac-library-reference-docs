@@ -1,5 +1,7 @@
 # s2ObjectIDs
 
+![s2ObjectIDs](./s2ObjectIDs.svg)
+
 * * * * * * * * * *
 
 ## Introduction

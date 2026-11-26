@@ -1,5 +1,7 @@
 # CF_INFO_T
 
+![CF_INFO_T](./CF_INFO_T.svg)
+
 * * * * * * * * * *
 
 ## Einleitung

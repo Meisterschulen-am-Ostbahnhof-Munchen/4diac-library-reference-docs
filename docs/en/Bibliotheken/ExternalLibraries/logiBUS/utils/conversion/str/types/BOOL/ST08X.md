@@ -1,5 +1,7 @@
 # ST08X
 
+![ST08X](./ST08X.svg)
+
 * * * * * * * * * *
 The **ST08X** data type is a structured data component designed for managing and grouping eight individual Boolean values. Its primary purpose is to provide a compact representation for a collection of eight independent bits, often used as status flags, control signals, or similar binary states.
 Because **ST08X** is a data type and not a function block, it does not have event, data inputs, or outputs in the sense of a 4diac function block. Instead, it defines an internal structure of member variables.

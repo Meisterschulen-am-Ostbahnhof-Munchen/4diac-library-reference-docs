@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 264" width="215" height="264">
+<style>@font-face { font-family: 'TGL 0-17_std'; src: local('TGL 0-17_std'), url('../../../../../_static/fonts/TGL-0-17_std.ttf') format('truetype'); }
+text { font-family: 'TGL 0-17_std', 'TGL 0-17', TGL, 'Times New Roman', Times, serif; font-size: 12px; fill: #000; }</style>
+<rect x="2" y="2" width="211" height="260" fill="#ffffff" stroke="#000" stroke-width="1"/>
+<rect x="2" y="2" width="211" height="30" fill="#e8eef7" stroke="#000" stroke-width="1"/>
+<text x="107" y="15" text-anchor="middle" font-weight="bold">ScrollControls_S</text>
+<text x="107" y="27" text-anchor="middle" font-style="italic" font-size="10">isobus::utils::scroll</text>
+<rect x="12" y="38" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="46">u16BtnTopId : UINT</text>
+<rect x="12" y="58" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="66">u16BtnPageUpId : UINT</text>
+<rect x="12" y="78" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="86">u16BtnUpId : UINT</text>
+<rect x="12" y="98" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="106">u16BtnDownId : UINT</text>
+<rect x="12" y="118" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="126">u16BtnPageDownId : UINT</text>
+<rect x="12" y="138" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="146">u16BtnBottomId : UINT</text>
+<rect x="12" y="158" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="166">u16GotoInputId : UINT</text>
+<rect x="12" y="178" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="186">u16BtnPageUpPtrId : UINT</text>
+<rect x="12" y="198" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="206">u16BtnUpPtrId : UINT</text>
+<rect x="12" y="218" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="226">u16BtnDownPtrId : UINT</text>
+<rect x="12" y="238" width="8" height="8" fill="#18519E" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="246">u16BtnPageDownPtrId : UINT</text>
+</svg>

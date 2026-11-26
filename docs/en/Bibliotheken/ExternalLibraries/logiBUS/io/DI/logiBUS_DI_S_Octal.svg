@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 204" width="288" height="204">
+<style>@font-face { font-family: 'TGL 0-17_std'; src: local('TGL 0-17_std'), url('../../../../../_static/fonts/TGL-0-17_std.ttf') format('truetype'); }
+text { font-family: 'TGL 0-17_std', 'TGL 0-17', TGL, 'Times New Roman', Times, serif; font-size: 12px; fill: #000; }</style>
+<rect x="2" y="2" width="284" height="200" fill="#ffffff" stroke="#000" stroke-width="1"/>
+<rect x="2" y="2" width="284" height="30" fill="#e8eef7" stroke="#000" stroke-width="1"/>
+<text x="144" y="15" text-anchor="middle" font-weight="bold">logiBUS_DI_S_Octal</text>
+<text x="144" y="27" text-anchor="middle" font-style="italic" font-size="10">logiBUS::io::DI</text>
+<rect x="12" y="38" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="46">Port1 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="58" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="66">Port2 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="78" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="86">Port3 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="98" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="106">Port4 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="118" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="126">Port5 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="138" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="146">Port6 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="158" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="166">Port7 : logiBUS::io::DI::logiBUS_DI_S</text>
+<rect x="12" y="178" width="8" height="8" fill="#3366FF" stroke="#000" stroke-width="0.5"/>
+<text x="28" y="186">Port8 : logiBUS::io::DI::logiBUS_DI_S</text>
+</svg>
