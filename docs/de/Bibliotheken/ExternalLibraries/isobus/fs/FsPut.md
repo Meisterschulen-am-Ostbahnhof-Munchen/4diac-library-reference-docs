@@ -28,7 +28,7 @@ Paket: `isobus::fs`
 
 -   **NmDestin** (Typ: `isobus::pgn::ISONETEVENT_T`): Client (s16OwnCfHnd) and file server (s16Handle)
 -   **sLocalPath** (Typ: `STRING`): Local source file, e.g. /data/fs/a.csv
--   **sRemotePath** (Typ: `STRING`): Path on the file server, e.g. \\USB\data\a.csv
+-   **sRemotePath** (Typ: `STRING`): Pfad auf dem File Server, z. B. `logibus_test.txt`. Ohne Volume landet er im aktuellen Verzeichnis des Servers (primäres Volume). Am CCI 1200 gibt es kein festes `\\USB\`: Ein Stick heißt nach seiner FAT-Seriennummer, z. B. `\\E82C-0533\`.
 -   **bAppend** (Typ: `BOOL`): FALSE: replace the file, TRUE: append
 
 ### **Daten-Ausgänge**
@@ -44,5 +44,11 @@ Keine.
 ### **Adapter (Plugs)**
 
 Keine.
+
+## Hinweise zum Verhalten
+
+-   Hardware-Test am CCI 1200 mit USB-Stick (2026-11-26, geprüft): Übung 156 (`FsWrite`/`FsRead`) und `FsGet` bestanden. `FsPut` und Übung 156b sind noch nicht vollständig getestet.
+-   Server in diesem Test: Adresse 0xF8, NAME-Funktion 61, Hersteller 339.
+-   Pfade ohne Volume (`logibus_test.txt`) sind die empfohlene Form. `~\` wäre das Herstellerverzeichnis des Clients und ist gegen das CCI noch ungetestet.
 
 Hinweis: Diese Seite wurde aus der Typdefinition (`FsPut.fbt`) erzeugt und gibt nur die Schnittstelle wieder. Eine ausführliche Beschreibung des Verhaltens fehlt noch.
